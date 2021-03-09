@@ -9,7 +9,10 @@
     "type": "git"
   },
   "scripts": {
-    "build": "npm-run-all --parallel css js",
+    "build:assets": "npm-run-all --parallel css js",
+    "build:clean": "rimraf build",
+    "build:storybook": "build-storybook -c storybook/.storybook -o build",
+    "build:copy": "ncp assets build",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/starter.scss:assets/css/oec.css",
     "css-prefix": "npm-run-all --parallel css-prefix-*",
@@ -29,13 +32,10 @@
     "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oec.esm.js.map,includeSources,url=oec.esm.min.js.map\" --output assets/js/oec.esm.min.js assets/js/oec.esm.js",
     "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oec.bundle.js.map,includeSources,url=oec.bundle.min.js.map\" --output assets/js/oec.bundle.min.js assets/js/oec.bundle.js",
     "js-test": "npm-run-all --parallel js-test-karma js-test-jquery js-test-integration-*",
-    "server": "browser-sync start --proxy localhost:5000 --files \"assets/css/starter.css\"",
+    "server": "browser-sync start --proxy localhost:5000 --files \"assets/css/oec.min.css\"",
     "storybook": "start-storybook -p 5000 -c storybook/.storybook -s assets/",
-    "build:clean": "rimraf build",
-    "build:storybook": "build-storybook -c storybook/.storybook -o build",
-    "build:copy": "ncp assets build",
     "dist": "npm-run-all build:*",
-    "start": "npm-run-all --parallel server watch storybook",
+    "start": "npm-run-all --parallel watch storybook server",
     "watch": "nodemon -e twig,scss -x \"npm run css\"",
     "test": "npm run css-lint && npm run css"
   },
