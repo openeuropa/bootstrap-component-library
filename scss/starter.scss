@@ -1,0 +1,91 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/bootstrap";
+
+// Option 2
+//
+// Import just the styles you need. Note that some stylesheets are required no matter what.
+
+@import "bootstrap/functions"; // Required
+@import "bootstrap/variables"; // Required
+@import "bootstrap/mixins"; // Required
+
+//
+// Override Bootstrap here
+//
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: $purple;
+$body-bg: #f5f5f5;
+$border-radius: 0.4rem;
+
+// @import "bootstrap/root";
+@import "bootstrap/reboot"; // Required
+@import "bootstrap/type";
+// @import "bootstrap/images";
+// @import "bootstrap/code";
+@import "bootstrap/grid";
+// @import "bootstrap/tables";
+// @import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+// @import "bootstrap/button-group";
+// @import "bootstrap/input-group"; // Requires forms
+// @import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar"; // Requires nav
+// @import "bootstrap/card";
+// @import "bootstrap/breadcrumb";
+// @import "bootstrap/pagination";
+@import "bootstrap/badge";
+// @import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+// @import "bootstrap/progress";
+// @import "bootstrap/media";
+// @import "bootstrap/list-group";
+@import "bootstrap/close";
+// @import "bootstrap/toasts";
+@import "bootstrap/modal"; // Requires transitions
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popover";
+// @import "bootstrap/carousel";
+// @import "bootstrap/spinners";
+@import "bootstrap/utilities";
+@import "bootstrap/utilities/api";
+// @import "bootstrap/print";
+@import "button/button";
+
+//
+// Custom styles
+//
+
+body {
+    padding: 3rem 1.5rem;
+}
+
+// Style Bootstrap icons
+.bi {
+    fill: currentColor;
+}
