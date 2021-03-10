@@ -14,8 +14,8 @@ addParameters({
   },
   cssresources: [
     {
-      id: "oec",
-      code: `<link rel="stylesheet" type="text/css" href="css/oec.min.css" />`,
+      id: "oe",
+      code: `<link rel="stylesheet" type="text/css" href="css/oe.min.css" />`,
       picked: true,
       hideCode: true,
     },

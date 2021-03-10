@@ -1,10 +1,10 @@
 {
-  "name": "bootstrap-npm-starter",
-  "version": "1.4.0",
+  "name": "oe-library",
+  "version": "0.0.1",
   "private": true,
-  "description": "Demo project for building a Bootstrap powered site via npm.",
-  "author": "mdo",
-  "license": "MIT",
+  "description": "OE library repository.",
+  "author": "EUROPEAN COMMISSION",
+  "license": "EUPL",
   "repository": {
     "type": "git"
   },
@@ -14,12 +14,12 @@
     "build:storybook": "build-storybook -c storybook/.storybook -o build",
     "build:copy": "ncp assets build",
     "css": "npm-run-all css-compile css-prefix css-minify",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/starter.scss:assets/css/oec.css",
+    "css-compile": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css src/scss/oe.scss:assets/css/oe.css",
     "css-prefix": "npm-run-all --parallel css-prefix-*",
     "css-prefix-main": "postcss --config postcss.config.js --replace \"assets/css/*.css\" \"!assets/css/*.min.css\"",
-    "css-lint": "stylelint scss/",
+    "css-lint": "stylelint src/**/*.scss",
     "css-minify": "npm-run-all --parallel css-minify-*",
-    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output assets/css/oec.min.css assets/css/oec.css",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output assets/css/oe.min.css assets/css/oe.css",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --parallel js-compile-*",
     "js-compile-standalone": "rollup --environment BUNDLE:false --config rollup.config.js --sourcemap",
@@ -28,12 +28,12 @@
     "js-compile-plugins": "node build-plugins.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "js-minify": "npm-run-all --parallel js-minify-*",
-    "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oec.js.map,includeSources,url=oec.min.js.map\" --output assets/js/oec.min.js assets/js/oec.js",
-    "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oec.esm.js.map,includeSources,url=oec.esm.min.js.map\" --output assets/js/oec.esm.min.js assets/js/oec.esm.js",
-    "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oec.bundle.js.map,includeSources,url=oec.bundle.min.js.map\" --output assets/js/oec.bundle.min.js assets/js/oec.bundle.js",
+    "js-minify-standalone": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oe.js.map,includeSources,url=oe.min.js.map\" --output assets/js/oe.min.js assets/js/oe.js",
+    "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oe.esm.js.map,includeSources,url=oe.esm.min.js.map\" --output assets/js/oe.esm.min.js assets/js/oe.esm.js",
+    "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=assets/js/oe.bundle.js.map,includeSources,url=oe.bundle.min.js.map\" --output assets/js/oe.bundle.min.js assets/js/oe.bundle.js",
     "js-test": "npm-run-all --parallel js-test-karma js-test-jquery js-test-integration-*",
-    "server": "browser-sync start --proxy localhost:5000 --files \"assets/css/oec.min.css\"",
-    "storybook": "start-storybook -p 5000 -c storybook/.storybook -s assets/",
+    "server": "browser-sync start --proxy localhost:5000 --files \"assets/css/oe.min.css\"",
+    "storybook": "start-storybook -p 5000 -c storybook/.storybook -s assets/ --ci",
     "dist": "npm-run-all build:*",
     "start": "npm-run-all --parallel watch storybook server",
     "watch": "nodemon -e twig,scss -x \"npm run css\"",
@@ -44,15 +44,22 @@
     "sass",
     "css",
     "javascript",
-    "starter",
     "template"
   ],
   "workspaces": [
-    "storybook"
+    "storybook",
+    "bootstrap",
+    "src/components/*"
   ],
-  "dependencies": {
-    "bootstrap": "^5.0.0-beta2",
-    "bootstrap-icons": "^1.3.0"
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.12.13",
@@ -68,18 +75,23 @@
     "browser-sync": "^2.26.14",
     "glob": "^7.1.6",
     "eslint": "^7.19.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "lint-staged": "10.5.4",
     "sass": "^1.32.8",
     "ncp": "2.0.0",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.5",
     "postcss-cli": "^8.3.1",
+    "prettier": "2.2.1",
     "purgecss": "^3.1.3",
     "rimraf": "3.0.2",
     "rollup": "^2.38.5",
     "rollup-plugin-istanbul": "^3.0.0",
     "serve": "^11.3.2",
     "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "8.0.2",
     "stylelint-config-twbs-bootstrap": "^2.1.0",
     "terser": "5.1.0"
   }
