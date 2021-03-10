@@ -19,6 +19,12 @@ addParameters({
       picked: true,
       hideCode: true,
     },
+    {
+      id: "oe-ecl",
+      code: `<link rel="stylesheet" type="text/css" href="css/oe-ecl.min.css" />`,
+      picked: false,
+      hideCode: true,
+    },
   ],
   controls: { expanded: true },
   layout: "fullscreen",

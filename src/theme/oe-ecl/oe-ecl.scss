@@ -1,41 +1,9 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
-
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
-
-// @import "@oe/bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Import just the styles you need. Note that some stylesheets are required no matter what.
-
 @import "@oe/bootstrap/functions"; // Required
 @import "@oe/bootstrap/scss/variables"; // Required
 @import "@oe/bootstrap/scss/mixins"; // Required
 
-//
-// Override Bootstrap here
-//
-
-// Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
-
-// Customize some defaults
+// Custom variables
+$primary: #004494;
 
 // @import "@oe/bootstrap/scss/root";
 @import "@oe/bootstrap/scss/reboot"; // Required
@@ -72,12 +40,43 @@ $enable-shadows: true;
 @import "@oe/bootstrap/scss/utilities";
 @import "@oe/bootstrap/scss/utilities/api";
 // @import "@oe/bootstrap/scss/print";
+
 @import "@oe/button/scss";
+
+// TODO: use @use instead (see below)
+$header-margin: 1.5rem .5rem;
+$menu-background: $primary;
+$menu-color: #fff;
+$menu-color-hover: #fff;
+$menu-background-active: #003776;
+$menu-color-active: #fff;
 @import "@oe/navbar/navbar";
+
+/* @use "@oe/navbar/navbar" with (
+  $header-margin: 1.5rem .5rem,
+  $menu-background: #004494,
+  $menu-color: #fff,
+  $menu-color-hover: #fff,
+  $menu-background-active: #003776,
+  $menu-color-active: #fff,
+); */
 
 //
 // Custom styles
 //
+.oe-navbar-header {
+  align-items: flex-end;  
+}
+
+@media (min-width: 992px) {
+  .oe-menu .nav-link.active {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 
 // Style Bootstrap icons
 .bi {

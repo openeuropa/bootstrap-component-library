@@ -1,0 +1,30 @@
+$header-margin: 0.5rem !default;
+$menu-background: $light !default;
+$menu-color: #868e96 !default;
+$menu-color-hover: #2e3338 !default;
+$menu-background-active: transparent !default;
+$menu-color-active: #2e3338 !default;
+
+.oe-navbar-header {
+  align-items: center; 
+  display: flex;
+  justify-content: space-between;
+  margin: $header-margin;
+}
+
+.oe-menu {
+  background-color: $menu-background;
+}
+.oe-menu .nav-link {
+  color: $menu-color;
+  
+  &:hover,
+  &:focus {
+    color: $menu-color-hover;
+  }
+  
+  &.active {
+    background-color: $menu-background-active;
+    color: $menu-color-active;
+  }
+}
