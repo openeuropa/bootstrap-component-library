@@ -6,7 +6,7 @@ $menu-background-active: transparent !default;
 $menu-color-active: #2e3338 !default;
 
 .oe-navbar-header {
-  align-items: center; 
+  align-items: center;
   display: flex;
   justify-content: space-between;
   margin: $header-margin;
@@ -15,14 +15,15 @@ $menu-color-active: #2e3338 !default;
 .oe-menu {
   background-color: $menu-background;
 }
-.oe-menu .nav-link {
+
+.navbar-light.oe-menu .nav-link {
   color: $menu-color;
-  
+
   &:hover,
   &:focus {
     color: $menu-color-hover;
   }
-  
+
   &.active {
     background-color: $menu-background-active;
     color: $menu-color-active;

@@ -1,4 +1,4 @@
-@import "@oe/bootstrap/functions"; // Required
+@import "@oe/bootstrap/scss/functions"; // Required
 @import "@oe/bootstrap/scss/variables"; // Required
 @import "@oe/bootstrap/scss/mixins"; // Required
 
@@ -44,7 +44,7 @@ $primary: #004494;
 @import "@oe/button/scss";
 
 // TODO: use @use instead (see below)
-$header-margin: 1.5rem .5rem;
+$header-margin: 1.5rem 0.5rem;
 $menu-background: $primary;
 $menu-color: #fff;
 $menu-color-hover: #fff;
@@ -65,7 +65,7 @@ $menu-color-active: #fff;
 // Custom styles
 //
 .oe-navbar-header {
-  align-items: flex-end;  
+  align-items: flex-end;
 }
 
 @media (min-width: 992px) {
@@ -76,7 +76,6 @@ $menu-color-active: #fff;
     padding-bottom: 1rem;
   }
 }
-
 
 // Style Bootstrap icons
 .bi {

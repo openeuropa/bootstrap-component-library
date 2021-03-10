@@ -22,7 +22,7 @@
     "css-lint": "stylelint src/**/*.scss",
     "css-minify": "npm-run-all --parallel css-minify-*",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output assets/css/oe.min.css assets/css/oe.css",
-    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output assets/css/oe-ecl.min.css assets/css/oe-ecl.css",
+    "css-minify-ecl": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output assets/css/oe-ecl.min.css assets/css/oe-ecl.css",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "npm-run-all --parallel js-compile-*",
     "js-compile-standalone": "rollup --environment BUNDLE:false --config scripts/rollup.config.js --sourcemap",
