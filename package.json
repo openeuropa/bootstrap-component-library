@@ -35,7 +35,7 @@
     "server": "browser-sync start --proxy localhost:5000 --files \"assets/css/oe.min.css\"",
     "storybook": "start-storybook -p 5000 -c storybook/.storybook -s assets/ --ci",
     "dist": "npm-run-all build:*",
-    "start": "npm-run-all --parallel watch storybook server",
+    "start": "npm-run-all --parallel build:assets watch storybook server",
     "watch": "nodemon -e twig,scss -x \"npm run css\"",
     "test": "npm run css-lint && npm run css"
   },
