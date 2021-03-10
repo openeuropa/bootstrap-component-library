@@ -11,9 +11,27 @@ Navbar.storyName = "default";
 export const NavbarECL = (args) => navbar(args);
 
 NavbarECL.args = {
-  logo_src: 'https://ec.europa.eu/info/sites/info/themes/europa/images/svg/logo/logo--en.svg',
-  logo_width: '240',
-  logo_height: '60',
-  navbar_variant: 'navbar-dark',
+  logo_src:
+    "https://ec.europa.eu/info/sites/info/themes/europa/images/svg/logo/logo--en.svg",
+  logo_width: "240",
+  logo_height: "60",
+  navbar_variant: "navbar-dark",
 };
+
 NavbarECL.storyName = "ECL branding";
+NavbarECL.parameters = {
+  cssresources: [
+    {
+      id: "oe",
+      code: `<link rel="stylesheet" type="text/css" href="css/oe.min.css" />`,
+      picked: false,
+      hideCode: true,
+    },
+    {
+      id: "oe-ecl",
+      code: `<link rel="stylesheet" type="text/css" href="css/oe-ecl.min.css" />`,
+      picked: true,
+      hideCode: true,
+    },
+  ],
+};
