@@ -4583,4 +4583,4 @@ class Toast extends BaseComponent {
 defineJQueryPlugin(NAME, Toast);
 
 export { Alert, Button, Carousel, Collapse, Dropdown, Modal, Popover, ScrollSpy, Tab, Toast, Tooltip };
-//# sourceMappingURL=oec.esm.js.map
+//# sourceMappingURL=oe.esm.js.map
