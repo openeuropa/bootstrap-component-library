@@ -1,64 +1,10 @@
-$header-margin: .5rem !default;
+$navbar-background: transparent !default;
+$navbar-link-active-background: transparent !default;
 
-.oe-navbar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: $header-margin;
+.oe-navbar {
+  background-color: $navbar-background;
 }
 
-// menu
-$menu-background: $light !default;
-$menu-color: #868e96 !default;
-$menu-color-hover: #2e3338 !default;
-$menu-background-active: transparent !default;
-$menu-color-active: #2e3338 !default;
-
-.oe-menu {
-  background-color: $menu-background;
-}
-
-.oe-menu .nav-link {
-  color: $menu-color;
-
-  &:hover,
-  &:focus {
-    color: $menu-color-hover;
-  }
-
-  &.active {
-    color: $menu-color-active;
-    background-color: $menu-background-active;
-  }
-}
-
-// language list
-$language-background: $light !default;
-$language-color: $dark !default;
-$language-list-gap: $spacer !default;
-$language-item-background: transparent !default;
-$language-item-color: $link-color !default;
-$language-item-background-hover: transparent !default;
-$language-item-color-hover: $link-hover-color !default;
-
-.oe-language {
-  color: $language-color;
-  background-color: $language-background;
-}
-
-.oe-language__list {
-  display: grid;
-  gap: $language-list-gap;
-  margin-bottom: $spacer;
-}
-
-.oe-language__item {
-  color: $language-item-color;
-  background-color: $language-item-background;
-
-  &:hover,
-  &:focus {
-    color: $language-item-color-hover;
-    background-color: $language-item-background-hover;
-  }
+.oe-navbar .nav-link.active {
+  background-color: $navbar-link-active-background;
 }

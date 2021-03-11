@@ -1,5 +1,38 @@
 import navbar from "./navbar.html.twig";
 
+// Controls
+const getArgTypes = (data) => {
+  return {
+    color_set: {
+      name: 'color set',
+      type: { name: 'select' },
+      defaultValue: 'light',
+      description: 'Available set of color',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'light' },
+        category: 'Style',
+      },
+      control: {
+        type: 'select',
+        options: [
+          'light',
+          'dark',
+        ],
+      },
+    },
+  }
+}
+
+// Decoration
+const darkMode = (story, controls) => {
+  const demo = story();
+  return controls.args.color_set === 'dark'
+    ? `<div class="bg-dark">${demo}</div>`
+    : demo;
+};
+
+// Stories
 export default {
   title: "Components/Navbar",
 };
@@ -7,6 +40,8 @@ export default {
 export const Navbar = (args) => navbar(args);
 
 Navbar.storyName = "default";
+Navbar.argTypes = getArgTypes();
+Navbar.decorators = [darkMode];
 Navbar.parameters = {
   cssresources: [
     {
@@ -18,16 +53,17 @@ Navbar.parameters = {
   ],
 };
 
-export const NavbarECL = (args) => navbar(args);
-
-NavbarECL.args = {
+const NavbarECLArgs = {
   logo_src:
     "https://ec.europa.eu/info/sites/info/themes/europa/images/svg/logo/logo--en.svg",
   logo_width: "240",
   logo_height: "60",
-  navbar_variant: "navbar-dark",
+  color_set: "dark",
 };
+export const NavbarECL = (args) => navbar(NavbarECLArgs);
+
 NavbarECL.storyName = "ECL branding";
+NavbarECL.argTypes = {};
 NavbarECL.parameters = {
   cssresources: [
     {

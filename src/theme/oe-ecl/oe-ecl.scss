@@ -3,10 +3,13 @@
 @import "@oe/bootstrap/scss/mixins"; // Required
 @import "@oe/bootstrap/scss/containers";
 
-// Custom variables
+// Override Bootstrap variables
 $primary: #004494;
 $secondary: #ffd617;
 $font-family-sans-serif: arial,sans-serif;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: #fff;
+$navbar-dark-active-color: #fff;
 
 @import "@oe/bootstrap/scss/root";
 @import "@oe/bootstrap/scss/reboot"; // Required
@@ -48,11 +51,8 @@ $font-family-sans-serif: arial,sans-serif;
 
 // TODO: use @use instead (see below)
 $header-margin: 1.5rem .5rem;
-$menu-background: $primary;
-$menu-color: #fff;
-$menu-color-hover: #fff;
-$menu-background-active: #003776;
-$menu-color-active: #fff;
+$navbar-background: $primary;
+$navbar-link-active-background: #003776;
 $language-background: $primary;
 $language-color: #fff;
 $language-list-gap: map-get($spacers, 2);
@@ -61,35 +61,25 @@ $language-item-color: $primary;
 $language-item-background-hover: $secondary;
 $language-item-color-hover: $dark;
 @import "@oe/navbar/navbar";
+@import "@oe/header/header";
 
 /* @use "@oe/navbar/navbar" with (
-  $header-margin: 1.5rem .5rem,
-  $menu-background: $primary,
-  $menu-color: #fff,
-  $menu-color-hover: #fff,
-  $menu-background-active: #003776,
-  $menu-color-active: #fff,
-  $language-background: $primary,
-  $language-color: #fff,
-  $language-list-gap: map-get($spacers, 2),
-  $language-item-background: #fff,
-  $language-item-color: $primary,
-  $language-item-background-hover: $secondary,
-  $language-item-color-hover: $dark,
+  $navbar-background: $primary,
+  $navbar-link-active-background-active: #003776,
 ); */
 
 //
 // Custom styles
 //
 
-// navbar
+// header
 .oe-navbar-header {
   align-items: flex-end;
 }
 
-// menu
+// navbar
 @media (min-width: 992px) {
-  .oe-menu .nav-link.active {
+  .oe-navbar .nav-link.active {
     padding-top: $spacer;
     padding-bottom: $spacer;
     margin-top: -#{map-get($spacers, 2)};
