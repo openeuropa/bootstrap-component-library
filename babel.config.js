@@ -1,14 +1,19 @@
-module.exports = {
-  presets: [
-    [
-      "@babel/preset-env",
-      {
-        useBuiltIns: "usage",
-        corejs: 3,
-      },
-    ],
-    "@babel/preset-react",
-  ],
-  plugins: ["@babel/plugin-transform-runtime", "preval"],
-  sourceType: "unambiguous",
+module.exports = (api) => {
+  if (api.env("test")) {
+    return {
+      presets: [
+        [
+          "@babel/preset-env",
+          {
+            useBuiltIns: "usage",
+            corejs: 3,
+          },
+        ],
+        "@babel/preset-react",
+      ],
+      plugins: ["@babel/plugin-transform-runtime"],
+      sourceType: "unambiguous",
+    };
+  }
+  return {};
 };
