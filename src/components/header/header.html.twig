@@ -17,10 +17,12 @@
       - target
     - modal
 #}
+{% spaceless %}
+
 {% set _logo = {
-  src: logo.src|default('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png'),
+  src: logo.src|default(''),
   width: logo.width|default(100),
-  height: navbar.height|default(60) 
+  height: navbar.height|default(60)
 } %}
 {% set _navbar = navbar|default({}) %}
 {% set _login = {
@@ -42,7 +44,7 @@
 
 <header>
   <!-- header -->
-  <div class="container">    
+  <div class="container">
     <div class="oe-header">
       <a class="navbar-brand" href="#">
         <img src={{ _logo.src }} width={{ _logo.width }} height={{ _logo.height }} />
@@ -72,3 +74,4 @@
 <!-- Modal - Language -->
 {% include '@oe/modal/modal.html.twig' with _language.modal only %}
 
+{% endspaceless %}
