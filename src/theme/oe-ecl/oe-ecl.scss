@@ -3,7 +3,13 @@
 @import "@oe/bootstrap/scss/mixins"; // Required
 @import "@oe/bootstrap/scss/containers";
 
-// Custom variables
+// Override Bootstrap variables
+$primary: #004494;
+$secondary: #ffd617;
+$font-family-sans-serif: arial,sans-serif;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: #fff;
+$navbar-dark-active-color: #fff;
 
 @import "@oe/bootstrap/scss/root";
 @import "@oe/bootstrap/scss/reboot"; // Required
@@ -40,13 +46,71 @@
 @import "@oe/bootstrap/scss/utilities";
 @import "@oe/bootstrap/scss/utilities/api";
 // @import "@oe/bootstrap/scss/print";
+
 @import "@oe/button/scss";
-@import "@oe/header/header";
+
+// TODO: use @use instead (see below)
+$header-margin: 1.5rem .5rem;
+$navbar-background: $primary;
+$navbar-link-active-background: #003776;
+$language-background: $primary;
+$language-color: #fff;
+$language-list-gap: map-get($spacers, 2);
+$language-item-background: #fff;
+$language-item-color: $primary;
+$language-item-background-hover: $secondary;
+$language-item-color-hover: $dark;
 @import "@oe/navbar/navbar";
+@import "@oe/header/header";
+
+/* @use "@oe/navbar/navbar" with (
+  $navbar-background: $primary,
+  $navbar-link-active-background-active: #003776,
+); */
 
 //
 // Custom styles
 //
+
+// header
+.oe-navbar-header {
+  align-items: flex-end;
+}
+
+// navbar
+@media (min-width: 992px) {
+  .oe-navbar .nav-link.active {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+    margin-top: -#{map-get($spacers, 2)};
+    margin-bottom: -#{map-get($spacers, 2)};
+  }
+}
+
+// language list
+.oe-language .modal-body {
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+}
+
+.oe-language__title {
+  margin-bottom: map-get($spacers, 4);
+}
+
+.oe-language__list {
+  margin-bottom: map-get($spacers, 4);
+}
+
+.oe-language__item {
+  padding: map-get($spacers, 2) $spacer;
+  font-weight: $font-weight-bold;
+  text-decoration: none; //should be handled at link level
+
+  &:hover,
+  &:focus {
+    text-decoration: underline; //should be handled at link level
+  }
+}
 
 // Style Bootstrap icons
 .bi {

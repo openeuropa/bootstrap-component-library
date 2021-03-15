@@ -7,7 +7,7 @@ const loader = new TwingLoaderFilesystem(oeAbsPath);
 // In storybook we get this returned as an instance of
 // TWigLoaderNull, we need to avoid processing this.
 if (typeof loader.addPath === "function") {
-  // Add namespace ecl-twig.
+  // Add namespace oe.
   loader.addPath(oeAbsPath, "oe");
 }
 

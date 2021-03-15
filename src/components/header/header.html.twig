@@ -1,0 +1,74 @@
+{# Parameters:
+  - logo
+    - src
+    - width
+    - height
+  - navbar
+  - login
+    - link
+      - label
+      - href
+      - target
+    - modal
+  - language
+    - link
+      - label
+      - href
+      - target
+    - modal
+#}
+{% set _logo = {
+  src: logo.src|default('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png'),
+  width: logo.width|default(100),
+  height: navbar.height|default(60) 
+} %}
+{% set _navbar = navbar|default({}) %}
+{% set _login = {
+  link: {
+    label: login.link.label|default(''),
+    href: login.link.href|default('#'),
+    target: login.link.target|default(login.modal.id|default('')),
+  },
+  modal: login.modal|default({}),
+} %}
+{% set _language = {
+  link: {
+    label: language.link.label|default(''),
+    href: language.link.href|default('#'),
+    target: language.link.target|default(language.modal.id|default('')),
+  },
+  modal: language.modal|default({}),
+} %}
+
+<header>
+  <!-- header -->
+  <div class="container">    
+    <div class="oe-header">
+      <a class="navbar-brand" href="#">
+        <img src={{ _logo.src }} width={{ _logo.width }} height={{ _logo.height }} />
+      </a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href={{ _login.link.label }} role="button" data-bs-toggle="modal" data-bs-target="#{{ _login.link.target }}">
+            {{ _login.link.label }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={{ _language.link.label }} role="button" data-bs-toggle="modal" data-bs-target="#{{ _language.link.target }}">
+            {{ _language.link.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- navbar -->
+  {% include '@oe/navbar/navbar.html.twig' with _navbar only %}
+</header>
+
+<!-- Modal - Login -->
+{% include '@oe/modal/modal.html.twig' with _login.modal only %}
+
+<!-- Modal - Language -->
+{% include '@oe/modal/modal.html.twig' with _language.modal only %}
+
