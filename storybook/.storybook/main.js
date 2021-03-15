@@ -3,6 +3,7 @@ const path = require("path");
 const stories = ["../../src/components/**/*.story.js"];
 
 const addons = [
+  "storybook-addon-designs",
   "@storybook/addon-viewport",
   "@storybook/addon-cssresources",
   "@storybook/addon-docs",
