@@ -8,7 +8,7 @@ const loader = new TwingLoaderFilesystem(oeAbsPath);
 // TWigLoaderNull, we need to avoid processing this.
 if (typeof loader.addPath === "function") {
   // Add namespace oe.
-  loader.addPath(ecAbsPath, "oe");
+  loader.addPath(oeAbsPath, "oe");
 }
 
 module.exports = new TwingEnvironment(loader, { autoescape: false });
