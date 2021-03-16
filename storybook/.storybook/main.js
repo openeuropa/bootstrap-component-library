@@ -13,13 +13,28 @@ const addons = [
 ];
 
 const webpackFinal = (config) => {
-  config.module.rules.push({
-    test: /\.twig$/,
-    loader: "twing-loader",
-    options: {
-      environmentModulePath: path.resolve(`${__dirname}/environment.js`),
+  config.module.rules.push(
+    {
+      test: /\.story\.js?$/,
+      loaders: [
+        /*
+        This loader should be first in the list unless you
+        want tranfromations from other loaders to affect
+        what’s shown in the code tabs
+        */
+        require.resolve("@whitespace/storybook-addon-code/loader"),
+        // ...
+      ],
+      enforce: "pre",
     },
-  });
+    {
+      test: /\.twig$/,
+      loader: "twing-loader",
+      options: {
+        environmentModulePath: path.resolve(`${__dirname}/environment.js`),
+      },
+    }
+  );
   config.plugins.forEach((plugin, i) => {
     if (plugin.constructor.name === "ProgressPlugin") {
       config.plugins.splice(i, 1);

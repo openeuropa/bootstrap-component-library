@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-header/data.js";
 import headerECLData from "@oe/data-header/data-ecl.js";
 import header from "./header.html.twig";
+import "!!null-loader!./header.scss";
 
 // Stories
 export default {
