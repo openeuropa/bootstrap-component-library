@@ -1,4 +1,6 @@
-{# Parameters: 
+{% spaceless %}
+
+{# Parameters:
   - color_set
 #}
 {% set _color_set = color_set|default('light') %}
@@ -33,3 +35,5 @@
     </div>
   </div>
 </nav>
+
+{% endspaceless %}

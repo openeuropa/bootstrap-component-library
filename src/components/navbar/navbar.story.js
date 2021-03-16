@@ -1,33 +1,31 @@
 import navbar from "./navbar.html.twig";
+import "!!null-loader!./navbar.scss";
 
 // Controls
 const getArgTypes = (data) => {
   return {
     color_set: {
-      name: 'color set',
-      type: { name: 'select' },
-      defaultValue: 'light',
-      description: 'Available set of color',
+      name: "color set",
+      type: { name: "select" },
+      defaultValue: "light",
+      description: "Available set of color",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'light' },
-        category: 'Style',
+        type: { summary: "string" },
+        defaultValue: { summary: "light" },
+        category: "Style",
       },
       control: {
-        type: 'select',
-        options: [
-          'light',
-          'dark',
-        ],
+        type: "select",
+        options: ["light", "dark"],
       },
     },
-  }
-}
+  };
+};
 
 // Decoration
 const darkMode = (story, controls) => {
   const demo = story();
-  return controls.args.color_set === 'dark'
+  return controls.args.color_set === "dark"
     ? `<div class="bg-dark">${demo}</div>`
     : demo;
 };
