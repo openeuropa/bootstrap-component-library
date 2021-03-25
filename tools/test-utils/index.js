@@ -5,9 +5,9 @@ const renderTwigFileAsNode = (file, options) =>
   new Promise((resolve, reject) => {
     try {
       const html = twing.render(file, options);
-      const test = document.createElement("test");
-      test.innerHTML = html.trim();
-      resolve(test);
+      const div = document.createElement("div");
+      div.innerHTML = html.trim();
+      resolve(div.firstChild);
     } catch (error) {
       reject(error);
     }
