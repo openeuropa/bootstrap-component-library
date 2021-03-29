@@ -10,7 +10,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): base-component.js
+   * Bootstrap (v5.0.0-beta3): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -20,27 +20,29 @@
    * ------------------------------------------------------------------------
    */
 
-  const VERSION = '5.0.0-beta2';
+  const VERSION = '5.0.0-beta3';
 
   class BaseComponent {
     constructor(element) {
+      element = typeof element === 'string' ? document.querySelector(element) : element;
+
       if (!element) {
         return;
       }
 
       this._element = element;
-      Data__default['default'].setData(element, this.constructor.DATA_KEY, this);
+      Data__default['default'].set(this._element, this.constructor.DATA_KEY, this);
     }
 
     dispose() {
-      Data__default['default'].removeData(this._element, this.constructor.DATA_KEY);
+      Data__default['default'].remove(this._element, this.constructor.DATA_KEY);
       this._element = null;
     }
     /** Static */
 
 
     static getInstance(element) {
-      return Data__default['default'].getData(element, this.DATA_KEY);
+      return Data__default['default'].get(element, this.DATA_KEY);
     }
 
     static get VERSION() {

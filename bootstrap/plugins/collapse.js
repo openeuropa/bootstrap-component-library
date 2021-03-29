@@ -14,7 +14,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -149,8 +149,6 @@
     }
   };
 
-  document.documentElement.dir === 'rtl';
-
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
@@ -171,7 +169,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): collapse.js
+   * Bootstrap (v5.0.0-beta3): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -217,13 +215,13 @@
       super(element);
       this._isTransitioning = false;
       this._config = this._getConfig(config);
-      this._triggerArray = SelectorEngine__default['default'].find(`${SELECTOR_DATA_TOGGLE}[href="#${element.id}"],` + `${SELECTOR_DATA_TOGGLE}[data-bs-target="#${element.id}"]`);
+      this._triggerArray = SelectorEngine__default['default'].find(`${SELECTOR_DATA_TOGGLE}[href="#${this._element.id}"],` + `${SELECTOR_DATA_TOGGLE}[data-bs-target="#${this._element.id}"]`);
       const toggleList = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
 
       for (let i = 0, len = toggleList.length; i < len; i++) {
         const elem = toggleList[i];
         const selector = getSelectorFromElement(elem);
-        const filterElement = SelectorEngine__default['default'].find(selector).filter(foundElem => foundElem === element);
+        const filterElement = SelectorEngine__default['default'].find(selector).filter(foundElem => foundElem === this._element);
 
         if (selector !== null && filterElement.length) {
           this._selector = selector;
@@ -287,7 +285,7 @@
 
       if (actives) {
         const tempActiveData = actives.find(elem => container !== elem);
-        activesData = tempActiveData ? Data__default['default'].getData(tempActiveData, DATA_KEY) : null;
+        activesData = tempActiveData ? Data__default['default'].get(tempActiveData, DATA_KEY) : null;
 
         if (activesData && activesData._isTransitioning) {
           return;
@@ -307,7 +305,7 @@
           }
 
           if (!activesData) {
-            Data__default['default'].setData(elemActive, DATA_KEY, null);
+            Data__default['default'].set(elemActive, DATA_KEY, null);
           }
         });
       }
@@ -468,7 +466,7 @@
 
 
     static collapseInterface(element, config) {
-      let data = Data__default['default'].getData(element, DATA_KEY);
+      let data = Data__default['default'].get(element, DATA_KEY);
       const _config = { ...Default,
         ...Manipulator__default['default'].getDataAttributes(element),
         ...(typeof config === 'object' && config ? config : {})
@@ -515,7 +513,7 @@
     const selector = getSelectorFromElement(this);
     const selectorElements = SelectorEngine__default['default'].find(selector);
     selectorElements.forEach(element => {
-      const data = Data__default['default'].getData(element, DATA_KEY);
+      const data = Data__default['default'].get(element, DATA_KEY);
       let config;
 
       if (data) {

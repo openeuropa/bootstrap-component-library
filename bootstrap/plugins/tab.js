@@ -13,7 +13,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -94,6 +94,22 @@
     }, emulatedDuration);
   };
 
+  const isDisabled = element => {
+    if (!element || element.nodeType !== Node.ELEMENT_NODE) {
+      return true;
+    }
+
+    if (element.classList.contains('disabled')) {
+      return true;
+    }
+
+    if (typeof element.disabled !== 'undefined') {
+      return element.disabled;
+    }
+
+    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+  };
+
   const reflow = element => element.offsetHeight;
 
   const getjQuery = () => {
@@ -116,8 +132,6 @@
     }
   };
 
-  document.documentElement.dir === 'rtl';
-
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
@@ -138,7 +152,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): tab.js
+   * Bootstrap (v5.0.0-beta3): tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -159,7 +173,6 @@
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
   const CLASS_NAME_DROPDOWN_MENU = 'dropdown-menu';
   const CLASS_NAME_ACTIVE = 'active';
-  const CLASS_NAME_DISABLED = 'disabled';
   const CLASS_NAME_FADE = 'fade';
   const CLASS_NAME_SHOW = 'show';
   const SELECTOR_DROPDOWN = '.dropdown';
@@ -183,7 +196,7 @@
 
 
     show() {
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && this._element.classList.contains(CLASS_NAME_ACTIVE) || this._element.classList.contains(CLASS_NAME_DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && this._element.classList.contains(CLASS_NAME_ACTIVE) || isDisabled(this._element)) {
         return;
       }
 
@@ -289,7 +302,7 @@
 
     static jQueryInterface(config) {
       return this.each(function () {
-        const data = Data__default['default'].getData(this, DATA_KEY) || new Tab(this);
+        const data = Data__default['default'].get(this, DATA_KEY) || new Tab(this);
 
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
@@ -311,7 +324,7 @@
 
   EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     event.preventDefault();
-    const data = Data__default['default'].getData(this, DATA_KEY) || new Tab(this);
+    const data = Data__default['default'].get(this, DATA_KEY) || new Tab(this);
     data.show();
   });
   /**

@@ -13,7 +13,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -109,8 +109,6 @@
     }
   };
 
-  document.documentElement.dir === 'rtl';
-
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
@@ -131,7 +129,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): toast.js
+   * Bootstrap (v5.0.0-beta3): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -297,7 +295,7 @@
 
     static jQueryInterface(config) {
       return this.each(function () {
-        let data = Data__default['default'].getData(this, DATA_KEY);
+        let data = Data__default['default'].get(this, DATA_KEY);
 
         const _config = typeof config === 'object' && config;
 

@@ -6,7 +6,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -23,11 +23,9 @@
     return null;
   };
 
-  document.documentElement.dir === 'rtl';
-
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): dom/event-handler.js
+   * Bootstrap (v5.0.0-beta3): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */

@@ -14,7 +14,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -153,7 +153,7 @@
     }
   };
 
-  const isRTL = document.documentElement.dir === 'rtl';
+  const isRTL = () => document.documentElement.dir === 'rtl';
 
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
@@ -175,7 +175,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): modal.js
+   * Bootstrap (v5.0.0-beta3): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -234,7 +234,7 @@
     constructor(element, config) {
       super(element);
       this._config = this._getConfig(config);
-      this._dialog = SelectorEngine__default['default'].findOne(SELECTOR_DIALOG, element);
+      this._dialog = SelectorEngine__default['default'].findOne(SELECTOR_DIALOG, this._element);
       this._backdrop = null;
       this._isShown = false;
       this._isBodyOverflowing = false;
@@ -262,7 +262,7 @@
         return;
       }
 
-      if (this._element.classList.contains(CLASS_NAME_FADE)) {
+      if (this._isAnimated()) {
         this._isTransitioning = true;
       }
 
@@ -315,9 +315,9 @@
 
       this._isShown = false;
 
-      const transition = this._element.classList.contains(CLASS_NAME_FADE);
+      const isAnimated = this._isAnimated();
 
-      if (transition) {
+      if (isAnimated) {
         this._isTransitioning = true;
       }
 
@@ -332,7 +332,7 @@
       EventHandler__default['default'].off(this._element, EVENT_CLICK_DISMISS);
       EventHandler__default['default'].off(this._dialog, EVENT_MOUSEDOWN_DISMISS);
 
-      if (transition) {
+      if (isAnimated) {
         const transitionDuration = getTransitionDurationFromElement(this._element);
         EventHandler__default['default'].one(this._element, 'transitionend', event => this._hideModal(event));
         emulateTransitionEnd(this._element, transitionDuration);
@@ -375,7 +375,7 @@
     }
 
     _showElement(relatedTarget) {
-      const transition = this._element.classList.contains(CLASS_NAME_FADE);
+      const isAnimated = this._isAnimated();
 
       const modalBody = SelectorEngine__default['default'].findOne(SELECTOR_MODAL_BODY, this._dialog);
 
@@ -398,7 +398,7 @@
         modalBody.scrollTop = 0;
       }
 
-      if (transition) {
+      if (isAnimated) {
         reflow(this._element);
       }
 
@@ -419,7 +419,7 @@
         });
       };
 
-      if (transition) {
+      if (isAnimated) {
         const transitionDuration = getTransitionDurationFromElement(this._dialog);
         EventHandler__default['default'].one(this._dialog, 'transitionend', transitionComplete);
         emulateTransitionEnd(this._dialog, transitionDuration);
@@ -490,14 +490,14 @@
     }
 
     _showBackdrop(callback) {
-      const animate = this._element.classList.contains(CLASS_NAME_FADE) ? CLASS_NAME_FADE : '';
+      const isAnimated = this._isAnimated();
 
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
         this._backdrop.className = CLASS_NAME_BACKDROP;
 
-        if (animate) {
-          this._backdrop.classList.add(animate);
+        if (isAnimated) {
+          this._backdrop.classList.add(CLASS_NAME_FADE);
         }
 
         document.body.appendChild(this._backdrop);
@@ -518,13 +518,13 @@
           }
         });
 
-        if (animate) {
+        if (isAnimated) {
           reflow(this._backdrop);
         }
 
         this._backdrop.classList.add(CLASS_NAME_SHOW);
 
-        if (!animate) {
+        if (!isAnimated) {
           callback();
           return;
         }
@@ -541,7 +541,7 @@
           callback();
         };
 
-        if (this._element.classList.contains(CLASS_NAME_FADE)) {
+        if (isAnimated) {
           const backdropTransitionDuration = getTransitionDurationFromElement(this._backdrop);
           EventHandler__default['default'].one(this._backdrop, 'transitionend', callbackRemove);
           emulateTransitionEnd(this._backdrop, backdropTransitionDuration);
@@ -551,6 +551,10 @@
       } else {
         callback();
       }
+    }
+
+    _isAnimated() {
+      return this._element.classList.contains(CLASS_NAME_FADE);
     }
 
     _triggerBackdropTransition() {
@@ -591,11 +595,11 @@
     _adjustDialog() {
       const isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
 
-      if (!this._isBodyOverflowing && isModalOverflowing && !isRTL || this._isBodyOverflowing && !isModalOverflowing && isRTL) {
+      if (!this._isBodyOverflowing && isModalOverflowing && !isRTL() || this._isBodyOverflowing && !isModalOverflowing && isRTL()) {
         this._element.style.paddingLeft = `${this._scrollbarWidth}px`;
       }
 
-      if (this._isBodyOverflowing && !isModalOverflowing && !isRTL || !this._isBodyOverflowing && isModalOverflowing && isRTL) {
+      if (this._isBodyOverflowing && !isModalOverflowing && !isRTL() || !this._isBodyOverflowing && isModalOverflowing && isRTL()) {
         this._element.style.paddingRight = `${this._scrollbarWidth}px`;
       }
     }
@@ -625,6 +629,10 @@
 
     _setElementAttributes(selector, styleProp, callback) {
       SelectorEngine__default['default'].find(selector).forEach(element => {
+        if (element !== document.body && window.innerWidth > element.clientWidth + this._scrollbarWidth) {
+          return;
+        }
+
         const actualValue = element.style[styleProp];
         const calculatedValue = window.getComputedStyle(element)[styleProp];
         Manipulator__default['default'].setDataAttribute(element, styleProp, actualValue);
@@ -666,7 +674,7 @@
 
     static jQueryInterface(config, relatedTarget) {
       return this.each(function () {
-        let data = Data__default['default'].getData(this, DATA_KEY);
+        let data = Data__default['default'].get(this, DATA_KEY);
         const _config = { ...Default,
           ...Manipulator__default['default'].getDataAttributes(this),
           ...(typeof config === 'object' && config ? config : {})
@@ -713,7 +721,7 @@
         }
       });
     });
-    let data = Data__default['default'].getData(target, DATA_KEY);
+    let data = Data__default['default'].get(target, DATA_KEY);
 
     if (!data) {
       const config = { ...Manipulator__default['default'].getDataAttributes(target),

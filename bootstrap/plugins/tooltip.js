@@ -35,7 +35,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -169,7 +169,7 @@
     }
   };
 
-  const isRTL = document.documentElement.dir === 'rtl';
+  const isRTL = () => document.documentElement.dir === 'rtl';
 
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
@@ -191,7 +191,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/sanitizer.js
+   * Bootstrap (v5.0.0-beta3): util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -203,7 +203,7 @@
    * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-  const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/gi;
+  const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/i;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
@@ -304,7 +304,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): tooltip.js
+   * Bootstrap (v5.0.0-beta3): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -342,9 +342,9 @@
   const AttachmentMap = {
     AUTO: 'auto',
     TOP: 'top',
-    RIGHT: isRTL ? 'left' : 'right',
+    RIGHT: isRTL() ? 'left' : 'right',
     BOTTOM: 'bottom',
-    LEFT: isRTL ? 'right' : 'left'
+    LEFT: isRTL() ? 'right' : 'left'
   };
   const Default = {
     animation: true,
@@ -538,14 +538,19 @@
 
       const container = this._getContainer();
 
-      Data__default['default'].setData(tip, this.constructor.DATA_KEY, this);
+      Data__default['default'].set(tip, this.constructor.DATA_KEY, this);
 
       if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
         container.appendChild(tip);
+        EventHandler__default['default'].trigger(this._element, this.constructor.Event.INSERTED);
       }
 
-      EventHandler__default['default'].trigger(this._element, this.constructor.Event.INSERTED);
-      this._popper = Popper.createPopper(this._element, tip, this._getPopperConfig(attachment));
+      if (this._popper) {
+        this._popper.update();
+      } else {
+        this._popper = Popper__namespace.createPopper(this._element, tip, this._getPopperConfig(attachment));
+      }
+
       tip.classList.add(CLASS_NAME_SHOW);
       const customClass = typeof this.config.customClass === 'function' ? this.config.customClass() : this.config.customClass;
 
@@ -590,6 +595,10 @@
       const tip = this.getTipElement();
 
       const complete = () => {
+        if (this._isWithActiveTrigger()) {
+          return;
+        }
+
         if (this._hoverState !== HOVER_STATE_SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
         }
@@ -722,11 +731,11 @@
 
     _initializeOnDelegatedTarget(event, context) {
       const dataKey = this.constructor.DATA_KEY;
-      context = context || Data__default['default'].getData(event.delegateTarget, dataKey);
+      context = context || Data__default['default'].get(event.delegateTarget, dataKey);
 
       if (!context) {
         context = new this.constructor(event.delegateTarget, this._getDelegateConfig());
-        Data__default['default'].setData(event.delegateTarget, dataKey, context);
+        Data__default['default'].set(event.delegateTarget, dataKey, context);
       }
 
       return context;
@@ -887,7 +896,7 @@
       context = this._initializeOnDelegatedTarget(event, context);
 
       if (event) {
-        context._activeTrigger[event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER] = false;
+        context._activeTrigger[event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER] = context._element.contains(event.relatedTarget);
       }
 
       if (context._isWithActiveTrigger()) {
@@ -1002,7 +1011,7 @@
 
     static jQueryInterface(config) {
       return this.each(function () {
-        let data = Data__default['default'].getData(this, DATA_KEY);
+        let data = Data__default['default'].get(this, DATA_KEY);
 
         const _config = typeof config === 'object' && config;
 

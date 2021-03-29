@@ -14,7 +14,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -110,8 +110,6 @@
     }
   };
 
-  document.documentElement.dir === 'rtl';
-
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
@@ -132,7 +130,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): scrollspy.js
+   * Bootstrap (v5.0.0-beta3): scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -179,7 +177,7 @@
   class ScrollSpy extends BaseComponent__default['default'] {
     constructor(element, config) {
       super(element);
-      this._scrollElement = element.tagName === 'BODY' ? window : element;
+      this._scrollElement = this._element.tagName === 'BODY' ? window : this._element;
       this._config = this._getConfig(config);
       this._selector = `${this._config.target} ${SELECTOR_NAV_LINKS}, ${this._config.target} ${SELECTOR_LIST_ITEMS}, ${this._config.target} .${CLASS_NAME_DROPDOWN_ITEM}`;
       this._offsets = [];
@@ -353,7 +351,7 @@
 
     static jQueryInterface(config) {
       return this.each(function () {
-        let data = Data__default['default'].getData(this, DATA_KEY);
+        let data = Data__default['default'].get(this, DATA_KEY);
 
         const _config = typeof config === 'object' && config;
 

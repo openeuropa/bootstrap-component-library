@@ -12,7 +12,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): util/index.js
+   * Bootstrap (v5.0.0-beta3): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -37,8 +37,6 @@
     }
   };
 
-  document.documentElement.dir === 'rtl';
-
   const defineJQueryPlugin = (name, plugin) => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
@@ -59,7 +57,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta2): button.js
+   * Bootstrap (v5.0.0-beta3): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -97,7 +95,7 @@
 
     static jQueryInterface(config) {
       return this.each(function () {
-        let data = Data__default['default'].getData(this, DATA_KEY);
+        let data = Data__default['default'].get(this, DATA_KEY);
 
         if (!data) {
           data = new Button(this);
@@ -120,7 +118,7 @@
   EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
     event.preventDefault();
     const button = event.target.closest(SELECTOR_DATA_TOGGLE);
-    let data = Data__default['default'].getData(button, DATA_KEY);
+    let data = Data__default['default'].get(button, DATA_KEY);
 
     if (!data) {
       data = new Button(button);
