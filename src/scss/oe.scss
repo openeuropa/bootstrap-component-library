@@ -12,13 +12,13 @@
 // @import "@oe/bootstrap/scss/code";
 @import "@oe/bootstrap/scss/grid";
 // @import "@oe/bootstrap/scss/tables";
-// @import "@oe/bootstrap/scss/forms";
+@import "@oe/bootstrap/scss/forms";
 @import "@oe/bootstrap/scss/buttons";
 @import "@oe/bootstrap/scss/transitions";
 @import "@oe/bootstrap/scss/dropdown";
 // @import "@oe/bootstrap/scss/button-group";
-// @import "@oe/bootstrap/scss/input-group"; // Requires forms
-// @import "@oe/bootstrap/scss/custom-forms";
+//@import "@oe/bootstrap/scss/input-group"; // Requires forms
+//@import "@oe/bootstrap/scss/custom-forms";
 @import "@oe/bootstrap/scss/nav";
 @import "@oe/bootstrap/scss/navbar"; // Requires nav
 // @import "@oe/bootstrap/scss/card";
@@ -43,11 +43,5 @@
 @import "@oe/header/header";
 @import "@oe/navbar/navbar";
 
-//
-// Custom styles
-//
-
-// Style Bootstrap icons
-.bi {
-  fill: currentColor;
-}
+// Helpers
+@import "@oe/bootstrap/scss/helpers";

@@ -18,7 +18,7 @@ $navbar-dark-active-color: #fff;
 // @import "@oe/bootstrap/scss/code";
 @import "@oe/bootstrap/scss/grid";
 // @import "@oe/bootstrap/scss/tables";
-// @import "@oe/bootstrap/scss/forms";
+@import "@oe/bootstrap/scss/forms";
 @import "@oe/bootstrap/scss/buttons";
 @import "@oe/bootstrap/scss/transitions";
 @import "@oe/bootstrap/scss/dropdown";
@@ -47,6 +47,9 @@ $navbar-dark-active-color: #fff;
 @import "@oe/bootstrap/scss/utilities/api";
 // @import "@oe/bootstrap/scss/print";
 
+// Helpers
+@import "@oe/bootstrap/scss/helpers";
+
 // TODO: use @use instead (see below)
 $header-margin: 1.5rem .5rem;
 $navbar-background: $primary;
@@ -66,9 +69,6 @@ $language-item-color-hover: $dark;
   $navbar-link-active-background-active: #003776,
 ); */
 
-//
-// Custom styles
-//
 
 // header
 .oe-navbar-header {
