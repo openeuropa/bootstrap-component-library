@@ -1,0 +1,14 @@
+// navbar
+@use "@oe/navbar/navbar" with (
+  $navbar-background: $primary,
+  $navbar-link-active-background: #003776,
+);
+
+@media (min-width: 992px) {
+  .oe-navbar .nav-link.active {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+    margin-top: -#{map-get($spacers, 2)};
+    margin-bottom: -#{map-get($spacers, 2)};
+  }
+}

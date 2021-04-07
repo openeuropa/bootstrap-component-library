@@ -1,113 +1,51 @@
-@import "@oe/bootstrap/scss/functions"; // Required
-@import "@oe/bootstrap/scss/variables"; // Required
-@import "@oe/bootstrap/scss/mixins"; // Required
-@import "@oe/bootstrap/scss/containers";
+// Configuration
+@import "@oe/bootstrap/scss/functions";
+@import "@oe/bootstrap/scss/variables";
+@import "@oe/bootstrap/scss/mixins";
+@import "@oe/bootstrap/scss/utilities";
 
 // Override Bootstrap variables
-$primary: #004494;
-$secondary: #ffd617;
-$font-family-sans-serif: arial,sans-serif;
-$navbar-dark-color: #fff;
-$navbar-dark-hover-color: #fff;
-$navbar-dark-active-color: #fff;
+@import "base/variables";
 
+// Layout & components
 @import "@oe/bootstrap/scss/root";
-@import "@oe/bootstrap/scss/reboot"; // Required
+@import "@oe/bootstrap/scss/reboot";
 @import "@oe/bootstrap/scss/type";
-// @import "@oe/bootstrap/scss/images";
-// @import "@oe/bootstrap/scss/code";
+@import "@oe/bootstrap/scss/images";
+@import "@oe/bootstrap/scss/containers";
 @import "@oe/bootstrap/scss/grid";
-// @import "@oe/bootstrap/scss/tables";
+@import "@oe/bootstrap/scss/tables";
 @import "@oe/bootstrap/scss/forms";
 @import "@oe/bootstrap/scss/buttons";
 @import "@oe/bootstrap/scss/transitions";
 @import "@oe/bootstrap/scss/dropdown";
-// @import "@oe/bootstrap/scss/button-group";
-// @import "@oe/bootstrap/scss/input-group"; // Requires forms
-// @import "@oe/bootstrap/scss/custom-forms";
+@import "@oe/bootstrap/scss/button-group";
 @import "@oe/bootstrap/scss/nav";
-@import "@oe/bootstrap/scss/navbar"; // Requires nav
+@import "@oe/bootstrap/scss/navbar";
 // @import "@oe/bootstrap/scss/card";
+// @import "@oe/bootstrap/scss/accordion";
 // @import "@oe/bootstrap/scss/breadcrumb";
 // @import "@oe/bootstrap/scss/pagination";
 @import "@oe/bootstrap/scss/badge";
-// @import "@oe/bootstrap/scss/jumbotron";
 @import "@oe/bootstrap/scss/alert";
 // @import "@oe/bootstrap/scss/progress";
-// @import "@oe/bootstrap/scss/media";
 // @import "@oe/bootstrap/scss/list-group";
 @import "@oe/bootstrap/scss/close";
 // @import "@oe/bootstrap/scss/toasts";
-@import "@oe/bootstrap/scss/modal"; // Requires transitions
+@import "@oe/bootstrap/scss/modal";
 // @import "@oe/bootstrap/scss/tooltip";
 // @import "@oe/bootstrap/scss/popover";
 // @import "@oe/bootstrap/scss/carousel";
 // @import "@oe/bootstrap/scss/spinners";
-@import "@oe/bootstrap/scss/utilities";
+// @import "@oe/bootstrap/scss/offcanvas";
+
+// Helpers
+@import "@oe/bootstrap/scss/helpers";
+
+// Utilities
 @import "@oe/bootstrap/scss/utilities/api";
-// @import "@oe/bootstrap/scss/print";
 
-// Helpers
-@import "@oe/bootstrap/scss/helpers";
-
-// TODO: use @use instead (see below)
-$header-margin: 1.5rem .5rem;
-$navbar-background: $primary;
-$navbar-link-active-background: #003776;
-$language-background: $primary;
-$language-color: #fff;
-$language-list-gap: map-get($spacers, 2);
-$language-item-background: #fff;
-$language-item-color: $primary;
-$language-item-background-hover: $secondary;
-$language-item-color-hover: $dark;
-@import "@oe/navbar/navbar";
-@import "@oe/header/header";
-
-// Helpers
-@import "@oe/bootstrap/scss/helpers";
-
-/* @use "@oe/navbar/navbar" with (
-  $navbar-background: $primary,
-  $navbar-link-active-background-active: #003776,
-); */
-
-// header
-.oe-navbar-header {
-  align-items: flex-end;
-}
-
-// navbar
-@media (min-width: 992px) {
-  .oe-navbar .nav-link.active {
-    padding-top: $spacer;
-    padding-bottom: $spacer;
-    margin-top: -#{map-get($spacers, 2)};
-    margin-bottom: -#{map-get($spacers, 2)};
-  }
-}
-
-// language list
-.oe-language .modal-body {
-  padding-top: map-get($spacers, 5);
-  padding-bottom: map-get($spacers, 5);
-}
-
-.oe-language__title {
-  margin-bottom: map-get($spacers, 4);
-}
-
-.oe-language__list {
-  margin-bottom: map-get($spacers, 4);
-}
-
-.oe-language__item {
-  padding: map-get($spacers, 2) $spacer;
-  font-weight: $font-weight-bold;
-  text-decoration: none; //should be handled at link level
-
-  &:hover,
-  &:focus {
-    text-decoration: underline; //should be handled at link level
-  }
-}
+// Custom Styles
+@import "components/header";
+@import "components/navbar";
+@import "components/language-list";

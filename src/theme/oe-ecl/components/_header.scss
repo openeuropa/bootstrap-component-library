@@ -1,0 +1,15 @@
+// header
+@use "@oe/header/header" with (
+  $header-margin: 1.5rem .5rem,
+  $language-background: $primary,
+  $language-color: #fff,
+  $language-list-gap: map-get($spacers, 2),
+  $language-item-background: #fff,
+  $language-item-color: $primary,
+  $language-item-background-hover: $secondary,
+  $language-item-color-hover: $dark,
+);
+
+.oe-navbar-header {
+  align-items: flex-end;
+}
