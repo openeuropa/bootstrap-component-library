@@ -1,0 +1,39 @@
+{% spaceless %}
+
+{# 
+  Parameters:
+  - label (string) (default: '')
+  - variant (string) (default: 'primary')
+  - size (string) (default: 'md')
+  - type (string) (default: 'button')
+  - outline (boolean) (default: false)
+  - disabled (boolean) (default: false)
+  - text_nowrap (boolean) (default: false)
+  - assistive_text (string) (default: '')
+#}
+
+{% set _label = label|default('') %}
+{% set _variant = variant|default('primary') %}
+{% set _size = size|default('md') %}
+{% set _type = type|default('button') %}
+{% set _outline = outline|default(false) %}
+{% set _disabled = disabled|default(false) %}
+{% set _toggle = toggle|default(false) %}
+{% set _text_nowrap = text_nowrap|default(false) %}
+{% set _assistive_text = assistive_text|default('') %}
+{% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
+{% set _class = _class ~ ' btn-' + _size %}
+{% set _class = _class ~ (_text_nowrap ? ' text-nowrap' : '') %}
+
+<button
+  type="{{ _type }}"
+  class="{{ _class }}" 
+  {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
+  {{ _toggle ? 'data-bs-toggle="button" autocomplete="off"' : '' }}>
+    {%- if _assistive_text is not empty -%}
+      <span class="visually-hidden">{{- _assistive_text -}}</span>
+    {% endif %}
+    {{- label -}}
+</button>
+
+{% endspaceless %}
