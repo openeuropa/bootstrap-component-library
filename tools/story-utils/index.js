@@ -164,5 +164,51 @@ export const getFormControls = (data, type) => {
     };
   }
 
+  if (type === "radio" || type === "checkbox") {
+    argTypes.toggle = {
+      type: { name: "boolean" },
+      description: `Turns a ${type} into a button`,
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    }
+    argTypes.toggle_variant = {
+      name: "Toggle variant",
+      type: { name: "select" },
+      description: "Variant of the button",
+      defaultValue: data.variant,
+      control: {
+        type: "select",
+        options: [
+          "primary",
+          "outline-primary",
+          "secondary",
+          "outline-secondary",
+          "success",
+          "outline-success",
+          "danger",
+          "outline-danger",
+          "warning",
+          "outline-warning",
+          "info",
+          "outline-info",
+          "light",
+          "outline-light",
+          "dark",
+          "outline-dark",
+          "link"
+        ],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "primary" },
+        category: "Style",
+      },
+    }
+  }
+
   return argTypes;
 };

@@ -18,6 +18,8 @@
   - "hidden_label" (boolean) (default: false)
   - "size" (string) (default: '')
   - "switch" (boolean) (default: false)
+  - "toggle" (boolean) (default: false)
+  - "toggle_variant" (string) (default: 'primary')
 #}
 
 {% set _id = id|default('') %}
@@ -38,6 +40,8 @@
 {% set _horizontal_class = horizontal_class|default('col-sm-10') %}
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
 {% set _switch = switch|default(false) %}
+{% set _toggle = toggle|default(false) %}
+{% set _toggle_variant = toggle_variant|default('primary') %}
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _class = 'form-control' %}
@@ -61,6 +65,10 @@
 {% if _hidden_label %}
   {% set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
+{% if _toggle %}
+  {% set _label_class = _label_class ~ ' btn btn-' ~ _toggle_variant %}
+  {% set _class = _class ~ ' btn-check' %}
+{% endif %}
 
 {% if _label is not empty %}
   {% set _label_block %}
@@ -75,7 +83,7 @@
   {% endset %}
 {% endif %}
 
-{% if _floating or _horizontal or _type == 'checkbox' or _type == 'radio' %}
+{% if (_floating or _horizontal or _type == 'checkbox' or _type == 'radio') and not _toggle %}
   {% set _wrapper_class = _floating ? 'form-floating' : 'row' %}
 {% if _type == 'checkbox' or _type == 'radio' %}
   {% set _wrapper_class = 'form-check' %}
@@ -131,7 +139,7 @@
     {{- _helper_text -}}
   </div>
 {% endif %}
-{% if _floating or _horizontal or _type == 'checkbox' or type == 'radio' %}
+{% if (_floating or _horizontal or _type == 'checkbox' or type == 'radio') and not _toggle %}
 </div>
 {% endif %}
 

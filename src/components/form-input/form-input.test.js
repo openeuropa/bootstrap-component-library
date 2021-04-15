@@ -85,4 +85,20 @@ describe("OE - Form Input", () => {
       render({ ...demoData, type: "checkbox", switch: true })
     ).resolves.toMatchSnapshot();
   });
+
+  test("checkbox button toggle renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, type: "checkbox", toggle: true, toggle_variant: 'primary' })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("radio button toggle renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, type: "radio", toggle: true, toggle_variant: 'primary' })
+    ).resolves.toMatchSnapshot();
+  });
 });
