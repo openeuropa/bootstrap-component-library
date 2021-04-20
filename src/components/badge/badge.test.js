@@ -1,18 +1,10 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-badge/data";
+import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/badge/badge.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const backgrounds = [
-  "primary",
-  "secondary",
-  "success",
-  "danger",
-  "warning",
-  "info",
-  "light",
-  "dark",
-];
+const backgrounds = getVariants();
 
 describe("OE - badge", () => {
   test("renders correctly with a link", () => {

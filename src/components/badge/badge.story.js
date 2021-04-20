@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-badge/data";
 import badge from "./badge.html.twig";
+import { getVariants } from "@oe/story-utils";
 
 const getArgTypes = (data) => {
   return {
@@ -40,16 +41,7 @@ const getArgTypes = (data) => {
       defaultValue: data.background,
       control: {
         type: "select",
-        options: [
-          "primary",
-          "secondary",
-          "success",
-          "danger",
-          "warning",
-          "info",
-          "light",
-          "dark",
-        ],
+        options: getVariants()
       },
       table: {
         type: { summary: "string" },

@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-alert/data";
 import alert from "./alert.html.twig";
+import { getVariants } from "@oe/story-utils";
 
 const getArgTypes = (data) => {
   return {
@@ -10,16 +11,7 @@ const getArgTypes = (data) => {
       defaultValue: data.variant,
       control: {
         type: "select",
-        options: [
-          "primary",
-          "secondary",
-          "success",
-          "danger",
-          "warning",
-          "info",
-          "light",
-          "dark",
-        ],
+        options: getVariants()
       },
       table: {
         type: { summary: "string" },

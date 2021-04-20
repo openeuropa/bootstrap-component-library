@@ -1,19 +1,10 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-button/data";
+import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const variants = [
-  "primary",
-  "secondary",
-  "success",
-  "danger",
-  "warning",
-  "info",
-  "light",
-  "dark",
-  "link"
-];
+const variants = [...getVariants(), 'link'];
 const sizes = [
   "lg",
   "md",

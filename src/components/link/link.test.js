@@ -1,25 +1,17 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-alert/data";
+import demoData from "@oe/data-link/data";
 import { getVariants } from "@oe/story-utils";
 
-const template = "@oe/alert/alert.html.twig";
+const template = "@oe/link/link.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const variants = getVariants();
 
-describe("OE - Alert", () => {
-  test(`renders correctly without close button`, () => {
+describe("OE - Link", () => {
+  test(`renders correctly`, () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dismissible: false })
-    ).resolves.toMatchSnapshot();
-  });
-
-  test(`renders correctly without animation for the close button`, () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, animated_dismiss: false })
+      render(demoData)
     ).resolves.toMatchSnapshot();
   });
 
@@ -31,5 +23,13 @@ describe("OE - Alert", () => {
         render({ ...demoData, variant: variant })
       ).resolves.toMatchSnapshot();
     });
+  });
+
+  test(`as toggle renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, toggle_target: 'collapseElement' })
+    ).resolves.toMatchSnapshot();
   });
 });

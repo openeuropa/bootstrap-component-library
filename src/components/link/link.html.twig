@@ -1,0 +1,58 @@
+{% spaceless %}
+
+{# Parameters:
+  - label (string) (default: '')
+  - path (string) (default: '')
+  - variant (string) (default: '')
+    - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
+  - toggle_target (string) (default: '')
+  - aria_expanded (string) (default: 'false')
+  - extra_classes (string) (default: '')
+  - extra_attributes (array of objects based on name - attribute name and value - attribute value)) (default: {})
+#}
+
+{% set _label = label|default('') %}
+{% set _path = path|default('') %}
+{% set _variant = variant|default('') %}
+{% set _toggle_target = toggle_target|default('') %}
+{% set _aria_expanded = aria_expanded|default('false') %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _extra_attributes = '' %}
+{% set _class = '' %}
+
+{% if _extra_classes is not empty %}
+  {% set _class = _extra_classes %}
+{% endif %}
+{% if _variant is not empty %}
+  {% set _class = _class ~ ' link-' ~ _variant %}
+{% endif %}
+{% if _toggle_target is not empty %}
+  {% set _path = '#' ~ _toggle_target %}
+{% endif %}
+{% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
+  {% for attr in extra_attributes %}
+    {% if attr.value is defined %}
+      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') ~ '="' ~ attr.value|e('html_attr') ~ '"' %}
+    {% else %}
+      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<a 
+  href="{{ _path }}"
+{% if _class is not empty %}
+  class="{{ _class }}"
+{% endif %}
+{% if _toggle_target is not empty %}
+  data-bs-toggle="collapse"
+  role="button"
+  aria-expanded="{{ _aria_expanded }}"
+  aria-controls="{{ _toggle_target }}"
+{% endif %}
+{{ _extra_attributes|raw }}
+>
+  {{- _label -}}
+</a>
+
+{% endspaceless %}

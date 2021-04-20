@@ -212,3 +212,16 @@ export const getFormControls = (data, type) => {
 
   return argTypes;
 };
+
+export const getVariants = () => {
+  return [
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'light',
+    'dark'
+  ];
+}

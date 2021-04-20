@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-button/data";
 import button from "./button.html.twig";
+import { getVariants } from "@oe/story-utils";
 
 const getArgTypes = (data) => {
   return {
@@ -59,17 +60,7 @@ const getArgTypes = (data) => {
       defaultValue: data.variant,
       control: {
         type: "select",
-        options: [
-          "primary",
-          "secondary",
-          "success",
-          "danger",
-          "warning",
-          "info",
-          "light",
-          "dark",
-          "link"
-        ],
+        options: [ ...getVariants(), 'link'],
       },
       table: {
         type: { summary: "string" },
