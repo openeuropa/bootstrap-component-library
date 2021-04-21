@@ -1,5 +1,6 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-link/data";
+import toggleDemoData from "@oe/data-link/toggleData";
 import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/link/link.html.twig";
@@ -29,7 +30,7 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, toggle_target: 'collapseElement' })
+      render(toggleDemoData)
     ).resolves.toMatchSnapshot();
   });
 });

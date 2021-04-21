@@ -1,7 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-button/data";
+import toggleDemoData from "@oe/data-button/toggleData";
 import button from "./button.html.twig";
 import { getVariants } from "@oe/story-utils";
+
+const withCollapse = (story) => {
+  const demo = story();
+  return `${demo} <div class="collapse mt-3" id="${toggleDemoData.target}">${toggleDemoData.collapse_text}</div>`;
+};
 
 const getArgTypes = (data) => {
   return {
@@ -74,7 +80,7 @@ const getArgTypes = (data) => {
       defaultValue: "md",
       control: {
         type: "select",
-        options: ['sm','md','lg'],
+        options: { small: "sm", medium:"md", large: "lg" },
       },
       table: {
         type: { summary: "string" },
@@ -85,16 +91,6 @@ const getArgTypes = (data) => {
     disabled: {
       type: { name: "boolean" },
       description: "Enable the disabled state",
-      defaultValue: false,
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
-    },
-    toggle: {
-      type: { name: "boolean" },
-      description: "Enable the toggle state",
       defaultValue: false,
       table: {
         type: { summary: "boolean" },
@@ -131,7 +127,12 @@ export default {
   }
 };
 
-export const Primary = (args) => button(applyArgs(demoData, args));
+export const Default = (args) => button(applyArgs(demoData, args));
 
-Primary.storyName = "Default";
-Primary.argTypes = getArgTypes(demoData);
+Default.argTypes = getArgTypes(demoData);
+
+export const Collapse = (args) => button(applyArgs(toggleDemoData, args));
+
+Collapse.storyName = "Collapse";
+Collapse.argTypes = getArgTypes(toggleDemoData);
+Collapse.decorators = [withCollapse];

@@ -1,5 +1,6 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-button/data";
+import toggleDemoData from "@oe/data-link/toggleData";
 import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/button/button.html.twig";
@@ -30,6 +31,14 @@ describe("OE - Button", () => {
         render({ ...demoData, size: size })
       ).resolves.toMatchSnapshot();
     });
+  });
+
+  test("with toggle renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render(toggleDemoData)
+    ).resolves.toMatchSnapshot();
   });
 });
 

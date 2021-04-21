@@ -1,7 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-link/data";
+import toggleDemoData from "@oe/data-link/toggleData";
 import link from "./link.html.twig";
 import { getVariants } from "@oe/story-utils";
+
+const withCollapse = (story) => {
+  const demo = story();
+  return `${demo} <div class="collapse mt-3" id="${toggleDemoData.target}">${toggleDemoData.collapse_text}</div>`;
+};
 
 const getArgTypes = (data) => {
   return {
@@ -54,3 +60,9 @@ export default {
 export const Default = (args) => link(applyArgs(demoData, args));
 
 Default.argTypes = getArgTypes(demoData);
+
+export const Collapse = (args) => link(applyArgs(toggleDemoData, args));
+
+Collapse.storyName = "Collapse";
+Collapse.argTypes = getArgTypes(toggleDemoData);
+Collapse.decorators = [withCollapse];

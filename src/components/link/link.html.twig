@@ -5,7 +5,10 @@
   - path (string) (default: '')
   - variant (string) (default: '')
     - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
-  - toggle_target (string) (default: '')
+  - toggle (boolean) (default: false)
+  - toggle_type (string) (default: 'button')
+    - options ["button", "collapse"]
+  - target (string) (default: '')
   - aria_expanded (string) (default: 'false')
   - extra_classes (string) (default: '')
   - extra_attributes (array of objects based on name - attribute name and value - attribute value)) (default: {})
@@ -14,7 +17,9 @@
 {% set _label = label|default('') %}
 {% set _path = path|default('') %}
 {% set _variant = variant|default('') %}
-{% set _toggle_target = toggle_target|default('') %}
+{% set _toggle = toggle|default(false) %}
+{% set _toggle_type = toggle_type|default('button') %}
+{% set _target = target|default('') %}
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _extra_classes = extra_classes|default('') %}
 {% set _extra_attributes = '' %}
@@ -26,8 +31,8 @@
 {% if _variant is not empty %}
   {% set _class = _class ~ ' link-' ~ _variant %}
 {% endif %}
-{% if _toggle_target is not empty %}
-  {% set _path = '#' ~ _toggle_target %}
+{% if _toggle %}
+  {% set _path = '#' ~ _target %}
 {% endif %}
 {% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
   {% for attr in extra_attributes %}
@@ -44,11 +49,13 @@
 {% if _class is not empty %}
   class="{{ _class }}"
 {% endif %}
-{% if _toggle_target is not empty %}
-  data-bs-toggle="collapse"
+{% if _toggle %}
+  data-bs-toggle="{{ _toggle_type }}"
   role="button"
-  aria-expanded="{{ _aria_expanded }}"
-  aria-controls="{{ _toggle_target }}"
+  {% if _toggle_type == 'collapse' %}
+    aria-expanded="{{ _aria_expanded }}"
+    aria-controls="{{ _target }}"
+  {% endif %}
 {% endif %}
 {{ _extra_attributes|raw }}
 >
