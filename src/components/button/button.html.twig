@@ -17,6 +17,8 @@
     - options ["true", "false"]
   - text_nowrap (boolean) (default: false)
   - assistive_text (string) (default: '')
+  - clean_class (boolean) (default: true)
+  - extra_classes (string) (default: '')
 #}
 
 {% set _label = label|default('') %}
@@ -31,9 +33,17 @@
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _text_nowrap = text_nowrap|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
-{% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
-{% set _class = _class ~ ' btn-' + _size %}
+{% set _clean_class = clean_class|default(false) %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = '' %}
+{% if _clean_class == false %}
+  {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
+  {% set _class = _class ~ ' btn-' + _size %}
+{% endif %}
 {% set _class = _class ~ (_text_nowrap ? ' text-nowrap' : '') %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
 
 <button
   type="{{ _type }}"

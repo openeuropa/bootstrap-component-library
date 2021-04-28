@@ -20,6 +20,7 @@
   - "switch" (boolean) (default: false)
   - "toggle" (boolean) (default: false)
   - "toggle_variant" (string) (default: 'primary')
+  - "remove_wrapper" (boolean) (default: false)
 #}
 
 {% set _id = id|default('') %}
@@ -42,6 +43,7 @@
 {% set _switch = switch|default(false) %}
 {% set _toggle = toggle|default(false) %}
 {% set _toggle_variant = toggle_variant|default('primary') %}
+{% set _remove_wrapper = remove_wrapper|default(false) %}
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _class = 'form-control' %}
@@ -83,7 +85,10 @@
   {% endset %}
 {% endif %}
 
-{% if (_floating or _horizontal or _type == 'checkbox' or _type == 'radio') and not _toggle %}
+{% if (_floating or _horizontal or _type == 'checkbox' or _type == 'radio') and 
+      not _toggle and
+      not _remove_wrapper
+%}
   {% set _wrapper_class = _floating ? 'form-floating' : 'row' %}
 {% if _type == 'checkbox' or _type == 'radio' %}
   {% set _wrapper_class = 'form-check' %}
@@ -139,7 +144,10 @@
     {{- _helper_text -}}
   </div>
 {% endif %}
-{% if (_floating or _horizontal or _type == 'checkbox' or type == 'radio') and not _toggle %}
+{% if (_floating or _horizontal or _type == 'checkbox' or type == 'radio') and 
+      not _toggle and
+      not _remove_wrapper
+%}
 </div>
 {% endif %}
 
