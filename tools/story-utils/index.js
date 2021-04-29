@@ -174,7 +174,7 @@ export const getFormControls = (data, type) => {
         defaultValue: { summary: "false" },
         category: "Style",
       },
-    }
+    };
     argTypes.toggle_variant = {
       name: "Toggle variant",
       type: { name: "select" },
@@ -199,7 +199,7 @@ export const getFormControls = (data, type) => {
           "outline-light",
           "dark",
           "outline-dark",
-          "link"
+          "link",
         ],
       },
       table: {
@@ -207,7 +207,7 @@ export const getFormControls = (data, type) => {
         defaultValue: { summary: "primary" },
         category: "Style",
       },
-    }
+    };
   }
 
   return argTypes;
@@ -215,86 +215,77 @@ export const getFormControls = (data, type) => {
 
 export const getVariants = () => {
   return [
-    'primary',
-    'secondary',
-    'success',
-    'danger',
-    'warning',
-    'info',
-    'light',
-    'dark'
+    "primary",
+    "secondary",
+    "success",
+    "danger",
+    "warning",
+    "info",
+    "light",
+    "dark",
   ];
-}
+};
 
 export const getIconControls = (type, data) => {
   return {
     name: {
-      name: 'icon name',
-      description: 'Icon name',
-      defaultValue: (data && data.name) ? data.name : '',
+      name: "icon name",
+      description: "Icon name",
+      defaultValue: data && data.name ? data.name : "",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: '' },
-        category: 'Icon',
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Icon",
       },
       control: {
-        type: 'select',
+        type: "select",
         options: getIconNames(),
       },
     },
     transformation: {
-      name: 'icon transformation',
-      type: { name: 'select' },
-      description: 'Icon transformation',
+      name: "icon transformation",
+      type: { name: "select" },
+      description: "Icon transformation",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: '' },
-        category: 'Icon',
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Icon",
       },
       control: {
-        type: 'select',
+        type: "select",
         options: [
           "rotate-90",
           "rotate-180",
           "rotate-270",
           "flip-horizontal",
-          "flip-vertical"
-        ]
+          "flip-vertical",
+        ],
       },
     },
     position: {
-      name: 'icon position',
-      type: { name: 'inline-radio' },
-      description: 'Icon position inside the button or link',
+      name: "icon position",
+      type: { name: "inline-radio" },
+      description: "Icon position inside the button or link",
       defaultValue: "after",
       table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'after' },
-        category: 'Icon',
+        type: { summary: "string" },
+        defaultValue: { summary: "after" },
+        category: "Icon",
         disable: (type !== "link") & (type !== "button"),
       },
       control: {
-        type: 'inline-radio',
-        options: ['before', 'after'],
+        type: "inline-radio",
+        options: ["before", "after"],
       },
     },
     size: {
-      name: 'icon size',
+      name: "icon size",
       type: { name: "select" },
       description: "Size of icon",
       defaultValue: "s",
       control: {
         type: "select",
-        options: [
-          "2xs",
-          "xs",
-          "s",
-          "m",
-          "l",
-          "xl",
-          "2xl",
-          "fluid"
-        ],
+        options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
       },
       table: {
         type: { summary: "string" },
@@ -302,29 +293,29 @@ export const getIconControls = (type, data) => {
         category: "Icon",
       },
     },
-  }
-}
+  };
+};
 
 export const getIconNames = () => {
   return [
-    'none',
-    'alarm',
-    'arrow-left',
-    'arrow-right',
-    'chat',
-    'cloud',
-    'file-earmark-arrow-down',
-    'wifi',
-    'share',
-    'mouse',
-    'key',
-    'hand-index',
-    'fonts',
-    'fullscreen',
-    'fullscreen-exit',
-    'filter',
-    'files',
-    'eye',
-    'eye-slash'
+    "none",
+    "alarm",
+    "arrow-left",
+    "arrow-right",
+    "chat",
+    "cloud",
+    "file-earmark-arrow-down",
+    "wifi",
+    "share",
+    "mouse",
+    "key",
+    "hand-index",
+    "fonts",
+    "fullscreen",
+    "fullscreen-exit",
+    "filter",
+    "files",
+    "eye",
+    "eye-slash",
   ];
-}
+};

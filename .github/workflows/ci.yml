@@ -26,5 +26,7 @@ jobs:
         run: yarn css
       - name: Build js
         run: yarn js
+      - name: Code style
+        run: yarn pretty:check
       - name: Test
         run: yarn test
