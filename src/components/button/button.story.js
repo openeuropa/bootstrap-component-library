@@ -29,9 +29,9 @@ const getArgTypes = (data) => {
       control: {
         type: "select",
         options: {
-          Button: 'button',
-          Submit: 'submit',
-          Reset: 'reset'
+          Button: "button",
+          Submit: "submit",
+          Reset: "reset",
         },
       },
       table: {
@@ -43,7 +43,8 @@ const getArgTypes = (data) => {
     assistive_text: {
       type: { name: "string" },
       name: "Additional text visually hidden",
-      description: "Text inside the button to be visible on assistive technologies",
+      description:
+        "Text inside the button to be visible on assistive technologies",
       defaultValue: false,
       table: {
         type: { summary: "string" },
@@ -67,7 +68,7 @@ const getArgTypes = (data) => {
       defaultValue: data.variant,
       control: {
         type: "select",
-        options: [ ...getVariants(), 'link'],
+        options: [...getVariants(), "link"],
       },
       table: {
         type: { summary: "string" },
@@ -81,7 +82,7 @@ const getArgTypes = (data) => {
       defaultValue: "md",
       control: {
         type: "select",
-        options: { small: "sm", medium:"md", large: "lg" },
+        options: { small: "sm", medium: "md", large: "lg" },
       },
       table: {
         type: { summary: "string" },
@@ -110,19 +111,19 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    ...getIconControls('button')
+    ...getIconControls("button"),
   };
 };
 
 const applyArgs = (data, args) => {
-  if (args.name && args.name !== 'none') {
+  if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;
     data.icon.size = args.size;
     data.icon.path = defaultSprite;
     data.icon.transformation = args.transformation;
   }
-  if(args.name == 'none') {
+  if (args.name == "none") {
     data.icon = null;
   }
   return Object.assign(data, args);
@@ -134,9 +135,10 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url: 'https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2624%3A0',
+      url:
+        "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2624%3A0",
     },
-  }
+  },
 };
 
 export const Default = (args) => button(applyArgs(demoData, args));

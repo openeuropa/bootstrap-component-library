@@ -38,7 +38,7 @@ const getArgTypes = (data) => {
       defaultValue: "",
       control: {
         type: "select",
-        options: getVariants()
+        options: getVariants(),
       },
       table: {
         type: { summary: "string" },
@@ -46,19 +46,19 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    ...getIconControls('link')
+    ...getIconControls("link"),
   };
 };
 
 const applyArgs = (data, args) => {
-  if (args.name && args.name !== 'none') {
+  if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;
     data.icon.size = args.size;
     data.icon.path = defaultSprite;
     data.icon.transformation = args.transformation;
   }
-  if(args.name == 'none') {
+  if (args.name == "none") {
     data.icon = null;
   }
   return Object.assign(data, args);

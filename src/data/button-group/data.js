@@ -2,24 +2,24 @@ module.exports = {
   items: [
     [
       {
-        label: 'I am a button',
+        label: "I am a button",
         outline: false,
-        variant: 'danger'
+        variant: "danger",
       },
       {
-        label: 'I am a button',
+        label: "I am a button",
         outline: false,
-        variant: 'primary'
+        variant: "primary",
       },
       {
-        label: 'I am a button',
+        label: "I am a button",
         outline: true,
-        variant: 'dark'
+        variant: "dark",
       },
       {
-        label: 'I am a button',
+        label: "I am a button",
         outline: false,
-        variant: 'warning'
+        variant: "warning",
       },
     ],
   ],

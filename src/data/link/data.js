@@ -4,7 +4,7 @@ module.exports = {
   extra_attributes: [
     {
       name: "target",
-      value: "_blank"
-    }
-  ]
+      value: "_blank",
+    },
+  ],
 };

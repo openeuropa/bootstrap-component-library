@@ -11,9 +11,7 @@ describe("OE - Link", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(
-      render(demoData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
   variants.forEach((variant) => {
@@ -29,16 +27,21 @@ describe("OE - Link", () => {
   test(`as toggle renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(
-      render(toggleDemoData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(toggleDemoData)).resolves.toMatchSnapshot();
   });
 
   test("with icon renders correctly", () => {
     expect.assertions(1);
 
     return expect(
-      render({...demoData, icon: {name: "mouse", transformation: "rotate-90", path: 'bootstrap-icons.svg'}})
+      render({
+        ...demoData,
+        icon: {
+          name: "mouse",
+          transformation: "rotate-90",
+          path: "bootstrap-icons.svg",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 });

@@ -1,4 +1,4 @@
 module.exports = {
-  name: 'eye-slash',
-  path: 'boostrap-icons.svg'
+  name: "eye-slash",
+  path: "boostrap-icons.svg",
 };

@@ -5,12 +5,8 @@ import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const variants = [...getVariants(), 'link'];
-const sizes = [
-  "lg",
-  "md",
-  "sm",
-];
+const variants = [...getVariants(), "link"];
+const sizes = ["lg", "md", "sm"];
 
 describe("OE - Button", () => {
   variants.forEach((variant) => {
@@ -36,16 +32,21 @@ describe("OE - Button", () => {
   test("with toggle renders correctly", () => {
     expect.assertions(1);
 
-    return expect(
-      render(toggleDemoData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(toggleDemoData)).resolves.toMatchSnapshot();
   });
 
   test("with icon renders correctly", () => {
     expect.assertions(1);
 
     return expect(
-      render({...demoData, icon: {name: "mouse", transformation: "rotate-90", path: 'bootstrap-icons.svg'}})
+      render({
+        ...demoData,
+        icon: {
+          name: "mouse",
+          transformation: "rotate-90",
+          path: "bootstrap-icons.svg",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 });

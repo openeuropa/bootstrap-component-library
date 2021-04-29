@@ -5,11 +5,7 @@ import toolbarData from "@oe/data-button-group/toolbarData";
 
 const template = "@oe/button-group/button-group.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const sizes = [
-  "lg",
-  "md",
-  "sm",
-];
+const sizes = ["lg", "md", "sm"];
 
 describe("OE - Button-group", () => {
   sizes.forEach((size) => {
@@ -33,16 +29,12 @@ describe("OE - Button-group", () => {
   test(`input-group renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(
-      render(inputGroupData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(inputGroupData)).resolves.toMatchSnapshot();
   });
 
   test(`toolbar renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(
-      render(toolbarData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(toolbarData)).resolves.toMatchSnapshot();
   });
 });

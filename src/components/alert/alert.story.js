@@ -11,7 +11,7 @@ const getArgTypes = (data) => {
       defaultValue: data.variant,
       control: {
         type: "select",
-        options: getVariants()
+        options: getVariants(),
       },
       table: {
         type: { summary: "string" },

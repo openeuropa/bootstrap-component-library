@@ -22,14 +22,14 @@ const getArgTypes = () => {
       defaultValue: "",
       control: {
         type: "select",
-        options: { 
-          "none": "", 
-          "horizontal":"horizontal", 
-          "horizontal small": "horizontal-sm", 
-          "horizontal medium": "horizontal-md", 
-          "horizontal large": "horizontal-lg", 
-          "horizontal extra large": "horizontal-xl", 
-          "horizontal extra extra large": "horizontal-xxl"
+        options: {
+          none: "",
+          horizontal: "horizontal",
+          "horizontal small": "horizontal-sm",
+          "horizontal medium": "horizontal-md",
+          "horizontal large": "horizontal-lg",
+          "horizontal extra large": "horizontal-xl",
+          "horizontal extra extra large": "horizontal-xxl",
         },
       },
       table: {
@@ -38,7 +38,7 @@ const getArgTypes = () => {
         category: "Style",
       },
     },
-  }
+  };
 };
 
 const applyArgs = (data, args) => {
@@ -51,9 +51,10 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url: 'https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2737%3A45',
+      url:
+        "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2737%3A45",
     },
-  }
+  },
 };
 
 export const Unordered = (args) => listGroup(applyArgs(demoData, args));
@@ -61,12 +62,14 @@ export const Unordered = (args) => listGroup(applyArgs(demoData, args));
 Unordered.storyName = "Unordered";
 Unordered.argTypes = getArgTypes(demoData);
 
-export const Ordered = (args) => listGroup(applyArgs({...orderedData, type: 'ordered'}, args));
+export const Ordered = (args) =>
+  listGroup(applyArgs({ ...orderedData, type: "ordered" }, args));
 
 Ordered.storyName = "Ordered";
 Ordered.argTypes = getArgTypes(orderedData);
 
-export const Actionable = (args) => listGroup(applyArgs({...actionableDemoData, type: 'actionable'}, args));
+export const Actionable = (args) =>
+  listGroup(applyArgs({ ...actionableDemoData, type: "actionable" }, args));
 
 Actionable.storyName = "Actionable";
 Actionable.argTypes = getArgTypes(actionableDemoData);

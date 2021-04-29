@@ -8,24 +8,20 @@ describe("OE - Blockquote", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(
-      render({ ...demoData})
-    ).resolves.toMatchSnapshot();
+    return expect(render({ ...demoData })).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly with no cite`, () => {
     expect.assertions(1);
 
-    return expect(
-      render({ ...demoData, cite: ''})
-    ).resolves.toMatchSnapshot();
+    return expect(render({ ...demoData, cite: "" })).resolves.toMatchSnapshot();
   });
-  
+
   test(`renders correctly with no attribution`, () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, attribution: ''})
+      render({ ...demoData, attribution: "" })
     ).resolves.toMatchSnapshot();
   });
 
@@ -33,7 +29,7 @@ describe("OE - Blockquote", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, alignment: 'center'})
+      render({ ...demoData, alignment: "center" })
     ).resolves.toMatchSnapshot();
   });
 });

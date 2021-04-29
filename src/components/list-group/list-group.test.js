@@ -10,16 +10,14 @@ describe("OE - List group", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(
-      render(demoData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly numbered`, () => {
     expect.assertions(1);
 
     return expect(
-      render({...orderedData, type: 'ordered'})
+      render({ ...orderedData, type: "ordered" })
     ).resolves.toMatchSnapshot();
   });
 
@@ -27,7 +25,7 @@ describe("OE - List group", () => {
     expect.assertions(1);
 
     return expect(
-      render({...demoData, horizontal: 'horizontal'})
+      render({ ...demoData, horizontal: "horizontal" })
     ).resolves.toMatchSnapshot();
   });
 
@@ -35,7 +33,7 @@ describe("OE - List group", () => {
     expect.assertions(1);
 
     return expect(
-      render({...actionableData, type: 'actionable'})
+      render({ ...actionableData, type: "actionable" })
     ).resolves.toMatchSnapshot();
   });
 });

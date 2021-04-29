@@ -1,20 +1,20 @@
 module.exports = {
   items: [
     {
-      variant: 'info',
-      html: 'Ordered Label'
+      variant: "info",
+      html: "Ordered Label",
     },
     {
-      variant: 'light',
-      html: 'Ordered Label'
+      variant: "light",
+      html: "Ordered Label",
     },
     {
-      variant: 'dark',
-      html: 'Ordered Label'
+      variant: "dark",
+      html: "Ordered Label",
     },
     {
-      variant: 'success',
-      html: 'Ordered Label'
+      variant: "success",
+      html: "Ordered Label",
     },
     {
       required: false,
@@ -23,17 +23,18 @@ module.exports = {
       id: "example-form-input-1",
       size: "sm",
       input: true,
-      type: 'radio',
+      type: "radio",
       remove_wrapper: true,
     },
     {
-      variant: 'warning',
-      html: '<div class="ms-2 me-auto"><div class="fw-bold">Subheading</div>Cras justo odio</div>',
-      extra_classes: 'd-flex justify-content-between align-items-center',
+      variant: "warning",
+      html:
+        '<div class="ms-2 me-auto"><div class="fw-bold">Subheading</div>Cras justo odio</div>',
+      extra_classes: "d-flex justify-content-between align-items-center",
       badge: {
         label: "10",
-        rounded_pill: true
-      }
-    }
-  ]
+        rounded_pill: true,
+      },
+    },
+  ],
 };

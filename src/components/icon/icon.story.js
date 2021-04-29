@@ -7,7 +7,7 @@ import { getIconControls } from "@oe/story-utils";
 
 const getArgTypes = (data) => {
   return {
-    ...getIconControls('icon', data)
+    ...getIconControls("icon", data),
   };
 };
 
@@ -25,6 +25,7 @@ export default {
   },
 };
 
-export const Default = (args) => icon(applyArgs({ ...demoData, path: defaultSprite}, args));
+export const Default = (args) =>
+  icon(applyArgs({ ...demoData, path: defaultSprite }, args));
 
 Default.argTypes = getArgTypes(demoData);

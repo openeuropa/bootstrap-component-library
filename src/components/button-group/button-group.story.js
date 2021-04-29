@@ -7,7 +7,7 @@ import buttonGroup from "./button-group.html.twig";
 const getArgTypes = (data) => {
   return {
     role: {
-      name: 'role of the container',
+      name: "role of the container",
       type: { name: "select" },
       description: "Describe the role of container for assistive technologies",
       defaultValue: "group",
@@ -22,8 +22,9 @@ const getArgTypes = (data) => {
       },
     },
     aria_label: {
-      name: 'label of the aria content',
-      description: "Describe the label of the aria used for assistive technologies",
+      name: "label of the aria content",
+      description:
+        "Describe the label of the aria used for assistive technologies",
       type: { name: "string" },
       defaultValue: "",
       table: {
@@ -34,7 +35,8 @@ const getArgTypes = (data) => {
     },
     toolbar: {
       type: { name: "boolean" },
-      description: "Enables support for multiple button groups in a toolbar style",
+      description:
+        "Enables support for multiple button groups in a toolbar style",
       defaultValue: data.toolbar,
       table: {
         type: { summary: "boolean" },
@@ -43,7 +45,7 @@ const getArgTypes = (data) => {
       },
     },
     toolbar_aria_label: {
-      name: 'toolbar aria label',
+      name: "toolbar aria label",
       description: "Toolbar wrapper aria label",
       type: { name: "string" },
       defaultValue: data.toolbar_aria_label,
@@ -59,7 +61,7 @@ const getArgTypes = (data) => {
       defaultValue: "md",
       control: {
         type: "select",
-        options: { small: "sm", medium:"md", large: "lg" },
+        options: { small: "sm", medium: "md", large: "lg" },
       },
       table: {
         type: { summary: "string" },
@@ -98,7 +100,8 @@ export const Default = (args) => buttonGroup(applyArgs(demoData, args));
 
 Default.argTypes = getArgTypes(demoData);
 
-export const InputGroup = (args) => buttonGroup(applyArgs(inputGroupData, args));
+export const InputGroup = (args) =>
+  buttonGroup(applyArgs(inputGroupData, args));
 
 InputGroup.storyName = "Input group";
 InputGroup.argTypes = getArgTypes(inputGroupData);

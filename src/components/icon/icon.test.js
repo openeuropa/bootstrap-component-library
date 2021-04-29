@@ -4,7 +4,13 @@ import demoData from "@oe/data-icon/data";
 const template = "@oe/icon/icon.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const sizes = ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"];
-const transformations =  ["rotate-90", "rotate-180", "rotate-270", "flip-horizontal", "flip-vertical"];
+const transformations = [
+  "rotate-90",
+  "rotate-180",
+  "rotate-270",
+  "flip-horizontal",
+  "flip-vertical",
+];
 
 describe("OE - Icon", () => {
   sizes.forEach((size) => {

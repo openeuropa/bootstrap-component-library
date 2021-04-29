@@ -90,7 +90,12 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, type: "checkbox", toggle: true, toggle_variant: 'primary' })
+      render({
+        ...demoData,
+        type: "checkbox",
+        toggle: true,
+        toggle_variant: "primary",
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -98,7 +103,12 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, type: "radio", toggle: true, toggle_variant: 'primary' })
+      render({
+        ...demoData,
+        type: "radio",
+        toggle: true,
+        toggle_variant: "primary",
+      })
     ).resolves.toMatchSnapshot();
   });
 });
