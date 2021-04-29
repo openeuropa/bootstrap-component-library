@@ -12,6 +12,9 @@
   - aria_expanded (string) (default: 'false')
   - extra_classes (string) (default: '')
   - extra_attributes (array of objects based on name - attribute name and value - attribute value)) (default: {})
+  - icon (icon object) (default: {}): predefined structure for Icon component
+  - icon_position (string) (default: after)
+    - options ["after", "before"]
 #}
 
 {% set _label = label|default('') %}
@@ -22,8 +25,15 @@
 {% set _target = target|default('') %}
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _extra_classes = extra_classes|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _icon_position = icon_position|default('after') %}
 {% set _extra_attributes = '' %}
 {% set _class = '' %}
+{% if _icon is not empty %}
+{% set _icon_markup %}
+  {% include '@oe/icon/icon.html.twig' with _icon only %}
+{% endset %}
+{% endif %}
 
 {% if _extra_classes is not empty %}
   {% set _class = _extra_classes %}
@@ -59,7 +69,13 @@
 {% endif %}
 {{ _extra_attributes|raw }}
 >
+  {%- if _icon_position == 'before' and _icon_markup is defined -%}
+    {{ _icon_markup|raw }}
+  {%- endif -%}
   {{- _label -}}
+  {%- if _icon_position == 'after' and _icon_markup is defined -%}
+    {{ _icon_markup|raw }}
+  {%- endif -%}
 </a>
 
 {% endspaceless %}

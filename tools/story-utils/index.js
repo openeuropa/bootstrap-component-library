@@ -225,3 +225,106 @@ export const getVariants = () => {
     'dark'
   ];
 }
+
+export const getIconControls = (type, data) => {
+  return {
+    name: {
+      name: 'icon name',
+      description: 'Icon name',
+      defaultValue: (data && data.name) ? data.name : '',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
+        category: 'Icon',
+      },
+      control: {
+        type: 'select',
+        options: getIconNames(),
+      },
+    },
+    transformation: {
+      name: 'icon transformation',
+      type: { name: 'select' },
+      description: 'Icon transformation',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
+        category: 'Icon',
+      },
+      control: {
+        type: 'select',
+        options: [
+          "rotate-90",
+          "rotate-180",
+          "rotate-270",
+          "flip-horizontal",
+          "flip-vertical"
+        ]
+      },
+    },
+    position: {
+      name: 'icon position',
+      type: { name: 'inline-radio' },
+      description: 'Icon position inside the button or link',
+      defaultValue: "after",
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'after' },
+        category: 'Icon',
+        disable: (type !== "link") & (type !== "button"),
+      },
+      control: {
+        type: 'inline-radio',
+        options: ['before', 'after'],
+      },
+    },
+    size: {
+      name: 'icon size',
+      type: { name: "select" },
+      description: "Size of icon",
+      defaultValue: "s",
+      control: {
+        type: "select",
+        options: [
+          "2xs",
+          "xs",
+          "s",
+          "m",
+          "l",
+          "xl",
+          "2xl",
+          "fluid"
+        ],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "s" },
+        category: "Icon",
+      },
+    },
+  }
+}
+
+export const getIconNames = () => {
+  return [
+    'none',
+    'alarm',
+    'arrow-left',
+    'arrow-right',
+    'chat',
+    'cloud',
+    'file-earmark-arrow-down',
+    'wifi',
+    'share',
+    'mouse',
+    'key',
+    'hand-index',
+    'fonts',
+    'fullscreen',
+    'fullscreen-exit',
+    'filter',
+    'files',
+    'eye',
+    'eye-slash'
+  ];
+}

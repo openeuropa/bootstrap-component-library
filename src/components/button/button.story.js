@@ -2,7 +2,8 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-button/data";
 import toggleDemoData from "@oe/data-button/toggleData";
 import button from "./button.html.twig";
-import { getVariants } from "@oe/story-utils";
+import { getIconControls, getVariants } from "@oe/story-utils";
+import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
 
 const withCollapse = (story) => {
   const demo = story();
@@ -109,10 +110,21 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    ...getIconControls('button')
   };
 };
 
 const applyArgs = (data, args) => {
+  if (args.name && args.name !== 'none') {
+    data.icon = {};
+    data.icon.name = args.name;
+    data.icon.size = args.size;
+    data.icon.path = defaultSprite;
+    data.icon.transformation = args.transformation;
+  }
+  if(args.name == 'none') {
+    data.icon = null;
+  }
   return Object.assign(data, args);
 };
 

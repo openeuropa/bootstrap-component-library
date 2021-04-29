@@ -33,4 +33,12 @@ describe("OE - Link", () => {
       render(toggleDemoData)
     ).resolves.toMatchSnapshot();
   });
+
+  test("with icon renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({...demoData, icon: {name: "mouse", transformation: "rotate-90", path: 'bootstrap-icons.svg'}})
+    ).resolves.toMatchSnapshot();
+  });
 });

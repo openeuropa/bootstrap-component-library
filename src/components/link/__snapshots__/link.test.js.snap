@@ -100,3 +100,19 @@ exports[`OE - Link warning renders correctly 1`] = `
   A simple link!
 </a>
 `;
+
+exports[`OE - Link with icon renders correctly 1`] = `
+<a
+  href="#link"
+  target="_blank"
+>
+  A simple link!  
+  <svg
+    class="bi icon--s icon--rotate-90"
+  >
+    <use
+      xlink:href="bootstrap-icons.svg#mouse"
+    />
+  </svg>
+</a>
+`;

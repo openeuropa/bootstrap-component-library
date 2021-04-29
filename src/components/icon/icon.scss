@@ -1,0 +1,80 @@
+// icon
+
+$icon: (
+  '2xs': 0.75rem,
+  'xs': 1rem,
+  's': 1.25rem,
+  'm': 1.5rem,
+  'l': 2rem,
+  'xl': 2.5rem,
+  '2xl': 3rem,
+  'fluid': 1em,
+) !default;
+
+.icon--2xs {
+  height: map-get($icon, '2xs');
+  width: map-get($icon, '2xs');
+}
+
+.icon--xs {
+  height: map-get($icon, 'xs');
+  width: map-get($icon, 'xs');
+}
+
+.icon--s {
+  height: map-get($icon, 's');
+  width: map-get($icon, 's');
+}
+
+.icon--m {
+  height: map-get($icon, 'm');
+  width: map-get($icon, 'm');
+}
+
+.icon--l {
+  height: map-get($icon, 'l');
+  width: map-get($icon, 'l');
+}
+
+.icon--xl {
+  height: map-get($icon, 'xl');
+  width: map-get($icon, 'xl');
+}
+
+.icon--2xl {
+  height: map-get($icon, '2xl');
+  width: map-get($icon, '2xl');
+}
+
+.icon--fluid {
+  height: map-get($icon, 'fluid');
+  width: map-get($icon, 'fluid');
+}
+
+.icon--rotate-90 {
+  transform: rotateZ(90deg);
+}
+
+.icon--rotate-180 {
+  transform: rotateZ(180deg);
+}
+
+.icon--rotate-270 {
+  transform: rotateZ(270deg);
+}
+
+.icon--flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.icon--flip-vertical {
+  transform: scaleY(-1);
+}
+
+a,
+.btn {
+  .bi {
+    vertical-align: top;
+    margin: 0 0.2rem;
+  }
+}

@@ -189,6 +189,22 @@ exports[`OE - Button warning renders correctly 1`] = `
 </button>
 `;
 
+exports[`OE - Button with icon renders correctly 1`] = `
+<button
+  class="btn btn-primary btn-md"
+  type="button"
+>
+  Label
+  <svg
+    class="bi icon--s icon--rotate-90"
+  >
+    <use
+      xlink:href="bootstrap-icons.svg#mouse"
+    />
+  </svg>
+</button>
+`;
+
 exports[`OE - Button with toggle renders correctly 1`] = `
 <button
   aria-controls="collapseExample"

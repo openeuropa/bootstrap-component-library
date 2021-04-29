@@ -17,6 +17,9 @@
     - options ["true", "false"]
   - text_nowrap (boolean) (default: false)
   - assistive_text (string) (default: '')
+  - icon (icon object) (default: {}): predefined structure for Icon component
+  - icon_position (string) (default: after)
+    - options ["after", "before"]
   - clean_class (boolean) (default: true)
   - extra_classes (string) (default: '')
 #}
@@ -33,6 +36,8 @@
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _text_nowrap = text_nowrap|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _icon_position = icon_position|default('after') %}
 {% set _clean_class = clean_class|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
 {% set _class = '' %}
@@ -49,19 +54,29 @@
   type="{{ _type }}"
   class="{{ _class }}" 
   {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
-  {% if _toggle %}
-    data-bs-toggle="{{ _toggle_type }}"
-    autocomplete="off"
-    {% if _toggle_type == 'collapse' %}
-      data-bs-target="#{{ _target }}"
-      aria-expanded="{{ _aria_expanded }}"
-      aria-controls="{{ _target }}"
-    {% endif %}
-  {% endif %}>
-    {%- if _assistive_text is not empty -%}
-      <span class="visually-hidden">{{- _assistive_text -}}</span>
-    {% endif %}
-    {{- label -}}
+{% if _toggle %}
+  data-bs-toggle="{{ _toggle_type }}"
+  autocomplete="off"
+{% if _toggle_type == 'collapse' %}
+  data-bs-target="#{{ _target }}"
+  aria-expanded="{{ _aria_expanded }}"
+  aria-controls="{{ _target }}"
+{% endif %}
+{% endif %}>
+{%- if _assistive_text is not empty -%}
+  <span class="visually-hidden">{{- _assistive_text -}}</span>
+{% endif %}
+{%- if _icon_position == 'before' -%}
+{% if _icon is not empty %}
+  {% include '@oe/icon/icon.html.twig' with _icon only %}
+{% endif %}
+{%- endif -%}
+  {{- label -}}
+{%- if _icon_position == 'after' -%}
+{%- if _icon is not empty -%}
+  {% include '@oe/icon/icon.html.twig' with _icon only %}
+{%- endif -%}
+{%- endif -%}
 </button>
 
 {% endspaceless %}
