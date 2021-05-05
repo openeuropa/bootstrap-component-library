@@ -1,5 +1,6 @@
 import navbar from "./navbar.html.twig";
-import "!!null-loader!./navbar.scss";
+import "!!null-loader!@oe/theme-oe/scss/_navbar.scss";
+import "!!null-loader!@oe/theme-ecl/scss/_navbar.scss";
 
 // Controls
 const getArgTypes = (data) => {
@@ -44,7 +45,7 @@ Navbar.parameters = {
   cssresources: [
     {
       id: "oe",
-      code: `<link rel="stylesheet" type="text/css" href="css/oe.min.css" />`,
+      code: `<link rel="stylesheet" type="text/css" href="oe.min.css" />`,
       picked: true,
       hideCode: true,
     },
@@ -66,7 +67,7 @@ NavbarECL.parameters = {
   cssresources: [
     {
       id: "oe-ecl",
-      code: `<link rel="stylesheet" type="text/css" href="css/oe-ecl.min.css" />`,
+      code: `<link rel="stylesheet" type="text/css" href="oe-ecl.min.css" />`,
       picked: true,
       hideCode: true,
     },

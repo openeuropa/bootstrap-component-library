@@ -4,6 +4,9 @@
 @import "@oe/bootstrap/scss/mixins";
 @import "@oe/bootstrap/scss/utilities";
 
+// Override Bootstrap variables
+@import "base/variables";
+
 // Layout & components
 @import "@oe/bootstrap/scss/root";
 @import "@oe/bootstrap/scss/reboot";
@@ -42,7 +45,8 @@
 // Utilities
 @import "@oe/bootstrap/scss/utilities/api";
 
-// Custom styles
-@import "@oe/header/header";
-@import "@oe/navbar/navbar";
-@import "@oe/icon/icon";
+// Custom Styles
+@import "@oe/theme-ecl/scss/header";
+@import "@oe/theme-ecl/scss/navbar";
+@import "@oe/theme-ecl/scss/language-list";
+@import "@oe/theme-oe/scss/icon";

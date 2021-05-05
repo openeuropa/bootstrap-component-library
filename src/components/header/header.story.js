@@ -2,9 +2,9 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-header/data";
 import headerECLData from "@oe/data-header/data-ecl";
 import header from "./header.html.twig";
-import "!!null-loader!./header.scss";
+import "!!null-loader!@oe/theme-oe/scss/_header.scss";
+import "!!null-loader!@oe/theme-ecl/scss/_header.scss";
 
-// Stories
 export default {
   title: "Components/Header",
   decorators: [withDesign],
@@ -22,7 +22,7 @@ Header.parameters = {
   cssresources: [
     {
       id: "oe",
-      code: `<link rel="stylesheet" type="text/css" href="css/oe.min.css" />`,
+      code: `<link rel="stylesheet" type="text/css" href="oe.min.css" />`,
       picked: true,
       hideCode: true,
     },
@@ -41,7 +41,7 @@ HeaderECL.parameters = {
   cssresources: [
     {
       id: "oe-ecl",
-      code: `<link rel="stylesheet" type="text/css" href="css/oe-ecl.min.css" />`,
+      code: `<link rel="stylesheet" type="text/css" href="oe-ecl.min.css" />`,
       picked: true,
       hideCode: true,
     },

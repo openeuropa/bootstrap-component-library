@@ -15,13 +15,13 @@ addParameters({
   cssresources: [
     {
       id: "oe",
-      code: `<link rel="stylesheet" type="text/css" href="css/oe.min.css" />`,
+      code: `<link rel="stylesheet" type="text/css" href="oe.min.css" />`,
       picked: true,
       hideCode: true,
     },
     {
       id: "oe-ecl",
-      code: `<link rel="stylesheet" type="text/css" href="css/oe-ecl.min.css" />`,
+      code: `<link rel="stylesheet" type="text/css" href="oe-ecl.min.css" />`,
       picked: false,
       hideCode: true,
     },

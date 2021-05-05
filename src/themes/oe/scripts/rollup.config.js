@@ -34,9 +34,9 @@ if (BUNDLE) {
 }
 
 const rollupConfig = {
-  input: path.resolve(__dirname, `../src/js/index.${ESM ? "esm" : "umd"}.js`),
+  input: path.resolve(__dirname, `../index.${ESM ? "esm" : "umd"}.js`),
   output: {
-    file: path.resolve(__dirname, `../assets/js/${fileDest}.js`),
+    file: path.resolve(__dirname, `../js/${fileDest}.js`),
     format: ESM ? "esm" : "umd",
     globals,
   },

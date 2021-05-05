@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-icon/data";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
 import icon from "./icon.html.twig";
-import "!!null-loader!./icon.scss";
+import "!!null-loader!@oe/theme-oe/scss/_icon.scss";
 import { getIconControls } from "@oe/story-utils";
 
 const getArgTypes = (data) => {
