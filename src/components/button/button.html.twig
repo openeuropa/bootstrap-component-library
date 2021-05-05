@@ -11,12 +11,13 @@
   - disabled (boolean) (default: false)
   - toggle (boolean) (default: false)
   - toggle_type (string) (default: 'button')
-    - options ["button", "collapse"]
+    - options ["button", "collapse", "dropdown"]
   - target (string) (default: '')
   - aria_expanded (string) (default: 'false')
     - options ["true", "false"]
   - text_nowrap (boolean) (default: false)
   - assistive_text (string) (default: '')
+  - id (string) (default: '')
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
     - options ["after", "before"]
@@ -36,6 +37,7 @@
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _text_nowrap = text_nowrap|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
+{% set _id = id|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
 {% set _clean_class = clean_class|default(false) %}
@@ -54,13 +56,18 @@
   type="{{ _type }}"
   class="{{ _class }}" 
   {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
+{% if _id is not empty %}
+  id="{{ _id }}"
+{% endif %}
 {% if _toggle %}
   data-bs-toggle="{{ _toggle_type }}"
   autocomplete="off"
 {% if _toggle_type == 'collapse' %}
   data-bs-target="#{{ _target }}"
-  aria-expanded="{{ _aria_expanded }}"
   aria-controls="{{ _target }}"
+{% endif %}
+{% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
+  aria-expanded="{{ _aria_expanded }}"
 {% endif %}
 {% endif %}>
 {%- if _assistive_text is not empty -%}
