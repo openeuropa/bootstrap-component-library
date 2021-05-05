@@ -1,0 +1,136 @@
+{% spaceless %}
+
+{# Parameters:
+  - size (string) (default: '')
+    - options ["sm", "lg"]
+  - alignment (string) (default: '')
+    - options ["end", "center"]
+  - aria_label (string) (default: '')
+  - enable_icon (boolean) (default: false)
+  - prev (object)
+    format: {
+      - path (string)
+      - label (string)
+      - disabled (boolean)
+      - icon (Icon component)
+    }
+  - next (object)
+    format: {
+      - path (string)
+      - label (string)
+      - disabled (boolean)
+      - icon (Icon component)
+    }
+  - items (array of objects)
+    format: [
+    {
+      - path (string)
+      - label (string)
+      - disabled (boolean)
+      - active (boolean)
+    }
+#}
+
+{% set _size = size|default('') %}
+{% set _alignment = alignment|default('') %}
+{% set _aria_label = aria_label|default('') %}
+{% set _enable_icon = enable_icon|default(false) %}
+{% set _items = items|default([]) %}
+{% set _next = next|default({}) %}
+{% set _prev = prev|default({}) %}
+{% set _class = 'pagination' %}
+{% if _size is not empty %}
+{% set _class = _class ~ ' pagination-' ~ _size %}
+{% endif %}
+{% if _alignment is not empty %}
+{% set _class = _class ~ ' justify-content-' ~ _alignment %}
+{% endif %}
+
+<nav
+  {% if _aria_label is not empty %}
+  aria-label="{{ aria_label }}"
+  {% endif %}
+>
+  <ul class="{{ _class }}">
+  {% if _prev is not empty %}
+    {% set _prev_class = 'page-item' %}
+    {% if _prev.disabled %}
+      {% set _prev_class = _prev_class ~ ' disabled' %}
+    {% endif %}
+    <li class="{{ _prev_class }}">
+      <a 
+        class="page-link" 
+        href="{{ _prev.path }}"
+        {% if _prev.disabled %}
+        tabindex="-1"
+        aria-disabled="true"
+        {% endif %}
+      >
+      {%- if _enable_icon -%}
+        {%- if _prev.icon is not empty -%}
+        {%- include '@oe/icon/icon.html.twig' with _prev.icon only -%}
+        {%- else -%}
+        <span aria-hidden="true">&laquo;</span>
+        {%- endif -%}
+      {%- else -%}
+      {{- _prev.label -}}
+      {%- endif -%}
+      </a>
+    </li>
+  {% endif %}
+  {% if _items is not empty and _items is iterable %}
+    {% for _item in _items %}
+    {% set _item_class = 'page-item' %}
+    {% if _item.disabled %}
+      {% set _item_class = _item_class ~ ' disabled' %}
+    {% endif %}
+    {% if _item.active %}
+      {% set _item_class = _item_class ~ ' active' %}
+    {% endif %}
+    <li class="{{ _item_class }}">
+      <a 
+        class="page-link" 
+        href="{{ _item.path }}"
+        {% if _item.disabled %}
+        tabindex="-1"
+        aria-disabled="true"
+        {% endif %}
+        {% if _item.active %}
+        aria-current="page"
+        {% endif %}
+      >
+        {{- _item.label -}}
+      </a>
+    </li>
+    {% endfor %}
+  {% endif %}
+  {% if _next is not empty %}
+    {% set _next_class = 'page-item' %}
+    {% if _next.disabled %}
+      {% set _next_class = _next_class ~ ' disabled' %}
+    {% endif %}
+    <li class="{{ _next_class }}">
+      <a 
+        class="page-link" 
+        href="{{ _next.path }}"
+        {% if _next.disabled %}
+        tabindex="-1"
+        aria-disabled="true"
+        {% endif %}
+      >
+      {%- if _enable_icon -%}
+        {%- if _next.icon is not empty -%}
+        {%- include '@oe/icon/icon.html.twig' with _next.icon only -%}
+        {%- else -%}
+        <span aria-hidden="true">&raquo;</span>
+        {%- endif -%}
+      {%- else -%}
+        {{- _next.label -}}
+        {%- endif -%}
+      </a>
+    </li>
+  {% endif %}
+  </ul>
+</nav>
+
+{% endspaceless %}
