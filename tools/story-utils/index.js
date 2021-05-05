@@ -10,6 +10,17 @@ export const getFormControls = (data, type) => {
         category: "Content",
       },
     },
+    hidden_label: {
+      name: "hidden label",
+      type: { name: "boolean" },
+      description: "Hidden label",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
     helper_text: {
       name: "helper text",
       type: { name: "string", required: false },
@@ -41,7 +52,7 @@ export const getFormControls = (data, type) => {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
         category: "States",
-        disable: type !== "element",
+        disable: (type !== "element") & (type !== "select"),
       },
     },
     required: {
@@ -53,17 +64,6 @@ export const getFormControls = (data, type) => {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
         category: "States",
-      },
-    },
-    hidden_label: {
-      name: "hidden label",
-      type: { name: "boolean" },
-      description: "Hidden label",
-      defaultValue: false,
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
       },
     },
   };
@@ -110,21 +110,6 @@ export const getFormControls = (data, type) => {
         category: "Style",
       },
     };
-    argTypes.size = {
-      name: "size",
-      type: { name: "select" },
-      defaultValue: data.size,
-      description: "The width of the form element {sm: small, lg: large}",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: data.size },
-        category: "Size",
-      },
-      control: {
-        type: "select",
-        options: { small: "sm", large: "lg" },
-      },
-    };
     if (type !== "file") {
       argTypes.floating = {
         name: "floating label",
@@ -151,11 +136,34 @@ export const getFormControls = (data, type) => {
     }
   }
 
-  if (type === "switch" || type === "checkbox") {
+  if (
+    type === "text" ||
+    type === "textarea" ||
+    type === "file" ||
+    type === "select"
+  ) {
+    argTypes.size = {
+      name: "size",
+      type: { name: "select" },
+      defaultValue: data.size,
+      description: "The width of the form element {sm: small, lg: large}",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: data.size },
+        category: "Size",
+      },
+      control: {
+        type: "select",
+        options: { small: "sm", large: "lg" },
+      },
+    };
+  }
+
+  if (type === "checkbox") {
     argTypes.switch = {
       type: { name: "boolean" },
       description: "Turns a checkbox into a switcher",
-      defaultValue: false,
+      defaultValue: data.switch,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -176,31 +184,13 @@ export const getFormControls = (data, type) => {
       },
     };
     argTypes.toggle_variant = {
-      name: "Toggle variant",
+      name: "toggle variant",
       type: { name: "select" },
       description: "Variant of the button",
       defaultValue: data.variant,
       control: {
         type: "select",
-        options: [
-          "primary",
-          "outline-primary",
-          "secondary",
-          "outline-secondary",
-          "success",
-          "outline-success",
-          "danger",
-          "outline-danger",
-          "warning",
-          "outline-warning",
-          "info",
-          "outline-info",
-          "light",
-          "outline-light",
-          "dark",
-          "outline-dark",
-          "link",
-        ],
+        options: getVariants(true, ["link"]),
       },
       table: {
         type: { summary: "string" },
@@ -213,8 +203,8 @@ export const getFormControls = (data, type) => {
   return argTypes;
 };
 
-export const getVariants = () => {
-  return [
+export const getVariants = (outline, add) => {
+  let variants = [
     "primary",
     "secondary",
     "success",
@@ -224,6 +214,14 @@ export const getVariants = () => {
     "light",
     "dark",
   ];
+  if (outline) {
+    variants = [...variants, ...variants.map((el) => `outline-${el}`)];
+  }
+  if (add) {
+    variants = [...variants, ...add];
+  }
+
+  return variants;
 };
 
 export const getIconControls = (type, data) => {

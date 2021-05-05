@@ -1,58 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OE - modal renders correctly 1`] = `
-<div
-  aria-hidden="true"
-  aria-labelledby="exampleModalLabel"
-  class="modal fade "
-  id="exampleModal"
-  tabindex="-1"
->
+<jest>
   <div
-    class="modal-dialog "
+    aria-hidden="true"
+    aria-labelledby="exampleModalLabel"
+    class="modal fade "
+    id="exampleModal"
+    tabindex="-1"
   >
     <div
-      class="modal-content"
+      class="modal-dialog "
     >
       <div
-        class="modal-header"
+        class="modal-content"
       >
-        <h5
-          class="modal-title"
-          id="exampleModalLabel"
+        <div
+          class="modal-header"
         >
-          Modal title
-        </h5>
-        <button
-          aria-label="Close"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          type="button"
-        />
-      </div>
-      <div
-        class="modal-body"
-      >
-        Modal body
-      </div>
-      <div
-        class="modal-footer"
-      >
-        <button
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-          type="button"
+          <h5
+            class="modal-title"
+            id="exampleModalLabel"
+          >
+            Modal title
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
         >
-          Close
-        </button>
-        <button
-          class="btn btn-primary"
-          type="button"
+          Modal body
+        </div>
+        <div
+          class="modal-footer"
         >
-          Save changes
-        </button>
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Save changes
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</jest>
 `;

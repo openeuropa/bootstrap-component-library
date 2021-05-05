@@ -65,3 +65,6 @@ addParameters({
 });
 
 export const decorators = [withCssResources];
+export const parameters = {
+  layout: "padded",
+};

@@ -1,0 +1,564 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OE - Form basic renders correctly 1`] = `
+<jest>
+  <form>
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="exampleInputEmail1"
+      >
+        Email address
+      </label>
+      <input
+        aria-describedby="emailHelp"
+        class="form-control"
+        id="exampleInputEmail1"
+        required=""
+        type="email"
+      />
+      <div
+        class="form-text"
+        id="emailHelp"
+      >
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="exampleInputPassword1"
+      >
+        Password
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputPassword1"
+        required=""
+        type="password"
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="exampleInputPassword1"
+          required=""
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="exampleInputPassword1"
+        >
+          Check me out
+        </label>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary btn-md"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</jest>
+`;
+
+exports[`OE - Form horizontal renders correctly 1`] = `
+<jest>
+  <form>
+    <div
+      class="row mb-3"
+    >
+      <label
+        class="col-form-label col-sm-2"
+        for="exampleInputEmail1"
+      >
+        Email address
+      </label>
+      <div
+        class="col-sm-10"
+      >
+        <input
+          class="form-control"
+          id="exampleInputEmail1"
+          required=""
+          type="email"
+        />
+      </div>
+    </div>
+    <div
+      class="row mb-3"
+    >
+      <label
+        class="col-form-label col-sm-2"
+        for="exampleInputPassword1"
+      >
+        Password
+      </label>
+      <div
+        class="col-sm-10"
+      >
+        <input
+          class="form-control"
+          id="exampleInputPassword1"
+          required=""
+          type="password"
+        />
+      </div>
+    </div>
+    <fieldset
+      class="row mb-3"
+    >
+      <legend
+        class="col-form-label col-sm-2 pt-0"
+      >
+        Radios
+      </legend>
+      <div
+        class="col-sm-10"
+      >
+        <div
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            id="exampleInputRadios1"
+            type="radio"
+          />
+          <label
+            class="form-check-label"
+            for="exampleInputRadios1"
+          >
+            First radio
+          </label>
+        </div>
+        <div
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            id="exampleInputRadios2"
+            type="radio"
+          />
+          <label
+            class="form-check-label"
+            for="exampleInputRadios2"
+          >
+            Second radio
+          </label>
+        </div>
+        <div
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            disabled=""
+            id="exampleInputRadios3"
+            type="radio"
+          />
+          <label
+            class="form-check-label"
+            for="exampleInputRadios3"
+          >
+            Third radio
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="row mb-3"
+    >
+      <div
+        class="col-sm-10 offset-sm-2"
+      >
+        <div
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            id="exampleInputCheck1"
+            required=""
+            type="checkbox"
+          />
+          <label
+            class="form-check-label"
+            for="exampleInputCheck1"
+          >
+            Example checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12"
+    >
+      <button
+        class="btn btn-primary btn-md"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </div>
+  </form>
+</jest>
+`;
+
+exports[`OE - Form inline renders correctly 1`] = `
+<jest>
+  <form
+    class="row row-cols-lg-auto g-3 align-items-center"
+  >
+    <div
+      class="col-12"
+    >
+      <label
+        class="form-label visually-hidden"
+        for="inlineFormInputGroupUsername"
+      >
+        Username
+      </label>
+      <input
+        class="form-control"
+        id="inlineFormInputGroupUsername"
+        placeholder="Username"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="col-12"
+    >
+      <label
+        class="form-label visually-hidden"
+      >
+        Preference
+      </label>
+      <select
+        class="form-select form-select-null"
+        required=""
+      >
+        <option
+          selected=""
+          value=""
+        >
+          Choose
+        </option>
+        <option
+          value="1"
+        >
+          One
+        </option>
+        <option
+          value="2"
+        >
+          Two
+        </option>
+        <option
+          value="3"
+        >
+          Three
+        </option>
+      </select>
+    </div>
+    <div
+      class="col-12"
+    >
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="exampleInputCheck1"
+          required=""
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="exampleInputCheck1"
+        >
+          Remember me
+        </label>
+      </div>
+    </div>
+    <div
+      class="col-12"
+    >
+      <button
+        class="btn btn-primary btn-md"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</jest>
+`;
+
+exports[`OE - Form renders correctly when disabled 1`] = `
+<jest>
+  <form>
+    <fieldset
+      class=""
+      disabled=""
+    >
+      <legend>
+        Disabled fieldset example
+      </legend>
+      <div
+        class="mb-3"
+      >
+        <label
+          class="form-label"
+          for="disabledTextInput"
+        >
+          Disabled input
+        </label>
+        <input
+          aria-describedby="helperText"
+          class="form-control"
+          id="disabledTextInput"
+          placeholder="Disabled input"
+          required=""
+          type="text"
+        />
+        <div
+          class="form-text"
+          id="helperText"
+        >
+          Helper text for the form input
+        </div>
+      </div>
+      <div
+        class="mb-3"
+      >
+        <select
+          class="form-select form-select-md"
+        >
+          <option
+            value="1"
+          >
+            a select option
+          </option>
+          <option
+            value="2"
+          >
+            another select option
+          </option>
+          <option
+            value="3"
+          >
+            another option
+          </option>
+          <option
+            value="4"
+          >
+            last option
+          </option>
+          <option
+            selected=""
+            value=""
+          >
+            the selected option
+          </option>
+        </select>
+        <div
+          class="form-text"
+        >
+          Helper text for the select element
+        </div>
+      </div>
+      <div
+        class="mb-3"
+      >
+        <div
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            id="disabledFieldsetCheck"
+            type="checkbox"
+          />
+          <label
+            class="form-check-label"
+            for="disabledFieldsetCheck"
+          >
+            Can't check this
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <button
+      class="btn btn-primary btn-md"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</jest>
+`;
+
+exports[`OE - Form using a grid renders correctly 1`] = `
+<jest>
+  <form
+    class="row g-3"
+  >
+    <div
+      class="col-md-6"
+    >
+      <label
+        class="form-label"
+        for="exampleInputEmail1"
+      >
+        Email address
+      </label>
+      <input
+        aria-describedby="emailHelp"
+        class="form-control"
+        id="exampleInputEmail1"
+        required=""
+        type="email"
+      />
+      <div
+        class="form-text"
+        id="emailHelp"
+      >
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div
+      class="col-md-6"
+    >
+      <label
+        class="form-label"
+        for="exampleInputPassword1"
+      >
+        Password
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputPassword1"
+        required=""
+        type="password"
+      />
+    </div>
+    <div
+      class="col-12"
+    >
+      <label
+        class="form-label"
+        for="exampleInputAddress1"
+      >
+        Address
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputAddress1"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="col-12"
+    >
+      <label
+        class="form-label"
+        for="exampleInputAddress2"
+      >
+        Address 2
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputAddress2"
+        type="text"
+      />
+    </div>
+    <div
+      class="col-md-6"
+    >
+      <label
+        class="form-label"
+        for="exampleInputCity1"
+      >
+        City
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputCity1"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="col-md-4"
+    >
+      <label
+        class="form-label"
+        for="exampleInputState1"
+      >
+        State
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputState1"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="col-md-2"
+    >
+      <label
+        class="form-label"
+        for="exampleInputZip1"
+      >
+        Zip
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputZip1"
+        required=""
+        type="text"
+      />
+    </div>
+    <div
+      class="col-12"
+    >
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="exampleInputCheck1"
+          required=""
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="exampleInputCheck1"
+        >
+          Check me out
+        </label>
+      </div>
+    </div>
+    <div
+      class="col-12"
+    >
+      <button
+        class="btn btn-primary btn-md"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</jest>
+`;

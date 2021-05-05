@@ -5,7 +5,7 @@ import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const variants = [...getVariants(), "link"];
+const variants = getVariants(false, ["link"]);
 const sizes = ["lg", "md", "sm"];
 
 describe("OE - Button", () => {
