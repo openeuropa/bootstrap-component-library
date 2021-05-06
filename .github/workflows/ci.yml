@@ -41,7 +41,7 @@ jobs:
       - name: Package application
         run: yarn dist
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v1.2.1
         with:
           alias: preview-${{ github.event.number }}
           publish-dir: "build"
@@ -60,8 +60,9 @@ jobs:
       - name: Package application
         run: yarn dist
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v1.2.1
         with:
+          production-deploy: true
           publish-dir: "build"
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
