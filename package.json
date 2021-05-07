@@ -11,8 +11,8 @@
   "scripts": {
     "build:themes": "npm-run-all --parallel css js",
     "clean": "rimraf build assets",
-    "copy:assets": "copyfiles -f src/themes/**/*min.* assets/",
-    "copy:build": "copyfiles assets/* build",
+    "copy:assets": "copyfiles -f src/themes/**/*min.* static/* assets/",
+    "copy:build": "copyfiles assets/* static/* build",
     "copy:twig": "lerna --scope \"@oe/theme-*\" run twig",
     "css": "run-s css-compile css-prefix css-minify",
     "css-compile": "lerna --scope \"@oe/theme-*\" run css-compile",
