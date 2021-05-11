@@ -1,0 +1,30 @@
+{% spaceless %}
+
+{# Parameters:
+  - links (array of objects of type link)
+  - extra_classes (string) (default: '')
+#}
+
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = 'breadcrumb' ~ (_extra_classes ? ' ' ~ _extra_classes) %}
+{% set _links = links|default([]) %}
+
+{% if _links is not empty %}
+<nav aria-label="breadcrumb">
+  <ol class="{{ _class }}">
+    {% for _link in _links %}
+      {% if _link.path %}
+        <li class="breadcrumb-item">
+          {% include '@oe/link/link.html.twig' with _link only %}
+        </li>
+      {% else %}
+        <li class="breadcrumb-item active" aria-current="page">
+          {{- _link.label -}}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+
+{% endspaceless %}
