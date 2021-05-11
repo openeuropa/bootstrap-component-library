@@ -47,10 +47,7 @@
   {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
   {% set _class = _class ~ ' btn-' + _size %}
 {% endif %}
-{% set _class = _class ~ (_text_nowrap ? ' text-nowrap' : '') %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
-{% endif %}
+{% set _class = _class ~ (_text_nowrap ? ' text-nowrap') ~ (_extra_classes ? ' ' ~ _extra_classes) %}
 
 <button
   type="{{ _type }}"
