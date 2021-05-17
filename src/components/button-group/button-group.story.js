@@ -91,8 +91,7 @@ export default {
   decorators: [withDesign],
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2724%3A54",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2724%3A54",
   },
 };
 

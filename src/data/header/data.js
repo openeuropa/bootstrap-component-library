@@ -1,8 +1,7 @@
 // Simple content for demo
 module.exports = {
   logo: {
-    src:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png",
   },
   login: {
     link: {

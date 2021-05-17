@@ -13,8 +13,7 @@ export default {
     controls: { disable: true },
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
     },
   },
 };

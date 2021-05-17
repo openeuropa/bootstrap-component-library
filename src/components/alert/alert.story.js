@@ -78,8 +78,7 @@ Primary.argTypes = getArgTypes(demoData);
 Primary.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -91,8 +90,7 @@ Secondary.argTypes = getArgTypes(demoData);
 Secondary.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -104,8 +102,7 @@ Success.argTypes = getArgTypes(demoData);
 Success.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -117,8 +114,7 @@ Warning.argTypes = getArgTypes(demoData);
 Warning.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -130,8 +126,7 @@ Danger.argTypes = getArgTypes(demoData);
 Danger.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -143,8 +138,7 @@ Info.argTypes = getArgTypes(demoData);
 Info.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -156,8 +150,7 @@ Light.argTypes = getArgTypes(demoData);
 Light.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
 
@@ -169,7 +162,6 @@ Dark.argTypes = getArgTypes(demoData);
 Dark.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2713%3A1",
   },
 };
