@@ -1,0 +1,80 @@
+{% spaceless %}
+
+{# Parameters:
+  - title (object) (default: {}) format: {
+      label (string)
+      id (string) (default: '')
+      heading (string) (1, 2, 3, 4, 5, 6)
+    }
+  - placement (string) (default: '') (start, end, top, bottom)
+  - id (string) (default: '')
+  - body (string) (default: '')
+  - with_body_scroll (boolean) (default: false)
+  - with_backdrop (boolean) (default: true)
+#}
+
+{% set _classes = 'offcanvas' %}
+{% set _title = title|default({}) %}
+{% set _body = body|default('') %}
+{% set _with_close = with_close ?? true %}
+{% set _with_backdrop = with_backdrop ?? true %}
+{% set _with_body_scroll = with_body_scroll|default(false) %}
+{% set _id = id|default('') %}
+{% set _placement = placement|default('') %}
+{% if _title is not empty %}
+  {% set _aria_labelled = _title.id|default('') %}
+{% endif %}
+
+{% if _placement is not empty %}
+ {% set _classes = _classes ~ ' ' ~ _classes ~ '-' ~ _placement %}
+{% endif %}
+
+<div
+  class="{{ _classes }}"
+  tabindex="-1"
+{% if _id is not empty %}
+  id="{{ _id }}"
+{% endif %}
+{% if _aria_labelled is defined and _aria_labelled is not empty %}
+  aria-labelledby="{{ _aria_labelled }}"
+{% endif %}
+{% if _with_body_scroll %}
+  data-bs-scroll=true
+{% endif %}
+{% if not _with_backdrop %}
+  data-bs-backdrop=false
+{% endif %}
+>
+{% if _with_close or
+  (_title.label is defined and _title.label is not empty)
+%}
+  <div class="offcanvas-header">
+  {% if _title.label is defined and _title.label is not empty %}
+    <h{{ _title.heading|default(5) }}
+      class="offcanvas-title"
+    {% if _title.id is defined and _title.id is not empty %}
+      id="{{ _title.id }}"
+    {% endif %}
+    >
+      {{- _title.label -}}
+    </h{{ _title.heading|default(5) }}>
+  {% endif %}
+  {% if _with_close %}
+    {%- include '@oe/button/button.html.twig' with {
+        type: "button",
+        clean_class: true,
+        extra_classes: 'btn-close text-reset',
+        toggle_type: 'dismiss',
+        target: 'offcanvas',
+      } only -%}
+  {% endif %}
+  </div>
+{% endif %}
+{% if _body is not empty %}
+  <div class="offcanvas-body">
+    {{- _body -}}
+  </div>
+{% endif %}
+</div>
+
+{% endspaceless %}

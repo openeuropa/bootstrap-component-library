@@ -11,6 +11,7 @@ import Carousel from "@oe/bootstrap/js/src/carousel";
 import Collapse from "@oe/bootstrap/js/src/collapse";
 import Dropdown from "@oe/bootstrap/js/src/dropdown";
 import Modal from "@oe/bootstrap/js/src/modal";
+import Offcanvas from "@oe/bootstrap/js//src/offcanvas";
 import Popover from "@oe/bootstrap/js/src/popover";
 import ScrollSpy from "@oe/bootstrap/js/src/scrollspy";
 import Tab from "@oe/bootstrap/js/src/tab";
@@ -24,6 +25,7 @@ export {
   Collapse,
   Dropdown,
   Modal,
+  Offcanvas,
   Popover,
   ScrollSpy,
   Tab,

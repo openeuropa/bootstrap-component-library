@@ -3,6 +3,13 @@
   document.addEventListener(
     "DOMContentLoaded",
     function () {
+      var offcanvasElementList = [].slice.call(
+        document.querySelectorAll(".offcanvas")
+      );
+      var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+        var offCanvas = new oe.Offcanvas(offcanvasEl);
+      });
+
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));
       var options = { autohide: false };
       var toastList = toastElList.map(function (toastEl) {

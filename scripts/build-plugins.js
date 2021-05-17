@@ -43,6 +43,7 @@ const bsPlugins = {
   Collapse: path.resolve(__dirname, "../bootstrap/js/src/collapse.js"),
   Dropdown: path.resolve(__dirname, "../bootstrap/js/src/dropdown.js"),
   Modal: path.resolve(__dirname, "../bootstrap/js/src/modal.js"),
+  Offcanvas: path.resolve(__dirname, "../bootstrap/js/src/modal.js"),
   Popover: path.resolve(__dirname, "../bootstrap/js/src/popover.js"),
   ScrollSpy: path.resolve(__dirname, "../bootstrap/js/src/scrollspy.js"),
   Tab: path.resolve(__dirname, "../bootstrap/js/src/tab.js"),
@@ -79,7 +80,11 @@ const getConfigByPluginKey = (pluginKey) => {
     };
   }
 
-  if (pluginKey === "Alert" || pluginKey === "Tab") {
+  if (
+    pluginKey === "Alert" ||
+    pluginKey === "Tab" ||
+    pluginKey === "Offcanvas"
+  ) {
     return defaultPluginConfig;
   }
 
