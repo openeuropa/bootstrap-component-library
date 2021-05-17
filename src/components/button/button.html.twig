@@ -1,6 +1,6 @@
 {% spaceless %}
 
-{# 
+{#
   Parameters:
   - label (string) (default: '')
   - variant (string) (default: 'primary')
@@ -11,7 +11,7 @@
   - disabled (boolean) (default: false)
   - toggle (boolean) (default: false)
   - toggle_type (string) (default: 'button')
-    - options ["button", "collapse", "dropdown"]
+    - options ["button", "collapse", "dropdown", "dismiss"]
   - target (string) (default: '')
   - aria_expanded (string) (default: 'false')
     - options ["true", "false"]
@@ -47,12 +47,13 @@
   {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
   {% set _class = _class ~ ' btn-' + _size %}
 {% endif %}
-{% set _class = _class ~ (_text_nowrap ? ' text-nowrap') ~ (_extra_classes ? ' ' ~ _extra_classes) %}
+{% set _class = (_class ~ (_text_nowrap ? ' text-nowrap') ~ (_extra_classes ? ' ' ~ _extra_classes))|trim %}
 
 <button
   type="{{ _type }}"
-  class="{{ _class }}" 
+  class="{{ _class }}"
   {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
+  {{ _extra_attributes ? _extra_attributes }}
 {% if _id is not empty %}
   id="{{ _id }}"
 {% endif %}
@@ -66,7 +67,11 @@
 {% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
   aria-expanded="{{ _aria_expanded }}"
 {% endif %}
-{% endif %}>
+{% endif %}
+{% if _toggle_type == 'dismiss' %}
+  data-bs-dismiss="{{ _target }}"
+{% endif %}
+>
 {%- if _assistive_text is not empty -%}
   <span class="visually-hidden">{{- _assistive_text -}}</span>
 {% endif %}

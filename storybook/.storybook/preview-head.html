@@ -1,1 +1,15 @@
 <script defer type="text/javascript" src="oe.bundle.min.js"></script>
+<script>
+  document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var options = { autohide: false };
+      var toastList = toastElList.map(function (toastEl) {
+        var toast = new oe.Toast(toastEl, options);
+        toast.show();
+      });
+    },
+    false
+  );
+</script>
