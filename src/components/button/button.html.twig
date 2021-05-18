@@ -60,7 +60,7 @@
 {% if _toggle %}
   data-bs-toggle="{{ _toggle_type }}"
   autocomplete="off"
-{% if _toggle_type == 'collapse' %}
+{% if _toggle_type == 'collapse' or _toggle_type == 'tab' %}
   data-bs-target="#{{ _target }}"
   aria-controls="{{ _target }}"
 {% endif %}

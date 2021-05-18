@@ -22,6 +22,7 @@
       'dropdown-menu-xxl-start'
     ]
   - dark (boolean) (default: false)
+  - remove_wrapper (boolean) (default: false)
   - items (array of objects)
     format: [
       {
@@ -39,6 +40,7 @@
 {% set _direction = direction|default('') %}
 {% set _alignment = alignment|default('') %}
 {% set _dark = dark|default(false) %}
+{% set _remove_wrapper = remove_wrapper|default(false) %}
 {% set _items = items|default([]) %}
 {% set _class = 'dropdown' %}
 {% set _dropdown_class = 'dropdown-menu' %}
@@ -63,7 +65,9 @@
 })
 %}
 
+{% if not _remove_wrapper %}
 <div class="{{ _class }}">
+{% endif %}
   {% if _link %}
     {% include '@oe/link/link.html.twig' with _trigger only %}
   {% else %}
@@ -93,6 +97,8 @@
       {% endfor %}
     {% endif %}
   </ul>
+{% if not _remove_wrapper %}
 </div>
+{% endif %}
 
 {% endspaceless %}

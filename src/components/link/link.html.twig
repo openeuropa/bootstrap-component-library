@@ -11,6 +11,7 @@
   - target (string) (default: '')
   - aria_expanded (string) (default: 'false')
   - id (string) (default: '')
+  - disabled (boolean) (default: false)
   - extra_classes (string) (default: '')
   - extra_attributes (array of objects based on name - attribute name and value - attribute value)) (default: {})
   - icon (icon object) (default: {}): predefined structure for Icon component
@@ -26,6 +27,7 @@
 {% set _target = target|default('') %}
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _id = id|default('') %}
+{% set _disabled = disabled|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
@@ -37,8 +39,11 @@
 {% endset %}
 {% endif %}
 
+{% if _disabled %}
+  {% set _class = _class ~ ' ' ~ 'disabled' %}
+{% endif %}
 {% if _extra_classes is not empty %}
-  {% set _class = _extra_classes %}
+  {% set _class = (_class ? _class ~ ' ' : '') ~ _extra_classes %}
 {% endif %}
 {% if _variant is not empty %}
   {% set _class = _class ~ ' link-' ~ _variant %}
@@ -64,10 +69,14 @@
 {% if _id is not empty %}
   id="{{ _id }}"
 {% endif %}
+{% if _disabled %}
+  tabindex="-1"
+  aria-disabled="true"
+{% endif %}
 {% if _toggle %}
   data-bs-toggle="{{ _toggle_type }}"
   role="button"
-{% if _toggle_type == 'collapse' %}
+{% if _toggle_type == 'collapse' or _toggle_type == 'tab' %}
   aria-controls="{{ _target }}"
 {% endif %}
 {% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
