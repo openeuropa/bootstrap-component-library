@@ -23,9 +23,11 @@ const applyArgs = (data, args) => {
 export default {
   title: "Components/Breadcrumb",
   decorators: [withDesign],
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2714%3A403",
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2714%3A403",
+    },
   },
 };
 

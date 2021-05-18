@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import navbar from "./navbar.html.twig";
 import "!!null-loader!@oe/theme-oe/scss/_navbar.scss";
 import "!!null-loader!@oe/theme-ecl/scss/_navbar.scss";
@@ -34,13 +35,14 @@ const darkMode = (story, controls) => {
 // Stories
 export default {
   title: "Components/Navbar",
+  decorators: [withDesign],
 };
 
 export const Navbar = (args) => navbar(args);
 
 Navbar.storyName = "default";
 Navbar.argTypes = getArgTypes();
-Navbar.decorators = [darkMode];
+Navbar.decorators = [darkMode, withDesign];
 Navbar.parameters = {
   cssresources: [
     {
@@ -50,6 +52,10 @@ Navbar.parameters = {
       hideCode: true,
     },
   ],
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2896%3A0",
+  },
 };
 
 const NavbarECLArgs = {
@@ -59,6 +65,7 @@ const NavbarECLArgs = {
   logo_height: "60",
   color_set: "dark",
 };
+
 export const NavbarECL = (args) => navbar(NavbarECLArgs);
 
 NavbarECL.storyName = "ECL branding";
@@ -72,4 +79,8 @@ NavbarECL.parameters = {
       hideCode: true,
     },
   ],
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2896%3A0",
+  },
 };

@@ -1,4 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-link/data";
 import toggleDemoData from "@oe/data-link/toggleData";
 import link from "./link.html.twig";
@@ -66,7 +65,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Link",
-  decorators: [withDesign],
 };
 
 export const Default = (args) => link(applyArgs(demoData, args));

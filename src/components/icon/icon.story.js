@@ -18,9 +18,11 @@ const applyArgs = (data, args) => {
 export default {
   title: "Components/Icon",
   decorators: [withDesign],
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2889%3A6155",
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2892%3A1152",
+    },
   },
 };
 

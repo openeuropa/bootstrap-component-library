@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-modal/data";
 import modal from "./modal.html.twig";
 
@@ -41,6 +42,13 @@ const modalButton = (story, controls) => {
 // Stories
 export default {
   title: "Components/Modal",
+  decorators: [withDesign],
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2617%3A191",
+    },
+  },
 };
 
 export const Modal = (args) => modal(applyArgs(demoData, args));
