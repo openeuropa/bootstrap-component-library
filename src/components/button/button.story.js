@@ -1,8 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-button/data";
 import toggleDemoData from "@oe/data-button/toggleData";
+import popoverDemoData from "@oe/data-button/popoverData";
 import button from "./button.html.twig";
-import { getIconControls, getVariants } from "@oe/story-utils";
+import {
+  getIconControls,
+  getVariants,
+  getSpecificControls,
+} from "@oe/story-utils";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
 
 const withCollapse = (story) => {
@@ -10,7 +15,7 @@ const withCollapse = (story) => {
   return `${demo} <div class="collapse mt-3" id="${toggleDemoData.target}">${toggleDemoData.collapse_text}</div>`;
 };
 
-const getArgTypes = (data) => {
+const getArgTypes = (data, type) => {
   return {
     label: {
       type: { name: "string" },
@@ -112,6 +117,7 @@ const getArgTypes = (data) => {
       },
     },
     ...getIconControls("button"),
+    ...getSpecificControls(data, type),
   };
 };
 
@@ -149,3 +155,8 @@ export const Collapse = (args) => button(applyArgs(toggleDemoData, args));
 Collapse.storyName = "Collapse";
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
+
+export const Popover = (args) => button(applyArgs(popoverDemoData, args));
+
+Popover.storyName = "Popover";
+Popover.argTypes = getArgTypes(popoverDemoData, "popover");

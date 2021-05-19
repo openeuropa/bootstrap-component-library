@@ -1,6 +1,7 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-button/data";
 import toggleDemoData from "@oe/data-link/toggleData";
+import popoverDemoData from "@oe/data-button/popoverData";
 import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/button/button.html.twig";
@@ -46,6 +47,18 @@ describe("OE - Button", () => {
           transformation: "rotate-90",
           path: "bootstrap-icons.svg",
         },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("with popover renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...popoverDemoData,
+        popover_placement: "top",
+        popover_trigger: "focus",
       })
     ).resolves.toMatchSnapshot();
   });

@@ -3,6 +3,12 @@
   document.addEventListener(
     "DOMContentLoaded",
     function () {
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new oe.Popover(popoverTriggerEl);
+      });
       var offcanvasElementList = [].slice.call(
         document.querySelectorAll(".offcanvas")
       );

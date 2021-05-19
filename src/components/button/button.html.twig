@@ -1,6 +1,6 @@
 {% spaceless %}
 
-{#
+{# 
   Parameters:
   - label (string) (default: '')
   - variant (string) (default: 'primary')
@@ -9,20 +9,27 @@
   - type (string) (default: 'button')
   - outline (boolean) (default: false)
   - disabled (boolean) (default: false)
-  - toggle (boolean) (default: false)
-  - toggle_type (string) (default: 'button')
-    - options ["button", "collapse", "dropdown", "dismiss"]
-  - target (string) (default: '')
-  - aria_expanded (string) (default: 'false')
-    - options ["true", "false"]
   - text_nowrap (boolean) (default: false)
   - assistive_text (string) (default: '')
   - id (string) (default: '')
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
     - options ["after", "before"]
-  - clean_class (boolean) (default: true)
+  - clean_class (boolean) (default: false)
   - extra_classes (string) (default: '')
+
+    Toggles functionality parameters
+  - toggle (boolean) (default: false)
+  - toggle_type (string) (default: 'button')
+    - options ["button", "collapse", "dropdown", "popover"]
+  - target (string) (default: '')
+  - aria_expanded (string) (default: 'false')
+    - options ["true", "false"]
+  - popover_title (string) (default: '')
+  - popover_trigger (string) (default: '')
+  - popover_placement (string) (default: '')
+    - options ['top', 'bottom', 'left', 'right']
+  - popover_content (string) (default: '')
 #}
 
 {% set _label = label|default('') %}
@@ -34,6 +41,10 @@
 {% set _toggle = toggle|default(false) %}
 {% set _toggle_type = toggle_type|default('button') %}
 {% set _target = target|default('') %}
+{% set _popover_trigger = popover_trigger|default('') %}
+{% set _popover_placement = popover_placement|default('') %}
+{% set _popover_title = popover_title|default('') %}
+{% set _popover_content = popover_content|default('') %}
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _text_nowrap = text_nowrap|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
@@ -47,13 +58,15 @@
   {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
   {% set _class = _class ~ ' btn-' + _size %}
 {% endif %}
-{% set _class = (_class ~ (_text_nowrap ? ' text-nowrap') ~ (_extra_classes ? ' ' ~ _extra_classes))|trim %}
+{% set _class = _class ~ (_text_nowrap ? ' text-nowrap' : '') %}
+{% if _extra_classes is not empty %}
+  {% set _class = (_class ? _class ~ ' ' : '') ~ _extra_classes %}
+{% endif %}
 
 <button
   type="{{ _type }}"
-  class="{{ _class }}"
+  class="{{ _class }}" 
   {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
-  {{ _extra_attributes ? _extra_attributes }}
 {% if _id is not empty %}
   id="{{ _id }}"
 {% endif %}
@@ -67,6 +80,18 @@
 {% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
   aria-expanded="{{ _aria_expanded }}"
 {% endif %}
+{% if _popover_placement is not empty %}
+  data-bs-placement="{{ _popover_placement }}"
+{% endif %}
+{% if _popover_trigger is not empty %}
+  data-bs-trigger="{{ _popover_trigger }}"
+{% endif %}
+{% if _popover_content is not empty %}
+  data-bs-content="{{ _popover_content }}"
+{% endif %}
+{% endif %}
+{% if _popover_title is not empty %}
+  title="{{ _popover_title }}"
 {% endif %}
 {% if _toggle_type == 'dismiss' %}
   data-bs-dismiss="{{ _target }}"

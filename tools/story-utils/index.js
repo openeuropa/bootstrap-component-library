@@ -203,6 +203,65 @@ export const getFormControls = (data, type) => {
   return argTypes;
 };
 
+export const getSpecificControls = (data, type) => {
+  const argTypes = {};
+  if (type == "popover") {
+    argTypes.popover_placement = {
+      name: "placement",
+      type: { name: "select" },
+      description: "Placement of popover",
+      defaultValue: "",
+      control: {
+        type: "select",
+        options: ["top", "bottom", "left", "right"],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Popover",
+      },
+    };
+    argTypes.popover_content = {
+      name: "popover content",
+      type: { name: "string" },
+      defaultValue: data.popover_content,
+      description: "Content of popover",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Popover",
+      },
+    };
+    argTypes.popover_title = {
+      name: "title",
+      type: { name: "string" },
+      defaultValue: data.popover_title,
+      description: "Content of title of popover",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Popover",
+      },
+    };
+    argTypes.popover_trigger = {
+      name: "trigger",
+      type: { name: "select" },
+      defaultValue: "",
+      description: "Trigger of popover",
+      control: {
+        type: "select",
+        options: ["hover", "focus", "click", "manual"],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Popover",
+      },
+    };
+  }
+  return argTypes;
+};
+
 export const getVariants = (outline, add) => {
   let variants = [
     "primary",
