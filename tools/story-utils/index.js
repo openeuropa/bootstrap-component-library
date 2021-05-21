@@ -319,7 +319,7 @@ export const getIconControls = (type, data) => {
         ],
       },
     },
-    position: {
+    icon_position: {
       name: "icon position",
       type: { name: "inline-radio" },
       description: "Icon position inside the button or link",
