@@ -17,6 +17,8 @@
     - options ["after", "before"]
   - clean_class (boolean) (default: false)
   - extra_classes (string) (default: '')
+  - spinner (spinner object) (default: {})
+  - show_spinner (boolean) (default: false)
 
     Toggles functionality parameters
   - toggle (boolean) (default: false)
@@ -51,6 +53,8 @@
 {% set _id = id|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
+{% set _show_spinner = show_spinner|default(false) %}
+{% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
 {% set _class = '' %}
@@ -97,6 +101,9 @@
   data-bs-dismiss="{{ _target }}"
 {% endif %}
 >
+{%- if _show_spinner -%}
+  {% include '@oe/spinner/spinner.html.twig' with _spinner only %}
+{%- endif -%}
 {%- if _assistive_text is not empty -%}
   <span class="visually-hidden">{{- _assistive_text -}}</span>
 {% endif %}

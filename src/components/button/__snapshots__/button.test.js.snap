@@ -266,6 +266,27 @@ exports[`OE - Button with popover renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Button with spinner renders correctly 1`] = `
+<jest>
+  <button
+    class="btn btn-primary btn-md"
+    type="button"
+  >
+    <div
+      class="spinner-border spinner-border-sm text-info me-1"
+      role="status"
+    >
+      <span
+        class="visually-hidden"
+      >
+        Loading...
+      </span>
+    </div>
+    Label
+  </button>
+</jest>
+`;
+
 exports[`OE - Button with toggle renders correctly 1`] = `
 <jest>
   <button

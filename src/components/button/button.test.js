@@ -2,6 +2,7 @@ import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-button/data";
 import toggleDemoData from "@oe/data-link/toggleData";
 import popoverDemoData from "@oe/data-button/popoverData";
+import spinnerDemoData from "@oe/data-button/spinnerData";
 import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/button/button.html.twig";
@@ -34,6 +35,12 @@ describe("OE - Button", () => {
     expect.assertions(1);
 
     return expect(render(toggleDemoData)).resolves.toMatchSnapshot();
+  });
+
+  test("with spinner renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(render(spinnerDemoData)).resolves.toMatchSnapshot();
   });
 
   test("with icon renders correctly", () => {

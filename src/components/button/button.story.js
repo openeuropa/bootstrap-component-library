@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-button/data";
 import toggleDemoData from "@oe/data-button/toggleData";
 import popoverDemoData from "@oe/data-button/popoverData";
+import spinnerDemoData from "@oe/data-button/spinnerData";
 import button from "./button.html.twig";
 import {
   getIconControls,
@@ -160,3 +161,8 @@ export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
 Popover.storyName = "Popover";
 Popover.argTypes = getArgTypes(popoverDemoData, "popover");
+
+export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
+
+Spinner.storyName = "Spinner";
+Spinner.argTypes = getArgTypes(spinnerDemoData);
