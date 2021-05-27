@@ -19,10 +19,18 @@ export default {
   title: "Components/Icon",
   decorators: [withDesign],
   parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2892%3A1152",
-    },
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2892%3A1152",
+      },
+      {
+        name: "Bootstrap docs",
+        type: "iframe",
+        url: "https://getbootstrap.com/docs/5.0/extend/icons/",
+      },
+    ],
   },
 };
 

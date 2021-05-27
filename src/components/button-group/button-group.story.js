@@ -90,10 +90,18 @@ export default {
   title: "Components/Button Group",
   decorators: [withDesign],
   parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2724%3A54",
-    },
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2724%3A54",
+      },
+      {
+        name: "Bootstrap docs",
+        type: "iframe",
+        url: "https://getbootstrap.com/docs/5.0/components/button-group/",
+      },
+    ],
   },
 };
 

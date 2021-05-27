@@ -44,10 +44,18 @@ export default {
   title: "Components/Dropdown",
   decorators: [withDesign],
   parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2726%3A46",
-    },
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2726%3A46",
+      },
+      {
+        name: "Bootstrap docs",
+        type: "iframe",
+        url: "https://getbootstrap.com/docs/5.0/components/dropdowns/",
+      },
+    ],
   },
 };
 

@@ -56,10 +56,18 @@ export default {
   title: "Components/Accordion",
   decorators: [withDesign],
   parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2892%3A13354",
-    },
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2892%3A13354",
+      },
+      {
+        name: "Bootstrap docs",
+        type: "iframe",
+        url: "https://getbootstrap.com/docs/5.0/components/accordion/",
+      },
+    ],
   },
 };
 

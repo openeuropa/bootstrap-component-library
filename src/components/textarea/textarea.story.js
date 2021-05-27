@@ -29,15 +29,16 @@ const applyArgs = (data, args) => {
 export default {
   title: "Components/Forms/Textarea",
   decorators: [withDesign],
+  parameters: {
+    design: {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
+    },
+  },
 };
 
 export const Textarea = (args) => textarea(applyArgs(demoData, args));
 
 Textarea.storyName = "default";
 Textarea.argTypes = getArgTypes(demoData);
-Textarea.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
-  },
-};

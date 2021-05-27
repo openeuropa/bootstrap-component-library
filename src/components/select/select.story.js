@@ -17,14 +17,22 @@ const applyArgs = (data, args) => {
 export default {
   title: "Components/Forms/Select",
   decorators: [withDesign],
+  parameters: {
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
+      },
+      {
+        name: "Bootstrap docs",
+        type: "iframe",
+        url: "https://getbootstrap.com/docs/5.0/forms/select/",
+      },
+    ],
+  },
 };
 
 export const Default = (args) => select(applyArgs(demoData, args));
 
 Default.argTypes = getArgTypes(demoData, "select");
-Default.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
-  },
-};

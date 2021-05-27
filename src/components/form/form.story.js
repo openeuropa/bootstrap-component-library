@@ -11,9 +11,19 @@ export default {
   decorators: [withDesign],
   parameters: {
     controls: { disable: true },
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
+    parameters: {
+      design: [
+        {
+          name: "Wireframe",
+          type: "figma",
+          url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=53%3A24",
+        },
+        {
+          name: "Bootstrap docs",
+          type: "iframe",
+          url: "https://getbootstrap.com/docs/5.0/forms/overview/",
+        },
+      ],
     },
   },
 };

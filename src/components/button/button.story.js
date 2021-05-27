@@ -139,30 +139,80 @@ const applyArgs = (data, args) => {
 export default {
   title: "Components/Button",
   decorators: [withDesign],
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2624%3A0",
-    },
-  },
 };
 
 export const Default = (args) => button(applyArgs(demoData, args));
 
 Default.argTypes = getArgTypes(demoData);
+Default.parameters = {
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2624%3A0",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/components/buttons/",
+    },
+  ],
+};
 
 export const Collapse = (args) => button(applyArgs(toggleDemoData, args));
 
 Collapse.storyName = "Collapse";
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
+Collapse.parameters = {
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2726%3A0",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/components/collapse/",
+    },
+  ],
+};
 
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
 Popover.storyName = "Popover";
 Popover.argTypes = getArgTypes(popoverDemoData, "popover");
+Popover.parameters = {
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2738%3A345",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/components/popovers/",
+    },
+  ],
+};
 
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
 
 Spinner.storyName = "Spinner";
 Spinner.argTypes = getArgTypes(spinnerDemoData);
+Spinner.parameters = {
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=3142%3A10921",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/components/spinners/",
+    },
+  ],
+};
