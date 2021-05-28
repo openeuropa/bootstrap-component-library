@@ -203,67 +203,6 @@ export const getFormControls = (data, type) => {
   return argTypes;
 };
 
-export const getSpecificControls = (data, type) => {
-  const argTypes = {};
-  if (type == "popover") {
-    argTypes.popover_content = {
-      name: "popover content",
-      type: { name: "string" },
-      defaultValue: data.popover_content,
-      description: "Content of popover",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: type,
-      },
-    };
-    argTypes.popover_trigger = {
-      name: "trigger",
-      type: { name: "select" },
-      defaultValue: "",
-      description: "Trigger of popover",
-      control: {
-        type: "select",
-        options: ["hover", "focus", "click", "manual"],
-      },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: type,
-      },
-    };
-  }
-  if (type == "popover" || type == "tooltip") {
-    argTypes.content_placement = {
-      name: "placement",
-      type: { name: "select" },
-      description: `Placement of ${type}`,
-      defaultValue: data.content_placement,
-      control: {
-        type: "select",
-        options: ["top", "bottom", "left", "right"],
-      },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: type,
-      },
-    };
-    argTypes.title = {
-      name: "title",
-      type: { name: "string" },
-      defaultValue: data.title,
-      description: `Content of title of ${type}`,
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: type,
-      },
-    };
-  }
-  return argTypes;
-};
-
 export const getVariants = (outline, add) => {
   let variants = [
     "primary",

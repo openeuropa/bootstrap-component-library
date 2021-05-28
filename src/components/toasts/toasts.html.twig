@@ -76,8 +76,9 @@
         type: "button",
         extra_classes: 'btn-close',
         clean_class: true,
-        toggle_type: 'dismiss',
-        target: 'toast',
+        extra_attributes: [
+          { name: "data-bs-dismiss", value: "toast" }
+        ]
       } only -%}
     {% endif %}
     </div>

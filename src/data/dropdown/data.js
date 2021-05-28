@@ -2,6 +2,7 @@ module.exports = {
   id: "dropdown-1",
   trigger: {
     label: "Dropdown Toggle",
+    path: "#",
   },
   items: [
     {

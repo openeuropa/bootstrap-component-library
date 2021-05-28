@@ -64,8 +64,9 @@
         type: "button",
         clean_class: true,
         extra_classes: 'btn-close text-reset',
-        toggle_type: 'dismiss',
-        target: 'offcanvas',
+        extra_attributes: [
+          { name: "data-bs-dismiss", value: "offcanvas" }
+        ]
       } only -%}
   {% endif %}
   </div>

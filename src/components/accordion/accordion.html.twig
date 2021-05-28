@@ -1,6 +1,6 @@
 {% spaceless %}
 
-{# 
+{#
   Parameters:
   - id (int) (default: random(1000))
   - flush (boolean) (default: false) flush variant of the accordion
@@ -11,7 +11,8 @@
       },
       ...
     ]
-  - open_item_id (int) (default: 0) index value of the item to open (starting from 1), all closed by default (0)
+  - open_item_id (int) (default: 0) index value of the item to open (starting from 1),
+    all closed by default (0)
   - extra_classes (string) (default: '')
 #}
 
@@ -25,7 +26,7 @@
 
 {% if _items is not empty %}
 <div class="{{ _class }}" id="accordion-{{ _id }}">
-  {% for _item in _items %}
+{% for _item in _items %}
   {% set _open_item = _open_item_id == loop.index %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="heading-{{ _id }}-{{ loop.index }}">
@@ -33,24 +34,28 @@
         label: _item.title,
         extra_classes: 'accordion-button' ~ (not open_item ? ' collapsed'),
         clean_class: true,
-        toggle: true,
-        toggle_type: 'collapse',
-        target: 'collapse-' ~ _id ~ '-' ~ loop.index,
-        aria_expanded: open_item ? 'true' : 'false',
+        extra_attributes: [
+          { name: "data-bs-toggle", value: "collapse" },
+          { name: "autocomplete", value: "off" },
+          { name: "data-bs-target", value: '#collapse-' ~ _id ~ '-' ~ loop.index },
+          { name: "aria-controls", value: 'collapse-' ~ _id ~ '-' ~ loop.index },
+          { name: "aria-expanded", value: open_item ? 'true' : 'false' }
+        ]
       } only %}
     </h2>
-    <div 
-      id="collapse-{{ _id }}-{{ loop.index }}" 
-      class="accordion-collapse collapse{{ _open_item ? ' show' }}" 
-      aria-labelledby="heading-{{ _id }}-{{ loop.index }}" 
-      data-bs-parent="#accordion-{{ _id }}">
+    <div
+      id="collapse-{{ _id }}-{{ loop.index }}"
+      class="accordion-collapse collapse{{ _open_item ? ' show' }}"
+      aria-labelledby="heading-{{ _id }}-{{ loop.index }}"
+      data-bs-parent="#accordion-{{ _id }}"
+    >
       <div class="accordion-body">
         {%- set _content = _item.content|default('') %}
         {%- block content _content -%}
       </div>
     </div>
   </div>
-  {% endfor %}
+{% endfor %}
 </div>
 {% endif %}
 

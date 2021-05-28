@@ -5,11 +5,6 @@
   - path (string) (default: '#')
   - variant (string) (default: '')
     - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
-  - toggle (boolean) (default: false)
-  - toggle_type (string) (default: 'button')
-    - options ["button", "collapse"]
-  - target (string) (default: '')
-  - aria_expanded (string) (default: 'false')
   - id (string) (default: '')
   - disabled (boolean) (default: false)
   - extra_classes (string) (default: '')
@@ -22,10 +17,6 @@
 {% set _label = label|default('') %}
 {% set _path = path|default('#') %}
 {% set _variant = variant|default('') %}
-{% set _toggle = toggle|default(false) %}
-{% set _toggle_type = toggle_type|default('button') %}
-{% set _target = target|default('') %}
-{% set _aria_expanded = aria_expanded|default('false') %}
 {% set _id = id|default('') %}
 {% set _disabled = disabled|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
@@ -33,6 +24,7 @@
 {% set _icon_position = icon_position|default('after') %}
 {% set _extra_attributes = '' %}
 {% set _class = '' %}
+
 {% if _icon is not empty %}
 {% set _icon_markup %}
   {% include '@oe/icon/icon.html.twig' with _icon only %}
@@ -48,9 +40,7 @@
 {% if _variant is not empty %}
   {% set _class = _class ~ ' link-' ~ _variant %}
 {% endif %}
-{% if _toggle and _target is not empty %}
-  {% set _path = '#' ~ _target %}
-{% endif %}
+
 {% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
   {% for attr in extra_attributes %}
     {% if attr.value is defined %}
@@ -61,7 +51,7 @@
   {% endfor %}
 {% endif %}
 
-<a 
+<a
   href="{{ _path }}"
 {% if _class is not empty %}
   class="{{ _class }}"
@@ -73,17 +63,7 @@
   tabindex="-1"
   aria-disabled="true"
 {% endif %}
-{% if _toggle %}
-  data-bs-toggle="{{ _toggle_type }}"
-  role="button"
-{% if _toggle_type == 'collapse' or _toggle_type == 'tab' %}
-  aria-controls="{{ _target }}"
-{% endif %}
-{% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
-  aria-expanded="{{ _aria_expanded }}"
-{% endif %}
-{% endif %}
-{{ _extra_attributes|raw }}
+  {{ _extra_attributes|raw }}
 >
   {%- if _icon_position == 'before' and _icon_markup is defined -%}
     {{ _icon_markup|raw }}

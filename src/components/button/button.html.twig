@@ -17,21 +17,9 @@
     - options ["after", "before"]
   - clean_class (boolean) (default: false)
   - extra_classes (string) (default: '')
+  - extra_attributes (object) (default: {})
   - spinner (spinner object) (default: {})
   - show_spinner (boolean) (default: false)
-
-    Toggles functionality parameters
-  - toggle (boolean) (default: false)
-  - toggle_type (string) (default: 'button')
-    - options ["button", "collapse", "dropdown", "popover"]
-  - target (string) (default: '')
-  - aria_expanded (string) (default: 'false')
-    - options ["true", "false"]
-  - title (string) (default: '')
-  - popover_trigger (string) (default: '')
-  - content_placement (string) (default: '')
-    - options ['top', 'bottom', 'left', 'right']
-  - popover_content (string) (default: '')
 #}
 
 {% set _label = label|default('') %}
@@ -40,14 +28,6 @@
 {% set _type = type|default('button') %}
 {% set _outline = outline|default(false) %}
 {% set _disabled = disabled|default(false) %}
-{% set _toggle = toggle|default(false) %}
-{% set _toggle_type = toggle_type|default('button') %}
-{% set _target = target|default('') %}
-{% set _popover_trigger = popover_trigger|default('') %}
-{% set _content_placement = content_placement|default('') %}
-{% set _title = title|default('') %}
-{% set _popover_content = popover_content|default('') %}
-{% set _aria_expanded = aria_expanded|default('false') %}
 {% set _text_nowrap = text_nowrap|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
 {% set _id = id|default('') %}
@@ -57,6 +37,7 @@
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
+{% set _extra_attributes = '' %}
 {% set _class = '' %}
 {% if _clean_class == false %}
   {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
@@ -66,40 +47,24 @@
 {% if _extra_classes is not empty %}
   {% set _class = (_class ? _class ~ ' ' : '') ~ _extra_classes %}
 {% endif %}
+{% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
+  {% for attr in extra_attributes %}
+    {% if attr.value is defined %}
+      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') ~ '="' ~ attr.value|e('html_attr') ~ '"' %}
+    {% else %}
+      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <button
   type="{{ _type }}"
-  class="{{ _class }}" 
+  class="{{ _class }}"
   {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
 {% if _id is not empty %}
   id="{{ _id }}"
 {% endif %}
-{% if _toggle %}
-  data-bs-toggle="{{ _toggle_type }}"
-  autocomplete="off"
-{% if _toggle_type == 'collapse' or _toggle_type == 'tab' %}
-  data-bs-target="#{{ _target }}"
-  aria-controls="{{ _target }}"
-{% endif %}
-{% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
-  aria-expanded="{{ _aria_expanded }}"
-{% endif %}
-{% if _content_placement is not empty %}
-  data-bs-placement="{{ _content_placement }}"
-{% endif %}
-{% if _popover_trigger is not empty %}
-  data-bs-trigger="{{ _popover_trigger }}"
-{% endif %}
-{% if _popover_content is not empty %}
-  data-bs-content="{{ _popover_content }}"
-{% endif %}
-{% endif %}
-{% if _title is not empty %}
-  title="{{ _title }}"
-{% endif %}
-{% if _toggle_type == 'dismiss' %}
-  data-bs-dismiss="{{ _target }}"
-{% endif %}
+{{ _extra_attributes|raw }}
 >
 {%- if _show_spinner -%}
   {% include '@oe/spinner/spinner.html.twig' with _spinner only %}

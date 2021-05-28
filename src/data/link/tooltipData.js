@@ -1,8 +1,6 @@
 module.exports = {
   label: "A link with tooltip",
   path: "/example.html",
-  toggle: true,
-  toggle_type: "tooltip",
   extra_attributes: [
     {
       name: "title",
@@ -11,6 +9,14 @@ module.exports = {
     {
       name: "data-bs-placement",
       value: "bottom",
+    },
+    {
+      name: "data-bs-toggle",
+      value: "tooltip",
+    },
+    {
+      name: "role",
+      value: "button",
     },
   ],
 };

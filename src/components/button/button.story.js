@@ -5,19 +5,19 @@ import popoverDemoData from "@oe/data-button/popoverData";
 import tooltipDemoData from "@oe/data-button/tooltipData";
 import spinnerDemoData from "@oe/data-button/spinnerData";
 import button from "./button.html.twig";
-import {
-  getIconControls,
-  getVariants,
-  getSpecificControls,
-} from "@oe/story-utils";
+import { getIconControls, getVariants } from "@oe/story-utils";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
 
 const withCollapse = (story) => {
   const demo = story();
-  return `${demo} <div class="collapse mt-3" id="${toggleDemoData.target}">${toggleDemoData.collapse_text}</div>`;
+  return `
+    ${demo} 
+    <div class="collapse mt-3" id="${toggleDemoData.extra_attributes[3].value}">
+      ${toggleDemoData.collapse_text}
+    </div>`;
 };
 
-const getArgTypes = (data, type) => {
+const getArgTypes = (data) => {
   return {
     label: {
       type: { name: "string" },
@@ -118,8 +118,20 @@ const getArgTypes = (data, type) => {
         category: "Style",
       },
     },
+    extra_attributes: {
+      type: { name: "array of objects" },
+      description: "Extra attributes",
+      defaultValue: data.extra_attributes || [{}],
+      control: {
+        type: "object",
+      },
+      table: {
+        type: { summary: "array of objects" },
+        defaultValue: { summary: [] },
+        category: "extra attributes",
+      },
+    },
     ...getIconControls("button"),
-    ...getSpecificControls(data, type),
   };
 };
 
@@ -183,7 +195,7 @@ Collapse.parameters = {
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
 Popover.storyName = "Popover";
-Popover.argTypes = getArgTypes(popoverDemoData, "popover");
+Popover.argTypes = getArgTypes(popoverDemoData);
 Popover.parameters = {
   design: [
     {

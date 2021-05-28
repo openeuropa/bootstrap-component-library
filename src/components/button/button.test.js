@@ -1,6 +1,6 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-button/data";
-import toggleDemoData from "@oe/data-link/toggleData";
+import toggleDemoData from "@oe/data-button/toggleData";
 import popoverDemoData from "@oe/data-button/popoverData";
 import tooltipDemoData from "@oe/data-button/tooltipData";
 import spinnerDemoData from "@oe/data-button/spinnerData";

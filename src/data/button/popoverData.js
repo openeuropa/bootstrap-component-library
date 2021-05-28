@@ -1,7 +1,29 @@
 module.exports = {
   label: "Button with popover",
-  toggle_type: "popover",
-  toggle: true,
-  popover_content: "This is a popover",
-  title: "This is a title of popover",
+  extra_attributes: [
+    {
+      name: "data-bs-toggle",
+      value: "popover",
+    },
+    {
+      name: "autocomplete",
+      value: "off",
+    },
+    {
+      name: "data-bs-trigger",
+      value: "focus",
+    },
+    {
+      name: "data-bs-placement",
+      value: "top",
+    },
+    {
+      name: "data-bs-content",
+      value: "This is a popover",
+    },
+    {
+      name: "title",
+      value: "This is a title of popover",
+    },
+  ],
 };
