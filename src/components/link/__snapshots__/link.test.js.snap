@@ -18,8 +18,7 @@ exports[`OE - Link danger renders correctly 1`] = `
 <jest>
   <a
     class=" link-danger"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -30,8 +29,7 @@ exports[`OE - Link dark renders correctly 1`] = `
 <jest>
   <a
     class=" link-dark"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -42,8 +40,7 @@ exports[`OE - Link info renders correctly 1`] = `
 <jest>
   <a
     class=" link-info"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -54,8 +51,7 @@ exports[`OE - Link light renders correctly 1`] = `
 <jest>
   <a
     class=" link-light"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -66,8 +62,7 @@ exports[`OE - Link primary renders correctly 1`] = `
 <jest>
   <a
     class=" link-primary"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -77,8 +72,7 @@ exports[`OE - Link primary renders correctly 1`] = `
 exports[`OE - Link renders correctly 1`] = `
 <jest>
   <a
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -89,8 +83,7 @@ exports[`OE - Link secondary renders correctly 1`] = `
 <jest>
   <a
     class=" link-secondary"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -101,8 +94,7 @@ exports[`OE - Link success renders correctly 1`] = `
 <jest>
   <a
     class=" link-success"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -113,8 +105,7 @@ exports[`OE - Link warning renders correctly 1`] = `
 <jest>
   <a
     class=" link-warning"
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!
   </a>
@@ -124,8 +115,7 @@ exports[`OE - Link warning renders correctly 1`] = `
 exports[`OE - Link with icon renders correctly 1`] = `
 <jest>
   <a
-    href="#link"
-    target="_blank"
+    href="/example.html"
   >
     A simple link!  
     <svg
@@ -135,6 +125,20 @@ exports[`OE - Link with icon renders correctly 1`] = `
         xlink:href="bootstrap-icons.svg#mouse"
       />
     </svg>
+  </a>
+</jest>
+`;
+
+exports[`OE - Link with tooltip renders correctly 1`] = `
+<jest>
+  <a
+    data-bs-placement="bottom"
+    data-bs-toggle="tooltip"
+    href="/example.html"
+    role="button"
+    title="This is a tooltip"
+  >
+    A link with tooltip
   </a>
 </jest>
 `;

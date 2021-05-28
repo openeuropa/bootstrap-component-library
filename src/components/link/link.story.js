@@ -1,5 +1,6 @@
 import demoData from "@oe/data-link/data";
 import toggleDemoData from "@oe/data-link/toggleData";
+import tooltipDemoData from "@oe/data-link/tooltipData";
 import link from "./link.html.twig";
 import { getIconControls, getVariants } from "@oe/story-utils";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
@@ -27,7 +28,7 @@ const getArgTypes = (data) => {
       defaultValue: data.path,
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "" },
+        defaultValue: { summary: "#" },
         category: "Content",
       },
     },
@@ -76,3 +77,15 @@ export const Collapse = (args) => link(applyArgs(toggleDemoData, args));
 Collapse.storyName = "Collapse";
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
+
+export const Tooltip = (args) => link(applyArgs(tooltipDemoData, args));
+
+Tooltip.storyName = "Tooltip";
+Tooltip.argTypes = getArgTypes(tooltipDemoData);
+Tooltip.parameters = {
+  design: {
+    name: "Bootstrap docs",
+    type: "iframe",
+    url: "https://getbootstrap.com/docs/5.0/components/tooltips/",
+  },
+};

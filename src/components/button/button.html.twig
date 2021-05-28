@@ -27,9 +27,9 @@
   - target (string) (default: '')
   - aria_expanded (string) (default: 'false')
     - options ["true", "false"]
-  - popover_title (string) (default: '')
+  - title (string) (default: '')
   - popover_trigger (string) (default: '')
-  - popover_placement (string) (default: '')
+  - content_placement (string) (default: '')
     - options ['top', 'bottom', 'left', 'right']
   - popover_content (string) (default: '')
 #}
@@ -44,8 +44,8 @@
 {% set _toggle_type = toggle_type|default('button') %}
 {% set _target = target|default('') %}
 {% set _popover_trigger = popover_trigger|default('') %}
-{% set _popover_placement = popover_placement|default('') %}
-{% set _popover_title = popover_title|default('') %}
+{% set _content_placement = content_placement|default('') %}
+{% set _title = title|default('') %}
 {% set _popover_content = popover_content|default('') %}
 {% set _aria_expanded = aria_expanded|default('false') %}
 {% set _text_nowrap = text_nowrap|default(false) %}
@@ -84,8 +84,8 @@
 {% if _toggle_type == 'collapse' or _toggle_type == 'dropdown' %}
   aria-expanded="{{ _aria_expanded }}"
 {% endif %}
-{% if _popover_placement is not empty %}
-  data-bs-placement="{{ _popover_placement }}"
+{% if _content_placement is not empty %}
+  data-bs-placement="{{ _content_placement }}"
 {% endif %}
 {% if _popover_trigger is not empty %}
   data-bs-trigger="{{ _popover_trigger }}"
@@ -94,8 +94,8 @@
   data-bs-content="{{ _popover_content }}"
 {% endif %}
 {% endif %}
-{% if _popover_title is not empty %}
-  title="{{ _popover_title }}"
+{% if _title is not empty %}
+  title="{{ _title }}"
 {% endif %}
 {% if _toggle_type == 'dismiss' %}
   data-bs-dismiss="{{ _target }}"

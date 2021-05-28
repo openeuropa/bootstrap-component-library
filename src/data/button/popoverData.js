@@ -3,5 +3,5 @@ module.exports = {
   toggle_type: "popover",
   toggle: true,
   popover_content: "This is a popover",
-  popover_title: "This is a title of popover",
+  title: "This is a title of popover",
 };

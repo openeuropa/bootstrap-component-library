@@ -2,6 +2,7 @@ import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-button/data";
 import toggleDemoData from "@oe/data-link/toggleData";
 import popoverDemoData from "@oe/data-button/popoverData";
+import tooltipDemoData from "@oe/data-button/tooltipData";
 import spinnerDemoData from "@oe/data-button/spinnerData";
 import { getVariants } from "@oe/story-utils";
 
@@ -64,8 +65,19 @@ describe("OE - Button", () => {
     return expect(
       render({
         ...popoverDemoData,
-        popover_placement: "top",
+        content_placement: "top",
         popover_trigger: "focus",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("with tooltip renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...tooltipDemoData,
+        content_placement: "bottom",
       })
     ).resolves.toMatchSnapshot();
   });

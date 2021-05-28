@@ -2,7 +2,7 @@
 
 {# Parameters:
   - label (string) (default: '')
-  - path (string) (default: '')
+  - path (string) (default: '#')
   - variant (string) (default: '')
     - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
   - toggle (boolean) (default: false)
@@ -20,7 +20,7 @@
 #}
 
 {% set _label = label|default('') %}
-{% set _path = path|default('') %}
+{% set _path = path|default('#') %}
 {% set _variant = variant|default('') %}
 {% set _toggle = toggle|default(false) %}
 {% set _toggle_type = toggle_type|default('button') %}
@@ -48,7 +48,7 @@
 {% if _variant is not empty %}
   {% set _class = _class ~ ' link-' ~ _variant %}
 {% endif %}
-{% if _toggle %}
+{% if _toggle and _target is not empty %}
   {% set _path = '#' ~ _target %}
 {% endif %}
 {% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}

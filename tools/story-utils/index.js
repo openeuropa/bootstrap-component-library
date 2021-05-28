@@ -206,21 +206,6 @@ export const getFormControls = (data, type) => {
 export const getSpecificControls = (data, type) => {
   const argTypes = {};
   if (type == "popover") {
-    argTypes.popover_placement = {
-      name: "placement",
-      type: { name: "select" },
-      description: "Placement of popover",
-      defaultValue: "",
-      control: {
-        type: "select",
-        options: ["top", "bottom", "left", "right"],
-      },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Popover",
-      },
-    };
     argTypes.popover_content = {
       name: "popover content",
       type: { name: "string" },
@@ -229,18 +214,7 @@ export const getSpecificControls = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
-        category: "Popover",
-      },
-    };
-    argTypes.popover_title = {
-      name: "title",
-      type: { name: "string" },
-      defaultValue: data.popover_title,
-      description: "Content of title of popover",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Popover",
+        category: type,
       },
     };
     argTypes.popover_trigger = {
@@ -255,7 +229,35 @@ export const getSpecificControls = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
-        category: "Popover",
+        category: type,
+      },
+    };
+  }
+  if (type == "popover" || type == "tooltip") {
+    argTypes.content_placement = {
+      name: "placement",
+      type: { name: "select" },
+      description: `Placement of ${type}`,
+      defaultValue: data.content_placement,
+      control: {
+        type: "select",
+        options: ["top", "bottom", "left", "right"],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: type,
+      },
+    };
+    argTypes.title = {
+      name: "title",
+      type: { name: "string" },
+      defaultValue: data.title,
+      description: `Content of title of ${type}`,
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: type,
       },
     };
   }

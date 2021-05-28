@@ -1,6 +1,7 @@
 import { merge, renderTwigFileAsNode } from "@oe/test-utils";
 import demoData from "@oe/data-link/data";
 import toggleDemoData from "@oe/data-link/toggleData";
+import tooltipDemoData from "@oe/data-link/tooltipData";
 import { getVariants } from "@oe/story-utils";
 
 const template = "@oe/link/link.html.twig";
@@ -28,6 +29,12 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(render(toggleDemoData)).resolves.toMatchSnapshot();
+  });
+
+  test(`with tooltip renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(render(tooltipDemoData)).resolves.toMatchSnapshot();
   });
 
   test("with icon renders correctly", () => {
