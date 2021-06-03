@@ -1,0 +1,153 @@
+{% spaceless %}
+
+{# Parameters:
+  - id (string) (default: '')
+  - autoplay (boolean) (default: true)
+  - autoinit (boolean) (default: true)
+  - dark (boolean) (default: false)
+  - active_item (integer) (default: 1)
+  - extra_classes (string) (default: '')
+  - items (array of objects) format: [
+     {
+      image: {
+        src (string)
+        alt (string)
+      },
+      caption (string)
+      caption_classes (string)
+      interval (integer) (default: 0)
+     }
+     ...
+   ],
+  - fade (boolean) (default: false)
+  - with_controls (boolean) (default: true)
+  - previous_label (string) (default: '')
+  - next_label (string) (default: '')
+  - with_indicators (boolean) (default: false)
+#}
+
+{% set _id = id|default('') %}
+{% set _items = items|default([]) %}
+{% set _with_controls = with_controls ?? true %}
+{% set _active_item = active_item|default(1) %}
+{% set _prev_label = prev_label|default('') %}
+{% set _next_label = next_label|default('') %}
+{% set _with_indicators = with_indicators|default(false) %}
+{% set _classes = 'carousel slide' %}
+{% set _autoinit = autoinit ?? true %}
+{% set _autoplay = autoplay ?? true %}
+{% set _disable_touch = disable_touch|default(false) %}
+{% set _fade = fade|default(false) %}
+{% set _dark = dark|default(false) %}
+{% set _extra_classes = extra_classes|default('') %}
+
+{% if _fade %}
+  {% set _classes = _classes ~ ' carousel-fade' %}
+{% endif %}
+{% if _dark %}
+  {% set _classes = _classes ~ ' carousel-dark' %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _classes = _classes ~ ' ' ~ _extra_classes %}
+{% endif %}
+
+<div
+{% if _id is not empty %}
+  id="{{ _id }}"
+{% endif %}
+  class="{{ _classes }}"
+{% if _autoinit %}
+  data-bs-ride="carousel"
+{% endif %}
+{% if _disable_touch %}
+  data-bs-touch="false"
+{% endif %}
+{% if not _autoplay %}
+  data-bs-interval="false"
+{% endif %}
+>
+{% if _with_indicators %}
+  <div class="carousel-indicators">
+  {% for _i in 0..(_items|length - 1) %}
+    {% set _indicator_attrs = [
+      { name: 'aria-label', value: 'Slide ' ~ (_i + 1) },
+      { name: 'data-bs-target', value: '#' ~ _id },
+      { name: 'data-bs-slide-to', value: _i },
+    ] %}
+    {% if loop.index == _active_item %}
+      {% set _indicator_attrs = _indicator_attrs|merge([
+        { name: 'aria-current', value: 'true' }
+      ]) %}
+    {% endif %}
+    {% include '@oe/button/button.html.twig' with {
+      clean_class: true,
+      extra_attributes: _indicator_attrs,
+      extra_classes: loop.index == _active_item ? 'active' : '',
+    } only %}
+  {% endfor %}
+  </div>
+{% endif %}
+  <div class="carousel-inner">
+  {% if _items is not empty and _items is iterable %}
+    {% for _item in items %}
+    {% set _item_classes = 'carousel-item' %}
+    {% if loop.index == _active_item %}
+      {% set _item_classes = _item_classes ~ ' active' %}
+    {% endif %}
+    <div
+      class="{{ _item_classes }}"
+    {% if _item.interval is defined %}
+      data-bs-interval="{{ _item.interval }}"
+    {% endif %}
+    >
+    {% if _item.image is defined and _item.image is not empty %}
+      <img
+        src="{{ _item.image.src }}"
+        class="d-block w-100"
+      {% if _item.image.alt is defined and _item.image.alt is not empty %}
+        alt="{{ _item.image.alt }}"
+      {% endif %}
+      >
+    {% endif %}
+    {% if _item.caption is defined and _item.caption is not empty %}
+      {% set _caption_classes = 'carousel-caption' %}
+      {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
+        {% set _caption_classes = _caption_classes ~ ' ' ~ _item.caption_classes %}
+      {% endif %}
+      <div
+        class="{{ _caption_classes }}"
+      >
+        {{- _item.caption -}}
+      </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+  {% endif %}
+  </div>
+{% if with_controls %}
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#{{ _id }}"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  {% if _prev_label is not empty %}
+    <span class="visually-hidden">{{ _prev_label }}</span>
+  {% endif %}
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#{{ _id }}"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  {% if _next_label is not empty %}
+    <span class="visually-hidden">{{ _next_label }}</span>
+  {% endif %}
+  </button>
+{% endif %}
+</div>
+
+{% endspaceless %}

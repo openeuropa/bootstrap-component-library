@@ -1,6 +1,6 @@
 import { addParameters } from "@storybook/html";
 import { withCssResources } from "@storybook/addon-cssresources";
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 addParameters({
   a11y: {
@@ -29,10 +29,10 @@ addParameters({
   controls: { expanded: true },
   layout: "fullscreen",
   viewport: {
-    defaultViewport: "responsive",
+    defaultViewport: "Responsive",
     viewports: {
       responsive: {
-        name: "responsive",
+        name: "Responsive",
         styles: {
           width: "100%",
           height: "100%",
@@ -43,7 +43,7 @@ addParameters({
           position: "absolute",
         },
       },
-      ...INITIAL_VIEWPORTS,
+      ...MINIMAL_VIEWPORTS,
       "1366x768": {
         name: "1366x768",
         styles: {

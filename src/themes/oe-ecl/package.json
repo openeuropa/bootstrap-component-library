@@ -6,9 +6,11 @@
   "description": "OE — theme ECL",
   "private": true,
   "scripts": {
+    "css-clean": "rimraf css",
     "css-compile": "sass --load-path=../../../node_modules --style expanded --source-map --embed-sources --no-error-css oe-ecl.scss:css/oe-ecl.css",
     "css-prefix": "postcss --config postcss.config.js --replace \"css/*.css\"",
     "css-minify": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output css/oe-ecl.min.css css/oe-ecl.css",
+    "js-clean": "rimraf js",
     "js-compile": "npm-run-all js-compile-*",
     "js-compile-standalone": "rollup --environment BUNDLE:false --config scripts/rollup.config.js --sourcemap",
     "js-compile-standalone-esm": "rollup --environment ESM:true,BUNDLE:false --config scripts/rollup.config.js --sourcemap",

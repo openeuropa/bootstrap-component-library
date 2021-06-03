@@ -73,7 +73,8 @@ const getConfigByPluginKey = (pluginKey) => {
     pluginKey === "EventHandler" ||
     pluginKey === "SelectorEngine" ||
     pluginKey === "Util" ||
-    pluginKey === "Sanitizer"
+    pluginKey === "Sanitizer" ||
+    pluginKey === "Backdrop"
   ) {
     return {
       external: [],
@@ -139,7 +140,7 @@ const getConfigByPluginKey = (pluginKey) => {
   }
 };
 
-const utilObjects = new Set(["Util", "Sanitizer"]);
+const utilObjects = new Set(["Util", "Sanitizer", "Backdrop"]);
 
 const domObjects = new Set([
   "Data",

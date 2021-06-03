@@ -28,7 +28,10 @@ if (BUNDLE) {
   external.pop();
   delete globals["@popperjs/core"];
   plugins.push(
-    replace({ "process.env.NODE_ENV": '"production"' }),
+    replace({
+      "process.env.NODE_ENV": '"production"',
+      preventAssignment: true,
+    }),
     nodeResolve()
   );
 }

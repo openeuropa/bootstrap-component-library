@@ -59,7 +59,9 @@
 
 <button
   type="{{ _type }}"
+{% if _class %}
   class="{{ _class }}"
+{% endif %}
   {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
 {% if _id is not empty %}
   id="{{ _id }}"
