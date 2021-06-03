@@ -3,7 +3,7 @@ import demoData from "@oe/data-progress/data.js";
 import progress from "./progress.html.twig";
 import { getVariants } from "@oe/story-utils";
 
-const getArgTypes = () => {
+const getArgTypes = (data) => {
   return {
     striped: {
       type: { name: "boolean" },
