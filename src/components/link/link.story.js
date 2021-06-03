@@ -1,6 +1,6 @@
-import demoData from "@oe/data-link/data";
-import toggleDemoData from "@oe/data-link/toggleData";
-import tooltipDemoData from "@oe/data-link/tooltipData";
+import demoData from "@oe/data-link/data.js";
+import toggleDemoData from "@oe/data-link/toggleData.js";
+import tooltipDemoData from "@oe/data-link/tooltipData.js";
 import link from "./link.html.twig";
 import { getIconControls, getVariants } from "@oe/story-utils";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";

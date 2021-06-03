@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-dropdown/data";
+import demoData from "@oe/data-dropdown/data.js";
 import dropdown from "./dropdown.html.twig";
 
 const getArgTypes = (data) => {

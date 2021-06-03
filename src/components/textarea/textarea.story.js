@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@oe/story-utils";
-import demoData from "@oe/data-textarea/data";
+import demoData from "@oe/data-textarea/data.js";
 import textarea from "./textarea.html.twig";
 
 const getArgTypes = (data) => {

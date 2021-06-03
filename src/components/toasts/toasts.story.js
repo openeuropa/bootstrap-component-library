@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
-import demoSingle from "@oe/data-toasts/data";
-import demoMultiple from "@oe/data-toasts/data-multiple";
+import demoSingle from "@oe/data-toasts/data.js";
+import demoMultiple from "@oe/data-toasts/data-multiple.js";
 import toasts from "./toasts.html.twig";
 
 const getArgTypes = (data) => {

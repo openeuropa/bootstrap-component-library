@@ -1,4 +1,4 @@
-import demoData from "@oe/data-offcanvas/data";
+import demoData from "@oe/data-offcanvas/data.js";
 import offCanvas from "./offcanvas.html.twig";
 
 const getArgTypes = (data) => {

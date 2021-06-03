@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-breadcrumb/data";
+import demoData from "@oe/data-breadcrumb/data.js";
 import breadcrumb from "./breadcrumb.html.twig";
 
 const getArgTypes = (data) => {

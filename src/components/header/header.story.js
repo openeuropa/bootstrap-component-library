@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-header/data";
+import demoData from "@oe/data-header/data.js";
 import headerECLData from "@oe/data-header/data-ecl";
 import header from "./header.html.twig";
 import "!!null-loader!@oe/theme-oe/scss/_header.scss";

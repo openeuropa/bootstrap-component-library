@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-form/data";
-import demoDisabled from "@oe/data-form/data-disabled";
-import demoGrid from "@oe/data-form/data-grid";
-import demoHorizontal from "@oe/data-form/data-horizontal";
-import demoInline from "@oe/data-form/data-inline";
+import demoData from "@oe/data-form/data.js";
+import demoDisabled from "@oe/data-form/data-disabled.js";
+import demoGrid from "@oe/data-form/data-grid.js";
+import demoHorizontal from "@oe/data-form/data-horizontal.js";
+import demoInline from "@oe/data-form/data-inline.js";
 import form from "./form.html.twig";
 
 export default {

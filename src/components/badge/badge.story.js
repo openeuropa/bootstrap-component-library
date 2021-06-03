@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-badge/data";
+import demoData from "@oe/data-badge/data.js";
 import badge from "./badge.html.twig";
 import { getVariants } from "@oe/story-utils";
 

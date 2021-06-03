@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-alert/data";
+import demoData from "@oe/data-alert/data.js";
 import alert from "./alert.html.twig";
 import { getVariants } from "@oe/story-utils";
 

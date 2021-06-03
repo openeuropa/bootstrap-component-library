@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-spinner/data";
+import demoData from "@oe/data-spinner/data.js";
 import spinner from "./spinner.html.twig";
 import { getVariants } from "@oe/story-utils";
 

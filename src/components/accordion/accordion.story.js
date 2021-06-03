@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-accordion/data";
+import demoData from "@oe/data-accordion/data.js";
 import accordion from "./accordion.html.twig";
 
 const getArgTypes = (data) => {

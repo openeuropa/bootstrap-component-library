@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-pagination/data";
-import demoCustomIconsData from "@oe/data-pagination/dataCustomIcons";
+import demoData from "@oe/data-pagination/data.js";
+import demoCustomIconsData from "@oe/data-pagination/dataCustomIcons.js";
 import pagination from "./pagination.html.twig";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
 

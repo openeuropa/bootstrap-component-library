@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-button/data";
-import toggleDemoData from "@oe/data-button/toggleData";
-import popoverDemoData from "@oe/data-button/popoverData";
-import tooltipDemoData from "@oe/data-button/tooltipData";
-import spinnerDemoData from "@oe/data-button/spinnerData";
+import demoData from "@oe/data-button/data.js";
+import toggleDemoData from "@oe/data-button/toggleData.js";
+import popoverDemoData from "@oe/data-button/popoverData.js";
+import tooltipDemoData from "@oe/data-button/tooltipData.js";
+import spinnerDemoData from "@oe/data-button/spinnerData.js";
 import button from "./button.html.twig";
 import { getIconControls, getVariants } from "@oe/story-utils";
 import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
