@@ -52,10 +52,23 @@ Navbar.parameters = {
       hideCode: true,
     },
   ],
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2896%3A0",
-  },
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2896%3A0",
+    },
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=30%3A10",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/components/navbar/",
+    },
+  ],
 };
 
 const NavbarECLArgs = {
@@ -79,8 +92,21 @@ NavbarECL.parameters = {
       hideCode: true,
     },
   ],
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2896%3A0",
-  },
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2896%3A0",
+    },
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=30%3A10",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/components/navbar/",
+    },
+  ],
 };

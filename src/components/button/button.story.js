@@ -162,7 +162,12 @@ Default.parameters = {
     {
       name: "Wireframe",
       type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2624%3A0",
+      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2624%3A00",
+    },
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=1%3A815",
     },
     {
       name: "Bootstrap docs",

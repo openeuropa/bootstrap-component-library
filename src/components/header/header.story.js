@@ -29,7 +29,7 @@ Header.parameters = {
   ],
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2881%3A68",
+    url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2881%3A68",
   },
 };
 
@@ -47,6 +47,6 @@ HeaderECL.parameters = {
   ],
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2881%3A68",
+    url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2881%3A68",
   },
 };

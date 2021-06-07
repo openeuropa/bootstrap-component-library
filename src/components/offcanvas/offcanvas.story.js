@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@oe/data-offcanvas/data.js";
 import offCanvas from "./offcanvas.html.twig";
 
@@ -95,6 +96,26 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Offcanvas",
+  decorators: [withDesign],
+  parameters: {
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=3405%3A0",
+      },
+      {
+        name: "Mockup",
+        type: "figma",
+        url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=3501%3A5602",
+      },
+      {
+        name: "Bootstrap docs",
+        type: "iframe",
+        url: "https://getbootstrap.com/docs/5.0/components/offcanvas/",
+      },
+    ],
+  },
 };
 
 export const Default = (args) => offCanvas(applyArgs(demoData, args));

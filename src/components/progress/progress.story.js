@@ -89,7 +89,12 @@ export default {
       {
         name: "Wireframe",
         type: "figma",
-        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=3140%3A10773",
+        url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=3140%3A10773",
+      },
+      {
+        name: "Mockup",
+        type: "figma",
+        url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A86",
       },
       {
         name: "Bootstrap docs",
