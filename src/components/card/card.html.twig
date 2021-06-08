@@ -1,0 +1,175 @@
+{% spaceless %}
+
+{# Parameters:
+  - title (object) (default: {})
+    format: {
+      content: '',
+      tag: '',
+      classes: ''
+    }
+  - subtitle (object) (default: {})
+    format: {
+      content: '',
+      tag: '',
+      classes: ''
+    }
+  - text (object) (default: {})
+    format: {
+      content: '',
+      tag: '',
+      classes: ''
+    }
+  - content (string) (default: '')
+  - image (object) (default: {})
+    format: {
+      path (string),
+      alt (string),
+      position (string)
+    }
+  - horizontal (boolean) (default: false)
+  - horizontal_grid (object) (default: {})
+    format: {
+      left_col (default: '4')
+      right_col (default: '8')
+      gutter (default: '0')
+    }
+  - variant (string) (default: '')
+  - border_variant (string) (default: '')
+  - text_color (string) (default: '')
+    options: ['dark', 'white']
+  - card_header (string) (default: '')
+  - card_footer (string) (default: '')
+  - extra_classes (string) (default: '')
+#}
+
+{% set _title = title|default({}) %}
+{% set _subtitle = subtitle|default({}) %}
+{% set _text = text|default({}) %}
+{% set _content = content|default('') %}
+{% set _image = image|default({}) %}
+{% set _variant = variant|default('') %}
+{% set _horizontal = horizontal|default(false) %}
+{% set _horizontal_grid = horizontal_grid|default({
+  left_col: '4',
+  right_col: '8',
+  gutter: '0'
+}) %}
+{% set _border_variant = border_variant|default('') %}
+{% set _text_color = text_color|default('') %}
+{% set _card_header = card_header|default('') %}
+{% set _card_footer = card_footer|default('') %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = 'card' %}
+{% if _text_color is not empty %}
+  {% set _class = _class ~ ' text-' ~ _text_color %}
+{% endif %}
+{% if _variant is not empty %}
+  {% set _class = _class ~ ' bg-' ~ _variant %}
+  {% if _text_color is empty %}
+    {% if _variant == 'warning' or _variant == 'info' or _variant == 'light' %}
+      {% set _class = _class ~ ' text-dark' %}
+    {% else %}
+      {% set _class = _class ~ ' text-white' %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% if _border_variant is not empty %}
+  {% set _class = _class ~ ' border-' ~ _border_variant %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
+
+<div class='{{ _class }}'>
+{% if _horizontal %}
+<div class='row g-{{ _horizontal_grid.gutter }}'>
+{% endif %}
+{% if _image is not empty and _image.position != 'bottom' %}
+  {% set _img_class = 'card-img-top' %}
+  {% if _image.position == 'background' %}
+    {% set _img_class = 'card-img' %}
+  {% endif %}
+  {% if _horizontal %}
+  <div class='col-{{ _horizontal_grid.left_col }}'>
+  {% endif %}
+  <img
+    src='{{ _image.path }}'
+    alt='{{ _image.alt }}'
+    class='{{ _img_class }}'
+  >
+  {% if _horizontal %}
+  </div>
+  {% endif %}
+  {% if _image.position == 'background' %}
+  <div class='card-img-overlay'>
+  {% endif %}
+{% endif %}
+{% if _horizontal %}
+<div class='col-{{ _horizontal_grid.right_col }}'>
+{% endif %}
+{% if _card_header is not empty %}
+  <div class='card-header'>
+    {{- _card_header -}}
+  </div>
+{% endif %}
+  <div class='card-body'>
+  {% if _title is not empty %}
+    {% set _title_tag = _title.tag ?? 'h5' %}
+    <{{ _title_tag }}
+      class='card-title{{ title.classes ? ' ' ~ title.classes }}'
+    >
+      {{- title.content -}}
+    </{{ _title_tag }}>
+  {% endif %}
+  {% if _subtitle is not empty %}
+    {% set _subtitle_tag = _subtitle.tag ?? 'h6' %}
+    <{{ _subtitle_tag }}
+      class='card-subtitle{{ _subtitle.classes ? ' ' ~ _subtitle.classes }}'
+    >
+      {{- _subtitle.content -}}
+    </{{ _subtitle_tag }}>
+  {% endif %}
+  {% if _text is not empty %}
+    {% set _text_tag = _text.tag ?? 'p' %}
+    <{{ _text_tag }}
+      class='card-text{{ _text.classes ? ' ' ~ _text.classes }}'
+    >
+      {{- _text.content -}}
+    </{{ _text_tag }}>
+  {% endif %}
+  {% if _content is not empty %}
+    {{ _content }}
+  {% endif %}
+  </div>
+{% if _card_footer is not empty %}
+  <div class='card-footer'>
+    {{- _card_footer -}}
+  </div>
+{% endif %}
+{% if _horizontal %}
+</div>
+{% endif %}
+{% if _image is not empty %}
+  {% if _image.position == 'background' %}
+  </div>
+  {% endif %}
+  {% if _image.position == 'bottom' %}
+    {% if _horizontal %}
+    <div class='col-4'>
+    {% endif %}
+    <img
+      src='{{ _image.path }}'
+      alt='{{ _image.alt }}'
+      class='card-img-bottom'
+    >
+    {% if _horizontal %}
+    </div>
+    {% endif %}
+  {% endif %}
+{% endif %}
+</div>
+{% if _horizontal %}
+</div>
+{% endif %}
+
+{% endspaceless %}
