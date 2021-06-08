@@ -1,4 +1,4 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
+import { renderTwigFileAsNode } from "@oe/test-utils";
 
 import demoData from "@oe/data-header/data";
 import demoDataEcl from "@oe/data-header/data-ecl";

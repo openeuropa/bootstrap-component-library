@@ -38,3 +38,14 @@ $language-item-color-hover: $link-hover-color !default;
     background-color: $language-item-background-hover;
   }
 }
+
+$navbar-background: transparent !default;
+$navbar-link-active-background: transparent !default;
+
+.oe-header__navbar {
+  background-color: $navbar-background;
+}
+
+.oe-header__navbar .nav-link.active {
+  background-color: $navbar-link-active-background;
+}

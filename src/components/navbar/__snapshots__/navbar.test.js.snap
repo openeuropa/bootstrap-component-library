@@ -3,17 +3,23 @@
 exports[`OE - navbar dark renders correctly 1`] = `
 <jest>
   <nav
-    class="oe-navbar navbar navbar-dark navbar-expand-lg"
+    class="navbar navbar-expand-lg navbar-dark"
   >
     <div
       class="container"
     >
+      <a
+        class="navbar-brand"
+        href="/example.html"
+      >
+        Navbar
+      </a>
       <button
-        aria-controls="navbarNavDropdown"
+        aria-controls="navbar"
         aria-expanded="false"
         aria-label="Toggle navigation"
         class="navbar-toggler"
-        data-bs-target="#navbarNavDropdown"
+        data-bs-target="#navbar"
         data-bs-toggle="collapse"
         type="button"
       >
@@ -23,20 +29,19 @@ exports[`OE - navbar dark renders correctly 1`] = `
       </button>
       <div
         class="collapse navbar-collapse"
-        id="navbarNavDropdown"
+        id="navbar"
       >
         <ul
-          class="navbar-nav"
+          class="navbar-nav me-auto"
         >
           <li
             class="nav-item"
           >
             <a
-              aria-current="page"
-              class="nav-link active"
-              href="#"
+              class="nav-link"
+              href="#first"
             >
-              Home
+              I'm a link
             </a>
           </li>
           <li
@@ -44,9 +49,9 @@ exports[`OE - navbar dark renders correctly 1`] = `
           >
             <a
               class="nav-link"
-              href="#"
+              href="#first"
             >
-              Item 01
+              I'm a link 2
             </a>
           </li>
           <li
@@ -54,9 +59,9 @@ exports[`OE - navbar dark renders correctly 1`] = `
           >
             <a
               class="nav-link"
-              href="#"
+              href="#first"
             >
-              Item 02
+              I'm a link 3
             </a>
           </li>
           <li
@@ -64,47 +69,87 @@ exports[`OE - navbar dark renders correctly 1`] = `
           >
             <a
               aria-expanded="false"
-              class="nav-link dropdown-toggle"
+              class="dropdown-toggle nav-link"
               data-bs-toggle="dropdown"
               href="#"
-              id="navbarDropdownMenuLink"
+              id="dropdown-1"
               role="button"
             >
-              
-            Dropdown link
-          
+              Dropdown Toggle
             </a>
             <ul
-              aria-labelledby="navbarDropdownMenuLink"
+              aria-labelledby="dropdown-1"
               class="dropdown-menu"
             >
               <li>
                 <a
                   class="dropdown-item"
-                  href="#"
+                  href="/example.html"
                 >
-                  Action
+                  I'm a link
                 </a>
               </li>
               <li>
-                <a
+                <button
                   class="dropdown-item"
-                  href="#"
+                  type="button"
                 >
-                  Another action
-                </a>
+                  I'm a button
+                </button>
               </li>
               <li>
-                <a
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
                   class="dropdown-item"
-                  href="#"
+                  disabled=""
+                  type="button"
                 >
-                  Something else here
-                </a>
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
+                </button>
               </li>
             </ul>
           </li>
         </ul>
+        <form
+          class="d-flex"
+        >
+          <label
+            class="form-label visually-hidden"
+            for="inlineFormInputGroupSearch"
+          >
+            Search
+          </label>
+          <input
+            class="form-control"
+            id="inlineFormInputGroupSearch"
+            placeholder="Search"
+            required=""
+            type="text"
+          />
+          <div
+            class="ms-2"
+          >
+            <button
+              class="btn btn-primary btn-md"
+              type="Search"
+            >
+              Search
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </nav>
@@ -114,17 +159,23 @@ exports[`OE - navbar dark renders correctly 1`] = `
 exports[`OE - navbar light renders correctly 1`] = `
 <jest>
   <nav
-    class="oe-navbar navbar navbar-light navbar-expand-lg"
+    class="navbar navbar-expand-lg navbar-light"
   >
     <div
       class="container"
     >
+      <a
+        class="navbar-brand"
+        href="/example.html"
+      >
+        Navbar
+      </a>
       <button
-        aria-controls="navbarNavDropdown"
+        aria-controls="navbar"
         aria-expanded="false"
         aria-label="Toggle navigation"
         class="navbar-toggler"
-        data-bs-target="#navbarNavDropdown"
+        data-bs-target="#navbar"
         data-bs-toggle="collapse"
         type="button"
       >
@@ -134,20 +185,19 @@ exports[`OE - navbar light renders correctly 1`] = `
       </button>
       <div
         class="collapse navbar-collapse"
-        id="navbarNavDropdown"
+        id="navbar"
       >
         <ul
-          class="navbar-nav"
+          class="navbar-nav me-auto"
         >
           <li
             class="nav-item"
           >
             <a
-              aria-current="page"
-              class="nav-link active"
-              href="#"
+              class="nav-link"
+              href="#first"
             >
-              Home
+              I'm a link
             </a>
           </li>
           <li
@@ -155,9 +205,9 @@ exports[`OE - navbar light renders correctly 1`] = `
           >
             <a
               class="nav-link"
-              href="#"
+              href="#first"
             >
-              Item 01
+              I'm a link 2
             </a>
           </li>
           <li
@@ -165,9 +215,9 @@ exports[`OE - navbar light renders correctly 1`] = `
           >
             <a
               class="nav-link"
-              href="#"
+              href="#first"
             >
-              Item 02
+              I'm a link 3
             </a>
           </li>
           <li
@@ -175,47 +225,87 @@ exports[`OE - navbar light renders correctly 1`] = `
           >
             <a
               aria-expanded="false"
-              class="nav-link dropdown-toggle"
+              class="dropdown-toggle nav-link"
               data-bs-toggle="dropdown"
               href="#"
-              id="navbarDropdownMenuLink"
+              id="dropdown-1"
               role="button"
             >
-              
-            Dropdown link
-          
+              Dropdown Toggle
             </a>
             <ul
-              aria-labelledby="navbarDropdownMenuLink"
+              aria-labelledby="dropdown-1"
               class="dropdown-menu"
             >
               <li>
                 <a
                   class="dropdown-item"
-                  href="#"
+                  href="/example.html"
                 >
-                  Action
+                  I'm a link
                 </a>
               </li>
               <li>
-                <a
+                <button
                   class="dropdown-item"
-                  href="#"
+                  type="button"
                 >
-                  Another action
-                </a>
+                  I'm a button
+                </button>
               </li>
               <li>
-                <a
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
                   class="dropdown-item"
-                  href="#"
+                  disabled=""
+                  type="button"
                 >
-                  Something else here
-                </a>
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
+                </button>
               </li>
             </ul>
           </li>
         </ul>
+        <form
+          class="d-flex"
+        >
+          <label
+            class="form-label visually-hidden"
+            for="inlineFormInputGroupSearch"
+          >
+            Search
+          </label>
+          <input
+            class="form-control"
+            id="inlineFormInputGroupSearch"
+            placeholder="Search"
+            required=""
+            type="text"
+          />
+          <div
+            class="ms-2"
+          >
+            <button
+              class="btn btn-primary btn-md"
+              type="Search"
+            >
+              Search
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </nav>

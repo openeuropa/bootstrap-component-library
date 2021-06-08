@@ -9,6 +9,8 @@
     - options ['start', 'center', 'end']
   - tabs_content (boolean) (default: false)
   - nav (boolean) (default: false)
+  - navbar (boolean) (default: false)
+  - extra_classes (string) (default: '')
   - items (array of objects)
     format: [
       {
@@ -27,8 +29,10 @@
 {% set _alignment = alignment|default('') %}
 {% set _tabs_content = tabs_content|default(false) %}
 {% set _nav = nav|default(false) %}
+{% set _navbar = navbar|default(false) %}
+{% set _extra_classes = extra_classes|default('') %}
 {% set _items = items|default([]) %}
-{% set _class = 'nav' %}
+{% set _class = _navbar ? 'navbar-nav' : 'nav' %}
 {% if _pills %}
   {% set _class = _class ~ ' nav-pills' %}
 {% endif %}
@@ -43,6 +47,9 @@
 {% endif %}
 {% if _alignment is not empty %}
   {% set _class = _class ~ ' justify-content-' ~ _alignment %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
 {% endif %}
 
 {% if _nav %}
