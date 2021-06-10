@@ -29,6 +29,21 @@
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new oe.Tooltip(tooltipTriggerEl);
       });
+
+      if (document.getElementById("scrollspy") && typeof oe !== "undefined") {
+        document.body.setAttribute("data-bs-spy", "scroll");
+        document.body.setAttribute("data-bs-target", "#scrollspy");
+        var scrollspyBody = oe.ScrollSpy.getInstance(document.body);
+        if (scrollspyBody) {
+          scrollspyBody.dispose();
+        }
+        setTimeout(function () {
+          var scrollSpy = new oe.ScrollSpy(document.body, {
+            target: "#scrollspy",
+            method: "position",
+          });
+        }, 700);
+      }
     },
     false
   );

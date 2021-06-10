@@ -24,12 +24,15 @@
       },
       ...
     ]
+  - extra_classes (string) (default: '')
 #}
 
 {% set _flush = flush|default(false) %}
 {% set _horizontal = horizontal|default('') %}
+{% set _id = id|default('') %}
 {% set _type = type|default('unordered') %}
 {% set _items = items|default([]) %}
+{% set _extra_classes = extra_classes|default('') %}
 {% set _class = 'list-group' %}
 {% if _flush %}
   {% set _class = _class ~ ' list-group-flush' %}
@@ -40,15 +43,33 @@
 {% if _horizontal is not empty %}
   {% set _class = _class ~ ' list-group-' ~ _horizontal %}
 {% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
 
 {% if _type == 'unordered' %}
-  <ul class="{{ _class }}">
+  <ul
+    class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+  >
 {% endif %}
 {% if _type == 'ordered' %}
-  <ol class="{{ _class }}">
+  <ol
+    class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+  >
 {% endif %}
 {% if _type == 'actionable' %}
-  <div class="{{ _class }}">
+  <div
+  class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+  >
 {% endif %}
 {% if _items is not empty and _items is iterable %}
   {% for _item in _items %}

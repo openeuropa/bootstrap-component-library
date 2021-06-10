@@ -20,6 +20,7 @@
         - content (string) - content for tab
       }
     ]
+  - extra_classes (string) (default: '')
 #}
 
 {% set _pills = pills|default(false) %}
@@ -27,6 +28,7 @@
 {% set _vertical = vertical|default(false) %}
 {% set _full_width = full_width|default(false) %}
 {% set _alignment = alignment|default('') %}
+{% set _id = id|default('') %}
 {% set _tabs_content = tabs_content|default(false) %}
 {% set _nav = nav|default(false) %}
 {% set _navbar = navbar|default(false) %}
@@ -55,14 +57,20 @@
 {% if _nav %}
 <nav
   class="{{ _class }}"
-  >
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+>
 {% else %}
 <ul
   class="{{ _class }}"
   {% if _tabs %}
     role="tablist"
   {% endif %}
-  >
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+>
 {% endif %}
   {% if _items is not empty and _items is iterable %}
     {% for _item in _items %}
