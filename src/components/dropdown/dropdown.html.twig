@@ -83,9 +83,9 @@
 <div class="{{ _class }}">
 {% endif %}
   {% if _link %}
-    {% include '@oe/link/link.html.twig' with _trigger only %}
+    {% include '@oe-bcl/link/link.html.twig' with _trigger only %}
   {% else %}
-    {% include '@oe/button/button.html.twig' with _trigger only %}
+    {% include '@oe-bcl/button/button.html.twig' with _trigger only %}
   {% endif %}
   <ul class="{{ _dropdown_class }}" aria-labelledby="{{ _id }}">
     {% if _items is not empty and _items is iterable %}
@@ -101,9 +101,9 @@
         {% if _item.divider is defined %}
           <hr class="dropdown-divider">
         {% elseif _item.button is defined %}
-          {% include '@oe/button/button.html.twig' with _item only %}
+          {% include '@oe-bcl/button/button.html.twig' with _item only %}
         {% else %}
-          {% include '@oe/link/link.html.twig' with _item only %}
+          {% include '@oe-bcl/link/link.html.twig' with _item only %}
         {% endif %}
         </li>
       {% endfor %}

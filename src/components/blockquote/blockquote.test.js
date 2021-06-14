@@ -1,7 +1,7 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-blockquote/data";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-blockquote/data";
 
-const template = "@oe/blockquote/blockquote.html.twig";
+const template = "@oe-bcl/blockquote/blockquote.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Blockquote", () => {

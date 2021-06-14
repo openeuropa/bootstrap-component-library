@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
-import demoDataGroup from "@oe/data-card-layout/dataGroup.js";
-import demoDataGrid from "@oe/data-card-layout/dataGrid.js";
-import demoDataMasonry from "@oe/data-card-layout/dataMasonry.js";
+import demoDataGroup from "@openeuropa/bcl-data-card-layout/dataGroup.js";
+import demoDataGrid from "@openeuropa/bcl-data-card-layout/dataGrid.js";
+import demoDataMasonry from "@openeuropa/bcl-data-card-layout/dataMasonry.js";
 import cardLayout from "./card-layout.html.twig";
 
 const getArgTypes = (data, type) => {

@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-progress/data.js";
+import demoData from "@openeuropa/bcl-data-progress/data.js";
 import progress from "./progress.html.twig";
-import { getVariants } from "@oe/story-utils";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const getArgTypes = (data) => {
   return {

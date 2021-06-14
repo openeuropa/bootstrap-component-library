@@ -1,9 +1,9 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-button-group/data";
-import inputGroupData from "@oe/data-button-group/inputGroupData";
-import toolbarData from "@oe/data-button-group/toolbarData";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-button-group/data";
+import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData";
+import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData";
 
-const template = "@oe/button-group/button-group.html.twig";
+const template = "@oe-bcl/button-group/button-group.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const sizes = ["lg", "md", "sm"];
 

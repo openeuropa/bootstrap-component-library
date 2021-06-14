@@ -1,1 +1,1 @@
-# @oe/story-utils
+# @openeuropa/bcl-story-utils

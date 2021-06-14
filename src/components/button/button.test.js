@@ -1,12 +1,12 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-button/data";
-import toggleDemoData from "@oe/data-button/toggleData";
-import popoverDemoData from "@oe/data-button/popoverData";
-import tooltipDemoData from "@oe/data-button/tooltipData";
-import spinnerDemoData from "@oe/data-button/spinnerData";
-import { getVariants } from "@oe/story-utils";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-button/data";
+import toggleDemoData from "@openeuropa/bcl-data-button/toggleData";
+import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
+import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
+import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
-const template = "@oe/button/button.html.twig";
+const template = "@oe-bcl/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const variants = getVariants(false, ["link"]);
 const sizes = ["lg", "md", "sm"];

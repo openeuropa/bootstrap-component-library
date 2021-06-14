@@ -74,13 +74,13 @@
       {% endif %}
       {# textarea #}
       {% if _item.type == 'textarea' %}
-        {% include '@oe/textarea/textarea.html.twig' with _item only %}
+        {% include '@oe-bcl/textarea/textarea.html.twig' with _item only %}
       {# select #}
       {% elseif _item.type == 'select' %}
-        {% include '@oe/select/select.html.twig' with _item only %}
+        {% include '@oe-bcl/select/select.html.twig' with _item only %}
       {% else %}
       {# any other input type #}
-        {% include '@oe/form-input/form-input.html.twig' with _item only %}
+        {% include '@oe-bcl/form-input/form-input.html.twig' with _item only %}
       {% endif %}
       {% if _item.wrapper_classes is defined and _item.wrapper_classes is not empty %}
       </div>
@@ -101,7 +101,7 @@
   {% if _submit.wrapper is defined and _submit.wrapper is not empty %}
   <div class="{{ _submit.wrapper }}">
   {% endif %}
-    {% include '@oe/button/button.html.twig' with _submit only %}
+    {% include '@oe-bcl/button/button.html.twig' with _submit only %}
     {% if _submit.wrapper is defined and _submit.wrapper is not empty %}
   </div>
   {% endif %}

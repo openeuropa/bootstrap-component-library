@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-table/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-table/data";
 
-const template = "@oe/table/table.html.twig";
+const template = "@oe-bcl/table/table.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Table", () => {

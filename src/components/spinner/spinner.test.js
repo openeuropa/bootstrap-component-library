@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-spinner/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-spinner/data";
 
-const template = "@oe/spinner/spinner.html.twig";
+const template = "@oe-bcl/spinner/spinner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Spinner", () => {

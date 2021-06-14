@@ -1,7 +1,7 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-icon/data";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-icon/data";
 
-const template = "@oe/icon/icon.html.twig";
+const template = "@oe-bcl/icon/icon.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const sizes = ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"];
 const transformations = [

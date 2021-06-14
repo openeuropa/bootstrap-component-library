@@ -71,10 +71,10 @@
     </button>
     <div class='collapse navbar-collapse' id='{{ _collapse_id }}'>
       {% if _navigation is not empty %}
-        {% include '@oe/navigation/navigation.html.twig' with _navigation only %}
+        {% include '@oe-bcl/navigation/navigation.html.twig' with _navigation only %}
       {% endif %}
       {% if _form is not empty %}
-        {% include '@oe/form/form.html.twig' with _form only %}
+        {% include '@oe-bcl/form/form.html.twig' with _form only %}
       {% endif %}
     </div>
   </div>

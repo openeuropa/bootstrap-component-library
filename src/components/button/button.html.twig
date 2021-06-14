@@ -69,20 +69,20 @@
 {{ _extra_attributes|raw }}
 >
 {%- if _show_spinner -%}
-  {% include '@oe/spinner/spinner.html.twig' with _spinner only %}
+  {% include '@oe-bcl/spinner/spinner.html.twig' with _spinner only %}
 {%- endif -%}
 {%- if _assistive_text is not empty -%}
   <span class="visually-hidden">{{- _assistive_text -}}</span>
 {% endif %}
 {%- if _icon_position == 'before' -%}
 {% if _icon is not empty %}
-  {% include '@oe/icon/icon.html.twig' with _icon only %}
+  {% include '@oe-bcl/icon/icon.html.twig' with _icon only %}
 {% endif %}
 {%- endif -%}
   {{- label -}}
 {%- if _icon_position == 'after' -%}
 {%- if _icon is not empty -%}
-  {% include '@oe/icon/icon.html.twig' with _icon only %}
+  {% include '@oe-bcl/icon/icon.html.twig' with _icon only %}
 {%- endif -%}
 {%- endif -%}
 </button>

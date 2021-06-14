@@ -1,8 +1,8 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-alert/data";
-import { getVariants } from "@oe/story-utils";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-alert/data";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
-const template = "@oe/alert/alert.html.twig";
+const template = "@oe-bcl/alert/alert.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const variants = getVariants();
 

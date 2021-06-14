@@ -1,7 +1,7 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-navbar/data";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-navbar/data";
 
-const template = "@oe/navbar/navbar.html.twig";
+const template = "@oe-bcl/navbar/navbar.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - navbar", () => {

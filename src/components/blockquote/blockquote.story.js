@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-blockquote/data.js";
+import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import blockquote from "./blockquote.html.twig";
 
 const getArgTypes = (data) => {

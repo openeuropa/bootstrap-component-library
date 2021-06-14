@@ -1,8 +1,8 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-card/data.js";
-import demoDataHorizontal from "@oe/data-card/dataHorizontal.js";
+import demoData from "@openeuropa/bcl-data-card/data.js";
+import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal.js";
 import card from "./card.html.twig";
-import { getVariants } from "@oe/story-utils";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const getArgTypes = (data, type) => {
   let argTypes = {

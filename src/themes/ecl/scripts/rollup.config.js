@@ -8,7 +8,7 @@ const replace = require("@rollup/plugin-replace");
 const BUNDLE = process.env.BUNDLE === "true";
 const ESM = process.env.ESM === "true";
 
-let fileDest = `oe${ESM ? ".esm" : ""}`;
+let fileDest = `oe-bcl-ecl${ESM ? ".esm" : ""}`;
 const external = ["@popperjs/core"];
 const plugins = [
   babel({
@@ -48,7 +48,7 @@ const rollupConfig = {
 };
 
 if (!ESM) {
-  rollupConfig.output.name = "oe";
+  rollupConfig.output.name = "bootstrap";
 }
 
 module.exports = rollupConfig;

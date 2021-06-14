@@ -1,4 +1,8 @@
-<script defer type="text/javascript" src="oe.bundle.min.js"></script>
+<script
+  defer
+  type="text/javascript"
+  src="oe-bcl-default.bundle.min.js"
+></script>
 <script>
   document.addEventListener(
     "DOMContentLoaded",
@@ -7,19 +11,19 @@
         document.querySelectorAll('[data-bs-toggle="popover"]')
       );
       var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new oe.Popover(popoverTriggerEl);
+        return new bootstrap.Popover(popoverTriggerEl);
       });
       var offcanvasElementList = [].slice.call(
         document.querySelectorAll(".offcanvas")
       );
       var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
-        var offCanvas = new oe.Offcanvas(offcanvasEl);
+        var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
       });
 
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));
       var options = { autohide: false };
       var toastList = toastElList.map(function (toastEl) {
-        var toast = new oe.Toast(toastEl, options);
+        var toast = new bootstrap.Toast(toastEl, options);
         toast.show();
       });
 
@@ -27,18 +31,21 @@
         document.querySelectorAll('[data-bs-toggle="tooltip"]')
       );
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new oe.Tooltip(tooltipTriggerEl);
+        return new bootstrap.Tooltip(tooltipTriggerEl);
       });
 
-      if (document.getElementById("scrollspy") && typeof oe !== "undefined") {
+      if (
+        document.getElementById("scrollspy") &&
+        typeof bootstrap !== "undefined"
+      ) {
         document.body.setAttribute("data-bs-spy", "scroll");
         document.body.setAttribute("data-bs-target", "#scrollspy");
-        var scrollspyBody = oe.ScrollSpy.getInstance(document.body);
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
         if (scrollspyBody) {
           scrollspyBody.dispose();
         }
         setTimeout(function () {
-          var scrollSpy = new oe.ScrollSpy(document.body, {
+          var scrollSpy = new bootstrap.ScrollSpy(document.body, {
             target: "#scrollspy",
             method: "position",
           });

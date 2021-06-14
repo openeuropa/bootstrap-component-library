@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-icon/data.js";
-import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
+import demoData from "@openeuropa/bcl-data-icon/data.js";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import icon from "./icon.html.twig";
-import "!!null-loader!@oe/theme-oe/scss/_icon.scss";
-import { getIconControls } from "@oe/story-utils";
+import "!!null-loader!@openeuropa/bcl-theme-default/scss/_icon.scss";
+import { getIconControls } from "@openeuropa/bcl-story-utils";
 
 const getArgTypes = (data) => {
   return {

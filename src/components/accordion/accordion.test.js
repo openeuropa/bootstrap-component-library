@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-accordion/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-accordion/data";
 
-const template = "@oe/accordion/accordion.html.twig";
+const template = "@oe-bcl/accordion/accordion.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Accordion", () => {

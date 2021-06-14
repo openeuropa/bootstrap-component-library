@@ -68,7 +68,7 @@
       >
       {%- if _enable_icon -%}
         {%- if _prev.icon is not empty -%}
-        {%- include '@oe/icon/icon.html.twig' with _prev.icon only -%}
+        {%- include '@oe-bcl/icon/icon.html.twig' with _prev.icon only -%}
         {%- else -%}
         <span aria-hidden="true">&laquo;</span>
         {%- endif -%}
@@ -120,7 +120,7 @@
       >
       {%- if _enable_icon -%}
         {%- if _next.icon is not empty -%}
-        {%- include '@oe/icon/icon.html.twig' with _next.icon only -%}
+        {%- include '@oe-bcl/icon/icon.html.twig' with _next.icon only -%}
         {%- else -%}
         <span aria-hidden="true">&raquo;</span>
         {%- endif -%}

@@ -1,5 +1,5 @@
 const merge = require("deepmerge");
-const twing = require("@oe/storybook/.storybook/environment");
+const twing = require("@openeuropa/bcl-storybook/.storybook/environment");
 
 const renderTwigFileAsNode = (file, options) =>
   new Promise((resolve, reject) => {

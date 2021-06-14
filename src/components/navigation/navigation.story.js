@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-navigation/data.js";
-import demoTabsData from "@oe/data-navigation/dataTabs.js";
+import demoData from "@openeuropa/bcl-data-navigation/data.js";
+import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs.js";
 import navigation from "./navigation.html.twig";
 
 const getArgTypes = (data, type) => {

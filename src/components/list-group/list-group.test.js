@@ -1,9 +1,9 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-list-group/data";
-import actionableData from "@oe/data-list-group/actionableData";
-import orderedData from "@oe/data-list-group/orderedData";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-list-group/data";
+import actionableData from "@openeuropa/bcl-data-list-group/actionableData";
+import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
 
-const template = "@oe/list-group/list-group.html.twig";
+const template = "@oe-bcl/list-group/list-group.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - List group", () => {

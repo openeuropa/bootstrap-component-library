@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-dropdown/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-dropdown/data";
 
-const template = "@oe/dropdown/dropdown.html.twig";
+const template = "@oe-bcl/dropdown/dropdown.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - dropdown", () => {

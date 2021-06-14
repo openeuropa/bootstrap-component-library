@@ -72,7 +72,7 @@
     <div class="toast-header">
     {{- _toast.header|default('') -}}
     {% if _with_close %}
-      {%- include '@oe/button/button.html.twig' with {
+      {%- include '@oe-bcl/button/button.html.twig' with {
         type: "button",
         extra_classes: 'btn-close',
         clean_class: true,

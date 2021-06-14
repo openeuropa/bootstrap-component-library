@@ -1,8 +1,8 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData, { image } from "@oe/data-card/data";
-import demoDataHorizontal from "@oe/data-card/dataHorizontal";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData, { image } from "@openeuropa/bcl-data-card/data";
+import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal";
 
-const template = "@oe/card/card.html.twig";
+const template = "@oe-bcl/card/card.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Card", () => {

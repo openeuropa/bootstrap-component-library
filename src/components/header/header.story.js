@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-header/data.js";
-import headerECLData from "@oe/data-header/data-ecl";
+import demoData from "@openeuropa/bcl-data-header/data.js";
+import headerECLData from "@openeuropa/bcl-data-header/data-ecl";
 import header from "./header.html.twig";
-import "!!null-loader!@oe/theme-oe/scss/_header.scss";
-import "!!null-loader!@oe/theme-ecl/scss/_header.scss";
+import "!!null-loader!@openeuropa/bcl-theme-default/scss/_header.scss";
+import "!!null-loader!@openeuropa/bcl-theme-ecl/scss/_header.scss";
 
 export default {
   title: "Components/Header",

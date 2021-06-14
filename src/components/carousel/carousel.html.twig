@@ -79,7 +79,7 @@
         { name: 'aria-current', value: 'true' }
       ]) %}
     {% endif %}
-    {% include '@oe/button/button.html.twig' with {
+    {% include '@oe-bcl/button/button.html.twig' with {
       clean_class: true,
       extra_attributes: _indicator_attrs,
       extra_classes: loop.index == _active_item ? 'active' : '',

@@ -1,9 +1,9 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoData from "@oe/data-header/data";
-import demoDataEcl from "@oe/data-header/data-ecl";
+import demoData from "@openeuropa/bcl-data-header/data";
+import demoDataEcl from "@openeuropa/bcl-data-header/data-ecl";
 
-const template = "@oe/header/header.html.twig";
+const template = "@oe-bcl/header/header.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Header", () => {

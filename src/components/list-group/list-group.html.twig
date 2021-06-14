@@ -83,11 +83,11 @@
       {% endif %}
       <li class="{{ _item_class }}">
       {%- if _item.input is defined -%}
-          {% include '@oe/form-input/form-input.html.twig' with _item only %}
+          {% include '@oe-bcl/form-input/form-input.html.twig' with _item only %}
       {%- else -%}
           {{- _item.html -}}
           {%- if _item.badge is not empty -%}
-            {% include '@oe/badge/badge.html.twig' with _item.badge only %}
+            {% include '@oe-bcl/badge/badge.html.twig' with _item.badge only %}
           {%- endif -%}
       {%- endif -%}
       </li>
@@ -102,9 +102,9 @@
         })
       %}
       {% if _item.button is defined %}
-        {% include '@oe/button/button.html.twig' with _item only %}
+        {% include '@oe-bcl/button/button.html.twig' with _item only %}
       {% else %}
-        {% include '@oe/link/link.html.twig' with _item only %}
+        {% include '@oe-bcl/link/link.html.twig' with _item only %}
       {% endif %}
     {% endif %}
   {% endfor %}

@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-button-group/data.js";
-import toolbarData from "@oe/data-button-group/toolbarData.js";
-import inputGroupData from "@oe/data-button-group/inputGroupData.js";
+import demoData from "@openeuropa/bcl-data-button-group/data.js";
+import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData.js";
+import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData.js";
 import buttonGroup from "./button-group.html.twig";
 
 const getArgTypes = (data) => {

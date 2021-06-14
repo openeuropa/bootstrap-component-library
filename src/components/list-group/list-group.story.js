@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-list-group/data.js";
-import actionableDemoData from "@oe/data-list-group/actionableData";
-import orderedData from "@oe/data-list-group/orderedData";
+import demoData from "@openeuropa/bcl-data-list-group/data.js";
+import actionableDemoData from "@openeuropa/bcl-data-list-group/actionableData";
+import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
 import listGroup from "./list-group.html.twig";
 
 const getArgTypes = () => {

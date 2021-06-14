@@ -1,10 +1,10 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-link/data";
-import toggleDemoData from "@oe/data-link/toggleData";
-import tooltipDemoData from "@oe/data-link/tooltipData";
-import { getVariants } from "@oe/story-utils";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-link/data";
+import toggleDemoData from "@openeuropa/bcl-data-link/toggleData";
+import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
-const template = "@oe/link/link.html.twig";
+const template = "@oe-bcl/link/link.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const variants = getVariants();
 

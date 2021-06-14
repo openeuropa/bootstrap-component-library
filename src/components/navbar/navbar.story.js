@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-navbar/data.js";
+import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "./navbar.html.twig";
-import { getVariants } from "@oe/story-utils";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
 // Controls
 const getArgTypes = (data) => {

@@ -1,60 +1,62 @@
 {
-  "name": "oe-library",
-  "version": "0.0.1",
+  "name": "oe-bootstrap-component-library",
+  "version": "0.1.0",
   "private": true,
-  "description": "OE library repository.",
+  "description": "Openeuropa Bootstrap Component Library",
   "author": "EUROPEAN COMMISSION",
   "license": "EUPL",
   "repository": {
     "type": "git"
   },
   "scripts": {
-    "build:themes": "npm-run-all --parallel css js",
+    "build:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run build",
     "clean": "rimraf build assets",
     "copy:assets": "copyfiles -f src/themes/**/*min.* static/* assets/",
     "copy:build": "copyfiles assets/* static/* build",
-    "copy:twig": "lerna --scope \"@oe/theme-*\" run twig",
-    "css": "run-s css-*",
-    "css-clean": "lerna --scope \"@oe/theme-*\" run css-clean",
-    "css-compile": "lerna --scope \"@oe/theme-*\" run css-compile",
-    "css-prefix": "lerna --scope \"@oe/theme-*\" run css-prefix",
-    "css-minify": "lerna --scope \"@oe/theme-*\" run css-minify",
+    "copy:twig": "lerna --scope \"@openeuropa/bcl-theme-*\" run twig",
     "css-lint": "stylelint src/**/*.scss",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",
     "dist:storybook": "build-storybook -c storybook/.storybook -s assets -o build",
     "jest": "jest",
-    "js": "run-s js-*",
-    "js-clean": "lerna --scope \"@oe/theme-*\" run js-clean",
-    "js-plugins": "node scripts/build-plugins.js",
-    "js-compile": "lerna --scope \"@oe/theme-*\" run js-compile",
-    "js-minify": "lerna --scope \"@oe/theme-*\" run js-minify",
+    "patch": "patch-package",
+    "postinstall": "run-s patch pre-publish copy:assets",
     "prepare": "husky install",
+    "pre-publish": "lerna run postinstall && lerna run prepublish",
     "pretty:check": "prettier --check \"(src|storybook|tools)/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "pretty:fix": "prettier --write \"(src|storybook|tools)/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
-    "postinstall": "patch-package",
+    "publish": "scripts/publish.sh",
     "start": "run-p watch storybook server",
-    "server": "browser-sync start --proxy localhost:5000 --files \"assets/oe.min.css\"",
+    "server": "browser-sync start --proxy localhost:5000 --files \"assets/oe-bcl-default.min.css\"",
     "storybook": "start-storybook -p 5000 -c storybook/.storybook -s assets/ --ci",
     "test": "npm-run-all css-lint twig:snapshots",
     "twig:snapshots": "npm run jest",
     "watch": "nodemon -e twig,scss -x \"run-s build:themes copy:assets\""
   },
   "keywords": [
+    "openeuropa",
+    "component library",
     "bootstrap",
     "sass",
     "css",
     "javascript",
-    "template"
+    "template",
+    "twig"
   ],
-  "workspaces": [
-    "storybook",
-    "bootstrap",
-    "src/data/*",
-    "src/components/*",
-    "tools/*",
-    "src/themes/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "storybook",
+      "bootstrap",
+      "src/data/*",
+      "src/components/*",
+      "tools/*",
+      "src/themes/*"
+    ],
+    "nohoist": [
+      "**/bootstrap",
+      "**/bootstrap/**"
+    ]
+  },
   "jest": {
     "verbose": true,
     "testEnvironment": "jsdom"
@@ -70,17 +72,16 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "7.14.3",
-    "@babel/core": "7.14.3",
-    "@babel/plugin-transform-runtime": "7.14.3",
-    "@babel/preset-env": "7.14.4",
-    "@babel/preset-react": "7.13.13",
-    "@popperjs/core": "2.9.2",
-    "autoprefixer": "10.2.6",
+    "@babel/cli": "7.14.5",
+    "@babel/core": "7.14.5",
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "7.14.5",
+    "@babel/preset-react": "7.14.5",
     "babel-jest": "27.0.2",
     "browser-sync": "2.26.14",
+    "browser-update": "3.3.30",
     "copyfiles": "2.4.1",
-    "eslint": "7.27.0",
+    "eslint": "7.28.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "glob": "7.1.7",
@@ -92,13 +93,10 @@
     "nodemon": "2.0.7",
     "npm-run-all": "4.1.5",
     "patch-package": "6.4.7",
-    "postcss": "8.3.0",
-    "postcss-cli": "8.3.1",
-    "prettier": "2.3.0",
+    "prettier": "2.3.1",
     "rimraf": "3.0.2",
-    "serve": "11.3.2",
     "stylelint": "13.13.1",
-    "stylelint-config-twbs-bootstrap": "2.2.0"
+    "stylelint-config-twbs-bootstrap": "2.2.1"
   },
   "resolutions": {
     "ssri": ">=6.0.2",

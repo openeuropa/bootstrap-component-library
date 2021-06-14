@@ -30,7 +30,7 @@
   {% set _open_item = _open_item_id == loop.index %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="heading-{{ _id }}-{{ loop.index }}">
-      {% include '@oe/button/button.html.twig' with {
+      {% include '@oe-bcl/button/button.html.twig' with {
         label: _item.title,
         extra_classes: 'accordion-button' ~ (not open_item ? ' collapsed'),
         clean_class: true,

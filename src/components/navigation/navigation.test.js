@@ -1,8 +1,8 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-navigation/data";
-import demoTabsData from "@oe/data-navigation/dataTabs";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-navigation/data";
+import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs";
 
-const template = "@oe/navigation/navigation.html.twig";
+const template = "@oe-bcl/navigation/navigation.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - navigation", () => {

@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-progress/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-progress/data";
 
-const template = "@oe/progress/progress.html.twig";
+const template = "@oe-bcl/progress/progress.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Progress", () => {

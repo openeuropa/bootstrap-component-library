@@ -1,8 +1,8 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-badge/data";
-import { getVariants } from "@oe/story-utils";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-badge/data";
+import { getVariants } from "@openeuropa/bcl-story-utils";
 
-const template = "@oe/badge/badge.html.twig";
+const template = "@oe-bcl/badge/badge.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const backgrounds = getVariants();
 

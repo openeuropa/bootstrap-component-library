@@ -4,7 +4,7 @@
  * Script to build our plugins to use them separately.
  * Copyright 2020-2021 The Bootstrap Authors
  * Copyright 2020-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/../bootstrap/blob/main/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/../blob/main/LICENSE)
  */
 
 "use strict";
@@ -13,7 +13,7 @@ const path = require("path");
 const rollup = require("rollup");
 const { babel } = require("@rollup/plugin-babel");
 
-const rootPath = path.resolve(__dirname, "../bootstrap/plugins");
+const rootPath = path.resolve(__dirname, "../plugins");
 const plugins = [
   babel({
     // Only transpile our source code
@@ -23,32 +23,23 @@ const plugins = [
   }),
 ];
 const bsPlugins = {
-  Data: path.resolve(__dirname, "../bootstrap/js/src/dom/data.js"),
-  EventHandler: path.resolve(
-    __dirname,
-    "../bootstrap/js/src/dom/event-handler.js"
-  ),
-  Manipulator: path.resolve(
-    __dirname,
-    "../bootstrap/js/src/dom/manipulator.js"
-  ),
-  SelectorEngine: path.resolve(
-    __dirname,
-    "../bootstrap/js/src/dom/selector-engine.js"
-  ),
-  Alert: path.resolve(__dirname, "../bootstrap/js/src/alert.js"),
-  Base: path.resolve(__dirname, "../bootstrap/js/src/base-component.js"),
-  Button: path.resolve(__dirname, "../bootstrap/js/src/button.js"),
-  Carousel: path.resolve(__dirname, "../bootstrap/js/src/carousel.js"),
-  Collapse: path.resolve(__dirname, "../bootstrap/js/src/collapse.js"),
-  Dropdown: path.resolve(__dirname, "../bootstrap/js/src/dropdown.js"),
-  Modal: path.resolve(__dirname, "../bootstrap/js/src/modal.js"),
-  Offcanvas: path.resolve(__dirname, "../bootstrap/js/src/modal.js"),
-  Popover: path.resolve(__dirname, "../bootstrap/js/src/popover.js"),
-  ScrollSpy: path.resolve(__dirname, "../bootstrap/js/src/scrollspy.js"),
-  Tab: path.resolve(__dirname, "../bootstrap/js/src/tab.js"),
-  Toast: path.resolve(__dirname, "../bootstrap/js/src/toast.js"),
-  Tooltip: path.resolve(__dirname, "../bootstrap/js/src/tooltip.js"),
+  Data: path.resolve(__dirname, "../js/src/dom/data.js"),
+  EventHandler: path.resolve(__dirname, "../js/src/dom/event-handler.js"),
+  Manipulator: path.resolve(__dirname, "../js/src/dom/manipulator.js"),
+  SelectorEngine: path.resolve(__dirname, "../js/src/dom/selector-engine.js"),
+  Alert: path.resolve(__dirname, "../js/src/alert.js"),
+  Base: path.resolve(__dirname, "../js/src/base-component.js"),
+  Button: path.resolve(__dirname, "../js/src/button.js"),
+  Carousel: path.resolve(__dirname, "../js/src/carousel.js"),
+  Collapse: path.resolve(__dirname, "../js/src/collapse.js"),
+  Dropdown: path.resolve(__dirname, "../js/src/dropdown.js"),
+  Modal: path.resolve(__dirname, "../js/src/modal.js"),
+  Offcanvas: path.resolve(__dirname, "../js/src/modal.js"),
+  Popover: path.resolve(__dirname, "../js/src/popover.js"),
+  ScrollSpy: path.resolve(__dirname, "../js/src/scrollspy.js"),
+  Tab: path.resolve(__dirname, "../js/src/tab.js"),
+  Toast: path.resolve(__dirname, "../js/src/toast.js"),
+  Tooltip: path.resolve(__dirname, "../js/src/tooltip.js"),
 };
 
 const defaultPluginConfig = {

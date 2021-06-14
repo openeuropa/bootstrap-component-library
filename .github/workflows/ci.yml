@@ -24,10 +24,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Code style
         run: yarn pretty:check
-      - name: Build css
-        run: yarn css
-      - name: Build js
-        run: yarn js
+      - name: Build themes
+        run: yarn build:themes
       - name: Test
         run: yarn test
   deploy-pull-request-preview:

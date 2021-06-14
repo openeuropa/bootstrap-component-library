@@ -1,13 +1,14 @@
-import demoData from "@oe/data-link/data.js";
-import toggleDemoData from "@oe/data-link/toggleData.js";
-import tooltipDemoData from "@oe/data-link/tooltipData.js";
+import demoData from "@openeuropa/bcl-data-link/data.js";
+import toggleDemoData from "@openeuropa/bcl-data-link/toggleData.js";
+import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData.js";
 import link from "./link.html.twig";
-import { getIconControls, getVariants } from "@oe/story-utils";
-import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
+import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const withCollapse = (story) => {
   const demo = story();
-  return `${demo} <div class="collapse mt-3" id="${toggleDemoData.target}">${toggleDemoData.collapse_text}</div>`;
+  const target = toggleDemoData.path.substring(1);
+  return `${demo} <div class="collapse mt-3" id="${target}">${toggleDemoData.collapse_text}</div>`;
 };
 
 const getArgTypes = (data) => {

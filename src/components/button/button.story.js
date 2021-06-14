@@ -1,12 +1,12 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-button/data.js";
-import toggleDemoData from "@oe/data-button/toggleData.js";
-import popoverDemoData from "@oe/data-button/popoverData.js";
-import tooltipDemoData from "@oe/data-button/tooltipData.js";
-import spinnerDemoData from "@oe/data-button/spinnerData.js";
+import demoData from "@openeuropa/bcl-data-button/data.js";
+import toggleDemoData from "@openeuropa/bcl-data-button/toggleData.js";
+import popoverDemoData from "@openeuropa/bcl-data-button/popoverData.js";
+import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData.js";
+import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData.js";
 import button from "./button.html.twig";
-import { getIconControls, getVariants } from "@oe/story-utils";
-import defaultSprite from "@oe/bootstrap/bootstrap-icons.svg";
+import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const withCollapse = (story) => {
   const demo = story();

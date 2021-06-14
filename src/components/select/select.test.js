@@ -1,8 +1,8 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoData from "@oe/data-select/data";
+import demoData from "@openeuropa/bcl-data-select/data";
 
-const template = "@oe/select/select.html.twig";
+const template = "@oe-bcl/select/select.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - select", () => {

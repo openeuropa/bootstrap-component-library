@@ -15,7 +15,7 @@
     {% for _link in _links %}
       {% if _link.path %}
         <li class="breadcrumb-item">
-          {% include '@oe/link/link.html.twig' with _link only %}
+          {% include '@oe-bcl/link/link.html.twig' with _link only %}
         </li>
       {% else %}
         <li class="breadcrumb-item active" aria-current="page">

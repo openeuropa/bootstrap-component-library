@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
-import { getFormControls } from "@oe/story-utils";
-import demoData from "@oe/data-form-input/data.js";
+import { getFormControls } from "@openeuropa/bcl-story-utils";
+import demoData from "@openeuropa/bcl-data-form-input/data.js";
 import formInput from "./form-input.html.twig";
 
 const getArgTypes = (data, type) => {

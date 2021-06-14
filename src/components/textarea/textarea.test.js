@@ -1,8 +1,8 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoData from "@oe/data-textarea/data";
+import demoData from "@openeuropa/bcl-data-textarea/data";
 
-const template = "@oe/textarea/textarea.html.twig";
+const template = "@oe-bcl/textarea/textarea.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - textarea", () => {

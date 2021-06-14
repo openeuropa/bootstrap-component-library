@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-modal/data.js";
+import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "./modal.html.twig";
 
 // Controls

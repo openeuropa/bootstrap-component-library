@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-carousel/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-carousel/data";
 
-const template = "@oe/carousel/carousel.html.twig";
+const template = "@oe-bcl/carousel/carousel.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - carousel", () => {

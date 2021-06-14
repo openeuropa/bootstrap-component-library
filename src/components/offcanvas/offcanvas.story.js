@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@oe/data-offcanvas/data.js";
+import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "./offcanvas.html.twig";
 
 const getArgTypes = (data) => {

@@ -1,7 +1,7 @@
-import { renderTwigFileAsNode } from "@oe/test-utils";
-import demoData from "@oe/data-breadcrumb/data";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoData from "@openeuropa/bcl-data-breadcrumb/data";
 
-const template = "@oe/breadcrumb/breadcrumb.html.twig";
+const template = "@oe-bcl/breadcrumb/breadcrumb.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Breadcrumb", () => {

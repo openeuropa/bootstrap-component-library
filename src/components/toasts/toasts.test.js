@@ -1,8 +1,8 @@
-import { merge, renderTwigFileAsNode } from "@oe/test-utils";
-import demoSingle from "@oe/data-toasts/data";
-import demoMultiple from "@oe/data-toasts/data-multiple";
+import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import demoSingle from "@openeuropa/bcl-data-toasts/data";
+import demoMultiple from "@openeuropa/bcl-data-toasts/data-multiple";
 
-const template = "@oe/toasts/toasts.html.twig";
+const template = "@oe-bcl/toasts/toasts.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Toasts", () => {
