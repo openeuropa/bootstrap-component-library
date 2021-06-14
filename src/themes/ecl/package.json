@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "description": "OE - BCL theme ECL",
   "scripts": {
-    "build": "npm-run-all build-plugins css js",
+    "build": "npm-run-all build-plugins css js twig",
     "build-plugins": "plugins-builder",
     "css": "npm-run-all css-*",
     "css-clean": "rimraf css",
