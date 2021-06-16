@@ -14,13 +14,13 @@ addParameters({
   },
   cssresources: [
     {
-      id: "oe",
+      id: "bcl-theme-default",
       code: `<link rel="stylesheet" type="text/css" href="oe-bcl-default.min.css" />`,
       picked: true,
       hideCode: true,
     },
     {
-      id: "oe-ecl",
+      id: "bcl-theme-ecl",
       code: `<link rel="stylesheet" type="text/css" href="oe-bcl-ecl.min.css" />`,
       picked: false,
       hideCode: true,

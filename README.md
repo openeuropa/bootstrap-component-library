@@ -1,8 +1,10 @@
-<h3 align="center">Openeuropa Bootstrap Component Library template</h3>
+### Openeuropa Bootstrap Component Library template</h3>
 
-<p align="center">Library of components based on
-  [Bootstrap 5](https://github.com/twbs/bootstrap/tree/v5.0.1)
-</p>
+Library of components based on [Bootstrap 5](https://github.com/twbs/bootstrap/tree/v5.0.1)
+
+![Build Status](https://github.com/openeuropa/bootstrap-component-library/actions/workflows/ci.yaml/badge.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 ## Introduction
 
@@ -59,7 +61,37 @@ files available to each of the theme packages.
       size: 'm',
       transformation: 'rotate-180'
     } only %}
+
   ```
+
+### Anatomy of a theme package
+
+The theme packages aim to be a ready to use solution for integrating the library
+in any platform supporting twig:
+
+![default theme](docs/bcl-theme.jpg)
+
+Each theme comes with the already compiled, production ready, css and js
+resources in the respective folders but it also comes with all the source files
+needed to build those resources from scratch.
+These include the bootstrap 5 source files, each theme defines `bcl-bootstrap`
+as a dependency and this package provides the bootstrap files with a bin meant
+to build the bootstrap js plugins.
+
+The theme package has all the scripts needed to build the final resources,
+which is basically a pipeline of these scripts:
+`npm run build-plugins && npm run css && npm run js && npm run twig`
+
+Also the twig templates are included in the the theme package, in the `templates`
+folder and with a folder with the name of the component since the twig files are
+included as '@oe-bcl/componentName/componentName.html.twig'.
+
+#### Twig loader
+
+The library uses `@oe-bcl` as the namespaces for the templates so a typical
+twig-loader would be defined as such:
+
+`loader.addPath(pathToTheTemplatesFolder, "oe-bcl");`
 
 ### Setup on Windows using WSL 1
 
@@ -91,7 +123,7 @@ files available to each of the theme packages.
 1. Clone the project.
 2. In the project root, run `sudo yarn`.
 3. Type the password you entered.
-3. Run `sudo yarn start` and access `localhost:5000`.
+4. Run `sudo yarn start` and access `localhost:5000`.
 
 ```
 
