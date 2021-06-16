@@ -21,8 +21,8 @@ Header.storyName = "default";
 Header.parameters = {
   cssresources: [
     {
-      id: "oe",
-      code: `<link rel="stylesheet" type="text/css" href="oe.min.css" />`,
+      id: "bcl-theme-default",
+      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-default.min.css" />`,
       picked: true,
       hideCode: true,
     },
@@ -39,8 +39,8 @@ HeaderECL.storyName = "ECL branding";
 HeaderECL.parameters = {
   cssresources: [
     {
-      id: "oe-ecl",
-      code: `<link rel="stylesheet" type="text/css" href="oe-ecl.min.css" />`,
+      id: "bcl-theme-ecl",
+      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-ecl.min.css" />`,
       picked: true,
       hideCode: true,
     },

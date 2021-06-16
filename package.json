@@ -32,7 +32,7 @@
     "test": "npm-run-all css-lint twig:snapshots",
     "twig:snapshots": "npm run jest",
     "update-version": "scripts/update-version.sh",
-    "watch": "nodemon --ignore 'src/themes/*' -e twig,scss -x \"run-s build:themes copy:assets\""
+    "watch": "nodemon --ignore 'src/themes/**/*.twig' -e twig,scss -x \"run-s build:themes copy:assets\""
   },
   "keywords": [
     "openeuropa",
@@ -74,7 +74,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.14.5",
-    "@babel/core": "7.14.5",
+    "@babel/core": "7.14.6",
     "@babel/plugin-transform-runtime": "7.14.5",
     "@babel/preset-env": "7.14.5",
     "@babel/preset-react": "7.14.5",
