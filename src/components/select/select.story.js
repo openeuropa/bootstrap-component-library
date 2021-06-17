@@ -58,4 +58,3 @@ export const Multiselect = (args) => select(applyArgs(demoMultiData, args));
 
 Multiselect.argTypes = getArgTypes(demoMultiData, "select");
 Multiselect.decorators = [withInit];
-

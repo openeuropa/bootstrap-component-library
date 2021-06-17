@@ -72,7 +72,6 @@ describe("OE - select", () => {
   test("renders correctly as a multiple choice select", () => {
     expect.assertions(1);
 
-    return expect(render(demoMultiData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(demoMultiData)).resolves.toMatchSnapshot();
   });
 });
