@@ -1,6 +1,7 @@
 import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-select/data";
+import demoMultiData from "@openeuropa/bcl-data-select/dataMultiselect.js";
 
 const template = "@oe-bcl/select/select.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -65,6 +66,13 @@ describe("OE - select", () => {
 
     return expect(
       render({ ...demoData, label: "A select label", hidden_label: true })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly as a multiple choice select", () => {
+    expect.assertions(1);
+
+    return expect(render(demoMultiData)
     ).resolves.toMatchSnapshot();
   });
 });

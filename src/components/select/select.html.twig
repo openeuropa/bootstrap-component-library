@@ -27,6 +27,7 @@
 {% set _helper_text = helper_text|default('')%}
 {% set _helper_id = helper_id|default('') %}
 {% set _label = label|default('') %}
+{% set _extra_classes = extra_classes|default('') %}
 {% set _label_class = 'form-label' %}
 {% set _hidden_label = hidden_label|default(false) %}
 
@@ -35,7 +36,7 @@
 {% endif %}
 {% set _classes = _classes ~ ' form-select-' ~ size %}
 {% if _extra_classes is not empty %}
-  {% set _classes = classes ~ ' ' ~ extra_classes %}
+  {% set _classes = classes ~ ' ' ~ _extra_classes %}
 {% endif %}
 {% if _hidden_label %}
   {% set _label_class = _label_class ~ ' visually-hidden' %}

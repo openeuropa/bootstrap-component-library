@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-select/data.js";
+import demoMultiData from "@openeuropa/bcl-data-select/dataMultiselect.js";
 import select from "./select.html.twig";
 
 const getArgTypes = (data, type) => {
@@ -11,6 +12,17 @@ const getArgTypes = (data, type) => {
 
 const applyArgs = (data, args) => {
   return Object.assign(data, args);
+};
+
+const withInit = (story) => {
+  const demo = story();
+  return `
+    ${demo}
+    <script>        
+      new SlimSelect({
+        select: '.multi-select'
+      })
+    </script>`;
 };
 
 // Stories
@@ -41,3 +53,9 @@ export default {
 export const Default = (args) => select(applyArgs(demoData, args));
 
 Default.argTypes = getArgTypes(demoData, "select");
+
+export const Multiselect = (args) => select(applyArgs(demoMultiData, args));
+
+Multiselect.argTypes = getArgTypes(demoMultiData, "select");
+Multiselect.decorators = [withInit];
+

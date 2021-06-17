@@ -41,6 +41,48 @@ exports[`OE - select renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - select renders correctly as a multiple choice select 1`] = `
+<jest>
+  <select
+    class="null multi-select"
+    multiple=""
+    required=""
+  >
+    <option
+      value="1"
+    >
+      a select option
+    </option>
+    <option
+      value="2"
+    >
+      another select option
+    </option>
+    <option
+      value="3"
+    >
+      another option
+    </option>
+    <option
+      value="4"
+    >
+      last option
+    </option>
+    <option
+      selected=""
+      value=""
+    >
+      the selected option
+    </option>
+  </select>
+  <div
+    class="form-text"
+  >
+    Helper text for the select element
+  </div>
+</jest>
+`;
+
 exports[`OE - select renders correctly when disabled 1`] = `
 <jest>
   <select
