@@ -69,7 +69,7 @@ files available to each of the theme packages.
 The theme packages aim to be a ready to use solution for integrating the library
 in any platform supporting twig:
 
-![default theme](docs/bcl-theme.jpg)
+![default theme](docs/bcl-theme.png)
 
 Each theme comes with the already compiled, production ready, css and js
 resources in the respective folders but it also comes with all the source files
