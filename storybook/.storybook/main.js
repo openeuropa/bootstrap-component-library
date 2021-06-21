@@ -3,11 +3,11 @@ const path = require("path");
 const stories = ["../../src/components/**/*.story.js"];
 
 const addons = [
+  "@storybook/addon-docs",
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",
   "@storybook/addon-cssresources",
-  "@storybook/addon-docs",
   "@storybook/addon-a11y",
   "@whitespace/storybook-addon-html",
 ];
@@ -48,4 +48,7 @@ module.exports = {
   stories,
   addons,
   webpackFinal,
+  features: {
+    postcss: false,
+  },
 };
