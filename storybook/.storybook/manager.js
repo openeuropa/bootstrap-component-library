@@ -20,7 +20,9 @@ addons.setConfig({
   }),
   selectedPanel: "controls",
   initialActive: "sidebar",
-  showRoots: false,
+  sidebar: {
+    showRoots: false,
+  },
 });
 
 browserUpdate({
