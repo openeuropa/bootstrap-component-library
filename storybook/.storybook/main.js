@@ -1,6 +1,9 @@
 const path = require("path");
 
-const stories = ["../../src/components/**/*.story.js", "../../src/compositions/**/*.story.js"];
+const stories = [
+  "../../src/components/**/*.story.js",
+  "../../src/compositions/**/*.story.js",
+];
 
 const addons = [
   "@storybook/addon-docs",

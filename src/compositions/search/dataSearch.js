@@ -112,18 +112,18 @@ module.exports = {
       label: "Checked checkbox",
       size: "sm",
       checked: true,
-      id: "first-check"
+      id: "first-check",
     },
     secondInputFilter: {
       type: "checkbox",
       label: "Default checkbox",
       size: "sm",
-      id: "second-check"
+      id: "second-check",
     },
     firstDatepickerFilter: {
       type: "date",
       size: "sm",
-      extra_classes: "mb-2"
+      extra_classes: "mb-2",
     },
     secondDatepickerFilter: {
       size: "sm",
@@ -155,7 +155,8 @@ module.exports = {
           classes: "mb-4",
         },
         text: {
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           classes: "mb-4",
         },
         extra_classes: "border-0 mb-5",
@@ -180,7 +181,8 @@ module.exports = {
           classes: "mb-4",
         },
         text: {
-          content: "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+          content:
+            "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
           classes: "mb-4",
         },
         extra_classes: "border-0 mb-5",
@@ -189,7 +191,8 @@ module.exports = {
           alt: "alt img",
           position: "top",
         },
-        content: "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
+        content:
+          "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
       },
       {
         horizontal: true,
@@ -205,7 +208,8 @@ module.exports = {
           classes: "mb-4",
         },
         text: {
-          content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          content:
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           classes: "mb-4",
         },
         extra_classes: "border-0 mb-5",
@@ -214,7 +218,8 @@ module.exports = {
           alt: "alt img",
           position: "top",
         },
-        content: "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
+        content:
+          "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
       },
       {
         horizontal: true,
@@ -230,7 +235,8 @@ module.exports = {
           classes: "mb-4",
         },
         text: {
-          content: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          content:
+            "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           classes: "mb-4",
         },
         extra_classes: "border-0 mb-5",
@@ -255,7 +261,8 @@ module.exports = {
           classes: "mb-4",
         },
         text: {
-          content: "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          content:
+            "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           classes: "mb-4",
         },
         extra_classes: "border-0 mb-5",
@@ -264,7 +271,8 @@ module.exports = {
           alt: "alt img",
           position: "top",
         },
-        content: "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
+        content:
+          "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
       },
       {
         horizontal: true,
@@ -280,7 +288,8 @@ module.exports = {
           classes: "mb-4",
         },
         text: {
-          content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          content:
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           classes: "mb-4",
         },
         extra_classes: "border-0 mb-5",
@@ -343,8 +352,8 @@ module.exports = {
         name: "sliders",
         size: "xs",
         path: "static/media/bootstrap/bootstrap-icons.svg",
-        extra_classes: "ms-2 mt-1"
-      }
+        extra_classes: "ms-2 mt-1",
+      },
     },
     badges: [
       {
@@ -361,7 +370,7 @@ module.exports = {
         label: "Item 02",
         dismissible: true,
         extra_classes: "me-2",
-      }
+      },
     ],
     sortSelect: {
       label: "Sort by",
@@ -374,6 +383,6 @@ module.exports = {
         { value: 4, label: "last option" },
         { label: "A-Z", selected: true },
       ],
-    }
-  }
+    },
+  },
 };
