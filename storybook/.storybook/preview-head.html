@@ -51,6 +51,37 @@
           });
         }, 700);
       }
+  
+  var offcanvasMobile = document.querySelectorAll(".offcanvas-mobile")[0];
+  var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
+
+  // Define our viewportWidth variable
+    var viewportWidth;
+
+    // Set/update the viewportWidth value
+    var setViewportWidth = function () {
+      viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    }
+
+    // Log the viewport width into the console
+    var logWidth = function () {
+      if (viewportWidth < 992) {
+        offcanvasMobile.classList.add('offcanvas', 'offcanvas-start');
+      } else {
+        offcanvasMobile.classList.remove('offcanvas', 'offcanvas-start');
+        offcanvasMobile.style.visibility = 'visible';
+      }
+    }
+
+    // Set our initial width and log it
+    setViewportWidth();
+    logWidth();
+
+    // On resize events, recalculate and log
+    window.addEventListener('resize', function () {
+      setViewportWidth();
+      logWidth();
+    }, false);
     },
     false
   );

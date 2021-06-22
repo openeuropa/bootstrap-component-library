@@ -21,6 +21,7 @@
   - "toggle" (boolean) (default: false)
   - "toggle_variant" (string) (default: 'primary')
   - "remove_wrapper" (boolean) (default: false)
+  - "extra_classes" (string) (default: '')
 #}
 
 {% set _id = id|default('') %}
@@ -44,6 +45,7 @@
 {% set _toggle = toggle|default(false) %}
 {% set _toggle_variant = toggle_variant|default('primary') %}
 {% set _remove_wrapper = remove_wrapper|default(false) %}
+{% set _extra_classes = extra_classes|default('') %}
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _class = 'form-control' %}
@@ -70,6 +72,9 @@
 {% if _toggle %}
   {% set _label_class = _label_class ~ ' btn btn-' ~ _toggle_variant %}
   {% set _class = _class ~ ' btn-check' %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ " " ~ _extra_classes %}
 {% endif %}
 
 {% if _label is not empty %}

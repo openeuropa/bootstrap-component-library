@@ -23,7 +23,7 @@
     "js-minify-standalone-esm": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=js/oe-bcl-ecl.esm.js.map,includeSources,url=oe-bcl-ecl.esm.min.js.map\" --output js/oe-ecl.esm.min.js js/oe-bcl-ecl.esm.js",
     "js-minify-bundle": "terser --compress passes=2 --mangle --comments \"/^!/\" --source-map \"content=js/oe-bcl-ecl.bundle.js.map,includeSources,url=oe-bcl-ecl.bundle.min.js.map\" --output js/oe-bcl-ecl.bundle.min.js js/oe-bcl-ecl.bundle.js",
     "prepublish": "npm run build",
-    "twig": "copyfiles -u 3 ../../components/**/*.twig templates/"
+    "twig": "copyfiles -u 3 ../../components/**/*.twig templates/ && copyfiles -u 3 ../../compositions/**/*.twig templates/"
   },
   "dependencies": {
     "@openeuropa/bcl-bootstrap": "^0.1.2",
