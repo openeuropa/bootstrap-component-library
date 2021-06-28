@@ -351,7 +351,6 @@ module.exports = {
       icon: {
         name: "sliders",
         size: "xs",
-        path: "static/media/bootstrap/bootstrap-icons.svg",
         extra_classes: "ms-2 mt-1",
       },
     },

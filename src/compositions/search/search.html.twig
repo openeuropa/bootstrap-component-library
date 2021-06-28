@@ -7,9 +7,12 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-3">
-      <div class="offcanvas-mobile" tabindex="-1" id="offcanvas-mobile" aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-body p-md-0">
-            <h4 class="mb-4">Filter options</h4>
+        <div class="offcanvas-mobile" tabindex="-1" id="offcanvas-mobile" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header p-lg-0">
+            <h4 class="mb-lg-4">Filter options</h4>
+            <button type="button" class="btn-close text-reset d-lg-none" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-mobile-body p-lg-0">
             {% include '@oe-bcl/form-input/form-input.html.twig' with data.searchInput only %}
             <p class="mt-4 mb-3">Content types</p>
             {% include '@oe-bcl/select/select.html.twig' with data.singleSelect only %}
