@@ -1,3 +1,4 @@
+import drupalAttribute from "drupal-attribute";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "./alert.html.twig";
@@ -8,7 +9,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the alert",
-      defaultValue: data.variant,
+      defaultValue: "primary",
       control: {
         type: "select",
         options: getVariants(),
@@ -63,6 +64,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

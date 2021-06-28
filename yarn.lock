@@ -3440,11 +3440,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.2.tgz#1f2b42c4be7156ff4a6f914b2fb03d05fa84e38d"
   integrity sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==
 
-"@types/node@^12.0.8":
-  version "12.20.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.15.tgz#10ee6a6a3f971966fddfa3f6e89ef7a73ec622df"
-  integrity sha512-F6S4Chv4JicJmyrwlDkxUdGNSplsQdGwp1A0AJloEVDirWdZOAiRHhovDlsFkKUrquUXhz1imJhXHsf59auyAg==
-
 "@types/node@^14.0.10":
   version "14.17.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.3.tgz#6d327abaa4be34a74e421ed6409a0ae2f47f4c3d"
@@ -6448,6 +6443,11 @@ downshift@^6.0.15:
     compute-scroll-into-view "^1.0.17"
     prop-types "^15.7.2"
     react-is "^17.0.2"
+
+drupal-attribute@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/drupal-attribute/-/drupal-attribute-1.0.2.tgz#cd33da1ce9e66a2077d522f73eecbe76e56e44bb"
+  integrity sha1-zTPaHOnmaiB31SL3Puy+duVuRLs=
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -10179,7 +10179,7 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-locutus@^2.0.11, locutus@^2.0.9:
+locutus@^2.0.9:
   version "2.0.15"
   resolved "https://registry.yarnpkg.com/locutus/-/locutus-2.0.15.tgz#d75b9100713aaaf30be8b38ed6543910498c0db0"
   integrity sha512-2xWC4RkoAoCVXEb/stzEgG1TNgd+mrkLBj6TuEDNyUoKeQ2XzDTyJUC23sMiqbL6zJmJSP3w59OZo+zc4IBOmA==
@@ -10359,7 +10359,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-luxon@^1.19.3, luxon@^1.4.1:
+luxon@^1.4.1:
   version "1.27.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.27.0.tgz#ae10c69113d85dab8f15f5e8390d0cbeddf4f00f"
   integrity sha512-VKsFsPggTA0DvnxtJdiExAucKdAnwbCCNlMM5ENvHlxubqWd0xhZcdb4XgZ7QFNhaRhilXCFxHuoObP5BNA4PA==
@@ -15180,21 +15180,6 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-twig-lexer@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/twig-lexer/-/twig-lexer-0.7.2.tgz#8dbc1b5b46e19f5e878e7c4c06fd86e809f828c5"
-  integrity sha512-c+SyqPvjH1fDXIdW9E6oWMNGGB0f5Ua64ggEh/3AGUEIImkAGTzVdOY09qLaK1NhLCUSfT/JEjr8VnZbOaZDjg==
-  dependencies:
-    "@types/node" "^12.0.8"
-
-twing-drupal-filters@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/twing-drupal-filters/-/twing-drupal-filters-0.0.2.tgz#ae485255288413cbe6a8e6639fe367a6b7b3f3d7"
-  integrity sha512-q7Iv+nW5OC9y0/zCPPhB2AKGhd8p+Hp9B8G21LDKCil3OPvvcng5aFNhm9XU4m0bMOZMJhULZrsdrraAKRXlBA==
-  dependencies:
-    object-keys "^1.1.1"
-    twing "^5.0.1"
-
 twing-loader@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/twing-loader/-/twing-loader-2.0.2.tgz#841ed6449679374c04ecc38ddb717762e0d2b9c1"
@@ -15236,37 +15221,6 @@ twing@2.3.7:
     tmp "0.0.33"
     utf8-binary-cutter "^0.9.2"
     var-validator "0.0.3"
-
-twing@^5.0.1:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/twing/-/twing-5.0.2.tgz#e795ea454416ab4127663478a25c053ce94ce5f2"
-  integrity sha512-uyOnD+KUTH+Ddbs21/KVJJI8DFhlDLNJLEU5UrudGS1W1qLyyCho9HxSus9LUzIjYRYNifXiQnlYwzi2aWI0Pg==
-  dependencies:
-    "@types/luxon" "^1.4.0"
-    camelcase "^4.1.0"
-    capitalize "^1.0.0"
-    crypto-js "^3.1.9-1"
-    esrever "^0.2.0"
-    fs-extra "^5.0.0"
-    htmlspecialchars "^1.0.5"
-    iconv-lite "^0.4.19"
-    is-integer "^1.0.7"
-    is-number "^5.0.0"
-    is-plain-object "^2.0.4"
-    isobject "^3.0.1"
-    levenshtein "^1.0.5"
-    locutus "^2.0.11"
-    luxon "^1.19.3"
-    merge "^1.2.1"
-    object-hash "^1.2.0"
-    pad "^2.0.3"
-    regex-parser "^2.2.8"
-    runes "^0.4.3"
-    snake-case "^2.1.0"
-    source-map "^0.6.1"
-    tmp "0.0.33"
-    twig-lexer "^0.7.2"
-    utf8-binary-cutter "^0.9.2"
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

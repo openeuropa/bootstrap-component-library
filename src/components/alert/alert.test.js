@@ -1,6 +1,7 @@
 import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-alert/data";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/alert/alert.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -11,7 +12,11 @@ describe("OE - Alert", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dismissible: false })
+      render({
+        ...demoData,
+        dismissible: false,
+        attributes: new drupalAttribute(),
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -19,7 +24,11 @@ describe("OE - Alert", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, animated_dismiss: false })
+      render({
+        ...demoData,
+        animated_dismiss: false,
+        attributes: new drupalAttribute(),
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -28,7 +37,11 @@ describe("OE - Alert", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render({
+          ...demoData,
+          variant: variant,
+          attributes: new drupalAttribute(),
+        })
       ).resolves.toMatchSnapshot();
     });
   });
