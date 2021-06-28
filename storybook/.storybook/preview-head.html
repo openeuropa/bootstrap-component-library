@@ -68,10 +68,14 @@
       var logWidth = function () {
         if (viewportWidth < 992) {
           offcanvasMobile.classList.add("offcanvas", "offcanvas-start");
-          offcanvasMobile.querySelectorAll(".offcanvas-mobile-body")[0].classList.add("offcanvas-body");
+          offcanvasMobile
+            .querySelectorAll(".offcanvas-mobile-body")[0]
+            .classList.add("offcanvas-body");
         } else {
           offcanvasMobile.classList.remove("offcanvas", "offcanvas-start");
-          offcanvasMobile.querySelectorAll(".offcanvas-mobile-body")[0].classList.remove("offcanvas-body");
+          offcanvasMobile
+            .querySelectorAll(".offcanvas-mobile-body")[0]
+            .classList.remove("offcanvas-body");
           offcanvasMobile.style.visibility = "visible";
           bsOffcanvas.hide();
         }
