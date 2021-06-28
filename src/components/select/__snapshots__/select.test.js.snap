@@ -44,10 +44,29 @@ exports[`OE - select renders correctly 1`] = `
 exports[`OE - select renders correctly as a multiple choice select 1`] = `
 <jest>
   <select
-    class="null multi-select"
+    class=" multi-select"
     multiple=""
     required=""
   >
+    <optgroup
+      label="Group 1"
+    >
+      <option
+        value="1"
+      >
+        Option group 1
+      </option>
+      <option
+        value="2"
+      >
+        Option group 2
+      </option>
+      <option
+        value="3"
+      >
+        Option group 3
+      </option>
+    </optgroup>
     <option
       value="1"
     >
@@ -91,31 +110,26 @@ exports[`OE - select renders correctly when disabled 1`] = `
     required=""
   >
     <option
-      disabled=""
       value="1"
     >
       a select option
     </option>
     <option
-      disabled=""
       value="2"
     >
       another select option
     </option>
     <option
-      disabled=""
       value="3"
     >
       another option
     </option>
     <option
-      disabled=""
       value="4"
     >
       last option
     </option>
     <option
-      disabled=""
       selected=""
       value=""
     >
@@ -133,7 +147,7 @@ exports[`OE - select renders correctly when disabled 1`] = `
 exports[`OE - select renders correctly when invalid 1`] = `
 <jest>
   <select
-    class="form-select is-invalid form-select-md"
+    class="form-select form-select-md is-invalid"
     required=""
   >
     <option

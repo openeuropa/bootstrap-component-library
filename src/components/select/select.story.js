@@ -20,8 +20,21 @@ const withInit = (story) => {
     ${demo}
     <script>        
       new SlimSelect({
-        select: '.multi-select'
+        select: '.multi-select',
+        selectByGroup: ${demoMultiData.selectByGroup},
+        placeholder: "${demoMultiData.placeholder}"
       })
+      var ssValues = document.querySelectorAll('.ss-values')[0];
+      var badgeOptionInit = function() {
+        var childs = ssValues.querySelectorAll("div");
+        childs.forEach(function(el) {
+          console.log(el);
+          el.classList.remove("ss-value");
+          el.classList.add("badge", "bg-primary");
+        });
+      }
+      ssValues.addEventListener("DOMNodeInserted", badgeOptionInit);
+      badgeOptionInit();
     </script>`;
 };
 
@@ -29,32 +42,51 @@ const withInit = (story) => {
 export default {
   title: "Components/Forms/Select",
   decorators: [withDesign],
-  parameters: {
-    design: [
-      {
-        name: "Wireframe",
-        type: "figma",
-        url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-      },
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.0/forms/select/",
-      },
-    ],
-  },
 };
 
 export const Default = (args) => select(applyArgs(demoData, args));
 
 Default.argTypes = getArgTypes(demoData, "select");
+Default.parameters = {
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
+    },
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+    },
+    {
+      name: "Bootstrap docs",
+      type: "iframe",
+      url: "https://getbootstrap.com/docs/5.0/forms/select/",
+    },
+  ],
+};
 
 export const Multiselect = (args) => select(applyArgs(demoMultiData, args));
 
-Multiselect.argTypes = getArgTypes(demoMultiData, "select");
+Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
 Multiselect.decorators = [withInit];
+Multiselect.parameters = {
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
+    },
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+    },
+    {
+      name: "Slim select docs",
+      type: "iframe",
+      url: "https://slimselectjs.com/",
+    },
+  ],
+};

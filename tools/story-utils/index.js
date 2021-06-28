@@ -67,6 +67,19 @@ export const getFormControls = (data, type) => {
       },
     },
   };
+  if (type === "text" || type === "textarea" || type === "multiselect") {
+    argTypes.placeholder = {
+      name: "placeholder text",
+      type: "string",
+      defaultValue: data.placeholder,
+      description: "Text to be shown when the form element is not filled in",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    };
+  }
 
   if (type === "text" || type === "textarea" || type === "file") {
     argTypes.readonly = {
@@ -120,17 +133,6 @@ export const getFormControls = (data, type) => {
           type: { summary: "boolean" },
           defaultValue: { summary: "false" },
           category: "Style",
-        },
-      };
-      argTypes.placeholder = {
-        name: "placeholder text",
-        type: "string",
-        defaultValue: data.placeholder,
-        description: "Text to be shown when the form element is not filled in",
-        table: {
-          type: { summary: "string" },
-          defaultValue: { summary: "" },
-          category: "Content",
         },
       };
     }
@@ -195,6 +197,19 @@ export const getFormControls = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
+        category: "Style",
+      },
+    };
+  }
+  
+  if (type === "multiselect") {
+    argTypes.selectByGroup = {
+      type: { name: "boolean" },
+      description: `Select a group for multiselect`,
+      defaultValue: data.selectByGroup,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
         category: "Style",
       },
     };
