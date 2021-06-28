@@ -201,7 +201,7 @@ export const getFormControls = (data, type) => {
       },
     };
   }
-  
+
   if (type === "multiselect") {
     argTypes.selectByGroup = {
       type: { name: "boolean" },

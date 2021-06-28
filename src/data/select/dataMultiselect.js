@@ -15,7 +15,7 @@ module.exports = {
         { value: 1, label: "Option group 1" },
         { value: 2, label: "Option group 2" },
         { value: 3, label: "Option group 3" },
-      ]
+      ],
     },
     { value: 1, label: "a select option" },
     { value: 2, label: "another select option" },
