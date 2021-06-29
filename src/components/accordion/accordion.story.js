@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-accordion/data.js";
 import accordion from "./accordion.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -48,7 +49,7 @@ const getArgTypes = (data) => {
 const applyArgs = (data, args) => {
   data.items[0].title = args[`toggle1`];
   data.items[0].content = args[`content1`];
-
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

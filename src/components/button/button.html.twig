@@ -37,36 +37,50 @@
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
-{% set _extra_attributes = '' %}
-{% set _class = '' %}
+{% set _class = [] %}
+{% set attributes = attributes.removeAttribute('class') %}
+{% set attributes = attributes.removeAttribute('aria-current') %}
+{% set attributes = attributes.removeAttribute('aria-expanded') %}
+{% set attributes = attributes.removeAttribute('autocomplete') %}
+{% set attributes = attributes.removeAttribute('data-bs-toggle') %}
+{% set attributes = attributes.removeAttribute('id') %}
+{% set attributes = attributes.removeAttribute('disabled') %}
+{% set attributes = attributes.removeAttribute('aria-disabled') %}
+{% set attributes = attributes.removeAttribute('aria-controls') %}
+{% set attributes = attributes.removeAttribute('data-bs-target') %}
 {% if _clean_class == false %}
-  {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
-  {% set _class = _class ~ ' btn-' + _size %}
+  {% set _class = _class|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant]) %}
+  {% set _class = _class|merge(['btn-' + _size]) %}
 {% endif %}
-{% set _class = _class ~ (_text_nowrap ? ' text-nowrap' : '') %}
+{% if _text_nowrap %}
+  {% set _class = _class|merge(['text-nowrap']) %}
+{% endif %}
 {% if _extra_classes is not empty %}
-  {% set _class = (_class ? _class ~ ' ' : '') ~ _extra_classes %}
+  {% set _class = _class|merge([_extra_classes]) %}
 {% endif %}
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
+{% endif %}
+{% if _disabled %}
+  {% set attributes = attributes.setAttribute('disabled', '').setAttribute('aria-disabled', 'true') %}
+{% endif %}
+{% if _class is not empty %}
+  {% set attributes = attributes.addClass(_class) %}
+{% endif %}
+{% set attributes = attributes.setAttribute('type', _type) %}
+
 {% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
   {% for attr in extra_attributes %}
     {% if attr.value is defined %}
-      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') ~ '="' ~ attr.value|e('html_attr') ~ '"' %}
+      {% set attributes = attributes.setAttribute(attr.name, attr.value) %}
     {% else %}
-      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') %}
+      {% set attributes = attributes.setAttribute(attr.name) %}
     {% endif %}
   {% endfor %}
 {% endif %}
 
 <button
-  type="{{ _type }}"
-{% if _class %}
-  class="{{ _class }}"
-{% endif %}
-  {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
-{% if _id is not empty %}
-  id="{{ _id }}"
-{% endif %}
-{{ _extra_attributes|raw }}
+  {{ attributes }}
 >
 {%- if _show_spinner -%}
   {% include '@oe-bcl/spinner/spinner.html.twig' with _spinner only %}

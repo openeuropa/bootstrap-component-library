@@ -3,6 +3,7 @@ import demoData from "@openeuropa/bcl-data-button-group/data.js";
 import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData.js";
 import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData.js";
 import buttonGroup from "./button-group.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -83,6 +84,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

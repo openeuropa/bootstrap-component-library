@@ -76,7 +76,8 @@
 {% set _trigger = _trigger|merge({
   id: _id,
   extra_classes: _trigger_extra_classes,
-  extra_attributes: _trigger_attributes })
+  extra_attributes: _trigger_attributes,
+  attributes: attributes })
 %}
 
 {% if not _remove_wrapper %}
@@ -101,7 +102,9 @@
         {% if _item.divider is defined %}
           <hr class="dropdown-divider">
         {% elseif _item.button is defined %}
-          {% include '@oe-bcl/button/button.html.twig' with _item only %}
+          {% include '@oe-bcl/button/button.html.twig' with _item|merge({
+            attributes: attributes
+          }) only %}
         {% else %}
           {% include '@oe-bcl/link/link.html.twig' with _item only %}
         {% endif %}

@@ -1,9 +1,14 @@
 import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-navigation/data";
 import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/navigation/navigation.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) =>
+  renderTwigFileAsNode(template, {
+    ...params,
+    attributes: new drupalAttribute(),
+  });
 
 describe("OE - navigation", () => {
   test("renders correctly", () => {

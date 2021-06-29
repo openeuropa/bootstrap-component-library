@@ -5,6 +5,7 @@ import demoGrid from "@openeuropa/bcl-data-form/data-grid.js";
 import demoHorizontal from "@openeuropa/bcl-data-form/data-horizontal.js";
 import demoInline from "@openeuropa/bcl-data-form/data-inline.js";
 import form from "./form.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 export default {
   title: "Components/Forms/Form",
@@ -33,12 +34,17 @@ export default {
   },
 };
 
-export const Basic = () => form(demoData);
+export const Basic = () =>
+  form({ ...demoData, attributes: new drupalAttribute() });
 
-export const Disabled = () => form(demoDisabled);
+export const Disabled = () =>
+  form({ ...demoDisabled, attributes: new drupalAttribute() });
 
-export const Grid = () => form(demoGrid);
+export const Grid = () =>
+  form({ ...demoGrid, attributes: new drupalAttribute() });
 
-export const Horizontal = () => form(demoHorizontal);
+export const Horizontal = () =>
+  form({ ...demoHorizontal, attributes: new drupalAttribute() });
 
-export const Inline = () => form(demoInline);
+export const Inline = () =>
+  form({ ...demoInline, attributes: new drupalAttribute() });

@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoSingle from "@openeuropa/bcl-data-toasts/data.js";
 import demoMultiple from "@openeuropa/bcl-data-toasts/data-multiple.js";
 import toasts from "./toasts.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -73,6 +74,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

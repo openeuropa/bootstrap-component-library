@@ -5,6 +5,7 @@ import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
 import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
 import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -17,7 +18,11 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render({
+          ...demoData,
+          variant: variant,
+          attributes: new drupalAttribute(),
+        })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -27,7 +32,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size })
+        render({ ...demoData, size: size, attributes: new drupalAttribute() })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -35,13 +40,17 @@ describe("OE - Button", () => {
   test("with toggle renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(toggleDemoData)).resolves.toMatchSnapshot();
+    return expect(
+      render({ ...toggleDemoData, attributes: new drupalAttribute() })
+    ).resolves.toMatchSnapshot();
   });
 
   test("with spinner renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(spinnerDemoData)).resolves.toMatchSnapshot();
+    return expect(
+      render({ ...spinnerDemoData, attributes: new drupalAttribute() })
+    ).resolves.toMatchSnapshot();
   });
 
   test("with icon renders correctly", () => {
@@ -55,6 +64,7 @@ describe("OE - Button", () => {
           transformation: "rotate-90",
           path: "bootstrap-icons.svg",
         },
+        attributes: new drupalAttribute(),
       })
     ).resolves.toMatchSnapshot();
   });
@@ -67,6 +77,7 @@ describe("OE - Button", () => {
         ...popoverDemoData,
         content_placement: "top",
         popover_trigger: "focus",
+        attributes: new drupalAttribute(),
       })
     ).resolves.toMatchSnapshot();
   });
@@ -78,6 +89,7 @@ describe("OE - Button", () => {
       render({
         ...tooltipDemoData,
         content_placement: "bottom",
+        attributes: new drupalAttribute(),
       })
     ).resolves.toMatchSnapshot();
   });
@@ -89,7 +101,12 @@ describe("OE - Button Outline", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant, outline: true })
+        render({
+          ...demoData,
+          variant: variant,
+          outline: true,
+          attributes: new drupalAttribute(),
+        })
       ).resolves.toMatchSnapshot();
     });
   });

@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import drupalAttribute from "drupal-attribute";
 import demoData from "@openeuropa/bcl-data-button/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-button/toggleData.js";
 import popoverDemoData from "@openeuropa/bcl-data-button/popoverData.js";
@@ -121,7 +122,7 @@ const getArgTypes = (data) => {
     extra_attributes: {
       type: { name: "array of objects" },
       description: "Extra attributes",
-      defaultValue: data.extra_attributes || [{}],
+      defaultValue: data.extra_attributes || [],
       control: {
         type: "object",
       },
@@ -146,6 +147,7 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

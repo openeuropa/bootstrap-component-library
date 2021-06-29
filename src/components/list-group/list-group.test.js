@@ -2,9 +2,14 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-list-group/data";
 import actionableData from "@openeuropa/bcl-data-list-group/actionableData";
 import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/list-group/list-group.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) =>
+  renderTwigFileAsNode(template, {
+    ...params,
+    attributes: new drupalAttribute(),
+  });
 
 describe("OE - List group", () => {
   test(`renders correctly`, () => {

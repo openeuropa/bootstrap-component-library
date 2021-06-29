@@ -1,8 +1,13 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-carousel/data";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/carousel/carousel.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) =>
+  renderTwigFileAsNode(template, {
+    ...params,
+    attributes: new drupalAttribute(),
+  });
 
 describe("OE - carousel", () => {
   test("renders correctly", () => {

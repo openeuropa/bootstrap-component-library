@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-carousel/data.js";
 import carousel from "./carousel.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -127,6 +128,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

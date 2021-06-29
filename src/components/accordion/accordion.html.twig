@@ -40,7 +40,8 @@
           { name: "data-bs-target", value: '#collapse-' ~ _id ~ '-' ~ loop.index },
           { name: "aria-controls", value: 'collapse-' ~ _id ~ '-' ~ loop.index },
           { name: "aria-expanded", value: open_item ? 'true' : 'false' }
-        ]
+        ],
+        attributes: attributes
       } only %}
     </h2>
     <div

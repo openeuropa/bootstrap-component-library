@@ -43,6 +43,9 @@
         {% if _item.input is defined %}
           {% include '@oe-bcl/form-input/form-input.html.twig' with _item only %}
         {% else %}
+          {% set _item = _item|merge({
+            attributes: attributes
+          }) %}
           {% include '@oe-bcl/button/button.html.twig' with _item only %}
         {% endif %}
       {% endfor %}

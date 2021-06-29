@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navigation/data.js";
 import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs.js";
 import navigation from "./navigation.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data, type) => {
   let argTypes = {
@@ -61,6 +62,7 @@ const getArgTypes = (data, type) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 

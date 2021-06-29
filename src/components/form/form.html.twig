@@ -101,7 +101,9 @@
   {% if _submit.wrapper is defined and _submit.wrapper is not empty %}
   <div class="{{ _submit.wrapper }}">
   {% endif %}
-    {% include '@oe-bcl/button/button.html.twig' with _submit only %}
+    {% include '@oe-bcl/button/button.html.twig' with _submit|merge({
+      attributes: attributes
+    }) only %}
     {% if _submit.wrapper is defined and _submit.wrapper is not empty %}
   </div>
   {% endif %}

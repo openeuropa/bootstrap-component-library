@@ -2,9 +2,14 @@ import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-button-group/data";
 import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData";
 import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/button-group/button-group.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) =>
+  renderTwigFileAsNode(template, {
+    ...params,
+    attributes: new drupalAttribute(),
+  });
 const sizes = ["lg", "md", "sm"];
 
 describe("OE - Button-group", () => {
@@ -35,6 +40,6 @@ describe("OE - Button-group", () => {
   test(`toolbar renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(render(toolbarData)).resolves.toMatchSnapshot();
+    return expect(render({ ...toolbarData })).resolves.toMatchSnapshot();
   });
 });

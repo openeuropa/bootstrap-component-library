@@ -98,7 +98,8 @@
       {% endif %}
       {% set _item = _item|merge({
           extra_classes: _extra_classes,
-          clean_class: true 
+          clean_class: true,
+          attributes: attributes
         })
       %}
       {% if _item.button is defined %}

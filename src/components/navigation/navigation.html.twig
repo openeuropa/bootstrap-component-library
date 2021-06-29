@@ -103,9 +103,13 @@
       >
       {% endif %}
       {% if _item.dropdown is defined %}
-        {% include '@oe-bcl/dropdown/dropdown.html.twig' with _item only %}
+        {% include '@oe-bcl/dropdown/dropdown.html.twig' with _item|merge({
+          attributes: attributes
+        }) only %}
       {% elseif _item.button is defined %}
-        {% include '@oe-bcl/button/button.html.twig' with _item only %}
+        {% include '@oe-bcl/button/button.html.twig' with _item|merge({
+          attributes: attributes
+        }) only %}
       {% else %}
         {% include '@oe-bcl/link/link.html.twig' with _item only %}
       {% endif %}
