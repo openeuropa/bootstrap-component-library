@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "./navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 // Controls
 const getArgTypes = (data) => {
@@ -103,6 +104,7 @@ const applyArgs = (data, args) => {
   if (args.background == "light") {
     args.color_set = "light";
   }
+  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 
