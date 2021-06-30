@@ -1,0 +1,62 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - id (int) (default: random(1000))
+  - flush (boolean) (default: false) flush variant of the accordion
+  - items (array) (default: []): format: [
+      {
+        title: (string),
+        content: (block),
+      },
+      ...
+    ]
+  - open_item_id (int) (default: 0) index value of the item to open (starting from 1),
+    all closed by default (0)
+  - extra_classes (string) (default: '')
+#}
+
+{% set _id = id|default(random(1000)) %}
+{% set _flush = flush|default(false) %}
+{% set _items = items|default([]) %}
+{% set _open_item_id = open_item_id|default(0) %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = 'accordion' ~ (_flush ? ' accordion-flush') %}
+{% set _class = _class ~ (_extra_classes ? ' ' ~ _extra_classes) %}
+
+{% if _items is not empty %}
+<div class="{{ _class }}" id="accordion-{{ _id }}">
+{% for _item in _items %}
+  {% set _open_item = _open_item_id == loop.index %}
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading-{{ _id }}-{{ loop.index }}">
+      {% include '@oe-bcl/button/button.html.twig' with {
+        label: _item.title,
+        extra_classes: 'accordion-button' ~ (not open_item ? ' collapsed'),
+        clean_class: true,
+        extra_attributes: [
+          { name: "data-bs-toggle", value: "collapse" },
+          { name: "autocomplete", value: "off" },
+          { name: "data-bs-target", value: '#collapse-' ~ _id ~ '-' ~ loop.index },
+          { name: "aria-controls", value: 'collapse-' ~ _id ~ '-' ~ loop.index },
+          { name: "aria-expanded", value: open_item ? 'true' : 'false' }
+        ]
+      } only %}
+    </h2>
+    <div
+      id="collapse-{{ _id }}-{{ loop.index }}"
+      class="accordion-collapse collapse{{ _open_item ? ' show' }}"
+      aria-labelledby="heading-{{ _id }}-{{ loop.index }}"
+      data-bs-parent="#accordion-{{ _id }}"
+    >
+      <div class="accordion-body">
+        {%- set _content = _item.content|default('') %}
+        {%- block content _content -%}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endif %}
+
+{% endspaceless %}

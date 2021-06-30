@@ -1,0 +1,122 @@
+{% spaceless %}
+
+{# Parameters:
+  - flush (boolean) (default: false)
+  - horizontal (string) (default: '')
+    - options ['none', 'horizontal', 'horizontal-sm', 'horizontal-md', 'horizontal-lg', 'horizontal-xl', 'horizontal-xxl']
+  - type (string) (default: 'unordered')
+    - options ['unordered', 'ordered', 'actionable']
+  - items (array of objects: list item object or Button and Link component object if type actionable)
+      format: [
+      ('list item')
+      {
+        - html (string)
+        - variant (string)
+        - badge (predefined object Badge component)
+      }
+      {
+        ...Link
+        - button (boolean) (default: false)
+      },
+      {
+        ...Button
+        - button (boolean) (default: false)
+      },
+      ...
+    ]
+  - extra_classes (string) (default: '')
+#}
+
+{% set _flush = flush|default(false) %}
+{% set _horizontal = horizontal|default('') %}
+{% set _id = id|default('') %}
+{% set _type = type|default('unordered') %}
+{% set _items = items|default([]) %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = 'list-group' %}
+{% if _flush %}
+  {% set _class = _class ~ ' list-group-flush' %}
+{% endif %}
+{% if _type == 'ordered' %}
+  {% set _class = _class ~ ' list-group-numbered' %}
+{% endif %}
+{% if _horizontal is not empty %}
+  {% set _class = _class ~ ' list-group-' ~ _horizontal %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
+
+{% if _type == 'unordered' %}
+  <ul
+    class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+  >
+{% endif %}
+{% if _type == 'ordered' %}
+  <ol
+    class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+  >
+{% endif %}
+{% if _type == 'actionable' %}
+  <div
+  class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+  >
+{% endif %}
+{% if _items is not empty and _items is iterable %}
+  {% for _item in _items %}
+    {% if _type == 'unordered' or _type == 'ordered' %}
+      {% set _item_class = 'list-group-item' %}
+      {% if _item.variant is not empty %}
+        {% set _item_class = _item_class ~ ' list-group-item-' ~ _item.variant %}
+      {% endif %}
+      {% if _item.extra_classes is not empty %}
+        {% set _item_class = _item_class ~ ' ' ~ _item.extra_classes %}
+      {% endif %}
+      <li class="{{ _item_class }}">
+      {%- if _item.input is defined -%}
+          {% include '@oe-bcl/form-input/form-input.html.twig' with _item only %}
+      {%- else -%}
+          {{- _item.html -}}
+          {%- if _item.badge is not empty -%}
+            {% include '@oe-bcl/badge/badge.html.twig' with _item.badge only %}
+          {%- endif -%}
+      {%- endif -%}
+      </li>
+    {% else %}
+      {% set _extra_classes = 'list-group-item list-group-item-action' %}
+      {% if _item.extra_classes is defined and _item.extra_classes is not empty %}
+        {% set _extra_classes = _extra_classes ~ ' ' ~ _item.extra_classes %}
+      {% endif %}
+      {% set _item = _item|merge({
+          extra_classes: _extra_classes,
+          clean_class: true 
+        })
+      %}
+      {% if _item.button is defined %}
+        {% include '@oe-bcl/button/button.html.twig' with _item only %}
+      {% else %}
+        {% include '@oe-bcl/link/link.html.twig' with _item only %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if _type == 'unordered' %}
+</ul>
+{% endif %}
+{% if _type == 'ordered' %}
+</ol>
+{% endif %}
+{% if _type == 'actionable' %}
+</div>
+{% endif %}
+
+{% endspaceless %}

@@ -2,6 +2,7 @@
 
 const path = require("path");
 const program = require("commander");
+const buildScript = require("../scripts/scripts");
 const browserslist = require("browserslist");
 const { buildStyles } = require("../scripts/styles");
 const copyFiles = require("../scripts/copy");
@@ -60,7 +61,7 @@ program
   .action(() => {
     const config = loadConfig(program.config);
     config.copy.forEach((conf) =>
-      copyFiles(conf.patterns || "**", conf.from, conf.to)
+      copyFiles(conf.from || "**", conf.to, conf.options)
     );
   });
 

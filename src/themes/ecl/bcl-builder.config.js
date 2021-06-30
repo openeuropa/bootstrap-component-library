@@ -14,7 +14,7 @@ module.exports = {
   scripts: [
     {
       entry: path.resolve(__dirname, "index.umd.js"),
-      dest: path.resolve(outputFolder, "js/oe-bcl-default.bundle.min.js"),
+      dest: path.resolve(outputFolder, "js/oe-bcl-ecl.bundle.min.js"),
       options: {
         moduleName: "bootstrap",
         external: ["@popperjs/core"],
@@ -23,8 +23,8 @@ module.exports = {
   ],
   styles: [
     {
-      entry: path.resolve(outputFolder, "oe-bcl-default.scss"),
-      dest: path.resolve(outputFolder, "css/oe-bcl-default.min.css"),
+      entry: path.resolve(outputFolder, "oe-bcl-ecl.scss"),
+      dest: path.resolve(outputFolder, "css/oe-bcl-ecl.min.css"),
       options: {
         includePaths,
         sourceMap: "file",

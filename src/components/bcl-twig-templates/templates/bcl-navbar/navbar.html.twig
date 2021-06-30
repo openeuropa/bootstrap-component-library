@@ -1,0 +1,83 @@
+{% spaceless %}
+
+{# Parameters:
+  - collapse_id (string) (default: '')
+  - background (string) (default: '')
+  - brand (object) (default: {})
+    format: {
+      src: '',
+      alt: '',
+      class: '',
+      label: '', (optional: only for string label)
+      link: '',
+    }
+  - navigation (object Navigation) (default: {})
+  - form (object Form) (default: {})
+  - expand (string) (default: 'lg')
+    options: ['sm', 'md', 'lg']
+  - color_set (string) (default: 'light')
+    options ['light', 'dark']
+  - extra_classes (string) (default: '')
+#}
+{% set _collapse_id = collapse_id|default('') %}
+{% set _background = background|default('') %}
+{% set _navigation = navigation|default({}) %}
+{% set _form = form|default({}) %}
+{% set _expand = expand|default('lg') %}
+{% set _brand = brand|default({}) %}
+{% set _color_set = color_set|default('light') %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = 'navbar' %}
+{% set _class = _class ~ ' navbar-expand-' ~ _expand %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
+{% if _background is not empty %}
+  {% set _class = _class ~ ' bg-' ~ _background %}
+{% endif %}
+{% if _color_set is not empty %}
+  {% set _class = _class ~ ' navbar-' ~ _color_set %}
+{% endif %}
+
+<nav class='{{ _class }}'>
+  <div class='container'>
+    {% if _brand is not empty %}
+      <a class='navbar-brand' href='{{ _brand.link }}'>
+      {%- if _brand.label is defined -%}
+        {{- _brand.label -}}
+      {%- else -%}
+        <img
+          src='{{ _brand.src }}'
+          {% if _brand.alt is not empty %}
+          alt='{{ _brand.alt }}'
+          {% endif %}
+          {% if _brand.class is not empty %}
+          class='{{ _brand.class }}'
+          {% endif %}
+        />
+      {%- endif -%}
+      </a>
+    {% endif %}
+    <button
+      class='navbar-toggler'
+      type='button'
+      data-bs-toggle='collapse'
+      data-bs-target='#{{ _collapse_id }}'
+      aria-controls='{{ _collapse_id }}'
+      aria-expanded='false'
+      aria-label='Toggle navigation'
+    >
+      <span class='navbar-toggler-icon'></span>
+    </button>
+    <div class='collapse navbar-collapse' id='{{ _collapse_id }}'>
+      {% if _navigation is not empty %}
+        {% include '@oe-bcl/navigation/navigation.html.twig' with _navigation only %}
+      {% endif %}
+      {% if _form is not empty %}
+        {% include '@oe-bcl/form/form.html.twig' with _form only %}
+      {% endif %}
+    </div>
+  </div>
+</nav>
+
+{% endspaceless %}

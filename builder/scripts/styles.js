@@ -2,7 +2,7 @@ const sass = require("sass");
 const path = require("path");
 const fs = require("fs");
 const postcss = require("postcss");
-const clean = require("postcss-clean");
+const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 
 const getPlugins = (options) => {
@@ -10,7 +10,7 @@ const getPlugins = (options) => {
 
   plugins.push(autoprefixer({ grid: "no-autoplace" }));
 
-  plugins.push(clean({ sourceMap: true, sourceMapInlineSources: true }));
+  plugins.push(cssnano({ safe: true }));
 
   return plugins;
 };
@@ -53,7 +53,7 @@ const buildStyles = (entry, dest, options) => {
       fs.writeFileSync(dest, postcssResult.css);
 
       if (postcssResult.map) {
-        fs.writeFileSync(`${dest}.map`, postcssResult.map);
+        fs.writeFileSync(`${dest}.map`, postcssResult.map.toString());
       }
     });
 };

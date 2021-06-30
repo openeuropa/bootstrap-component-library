@@ -1,16 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const copy = require("copyfiles");
-const globby = require("globby");
 
-module.exports = (patterns, from, to) => {
+module.exports = (from, to, options) => {
   const executor = async () => {
-    patterns.map(async (file) => {
-      const input = path.resolve(from, file);
-      const dest = path.resolve(to, file);
-
-      fs.mkdirSync(path.dirname(dest), { recursive: true });
-      await copy(input, dest);
+    from.push(to);
+    await copy(from, options, function (err) {
+      if (err) console.error(err);
     });
   };
 

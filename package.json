@@ -13,7 +13,6 @@
     "clean": "rimraf build assets",
     "copy:assets": "copyfiles -f src/themes/**/*min.* static/* assets/",
     "copy:build": "copyfiles assets/* static/* build",
-    "copy:twig": "lerna --scope \"@openeuropa/bcl-theme-*\" run twig",
     "css-lint": "stylelint src/**/*.scss",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",
@@ -56,7 +55,9 @@
     ],
     "nohoist": [
       "**/bootstrap",
-      "**/bootstrap/**"
+      "**/bootstrap/**",
+      "**/@openeuropa/bcl-twig-templates",
+      "**/@openeuropa/bcl-twig-templates/**"
     ]
   },
   "jest": {

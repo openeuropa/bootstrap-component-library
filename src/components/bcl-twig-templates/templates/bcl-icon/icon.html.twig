@@ -1,0 +1,32 @@
+{% spaceless %}
+
+{# Parameters:
+  - name (string) (default: '')
+  - path (string) (default: '')
+  - size (string) (default: 's')
+    - options ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"]
+  - transformation (string) (default: '')
+    - options ["rotate-90", "rotate-180", "rotate-270", "flip-horizontal", "flip-vertical"]
+  - extra_classes (string) (default: '')
+#}
+
+{% set _name = name|default('') %}
+{% set _path = path|default('') %}
+{% set _size = size|default('s') %}
+{% set _transformation = transformation|default('') %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _class = 'bi ' ~ 'icon--' ~ _size %}
+
+{% if _transformation is not empty %}
+  {% set _class = _class ~ ' icon--' ~ _transformation %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
+
+<svg
+  class="{{ _class }}">
+  <use xlink:href="{{ _path ~ "#" ~ _name }}"/>
+</svg>
+
+{% endspaceless %}

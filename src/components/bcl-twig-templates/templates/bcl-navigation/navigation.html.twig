@@ -1,0 +1,140 @@
+{% spaceless %}
+
+{# Parameters:
+  - pills (boolean) (default: false)
+  - tabs (boolean) (default: false)
+  - vertical (boolean) (default: false)
+  - full_width (boolean) (default: false)
+  - alignment (string) (default: '')
+    - options ['start', 'center', 'end']
+  - tabs_content (boolean) (default: false)
+  - nav (boolean) (default: false)
+  - navbar (boolean) (default: false)
+  - extra_classes (string) (default: '')
+  - items (array of objects)
+    format: [
+      {
+        - Link or Button object component
+        - active (boolean)
+        - button (boolean) - set to button
+        - content (string) - content for tab
+      }
+    ]
+  - extra_classes (string) (default: '')
+#}
+
+{% set _pills = pills|default(false) %}
+{% set _tabs = tabs|default(false) %}
+{% set _vertical = vertical|default(false) %}
+{% set _full_width = full_width|default(false) %}
+{% set _alignment = alignment|default('') %}
+{% set _id = id|default('') %}
+{% set _tabs_content = tabs_content|default(false) %}
+{% set _nav = nav|default(false) %}
+{% set _navbar = navbar|default(false) %}
+{% set _extra_classes = extra_classes|default('') %}
+{% set _items = items|default([]) %}
+{% set _class = _navbar ? 'navbar-nav' : 'nav' %}
+{% if _pills %}
+  {% set _class = _class ~ ' nav-pills' %}
+{% endif %}
+{% if _tabs %}
+  {% set _class = _class ~ ' nav-tabs' %}
+{% endif %}
+{% if _vertical %}
+  {% set _class = _class ~ ' flex-column' %}
+{% endif %}
+{% if _full_width %}
+  {% set _class = _class ~ ' nav-fill' %}
+{% endif %}
+{% if _alignment is not empty %}
+  {% set _class = _class ~ ' justify-content-' ~ _alignment %}
+{% endif %}
+{% if _extra_classes is not empty %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% endif %}
+
+{% if _nav %}
+<nav
+  class="{{ _class }}"
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+>
+{% else %}
+<ul
+  class="{{ _class }}"
+  {% if _tabs %}
+    role="tablist"
+  {% endif %}
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}
+>
+{% endif %}
+  {% if _items is not empty and _items is iterable %}
+    {% for _item in _items %}
+      {% set _item_class = 'nav-item' %}
+      {% if _item.dropdown %}
+        {% set _item_class = _item_class ~ ' dropdown' %}
+        {% set _item = _item|merge({
+          remove_wrapper: true
+        })
+        %}
+      {% endif %}
+      {% set _extra_classes = 'nav-link' %}
+      {% if _item.active %}
+        {% set _extra_classes = _extra_classes ~ ' active' %}
+      {% endif %}
+      {% if _item.extra_classes is not empty %}
+        {% set _extra_classes = _extra_classes ~ ' ' ~ _item.extra_classes %}
+      {% endif %}
+      {% set _item = _item|merge({
+        extra_classes: _extra_classes,
+        clean_class: true 
+      })
+      %}
+      {% if not _nav %}
+      <li 
+        class="{{ _item_class }}"
+        {% if _tabs %}
+          role="presentation"
+        {% endif %}
+      >
+      {% endif %}
+      {% if _item.dropdown is defined %}
+        {% include '@oe-bcl/dropdown/dropdown.html.twig' with _item only %}
+      {% elseif _item.button is defined %}
+        {% include '@oe-bcl/button/button.html.twig' with _item only %}
+      {% else %}
+        {% include '@oe-bcl/link/link.html.twig' with _item only %}
+      {% endif %}
+      {% if not _nav %}
+      </li>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% if _nav %}
+</nav>
+{% else %}
+</ul>
+{% endif %}
+{% if _tabs_content %}
+<div class="tab-content">
+  {% if _items is not empty and _items is iterable %}
+    {% for _item in _items %}
+      {% if _item.content is not empty %}
+        {% set _content_class = 'tab-pane fade' %}
+        {% if _item.active %}
+          {% set _content_class = _content_class ~ ' show active' %}
+        {% endif %}
+        <div class="{{ _content_class }}" id="{{ _item.target }}" role="tabpanel" aria-labelledby="{{ _item.id }}">
+          {{- _item.content -}}
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>
+{% endif %}
+
+{% endspaceless %}
