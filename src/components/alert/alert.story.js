@@ -9,7 +9,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the alert",
-      defaultValue: "primary",
+      defaultValue: data.variant || "primary",
       control: {
         type: "select",
         options: getVariants(),
@@ -101,40 +101,40 @@ export const Secondary = (args) =>
   alert(applyArgs({ ...demoData, variant: "secondary" }, args));
 
 Secondary.storyName = "Secondary";
-Secondary.argTypes = getArgTypes(demoData);
+Secondary.argTypes = getArgTypes({ ...demoData, variant: "secondary" });
 
 export const Success = (args) =>
   alert(applyArgs({ ...demoData, variant: "success" }, args));
 
 Success.storyName = "Success";
-Success.argTypes = getArgTypes(demoData);
+Success.argTypes = getArgTypes({ ...demoData, variant: "success" });
 
 export const Warning = (args) =>
   alert(applyArgs({ ...demoData, variant: "warning" }, args));
 
 Warning.storyName = "Warning";
-Warning.argTypes = getArgTypes(demoData);
+Warning.argTypes = getArgTypes({ ...demoData, variant: "warning" });
 
 export const Danger = (args) =>
   alert(applyArgs({ ...demoData, variant: "danger" }, args));
 
 Danger.storyName = "Danger";
-Danger.argTypes = getArgTypes(demoData);
+Danger.argTypes = getArgTypes({ ...demoData, variant: "danger" });
 
 export const Info = (args) =>
   alert(applyArgs({ ...demoData, variant: "info" }, args));
 
 Info.storyName = "Info";
-Info.argTypes = getArgTypes(demoData);
+Info.argTypes = getArgTypes({ ...demoData, variant: "info" });
 
 export const Light = (args) =>
   alert(applyArgs({ ...demoData, variant: "light" }, args));
 
 Light.storyName = "Light";
-Light.argTypes = getArgTypes(demoData);
+Light.argTypes = getArgTypes({ ...demoData, variant: "light" });
 
 export const Dark = (args) =>
   alert(applyArgs({ ...demoData, variant: "dark" }, args));
 
 Dark.storyName = "Dark";
-Dark.argTypes = getArgTypes(demoData);
+Dark.argTypes = getArgTypes({ ...demoData, variant: "dark" });
