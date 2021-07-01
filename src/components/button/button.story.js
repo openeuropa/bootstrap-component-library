@@ -7,12 +7,13 @@ import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData.js";
 import button from "./button.html.twig";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import drupalAttribute from "drupal-attribute";
 
 const withCollapse = (story) => {
   const demo = story();
   return `
     ${demo} 
-    <div class="collapse mt-3" id="${toggleDemoData.extra_attributes[3].value}">
+    <div class="collapse mt-3" id="collapseExample">
       ${toggleDemoData.collapse_text}
     </div>`;
 };
@@ -118,19 +119,6 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    extra_attributes: {
-      type: { name: "array of objects" },
-      description: "Extra attributes",
-      defaultValue: data.extra_attributes || [{}],
-      control: {
-        type: "object",
-      },
-      table: {
-        type: { summary: "array of objects" },
-        defaultValue: { summary: [] },
-        category: "extra attributes",
-      },
-    },
     ...getIconControls("button"),
   };
 };
@@ -146,6 +134,7 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
+  data.attributes = new drupalAttribute(data.attributes);
   return Object.assign(data, args);
 };
 

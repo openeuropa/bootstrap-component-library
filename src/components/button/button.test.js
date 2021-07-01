@@ -5,6 +5,7 @@ import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
 import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
 import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -17,7 +18,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render({ ...demoData, attributes: new drupalAttribute().addClass('btn-' + variant) })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -27,7 +28,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size })
+        render({ ...demoData, attributes: new drupalAttribute().addClass('btn-' + size) })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -63,11 +64,7 @@ describe("OE - Button", () => {
     expect.assertions(1);
 
     return expect(
-      render({
-        ...popoverDemoData,
-        content_placement: "top",
-        popover_trigger: "focus",
-      })
+      render(popoverDemoData)
     ).resolves.toMatchSnapshot();
   });
 
@@ -75,10 +72,7 @@ describe("OE - Button", () => {
     expect.assertions(1);
 
     return expect(
-      render({
-        ...tooltipDemoData,
-        content_placement: "bottom",
-      })
+      render(tooltipDemoData)
     ).resolves.toMatchSnapshot();
   });
 });
@@ -89,7 +83,7 @@ describe("OE - Button Outline", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant, outline: true })
+        render({ ...demoData, attributes: new drupalAttribute().addClass('btn-' + variant), outline: true })
       ).resolves.toMatchSnapshot();
     });
   });
