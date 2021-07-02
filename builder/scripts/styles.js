@@ -10,7 +10,9 @@ const getPlugins = (options) => {
 
   plugins.push(autoprefixer({ grid: "no-autoplace" }));
 
-  plugins.push(cssnano({ safe: true }));
+  if (options.minify) {
+    plugins.push(cssnano({ safe: true }));
+  }
 
   return plugins;
 };

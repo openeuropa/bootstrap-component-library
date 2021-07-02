@@ -1,5 +1,6 @@
 const path = require("path");
 const pkg = require("./package.json");
+const replace = require("@rollup/plugin-replace");
 const rootPkg = require("../../../package.json");
 
 const outputFolder = path.resolve(__dirname);
@@ -13,21 +14,84 @@ const { apps } = rootPkg;
 module.exports = {
   scripts: [
     {
-      entry: path.resolve(__dirname, "index.umd.js"),
-      dest: path.resolve(outputFolder, "js/oe-bcl-default.bundle.min.js"),
+      entry: path.resolve(__dirname, "index.esm.js"),
+      dest: path.resolve(outputFolder, "js/oe-bcl-default.esm.js"),
       options: {
-        moduleName: "bootstrap",
+        format: "esm",
+        globals: { "@popperjs/core": "Popper" },
+        minify: true,
+        sourceMap: true,
+        minifyOptions: {
+          mangle: true,
+          format: {
+            comments: /^!/,
+          },
+          compress: {
+            passes: 2,
+          },
+        },
         external: ["@popperjs/core"],
+      },
+    },
+    {
+      entry: path.resolve(__dirname, "index.umd.js"),
+      dest: path.resolve(outputFolder, "js/oe-bcl-default.umd.js"),
+      options: {
+        name: "bootstrap",
+        minify: true,
+        sourceMap: true,
+        minifyOptions: {
+          mangle: true,
+          format: {
+            comments: /^!/,
+          },
+          compress: {
+            passes: 2,
+          },
+        },
+      },
+    },
+    {
+      entry: path.resolve(__dirname, "index.umd.js"),
+      dest: path.resolve(outputFolder, "js/oe-bcl-default.bundle.js"),
+      options: {
+        name: "bootstrap",
+        minify: true,
+        sourceMap: true,
+        minifyOptions: {
+          mangle: true,
+          format: {
+            comments: /^!/,
+          },
+          compress: {
+            passes: 2,
+          },
+        },
+        plugins: [
+          replace({
+            "process.env.NODE_ENV": '"production"',
+            preventAssignment: true,
+          }),
+        ],
       },
     },
   ],
   styles: [
     {
       entry: path.resolve(outputFolder, "oe-bcl-default.scss"),
+      dest: path.resolve(outputFolder, "css/oe-bcl-default.css"),
+      options: {
+        includePaths,
+        sourceMap: "file",
+      },
+    },
+    {
+      entry: path.resolve(outputFolder, "oe-bcl-default.scss"),
       dest: path.resolve(outputFolder, "css/oe-bcl-default.min.css"),
       options: {
         includePaths,
         sourceMap: "file",
+        minify: true,
       },
     },
   ],
