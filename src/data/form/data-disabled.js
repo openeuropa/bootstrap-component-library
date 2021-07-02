@@ -1,8 +1,11 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   submit: {
     label: "Submit",
     type: "submit",
     variant: "primary",
+    attributes: new drupalAttribute(),
   },
   items: [
     [

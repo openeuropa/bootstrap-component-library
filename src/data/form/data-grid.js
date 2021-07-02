@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   extra_classes: "row g-3",
   submit: {
@@ -5,6 +7,7 @@ module.exports = {
     label: "Submit",
     type: "submit",
     variant: "primary",
+    attributes: new drupalAttribute(),
   },
   items: [
     [

@@ -18,7 +18,11 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, attributes: new drupalAttribute().addClass('btn-' + variant) })
+        render({
+          ...demoData,
+          variant: variant,
+          attributes: new drupalAttribute(),
+        })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -28,7 +32,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, attributes: new drupalAttribute().addClass('btn-' + size) })
+        render({ ...demoData, size: size, attributes: new drupalAttribute() })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -51,6 +55,7 @@ describe("OE - Button", () => {
     return expect(
       render({
         ...demoData,
+        attributes: new drupalAttribute(),
         icon: {
           name: "mouse",
           transformation: "rotate-90",
@@ -63,17 +68,13 @@ describe("OE - Button", () => {
   test("with popover renders correctly", () => {
     expect.assertions(1);
 
-    return expect(
-      render(popoverDemoData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(popoverDemoData)).resolves.toMatchSnapshot();
   });
 
   test("with tooltip renders correctly", () => {
     expect.assertions(1);
 
-    return expect(
-      render(tooltipDemoData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(tooltipDemoData)).resolves.toMatchSnapshot();
   });
 });
 
@@ -83,7 +84,12 @@ describe("OE - Button Outline", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, attributes: new drupalAttribute().addClass('btn-' + variant), outline: true })
+        render({
+          ...demoData,
+          variant: variant,
+          outline: true,
+          attributes: new drupalAttribute(),
+        })
       ).resolves.toMatchSnapshot();
     });
   });

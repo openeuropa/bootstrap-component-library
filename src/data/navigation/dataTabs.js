@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   tabs: true,
   tabs_content: true,
@@ -31,24 +33,12 @@ module.exports = {
         "This is a demo content for the Second Tab. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       id: "second-tab",
       target: "second",
-      extra_attributes: [
-        {
-          name: "data-bs-toggle",
-          value: "tab",
-        },
-        {
-          name: "autocomplete",
-          value: "off",
-        },
-        {
-          name: "data-bs-target",
-          value: "#second",
-        },
-        {
-          name: "aria-controls",
-          value: "second",
-        },
-      ],
+      attributes: new drupalAttribute()
+        .setAttribute("data-bs-toggle", "tab")
+        .setAttribute("autocomplete", "off")
+        .setAttribute("data-bs-target", "#second")
+        .setAttribute("aria-controls", "second")
+        .addClass(["nav-link"]),
     },
     {
       label: "I'm a disabled button",
@@ -58,24 +48,12 @@ module.exports = {
         "This is a demo content for the Third Tab. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       id: "third-tab",
       target: "third",
-      extra_attributes: [
-        {
-          name: "data-bs-toggle",
-          value: "tab",
-        },
-        {
-          name: "autocomplete",
-          value: "off",
-        },
-        {
-          name: "data-bs-target",
-          value: "#third",
-        },
-        {
-          name: "aria-controls",
-          value: "third",
-        },
-      ],
+      attributes: new drupalAttribute()
+        .setAttribute("data-bs-toggle", "tab")
+        .setAttribute("autocomplete", "off")
+        .setAttribute("data-bs-target", "#third")
+        .setAttribute("aria-controls", "third")
+        .addClass(["nav-link"]),
     },
     {
       id: "dropdown-1",
@@ -108,6 +86,7 @@ module.exports = {
         {
           label: "I'm a button",
           button: true,
+          attributes: new drupalAttribute().addClass(["dropdown-item"]),
         },
         {
           divider: true,
@@ -116,11 +95,16 @@ module.exports = {
           label: "I'm a disabled button",
           button: true,
           disabled: true,
+          attributes: new drupalAttribute().addClass(["dropdown-item"]),
         },
         {
           label: "I'm a active button",
           button: true,
           active: true,
+          attributes: new drupalAttribute().addClass([
+            "dropdown-item",
+            "active",
+          ]),
         },
       ],
     },
@@ -132,24 +116,13 @@ module.exports = {
         "This is a demo content for the Fourth Tab. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       id: "fourth-tab",
       target: "fourth",
-      extra_attributes: [
-        {
-          name: "data-bs-toggle",
-          value: "tab",
-        },
-        {
-          name: "autocomplete",
-          value: "off",
-        },
-        {
-          name: "data-bs-target",
-          value: "#fourth",
-        },
-        {
-          name: "aria-controls",
-          value: "fourth",
-        },
-      ],
+      attributes: new drupalAttribute()
+        .setAttribute("aria-controls", "fourth")
+        .setAttribute("data-bs-toggle", "tab")
+        .setAttribute("autocomplete", "off")
+        .setAttribute("data-bs-target", "#fourth")
+        .setAttribute("aria-controls", "fourth")
+        .addClass(["nav-link", "active"]),
     },
   ],
 };

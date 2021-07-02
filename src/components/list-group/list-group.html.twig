@@ -102,7 +102,9 @@
         })
       %}
       {% if _item.button is defined %}
-        {% include '@oe-bcl/button/button.html.twig' with _item only %}
+        {% include '@oe-bcl/button/button.html.twig' with _item|merge({
+          attributes: _item.attributes.addClass(['list-group-item', 'list-group-item-action'])
+        }) only %}
       {% else %}
         {% include '@oe-bcl/link/link.html.twig' with _item only %}
       {% endif %}

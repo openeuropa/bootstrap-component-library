@@ -6,9 +6,12 @@
   - variant (string) (default: 'primary')
   - size (string) (default: 'md')
     - options ["sm", "md", "lg"]
+  - type (string) (default: 'button')
   - outline (boolean) (default: false)
+  - disabled (boolean) (default: false)
   - text_nowrap (boolean) (default: false)
   - assistive_text (string) (default: '')
+  - id (string) (default: '')
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
     - options ["after", "before"]
@@ -20,25 +23,35 @@
 {% set _label = label|default('') %}
 {% set _variant = variant|default('primary') %}
 {% set _size = size|default('md') %}
+{% set _type = type|default('button') %}
 {% set _outline = outline|default(false) %}
+{% set _disabled = disabled|default(false) %}
 {% set _text_nowrap = text_nowrap|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
+{% set _id = id|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
 {% set _show_spinner = show_spinner|default(false) %}
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
 {% set _class = [] %}
-{# {% set attributes = attributes.removeAttribute('class') %} #}
 {% if _clean_class == false %}
-  {% set _class = _class|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant]) %}
-  {% set _class = _class|merge(['btn-' + _size]) %}
+  {% set _class = _class|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
+  {% set _class = _class|merge(['btn-' + _size|e('html_attr')]) %}
 {% endif %}
 {% if _text_nowrap %}
   {% set _class = _class|merge(['text-nowrap']) %}
 {% endif %}
-
-{% set attributes = attributes.addClass(_class) %}
+{% if _disabled %}
+  {% set attributes = attributes.setAttribute('disabled', 'true').setAttribute('aria-disabled', 'true') %}
+{% endif %}
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
+{% endif %}
+{% if _class is not empty %}
+  {% set attributes = attributes.addClass(_class) %}
+{% endif %}
+{% set attributes = attributes.setAttribute('type', _type|e('html_attr')) %}
 
 <button
   {{ attributes }}

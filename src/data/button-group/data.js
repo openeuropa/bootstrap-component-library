@@ -7,29 +7,25 @@ module.exports = {
         label: "I am a button",
         outline: false,
         variant: "danger",
-        attributes: new drupalAttribute()
-                    .setAttribute('type', 'button'),
+        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: false,
         variant: "primary",
-        attributes: new drupalAttribute()
-                    .setAttribute('type', 'button'),
+        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: true,
         variant: "dark",
-        attributes: new drupalAttribute()
-                    .setAttribute('type', 'button'),
+        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: false,
         variant: "warning",
-        attributes: new drupalAttribute()
-                    .setAttribute('type', 'button'),
+        attributes: new drupalAttribute(),
       },
     ],
   ],

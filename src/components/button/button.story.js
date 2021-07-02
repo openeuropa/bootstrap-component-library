@@ -7,7 +7,6 @@ import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData.js";
 import button from "./button.html.twig";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
-import drupalAttribute from "drupal-attribute";
 
 const withCollapse = (story) => {
   const demo = story();
@@ -134,7 +133,6 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
-  data.attributes = new drupalAttribute(data.attributes);
   return Object.assign(data, args);
 };
 

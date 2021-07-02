@@ -5,13 +5,7 @@ module.exports = {
   trigger: {
     label: "Dropdown Toggle",
     path: "#",
-    attributes: new drupalAttribute()
-                .addClass('dropdown-toggle')
-                .setAttribute('aria-expanded', 'false')
-                .setAttribute('autocomplete', 'off')
-                .setAttribute('data-bs-toggle', 'dropdown')
-                .setAttribute('id', 'dropdown-1')
-                .setAttribute('type', 'button'),
+    attributes: new drupalAttribute(),
   },
   items: [
     {
@@ -21,9 +15,7 @@ module.exports = {
     {
       label: "I'm a button",
       button: true,
-      attributes: new drupalAttribute()
-                  .addClass('dropdown-item')
-                  .setAttribute('type', 'button'),
+      attributes: new drupalAttribute(),
     },
     {
       divider: true,
@@ -32,19 +24,13 @@ module.exports = {
       label: "I'm a disabled button",
       button: true,
       disabled: true,
-      attributes: new drupalAttribute()
-                  .addClass('dropdown-item')
-                  .setAttribute('aria-disabled', 'true')
-                  .setAttribute('type', 'button')
-                  .setAttribute('disabled', 'true'),
+      attributes: new drupalAttribute(),
     },
     {
       label: "I'm a active button",
       button: true,
       active: true,
-      attributes: new drupalAttribute()
-                  .addClass('dropdown-item active')
-                  .setAttribute('type', 'button'),
+      attributes: new drupalAttribute(),
     },
   ],
 };
