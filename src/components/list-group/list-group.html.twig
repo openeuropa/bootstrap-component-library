@@ -102,6 +102,11 @@
         })
       %}
       {% if _item.button is defined %}
+        {% if _item.attributes is empty %}
+          {% set _item = _item|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
         {% include '@oe-bcl/button/button.html.twig' with _item|merge({
           attributes: _item.attributes.addClass(['list-group-item', 'list-group-item-action'])
         }) only %}

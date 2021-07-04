@@ -75,7 +75,7 @@
                               .setAttribute('data-bs-slide-to', _i)
     %}
     {% if loop.index == _active_item %}
-      {% set button_attributes = button_attributes.setAttribute('aria-current', 'true').addClass(['active']) %}
+      {% set button_attributes = button_attributes.setAttribute('aria-current', true).addClass(['active']) %}
     {% endif %}
     {% include '@oe-bcl/button/button.html.twig' with {
       clean_class: true,

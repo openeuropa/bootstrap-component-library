@@ -6,7 +6,6 @@ module.exports = {
       label: "Button 1",
       disabled: true,
       button: true,
-      attributes: new drupalAttribute(),
     },
     {
       path: "/test-path",
@@ -16,7 +15,6 @@ module.exports = {
     {
       label: "Button 2",
       button: true,
-      attributes: new drupalAttribute(),
     },
     {
       path: "/test-path-2",

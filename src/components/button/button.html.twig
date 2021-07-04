@@ -34,22 +34,22 @@
 {% set _show_spinner = show_spinner|default(false) %}
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
-{% set _class = [] %}
+{% set _classes = [] %}
 {% if _clean_class == false %}
-  {% set _class = _class|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
-  {% set _class = _class|merge(['btn-' + _size|e('html_attr')]) %}
+  {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
+  {% set _classes = _classes|merge(['btn-' + _size|e('html_attr')]) %}
 {% endif %}
 {% if _text_nowrap %}
-  {% set _class = _class|merge(['text-nowrap']) %}
+  {% set _classes = _classes|merge(['text-nowrap']) %}
 {% endif %}
 {% if _disabled %}
-  {% set attributes = attributes.setAttribute('disabled', 'true').setAttribute('aria-disabled', 'true') %}
+  {% set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', true) %}
 {% endif %}
 {% if _id is not empty %}
   {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
 {% endif %}
-{% if _class is not empty %}
-  {% set attributes = attributes.addClass(_class) %}
+{% if _classes is not empty %}
+  {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
 {% set attributes = attributes.setAttribute('type', _type|e('html_attr')) %}
 

@@ -82,6 +82,11 @@
 {% if not _remove_wrapper %}
 <div class="{{ _class }}">
 {% endif %}
+  {% if _trigger.attributes is empty %}
+    {% set _trigger = _trigger|merge({
+      attributes: create_attribute()
+    }) %}
+  {% endif %}
   {% if _link %}
     {% include '@oe-bcl/link/link.html.twig' with _trigger only %}
   {% else %}
@@ -110,6 +115,11 @@
         {% if _item.divider is defined %}
           <hr class="dropdown-divider">
         {% elseif _item.button is defined %}
+          {% if _item.attributes is empty %}
+            {% set _item = _item|merge({
+              attributes: create_attribute()
+            }) %}
+          {% endif %}
           {% include '@oe-bcl/button/button.html.twig' with _item|merge({
             attributes: _item.attributes.addClass(_attributes_extra_classes)
           }) only %}

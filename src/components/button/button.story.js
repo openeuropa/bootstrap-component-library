@@ -52,7 +52,7 @@ const getArgTypes = (data) => {
       name: "Additional text visually hidden",
       description:
         "Text inside the button to be visible on assistive technologies",
-      defaultValue: false,
+      defaultValue: "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -72,7 +72,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the button",
-      defaultValue: data.variant,
+      defaultValue: data.variant || 'primary',
       control: {
         type: "select",
         options: getVariants(false, ["link"]),
@@ -123,6 +123,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  resetAttrs(data, args);
   if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;
@@ -134,6 +135,18 @@ const applyArgs = (data, args) => {
     data.icon = null;
   }
   return Object.assign(data, args);
+};
+
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass(`btn-${data.variant}`);
+  data.attributes.removeClass(`btn-outline-${data.variant}`);
+  if (!args.disabled) {
+    data.attributes.removeAttribute("disabled");
+    data.attributes.removeAttribute("aria-disabled");
+  }
+  if (!args.text_nowrap) {
+    data.attributes.removeClass("text-nowrap");
+  }
 };
 
 export default {

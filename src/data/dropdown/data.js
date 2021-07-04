@@ -5,7 +5,6 @@ module.exports = {
   trigger: {
     label: "Dropdown Toggle",
     path: "#",
-    attributes: new drupalAttribute(),
   },
   items: [
     {
@@ -15,7 +14,6 @@ module.exports = {
     {
       label: "I'm a button",
       button: true,
-      attributes: new drupalAttribute(),
     },
     {
       divider: true,
@@ -24,13 +22,11 @@ module.exports = {
       label: "I'm a disabled button",
       button: true,
       disabled: true,
-      attributes: new drupalAttribute(),
     },
     {
       label: "I'm a active button",
       button: true,
       active: true,
-      attributes: new drupalAttribute(),
     },
   ],
 };

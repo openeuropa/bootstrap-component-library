@@ -86,7 +86,6 @@ module.exports = {
         {
           label: "I'm a button",
           button: true,
-          attributes: new drupalAttribute().addClass(["dropdown-item"]),
         },
         {
           divider: true,
@@ -95,16 +94,11 @@ module.exports = {
           label: "I'm a disabled button",
           button: true,
           disabled: true,
-          attributes: new drupalAttribute().addClass(["dropdown-item"]),
         },
         {
           label: "I'm a active button",
           button: true,
           active: true,
-          attributes: new drupalAttribute().addClass([
-            "dropdown-item",
-            "active",
-          ]),
         },
       ],
     },
