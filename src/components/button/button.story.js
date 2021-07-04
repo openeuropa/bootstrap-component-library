@@ -72,7 +72,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the button",
-      defaultValue: data.variant || 'primary',
+      defaultValue: data.variant || "primary",
       control: {
         type: "select",
         options: getVariants(false, ["link"]),
