@@ -17,10 +17,6 @@ const renderTwigFileAsNode = (file, options, reset) =>
     }
   });
 
-const resetAttrs = () => {
-
-};
-
 module.exports = {
   merge,
   renderTwigFileAsNode,
