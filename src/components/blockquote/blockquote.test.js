@@ -14,7 +14,9 @@ describe("OE - Blockquote", () => {
   test(`renders correctly with no cite`, () => {
     expect.assertions(1);
 
-    return expect(render({ ...demoData, cite: "" }, true)).resolves.toMatchSnapshot();
+    return expect(
+      render({ ...demoData, cite: "" }, true)
+    ).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly with no attribution`, () => {
