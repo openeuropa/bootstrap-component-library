@@ -7,7 +7,6 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:clean": "rimraf css js templates",
-    "build:plugins": "plugins-builder",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
     "build:copy": "cross-env bcl-builder copy",

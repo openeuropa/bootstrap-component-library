@@ -9,13 +9,12 @@
   },
   "scripts": {
     "build-plugins": "bin/build-plugins.js",
-    "clean": "rimraf js scss",
+    "clean": "rimraf js plugins scss",
     "copy-sass": "copyfiles -u 3 \"./node_modules/bootstrap/scss/*\" \"./node_modules/bootstrap/scss/**/*\" scss",
     "copy-js": "copyfiles -u 3 \"./node_modules/bootstrap/js/**/*\" js",
     "copy-icons": "copyfiles -f ./node_modules/bootstrap-icons/bootstrap-icons.svg ../bootstrap",
-    "postinstall": "npm-run-all copy-*",
-    "prepublish": "npm-run-all build-plugins copy-*",
-    "preupdate": "npm-run-all copy-*"
+    "postinstall": "npm-run-all clean copy-* build-plugins",
+    "prepublish": "npm-run-all clean copy-* build-plugins"
   },
   "dependencies": {
     "bootstrap": "5.0.2",
