@@ -34,9 +34,6 @@
 {% set _show_spinner = show_spinner|default(false) %}
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
 {% set _classes = [] %}
 {% if _clean_class == false %}
   {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
