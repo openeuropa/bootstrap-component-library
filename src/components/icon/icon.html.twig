@@ -18,9 +18,6 @@
 {% if _transformation is not empty %}
   {% set _classes = _classes|merge(['icon--' ~ _transformation]) %}
 {% endif %}
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
 

@@ -1,5 +1,8 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   caption: "List of users",
+  attributes: new drupalAttribute(),
   table_head: {
     cells: [
       {

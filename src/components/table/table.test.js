@@ -2,20 +2,20 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-table/data";
 
 const template = "@oe-bcl/table/table.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
 
 describe("OE - Table", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(render(demoData)).resolves.toMatchSnapshot();
+    return expect(render(demoData, true)).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly with hoverable rows`, () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, hoverable: true })
+      render({ ...demoData, hoverable: true }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -23,7 +23,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, striped: true })
+      render({ ...demoData, striped: true }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -31,7 +31,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, small: true })
+      render({ ...demoData, small: true }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -39,7 +39,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, table_responsive: "sm" })
+      render({ ...demoData, table_responsive: "sm" }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -47,7 +47,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "danger" })
+      render({ ...demoData, variant: "danger" }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -55,7 +55,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, borderless: true })
+      render({ ...demoData, borderless: true }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -63,7 +63,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, border: "danger" })
+      render({ ...demoData, border: "danger" }, true)
     ).resolves.toMatchSnapshot();
   });
 

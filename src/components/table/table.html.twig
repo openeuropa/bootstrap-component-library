@@ -58,9 +58,6 @@
 {% set _table_footer = table_footer|default({}) %}
 {% set _table_head = table_head|default({}) %}
 {% set _rows = rows|default([]) %}
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
 {% set _classes = ['table'] %}
 {% if _striped %}
   {% set _classes = _classes|merge(['table-striped']) %}

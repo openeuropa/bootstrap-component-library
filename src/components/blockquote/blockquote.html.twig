@@ -13,9 +13,6 @@
 {% set _cite = cite|default('') %}
 {% set _alignment = alignment|default('left') %}
 {% set _classes = ['text-' ~ _alignment ] %}
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
 
