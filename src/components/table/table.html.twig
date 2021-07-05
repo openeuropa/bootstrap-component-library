@@ -58,28 +58,33 @@
 {% set _table_footer = table_footer|default({}) %}
 {% set _table_head = table_head|default({}) %}
 {% set _rows = rows|default([]) %}
-{% set _class = 'table' %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% set _classes = ['table'] %}
 {% if _striped %}
-  {% set _class = _class ~ ' table-striped' %}
+  {% set _classes = _classes|merge(['table-striped']) %}
 {% endif %}
 {% if _hoverable %}
-  {% set _class = _class ~ ' table-hover' %}
+  {% set _classes = _classes|merge(['table-hover']) %}
 {% endif %}
 {% if _alignment is not empty %}
-  {% set _class = _class ~ ' align-' ~ _alignment %}
+  {% set _classes = _classes|merge(['align-' ~ _alignment]) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _class = _class ~ ' table-' ~ _variant %}
+  {% set _classes = _classes|merge(['table-' ~ _variant]) %}
 {% endif %}
 {% if _small %}
-  {% set _class = _class ~ ' table-sm' %}
+  {% set _classes = _classes|merge(['table-sm']) %}
 {% endif %}
 {% if _border is not empty %}
-  {% set _class = _class ~ ' table-bordered border-' ~ _border %}
+  {% set _classes = _classes|merge(['table-bordered border-' ~ _border]) %}
 {% endif %}
 {% if _borderless %}
-  {% set _class = _class ~ ' table-borderless' %}
+  {% set _classes = _classes|merge(['table-borderless']) %}
 {% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _table_responsive is not empty %}
   {% set _responsive_class = 'table-responsive' %}
@@ -89,7 +94,9 @@
   <div class="{{ _responsive_class }}">
 {% endif %}
 
-<table class="{{ _class }}">
+<table
+  {{ attributes }}
+>
 {%- if _caption is not empty -%}
   <caption
     {% if _caption_top %}

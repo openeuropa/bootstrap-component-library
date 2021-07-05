@@ -6,16 +6,27 @@
   - header (block)
   - body (block)
   - footer (block)
-  - extra_class
 #}
 {% set _size = size ? 'modal-' ~ size : '' %}
 {% set _id = id|default('defaultModalId') %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
 {% set _footer = footer|default('') %}
-{% set _extra_class = extra_class|default('') %}
+{% set _class = ['modal fade'] %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% set attributes = attributes
+                    .setAttribute('id', _id)
+                    .setAttribute('tabindex', '-1')
+                    .setAttribute('aria-hidden', 'true')
+                    .setAttribute('aria-labelledby', _id ~ 'Label')
+                    .addClass(_class)
+%}
 
-<div class="modal fade {{ _extra_class }}" id={{ _id }} tabindex="-1" aria-labelledby="{{ _id }}Label" aria-hidden="true">
+<div
+  {{ attributes }}
+>
   <div class="modal-dialog {{ _size }}">
     <div class="modal-content">
       <div class="modal-header">

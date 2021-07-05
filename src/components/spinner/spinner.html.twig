@@ -6,26 +6,31 @@
   - variant (string) (default: '')
   - small (boolean) (default: false)
   - assistive_text (string) (default: '')
-  - extra_classes (string) (default: '')
 #}
 
 {% set _type = type|default('border') %}
 {% set _variant = variant|default('') %}
 {% set _small = small|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
-{% set _class = 'spinner-' ~ _type %}
-{% set _extra_classes = extra_classes|default('') %}
+{% set _classes = ['spinner-' ~ _type] %}
 {% if _small %}
-  {% set _class = _class ~ ' spinner-' ~ _type ~ '-sm' %}
+  {% set _classes = _classes|merge(['spinner-' ~ _type ~ '-sm']) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _class = _class ~ ' text-' ~ _variant %}
+  {% set _classes = _classes|merge(['text-' ~ _variant]) %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
 {% endif %}
 
-<div class="{{ _class }}" role="status">
+{% set attributes = attributes
+                    .addClass(_classes)
+                    .setAttribute('role', 'status')
+%}
+
+<div
+  {{ attributes }}
+>
 {% if _assistive_text is not empty %}
   <span class="visually-hidden">{{ _assistive_text }}</span>
 {% endif %}

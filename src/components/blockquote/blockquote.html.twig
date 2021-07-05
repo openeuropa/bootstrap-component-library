@@ -12,8 +12,16 @@
 {% set _attribution = attribution|default('') %}
 {% set _cite = cite|default('') %}
 {% set _alignment = alignment|default('left') %}
+{% set _classes = ['text-' ~ _alignment ] %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
 
-<figure class="text-{{ _alignment }}">
+{% set attributes = attributes.addClass(_classes) %}
+
+<figure
+  {{ attributes }}
+>
   <blockquote class="blockquote">
     <p>{{- _quote -}}</p>
   </blockquote>
