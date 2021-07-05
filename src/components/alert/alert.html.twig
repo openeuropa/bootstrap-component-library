@@ -14,6 +14,9 @@
 {% set _dismissible = dismissible ?? true %}
 {% set _animated_dismiss = animated_dismiss ?? true %}
 {% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr')] %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
 
 {% if _dismissible %}
   {% set _classes = _classes|merge(['alert-dismissible']) %}

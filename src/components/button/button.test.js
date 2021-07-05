@@ -5,7 +5,6 @@ import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
 import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
 import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
 import { getVariants } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/button/button.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -21,7 +20,6 @@ describe("OE - Button", () => {
         render({
           ...demoData,
           variant: variant,
-          attributes: new drupalAttribute(),
         })
       ).resolves.toMatchSnapshot();
     });
@@ -32,7 +30,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size, attributes: new drupalAttribute() })
+        render({ ...demoData, size: size })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -55,7 +53,6 @@ describe("OE - Button", () => {
     return expect(
       render({
         ...demoData,
-        attributes: new drupalAttribute(),
         icon: {
           name: "mouse",
           transformation: "rotate-90",
@@ -88,7 +85,6 @@ describe("OE - Button Outline", () => {
           ...demoData,
           variant: variant,
           outline: true,
-          attributes: new drupalAttribute(),
         })
       ).resolves.toMatchSnapshot();
     });
