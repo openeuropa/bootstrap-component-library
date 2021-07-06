@@ -43,7 +43,7 @@
   {% set _classes = _classes|merge(['text-nowrap']) %}
 {% endif %}
 {% if _disabled %}
-  {% set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', true) %}
+  {% set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', 'true') %}
 {% endif %}
 {% if _id is not empty %}
   {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
