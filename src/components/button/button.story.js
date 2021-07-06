@@ -123,6 +123,18 @@ const getArgTypes = (data) => {
   };
 };
 
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass(`btn-${data.variant}`);
+  data.attributes.removeClass(`btn-outline-${data.variant}`);
+  if (!args.disabled) {
+    data.attributes.removeAttribute("disabled");
+    data.attributes.removeAttribute("aria-disabled");
+  }
+  if (!args.text_nowrap) {
+    data.attributes.removeClass("text-nowrap");
+  }
+};
+
 const applyArgs = (data, args) => {
   resetAttrs(data, args);
   if (args.name && args.name !== "none") {
@@ -137,18 +149,6 @@ const applyArgs = (data, args) => {
     data.icon = null;
   }
   return Object.assign(data, args);
-};
-
-const resetAttrs = (data, args) => {
-  data.attributes.removeClass(`btn-${data.variant}`);
-  data.attributes.removeClass(`btn-outline-${data.variant}`);
-  if (!args.disabled) {
-    data.attributes.removeAttribute("disabled");
-    data.attributes.removeAttribute("aria-disabled");
-  }
-  if (!args.text_nowrap) {
-    data.attributes.removeClass("text-nowrap");
-  }
 };
 
 export default {
