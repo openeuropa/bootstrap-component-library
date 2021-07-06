@@ -140,7 +140,7 @@ const applyArgs = (data, args) => {
   if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;
-    data.icon.size = args.size;
+    data.icon.size = args.icon_size;
     data.icon.path = defaultSprite;
     data.icon.transformation = args.transformation;
     data.icon.attributes = new drupalAttribute();
