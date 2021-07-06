@@ -62,7 +62,7 @@ describe("OE - Button", () => {
             name: "mouse",
             transformation: "rotate-90",
             path: "bootstrap-icons.svg",
-            attributes: new drupalAttribute()
+            attributes: new drupalAttribute(),
           },
         },
         true
