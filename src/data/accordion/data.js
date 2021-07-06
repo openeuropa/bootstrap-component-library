@@ -1,5 +1,5 @@
 module.exports = {
-  id: "accordion-example",
+  id: "1",
   items: [
     {
       title: "Accordion Item #1",

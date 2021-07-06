@@ -25,7 +25,7 @@
 {% set _class = _class ~ (_extra_classes ? ' ' ~ _extra_classes) %}
 
 {% if _items is not empty %}
-<div class="{{ _class }}" id="{{ _id }}">
+<div class="{{ _class }}" id="accordion-{{ _id }}">
 {% for _item in _items %}
   {% set _open_item = _open_item_id == loop.index %}
   {% set _button_classes = ['accordion-button'] %}
@@ -52,7 +52,7 @@
       id="collapse-{{ _id }}-{{ loop.index }}"
       class="accordion-collapse collapse{{ _open_item ? ' show' }}"
       aria-labelledby="heading-{{ _id }}-{{ loop.index }}"
-      data-bs-parent="#{{ _id }}"
+      data-bs-parent="#accordion-{{ _id }}"
     >
       <div class="accordion-body">
         {%- set _content = _item.content|default('') %}

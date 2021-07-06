@@ -8,7 +8,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the alert",
-      defaultValue: data.variant,
+      defaultValue: "primary",
       control: {
         type: "select",
         options: getVariants(),
