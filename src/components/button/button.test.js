@@ -8,7 +8,7 @@ import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/button/button.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
 const variants = getVariants(false, ["link"]);
 const sizes = ["lg", "md", "sm"];
 
@@ -18,7 +18,13 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render(
+          {
+            ...demoData,
+            variant: variant,
+          },
+          true
+        )
       ).resolves.toMatchSnapshot();
     });
   });
@@ -28,7 +34,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size })
+        render({ ...demoData, size: size }, true)
       ).resolves.toMatchSnapshot();
     });
   });
@@ -49,39 +55,31 @@ describe("OE - Button", () => {
     expect.assertions(1);
 
     return expect(
-      render({
-        ...demoData,
-        icon: {
-          name: "mouse",
-          transformation: "rotate-90",
-          path: "bootstrap-icons.svg",
-          attributes: new drupalAttribute(),
+      render(
+        {
+          ...demoData,
+          icon: {
+            name: "mouse",
+            transformation: "rotate-90",
+            path: "bootstrap-icons.svg",
+            attributes: new drupalAttribute(),
+          },
         },
-      })
+        true
+      )
     ).resolves.toMatchSnapshot();
   });
 
   test("with popover renders correctly", () => {
     expect.assertions(1);
 
-    return expect(
-      render({
-        ...popoverDemoData,
-        content_placement: "top",
-        popover_trigger: "focus",
-      })
-    ).resolves.toMatchSnapshot();
+    return expect(render(popoverDemoData)).resolves.toMatchSnapshot();
   });
 
   test("with tooltip renders correctly", () => {
     expect.assertions(1);
 
-    return expect(
-      render({
-        ...tooltipDemoData,
-        content_placement: "bottom",
-      })
-    ).resolves.toMatchSnapshot();
+    return expect(render(tooltipDemoData)).resolves.toMatchSnapshot();
   });
 });
 
@@ -91,7 +89,14 @@ describe("OE - Button Outline", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant, outline: true })
+        render(
+          {
+            ...demoData,
+            variant: variant,
+            outline: true,
+          },
+          true
+        )
       ).resolves.toMatchSnapshot();
     });
   });

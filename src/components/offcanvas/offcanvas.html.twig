@@ -60,13 +60,13 @@
     </h{{ _title.heading|default(5) }}>
   {% endif %}
   {% if _with_close %}
+    {% set button_attributes = create_attribute()
+                              .addClass(['btn-close', 'text-reset'])
+                              .setAttribute('data-bs-dismiss', 'offcanvas')
+    %}
     {%- include '@oe-bcl/button/button.html.twig' with {
-        type: "button",
-        clean_class: true,
-        extra_classes: 'btn-close text-reset',
-        extra_attributes: [
-          { name: "data-bs-dismiss", value: "offcanvas" }
-        ]
+        attributes: button_attributes,
+        clean_class: true
       } only -%}
   {% endif %}
   </div>

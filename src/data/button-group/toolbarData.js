@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   toolbar: true,
   toolbar_aria_label: "Text here",
@@ -16,6 +18,7 @@ module.exports = {
         label: "I am a button",
         outline: false,
         variant: "primary",
+        attributes: new drupalAttribute(),
       },
       {
         input: true,
@@ -29,6 +32,7 @@ module.exports = {
         label: "I am a button",
         outline: true,
         variant: "dark",
+        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -44,11 +48,13 @@ module.exports = {
         label: "I am a button",
         outline: false,
         variant: "danger",
+        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: false,
         variant: "warning",
+        attributes: new drupalAttribute(),
       },
       {
         input: true,

@@ -69,20 +69,17 @@
 {% if _with_indicators %}
   <div class="carousel-indicators">
   {% for _i in 0..(_items|length - 1) %}
-    {% set _indicator_attrs = [
-      { name: 'aria-label', value: 'Slide ' ~ (_i + 1) },
-      { name: 'data-bs-target', value: '#' ~ _id },
-      { name: 'data-bs-slide-to', value: _i },
-    ] %}
+    {% set button_attributes = create_attribute()
+                              .setAttribute('aria-label', 'Slide ' ~ (_i + 1))
+                              .setAttribute('data-bs-target', '#' ~ _id)
+                              .setAttribute('data-bs-slide-to', _i)
+    %}
     {% if loop.index == _active_item %}
-      {% set _indicator_attrs = _indicator_attrs|merge([
-        { name: 'aria-current', value: 'true' }
-      ]) %}
+      {% set button_attributes = button_attributes.setAttribute('aria-current', true).addClass(['active']) %}
     {% endif %}
     {% include '@oe-bcl/button/button.html.twig' with {
       clean_class: true,
-      extra_attributes: _indicator_attrs,
-      extra_classes: loop.index == _active_item ? 'active' : '',
+      attributes: button_attributes
     } only %}
   {% endfor %}
   </div>

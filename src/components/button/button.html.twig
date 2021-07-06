@@ -16,8 +16,6 @@
   - icon_position (string) (default: after)
     - options ["after", "before"]
   - clean_class (boolean) (default: false)
-  - extra_classes (string) (default: '')
-  - extra_attributes (object) (default: {})
   - spinner (spinner object) (default: {})
   - show_spinner (boolean) (default: false)
 #}
@@ -36,37 +34,27 @@
 {% set _show_spinner = show_spinner|default(false) %}
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
-{% set _extra_attributes = '' %}
-{% set _class = '' %}
+{% set _classes = [] %}
 {% if _clean_class == false %}
-  {% set _class = 'btn btn-' ~ (_outline ? 'outline-' : '') ~ _variant %}
-  {% set _class = _class ~ ' btn-' + _size %}
+  {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
+  {% set _classes = _classes|merge(['btn-' + _size|e('html_attr')]) %}
 {% endif %}
-{% set _class = _class ~ (_text_nowrap ? ' text-nowrap' : '') %}
-{% if _extra_classes is not empty %}
-  {% set _class = (_class ? _class ~ ' ' : '') ~ _extra_classes %}
+{% if _text_nowrap %}
+  {% set _classes = _classes|merge(['text-nowrap']) %}
 {% endif %}
-{% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
-  {% for attr in extra_attributes %}
-    {% if attr.value is defined %}
-      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') ~ '="' ~ attr.value|e('html_attr') ~ '"' %}
-    {% else %}
-      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') %}
-    {% endif %}
-  {% endfor %}
+{% if _disabled %}
+  {% set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', 'true') %}
 {% endif %}
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
+{% endif %}
+{% if _classes is not empty %}
+  {% set attributes = attributes.addClass(_classes) %}
+{% endif %}
+{% set attributes = attributes.setAttribute('type', _type|e('html_attr')) %}
 
 <button
-  type="{{ _type }}"
-{% if _class %}
-  class="{{ _class }}"
-{% endif %}
-  {{ _disabled ? 'disabled aria-disabled="true"' : '' }}
-{% if _id is not empty %}
-  id="{{ _id }}"
-{% endif %}
-{{ _extra_attributes|raw }}
+  {{ attributes }}
 >
 {%- if _show_spinner -%}
   {% include '@oe-bcl/spinner/spinner.html.twig' with _spinner only %}
