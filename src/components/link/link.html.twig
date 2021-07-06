@@ -26,12 +26,6 @@
 {% set _class = '' %}
 
 {% if _icon is not empty %}
-  {% if _icon.attributes is empty %}
-    {% set _icon = _icon|merge({
-        attributes: create_attribute()
-      })
-    %}
-  {% endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/icon/icon.html.twig' with _icon only -%}
   {%- endset -%}

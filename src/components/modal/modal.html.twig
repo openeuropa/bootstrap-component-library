@@ -12,13 +12,13 @@
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
 {% set _footer = footer|default('') %}
-{% set _class = ['modal fade'] %}
+{% set _classes = ['modal fade'] %}
 {% set attributes = attributes
                     .setAttribute('id', _id)
                     .setAttribute('tabindex', '-1')
                     .setAttribute('aria-hidden', 'true')
                     .setAttribute('aria-labelledby', _id ~ 'Label')
-                    .addClass(_class)
+                    .addClass(_classes)
 %}
 
 <div

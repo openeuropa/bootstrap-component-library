@@ -56,12 +56,6 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-{% if _icon is not empty and _icon.attributes is empty %}
-  {% set _icon = _icon|merge({
-      attributes: create_attribute()
-    })
-  %}
-{% endif %}
 
 <button
   type="{{ _type }}"
