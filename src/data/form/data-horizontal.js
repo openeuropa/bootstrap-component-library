@@ -1,9 +1,12 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   submit: {
     wrapper: "col-12",
     label: "Sign in",
     type: "submit",
     variant: "primary",
+    attributes: new drupalAttribute(),
   },
   items: [
     [

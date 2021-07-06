@@ -1,4 +1,3 @@
-import drupalAttribute from "drupal-attribute";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "./alert.html.twig";
@@ -64,7 +63,6 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  data.attributes = new drupalAttribute();
   return Object.assign(data, args);
 };
 
