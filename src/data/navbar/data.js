@@ -28,22 +28,8 @@ module.exports = {
         dropdown: true,
         trigger: {
           label: "Dropdown Toggle",
-          extra_classes: "nav-link",
           path: "#",
-          extra_attributes: [
-            {
-              name: "aria-expanded",
-              value: "false",
-            },
-            {
-              name: "autocomplete",
-              value: "off",
-            },
-            {
-              name: "data-bs-toggle",
-              value: "dropdown",
-            },
-          ],
+          attributes: new drupalAttribute().addClass("nav-link"),
         },
         items: [
           {
@@ -53,7 +39,6 @@ module.exports = {
           {
             label: "I'm a button",
             button: true,
-            attributes: new drupalAttribute(),
           },
           {
             divider: true,
@@ -62,13 +47,11 @@ module.exports = {
             label: "I'm a disabled button",
             button: true,
             disabled: true,
-            attributes: new drupalAttribute(),
           },
           {
             label: "I'm a active button",
             button: true,
             active: true,
-            attributes: new drupalAttribute(),
           },
         ],
       },

@@ -7,8 +7,6 @@
     - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
   - id (string) (default: '')
   - disabled (boolean) (default: false)
-  - extra_classes (string) (default: '')
-  - extra_attributes (array of objects based on name - attribute name and value - attribute value)) (default: {})
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
     - options ["after", "before"]
@@ -19,11 +17,9 @@
 {% set _variant = variant|default('') %}
 {% set _id = id|default('') %}
 {% set _disabled = disabled|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
-{% set _extra_attributes = '' %}
-{% set _class = '' %}
+{% set _classes = [] %}
 
 {% if _icon is not empty %}
   {%- set _icon_markup -%}
@@ -32,38 +28,22 @@
 {% endif %}
 
 {% if _disabled %}
-  {% set _class = _class ~ ' ' ~ 'disabled' %}
-{% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = (_class ? _class ~ ' ' : '') ~ _extra_classes %}
+  {% set _classes = _classes|merge(['disabled']) %}
+  {% set attributes = attributes.setAttribute('aria-disabled', 'true').setAttribute('tabindex', '-1') %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _class = _class ~ ' link-' ~ _variant %}
-{% endif %}
-
-{% if extra_attributes is defined and extra_attributes is not empty and extra_attributes is iterable %}
-  {% for attr in extra_attributes %}
-    {% if attr.value is defined %}
-      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') ~ '="' ~ attr.value|e('html_attr') ~ '"' %}
-    {% else %}
-      {% set _extra_attributes = _extra_attributes ~ ' ' ~ attr.name|e('html_attr') %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-<a
-  href="{{ _path }}"
-{% if _class is not empty %}
-  class="{{ _class }}"
+  {% set _classes = _classes|merge(['link-' ~ _variant]) %}
 {% endif %}
 {% if _id is not empty %}
-  id="{{ _id }}"
+  {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
 {% endif %}
-{% if _disabled %}
-  tabindex="-1"
-  aria-disabled="true"
+{% if _classes is not empty %}
+  {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
-  {{ _extra_attributes|raw }}
+{% set attributes = attributes.setAttribute('href', _path|e('html_attr')) %}
+
+<a
+  {{ attributes }}
 >
   {%- if _icon_position == 'before' and _icon_markup is defined -%}
     {{ _icon_markup|raw }}

@@ -15,7 +15,10 @@ module.exports = {
           label: "Home",
           path: "/example",
           active: true,
-          extra_attributes: [{ name: "aria-current", value: "page" }],
+          attributes: new drupalAttribute().setAttribute(
+            "aria-current",
+            "page"
+          ),
         },
         {
           label: "Item 01",
@@ -31,22 +34,8 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Dropdown link",
-            extra_classes: "nav-link",
+            attributes: new drupalAttribute().addClass("nav-link"),
             path: "#",
-            extra_attributes: [
-              {
-                name: "aria-expanded",
-                value: "false",
-              },
-              {
-                name: "autocomplete",
-                value: "off",
-              },
-              {
-                name: "data-bs-toggle",
-                value: "dropdown",
-              },
-            ],
           },
           items: [
             {
