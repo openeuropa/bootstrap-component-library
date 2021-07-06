@@ -2,7 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-spinner/data";
 
 const template = "@oe-bcl/spinner/spinner.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Spinner", () => {
   test(`renders correctly`, () => {

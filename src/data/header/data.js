@@ -1,4 +1,6 @@
 // Simple content for demo
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   logo: {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png",
@@ -70,6 +72,7 @@ module.exports = {
     },
     modal: {
       id: "loginModal",
+      attributes: new drupalAttribute(),
       header:
         '<h5 class="modal-title" id="loginModalLabel">Log in</h5>' +
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
@@ -90,7 +93,7 @@ module.exports = {
     modal: {
       id: "languageModal",
       size: "fullscreen",
-      extra_class: "oe-language",
+      attributes: new drupalAttribute().addClass("oe-language"),
       header:
         '<h5 class="modal-title" id="languageeModalLabel">Select your language</h5>' +
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
