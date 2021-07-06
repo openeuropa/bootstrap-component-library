@@ -1,15 +1,11 @@
 const path = require("path");
-const pkg = require("./package.json");
 const replace = require("@rollup/plugin-replace");
-const rootPkg = require("../../../package.json");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = path.resolve(__dirname, "../../../node_modules");
 
 // SCSS includePaths
 const includePaths = [nodeModules];
-
-const { apps } = rootPkg;
 
 module.exports = {
   scripts: [
@@ -108,10 +104,13 @@ module.exports = {
     },
     {
       from: [
-        path.resolve(nodeModules, "@openeuropa/bcl-twig-templates/**/*.twig"),
+        path.resolve(
+          nodeModules,
+          "@openeuropa/bcl-twig-templates/templates/**/*.twig"
+        ),
       ],
       to: path.resolve(outputFolder, "templates"),
-      options: { up: 6 },
+      options: { up: 9 },
     },
   ],
 };

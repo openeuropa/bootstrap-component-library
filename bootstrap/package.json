@@ -13,10 +13,9 @@
     "copy-sass": "copyfiles -u 3 \"./node_modules/bootstrap/scss/*\" \"./node_modules/bootstrap/scss/**/*\" scss",
     "copy-js": "copyfiles -u 3 \"./node_modules/bootstrap/js/**/*\" js",
     "copy-icons": "copyfiles -f ./node_modules/bootstrap-icons/bootstrap-icons.svg ../bootstrap",
-    "postinstall": "npm-run-all clean copy-* build-plugins",
     "prepublish": "npm-run-all clean copy-* build-plugins"
   },
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "5.0.2",
     "bootstrap-icons": "1.5.0",
     "copyfiles": "2.4.1",
