@@ -260,8 +260,8 @@ export const getIconControls = (type, data) => {
         ],
       },
     },
-  }
-  if(type == 'icon') {
+  };
+  if (type == "icon") {
     argTypes.size = {
       name: "icon size",
       type: { name: "select" },
@@ -276,7 +276,7 @@ export const getIconControls = (type, data) => {
         defaultValue: { summary: "s" },
         category: "Icon",
       },
-    }
+    };
   } else {
     argTypes.icon_size = {
       name: "icon size",
@@ -292,7 +292,7 @@ export const getIconControls = (type, data) => {
         defaultValue: { summary: "s" },
         category: "Icon",
       },
-    }
+    };
     argTypes.icon_position = {
       name: "icon position",
       type: { name: "inline-radio" },
@@ -308,9 +308,9 @@ export const getIconControls = (type, data) => {
         type: "inline-radio",
         options: ["before", "after"],
       },
-    }
+    };
   }
-  return argTypes
+  return argTypes;
 };
 
 export const getIconNames = () => {
