@@ -2,7 +2,7 @@ import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-blockquote/data";
 
 const template = "@oe-bcl/blockquote/blockquote.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Blockquote", () => {
   test(`renders correctly`, () => {

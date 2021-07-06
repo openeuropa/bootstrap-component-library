@@ -2,7 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-table/data";
 
 const template = "@oe-bcl/table/table.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Table", () => {
   test(`renders correctly`, () => {

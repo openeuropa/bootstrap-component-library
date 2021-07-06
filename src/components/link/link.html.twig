@@ -26,9 +26,9 @@
 {% set _class = '' %}
 
 {% if _icon is not empty %}
-{% set _icon_markup %}
-  {% include '@oe-bcl/icon/icon.html.twig' with _icon only %}
-{% endset %}
+  {%- set _icon_markup -%}
+    {%- include '@oe-bcl/icon/icon.html.twig' with _icon only -%}
+  {%- endset -%}
 {% endif %}
 
 {% if _disabled %}

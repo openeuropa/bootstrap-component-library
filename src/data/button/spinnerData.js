@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   label: "Label",
   show_spinner: true,
@@ -5,6 +7,6 @@ module.exports = {
     variant: "info",
     small: true,
     assistive_text: "Loading...",
-    extra_classes: "me-1",
+    attributes: new drupalAttribute().addClass("me-1"),
   },
 };

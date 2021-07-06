@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   id: "exampleModal",
   header:
@@ -5,4 +7,5 @@ module.exports = {
   body: "Modal body",
   footer:
     '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button>',
+  attributes: new drupalAttribute(),
 };
