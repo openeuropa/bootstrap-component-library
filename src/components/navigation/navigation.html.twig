@@ -82,15 +82,17 @@
         })
         %}
       {% endif %}
-      {% set _extra_classes = 'nav-link' %}
+      {% set _item_classes = ['nav-link'] %}
       {% if _item.active %}
-        {% set _extra_classes = _extra_classes ~ ' active' %}
+        {% set _item_classes = _item_classes|merge(['active']) %}
       {% endif %}
-      {% if _item.extra_classes is not empty %}
-        {% set _extra_classes = _extra_classes ~ ' ' ~ _item.extra_classes %}
+      {% if _item.attributes is empty %}
+        {% set _item = _item|merge({
+          attributes: create_attribute()
+        }) %}
       {% endif %}
       {% set _item = _item|merge({
-        extra_classes: _extra_classes,
+        attributes: _item.attributes.addClass(_item_classes),
         clean_class: true 
       })
       %}
