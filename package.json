@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run build",
+    "changelog": "lerna-changelog",
     "clean": "rimraf build assets",
     "copy:assets": "copyfiles -f src/themes/**/*min.* static/* assets/",
     "copy:build": "copyfiles assets/* static/* build",
