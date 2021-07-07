@@ -11,20 +11,10 @@ module.exports = {
         "This is a demo content for the First Tab. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       id: "first-tab",
       target: "first",
-      extra_attributes: [
-        {
-          name: "data-bs-toggle",
-          value: "tab",
-        },
-        {
-          name: "role",
-          value: "button",
-        },
-        {
-          name: "aria-controls",
-          value: "first",
-        },
-      ],
+      attributes: new drupalAttribute()
+        .setAttribute("data-bs-toggle", "tab")
+        .setAttribute("role", "button")
+        .setAttribute("aria-controls", "first"),
     },
     {
       label: "I'm a button",
@@ -37,8 +27,7 @@ module.exports = {
         .setAttribute("data-bs-toggle", "tab")
         .setAttribute("autocomplete", "off")
         .setAttribute("data-bs-target", "#second")
-        .setAttribute("aria-controls", "second")
-        .addClass(["nav-link"]),
+        .setAttribute("aria-controls", "second"),
     },
     {
       label: "I'm a disabled button",
@@ -52,8 +41,7 @@ module.exports = {
         .setAttribute("data-bs-toggle", "tab")
         .setAttribute("autocomplete", "off")
         .setAttribute("data-bs-target", "#third")
-        .setAttribute("aria-controls", "third")
-        .addClass(["nav-link"]),
+        .setAttribute("aria-controls", "third"),
     },
     {
       id: "dropdown-1",
@@ -61,22 +49,8 @@ module.exports = {
       dropdown: true,
       trigger: {
         label: "Dropdown Toggle",
-        extra_classes: "nav-link",
         path: "#",
-        extra_attributes: [
-          {
-            name: "aria-expanded",
-            value: "false",
-          },
-          {
-            name: "autocomplete",
-            value: "off",
-          },
-          {
-            name: "data-bs-toggle",
-            value: "dropdown",
-          },
-        ],
+        attributes: new drupalAttribute().addClass("nav-link"),
       },
       items: [
         {

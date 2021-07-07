@@ -1,22 +1,11 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   label: "A link with tooltip",
   path: "/example.html",
-  extra_attributes: [
-    {
-      name: "title",
-      value: "This is a tooltip",
-    },
-    {
-      name: "data-bs-placement",
-      value: "bottom",
-    },
-    {
-      name: "data-bs-toggle",
-      value: "tooltip",
-    },
-    {
-      name: "role",
-      value: "button",
-    },
-  ],
+  attributes: new drupalAttribute()
+    .setAttribute("title", "This is a tooltip")
+    .setAttribute("data-bs-placement", "bottom")
+    .setAttribute("data-bs-toggle", "tooltip")
+    .setAttribute("role", "button"),
 };

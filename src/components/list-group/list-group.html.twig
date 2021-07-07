@@ -92,24 +92,17 @@
       {%- endif -%}
       </li>
     {% else %}
-      {% set _extra_classes = 'list-group-item list-group-item-action' %}
-      {% if _item.extra_classes is defined and _item.extra_classes is not empty %}
-        {% set _extra_classes = _extra_classes ~ ' ' ~ _item.extra_classes %}
+      {% if _item.attributes is empty %}
+        {% set _item = _item|merge({
+          attributes: create_attribute()
+        }) %}
       {% endif %}
       {% set _item = _item|merge({
-          extra_classes: _extra_classes,
-          clean_class: true 
-        })
-      %}
+        clean_class: true,
+        attributes: _item.attributes.addClass(['list-group-item', 'list-group-item-action'])
+      }) %}
       {% if _item.button is defined %}
-        {% if _item.attributes is empty %}
-          {% set _item = _item|merge({
-            attributes: create_attribute()
-          }) %}
-        {% endif %}
-        {% include '@oe-bcl/button/button.html.twig' with _item|merge({
-          attributes: _item.attributes.addClass(['list-group-item', 'list-group-item-action'])
-        }) only %}
+        {% include '@oe-bcl/button/button.html.twig' with _item only %}
       {% else %}
         {% include '@oe-bcl/link/link.html.twig' with _item only %}
       {% endif %}

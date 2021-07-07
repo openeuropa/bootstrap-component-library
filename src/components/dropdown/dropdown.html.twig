@@ -55,74 +55,57 @@
   {% set _class = _class ~ ' ' ~ _direction %}
 {% endif %}
 
-{% set _trigger_extra_classes = 'dropdown-toggle' %}
-{% if _trigger.extra_classes is not empty %}
-  {% set _trigger_extra_classes = _trigger_extra_classes ~ ' ' ~ _trigger.extra_classes %}
+{% if _trigger.attributes is empty %}
+  {% set _trigger = _trigger|merge({
+    attributes: create_attribute()
+  }) %}
 {% endif %}
-
-{% set _trigger_attributes = [
-    { name: "aria-expanded", value: "false" },
-    { name: "data-bs-toggle", value: 'dropdown' },
-  ]
-%}
-{% if _link %}
-  {% set _trigger_attributes = _trigger_attributes|merge([
-    { name: "role", value: "button" }]) %}
-{% else %}
-  {% set _trigger_attributes = _trigger_attributes|merge([
-    { name: "autocomplete", value: "off" }]) %}
-{% endif %}
-
 {% set _trigger = _trigger|merge({
-  id: _id,
-  extra_classes: _trigger_extra_classes,
-  extra_attributes: _trigger_attributes })
-%}
+  attributes: _trigger.attributes.addClass(['dropdown-toggle'])
+                      .setAttribute('aria-expanded', 'false')
+                      .setAttribute('data-bs-toggle', 'dropdown')
+                      .setAttribute('id', _id)
+}) %}
+
+{% if _link %}
+  {% set _trigger = _trigger|merge({
+    attributes: _trigger.attributes.setAttribute('role', 'button') 
+  }) %}
+{% else %}
+  {% set _trigger = _trigger|merge({
+    attributes: _trigger.attributes.setAttribute('autocomplete', 'off') 
+  }) %}
+{% endif %}
 
 {% if not _remove_wrapper %}
 <div class="{{ _class }}">
 {% endif %}
-  {% if _trigger.attributes is empty %}
-    {% set _trigger = _trigger|merge({
-      attributes: create_attribute()
-    }) %}
-  {% endif %}
   {% if _link %}
     {% include '@oe-bcl/link/link.html.twig' with _trigger only %}
   {% else %}
-    {% include '@oe-bcl/button/button.html.twig' with _trigger|merge({
-      attributes: _trigger.attributes
-                  .addClass(['dropdown-toggle'])
-                  .setAttribute('aria-expanded', 'false')
-                  .setAttribute('autocomplete', 'off')
-                  .setAttribute('data-bs-toggle', 'dropdown')
-                  .setAttribute('id', _id)
-    }) only %}
+    {% include '@oe-bcl/button/button.html.twig' with _trigger only %}
   {% endif %}
   <ul class="{{ _dropdown_class }}" aria-labelledby="{{ _id }}">
     {% if _items is not empty and _items is iterable %}
       {% for _item in _items %}
-        {% set _extra_classes = 'dropdown-item' %}
-        {% set _attributes_extra_classes = ['dropdown-item'] %}
+        {% if _item.attributes is empty %}
+          {% set _item = _item|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
+        {% set _item_classes = ['dropdown-item'] %}
         {% if _item.active %}
-          {% set _extra_classes = _extra_classes ~ ' active' %}
-          {% set _attributes_extra_classes = _attributes_extra_classes|merge(['active']) %}
+          {% set _item_classes = _item_classes|merge(['active']) %}
         {% endif %}
         {% set _item = _item|merge({
-          extra_classes: _extra_classes,
-          clean_class: true }) %}
+          clean_class: true,
+          attributes: _item.attributes.addClass(_item_classes)
+        }) %}
         <li>
         {% if _item.divider is defined %}
           <hr class="dropdown-divider">
         {% elseif _item.button is defined %}
-          {% if _item.attributes is empty %}
-            {% set _item = _item|merge({
-              attributes: create_attribute()
-            }) %}
-          {% endif %}
-          {% include '@oe-bcl/button/button.html.twig' with _item|merge({
-            attributes: _item.attributes.addClass(_attributes_extra_classes)
-          }) only %}
+          {% include '@oe-bcl/button/button.html.twig' with _item only %}
         {% else %}
           {% include '@oe-bcl/link/link.html.twig' with _item only %}
         {% endif %}

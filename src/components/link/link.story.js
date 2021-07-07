@@ -64,6 +64,7 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
+  data.attributes.removeClass(`link-${data.variant}`);
   return Object.assign(data, args);
 };
 
@@ -80,6 +81,13 @@ export const Collapse = (args) => link(applyArgs(toggleDemoData, args));
 Collapse.storyName = "Collapse";
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
+Tooltip.parameters = {
+  design: {
+    name: "Bootstrap docs",
+    type: "iframe",
+    url: "https://getbootstrap.com/docs/5.0/components/collapse/",
+  },
+};
 
 export const Tooltip = (args) => link(applyArgs(tooltipDemoData, args));
 
