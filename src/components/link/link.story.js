@@ -64,6 +64,7 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
+  data.attributes.removeClass(`link-${data.variant}`);
   return Object.assign(data, args);
 };
 
