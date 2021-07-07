@@ -81,7 +81,7 @@ export const Collapse = (args) => link(applyArgs(toggleDemoData, args));
 Collapse.storyName = "Collapse";
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
-Tooltip.parameters = {
+Collapse.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
