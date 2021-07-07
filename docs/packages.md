@@ -1,5 +1,9 @@
 ## Packages
 
+### Builder
+
+- 	@openeuropa/bcl-builder
+
 ### Bootstrap
 
 -   @openeuropa/bcl-bootstrap
@@ -10,6 +14,12 @@
 -   @openeuropa/bcl-theme-ecl
 
 ### Components
+
+#### All together
+
+-  	@openeuropa/bcl-twig-templates
+
+#### Individual packages
 
 -   @openeuropa/bcl-accordion
 -   @openeuropa/bcl-alert

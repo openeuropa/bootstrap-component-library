@@ -1,4 +1,4 @@
-### Openeuropa Bootstrap Component Library template</h3>
+## Openeuropa Bootstrap Component Library template
 
 Library of components based on [Bootstrap 5](https://github.com/twbs/bootstrap/tree/v5.0.1)
 
@@ -64,27 +64,42 @@ files available to each of the theme packages.
 
   ```
 
+### BCL builder
+
+The `@oe/bcl-builder` is a package providing three scripts, `styles`, `scripts`
+and `copy` that can be used respectively to compile SASS files and minify css
+files, compile and minify js files and to copy files in the filesystem.
+It comes with a `bin` file that is available when the package is installed and
+can be run as `npm run ecl-builder scriptName`.
+It supports a configuration file `bcl-builder.config.js` where each script can
+be configured to perform specific operations in the enviroment where they are
+used.
+Examples of the configuration files are available in the theme packages, the
+`bcl-builder` is used to build those packages in the library as well.
+
 ### Anatomy of a theme package
 
-The theme packages aim to be a ready to use solution for integrating the library
+The theme packages aim to be a ready solution for integrating the library
 in any platform supporting twig:
 
 ![default theme](docs/bcl-theme.png)
 
-Each theme comes with the already compiled, production ready, css and js
-resources in the respective folders but it also comes with all the source files
-needed to build those resources from scratch.
-These include the bootstrap 5 source files, each theme defines `bcl-bootstrap`
-as a dependency and this package provides the bootstrap files with a bin meant
-to build the bootstrap js plugins.
+Each theme package is meant to provide all the needed resources in terms of css,
+js, twig templates and icons.
+Js is offered in three different formats, `umd` (universal module definition),
+`esm` (ES Modules) and the `bundle`  (which includes popper Js), similarly to
+what happens with the files distributed by the bootstrap library.
+All the files come with a `map` file and with a minified version ready for being
+used in a production website.
+The twig templates are in the `templates` folder inside a folder with the name
+of the component so that they can be directly used with a loader defining the
+`@oe-bcl` namespace and pointing at the `templates` folder.
 
-The theme package has all the scripts needed to build the final resources,
-which is basically a pipeline of these scripts:
-`npm run build-plugins && npm run css && npm run js && npm run twig`
+### Twig templates
 
-Also the twig templates are included in the the theme package, in the `templates`
-folder and with a folder with the name of the component since the twig files are
-included as '@oe-bcl/componentName/componentName.html.twig'.
+The twig packages are available as individual npm packages but also directly
+available in the theme packages, the `bcl-twig-templates` package which is a
+collection of all the templates stored in a folder with the component name.
 
 #### Twig loader
 
