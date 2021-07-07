@@ -73,6 +73,9 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass(`bg-${data.background}`);
+  data.attributes.removeClass("rounded-pill");
+
   return Object.assign(data, args);
 };
 

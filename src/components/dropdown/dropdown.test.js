@@ -2,7 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-dropdown/data";
 
 const template = "@oe-bcl/dropdown/dropdown.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - dropdown", () => {
   test("renders correctly", () => {

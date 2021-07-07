@@ -13,19 +13,22 @@
     ]
   - open_item_id (int) (default: 0) index value of the item to open (starting from 1),
     all closed by default (0)
-  - extra_classes (string) (default: '')
 #}
 
 {% set _id = id|default(random(1000)) %}
 {% set _flush = flush|default(false) %}
 {% set _items = items|default([]) %}
 {% set _open_item_id = open_item_id|default(0) %}
-{% set _extra_classes = extra_classes|default('') %}
-{% set _class = 'accordion' ~ (_flush ? ' accordion-flush') %}
-{% set _class = _class ~ (_extra_classes ? ' ' ~ _extra_classes) %}
+{% set _classes = ['accordion'] %}
+{% if _flush %}
+  {% set _classes = _classes|merge(['accordion-flush']) %}
+{% endif %}
+{% set attributes = attributes.addClass(_classes).setAttribute('id', 'accordion-' ~ _id) %}
 
 {% if _items is not empty %}
-<div class="{{ _class }}" id="accordion-{{ _id }}">
+<div
+  {{ attributes }}
+>
 {% for _item in _items %}
   {% set _open_item = _open_item_id == loop.index %}
   {% set _button_classes = ['accordion-button'] %}

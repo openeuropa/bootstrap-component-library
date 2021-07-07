@@ -1,4 +1,7 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute(),
   items: [
     {
       variant: "danger",
@@ -32,6 +35,7 @@ module.exports = {
       badge: {
         label: "10",
         rounded_pill: true,
+        attributes: new drupalAttribute(),
       },
     },
   ],
