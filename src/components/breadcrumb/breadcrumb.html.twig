@@ -14,11 +14,6 @@
   <ol class="{{ _class }}">
     {% for _link in _links %}
       {% if _link.path %}
-        {% if _link.attributes is empty %}
-          {% set _link = _link|merge({
-            attributes: create_attribute()
-          }) %}
-        {% endif %}
         <li class="breadcrumb-item">
           {% include '@oe-bcl/link/link.html.twig' with _link only %}
         </li>

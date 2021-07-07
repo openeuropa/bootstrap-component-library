@@ -61,10 +61,10 @@
   }) %}
 {% endif %}
 {% set _trigger = _trigger|merge({
-  id: _id,
   attributes: _trigger.attributes.addClass(['dropdown-toggle'])
                       .setAttribute('aria-expanded', 'false')
                       .setAttribute('data-bs-toggle', 'dropdown')
+                      .setAttribute('id', _id)
 }) %}
 
 {% if _link %}
