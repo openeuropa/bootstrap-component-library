@@ -26,7 +26,7 @@ const getArgTypes = (data) => {
     dark: {
       type: { name: "boolean" },
       description: "Enables dark mode for dropdown menu",
-      defaultValue: "false",
+      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
