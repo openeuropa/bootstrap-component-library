@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   items: [
     [
@@ -8,6 +10,7 @@ module.exports = {
         id: "submit-1",
         type: "checkbox",
         toggle: true,
+        attributes: new drupalAttribute(),
       },
       {
         input: true,
@@ -16,6 +19,7 @@ module.exports = {
         id: "submit-2",
         type: "checkbox",
         toggle: true,
+        attributes: new drupalAttribute(),
       },
       {
         input: true,
@@ -24,6 +28,7 @@ module.exports = {
         id: "submit-3",
         type: "checkbox",
         toggle: true,
+        attributes: new drupalAttribute(),
       },
       {
         input: true,
@@ -32,6 +37,7 @@ module.exports = {
         id: "submit-4",
         type: "checkbox",
         toggle: true,
+        attributes: new drupalAttribute(),
       },
     ],
   ],

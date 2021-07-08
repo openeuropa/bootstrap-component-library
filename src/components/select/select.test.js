@@ -3,7 +3,7 @@ import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-select/data";
 
 const template = "@oe-bcl/select/select.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - select", () => {
   test("renders correctly", () => {

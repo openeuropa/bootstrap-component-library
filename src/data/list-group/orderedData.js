@@ -28,6 +28,7 @@ module.exports = {
       input: true,
       type: "radio",
       remove_wrapper: true,
+      attributes: new drupalAttribute(),
     },
     {
       variant: "warning",
