@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  attributes: new drupalAttribute(),
   items: [
     [
       {

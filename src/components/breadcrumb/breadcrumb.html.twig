@@ -2,16 +2,18 @@
 
 {# Parameters:
   - links (array of objects of type link)
-  - extra_classes (string) (default: '')
 #}
 
-{% set _extra_classes = extra_classes|default('') %}
-{% set _class = 'breadcrumb' ~ (_extra_classes ? ' ' ~ _extra_classes) %}
+{% set _classes = ['breadcrumb'] %}
 {% set _links = links|default([]) %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _links is not empty %}
 <nav aria-label="breadcrumb">
-  <ol class="{{ _class }}">
+  <ol
+    {{ attributes }}
+  >
     {% for _link in _links %}
       {% if _link.path %}
         <li class="breadcrumb-item">

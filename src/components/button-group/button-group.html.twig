@@ -8,19 +8,27 @@
   - aria_label (string) (default: '')
   - toolbar_aria_label (string) (default: '')
   - items (array of arrays with objects of type button or form-input (input key mandatory when the object is a form-input))
-  - extra_classes (string) (default: '')
 #}
 
 {% set _vertical = vertical|default(false) %}
 {% set _size = size|default('md') %}
 {% set _aria_label = aria_label|default('') %}
 {% set _toolbar = toolbar|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
 {% set _toolbar_aria_label = toolbar_aria_label|default('') %}
-{% set _class = 'btn-group' ~ ( _vertical ? '-vertical' : '') %}
-{% set _class = _class ~ ' btn-group-' + _size %}
-{% set _class = _class ~ ' ' ~ _extra_classes %}
+{% set _classes = ['btn-group'] %}
 {% set _items = items|default([]) %}
+
+{% if _vertical %}
+  {% set _classes = ['btn-group-vertical'] %}
+{% endif %}
+
+{% set _classes = _classes|merge(['btn-group-' ~ _size]) %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', _aria_label ) %}
+{% endif %}
+
+{% set attributes = attributes.setAttribute('role', 'group').addClass(_classes) %}
 
 {% if _toolbar %}
   <div class="btn-toolbar" role="toolbar"
@@ -32,11 +40,7 @@
 {% if _items is not empty %}
   {% for _items_group in _items %}
     <div 
-      class="{{ _class }}" 
-      role="group"
-      {% if _aria_label is not empty %}
-        aria-label="{{ _aria_label }}"
-      {% endif %}
+      {{ attributes }}
     >
     {% if _items_group is not empty and _items_group is iterable %}
       {% for _item in _items_group %}

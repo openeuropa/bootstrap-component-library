@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   type: "masonry",
   responsive_colums: "3",
@@ -20,7 +22,7 @@ module.exports = {
       card_footer: "Footer of card 1",
       wrapper_class: "col",
       content: "<button class='btn btn-primary'>Custom action</button>",
-      extra_classes: "mb-3",
+      attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
       title: {
@@ -41,7 +43,7 @@ module.exports = {
       },
       card_header: "Header of card 2",
       wrapper_class: "col",
-      extra_classes: "mb-3",
+      attributes: new drupalAttribute().addClass("mb-3"),
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
@@ -58,7 +60,7 @@ module.exports = {
         classes: "mb-2",
       },
       wrapper_class: "col",
-      extra_classes: "mb-3",
+      attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
       title: {
@@ -75,7 +77,7 @@ module.exports = {
       card_header: "Header of card 3",
       card_footer: "Footer of card 3",
       wrapper_class: "col",
-      extra_classes: "mb-3",
+      attributes: new drupalAttribute().addClass("mb-3"),
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
@@ -100,7 +102,7 @@ module.exports = {
       card_header: "Header of card 4",
       wrapper_class: "col",
       content: "<button class='btn btn-success'>Custom action</button>",
-      extra_classes: "mb-3",
+      attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
       title: {
@@ -116,7 +118,7 @@ module.exports = {
       },
       card_footer: "Footer of card 5",
       wrapper_class: "col",
-      extra_classes: "mb-3 text-center",
+      attributes: new drupalAttribute().addClass(["mb-3", "text-center"]),
     },
     {
       title: {
@@ -132,7 +134,7 @@ module.exports = {
       },
       card_footer: "Footer of card 6",
       wrapper_class: "col",
-      extra_classes: "mb-3",
+      attributes: new drupalAttribute().addClass("mb-3"),
       content:
         "<p>Some representative placeholder content for the first card.</p>",
     },

@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   type: "group",
   items: [
@@ -22,6 +24,7 @@ module.exports = {
       card_footer: "Footer of card 1",
       wrapper_class: "col",
       content: "<button class='btn btn-primary'>Custom action</button>",
+      attributes: new drupalAttribute(),
     },
     {
       title: {
@@ -45,6 +48,7 @@ module.exports = {
       card_footer: "Footer of card 2",
       wrapper_class: "col",
       content: "<p>Custom text</p>",
+      attributes: new drupalAttribute(),
     },
     {
       title: {
@@ -66,6 +70,7 @@ module.exports = {
       card_header: "Header of card 3",
       card_footer: "Footer of card 3",
       wrapper_class: "col",
+      attributes: new drupalAttribute(),
       content:
         "<p>Some representative placeholder content for the first card.</p>",
     },

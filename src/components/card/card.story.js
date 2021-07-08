@@ -135,7 +135,14 @@ const getArgTypes = (data, type) => {
   return argTypes;
 };
 
+const resetAttrs = (data) => {
+  data.attributes.removeClass(`bg-${data.variant}`);
+  data.attributes.removeClass("text-dark").removeClass("text-white");
+  data.attributes.removeClass(`border-${data.border_variant}`);
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 

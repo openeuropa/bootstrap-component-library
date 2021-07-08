@@ -48,9 +48,8 @@
 {% if _items is not empty and _items is iterable %}
   {% for _item in _items %}
     {% if _equal_height %}
-      {% set _item_extra_classes = _item.extra_classes ~ ' h-100' %}
       {% set _item = _item|merge({
-          extra_classes: _item_extra_classes
+          attributes: _item.attributes.addClass('h-100')
         })
       %}
     {% endif %}
