@@ -187,7 +187,7 @@ export const getFormControls = (data, type) => {
       name: "toggle variant",
       type: { name: "select" },
       description: "Variant of the button",
-      defaultValue: data.variant,
+      defaultValue: "primary" || data.variant,
       control: {
         type: "select",
         options: getVariants(true, ["link"]),
