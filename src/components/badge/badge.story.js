@@ -38,7 +38,7 @@ const getArgTypes = (data) => {
     background: {
       type: { name: "select" },
       description: "Background color of the badge",
-      defaultValue: data.background,
+      defaultValue: "primary" || data.background,
       control: {
         type: "select",
         options: getVariants(),

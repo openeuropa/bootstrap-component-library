@@ -35,7 +35,7 @@ module.exports = {
       badge: {
         label: "10",
         rounded_pill: true,
-        attributes: new drupalAttribute(),
+        attributes: new drupalAttribute().addClass('ms-2'),
       },
     },
   ],
