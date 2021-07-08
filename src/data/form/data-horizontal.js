@@ -19,6 +19,7 @@ module.exports = {
         required: true,
         label: "Email address",
         id: "exampleInputEmail1",
+        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -31,6 +32,7 @@ module.exports = {
         required: true,
         label: "Password",
         id: "exampleInputPassword1",
+        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -46,12 +48,14 @@ module.exports = {
         label: "First radio",
         id: "exampleInputRadios1",
         value: "option1",
+        attributes: new drupalAttribute(),
       },
       {
         type: "radio",
         label: "Second radio",
         id: "exampleInputRadios2",
         value: "option2",
+        attributes: new drupalAttribute(),
       },
       {
         type: "radio",
@@ -60,6 +64,7 @@ module.exports = {
         disabled: true,
         value: "option3",
         end_fieldset: true,
+        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -70,6 +75,7 @@ module.exports = {
         required: true,
         label: "Example checkbox",
         id: "exampleInputCheck1",
+        attributes: new drupalAttribute(),
       },
     ],
   ],

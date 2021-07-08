@@ -58,7 +58,7 @@ module.exports = {
     ],
   },
   form: {
-    extra_classes: "d-flex",
+    attributes: new drupalAttribute().addClass("d-flex"),
     submit: {
       wrapper: "ms-2",
       label: "Search",
@@ -75,6 +75,7 @@ module.exports = {
           hidden_label: true,
           placeholder: "Search",
           id: "inlineFormInputGroupSearch",
+          attributes: new drupalAttribute(),
         },
       ],
     ],

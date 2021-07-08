@@ -3,7 +3,7 @@ import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-form-input/data";
 
 const template = "@oe-bcl/form-input/form-input.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Form Input", () => {
   test("renders correctly", () => {
