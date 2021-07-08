@@ -46,6 +46,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass("accordion-flush");
   data.items[0].title = args[`toggle1`];
   data.items[0].content = args[`content1`];
 

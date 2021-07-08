@@ -42,6 +42,9 @@ const getArgTypes = () => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass("list-group-flush");
+  data.attributes.removeClass(`list-group-${data.horizontal}`);
+
   return Object.assign(data, args);
 };
 

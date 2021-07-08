@@ -43,17 +43,19 @@
 {% set _remove_wrapper = remove_wrapper|default(false) %}
 {% set _items = items|default([]) %}
 {% set _class = 'dropdown' %}
-{% set _dropdown_class = 'dropdown-menu' %}
+{% set _dropdown_classes = ['dropdown-menu'] %}
 
 {% if _dark %}
-  {% set _dropdown_class = _dropdown_class ~ ' dropdown-menu-dark' %}
+  {% set _dropdown_classes = _dropdown_classes|merge(['dropdown-menu-dark']) %}
 {% endif %}
 {% if _alignment %}
-  {% set _dropdown_class = _dropdown_class ~ ' ' ~ _alignment %}
+  {% set _dropdown_classes = _dropdown_classes|merge([_alignment]) %}
 {% endif %}
 {% if _direction %}
   {% set _class = _class ~ ' ' ~ _direction %}
 {% endif %}
+
+{% set attributes = attributes.setAttribute('aria-labelledby', _id).addClass(_dropdown_classes) %}
 
 {% if _trigger.attributes is empty %}
   {% set _trigger = _trigger|merge({
@@ -85,7 +87,9 @@
   {% else %}
     {% include '@oe-bcl/button/button.html.twig' with _trigger only %}
   {% endif %}
-  <ul class="{{ _dropdown_class }}" aria-labelledby="{{ _id }}">
+  <ul
+    {{ attributes }}
+  >
     {% if _items is not empty and _items is iterable %}
       {% for _item in _items %}
         {% if _item.attributes is empty %}

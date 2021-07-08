@@ -74,15 +74,19 @@
 {% endif %}
   {% if _items is not empty and _items is iterable %}
     {% for _item in _items %}
-      {% set _item_class = 'nav-item' %}
+      {% set _nav_class = 'nav-item' %}
       {% if _item.dropdown %}
-        {% set _item_class = _item_class ~ ' dropdown' %}
+        {% set _nav_class = _nav_class ~ ' dropdown' %}
         {% set _item = _item|merge({
           remove_wrapper: true
         })
         %}
       {% endif %}
-      {% set _item_classes = ['nav-link'] %}
+      {% if _item.dropdown %}
+        {% set _item_classes = [] %}
+      {% else %}
+        {% set _item_classes = ['nav-link'] %}
+      {% endif %}
       {% if _item.active %}
         {% set _item_classes = _item_classes|merge(['active']) %}
       {% endif %}
@@ -98,7 +102,7 @@
       %}
       {% if not _nav %}
       <li 
-        class="{{ _item_class }}"
+        class="{{ _nav_class }}"
         {% if _tabs %}
           role="presentation"
         {% endif %}

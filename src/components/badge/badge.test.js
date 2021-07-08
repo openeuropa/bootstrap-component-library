@@ -3,7 +3,7 @@ import demoData from "@openeuropa/bcl-data-badge/data";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const template = "@oe-bcl/badge/badge.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 const backgrounds = getVariants();
 
 describe("OE - badge", () => {

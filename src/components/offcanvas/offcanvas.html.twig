@@ -13,7 +13,7 @@
   - with_backdrop (boolean) (default: true)
 #}
 
-{% set _classes = 'offcanvas' %}
+{% set _classes = ['offcanvas'] %}
 {% set _title = title|default({}) %}
 {% set _body = body|default('') %}
 {% set _with_close = with_close ?? true %}
@@ -21,29 +21,35 @@
 {% set _with_body_scroll = with_body_scroll|default(false) %}
 {% set _id = id|default('') %}
 {% set _placement = placement|default('') %}
+
+{% if _placement is not empty %}
+ {% set _classes = _classes|merge(['offcanvas-' ~ _placement ]) %}
+{% endif %}
+
 {% if _title is not empty %}
   {% set _aria_labelled = _title.id|default('') %}
 {% endif %}
 
-{% if _placement is not empty %}
- {% set _classes = _classes ~ ' ' ~ _classes ~ '-' ~ _placement %}
+{% if _aria_labelled is defined and _aria_labelled is not empty %}
+  {% set attributes = attributes.setAttribute('aria-labelledby', _aria_labelled) %}
 {% endif %}
 
-<div
-  class="{{ _classes }}"
-  tabindex="-1"
 {% if _id is not empty %}
-  id="{{ _id }}"
+ {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
-{% if _aria_labelled is defined and _aria_labelled is not empty %}
-  aria-labelledby="{{ _aria_labelled }}"
-{% endif %}
+
 {% if _with_body_scroll %}
-  data-bs-scroll=true
+ {% set attributes = attributes.setAttribute('data-bs-scroll', true) %}
 {% endif %}
+
 {% if not _with_backdrop %}
-  data-bs-backdrop=false
+ {% set attributes = attributes.setAttribute('data-bs-backdrop', false) %}
 {% endif %}
+
+{% set attributes = attributes.setAttribute('tabindex', '-1').addClass( _classes ) %}
+
+<div
+  {{ attributes }}
 >
 {% if _with_close or
   (_title.label is defined and _title.label is not empty)

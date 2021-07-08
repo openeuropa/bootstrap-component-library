@@ -6,6 +6,7 @@ module.exports = {
     label: "Dropdown Toggle",
     path: "#",
   },
+  attributes: new drupalAttribute(),
   items: [
     {
       label: "I'm a link",

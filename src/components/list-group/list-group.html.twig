@@ -24,7 +24,6 @@
       },
       ...
     ]
-  - extra_classes (string) (default: '')
 #}
 
 {% set _flush = flush|default(false) %}
@@ -32,43 +31,34 @@
 {% set _id = id|default('') %}
 {% set _type = type|default('unordered') %}
 {% set _items = items|default([]) %}
-{% set _extra_classes = extra_classes|default('') %}
-{% set _class = 'list-group' %}
+{% set _classes = ['list-group'] %}
 {% if _flush %}
-  {% set _class = _class ~ ' list-group-flush' %}
+  {% set _classes = _classes|merge(['list-group-flush']) %}
 {% endif %}
 {% if _type == 'ordered' %}
-  {% set _class = _class ~ ' list-group-numbered' %}
+  {% set _classes = _classes|merge(['list-group-numbered']) %}
 {% endif %}
 {% if _horizontal is not empty %}
-  {% set _class = _class ~ ' list-group-' ~ _horizontal %}
+  {% set _classes = _classes|merge(['list-group-' ~ _horizontal]) %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _type == 'unordered' %}
   <ul
-    class="{{ _class }}"
-  {% if _id is not empty %}
-    id="{{ _id }}"
-  {% endif %}
+    {{ attributes }}
   >
 {% endif %}
 {% if _type == 'ordered' %}
   <ol
-    class="{{ _class }}"
-  {% if _id is not empty %}
-    id="{{ _id }}"
-  {% endif %}
+    {{ attributes }}
   >
 {% endif %}
 {% if _type == 'actionable' %}
   <div
-  class="{{ _class }}"
-  {% if _id is not empty %}
-    id="{{ _id }}"
-  {% endif %}
+    {{ attributes }}
   >
 {% endif %}
 {% if _items is not empty and _items is iterable %}
