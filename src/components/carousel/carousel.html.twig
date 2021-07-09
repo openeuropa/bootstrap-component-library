@@ -6,7 +6,6 @@
   - autoinit (boolean) (default: true)
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
-  - extra_classes (string) (default: '')
   - items (array of objects) format: [
      {
       image: {
@@ -33,7 +32,7 @@
 {% set _prev_label = prev_label|default('') %}
 {% set _next_label = next_label|default('') %}
 {% set _with_indicators = with_indicators|default(false) %}
-{% set _classes = 'carousel slide' %}
+{% set _classes = ['carousel slide'] %}
 {% set _autoinit = autoinit ?? true %}
 {% set _autoplay = autoplay ?? true %}
 {% set _disable_touch = disable_touch|default(false) %}
@@ -42,29 +41,32 @@
 {% set _extra_classes = extra_classes|default('') %}
 
 {% if _fade %}
-  {% set _classes = _classes ~ ' carousel-fade' %}
+  {% set _classes = _classes|merge(['carousel-fade']) %}
 {% endif %}
 {% if _dark %}
-  {% set _classes = _classes ~ ' carousel-dark' %}
-{% endif %}
-{% if _extra_classes is not empty %}
-  {% set _classes = _classes ~ ' ' ~ _extra_classes %}
+  {% set _classes = _classes|merge(['carousel-dark']) %}
 {% endif %}
 
-<div
 {% if _id is not empty %}
-  id="{{ _id }}"
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
-  class="{{ _classes }}"
+
 {% if _autoinit %}
-  data-bs-ride="carousel"
+  {% set attributes = attributes.setAttribute('data-bs-ride', 'carousel') %}
 {% endif %}
+
 {% if _disable_touch %}
-  data-bs-touch="false"
+  {% set attributes = attributes.setAttribute('data-bs-touch', 'false') %}
 {% endif %}
+
 {% if not _autoplay %}
-  data-bs-interval="false"
+  {% set attributes = attributes.setAttribute('data-bs-interval', 'false') %}
 {% endif %}
+
+{% set attributes = attributes.addClass( _classes ) %}
+
+<div
+  {{ attributes }}
 >
 {% if _with_indicators %}
   <div class="carousel-indicators">

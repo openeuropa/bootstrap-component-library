@@ -126,7 +126,22 @@ const getArgTypes = (data) => {
   };
 };
 
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass("carousel-fade");
+  data.attributes.removeClass("carousel-dark");
+  if (!args.autoinit) {
+    data.attributes.removeAttribute("data-bs-ride");
+  }
+  if (!args.disable_touch) {
+    data.attributes.removeAttribute("data-bs-touch");
+  }
+  if (args.autoplay) {
+    data.attributes.removeAttribute("data-bs-interval");
+  }
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data, args);
   return Object.assign(data, args);
 };
 

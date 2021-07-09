@@ -3,6 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   aria_label: "Test aria label",
   enable_icon: true,
+  attributes: new drupalAttribute(),
   prev: {
     label: "Previous",
     path: "#",

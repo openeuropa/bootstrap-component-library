@@ -17,7 +17,6 @@
     options: ['sm', 'md', 'lg']
   - color_set (string) (default: 'light')
     options ['light', 'dark']
-  - extra_classes (string) (default: '')
 #}
 {% set _collapse_id = collapse_id|default('') %}
 {% set _background = background|default('') %}
@@ -27,19 +26,19 @@
 {% set _brand = brand|default({}) %}
 {% set _color_set = color_set|default('light') %}
 {% set _extra_classes = extra_classes|default('') %}
-{% set _class = 'navbar' %}
-{% set _class = _class ~ ' navbar-expand-' ~ _expand %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
-{% endif %}
+{% set _classes = ['navbar', 'navbar-expand-' ~ _expand] %}
 {% if _background is not empty %}
-  {% set _class = _class ~ ' bg-' ~ _background %}
+  {% set _classes = _classes|merge(['bg-' ~ _background ]) %}
 {% endif %}
 {% if _color_set is not empty %}
-  {% set _class = _class ~ ' navbar-' ~ _color_set %}
+  {% set _classes = _classes|merge(['navbar-' ~ _color_set ]) %}
 {% endif %}
 
-<nav class='{{ _class }}'>
+{% set attributes = attributes.addClass( _classes ) %}
+
+<nav
+  {{ attributes }}
+>
   <div class='container'>
     {% if _brand is not empty %}
       <a class='navbar-brand' href='{{ _brand.link }}'>

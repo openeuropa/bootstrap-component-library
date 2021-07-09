@@ -47,25 +47,31 @@
 {# toasts #}
 {% if _toasts is not empty %}
   {% for _toast in _toasts %}
-    {% set _classes = 'toast' %}
+    {% set _classes = ['toast'] %}
     {% set _body = _toast.body|default('') %}
     {% set _role = _toast.role|default('') %}
     {% set _with_close = _toast.with_close ?? true %}
     {% set _aria_live = _toast.aria_live|default('') %}
-    {% set _autohide = autohide ?? true %}
+    {% set _autohide = _toast.autohide ?? true %}
     {% set _with_body_wrapper = _toast.with_body_wrapper|default(false) %}
     {% set _body_wrapper_classes = _toast.body_wrapper_classes|default('') %}
-    {% set _extra_classes = _toast.extra_classes|default('') %}
-    {% if _extra_classes is not empty %}
-      {% set _classes = classes ~ ' ' ~ _extra_classes %}
+
+    {% set attributes = _toast.attributes.addClass( _classes ).setAttribute('aria-atomic', true) %}
+    {% if _aria_live is not empty %}
+      {% set attributes = attributes.setAttribute('aria-live', _aria_live) %}
     {% endif %}
-  <div
-    class="{{ _classes }}"
-    aria-atomic="true"
-    {{- _aria_live ? 'aria-live="' ~ _aria_live ~ '"' -}}
-    {{- _role ? 'role="' ~ _role ~ '"' -}}
-    {{- not _autohide ? 'data-bs-autohide="false"' -}}
-  >
+    {% if _role is not empty %}
+      {% set attributes = attributes.setAttribute('role', _role) %}
+    {% endif %}
+    {% if not _autohide %}
+      {% set attributes = attributes.setAttribute('data-bs-autohide', 'false') %}
+    {% endif %}
+    {% set _toast = _toast|merge({
+      attributes: attributes
+    }) %}
+    <div
+      {{ _toast.attributes }}
+    >
     {% if _with_close or
       (_toast.header is defined and _toast.header is not empty)
     %}

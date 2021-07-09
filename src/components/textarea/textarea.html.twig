@@ -34,14 +34,14 @@
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
-{% set _class = 'form-control' %}
+{% set _classes = ['form-control'] %}
 
 {% set _rows = rows|default('4') %}
 {% if _size is not empty %}
-  {% set _class = _class ~ " form-control-" ~ size %}
+  {% set _classes = _classes|merge(['form-control-' ~ _size ]) %}
 {% endif %}
 {% if _invalid is not empty %}
-  {% set _class = _class ~ " is-invalid" %}
+  {% set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
 {% set _placeholder = placeholder|default('') %}
 {% if _horizontal %}
@@ -49,6 +49,32 @@
 {% endif %}
 {% if _hidden_label %}
   {% set _label_class = _label_class ~ ' visually-hidden' %}
+{% endif %}
+
+{% set attributes = attributes.addClass( _classes ).setAttribute('rows', _rows ) %}
+
+{% if _id %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
+{% endif %}
+
+{% if _required %}
+  {% set attributes = attributes.setAttribute('required', true) %}
+{% endif %}
+
+{% if _disabled %}
+  {% set attributes = attributes.setAttribute('disabled', true) %}
+{% endif %}
+
+{% if _readonly %}
+  {% set attributes = attributes.setAttribute('readonly', true) %}
+{% endif %}
+
+{% if _placeholder is not empty %}
+  {% set attributes = attributes.setAttribute('placeholder', _placeholder) %}
+{% endif %}
+
+{% if _helper_text_id is not empty %}
+  {% set attributes = attributes.setAttribute('aria-describedby', _helper_text_id) %}
 {% endif %}
 
 {% if _floating or _horizontal %}
@@ -75,26 +101,7 @@
 <div class="{{ _horizontal_class }}">
 {% endif %}
   <textarea
-    class="{{ _class }}"
-  {% if _id %}
-    id="{{ _id }}"
-  {% endif %}
-  {% if _required %}
-    required
-  {% endif %}
-  {% if _disabled %}
-    disabled
-  {% endif %}
-  {% if _readonly %}
-    readonly
-  {% endif %}
-    rows="{{ _rows }}"
-  {% if _placeholder is not empty %}
-    placeholder="{{ _placeholder }}"
-  {% endif %}
-  {% if _helper_text_id is not empty %}
-    aria-describedby="{{ _helper_text_id }}"
-  {% endif %}
+    {{ attributes }}
   >
   </textarea>
 {% if _horizontal and floating == false %}

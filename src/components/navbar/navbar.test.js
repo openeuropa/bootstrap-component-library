@@ -2,7 +2,7 @@ import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-navbar/data";
 
 const template = "@oe-bcl/navbar/navbar.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - navbar", () => {
   ["light", "dark"].forEach((color_set) => {

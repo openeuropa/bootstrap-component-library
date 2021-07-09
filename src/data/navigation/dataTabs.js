@@ -3,6 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   tabs: true,
   tabs_content: true,
+  attributes: new drupalAttribute(),
   items: [
     {
       label: "I'm a link",
