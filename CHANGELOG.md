@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.0 (2021-07-09)
+
+#### :rocket: New Feature
+* [#13](https://github.com/openeuropa/bootstrap-component-library/pull/13) feat(drupal-attributes): Refactored multiple components - FRONT-2434 ([@tibi2303](https://github.com/tibi2303))
+* [#12](https://github.com/openeuropa/bootstrap-component-library/pull/12) feat(drupal-attributes): Refactored breadcrumb, card, card-layout, button-group - FRONT-2430 ([@tibi2303](https://github.com/tibi2303))
+* [#11](https://github.com/openeuropa/bootstrap-component-library/pull/11) feat(drupal-attributes): Refactored select, input, form with drupal attributes - FRONT-2428 ([@tibi2303](https://github.com/tibi2303))
+* [#10](https://github.com/openeuropa/bootstrap-component-library/pull/10) feat(drupal-attributes): Refactored multiple components - FRONT-2419 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- [@tibi2303](https://github.com/tibi2303)
+
+
 
 ## 0.1.3 (2021-07-07)
 
