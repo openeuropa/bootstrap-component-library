@@ -51,7 +51,7 @@
   {% set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
 
-{% set attributes = attributes.addClass( _classes ).setAttribute('rows', _rows ) %}
+{% set attributes = attributes.addClass(_classes).setAttribute('rows', _rows ) %}
 
 {% if _id %}
   {% set attributes = attributes.setAttribute('id', _id) %}

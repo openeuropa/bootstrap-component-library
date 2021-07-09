@@ -56,7 +56,7 @@
     {% set _with_body_wrapper = _toast.with_body_wrapper|default(false) %}
     {% set _body_wrapper_classes = _toast.body_wrapper_classes|default('') %}
 
-    {% set attributes = _toast.attributes.addClass( _classes ).setAttribute('aria-atomic', true) %}
+    {% set attributes = _toast.attributes.addClass(_classes).setAttribute('aria-atomic', true) %}
     {% if _aria_live is not empty %}
       {% set attributes = attributes.setAttribute('aria-live', _aria_live) %}
     {% endif %}
