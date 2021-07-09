@@ -77,10 +77,7 @@
       {% set _nav_class = 'nav-item' %}
       {% if _item.dropdown %}
         {% set _nav_class = _nav_class ~ ' dropdown' %}
-        {% set _item = _item|merge({
-          remove_wrapper: true
-        })
-        %}
+        {% set _item = _item|merge({remove_wrapper: true}) %}
       {% endif %}
       {% if _item.dropdown %}
         {% set _item_classes = [] %}
@@ -97,11 +94,9 @@
       {% endif %}
       {% set _item = _item|merge({
         attributes: _item.attributes.addClass(_item_classes),
-        clean_class: true 
-      })
-      %}
+        clean_class: true}) %}
       {% if not _nav %}
-      <li 
+      <li
         class="{{ _nav_class }}"
         {% if _tabs %}
           role="presentation"

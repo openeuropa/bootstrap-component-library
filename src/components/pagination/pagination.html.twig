@@ -58,8 +58,8 @@
       {% set _prev_class = _prev_class ~ ' disabled' %}
     {% endif %}
     <li class="{{ _prev_class }}">
-      <a 
-        class="page-link" 
+      <a
+        class="page-link"
         href="{{ _prev.path }}"
         {% if _prev.disabled %}
         tabindex="-1"
@@ -88,8 +88,8 @@
       {% set _item_class = _item_class ~ ' active' %}
     {% endif %}
     <li class="{{ _item_class }}">
-      <a 
-        class="page-link" 
+      <a
+        class="page-link"
         href="{{ _item.path }}"
         {% if _item.disabled %}
         tabindex="-1"
@@ -110,8 +110,8 @@
       {% set _next_class = _next_class ~ ' disabled' %}
     {% endif %}
     <li class="{{ _next_class }}">
-      <a 
-        class="page-link" 
+      <a
+        class="page-link"
         href="{{ _next.path }}"
         {% if _next.disabled %}
         tabindex="-1"

@@ -17,7 +17,7 @@
 {% set _toolbar = toolbar|default(false) %}
 {% set _extra_classes = extra_classes|default('') %}
 {% set _toolbar_aria_label = toolbar_aria_label|default('') %}
-{% set _class = 'btn-group' ~ ( _vertical ? '-vertical' : '') %}
+{% set _class = 'btn-group' ~ (_vertical ? '-vertical' : '') %}
 {% set _class = _class ~ ' btn-group-' + _size %}
 {% set _class = _class ~ ' ' ~ _extra_classes %}
 {% set _items = items|default([]) %}
@@ -31,8 +31,8 @@
 {% endif %}
 {% if _items is not empty %}
   {% for _items_group in _items %}
-    <div 
-      class="{{ _class }}" 
+    <div
+      class="{{ _class }}"
       role="group"
       {% if _aria_label is not empty %}
         aria-label="{{ _aria_label }}"

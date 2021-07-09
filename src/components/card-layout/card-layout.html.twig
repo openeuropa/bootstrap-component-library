@@ -51,8 +51,7 @@
       {% set _item_extra_classes = _item.extra_classes ~ ' h-100' %}
       {% set _item = _item|merge({
           extra_classes: _item_extra_classes
-        })
-      %}
+        }) %}
     {% endif %}
     {% if _type == 'grid' or _type == 'masonry' %}
       <div class='col'>
