@@ -22,27 +22,26 @@
 {% set _responsive_colums = responsive_colums|default('') %}
 {% set _gutter = gutter|default('') %}
 {% set _equal_height = equal_height|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
+{% set _classes = [] %}
 
 {% if _type == 'group' %}
-  {% set _class = 'card-group' %}
+  {% set _classes = ['card-group'] %}
 {% elseif type == 'grid' or type == 'masonry' %}
-  {% set _class = 'row row-cols-' ~ _grid_columns %}
+  {% set _classes = _classes|merge(['row','row-cols-' ~ _grid_columns]) %}
   {% if _responsive_colums is not empty %}
-    {% set _class = _class ~ ' row-cols-' ~ _responsiveness ~ '-' ~ _responsive_colums %}
+    {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_colums]) %}
   {% endif %}
   {% if _gutter is not empty %}
-    {% set _class = _class ~ ' g-' ~ _gutter %}
+    {% set _classes = _classes|merge(['g-' ~ _gutter]) %}
   {% endif %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
-{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 <div
-  class='{{ _class }}'
+  {{ attributes }}
   {% if _type == 'masonry' %}
-  data-masonry='{"percentPosition": true }'
+    data-masonry='{"percentPosition": true }'
   {% endif %}
 >
 {% if _items is not empty and _items is iterable %}

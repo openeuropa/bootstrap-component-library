@@ -5,6 +5,7 @@ module.exports = {
   responsive_colums: "3",
   responsiveness: "md",
   gutters: "2",
+  attributes: new drupalAttribute(),
   items: [
     {
       title: {

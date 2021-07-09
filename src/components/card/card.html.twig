@@ -39,7 +39,6 @@
     options: ['dark', 'white']
   - card_header (string) (default: '')
   - card_footer (string) (default: '')
-  - extra_classes (string) (default: '')
 #}
 
 {% set _title = title|default({}) %}
@@ -60,10 +59,10 @@
 {% set _card_footer = card_footer|default('') %}
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
-  {% set _classes = _classes|merge(['text-' ~ _text_color ]) %}
+  {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes|merge(['bg-' ~ _variant ]) %}
+  {% set _classes = _classes|merge(['bg-' ~ _variant]) %}
   {% if _text_color is empty %}
     {% if _variant == 'warning' or _variant == 'info' or _variant == 'light' %}
       {% set _classes = _classes|merge(['text-dark']) %}
@@ -73,7 +72,7 @@
   {% endif %}
 {% endif %}
 {% if _border_variant is not empty %}
-  {% set _classes = _classes|merge(['border-' ~ _border_variant ]) %}
+  {% set _classes = _classes|merge(['border-' ~ _border_variant]) %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
