@@ -23,7 +23,7 @@
 {% set _placement = placement|default('') %}
 
 {% if _placement is not empty %}
- {% set _classes = _classes|merge(['offcanvas-' ~ _placement ]) %}
+ {% set _classes = _classes|merge(['offcanvas-' ~ _placement]) %}
 {% endif %}
 
 {% if _title is not empty %}
@@ -46,7 +46,7 @@
  {% set attributes = attributes.setAttribute('data-bs-backdrop', false) %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('tabindex', '-1').addClass( _classes ) %}
+{% set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) %}
 
 <div
   {{ attributes }}

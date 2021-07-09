@@ -1,0 +1,17 @@
+{
+  "name": "openeuropa/bootstrap-component-library",
+  "description": "Twig templates based on Bootstrap 5",
+  "license": "EUPL-1.1",
+  "keywords": [
+    "twig",
+    "components",
+    "european commission"
+  ],
+  "scripts": {
+    "twig-cs": "./vendor/bin/twigcs \"./src/components/\"",
+    "cs": "./vendor/bin/twigcs --severity error"
+  },
+  "require-dev": {
+    "friendsoftwig/twigcs": "^5.0.0"
+  }
+}

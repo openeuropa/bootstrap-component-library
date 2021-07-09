@@ -49,7 +49,7 @@
 {% set _classes = ['form-control'] %}
 
 {% if _size is not empty %}
-  {% set _classes = _classes|merge(['form-control-' ~ size ]) %}
+  {% set _classes = _classes|merge(['form-control-' ~ size]) %}
 {% endif %}
 {% if type == 'range' %}
   {% set _classes = _classes|merge(['form-range']) %}
@@ -130,7 +130,7 @@
 <div class="{{ _wrapper_class }}">
 {% endif %}
 {% endif %}
-{% if _label_block and _floating == false and  _type != 'checkbox' and _type != 'radio' %}
+{% if _label_block and _floating == false and _type != 'checkbox' and _type != 'radio' %}
   {{ _label_block|raw }}
 {% endif %}
 {% if _horizontal and floating == false %}

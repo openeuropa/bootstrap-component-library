@@ -86,7 +86,7 @@
 {% if _table_responsive is not empty %}
   {% set _responsive_class = 'table-responsive' %}
   {% if _table_responsive != 'all' %}
-    {% set _responsive_class = _responsive_class ~ '-'~ _table_responsive %}
+    {% set _responsive_class = _responsive_class ~ '-' ~ _table_responsive %}
   {% endif %}
   <div class="{{ _responsive_class }}">
 {% endif %}
