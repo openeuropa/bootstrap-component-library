@@ -47,6 +47,11 @@
 >
 {% if _items is not empty and _items is iterable %}
   {% for _item in _items %}
+    {% if _item.attributes is empty %}
+      {% set _item = _item|merge({
+        attributes: create_attribute()
+      }) %}
+    {% endif %}
     {% if _equal_height %}
       {% set _item = _item|merge({
           attributes: _item.attributes.addClass('h-100')

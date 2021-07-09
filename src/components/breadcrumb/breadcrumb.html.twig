@@ -7,12 +7,14 @@
 {% set _classes = ['breadcrumb'] %}
 {% set _links = links|default([]) %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
 
 {% if _links is not empty %}
-<nav aria-label="breadcrumb">
+<nav
+  {{ attributes }}
+>
   <ol
-    {{ attributes }}
+    class="{{ _classes }}"
   >
     {% for _link in _links %}
       {% if _link.path %}
