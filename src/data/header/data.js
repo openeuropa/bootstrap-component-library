@@ -7,9 +7,10 @@ module.exports = {
   },
   navbar: {
     collapse_id: "navbarNavDropdown",
-    extra_classes: "oe-header__navbar",
+    attributes: new drupalAttribute().addClass("oe-header__navbar"),
     navigation: {
       navbar: true,
+      attributes: new drupalAttribute(),
       items: [
         {
           label: "Home",

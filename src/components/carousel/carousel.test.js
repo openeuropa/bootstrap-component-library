@@ -2,7 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-carousel/data";
 
 const template = "@oe-bcl/carousel/carousel.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - carousel", () => {
   test("renders correctly", () => {
@@ -74,21 +74,12 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with extra classes", () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, extra_classes: "an-extra-class" })
-    ).resolves.toMatchSnapshot();
-  });
-
-  test("renders correctly with extra classes, fade and dark variant", () => {
+  test("renders correctly with fade and dark variant", () => {
     expect.assertions(1);
 
     return expect(
       render({
         ...demoData,
-        extra_classes: "an-extra-class",
         dark: true,
         fade: true,
       })

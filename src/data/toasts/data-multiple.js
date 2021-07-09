@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   with_wrapper: true,
   wrapper_classes: "position-relative",
@@ -11,6 +13,7 @@ module.exports = {
       header: `<strong class="me-auto">Bootstrap</strong><small class="text-muted">just now</small>`,
       body: "See? Just like this.",
       close_aria_label: "Close",
+      attributes: new drupalAttribute(),
     },
     {
       role: "alert",
@@ -18,6 +21,7 @@ module.exports = {
       header: `<strong class="me-auto">Bootstrap</strong><small class="text-muted">2 seconds ago</small>`,
       body: "Heads up, toasts will stack automatically.",
       close_aria_label: "Close",
+      attributes: new drupalAttribute(),
     },
   ],
 };

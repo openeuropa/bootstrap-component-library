@@ -25,7 +25,7 @@
 {% set _classes = _classes|merge(['btn-group-' ~ _size]) %}
 
 {% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', _aria_label ) %}
+  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
 {% endif %}
 
 {% set attributes = attributes.setAttribute('role', 'group').addClass(_classes) %}

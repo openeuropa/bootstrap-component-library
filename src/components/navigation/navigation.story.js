@@ -6,6 +6,7 @@ import navigation from "./navigation.html.twig";
 const getArgTypes = (data, type) => {
   let argTypes = {
     full_width: {
+      name: "full width",
       type: { name: "boolean" },
       description: "Full width menu",
       defaultValue: false,
@@ -60,7 +61,15 @@ const getArgTypes = (data, type) => {
   return argTypes;
 };
 
+const resetAttrs = (data) => {
+  data.attributes.removeClass("nav-pills");
+  data.attributes.removeClass("flex-column");
+  data.attributes.removeClass("nav-fill");
+  data.attributes.removeClass(`justify-content-${data.alignment}`);
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 

@@ -2,13 +2,14 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   collapse_id: "navbar",
+  attributes: new drupalAttribute(),
   brand: {
     label: "Navbar",
     link: "/example.html",
   },
   navigation: {
     navbar: true,
-    extra_classes: "me-auto",
+    attributes: new drupalAttribute().addClass("me-auto"),
     items: [
       {
         label: "I'm a link",

@@ -38,20 +38,22 @@
 {% set _items = items|default([]) %}
 {% set _next = next|default({}) %}
 {% set _prev = prev|default({}) %}
-{% set _class = 'pagination' %}
+{% set _classes = 'pagination' %}
 {% if _size is not empty %}
-{% set _class = _class ~ ' pagination-' ~ _size %}
+  {% set _classes = _classes ~ ' pagination-' ~ _size %}
 {% endif %}
 {% if _alignment is not empty %}
-{% set _class = _class ~ ' justify-content-' ~ _alignment %}
+  {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
+{% endif %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 
 <nav
-  {% if _aria_label is not empty %}
-  aria-label="{{ aria_label }}"
-  {% endif %}
+  {{ attributes }}
 >
-  <ul class="{{ _class }}">
+  <ul class="{{ _classes }}">
   {% if _prev is not empty %}
     {% set _prev_class = 'page-item' %}
     {% if _prev.disabled %}

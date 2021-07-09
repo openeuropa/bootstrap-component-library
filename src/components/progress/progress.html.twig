@@ -17,20 +17,24 @@
 {% set _animated = animated|default(false) %}
 {% set _label = label|default('') %}
 {% set _variant = variant|default('') %}
-{% set _class = 'progress-bar' %}
+{% set _classes = 'progress-bar' %}
 {% if _striped is not empty %}
-{% set _class = _class ~ ' progress-bar-striped' %}
+  {% set _classes = _classes ~ ' progress-bar-striped' %}
 {% endif %}
 {% if _animated is not empty %}
-{% set _class = _class ~ ' progress-bar-animated' %}
+  {% set _classes = _classes ~ ' progress-bar-animated' %}
 {% endif %}
 {% if _variant is not empty %}
-{% set _class = _class ~ ' bg-' ~ _variant %}
+  {% set _classes = _classes ~ ' bg-' ~ _variant %}
 {% endif %}
 
-<div class="progress">
+{% set attributes = attributes.addClass(['progress']) %}
+
+<div
+  {{ attributes }}
+>
   <div
-    class="{{ _class }}"
+    class="{{ _classes }}"
     role="progressbar"
     style="width: {{ _progress }}%"
     aria-valuenow="{{ _progress }}"
