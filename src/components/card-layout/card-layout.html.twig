@@ -47,11 +47,16 @@
 >
 {% if _items is not empty and _items is iterable %}
   {% for _item in _items %}
-    {% if _equal_height %}
-      {% set _item_extra_classes = _item.extra_classes ~ ' h-100' %}
+    {% if _item.attributes is empty %}
       {% set _item = _item|merge({
-          extra_classes: _item_extra_classes
-        }) %}
+        attributes: create_attribute()
+      }) %}
+    {% endif %}
+    {% if _equal_height %}
+      {% set _item = _item|merge({
+          attributes: _item.attributes.addClass('h-100')
+        })
+      %}
     {% endif %}
     {% if _type == 'grid' or _type == 'masonry' %}
       <div class='col'>

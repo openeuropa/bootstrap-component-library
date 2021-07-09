@@ -4,7 +4,7 @@ import demoDataGrid from "@openeuropa/bcl-data-card-layout/dataGrid";
 import demoDataMasonry from "@openeuropa/bcl-data-card-layout/dataMasonry";
 
 const template = "@oe-bcl/card-layout/card-layout.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Card", () => {
   test(`group renders correctly`, () => {

@@ -3,7 +3,7 @@ import demoData, { image } from "@openeuropa/bcl-data-card/data";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal";
 
 const template = "@oe-bcl/card/card.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
 
 describe("OE - Card", () => {
   test(`renders correctly`, () => {
@@ -16,7 +16,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, image: { ...image, position: "bottom" } })
+      render({ ...demoData, image: { ...image, position: "bottom" } }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -24,7 +24,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "danger" })
+      render({ ...demoData, variant: "danger" }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, border_variant: "danger" })
+      render({ ...demoData, border_variant: "danger" }, true)
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, text_color: "white" })
+      render({ ...demoData, text_color: "white" }, true)
     ).resolves.toMatchSnapshot();
   });
 });

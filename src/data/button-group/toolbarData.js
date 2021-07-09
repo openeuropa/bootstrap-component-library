@@ -3,7 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   toolbar: true,
   toolbar_aria_label: "Text here",
-  extra_classes: "me-2",
+  attributes: new drupalAttribute().addClass("me-2"),
   items: [
     [
       {
