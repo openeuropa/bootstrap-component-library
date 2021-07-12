@@ -24,5 +24,5 @@ module.exports = {
     { value: 4, label: "last option" },
     { label: "the selected option", selected: true },
   ],
-  attributes: new drupalAttribute().addClass('multi-select'),
+  attributes: new drupalAttribute().addClass("multi-select"),
 };

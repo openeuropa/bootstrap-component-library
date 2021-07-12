@@ -29,7 +29,7 @@ $spacing-s: 4px !default;
     background-color: $white;
     outline: 0;
     box-sizing: border-box;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
 
     &.ss-disabled {
       background-color: $border-color;
@@ -55,9 +55,9 @@ $spacing-s: 4px !default;
       text-align: left;
       width: calc(100% - 30px);
       line-height: 1em;
-      -webkit-user-select: none;  
-      -moz-user-select: none;    
-      -ms-user-select: none;      
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
       user-select: none;
 
       * {
@@ -99,7 +99,7 @@ $spacing-s: 4px !default;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
-        transition: transform .2s, margin .2s;
+        transition: transform 0.2s, margin 0.2s;
 
         &.arrow-up {
           transform: rotate(-135deg);
@@ -138,7 +138,7 @@ $spacing-s: 4px !default;
     background-color: $white;
     outline: 0;
     box-sizing: border-box;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
 
     &.ss-disabled {
       background-color: $border-color;
@@ -188,12 +188,24 @@ $spacing-s: 4px !default;
       }
 
       @keyframes scaleIn {
-        0% {transform: scale(0); opacity: 0;}
-        100% {transform: scale(1); opacity: 1;}
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
       @keyframes scaleOut {
-        0% {transform: scale(1); opacity: 1;}
-        100% {transform: scale(0); opacity: 0;}
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
       }
 
       .ss-value {
@@ -201,12 +213,12 @@ $spacing-s: 4px !default;
         user-select: none;
         align-items: center;
         background: $blue;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         color: $white;
         display: inline-block;
-        font-size: .8em;
+        font-size: 0.8em;
         line-height: 1;
-        padding: .55em .65em;
+        padding: 0.55em 0.65em;
         text-align: center;
         vertical-align: baseline;
         white-space: nowrap;
@@ -216,7 +228,7 @@ $spacing-s: 4px !default;
         }
         &.ss-out {
           animation-name: scaleOut;
-          animation-duration: .2s;
+          animation-duration: 0.2s;
           animation-timing-function: ease-out;
         }
 
@@ -240,7 +252,7 @@ $spacing-s: 4px !default;
         position: relative;
         height: 18px;
         width: 2px;
-        transition: transform .2s;
+        transition: transform 0.2s;
 
         &:after {
           background: $font-color;
@@ -257,7 +269,6 @@ $spacing-s: 4px !default;
         }
       }
     }
-
   }
 }
 .ss-content {
@@ -269,7 +280,7 @@ $spacing-s: 4px !default;
   z-index: 1010;
   background-color: $white;
   transform-origin: center top;
-  transition: transform .2s, opacity .2s;
+  transition: transform 0.2s, opacity 0.2s;
   opacity: 0;
   transform: scaleY(0);
 
@@ -316,7 +327,7 @@ $spacing-s: 4px !default;
       box-sizing: border-box;
       -webkit-box-sizing: border-box;
       -webkit-appearance: textfield;
-      
+
       &::placeholder {
         color: $font-placeholder-color;
         vertical-align: middle;
@@ -366,7 +377,7 @@ $spacing-s: 4px !default;
 
     .ss-optgroup-label-selectable {
       cursor: pointer;
-      
+
       &:hover {
         color: $white;
         background-color: $primary-color;
@@ -382,7 +393,8 @@ $spacing-s: 4px !default;
         display: inline-block;
       }
 
-      &:hover, &.ss-highlighted {
+      &:hover,
+      &.ss-highlighted {
         color: $white;
         background-color: $primary-color;
       }
@@ -395,10 +407,12 @@ $spacing-s: 4px !default;
 
       &:not(.ss-disabled).ss-option-selected {
         color: $font-color;
-        background-color: rgba($primary-color, .1);
+        background-color: rgba($primary-color, 0.1);
       }
 
-      &.ss-hide { display: none; }
+      &.ss-hide {
+        display: none;
+      }
 
       .ss-search-highlight {
         background-color: $search-highlight-color;
