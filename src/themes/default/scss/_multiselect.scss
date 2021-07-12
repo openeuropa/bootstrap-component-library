@@ -17,7 +17,6 @@ $spacing-s: 4px !default;
   width: 100%;
   color: $font-color;
   user-select: none;
-
   .ss-single-selected {
     box-sizing: border-box;
     display: flex;
@@ -30,7 +29,6 @@ $spacing-s: 4px !default;
     border-radius: $border-radius;
     outline: 0;
     transition: background-color 0.2s;
-
     &.ss-disabled {
       cursor: not-allowed;
       background-color: $border-color;
@@ -44,7 +42,6 @@ $spacing-s: 4px !default;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
-
     .placeholder {
       display: flex;
       flex: 1 1 100%;
@@ -56,10 +53,6 @@ $spacing-s: 4px !default;
       text-overflow: ellipsis;
       white-space: nowrap;
       user-select: none;
-      user-select: none;
-      user-select: none;
-      user-select: none;
-
       * {
         display: flex;
         align-items: center;
@@ -73,27 +66,24 @@ $spacing-s: 4px !default;
         color: $font-disabled-color;
       }
     }
-
     .ss-deselect {
       display: flex;
       flex: 0 1 auto;
       align-items: center;
       justify-content: flex-end;
       margin: 0 $spacing-m 0 $spacing-m;
-      font-weight: bold;
+      font-weight: 700;
 
       &.ss-hide {
         display: none;
       }
     }
-
     .ss-arrow {
       display: flex;
       flex: 0 1 auto;
       align-items: center;
       justify-content: flex-end;
       margin: 0 $spacing-m 0 $spacing-m;
-
       span {
         display: inline-block;
         padding: 3px;
@@ -112,7 +102,6 @@ $spacing-s: 4px !default;
       }
     }
   }
-
   &.is-invalid {
     .ss-multi-selected {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -125,7 +114,6 @@ $spacing-s: 4px !default;
       }
     }
   }
-
   .ss-multi-selected {
     box-sizing: border-box;
     display: flex;
@@ -139,24 +127,6 @@ $spacing-s: 4px !default;
     border-radius: $border-radius;
     outline: 0;
     transition: background-color 0.2s;
-
-    &.ss-disabled {
-      cursor: not-allowed;
-      background-color: $border-color;
-
-      .ss-values {
-        .ss-disabled {
-          color: $font-color;
-        }
-
-        .ss-value {
-          .ss-value-delete {
-            cursor: not-allowed;
-          }
-        }
-      }
-    }
-
     &.ss-open-above {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -165,109 +135,116 @@ $spacing-s: 4px !default;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
-
+  }
+  .ss-disabled {
+    cursor: not-allowed;
+    background-color: $border-color;
     .ss-values {
-      display: flex;
-      flex: 1 1 100%;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      width: calc(100% - 30px);
-      padding: 0.3rem 0.2rem;
-
       .ss-disabled {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding: 4px 5px;
-        margin: 2px 0;
-        overflow: hidden;
-        line-height: 1em;
-        color: $font-disabled-color;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        color: $font-color;
       }
-
-      @keyframes scaleIn {
-        0% {
-          opacity: 0;
-          transform: scale(0);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      @keyframes scaleOut {
-        0% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        100% {
-          opacity: 0;
-          transform: scale(0);
-        }
-      }
-
       .ss-value {
-        display: flex;
-        display: inline-block;
-        align-items: center;
-        padding: 0.55em 0.65em;
-        margin-right: 0.2rem;
-        font-size: 0.8em;
-        line-height: 1;
-        color: $white;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: baseline;
-        user-select: none;
-        background: $blue;
-        border-radius: 0.25rem;
         .ss-value-delete {
-          margin-left: 0.2rem;
-        }
-        &.ss-out {
-          animation-name: scaleOut;
-          animation-duration: 0.2s;
-          animation-timing-function: ease-out;
-        }
-
-        .ss-value-delete {
-          margin: 0 0 0 0.2rem;
-          cursor: pointer;
+          cursor: not-allowed;
         }
       }
     }
-
-    .ss-add {
+  }
+  .ss-values {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: calc(100% - 30px);
+    padding: 0.3rem 0.2rem;
+    .ss-disabled {
       display: flex;
-      flex: 0 1 3px;
-      margin: 9px 12px 0 5px;
-
-      .ss-plus {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2px;
-        height: 18px;
-        background: $font-color;
-        transition: transform 0.2s;
-
-        &::after {
-          position: absolute;
-          top: 8px;
-          left: -8px;
-          width: 18px;
-          height: 2px;
-          content: "";
-          background: $font-color;
-        }
-
-        &.ss-cross {
-          transform: rotate(45deg);
-        }
+      align-items: center;
+      width: 100%;
+      padding: 4px 5px;
+      margin: 2px 0;
+      overflow: hidden;
+      line-height: 1em;
+      color: $font-disabled-color;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    @keyframes scaleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0);
       }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes scaleOut {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  }
+  .ss-value {
+    display: flex;
+    display: inline-block;
+    align-items: center;
+    padding: 0.55em 0.65em;
+    margin-right: 0.2rem;
+    font-size: 0.8em;
+    line-height: 1;
+    color: $white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    user-select: none;
+    background: $blue;
+    border-radius: 0.25rem;
+    .ss-value-delete {
+      margin-left: 0.2rem;
+    }
+    &.ss-out {
+      animation-name: scaleOut;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-out;
+    }
+    .ss-value-delete {
+      margin: 0 0 0 0.2rem;
+      cursor: pointer;
+    }
+  }
+  .ss-add {
+    display: flex;
+    flex: 0 1 3px;
+    margin: 9px 12px 0 5px;
+  }
+  .ss-plus {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2px;
+    height: 18px;
+    background: $font-color;
+    transition: transform 0.2s;
+
+    &::after {
+      position: absolute;
+      top: 8px;
+      left: -8px;
+      width: 18px;
+      height: 2px;
+      content: "";
+      background: $font-color;
+    }
+
+    &.ss-cross {
+      transform: rotate(45deg);
     }
   }
 }
@@ -283,24 +260,20 @@ $spacing-s: 4px !default;
   transition: transform 0.2s, opacity 0.2s;
   transform: scaleY(0);
   transform-origin: center top;
-
   &.ss-open {
     display: block;
     opacity: 1;
     transform: scaleY(1);
   }
-
   .ss-search {
     display: flex;
     flex-direction: row;
     padding: $spacing-l $spacing-l $spacing-m $spacing-l;
-
     &.ss-hide {
       height: 0;
       padding: 0;
       margin: 0;
       opacity: 0;
-
       input {
         height: 0;
         padding: 0;
@@ -308,9 +281,7 @@ $spacing-s: 4px !default;
         opacity: 0;
       }
     }
-
     input {
-      box-sizing: border-box;
       box-sizing: border-box;
       display: inline-flex;
       flex: 1 1 auto;
@@ -327,17 +298,14 @@ $spacing-s: 4px !default;
       border-radius: $border-radius;
       outline: 0;
       appearance: textfield;
-
       &::placeholder {
         color: $font-placeholder-color;
         vertical-align: middle;
       }
-
       &:focus {
         box-shadow: 0 0 5px $primary-color;
       }
     }
-
     .ss-addable {
       box-sizing: border-box;
       display: inline-flex;
@@ -347,73 +315,60 @@ $spacing-s: 4px !default;
       height: 30px;
       margin: 0 0 0 8px;
       font-size: 22px;
-      font-weight: bold;
+      font-weight: 700;
       cursor: pointer;
       border: 1px solid $border-color;
       border-radius: $border-radius;
     }
   }
-
   .ss-addable {
     padding-top: 0;
   }
-
   .ss-list {
     max-height: 200px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: left;
-
     .ss-optgroup {
       .ss-optgroup-label {
         padding: 6px 10px;
-        font-weight: bold;
+        font-weight: 700;
       }
-
       .ss-option {
         padding: 6px 6px 6px 25px;
       }
     }
-
     .ss-optgroup-label-selectable {
       cursor: pointer;
-
       &:hover {
         color: $white;
         background-color: $primary-color;
       }
     }
-
     .ss-option {
       padding: 6px 10px;
       cursor: pointer;
       user-select: none;
-
       * {
         display: inline-block;
       }
-
       &:hover,
       &.ss-highlighted {
         color: $white;
         background-color: $primary-color;
       }
-
       &.ss-disabled {
         color: $font-disabled-color;
         cursor: not-allowed;
         background-color: $white;
       }
-
       &:not(.ss-disabled).ss-option-selected {
         color: $font-color;
         background-color: rgba($primary-color, 0.1);
       }
-
       &.ss-hide {
         display: none;
       }
-
       .ss-search-highlight {
         background-color: $search-highlight-color;
       }
