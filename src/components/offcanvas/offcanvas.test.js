@@ -2,7 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-offcanvas/data";
 
 const template = "@oe-bcl/offcanvas/offcanvas.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Offcanvas", () => {
   test(`renders correctly`, () => {

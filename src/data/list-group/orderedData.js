@@ -1,4 +1,7 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute(),
   items: [
     {
       variant: "info",
@@ -25,6 +28,7 @@ module.exports = {
       input: true,
       type: "radio",
       remove_wrapper: true,
+      attributes: new drupalAttribute(),
     },
     {
       variant: "warning",
@@ -33,6 +37,7 @@ module.exports = {
       badge: {
         label: "10",
         rounded_pill: true,
+        attributes: new drupalAttribute().addClass("ms-2"),
       },
     },
   ],

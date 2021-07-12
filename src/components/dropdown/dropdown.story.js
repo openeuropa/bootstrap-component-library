@@ -26,7 +26,7 @@ const getArgTypes = (data) => {
     dark: {
       type: { name: "boolean" },
       description: "Enables dark mode for dropdown menu",
-      defaultValue: data.toolbar,
+      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -37,6 +37,8 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass("dropdown-menu-dark");
+
   return Object.assign(data, args);
 };
 

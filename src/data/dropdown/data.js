@@ -1,9 +1,12 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   id: "dropdown-1",
   trigger: {
     label: "Dropdown Toggle",
     path: "#",
   },
+  attributes: new drupalAttribute(),
   items: [
     {
       label: "I'm a link",

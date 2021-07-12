@@ -4,7 +4,7 @@ import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData";
 import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData";
 
 const template = "@oe-bcl/button-group/button-group.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
 const sizes = ["lg", "md", "sm"];
 
 describe("OE - Button-group", () => {
@@ -13,7 +13,7 @@ describe("OE - Button-group", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size })
+        render({ ...demoData, size: size }, true)
       ).resolves.toMatchSnapshot();
     });
   });
@@ -22,7 +22,7 @@ describe("OE - Button-group", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, vertical: true })
+      render({ ...demoData, vertical: true }, true)
     ).resolves.toMatchSnapshot();
   });
 

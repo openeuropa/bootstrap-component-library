@@ -1,12 +1,15 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   collapse_id: "navbar",
+  attributes: new drupalAttribute(),
   brand: {
     label: "Navbar",
     link: "/example.html",
   },
   navigation: {
     navbar: true,
-    extra_classes: "me-auto",
+    attributes: new drupalAttribute().addClass("me-auto"),
     items: [
       {
         label: "I'm a link",
@@ -26,22 +29,8 @@ module.exports = {
         dropdown: true,
         trigger: {
           label: "Dropdown Toggle",
-          extra_classes: "nav-link",
           path: "#",
-          extra_attributes: [
-            {
-              name: "aria-expanded",
-              value: "false",
-            },
-            {
-              name: "autocomplete",
-              value: "off",
-            },
-            {
-              name: "data-bs-toggle",
-              value: "dropdown",
-            },
-          ],
+          attributes: new drupalAttribute().addClass("nav-link"),
         },
         items: [
           {
@@ -70,12 +59,13 @@ module.exports = {
     ],
   },
   form: {
-    extra_classes: "d-flex",
+    attributes: new drupalAttribute().addClass("d-flex"),
     submit: {
       wrapper: "ms-2",
       label: "Search",
       type: "Search",
       variant: "primary",
+      attributes: new drupalAttribute(),
     },
     items: [
       [
@@ -86,6 +76,7 @@ module.exports = {
           hidden_label: true,
           placeholder: "Search",
           id: "inlineFormInputGroupSearch",
+          attributes: new drupalAttribute(),
         },
       ],
     ],

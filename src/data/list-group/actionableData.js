@@ -1,4 +1,7 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute(),
   items: [
     {
       label: "Button 1",
@@ -18,7 +21,7 @@ module.exports = {
       path: "/test-path-2",
       label: "Link 2",
       target: "_blank",
-      extra_classes: "list-group-item-success",
+      attributes: new drupalAttribute().addClass(["list-group-item-success"]),
     },
   ],
 };

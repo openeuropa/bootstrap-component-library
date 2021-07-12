@@ -7,12 +7,13 @@ import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData.js";
 import button from "./button.html.twig";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import drupalAttribute from "drupal-attribute";
 
 const withCollapse = (story) => {
   const demo = story();
   return `
     ${demo} 
-    <div class="collapse mt-3" id="${toggleDemoData.extra_attributes[3].value}">
+    <div class="collapse mt-3" id="collapseExample">
       ${toggleDemoData.collapse_text}
     </div>`;
 };
@@ -52,7 +53,7 @@ const getArgTypes = (data) => {
       name: "Additional text visually hidden",
       description:
         "Text inside the button to be visible on assistive technologies",
-      defaultValue: false,
+      defaultValue: "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -72,7 +73,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the button",
-      defaultValue: data.variant,
+      defaultValue: data.variant || "primary",
       control: {
         type: "select",
         options: getVariants(false, ["link"]),
@@ -118,30 +119,31 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    extra_attributes: {
-      type: { name: "array of objects" },
-      description: "Extra attributes",
-      defaultValue: data.extra_attributes || [{}],
-      control: {
-        type: "object",
-      },
-      table: {
-        type: { summary: "array of objects" },
-        defaultValue: { summary: [] },
-        category: "extra attributes",
-      },
-    },
     ...getIconControls("button"),
   };
 };
 
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass(`btn-${data.variant}`);
+  data.attributes.removeClass(`btn-outline-${data.variant}`);
+  if (!args.disabled) {
+    data.attributes.removeAttribute("disabled");
+    data.attributes.removeAttribute("aria-disabled");
+  }
+  if (!args.text_nowrap) {
+    data.attributes.removeClass("text-nowrap");
+  }
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data, args);
   if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;
-    data.icon.size = args.size;
+    data.icon.size = args.icon_size;
     data.icon.path = defaultSprite;
     data.icon.transformation = args.transformation;
+    data.icon.attributes = new drupalAttribute();
   }
   if (args.name == "none") {
     data.icon = null;

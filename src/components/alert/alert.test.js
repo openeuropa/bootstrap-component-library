@@ -3,7 +3,7 @@ import demoData from "@openeuropa/bcl-data-alert/data";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const template = "@oe-bcl/alert/alert.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 const variants = getVariants();
 
 describe("OE - Alert", () => {
@@ -11,7 +11,10 @@ describe("OE - Alert", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dismissible: false })
+      render({
+        ...demoData,
+        dismissible: false,
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -19,7 +22,10 @@ describe("OE - Alert", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, animated_dismiss: false })
+      render({
+        ...demoData,
+        animated_dismiss: false,
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -28,7 +34,10 @@ describe("OE - Alert", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render({
+          ...demoData,
+          variant: variant,
+        })
       ).resolves.toMatchSnapshot();
     });
   });

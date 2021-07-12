@@ -10,7 +10,24 @@ const getArgTypes = (data, type) => {
   };
 };
 
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass("form-select-" + data.size);
+  if (!args.disabled) {
+    data.attributes.removeAttribute("disabled");
+  }
+  if (!args.required) {
+    data.attributes.removeAttribute("required");
+  }
+  if (!args.multiple) {
+    data.attributes.removeAttribute("multiple");
+  }
+  if (!args.invalid) {
+    data.attributes.removeClass("is-invalid");
+  }
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data, args);
   return Object.assign(data, args);
 };
 

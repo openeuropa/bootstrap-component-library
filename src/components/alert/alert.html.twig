@@ -4,7 +4,7 @@
   - message (string) (default: '')
   - heading (string) (default: '')
   - variant (string) (default: 'primary')
-  - disimissible (boolean) (default: true)
+  - dismissible (boolean) (default: true)
   - animated_dismiss (boolean) (default: true)
 #}
 
@@ -13,24 +13,22 @@
 {% set _heading = heading|default('') %}
 {% set _dismissible = dismissible ?? true %}
 {% set _animated_dismiss = animated_dismiss ?? true %}
-{% set _dismiss_class = '' %}
-{% set _class = 'alert alert-' ~ _variant %}
+{% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr')] %}
 
 {% if _dismissible %}
-  {% set _class = _class ~ ' alert-dismissible' %}
+  {% set _classes = _classes|merge(['alert-dismissible']) %}
 {% endif %}
 {% if _animated_dismiss %}
-  {% set _class = _class ~ ' fade show' %}
+  {% set _classes = _classes|merge(['fade', 'show']) %}
 {% endif %}
 
-<div
-  class="{{ _class }}"
-  role="alert"
->
+{% set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') %}
+
+<div {{ attributes }}>
 {%- if _heading is not empty -%}
   <h4 class="alert-heading">{{ _heading }}</h4>
 {%- endif -%}
-  {{- message -}}
+  {{- _message -}}
 {%- if _dismissible -%}
   <button
     type="button"

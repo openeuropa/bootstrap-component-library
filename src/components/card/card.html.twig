@@ -39,7 +39,6 @@
     options: ['dark', 'white']
   - card_header (string) (default: '')
   - card_footer (string) (default: '')
-  - extra_classes (string) (default: '')
 #}
 
 {% set _title = title|default({}) %}
@@ -58,29 +57,29 @@
 {% set _text_color = text_color|default('') %}
 {% set _card_header = card_header|default('') %}
 {% set _card_footer = card_footer|default('') %}
-{% set _extra_classes = extra_classes|default('') %}
-{% set _class = 'card' %}
+{% set _classes = ['card'] %}
 {% if _text_color is not empty %}
-  {% set _class = _class ~ ' text-' ~ _text_color %}
+  {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _class = _class ~ ' bg-' ~ _variant %}
+  {% set _classes = _classes|merge(['bg-' ~ _variant]) %}
   {% if _text_color is empty %}
     {% if _variant == 'warning' or _variant == 'info' or _variant == 'light' %}
-      {% set _class = _class ~ ' text-dark' %}
+      {% set _classes = _classes|merge(['text-dark']) %}
     {% else %}
-      {% set _class = _class ~ ' text-white' %}
+      {% set _classes = _classes|merge(['text-white']) %}
     {% endif %}
   {% endif %}
 {% endif %}
 {% if _border_variant is not empty %}
-  {% set _class = _class ~ ' border-' ~ _border_variant %}
-{% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
+  {% set _classes = _classes|merge(['border-' ~ _border_variant]) %}
 {% endif %}
 
-<div class='{{ _class }}'>
+{% set attributes = attributes.addClass(_classes) %}
+
+<div
+  {{ attributes }}
+>
 {% if _horizontal %}
 <div class='row g-{{ _horizontal_grid.gutter }}'>
 {% endif %}

@@ -5,7 +5,7 @@
   - "label" (string) (default: '')
   - "hidden_label" (boolean) (default: false)
   - "helper_text" (string) (default: '')
-  - "helper_id" (string) (default: '')
+  - "helper_text_id" (string) (default: '')
   - "disabled" (boolean) (default: false)
   - "invalid" (boolean) (default: false)
   - "required" (boolean) (default: false)
@@ -13,10 +13,9 @@
   - "multiple" (boolean) (default: false)
   - "options": (array of objects with value and label keys) (default: [])
   - "aria_label": (string) (default: '')
-  - "extra_classes: (string) (default: '')
 #}
 
-{% set _classes = 'form-select' %}
+{% set _classes = ['form-select'] %}
 {% set _disabled = disabled|default(false) %}
 {% set _options = options|default([]) %}
 {% set _aria_label = aria_label|default('') %}
@@ -24,27 +23,44 @@
 {% set _required = required|default(false) %}
 {% set _multiple = multiple|default(false) %}
 {% set _invalid = invalid|default(false) %}
-{% set _helper_text = helper_text|default('')%}
-{% set _helper_id = helper_id|default('') %}
+{% set _helper_text = helper_text|default('') %}
+{% set _helper_text_id = helper_text_id|default('') %}
 {% set _label = label|default('') %}
 {% set _extra_classes = extra_classes|default('') %}
 {% set _clean_class = clean_class|default(false) %}
 {% set _label_class = 'form-label' %}
 {% set _hidden_label = hidden_label|default(false) %}
 
-{% set _classes = _classes ~ ' form-select-' ~ _size %}
-{% if _clean_class %}
-  {% set _classes = "" %}
-{% endif %}
+{% set _classes = _classes|merge(['form-select-' ~ _size]) %}
 {% if _invalid is not empty %}
-  {% set _classes = _classes ~ " is-invalid" %}
+  {% set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _classes = _classes ~ ' ' ~ _extra_classes %}
+
+{% if _clean_class %}
+  {% set _classes = [] %}
 {% endif %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{% endif %}
+
+{% if _disabled %}
+  {% set attributes = attributes.setAttribute('disabled', true) %}
+{% endif %}
+
+{% if _multiple %}
+  {% set attributes = attributes.setAttribute('multiple', true) %}
+{% endif %}
+
+{% if _required %}
+  {% set attributes = attributes.setAttribute('required', true) %}
+{% endif %}
+
 {% if _hidden_label %}
   {% set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _label is not empty %}
   {% set _label_block %}
@@ -63,21 +79,9 @@
   {{ _label_block|raw }}
 {% endif %}
 <select
-  class="{{ _classes }}"
-{% if _aria_label is not empty %}
-  aria-label="{{ _aria_label }}"
-{% endif %}
-{% if _disabled %}
-  disabled
-{% endif %}
-{% if _multiple %}
-  multiple
-{% endif -%}
-{% if _required %}
-  required
-{% endif %}
+  {{ attributes }}
 >
-{% if _options is not empty  and _options is iterable %}
+{% if _options is not empty and _options is iterable %}
   {% for _option in _options %}
     {% if _option.optgroup is defined %}
       <optgroup label="{{ _option.label }}">

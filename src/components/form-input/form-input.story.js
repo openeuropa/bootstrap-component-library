@@ -42,7 +42,24 @@ const getArgTypes = (data, type) => {
   };
 };
 
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass("form-control-" + data.size);
+  if (!args.readonly) {
+    data.attributes.removeAttribute("readonly");
+  }
+  if (!args.required) {
+    data.attributes.removeAttribute("required");
+  }
+  if (!args.invalid) {
+    data.attributes.removeClass("is-invalid");
+  }
+  if (!args.placeholder) {
+    data.attributes.removeAttribute("placeholder");
+  }
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data, args);
   return Object.assign(data, args);
 };
 

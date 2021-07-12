@@ -83,6 +83,9 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes
+    .removeClass("btn-group-" + data.size)
+    .removeClass("btn-group-vertical");
   return Object.assign(data, args);
 };
 

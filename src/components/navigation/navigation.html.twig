@@ -10,7 +10,6 @@
   - tabs_content (boolean) (default: false)
   - nav (boolean) (default: false)
   - navbar (boolean) (default: false)
-  - extra_classes (string) (default: '')
   - items (array of objects)
     format: [
       {
@@ -20,7 +19,6 @@
         - content (string) - content for tab
       }
     ]
-  - extra_classes (string) (default: '')
 #}
 
 {% set _pills = pills|default(false) %}
@@ -32,71 +30,74 @@
 {% set _tabs_content = tabs_content|default(false) %}
 {% set _nav = nav|default(false) %}
 {% set _navbar = navbar|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
 {% set _items = items|default([]) %}
-{% set _class = _navbar ? 'navbar-nav' : 'nav' %}
+
+{% if _navbar %}
+  {% set _classes = ['navbar-nav'] %}
+{% else %}
+  {% set _classes = ['nav'] %}
+{% endif %}
 {% if _pills %}
-  {% set _class = _class ~ ' nav-pills' %}
+  {% set _classes = _classes|merge(['nav-pills']) %}
 {% endif %}
 {% if _tabs %}
-  {% set _class = _class ~ ' nav-tabs' %}
+  {% set _classes = _classes|merge(['nav-tabs']) %}
 {% endif %}
 {% if _vertical %}
-  {% set _class = _class ~ ' flex-column' %}
+  {% set _classes = _classes|merge(['flex-column']) %}
 {% endif %}
 {% if _full_width %}
-  {% set _class = _class ~ ' nav-fill' %}
+  {% set _classes = _classes|merge(['nav-fill']) %}
 {% endif %}
 {% if _alignment is not empty %}
-  {% set _class = _class ~ ' justify-content-' ~ _alignment %}
+  {% set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
+
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
+
+{% if not _nav and _tabs %}
+  {% set attributes = attributes.setAttribute('role', 'tablist') %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _nav %}
 <nav
-  class="{{ _class }}"
-  {% if _id is not empty %}
-    id="{{ _id }}"
-  {% endif %}
+  {{ attributes }}
 >
 {% else %}
 <ul
-  class="{{ _class }}"
-  {% if _tabs %}
-    role="tablist"
-  {% endif %}
-  {% if _id is not empty %}
-    id="{{ _id }}"
-  {% endif %}
+  {{ attributes }}
 >
 {% endif %}
   {% if _items is not empty and _items is iterable %}
     {% for _item in _items %}
-      {% set _item_class = 'nav-item' %}
+      {% set _nav_class = 'nav-item' %}
       {% if _item.dropdown %}
-        {% set _item_class = _item_class ~ ' dropdown' %}
-        {% set _item = _item|merge({
-          remove_wrapper: true
-        })
-        %}
+        {% set _nav_class = _nav_class ~ ' dropdown' %}
+        {% set _item = _item|merge({remove_wrapper: true}) %}
       {% endif %}
-      {% set _extra_classes = 'nav-link' %}
+      {% if _item.dropdown %}
+        {% set _item_classes = [] %}
+      {% else %}
+        {% set _item_classes = ['nav-link'] %}
+      {% endif %}
       {% if _item.active %}
-        {% set _extra_classes = _extra_classes ~ ' active' %}
+        {% set _item_classes = _item_classes|merge(['active']) %}
       {% endif %}
-      {% if _item.extra_classes is not empty %}
-        {% set _extra_classes = _extra_classes ~ ' ' ~ _item.extra_classes %}
+      {% if _item.attributes is empty %}
+        {% set _item = _item|merge({
+          attributes: create_attribute()
+        }) %}
       {% endif %}
       {% set _item = _item|merge({
-        extra_classes: _extra_classes,
-        clean_class: true 
-      })
-      %}
+        attributes: _item.attributes.addClass(_item_classes),
+        clean_class: true}) %}
       {% if not _nav %}
-      <li 
-        class="{{ _item_class }}"
+      <li
+        class="{{ _nav_class }}"
         {% if _tabs %}
           role="presentation"
         {% endif %}

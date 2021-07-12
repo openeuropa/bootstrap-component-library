@@ -1,18 +1,19 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-link/data";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/link/link.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
 const variants = getVariants();
 
 describe("OE - Link", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(render(demoData)).resolves.toMatchSnapshot();
+    return expect(render(demoData, true)).resolves.toMatchSnapshot();
   });
 
   variants.forEach((variant) => {
@@ -20,7 +21,7 @@ describe("OE - Link", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render({ ...demoData, variant: variant }, true)
       ).resolves.toMatchSnapshot();
     });
   });
@@ -41,14 +42,18 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(
-      render({
-        ...demoData,
-        icon: {
-          name: "mouse",
-          transformation: "rotate-90",
-          path: "bootstrap-icons.svg",
+      render(
+        {
+          ...demoData,
+          icon: {
+            name: "mouse",
+            transformation: "rotate-90",
+            path: "bootstrap-icons.svg",
+            attributes: new drupalAttribute(),
+          },
         },
-      })
+        true
+      )
     ).resolves.toMatchSnapshot();
   });
 });

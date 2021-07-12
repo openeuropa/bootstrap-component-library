@@ -1,10 +1,18 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
-  extra_classes: "row row-cols-lg-auto g-3 align-items-center",
+  attributes: new drupalAttribute().addClass([
+    "row",
+    "row-cols-lg-auto",
+    "g-3",
+    "align-items-center",
+  ]),
   submit: {
     wrapper: "col-12",
     label: "Submit",
     type: "submit",
     variant: "primary",
+    attributes: new drupalAttribute(),
   },
   items: [
     [
@@ -16,6 +24,7 @@ module.exports = {
         hidden_label: true,
         placeholder: "Username",
         id: "inlineFormInputGroupUsername",
+        attributes: new drupalAttribute(),
       },
       {
         wrapper_classes: "col-12",
@@ -30,6 +39,7 @@ module.exports = {
           { value: 3, label: "Three" },
         ],
         id: "inlineFormSelectPref",
+        attributes: new drupalAttribute(),
       },
       {
         type: "checkbox",
@@ -37,6 +47,7 @@ module.exports = {
         required: true,
         label: "Remember me",
         id: "exampleInputCheck1",
+        attributes: new drupalAttribute(),
       },
     ],
   ],

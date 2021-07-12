@@ -1,9 +1,12 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   id: "carouselExample",
   with_controls: true,
   with_indicators: true,
   prev_label: "Previous",
   next_label: "Next",
+  attributes: new drupalAttribute(),
   items: [
     {
       classes: "item_extra_class",

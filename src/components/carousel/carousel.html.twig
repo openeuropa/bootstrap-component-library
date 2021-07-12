@@ -6,7 +6,6 @@
   - autoinit (boolean) (default: true)
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
-  - extra_classes (string) (default: '')
   - items (array of objects) format: [
      {
       image: {
@@ -33,56 +32,55 @@
 {% set _prev_label = prev_label|default('') %}
 {% set _next_label = next_label|default('') %}
 {% set _with_indicators = with_indicators|default(false) %}
-{% set _classes = 'carousel slide' %}
+{% set _classes = ['carousel slide'] %}
 {% set _autoinit = autoinit ?? true %}
 {% set _autoplay = autoplay ?? true %}
 {% set _disable_touch = disable_touch|default(false) %}
 {% set _fade = fade|default(false) %}
 {% set _dark = dark|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
 
 {% if _fade %}
-  {% set _classes = _classes ~ ' carousel-fade' %}
+  {% set _classes = _classes|merge(['carousel-fade']) %}
 {% endif %}
 {% if _dark %}
-  {% set _classes = _classes ~ ' carousel-dark' %}
-{% endif %}
-{% if _extra_classes is not empty %}
-  {% set _classes = _classes ~ ' ' ~ _extra_classes %}
+  {% set _classes = _classes|merge(['carousel-dark']) %}
 {% endif %}
 
-<div
 {% if _id is not empty %}
-  id="{{ _id }}"
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
-  class="{{ _classes }}"
+
 {% if _autoinit %}
-  data-bs-ride="carousel"
+  {% set attributes = attributes.setAttribute('data-bs-ride', 'carousel') %}
 {% endif %}
+
 {% if _disable_touch %}
-  data-bs-touch="false"
+  {% set attributes = attributes.setAttribute('data-bs-touch', 'false') %}
 {% endif %}
+
 {% if not _autoplay %}
-  data-bs-interval="false"
+  {% set attributes = attributes.setAttribute('data-bs-interval', 'false') %}
 {% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
+
+<div
+  {{ attributes }}
 >
 {% if _with_indicators %}
   <div class="carousel-indicators">
   {% for _i in 0..(_items|length - 1) %}
-    {% set _indicator_attrs = [
-      { name: 'aria-label', value: 'Slide ' ~ (_i + 1) },
-      { name: 'data-bs-target', value: '#' ~ _id },
-      { name: 'data-bs-slide-to', value: _i },
-    ] %}
+    {% set button_attributes = create_attribute()
+                              .setAttribute('aria-label', 'Slide ' ~ (_i + 1))
+                              .setAttribute('data-bs-target', '#' ~ _id)
+                              .setAttribute('data-bs-slide-to', _i)
+    %}
     {% if loop.index == _active_item %}
-      {% set _indicator_attrs = _indicator_attrs|merge([
-        { name: 'aria-current', value: 'true' }
-      ]) %}
+      {% set button_attributes = button_attributes.setAttribute('aria-current', true).addClass(['active']) %}
     {% endif %}
     {% include '@oe-bcl/button/button.html.twig' with {
       clean_class: true,
-      extra_attributes: _indicator_attrs,
-      extra_classes: loop.index == _active_item ? 'active' : '',
+      attributes: button_attributes
     } only %}
   {% endfor %}
   </div>
@@ -124,7 +122,7 @@
     {% endfor %}
   {% endif %}
   </div>
-{% if with_controls %}
+{% if _with_controls %}
   <button
     class="carousel-control-prev"
     type="button"

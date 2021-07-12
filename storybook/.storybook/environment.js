@@ -1,5 +1,10 @@
 const path = require("path");
-const { TwingEnvironment, TwingLoaderFilesystem } = require("twing");
+const {
+  TwingEnvironment,
+  TwingLoaderFilesystem,
+  TwingFunction,
+} = require("twing");
+const drupalAttribute = require("drupal-attribute");
 
 const oeAbsPath = path.resolve(__dirname, "../../src/components");
 const loader = new TwingLoaderFilesystem(oeAbsPath);
@@ -11,4 +16,11 @@ if (typeof loader.addPath === "function") {
   loader.addPath(oeAbsPath, "oe-bcl");
 }
 
-module.exports = new TwingEnvironment(loader, { autoescape: false });
+const createAttribute = new TwingFunction("create_attribute", function () {
+  return new drupalAttribute();
+});
+
+const environment = new TwingEnvironment(loader, { autoescape: false });
+environment.addFunction(createAttribute);
+
+module.exports = environment;

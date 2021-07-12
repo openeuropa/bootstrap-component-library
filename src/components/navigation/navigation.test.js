@@ -3,7 +3,7 @@ import demoData from "@openeuropa/bcl-data-navigation/data";
 import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs";
 
 const template = "@oe-bcl/navigation/navigation.html.twig";
-const render = (params) => renderTwigFileAsNode(template, params);
+const render = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - navigation", () => {
   test("renders correctly", () => {

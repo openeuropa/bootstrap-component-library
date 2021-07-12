@@ -18,17 +18,13 @@
      ...
   ],
   - submit (object) (default: {}) Object of type button
-  - extra_classes (string) (default: '')
 #}
 
 {% set _items = items|default([]) %}
 {% set _submit = submit|default({}) %}
-{% set _classes = extra_classes|default('') %}
 
 <form
-{% if _classes is not empty %}
-  class="{{ _classes }}"
-{% endif %}
+  {{ attributes }}
 >
 {% if _items is not empty and _items is iterable %}
 {% for _item_group in _items %}

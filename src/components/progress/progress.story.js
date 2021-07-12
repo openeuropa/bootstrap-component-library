@@ -39,26 +39,6 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    label: {
-      type: { name: "string" },
-      description: "Label of the bar",
-      defaultValue: data.label,
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
-    label: {
-      type: { name: "string" },
-      description: "Label of the bar",
-      defaultValue: data.label,
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
     progress: {
       type: { name: "number" },
       description: "Progress of the bar",
@@ -78,6 +58,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  args.label = `${args.progress}%`;
   return Object.assign(data, args);
 };
 

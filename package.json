@@ -10,10 +10,10 @@
   },
   "scripts": {
     "build:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run build",
+    "changelog": "lerna-changelog",
     "clean": "rimraf build assets",
     "copy:assets": "copyfiles -f src/themes/**/*min.* static/* assets/",
     "copy:build": "copyfiles assets/* static/* build",
-    "copy:twig": "lerna --scope \"@openeuropa/bcl-theme-*\" run twig",
     "css-lint": "stylelint src/**/*.scss",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",
@@ -48,6 +48,7 @@
     "packages": [
       "storybook",
       "bootstrap",
+      "builder",
       "src/data/*",
       "src/components/*",
       "tools/*",
@@ -55,7 +56,9 @@
     ],
     "nohoist": [
       "**/bootstrap",
-      "**/bootstrap/**"
+      "**/bootstrap/**",
+      "**/@openeuropa/bcl-twig-templates",
+      "**/@openeuropa/bcl-twig-templates/**"
     ]
   },
   "jest": {
@@ -76,25 +79,25 @@
     "@babel/cli": "7.14.5",
     "@babel/core": "7.14.6",
     "@babel/plugin-transform-runtime": "7.14.5",
-    "@babel/preset-env": "7.14.5",
+    "@babel/preset-env": "7.14.7",
     "@babel/preset-react": "7.14.5",
-    "babel-jest": "27.0.2",
-    "browser-sync": "2.26.14",
+    "babel-jest": "27.0.6",
+    "browser-sync": "2.27.4",
     "browser-update": "3.3.30",
     "copyfiles": "2.4.1",
-    "eslint": "7.29.0",
+    "eslint": "7.30.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "glob": "7.1.7",
     "husky": "6.0.0",
-    "jest": "27.0.4",
+    "jest": "27.0.6",
     "lerna": "4.0.0",
     "lerna-changelog": "1.0.1",
     "lint-staged": "11.0.0",
-    "nodemon": "2.0.7",
+    "nodemon": "2.0.9",
     "npm-run-all": "4.1.5",
     "patch-package": "6.4.7",
-    "prettier": "2.3.1",
+    "prettier": "2.3.2",
     "rimraf": "3.0.2",
     "stylelint": "13.13.1",
     "stylelint-config-twbs-bootstrap": "2.2.1"

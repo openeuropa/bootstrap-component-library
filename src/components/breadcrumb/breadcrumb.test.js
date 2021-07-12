@@ -8,6 +8,6 @@ describe("OE - Breadcrumb", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(render({ ...demoData })).resolves.toMatchSnapshot();
+    return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 });

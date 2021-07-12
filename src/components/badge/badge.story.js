@@ -38,7 +38,7 @@ const getArgTypes = (data) => {
     background: {
       type: { name: "select" },
       description: "Background color of the badge",
-      defaultValue: data.background,
+      defaultValue: "primary" || data.background,
       control: {
         type: "select",
         options: getVariants(),
@@ -73,6 +73,9 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass(`bg-${data.background}`);
+  data.attributes.removeClass("rounded-pill");
+
   return Object.assign(data, args);
 };
 

@@ -11,23 +11,27 @@
 {% set _rounded_pill = rounded_pill|default(false) %}
 {% set _background = background|default('primary') %}
 {% set _label = label|default('') %}
-{% set _class = 'badge bg-' ~ _background %}
+{% set _classes = ['badge', 'bg-' ~ _background] %}
 {% set _url = url|default('') %}
 {% set _title = title|default(_label) %}
 {% set _hidden_text = hidden_text|default('') %}
 
 {% if _rounded_pill %}
-  {% set _class = _class ~ ' rounded-pill' %}
+  {% set _classes = _classes|merge(['rounded-pill']) %}
 {% endif %}
 
 {% if _background == 'light' %}
-  {% set _class = _class ~ ' text-dark' %}
+  {% set _classes = _classes|merge(['text-dark']) %}
 {% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 {%- if _url is not empty -%}
 <a href="{{ _url }}" title="{{ _title }}">
 {%- endif -%}
-  <span class="{{ _class }}">
+  <span
+    {{ attributes }}
+  >
   {%- if _hidden_text is not empty -%}
     <span class="visually-hidden">
       {{- _hidden_text -}}
