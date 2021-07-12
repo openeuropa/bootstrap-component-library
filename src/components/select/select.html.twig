@@ -32,12 +32,13 @@
 {% set _hidden_label = hidden_label|default(false) %}
 
 {% set _classes = _classes|merge(['form-select-' ~ _size]) %}
-{% if _invalid is not empty %}
-  {% set _classes = _classes|merge(['is-invalid']) %}
-{% endif %}
 
 {% if _clean_class %}
   {% set _classes = [] %}
+{% endif %}
+
+{% if _invalid %}
+  {% set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
 
 {% if _aria_label is not empty %}

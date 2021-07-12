@@ -41,17 +41,6 @@ const withInit = (story) => {
         selectByGroup: ${demoMultiData.selectByGroup},
         placeholder: "${demoMultiData.placeholder}"
       })
-      var ssValues = document.querySelectorAll('.ss-values')[0];
-      var badgeOptionInit = function() {
-        var childs = ssValues.querySelectorAll("div");
-        childs.forEach(function(el) {
-          console.log(el);
-          el.classList.remove("ss-value");
-          el.classList.add("badge", "bg-primary");
-        });
-      }
-      ssValues.addEventListener("DOMNodeInserted", badgeOptionInit);
-      badgeOptionInit();
     </script>`;
 };
 

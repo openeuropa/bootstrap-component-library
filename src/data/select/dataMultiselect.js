@@ -1,7 +1,8 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   multiple: true,
   clean_class: true,
-  extra_classes: "multi-select",
   required: true,
   helper_text: "Helper text for the select element",
   helper_text_id: "helperText",
@@ -23,4 +24,5 @@ module.exports = {
     { value: 4, label: "last option" },
     { label: "the selected option", selected: true },
   ],
+  attributes: new drupalAttribute().addClass('multi-select'),
 };
