@@ -1,6 +1,6 @@
 $height: 30px !default;
-$white: #ffffff !default;
-$font-color: #666666 !default;
+$white: #fff !default;
+$font-color: #666 !default;
 $font-placeholder-color: #8a8a8a !default;
 $font-disabled-color: #dedede !default;
 $primary-color: #5897fb !default;
@@ -14,59 +14,59 @@ $spacing-s: 4px !default;
 .ss-main {
   position: relative;
   display: inline-block;
-  user-select: none;
-  color: $font-color;
   width: 100%;
+  color: $font-color;
+  user-select: none;
 
   .ss-single-selected {
+    box-sizing: border-box;
     display: flex;
-    cursor: pointer;
     width: 100%;
     height: $height;
     padding: $spacing-m;
+    cursor: pointer;
+    background-color: $white;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    background-color: $white;
     outline: 0;
-    box-sizing: border-box;
     transition: background-color 0.2s;
 
     &.ss-disabled {
-      background-color: $border-color;
       cursor: not-allowed;
+      background-color: $border-color;
     }
 
     &.ss-open-above {
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
     &.ss-open-below {
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
     }
 
     .placeholder {
       display: flex;
       flex: 1 1 100%;
       align-items: center;
+      width: calc(100% - 30px);
       overflow: hidden;
+      line-height: 1em;
+      text-align: left;
       text-overflow: ellipsis;
       white-space: nowrap;
-      text-align: left;
-      width: calc(100% - 30px);
-      line-height: 1em;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
+      user-select: none;
+      user-select: none;
+      user-select: none;
       user-select: none;
 
       * {
         display: flex;
         align-items: center;
+        width: auto;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: auto;
       }
 
       .ss-disabled {
@@ -76,9 +76,9 @@ $spacing-s: 4px !default;
 
     .ss-deselect {
       display: flex;
+      flex: 0 1 auto;
       align-items: center;
       justify-content: flex-end;
-      flex: 0 1 auto;
       margin: 0 $spacing-m 0 $spacing-m;
       font-weight: bold;
 
@@ -89,25 +89,25 @@ $spacing-s: 4px !default;
 
     .ss-arrow {
       display: flex;
+      flex: 0 1 auto;
       align-items: center;
       justify-content: flex-end;
-      flex: 0 1 auto;
       margin: 0 $spacing-m 0 $spacing-m;
 
       span {
-        border: solid $font-color;
-        border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 3px;
+        border: solid $font-color;
+        border-width: 0 2px 2px 0;
         transition: transform 0.2s, margin 0.2s;
 
         &.arrow-up {
+          margin: 3px 0 0;
           transform: rotate(-135deg);
-          margin: 3px 0 0 0;
         }
         &.arrow-down {
+          margin: -3px 0 0;
           transform: rotate(45deg);
-          margin: -3px 0 0 0;
         }
       }
     }
@@ -127,22 +127,22 @@ $spacing-s: 4px !default;
   }
 
   .ss-multi-selected {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    cursor: pointer;
-    min-height: $height;
     width: 100%;
+    min-height: $height;
     padding: 0 0 0 3px;
+    cursor: pointer;
+    background-color: $white;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    background-color: $white;
     outline: 0;
-    box-sizing: border-box;
     transition: background-color 0.2s;
 
     &.ss-disabled {
-      background-color: $border-color;
       cursor: not-allowed;
+      background-color: $border-color;
 
       .ss-values {
         .ss-disabled {
@@ -158,71 +158,71 @@ $spacing-s: 4px !default;
     }
 
     &.ss-open-above {
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
     &.ss-open-below {
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
     }
 
     .ss-values {
       display: flex;
+      flex: 1 1 100%;
       flex-wrap: wrap;
       justify-content: flex-start;
-      flex: 1 1 100%;
       width: calc(100% - 30px);
       padding: 0.3rem 0.2rem;
 
       .ss-disabled {
         display: flex;
-        padding: 4px 5px;
-        margin: 2px 0px;
-        line-height: 1em;
         align-items: center;
         width: 100%;
-        color: $font-disabled-color;
+        padding: 4px 5px;
+        margin: 2px 0;
         overflow: hidden;
+        line-height: 1em;
+        color: $font-disabled-color;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
 
       @keyframes scaleIn {
         0% {
-          transform: scale(0);
           opacity: 0;
+          transform: scale(0);
         }
         100% {
-          transform: scale(1);
           opacity: 1;
+          transform: scale(1);
         }
       }
       @keyframes scaleOut {
         0% {
-          transform: scale(1);
           opacity: 1;
+          transform: scale(1);
         }
         100% {
-          transform: scale(0);
           opacity: 0;
+          transform: scale(0);
         }
       }
 
       .ss-value {
         display: flex;
-        user-select: none;
-        align-items: center;
-        background: $blue;
-        border-radius: 0.25rem;
-        color: $white;
         display: inline-block;
+        align-items: center;
+        padding: 0.55em 0.65em;
+        margin-right: 0.2rem;
         font-size: 0.8em;
         line-height: 1;
-        padding: 0.55em 0.65em;
+        color: $white;
         text-align: center;
-        vertical-align: baseline;
         white-space: nowrap;
-        margin-right: 0.2rem;
+        vertical-align: baseline;
+        user-select: none;
+        background: $blue;
+        border-radius: 0.25rem;
         .ss-value-delete {
           margin-left: 0.2rem;
         }
@@ -245,23 +245,23 @@ $spacing-s: 4px !default;
       margin: 9px 12px 0 5px;
 
       .ss-plus {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $font-color;
         position: relative;
-        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 2px;
+        height: 18px;
+        background: $font-color;
         transition: transform 0.2s;
 
-        &:after {
-          background: $font-color;
-          content: "";
+        &::after {
           position: absolute;
-          height: 2px;
-          width: 18px;
-          left: -8px;
           top: 8px;
+          left: -8px;
+          width: 18px;
+          height: 2px;
+          content: "";
+          background: $font-color;
         }
 
         &.ss-cross {
@@ -273,16 +273,16 @@ $spacing-s: 4px !default;
 }
 .ss-content {
   position: absolute;
-  width: 100%;
-  margin: -1px 0 0 0;
-  box-sizing: border-box;
-  border: solid 1px $border-color;
   z-index: 1010;
+  box-sizing: border-box;
+  width: 100%;
+  margin: -1px 0 0;
   background-color: $white;
-  transform-origin: center top;
-  transition: transform 0.2s, opacity 0.2s;
+  border: solid 1px $border-color;
   opacity: 0;
+  transition: transform 0.2s, opacity 0.2s;
   transform: scaleY(0);
+  transform-origin: center top;
 
   &.ss-open {
     display: block;
@@ -296,37 +296,37 @@ $spacing-s: 4px !default;
     padding: $spacing-l $spacing-l $spacing-m $spacing-l;
 
     &.ss-hide {
-      height: 0px;
+      height: 0;
+      padding: 0;
+      margin: 0;
       opacity: 0;
-      padding: 0px 0px 0px 0px;
-      margin: 0px 0px 0px 0px;
 
       input {
-        height: 0px;
+        height: 0;
+        padding: 0;
+        margin: 0;
         opacity: 0;
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px;
       }
     }
 
     input {
+      box-sizing: border-box;
+      box-sizing: border-box;
       display: inline-flex;
-      font-size: inherit;
-      line-height: inherit;
       flex: 1 1 auto;
       width: 100%;
-      min-width: 0px;
+      min-width: 0;
       height: 30px;
       padding: $spacing-m $spacing-l;
       margin: 0;
+      font-size: inherit;
+      line-height: inherit;
+      text-align: left;
+      background-color: $white;
       border: 1px solid $border-color;
       border-radius: $border-radius;
-      background-color: $white;
       outline: 0;
-      text-align: left;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -webkit-appearance: textfield;
+      appearance: textfield;
 
       &::placeholder {
         color: $font-placeholder-color;
@@ -339,23 +339,23 @@ $spacing-s: 4px !default;
     }
 
     .ss-addable {
+      box-sizing: border-box;
       display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      font-size: 22px;
-      font-weight: bold;
       flex: 0 0 30px;
+      align-items: center;
+      justify-content: center;
       height: 30px;
       margin: 0 0 0 8px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
       border: 1px solid $border-color;
       border-radius: $border-radius;
-      box-sizing: border-box;
     }
   }
 
   .ss-addable {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   .ss-list {
@@ -366,7 +366,7 @@ $spacing-s: 4px !default;
 
     .ss-optgroup {
       .ss-optgroup-label {
-        padding: 6px 10px 6px 10px;
+        padding: 6px 10px;
         font-weight: bold;
       }
 
@@ -385,7 +385,7 @@ $spacing-s: 4px !default;
     }
 
     .ss-option {
-      padding: 6px 10px 6px 10px;
+      padding: 6px 10px;
       cursor: pointer;
       user-select: none;
 
@@ -400,8 +400,8 @@ $spacing-s: 4px !default;
       }
 
       &.ss-disabled {
-        cursor: not-allowed;
         color: $font-disabled-color;
+        cursor: not-allowed;
         background-color: $white;
       }
 
