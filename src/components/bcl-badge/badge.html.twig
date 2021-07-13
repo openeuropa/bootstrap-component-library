@@ -6,6 +6,7 @@
   - url (string) (default: '')
   - title (string) (default: label)
   - hidden_text (string) (default: '')
+  - rounded_pill (string) (default: false)
 #}
 
 {% set _rounded_pill = rounded_pill|default(false) %}
@@ -20,7 +21,7 @@
   {% set _classes = _classes|merge(['rounded-pill']) %}
 {% endif %}
 
-{% if _background == 'light' %}
+{% if _background in ['light', 'warning', 'info'] %}
   {% set _classes = _classes|merge(['text-dark']) %}
 {% endif %}
 
