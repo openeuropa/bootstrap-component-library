@@ -1,0 +1,61 @@
+{
+  "name": "@openeuropa/bcl-twig-templates",
+  "author": "European Commission",
+  "license": "EUPL-1.2",
+  "version": "0.3.0",
+  "description": "OE Bcl Twig Templates",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@openeuropa/bcl-accordion": "^0.3.0",
+    "@openeuropa/bcl-alert": "^0.3.0",
+    "@openeuropa/bcl-badge": "^0.3.0",
+    "@openeuropa/bcl-blockquote": "^0.3.0",
+    "@openeuropa/bcl-breadcrumb": "^0.3.0",
+    "@openeuropa/bcl-button": "^0.3.0",
+    "@openeuropa/bcl-button-group": "^0.3.0",
+    "@openeuropa/bcl-card": "^0.3.0",
+    "@openeuropa/bcl-card-layout": "^0.3.0",
+    "@openeuropa/bcl-carousel": "^0.3.0",
+    "@openeuropa/bcl-dropdown": "^0.3.0",
+    "@openeuropa/bcl-form": "^0.3.0",
+    "@openeuropa/bcl-form-input": "^0.3.0",
+    "@openeuropa/bcl-header": "^0.3.0",
+    "@openeuropa/bcl-icon": "^0.3.0",
+    "@openeuropa/bcl-link": "^0.3.0",
+    "@openeuropa/bcl-list-group": "^0.3.0",
+    "@openeuropa/bcl-modal": "^0.3.0",
+    "@openeuropa/bcl-navbar": "^0.3.0",
+    "@openeuropa/bcl-navigation": "^0.3.0",
+    "@openeuropa/bcl-offcanvas": "^0.3.0",
+    "@openeuropa/bcl-pagination": "^0.3.0",
+    "@openeuropa/bcl-progress": "^0.3.0",
+    "@openeuropa/bcl-select": "^0.3.0",
+    "@openeuropa/bcl-spinner": "^0.3.0",
+    "@openeuropa/bcl-table": "^0.3.0",
+    "@openeuropa/bcl-textarea": "^0.3.0",
+    "@openeuropa/bcl-toast": "^0.3.0",
+    "copyfiles": "2.4.1",
+    "rimraf": "3.0.2"
+  },
+  "scripts": {
+    "clean": "rimraf templates",
+    "copy": "copyfiles -u 2 ./node_modules/**/*.twig templates/",
+    "prepublish": "npm run clean && npm run copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openeuropa/bootstrap-component-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openeuropa/bootstrap-component-library.git/issues"
+  },
+  "homepage": "https://github.com/openeuropa/bootstrap-component-library",
+  "keywords": [
+    "openeuropa",
+    "bootstrap-component-library",
+    "design-system",
+    "twig"
+  ]
+}

@@ -1,12 +1,16 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   aria_label: "Test aria label",
   enable_icon: true,
+  attributes: new drupalAttribute(),
   prev: {
     label: "Previous",
     path: "#",
     icon: {
       name: "arrow-left-short",
       path: "boostrap-icons.svg",
+      attributes: new drupalAttribute(),
     },
   },
   next: {
@@ -15,6 +19,7 @@ module.exports = {
     icon: {
       name: "arrow-right-short",
       path: "boostrap-icons.svg",
+      attributes: new drupalAttribute(),
     },
   },
   items: [

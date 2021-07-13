@@ -187,7 +187,7 @@ export const getFormControls = (data, type) => {
       name: "toggle variant",
       type: { name: "select" },
       description: "Variant of the button",
-      defaultValue: data.variant,
+      defaultValue: "primary" || data.variant,
       control: {
         type: "select",
         options: getVariants(true, ["link"]),
@@ -225,7 +225,7 @@ export const getVariants = (outline, add) => {
 };
 
 export const getIconControls = (type, data) => {
-  return {
+  const argTypes = {
     name: {
       name: "icon name",
       description: "Icon name",
@@ -260,7 +260,40 @@ export const getIconControls = (type, data) => {
         ],
       },
     },
-    icon_position: {
+  };
+  if (type == "icon") {
+    argTypes.size = {
+      name: "icon size",
+      type: { name: "select" },
+      description: "Size of icon",
+      defaultValue: "s",
+      control: {
+        type: "select",
+        options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "s" },
+        category: "Icon",
+      },
+    };
+  } else {
+    argTypes.icon_size = {
+      name: "icon size",
+      type: { name: "select" },
+      description: "Size of icon",
+      defaultValue: "s",
+      control: {
+        type: "select",
+        options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "s" },
+        category: "Icon",
+      },
+    };
+    argTypes.icon_position = {
       name: "icon position",
       type: { name: "inline-radio" },
       description: "Icon position inside the button or link",
@@ -275,23 +308,9 @@ export const getIconControls = (type, data) => {
         type: "inline-radio",
         options: ["before", "after"],
       },
-    },
-    size: {
-      name: "icon size",
-      type: { name: "select" },
-      description: "Size of icon",
-      defaultValue: "s",
-      control: {
-        type: "select",
-        options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
-      },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "s" },
-        category: "Icon",
-      },
-    },
-  };
+    };
+  }
+  return argTypes;
 };
 
 export const getIconNames = () => {

@@ -1,0 +1,42 @@
+{% spaceless %}
+
+{# Parameters:
+  - size (sm, lg, xl, fullscreen)
+  - id
+  - header (block)
+  - body (block)
+  - footer (block)
+#}
+{% set _size = size ? 'modal-' ~ size : '' %}
+{% set _id = id|default('defaultModalId') %}
+{% set _header = header|default('') %}
+{% set _body = body|default('') %}
+{% set _footer = footer|default('') %}
+{% set _classes = ['modal fade'] %}
+{% set attributes = attributes
+                    .setAttribute('id', _id)
+                    .setAttribute('tabindex', '-1')
+                    .setAttribute('aria-hidden', 'true')
+                    .setAttribute('aria-labelledby', _id ~ 'Label')
+                    .addClass(_classes)
+%}
+
+<div
+  {{ attributes }}
+>
+  <div class="modal-dialog {{ _size }}">
+    <div class="modal-content">
+      <div class="modal-header">
+        {%- block header _header -%}
+      </div>
+      <div class="modal-body">
+        {%- block body _body -%}
+      </div>
+      <div class="modal-footer">
+        {%- block footer _footer -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endspaceless %}

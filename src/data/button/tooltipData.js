@@ -1,21 +1,10 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   label: "Button with tooltip",
-  extra_attributes: [
-    {
-      name: "autocomplete",
-      value: "off",
-    },
-    {
-      name: "data-bs-placement",
-      value: "bottom",
-    },
-    {
-      name: "data-bs-toggle",
-      value: "tooltip",
-    },
-    {
-      name: "title",
-      value: "This is a tooltip",
-    },
-  ],
+  attributes: new drupalAttribute()
+    .setAttribute("data-bs-placement", "bottom")
+    .setAttribute("autocomplete", "off")
+    .setAttribute("data-bs-toggle", "tooltip")
+    .setAttribute("title", "This is a tooltip"),
 };

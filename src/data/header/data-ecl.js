@@ -1,4 +1,5 @@
 const demoData = require("./data.js");
+const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   logo: {
@@ -9,15 +10,19 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    extra_classes: "oe-header__navbar",
+    attributes: new drupalAttribute().addClass("oe-header__navbar"),
     navigation: {
       navbar: true,
+      attributes: new drupalAttribute(),
       items: [
         {
           label: "Home",
           path: "/example",
           active: true,
-          extra_attributes: [{ name: "aria-current", value: "page" }],
+          attributes: new drupalAttribute().setAttribute(
+            "aria-current",
+            "page"
+          ),
         },
         {
           label: "Item 01",
@@ -33,22 +38,8 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Dropdown link",
-            extra_classes: "nav-link",
             path: "#",
-            extra_attributes: [
-              {
-                name: "aria-expanded",
-                value: "false",
-              },
-              {
-                name: "autocomplete",
-                value: "off",
-              },
-              {
-                name: "data-bs-toggle",
-                value: "dropdown",
-              },
-            ],
+            attributes: new drupalAttribute().addClass("nav-link"),
           },
           items: [
             {

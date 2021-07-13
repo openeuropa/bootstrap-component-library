@@ -1,0 +1,48 @@
+{% spaceless %}
+
+{# Parameters:
+  - progress (int) (default: 0)
+  - min (int) (default: 0)
+  - max (int) (default: 100)
+  - striped (boolean) (default: false)
+  - animated (boolean) (default: false)
+  - label (string) (default: '')
+  - variant (string) (default: '')
+#}
+
+{% set _progress = progress|default(0) %}
+{% set _min = min|default(0) %}
+{% set _max = max|default(100) %}
+{% set _striped = striped|default(false) %}
+{% set _animated = animated|default(false) %}
+{% set _label = label|default('') %}
+{% set _variant = variant|default('') %}
+{% set _classes = 'progress-bar' %}
+{% if _striped is not empty %}
+  {% set _classes = _classes ~ ' progress-bar-striped' %}
+{% endif %}
+{% if _animated is not empty %}
+  {% set _classes = _classes ~ ' progress-bar-animated' %}
+{% endif %}
+{% if _variant is not empty %}
+  {% set _classes = _classes ~ ' bg-' ~ _variant %}
+{% endif %}
+
+{% set attributes = attributes.addClass(['progress']) %}
+
+<div
+  {{ attributes }}
+>
+  <div
+    class="{{ _classes }}"
+    role="progressbar"
+    style="width: {{ _progress }}%"
+    aria-valuenow="{{ _progress }}"
+    aria-valuemin="{{ _min }}"
+    aria-valuemax="{{ _max }}"
+  >
+  {{- _label -}}
+  </div>
+</div>
+
+{% endspaceless %}

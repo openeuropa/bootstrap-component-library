@@ -1,0 +1,42 @@
+{% spaceless %}
+
+{# Parameters:
+  - message (string) (default: '')
+  - heading (string) (default: '')
+  - variant (string) (default: 'primary')
+  - dismissible (boolean) (default: true)
+  - animated_dismiss (boolean) (default: true)
+#}
+
+{% set _message = message|default('') %}
+{% set _variant = variant|default('primary') %}
+{% set _heading = heading|default('') %}
+{% set _dismissible = dismissible ?? true %}
+{% set _animated_dismiss = animated_dismiss ?? true %}
+{% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr')] %}
+
+{% if _dismissible %}
+  {% set _classes = _classes|merge(['alert-dismissible']) %}
+{% endif %}
+{% if _animated_dismiss %}
+  {% set _classes = _classes|merge(['fade', 'show']) %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') %}
+
+<div {{ attributes }}>
+{%- if _heading is not empty -%}
+  <h4 class="alert-heading">{{ _heading }}</h4>
+{%- endif -%}
+  {{- _message -}}
+{%- if _dismissible -%}
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close">
+  </button>
+{%- endif -%}
+</div>
+
+{% endspaceless %}

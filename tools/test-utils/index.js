@@ -1,8 +1,12 @@
 const merge = require("deepmerge");
 const twing = require("@openeuropa/bcl-storybook/.storybook/environment");
+const drupalAttribute = require("drupal-attribute");
 
-const renderTwigFileAsNode = (file, options) =>
+const renderTwigFileAsNode = (file, options, reset) =>
   new Promise((resolve, reject) => {
+    if (reset) {
+      options.attributes = new drupalAttribute();
+    }
     try {
       const html = twing.render(file, options);
       const jest = document.createElement("jest");

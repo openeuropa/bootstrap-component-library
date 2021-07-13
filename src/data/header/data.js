@@ -1,19 +1,25 @@
 // Simple content for demo
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   logo: {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png",
   },
   navbar: {
     collapse_id: "navbarNavDropdown",
-    extra_classes: "oe-header__navbar",
+    attributes: new drupalAttribute().addClass("oe-header__navbar"),
     navigation: {
       navbar: true,
+      attributes: new drupalAttribute(),
       items: [
         {
           label: "Home",
           path: "/example",
           active: true,
-          extra_attributes: [{ name: "aria-current", value: "page" }],
+          attributes: new drupalAttribute().setAttribute(
+            "aria-current",
+            "page"
+          ),
         },
         {
           label: "Item 01",
@@ -29,22 +35,8 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Dropdown link",
-            extra_classes: "nav-link",
+            attributes: new drupalAttribute().addClass("nav-link"),
             path: "#",
-            extra_attributes: [
-              {
-                name: "aria-expanded",
-                value: "false",
-              },
-              {
-                name: "autocomplete",
-                value: "off",
-              },
-              {
-                name: "data-bs-toggle",
-                value: "dropdown",
-              },
-            ],
           },
           items: [
             {
@@ -70,6 +62,7 @@ module.exports = {
     },
     modal: {
       id: "loginModal",
+      attributes: new drupalAttribute(),
       header:
         '<h5 class="modal-title" id="loginModalLabel">Log in</h5>' +
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
@@ -90,7 +83,7 @@ module.exports = {
     modal: {
       id: "languageModal",
       size: "fullscreen",
-      extra_class: "oe-language",
+      attributes: new drupalAttribute().addClass("oe-language"),
       header:
         '<h5 class="modal-title" id="languageeModalLabel">Select your language</h5>' +
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',

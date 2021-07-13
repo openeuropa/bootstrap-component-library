@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   horizontal: true,
   horizontal_grid: {
@@ -16,11 +18,11 @@ module.exports = {
     content: "Text card with longer text which is supported",
     classes: "mb-2",
   },
-  extra_classes: "w-50",
   image: {
     path: "https://picsum.photos/seed/1019/400/600",
     alt: "alt img",
     position: "top",
   },
   content: "<button class='btn btn-primary'>Custom action</button>",
+  attributes: new drupalAttribute().addClass("w-50"),
 };

@@ -1,0 +1,35 @@
+{% spaceless %}
+
+{# Parameters:
+  - quote (string) (default: '')
+  - attribution (string) (default: '')
+  - cite (string) (default: '')
+  - alignment (string) (default: 'left')
+    - options ["left", "center", "end"]
+#}
+
+{% set _quote = quote|default('') %}
+{% set _attribution = attribution|default('') %}
+{% set _cite = cite|default('') %}
+{% set _alignment = alignment|default('left') %}
+{% set _classes = ['text-' ~ _alignment] %}
+
+{% set attributes = attributes.addClass(_classes) %}
+
+<figure
+  {{ attributes }}
+>
+  <blockquote class="blockquote">
+    <p>{{- _quote -}}</p>
+  </blockquote>
+{% if _attribution is not empty %}
+  <figcaption class="blockquote-footer">
+    {{- _attribution -}}
+  {% if _cite is not empty %}
+    <cite title="{{ _cite }}">{{- _cite -}}</cite>
+  {% endif %}
+  </figcaption>
+{% endif %}
+</figure>
+
+{% endspaceless %}
