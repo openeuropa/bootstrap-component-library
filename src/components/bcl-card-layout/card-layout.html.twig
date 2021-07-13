@@ -1,0 +1,71 @@
+{% spaceless %}
+
+{# Parameters:
+  - type (string) (default: 'group')
+    options: ['group', 'grid', 'masonry']
+  - items (array of Card) (default: [])
+  - grid_columns (int) (default: 1)
+    options: ['1', '2', '3']
+  - responsiveness (string) (default: '')
+    options: ['sm', 'md', 'lg', 'xl', 'xxl']
+  - responsive_colums (int) (default: '')
+    options: ['1', '2', '3']
+  - gutter (int) (default: '')
+    options: ['0', '1', '2', '3', '4', '5']
+  - equal_height (boolean) (default: false)
+#}
+
+{% set _type = type|default('group') %}
+{% set _items = items|default([]) %}
+{% set _grid_columns = grid_columns|default(1) %}
+{% set _responsiveness = responsiveness|default('md') %}
+{% set _responsive_colums = responsive_colums|default('') %}
+{% set _gutter = gutter|default('') %}
+{% set _equal_height = equal_height|default(false) %}
+{% set _classes = [] %}
+
+{% if _type == 'group' %}
+  {% set _classes = ['card-group'] %}
+{% elseif type == 'grid' or type == 'masonry' %}
+  {% set _classes = _classes|merge(['row','row-cols-' ~ _grid_columns]) %}
+  {% if _responsive_colums is not empty %}
+    {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_colums]) %}
+  {% endif %}
+  {% if _gutter is not empty %}
+    {% set _classes = _classes|merge(['g-' ~ _gutter]) %}
+  {% endif %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
+
+<div
+  {{ attributes }}
+  {% if _type == 'masonry' %}
+    data-masonry='{"percentPosition": true }'
+  {% endif %}
+>
+{% if _items is not empty and _items is iterable %}
+  {% for _item in _items %}
+    {% if _item.attributes is empty %}
+      {% set _item = _item|merge({
+        attributes: create_attribute()
+      }) %}
+    {% endif %}
+    {% if _equal_height %}
+      {% set _item = _item|merge({
+          attributes: _item.attributes.addClass('h-100')
+        })
+      %}
+    {% endif %}
+    {% if _type == 'grid' or _type == 'masonry' %}
+      <div class='col'>
+    {% endif %}
+      {% include '@oe-bcl/bcl-card/card.html.twig' with _item only %}
+    {% if _type == 'grid' or _type == 'masonry' %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+</div>
+
+{% endspaceless %}

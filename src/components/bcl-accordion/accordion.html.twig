@@ -1,0 +1,70 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - id (int) (default: random(1000))
+  - flush (boolean) (default: false) flush variant of the accordion
+  - items (array) (default: []): format: [
+      {
+        title: (string),
+        content: (block),
+      },
+      ...
+    ]
+  - open_item_id (int) (default: 0) index value of the item to open (starting from 1),
+    all closed by default (0)
+#}
+
+{% set _id = id|default(random(1000)) %}
+{% set _flush = flush|default(false) %}
+{% set _items = items|default([]) %}
+{% set _open_item_id = open_item_id|default(0) %}
+{% set _classes = ['accordion'] %}
+{% if _flush %}
+  {% set _classes = _classes|merge(['accordion-flush']) %}
+{% endif %}
+{% set attributes = attributes.addClass(_classes).setAttribute('id', 'accordion-' ~ _id) %}
+
+{% if _items is not empty %}
+<div
+  {{ attributes }}
+>
+{% for _item in _items %}
+  {% set _open_item = _open_item_id == loop.index %}
+  {% set _button_classes = ['accordion-button'] %}
+  {% if not _open_item %}
+    {% set _button_classes = _button_classes|merge(['collapsed']) %}
+  {% endif %}
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading-{{ _id }}-{{ loop.index }}">
+      {% set button_attributes = create_attribute()
+                                .addClass(_button_classes)
+                                .setAttribute('data-bs-toggle', 'collapse')
+                                .setAttribute('autocomplete', 'off')
+                                .setAttribute('data-bs-target', '#collapse-' ~ _id ~ '-' ~ loop.index)
+                                .setAttribute('aria-controls', 'collapse-' ~ _id ~ '-' ~ loop.index)
+                                .setAttribute('aria-expanded', open_item ? 'true' : 'false')
+      %}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with {
+        label: _item.title,
+        clean_class: true,
+        attributes: button_attributes
+      } only %}
+    </h2>
+    <div
+      id="collapse-{{ _id }}-{{ loop.index }}"
+      class="accordion-collapse collapse{{ _open_item ? ' show' }}"
+      aria-labelledby="heading-{{ _id }}-{{ loop.index }}"
+      data-bs-parent="#accordion-{{ _id }}"
+    >
+      <div class="accordion-body">
+        {%- set _content = _item.content|default('') %}
+        {%- block content _content -%}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endif %}
+
+{% endspaceless %}

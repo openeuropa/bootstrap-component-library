@@ -1,0 +1,41 @@
+{% spaceless %}
+
+{# Parameters:
+  - links (array of objects of type link)
+#}
+
+{% set _classes = ['breadcrumb'] %}
+{% set _links = links|default([]) %}
+
+{% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
+
+{% if _links is not empty %}
+<nav
+  {{ attributes }}
+>
+  <ol
+    class="{{ _classes }}"
+  >
+    {% for _link in _links %}
+      {% set _segment_classes = 'breadcrumb-item' %}
+      {% set _segment_attrs = '' %}
+      {% if loop.last %}
+        {% set _segment_classes = _segment_classes ~ ' active' %} 
+        {% set _segment_attrs = 'aria-current="page"'  %}
+      {%  endif %}
+      <li 
+        class="{{ _segment_classes }}"
+        {{ _segment_attrs }}
+      >
+        {%- if _link.path -%}
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+        {%  else %}
+          {{- _link.label -}}
+        {%- endif -%}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+
+{% endspaceless %}
