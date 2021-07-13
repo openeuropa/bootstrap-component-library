@@ -17,15 +17,22 @@
     class="{{ _classes }}"
   >
     {% for _link in _links %}
-      {% if _link.path %}
-        <li class="breadcrumb-item">
+      {% set _segment_class = 'breadcrumb-item' %}
+      {% set _segment_attrs = '' %}
+      {% if loop.last %}
+        {% set _segment_class = _segment_class ~ ' active' %} 
+        {% set _segment_attrs = 'aria-current="page"'  %}
+      {%  endif %}
+      <li 
+        class="{{ _segment_class }}"
+        {{ _segment_attrs }}
+      >
+        {%- if _link.path -%}
           {% include '@oe-bcl/link/link.html.twig' with _link only %}
-        </li>
-      {% else %}
-        <li class="breadcrumb-item active" aria-current="page">
+        {%  else %}
           {{- _link.label -}}
-        </li>
-      {% endif %}
+        {%- endif -%}
+      </li>
     {% endfor %}
   </ol>
 </nav>
