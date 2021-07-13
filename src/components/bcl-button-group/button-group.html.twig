@@ -1,0 +1,61 @@
+{% spaceless %}
+
+{# Parameters:
+  - vertical (boolean) (default: false)
+  - size (string) (default: 'md')
+    - options ["sm", "md", "lg"]
+  - toolbar (boolean) (default: 'false')
+  - aria_label (string) (default: '')
+  - toolbar_aria_label (string) (default: '')
+  - items (array of arrays with objects of type button or form-input (input key mandatory when the object is a form-input))
+#}
+
+{% set _vertical = vertical|default(false) %}
+{% set _size = size|default('md') %}
+{% set _aria_label = aria_label|default('') %}
+{% set _toolbar = toolbar|default(false) %}
+{% set _toolbar_aria_label = toolbar_aria_label|default('') %}
+{% set _classes = ['btn-group'] %}
+{% set _items = items|default([]) %}
+
+{% if _vertical %}
+  {% set _classes = ['btn-group-vertical'] %}
+{% endif %}
+
+{% set _classes = _classes|merge(['btn-group-' ~ _size]) %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{% endif %}
+
+{% set attributes = attributes.setAttribute('role', 'group').addClass(_classes) %}
+
+{% if _toolbar %}
+  <div class="btn-toolbar" role="toolbar"
+  {% if _toolbar_aria_label is not empty %}
+    aria-label="{{ _toolbar_aria_label }}"
+  {% endif %}
+  >
+{% endif %}
+{% if _items is not empty %}
+  {% for _items_group in _items %}
+    <div 
+      {{ attributes }}
+    >
+    {% if _items_group is not empty and _items_group is iterable %}
+      {% for _item in _items_group %}
+        {% if _item.input is defined %}
+          {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
+        {% else %}
+          {% include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    </div>
+  {% endfor %}
+{% endif %}
+{% if _toolbar %}
+  </div>
+{% endif %}
+
+{% endspaceless %}
