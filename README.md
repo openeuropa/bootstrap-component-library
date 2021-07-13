@@ -55,7 +55,7 @@ files available to each of the theme packages.
   capable of identifying the templates using their namespace `@oe-bcl`.
 
   ```twig
-  {% include '@oe-bcl/icon/icon.html.twig' with {
+  {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: 'files',
       path: 'static/media/bootstrap-icons.svg',
       size: 'm',
@@ -91,15 +91,15 @@ Js is offered in three different formats, `umd` (universal module definition),
 what happens with the files distributed by the bootstrap library.
 All the files come with a `map` file and with a minified version ready for being
 used in a production website.
-The twig templates are in the `templates` folder inside a folder with the name
-of the component so that they can be directly used with a loader defining the
+The twig templates are in the `templates` folder inside a folder with the respective
+package name so that they can be directly used with a loader defining the
 `@oe-bcl` namespace and pointing at the `templates` folder.
 
 ### Twig templates
 
 The twig packages are available as individual npm packages but also directly
 available in the theme packages, the `@openeuropa/bcl-twig-templates` package
-which is a collection of all the templates stored in a folder with the component
+which is a collection of all the templates stored in a folder with the package
 name.
 
 #### Twig loader

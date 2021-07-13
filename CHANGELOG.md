@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.0 (2021-07-13)
+
+#### :boom: Breaking Change
+* [#17](https://github.com/openeuropa/bootstrap-component-library/pull/17) chore: refactoring filesystem and includes ([@planctus](https://github.com/planctus))
+
+#### :bug: Bug Fix
+* [#18](https://github.com/openeuropa/bootstrap-component-library/pull/18) fix: Bug fix h-100 remove class on card group story - FRONT-2445 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
+## 0.2.1 (2021-07-13)
+
+#### :nail_care: Enhancement
+* [#16](https://github.com/openeuropa/bootstrap-component-library/pull/16) feat(breadcrumb) : Modify logic of breadcrumb - FRONT-2439 ([@theosuja](https://github.com/theosuja))
+
+#### :house: Internal
+* [#15](https://github.com/openeuropa/bootstrap-component-library/pull/15) chore(deps): Updating storybook and some other dep ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+
+
 ## 0.2.0 (2021-07-09)
 
 #### :rocket: New Feature
