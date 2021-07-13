@@ -31,19 +31,6 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
-const withInit = (story) => {
-  const demo = story();
-  return `
-    ${demo}
-    <script>        
-      new SlimSelect({
-        select: '.multi-select',
-        selectByGroup: ${demoMultiData.selectByGroup},
-        placeholder: "${demoMultiData.placeholder}"
-      })
-    </script>`;
-};
-
 // Stories
 export default {
   title: "Components/Forms/Select",
@@ -76,7 +63,6 @@ Default.parameters = {
 export const Multiselect = (args) => select(applyArgs(demoMultiData, args));
 
 Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
-Multiselect.decorators = [withInit];
 Multiselect.parameters = {
   design: [
     {

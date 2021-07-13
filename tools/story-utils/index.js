@@ -46,7 +46,7 @@ export const getFormControls = (data, type) => {
     disabled: {
       name: "disabled",
       type: "boolean",
-      defaultValue: data.disabled,
+      defaultValue: data.disabled || false,
       description: "Disabled form element",
       table: {
         type: { summary: "boolean" },

@@ -135,13 +135,11 @@ $spacing-s: 4px !default;
       border-bottom-left-radius: 0;
     }
   }
-  .ss-disabled {
+  .ss-multi-selected.ss-disabled {
     cursor: not-allowed;
     background-color: $border-color;
-    .ss-values {
-      .ss-disabled {
-        color: $font-color;
-      }
+    .ss-disabled {
+      color: $font-color;
     }
     .ss-value-delete {
       pointer-events: none;
@@ -160,7 +158,7 @@ $spacing-s: 4px !default;
       align-items: center;
       width: 100%;
       padding: 4px 5px;
-      margin: 2px 0;
+      margin: 1px 0;
       overflow: hidden;
       line-height: 1em;
       color: $font-disabled-color;
