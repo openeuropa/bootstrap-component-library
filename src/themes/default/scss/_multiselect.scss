@@ -90,15 +90,14 @@ $spacing-s: 4px !default;
         border: solid $font-color;
         border-width: 0 2px 2px 0;
         transition: transform 0.2s, margin 0.2s;
-
-        &.arrow-up {
-          margin: 3px 0 0;
-          transform: rotate(-135deg);
-        }
-        &.arrow-down {
-          margin: -3px 0 0;
-          transform: rotate(45deg);
-        }
+      }
+      span.arrow-up {
+        margin: 3px 0 0;
+        transform: rotate(-135deg);
+      }
+      span.arrow-down {
+        margin: -3px 0 0;
+        transform: rotate(45deg);
       }
     }
   }
@@ -143,11 +142,10 @@ $spacing-s: 4px !default;
       .ss-disabled {
         color: $font-color;
       }
-      .ss-value {
-        .ss-value-delete {
-          cursor: not-allowed;
-        }
-      }
+    }
+    .ss-value-delete {
+      cursor: not-allowed;
+      pointer-events: none;
     }
   }
   .ss-values {
@@ -205,18 +203,15 @@ $spacing-s: 4px !default;
     user-select: none;
     background: $blue;
     border-radius: 0.25rem;
-    .ss-value-delete {
-      margin-left: 0.2rem;
-    }
     &.ss-out {
       animation-name: scaleOut;
       animation-duration: 0.2s;
       animation-timing-function: ease-out;
     }
-    .ss-value-delete {
-      margin: 0 0 0 0.2rem;
-      cursor: pointer;
-    }
+  }
+  .ss-value-delete {
+    margin: 0 0 0 0.2rem;
+    cursor: pointer;
   }
   .ss-add {
     display: flex;

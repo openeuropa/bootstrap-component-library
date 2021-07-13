@@ -52,7 +52,8 @@ export const getFormControls = (data, type) => {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
         category: "States",
-        disable: (type !== "element") & (type !== "select"),
+        disable:
+          (type !== "element") & (type !== "select") & (type !== "multiselect"),
       },
     },
     required: {
