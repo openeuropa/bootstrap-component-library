@@ -1,14 +1,18 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   data: {
     navbar: {
       collapse_id: "navbar",
+      attributes: new drupalAttribute(),
+      background: "light",
       brand: {
         label: "Navbar",
         link: "/example.html",
       },
       navigation: {
         navbar: true,
-        extra_classes: "me-auto",
+        attributes: new drupalAttribute().addClass("me-auto"),
         items: [
           {
             label: "I'm a link",
@@ -28,22 +32,10 @@ module.exports = {
             dropdown: true,
             trigger: {
               label: "Dropdown Toggle",
-              extra_classes: "nav-link",
+              attributes: new drupalAttribute()
+                .addClass("nav-link")
+                .setAttribute("autocomplete", "off"),
               path: "#",
-              extra_attributes: [
-                {
-                  name: "aria-expanded",
-                  value: "false",
-                },
-                {
-                  name: "autocomplete",
-                  value: "off",
-                },
-                {
-                  name: "data-bs-toggle",
-                  value: "dropdown",
-                },
-              ],
             },
             items: [
               {
@@ -72,12 +64,13 @@ module.exports = {
         ],
       },
       form: {
-        extra_classes: "d-flex",
+        attributes: new drupalAttribute().addClass("d-flex"),
         submit: {
           wrapper: "ms-2",
           label: "Search",
           type: "Search",
           variant: "primary",
+          attributes: new drupalAttribute(),
         },
         items: [
           [
@@ -88,6 +81,7 @@ module.exports = {
               hidden_label: true,
               placeholder: "Search",
               id: "inlineFormInputGroupSearch",
+              attributes: new drupalAttribute(),
             },
           ],
         ],
@@ -96,9 +90,11 @@ module.exports = {
     searchInput: {
       placeholder: "Keyword",
       size: "sm",
+      attributes: new drupalAttribute(),
     },
     singleSelect: {
       size: "sm",
+      attributes: new drupalAttribute(),
       options: [
         { value: 1, label: "a select option" },
         { value: 2, label: "another select option" },
@@ -113,32 +109,36 @@ module.exports = {
       size: "sm",
       checked: true,
       id: "first-check",
+      attributes: new drupalAttribute(),
     },
     secondInputFilter: {
       type: "checkbox",
       label: "Default checkbox",
       size: "sm",
       id: "second-check",
+      attributes: new drupalAttribute(),
     },
     firstDatepickerFilter: {
       type: "date",
       size: "sm",
-      extra_classes: "mb-2",
+      attributes: new drupalAttribute().addClass("mb-2"),
     },
     secondDatepickerFilter: {
       size: "sm",
       type: "date",
+      attributes: new drupalAttribute(),
     },
     buttonPrimary: {
-      extra_classes: "me-2",
       label: "Refine",
       type: "submit",
       variant: "primary",
+      attributes: new drupalAttribute().addClass("me-2"),
     },
     buttonSecondary: {
       label: "Clear",
       type: "submit",
       variant: "secondary",
+      attributes: new drupalAttribute(),
     },
     cards: [
       {
@@ -159,7 +159,7 @@ module.exports = {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           classes: "mb-4",
         },
-        extra_classes: "border-0 mb-5",
+        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
@@ -185,7 +185,7 @@ module.exports = {
             "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
           classes: "mb-4",
         },
-        extra_classes: "border-0 mb-5",
+        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=2",
           alt: "alt img",
@@ -212,7 +212,7 @@ module.exports = {
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           classes: "mb-4",
         },
-        extra_classes: "border-0 mb-5",
+        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=3",
           alt: "alt img",
@@ -239,7 +239,7 @@ module.exports = {
             "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           classes: "mb-4",
         },
-        extra_classes: "border-0 mb-5",
+        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=4",
           alt: "alt img",
@@ -265,7 +265,7 @@ module.exports = {
             "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           classes: "mb-4",
         },
-        extra_classes: "border-0 mb-5",
+        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=5",
           alt: "alt img",
@@ -292,7 +292,7 @@ module.exports = {
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           classes: "mb-4",
         },
-        extra_classes: "border-0 mb-5",
+        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=6",
           alt: "alt img",
@@ -302,7 +302,7 @@ module.exports = {
       },
     ],
     pagination: {
-      extra_classes: "mt-5",
+      attributes: new drupalAttribute().addClass(["mt-5"]),
       alignment: "center",
       prev: {
         label: "Previous",
@@ -330,51 +330,41 @@ module.exports = {
       ],
     },
     filterButton: {
-      extra_classes: "d-lg-none w-100 mb-4",
       label: "Filter options",
       type: "button",
       variant: "primary",
-      extra_attributes: [
-        {
-          name: "data-bs-toggle",
-          value: "offcanvas",
-        },
-        {
-          name: "data-bs-target",
-          value: "#offcanvas-mobile",
-        },
-        {
-          name: "aria-controls",
-          value: "offcanvas-mobile",
-        },
-      ],
+      attributes: new drupalAttribute()
+        .addClass(["d-lg-none", "w-100", "mb-4"])
+        .setAttribute("data-bs-toggle", "offcanvas")
+        .setAttribute("data-bs-target", "#offcanvas-mobile")
+        .setAttribute("aria-controls", "offcanvas-mobile"),
       icon: {
         name: "sliders",
         size: "xs",
-        extra_classes: "ms-2 mt-1",
+        attributes: new drupalAttribute().addClass(["ms-2", "mt-1"]),
       },
     },
     badges: [
       {
         label: "News",
         dismissible: true,
-        extra_classes: "me-2",
+        attributes: new drupalAttribute().addClass(["me-2"]),
       },
       {
         label: "Item 01",
         dismissible: true,
-        extra_classes: "me-2",
+        attributes: new drupalAttribute().addClass(["me-2"]),
       },
       {
         label: "Item 02",
         dismissible: true,
-        extra_classes: "me-2",
+        attributes: new drupalAttribute().addClass(["me-2"]),
       },
     ],
     sortSelect: {
       label: "Sort by",
       size: "sm",
-      extra_classes: "",
+      attributes: new drupalAttribute().addClass("mb-4"),
       options: [
         { value: 1, label: "a select option" },
         { value: 2, label: "another select option" },
