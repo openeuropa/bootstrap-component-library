@@ -42,16 +42,19 @@
 {% if _text_nowrap %}
   {% set _classes = _classes|merge(['text-nowrap']) %}
 {% endif %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
 {% if _disabled %}
   {% set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', 'true') %}
 {% endif %}
 {% if _id is not empty %}
-  {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% set attributes = attributes.setAttribute('type', _type|e('html_attr')) %}
+{% set attributes = attributes.setAttribute('type', _type) %}
 
 <button
   {{ attributes }}

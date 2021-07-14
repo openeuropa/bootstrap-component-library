@@ -27,6 +27,10 @@
   {%- endset -%}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _disabled %}
   {% set _classes = _classes|merge(['disabled']) %}
   {% set attributes = attributes.setAttribute('aria-disabled', 'true').setAttribute('tabindex', '-1') %}
@@ -35,12 +39,12 @@
   {% set _classes = _classes|merge(['link-' ~ _variant]) %}
 {% endif %}
 {% if _id is not empty %}
-  {% set attributes = attributes.setAttribute('id', _id|e('html_attr')) %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% set attributes = attributes.setAttribute('href', _path|e('html_attr')) %}
+{% set attributes = attributes.setAttribute('href', _path) %}
 
 <a
   {{ attributes }}

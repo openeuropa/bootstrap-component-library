@@ -65,7 +65,6 @@ module.exports = {
       label: "Search",
       type: "Search",
       variant: "primary",
-      attributes: new drupalAttribute(),
     },
     items: [
       [
@@ -76,7 +75,6 @@ module.exports = {
           hidden_label: true,
           placeholder: "Search",
           id: "inlineFormInputGroupSearch",
-          attributes: new drupalAttribute(),
         },
       ],
     ],
