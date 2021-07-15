@@ -3,16 +3,18 @@
   type="text/javascript"
   src="oe-bcl-default.bundle.min.js"
 ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.0/slimselect.min.js"></script>
+<script src="slimselect.min.js"></script>
 <script>
   document.addEventListener(
     "DOMContentLoaded",
     function () {
-      new SlimSelect({
-        select: ".multi-select",
-        selectByGroup: true,
-        placeholder: "Please select a value",
-      });
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
       var popoverTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="popover"]')
       );
