@@ -27,7 +27,7 @@
 {% if _type == 'group' %}
   {% set _classes = ['card-group'] %}
 {% elseif type == 'grid' or type == 'masonry' %}
-  {% set _classes = _classes|merge(['row','row-cols-' ~ _grid_columns]) %}
+  {% set _classes = _classes|merge(['row', 'row-cols-' ~ _grid_columns]) %}
   {% if _responsive_colums is not empty %}
     {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_colums]) %}
   {% endif %}

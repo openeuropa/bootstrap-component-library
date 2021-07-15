@@ -10,7 +10,6 @@ module.exports = {
     attributes: new drupalAttribute().addClass("oe-header__navbar"),
     navigation: {
       navbar: true,
-      attributes: new drupalAttribute(),
       items: [
         {
           label: "Home",
@@ -62,7 +61,6 @@ module.exports = {
     },
     modal: {
       id: "loginModal",
-      attributes: new drupalAttribute(),
       header:
         '<h5 class="modal-title" id="loginModalLabel">Log in</h5>' +
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',

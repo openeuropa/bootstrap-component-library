@@ -27,7 +27,6 @@ module.exports = {
       size: "sm",
       input: true,
       type: "checkbox",
-      attributes: new drupalAttribute(),
     },
     {
       variant: "warning",

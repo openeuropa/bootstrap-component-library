@@ -13,13 +13,11 @@ module.exports = {
         id: "submit-1",
         type: "checkbox",
         toggle: true,
-        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: false,
         variant: "primary",
-        attributes: new drupalAttribute(),
       },
       {
         input: true,
@@ -28,13 +26,11 @@ module.exports = {
         id: "submit-3",
         type: "checkbox",
         toggle: true,
-        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: true,
         variant: "dark",
-        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -45,19 +41,16 @@ module.exports = {
         id: "submit-2",
         type: "checkbox",
         toggle: true,
-        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: false,
         variant: "danger",
-        attributes: new drupalAttribute(),
       },
       {
         label: "I am a button",
         outline: false,
         variant: "warning",
-        attributes: new drupalAttribute(),
       },
       {
         input: true,
@@ -66,7 +59,6 @@ module.exports = {
         id: "submit-4",
         type: "checkbox",
         toggle: true,
-        attributes: new drupalAttribute(),
       },
     ],
   ],

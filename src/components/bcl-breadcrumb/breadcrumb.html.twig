@@ -4,7 +4,7 @@
   - links (array of objects of type link)
 #}
 
-{% set _classes = ['breadcrumb'] %}
+{% set _classes = 'breadcrumb' %}
 {% set _links = links|default([]) %}
 
 {% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}

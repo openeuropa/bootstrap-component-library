@@ -13,6 +13,11 @@
 {% set _body = body|default('') %}
 {% set _footer = footer|default('') %}
 {% set _classes = ['modal fade'] %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes
                     .setAttribute('id', _id)
                     .setAttribute('tabindex', '-1')

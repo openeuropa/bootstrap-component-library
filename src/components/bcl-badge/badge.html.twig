@@ -25,6 +25,10 @@
   {% set _classes = _classes|merge(['text-dark']) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 {%- if _url is not empty -%}
