@@ -52,6 +52,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   resetAttrs(data);
+
   data.items[0].title = args[`toggle1`];
   data.items[0].content = args[`content1`];
 
