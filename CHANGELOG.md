@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.0 (2021-07-15)
+
+#### :bug: Bug Fix
+* [#21](https://github.com/openeuropa/bootstrap-component-library/pull/21) feat(drupal-attributes): Adding drupal attributes in templates when they are included using the "only" keyword - FRONT-2462 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.3.0 (2021-07-13)
 
 #### :boom: Breaking Change
