@@ -18,7 +18,7 @@ describe("OE - badge", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, hidden_text: "An assistive text" })
+      render({ ...demoData, assistive_text: "An assistive text" })
     ).resolves.toMatchSnapshot();
   });
 

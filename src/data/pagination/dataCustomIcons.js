@@ -10,7 +10,6 @@ module.exports = {
     icon: {
       name: "arrow-left-short",
       path: "boostrap-icons.svg",
-      attributes: new drupalAttribute(),
     },
   },
   next: {
@@ -19,7 +18,6 @@ module.exports = {
     icon: {
       name: "arrow-right-short",
       path: "boostrap-icons.svg",
-      attributes: new drupalAttribute(),
     },
   },
   items: [

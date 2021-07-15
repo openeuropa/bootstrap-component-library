@@ -55,6 +55,10 @@
   {% set _class = _class ~ ' ' ~ _direction %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.setAttribute('aria-labelledby', _id).addClass(_dropdown_classes) %}
 
 {% if _trigger.attributes is empty %}

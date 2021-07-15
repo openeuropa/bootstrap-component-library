@@ -53,6 +53,10 @@
   {% set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _id is not empty %}
   {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}

@@ -1,11 +1,8 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   submit: {
     label: "Submit",
     type: "submit",
     variant: "primary",
-    attributes: new drupalAttribute(),
   },
   items: [
     [
@@ -22,7 +19,6 @@ module.exports = {
         placeholder: "Disabled input",
         helper_text: "Helper text for the form input",
         helper_text_id: "helperText",
-        attributes: new drupalAttribute(),
       },
       {
         wrapper_classes: "mb-3",
@@ -38,14 +34,12 @@ module.exports = {
           { value: 4, label: "last option" },
           { label: "the selected option", selected: true },
         ],
-        attributes: new drupalAttribute(),
       },
       {
         type: "checkbox",
         wrapper_classes: "mb-3",
         label: "Can't check this",
         id: "disabledFieldsetCheck",
-        attributes: new drupalAttribute(),
       },
     ],
   ],

@@ -1,11 +1,8 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   submit: {
     label: "Submit",
     type: "submit",
     variant: "primary",
-    attributes: new drupalAttribute(),
   },
   items: [
     [
@@ -17,7 +14,6 @@ module.exports = {
         id: "exampleInputEmail1",
         helper_text: "We'll never share your email with anyone else.",
         helper_text_id: "emailHelp",
-        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -27,7 +23,6 @@ module.exports = {
         required: true,
         label: "Password",
         id: "exampleInputPassword1",
-        attributes: new drupalAttribute(),
       },
     ],
     [
@@ -37,7 +32,6 @@ module.exports = {
         required: true,
         label: "Check me out",
         id: "exampleInputPassword1",
-        attributes: new drupalAttribute(),
       },
     ],
   ],

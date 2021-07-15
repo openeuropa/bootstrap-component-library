@@ -33,6 +33,10 @@
   {% set _classes = _classes|merge(['navbar-' ~ _color_set]) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 <nav
