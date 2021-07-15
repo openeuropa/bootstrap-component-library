@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-accordion/data.js";
 import accordion from "./accordion.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -45,8 +46,12 @@ const getArgTypes = (data) => {
   };
 };
 
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
+};
+
 const applyArgs = (data, args) => {
-  data.attributes.removeClass("accordion-flush");
+  resetAttrs(data);
   data.items[0].title = args[`toggle1`];
   data.items[0].content = args[`content1`];
 

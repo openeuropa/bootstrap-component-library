@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "./textarea.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -21,25 +22,13 @@ const getArgTypes = (data) => {
   };
 };
 
-const resetAttrs = (data, args) => {
-  data.attributes.removeClass("is-invalid");
-  data.attributes.removeClass(`form-control-${data.size}`);
-  if (!args.required) {
-    data.attributes.removeAttribute("required");
-  }
-  if (!args.disabled) {
-    data.attributes.removeAttribute("disabled");
-  }
-  if (!args.readonly) {
-    data.attributes.removeAttribute("readonly");
-  }
-  if (!args.placeholder) {
-    data.attributes.removeAttribute("placeholder");
-  }
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
 };
 
 const applyArgs = (data, args) => {
-  resetAttrs(data, args);
+  resetAttrs(data);
+
   return Object.assign(data, args);
 };
 

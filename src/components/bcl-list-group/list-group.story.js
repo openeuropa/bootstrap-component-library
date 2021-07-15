@@ -3,6 +3,7 @@ import demoData from "@openeuropa/bcl-data-list-group/data.js";
 import actionableDemoData from "@openeuropa/bcl-data-list-group/actionableData";
 import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
 import listGroup from "./list-group.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = () => {
   return {
@@ -41,9 +42,12 @@ const getArgTypes = () => {
   };
 };
 
-const applyArgs = (data, args) => {
-  data.attributes.removeClass("list-group-flush");
-  data.attributes.removeClass(`list-group-${data.horizontal}`);
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
+};
+
+const applyArgs = (data) => {
+  resetAttrs(data);
 
   return Object.assign(data, args);
 };

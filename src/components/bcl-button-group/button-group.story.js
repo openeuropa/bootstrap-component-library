@@ -3,6 +3,7 @@ import demoData from "@openeuropa/bcl-data-button-group/data.js";
 import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData.js";
 import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData.js";
 import buttonGroup from "./button-group.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -82,10 +83,13 @@ const getArgTypes = (data) => {
   };
 };
 
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
+};
+
 const applyArgs = (data, args) => {
-  data.attributes
-    .removeClass("btn-group-" + data.size)
-    .removeClass("btn-group-vertical");
+  resetAttrs(data);
+
   return Object.assign(data, args);
 };
 

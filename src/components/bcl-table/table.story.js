@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-table/data.js";
 import table from "./table.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = () => {
   return {
@@ -76,7 +77,12 @@ const getArgTypes = () => {
   };
 };
 
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 

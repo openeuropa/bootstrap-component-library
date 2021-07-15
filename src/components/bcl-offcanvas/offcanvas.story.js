@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "./offcanvas.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -83,26 +84,19 @@ const getArgTypes = (data) => {
   };
 };
 
-const offCanvasTrigger = (story, controls) => {
+const offCanvasTrigger = (story) => {
   const demo = story();
   return `<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             Toggle offcanvas
           </button>${demo}`;
 };
 
-const resetAttrs = (data, args) => {
-  data.attributes.removeClass(`offcanvas-${data.placement}`);
-  data.attributes.removeClass(`btn-outline-${data.variant}`);
-  if (args.with_backdrop) {
-    data.attributes.removeAttribute("data-bs-backdrop");
-  }
-  if (!args.with_body_scroll) {
-    data.attributes.removeAttribute("data-bs-scroll");
-  }
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
 };
 
 const applyArgs = (data, args) => {
-  resetAttrs(data, args);
+  resetAttrs(data);
 
   return Object.assign(data, args);
 };

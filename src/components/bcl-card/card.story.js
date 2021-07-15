@@ -3,6 +3,7 @@ import demoData from "@openeuropa/bcl-data-card/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal.js";
 import card from "./card.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data, type) => {
   let argTypes = {
@@ -136,9 +137,7 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass(`bg-${data.variant}`);
-  data.attributes.removeClass("text-dark").removeClass("text-white");
-  data.attributes.removeClass(`border-${data.border_variant}`);
+  data.attributes = new drupalAttribute();
 };
 
 const applyArgs = (data, args) => {

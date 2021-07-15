@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "./dropdown.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -36,8 +37,12 @@ const getArgTypes = (data) => {
   };
 };
 
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
+};
+
 const applyArgs = (data, args) => {
-  data.attributes.removeClass("dropdown-menu-dark");
+  resetAttrs(data);
 
   return Object.assign(data, args);
 };

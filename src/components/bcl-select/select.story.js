@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-select/data.js";
 import select from "./select.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data, type) => {
   return {
@@ -9,24 +10,12 @@ const getArgTypes = (data, type) => {
   };
 };
 
-const resetAttrs = (data, args) => {
-  data.attributes.removeClass("form-select-" + data.size);
-  if (!args.disabled) {
-    data.attributes.removeAttribute("disabled");
-  }
-  if (!args.required) {
-    data.attributes.removeAttribute("required");
-  }
-  if (!args.multiple) {
-    data.attributes.removeAttribute("multiple");
-  }
-  if (!args.invalid) {
-    data.attributes.removeClass("is-invalid");
-  }
+const resetAttrs = (data) => {
+  data.attributes = new drupalAttribute();
 };
 
 const applyArgs = (data, args) => {
-  resetAttrs(data, args);
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 

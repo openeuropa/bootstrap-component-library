@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "./navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 // Controls
 const getArgTypes = (data) => {
@@ -97,13 +98,12 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass(`navbar-${data.color_set}`);
-  data.attributes.removeClass(`bg-${data.background}`);
-  data.attributes.removeClass(`navbar-expand-${data.expand}`);
+  data.attributes = new drupalAttribute();
 };
 
 const applyArgs = (data, args) => {
   resetAttrs(data);
+
   if (args.background == "dark") {
     args.color_set = "dark";
   }
