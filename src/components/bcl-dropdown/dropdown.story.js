@@ -38,12 +38,14 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+  data.attributes.removeClass("dropdown-menu-dark");
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
-
   return Object.assign(data, args);
 };
 

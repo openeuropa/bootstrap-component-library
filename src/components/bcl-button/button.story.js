@@ -123,13 +123,23 @@ const getArgTypes = (data) => {
   };
 };
 
-const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass(`btn-${data.variant}`);
+  data.attributes.removeClass(`btn-outline-${data.variant}`);
+  if (!args.disabled) {
+    data.attributes.removeAttribute("disabled");
+    data.attributes.removeAttribute("aria-disabled");
+  }
+  if (!args.text_nowrap) {
+    data.attributes.removeClass("text-nowrap");
+  }
 };
 
 const applyArgs = (data, args) => {
-  resetAttrs(data);
-
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
+  resetAttrs(data, args);
   if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;

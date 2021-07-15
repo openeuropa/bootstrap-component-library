@@ -137,10 +137,15 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+  data.attributes.removeClass(`bg-${data.variant}`);
+  data.attributes.removeClass("text-dark").removeClass("text-white");
+  data.attributes.removeClass(`border-${data.border_variant}`);
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
   return Object.assign(data, args);
 };

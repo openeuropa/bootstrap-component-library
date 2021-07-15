@@ -47,15 +47,16 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+  data.attributes.removeClass("accordion-flush");
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
-
   data.items[0].title = args[`toggle1`];
   data.items[0].content = args[`content1`];
-
   return Object.assign(data, args);
 };
 

@@ -91,13 +91,22 @@ const offCanvasTrigger = (story) => {
           </button>${demo}`;
 };
 
-const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass(`offcanvas-${data.placement}`);
+  data.attributes.removeClass(`btn-outline-${data.variant}`);
+  if (args.with_backdrop) {
+    data.attributes.removeAttribute("data-bs-backdrop");
+  }
+  if (!args.with_body_scroll) {
+    data.attributes.removeAttribute("data-bs-scroll");
+  }
 };
 
 const applyArgs = (data, args) => {
-  resetAttrs(data);
-
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
+  resetAttrs(data, args);
   return Object.assign(data, args);
 };
 

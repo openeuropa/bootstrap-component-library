@@ -60,7 +60,7 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    hidden_text: {
+    assistive_text: {
       type: { name: "string" },
       description: "Assistive, hidden text",
       defaultValue: "",
@@ -73,9 +73,16 @@ const getArgTypes = (data) => {
   };
 };
 
-const applyArgs = (data, args) => {
-  data.attributes = new drupalAttribute();
+const resetAttrs = (data) => {
+  data.attributes.removeClass(`bg-${data.background}`);
+  data.attributes.removeClass("rounded-pill");
+};
 
+const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 

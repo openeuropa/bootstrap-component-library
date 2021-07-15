@@ -75,7 +75,7 @@
   {% set _classes = _classes|merge(['table-sm']) %}
 {% endif %}
 {% if _border is not empty %}
-  {% set _classes = _classes|merge(['table-bordered border-' ~ _border]) %}
+  {% set _classes = _classes|merge(['table-bordered', 'border-' ~ _border]) %}
 {% endif %}
 {% if _borderless %}
   {% set _classes = _classes|merge(['table-borderless']) %}

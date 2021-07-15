@@ -98,12 +98,16 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+  data.attributes.removeClass(`navbar-${data.color_set}`);
+  data.attributes.removeClass(`bg-${data.background}`);
+  data.attributes.removeClass(`navbar-expand-${data.expand}`);
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
-
   if (args.background == "dark") {
     args.color_set = "dark";
   }

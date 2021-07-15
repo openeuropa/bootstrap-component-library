@@ -77,12 +77,27 @@ const getArgTypes = () => {
   };
 };
 
-const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass("table-" + data.variant);
+  data.attributes
+    .removeClass("table-bordered")
+    .removeClass("border-" + data.border);
+  if (!args.striped) {
+    data.attributes.removeClass("table-striped");
+  }
+  if (!args.hoverable) {
+    data.attributes.removeClass("table-hover");
+  }
+  if (!args.small) {
+    data.attributes.removeClass("table-sm");
+  }
+  if (!args.borderless) {
+    data.attributes.removeClass("table-borderless");
+  }
 };
 
 const applyArgs = (data, args) => {
-  resetAttrs(data);
+  resetAttrs(data, args);
   return Object.assign(data, args);
 };
 

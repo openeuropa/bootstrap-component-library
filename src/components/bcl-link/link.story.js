@@ -53,12 +53,14 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+  data.attributes.removeClass(`link-${data.variant}`);
 };
 
-const applyArgs = (data) => {
+const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
-
   if (args.name && args.name !== "none") {
     data.icon = {};
     data.icon.name = args.name;

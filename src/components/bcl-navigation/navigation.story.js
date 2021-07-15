@@ -63,12 +63,17 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes = new drupalAttribute();
+  data.attributes.removeClass("nav-pills");
+  data.attributes.removeClass("flex-column");
+  data.attributes.removeClass("nav-fill");
+  data.attributes.removeClass(`justify-content-${data.alignment}`);
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
-
   return Object.assign(data, args);
 };
 
