@@ -5,8 +5,9 @@
   - background: (string) (default: 'primary')
   - url (string) (default: '')
   - title (string) (default: label)
-  - hidden_text (string) (default: '')
   - dismissible (boolean) (default: false)
+  - assistive_text (string) (default: '')
+  - rounded_pill (boolean) (default: false)
 #}
 
 {% set _rounded_pill = rounded_pill|default(false) %}
@@ -15,16 +16,19 @@
 {% set _classes = ['badge', 'bg-' ~ _background] %}
 {% set _url = url|default('') %}
 {% set _title = title|default(_label) %}
-{% set _hidden_text = hidden_text|default('') %}
 {% set _dismissible = dismissible|default(false) %}
-{% set _extra_classes = extra_classes|default('') %}
+{% set _assistive_text = assistive_text|default('') %}
 
 {% if _rounded_pill %}
   {% set _classes = _classes|merge(['rounded-pill']) %}
 {% endif %}
 
-{% if _background == 'light' %}
+{% if _background in ['light', 'warning', 'info'] %}
   {% set _classes = _classes|merge(['text-dark']) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
@@ -35,9 +39,9 @@
   <span
     {{ attributes }}
   >
-  {%- if _hidden_text is not empty -%}
+  {%- if _assistive_text is not empty -%}
     <span class="visually-hidden">
-      {{- _hidden_text -}}
+      {{- _assistive_text -}}
     </span>
   {%- endif -%}
     {{- _label -}}

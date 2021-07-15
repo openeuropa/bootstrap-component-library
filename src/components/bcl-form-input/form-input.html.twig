@@ -74,6 +74,10 @@
   {% set _classes = _classes|merge(['btn-check']) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes).setAttribute('type', _type) %}
 
 {% if _id %}

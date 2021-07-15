@@ -77,6 +77,10 @@
   {% set _classes = _classes|merge(['border-' ~ _border_variant]) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 <div

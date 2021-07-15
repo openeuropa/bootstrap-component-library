@@ -12,7 +12,6 @@ module.exports = {
     label: "Submit",
     type: "submit",
     variant: "primary",
-    attributes: new drupalAttribute(),
   },
   items: [
     [
@@ -24,7 +23,6 @@ module.exports = {
         hidden_label: true,
         placeholder: "Username",
         id: "inlineFormInputGroupUsername",
-        attributes: new drupalAttribute(),
       },
       {
         wrapper_classes: "col-12",
@@ -39,7 +37,6 @@ module.exports = {
           { value: 3, label: "Three" },
         ],
         id: "inlineFormSelectPref",
-        attributes: new drupalAttribute(),
       },
       {
         type: "checkbox",
@@ -47,7 +44,6 @@ module.exports = {
         required: true,
         label: "Remember me",
         id: "exampleInputCheck1",
-        attributes: new drupalAttribute(),
       },
     ],
   ],

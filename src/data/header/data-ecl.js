@@ -13,7 +13,6 @@ module.exports = {
     attributes: new drupalAttribute().addClass("oe-header__navbar"),
     navigation: {
       navbar: true,
-      attributes: new drupalAttribute(),
       items: [
         {
           label: "Home",

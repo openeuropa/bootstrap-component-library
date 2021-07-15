@@ -1,7 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
-  attributes: new drupalAttribute(),
   required: true,
   size: "md",
   helper_text: "Helper text for the select element",
