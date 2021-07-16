@@ -34,4 +34,23 @@ describe("OE - Progress", () => {
       render({ ...demoData, variant: "danger" })
     ).resolves.toMatchSnapshot();
   });
+
+  test(`renders correctly with message`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        message: "This is a demo message under the progress bar.",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with bar label`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, bar_label: "Loading..." })
+    ).resolves.toMatchSnapshot();
+  });
 });

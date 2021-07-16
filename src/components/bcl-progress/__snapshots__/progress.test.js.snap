@@ -2,6 +2,11 @@
 
 exports[`OE - Progress renders correctly 1`] = `
 <jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
   <div
     class="progress"
   >
@@ -19,8 +24,66 @@ exports[`OE - Progress renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Progress renders correctly with bar label 1`] = `
+<jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
+  <div
+    class="progress"
+  >
+    <div
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="25"
+      class="progress-bar"
+      role="progressbar"
+      style="width: 25%"
+    >
+      Loading...
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Progress renders correctly with message 1`] = `
+<jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
+  <div
+    class="progress"
+  >
+    <div
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="25"
+      class="progress-bar"
+      role="progressbar"
+      style="width: 25%"
+    >
+      25%
+    </div>
+  </div>
+  <small
+    class="form-text text-muted progress-bar-message"
+  >
+    This is a demo message under the progress bar.
+  </small>
+</jest>
+`;
+
 exports[`OE - Progress renders correctly with striped and animated style 1`] = `
 <jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
   <div
     class="progress"
   >
@@ -40,6 +103,11 @@ exports[`OE - Progress renders correctly with striped and animated style 1`] = `
 
 exports[`OE - Progress renders correctly with striped style 1`] = `
 <jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
   <div
     class="progress"
   >
@@ -59,6 +127,11 @@ exports[`OE - Progress renders correctly with striped style 1`] = `
 
 exports[`OE - Progress renders correctly with variant danger 1`] = `
 <jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
   <div
     class="progress"
   >
