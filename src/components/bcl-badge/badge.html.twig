@@ -14,7 +14,7 @@
 {% set _label = label|default('') %}
 {% set _classes = ['badge', 'bg-' ~ _background] %}
 {% set _url = url|default('') %}
-{% set _title_attr = title_attr|default(_label) %}
+{% set _title = title|default(_label) %}
 {% set _assistive_text = assistive_text|default('') %}
 
 {% if _rounded_pill %}
@@ -32,7 +32,7 @@
 {% set attributes = attributes.addClass(_classes) %}
 
 {%- if _url is not empty -%}
-<a href="{{ _url }}" title="{{ _title_attr }}">
+<a href="{{ _url }}" title="{{ _title }}">
 {%- endif -%}
   <span
     {{ attributes }}

@@ -8,7 +8,7 @@ const getArgs = (data) => {
   return {
     label: data.label,
     url: "",
-    title_attr: data.label,
+    title: data.label,
     background: data.background || "primary",
     rounded_pill: false,
     assistive_text: "",
@@ -35,7 +35,7 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
-    title_attr: {
+    title: {
       type: { name: "string" },
       description: "Title attribute if it's a link",
       table: {
