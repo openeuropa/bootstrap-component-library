@@ -101,7 +101,9 @@ const getArgTypes = (data, type) => {
 
 const applyArgs = (data, args) => {
   data.items.forEach((item) => {
-    item.attributes.removeClass("h-100");
+    if (item.attributes) {
+      item.attributes.removeClass("h-100");
+    }
   });
   return Object.assign(data, args);
 };

@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "./offcanvas.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -83,7 +84,7 @@ const getArgTypes = (data) => {
   };
 };
 
-const offCanvasTrigger = (story, controls) => {
+const offCanvasTrigger = (story) => {
   const demo = story();
   return `<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             Toggle offcanvas
@@ -102,8 +103,10 @@ const resetAttrs = (data, args) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data, args);
-
   return Object.assign(data, args);
 };
 
