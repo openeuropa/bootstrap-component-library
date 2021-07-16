@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "./textarea.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -39,6 +40,9 @@ const resetAttrs = (data, args) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data, args);
   return Object.assign(data, args);
 };

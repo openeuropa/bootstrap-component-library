@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-select/data.js";
 import select from "./select.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data, type) => {
   return {
@@ -26,6 +27,9 @@ const resetAttrs = (data, args) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data, args);
   return Object.assign(data, args);
 };

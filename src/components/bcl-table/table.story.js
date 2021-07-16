@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-table/data.js";
 import table from "./table.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = () => {
   return {
@@ -76,7 +77,27 @@ const getArgTypes = () => {
   };
 };
 
+const resetAttrs = (data, args) => {
+  data.attributes.removeClass("table-" + data.variant);
+  data.attributes
+    .removeClass("table-bordered")
+    .removeClass("border-" + data.border);
+  if (!args.striped) {
+    data.attributes.removeClass("table-striped");
+  }
+  if (!args.hoverable) {
+    data.attributes.removeClass("table-hover");
+  }
+  if (!args.small) {
+    data.attributes.removeClass("table-sm");
+  }
+  if (!args.borderless) {
+    data.attributes.removeClass("table-borderless");
+  }
+};
+
 const applyArgs = (data, args) => {
+  resetAttrs(data, args);
   return Object.assign(data, args);
 };
 
