@@ -4,13 +4,29 @@ import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "./textarea.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data) => {
+  return {
+    label: data.label,
+    invalid: false,
+    required: false,
+    disabled: false,
+    placeholder: data.placeholder,
+    floating: false,
+    readonly: false,
+    horizontal: false,
+    horizontal_class: "col-sm-10",
+    horizontal_label_class: "col-sm-2",
+    rows: 4,
+    size: "sm",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     ...getFormControls(data, "textarea"),
     rows: {
       type: { name: "number" },
       description: "Number or rows",
-      defaultValue: 4,
       table: {
         type: { summary: "integer" },
         min: 1,
@@ -70,4 +86,5 @@ export default {
 export const Textarea = (args) => textarea(applyArgs(demoData, args));
 
 Textarea.storyName = "default";
+Textarea.args = getArgs(demoData);
 Textarea.argTypes = getArgTypes(demoData);

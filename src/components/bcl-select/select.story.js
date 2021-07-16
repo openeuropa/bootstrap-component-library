@@ -4,6 +4,18 @@ import demoData from "@openeuropa/bcl-data-select/data.js";
 import select from "./select.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data) => {
+  return {
+    label: data.label,
+    hidden_label: false,
+    helper_text: data.helper_text,
+    invalid: false,
+    disabled: false,
+    required: true,
+    size: "sm",
+  };
+};
+
 const getArgTypes = (data, type) => {
   return {
     ...getFormControls(data, type),
@@ -61,4 +73,5 @@ export default {
 
 export const Default = (args) => select(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData, "select");
 Default.argTypes = getArgTypes(demoData, "select");

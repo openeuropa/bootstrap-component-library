@@ -4,35 +4,71 @@ import demoData from "@openeuropa/bcl-data-form-input/data.js";
 import formInput from "./form-input.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data, type) => {
+  let args = {
+    type: type,
+    label: data.label,
+    hidden_label: false,
+    helper_text: data.helper_text,
+    invalid: data.invalid,
+    disabled: data.disabled,
+    required: data.required,
+  };
+  if (type === "text" || type === "textarea" || type === "file") {
+    args.readonly = data.readonly;
+    args.horizontal = false;
+    args.horizontal_class = "col-sm-10";
+    args.horizontal_label_class = "col-sm-2";
+  }
+  if (type !== "file") {
+    args.floating = false;
+    args.placeholder = "";
+  }
+
+  if (
+    type === "text" ||
+    type === "textarea" ||
+    type === "file" ||
+    type === "select"
+  ) {
+    args.size = data.size;
+  }
+  if (type === "checkbox") {
+    args.switch = data.switch;
+  }
+  if (type === "radio" || type === "checkbox") {
+    args.toggle = false;
+    args.toggle_variant = data.variant || "primary";
+  }
+
+  return args;
+};
+
 const getArgTypes = (data, type) => {
   return {
     type: {
       type: { name: "select" },
       description: "Type of the text input",
-      defaultValue: type,
-      control: {
-        type: "select",
-        options: [
-          "text",
-          "email",
-          "password",
-          "radio",
-          "checkbox",
-          "file",
-          "color",
-          "date",
-          "datetime-local",
-          "search",
-          "range",
-          "tel",
-          "time",
-          "url",
-          "week",
-          "number",
-          "month",
-          "hidden",
-        ],
-      },
+      options: [
+        "text",
+        "email",
+        "password",
+        "radio",
+        "checkbox",
+        "file",
+        "color",
+        "date",
+        "datetime-local",
+        "search",
+        "range",
+        "tel",
+        "time",
+        "url",
+        "week",
+        "number",
+        "month",
+        "hidden",
+      ],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "text" },
@@ -73,13 +109,12 @@ export default {
   decorators: [withDesign],
 };
 
-export const FormInput = (args) => formInput(applyArgs(demoData, args));
+const formTextData = { ...demoData, placeholder: "text here" };
+export const FormInput = (args) => formInput(applyArgs(formTextData, args));
 
 FormInput.storyName = "text field";
-FormInput.argTypes = getArgTypes(
-  { ...demoData, placeholder: "text here" },
-  "text"
-);
+FormInput.args = getArgs(formTextData, "text");
+FormInput.argTypes = getArgTypes(formTextData, "text");
 FormInput.parameters = {
   design: [
     {
@@ -100,11 +135,12 @@ FormInput.parameters = {
   ],
 };
 
-export const Checkbox = (args) =>
-  formInput(applyArgs({ ...demoData, type: "checkbox" }, args));
+const checkboxData = { ...demoData, type: "checkbox" };
+export const Checkbox = (args) => formInput(applyArgs(checkboxData, args));
 
 Checkbox.storyName = "checkbox";
-Checkbox.argTypes = getArgTypes(demoData, "checkbox");
+Checkbox.args = getArgs(checkboxData, "checkbox");
+Checkbox.argTypes = getArgTypes(checkboxData, "checkbox");
 Checkbox.parameters = {
   design: [
     {
@@ -125,11 +161,12 @@ Checkbox.parameters = {
   ],
 };
 
-export const Switch = (args) =>
-  formInput(applyArgs({ ...demoData, type: "checkbox", switch: true }, args));
+const switchData = { ...demoData, type: "checkbox", switch: true };
+export const Switch = (args) => formInput(applyArgs(switchData, args));
 
 Switch.storyName = "switch";
-Switch.argTypes = getArgTypes({ ...demoData, switch: "true" }, "checkbox");
+Switch.args = getArgs(switchData, "checkbox");
+Switch.argTypes = getArgTypes(switchData, "checkbox");
 Switch.parameters = {
   design: [
     {
@@ -150,11 +187,12 @@ Switch.parameters = {
   ],
 };
 
-export const Radio = (args) =>
-  formInput(applyArgs({ ...demoData, type: "radio" }, args));
+const radioData = { ...demoData, type: "radio" };
+export const Radio = (args) => formInput(applyArgs(radioData, args));
 
 Radio.storyName = "radio";
-Radio.argTypes = getArgTypes(demoData, "radio");
+Radio.args = getArgs(radioData, "radio");
+Radio.argTypes = getArgTypes(radioData, "radio");
 Radio.parameters = {
   design: [
     {
@@ -175,11 +213,12 @@ Radio.parameters = {
   ],
 };
 
-export const File = (args) =>
-  formInput(applyArgs({ ...demoData, type: "file" }, args));
+const fileData = { ...demoData, type: "file" };
+export const File = (args) => formInput(applyArgs(fileData, args));
 
 File.storyName = "file";
-File.argTypes = getArgTypes(demoData, "file");
+File.args = getArgs(fileData, "file");
+File.argTypes = getArgTypes(fileData, "file");
 File.parameters = {
   design: [
     {

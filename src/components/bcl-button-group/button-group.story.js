@@ -5,17 +5,24 @@ import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData.js"
 import buttonGroup from "./button-group.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data) => {
+  return {
+    role: data.role || "group",
+    aria_label: "",
+    toolbar: data.toolbar,
+    toolbar_aria_label: data.toolbar_aria_label,
+    size: "md",
+    vertical: false,
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     role: {
       name: "role of the container",
       type: { name: "select" },
+      options: ["group", "toolbar"],
       description: "Describe the role of container for assistive technologies",
-      defaultValue: data.role || "group",
-      control: {
-        type: "select",
-        options: ["group", "toolbar"],
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "group" },
@@ -27,7 +34,6 @@ const getArgTypes = (data) => {
       description:
         "Describe the label of the aria used for assistive technologies",
       type: { name: "string" },
-      defaultValue: "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -38,7 +44,6 @@ const getArgTypes = (data) => {
       type: { name: "boolean" },
       description:
         "Enables support for multiple button groups in a toolbar style",
-      defaultValue: data.toolbar,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -49,7 +54,6 @@ const getArgTypes = (data) => {
       name: "toolbar aria label",
       description: "Toolbar wrapper aria label",
       type: { name: "string" },
-      defaultValue: data.toolbar_aria_label,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -59,11 +63,7 @@ const getArgTypes = (data) => {
     size: {
       type: { name: "select" },
       description: "Size of the button group",
-      defaultValue: "md",
-      control: {
-        type: "select",
-        options: { small: "sm", medium: "md", large: "lg" },
-      },
+      options: { small: "sm", medium: "md", large: "lg" },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
@@ -73,7 +73,6 @@ const getArgTypes = (data) => {
     vertical: {
       type: { name: "boolean" },
       description: "Enable the vertical state",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -123,15 +122,18 @@ export default {
 
 export const Default = (args) => buttonGroup(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 
 export const InputGroup = (args) =>
   buttonGroup(applyArgs(inputGroupData, args));
 
 InputGroup.storyName = "Input group";
+InputGroup.args = getArgs(inputGroupData);
 InputGroup.argTypes = getArgTypes(inputGroupData);
 
 export const Toolbar = (args) => buttonGroup(applyArgs(toolbarData, args));
 
 Toolbar.storyName = "Toolbar";
+Toolbar.args = getArgs(toolbarData);
 Toolbar.argTypes = getArgTypes(toolbarData);

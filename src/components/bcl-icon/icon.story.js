@@ -5,6 +5,14 @@ import icon from "./icon.html.twig";
 import "!!null-loader!@openeuropa/bcl-theme-default/scss/_icon.scss";
 import { getIconControls } from "@openeuropa/bcl-story-utils";
 
+const getArgs = (data) => {
+  return {
+    name: data.name || "",
+    transformation: "",
+    size: "s",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     ...getIconControls("icon", data),
@@ -42,4 +50,5 @@ export default {
 export const Default = (args) =>
   icon(applyArgs({ ...demoData, path: defaultSprite }, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

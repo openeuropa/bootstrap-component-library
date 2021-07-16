@@ -2,7 +2,6 @@ export const getFormControls = (data, type) => {
   const argTypes = {
     label: {
       type: { name: "string", required: true },
-      defaultValue: data.label,
       description: "Label of the form element",
       table: {
         type: { summary: "string" },
@@ -14,7 +13,6 @@ export const getFormControls = (data, type) => {
       name: "hidden label",
       type: { name: "boolean" },
       description: "Hidden label",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -24,7 +22,6 @@ export const getFormControls = (data, type) => {
     helper_text: {
       name: "helper text",
       type: { name: "string", required: false },
-      defaultValue: data.helper_text,
       description: "Helper text of the form element",
       table: {
         type: { summary: "string" },
@@ -35,7 +32,6 @@ export const getFormControls = (data, type) => {
     invalid: {
       name: "invalid",
       type: "boolean",
-      defaultValue: data.invalid,
       description: "Marks the form element as invalid",
       table: {
         type: { summary: "boolean" },
@@ -46,7 +42,6 @@ export const getFormControls = (data, type) => {
     disabled: {
       name: "disabled",
       type: "boolean",
-      defaultValue: data.disabled,
       description: "Disabled form element",
       table: {
         type: { summary: "boolean" },
@@ -58,7 +53,6 @@ export const getFormControls = (data, type) => {
     required: {
       name: "required",
       type: "boolean",
-      defaultValue: data.required,
       description: "Sets the required attribute on the form element",
       table: {
         type: { summary: "boolean" },
@@ -72,7 +66,6 @@ export const getFormControls = (data, type) => {
     argTypes.readonly = {
       name: "readonly",
       type: "boolean",
-      defaultValue: data.readonly,
       description: `Marks the form element as readonly`,
       table: {
         type: { summary: "boolean" },
@@ -83,7 +76,6 @@ export const getFormControls = (data, type) => {
     argTypes.horizontal = {
       type: { name: "boolean" },
       description: "Horizontal layout",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -93,7 +85,6 @@ export const getFormControls = (data, type) => {
     argTypes.horizontal_class = {
       type: { name: "string" },
       description: "Css class for the form input in an horizontal layout",
-      defaultValue: "col-sm-10",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "col-sm-10" },
@@ -103,7 +94,6 @@ export const getFormControls = (data, type) => {
     argTypes.horizontal_label_class = {
       type: { name: "string" },
       description: "Css class for the label in an horizontal layout",
-      defaultValue: "col-sm-2",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "col-sm-2" },
@@ -125,7 +115,6 @@ export const getFormControls = (data, type) => {
       argTypes.placeholder = {
         name: "placeholder text",
         type: "string",
-        defaultValue: data.placeholder,
         description: "Text to be shown when the form element is not filled in",
         table: {
           type: { summary: "string" },
@@ -145,7 +134,7 @@ export const getFormControls = (data, type) => {
     argTypes.size = {
       name: "size",
       type: { name: "select" },
-      defaultValue: data.size,
+      options: ["sm", "lg"],
       description: "The width of the form element {sm: small, lg: large}",
       table: {
         type: { summary: "string" },
@@ -154,7 +143,10 @@ export const getFormControls = (data, type) => {
       },
       control: {
         type: "select",
-        options: { small: "sm", large: "lg" },
+        labels: {
+          sm: "small",
+          lg: "large",
+        },
       },
     };
   }
@@ -187,11 +179,7 @@ export const getFormControls = (data, type) => {
       name: "toggle variant",
       type: { name: "select" },
       description: "Variant of the button",
-      defaultValue: "primary" || data.variant,
-      control: {
-        type: "select",
-        options: getVariants(true, ["link"]),
-      },
+      options: getVariants(true, ["link"]),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
@@ -228,49 +216,39 @@ export const getIconControls = (type, data) => {
   const argTypes = {
     name: {
       name: "icon name",
+      type: { name: "select" },
+      options: getIconNames(),
       description: "Icon name",
-      defaultValue: data && data.name ? data.name : "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
         category: "Icon",
       },
-      control: {
-        type: "select",
-        options: getIconNames(),
-      },
     },
     transformation: {
       name: "icon transformation",
       type: { name: "select" },
+      options: [
+        "rotate-90",
+        "rotate-180",
+        "rotate-270",
+        "flip-horizontal",
+        "flip-vertical",
+      ],
       description: "Icon transformation",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
         category: "Icon",
       },
-      control: {
-        type: "select",
-        options: [
-          "rotate-90",
-          "rotate-180",
-          "rotate-270",
-          "flip-horizontal",
-          "flip-vertical",
-        ],
-      },
     },
   };
   if (type == "icon") {
     argTypes.size = {
       name: "icon size",
+      options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
       type: { name: "select" },
       description: "Size of icon",
-      defaultValue: "s",
-      control: {
-        type: "select",
-        options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "s" },
@@ -280,13 +258,10 @@ export const getIconControls = (type, data) => {
   } else {
     argTypes.icon_size = {
       name: "icon size",
+      options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
       type: { name: "select" },
       description: "Size of icon",
       defaultValue: "s",
-      control: {
-        type: "select",
-        options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "s" },
@@ -295,6 +270,7 @@ export const getIconControls = (type, data) => {
     };
     argTypes.icon_position = {
       name: "icon position",
+      options: ["before", "after"],
       type: { name: "inline-radio" },
       description: "Icon position inside the button or link",
       defaultValue: "after",
@@ -304,12 +280,9 @@ export const getIconControls = (type, data) => {
         category: "Icon",
         disable: (type !== "link") & (type !== "button"),
       },
-      control: {
-        type: "inline-radio",
-        options: ["before", "after"],
-      },
     };
   }
+
   return argTypes;
 };
 
