@@ -99,13 +99,7 @@
     {% endif %}
     >
     {% if _item.image is defined and _item.image is not empty %}
-      <img
-        src="{{ _item.image.src }}"
-        class="d-block w-100"
-      {% if _item.image.alt is defined and _item.image.alt is not empty %}
-        alt="{{ _item.image.alt }}"
-      {% endif %}
-      >
+      {{ _item.image }}
     {% endif %}
     {% if _item.caption is defined and _item.caption is not empty %}
       {% set _caption_classes = 'carousel-caption' %}
