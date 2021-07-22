@@ -4,11 +4,24 @@ import demoData from "@openeuropa/bcl-data-carousel/data";
 const template = "@oe-bcl/bcl-carousel/carousel.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
 
+const parseImage = (data) => {
+  data.items.forEach((slide) => {
+    if (slide.image) {
+      let alt = ``;
+      if (slide.image.alt) {
+        alt = `alt="${slide.image.alt}"`;
+      }
+      slide.image = `<img src="${slide.image.src}" ${alt} class="d-block w-100">`;
+    }
+  });
+  return data;
+};
+
 describe("OE - carousel", () => {
   test("renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(demoData)).resolves.toMatchSnapshot();
+    return expect(render(parseImage(demoData))).resolves.toMatchSnapshot();
   });
 
   test("renders correctly with dark variant", () => {
