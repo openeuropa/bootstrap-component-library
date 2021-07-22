@@ -4,7 +4,6 @@ module.exports = {
   id: "dropdown-1",
   trigger: {
     label: "Dropdown Toggle",
-    path: "#",
   },
   attributes: new drupalAttribute(),
   items: [

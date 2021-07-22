@@ -3,6 +3,7 @@
 {# 
   Parameters:
   - label (string) (default: '')
+  - path (string) (default: ''): if set the button will be converted in a <a> tag
   - variant (string) (default: 'primary')
   - size (string) (default: 'md')
     - options ["sm", "md", "lg"]
@@ -21,6 +22,7 @@
 #}
 
 {% set _label = label|default('') %}
+{% set _path = path|default('') %}
 {% set _variant = variant|default('primary') %}
 {% set _size = size|default('md') %}
 {% set _type = type|default('button') %}
@@ -54,11 +56,12 @@
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% set attributes = attributes.setAttribute('type', _type) %}
 
-<button
-  {{ attributes }}
->
+{%- if path is not empty -%}
+  <a{{ attributes.setAttribute('href', _path) }}>
+{%- else -%}
+ <button{{ attributes.setAttribute('type', _type) }}>
+{%- endif -%}
 {%- if _show_spinner -%}
   {% include '@oe-bcl/bcl-spinner/spinner.html.twig' with _spinner only %}
 {%- endif -%}
@@ -76,6 +79,10 @@
   {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
 {%- endif -%}
 {%- endif -%}
-</button>
+{%- if path -%}
+  </a>
+{%- else -%}
+ </button>
+{%- endif -%}
 
 {% endspaceless %}

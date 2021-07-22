@@ -30,6 +30,16 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
+    path: {
+      type: { name: "string" },
+      description: "Path of the button, if set the button will be converted in a <a> tag",
+      defaultValue: data.path,
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
     type: {
       type: { name: "select" },
       description: "Type of the button",
