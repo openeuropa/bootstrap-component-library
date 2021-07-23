@@ -16,6 +16,8 @@
             {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with data.searchInput only %}
             <p class="mt-4 mb-3">Content types</p>
             {% include '@oe-bcl/bcl-select/select.html.twig' with data.singleSelect only %}
+            <p class="mt-4 mb-3">Filter A</p>
+            {% include '@oe-bcl/bcl-select/select.html.twig' with data.multiSelect only %}
             <p class="mt-4 mb-3">Filter B</p>
             {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with data.firstInputFilter only %}
             {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with data.secondInputFilter only %}
