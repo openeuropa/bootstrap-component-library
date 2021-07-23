@@ -12,7 +12,7 @@
     "build:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run build",
     "changelog": "lerna-changelog",
     "clean": "rimraf build assets",
-    "copy:assets": "copyfiles -f src/themes/**/*min.* static/* assets/",
+    "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js static/* assets/",
     "copy:build": "copyfiles assets/* static/* build",
     "css-lint": "stylelint src/**/*.scss",
     "dist": "run-s clean dist:*",
@@ -100,6 +100,7 @@
     "patch-package": "6.4.7",
     "prettier": "2.3.2",
     "rimraf": "3.0.2",
+    "slim-select": "1.27.0",
     "stylelint": "13.13.1",
     "stylelint-config-twbs-bootstrap": "2.2.1"
   },

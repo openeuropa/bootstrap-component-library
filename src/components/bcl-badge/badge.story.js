@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "./badge.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -69,7 +70,7 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    hidden_text: {
+    assistive_text: {
       type: { name: "string" },
       description: "Assistive, hidden text",
       defaultValue: "",
@@ -82,10 +83,16 @@ const getArgTypes = (data) => {
   };
 };
 
-const applyArgs = (data, args) => {
+const resetAttrs = (data) => {
   data.attributes.removeClass(`bg-${data.background}`);
   data.attributes.removeClass("rounded-pill");
+};
 
+const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 

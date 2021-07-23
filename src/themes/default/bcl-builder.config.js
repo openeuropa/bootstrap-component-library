@@ -93,6 +93,11 @@ module.exports = {
   ],
   copy: [
     {
+      from: [path.resolve(nodeModules, "slim-select/dist/slimselect.min.js")],
+      to: path.resolve(outputFolder, "js"),
+      options: { up: true },
+    },
+    {
       from: [
         path.resolve(
           nodeModules,

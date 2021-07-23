@@ -42,6 +42,68 @@ exports[`OE - select renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - select renders correctly as a multiple choice select 1`] = `
+<jest>
+  <select
+    class=""
+    multiple="true"
+    required="true"
+  >
+    <optgroup
+      label="Group 1"
+    >
+      <option
+        value="1"
+      >
+        Option group 1
+      </option>
+      <option
+        value="2"
+      >
+        Option group 2
+      </option>
+      <option
+        value="3"
+      >
+        Option group 3
+      </option>
+    </optgroup>
+    <option
+      value="1"
+    >
+      a select option
+    </option>
+    <option
+      value="2"
+    >
+      another select option
+    </option>
+    <option
+      value="3"
+    >
+      another option
+    </option>
+    <option
+      value="4"
+    >
+      last option
+    </option>
+    <option
+      selected=""
+      value=""
+    >
+      the selected option
+    </option>
+  </select>
+  <div
+    class="form-text"
+    id="helperText"
+  >
+    Helper text for the select element
+  </div>
+</jest>
+`;
+
 exports[`OE - select renders correctly when disabled 1`] = `
 <jest>
   <select
@@ -50,31 +112,26 @@ exports[`OE - select renders correctly when disabled 1`] = `
     required="true"
   >
     <option
-      disabled=""
       value="1"
     >
       a select option
     </option>
     <option
-      disabled=""
       value="2"
     >
       another select option
     </option>
     <option
-      disabled=""
       value="3"
     >
       another option
     </option>
     <option
-      disabled=""
       value="4"
     >
       last option
     </option>
     <option
-      disabled=""
       selected=""
       value=""
     >

@@ -136,6 +136,9 @@ const resetAttrs = (data, args) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data, args);
   if (args.name && args.name !== "none") {
     data.icon = {};

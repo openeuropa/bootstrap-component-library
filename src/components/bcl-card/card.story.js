@@ -3,6 +3,7 @@ import demoData from "@openeuropa/bcl-data-card/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal.js";
 import card from "./card.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data, type) => {
   let argTypes = {
@@ -142,6 +143,9 @@ const resetAttrs = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   resetAttrs(data);
   return Object.assign(data, args);
 };

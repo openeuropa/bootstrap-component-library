@@ -37,7 +37,7 @@
 {% set _classes = [] %}
 {% if _clean_class == false %}
   {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
-  {% set _classes = _classes|merge(['btn-' + _size|e('html_attr')]) %}
+  {% set _classes = _classes|merge(['btn-' ~ _size|e('html_attr')]) %}
 {% endif %}
 {% if _text_nowrap %}
   {% set _classes = _classes|merge(['text-nowrap']) %}

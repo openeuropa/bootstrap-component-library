@@ -27,11 +27,17 @@
 {% set _helper_text_id = helper_text_id|default('') %}
 {% set _label = label|default('') %}
 {% set _extra_classes = extra_classes|default('') %}
+{% set _clean_class = clean_class|default(false) %}
 {% set _label_class = 'form-label' %}
 {% set _hidden_label = hidden_label|default(false) %}
 
 {% set _classes = _classes|merge(['form-select-' ~ _size]) %}
-{% if _invalid is not empty %}
+
+{% if _clean_class %}
+  {% set _classes = [] %}
+{% endif %}
+
+{% if _invalid %}
   {% set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
 
@@ -77,23 +83,42 @@
 {% if _label_block is defined %}
   {{ _label_block|raw }}
 {% endif %}
-
 <select
   {{ attributes }}
 >
 {% if _options is not empty and _options is iterable %}
   {% for _option in _options %}
-  <option
-    value="{{ _option.value }}"
-  {% if _option.selected is defined %}
-    selected
-  {% endif %}
-  {% if _disabled %}
-    disabled
-  {% endif %}
-  >
-    {{- _option.label -}}
-  </option>
+    {% if _option.optgroup is defined %}
+      <optgroup label="{{ _option.label }}">
+      {% if _option.options is not empty  and _option.options is iterable %}
+        {% for _optGroupOption in _option.options %}
+        <option
+          value="{{ _optGroupOption.value }}"
+        {% if _optGroupOption.selected is defined %}
+          selected
+        {% endif %}
+        {% if _optGroupOption.disabled %}
+          disabled
+        {% endif %}
+        >
+          {{- _optGroupOption.label -}}
+        </option>
+        {% endfor %}
+      {% endif %}
+      </optgroup>
+    {% else %}
+      <option
+        value="{{ _option.value }}"
+      {% if _option.selected is defined %}
+        selected
+      {% endif %}
+      {% if _option.disabled %}
+        disabled
+      {% endif %}
+      >
+        {{- _option.label -}}
+      </option>
+    {% endif %}
   {% endfor %}
 {% endif %}
 </select>

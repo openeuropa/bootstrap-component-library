@@ -3,6 +3,7 @@ import demoData from "@openeuropa/bcl-data-button-group/data.js";
 import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData.js";
 import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData.js";
 import buttonGroup from "./button-group.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
   return {
@@ -10,7 +11,7 @@ const getArgTypes = (data) => {
       name: "role of the container",
       type: { name: "select" },
       description: "Describe the role of container for assistive technologies",
-      defaultValue: "group",
+      defaultValue: data.role || "group",
       control: {
         type: "select",
         options: ["group", "toolbar"],
@@ -82,10 +83,17 @@ const getArgTypes = (data) => {
   };
 };
 
-const applyArgs = (data, args) => {
+const resetAttrs = (data) => {
   data.attributes
     .removeClass("btn-group-" + data.size)
     .removeClass("btn-group-vertical");
+};
+
+const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
+  resetAttrs(data);
   return Object.assign(data, args);
 };
 
