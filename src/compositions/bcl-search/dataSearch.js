@@ -92,6 +92,19 @@ module.exports = {
       size: "sm",
       attributes: new drupalAttribute(),
     },
+    multiSelect: {
+      size: "sm",
+      attributes: new drupalAttribute().addClass("multi-select"),
+      multiple: true,
+      clean_class: true,
+      options: [
+        { value: 1, label: "a select option" },
+        { value: 2, label: "another select option" },
+        { value: 3, label: "another option" },
+        { value: 4, label: "last option" },
+        { label: "the selected option", selected: true },
+      ],
+    },
     singleSelect: {
       size: "sm",
       attributes: new drupalAttribute(),
