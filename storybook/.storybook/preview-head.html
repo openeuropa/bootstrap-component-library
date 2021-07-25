@@ -61,7 +61,6 @@
       }
 
       var offcanvasMobile = document.querySelectorAll(".offcanvas-mobile")[0];
-      var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
 
       // Define our viewportWidth variable
       var viewportWidth;
@@ -85,23 +84,24 @@
             .querySelectorAll(".offcanvas-mobile-body")[0]
             .classList.remove("offcanvas-body");
           offcanvasMobile.style.visibility = "visible";
-          bsOffcanvas.hide();
         }
       };
-
-      // Set our initial width and log it
-      setViewportWidth();
-      logWidth();
-
-      // On resize events, recalculate and log
-      window.addEventListener(
-        "resize",
-        function () {
-          setViewportWidth();
-          logWidth();
-        },
-        false
-      );
+      setTimeout(function () {
+        // Set our initial width and log it
+        var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
+        setViewportWidth();
+        logWidth();
+        // On resize events, recalculate and log
+        window.addEventListener(
+          "resize",
+          function () {
+            setViewportWidth();
+            logWidth();
+            bsOffcanvas.hide();
+          },
+          false
+        );
+      }, 700);
     },
     false
   );
