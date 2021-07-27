@@ -16,13 +16,19 @@ addParameters({
     {
       id: "bcl-theme-default",
       code: `<link rel="stylesheet" type="text/css" href="oe-bcl-default.min.css" />`,
-      picked: true,
+      picked: false,
       hideCode: true,
     },
     {
       id: "bcl-theme-ecl",
       code: `<link rel="stylesheet" type="text/css" href="oe-bcl-ecl.min.css" />`,
       picked: false,
+      hideCode: true,
+    },
+    {
+      id: "bcl-theme-joinup",
+      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-joinup.min.css" />`,
+      picked: true,
       hideCode: true,
     },
   ],

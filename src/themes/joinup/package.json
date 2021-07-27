@@ -1,0 +1,42 @@
+{
+  "name": "@openeuropa/bcl-theme-joinup",
+  "author": "European Commission",
+  "license": "EUPL-1.2",
+  "version": "0.4.0",
+  "description": "OE - BCL theme joinup",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:clean": "rimraf css js templates",
+    "build:styles": "cross-env bcl-builder styles",
+    "build:scripts": "cross-env bcl-builder scripts",
+    "build:copy": "cross-env bcl-builder copy",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@openeuropa/bcl-bootstrap": "^0.4.0",
+    "@openeuropa/bcl-builder": "^0.4.0",
+    "@openeuropa/bcl-twig-templates": "^0.4.0",
+    "copyfiles": "2.4.1",
+    "cross-env": "7.0.3",
+    "glob": "7.1.7",
+    "npm-run-all": "4.1.5",
+    "slim-select": "1.27.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openeuropa/bootstrap-component-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openeuropa/bootstrap-component-library.git/issues"
+  },
+  "homepage": "https://github.com/openeuropa/bootstrap-component-library",
+  "keywords": [
+    "openeuropa",
+    "bootstrap-component-library",
+    "design-system",
+    "twig"
+  ]
+}

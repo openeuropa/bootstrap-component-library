@@ -27,7 +27,7 @@
     "pretty:fix": "prettier --write \"(src|storybook|tools)/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "publish": "scripts/publish.sh",
     "start": "run-p watch storybook server",
-    "server": "browser-sync start --proxy localhost:5000 --files \"assets/oe-bcl-default.min.css\"",
+    "server": "browser-sync start --proxy localhost:5000 --files \"assets/oe-bcl-joinup.min.css\"",
     "storybook": "start-storybook -p 5000 -c storybook/.storybook -s assets/ --ci",
     "test": "npm-run-all css-lint twig:snapshots",
     "twig:snapshots": "npm run jest",
