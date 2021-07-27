@@ -19,12 +19,6 @@ addParameters({
       picked: true,
       hideCode: true,
     },
-    {
-      id: "bcl-theme-ecl",
-      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-ecl.min.css" />`,
-      picked: false,
-      hideCode: true,
-    },
   ],
   controls: { expanded: true },
   layout: "fullscreen",
