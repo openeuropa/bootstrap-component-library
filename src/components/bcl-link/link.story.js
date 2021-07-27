@@ -48,6 +48,40 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    btn_styled: {
+      type: { name: "boolean" },
+      description: "Style as a button",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    outline: {
+      type: { name: "boolean" },
+      description: "Enable outline if link is styled as a button",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    size: {
+      type: { name: "select" },
+      description: "Size of the button if link is styled as a button",
+      defaultValue: "md",
+      control: {
+        type: "select",
+        options: { small: "sm", medium: "md", large: "lg" },
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "md" },
+        category: "Style",
+      },
+    },
     ...getIconControls("link"),
   };
 };
