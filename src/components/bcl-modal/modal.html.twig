@@ -7,10 +7,13 @@
   - body (block)
   - footer (block)
 #}
-{% set _size = size ? 'modal-' ~ size : '' %}
-{% set _id = id|default('defaultModalId') %}
+{% set _size = size ? 'modal-' ~ size %}
+{% set _id = id|default('modal' ~ random(1000)) %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
+{% set _static_backdrop = static_backdrop|default(false) %}
+{% set _verticaly_centered = verticaly_centered|default(false) %}
+{% set _scrollable = scrollable|default(false) %}
 {% set _footer = footer|default('') %}
 {% set _classes = ['modal fade'] %}
 
@@ -26,10 +29,21 @@
                     .addClass(_classes)
 %}
 
+{% if _static_backdrop %}
+  {% set dialog_attributes = dialog_attributes.setAttribute('data-bs-backdrop', 'static') %}
+{% endif %}
+
+{% set dialog_attributes = create_attribute().addClass([
+  'modal-dialog',
+  _size,
+  _verticaly_centered ? 'modal-dialog-centered',
+  _scrollable ? 'modal-dialog-scrollable'
+]) %}
+
 <div
   {{ attributes }}
 >
-  <div class="modal-dialog {{ _size }}">
+  <div{{ dialog_attributes }}>
     <div class="modal-content">
       <div class="modal-header">
         {%- block header _header -%}

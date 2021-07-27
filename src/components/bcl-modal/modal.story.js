@@ -26,6 +26,36 @@ const getArgTypes = () => {
         },
       },
     },
+    static_backdrop: {
+      type: { name: "boolean" },
+      description: "Modal will not close when clicking outside it",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    verticaly_centered: {
+      type: { name: "boolean" },
+      description: "Vertically center the modal",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    scrollable: {
+      type: { name: "boolean" },
+      description: "Scrolling long content in modal dialog",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
   };
 };
 
