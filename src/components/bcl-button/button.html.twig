@@ -54,8 +54,11 @@
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
+{% set attributes = attributes.setAttribute('type', _type) %}
 
-<button{{ attributes.setAttribute('type', _type) }}>
+<button
+  {{ attributes }}
+>
 {%- if _show_spinner -%}
   {% include '@oe-bcl/bcl-spinner/spinner.html.twig' with _spinner only %}
 {%- endif -%}
@@ -73,6 +76,6 @@
   {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
 {%- endif -%}
 {%- endif -%}
- </button>
+</button>
 
 {% endspaceless %}
