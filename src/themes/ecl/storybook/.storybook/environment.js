@@ -7,7 +7,7 @@ const {
 const drupalAttribute = require("drupal-attribute");
 
 const oeAbsPath = path.resolve(__dirname, "../../../../components");
-const projAbsPath = path.resolve(__dirname, "../custom-templates");
+const projAbsPath = path.resolve(__dirname, "../../custom-templates");
 const loader = new TwingLoaderFilesystem(oeAbsPath);
 
 // In storybook we get this returned as an instance of
@@ -15,6 +15,7 @@ const loader = new TwingLoaderFilesystem(oeAbsPath);
 if (typeof loader.addPath === "function") {
   // Add namespace oe.
   loader.addPath(oeAbsPath, "oe-bcl");
+  loader.addPath(projAbsPath, "oe-bcl");
 }
 
 const createAttribute = new TwingFunction("create_attribute", function () {
