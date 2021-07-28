@@ -117,5 +117,10 @@ module.exports = {
       to: path.resolve(outputFolder, "templates"),
       options: { up: 9 },
     },
+    {
+      from: ["./custom-templates/**/*.twig"],
+      to: path.resolve(outputFolder, "templates"),
+      options: { up: 1 },
+    },
   ],
 };

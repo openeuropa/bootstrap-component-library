@@ -34,7 +34,7 @@
     "test": "npm-run-all css-lint twig:snapshots",
     "twig:snapshots": "npm run jest",
     "update-version": "scripts/update-version.sh",
-    "watch": "nodemon --ignore 'src/themes/templates/*.twig' -e twig,scss -x \"run-s build:themes copy:assets\""
+    "watch": "nodemon --ignore 'src/themes/**/*.twig' -e twig,scss -x \"run-s build:themes copy:assets\""
   },
   "keywords": [
     "openeuropa",

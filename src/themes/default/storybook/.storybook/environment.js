@@ -6,7 +6,7 @@ const {
 } = require("twing");
 const drupalAttribute = require("drupal-attribute");
 
-const oeAbsPath = path.resolve(__dirname, "../../../..//components");
+const oeAbsPath = path.resolve(__dirname, "../../../../components");
 const projAbsPath = path.resolve(__dirname, "../custom-templates");
 const loader = new TwingLoaderFilesystem(oeAbsPath);
 
