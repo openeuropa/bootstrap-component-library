@@ -1,0 +1,51 @@
+$header-margin: 0.5rem !default;
+
+// header
+.oe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: $header-margin;
+}
+
+// language list
+$language-background: $light !default;
+$language-color: $dark !default;
+$language-list-gap: $spacer !default;
+$language-item-background: transparent !default;
+$language-item-color: $link-color !default;
+$language-item-background-hover: transparent !default;
+$language-item-color-hover: $link-hover-color !default;
+
+.oe-language .modal-content {
+  color: $language-color;
+  background-color: $language-background;
+}
+
+.oe-language__list {
+  display: grid;
+  gap: $language-list-gap;
+  margin-bottom: $language-list-gap;
+}
+
+.oe-language__item {
+  color: $language-item-color;
+  background-color: $language-item-background;
+
+  &:hover,
+  &:focus {
+    color: $language-item-color-hover;
+    background-color: $language-item-background-hover;
+  }
+}
+
+$navbar-background: transparent !default;
+$navbar-link-active-background: transparent !default;
+
+.oe-header__navbar {
+  background-color: $navbar-background;
+}
+
+.oe-header__navbar .nav-link.active {
+  background-color: $navbar-link-active-background;
+}

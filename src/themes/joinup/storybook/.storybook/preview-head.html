@@ -1,0 +1,104 @@
+<script defer type="text/javascript" src="oe-bcl-joinup.bundle.min.js"></script>
+<script src="slimselect.min.js"></script>
+<script>
+  document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+      var offcanvasElementList = [].slice.call(
+        document.querySelectorAll(".offcanvas")
+      );
+      var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+        var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
+      });
+
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var options = { autohide: false };
+      var toastList = toastElList.map(function (toastEl) {
+        var toast = new bootstrap.Toast(toastEl, options);
+        toast.show();
+      });
+
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      if (
+        document.getElementById("scrollspy") &&
+        typeof bootstrap !== "undefined"
+      ) {
+        document.body.setAttribute("data-bs-spy", "scroll");
+        document.body.setAttribute("data-bs-target", "#scrollspy");
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
+        if (scrollspyBody) {
+          scrollspyBody.dispose();
+        }
+        setTimeout(function () {
+          var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: "#scrollspy",
+            method: "position",
+          });
+        }, 700);
+      }
+
+      var offcanvasMobile = document.querySelectorAll(".offcanvas-mobile")[0];
+
+      // Define our viewportWidth variable
+      var viewportWidth;
+
+      // Set/update the viewportWidth value
+      var setViewportWidth = function () {
+        viewportWidth =
+          window.innerWidth || document.documentElement.clientWidth;
+      };
+
+      // Log the viewport width into the console
+      var logWidth = function () {
+        if (viewportWidth < 992) {
+          offcanvasMobile.classList.add("offcanvas", "offcanvas-start");
+          offcanvasMobile
+            .querySelectorAll(".offcanvas-mobile-body")[0]
+            .classList.add("offcanvas-body");
+        } else {
+          offcanvasMobile.classList.remove("offcanvas", "offcanvas-start");
+          offcanvasMobile
+            .querySelectorAll(".offcanvas-mobile-body")[0]
+            .classList.remove("offcanvas-body");
+          offcanvasMobile.style.visibility = "visible";
+        }
+      };
+      setTimeout(function () {
+        // Set our initial width and log it
+        var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
+        setViewportWidth();
+        logWidth();
+        // On resize events, recalculate and log
+        window.addEventListener(
+          "resize",
+          function () {
+            setViewportWidth();
+            logWidth();
+            bsOffcanvas.hide();
+          },
+          false
+        );
+      }, 700);
+    },
+    false
+  );
+</script>

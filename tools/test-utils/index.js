@@ -1,5 +1,5 @@
 const merge = require("deepmerge");
-const twing = require("@openeuropa/bcl-storybook/.storybook/environment");
+const twing = require("@openeuropa/bcl-storybook-default/.storybook/environment");
 const drupalAttribute = require("drupal-attribute");
 
 const renderTwigFileAsNode = (file, options, reset) =>

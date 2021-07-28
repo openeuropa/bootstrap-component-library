@@ -1,14 +1,15 @@
 {
-  "name": "@openeuropa/bcl-theme-default",
+  "name": "@openeuropa/bcl-theme-joinup",
   "author": "European Commission",
   "license": "EUPL-1.2",
   "version": "0.4.0",
-  "description": "OE - BCL theme default",
+  "description": "OE - BCL theme joinup",
   "scripts": {
     "build": "npm-run-all build:*",
     "build:clean": "rimraf css js templates",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
+    "build:copy": "cross-env bcl-builder copy",
     "prepublish": "npm run build"
   },
   "devDependencies": {
