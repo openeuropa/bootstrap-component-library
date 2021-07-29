@@ -1,5 +1,5 @@
-import demoData from "./dataSearch.js";
-import search from "./search.html.twig";
+import demoData from "@openeuropa/bcl-search/dataSearch.js";
+import search from "@openeuropa/bcl-search/search.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 export default {

@@ -12,14 +12,6 @@ addParameters({
     },
     manual: false,
   },
-  cssresources: [
-    {
-      id: "bcl-theme-default",
-      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-default.min.css" />`,
-      picked: true,
-      hideCode: true,
-    },
-  ],
   controls: { expanded: true },
   layout: "fullscreen",
   viewport: {

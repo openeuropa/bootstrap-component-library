@@ -3,6 +3,7 @@ import { addons } from "@storybook/addons";
 import browserUpdate from "browser-update";
 import { create } from "@storybook/theming";
 import { version } from "../../../../../lerna.json";
+import { project } from "../.project.json";
 
 addons.setConfig({
   isFullscreen: false,
@@ -14,7 +15,7 @@ addons.setConfig({
   isToolshown: true,
   theme: create({
     base: "light",
-    brandTitle: `OE - Bootstrap component library v${version}`,
+    brandTitle: `OE-BCL ${project} v${version}`,
     brandUrl: "https://github.com/openeuropa/bootstrap-component-library",
     brandImage: undefined,
   }),

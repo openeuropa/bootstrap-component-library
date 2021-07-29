@@ -7,7 +7,6 @@ const addons = [
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",
-  "@storybook/addon-cssresources",
   "@storybook/addon-a11y",
   "@whitespace/storybook-addon-html",
 ];
