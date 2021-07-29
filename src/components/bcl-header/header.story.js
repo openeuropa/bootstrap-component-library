@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-header/data.js";
 import headerECLData from "@openeuropa/bcl-data-header/data-ecl";
-import header from "./header.html.twig";
+import header from "@openeuropa/bcl-header/header.html.twig";
 import "!!null-loader!@openeuropa/bcl-theme-default/scss/_header.scss";
 import "!!null-loader!@openeuropa/bcl-theme-ecl/scss/_header.scss";
 

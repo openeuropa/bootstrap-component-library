@@ -4,7 +4,7 @@ import toggleDemoData from "@openeuropa/bcl-data-button/toggleData.js";
 import popoverDemoData from "@openeuropa/bcl-data-button/popoverData.js";
 import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData.js";
 import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData.js";
-import button from "./button.html.twig";
+import button from "@openeuropa/bcl-button/button.html.twig";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import drupalAttribute from "drupal-attribute";

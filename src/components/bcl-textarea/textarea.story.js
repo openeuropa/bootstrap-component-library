@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
-import textarea from "./textarea.html.twig";
+import textarea from "@openeuropa/bcl-textarea/textarea.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {

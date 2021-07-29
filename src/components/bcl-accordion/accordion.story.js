@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-accordion/data.js";
-import accordion from "./accordion.html.twig";
+import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {

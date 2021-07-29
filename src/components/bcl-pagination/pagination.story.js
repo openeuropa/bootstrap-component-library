@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-pagination/data.js";
 import demoCustomIconsData from "@openeuropa/bcl-data-pagination/dataCustomIcons.js";
-import pagination from "./pagination.html.twig";
+import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgTypes = (data) => {

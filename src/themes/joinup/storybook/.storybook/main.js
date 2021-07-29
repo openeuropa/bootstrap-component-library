@@ -1,6 +1,6 @@
 const path = require("path");
 
-const stories = ["../../../../**/*.story.js", "../stories/*.story.js"];
+const stories = ["../bcl-stories/**/*.story.js", "../stories/*.story.js"];
 
 const addons = [
   "@storybook/addon-docs",

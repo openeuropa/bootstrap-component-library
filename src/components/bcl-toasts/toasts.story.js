@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoSingle from "@openeuropa/bcl-data-toasts/data.js";
 import demoMultiple from "@openeuropa/bcl-data-toasts/data-multiple.js";
-import toasts from "./toasts.html.twig";
+import toasts from "@openeuropa/bcl-toast/toasts.html.twig";
 
 const getArgTypes = (data) => {
   return {

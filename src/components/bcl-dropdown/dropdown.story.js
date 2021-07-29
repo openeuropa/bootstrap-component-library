@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
-import dropdown from "./dropdown.html.twig";
+import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {

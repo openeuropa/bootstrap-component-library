@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-carousel/data.js";
-import carousel from "./carousel.html.twig";
+import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgTypes = (data) => {
