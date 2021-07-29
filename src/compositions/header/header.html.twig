@@ -1,0 +1,59 @@
+{% spaceless %}
+
+<header class="ju-navheader">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/example.html">
+        <img src="/src/themes/joinup/images/logo.svg" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar"
+        aria-controls="navbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="container-fluid navbar-nav nav-pills justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sign-in">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <button
+              data-bs-toggle="collapse"
+              autocomplete="off"
+              aria-expanded="false"
+              aria-controls="getStarted"
+              data-bs-target="#getStarted"
+              class="nav-link ju-navheader__cta"
+              type="button"
+            >
+              Get started
+            </button>
+            <div class="collapse ju-navheader__collapse" id="getStarted">
+              <p class="ju-navheader__collapse-title">
+                Create an account
+              </p>
+              <p class="ju-navheader__collapse-text">
+                As a signed-in user you can create content, become a member of a community, receive notifications on your favourite solutions and topics, and access all other features available on the platform.
+              </p>
+              <p class="ju-navheader__collapse-cta">
+                <a class="ju-navheader__collapse-cta-link" href="#">About EU Login</a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+{% endspaceless %}
