@@ -5,6 +5,9 @@ import modal from "@openeuropa/bcl-modal/modal.html.twig";
 const getArgs = () => {
   return {
     size: "",
+    static_backdrop: false,
+    verticaly_centered: false,
+    scrollable: false,
   };
 };
 
@@ -29,6 +32,35 @@ const getArgTypes = () => {
           xl: "extra large",
           fullscreen: "fullscreen",
         },
+      },
+    },
+    static_backdrop: {
+      name: "static backdrop",
+      type: { name: "boolean" },
+      description: "Modal will not close when clicking outside it",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    verticaly_centered: {
+      name: "verticaly centered",
+      type: { name: "boolean" },
+      description: "Vertically center the modal",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    scrollable: {
+      type: { name: "boolean" },
+      description: "Scrolling long content in modal dialog",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
       },
     },
   };

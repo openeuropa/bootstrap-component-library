@@ -9,6 +9,8 @@ const getArgs = (data) => {
     animated: false,
     variant: "",
     progress: data.progress,
+    label: data.label,
+    bar_label: "",
   };
 };
 
@@ -56,11 +58,30 @@ const getArgTypes = (data) => {
         max: 100,
       },
     },
+    label: {
+      type: { name: "string" },
+      name: "label",
+      description: "Text before the progress bar",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    bar_label: {
+      type: { name: "string" },
+      name: "bar label",
+      description: "Text inside the progress bar",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
   };
 };
 
 const applyArgs = (data, args) => {
-  args.label = `${args.progress}%`;
   return Object.assign(data, args);
 };
 
