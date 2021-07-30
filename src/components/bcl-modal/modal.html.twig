@@ -1,7 +1,7 @@
 {% spaceless %}
 
 {# Parameters:
-  - size (sm, lg, xl, fullscreen)
+  - size (string) (sm, lg, xl, fullscreen) default('')
   - id (boolean) (default: 'modal-' ~ random(1000))
   - static_backdrop (boolean) (default: false)
   - verticaly_centered (boolean) (default: false)
@@ -10,7 +10,7 @@
   - body (block) (default: '')
   - footer (block) (default: '')
 #}
-{% set _size = size ? 'modal-' ~ size : '' %}
+{% set _size =  size|default('') %}
 {% set _id = id|default('modal-' ~ random(1000)) %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
@@ -36,6 +36,7 @@
   {{ attributes }}
 >
   <div class="modal-dialog
+  {{- _size ? ' modal-' ~ size -}}
   {{- _verticaly_centered ? ' modal-dialog-centered' -}}
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
   {{- _static_backdrop ? ' data-bs-backdrop="static"' -}}

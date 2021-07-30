@@ -28,14 +28,6 @@ describe("OE - modal", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with verticaly centered modal", () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, verticaly_centered: true })
-    ).resolves.toMatchSnapshot();
-  });
-
   test("renders correctly with scrollable modal", () => {
     expect.assertions(1);
 
