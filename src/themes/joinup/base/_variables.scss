@@ -1,6 +1,66 @@
-// Colors
-$primary: #ff0;
+// Override Bootstrap's Sass default variables for Joinup
 
+// General
+$enable-negative-margins: true;
+$border-radius: 0.5rem;
+
+// Color system
+$brand: #1073de;
+$secondary: lighten(
+  desaturate(adjust-hue($brand, -1), 15.13),
+  47.84
+); // #e7f1fb
+$primary: #143b76;
+$success: #18bf80;
+$warning: #eba843;
+$danger: #eb3434;
 $theme-colors: (
+  "brand": $brand,
   "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "warning": $warning,
+  "danger": $danger
 );
+$gray-100: #fafbfc !default;
+$gray-200: #f5f6f7 !default;
+$gray-300: #dadee0 !default;
+$gray-400: #a2a8ab !default;
+$gray-500: #858a8c !default;
+$gray-600: #6d7173 !default;
+$gray-700: #555859 !default;
+$gray-800: #3d3f40 !default;
+$gray-900: #242626 !default;
+
+// Links
+$link-color: $brand;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Buttons
+$btn-link-color: $link-color;
+
+$box-shadow: 0 0.1rem 0.4rem 0.1rem rgba($black, 0.15);
+
+$btn-hover-bg-shade-amount: 0;
+$btn-hover-bg-tint-amount: 0;
+$btn-disabled-opacity: 0.5;
+$btn-hover-border-shade-amount: 20%;
+$btn-border-radius: 0.4rem;
+$btn-padding-y: 0.4rem;
+$btn-padding-x: 1.6rem;
+
+// Typography
+
+// Font size xs (not existent on BS)
+$font-size-xs: $font-size-base * 0.75; // 12px.
+
+$h1-font-size: $font-size-base * 2.5; // 40px
+$h2-font-size: $font-size-base * 2; // 32px
+$h3-font-size: $font-size-base * 1.5; // 24px
+$h4-font-size: $font-size-base * 1.25; // 20px
+$h5-font-size: $font-size-base; // 16px
+$h6-font-size: $font-size-base; // 16px
+
+$headings-font-weight: 700;
+$headings-line-height: 2.5 !default;
