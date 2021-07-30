@@ -3,12 +3,20 @@ import demoData from "@openeuropa/bcl-data-spinner/data.js";
 import spinner from "@openeuropa/bcl-spinner/spinner.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
+const getArgs = (data) => {
+  return {
+    small: false,
+    variant: data.variant,
+    type: "border",
+    assistive_text: data.assistive_text,
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     small: {
       type: { name: "boolean" },
       description: "Small spinner",
-      defaultValue: data.small,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -18,11 +26,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the spinner",
-      defaultValue: data.variant,
-      control: {
-        type: "select",
-        options: getVariants(false),
-      },
+      options: getVariants(false),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -32,10 +36,9 @@ const getArgTypes = (data) => {
     type: {
       type: { name: "select" },
       description: "Type of spinner",
-      defaultValue: "border",
+      options: ["border", "grow"],
       control: {
         type: "inline-radio",
-        options: ["border", "grow"],
       },
       table: {
         type: { summary: "string" },
@@ -48,7 +51,6 @@ const getArgTypes = (data) => {
       name: "assistive text",
       description:
         "Text inside the spinner to be visible on assistive technologies",
-      defaultValue: data.assistive_text,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -88,4 +90,5 @@ export default {
 
 export const Default = (args) => spinner(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

@@ -4,18 +4,26 @@ import demoCustomIconsData from "@openeuropa/bcl-data-pagination/dataCustomIcons
 import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
+const getArgs = (data) => {
+  return {
+    size: "",
+    alignment: "",
+    enable_icon: data.enable_icon,
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     size: {
       type: { name: "select" },
       description: "size",
-      defaultValue: "",
+      options: ["", "sm", "lg"],
       control: {
         type: "select",
-        options: {
-          small: "sm",
-          medium: "",
-          large: "lg",
+        labels: {
+          sm: "small",
+          "": "medium",
+          lg: "large",
         },
       },
       table: {
@@ -27,13 +35,13 @@ const getArgTypes = (data) => {
     alignment: {
       type: { name: "select" },
       description: "alignment",
-      defaultValue: "",
+      options: ["", "center", "end"],
       control: {
         type: "select",
-        options: {
-          left: "",
+        labels: {
+          "": "left",
           center: "center",
-          right: "end",
+          end: "right",
         },
       },
       table: {
@@ -46,7 +54,6 @@ const getArgTypes = (data) => {
       name: "enable icon",
       type: { name: "boolean" },
       description: "Enable icon for previous and next",
-      defaultValue: data.enable_icon,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -94,11 +101,12 @@ export default {
 
 export const Default = (args) => pagination(applyArgs(demoData, args));
 
-Default.storyName = "Default";
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 
 export const customIcons = (args) =>
   pagination(applyArgs(demoCustomIconsData, args));
 
 customIcons.storyName = "With Custom Icons";
+customIcons.args = getArgs(demoCustomIconsData);
 customIcons.argTypes = getArgTypes(demoCustomIconsData);

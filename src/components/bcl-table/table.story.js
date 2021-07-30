@@ -4,12 +4,20 @@ import table from "@openeuropa/bcl-table/table.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data) => {
+  return {
+    striped: false,
+    hoverable: false,
+    borderless: false,
+    small: false,
+  };
+};
+
 const getArgTypes = () => {
   return {
     striped: {
       type: { name: "boolean" },
       description: "Striped table",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -19,7 +27,6 @@ const getArgTypes = () => {
     hoverable: {
       type: { name: "boolean" },
       description: "Hoverable rows",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -29,11 +36,7 @@ const getArgTypes = () => {
     variant: {
       type: { name: "select" },
       description: "Variant of the table",
-      defaultValue: "",
-      control: {
-        type: "select",
-        options: getVariants(false),
-      },
+      options: getVariants(false),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -43,11 +46,7 @@ const getArgTypes = () => {
     border: {
       type: { name: "select" },
       description: "Variant of the border of table",
-      defaultValue: "",
-      control: {
-        type: "select",
-        options: getVariants(false),
-      },
+      options: getVariants(false),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -57,7 +56,6 @@ const getArgTypes = () => {
     borderless: {
       type: { name: "boolean" },
       description: "Borderless table",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -67,7 +65,6 @@ const getArgTypes = () => {
     small: {
       type: { name: "boolean" },
       description: "Small table",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -127,4 +124,5 @@ export default {
 
 export const Default = (args) => table(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
