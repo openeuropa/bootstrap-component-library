@@ -7,7 +7,9 @@
   - striped (boolean) (default: false)
   - animated (boolean) (default: false)
   - label (string) (default: '')
+  - bar_label (string) (default: '')
   - variant (string) (default: '')
+  - message (string) (default: '')
 #}
 
 {% set _progress = progress|default(0) %}
@@ -16,7 +18,9 @@
 {% set _striped = striped|default(false) %}
 {% set _animated = animated|default(false) %}
 {% set _label = label|default('') %}
+{% set _bar_label = bar_label|default('') %}
 {% set _variant = variant|default('') %}
+{% set _message = message|default('') %}
 {% set _classes = 'progress-bar' %}
 {% if _striped is not empty %}
   {% set _classes = _classes ~ ' progress-bar-striped' %}
@@ -30,6 +34,13 @@
 
 {% set attributes = attributes.addClass(['progress']) %}
 
+{% if _bar_label is empty %} 
+  {% set _bar_label = _progress ~ '%' %}
+{% endif %}
+
+{% if _label is not empty %}
+  <label class="progress-bar-label">{{ _label }}</label>
+{% endif %}
 <div
   {{ attributes }}
 >
@@ -41,8 +52,11 @@
     aria-valuemin="{{ _min }}"
     aria-valuemax="{{ _max }}"
   >
-  {{- _label -}}
+  {{- _bar_label -}}
   </div>
 </div>
+{% if _message is not empty %}
+  <small class="form-text text-muted progress-bar-message">{{ _message }}</small>
+{% endif %}
 
 {% endspaceless %}
