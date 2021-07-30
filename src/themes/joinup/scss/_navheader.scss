@@ -1,0 +1,50 @@
+$header-margin: 0.5rem !default;
+
+// JoinUp Nav Header
+.ju-navheader {
+  @extend .shadow;
+  @extend .py-2;
+  .nav-item {
+    &:not(:last-of-type) {
+      @extend .me-4;
+    }
+  }
+  .nav-link {
+    font-weight: $font-weight-bold;
+    color: $brand;
+  }
+
+  &__cta {
+    @extend .active;
+    @extend .text-light;
+    @extend .px-4;
+    font-weight: $font-weight-bold;
+    border-radius: $border-radius-lg;
+  }
+  &__collapse {
+    @extend .shadow;
+    @extend .col-md-4;
+    @extend .p-4;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #fff;
+    border-radius: $border-radius-lg;
+    &-title {
+      margin-bottom: 0.25rem;
+      font-weight: $font-weight-bold;
+      color: $brand;
+    }
+    &-text {
+      font-size: 0.825rem;
+    }
+    &-cta {
+      margin-bottom: 0;
+      color: $primary;
+      text-align: right;
+      &-link {
+        text-decoration: none;
+      }
+    }
+  }
+}
