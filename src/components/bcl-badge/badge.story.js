@@ -35,6 +35,16 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
+    dismissible: {
+      type: { name: "boolean" },
+      description: "Dismissible badge",
+      defaultValue: false,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Content",
+      },
+    },
     title: {
       type: { name: "string" },
       description: "Title attribute if it's a link",

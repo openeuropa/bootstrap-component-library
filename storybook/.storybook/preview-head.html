@@ -3,10 +3,18 @@
   type="text/javascript"
   src="oe-bcl-default.bundle.min.js"
 ></script>
+<script src="slimselect.min.js"></script>
 <script>
   document.addEventListener(
     "DOMContentLoaded",
     function () {
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
       var popoverTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="popover"]')
       );
@@ -51,6 +59,49 @@
           });
         }, 700);
       }
+
+      var offcanvasMobile = document.querySelectorAll(".offcanvas-mobile")[0];
+
+      // Define our viewportWidth variable
+      var viewportWidth;
+
+      // Set/update the viewportWidth value
+      var setViewportWidth = function () {
+        viewportWidth =
+          window.innerWidth || document.documentElement.clientWidth;
+      };
+
+      // Log the viewport width into the console
+      var logWidth = function () {
+        if (viewportWidth < 992) {
+          offcanvasMobile.classList.add("offcanvas", "offcanvas-start");
+          offcanvasMobile
+            .querySelectorAll(".offcanvas-mobile-body")[0]
+            .classList.add("offcanvas-body");
+        } else {
+          offcanvasMobile.classList.remove("offcanvas", "offcanvas-start");
+          offcanvasMobile
+            .querySelectorAll(".offcanvas-mobile-body")[0]
+            .classList.remove("offcanvas-body");
+          offcanvasMobile.style.visibility = "visible";
+        }
+      };
+      setTimeout(function () {
+        // Set our initial width and log it
+        var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
+        setViewportWidth();
+        logWidth();
+        // On resize events, recalculate and log
+        window.addEventListener(
+          "resize",
+          function () {
+            setViewportWidth();
+            logWidth();
+            bsOffcanvas.hide();
+          },
+          false
+        );
+      }, 700);
     },
     false
   );

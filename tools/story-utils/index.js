@@ -61,6 +61,18 @@ export const getFormControls = (data, type) => {
       },
     },
   };
+  if (type === "text" || type === "textarea" || type === "multiselect") {
+    argTypes.placeholder = {
+      name: "placeholder text",
+      type: "string",
+      description: "Text to be shown when the form element is not filled in",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    };
+  }
 
   if (type === "text" || type === "textarea" || type === "file") {
     argTypes.readonly = {
@@ -73,33 +85,6 @@ export const getFormControls = (data, type) => {
         category: "States",
       },
     };
-    argTypes.horizontal = {
-      type: { name: "boolean" },
-      description: "Horizontal layout",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
-    };
-    argTypes.horizontal_class = {
-      type: { name: "string" },
-      description: "Css class for the form input in an horizontal layout",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "col-sm-10" },
-        category: "Style",
-      },
-    };
-    argTypes.horizontal_label_class = {
-      type: { name: "string" },
-      description: "Css class for the label in an horizontal layout",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "col-sm-2" },
-        category: "Style",
-      },
-    };
     if (type !== "file") {
       argTypes.floating = {
         name: "floating label",
@@ -110,16 +95,6 @@ export const getFormControls = (data, type) => {
           type: { summary: "boolean" },
           defaultValue: { summary: "false" },
           category: "Style",
-        },
-      };
-      argTypes.placeholder = {
-        name: "placeholder text",
-        type: "string",
-        description: "Text to be shown when the form element is not filled in",
-        table: {
-          type: { summary: "string" },
-          defaultValue: { summary: "" },
-          category: "Content",
         },
       };
     }
@@ -183,6 +158,19 @@ export const getFormControls = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
+        category: "Style",
+      },
+    };
+  }
+
+  if (type === "multiselect") {
+    argTypes.select_by_group = {
+      name: "select by group",
+      type: { name: "boolean" },
+      description: `Select a group for multiselect`,
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
         category: "Style",
       },
     };

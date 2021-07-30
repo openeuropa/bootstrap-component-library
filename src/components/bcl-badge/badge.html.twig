@@ -5,6 +5,7 @@
   - background: (string) (default: 'primary')
   - url (string) (default: '')
   - title (string) (default: label)
+  - dismissible (boolean) (default: false)
   - assistive_text (string) (default: '')
   - rounded_pill (boolean) (default: false)
 #}
@@ -15,6 +16,7 @@
 {% set _classes = ['badge', 'bg-' ~ _background] %}
 {% set _url = url|default('') %}
 {% set _title = title|default(_label) %}
+{% set _dismissible = dismissible|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
 
 {% if _rounded_pill %}
@@ -43,6 +45,9 @@
     </span>
   {%- endif -%}
     {{- _label -}}
+  {%- if _dismissible -%}
+    <span class="icon--close" aria-hidden="true">&times;</span>
+  {%- endif -%}
   </span>
 {%- if _url is not empty -%}
 </a>

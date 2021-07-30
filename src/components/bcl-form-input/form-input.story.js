@@ -14,27 +14,17 @@ const getArgs = (data, type) => {
     disabled: data.disabled,
     required: data.required,
   };
-  if (type === "text" || type === "textarea" || type === "file") {
+  if (type === "text" || type === "file") {
     args.readonly = data.readonly;
-    args.horizontal = false;
-    args.horizontal_class = "col-sm-10";
-    args.horizontal_label_class = "col-sm-2";
   }
   if (type !== "file") {
     args.floating = false;
+    args.placeholder = "text here";
+  } else {
     args.placeholder = "";
   }
-
-  if (
-    type === "text" ||
-    type === "textarea" ||
-    type === "file" ||
-    type === "select"
-  ) {
-    args.size = data.size;
-  }
   if (type === "checkbox") {
-    args.switch = data.switch;
+    args.switch = data.switch || false;
   }
   if (type === "radio" || type === "checkbox") {
     args.toggle = false;
@@ -100,6 +90,7 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data, args);
+  console.log(args);
   return Object.assign(data, args);
 };
 
@@ -109,12 +100,11 @@ export default {
   decorators: [withDesign],
 };
 
-const formTextData = { ...demoData, placeholder: "text here" };
-export const FormInput = (args) => formInput(applyArgs(formTextData, args));
+export const FormInput = (args) => formInput(applyArgs(demoData, args));
 
 FormInput.storyName = "text field";
-FormInput.args = getArgs(formTextData, "text");
-FormInput.argTypes = getArgTypes(formTextData, "text");
+FormInput.args = getArgs(demoData, "text");
+FormInput.argTypes = getArgTypes(demoData, "text");
 FormInput.parameters = {
   design: [
     {
