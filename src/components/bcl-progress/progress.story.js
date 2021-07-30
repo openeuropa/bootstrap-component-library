@@ -19,7 +19,6 @@ const getArgTypes = (data) => {
     striped: {
       type: { name: "boolean" },
       description: "Striped bar",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -29,7 +28,6 @@ const getArgTypes = (data) => {
     animated: {
       type: { name: "boolean" },
       description: "Animated bar",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
