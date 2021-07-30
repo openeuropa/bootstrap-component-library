@@ -3,16 +3,23 @@ import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "./dropdown.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data) => {
+  return {
+    direction: "",
+    dark: false,
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     direction: {
       type: { name: "select" },
       description: "Direction of dropdown menu",
-      defaultValue: "",
+      options: ["", "dropup", "dropend", "dropstart"],
       control: {
         type: "select",
-        options: {
-          dropdown: "",
+        labels: {
+          "": "dropdown",
           dropup: "dropup",
           dropend: "dropend",
           dropstart: "dropstart",
@@ -27,7 +34,6 @@ const getArgTypes = (data) => {
     dark: {
       type: { name: "boolean" },
       description: "Enables dark mode for dropdown menu",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -75,4 +81,5 @@ export default {
 
 export const Default = (args) => dropdown(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

@@ -5,12 +5,29 @@ import card from "./card.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data, type) => {
+  const args = {
+    title: data.title,
+    subtitle: data.subtitle,
+    text: data.text,
+    content: data.content,
+    variant: data.variant,
+    text_color: data.text_color,
+    border_variant: data.border_variant,
+  };
+  if (type == "horizontal") {
+    args.horizontal = data.horizontal;
+    args.horizontal_grid = data.horizontal_grid;
+  }
+
+  return args;
+};
+
 const getArgTypes = (data, type) => {
   let argTypes = {
     title: {
       type: { name: "object" },
       description: "Title of the card",
-      defaultValue: data.title,
       control: {
         type: "object",
       },
@@ -23,7 +40,6 @@ const getArgTypes = (data, type) => {
     subtitle: {
       type: { name: "object" },
       description: "Subtitle of the card",
-      defaultValue: data.subtitle,
       control: {
         type: "object",
       },
@@ -36,7 +52,6 @@ const getArgTypes = (data, type) => {
     text: {
       type: { name: "object" },
       description: "Text of the card",
-      defaultValue: data.text,
       control: {
         type: "object",
       },
@@ -49,7 +64,6 @@ const getArgTypes = (data, type) => {
     content: {
       type: { name: "string" },
       description: "Custom content of the card",
-      defaultValue: data.content,
       control: {
         type: "text",
       },
@@ -62,11 +76,7 @@ const getArgTypes = (data, type) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the card",
-      defaultValue: data.variant,
-      control: {
-        type: "select",
-        options: getVariants(false),
-      },
+      options: getVariants(false),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -76,12 +86,8 @@ const getArgTypes = (data, type) => {
     text_color: {
       name: "text color",
       type: { name: "select" },
+      options: ["white", "dark"],
       description: "Text color of the card",
-      defaultValue: data.text_color,
-      control: {
-        type: "select",
-        options: ["white", "dark"],
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -92,11 +98,7 @@ const getArgTypes = (data, type) => {
       name: "border variant",
       type: { name: "select" },
       description: "Border Variant of the card",
-      defaultValue: data.border_variant,
-      control: {
-        type: "select",
-        options: getVariants(false),
-      },
+      options: getVariants(false),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -108,11 +110,6 @@ const getArgTypes = (data, type) => {
     argTypes.horizontal = {
       type: { name: "boolean" },
       description: "Horizontal style of card",
-      defaultValue: data.horizontal,
-      control: {
-        type: "select",
-        options: [data.horizontal],
-      },
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -122,7 +119,6 @@ const getArgTypes = (data, type) => {
     argTypes.horizontal_grid = {
       type: { name: "object" },
       description: "Horizontal grid layout",
-      defaultValue: data.horizontal_grid,
       control: {
         type: "object",
       },
@@ -171,8 +167,10 @@ export default {
 
 export const Default = (args) => card(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 
 export const Horizontal = (args) => card(applyArgs(demoDataHorizontal, args));
 
+Horizontal.args = getArgs(demoDataHorizontal, "horizontal");
 Horizontal.argTypes = getArgTypes(demoDataHorizontal, "horizontal");

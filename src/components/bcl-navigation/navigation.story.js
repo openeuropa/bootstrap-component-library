@@ -4,13 +4,25 @@ import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs.js";
 import navigation from "./navigation.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = (data, type) => {
+  let args = {
+    full_width: false,
+    alignment: "",
+  };
+  if (type === "default") {
+    args.pills = data.pills;
+    args.vertical = false;
+  }
+
+  return args;
+};
+
 const getArgTypes = (data, type) => {
   let argTypes = {
     full_width: {
       name: "full width",
       type: { name: "boolean" },
       description: "Full width menu",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -20,14 +32,14 @@ const getArgTypes = (data, type) => {
     alignment: {
       type: { name: "select" },
       description: "Alignment menu",
-      defaultValue: "",
+      options: ["", "start", "center", "end"],
       control: {
         type: "select",
-        options: {
-          none: "",
-          left: "start",
+        labels: {
+          "": "none",
+          start: "left",
           center: "center",
-          right: "end",
+          end: "right",
         },
       },
       table: {
@@ -41,7 +53,6 @@ const getArgTypes = (data, type) => {
     argTypes.pills = {
       type: { name: "boolean" },
       description: "Menu items as pills",
-      defaultValue: data.pills,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -51,7 +62,6 @@ const getArgTypes = (data, type) => {
     argTypes.vertical = {
       type: { name: "boolean" },
       description: "Vertical menu",
-      defaultValue: "",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -103,9 +113,10 @@ export default {
 
 export const Default = (args) => navigation(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData, "default");
 Default.argTypes = getArgTypes(demoData, "default");
 
 export const Tabs = (args) => navigation(applyArgs(demoTabsData, args));
 
-Tabs.storyName = "Tabs";
+Tabs.args = getArgs(demoTabsData);
 Tabs.argTypes = getArgTypes(demoTabsData);
