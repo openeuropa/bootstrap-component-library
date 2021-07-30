@@ -5,6 +5,9 @@ import modal from "./modal.html.twig";
 const getArgs = () => {
   return {
     size: "",
+    static_backdrop: false,
+    verticaly_centered: false,
+    scrollable: false,
   };
 };
 
@@ -35,7 +38,6 @@ const getArgTypes = () => {
       name: "static backdrop",
       type: { name: "boolean" },
       description: "Modal will not close when clicking outside it",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -46,7 +48,6 @@ const getArgTypes = () => {
       name: "verticaly centered",
       type: { name: "boolean" },
       description: "Vertically center the modal",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -56,7 +57,6 @@ const getArgTypes = () => {
     scrollable: {
       type: { name: "boolean" },
       description: "Scrolling long content in modal dialog",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
