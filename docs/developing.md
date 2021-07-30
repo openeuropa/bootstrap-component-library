@@ -8,7 +8,7 @@ specific project.
 It is based on the concept of `themes` which can be directly used in a drupal
 theme providing it with all the needed resources the library has: js files,
 css files, twig templates.
-All the components and compositiions are using bootstrap markup and the default
+All the components and compositions are using bootstrap markup and the default
 styles and behaviours, unless amended or overridden by the theme, are provided
 by the bootstrap library, its sources are compiled by the library in a way as
 close as possible to the one used by bootstrap itself.
@@ -49,7 +49,7 @@ when using a theme provided by the library but in any case a package with all th
 bootstrap sources is released and maintained by the BCL library.
 The package name is `@openeuropa/bcl-bootstrap` and the folder where it is
 defined in the library is `bootstrap`.
-The library uses Bootstrap 5, the demoes are all having links to the bootstrap
+The library uses Bootstrap 5, the demos are all having links to the bootstrap
 documentation for giving full access to the available information about a certain
 component or functionality.
 Application using any of the theme provided by the library should not have any
@@ -65,7 +65,7 @@ package that it contains
 Ex: `src/components/bcl-accordion/accordion.html.twig`.
 These are basically the components for how they are defined by bootstrap, each
 folder contains one or more `*.html.twig` templates, a `*.story.js` file defining
-the demoes that storybook will show, a `*.test.js` file defining test scenarios
+the demos that storybook will show, a `*.test.js` file defining test scenarios
 for jest to render and store the resulting html markup.
 These components are the ones defining the basic elements, atoms of the library,
 they can then be overridden by a theme package developed for a specific project.
@@ -90,7 +90,7 @@ npm packages.
 
 #### Stories
 
-Stories are the demoes that storybook will present in the styleguide, the
+Stories are the demos that storybook will present in the styleguide, the
 default stories are defined in the components folder, this can be used also by
 any of the other themes and be combined with custom stories belonging to the
 project's specific styleguide.

@@ -110,9 +110,9 @@ twig-loader would be defined as such:
 
 `loader.addPath(pathToTheTemplatesFolder, "oe-bcl");`
 
-## Developer's brief guide
+## Developer's guidelines
 
-![Developer's guidelines](docs/developing.md)
+[Developer's guidelines](docs/developing.md)
 
 ### Setup on Windows using WSL 1
 
