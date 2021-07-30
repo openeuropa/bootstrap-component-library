@@ -27,6 +27,7 @@ const getArgTypes = () => {
       },
     },
     static_backdrop: {
+      name: "static backdrop",
       type: { name: "boolean" },
       description: "Modal will not close when clicking outside it",
       defaultValue: false,
@@ -37,6 +38,7 @@ const getArgTypes = () => {
       },
     },
     verticaly_centered: {
+      name: "verticaly centered",
       type: { name: "boolean" },
       description: "Vertically center the modal",
       defaultValue: false,

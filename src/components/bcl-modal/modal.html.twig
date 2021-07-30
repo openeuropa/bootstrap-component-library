@@ -2,13 +2,16 @@
 
 {# Parameters:
   - size (sm, lg, xl, fullscreen)
-  - id
-  - header (block)
-  - body (block)
-  - footer (block)
+  - id (boolean) (default: 'modal-' ~ random(1000))
+  - static_backdrop (boolean) (default: false)
+  - verticaly_centered (boolean) (default: false)
+  - scrollable (boolean) (default: false)
+  - header (block) (default: '')
+  - body (block) (default: '')
+  - footer (block) (default: '')
 #}
-{% set _size = size ? 'modal-' ~ size %}
-{% set _id = id|default('modal' ~ random(1000)) %}
+{% set _size = size ? 'modal-' ~ size : '' %}
+{% set _id = id|default('modal-' ~ random(1000)) %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
 {% set _static_backdrop = static_backdrop|default(false) %}
@@ -29,21 +32,14 @@
                     .addClass(_classes)
 %}
 
-{% if _static_backdrop %}
-  {% set dialog_attributes = dialog_attributes.setAttribute('data-bs-backdrop', 'static') %}
-{% endif %}
-
-{% set dialog_attributes = create_attribute().addClass([
-  'modal-dialog',
-  _size,
-  _verticaly_centered ? 'modal-dialog-centered',
-  _scrollable ? 'modal-dialog-scrollable'
-]) %}
-
 <div
   {{ attributes }}
 >
-  <div{{ dialog_attributes }}>
+  <div class="modal-dialog
+  {{- _verticaly_centered ? ' modal-dialog-centered' -}}
+  {{- _scrollable ? ' modal-dialog-scrollable' -}}"
+  {{- _static_backdrop ? ' data-bs-backdrop="static"' -}}
+  >
     <div class="modal-content">
       <div class="modal-header">
         {%- block header _header -%}
