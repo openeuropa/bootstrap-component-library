@@ -35,6 +35,7 @@ yarn start {project}
 - Open <http://localhost:5000> to see the storybook instance.
 - Use <http://localhost:3000> to enjoy live reloading on storybook.
 
+
 ## Npm packages
 
 The components are released as single, standalone packages providing a twig
@@ -108,6 +109,10 @@ The library uses `@oe-bcl` as the namespaces for the templates so a typical
 twig-loader would be defined as such:
 
 `loader.addPath(pathToTheTemplatesFolder, "oe-bcl");`
+
+## Developer's brief guide
+
+![Developer's guidelines](docs/developing.md)
 
 ### Setup on Windows using WSL 1
 
