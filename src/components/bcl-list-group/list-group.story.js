@@ -5,12 +5,18 @@ import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
 import listGroup from "@openeuropa/bcl-list-group/list-group.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const getArgs = () => {
+  return {
+    flush: false,
+    horizontal: "",
+  };
+};
+
 const getArgTypes = () => {
   return {
     flush: {
       type: { name: "boolean" },
       description: "Remove borders",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -20,17 +26,25 @@ const getArgTypes = () => {
     horizontal: {
       type: { name: "select" },
       description: "Horizontal style for each media query",
-      defaultValue: "",
+      options: [
+        "",
+        "horizontal",
+        "horizontal-sm",
+        "horizontal-md",
+        "horizontal-lg",
+        "horizontal-xl",
+        "horizontal-xxl",
+      ],
       control: {
         type: "select",
-        options: {
-          none: "",
+        labels: {
+          "": "none",
           horizontal: "horizontal",
-          "horizontal small": "horizontal-sm",
-          "horizontal medium": "horizontal-md",
-          "horizontal large": "horizontal-lg",
-          "horizontal extra large": "horizontal-xl",
-          "horizontal extra extra large": "horizontal-xxl",
+          "horizontal-sm": "horizontal small",
+          "horizontal-md": "horizontal medium",
+          "horizontal-lg": "horizontal large",
+          "horizontal-xl": "horizontal extra large",
+          "horizontal-xxl": "horizontal extra extra large",
         },
       },
       table: {
@@ -81,17 +95,17 @@ export default {
 
 export const Unordered = (args) => listGroup(applyArgs(demoData, args));
 
-Unordered.storyName = "Unordered";
+Unordered.args = getArgs(demoData);
 Unordered.argTypes = getArgTypes(demoData);
 
 export const Ordered = (args) =>
   listGroup(applyArgs({ ...orderedData, type: "ordered" }, args));
 
-Ordered.storyName = "Ordered";
-Ordered.argTypes = getArgTypes(orderedData);
+Ordered.args = getArgs();
+Ordered.argTypes = getArgTypes();
 
 export const Actionable = (args) =>
   listGroup(applyArgs({ ...actionableDemoData, type: "actionable" }, args));
 
-Actionable.storyName = "Actionable";
-Actionable.argTypes = getArgTypes(actionableDemoData);
+Actionable.args = getArgs();
+Actionable.argTypes = getArgTypes();

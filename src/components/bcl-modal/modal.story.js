@@ -2,14 +2,19 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
-// Controls
+const getArgs = () => {
+  return {
+    size: "",
+  };
+};
+
 const getArgTypes = () => {
   return {
     size: {
       name: "size",
       type: { name: "select" },
-      defaultValue: "",
       description: "Modal size",
+      options: ["", "sm", "lg", "xl", "fullscreen"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -17,11 +22,11 @@ const getArgTypes = () => {
       },
       control: {
         type: "select",
-        options: {
-          default: "",
-          small: "sm",
-          large: "lg",
-          "extra large": "xl",
+        labels: {
+          "": "default",
+          sm: "small",
+          lg: "large",
+          xl: "extra large",
           fullscreen: "fullscreen",
         },
       },
@@ -67,5 +72,6 @@ export default {
 export const Modal = (args) => modal(applyArgs(demoData, args));
 
 Modal.storyName = "default";
+Modal.args = getArgs();
 Modal.argTypes = getArgTypes();
 Modal.decorators = [modalButton];
