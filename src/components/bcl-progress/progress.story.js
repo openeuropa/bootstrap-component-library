@@ -3,12 +3,22 @@ import demoData from "@openeuropa/bcl-data-progress/data.js";
 import progress from "./progress.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
+const getArgs = (data) => {
+  return {
+    striped: false,
+    animated: false,
+    variant: "",
+    progress: data.progress,
+    label: data.label,
+    bar_label: "",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     striped: {
       type: { name: "boolean" },
       description: "Striped bar",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -18,7 +28,6 @@ const getArgTypes = (data) => {
     animated: {
       type: { name: "boolean" },
       description: "Animated bar",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -28,11 +37,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the progress",
-      defaultValue: "",
-      control: {
-        type: "select",
-        options: getVariants(false),
-      },
+      options: getVariants(false),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -42,7 +47,6 @@ const getArgTypes = (data) => {
     progress: {
       type: { name: "number" },
       description: "Progress of the bar",
-      defaultValue: data.progress,
       table: {
         type: { summary: "number" },
         defaultValue: { summary: "" },
@@ -54,11 +58,30 @@ const getArgTypes = (data) => {
         max: 100,
       },
     },
+    label: {
+      type: { name: "string" },
+      name: "label",
+      description: "Text before the progress bar",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    bar_label: {
+      type: { name: "string" },
+      name: "bar label",
+      description: "Text inside the progress bar",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
   };
 };
 
 const applyArgs = (data, args) => {
-  args.label = `${args.progress}%`;
   return Object.assign(data, args);
 };
 
@@ -88,4 +111,5 @@ export default {
 
 export const Default = (args) => progress(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

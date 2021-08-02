@@ -2,12 +2,20 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import blockquote from "./blockquote.html.twig";
 
+const getArgs = (data) => {
+  return {
+    quote: data.quote,
+    attribution: data.attribution,
+    cite: data.cite,
+    alignment: "left",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     quote: {
       type: { name: "string" },
       description: "Text of blockquote",
-      defaultValue: data.quote,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -17,7 +25,6 @@ const getArgTypes = (data) => {
     attribution: {
       type: { name: "string" },
       description: "Attribution of blockquote",
-      defaultValue: data.attribution,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -27,7 +34,6 @@ const getArgTypes = (data) => {
     cite: {
       type: { name: "string" },
       description: "Cite of attribution",
-      defaultValue: data.cite,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -36,12 +42,8 @@ const getArgTypes = (data) => {
     },
     alignment: {
       type: { name: "select" },
+      options: ["left", "center", "end"],
       description: "Text alignment",
-      defaultValue: "left",
-      control: {
-        type: "select",
-        options: ["left", "center", "end"],
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "left" },
@@ -82,4 +84,5 @@ export default {
 export const Default = (args) => blockquote(applyArgs(demoData, args));
 
 Default.storyName = "Default";
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
