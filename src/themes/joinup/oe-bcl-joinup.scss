@@ -4,8 +4,14 @@
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
 @import "@openeuropa/bcl-bootstrap/scss/utilities";
 
+// Import base elements
+@import "scss/base/fonts";
+
 // Override Bootstrap variables
-@import "base/variables";
+@import "scss/base/variables";
+
+// Modify utilities
+@import "scss/base/utilities";
 
 // Layout & components
 @import "@openeuropa/bcl-bootstrap/scss/root";
