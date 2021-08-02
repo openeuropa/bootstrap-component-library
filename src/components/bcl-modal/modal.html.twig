@@ -1,16 +1,22 @@
 {% spaceless %}
 
 {# Parameters:
-  - size (sm, lg, xl, fullscreen)
-  - id
-  - header (block)
-  - body (block)
-  - footer (block)
+  - size (string) (sm, lg, xl, fullscreen) default('')
+  - id (boolean) (default: 'modal-' ~ random(1000))
+  - static_backdrop (boolean) (default: false)
+  - verticaly_centered (boolean) (default: false)
+  - scrollable (boolean) (default: false)
+  - header (block) (default: '')
+  - body (block) (default: '')
+  - footer (block) (default: '')
 #}
-{% set _size = size ? 'modal-' ~ size : '' %}
-{% set _id = id|default('defaultModalId') %}
+{% set _size =  size|default('') %}
+{% set _id = id|default('modal-' ~ random(1000)) %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
+{% set _static_backdrop = static_backdrop|default(false) %}
+{% set _verticaly_centered = verticaly_centered|default(false) %}
+{% set _scrollable = scrollable|default(false) %}
 {% set _footer = footer|default('') %}
 {% set _classes = ['modal fade'] %}
 
@@ -29,7 +35,12 @@
 <div
   {{ attributes }}
 >
-  <div class="modal-dialog {{ _size }}">
+  <div class="modal-dialog
+  {{- _size ? ' modal-' ~ size -}}
+  {{- _verticaly_centered ? ' modal-dialog-centered' -}}
+  {{- _scrollable ? ' modal-dialog-scrollable' -}}"
+  {{- _static_backdrop ? ' data-bs-backdrop="static"' -}}
+  >
     <div class="modal-content">
       <div class="modal-header">
         {%- block header _header -%}

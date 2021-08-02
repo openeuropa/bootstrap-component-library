@@ -1,7 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  label: "25%",
+  label: "This is the label of progress bar",
   progress: 25,
   attributes: new drupalAttribute(),
 };

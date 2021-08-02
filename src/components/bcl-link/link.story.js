@@ -12,12 +12,20 @@ const withCollapse = (story) => {
   return `${demo} <div class="collapse mt-3" id="${target}">${toggleDemoData.collapse_text}</div>`;
 };
 
+const getArgs = (data) => {
+  return {
+    label: data.label,
+    path: data.path,
+    variant: data.variant,
+    name: "none",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     label: {
       type: { name: "string" },
       description: "Label of the link",
-      defaultValue: data.label,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -27,7 +35,6 @@ const getArgTypes = (data) => {
     path: {
       type: { name: "string" },
       description: "Href of the link",
-      defaultValue: data.path,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "#" },
@@ -37,11 +44,7 @@ const getArgTypes = (data) => {
     variant: {
       type: { name: "select" },
       description: "Variant of the link",
-      defaultValue: "",
-      control: {
-        type: "select",
-        options: getVariants(),
-      },
+      options: getVariants(),
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -81,11 +84,12 @@ export default {
 
 export const Default = (args) => link(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 
 export const Collapse = (args) => link(applyArgs(toggleDemoData, args));
 
-Collapse.storyName = "Collapse";
+Collapse.args = getArgs(toggleDemoData);
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
 Collapse.parameters = {
@@ -98,7 +102,7 @@ Collapse.parameters = {
 
 export const Tooltip = (args) => link(applyArgs(tooltipDemoData, args));
 
-Tooltip.storyName = "Tooltip";
+Tooltip.args = getArgs(tooltipDemoData);
 Tooltip.argTypes = getArgTypes(tooltipDemoData);
 Tooltip.parameters = {
   design: {

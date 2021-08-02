@@ -3,13 +3,23 @@ import demoSingle from "@openeuropa/bcl-data-toasts/data.js";
 import demoMultiple from "@openeuropa/bcl-data-toasts/data-multiple.js";
 import toasts from "./toasts.html.twig";
 
+const getArgs = (data) => {
+  return {
+    with_wrapper: data.with_wrapper,
+    wrapper_classes: data.wrapper_classes,
+    wrapper_aria_live: data.wrapper_aria_live,
+    with_container: data.with_container,
+    container_classes: data.container_classes,
+    toasts: data.toasts,
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     with_wrapper: {
       name: "with a wrapper",
       type: { name: "boolean" },
       description: "With an external wrapper",
-      defaultValue: data.with_wrapper,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -20,7 +30,6 @@ const getArgTypes = (data) => {
       name: "classes for the wrapper",
       type: { name: "string" },
       description: "External wrapper classes, if any.",
-      defaultValue: data.wrapper_classes,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -31,7 +40,6 @@ const getArgTypes = (data) => {
       name: "aria live for the wrapper",
       type: { name: "string" },
       description: "aria-live attribute to be set on the wrapper",
-      defaultValue: data.wrapper_aria_live,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -42,7 +50,6 @@ const getArgTypes = (data) => {
       name: "with a container",
       type: { name: "boolean" },
       description: "With a container for multiple toasts",
-      defaultValue: data.with_container,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -53,7 +60,6 @@ const getArgTypes = (data) => {
       type: { name: "string" },
       name: "classes for the container",
       description: "Container classes, if any.",
-      defaultValue: data.container_classes,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -63,7 +69,6 @@ const getArgTypes = (data) => {
     toasts: {
       type: { name: "object" },
       description: "Toasts",
-      defaultValue: data.toasts,
       table: {
         type: { summary: "object" },
         category: "Content",
@@ -104,9 +109,11 @@ export default {
 export const Toast = (args) => toasts(applyArgs(demoSingle, args));
 
 Toast.storyName = "Single toast";
+Toast.args = getArgs(demoSingle);
 Toast.argTypes = getArgTypes(demoSingle);
 
 export const Toasts = (args) => toasts(applyArgs(demoMultiple, args));
 
 Toasts.storyName = "Multiple toasts";
+Toasts.args = getArgs(demoMultiple);
 Toasts.argTypes = getArgTypes(demoMultiple);

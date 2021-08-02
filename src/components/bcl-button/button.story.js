@@ -18,12 +18,28 @@ const withCollapse = (story) => {
     </div>`;
 };
 
+const getArgs = (data) => {
+  return {
+    label: data.label,
+    type: "button",
+    assistive_text: "",
+    outline: false,
+    variant: data.variant || "primary",
+    size: "md",
+    disabled: false,
+    text_nowrap: false,
+    name: data.name || "",
+    transformation: "",
+    icon_size: "",
+    icon_position: "after",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     label: {
       type: { name: "string" },
       description: "Label of the button",
-      defaultValue: data.label,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -33,14 +49,10 @@ const getArgTypes = (data) => {
     type: {
       type: { name: "select" },
       description: "Type of the button",
-      defaultValue: "button",
-      control: {
-        type: "select",
-        options: {
-          Button: "button",
-          Submit: "submit",
-          Reset: "reset",
-        },
+      options: {
+        Button: "button",
+        Submit: "submit",
+        Reset: "reset",
       },
       table: {
         type: { summary: "string" },
@@ -53,7 +65,6 @@ const getArgTypes = (data) => {
       name: "Additional text visually hidden",
       description:
         "Text inside the button to be visible on assistive technologies",
-      defaultValue: "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -63,7 +74,6 @@ const getArgTypes = (data) => {
     outline: {
       type: { name: "boolean" },
       description: "Enable outline style",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -72,12 +82,8 @@ const getArgTypes = (data) => {
     },
     variant: {
       type: { name: "select" },
+      options: getVariants(false, ["link"]),
       description: "Variant of the button",
-      defaultValue: data.variant || "primary",
-      control: {
-        type: "select",
-        options: getVariants(false, ["link"]),
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
@@ -87,11 +93,7 @@ const getArgTypes = (data) => {
     size: {
       type: { name: "select" },
       description: "Size of the button",
-      defaultValue: "md",
-      control: {
-        type: "select",
-        options: { small: "sm", medium: "md", large: "lg" },
-      },
+      options: { small: "sm", medium: "md", large: "lg" },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
@@ -101,7 +103,6 @@ const getArgTypes = (data) => {
     disabled: {
       type: { name: "boolean" },
       description: "Enable the disabled state",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -112,7 +113,6 @@ const getArgTypes = (data) => {
       type: { name: "boolean" },
       name: "Prevent label from wrapping",
       description: "Button text should not wrap",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -161,6 +161,7 @@ export default {
 
 export const Default = (args) => button(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.parameters = {
   design: [
@@ -185,6 +186,7 @@ Default.parameters = {
 export const Collapse = (args) => button(applyArgs(toggleDemoData, args));
 
 Collapse.storyName = "Collapse";
+Collapse.args = getArgs(toggleDemoData);
 Collapse.argTypes = getArgTypes(toggleDemoData);
 Collapse.decorators = [withCollapse];
 Collapse.parameters = {
@@ -205,6 +207,7 @@ Collapse.parameters = {
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
 Popover.storyName = "Popover";
+Popover.args = getArgs(popoverDemoData);
 Popover.argTypes = getArgTypes(popoverDemoData);
 Popover.parameters = {
   design: [
@@ -224,7 +227,8 @@ Popover.parameters = {
 export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
 
 Tooltip.storyName = "Tooltip";
-Tooltip.argTypes = getArgTypes(tooltipDemoData, "tooltip");
+Tooltip.args = getArgs(tooltipDemoData);
+Tooltip.argTypes = getArgTypes(tooltipDemoData);
 Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",
@@ -236,6 +240,7 @@ Tooltip.parameters = {
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
 
 Spinner.storyName = "Spinner";
+Spinner.args = getArgs(spinnerDemoData);
 Spinner.argTypes = getArgTypes(spinnerDemoData);
 Spinner.parameters = {
   design: [

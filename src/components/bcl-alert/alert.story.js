@@ -3,16 +3,22 @@ import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "./alert.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
+const getArgs = (data) => {
+  return {
+    variant: data.variant || "primary",
+    message: data.message,
+    heading: data.heading,
+    dismissible: true,
+    animated_dismiss: true,
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     variant: {
       type: { name: "select" },
+      options: getVariants(),
       description: "Variant of the alert",
-      defaultValue: data.variant || "primary",
-      control: {
-        type: "select",
-        options: getVariants(),
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
@@ -22,7 +28,6 @@ const getArgTypes = (data) => {
     message: {
       type: { name: "string" },
       description: "Content of the alert",
-      defaultValue: data.message,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -32,7 +37,6 @@ const getArgTypes = (data) => {
     heading: {
       type: { name: "string" },
       description: "Heading of the alert",
-      defaultValue: data.heading,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -42,7 +46,6 @@ const getArgTypes = (data) => {
     dismissible: {
       type: { name: "boolean" },
       description: "Enable the close button",
-      defaultValue: true,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
@@ -52,7 +55,6 @@ const getArgTypes = (data) => {
     animated_dismiss: {
       type: { name: "boolean" },
       description: "Enable the animation on dismiss",
-      defaultValue: true,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
@@ -93,46 +95,54 @@ export default {
 export const Primary = (args) => alert(applyArgs(demoData, args));
 
 Primary.storyName = "Primary (default)";
+Primary.args = getArgs(demoData);
 Primary.argTypes = getArgTypes(demoData);
 
-export const Secondary = (args) =>
-  alert(applyArgs({ ...demoData, variant: "secondary" }, args));
+const dataSecondary = { ...demoData, variant: "secondary" };
+export const Secondary = (args) => alert(applyArgs(dataSecondary, args));
 
 Secondary.storyName = "Secondary";
-Secondary.argTypes = getArgTypes({ ...demoData, variant: "secondary" });
+Secondary.args = getArgs(dataSecondary);
+Secondary.argTypes = getArgTypes(dataSecondary);
 
-export const Success = (args) =>
-  alert(applyArgs({ ...demoData, variant: "success" }, args));
+const dataSuccess = { ...demoData, variant: "success" };
+export const Success = (args) => alert(applyArgs(dataSuccess, args));
 
 Success.storyName = "Success";
-Success.argTypes = getArgTypes({ ...demoData, variant: "success" });
+Success.args = getArgs(dataSuccess);
+Success.argTypes = getArgTypes(dataSuccess);
 
-export const Warning = (args) =>
-  alert(applyArgs({ ...demoData, variant: "warning" }, args));
+const dataWarning = { ...demoData, variant: "warning" };
+export const Warning = (args) => alert(applyArgs(dataWarning, args));
 
 Warning.storyName = "Warning";
-Warning.argTypes = getArgTypes({ ...demoData, variant: "warning" });
+Warning.args = getArgs(dataWarning);
+Warning.argTypes = getArgTypes(dataWarning);
 
-export const Danger = (args) =>
-  alert(applyArgs({ ...demoData, variant: "danger" }, args));
+const dataDanger = { ...demoData, variant: "danger" };
+export const Danger = (args) => alert(applyArgs(dataDanger, args));
 
 Danger.storyName = "Danger";
-Danger.argTypes = getArgTypes({ ...demoData, variant: "danger" });
+Danger.args = getArgs(dataDanger);
+Danger.argTypes = getArgTypes(dataDanger);
 
-export const Info = (args) =>
-  alert(applyArgs({ ...demoData, variant: "info" }, args));
+const dataInfo = { ...demoData, variant: "info" };
+export const Info = (args) => alert(applyArgs(dataInfo, args));
 
 Info.storyName = "Info";
-Info.argTypes = getArgTypes({ ...demoData, variant: "info" });
+Info.args = getArgs(dataInfo);
+Info.argTypes = getArgTypes(dataInfo);
 
-export const Light = (args) =>
-  alert(applyArgs({ ...demoData, variant: "light" }, args));
+const dataLight = { ...demoData, variant: "light" };
+export const Light = (args) => alert(applyArgs(dataLight, args));
 
 Light.storyName = "Light";
-Light.argTypes = getArgTypes({ ...demoData, variant: "light" });
+Light.args = getArgs(dataLight);
+Light.argTypes = getArgTypes(dataLight);
 
-export const Dark = (args) =>
-  alert(applyArgs({ ...demoData, variant: "dark" }, args));
+const dataDark = { ...demoData, variant: "dark" };
+export const Dark = (args) => alert(applyArgs(dataDark, args));
 
 Dark.storyName = "Dark";
-Dark.argTypes = getArgTypes({ ...demoData, variant: "dark" });
+Dark.args = getArgs(dataDark);
+Dark.argTypes = getArgTypes(dataDark);

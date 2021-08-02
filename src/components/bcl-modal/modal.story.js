@@ -2,14 +2,22 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "./modal.html.twig";
 
-// Controls
+const getArgs = () => {
+  return {
+    size: "",
+    static_backdrop: false,
+    verticaly_centered: false,
+    scrollable: false,
+  };
+};
+
 const getArgTypes = () => {
   return {
     size: {
       name: "size",
       type: { name: "select" },
-      defaultValue: "",
       description: "Modal size",
+      options: ["", "sm", "lg", "xl", "fullscreen"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -17,13 +25,42 @@ const getArgTypes = () => {
       },
       control: {
         type: "select",
-        options: {
-          default: "",
-          small: "sm",
-          large: "lg",
-          "extra large": "xl",
+        labels: {
+          "": "default",
+          sm: "small",
+          lg: "large",
+          xl: "extra large",
           fullscreen: "fullscreen",
         },
+      },
+    },
+    static_backdrop: {
+      name: "static backdrop",
+      type: { name: "boolean" },
+      description: "Modal will not close when clicking outside it",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    verticaly_centered: {
+      name: "verticaly centered",
+      type: { name: "boolean" },
+      description: "Vertically center the modal",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    scrollable: {
+      type: { name: "boolean" },
+      description: "Scrolling long content in modal dialog",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
       },
     },
   };
@@ -67,5 +104,6 @@ export default {
 export const Modal = (args) => modal(applyArgs(demoData, args));
 
 Modal.storyName = "default";
+Modal.args = getArgs();
 Modal.argTypes = getArgTypes();
 Modal.decorators = [modalButton];
