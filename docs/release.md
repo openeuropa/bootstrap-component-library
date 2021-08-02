@@ -18,7 +18,7 @@ or for a new minor:
 yarn update-version minor
 ```
 
-If you need to jump to a higher version number (e.g. if you're skipping some ECL versions, upgrading from ECL 2.3.x to 2.6.y), you will have to provide the version number manually:
+If you need to jump to a higher version number (e.g. if you're skipping some BCL versions, upgrading from BCL 2.3.x to 2.6.y), you will have to provide the version number manually:
 
 ```sh
 yarn update-version 2.6.0
