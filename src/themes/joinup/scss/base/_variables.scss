@@ -3,17 +3,20 @@
 // General
 $enable-negative-margins: true;
 $border-radius: 0.5rem;
+$enable-shadows: true;
+$enable-negative-margins: true;
 
 // Color system
 $brand: #1073de;
+$primary: #143b76;
 $secondary: lighten(
   desaturate(adjust-hue($brand, -1), 15.13),
   47.84
 ); // #e7f1fb
-$primary: #143b76;
 $success: #18bf80;
 $warning: #eba843;
 $danger: #eb3434;
+
 $theme-colors: (
   "brand": $brand,
   "primary": $primary,
@@ -22,6 +25,7 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
 );
+
 $gray-100: #fafbfc !default;
 $gray-200: #f5f6f7 !default;
 $gray-300: #dadee0 !default;
@@ -52,7 +56,18 @@ $btn-padding-x: 1.6rem;
 
 // Typography
 
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-family-base: "Roboto", sans-serif;
+$headings-font-weight: 700;
+
+// Adding a new font weight medium
+$font-weight-medium: 500;
+
+$display-font-weight: normal;
+
 // Font size xs (not existent on BS)
+// Available as a utilities, ex: fs-xs
+$font-size-sm: $font-size-base * 0.875; // 14px.
 $font-size-xs: $font-size-base * 0.75; // 12px.
 
 $h1-font-size: $font-size-base * 2.5; // 40px
