@@ -85,7 +85,7 @@ might only contain an html markup to be used as the model to be reproduced by
 the application using it.
 Being part of the library, though, they can be written in `twig` if that is
 convenient for the developer, in any case it is not foreseen the usage of those
-twig templates in the drupal application and it is not needed their release as
+twig templates in the drupal application and it is not needed to release them as
 npm packages.
 
 #### Stories
