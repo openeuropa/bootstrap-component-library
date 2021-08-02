@@ -31,7 +31,7 @@ The way the library provides all the needed resources is through the theme
 packages, these are basically containers for the source files (twig, sass, js)
 specifically defined by the theme and the storybook instance used to demo the
 project's styleguide.
-Themes are located is `src/themes` and they all have a very similar structure,
+Themes are located in `src/themes` and they all have a very similar structure,
 they all have a `bcl-builder.config.js` file which determines their status when
 they are build, scss and js files are compiled and minified, resources as 
 templates and stories are copied using the `bcl-builder` following the 
