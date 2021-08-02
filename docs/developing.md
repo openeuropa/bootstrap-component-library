@@ -108,7 +108,7 @@ There is one file in each theme, in the `src/themes/{theme}/storybook/stories`
 folder, called `bcl-stories.js` where a list of the stories to be excluded can
 be provided.
 This folder is also the place where to store the custom stories defined by the
-project, storybook will read then stories from the `bcl-stories` folder and the
+project, storybook will read the stories from the `bcl-stories` folder and the
 `stories` folder inside the `storybook` folder of each theme, so that the
 developer can freely combine default and custom stories in the project's
 styleguide.
