@@ -1,3 +1,5 @@
+// stylelint-disable indentation
+
 $utilities: map-merge(
   $utilities,
   (
@@ -10,6 +12,7 @@ $utilities: map-merge(
               map-get(map-get($utilities, "font-weight"), "values"),
               (
                 medium: $font-weight-medium,
+                // Create fw-medium utility class
               )
             ),
         )
@@ -23,7 +26,9 @@ $utilities: map-merge(
               map-get(map-get($utilities, "font-weight"), "values"),
               (
                 sm: $font-size-sm,
+                // Create fs-sm utility class
                 xs: $font-size-xs,
+                // Create fs-xs utility class
               )
             ),
         )
