@@ -3,8 +3,9 @@
 // General
 $enable-negative-margins: true;
 $border-radius: 0.5rem;
-$enable-shadows: true;
 $enable-negative-margins: true;
+$enable-shadows: true;
+$box-shadow: 0 0.1rem 0.4rem 0.1rem rgba($black, 0.1);
 
 // Color system
 $brand: #1073de;
@@ -44,8 +45,6 @@ $link-hover-decoration: underline;
 // Buttons
 $btn-link-color: $link-color;
 
-$box-shadow: 0 0.1rem 0.4rem 0.1rem rgba($black, 0.15);
-
 $btn-hover-bg-shade-amount: 0;
 $btn-hover-bg-tint-amount: 0;
 $btn-disabled-opacity: 0.5;
@@ -79,3 +78,8 @@ $h6-font-size: $font-size-base; // 16px
 
 $headings-font-weight: 700;
 $headings-line-height: 2.5 !default;
+
+// Form elements
+$input-focus-border-color: tint-color($component-active-bg, 50%);
+$input-focus-width: 0;
+$input-btn-focus-box-shadow: none;
