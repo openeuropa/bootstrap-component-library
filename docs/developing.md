@@ -6,19 +6,19 @@ The BCL library is the tool meant to develop all the components and compositions
 to be used in a drupal application for creating the desired look and feel for a
 specific project.
 It is based on the concept of `themes` which can be directly used in a drupal
-theme providing it with all the needed resources the library has: js files,
-css files, twig templates.
+theme since it provides all the needed resources: js files, css files and twig 
+templates.
 All the components and compositions are using bootstrap markup and the default
 styles and behaviours, unless amended or overridden by the theme, are provided
 by the bootstrap library, its sources are compiled by the library in a way as
-close as possible to the one used by bootstrap itself.
+close as possible to the one released by bootstrap itself.
 
 #### The monorepo
 
-BCL is a `monorepo`, both in terms of the fact that it holds multiple npm
-packages as well as multiple "websites" in a single repository.
-All the packages have then the same versioning and each release happens at the
-same time for all the packages defined.
+Bootrap Component Library is a `monorepo`, both in terms of the fact that it
+holds multiple npm packages as well as multiple "websites" in a single repository.
+All the packages have the same versioning and each release happens at the
+same time for all the packages defined in the library.
 The websites (storybook instances) are released independently in production,
 while they are collected together in the same domain for the previews of the
 custom branches.
@@ -26,7 +26,7 @@ custom branches.
 #### Themes
 
 The main goal of this library is to release `npm packages` to be used in a drupal
-theme to achieve a certain look and feel for a website or web application.
+theme to achieve a certain UI for a website or web application.
 The way the library provides all the needed resources is through the theme
 packages, these are basically containers for the source files (twig, sass, js)
 specifically defined by the theme and the storybook instance used to demo the
@@ -55,7 +55,8 @@ component or functionality.
 Application using any of the theme provided by the library should not have any
 dependency on bootstrap, the library is providing it and updating it when needed,
 in exceptional cases, though, it is possible at the application level, by using
-the aforementioned package and the `bcl-builder`, to recompile all the sources.
+the aforementioned package and the `bcl-builder`, to recompile all the bootstrap
+sources.
 This usage of the library is discouraged but still possible.
 
 #### Components
@@ -75,14 +76,14 @@ they can then be overridden by a theme package developed for a specific project.
 Being the library used in drupal websites, to facilitate the usage of the
 templates provided, the drupal `Attribute` object is used, this way the
 attributes defined by the templates can be easily combined with the ones coming
-from the drupal application level.
+from the drupal application.
 
 #### Compositions
 
 Compositions are stored in `src/compositions`.
-Compositions are examples provided by the library of more complex layouts, they
-might only contain an html markup to be used as the model to be reproduced by
-the application using it.
+These are examples provided by the library of more complex layouts, they
+might indeed only contain an html markup to be used as the model to be reproduced 
+in the application using it.
 Being part of the library, though, they can be written in `twig` if that is
 convenient for the developer, in any case it is not foreseen the usage of those
 twig templates in the drupal application and it is not needed to release them as
@@ -91,18 +92,17 @@ npm packages.
 #### Stories
 
 Stories are the demos that storybook will present in the styleguide, the
-default stories are defined in the components folder, this can be used also by
-any of the other themes and be combined with custom stories belonging to the
-project's specific styleguide.
-Mind the fact that the stories defined in the package folders are not directly
-used by storybook, they are copied in a `bcl-stories` folder available in each
-theme, these files are not versioned, the place where to act to modify any
-existing story file is the `src/components/{component}` folder, instead.
+default stories are defined in the components folder as a `*.story.js` file,
+these stories can be used by any of the themes and be combined with custom 
+stories belonging to the project's styleguide.
+The folder containing all the stories in a theme package is `storybook`, the
+default stories are copied in `storybook/bcl-stories` while the new or overriding
+ones can be defined in `storybook/stories`.
 
 ##### Combining stories in the theme packages
 
 All the default stories are used by default by all the different themes, but
-they can also be cherry-picked in order to combine them with different stories
+they can also be cherry-picked in order to combine them with the stories
 defined by the single projects.
 There is one file in each theme, in the `src/themes/{theme}/storybook/stories`
 folder, called `bcl-stories.js` where a list of the stories to be excluded can
@@ -112,25 +112,47 @@ project, storybook will read the stories from the `bcl-stories` folder and the
 `stories` folder inside the `storybook` folder of each theme, so that the
 developer can freely combine default and custom stories in the project's
 styleguide.
+The stories are sorted alphabetically.
+
+#### Working on the default stories
+
+Since the different storybook instances defining the styleguides are using a
+copied version of the default stories, it's not convenient to work on any of them
+when it's about editing the story files.
+Running `yarn storybook` another instance of storybook will be started reading
+from the stories defined in the `components` folder, this way all the changes in
+the `*.story.js` file will be immediately visible in the instance.
 
 ### Overriding and adding twig templates in a theme
 
 All the templates available in `src/components/` are copied in the `templates`
-folder of each theme so that the npm package released will also contain them.
-But these can be overridden, as well as others can be added by placing them in
-the `custom-templates` folder available in each theme.
+folder of each theme so that the npm package will also contain those once it's
+released.
+Default templates can be overridden in the theme package, as well as others can 
+be added by placing them in the `custom-templates` folder available in each theme.
 The structure of the content of this folder should be similar to the
 `src/components` one, the template should be stored in a folder with the
 package name, although these are not meant to be released as individual npm
 packages, at the moment.
 To override an existing template from BCL the same identical name has to be used,
-both for the folder and the template name, to add a new one a custom name has to
-be chosen, for consistency they should always be included the same way the 
-default template are:
+both for the folder and the template name.
+The overridden template has to be added in the `custom-templates/bcl-templates.js`
+file so that it will not be copied the `templates` folder. 
+To add a new template a custom name has to be chosen, for consistency they should
+always be included the same way the default template are:
 `{% include '@oe-bcl/bcl-button/button.html.twig' with {} only %}`
 so that a single namespace can be handled by the twig loader and the twig files
 in the `templates` folder of each theme can be directly used also in the drupal
 theme.
+
+#### Stories for an overridden template
+
+Mind the fact that if a component template is overridden then its stories need to
+be overridden as well by the theme package.
+This means adding the exclusion for the default story in the `bcl-stories.js`
+file and defining a new story file in `stories`.
+If you do so, you will also need to manually run `yarn build:storybook` for the
+default stories imported in the theme you are working on to be updated.
 
 ### Adding a new theme
 

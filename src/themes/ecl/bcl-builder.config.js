@@ -1,11 +1,23 @@
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
+const templates = require("./custom-templates/bcl-templates");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = path.resolve(__dirname, "../../../node_modules");
 
 // SCSS includePaths
 const includePaths = [nodeModules];
+const excludePaths = [];
+if (templates.length) {
+  templates.forEach((template) => {
+    excludePaths.push(
+      path.resolve(
+        nodeModules,
+        `@openeuropa/bcl-twig-templates/templates/**/${template}.html.twig`
+      )
+    );
+  });
+}
 
 module.exports = {
   scripts: [

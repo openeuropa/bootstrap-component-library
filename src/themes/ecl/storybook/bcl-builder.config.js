@@ -6,13 +6,13 @@ const outputFolder = path.resolve(__dirname);
 
 const excludePaths = [];
 stories.forEach((story) => {
-  excludePaths.push(`../../../**/${story}.story.js`);
+  excludePaths.push(`../../../{components,compositions}/**/${story}.story.js`);
 });
 
 module.exports = {
   copy: [
     {
-      from: ["../../../**/*.story.js"],
+      from: ["../../../{components,compositions}/**/*.story.js"],
       to: path.resolve(outputFolder, "bcl-stories"),
       options: { up: true, exclude: excludePaths },
     },

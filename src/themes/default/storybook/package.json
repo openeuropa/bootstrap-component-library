@@ -6,7 +6,10 @@
   "version": "0.4.0",
   "description": "OE storybook",
   "scripts": {
-    "postinstall": "cross-env bcl-builder copy",
+    "build": "npm run clean && npm run copy",
+    "clean": "rimraf bcl-stories",
+    "copy": "cross-env bcl-builder copy",
+    "postinstall": "npm run copy",
     "start": "start-storybook -p 9001 -c .storybook -s ../../../../assets/",
     "dist": "build-storybook -c .storybook -s ../../../../assets -o ../../../../build/bcl"
   },
@@ -29,6 +32,7 @@
     "null-loader": "4.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "rimraf": "3.0.2",
     "storybook-addon-designs": "6.0.1",
     "twing": "2.3.7",
     "twing-loader": "2.0.2"

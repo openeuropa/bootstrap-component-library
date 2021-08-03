@@ -55,8 +55,8 @@ export const parameters = {
   layout: "padded",
   options: {
     storySort: {
-      method: "alphabetical",
-      order: ["Components", "Compositions"],
+      method: 'alphabetical',
+      order: ['Components', 'Compositions'],
     },
   },
 };

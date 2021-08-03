@@ -1,1 +1,1 @@
-module.exports = ["card", "scrollspy", "search"];
+module.exports = [];
