@@ -1,7 +1,26 @@
+.btn {
+  font-weight: 500;
+  &:not(.btn-link) {
+    &:hover {
+      box-shadow: $box-shadow;
+    }
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background-color: lighten(desaturate($primary, 23.76), 8.63);
+  }
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $primary-darker;
+  }
+}
+
 .btn-secondary {
   color: $brand;
   &:hover {
     color: $brand;
-    box-shadow: $box-shadow;
   }
 }
