@@ -137,7 +137,13 @@ packages, at the moment.
 To override an existing template from BCL the same identical name has to be used,
 both for the folder and the template name.
 The overridden template has to be added in the `custom-templates/bcl-templates.js`
-file so that it will not be copied the `templates` folder. 
+file so that it will not be copied the `templates` folder.
+
+Ex: To exclude the default table template, you would export in the `bcl-templates.js`
+file an array like this `['table']`
+The element added to the array has to be the template name without the `html.twig`
+extension.
+
 To add a new template a custom name has to be chosen, for consistency they should
 always be included the same way the default template are:
 `{% include '@oe-bcl/bcl-button/button.html.twig' with {} only %}`
@@ -151,6 +157,12 @@ Mind the fact that if a component template is overridden then its stories need t
 be overridden as well by the theme package.
 This means adding the exclusion for the default story in the `bcl-stories.js`
 file and defining a new story file in `stories`.
+
+Ex: To exclude the default table story, you would export in the `bcl-stories.js`
+file an array like this `['table']`
+The element added to the array has to be the story file name without the `story.js`
+extension.
+
 If you do so, you will also need to manually run `yarn build:storybook` for the
 default stories imported in the theme you are working on to be updated.
 
