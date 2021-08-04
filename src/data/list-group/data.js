@@ -26,7 +26,7 @@ module.exports = {
       id: "example-form-input-1",
       size: "sm",
       input: true,
-      type: "checkbox",
+      input_type: "checkbox",
     },
     {
       variant: "warning",

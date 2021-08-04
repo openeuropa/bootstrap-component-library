@@ -8,7 +8,7 @@ module.exports = {
     [
       {
         classes: "mb-3",
-        type: "email",
+        input_type: "email",
         required: true,
         label: "Email address",
         id: "exampleInputEmail1",
@@ -18,7 +18,7 @@ module.exports = {
     ],
     [
       {
-        type: "password",
+        input_type: "password",
         classes: "mb-3",
         required: true,
         label: "Password",
@@ -27,7 +27,7 @@ module.exports = {
     ],
     [
       {
-        type: "checkbox",
+        input_type: "checkbox",
         classes: "mb-3",
         required: true,
         label: "Check me out",
