@@ -21,6 +21,7 @@
     "copy:index": "copyfiles -f static/index.html build",
     "css-lint": "stylelint src/**/*.scss",
     "dist": "run-s clean dist:*",
+    "dist-joinup": "run-s clean build:theme:joinup copy:* && lerna --scope \"@openeuropa/bcl-storybook-joinup\" run dist",
     "dist:themes": "run-s build:themes copy:*",
     "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-*\" run dist",
     "jest": "jest",

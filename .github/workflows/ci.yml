@@ -31,13 +31,29 @@ jobs:
   deploy-pull-request-preview:
     name: deploy preview
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && !contains('#*#', github.ref)
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Package application
         run: yarn dist
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.1
+        with:
+          alias: preview-${{ github.event.number }}
+          publish-dir: "build"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+    if: github.event_name == 'pull_request' && contains('#joinup#', github.ref)
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Package application
+        run: yarn dist-joinup
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.1
         with:
