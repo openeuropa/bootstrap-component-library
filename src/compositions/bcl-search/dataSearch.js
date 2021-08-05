@@ -75,7 +75,7 @@ module.exports = {
         items: [
           [
             {
-              type: "text",
+              input_type: "text",
               required: true,
               label: "Search",
               hidden_label: true,
@@ -117,7 +117,7 @@ module.exports = {
       ],
     },
     firstInputFilter: {
-      type: "checkbox",
+      input_type: "checkbox",
       label: "Checked checkbox",
       size: "sm",
       checked: true,
@@ -125,20 +125,20 @@ module.exports = {
       attributes: new drupalAttribute(),
     },
     secondInputFilter: {
-      type: "checkbox",
+      input_type: "checkbox",
       label: "Default checkbox",
       size: "sm",
       id: "second-check",
       attributes: new drupalAttribute(),
     },
     firstDatepickerFilter: {
-      type: "date",
+      input_type: "date",
       size: "sm",
       attributes: new drupalAttribute().addClass("mb-2"),
     },
     secondDatepickerFilter: {
       size: "sm",
-      type: "date",
+      input_type: "date",
       attributes: new drupalAttribute(),
     },
     buttonPrimary: {

@@ -36,7 +36,7 @@ const getArgs = (data, type) => {
 
 const getArgTypes = (data, type) => {
   return {
-    type: {
+    input_type: {
       type: { name: "select" },
       description: "Type of the text input",
       options: [
@@ -90,7 +90,6 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data, args);
-  console.log(args);
   return Object.assign(data, args);
 };
 
@@ -125,7 +124,7 @@ FormInput.parameters = {
   ],
 };
 
-const checkboxData = { ...demoData, type: "checkbox" };
+const checkboxData = { ...demoData, input_type: "checkbox" };
 export const Checkbox = (args) => formInput(applyArgs(checkboxData, args));
 
 Checkbox.storyName = "checkbox";
@@ -151,7 +150,7 @@ Checkbox.parameters = {
   ],
 };
 
-const switchData = { ...demoData, type: "checkbox", switch: true };
+const switchData = { ...demoData, input_type: "checkbox", switch: true };
 export const Switch = (args) => formInput(applyArgs(switchData, args));
 
 Switch.storyName = "switch";
@@ -177,7 +176,7 @@ Switch.parameters = {
   ],
 };
 
-const radioData = { ...demoData, type: "radio" };
+const radioData = { ...demoData, input_type: "radio" };
 export const Radio = (args) => formInput(applyArgs(radioData, args));
 
 Radio.storyName = "radio";
@@ -203,7 +202,7 @@ Radio.parameters = {
   ],
 };
 
-const fileData = { ...demoData, type: "file" };
+const fileData = { ...demoData, input_type: "file" };
 export const File = (args) => formInput(applyArgs(fileData, args));
 
 File.storyName = "file";
