@@ -28,10 +28,10 @@ jobs:
         run: yarn build:themes
       - name: Test
         run: yarn test
-  deploy-pull-request-preview:
-    name: deploy preview
+  deploy-pull-request-preview-full:
+    name: deploy full preview
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.ref != 'refs/heads/#joinup#-test'
+    if: github.event_name == 'pull_request' && !contains('#*#', github.ref)
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
@@ -47,7 +47,10 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-    if: github.event_name == 'pull_request' && github.ref == 'refs/heads/#joinup#-test'
+  deploy-pull-request-preview-project:
+    name: deploy preview for single projects
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && contains('#joinup#', github.ref)
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
