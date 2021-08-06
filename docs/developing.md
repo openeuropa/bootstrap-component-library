@@ -6,7 +6,7 @@ The BCL library is the tool meant to develop all the components and compositions
 to be used in a drupal application for creating the desired look and feel for a
 specific project.
 It is based on the concept of `themes` which can be directly used in a drupal
-theme since it provides all the needed resources: js files, css files and twig 
+theme since it provides all the needed resources: js files, css files and twig
 templates.
 All the components and compositions are using bootstrap markup and the default
 styles and behaviours, unless amended or overridden by the theme, are provided
@@ -33,8 +33,8 @@ specifically defined by the theme and the storybook instance used to demo the
 project's styleguide.
 Themes are located in `src/themes` and they all have a very similar structure,
 they all have a `bcl-builder.config.js` file which determines their status when
-they are build, scss and js files are compiled and minified, resources as 
-templates and stories are copied using the `bcl-builder` following the 
+they are build, scss and js files are compiled and minified, resources as
+templates and stories are copied using the `bcl-builder` following the
 configuration in this file.
 The storybook instances are not part of the packages released, they are only
 used by the library to build the styleguides that are then publicly hosted as
@@ -62,7 +62,7 @@ This usage of the library is discouraged but still possible.
 #### Components
 
 Components are stored in `src/components`, in a folder with the name of the
-package that it contains 
+package that it contains
 Ex: `src/components/bcl-accordion/accordion.html.twig`.
 These are basically the components for how they are defined by bootstrap, each
 folder contains one or more `*.html.twig` templates, a `*.story.js` file defining
@@ -82,7 +82,7 @@ from the drupal application.
 
 Compositions are stored in `src/compositions`.
 These are examples provided by the library of more complex layouts, they
-might indeed only contain an html markup to be used as the model to be reproduced 
+might indeed only contain an html markup to be used as the model to be reproduced
 in the application using it.
 Being part of the library, though, they can be written in `twig` if that is
 convenient for the developer, in any case it is not foreseen the usage of those
@@ -93,7 +93,7 @@ npm packages.
 
 Stories are the demos that storybook will present in the styleguide, the
 default stories are defined in the components folder as a `*.story.js` file,
-these stories can be used by any of the themes and be combined with custom 
+these stories can be used by any of the themes and be combined with custom
 stories belonging to the project's styleguide.
 The folder containing all the stories in a theme package is `storybook`, the
 default stories are copied in `storybook/bcl-stories` while the new or overriding
@@ -128,7 +128,7 @@ the `*.story.js` file will be immediately visible in the instance.
 All the templates available in `src/components/` are copied in the `templates`
 folder of each theme so that the npm package will also contain those once it's
 released.
-Default templates can be overridden in the theme package, as well as others can 
+Default templates can be overridden in the theme package, as well as others can
 be added by placing them in the `custom-templates` folder available in each theme.
 The structure of the content of this folder should be similar to the
 `src/components` one, the template should be stored in a folder with the
@@ -171,10 +171,13 @@ default stories imported in the theme you are working on to be updated.
 The themes have a very similar structure, therefore an existing theme can be
 copied in a different folder in `src/themes` and once the needed adaptations are
 done it should be already working, including the associated storybook instance.
-For this to be available for the developer, though, a script needs to be added to
-the main `package.json`, following the existing ones, it will be named:
-`storybook:{project}`, this way when running `yarn start {project}` the right
-storybook configuration will be selected and made available in the web browser.
+For this to be available for the developer, though, a series of scripts need to
+be added to the main `package.json`, following the existing ones:
+`storybook:project`
+`build:theme:project`
+`dist-storybook:project`
+Also the `static/index.html` file should be updated adding a link to the new
+folder with the project when deployed.
 The configuration of a new theme is mainly the adaptation of the
 `ecl-builder.config.js` file, as previously mentioned this file is taking care
 of setting up all the needed resources for a theme package.
@@ -187,6 +190,18 @@ checked and it should start with `chore or fix or feat optionally followed by an
  argument in () and :`.
  As a convention please report at the end of the pr title also the jira ticket
  number to easily match the pr against a "task".
+
+### Deployments
+
+Each pull request generate a deployment on netlify on every push of every project
+in the library.
+In order to reduce the time needed for the build and the deployment and to
+limit the resources used as well, it is possible to limit the build to a single
+project by using a specific convention in the branch name:
+if the branch contains two hashes with the project name in between
+Ex: `feat/front-0000#joinup#`
+the only project that will be built in the CI is the one between the hashes, and
+it's also the only one that will be deployed in the preview.
 
 ### Release
 
