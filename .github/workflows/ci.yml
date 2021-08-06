@@ -50,18 +50,22 @@ jobs:
   deploy-pull-request-preview-project:
     name: deploy preview for single projects
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && contains('#joinup#', github.head.ref)
+    if: github.event_name == 'pull_request' && contains('#*#', github.head.ref)
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(grep -oP '(?<=#).*?(?=#)' <<< "${GITHUB_HEAD_REF}"
+        id: extract_branch
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Package application
-        run: yarn dist-joinup
+        run: yarn dist-${{ steps.extract_branch.outputs.branch }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.1
         with:
           alias: preview-${{ github.event.number }}
-          publish-dir: "build"
+          publish-dir: "build/${{ steps.extract_branch.outputs.branch }}"
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
