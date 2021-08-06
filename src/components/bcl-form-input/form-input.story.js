@@ -4,9 +4,9 @@ import demoData from "@openeuropa/bcl-data-form-input/data.js";
 import formInput from "./form-input.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data, type) => {
+const getArgs = (data, input_type) => {
   let args = {
-    type: type,
+    input_type: input_type,
     label: data.label,
     hidden_label: false,
     helper_text: data.helper_text,
@@ -14,19 +14,19 @@ const getArgs = (data, type) => {
     disabled: data.disabled,
     required: data.required,
   };
-  if (type === "text" || type === "file") {
+  if (input_type === "text" || input_type === "file") {
     args.readonly = data.readonly;
   }
-  if (type !== "file") {
+  if (input_type !== "file") {
     args.floating = false;
     args.placeholder = "text here";
   } else {
     args.placeholder = "";
   }
-  if (type === "checkbox") {
+  if (input_type === "checkbox") {
     args.switch = data.switch || false;
   }
-  if (type === "radio" || type === "checkbox") {
+  if (input_type === "radio" || input_type === "checkbox") {
     args.toggle = false;
     args.toggle_variant = data.variant || "primary";
   }
