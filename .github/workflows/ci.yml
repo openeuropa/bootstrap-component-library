@@ -50,7 +50,7 @@ jobs:
   deploy-pull-request-preview-project:
     name: deploy preview for single projects
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && contains(github.head_ref, '#')
+    if: github.event_name == 'pull_request' && contains(github.head_ref, '#*#')
     steps:
       - name: Get project to be deployed
         shell: bash
