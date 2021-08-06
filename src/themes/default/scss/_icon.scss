@@ -81,17 +81,17 @@ a,
 
 .badge {
   .icon--close {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
     margin-left: 0.3rem;
     font-size: 0.8rem;
+    font-weight: 300;
     line-height: 0.6rem;
     vertical-align: top;
     cursor: pointer;
     background: $white;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    font-weight: 300;
   }
   &.bg-primary {
     .icon--close {
@@ -120,20 +120,20 @@ a,
   }
   &.bg-warning {
     .icon--close {
-      background: $black;
       color: $warning;
+      background: $black;
     }
   }
   &.bg-info {
     .icon--close {
-      background: $black;
       color: $info;
+      background: $black;
     }
   }
   &.bg-light {
     .icon--close {
-      background: $black;
       color: $light;
+      background: $black;
     }
   }
 }
