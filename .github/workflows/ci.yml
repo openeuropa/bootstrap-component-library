@@ -31,7 +31,7 @@ jobs:
   deploy-pull-request-preview:
     name: deploy preview
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && contains('#*#', github.ref) !== true
+    if: github.event_name == 'pull_request' && github.ref != 'refs/heads/#joinup#-test'
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
@@ -47,7 +47,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-    if: github.event_name == 'pull_request' && contains('#joinup#', github.ref)
+    if: github.event_name == 'pull_request' && github.ref == 'refs/heads/#joinup#-test'
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
