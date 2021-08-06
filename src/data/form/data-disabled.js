@@ -36,7 +36,7 @@ module.exports = {
         ],
       },
       {
-        type: "checkbox",
+        input_type: "checkbox",
         wrapper_classes: "mb-3",
         label: "Can't check this",
         id: "disabledFieldsetCheck",

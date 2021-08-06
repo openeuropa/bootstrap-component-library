@@ -11,7 +11,7 @@ module.exports = {
         label: "I am a input field",
         toggle_variant: "outline-primary",
         id: "submit-1",
-        type: "checkbox",
+        input_type: "checkbox",
         toggle: true,
       },
       {
@@ -24,7 +24,7 @@ module.exports = {
         label: "I am a input field",
         toggle_variant: "warning",
         id: "submit-3",
-        type: "checkbox",
+        input_type: "checkbox",
         toggle: true,
       },
       {
@@ -39,7 +39,7 @@ module.exports = {
         label: "I am a input field",
         toggle_variant: "secondary",
         id: "submit-2",
-        type: "checkbox",
+        input_type: "checkbox",
         toggle: true,
       },
       {
@@ -57,7 +57,7 @@ module.exports = {
         label: "I am a input field",
         toggle_variant: "info",
         id: "submit-4",
-        type: "checkbox",
+        input_type: "checkbox",
         toggle: true,
       },
     ],
