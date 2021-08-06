@@ -17,7 +17,7 @@ module.exports = {
     [
       {
         wrapper_classes: "col-12",
-        type: "text",
+        input_type: "text",
         required: true,
         label: "Username",
         hidden_label: true,
@@ -39,7 +39,7 @@ module.exports = {
         id: "inlineFormSelectPref",
       },
       {
-        type: "checkbox",
+        input_type: "checkbox",
         wrapper_classes: "col-12",
         required: true,
         label: "Remember me",

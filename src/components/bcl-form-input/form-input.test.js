@@ -66,7 +66,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, type: "checkbox" })
+      render({ ...demoData, input_type: "checkbox" })
     ).resolves.toMatchSnapshot();
   });
 
@@ -74,7 +74,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, type: "radio" })
+      render({ ...demoData, input_type: "radio" })
     ).resolves.toMatchSnapshot();
   });
 
@@ -82,7 +82,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, type: "checkbox", switch: true })
+      render({ ...demoData, input_type: "checkbox", switch: true })
     ).resolves.toMatchSnapshot();
   });
 
@@ -92,7 +92,7 @@ describe("OE - Form Input", () => {
     return expect(
       render({
         ...demoData,
-        type: "checkbox",
+        input_type: "checkbox",
         toggle: true,
         toggle_variant: "primary",
       })
@@ -105,7 +105,7 @@ describe("OE - Form Input", () => {
     return expect(
       render({
         ...demoData,
-        type: "radio",
+        input_type: "radio",
         toggle: true,
         toggle_variant: "primary",
       })
