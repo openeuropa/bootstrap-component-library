@@ -89,11 +89,11 @@ module.exports = {
     },
     offcanvas: {
       mobile_only: true,
-      id: 'offcanvas-mobile',
+      id: "offcanvas-mobile",
       with_close: true,
       title: {
         heading: 4,
-        label: "Filter options"
+        label: "Filter options",
       },
       attributes: new drupalAttribute(),
       body: {
@@ -102,14 +102,14 @@ module.exports = {
             placeholder: "Keyword",
             size: "sm",
             attributes: new drupalAttribute(),
-            element_type: 'input'
+            element_type: "input",
           },
           {
-            element_type: 'html',
+            element_type: "html",
             content: '<p class="mt-4 mb-3">Content types</p>',
           },
           {
-            element_type: 'select',
+            element_type: "select",
             size: "sm",
             attributes: new drupalAttribute(),
             options: [
@@ -121,11 +121,11 @@ module.exports = {
             ],
           },
           {
-            element_type: 'html',
+            element_type: "html",
             content: '<p class="mt-4 mb-3">Filter A</p>',
           },
           {
-            element_type: 'select',
+            element_type: "select",
             size: "sm",
             attributes: new drupalAttribute().addClass("multi-select"),
             multiple: true,
@@ -139,11 +139,11 @@ module.exports = {
             ],
           },
           {
-            element_type: 'html',
+            element_type: "html",
             content: '<p class="mt-4 mb-3">Filter B</p>',
           },
           {
-            element_type: 'input',
+            element_type: "input",
             input_type: "checkbox",
             label: "Checked checkbox",
             size: "sm",
@@ -152,7 +152,7 @@ module.exports = {
             attributes: new drupalAttribute(),
           },
           {
-            element_type: 'input',
+            element_type: "input",
             input_type: "checkbox",
             label: "Default checkbox",
             size: "sm",
@@ -160,37 +160,37 @@ module.exports = {
             attributes: new drupalAttribute(),
           },
           {
-            element_type: 'html',
+            element_type: "html",
             content: '<p class="mt-4 mb-3">Filter C</p>',
           },
           {
-            element_type: 'input',
+            element_type: "input",
             input_type: "date",
             size: "sm",
             attributes: new drupalAttribute().addClass("mb-2"),
           },
           {
-            element_type: 'input',
+            element_type: "input",
             size: "sm",
             input_type: "date",
             attributes: new drupalAttribute(),
           },
           {
-            element_type: 'button',
+            element_type: "button",
             label: "Refine",
             type: "submit",
             variant: "primary",
             attributes: new drupalAttribute().addClass(["me-2", "mt-4"]),
           },
           {
-            element_type: 'button',
+            element_type: "button",
             label: "Clear",
             type: "submit",
             variant: "secondary",
             attributes: new drupalAttribute().addClass("mt-4"),
           },
-        ]
-      }
+        ],
+      },
     },
     cards: [
       {
