@@ -11,16 +11,29 @@
   - body (string) (default: '')
   - with_body_scroll (boolean) (default: false)
   - with_backdrop (boolean) (default: true)
+  - mobile_only (boolean) (default: false)
 #}
 
-{% set _classes = ['offcanvas'] %}
 {% set _title = title|default({}) %}
-{% set _body = body|default('') %}
+{% set _body = body|default({}) %}
+{% set _mobile_only = mobile_only|default(false) %}
 {% set _with_close = with_close ?? true %}
 {% set _with_backdrop = with_backdrop ?? true %}
 {% set _with_body_scroll = with_body_scroll|default(false) %}
 {% set _id = id|default('') %}
 {% set _placement = placement|default('') %}
+
+{% if _mobile_only %}
+  {% set _classes = ['offcanvas-mobile'] %}
+  {% set _class_body = 'offcanvas-mobile-body p-lg-0' %}
+  {% set _class_header = 'offcanvas-header p-lg-0' %}
+  {% set _class_title = 'mb-lg-4' %}
+{% else %}
+  {% set _classes = ['offcanvas'] %}
+  {% set _class_body = 'offcanvas-body' %}
+  {% set _class_header = 'offcanvas-header' %}
+  {% set _class_title = 'offcanvas-title' %}
+{% endif %}
 
 {% if _placement is not empty %}
  {% set _classes = _classes|merge(['offcanvas-' ~ _placement]) %}
@@ -54,10 +67,10 @@
 {% if _with_close or
   (_title.label is defined and _title.label is not empty)
 %}
-  <div class="offcanvas-header">
+  <div class="{{ _class_header }}">
   {% if _title.label is defined and _title.label is not empty %}
     <h{{ _title.heading|default(5) }}
-      class="offcanvas-title"
+      class="{{ _class_title }}"
     {% if _title.id is defined and _title.id is not empty %}
       id="{{ _title.id }}"
     {% endif %}
@@ -70,6 +83,9 @@
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
     %}
+    {% if _mobile_only %}
+      {% set button_attributes = button_attributes.addClass(['d-lg-none']) %}
+    {% endif %}
     {%- include '@oe-bcl/bcl-button/button.html.twig' with {
         attributes: button_attributes,
         clean_class: true
@@ -78,8 +94,23 @@
   </div>
 {% endif %}
 {% if _body is not empty %}
-  <div class="offcanvas-body">
-    {{- _body -}}
+  <div class="{{ _class_body }}">
+  {% if _body.items is not empty and _body.items is iterable %}
+    {% for _item in _body.items %}
+      {% if _item.element_type == 'input' %}
+        {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
+      {% endif %}
+      {% if _item.element_type == 'select' %}
+        {% include '@oe-bcl/bcl-select/select.html.twig' with _item only %}
+      {% endif %}
+      {% if _item.element_type == 'button' %}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
+      {% endif %}
+      {% if _item.element_type == 'html' %}
+        {{ _item.content }}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
   </div>
 {% endif %}
 </div>
