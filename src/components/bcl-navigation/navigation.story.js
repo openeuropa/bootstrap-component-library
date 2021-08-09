@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navigation/data.js";
 import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs.js";
-import navigation from "./navigation.html.twig";
+import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data, type) => {

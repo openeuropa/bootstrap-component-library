@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoDataGroup from "@openeuropa/bcl-data-card-layout/dataGroup.js";
 import demoDataGrid from "@openeuropa/bcl-data-card-layout/dataGrid.js";
 import demoDataMasonry from "@openeuropa/bcl-data-card-layout/dataMasonry.js";
-import cardLayout from "./card-layout.html.twig";
+import cardLayout from "@openeuropa/bcl-card-layout/card-layout.html.twig";
 
 const getArgs = (data, type) => {
   let args = { type: type };

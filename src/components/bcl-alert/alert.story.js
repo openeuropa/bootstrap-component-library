@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-alert/data.js";
-import alert from "./alert.html.twig";
+import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const getArgs = (data) => {

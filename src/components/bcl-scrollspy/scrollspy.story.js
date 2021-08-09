@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
-import navScrollspy from "./navScrollspy.html";
-import groupScrollspy from "./groupScrollspy.html";
+import navScrollspy from "@openeuropa/bcl-scrollspy/navScrollspy.html";
+import groupScrollspy from "@openeuropa/bcl-scrollspy/groupScrollspy.html";
 
 export default {
   title: "Components/Scrollspy",
