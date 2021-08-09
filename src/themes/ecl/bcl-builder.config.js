@@ -116,7 +116,7 @@ module.exports = {
         `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/*.twig`,
       ],
       to: path.resolve(outputFolder, "templates"),
-      options: { up: 7 },
+      options: { up: 7, exclude: excludePaths },
     },
     {
       from: ["custom-templates/**/*.twig"],
