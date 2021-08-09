@@ -1,5 +1,5 @@
 const path = require("path");
-const stories = require("./stories/bcl-stories");
+const stories = require("../src/stories/bcl-stories");
 
 const nodeModules = path.resolve(__dirname, "../../../../node_modules");
 const outputFolder = path.resolve(__dirname);

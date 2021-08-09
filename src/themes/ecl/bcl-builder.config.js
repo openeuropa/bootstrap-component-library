@@ -1,6 +1,6 @@
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
-const templates = require("./custom-templates/bcl-templates");
+const templates = require("./src/templates/bcl-templates");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = "../../../node_modules";
@@ -19,7 +19,7 @@ if (templates.length) {
 module.exports = {
   scripts: [
     {
-      entry: path.resolve(__dirname, "index.esm.js"),
+      entry: path.resolve(__dirname, "src/js/index.esm.js"),
       dest: path.resolve(outputFolder, "js/oe-bcl-ecl.esm.js"),
       options: {
         format: "esm",
@@ -39,7 +39,7 @@ module.exports = {
       },
     },
     {
-      entry: path.resolve(__dirname, "index.umd.js"),
+      entry: path.resolve(__dirname, "src/js/index.umd.js"),
       dest: path.resolve(outputFolder, "js/oe-bcl-ecl.umd.js"),
       options: {
         name: "bootstrap",
@@ -57,7 +57,7 @@ module.exports = {
       },
     },
     {
-      entry: path.resolve(__dirname, "index.umd.js"),
+      entry: path.resolve(__dirname, "src/js/index.umd.js"),
       dest: path.resolve(outputFolder, "js/oe-bcl-ecl.bundle.js"),
       options: {
         name: "bootstrap",
@@ -83,7 +83,7 @@ module.exports = {
   ],
   styles: [
     {
-      entry: path.resolve(outputFolder, "oe-bcl-ecl.scss"),
+      entry: path.resolve(outputFolder, "src/scss/oe-bcl-ecl.scss"),
       dest: path.resolve(outputFolder, "css/oe-bcl-ecl.css"),
       options: {
         includePaths,
@@ -91,7 +91,7 @@ module.exports = {
       },
     },
     {
-      entry: path.resolve(outputFolder, "oe-bcl-ecl.scss"),
+      entry: path.resolve(outputFolder, "src/scss/oe-bcl-ecl.scss"),
       dest: path.resolve(outputFolder, "css/oe-bcl-ecl.min.css"),
       options: {
         includePaths,
@@ -119,9 +119,9 @@ module.exports = {
       options: { up: 7, exclude: excludePaths },
     },
     {
-      from: ["custom-templates/**/*.twig"],
+      from: ["src/templates/**/*.twig"],
       to: path.resolve(outputFolder, "templates"),
-      options: { up: 1 },
+      options: { up: 2 },
     },
   ],
 };
