@@ -4,6 +4,9 @@
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
 @import "@openeuropa/bcl-bootstrap/scss/utilities";
 
+// Override Bootstrap variables
+@import "@openeuropa/bcl-theme-ecl/src/scss/base/variables";
+
 // Layout & components
 @import "@openeuropa/bcl-bootstrap/scss/root";
 @import "@openeuropa/bcl-bootstrap/scss/reboot";
@@ -42,7 +45,7 @@
 // Utilities
 @import "@openeuropa/bcl-bootstrap/scss/utilities/api";
 
-// Custom styles
-@import "@openeuropa/bcl-theme-default/scss/header";
-@import "@openeuropa/bcl-theme-default/scss/icon";
-@import "@openeuropa/bcl-theme-default/scss/multiselect";
+// Custom Styles
+@import "@openeuropa/bcl-theme-ecl/src/scss/header";
+@import "@openeuropa/bcl-theme-ecl/src/scss/language-list";
+@import "@openeuropa/bcl-theme-default/src/scss/icon";

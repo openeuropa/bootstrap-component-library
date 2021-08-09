@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-table/data.js";
-import table from "../../custom-templates/bcl-table/table.html.twig";
+import table from "../../src/templates/bcl-table/table.html.twig";
 
 const getArgs = (data) => {
   return {

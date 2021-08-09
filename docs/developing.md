@@ -95,23 +95,21 @@ Stories are the demos that storybook will present in the styleguide, the
 default stories are defined in the components folder as a `*.story.js` file,
 these stories can be used by any of the themes and be combined with custom
 stories belonging to the project's styleguide.
-The folder containing all the stories in a theme package is `storybook`, the
-default stories are copied in `storybook/bcl-stories` while the new or overriding
-ones can be defined in `storybook/stories`.
+In a theme package the default stories are copied in `storybook/bcl-stories`
+while the new or overriding ones can be defined in `src/stories`.
 
 ##### Combining stories in the theme packages
 
 All the default stories are used by default by all the different themes, but
 they can also be cherry-picked in order to combine them with the stories
 defined by the single projects.
-There is one file in each theme, in the `src/themes/{theme}/storybook/stories`
+There is one file in each theme, in the `src/themes/{theme}/src/stories`
 folder, called `bcl-stories.js` where a list of the stories to be excluded can
 be provided.
 This folder is also the place where to store the custom stories defined by the
 project, storybook will read the stories from the `bcl-stories` folder and the
-`stories` folder inside the `storybook` folder of each theme, so that the
-developer can freely combine default and custom stories in the project's
-styleguide.
+`stories` folder of each theme, so that the developer can freely combine default
+and custom stories in the project's styleguide.
 The stories are sorted alphabetically.
 
 #### Working on the default stories
@@ -129,18 +127,18 @@ All the templates available in `src/components/` are copied in the `templates`
 folder of each theme so that the npm package will also contain those once it's
 released.
 Default templates can be overridden in the theme package, as well as others can
-be added by placing them in the `custom-templates` folder available in each theme.
+be added by placing them in the `src/templates` folder available in each theme.
 The structure of the content of this folder should be similar to the
 `src/components` one, the template should be stored in a folder with the
 package name, although these are not meant to be released as individual npm
 packages, at the moment.
 To override an existing template from BCL the same identical name has to be used,
 both for the folder and the template name.
-The overridden template has to be added in the `custom-templates/bcl-templates.js`
+The overridden template has to be added in the `src/templates/bcl-templates.js`
 file so that it will not be copied the `templates` folder.
 
-Ex: To exclude the default table template, you would export in the `bcl-templates.js`
-file an array like this `['table']`
+Ex: To exclude the default table template, you would export in the
+`bcl-templates.js` file an array like this `['table']`.
 The element added to the array has to be the template name without the `html.twig`
 extension.
 
@@ -155,16 +153,17 @@ theme.
 
 Mind the fact that if a component template is overridden then its stories need to
 be overridden as well by the theme package.
-This means adding the exclusion for the default story in the `bcl-stories.js`
-file and defining a new story file in `stories`.
+This means adding the exclusion for the default story in the
+`src/stories/bcl-stories.js` file and defining a new story file in `stories`.
 
 Ex: To exclude the default table story, you would export in the `bcl-stories.js`
 file an array like this `['table']`
 The element added to the array has to be the story file name without the `story.js`
 extension.
 
-If you do so, you will also need to manually run `yarn build:storybook` for the
-default stories imported in the theme you are working on to be updated.
+If you do so, you might also need to manually run `yarn build:storybook` for the
+default stories imported in the theme you are working on to be updated, but it
+shouldn't be normally the case.
 
 ### Adding a new theme
 
@@ -176,6 +175,7 @@ be added to the main `package.json`, following the existing ones:
 `storybook:project`
 `build:theme:project`
 `dist-storybook:project`
+
 Also the `static/index.html` file should be updated adding a link to the new
 folder with the project when deployed.
 The configuration of a new theme is mainly the adaptation of the
