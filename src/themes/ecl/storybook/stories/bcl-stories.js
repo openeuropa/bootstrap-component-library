@@ -1,1 +1,1 @@
-module.exports = ['table'];
+module.exports = ["table"];
