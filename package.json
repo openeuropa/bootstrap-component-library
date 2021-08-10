@@ -19,7 +19,7 @@
     "clean:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run clean",
     "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js static/* assets/",
     "copy:index": "copyfiles -f static/index.html build",
-    "css-lint": "stylelint src/**/*.scss",
+    "css-lint": "stylelint --fix src/**/*.scss",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",
     "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-*\" run dist",
