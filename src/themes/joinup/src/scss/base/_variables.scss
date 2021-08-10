@@ -1,0 +1,91 @@
+// Override Bootstrap's Sass default variables for Joinup
+
+// General
+$border-radius: 0.5rem;
+$enable-negative-margins: true;
+$enable-shadows: true;
+$box-shadow: 0 0.1rem 0.4rem 0.1rem rgba($black, 0.1);
+
+// Color system
+$brand: #1073de;
+$primary: #143b76;
+$primary-darker: darken(desaturate($primary, 0.07), 4.12); // #113264
+$secondary: lighten(
+  desaturate(adjust-hue($brand, -1), 15.13),
+  47.84
+); // #e7f1fb
+$success: #18bf80;
+$warning: #eba843;
+$danger: #eb3434;
+
+$theme-colors: (
+  "brand": $brand,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "warning": $warning,
+  "danger": $danger
+);
+
+$gray-100: #fafbfc;
+$gray-200: #f5f6f7;
+$gray-300: #dadee0;
+$gray-400: #a2a8ab;
+$gray-500: #858a8c;
+$gray-600: #6d7173;
+$gray-700: #555859;
+$gray-800: #3d3f40;
+$gray-900: #242626;
+
+// Links
+$link-color: $brand;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Headings
+$headings-color: $primary;
+
+// Buttons
+$btn-link-color: $link-color;
+
+$btn-hover-bg-shade-amount: 0;
+$btn-hover-bg-tint-amount: 0;
+$btn-disabled-opacity: 0.5;
+$btn-hover-border-shade-amount: 20%;
+$btn-border-radius: 0.4rem;
+$btn-padding-y: 0.4rem;
+$btn-padding-x: 1.6rem;
+
+$btn-hover-bg-shade-amount: 10%;
+$btn-hover-bg-tint-amount: 10%;
+$btn-active-bg-shade-amount: 20%;
+$btn-active-bg-tint-amount: 20%;
+
+// Typography
+
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-family-base: "Roboto", sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: 2.5;
+
+// Adding a new font weight medium
+$font-weight-medium: 500;
+
+$display-font-weight: normal;
+
+// Font size xs (not existent on BS)
+// Available as a utilities, ex: fs-xs
+$font-size-sm: $font-size-base * 0.875; // 14px.
+$font-size-xs: $font-size-base * 0.75; // 12px.
+
+$h1-font-size: $font-size-base * 2.5; // 40px
+$h2-font-size: $font-size-base * 2; // 32px
+$h3-font-size: $font-size-base * 1.5; // 24px
+$h4-font-size: $font-size-base * 1.25; // 20px
+$h5-font-size: $font-size-base; // 16px
+$h6-font-size: $font-size-base; // 16px
+
+// Form elements
+$input-focus-border-color: tint-color($component-active-bg, 50%);
+$input-focus-width: 0;
+$input-btn-focus-box-shadow: none;
