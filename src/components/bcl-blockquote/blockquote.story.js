@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-blockquote/data.js";
-import blockquote from "./blockquote.html.twig";
+import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 
 const getArgs = (data) => {
   return {

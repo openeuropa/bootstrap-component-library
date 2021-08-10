@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-select/data.js";
 import demoMultiData from "@openeuropa/bcl-data-select/dataMultiselect.js";
-import select from "./select.html.twig";
+import select from "@openeuropa/bcl-select/select.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data, type) => {
