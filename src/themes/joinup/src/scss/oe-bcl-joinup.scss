@@ -4,6 +4,9 @@
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
 @import "@openeuropa/bcl-bootstrap/scss/utilities";
 
+// Override Bootstrap variables
+@import "base/variables";
+
 // Layout & components
 @import "@openeuropa/bcl-bootstrap/scss/root";
 @import "@openeuropa/bcl-bootstrap/scss/reboot";
@@ -46,3 +49,6 @@
 @import "@openeuropa/bcl-theme-default/src/scss/header";
 @import "@openeuropa/bcl-theme-default/src/scss/icon";
 @import "@openeuropa/bcl-theme-default/src/scss/multiselect";
+
+// JoinUp Custom styles
+@import "navbar";
