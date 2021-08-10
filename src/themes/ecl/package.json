@@ -6,13 +6,14 @@
   "description": "OE - BCL theme ECL",
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:clean": "rimraf css js templates",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
     "build:copy": "cross-env bcl-builder copy",
+    "clean": "rimraf css js templates",
     "prepublish": "npm run build"
   },
   "devDependencies": {
+    "@openeuropa/bcl-theme-default": "^0.4.0",
     "@openeuropa/bcl-bootstrap": "^0.4.0",
     "@openeuropa/bcl-builder": "^0.4.0",
     "@openeuropa/bcl-twig-templates": "^0.4.0",

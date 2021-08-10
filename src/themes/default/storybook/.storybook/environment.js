@@ -6,14 +6,14 @@ const {
 } = require("twing");
 const drupalAttribute = require("drupal-attribute");
 
-const oeAbsPath = path.resolve(__dirname, "../../src/components");
-const loader = new TwingLoaderFilesystem(oeAbsPath);
+const projAbsPath = path.resolve(__dirname, "../../templates");
+const loader = new TwingLoaderFilesystem(projAbsPath);
 
 // In storybook we get this returned as an instance of
 // TWigLoaderNull, we need to avoid processing this.
 if (typeof loader.addPath === "function") {
   // Add namespace oe.
-  loader.addPath(oeAbsPath, "oe-bcl");
+  loader.addPath(projAbsPath, "oe-bcl");
 }
 
 const createAttribute = new TwingFunction("create_attribute", function () {

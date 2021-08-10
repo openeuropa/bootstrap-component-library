@@ -1,7 +1,7 @@
 import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData.js";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData.js";
-import link from "./link.html.twig";
+import link from "@openeuropa/bcl-link/link.html.twig";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import drupalAttribute from "drupal-attribute";

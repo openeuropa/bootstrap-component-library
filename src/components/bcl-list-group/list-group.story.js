@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-list-group/data.js";
 import actionableDemoData from "@openeuropa/bcl-data-list-group/actionableData";
 import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
-import listGroup from "./list-group.html.twig";
+import listGroup from "@openeuropa/bcl-list-group/list-group.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = () => {

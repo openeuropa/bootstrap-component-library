@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
-import navbar from "./navbar.html.twig";
+import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
