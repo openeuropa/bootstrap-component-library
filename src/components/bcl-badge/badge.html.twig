@@ -46,7 +46,12 @@
   {%- endif -%}
     {{- _label -}}
   {%- if _dismissible -%}
-    <span class="icon--close" aria-hidden="true">&times;</span>
+    <span class="icon--close" aria-hidden="true">
+      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+        name: "x",
+        path: "static/media/bootstrap/bootstrap-icons.svg"
+      } only %}
+    </span>
   {%- endif -%}
   </span>
 {%- if _url is not empty -%}
