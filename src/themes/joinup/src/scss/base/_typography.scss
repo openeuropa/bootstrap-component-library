@@ -1,0 +1,20 @@
+// stylelint-disable selector-no-qualifying-type
+.fs-sm,
+.fs-xs {
+  color: $gray-500;
+}
+.fw-medium {
+  color: $gray-700;
+}
+
+h1 {
+  color: $primary-darker;
+}
+
+h2,
+h3,
+h4 {
+  &.fw-medium {
+    color: $primary-darker;
+  }
+}
