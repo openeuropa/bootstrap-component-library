@@ -1,14 +1,21 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-accordion/data.js";
-import accordion from "./accordion.html.twig";
+import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+const getArgs = (data) => {
+  return {
+    toggle1: data.items[0].title,
+    content1: data.items[0].content,
+    flush: false,
+  };
+};
 
 const getArgTypes = (data) => {
   return {
     toggle1: {
       name: `toggle 1`,
       type: { name: "string", required: true },
-      defaultValue: data.items[0].title,
       description: `Text of the first accordion toggler`,
       table: {
         type: { summary: "string" },
@@ -22,7 +29,6 @@ const getArgTypes = (data) => {
     content1: {
       name: `content 1`,
       type: { name: "string", required: true },
-      defaultValue: data.items[0].content,
       description: "Text of the first accordion item content",
       table: {
         type: { summary: "string" },
@@ -36,7 +42,6 @@ const getArgTypes = (data) => {
     flush: {
       type: { name: "boolean" },
       description: "Variant of the accordion",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
@@ -57,6 +62,7 @@ const applyArgs = (data, args) => {
   resetAttrs(data);
   data.items[0].title = args[`toggle1`];
   data.items[0].content = args[`content1`];
+
   return Object.assign(data, args);
 };
 
@@ -86,4 +92,5 @@ export default {
 
 export const Default = (args) => accordion(applyArgs(demoData, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

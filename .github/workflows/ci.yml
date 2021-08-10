@@ -28,10 +28,10 @@ jobs:
         run: yarn build:themes
       - name: Test
         run: yarn test
-  deploy-pull-request-preview:
-    name: deploy preview
+  deploy-pull-request-preview-full:
+    name: deploy full preview
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && !contains(github.head_ref, '#')
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
@@ -43,6 +43,29 @@ jobs:
         with:
           alias: preview-${{ github.event.number }}
           publish-dir: "build"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  deploy-pull-request-preview-project:
+    name: deploy preview for single projects
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && contains(github.head_ref, '#')
+    steps:
+      - name: Get project to be deployed
+        shell: bash
+        run: echo "##[set-output name=branch;]$(grep -oP '(?<=#).*?(?=#)' <<< ${GITHUB_HEAD_REF})"
+        id: extract_branch
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Package application
+        run: yarn dist-project ${{ steps.extract_branch.outputs.branch }}
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.1
+        with:
+          alias: preview-${{ github.event.number }}
+          publish-dir: "build/${{ steps.extract_branch.outputs.branch }}"
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

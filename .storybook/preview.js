@@ -12,20 +12,6 @@ addParameters({
     },
     manual: false,
   },
-  cssresources: [
-    {
-      id: "bcl-theme-default",
-      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-default.min.css" />`,
-      picked: true,
-      hideCode: true,
-    },
-    {
-      id: "bcl-theme-ecl",
-      code: `<link rel="stylesheet" type="text/css" href="oe-bcl-ecl.min.css" />`,
-      picked: false,
-      hideCode: true,
-    },
-  ],
   controls: { expanded: true },
   layout: "fullscreen",
   viewport: {
@@ -67,4 +53,10 @@ addParameters({
 export const decorators = [withCssResources];
 export const parameters = {
   layout: "padded",
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: ['Components', 'Compositions'],
+    },
+  },
 };

@@ -1,8 +1,24 @@
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
-import textarea from "./textarea.html.twig";
+import textarea from "@openeuropa/bcl-textarea/textarea.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+const getArgs = (data) => {
+  return {
+    label: data.label,
+    invalid: false,
+    required: false,
+    disabled: false,
+    helper_text: "",
+    placeholder: data.placeholder,
+    hidden_label: false,
+    floating: false,
+    readonly: false,
+    rows: 4,
+    size: "sm",
+  };
+};
 
 const getArgTypes = (data) => {
   return {
@@ -10,7 +26,6 @@ const getArgTypes = (data) => {
     rows: {
       type: { name: "number" },
       description: "Number or rows",
-      defaultValue: 4,
       table: {
         type: { summary: "integer" },
         min: 1,
@@ -70,4 +85,5 @@ export default {
 export const Textarea = (args) => textarea(applyArgs(demoData, args));
 
 Textarea.storyName = "default";
+Textarea.args = getArgs(demoData);
 Textarea.argTypes = getArgTypes(demoData);

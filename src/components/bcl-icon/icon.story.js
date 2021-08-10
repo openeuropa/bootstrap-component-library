@@ -1,9 +1,17 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-icon/data.js";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
-import icon from "./icon.html.twig";
-import "!!null-loader!@openeuropa/bcl-theme-default/scss/_icon.scss";
+import icon from "@openeuropa/bcl-icon/icon.html.twig";
+import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_icon.scss";
 import { getIconControls } from "@openeuropa/bcl-story-utils";
+
+const getArgs = (data) => {
+  return {
+    name: data.name || "",
+    transformation: "",
+    size: "s",
+  };
+};
 
 const getArgTypes = (data) => {
   return {
@@ -42,4 +50,5 @@ export default {
 export const Default = (args) =>
   icon(applyArgs({ ...demoData, path: defaultSprite }, args));
 
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

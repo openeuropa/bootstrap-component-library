@@ -1,15 +1,25 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
-import badge from "./badge.html.twig";
+import badge from "@openeuropa/bcl-badge/badge.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
+
+const getArgs = (data) => {
+  return {
+    label: data.label,
+    url: "",
+    title: data.label,
+    background: data.background || "primary",
+    rounded_pill: false,
+    assistive_text: "",
+  };
+};
 
 const getArgTypes = (data) => {
   return {
     label: {
       type: { name: "string" },
       description: "Label of the badge",
-      defaultValue: data.label,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -19,7 +29,6 @@ const getArgTypes = (data) => {
     url: {
       type: { name: "string" },
       description: "If you want the badge to be a link",
-      defaultValue: "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -39,7 +48,6 @@ const getArgTypes = (data) => {
     title: {
       type: { name: "string" },
       description: "Title attribute if it's a link",
-      defaultValue: data.label,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -48,12 +56,8 @@ const getArgTypes = (data) => {
     },
     background: {
       type: { name: "select" },
+      options: getVariants(),
       description: "Background color of the badge",
-      defaultValue: "primary" || data.background,
-      control: {
-        type: "select",
-        options: getVariants(),
-      },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
@@ -63,7 +67,6 @@ const getArgTypes = (data) => {
     rounded_pill: {
       type: { name: "boolean" },
       description: "Mane the badge a rounded pill",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -73,7 +76,6 @@ const getArgTypes = (data) => {
     assistive_text: {
       type: { name: "string" },
       description: "Assistive, hidden text",
-      defaultValue: "",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -123,46 +125,54 @@ export default {
 export const Primary = (args) => badge(applyArgs(demoData, args));
 
 Primary.storyName = "Primary (default)";
+Primary.args = getArgs(demoData);
 Primary.argTypes = getArgTypes(demoData);
 
-export const Secondary = (args) =>
-  badge(applyArgs({ ...demoData, background: "secondary" }, args));
+const dataSecondary = { ...demoData, background: "secondary" };
+export const Secondary = (args) => badge(applyArgs(dataSecondary, args));
 
 Secondary.storyName = "Secondary";
-Secondary.argTypes = getArgTypes(demoData);
+Secondary.args = getArgs(dataSecondary);
+Secondary.argTypes = getArgTypes(dataSecondary);
 
-export const Success = (args) =>
-  badge(applyArgs({ ...demoData, background: "success" }, args));
+const dataSuccess = { ...demoData, background: "success" };
+export const Success = (args) => badge(applyArgs(dataSuccess, args));
 
 Success.storyName = "Success";
-Success.argTypes = getArgTypes(demoData);
+Success.args = getArgs(dataSuccess);
+Success.argTypes = getArgTypes(dataSuccess);
 
-export const Warning = (args) =>
-  badge(applyArgs({ ...demoData, background: "warning" }, args));
+const dataWarning = { ...demoData, background: "warning" };
+export const Warning = (args) => badge(applyArgs(dataWarning, args));
 
 Warning.storyName = "Warning";
-Warning.argTypes = getArgTypes(demoData);
+Warning.args = getArgs(dataWarning);
+Warning.argTypes = getArgTypes(dataWarning);
 
-export const Danger = (args) =>
-  badge(applyArgs({ ...demoData, background: "danger" }, args));
+const dataDanger = { ...demoData, background: "danger" };
+export const Danger = (args) => badge(applyArgs(dataDanger, args));
 
 Danger.storyName = "Danger";
-Danger.argTypes = getArgTypes(demoData);
+Danger.args = getArgs(dataDanger);
+Danger.argTypes = getArgTypes(dataDanger);
 
-export const Info = (args) =>
-  badge(applyArgs({ ...demoData, background: "info" }, args));
+const dataInfo = { ...demoData, background: "info" };
+export const Info = (args) => badge(applyArgs(dataInfo, args));
 
 Info.storyName = "Info";
-Info.argTypes = getArgTypes(demoData);
+Info.args = getArgs(dataInfo);
+Info.argTypes = getArgTypes(dataInfo);
 
-export const Light = (args) =>
-  badge(applyArgs({ ...demoData, background: "light" }, args));
+const dataLight = { ...demoData, background: "light" };
+export const Light = (args) => badge(applyArgs(dataLight, args));
 
 Light.storyName = "Light";
-Light.argTypes = getArgTypes(demoData);
+Light.args = getArgs(dataLight);
+Light.argTypes = getArgTypes(dataLight);
 
-export const Dark = (args) =>
-  badge(applyArgs({ ...demoData, background: "dark" }, args));
+const dataDark = { ...demoData, background: "dark" };
+export const Dark = (args) => badge(applyArgs(dataDark, args));
 
 Dark.storyName = "Dark";
-Dark.argTypes = getArgTypes(demoData);
+Dark.args = getArgs(dataDark);
+Dark.argTypes = getArgTypes(dataDark);

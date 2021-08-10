@@ -4,7 +4,7 @@ import demoDisabled from "@openeuropa/bcl-data-form/data-disabled.js";
 import demoGrid from "@openeuropa/bcl-data-form/data-grid.js";
 import demoHorizontal from "@openeuropa/bcl-data-form/data-horizontal.js";
 import demoInline from "@openeuropa/bcl-data-form/data-inline.js";
-import form from "./form.html.twig";
+import form from "@openeuropa/bcl-form/form.html.twig";
 
 export default {
   title: "Components/Forms/Form",

@@ -1,16 +1,24 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
-import navbar from "./navbar.html.twig";
+import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
-// Controls
+const getArgs = (data) => {
+  return {
+    brand: data.brand,
+    navigation: data.navigation,
+    form: data.form,
+    color_set: "light",
+    expand: "lg",
+  };
+};
+
 const getArgTypes = (data) => {
   return {
     brand: {
       name: "brand",
       type: { name: "object" },
-      defaultValue: data.brand,
       description: "Logo as label or image",
       table: {
         type: { summary: "object" },
@@ -24,7 +32,6 @@ const getArgTypes = (data) => {
     navigation: {
       name: "navigation",
       type: { name: "object" },
-      defaultValue: data.navigation,
       description: "Links and labels for navigation",
       table: {
         type: { summary: "object" },
@@ -38,7 +45,6 @@ const getArgTypes = (data) => {
     form: {
       name: "form",
       type: { name: "object" },
-      defaultValue: data.form,
       description: "Input in navigation",
       table: {
         type: { summary: "object" },
@@ -52,46 +58,34 @@ const getArgTypes = (data) => {
     color_set: {
       name: "color set",
       type: { name: "select" },
-      defaultValue: "light",
       description: "Available set of color",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "light" },
         category: "Style",
       },
-      control: {
-        type: "select",
-        options: ["light", "dark"],
-      },
+      options: ["light", "dark"],
     },
     background: {
       name: "background",
       type: { name: "select" },
-      defaultValue: "",
+      options: getVariants(),
       description: "Background of navbar",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
         category: "Style",
       },
-      control: {
-        type: "select",
-        options: getVariants(),
-      },
     },
     expand: {
       name: "expand",
       type: { name: "select" },
-      defaultValue: "lg",
+      options: ["sm", "md", "lg"],
       description: "Expand breakpoint of menu",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "lg" },
         category: "Style",
-      },
-      control: {
-        type: "select",
-        options: ["sm", "md", "lg"],
       },
     },
   };
@@ -145,4 +139,5 @@ export default {
 export const Navbar = (args) => navbar(applyArgs(demoData, args));
 
 Navbar.storyName = "Default";
+Navbar.args = getArgs(demoData);
 Navbar.argTypes = getArgTypes(demoData);

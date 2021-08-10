@@ -1,14 +1,25 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
-import offCanvas from "./offcanvas.html.twig";
+import offCanvas from "@openeuropa/bcl-offcanvas/offcanvas.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+const getArgs = (data) => {
+  return {
+    id: data.id,
+    title: data.title,
+    body: data.body,
+    with_close: true,
+    placement: data.placement,
+    with_backdrop: true,
+    with_body_scroll: false,
+  };
+};
 
 const getArgTypes = (data) => {
   return {
     id: {
       type: { name: "string" },
       description: "Id attribute of the offcanvas",
-      defaultValue: data.id,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -18,7 +29,6 @@ const getArgTypes = (data) => {
     title: {
       type: { name: "object" },
       description: "Title of the offcanvas",
-      defaultValue: data.title,
       table: {
         type: { summary: "object" },
         category: "Content",
@@ -27,7 +37,6 @@ const getArgTypes = (data) => {
     body: {
       type: { name: "string" },
       description: "Content of the offcanvas",
-      defaultValue: data.body,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -38,7 +47,6 @@ const getArgTypes = (data) => {
       name: "close button",
       type: { name: "boolean" },
       description: "Enable the close button",
-      defaultValue: true,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
@@ -48,11 +56,7 @@ const getArgTypes = (data) => {
     placement: {
       type: { name: "select" },
       description: "Position of the offcanvas",
-      defaultValue: data.placement,
-      control: {
-        type: "select",
-        options: ["bottom", "top", "start", "end"],
-      },
+      options: ["bottom", "top", "start", "end"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -63,7 +67,6 @@ const getArgTypes = (data) => {
       name: "enable backdrop",
       type: { name: "boolean" },
       description: "Enable backdrop",
-      defaultValue: true,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
@@ -74,7 +77,6 @@ const getArgTypes = (data) => {
       name: "enable body scrolling",
       type: { name: "boolean" },
       description: "Enable body scrolling",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -136,6 +138,6 @@ export default {
 
 export const Default = (args) => offCanvas(applyArgs(demoData, args));
 
-Default.storyName = "Default";
+Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.decorators = [offCanvasTrigger];

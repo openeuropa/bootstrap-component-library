@@ -29,11 +29,12 @@ cd bootstrap-component-library
 yarn
 
 # Start a development session (storybook with browsersync )
-yarn start
+yarn start {project}
 ```
 
 - Open <http://localhost:5000> to see the storybook instance.
 - Use <http://localhost:3000> to enjoy live reloading on storybook.
+
 
 ## Npm packages
 
@@ -99,8 +100,8 @@ package name so that they can be directly used with a loader defining the
 
 The twig packages are available as individual npm packages but also directly
 available in the theme packages, the `@openeuropa/bcl-twig-templates` package
-which is a collection of all the templates stored in a folder with the package
-name.
+which is a collection of all the BCL default templates stored in a folder 
+with the package name.
 
 #### Twig loader
 
@@ -108,6 +109,10 @@ The library uses `@oe-bcl` as the namespaces for the templates so a typical
 twig-loader would be defined as such:
 
 `loader.addPath(pathToTheTemplatesFolder, "oe-bcl");`
+
+## Developer's guidelines
+
+[Developer's guidelines](docs/developing.md)
 
 ### Setup on Windows using WSL 1
 
