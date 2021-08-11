@@ -15,7 +15,7 @@ const loader = new TwingLoaderFilesystem(projComponentsAbsPath);
 if (typeof loader.addPath === "function") {
   // Add namespace oe.
   loader.addPath(projComponentsAbsPath, "oe-bcl");
-  loader.addPath(projCompositionsAbsPath, "oe-bcl-comp");
+  loader.addPath(projCompositionsAbsPath, "oe-bcl");
 }
 
 const createAttribute = new TwingFunction("create_attribute", function () {
