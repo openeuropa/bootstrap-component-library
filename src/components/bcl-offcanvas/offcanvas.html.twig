@@ -5,15 +5,19 @@
       label (string)
       id (string) (default: '')
       heading (string) (1, 2, 3, 4, 5, 6)
+      extra_classes(string) (default: '')
     }
   - placement (string) (default: '') (start, end, top, bottom)
   - id (string) (default: '')
   - body (string) (default: '')
   - with_body_scroll (boolean) (default: false)
   - with_backdrop (boolean) (default: true)
+  - with_close (boolean) (default: true)
+  - extra_classes_body (string) (default: '')
+  - extra_classes_header (string) (default: '')
+  - extra_classes_close (string) (default: '')
 #}
 
-{% set _classes = ['offcanvas'] %}
 {% set _title = title|default({}) %}
 {% set _body = body|default('') %}
 {% set _with_close = with_close ?? true %}
@@ -21,6 +25,13 @@
 {% set _with_body_scroll = with_body_scroll|default(false) %}
 {% set _id = id|default('') %}
 {% set _placement = placement|default('') %}
+{% set _extra_classes_body = extra_classes_body|default('') %}
+{% set _extra_classes_header = extra_classes_header|default('') %}
+{% set _extra_classes_close = extra_classes_close|default('') %}
+
+{% set _classes = ['offcanvas'] %}
+{% set _class_body = 'offcanvas-body' ~ (_extra_classes_body ? ' ' ~ _extra_classes_body : '') %}
+{% set _class_header = 'offcanvas-header' ~ (_extra_classes_header ? ' ' ~ _extra_classes_header : '') %}
 
 {% if _placement is not empty %}
  {% set _classes = _classes|merge(['offcanvas-' ~ _placement]) %}
@@ -54,10 +65,10 @@
 {% if _with_close or
   (_title.label is defined and _title.label is not empty)
 %}
-  <div class="offcanvas-header">
+  <div class="{{ _class_header }}">
   {% if _title.label is defined and _title.label is not empty %}
     <h{{ _title.heading|default(5) }}
-      class="offcanvas-title"
+      class="{{ 'offcanvas-title' ~ (_title.extra_classes ? ' ' ~ _title.extra_classes : '') }}"
     {% if _title.id is defined and _title.id is not empty %}
       id="{{ _title.id }}"
     {% endif %}
@@ -70,6 +81,9 @@
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
     %}
+    {% if _extra_classes_close is not empty %}
+      {% set button_attributes = button_attributes.addClass(_extra_classes_close) %}
+    {% endif %}
     {%- include '@oe-bcl/bcl-button/button.html.twig' with {
         attributes: button_attributes,
         clean_class: true
@@ -77,11 +91,15 @@
   {% endif %}
   </div>
 {% endif %}
-{% if _body is not empty %}
-  <div class="offcanvas-body">
-    {{- _body -}}
+{%- if _body is not empty -%}
+  <div class="{{ _class_body }}">
+{%- endif -%}
+  {%- block body -%}
+    {{ _body }}
+  {%- endblock -%}
+{%- if _body is not empty -%}
   </div>
-{% endif %}
+{%- endif -%}
 </div>
 
 {% endspaceless %}

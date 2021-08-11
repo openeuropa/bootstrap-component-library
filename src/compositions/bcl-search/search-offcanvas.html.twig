@@ -1,0 +1,22 @@
+{% extends "@oe-bcl/bcl-offcanvas/offcanvas.html.twig" %}
+
+{% block body %}
+  <div class="offcanvas-body p-lg-0">
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with search_input only %}
+    <p class="mt-4 mb-3">Content types</p>
+    {% include '@oe-bcl/bcl-select/select.html.twig' with single_select only %}
+    <p class="mt-4 mb-3">Filter A</p>
+    {% include '@oe-bcl/bcl-select/select.html.twig' with multi_select only %}
+    <p class="mt-4 mb-3">Filter B</p>
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with first_input_filter only %}
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with second_input_filter only %}
+    <p class="mt-4 mb-3">Filter C</p>
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with first_datepicker_filter only %}
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with second_datepicker_filter only %}
+    <div class="mt-4">
+      {% include '@oe-bcl/bcl-button/button.html.twig' with button_primary only %}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with button_secondary only %}
+    </div>
+  </div>
+  
+{% endblock %}

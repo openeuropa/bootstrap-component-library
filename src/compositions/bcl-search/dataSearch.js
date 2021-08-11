@@ -87,71 +87,83 @@ module.exports = {
         ],
       },
     },
-    searchInput: {
-      placeholder: "Keyword",
-      size: "sm",
-      attributes: new drupalAttribute(),
-    },
-    multiSelect: {
-      size: "sm",
-      attributes: new drupalAttribute().addClass("multi-select"),
-      multiple: true,
-      clean_class: true,
-      options: [
-        { value: 1, label: "a select option" },
-        { value: 2, label: "another select option" },
-        { value: 3, label: "another option" },
-        { value: 4, label: "last option" },
-        { label: "the selected option", selected: true },
-      ],
-    },
-    singleSelect: {
-      size: "sm",
-      attributes: new drupalAttribute(),
-      options: [
-        { value: 1, label: "a select option" },
-        { value: 2, label: "another select option" },
-        { value: 3, label: "another option" },
-        { value: 4, label: "last option" },
-        { label: "the selected option", selected: true },
-      ],
-    },
-    firstInputFilter: {
-      input_type: "checkbox",
-      label: "Checked checkbox",
-      size: "sm",
-      checked: true,
-      id: "first-check",
-      attributes: new drupalAttribute(),
-    },
-    secondInputFilter: {
-      input_type: "checkbox",
-      label: "Default checkbox",
-      size: "sm",
-      id: "second-check",
-      attributes: new drupalAttribute(),
-    },
-    firstDatepickerFilter: {
-      input_type: "date",
-      size: "sm",
-      attributes: new drupalAttribute().addClass("mb-2"),
-    },
-    secondDatepickerFilter: {
-      size: "sm",
-      input_type: "date",
-      attributes: new drupalAttribute(),
-    },
-    buttonPrimary: {
-      label: "Refine",
-      type: "submit",
-      variant: "primary",
-      attributes: new drupalAttribute().addClass("me-2"),
-    },
-    buttonSecondary: {
-      label: "Clear",
-      type: "submit",
-      variant: "secondary",
-      attributes: new drupalAttribute(),
+    offcanvas: {
+      id: "offcanvas-mobile",
+      attributes: new drupalAttribute().addClass("offcanvas-mobile"),
+      extra_classes_close: "d-lg-none",
+      extra_classes_header: "p-lg-0",
+      title: {
+        label: "Filter options",
+        heading: 4,
+        extra_classes: "mb-lg-4",
+        id: "offcanvasExampleLabel",
+      },
+      search_input: {
+        placeholder: "Keyword",
+        size: "sm",
+        attributes: new drupalAttribute(),
+      },
+      multi_select: {
+        size: "sm",
+        attributes: new drupalAttribute().addClass("multi-select"),
+        multiple: true,
+        clean_class: true,
+        options: [
+          { value: 1, label: "a select option" },
+          { value: 2, label: "another select option" },
+          { value: 3, label: "another option" },
+          { value: 4, label: "last option" },
+          { label: "the selected option", selected: true },
+        ],
+      },
+      single_select: {
+        size: "sm",
+        attributes: new drupalAttribute(),
+        options: [
+          { value: 1, label: "a select option" },
+          { value: 2, label: "another select option" },
+          { value: 3, label: "another option" },
+          { value: 4, label: "last option" },
+          { label: "the selected option", selected: true },
+        ],
+      },
+      first_input_filter: {
+        input_type: "checkbox",
+        label: "Checked checkbox",
+        size: "sm",
+        checked: true,
+        id: "first-check",
+        attributes: new drupalAttribute(),
+      },
+      second_input_filter: {
+        input_type: "checkbox",
+        label: "Default checkbox",
+        size: "sm",
+        id: "second-check",
+        attributes: new drupalAttribute(),
+      },
+      first_datepicker_filter: {
+        input_type: "date",
+        size: "sm",
+        attributes: new drupalAttribute().addClass("mb-2"),
+      },
+      second_datepicker_filter: {
+        size: "sm",
+        input_type: "date",
+        attributes: new drupalAttribute(),
+      },
+      button_primary: {
+        label: "Refine",
+        type: "submit",
+        variant: "primary",
+        attributes: new drupalAttribute().addClass("me-2"),
+      },
+      button_secondary: {
+        label: "Clear",
+        type: "submit",
+        variant: "secondary",
+        attributes: new drupalAttribute(),
+      },
     },
     cards: [
       {
@@ -342,7 +354,7 @@ module.exports = {
         },
       ],
     },
-    filterButton: {
+    filter_button: {
       label: "Filter options",
       type: "button",
       variant: "primary",
@@ -354,7 +366,7 @@ module.exports = {
       icon: {
         name: "sliders",
         size: "xs",
-        attributes: new drupalAttribute().addClass(["ms-2", "mt-1"]),
+        attributes: new drupalAttribute().addClass(["ms-2"]),
       },
     },
     badges: [
@@ -374,7 +386,7 @@ module.exports = {
         attributes: new drupalAttribute().addClass(["me-2"]),
       },
     ],
-    sortSelect: {
+    sort_select: {
       label: "Sort by",
       size: "sm",
       attributes: new drupalAttribute().addClass("mb-4"),
