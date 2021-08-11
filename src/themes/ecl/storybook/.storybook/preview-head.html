@@ -21,9 +21,11 @@
       var offcanvasElementList = [].slice.call(
         document.querySelectorAll(".offcanvas")
       );
-      var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
-        var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
-      });
+      setTimeout(function () {
+        var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+          var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
+        });
+      }, 1000);
 
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));
       var options = { autohide: false };
