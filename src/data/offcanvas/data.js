@@ -9,13 +9,6 @@ module.exports = {
     id: "offCanvasBottomLabel",
     heading: "5",
   },
-  body: {
-    items: [
-      {
-        element_type: "html",
-        content: "<p>Interesting content</p>",
-      },
-    ],
-  },
+  body: "An interesting content for this offcanvas",
   attributes: new drupalAttribute(),
 };

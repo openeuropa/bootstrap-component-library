@@ -5,13 +5,17 @@
       label (string)
       id (string) (default: '')
       heading (string) (1, 2, 3, 4, 5, 6)
+      extra_classes(string) (default: '')
     }
   - placement (string) (default: '') (start, end, top, bottom)
   - id (string) (default: '')
   - body (string) (default: '')
   - with_body_scroll (boolean) (default: false)
   - with_backdrop (boolean) (default: true)
-  - mobile_only (boolean) (default: false)
+  - with_close (boolean) (default: true)
+  - extra_classes_body (string) (default: '')
+  - extra_classes_header (string) (default: '')
+  - extra_classes_close (string) (default: '')
 #}
 
 {% set _title = title|default({}) %}
@@ -22,18 +26,13 @@
 {% set _with_body_scroll = with_body_scroll|default(false) %}
 {% set _id = id|default('') %}
 {% set _placement = placement|default('') %}
+{% set _extra_classes_body = extra_classes_body|default('') %}
+{% set _extra_classes_header = extra_classes_header|default('') %}
+{% set _extra_classes_close = extra_classes_close|default('') %}
 
-{% if _mobile_only %}
-  {% set _classes = ['offcanvas-mobile'] %}
-  {% set _class_body = 'offcanvas-mobile-body p-lg-0' %}
-  {% set _class_header = 'offcanvas-header p-lg-0' %}
-  {% set _class_title = 'mb-lg-4' %}
-{% else %}
-  {% set _classes = ['offcanvas'] %}
-  {% set _class_body = 'offcanvas-body' %}
-  {% set _class_header = 'offcanvas-header' %}
-  {% set _class_title = 'offcanvas-title' %}
-{% endif %}
+{% set _classes = ['offcanvas'] %}
+{% set _class_body = 'offcanvas-body' ~ (_extra_classes_body ? ' ' ~ _extra_classes_body : '') %}
+{% set _class_header = 'offcanvas-header' ~ (_extra_classes_header ? ' ' ~ _extra_classes_header : '') %}
 
 {% if _placement is not empty %}
  {% set _classes = _classes|merge(['offcanvas-' ~ _placement]) %}
@@ -70,7 +69,7 @@
   <div class="{{ _class_header }}">
   {% if _title.label is defined and _title.label is not empty %}
     <h{{ _title.heading|default(5) }}
-      class="{{ _class_title }}"
+      class="{{ 'offcanvas-title' ~ (_title.extra_classes ? ' ' ~ _title.extra_classes : '') }}"
     {% if _title.id is defined and _title.id is not empty %}
       id="{{ _title.id }}"
     {% endif %}
@@ -83,8 +82,8 @@
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
     %}
-    {% if _mobile_only %}
-      {% set button_attributes = button_attributes.addClass(['d-lg-none']) %}
+    {% if _extra_classes_close is not empty %}
+      {% set button_attributes = button_attributes.addClass(_extra_classes_close) %}
     {% endif %}
     {%- include '@oe-bcl/bcl-button/button.html.twig' with {
         attributes: button_attributes,
@@ -95,22 +94,11 @@
 {% endif %}
 {% if _body is not empty %}
   <div class="{{ _class_body }}">
-  {% if _body.items is not empty and _body.items is iterable %}
-    {% for _item in _body.items %}
-      {% if _item.element_type == 'input' %}
-        {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
-      {% endif %}
-      {% if _item.element_type == 'select' %}
-        {% include '@oe-bcl/bcl-select/select.html.twig' with _item only %}
-      {% endif %}
-      {% if _item.element_type == 'button' %}
-        {% include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
-      {% endif %}
-      {% if _item.element_type == 'html' %}
-        {{ _item.content }}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+{% endif %}
+  {% block body %}
+    {{- _body -}}
+  {% endblock %}
+{% if _body is not empty %}
   </div>
 {% endif %}
 </div>
