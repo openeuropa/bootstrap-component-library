@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="oe-bcl-ecl.min.css" />
-<script defer type="text/javascript" src="oe-bcl-ecl.bundle.min.js"></script>
+<script type="text/javascript" src="oe-bcl-ecl.bundle.min.js"></script>
 <script src="slimselect.min.js"></script>
 <script>
   document.addEventListener(
@@ -21,11 +21,9 @@
       var offcanvasElementList = [].slice.call(
         document.querySelectorAll(".offcanvas")
       );
-      setTimeout(function () {
-        var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
-          var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
-        });
-      }, 1000);
+      var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+        var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
+      });
 
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));
       var options = { autohide: false };
@@ -51,12 +49,10 @@
         if (scrollspyBody) {
           scrollspyBody.dispose();
         }
-        setTimeout(function () {
-          var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: "#scrollspy",
-            method: "position",
-          });
-        }, 700);
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+          target: "#scrollspy",
+          method: "position",
+        });
       }
 
       var offcanvasMobile = document.querySelectorAll(".offcanvas-mobile")[0];
@@ -79,22 +75,20 @@
           offcanvasMobile.style.visibility = "visible";
         }
       };
-      setTimeout(function () {
-        // Set our initial width and log it
-        var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
-        setViewportWidth();
-        logWidth();
-        // On resize events, recalculate and log
-        window.addEventListener(
-          "resize",
-          function () {
-            setViewportWidth();
-            logWidth();
-            bsOffcanvas.hide();
-          },
-          false
-        );
-      }, 700);
+      // Set our initial width and log it
+      var bsOffcanvas = new bootstrap.Offcanvas(offcanvasMobile);
+      setViewportWidth();
+      logWidth();
+      // On resize events, recalculate and log
+      window.addEventListener(
+        "resize",
+        function () {
+          setViewportWidth();
+          logWidth();
+          bsOffcanvas.hide();
+        },
+        false
+      );
     },
     false
   );
