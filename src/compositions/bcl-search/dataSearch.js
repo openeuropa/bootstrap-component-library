@@ -98,12 +98,12 @@ module.exports = {
         extra_classes: "mb-lg-4",
         id: "offcanvasExampleLabel",
       },
-      searchInput: {
+      search_input: {
         placeholder: "Keyword",
         size: "sm",
         attributes: new drupalAttribute(),
       },
-      multiSelect: {
+      multi_select: {
         size: "sm",
         attributes: new drupalAttribute().addClass("multi-select"),
         multiple: true,
@@ -116,7 +116,7 @@ module.exports = {
           { label: "the selected option", selected: true },
         ],
       },
-      singleSelect: {
+      single_select: {
         size: "sm",
         attributes: new drupalAttribute(),
         options: [
@@ -127,7 +127,7 @@ module.exports = {
           { label: "the selected option", selected: true },
         ],
       },
-      firstInputFilter: {
+      first_input_filter: {
         input_type: "checkbox",
         label: "Checked checkbox",
         size: "sm",
@@ -135,30 +135,30 @@ module.exports = {
         id: "first-check",
         attributes: new drupalAttribute(),
       },
-      secondInputFilter: {
+      second_input_filter: {
         input_type: "checkbox",
         label: "Default checkbox",
         size: "sm",
         id: "second-check",
         attributes: new drupalAttribute(),
       },
-      firstDatepickerFilter: {
+      first_datepicker_filter: {
         input_type: "date",
         size: "sm",
         attributes: new drupalAttribute().addClass("mb-2"),
       },
-      secondDatepickerFilter: {
+      second_datepicker_filter: {
         size: "sm",
         input_type: "date",
         attributes: new drupalAttribute(),
       },
-      buttonPrimary: {
+      button_primary: {
         label: "Refine",
         type: "submit",
         variant: "primary",
         attributes: new drupalAttribute().addClass("me-2"),
       },
-      buttonSecondary: {
+      button_secondary: {
         label: "Clear",
         type: "submit",
         variant: "secondary",
@@ -354,7 +354,7 @@ module.exports = {
         },
       ],
     },
-    filterButton: {
+    filter_button: {
       label: "Filter options",
       type: "button",
       variant: "primary",
@@ -366,7 +366,7 @@ module.exports = {
       icon: {
         name: "sliders",
         size: "xs",
-        attributes: new drupalAttribute().addClass(["ms-2", "mt-1"]),
+        attributes: new drupalAttribute().addClass(["ms-2"]),
       },
     },
     badges: [
@@ -386,7 +386,7 @@ module.exports = {
         attributes: new drupalAttribute().addClass(["me-2"]),
       },
     ],
-    sortSelect: {
+    sort_select: {
       label: "Sort by",
       size: "sm",
       attributes: new drupalAttribute().addClass("mb-4"),
