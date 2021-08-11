@@ -92,15 +92,15 @@
   {% endif %}
   </div>
 {% endif %}
-{% if _body is not empty %}
+{%- if _body is not empty -%}
   <div class="{{ _class_body }}">
-{% endif %}
-  {% block body %}
-    {{- _body -}}
-  {% endblock %}
-{% if _body is not empty %}
+{%- endif -%}
+  {%- block body -%}
+    {{ _body }}
+  {%- endblock -%}
+{%- if _body is not empty -%}
   </div>
-{% endif %}
+{%- endif -%}
 </div>
 
 {% endspaceless %}
