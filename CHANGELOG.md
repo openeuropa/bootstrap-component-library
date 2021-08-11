@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.0 (2021-08-11)
+
+#### :rocket: New Feature
+* [#36](https://github.com/openeuropa/bootstrap-component-library/pull/36) feat(removable-badge-variants): Added removable badge variants. - FRONT-2593 ([@tibi2303](https://github.com/tibi2303))
+* [#42](https://github.com/openeuropa/bootstrap-component-library/pull/42) feat(ISA):  Add sass variables to override Bootstrap default - FRONT-2700 ([@gingapa](https://github.com/gingapa))
+* [#32](https://github.com/openeuropa/bootstrap-component-library/pull/32) chore: Multiple projects POC ([@planctus](https://github.com/planctus))
+* [#24](https://github.com/openeuropa/bootstrap-component-library/pull/24) feat(refactor-progress): Added refactor of progress bar - FRONT-2494 ([@tibi2303](https://github.com/tibi2303))
+* [#3](https://github.com/openeuropa/bootstrap-component-library/pull/3) feat(search): Added search page - FRONT-2348 ([@tibi2303](https://github.com/tibi2303))
+* [#2](https://github.com/openeuropa/bootstrap-component-library/pull/2) feat(multiselect): Added multiselect - FRONT-2351 ([@tibi2303](https://github.com/tibi2303))
+* [#26](https://github.com/openeuropa/bootstrap-component-library/pull/26) feat(image structure): Added parse image in carousel for drupal structure of images - FRONT-2591 ([@tibi2303](https://github.com/tibi2303))
+* [#23](https://github.com/openeuropa/bootstrap-component-library/pull/23) feat(drupal-attributes): Refactored reset of drupal attributes - FRONT-2472 ([@tibi2303](https://github.com/tibi2303))
+
+#### :boom: Breaking Change
+* [#34](https://github.com/openeuropa/bootstrap-component-library/pull/34) feat(param): Renamed type to input_type in form_input - FRONT-2687 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#39](https://github.com/openeuropa/bootstrap-component-library/pull/39) feat(offcanvas): Added offcanvas improvements - FRONT-2699 ([@tibi2303](https://github.com/tibi2303))
+* [#31](https://github.com/openeuropa/bootstrap-component-library/pull/31) feat(modal): Add missing bootstrap params - FRONT-2686 ([@papegaill](https://github.com/papegaill))
+
+#### :house: Internal
+* [#33](https://github.com/openeuropa/bootstrap-component-library/pull/33) chore(deps): updates - 30/07/21 ([@planctus](https://github.com/planctus))
+* [#25](https://github.com/openeuropa/bootstrap-component-library/pull/25) chore(storybook): Refactoring select controls options, removing argType.defaultValue ([@planctus](https://github.com/planctus))
+* [#22](https://github.com/openeuropa/bootstrap-component-library/pull/22) chore(deps): All the available updates ([@planctus](https://github.com/planctus))
+
+#### Committers: 4
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- Paulo Gingao ([@gingapa](https://github.com/gingapa))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.4.0 (2021-07-15)
 
 #### :bug: Bug Fix
@@ -65,4 +95,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 #### Committers: 2
 - [@planctus](https://github.com/planctus)
 - [@tibi2303](https://github.com/tibi2303)
-
