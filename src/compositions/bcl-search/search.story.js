@@ -8,6 +8,9 @@ export default {
 
 const correctPaths = (data) => {
   data.data.filter_button.icon.path = defaultSprite;
+  data.data.badges.forEach((badge) => {
+    badge.icons_path = defaultSprite;
+  });
   return data;
 };
 

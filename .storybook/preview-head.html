@@ -59,6 +59,7 @@
       }
 
       var offcanvasMobile = document.querySelectorAll(".offcanvas-mobile")[0];
+      var offcanvasMobileBody = document.querySelectorAll(".offcanvas-mobile .offcanvas-body")[0];
 
       // Define our viewportWidth variable
       var viewportWidth;
@@ -73,7 +74,9 @@
       var logWidth = function () {
         if (viewportWidth < 992) {
           offcanvasMobile.classList.add("offcanvas", "offcanvas-start");
+          offcanvasMobileBody.classList.remove("overflow-visible");
         } else {
+          offcanvasMobileBody.classList.add("overflow-visible");
           offcanvasMobile.classList.remove("offcanvas", "offcanvas-start");
           offcanvasMobile.style.visibility = "visible";
         }
