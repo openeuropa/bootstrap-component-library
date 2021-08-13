@@ -17,7 +17,7 @@
   &.is-invalid {
     .ss-multi-selected {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-      background-position: right 1.5rem center,center right 2.25rem;
+      background-position: right 1.5rem center, center right 2.25rem;
       background-size: 1.2rem 1.4rem;
       background-repeat: no-repeat;
       border-color: #dc3545;
@@ -27,19 +27,25 @@
     }
   }
   .badge {
-    margin: .45rem .45rem 0 0;
+    margin: 0.25rem 0.45rem 0 0;
     &:last-child {
-      margin-bottom: .45rem;
+      margin-bottom: 0.25rem;
     }
     .ss-value-delete {
       font-size: 0;
       &:after {
-        line-height: .7rem;
-        margin-left: .2rem;
-        vertical-align: top;
-        cursor: pointer;
         content: "×";
-        font-size: 1rem;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 0.65rem;
+        margin-left: 0.3rem;
+        background: #fff;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        color: #0d6efd;
+        font-weight: 500;
       }
     }
   }
@@ -48,12 +54,12 @@
       margin-right: 1rem;
     }
     .ss-plus {
-      height: 1.3rem;
-      top: -2px;
+      height: 1rem;
+      top: -3px;
       &:after {
-        left: -10px;
-        top: 10px;
-        width: 1.3rem;
+        left: -7px;
+        top: 7px;
+        width: 1rem;
       }
     }
   }
@@ -62,6 +68,6 @@
     margin-left: 5px;
   }
   .ss-multi-selected {
-    min-height: 2.35rem;
+    min-height: 1.95rem;
   }
 }
