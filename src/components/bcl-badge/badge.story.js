@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
@@ -95,6 +96,7 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data);
+  data.icons_path = defaultSprite;
   return Object.assign(data, args);
 };
 

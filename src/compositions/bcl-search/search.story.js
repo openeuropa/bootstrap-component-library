@@ -7,7 +7,7 @@ export default {
 };
 
 const correctPaths = (data) => {
-  data.data.filterButton.icon.path = defaultSprite;
+  data.data.filter_button.icon.path = defaultSprite;
   return data;
 };
 

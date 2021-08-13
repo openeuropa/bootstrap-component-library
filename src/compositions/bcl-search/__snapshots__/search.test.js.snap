@@ -1,0 +1,819 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OE - Search renders correctly 1`] = `
+<jest>
+  <header>
+    <nav
+      class="navbar navbar-expand-lg bg-light navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href="/example.html"
+        >
+          Navbar
+        </a>
+        <button
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbar"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbar"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#first"
+              >
+                I'm a link
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#first"
+              >
+                I'm a link 2
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="#first"
+              >
+                I'm a link 3
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                autocomplete="off"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="dropdown-1"
+                role="button"
+              >
+                Dropdown Toggle
+              </a>
+              <ul
+                aria-labelledby="dropdown-1"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    I'm a link
+                  </a>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item"
+                    type="button"
+                  >
+                    I'm a button
+                  </button>
+                </li>
+                <li>
+                  <hr
+                    class="dropdown-divider"
+                  />
+                </li>
+                <li>
+                  <button
+                    aria-disabled="true"
+                    class="dropdown-item"
+                    disabled="true"
+                    type="button"
+                  >
+                    I'm a disabled button
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item active"
+                    type="button"
+                  >
+                    I'm a active button
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <div
+              class="ms-2"
+            >
+              <button
+                class="btn btn-primary btn-md"
+                type="Search"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div
+      class="container mt-5"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-md-3"
+        >
+          <div
+            aria-labelledby="offcanvasExampleLabel"
+            class="offcanvas-mobile offcanvas"
+            id="offcanvas-mobile"
+            tabindex="-1"
+          >
+            <div
+              class="offcanvas-header p-lg-0"
+            >
+              <h4
+                class="offcanvas-title mb-lg-4"
+                id="offcanvasExampleLabel"
+              >
+                Filter options
+              </h4>
+              <button
+                class="btn-close text-reset d-lg-none"
+                data-bs-dismiss="offcanvas"
+                type="button"
+              />
+            </div>
+            <div
+              class="offcanvas-body p-lg-0"
+            >
+              <input
+                class="form-control form-control-sm"
+                placeholder="Keyword"
+                type="text"
+              />
+              <p
+                class="mt-4 mb-3"
+              >
+                Content types
+              </p>
+              <select
+                class="form-select form-select-sm"
+              >
+                <option
+                  value="1"
+                >
+                  a select option
+                </option>
+                <option
+                  value="2"
+                >
+                  another select option
+                </option>
+                <option
+                  value="3"
+                >
+                  another option
+                </option>
+                <option
+                  value="4"
+                >
+                  last option
+                </option>
+                <option
+                  selected=""
+                  value=""
+                >
+                  the selected option
+                </option>
+              </select>
+              <p
+                class="mt-4 mb-3"
+              >
+                Filter A
+              </p>
+              <select
+                class="multi-select"
+                multiple="true"
+              >
+                <option
+                  value="1"
+                >
+                  a select option
+                </option>
+                <option
+                  value="2"
+                >
+                  another select option
+                </option>
+                <option
+                  value="3"
+                >
+                  another option
+                </option>
+                <option
+                  value="4"
+                >
+                  last option
+                </option>
+                <option
+                  selected=""
+                  value=""
+                >
+                  the selected option
+                </option>
+              </select>
+              <p
+                class="mt-4 mb-3"
+              >
+                Filter B
+              </p>
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="first-check"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="first-check"
+                >
+                  Checked checkbox
+                </label>
+              </div>
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="second-check"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="second-check"
+                >
+                  Default checkbox
+                </label>
+              </div>
+              <p
+                class="mt-4 mb-3"
+              >
+                Filter C
+              </p>
+              <input
+                class="mb-2 form-control form-control-sm"
+                type="date"
+              />
+              <input
+                class="form-control form-control-sm"
+                type="date"
+              />
+              <div
+                class="mt-4"
+              >
+                <button
+                  class="me-2 btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Refine
+                </button>
+                <button
+                  class="btn btn-secondary btn-md"
+                  type="submit"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-lg-9"
+        >
+          <button
+            aria-controls="offcanvas-mobile"
+            class="d-lg-none w-100 mb-4 btn btn-primary btn-md"
+            data-bs-target="#offcanvas-mobile"
+            data-bs-toggle="offcanvas"
+            type="button"
+          >
+            Filter options
+            <svg
+              class="ms-2 bi icon--xs"
+            >
+              <use
+                xlink:href="#sliders"
+              />
+            </svg>
+          </button>
+          <div
+            class="float-end d-none d-md-block"
+          >
+            <label
+              class="form-label"
+            >
+              Sort by
+            </label>
+            <select
+              class="mb-4 form-select form-select-sm"
+            >
+              <option
+                value="1"
+              >
+                a select option
+              </option>
+              <option
+                value="2"
+              >
+                another select option
+              </option>
+              <option
+                value="3"
+              >
+                another option
+              </option>
+              <option
+                value="4"
+              >
+                last option
+              </option>
+              <option
+                selected=""
+                value=""
+              >
+                A-Z
+              </option>
+            </select>
+          </div>
+          <h4
+            class="mb-3 mb-md-4"
+          >
+            Search results (18)
+          </h4>
+          <div
+            class="mb-4"
+          >
+            <span
+              class="me-2 badge bg-primary"
+            >
+              News
+              <span
+                aria-hidden="true"
+                class="icon--close"
+              >
+                <svg
+                  class="bi icon--s"
+                >
+                  <use
+                    xlink:href="#x"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              class="me-2 badge bg-primary"
+            >
+              Item 01
+              <span
+                aria-hidden="true"
+                class="icon--close"
+              >
+                <svg
+                  class="bi icon--s"
+                >
+                  <use
+                    xlink:href="#x"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              class="me-2 badge bg-primary"
+            >
+              Item 02
+              <span
+                aria-hidden="true"
+                class="icon--close"
+              >
+                <svg
+                  class="bi icon--s"
+                >
+                  <use
+                    xlink:href="#x"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <hr
+            class="d-none d-md-block mb-4"
+          />
+          <div
+            class="d-md-none"
+          >
+            <label
+              class="form-label"
+            >
+              Sort by
+            </label>
+            <select
+              class="mb-4 form-select form-select-sm"
+            >
+              <option
+                value="1"
+              >
+                a select option
+              </option>
+              <option
+                value="2"
+              >
+                another select option
+              </option>
+              <option
+                value="3"
+              >
+                another option
+              </option>
+              <option
+                value="4"
+              >
+                last option
+              </option>
+              <option
+                selected=""
+                value=""
+              >
+                A-Z
+              </option>
+            </select>
+          </div>
+          <div
+            class="border-0 mb-5 card"
+          >
+            <div
+              class="row g-0"
+            >
+              <div
+                class="col-md-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top"
+                  src="https://picsum.photos/200/200?random=1"
+                />
+              </div>
+              <div
+                class="col-md-9"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title mb-4"
+                  >
+                    Lorem ipsum dolor sit amet
+                  </h5>
+                  <p
+                    class="card-text mb-4"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                  <span
+                    class="badge bg-primary"
+                  >
+                    Item 01
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-0 mb-5 card"
+          >
+            <div
+              class="row g-0"
+            >
+              <div
+                class="col-md-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top"
+                  src="https://picsum.photos/200/200?random=2"
+                />
+              </div>
+              <div
+                class="col-md-9"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title mb-4"
+                  >
+                    Incididunt ut labore et dolore
+                  </h5>
+                  <p
+                    class="card-text mb-4"
+                  >
+                    Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                  </p>
+                  <span
+                    class="badge bg-primary me-2"
+                  >
+                    Item 01
+                  </span>
+                  <span
+                    class="badge bg-primary"
+                  >
+                    Item 02
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-0 mb-5 card"
+          >
+            <div
+              class="row g-0"
+            >
+              <div
+                class="col-md-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top"
+                  src="https://picsum.photos/200/200?random=3"
+                />
+              </div>
+              <div
+                class="col-md-9"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title mb-4"
+                  >
+                    Quis nostrud exercitation ullamco
+                  </h5>
+                  <p
+                    class="card-text mb-4"
+                  >
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                  <span
+                    class="badge bg-primary me-2"
+                  >
+                    Item 01
+                  </span>
+                  <span
+                    class="badge bg-primary"
+                  >
+                    Item 02
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-0 mb-5 card"
+          >
+            <div
+              class="row g-0"
+            >
+              <div
+                class="col-md-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top"
+                  src="https://picsum.photos/200/200?random=4"
+                />
+              </div>
+              <div
+                class="col-md-9"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title mb-4"
+                  >
+                    Quis nostrud exercitation ullamco
+                  </h5>
+                  <p
+                    class="card-text mb-4"
+                  >
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                  <span
+                    class="badge bg-primary"
+                  >
+                    Item 01
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-0 mb-5 card"
+          >
+            <div
+              class="row g-0"
+            >
+              <div
+                class="col-md-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top"
+                  src="https://picsum.photos/200/200?random=5"
+                />
+              </div>
+              <div
+                class="col-md-9"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title mb-4"
+                  >
+                    Duis aute irure dolor in Excepteur
+                  </h5>
+                  <p
+                    class="card-text mb-4"
+                  >
+                    Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <span
+                    class="badge bg-primary me-2"
+                  >
+                    Item 01
+                  </span>
+                  <span
+                    class="badge bg-primary"
+                  >
+                    Item 02
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-0 mb-5 card"
+          >
+            <div
+              class="row g-0"
+            >
+              <div
+                class="col-md-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top"
+                  src="https://picsum.photos/200/200?random=6"
+                />
+              </div>
+              <div
+                class="col-md-9"
+              >
+                <div
+                  class="card-body"
+                >
+                  <h5
+                    class="card-title mb-4"
+                  >
+                    Excepteur sint occaecat cupidatat non
+                  </h5>
+                  <p
+                    class="card-text mb-4"
+                  >
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <span
+                    class="badge bg-primary"
+                  >
+                    Item 02
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <nav
+            class="mt-5"
+          >
+            <ul
+              class="pagination justify-content-center"
+            >
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  Previous
+                </a>
+              </li>
+              <li
+                class="page-item disabled"
+              >
+                <a
+                  aria-disabled="true"
+                  class="page-link"
+                  href="#"
+                  tabindex="-1"
+                >
+                  1
+                </a>
+              </li>
+              <li
+                class="page-item active"
+              >
+                <a
+                  aria-current="page"
+                  class="page-link"
+                  href="#"
+                >
+                  2
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  3
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  Next
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+</jest>
+`;
