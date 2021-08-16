@@ -346,6 +346,53 @@ exports[`OE - select renders correctly when required 1`] = `
 </jest>
 `;
 
+exports[`OE - select renders correctly when valid 1`] = `
+<jest>
+  <label
+    class="form-label"
+  >
+    A select form element
+  </label>
+  <select
+    class="form-select form-select-md is-valid"
+    required="true"
+  >
+    <option
+      value="1"
+    >
+      a select option
+    </option>
+    <option
+      value="2"
+    >
+      another select option
+    </option>
+    <option
+      value="3"
+    >
+      another option
+    </option>
+    <option
+      value="4"
+    >
+      last option
+    </option>
+    <option
+      selected=""
+      value=""
+    >
+      the selected option
+    </option>
+  </select>
+  <div
+    class="form-text"
+    id="helperText"
+  >
+    Helper text for the select element
+  </div>
+</jest>
+`;
+
 exports[`OE - select renders correctly with a label 1`] = `
 <jest>
   <label

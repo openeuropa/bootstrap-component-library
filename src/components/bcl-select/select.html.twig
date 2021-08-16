@@ -23,6 +23,7 @@
 {% set _required = required|default(false) %}
 {% set _multiple = multiple|default(false) %}
 {% set _invalid = invalid|default(false) %}
+{% set _valid = valid|default(false) %}
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
 {% set _label = label|default('') %}
@@ -39,6 +40,10 @@
 
 {% if _invalid %}
   {% set _classes = _classes|merge(['is-invalid']) %}
+{% endif %}
+
+{% if _valid %}
+  {% set _classes = _classes|merge(['is-valid']) %}
 {% endif %}
 
 {% if attributes is empty %}

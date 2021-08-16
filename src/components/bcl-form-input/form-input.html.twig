@@ -10,6 +10,7 @@
   - "checked" (boolean) (default: false)
   - "disabled" (boolean) (default: false)
   - "invalid" (boolean) (default: false)
+  - "valid" (boolean) (default: false)
   - "required" (boolean) (default: false)
   - "readonly" (boolean) (default: false)
   - "floating" (boolean) (default: false)
@@ -34,6 +35,7 @@
 {% set _disabled = disabled|default(false) %}
 {% set _readonly = readonly|default(false) %}
 {% set _invalid = invalid|default(false) %}
+{% set _valid = valid|default(false) %}
 {% set _floating = floating|default(false) %}
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
@@ -62,6 +64,9 @@
 {% endif %}
 {% if _invalid is not empty %}
   {% set _classes = _classes|merge(['is-invalid']) %}
+{% endif %}
+{% if _valid is not empty %}
+  {% set _classes = _classes|merge(['is-valid']) %}
 {% endif %}
 {% if _horizontal %}
   {% set _label_class = 'col-form-label ' ~ _horizontal_label_class %}

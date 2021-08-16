@@ -38,10 +38,15 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass("is-invalid");
   data.attributes.removeClass(`form-control-${data.size}`);
   if (!args.required) {
     data.attributes.removeAttribute("required");
+  }
+  if (!args.invalid) {
+    data.attributes.removeClass("is-invalid");
+  }
+  if (!args.invalid) {
+    data.attributes.removeClass("is-valid");
   }
   if (!args.disabled) {
     data.attributes.removeAttribute("disabled");

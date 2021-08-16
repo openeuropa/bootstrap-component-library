@@ -42,6 +42,9 @@ const resetAttrs = (data, args) => {
   if (!args.invalid) {
     data.attributes.removeClass("is-invalid");
   }
+  if (!args.valid) {
+    data.attributes.removeClass("is-valid");
+  }
 };
 
 const applyArgs = (data, args) => {

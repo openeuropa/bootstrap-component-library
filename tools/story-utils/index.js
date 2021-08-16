@@ -39,6 +39,16 @@ export const getFormControls = (data, type) => {
         category: "States",
       },
     },
+    valid: {
+      name: "valid",
+      type: "boolean",
+      description: "Marks the form element as valid",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+        category: "States",
+      },
+    },
     disabled: {
       name: "disabled",
       type: "boolean",

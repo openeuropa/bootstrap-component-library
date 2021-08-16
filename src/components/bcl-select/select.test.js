@@ -45,6 +45,14 @@ describe("OE - select", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly when valid", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, valid: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly when multiple", () => {
     expect.assertions(1);
 
