@@ -1,0 +1,24 @@
+{% extends "@oe-bcl/bcl-offcanvas/offcanvas.html.twig" %}
+
+{% block body %}
+  <div class="offcanvas-body p-lg-0">
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with search_input only %}
+    <hr/>
+    <p class="mt-4 mb-3">Organisation</p>
+    {% include '@oe-bcl/bcl-select/select.html.twig' with single_select only %}
+    <p class="mt-4 mb-3">Profile Type</p>
+    {% include '@oe-bcl/bcl-select/select.html.twig' with single_select only %}
+    <p class="mt-4 mb-3">Group</p>
+    {% include '@oe-bcl/bcl-select/select.html.twig' with single_select only %}
+    <hr/>
+    <p class="mt-4 mb-3">Option 1</p>
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with text_input only %}
+    <p class="mt-4 mb-3">Option 2</p>
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with text_input only %}
+    <div class="mt-4">
+      {% include '@oe-bcl/bcl-button/button.html.twig' with button_primary only %}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with button_secondary only %}
+    </div>
+  </div>
+  
+{% endblock %}
