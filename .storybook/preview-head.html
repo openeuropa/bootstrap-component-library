@@ -14,16 +14,6 @@
           selectByGroup: true,
           placeholder: "Please select a value",
         });
-        var ssValues = document.querySelectorAll('.ss-values')[0];
-        var badgeOptionInit = function() {
-          var childs = ssValues.querySelectorAll("div");
-          childs.forEach(function(el) {
-            el.classList.remove("ss-value");
-            el.classList.add("badge", "bg-primary");
-          });
-        }
-        ssValues.addEventListener("DOMNodeInserted", badgeOptionInit);
-        badgeOptionInit();
       }
       var popoverTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="popover"]')
