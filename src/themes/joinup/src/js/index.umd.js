@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.1): index.umd.js
- * Licensed under MIT (https:/github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Bootstrap (v5.1.0): index.esm.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
 
