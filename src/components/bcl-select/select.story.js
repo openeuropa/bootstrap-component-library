@@ -14,6 +14,7 @@ const getArgs = (data, type) => {
     disabled: false,
     required: true,
     size: "sm",
+    valid: false,
   };
   if (type === "multiselect") {
     args.select_by_group = data.selectByGroup;
