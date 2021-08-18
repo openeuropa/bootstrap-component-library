@@ -6,4 +6,6 @@ module.exports = {
   id: "example-textarea-1",
   size: "sm",
   helper_text: "An helper text",
+  invalid_feedback: "Invalid feedback example",
+  valid_feedback: "Valid feedback example",
 };

@@ -18,8 +18,8 @@ const getArgs = (data) => {
     readonly: false,
     rows: 4,
     size: "sm",
-    invalid_feedback: "",
-    valid_feedback: "",
+    invalid_feedback: data.invalid_feedback,
+    valid_feedback: data.valid_feedback,
   };
 };
 

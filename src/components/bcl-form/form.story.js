@@ -33,7 +33,24 @@ export default {
   },
 };
 
+const clientValidation = (story) => {
+  const demo = story();
+  return `<script>
+  var form = document.querySelector('.needs-validation');
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+  </script>${demo}`;
+};
+
 export const Basic = () => form(demoData);
+Basic.storyName = "Basic (with client side validation)";
+Basic.decorators = [clientValidation];
 
 export const Disabled = () => form(demoDisabled);
 

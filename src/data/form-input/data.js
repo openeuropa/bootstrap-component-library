@@ -9,4 +9,6 @@ module.exports = {
   size: "sm",
   helper_text: "Helper text for the form input",
   helper_text_id: "helperText",
+  invalid_feedback: "Invalid feedback example",
+  valid_feedback: "Valid feedback example",
 };

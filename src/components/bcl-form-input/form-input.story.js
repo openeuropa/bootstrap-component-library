@@ -14,8 +14,8 @@ const getArgs = (data, input_type) => {
     disabled: data.disabled,
     required: data.required,
     valid: false,
-    invalid_feedback: "",
-    valid_feedback: "",
+    invalid_feedback: data.invalid_feedback,
+    valid_feedback: data.valid_feedback,
   };
   if (input_type === "text" || input_type === "file") {
     args.readonly = data.readonly;

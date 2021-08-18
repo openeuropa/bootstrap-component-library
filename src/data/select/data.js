@@ -4,6 +4,8 @@ module.exports = {
   size: "md",
   helper_text: "Helper text for the select element",
   helper_text_id: "helperText",
+  invalid_feedback: "Invalid feedback example",
+  valid_feedback: "Valid feedback example",
   options: [
     { value: 1, label: "a select option" },
     { value: 2, label: "another select option" },
