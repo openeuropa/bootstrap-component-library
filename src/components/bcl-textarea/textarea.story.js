@@ -8,6 +8,7 @@ const getArgs = (data) => {
   return {
     label: data.label,
     invalid: false,
+    valid: false,
     required: false,
     disabled: false,
     helper_text: "",
@@ -17,6 +18,8 @@ const getArgs = (data) => {
     readonly: false,
     rows: 4,
     size: "sm",
+    invalid_feedback: "",
+    valid_feedback: "",
   };
 };
 
@@ -45,7 +48,7 @@ const resetAttrs = (data, args) => {
   if (!args.invalid) {
     data.attributes.removeClass("is-invalid");
   }
-  if (!args.invalid) {
+  if (!args.valid) {
     data.attributes.removeClass("is-valid");
   }
   if (!args.disabled) {

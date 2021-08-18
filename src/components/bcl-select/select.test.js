@@ -53,6 +53,22 @@ describe("OE - select", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with invalid feedback", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, invalid_feedback: "Invalid feedback example" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with valid feedback", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, valid_feedback: "Valid feedback example" })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly when multiple", () => {
     expect.assertions(1);
 

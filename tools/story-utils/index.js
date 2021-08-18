@@ -52,7 +52,7 @@ export const getFormControls = (data, type) => {
     invalid_feedback: {
       name: "invalid feedback",
       type: { name: "string"},
-      description: "Invalid content under input",
+      description: "Invalid error",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -62,7 +62,7 @@ export const getFormControls = (data, type) => {
     valid_feedback: {
       name: "valid feedback",
       type: { name: "string"},
-      description: "Valid content under input",
+      description: "Valid content",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },

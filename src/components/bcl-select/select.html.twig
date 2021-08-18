@@ -8,6 +8,9 @@
   - "helper_text_id" (string) (default: '')
   - "disabled" (boolean) (default: false)
   - "invalid" (boolean) (default: false)
+  - "valid" (boolean) (default: false)
+  - "invalid_feedback" (string) (default: '')
+  - "valid_feedback" (string) (default: '')
   - "required" (boolean) (default: false)
   - "size" (string) (default: 'md') (sm, lg, md)
   - "multiple" (boolean) (default: false)
@@ -24,6 +27,8 @@
 {% set _multiple = multiple|default(false) %}
 {% set _invalid = invalid|default(false) %}
 {% set _valid = valid|default(false) %}
+{% set _invalid_feedback = invalid_feedback|default('') %}
+{% set _valid_feedback = valid_feedback|default('') %}
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
 {% set _label = label|default('') %}
@@ -127,6 +132,16 @@
   {% endfor %}
 {% endif %}
 </select>
+{% if _invalid_feedback is not empty %}
+  <div class="invalid-feedback">
+    {{- _invalid_feedback -}}
+  </div>
+{% endif %}
+{% if _valid_feedback is not empty %}
+  <div class="valid-feedback">
+    {{- _valid_feedback -}}
+  </div>
+{% endif %}
 {% if _helper_text is not empty %}
 <div
   class="form-text"

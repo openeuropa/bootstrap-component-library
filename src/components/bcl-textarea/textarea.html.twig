@@ -5,7 +5,10 @@
   - "id" (string) (default: '')
   - "label" (string) (default: '')
   - "disabled" (boolean) (default: false)
+  - "valid" (boolean) (default: false)
   - "invalid" (boolean) (default: false)
+  - "invalid_feedback" (string) (default: '')
+  - "valid_feedback" (string) (default: '')
   - "required" (boolean) (default: false)
   - "readonly" (boolean) (default: false)
   - "rows" (int) (default: 4)
@@ -26,6 +29,8 @@
 {% set _readonly = readonly|default(false) %}
 {% set _invalid = invalid|default(false) %}
 {% set _valid = valid|default(false) %}
+{% set _invalid_feedback = invalid_feedback|default('') %}
+{% set _valid_feedback = valid_feedback|default('') %}
 {% set _floating = floating|default(false) %}
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
@@ -117,6 +122,16 @@
 {% endif %}
 {% if _label_block and _floating %}
   {{ _label_block|raw }}
+{% endif %}
+{% if _invalid_feedback is not empty %}
+  <div class="invalid-feedback">
+    {{- _invalid_feedback -}}
+  </div>
+{% endif %}
+{% if _valid_feedback is not empty %}
+  <div class="valid-feedback">
+    {{- _valid_feedback -}}
+  </div>
 {% endif %}
 {% if _helper_text is not empty %}
   <div
