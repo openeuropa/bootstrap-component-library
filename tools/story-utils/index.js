@@ -51,7 +51,7 @@ export const getFormControls = (data, type) => {
     },
     invalid_feedback: {
       name: "invalid feedback",
-      type: { name: "string"},
+      type: { name: "string" },
       description: "Invalid error",
       table: {
         type: { summary: "string" },
@@ -61,7 +61,7 @@ export const getFormControls = (data, type) => {
     },
     valid_feedback: {
       name: "valid feedback",
-      type: { name: "string"},
+      type: { name: "string" },
       description: "Valid content",
       table: {
         type: { summary: "string" },
