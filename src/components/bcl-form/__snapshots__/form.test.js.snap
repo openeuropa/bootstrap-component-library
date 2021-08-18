@@ -2,7 +2,10 @@
 
 exports[`OE - Form basic renders correctly 1`] = `
 <jest>
-  <form>
+  <form
+    class="needs-validation"
+    novalidate="true"
+  >
     <div
       class="mb-3"
     >
@@ -19,6 +22,11 @@ exports[`OE - Form basic renders correctly 1`] = `
         required="true"
         type="email"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide an email.
+      </div>
       <div
         class="form-text"
         id="emailHelp"
@@ -41,6 +49,11 @@ exports[`OE - Form basic renders correctly 1`] = `
         required="true"
         type="password"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide a password.
+      </div>
     </div>
     <div
       class="mb-3"
@@ -60,6 +73,11 @@ exports[`OE - Form basic renders correctly 1`] = `
         >
           Check me out
         </label>
+        <div
+          class="invalid-feedback"
+        >
+          Please check the required checkbox.
+        </div>
       </div>
     </div>
     <button

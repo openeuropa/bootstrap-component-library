@@ -49,6 +49,26 @@ export const getFormControls = (data, type) => {
         category: "States",
       },
     },
+    invalid_feedback: {
+      name: "invalid feedback",
+      type: { name: "string"},
+      description: "Invalid content under input",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    valid_feedback: {
+      name: "valid feedback",
+      type: { name: "string"},
+      description: "Valid content under input",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
     disabled: {
       name: "disabled",
       type: "boolean",

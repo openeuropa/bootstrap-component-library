@@ -1,4 +1,9 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute()
+    .addClass("needs-validation")
+    .setAttribute("novalidate", true),
   submit: {
     label: "Submit",
     type: "submit",
@@ -14,6 +19,7 @@ module.exports = {
         id: "exampleInputEmail1",
         helper_text: "We'll never share your email with anyone else.",
         helper_text_id: "emailHelp",
+        invalid_feedback: "Please provide an email.",
       },
     ],
     [
@@ -23,6 +29,7 @@ module.exports = {
         required: true,
         label: "Password",
         id: "exampleInputPassword1",
+        invalid_feedback: "Please provide a password.",
       },
     ],
     [
@@ -32,6 +39,7 @@ module.exports = {
         required: true,
         label: "Check me out",
         id: "exampleInputPassword1",
+        invalid_feedback: "Please check the required checkbox.",
       },
     ],
   ],
