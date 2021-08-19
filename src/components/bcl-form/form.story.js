@@ -55,10 +55,8 @@ Basic.decorators = [clientValidation];
 export const Disabled = () => form(demoDisabled);
 
 export const Grid = () => form(demoGrid);
-Grid.storyName = "Grid (with default browser validation)";
 
 export const Horizontal = () => form(demoHorizontal);
 Horizontal.storyName = "Horizontal (with default browser validation)";
 
 export const Inline = () => form(demoInline);
-Inline.storyName = "Inline (with default browser validation)";

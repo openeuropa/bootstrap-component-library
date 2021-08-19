@@ -3,6 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   attributes: new drupalAttribute()
     .addClass(["row", "row-cols-lg-auto", "g-3", "align-items-center"])
+    .setAttribute("novalidate", true)
     .setAttribute("onsubmit", "return false;"),
   submit: {
     wrapper: "col-12",
