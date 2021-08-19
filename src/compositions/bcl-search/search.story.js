@@ -6,6 +6,21 @@ export default {
   title: "Compositions/Search",
 };
 
+const scriptInit = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var badges = document.querySelectorAll(".badge");
+      badges.forEach(element => {
+        var close = element.getElementsByTagName('span')[0];
+        close.addEventListener('click', event => {
+          close.parentElement.remove();
+        })
+      });
+    </script>
+  ${demo}`;
+};
+
 const correctPaths = (data) => {
   data.data.filter_button.icon.path = defaultSprite;
   data.data.badges.forEach((badge) => {
@@ -15,3 +30,4 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
+Default.decorators = [scriptInit];
