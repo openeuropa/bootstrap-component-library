@@ -193,19 +193,6 @@ export const getFormControls = (data, type) => {
     };
   }
 
-  if (type === "multiselect") {
-    argTypes.select_by_group = {
-      name: "select by group",
-      type: { name: "boolean" },
-      description: `Select a group for multiselect`,
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
-    };
-  }
-
   return argTypes;
 };
 

@@ -13,13 +13,12 @@ const getArgs = (data, type) => {
     invalid: false,
     disabled: false,
     required: true,
-    size: "sm",
     valid: false,
     invalid_feedback: data.invalid_feedback,
     valid_feedback: data.valid_feedback,
   };
-  if (type === "multiselect") {
-    args.select_by_group = data.selectByGroup;
+  if (type === "select") {
+    args.size = "sm";
   }
 
   return args;
