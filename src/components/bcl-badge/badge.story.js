@@ -100,6 +100,19 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
+const closeInit = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var badge = document.querySelector(".badge");
+      var close = badge.getElementsByTagName('span')[0];
+      close.addEventListener('click', event => {
+        close.parentElement.remove();
+      });
+    </script>
+  ${demo}`;
+};
+
 export default {
   title: "Components/Badge",
   decorators: [withDesign],
@@ -129,6 +142,7 @@ export const Primary = (args) => badge(applyArgs(demoData, args));
 Primary.storyName = "Primary (default)";
 Primary.args = getArgs(demoData);
 Primary.argTypes = getArgTypes(demoData);
+Primary.decorators = [closeInit];
 
 const dataSecondary = { ...demoData, background: "secondary" };
 export const Secondary = (args) => badge(applyArgs(dataSecondary, args));
@@ -136,6 +150,7 @@ export const Secondary = (args) => badge(applyArgs(dataSecondary, args));
 Secondary.storyName = "Secondary";
 Secondary.args = getArgs(dataSecondary);
 Secondary.argTypes = getArgTypes(dataSecondary);
+Secondary.decorators = [closeInit];
 
 const dataSuccess = { ...demoData, background: "success" };
 export const Success = (args) => badge(applyArgs(dataSuccess, args));
@@ -143,6 +158,7 @@ export const Success = (args) => badge(applyArgs(dataSuccess, args));
 Success.storyName = "Success";
 Success.args = getArgs(dataSuccess);
 Success.argTypes = getArgTypes(dataSuccess);
+Success.decorators = [closeInit];
 
 const dataWarning = { ...demoData, background: "warning" };
 export const Warning = (args) => badge(applyArgs(dataWarning, args));
@@ -150,6 +166,7 @@ export const Warning = (args) => badge(applyArgs(dataWarning, args));
 Warning.storyName = "Warning";
 Warning.args = getArgs(dataWarning);
 Warning.argTypes = getArgTypes(dataWarning);
+Warning.decorators = [closeInit];
 
 const dataDanger = { ...demoData, background: "danger" };
 export const Danger = (args) => badge(applyArgs(dataDanger, args));
@@ -157,6 +174,7 @@ export const Danger = (args) => badge(applyArgs(dataDanger, args));
 Danger.storyName = "Danger";
 Danger.args = getArgs(dataDanger);
 Danger.argTypes = getArgTypes(dataDanger);
+Danger.decorators = [closeInit];
 
 const dataInfo = { ...demoData, background: "info" };
 export const Info = (args) => badge(applyArgs(dataInfo, args));
@@ -164,6 +182,7 @@ export const Info = (args) => badge(applyArgs(dataInfo, args));
 Info.storyName = "Info";
 Info.args = getArgs(dataInfo);
 Info.argTypes = getArgTypes(dataInfo);
+Info.decorators = [closeInit];
 
 const dataLight = { ...demoData, background: "light" };
 export const Light = (args) => badge(applyArgs(dataLight, args));
@@ -171,6 +190,7 @@ export const Light = (args) => badge(applyArgs(dataLight, args));
 Light.storyName = "Light";
 Light.args = getArgs(dataLight);
 Light.argTypes = getArgTypes(dataLight);
+Light.decorators = [closeInit];
 
 const dataDark = { ...demoData, background: "dark" };
 export const Dark = (args) => badge(applyArgs(dataDark, args));
@@ -178,3 +198,4 @@ export const Dark = (args) => badge(applyArgs(dataDark, args));
 Dark.storyName = "Dark";
 Dark.args = getArgs(dataDark);
 Dark.argTypes = getArgTypes(dataDark);
+Dark.decorators = [closeInit];
