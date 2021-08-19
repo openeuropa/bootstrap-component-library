@@ -1,4 +1,9 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute()
+    .setAttribute("novalidate", true)
+    .setAttribute("onsubmit", "return false;"),
   submit: {
     label: "Submit",
     type: "submit",

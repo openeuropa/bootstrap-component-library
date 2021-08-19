@@ -33,12 +33,30 @@ export default {
   },
 };
 
+const clientValidation = (story) => {
+  const demo = story();
+  return `<script>
+  var form = document.querySelector('.needs-validation');
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+  </script>${demo}`;
+};
+
 export const Basic = () => form(demoData);
+Basic.storyName = "Basic (with bootstrap validation)";
+Basic.decorators = [clientValidation];
 
 export const Disabled = () => form(demoDisabled);
 
 export const Grid = () => form(demoGrid);
 
 export const Horizontal = () => form(demoHorizontal);
+Horizontal.storyName = "Horizontal (with default browser validation)";
 
 export const Inline = () => form(demoInline);

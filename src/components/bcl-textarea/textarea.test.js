@@ -44,6 +44,14 @@ describe("OE - textarea", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly when valid", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, valid: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with floating label", () => {
     expect.assertions(1);
 

@@ -13,6 +13,9 @@ const getArgs = (data, input_type) => {
     invalid: data.invalid,
     disabled: data.disabled,
     required: data.required,
+    valid: false,
+    invalid_feedback: data.invalid_feedback,
+    valid_feedback: data.valid_feedback,
   };
   if (input_type === "text" || input_type === "file") {
     args.readonly = data.readonly;
@@ -37,6 +40,7 @@ const getArgs = (data, input_type) => {
 const getArgTypes = (data, type) => {
   return {
     input_type: {
+      name: "input type",
       type: { name: "select" },
       description: "Type of the text input",
       options: [
@@ -79,6 +83,9 @@ const resetAttrs = (data, args) => {
   }
   if (!args.invalid) {
     data.attributes.removeClass("is-invalid");
+  }
+  if (!args.valid) {
+    data.attributes.removeClass("is-valid");
   }
   if (!args.placeholder) {
     data.attributes.removeAttribute("placeholder");

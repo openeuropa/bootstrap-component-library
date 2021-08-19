@@ -13,6 +13,9 @@ const getArgs = (data, type) => {
     invalid: false,
     disabled: false,
     required: true,
+    valid: false,
+    invalid_feedback: data.invalid_feedback,
+    valid_feedback: data.valid_feedback,
   };
   if (type === "select") {
     args.size = "sm";
@@ -40,6 +43,9 @@ const resetAttrs = (data, args) => {
   }
   if (!args.invalid) {
     data.attributes.removeClass("is-invalid");
+  }
+  if (!args.valid) {
+    data.attributes.removeClass("is-valid");
   }
 };
 
