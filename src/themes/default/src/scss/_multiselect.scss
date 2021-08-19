@@ -1,16 +1,5 @@
 @use "slim-select/src/slim-select/slimselect.scss" with (
-  $height: 30px,
-  $white: #fff,
-  $font-color: #666,
-  $font-placeholder-color: #8a8a8a,
-  $font-disabled-color: #dedede,
   $primary-color: $primary,
-  $border-color: #dcdee2,
-  $search-highlight-color: #fffb8c,
-  $border-radius: 4px,
-  $spacing-l: 8px,
-  $spacing-m: 6px,
-  $spacing-s: 4px,
 );
 
 .ss-main.multi-select {
@@ -25,5 +14,8 @@
       background-repeat: no-repeat;
       border-color: $danger;
     }
+  }
+  .ss-value-text {
+    font-weight: 700;
   }
 }
