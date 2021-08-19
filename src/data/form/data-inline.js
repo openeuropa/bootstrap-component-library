@@ -1,14 +1,10 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute().addClass([
-    "row",
-    "row-cols-lg-auto",
-    "g-3",
-    "align-items-center",
-  ])
-  .addClass("needs-validation")
-  .setAttribute("novalidate", true),
+  attributes: new drupalAttribute()
+    .addClass(["row", "row-cols-lg-auto", "g-3", "align-items-center"])
+    .addClass("needs-validation")
+    .setAttribute("novalidate", true),
   submit: {
     wrapper: "col-12",
     label: "Submit",
