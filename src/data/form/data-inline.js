@@ -6,7 +6,9 @@ module.exports = {
     "row-cols-lg-auto",
     "g-3",
     "align-items-center",
-  ]),
+  ])
+  .addClass("needs-validation")
+  .setAttribute("novalidate", true),
   submit: {
     wrapper: "col-12",
     label: "Submit",
@@ -42,7 +44,7 @@ module.exports = {
         input_type: "checkbox",
         wrapper_classes: "col-12",
         required: true,
-        label: "Remember me",
+        label: "Remember me *",
         id: "exampleInputCheck1",
       },
     ],

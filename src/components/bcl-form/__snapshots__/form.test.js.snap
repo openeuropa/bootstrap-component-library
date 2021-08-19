@@ -13,7 +13,7 @@ exports[`OE - Form basic renders correctly 1`] = `
         class="form-label"
         for="exampleInputEmail1"
       >
-        Email address
+        Email address *
       </label>
       <input
         aria-describedby="emailHelp"
@@ -41,7 +41,7 @@ exports[`OE - Form basic renders correctly 1`] = `
         class="form-label"
         for="exampleInputPassword1"
       >
-        Password
+        Password *
       </label>
       <input
         class="form-control"
@@ -71,7 +71,7 @@ exports[`OE - Form basic renders correctly 1`] = `
           class="form-check-label"
           for="exampleInputPassword1"
         >
-          Check me out
+          Check me out *
         </label>
         <div
           class="invalid-feedback"
@@ -92,7 +92,9 @@ exports[`OE - Form basic renders correctly 1`] = `
 
 exports[`OE - Form horizontal renders correctly 1`] = `
 <jest>
-  <form>
+  <form
+    onsubmit="return false;"
+  >
     <div
       class="row mb-3"
     >
@@ -233,7 +235,8 @@ exports[`OE - Form horizontal renders correctly 1`] = `
 exports[`OE - Form inline renders correctly 1`] = `
 <jest>
   <form
-    class="row row-cols-lg-auto g-3 align-items-center"
+    class="row row-cols-lg-auto g-3 align-items-center needs-validation"
+    novalidate="true"
   >
     <div
       class="col-12"
@@ -303,7 +306,7 @@ exports[`OE - Form inline renders correctly 1`] = `
           class="form-check-label"
           for="exampleInputCheck1"
         >
-          Remember me
+          Remember me *
         </label>
       </div>
     </div>
@@ -428,7 +431,8 @@ exports[`OE - Form renders correctly when disabled 1`] = `
 exports[`OE - Form using a grid renders correctly 1`] = `
 <jest>
   <form
-    class="row g-3"
+    class="row g-3 needs-validation"
+    novalidate="true"
   >
     <div
       class="col-md-6"
@@ -437,7 +441,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         class="form-label"
         for="exampleInputEmail1"
       >
-        Email address
+        Email address *
       </label>
       <input
         aria-describedby="emailHelp"
@@ -446,6 +450,11 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         required="true"
         type="email"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide an email.
+      </div>
       <div
         class="form-text"
         id="emailHelp"
@@ -460,7 +469,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         class="form-label"
         for="exampleInputPassword1"
       >
-        Password
+        Password *
       </label>
       <input
         class="form-control"
@@ -468,6 +477,11 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         required="true"
         type="password"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide a password.
+      </div>
     </div>
     <div
       class="col-12"
@@ -481,9 +495,13 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       <input
         class="form-control"
         id="exampleInputAddress1"
-        required="true"
         type="text"
       />
+      <div
+        class="valid-feedback"
+      >
+        This is not required so it has a success state.
+      </div>
     </div>
     <div
       class="col-12"
@@ -499,6 +517,11 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         id="exampleInputAddress2"
         type="text"
       />
+      <div
+        class="valid-feedback"
+      >
+        This is not required so it has a success state.
+      </div>
     </div>
     <div
       class="col-md-6"
@@ -507,7 +530,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         class="form-label"
         for="exampleInputCity1"
       >
-        City
+        City *
       </label>
       <input
         class="form-control"
@@ -515,6 +538,11 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         required="true"
         type="text"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide a City.
+      </div>
     </div>
     <div
       class="col-md-4"
@@ -523,7 +551,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         class="form-label"
         for="exampleInputState1"
       >
-        State
+        State *
       </label>
       <input
         class="form-control"
@@ -531,6 +559,11 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         required="true"
         type="text"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide a state.
+      </div>
     </div>
     <div
       class="col-md-2"
@@ -539,7 +572,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         class="form-label"
         for="exampleInputZip1"
       >
-        Zip
+        Zip *
       </label>
       <input
         class="form-control"
@@ -547,6 +580,11 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         required="true"
         type="text"
       />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide a zip code.
+      </div>
     </div>
     <div
       class="col-12"
@@ -564,8 +602,13 @@ exports[`OE - Form using a grid renders correctly 1`] = `
           class="form-check-label"
           for="exampleInputCheck1"
         >
-          Check me out
+          Check me out *
         </label>
+        <div
+          class="invalid-feedback"
+        >
+          Please check me.
+        </div>
       </div>
     </div>
     <div
