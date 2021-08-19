@@ -5,6 +5,7 @@ exports[`OE - Form basic renders correctly 1`] = `
   <form
     class="needs-validation"
     novalidate="true"
+    onsubmit="return false;"
   >
     <div
       class="mb-3"
@@ -235,8 +236,8 @@ exports[`OE - Form horizontal renders correctly 1`] = `
 exports[`OE - Form inline renders correctly 1`] = `
 <jest>
   <form
-    class="row row-cols-lg-auto g-3 align-items-center needs-validation"
-    novalidate="true"
+    class="row row-cols-lg-auto g-3 align-items-center"
+    onsubmit="return false;"
   >
     <div
       class="col-12"
@@ -326,9 +327,10 @@ exports[`OE - Form inline renders correctly 1`] = `
 
 exports[`OE - Form renders correctly when disabled 1`] = `
 <jest>
-  <form>
+  <form
+    onsubmit="return false;"
+  >
     <fieldset
-      class=""
       disabled=""
     >
       <legend>
@@ -431,8 +433,8 @@ exports[`OE - Form renders correctly when disabled 1`] = `
 exports[`OE - Form using a grid renders correctly 1`] = `
 <jest>
   <form
-    class="row g-3 needs-validation"
-    novalidate="true"
+    class="row g-3"
+    onsubmit="return false;"
   >
     <div
       class="col-md-6"

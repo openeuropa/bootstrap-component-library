@@ -3,7 +3,8 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   attributes: new drupalAttribute()
     .addClass("needs-validation")
-    .setAttribute("novalidate", true),
+    .setAttribute("novalidate", true)
+    .setAttribute("onsubmit", "return false;"),
   submit: {
     label: "Submit",
     type: "submit",

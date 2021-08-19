@@ -41,7 +41,9 @@
     {% set _fieldset_classes = _item_group[0].fieldset_classes %}
   {% endif %}
   <fieldset
+  {% if _fieldset_classes is not empty %}
     class="{{ _fieldset_classes }}"
+  {% endif %}
   {% if _item_group[0].disabled %}
     disabled
   {% endif %}
