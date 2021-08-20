@@ -41,6 +41,17 @@
     options: ['dark', 'white']
   - card_header (string) (default: '')
   - card_footer (string) (default: '')
+  - extra_classes_body (string) (default: '')
+  - extra_classes_header (string) (default: '')
+  - extra_classes_footer (string) (default: '')
+  - category (string) (default: {} - badge object)
+  - card_tags (string) (default: [] - format: [
+    {
+      label: "",
+      classes: ""
+    },
+    ...
+  ])
 #}
 
 {% set _title = title|default({}) %}
@@ -59,6 +70,9 @@
 {% set _text_color = text_color|default('') %}
 {% set _card_header = card_header|default('') %}
 {% set _card_footer = card_footer|default('') %}
+{% set _extra_classes_body = extra_classes_body|default('') %}
+{% set _card_tags = card_tags|default([]) %}
+{% set _category = category|default({}) %}
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
@@ -79,6 +93,21 @@
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set _body_classes = 'card-body' %}
+{% if _extra_classes_body is not empty %}
+  {% set _body_classes = _body_classes ~ ' ' ~ _extra_classes_body %}
+{% endif %}
+
+{% set _header_classes = 'card-header' %}
+{% if _extra_classes_header is not empty %}
+  {% set _header_classes = _header_classes ~ ' ' ~ _extra_classes_header %}
+{% endif %}
+
+{% set _footer_classes = 'card-footer' %}
+{% if _extra_classes_footer is not empty %}
+  {% set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
@@ -113,11 +142,17 @@
 <div class='col-{{ _horizontal_grid.right_col_responsive ? _horizontal_grid.right_col_responsive ~ '-' }}{{ _horizontal_grid.right_col }}'>
 {% endif %}
 {% if _card_header is not empty %}
-  <div class='card-header'>
+  <div class='{{ _header_classes }}'>
     {{- _card_header -}}
   </div>
 {% endif %}
-  <div class='card-body'>
+  <div class='{{ _body_classes }}'>
+  {% if _category is not empty %}
+    {% set _category = _category|merge({
+      attributes: create_attribute().addClass("mb-3")
+    }) %}
+    {% include '@oe-bcl/bcl-badge/badge.html.twig' with _category only %}
+  {% endif %}
   {% if _title is not empty %}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
@@ -145,9 +180,22 @@
   {% if _content is not empty %}
     {{ _content }}
   {% endif %}
+  {% if _card_tags is not empty and _card_tags is iterable %}
+    <div>
+    {%- for _tag in _card_tags -%}
+      <span
+        {% if _tag.classes is not empty %}
+        class="{{ _tag.classes }}"
+        {% endif %}
+      >
+        {{- _tag.label -}}
+      </span>
+    {%- endfor -%}
+    </div>
+  {% endif %}
   </div>
 {% if _card_footer is not empty %}
-  <div class='card-footer'>
+  <div class='{{ _footer_classes }}'>
     {{- _card_footer -}}
   </div>
 {% endif %}

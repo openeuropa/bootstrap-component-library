@@ -88,8 +88,10 @@ module.exports = {
       },
     },
     offcanvas: {
-      id: "offcanvas-mobile",
-      attributes: new drupalAttribute().addClass("offcanvas-mobile"),
+      id: "bcl-offcanvas",
+      attributes: new drupalAttribute().addClass(
+        "bcl-offcanvas offcanvas-start"
+      ),
       extra_classes_close: "d-lg-none",
       extra_classes_header: "p-lg-0",
       title: {
@@ -140,24 +142,32 @@ module.exports = {
           left_col_responsive: "md",
           right_col: 10,
           right_col_responsive: "md",
-          gutter: 0,
+          gutter: 2,
         },
+        category: {
+          label: "Profile Type",
+        },
+        extra_classes_body: "pt-0",
         title: {
-          content: "Lorem ipsum dolor sit amet",
-          classes: "mb-4",
+          content: "Stefan Mayer",
+          classes: "mb-3",
         },
-        text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          classes: "mb-4",
-        },
+        card_tags: [
+          {
+            label: "Organisation",
+            classes: "text-muted me-2",
+          },
+          {
+            label: "Position",
+            classes: "text-muted me-2",
+          },
+        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
         },
-        content: "<span class='badge bg-primary'>Item 01</span>",
       },
       {
         horizontal: true,
@@ -166,25 +176,32 @@ module.exports = {
           left_col_responsive: "md",
           right_col: 10,
           right_col_responsive: "md",
-          gutter: 0,
+          gutter: 2,
         },
+        category: {
+          label: "Profile Type",
+        },
+        extra_classes_body: "pt-0",
         title: {
-          content: "Incididunt ut labore et dolore",
-          classes: "mb-4",
+          content: "Adjur Tichar",
+          classes: "mb-3",
         },
-        text: {
-          content:
-            "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-          classes: "mb-4",
-        },
+        card_tags: [
+          {
+            label: "Organisation",
+            classes: "text-muted me-2",
+          },
+          {
+            label: "Position",
+            classes: "text-muted me-2",
+          },
+        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=2",
           alt: "alt img",
           position: "top",
         },
-        content:
-          "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
       },
       {
         horizontal: true,
@@ -193,25 +210,32 @@ module.exports = {
           left_col_responsive: "md",
           right_col: 10,
           right_col_responsive: "md",
-          gutter: 0,
+          gutter: 2,
         },
+        category: {
+          label: "Profile Type",
+        },
+        extra_classes_body: "pt-0",
         title: {
-          content: "Quis nostrud exercitation ullamco",
-          classes: "mb-4",
+          content: "Szép Mara",
+          classes: "mb-3",
         },
-        text: {
-          content:
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-4",
-        },
+        card_tags: [
+          {
+            label: "Organisation",
+            classes: "text-muted me-2",
+          },
+          {
+            label: "Position",
+            classes: "text-muted me-2",
+          },
+        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=3",
           alt: "alt img",
           position: "top",
         },
-        content:
-          "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
       },
       {
         horizontal: true,
@@ -220,24 +244,32 @@ module.exports = {
           left_col_responsive: "md",
           right_col: 10,
           right_col_responsive: "md",
-          gutter: 0,
+          gutter: 2,
         },
+        category: {
+          label: "Profile Type",
+        },
+        extra_classes_body: "pt-0",
         title: {
-          content: "Quis nostrud exercitation ullamco",
-          classes: "mb-4",
+          content: "Daniel Cardoso Rocha",
+          classes: "mb-3",
         },
-        text: {
-          content:
-            "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-4",
-        },
+        card_tags: [
+          {
+            label: "Organisation",
+            classes: "text-muted me-2",
+          },
+          {
+            label: "Position",
+            classes: "text-muted me-2",
+          },
+        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=4",
           alt: "alt img",
           position: "top",
         },
-        content: "<span class='badge bg-primary'>Item 01</span>",
       },
       {
         horizontal: true,
@@ -246,25 +278,32 @@ module.exports = {
           left_col_responsive: "md",
           right_col: 10,
           right_col_responsive: "md",
-          gutter: 0,
+          gutter: 2,
         },
+        category: {
+          label: "Profile Type",
+        },
+        extra_classes_body: "pt-0",
         title: {
-          content: "Duis aute irure dolor in Excepteur",
-          classes: "mb-4",
+          content: "Aurelia Panicucci",
+          classes: "mb-3",
         },
-        text: {
-          content:
-            "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-4",
-        },
+        card_tags: [
+          {
+            label: "Organisation",
+            classes: "text-muted me-2",
+          },
+          {
+            label: "Position",
+            classes: "text-muted me-2",
+          },
+        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=5",
           alt: "alt img",
           position: "top",
         },
-        content:
-          "<span class='badge bg-primary me-2'>Item 01</span><span class='badge bg-primary'>Item 02</span>",
       },
       {
         horizontal: true,
@@ -273,24 +312,32 @@ module.exports = {
           left_col_responsive: "md",
           right_col: 10,
           right_col_responsive: "md",
-          gutter: 0,
+          gutter: 2,
         },
+        category: {
+          label: "Profile Type",
+        },
+        extra_classes_body: "pt-0",
         title: {
-          content: "Excepteur sint occaecat cupidatat non",
-          classes: "mb-4",
+          content: "Felicyta Kowalska",
+          classes: "mb-3",
         },
-        text: {
-          content:
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-4",
-        },
+        card_tags: [
+          {
+            label: "Organisation",
+            classes: "text-muted me-2",
+          },
+          {
+            label: "Position",
+            classes: "text-muted me-2",
+          },
+        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=6",
           alt: "alt img",
           position: "top",
         },
-        content: "<span class='badge bg-primary'>Item 02</span>",
       },
     ],
     pagination: {
