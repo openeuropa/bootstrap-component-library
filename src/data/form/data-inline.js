@@ -1,12 +1,10 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute().addClass([
-    "row",
-    "row-cols-lg-auto",
-    "g-3",
-    "align-items-center",
-  ]),
+  attributes: new drupalAttribute()
+    .addClass(["row", "row-cols-lg-auto", "g-3", "align-items-center"])
+    .setAttribute("novalidate", true)
+    .setAttribute("onsubmit", "return false;"),
   submit: {
     wrapper: "col-12",
     label: "Submit",
@@ -42,7 +40,7 @@ module.exports = {
         input_type: "checkbox",
         wrapper_classes: "col-12",
         required: true,
-        label: "Remember me",
+        label: "Remember me *",
         id: "exampleInputCheck1",
       },
     ],

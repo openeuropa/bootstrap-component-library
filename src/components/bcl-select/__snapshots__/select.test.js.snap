@@ -39,6 +39,16 @@ exports[`OE - select renders correctly 1`] = `
     </option>
   </select>
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
     id="helperText"
   >
@@ -74,32 +84,42 @@ exports[`OE - select renders correctly as a multiple choice select 1`] = `
       </option>
     </optgroup>
     <option
-      value="1"
+      value="5"
     >
       a select option
     </option>
     <option
-      value="2"
+      value="6"
     >
       another select option
     </option>
     <option
-      value="3"
+      value="7"
     >
       another option
     </option>
     <option
-      value="4"
+      value="8"
     >
       last option
     </option>
     <option
       selected=""
-      value=""
+      value="9"
     >
       the selected option
     </option>
   </select>
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
     id="helperText"
@@ -149,6 +169,16 @@ exports[`OE - select renders correctly when disabled 1`] = `
     </option>
   </select>
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
     id="helperText"
   >
@@ -195,6 +225,16 @@ exports[`OE - select renders correctly when invalid 1`] = `
       the selected option
     </option>
   </select>
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
     id="helperText"
@@ -244,6 +284,16 @@ exports[`OE - select renders correctly when multiple 1`] = `
     </option>
   </select>
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
     id="helperText"
   >
@@ -290,6 +340,16 @@ exports[`OE - select renders correctly when readonly 1`] = `
       the selected option
     </option>
   </select>
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
     id="helperText"
@@ -338,6 +398,73 @@ exports[`OE - select renders correctly when required 1`] = `
     </option>
   </select>
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
+    class="form-text"
+    id="helperText"
+  >
+    Helper text for the select element
+  </div>
+</jest>
+`;
+
+exports[`OE - select renders correctly when valid 1`] = `
+<jest>
+  <label
+    class="form-label"
+  >
+    A select form element
+  </label>
+  <select
+    class="form-select form-select-md is-valid"
+    required="true"
+  >
+    <option
+      value="1"
+    >
+      a select option
+    </option>
+    <option
+      value="2"
+    >
+      another select option
+    </option>
+    <option
+      value="3"
+    >
+      another option
+    </option>
+    <option
+      value="4"
+    >
+      last option
+    </option>
+    <option
+      selected=""
+      value=""
+    >
+      the selected option
+    </option>
+  </select>
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
     id="helperText"
   >
@@ -385,6 +512,16 @@ exports[`OE - select renders correctly with a label 1`] = `
     </option>
   </select>
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
     id="helperText"
   >
@@ -431,6 +568,16 @@ exports[`OE - select renders correctly with an hidden label 1`] = `
       the selected option
     </option>
   </select>
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
     id="helperText"

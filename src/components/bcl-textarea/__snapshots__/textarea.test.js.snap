@@ -15,6 +15,16 @@ exports[`OE - textarea renders correctly 1`] = `
     rows="4"
   />
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
   >
     An helper text
@@ -37,6 +47,16 @@ exports[`OE - textarea renders correctly when disabled 1`] = `
     placeholder="Text here"
     rows="4"
   />
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
   >
@@ -67,6 +87,16 @@ exports[`OE - textarea renders correctly when horizontal 1`] = `
       />
     </div>
     <div
+      class="invalid-feedback"
+    >
+      Invalid feedback example
+    </div>
+    <div
+      class="valid-feedback"
+    >
+      Valid feedback example
+    </div>
+    <div
       class="form-text"
     >
       An helper text
@@ -89,6 +119,16 @@ exports[`OE - textarea renders correctly when invalid 1`] = `
     placeholder="Text here"
     rows="4"
   />
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
   >
@@ -113,6 +153,16 @@ exports[`OE - textarea renders correctly when readonly 1`] = `
     rows="4"
   />
   <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
     class="form-text"
   >
     An helper text
@@ -135,6 +185,48 @@ exports[`OE - textarea renders correctly when required 1`] = `
     required="true"
     rows="4"
   />
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
+    class="form-text"
+  >
+    An helper text
+  </div>
+</jest>
+`;
+
+exports[`OE - textarea renders correctly when valid 1`] = `
+<jest>
+  <label
+    class="form-label"
+    for="example-textarea-1"
+  >
+    Example textarea
+  </label>
+  <textarea
+    class="form-control form-control-sm is-valid"
+    id="example-textarea-1"
+    placeholder="Text here"
+    rows="4"
+  />
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
   <div
     class="form-text"
   >
@@ -160,6 +252,16 @@ exports[`OE - textarea renders correctly with floating label 1`] = `
     >
       Example textarea
     </label>
+    <div
+      class="invalid-feedback"
+    >
+      Invalid feedback example
+    </div>
+    <div
+      class="valid-feedback"
+    >
+      Valid feedback example
+    </div>
     <div
       class="form-text"
     >

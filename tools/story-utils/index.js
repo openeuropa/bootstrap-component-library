@@ -39,6 +39,36 @@ export const getFormControls = (data, type) => {
         category: "States",
       },
     },
+    valid: {
+      name: "valid",
+      type: "boolean",
+      description: "Marks the form element as valid",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+        category: "States",
+      },
+    },
+    invalid_feedback: {
+      name: "invalid feedback",
+      type: { name: "string" },
+      description: "Invalid error",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    valid_feedback: {
+      name: "valid feedback",
+      type: { name: "string" },
+      description: "Valid content",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
     disabled: {
       name: "disabled",
       type: "boolean",
@@ -158,19 +188,6 @@ export const getFormControls = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "primary" },
-        category: "Style",
-      },
-    };
-  }
-
-  if (type === "multiselect") {
-    argTypes.select_by_group = {
-      name: "select by group",
-      type: { name: "boolean" },
-      description: `Select a group for multiselect`,
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
         category: "Style",
       },
     };

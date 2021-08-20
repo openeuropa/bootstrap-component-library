@@ -88,8 +88,10 @@ module.exports = {
       },
     },
     offcanvas: {
-      id: "offcanvas-mobile",
-      attributes: new drupalAttribute().addClass("offcanvas-mobile"),
+      id: "bcl-offcanvas",
+      attributes: new drupalAttribute().addClass(
+        "bcl-offcanvas offcanvas-start"
+      ),
       extra_classes_close: "d-lg-none",
       extra_classes_header: "p-lg-0",
       title: {
@@ -361,8 +363,8 @@ module.exports = {
       attributes: new drupalAttribute()
         .addClass(["d-lg-none", "w-100", "mb-4"])
         .setAttribute("data-bs-toggle", "offcanvas")
-        .setAttribute("data-bs-target", "#offcanvas-mobile")
-        .setAttribute("aria-controls", "offcanvas-mobile"),
+        .setAttribute("data-bs-target", "#bcl-offcanvas")
+        .setAttribute("aria-controls", "bcl-offcanvas"),
       icon: {
         name: "sliders",
         size: "xs",
