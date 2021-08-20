@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.0 (2021-08-20)
+
+#### :nail_care: Enhancement
+* [#46](https://github.com/openeuropa/bootstrap-component-library/pull/46) feat(form-validation): Adding validation parameters to the form-input fields and demo improvement on forms - FRONT-2808 ([@tibi2303](https://github.com/tibi2303))
+* [#40](https://github.com/openeuropa/bootstrap-component-library/pull/40) feat(multiselect): Restyling of multiselect - FRONT-2592 ([@tibi2303](https://github.com/tibi2303))
+* [#45](https://github.com/openeuropa/bootstrap-component-library/pull/45) feat(search-improvements): Improvements on search - FRONT-2785 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#47](https://github.com/openeuropa/bootstrap-component-library/pull/47) chore(deps): Updates 17-08-21 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.5.0 (2021-08-11)
 
 #### :rocket: New Feature
