@@ -148,38 +148,37 @@
 {% endif %}
   <div class='{{ _body_classes }}'>
   {% if _category is not empty %}
-    {% set _category = _category|merge({
-      attributes: create_attribute().addClass("mb-3")
-    }) %}
-    {% include '@oe-bcl/bcl-badge/badge.html.twig' with _category only %}
+    <div class="mb-3">
+      {% include '@oe-bcl/bcl-badge/badge.html.twig' with _category only %}
+    </div>
   {% endif %}
-  {% if _title is not empty %}
+  {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
       class='card-title{{ title.classes ? ' ' ~ title.classes }}'
     >
       {{- title.content -}}
     </{{ _title_tag }}>
-  {% endif %}
-  {% if _subtitle is not empty %}
+  {%- endif -%}
+  {%- if _subtitle is not empty -%}
     {% set _subtitle_tag = _subtitle.tag ?? 'h6' %}
     <{{ _subtitle_tag }}
       class='card-subtitle{{ _subtitle.classes ? ' ' ~ _subtitle.classes }}'
     >
       {{- _subtitle.content -}}
     </{{ _subtitle_tag }}>
-  {% endif %}
-  {% if _text is not empty %}
+  {%- endif -%}
+  {%- if _text is not empty -%}
     {% set _text_tag = _text.tag ?? 'p' %}
     <{{ _text_tag }}
       class='card-text{{ _text.classes ? ' ' ~ _text.classes }}'
     >
       {{- _text.content -}}
     </{{ _text_tag }}>
-  {% endif %}
-  {% if _content is not empty %}
-    {{ _content }}
-  {% endif %}
+  {%- endif -%}
+  {%- if _content is not empty -%}
+    {{- _content -}}
+  {%- endif -%}
   {% if _card_tags is not empty and _card_tags is iterable %}
     <div>
     {%- for _tag in _card_tags -%}

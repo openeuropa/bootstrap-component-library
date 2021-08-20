@@ -382,8 +382,8 @@ module.exports = {
       attributes: new drupalAttribute()
         .addClass(["d-lg-none", "w-100", "mb-4"])
         .setAttribute("data-bs-toggle", "offcanvas")
-        .setAttribute("data-bs-target", "#offcanvas-mobile")
-        .setAttribute("aria-controls", "offcanvas-mobile"),
+        .setAttribute("data-bs-target", "#bcl-offcanvas")
+        .setAttribute("aria-controls", "bcl-offcanvas"),
       icon: {
         name: "sliders",
         size: "xs",
