@@ -13,9 +13,11 @@ const scriptInit = (story) => {
       var badges = document.querySelectorAll(".filter-badges .badge");
       badges.forEach(element => {
         var close = element.getElementsByTagName('span')[0];
-        close.addEventListener('click', event => {
-          close.parentElement.remove();
-        })
+        if (close) {
+          close.addEventListener('click', event => {
+            close.parentElement.remove();
+          })
+        }
       });
     </script>
   ${demo}`;
