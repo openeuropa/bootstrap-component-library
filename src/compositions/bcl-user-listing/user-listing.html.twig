@@ -17,7 +17,7 @@
         }) only %}
       </div>
       <h4 class="mb-3 mb-md-4">Users (18)</h4>
-      <div class="mb-4">
+      <div class="filter-badges mb-4">
         {% if data.badges is not empty and data.badges is iterable %}
           {% for badge in data.badges %}
             {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge only %}

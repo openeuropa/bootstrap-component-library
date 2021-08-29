@@ -10,7 +10,7 @@ const scriptInit = (story) => {
   const demo = story();
   return `
     <script>
-      var badges = document.querySelectorAll(".badge");
+      var badges = document.querySelectorAll(".filter-badges .badge");
       badges.forEach(element => {
         var close = element.getElementsByTagName('span')[0];
         close.addEventListener('click', event => {

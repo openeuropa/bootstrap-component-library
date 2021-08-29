@@ -11,13 +11,13 @@
       </div>
       <div class="col-12 col-lg-9">
       {% include '@oe-bcl/bcl-button/button.html.twig' with data.filter_button only %}
-      <div class="mb-3 clearfix">
-        <div class="float-end d-none d-md-block">
-          {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
-            extra_classes: "w-auto d-inline-block ms-2"
-          }) only %}
-        </div>
-        <h4 class="mb-4">Search results (18)</h4>
+      <div class="float-end d-none d-md-block">
+        {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
+          extra_classes: "w-auto d-inline-block ms-2"
+        }) only %}
+      </div>
+      <h4 class="mb-3 mb-md-4">Search results (18)</h4>
+      <div class="filter-badges mb-4">
         {% if data.badges is not empty and data.badges is iterable %}
           {% for badge in data.badges %}
             {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge only %}
