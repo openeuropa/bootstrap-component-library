@@ -118,7 +118,6 @@ module.exports = {
           { value: 2, label: "another select option" },
           { value: 3, label: "another option" },
           { value: 4, label: "last option" },
-          { label: "Placeholder", selected: true },
         ],
       },
       button_primary: {
