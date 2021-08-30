@@ -41,6 +41,10 @@
     options: ['dark', 'white']
   - card_header (string) (default: '')
   - card_footer (string) (default: '')
+  - extra_classes_body (string) (default: '')
+  - extra_classes_header (string) (default: '')
+  - extra_classes_footer (string) (default: '')
+  - badges (array of badge object) (default: [])
 #}
 
 {% set _title = title|default({}) %}
@@ -59,6 +63,10 @@
 {% set _text_color = text_color|default('') %}
 {% set _card_header = card_header|default('') %}
 {% set _card_footer = card_footer|default('') %}
+{% set _extra_classes_body = extra_classes_body|default('') %}
+{% set _extra_classes_header = extra_classes_header|default('') %}
+{% set _extra_classes_footer = extra_classes_footer|default('') %}
+{% set _badges = badges|default([]) %}
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
@@ -79,6 +87,21 @@
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set _body_classes = 'card-body' %}
+{% if _extra_classes_body is not empty %}
+  {% set _body_classes = _body_classes ~ ' ' ~ _extra_classes_body %}
+{% endif %}
+
+{% set _header_classes = 'card-header' %}
+{% if _extra_classes_header is not empty %}
+  {% set _header_classes = _header_classes ~ ' ' ~ _extra_classes_header %}
+{% endif %}
+
+{% set _footer_classes = 'card-footer' %}
+{% if _extra_classes_footer is not empty %}
+  {% set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
@@ -112,42 +135,49 @@
 {% if _horizontal %}
 <div class='col-{{ _horizontal_grid.right_col_responsive ? _horizontal_grid.right_col_responsive ~ '-' }}{{ _horizontal_grid.right_col }}'>
 {% endif %}
-{% if _card_header is not empty %}
-  <div class='card-header'>
+{% if _card_header is not empty or _badges is not empty %}
+  <div class='{{ _header_classes }}'>
     {{- _card_header -}}
+    {%- if _badges is not empty and _badges is iterable -%}
+      <div class="mb-3">
+      {% for _badge in _badges %}
+        {% include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
+      {% endfor %}
+      </div>
+    {%- endif -%}
   </div>
 {% endif %}
-  <div class='card-body'>
-  {% if _title is not empty %}
+  <div class='{{ _body_classes }}'>
+  {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
       class='card-title{{ title.classes ? ' ' ~ title.classes }}'
     >
       {{- title.content -}}
     </{{ _title_tag }}>
-  {% endif %}
-  {% if _subtitle is not empty %}
+  {%- endif -%}
+  {%- if _subtitle is not empty -%}
     {% set _subtitle_tag = _subtitle.tag ?? 'h6' %}
     <{{ _subtitle_tag }}
       class='card-subtitle{{ _subtitle.classes ? ' ' ~ _subtitle.classes }}'
     >
       {{- _subtitle.content -}}
     </{{ _subtitle_tag }}>
-  {% endif %}
-  {% if _text is not empty %}
+  {%- endif -%}
+  {%- if _text is not empty -%}
     {% set _text_tag = _text.tag ?? 'p' %}
     <{{ _text_tag }}
       class='card-text{{ _text.classes ? ' ' ~ _text.classes }}'
     >
       {{- _text.content -}}
     </{{ _text_tag }}>
-  {% endif %}
-  {% if _content is not empty %}
-    {{ _content }}
-  {% endif %}
+  {%- endif -%}
+  {%- if _content is not empty -%}
+    {{- _content -}}
+  {%- endif -%}
   </div>
 {% if _card_footer is not empty %}
-  <div class='card-footer'>
+  <div class='{{ _footer_classes }}'>
     {{- _card_footer -}}
   </div>
 {% endif %}

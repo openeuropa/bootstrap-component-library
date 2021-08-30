@@ -42,6 +42,14 @@ describe("OE - Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with badges", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, badges: [{ label: "Card Category" }] })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders with text color white correctly`, () => {
     expect.assertions(1);
 

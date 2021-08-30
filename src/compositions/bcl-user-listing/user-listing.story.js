@@ -1,9 +1,9 @@
-import demoData from "@openeuropa/bcl-search/dataSearch.js";
-import search from "@openeuropa/bcl-search/search.html.twig";
+import demoData from "@openeuropa/bcl-user-listing/dataUserListing.js";
+import userListing from "@openeuropa/bcl-user-listing/user-listing.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 export default {
-  title: "Compositions/Search",
+  title: "Compositions/Users/Listing",
 };
 
 const scriptInit = (story) => {
@@ -13,7 +13,7 @@ const scriptInit = (story) => {
       var badges = document.querySelectorAll(".badge");
       badges.forEach(element => {
         var close = element.getElementsByTagName('span')[0];
-        if(close) {
+        if (close) {
           close.addEventListener('click', event => {
             close.parentElement.remove();
           })
@@ -31,5 +31,5 @@ const correctPaths = (data) => {
   return data;
 };
 
-export const Default = () => search(correctPaths(demoData));
+export const Default = () => userListing(correctPaths(demoData));
 Default.decorators = [scriptInit];

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Search renders correctly 1`] = `
+exports[`OE - User listing renders correctly 1`] = `
 <jest>
   <header>
     <nav
@@ -193,13 +193,14 @@ exports[`OE - Search renders correctly 1`] = `
             >
               <input
                 class="form-control form-control-sm"
-                placeholder="Keyword"
+                placeholder="Search by name or surname"
                 type="text"
               />
+              <hr />
               <p
                 class="mt-4 mb-3"
               >
-                Content types
+                Organisation
               </p>
               <select
                 class="form-select form-select-sm"
@@ -224,21 +225,14 @@ exports[`OE - Search renders correctly 1`] = `
                 >
                   last option
                 </option>
-                <option
-                  selected=""
-                  value=""
-                >
-                  the selected option
-                </option>
               </select>
               <p
                 class="mt-4 mb-3"
               >
-                Filter A
+                Profile Type
               </p>
               <select
-                class="multi-select"
-                multiple="true"
+                class="form-select form-select-sm"
               >
                 <option
                   value="1"
@@ -260,61 +254,56 @@ exports[`OE - Search renders correctly 1`] = `
                 >
                   last option
                 </option>
-                <option
-                  selected=""
-                  value=""
-                >
-                  the selected option
-                </option>
               </select>
               <p
                 class="mt-4 mb-3"
               >
-                Filter B
+                Group
               </p>
-              <div
-                class="form-check"
+              <select
+                class="form-select form-select-sm"
               >
-                <input
-                  checked="true"
-                  class="form-check-input"
-                  id="first-check"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="first-check"
+                <option
+                  value="1"
                 >
-                  Checked checkbox
-                </label>
-              </div>
-              <div
-                class="form-check"
-              >
-                <input
-                  class="form-check-input"
-                  id="second-check"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="second-check"
+                  a select option
+                </option>
+                <option
+                  value="2"
                 >
-                  Default checkbox
-                </label>
-              </div>
+                  another select option
+                </option>
+                <option
+                  value="3"
+                >
+                  another option
+                </option>
+                <option
+                  value="4"
+                >
+                  last option
+                </option>
+              </select>
+              <hr />
               <p
                 class="mt-4 mb-3"
               >
-                Filter C
+                Option 1
               </p>
               <input
-                class="mb-2 form-control form-control-sm"
-                type="date"
+                class="form-control form-control-sm"
+                placeholder="Placeholder"
+                type="text"
               />
+              <p
+                class="mt-4 mb-3"
+              >
+                Option 2
+              </p>
               <input
                 class="form-control form-control-sm"
-                type="date"
+                placeholder="Placeholder"
+                type="text"
               />
               <div
                 class="mt-4"
@@ -396,7 +385,7 @@ exports[`OE - Search renders correctly 1`] = `
           <h4
             class="mb-3 mb-md-4"
           >
-            Search results (18)
+            Users (18)
           </h4>
           <div
             class="mb-4"
@@ -404,7 +393,7 @@ exports[`OE - Search renders correctly 1`] = `
             <span
               class="me-2 badge bg-primary"
             >
-              News
+              Name
               <span
                 aria-hidden="true"
                 class="icon--close"
@@ -421,24 +410,7 @@ exports[`OE - Search renders correctly 1`] = `
             <span
               class="me-2 badge bg-primary"
             >
-              Item 01
-              <span
-                aria-hidden="true"
-                class="icon--close"
-              >
-                <svg
-                  class="bi icon--s"
-                >
-                  <use
-                    xlink:href="#x"
-                  />
-                </svg>
-              </span>
-            </span>
-            <span
-              class="me-2 badge bg-primary"
-            >
-              Item 02
+              Organisation
               <span
                 aria-hidden="true"
                 class="icon--close"
@@ -499,10 +471,10 @@ exports[`OE - Search renders correctly 1`] = `
             class="border-0 mb-5 card"
           >
             <div
-              class="row g-0"
+              class="row g-2"
             >
               <div
-                class="col-md-3"
+                class="col-md-2"
               >
                 <img
                   alt="alt img"
@@ -511,26 +483,41 @@ exports[`OE - Search renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-9"
+                class="col-md-10"
               >
                 <div
-                  class="card-body"
+                  class="card-header bg-transparent pt-0 pb-0 border-0"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <span
+                      class="badge bg-primary"
+                    >
+                      Profile Type
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="card-body pt-0"
                 >
                   <h5
-                    class="card-title mb-4"
+                    class="card-title mb-3"
                   >
-                    Lorem ipsum dolor sit amet
+                    Stefan Mayer
                   </h5>
-                  <p
-                    class="card-text mb-4"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                  <span
-                    class="badge bg-primary"
-                  >
-                    Item 01
-                  </span>
+                  <div>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Organisation
+                    </span>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Position
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -539,10 +526,10 @@ exports[`OE - Search renders correctly 1`] = `
             class="border-0 mb-5 card"
           >
             <div
-              class="row g-0"
+              class="row g-2"
             >
               <div
-                class="col-md-3"
+                class="col-md-2"
               >
                 <img
                   alt="alt img"
@@ -551,31 +538,41 @@ exports[`OE - Search renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-9"
+                class="col-md-10"
               >
                 <div
-                  class="card-body"
+                  class="card-header bg-transparent pt-0 pb-0 border-0"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <span
+                      class="badge bg-primary"
+                    >
+                      Profile Type
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="card-body pt-0"
                 >
                   <h5
-                    class="card-title mb-4"
+                    class="card-title mb-3"
                   >
-                    Incididunt ut labore et dolore
+                    Adjur Tichar
                   </h5>
-                  <p
-                    class="card-text mb-4"
-                  >
-                    Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                  </p>
-                  <span
-                    class="badge bg-primary me-2"
-                  >
-                    Item 01
-                  </span>
-                  <span
-                    class="badge bg-primary"
-                  >
-                    Item 02
-                  </span>
+                  <div>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Organisation
+                    </span>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Position
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -584,10 +581,10 @@ exports[`OE - Search renders correctly 1`] = `
             class="border-0 mb-5 card"
           >
             <div
-              class="row g-0"
+              class="row g-2"
             >
               <div
-                class="col-md-3"
+                class="col-md-2"
               >
                 <img
                   alt="alt img"
@@ -596,31 +593,41 @@ exports[`OE - Search renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-9"
+                class="col-md-10"
               >
                 <div
-                  class="card-body"
+                  class="card-header bg-transparent pt-0 pb-0 border-0"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <span
+                      class="badge bg-primary"
+                    >
+                      Profile Type
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="card-body pt-0"
                 >
                   <h5
-                    class="card-title mb-4"
+                    class="card-title mb-3"
                   >
-                    Quis nostrud exercitation ullamco
+                    Szép Mara
                   </h5>
-                  <p
-                    class="card-text mb-4"
-                  >
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <span
-                    class="badge bg-primary me-2"
-                  >
-                    Item 01
-                  </span>
-                  <span
-                    class="badge bg-primary"
-                  >
-                    Item 02
-                  </span>
+                  <div>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Organisation
+                    </span>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Position
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -629,10 +636,10 @@ exports[`OE - Search renders correctly 1`] = `
             class="border-0 mb-5 card"
           >
             <div
-              class="row g-0"
+              class="row g-2"
             >
               <div
-                class="col-md-3"
+                class="col-md-2"
               >
                 <img
                   alt="alt img"
@@ -641,26 +648,41 @@ exports[`OE - Search renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-9"
+                class="col-md-10"
               >
                 <div
-                  class="card-body"
+                  class="card-header bg-transparent pt-0 pb-0 border-0"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <span
+                      class="badge bg-primary"
+                    >
+                      Profile Type
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="card-body pt-0"
                 >
                   <h5
-                    class="card-title mb-4"
+                    class="card-title mb-3"
                   >
-                    Quis nostrud exercitation ullamco
+                    Daniel Cardoso Rocha
                   </h5>
-                  <p
-                    class="card-text mb-4"
-                  >
-                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <span
-                    class="badge bg-primary"
-                  >
-                    Item 01
-                  </span>
+                  <div>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Organisation
+                    </span>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Position
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -669,10 +691,10 @@ exports[`OE - Search renders correctly 1`] = `
             class="border-0 mb-5 card"
           >
             <div
-              class="row g-0"
+              class="row g-2"
             >
               <div
-                class="col-md-3"
+                class="col-md-2"
               >
                 <img
                   alt="alt img"
@@ -681,31 +703,41 @@ exports[`OE - Search renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-9"
+                class="col-md-10"
               >
                 <div
-                  class="card-body"
+                  class="card-header bg-transparent pt-0 pb-0 border-0"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <span
+                      class="badge bg-primary"
+                    >
+                      Profile Type
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="card-body pt-0"
                 >
                   <h5
-                    class="card-title mb-4"
+                    class="card-title mb-3"
                   >
-                    Duis aute irure dolor in Excepteur
+                    Aurelia Panicucci
                   </h5>
-                  <p
-                    class="card-text mb-4"
-                  >
-                    Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  <span
-                    class="badge bg-primary me-2"
-                  >
-                    Item 01
-                  </span>
-                  <span
-                    class="badge bg-primary"
-                  >
-                    Item 02
-                  </span>
+                  <div>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Organisation
+                    </span>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Position
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -714,10 +746,10 @@ exports[`OE - Search renders correctly 1`] = `
             class="border-0 mb-5 card"
           >
             <div
-              class="row g-0"
+              class="row g-2"
             >
               <div
-                class="col-md-3"
+                class="col-md-2"
               >
                 <img
                   alt="alt img"
@@ -726,26 +758,41 @@ exports[`OE - Search renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-9"
+                class="col-md-10"
               >
                 <div
-                  class="card-body"
+                  class="card-header bg-transparent pt-0 pb-0 border-0"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <span
+                      class="badge bg-primary"
+                    >
+                      Profile Type
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="card-body pt-0"
                 >
                   <h5
-                    class="card-title mb-4"
+                    class="card-title mb-3"
                   >
-                    Excepteur sint occaecat cupidatat non
+                    Felicyta Kowalska
                   </h5>
-                  <p
-                    class="card-text mb-4"
-                  >
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  <span
-                    class="badge bg-primary"
-                  >
-                    Item 02
-                  </span>
+                  <div>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Organisation
+                    </span>
+                    <span
+                      class="text-muted me-2"
+                    >
+                      Position
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -768,22 +815,20 @@ exports[`OE - Search renders correctly 1`] = `
                 </a>
               </li>
               <li
-                class="page-item disabled"
+                class="page-item active"
               >
                 <a
-                  aria-disabled="true"
+                  aria-current="page"
                   class="page-link"
                   href="#"
-                  tabindex="-1"
                 >
                   1
                 </a>
               </li>
               <li
-                class="page-item active"
+                class="page-item"
               >
                 <a
-                  aria-current="page"
                   class="page-link"
                   href="#"
                 >
@@ -798,6 +843,26 @@ exports[`OE - Search renders correctly 1`] = `
                   href="#"
                 >
                   3
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  4
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  5
                 </a>
               </li>
               <li

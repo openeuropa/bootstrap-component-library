@@ -106,9 +106,11 @@ const closeInit = (story) => {
     <script>
       var badge = document.querySelector(".badge");
       var close = badge.getElementsByTagName('span')[0];
-      close.addEventListener('click', event => {
-        close.parentElement.remove();
-      });
+      if(close) {
+        close.addEventListener('click', event => {
+          close.parentElement.remove();
+        });
+      }
     </script>
   ${demo}`;
 };
