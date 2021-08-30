@@ -163,7 +163,8 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
-        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+        content:
+          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
@@ -199,7 +200,8 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
-        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+        content:
+          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=2",
@@ -225,7 +227,8 @@ module.exports = {
           content: "Szép Mara",
           classes: "mb-3",
         },
-        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+        content:
+          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         card_tags: [
           {
             label: "Organisation",
@@ -271,7 +274,8 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
-        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+        content:
+          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=4",
@@ -307,7 +311,8 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
-        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+        content:
+          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=5",
@@ -333,7 +338,8 @@ module.exports = {
           content: "Felicyta Kowalska",
           classes: "mb-3",
         },
-        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+        content:
+          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         card_tags: [
           {
             label: "Organisation",
