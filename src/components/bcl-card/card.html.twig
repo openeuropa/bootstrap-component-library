@@ -45,13 +45,6 @@
   - extra_classes_header (string) (default: '')
   - extra_classes_footer (string) (default: '')
   - category (string) (default: {} - badge object)
-  - card_tags (string) (default: [] - format: [
-    {
-      label: "",
-      classes: ""
-    },
-    ...
-  ])
 #}
 
 {% set _title = title|default({}) %}
@@ -71,7 +64,8 @@
 {% set _card_header = card_header|default('') %}
 {% set _card_footer = card_footer|default('') %}
 {% set _extra_classes_body = extra_classes_body|default('') %}
-{% set _card_tags = card_tags|default([]) %}
+{% set _extra_classes_header = extra_classes_header|default('') %}
+{% set _extra_classes_footer = extra_classes_footer|default('') %}
 {% set _category = category|default({}) %}
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
@@ -141,17 +135,17 @@
 {% if _horizontal %}
 <div class='col-{{ _horizontal_grid.right_col_responsive ? _horizontal_grid.right_col_responsive ~ '-' }}{{ _horizontal_grid.right_col }}'>
 {% endif %}
-{% if _card_header is not empty %}
+{% if _card_header is not empty or _category is not empty %}
   <div class='{{ _header_classes }}'>
     {{- _card_header -}}
+    {%- if _category is not empty -%}
+      <div class="mb-3">
+        {% include '@oe-bcl/bcl-badge/badge.html.twig' with _category only %}
+      </div>
+    {%- endif -%}
   </div>
 {% endif %}
   <div class='{{ _body_classes }}'>
-  {% if _category is not empty %}
-    <div class="mb-3">
-      {% include '@oe-bcl/bcl-badge/badge.html.twig' with _category only %}
-    </div>
-  {% endif %}
   {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
@@ -179,19 +173,6 @@
   {%- if _content is not empty -%}
     {{- _content -}}
   {%- endif -%}
-  {% if _card_tags is not empty and _card_tags is iterable %}
-    <div>
-    {%- for _tag in _card_tags -%}
-      <span
-        {% if _tag.classes is not empty %}
-        class="{{ _tag.classes }}"
-        {% endif %}
-      >
-        {{- _tag.label -}}
-      </span>
-    {%- endfor -%}
-    </div>
-  {% endif %}
   </div>
 {% if _card_footer is not empty %}
   <div class='{{ _footer_classes }}'>

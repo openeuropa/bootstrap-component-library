@@ -50,14 +50,6 @@ describe("OE - Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with tags", () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, card_tags: [{ label: "Card Label" }] })
-    ).resolves.toMatchSnapshot();
-  });
-
   test(`renders with text color white correctly`, () => {
     expect.assertions(1);
 

@@ -147,6 +147,7 @@ module.exports = {
         category: {
           label: "Profile Type",
         },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
           content: "Stefan Mayer",
@@ -162,6 +163,7 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
+        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
@@ -181,6 +183,7 @@ module.exports = {
         category: {
           label: "Profile Type",
         },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
           content: "Adjur Tichar",
@@ -196,6 +199,7 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
+        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=2",
@@ -215,11 +219,13 @@ module.exports = {
         category: {
           label: "Profile Type",
         },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
           content: "Szép Mara",
           classes: "mb-3",
         },
+        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         card_tags: [
           {
             label: "Organisation",
@@ -249,6 +255,7 @@ module.exports = {
         category: {
           label: "Profile Type",
         },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
           content: "Daniel Cardoso Rocha",
@@ -264,6 +271,7 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
+        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=4",
@@ -283,6 +291,7 @@ module.exports = {
         category: {
           label: "Profile Type",
         },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
           content: "Aurelia Panicucci",
@@ -298,6 +307,7 @@ module.exports = {
             classes: "text-muted me-2",
           },
         ],
+        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=5",
@@ -317,11 +327,13 @@ module.exports = {
         category: {
           label: "Profile Type",
         },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
           content: "Felicyta Kowalska",
           classes: "mb-3",
         },
+        content: "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         card_tags: [
           {
             label: "Organisation",
