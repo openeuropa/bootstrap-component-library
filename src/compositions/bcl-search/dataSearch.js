@@ -94,6 +94,7 @@ module.exports = {
       ),
       extra_classes_close: "d-lg-none",
       extra_classes_header: "p-lg-0",
+      with_body_scroll: true,
       title: {
         label: "Filter options",
         heading: 4,
