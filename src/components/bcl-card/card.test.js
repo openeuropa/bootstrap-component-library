@@ -42,11 +42,11 @@ describe("OE - Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with category", () => {
+  test("renders correctly with badges", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, category: { label: "Card Category" } })
+      render({ ...demoData, badges: [{ label: "Card Category" }] })
     ).resolves.toMatchSnapshot();
   });
 

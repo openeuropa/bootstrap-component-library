@@ -144,9 +144,11 @@ module.exports = {
           right_col_responsive: "md",
           gutter: 2,
         },
-        category: {
-          label: "Profile Type",
-        },
+        badges: [
+          {
+            label: "Profile Type",
+          },
+        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
@@ -181,9 +183,11 @@ module.exports = {
           right_col_responsive: "md",
           gutter: 2,
         },
-        category: {
-          label: "Profile Type",
-        },
+        badges: [
+          {
+            label: "Profile Type",
+          },
+        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
@@ -218,9 +222,11 @@ module.exports = {
           right_col_responsive: "md",
           gutter: 2,
         },
-        category: {
-          label: "Profile Type",
-        },
+        badges: [
+          {
+            label: "Profile Type",
+          },
+        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
@@ -255,9 +261,11 @@ module.exports = {
           right_col_responsive: "md",
           gutter: 2,
         },
-        category: {
-          label: "Profile Type",
-        },
+        badges: [
+          {
+            label: "Profile Type",
+          },
+        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
@@ -292,9 +300,11 @@ module.exports = {
           right_col_responsive: "md",
           gutter: 2,
         },
-        category: {
-          label: "Profile Type",
-        },
+        badges: [
+          {
+            label: "Profile Type",
+          },
+        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
@@ -329,9 +339,11 @@ module.exports = {
           right_col_responsive: "md",
           gutter: 2,
         },
-        category: {
-          label: "Profile Type",
-        },
+        badges: [
+          {
+            label: "Profile Type",
+          },
+        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
