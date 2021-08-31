@@ -103,7 +103,7 @@ module.exports = {
         tag: "h2",
       },
       content:
-        "<div class='mb-4 mt-4'><span class='text-muted me-2'>DG Test</span><span class='text-muted me-2'>Director</span></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>",
+        "<div class='mb-4 mt-4'><span class='text-muted me-3'>DG Test</span><span class='text-muted me-3'>Director</span></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>",
       attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
       image: {
         path: "https://picsum.photos/200/200?random=6",
