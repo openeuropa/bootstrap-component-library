@@ -1,0 +1,41 @@
+{% spaceless %}
+
+<header>
+  {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with data.navbar only %}
+</header>
+<main>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-10">
+        {% include '@oe-bcl/bcl-card/card.html.twig' with data.user only %}
+      </div>
+      <div class="col-2">
+        {% include '@oe-bcl/bcl-button/button.html.twig' with data.editButton only %}
+      </div>
+    </div>
+    <div class="my-3">
+      <h4 class="fw-bold mb-3">Personal information</h4>
+      <div class="row">
+        <div class="col-4">
+          {% include '@oe-bcl/bcl-table/table.html.twig' with data.personalInfoBasic only %}
+        </div>
+        <div class="col-4 offset-2">
+          {% include '@oe-bcl/bcl-table/table.html.twig' with data.personalInfoLocation only %}
+        </div>
+      </div>
+    </div>
+    <div class="my-3">
+      <h4 class="fw-bold mb-3">Professional information</h4>
+      <div class="row">
+        <div class="col-4">
+          {% include '@oe-bcl/bcl-table/table.html.twig' with data.professionalInfo only %}
+        </div>
+        <div class="col-4 offset-2">
+          {% include '@oe-bcl/bcl-table/table.html.twig' with data.professionalLanguages only %}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endspaceless %}
