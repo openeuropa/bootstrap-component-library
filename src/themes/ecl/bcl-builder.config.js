@@ -11,7 +11,7 @@ const excludePaths = [];
 if (templates.length) {
   templates.forEach((template) => {
     excludePaths.push(
-      `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/${template}.html.twig`
+      `${nodeModules}/@openeuropa/bcl-twig-templates/templates/bcl-${template}/*.html.twig`
     );
   });
 }
