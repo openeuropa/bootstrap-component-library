@@ -104,6 +104,24 @@
   {% set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
 {% endif %}
 
+{% set _left_col_class = 'col' %}
+{% if _horizontal_grid.left_col_responsive is not empty %}
+  {% set _left_col_class = _left_col_class ~ '-' ~ _horizontal_grid.left_col_responsive %}
+{% endif %}
+{% set _left_col_class = _left_col_class ~ '-' ~ _horizontal_grid.left_col %}
+{% if _horizontal_grid.left_col_extra_classes is not empty %}
+  {% set _left_col_class = _left_col_class ~ ' ' ~ _horizontal_grid.left_col_extra_classes %}
+{% endif %}
+
+{% set _right_col_class = 'col' %}
+{% if _horizontal_grid.right_col_responsive is not empty %}
+  {% set _right_col_class = _right_col_class ~ '-' ~ _horizontal_grid.right_col_responsive %}
+{% endif %}
+{% set _right_col_class = _right_col_class ~ '-' ~ _horizontal_grid.right_col %}
+{% if _horizontal_grid.right_col_extra_classes is not empty %}
+  {% set _right_col_class = _right_col_class ~ ' ' ~ _horizontal_grid.right_col_extra_classes %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 <div
@@ -118,7 +136,7 @@
     {% set _img_class = 'card-img' %}
   {% endif %}
   {% if _horizontal %}
-  <div class='col-{{ _horizontal_grid.left_col_responsive ? _horizontal_grid.left_col_responsive ~ '-' }}{{ _horizontal_grid.left_col }}'>
+  <div class='{{ _left_col_class }}'>
   {% endif %}
   <img
     src='{{ _image.path }}'
@@ -133,7 +151,7 @@
   {% endif %}
 {% endif %}
 {% if _horizontal %}
-<div class='col-{{ _horizontal_grid.right_col_responsive ? _horizontal_grid.right_col_responsive ~ '-' }}{{ _horizontal_grid.right_col }}'>
+<div class='{{ _right_col_class }}'>
 {% endif %}
 {% if _card_header is not empty or _badges is not empty %}
   <div class='{{ _header_classes }}'>

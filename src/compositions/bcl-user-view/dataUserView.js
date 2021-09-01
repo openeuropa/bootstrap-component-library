@@ -92,6 +92,7 @@ module.exports = {
       horizontal_grid: {
         left_col: 3,
         left_col_responsive: "md",
+        left_col_extra_classes: "col-6 offset-3 offset-md-0",
         right_col: 9,
         right_col_responsive: "md",
         gutter: 2,
@@ -101,10 +102,11 @@ module.exports = {
       title: {
         content: "Stefan Mayer",
         tag: "h2",
+        classes: "fw-bold",
       },
       content:
         "<div class='mb-4 mt-4'><span class='text-muted me-3'>DG Test</span><span class='text-muted me-3'>Director</span></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>",
-      attributes: new drupalAttribute().addClass(["border-0"]),
+      attributes: new drupalAttribute().addClass(["border-0", "mb-md-3"]),
       image: {
         path: "https://picsum.photos/200/200?random=6",
         alt: "alt img",
