@@ -6,32 +6,92 @@
 <main>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-10">
+      <div class="col-12 col-md-10">
         {% include '@oe-bcl/bcl-card/card.html.twig' with data.user only %}
       </div>
-      <div class="col-2 text-end">
+      <div class="col-12 col-md-2 text-end">
         {% include '@oe-bcl/bcl-button/button.html.twig' with data.editButton only %}
       </div>
     </div>
     <div class="my-3">
-      <h4 class="fw-bold mb-3">Personal information</h4>
+      <h4 class="fw-bold mb-4">Personal information</h4>
       <div class="row">
-        <div class="col-4">
-          {% include '@oe-bcl/bcl-table/table.html.twig' with data.personalInfoBasic only %}
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Gender:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>Male</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Nationality:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>German</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Date of birth:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>22/01/1972</p>
+            </div>
+          </div>
         </div>
-        <div class="col-4 offset-2">
-          {% include '@oe-bcl/bcl-table/table.html.twig' with data.personalInfoLocation only %}
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Country:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>German</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">City:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>Düsseldorf</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="my-3">
-      <h4 class="fw-bold mb-3">Professional information</h4>
+      <h4 class="fw-bold mb-4">Professional information</h4>
       <div class="row">
-        <div class="col-4">
-          {% include '@oe-bcl/bcl-table/table.html.twig' with data.professionalInfo only %}
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Organisation:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>DG Test</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Position:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>Director</p>
+            </div>
+          </div>
         </div>
-        <div class="col-4 offset-2">
-          {% include '@oe-bcl/bcl-table/table.html.twig' with data.professionalLanguages only %}
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="mb-0">Working languages:</p>
+            </div>
+            <div class="col-12 col-md-5">
+              <p>English, German</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

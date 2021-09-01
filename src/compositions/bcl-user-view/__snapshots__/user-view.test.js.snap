@@ -164,10 +164,10 @@ exports[`OE - User view renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-10"
+          class="col-12 col-md-10"
         >
           <div
-            class="border-0 mb-5 card"
+            class="border-0 card"
           >
             <div
               class="row g-2"
@@ -185,7 +185,7 @@ exports[`OE - User view renders correctly 1`] = `
                 class="col-md-9"
               >
                 <div
-                  class="card-body pt-0"
+                  class="card-body pt-md-0 px-0 px-md-3"
                 >
                   <h2
                     class="card-title"
@@ -215,10 +215,10 @@ exports[`OE - User view renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="col-2 text-end"
+          class="col-12 col-md-2 text-end"
         >
           <button
-            class="btn btn-secondary btn-md"
+            class="w-100 mb-3 btn btn-secondary btn-md"
             type="button"
           >
             Manage profile
@@ -229,7 +229,7 @@ exports[`OE - User view renders correctly 1`] = `
         class="my-3"
       >
         <h4
-          class="fw-bold mb-3"
+          class="fw-bold mb-4"
         >
           Personal information
         </h4>
@@ -237,64 +237,112 @@ exports[`OE - User view renders correctly 1`] = `
           class="row"
         >
           <div
-            class="col-4"
+            class="col-12 col-md-6"
           >
-            <table
-              class="w-100 table table-borderless"
+            <div
+              class="row"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Gender :
-                  </td>
-                  <td>
-                    Male
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Nationality :
-                  </td>
-                  <td>
-                    German
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Date of birth :
-                  </td>
-                  <td>
-                    22/01/1972
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Gender:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  Male
+                </p>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Nationality:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  German
+                </p>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Date of birth:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  22/01/1972
+                </p>
+              </div>
+            </div>
           </div>
           <div
-            class="col-4 offset-2"
+            class="col-12 col-md-6"
           >
-            <table
-              class="w-100 table table-borderless"
+            <div
+              class="row"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Country :
-                  </td>
-                  <td>
-                    Germany
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    City :
-                  </td>
-                  <td>
-                    Düsseldorf
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Country:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  German
+                </p>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  City:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  Düsseldorf
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -302,7 +350,7 @@ exports[`OE - User view renders correctly 1`] = `
         class="my-3"
       >
         <h4
-          class="fw-bold mb-3"
+          class="fw-bold mb-4"
         >
           Professional information
         </h4>
@@ -310,48 +358,72 @@ exports[`OE - User view renders correctly 1`] = `
           class="row"
         >
           <div
-            class="col-4"
+            class="col-12 col-md-6"
           >
-            <table
-              class="w-100 table table-borderless"
+            <div
+              class="row"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Organisation :
-                  </td>
-                  <td>
-                    DG Test
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Position :
-                  </td>
-                  <td>
-                    Director
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Organisation:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  DG Test
+                </p>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Position:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  Director
+                </p>
+              </div>
+            </div>
           </div>
           <div
-            class="col-4 offset-2"
+            class="col-12 col-md-6"
           >
-            <table
-              class="w-100 table table-borderless"
+            <div
+              class="row"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Working languages :
-                  </td>
-                  <td>
-                    English, German
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p
+                  class="mb-0"
+                >
+                  Working languages:
+                </p>
+              </div>
+              <div
+                class="col-12 col-md-5"
+              >
+                <p>
+                  English, German
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
