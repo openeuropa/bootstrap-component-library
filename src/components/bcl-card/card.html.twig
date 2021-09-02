@@ -29,10 +29,8 @@
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
     format: {
-      left_col_responsive (default: '')
-      left_col (default: '4')
-      right_col_responsive (default: '')
-      right_col (default: '8')
+      left_col_classes (default: 'col-4')
+      right_col_classes (default: 'col-8')
       gutter (default: '0')
     }
   - variant (string) (default: '')
@@ -55,8 +53,8 @@
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_grid = horizontal_grid|default({
-  left_col: '4',
-  right_col: '8',
+  left_col_classes: 'col-4',
+  right_col_classes: 'col-8',
   gutter: '0'
 }) %}
 {% set _border_variant = border_variant|default('') %}
@@ -104,24 +102,6 @@
   {% set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
 {% endif %}
 
-{% set _left_col_classes = 'col' %}
-{% if _horizontal_grid.left_col_responsive is not empty %}
-  {% set _left_col_classes = _left_col_classes ~ '-' ~ _horizontal_grid.left_col_responsive %}
-{% endif %}
-{% set _left_col_classes = _left_col_classes ~ '-' ~ _horizontal_grid.left_col %}
-{% if _horizontal_grid.left_col_extra_classes is not empty %}
-  {% set _left_col_classes = _left_col_classes ~ ' ' ~ _horizontal_grid.left_col_extra_classes %}
-{% endif %}
-
-{% set _right_col_classes = 'col' %}
-{% if _horizontal_grid.right_col_responsive is not empty %}
-  {% set _right_col_classes = _right_col_classes ~ '-' ~ _horizontal_grid.right_col_responsive %}
-{% endif %}
-{% set _right_col_classes = _right_col_classes ~ '-' ~ _horizontal_grid.right_col %}
-{% if _horizontal_grid.right_col_extra_classes is not empty %}
-  {% set _right_col_classes = _right_col_classes ~ ' ' ~ _horizontal_grid.right_col_extra_classes %}
-{% endif %}
-
 {% set attributes = attributes.addClass(_classes) %}
 
 <div
@@ -136,7 +116,7 @@
     {% set _img_class = 'card-img' %}
   {% endif %}
   {% if _horizontal %}
-  <div class='{{ _left_col_classes }}'>
+  <div class='{{ _horizontal_grid.left_col_classes  }}'>
   {% endif %}
   <img
     src='{{ _image.path }}'
@@ -151,7 +131,7 @@
   {% endif %}
 {% endif %}
 {% if _horizontal %}
-<div class='{{ _right_col_classes }}'>
+<div class='{{ _horizontal_grid.right_col_classes }}'>
 {% endif %}
 {% if _card_header is not empty or _badges is not empty %}
   <div class='{{ _header_classes }}'>

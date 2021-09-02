@@ -172,10 +172,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 3,
-          left_col_responsive: "md",
-          right_col: 9,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-3",
+          right_col_classes: "col-md-9",
           gutter: 0,
         },
         title: {
@@ -198,10 +196,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 3,
-          left_col_responsive: "md",
-          right_col: 9,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-3",
+          right_col_classes: "col-md-9",
           gutter: 0,
         },
         title: {
@@ -225,10 +221,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 3,
-          left_col_responsive: "md",
-          right_col: 9,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-3",
+          right_col_classes: "col-md-9",
           gutter: 0,
         },
         title: {
@@ -252,10 +246,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 3,
-          left_col_responsive: "md",
-          right_col: 9,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-3",
+          right_col_classes: "col-md-9",
           gutter: 0,
         },
         title: {
@@ -278,10 +270,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 3,
-          left_col_responsive: "md",
-          right_col: 9,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-3",
+          right_col_classes: "col-md-9",
           gutter: 0,
         },
         title: {
@@ -305,10 +295,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 3,
-          left_col_responsive: "md",
-          right_col: 9,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-3",
+          right_col_classes: "col-md-9",
           gutter: 0,
         },
         title: {

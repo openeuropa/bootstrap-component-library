@@ -90,11 +90,8 @@ module.exports = {
     user: {
       horizontal: true,
       horizontal_grid: {
-        left_col: 3,
-        left_col_responsive: "md",
-        left_col_extra_classes: "col-6 offset-3 offset-md-0",
-        right_col: 9,
-        right_col_responsive: "md",
+        left_col_classes: "col-6 col-md-3 offset-3 offset-md-0",
+        right_col_classes: "col-md-9",
         gutter: 2,
       },
       extra_classes_header: "bg-transparent pt-0 pb-0 border-0",

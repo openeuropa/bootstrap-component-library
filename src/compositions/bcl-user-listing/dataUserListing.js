@@ -138,10 +138,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -167,10 +165,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -196,10 +192,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -225,10 +219,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -254,10 +246,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -283,10 +273,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
