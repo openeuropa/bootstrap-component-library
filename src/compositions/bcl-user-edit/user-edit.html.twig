@@ -1,0 +1,12 @@
+{% spaceless %}
+
+<header>
+  {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with data.navbar only %}
+</header>
+<main>
+  <div class="container mt-5">
+    {% include '@oe-bcl/bcl-user-edit/edit-contents.html.twig' with data.navigation only %}
+  </div>
+</main>
+
+{% endspaceless %}
