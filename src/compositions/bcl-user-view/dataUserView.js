@@ -92,7 +92,6 @@ module.exports = {
       horizontal_grid: {
         left_col_classes: "col-6 col-md-3 offset-3 offset-md-0",
         right_col_classes: "col-md-9",
-        gutter: 2,
       },
       extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
       extra_classes_body: "pt-md-0 px-0 px-md-3",

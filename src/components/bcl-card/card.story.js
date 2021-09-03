@@ -17,13 +17,6 @@ const getArgs = (data, type) => {
   };
   if (type == "horizontal") {
     args.horizontal = data.horizontal;
-    if (!data.horizontal_grid) {
-      data.horizontal_grid = {
-        left_col_classes: "col-4",
-        right_col_classes: "col-8",
-        gutter: 0,
-      };
-    }
     args.horizontal_grid = data.horizontal_grid;
   }
 
