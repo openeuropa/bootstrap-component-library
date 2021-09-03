@@ -5,7 +5,7 @@ module.exports = {
   horizontal_grid: {
     left_col_classes: "col-4",
     right_col_classes: "col-8",
-    gutter: '0'
+    gutter: "0",
   },
   title: {
     content: "Title card",
