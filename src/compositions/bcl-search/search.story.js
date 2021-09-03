@@ -4,6 +4,15 @@ import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 export default {
   title: "Compositions/Search",
+  parameters: {
+    design: [
+      {
+        name: "Wireframe",
+        type: "figma",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=43%3A0",
+      },
+    ],
+  },
 };
 
 const scriptInit = (story) => {
