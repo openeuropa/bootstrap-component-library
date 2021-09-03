@@ -13,7 +13,16 @@
     </div>
   </div>
   <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
-    asd privacy
+    <h3 class="fw-bold mt-5 mb-4">Privacy settings</h3>
+    {% include '@oe-bcl/bcl-form/form.html.twig' with privacySettings only %}
+    <h3 class="fw-bold mt-5 mb-4">Public profile contents</h3>
+    <p class="mb-0">Select what information should be displayed to your profile.</p>
+    <p class="mb-4">Only people who have access to your data will be able to consult these informations.</p>
+    {% include '@oe-bcl/bcl-form/form.html.twig' with publicProfileContent only %}
+    <h3 class="fw-bold mt-5 mb-4">Delete account</h3>
+    <p class="mb-0">Account deletion is permanent and cannot be undone.</p>
+    <p>If you delete your account, all content created by you (comments, articles, ...) will be anonymized.</p>
+    {% include '@oe-bcl/bcl-form/form.html.twig' with deleteAccount only %}
   </div>
   
 {% endblock %}

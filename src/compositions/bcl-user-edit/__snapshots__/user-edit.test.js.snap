@@ -159,364 +159,448 @@ exports[`OE - User edit renders correctly 1`] = `
   <main>
     <div
       class="container mt-5"
-    />
-  </main>
-</jest>
-`;
-
-exports[`OE - User view renders correctly 1`] = `
-<jest>
-  <header>
-    <nav
-      class="navbar navbar-expand-lg bg-light navbar-light"
     >
-      <div
-        class="container"
+      <ul
+        class="nav nav-tabs"
+        role="tablist"
       >
-        <a
-          class="navbar-brand"
-          href="/example.html"
+        <li
+          class="nav-item"
+          role="presentation"
         >
-          Navbar
-        </a>
-        <button
-          aria-controls="navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbar"
-          data-bs-toggle="collapse"
-          type="button"
+          <a
+            aria-controls="profile"
+            autocomplete="off"
+            class="nav-link active"
+            data-bs-target="#profile"
+            data-bs-toggle="tab"
+            href="#profile"
+            id="profile-tab"
+          >
+            Profile information
+          </a>
+        </li>
+        <li
+          class="nav-item"
+          role="presentation"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
+          <a
+            aria-controls="privacy"
+            autocomplete="off"
+            class="nav-link"
+            data-bs-target="#privacy"
+            data-bs-toggle="tab"
+            href="#"
+            id="privacy-tab"
+          >
+            Privacy settings
+          </a>
+        </li>
+      </ul>
+      <div
+        class="tab-content"
+      >
         <div
-          class="collapse navbar-collapse"
-          id="navbar"
+          aria-labelledby="profile-tab"
+          class="tab-pane fade show active"
+          id="profile"
+          role="tabpanel"
         >
-          <ul
-            class="me-auto navbar-nav"
+          <div
+            class="row"
           >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="#first"
-              >
-                I'm a link
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="#first"
-              >
-                I'm a link 2
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="#first"
-              >
-                I'm a link 3
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
-                aria-expanded="false"
-                autocomplete="off"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                id="dropdown-1"
-                role="button"
-              >
-                Dropdown Toggle
-              </a>
-              <ul
-                aria-labelledby="dropdown-1"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    I'm a link
-                  </a>
-                </li>
-                <li>
-                  <button
-                    class="dropdown-item"
-                    type="button"
-                  >
-                    I'm a button
-                  </button>
-                </li>
-                <li>
-                  <hr
-                    class="dropdown-divider"
-                  />
-                </li>
-                <li>
-                  <button
-                    aria-disabled="true"
-                    class="dropdown-item"
-                    disabled="true"
-                    type="button"
-                  >
-                    I'm a disabled button
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="dropdown-item active"
-                    type="button"
-                  >
-                    I'm a active button
-                  </button>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex"
-          >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
-            >
-              Search
-            </label>
-            <input
-              class="form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
             <div
-              class="ms-2"
+              class="col-2"
+            >
+              <img
+                alt="profile-image"
+                src="https://picsum.photos/seed/1002/600/400"
+              />
+              <label
+                class="btn btn-primary"
+                for="my-file-selector"
+              >
+                <input
+                  class="d-none"
+                  id="my-file-selector"
+                  type="file"
+                />
+                
+            Button Text Here
+        
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="privacy-tab"
+          class="tab-pane fade"
+          id="privacy"
+          role="tabpanel"
+        >
+          <h3
+            class="fw-bold mt-5 mb-4"
+          >
+            Privacy settings
+          </h3>
+          <form
+            class="mb-3"
+            novalidate="true"
+            onsubmit="return false;"
+          >
+            <div
+              class="col-sm-6 col-lg-3"
+            >
+              <label
+                class="form-label"
+              >
+                Who can consult my data
+              </label>
+              <select
+                class="form-select form-select-md"
+              >
+                <option
+                  value="1"
+                >
+                  Anonymous users
+                </option>
+                <option
+                  value="2"
+                >
+                  Nobody
+                </option>
+                <option
+                  selected=""
+                  value=""
+                >
+                  Authenticated users only
+                </option>
+              </select>
+              <div
+                class="form-text"
+                id="helperText"
+              >
+                Helper text
+              </div>
+            </div>
+            <div
+              class="mt-4 d-grid d-sm-block"
             >
               <button
                 class="btn btn-primary btn-md"
-                type="Search"
+                type="submit"
               >
-                Search
+                Save
               </button>
             </div>
           </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div
-      class="container mt-5"
-    >
-      <div
-        class="row"
-      >
-        <div
-          class="col-10"
-        >
-          <div
-            class="border-0 mb-5 card"
+          <h3
+            class="fw-bold mt-5 mb-4"
+          >
+            Public profile contents
+          </h3>
+          <p
+            class="mb-0"
+          >
+            Select what information should be displayed to your profile.
+          </p>
+          <p
+            class="mb-4"
+          >
+            Only people who have access to your data will be able to consult these informations.
+          </p>
+          <form
+            class="row mb-3"
+            novalidate="true"
+            onsubmit="return false;"
           >
             <div
-              class="row g-2"
+              class="mb-3 col-sm-6 col-md-4"
             >
               <div
-                class="col-md-3"
+                class="form-check"
               >
-                <img
-                  alt="alt img"
-                  class="card-img-top"
-                  src="https://picsum.photos/200/200?random=6"
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="picture"
+                  required="true"
+                  type="checkbox"
                 />
-              </div>
-              <div
-                class="col-md-9"
-              >
-                <div
-                  class="card-body pt-0"
+                <label
+                  class="form-check-label"
+                  for="picture"
                 >
-                  <h2
-                    class="card-title"
-                  >
-                    Stefan Mayer
-                  </h2>
-                  <div
-                    class="mb-4 mt-4"
-                  >
-                    <span
-                      class="text-muted me-3"
-                    >
-                      DG Test
-                    </span>
-                    <span
-                      class="text-muted me-3"
-                    >
-                      Director
-                    </span>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
-                  </p>
-                </div>
+                  Picture
+                </label>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="col-2 text-end"
-        >
-          <button
-            class="btn btn-secondary btn-md"
-            type="button"
-          >
-            Manage profile
-          </button>
-        </div>
-      </div>
-      <div
-        class="my-3"
-      >
-        <h4
-          class="fw-bold mb-3"
-        >
-          Personal information
-        </h4>
-        <div
-          class="row"
-        >
-          <div
-            class="col-4"
-          >
-            <table
-              class="w-100 table table-borderless"
+            <div
+              class="mb-3 col-sm-6 col-md-4"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Gender :
-                  </td>
-                  <td>
-                    Male
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Nationality :
-                  </td>
-                  <td>
-                    German
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Date of birth :
-                  </td>
-                  <td>
-                    22/01/1972
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div
-            class="col-4 offset-2"
-          >
-            <table
-              class="w-100 table table-borderless"
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="position"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="position"
+                >
+                  Position
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Country :
-                  </td>
-                  <td>
-                    Germany
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    City :
-                  </td>
-                  <td>
-                    Düsseldorf
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div
-        class="my-3"
-      >
-        <h4
-          class="fw-bold mb-3"
-        >
-          Professional information
-        </h4>
-        <div
-          class="row"
-        >
-          <div
-            class="col-4"
-          >
-            <table
-              class="w-100 table table-borderless"
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="city"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="city"
+                >
+                  City
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Organisation :
-                  </td>
-                  <td>
-                    DG Test
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Position :
-                  </td>
-                  <td>
-                    Director
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div
-            class="col-4 offset-2"
-          >
-            <table
-              class="w-100 table table-borderless"
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="firstName"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="firstName"
+                >
+                  First name
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
             >
-              <tbody>
-                <tr>
-                  <td>
-                    Working languages :
-                  </td>
-                  <td>
-                    English, German
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="gender"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="gender"
+                >
+                  Gender
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="nationality"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="nationality"
+                >
+                  Nationality
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="lastName"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="lastName"
+                >
+                  Last name
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="workingLanguages"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="workingLanguages"
+                >
+                  Working languages
+                </label>
+              </div>
+            </div>
+            <div
+              class="mb-3 col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="dateOfBirth"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="dateOfBirth"
+                >
+                  Date of birth
+                </label>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="organisation"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="organisation"
+                >
+                  Organisation
+                </label>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="country"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="country"
+                >
+                  Country
+                </label>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-md-4"
+            >
+              <div
+                class="form-check"
+              >
+                <input
+                  checked="true"
+                  class="form-check-input"
+                  id="bio"
+                  required="true"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="bio"
+                >
+                  Bio
+                </label>
+              </div>
+            </div>
+            <div
+              class="mt-4 d-grid d-sm-block"
+            >
+              <button
+                class="btn btn-primary btn-md"
+                type="submit"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+          <h3
+            class="fw-bold mt-5 mb-4"
+          >
+            Delete account
+          </h3>
+          <p
+            class="mb-0"
+          >
+            Account deletion is permanent and cannot be undone.
+          </p>
+          <p>
+            If you delete your account, all content created by you (comments, articles, ...) will be anonymized.
+          </p>
+          <form
+            novalidate="true"
+            onsubmit="return false;"
+          >
+            <div
+              class="mt-4 d-grid d-sm-block"
+            >
+              <button
+                class="btn btn-danger btn-md"
+                type="submit"
+              >
+                Delete my account
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
