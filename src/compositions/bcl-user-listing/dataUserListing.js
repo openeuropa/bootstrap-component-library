@@ -201,10 +201,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -218,16 +216,6 @@ module.exports = {
           content: "Stefan Mayer",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -240,10 +228,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -257,16 +243,6 @@ module.exports = {
           content: "Adjur Tichar",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -279,10 +255,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -298,16 +272,6 @@ module.exports = {
         },
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=3",
@@ -318,10 +282,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -335,16 +297,6 @@ module.exports = {
           content: "Daniel Cardoso Rocha",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -357,10 +309,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -374,16 +324,6 @@ module.exports = {
           content: "Aurelia Panicucci",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -396,10 +336,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -415,16 +353,6 @@ module.exports = {
         },
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=6",

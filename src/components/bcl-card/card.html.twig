@@ -29,11 +29,9 @@
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
     format: {
-      left_col_responsive (default: '')
-      left_col (default: '4')
-      right_col_responsive (default: '')
-      right_col (default: '8')
-      gutter (default: '0')
+      left_col_classes (default: 'col-4')
+      right_col_classes (default: 'col-8')
+      gutter (default: '')
     }
   - variant (string) (default: '')
   - border_variant (string) (default: '')
@@ -55,9 +53,8 @@
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_grid = horizontal_grid|default({
-  left_col: '4',
-  right_col: '8',
-  gutter: '0'
+  left_col_classes: 'col-4',
+  right_col_classes: 'col-8'
 }) %}
 {% set _border_variant = border_variant|default('') %}
 {% set _text_color = text_color|default('') %}
@@ -104,13 +101,18 @@
   {% set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
 {% endif %}
 
+{% set _row_classes = 'row' %}
+{% if _horizontal_grid.gutter is not empty %}
+  {% set _row_classes = _row_classes ~ ' g-' ~ _horizontal_grid.gutter %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 <div
   {{ attributes }}
 >
 {% if _horizontal %}
-<div class='row g-{{ _horizontal_grid.gutter }}'>
+<div class='{{ _row_classes }}'>
 {% endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
   {% set _img_class = 'card-img-top' %}
@@ -118,7 +120,7 @@
     {% set _img_class = 'card-img' %}
   {% endif %}
   {% if _horizontal %}
-  <div class='col-{{ _horizontal_grid.left_col_responsive ? _horizontal_grid.left_col_responsive ~ '-' }}{{ _horizontal_grid.left_col }}'>
+  <div class='{{ _horizontal_grid.left_col_classes  }}'>
   {% endif %}
   <img
     src='{{ _image.path }}'
@@ -133,7 +135,7 @@
   {% endif %}
 {% endif %}
 {% if _horizontal %}
-<div class='col-{{ _horizontal_grid.right_col_responsive ? _horizontal_grid.right_col_responsive ~ '-' }}{{ _horizontal_grid.right_col }}'>
+<div class='{{ _horizontal_grid.right_col_classes }}'>
 {% endif %}
 {% if _card_header is not empty or _badges is not empty %}
   <div class='{{ _header_classes }}'>
