@@ -134,6 +134,7 @@ module.exports = {
       removeImageButton: {
         label: "Remove picture",
         variant: "link",
+        attributes: new drupalAttribute().addClass("mt-2"),
       },
       profileInformation: {
         attributes: new drupalAttribute()
@@ -218,6 +219,7 @@ module.exports = {
               required: true,
               label: "Bio",
               helper_text: "Helper text",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
             },
             {
               wrapper_classes: "mb-3",
@@ -306,7 +308,7 @@ module.exports = {
           label: "Save",
           type: "submit",
           variant: "primary",
-          wrapper: "mt-2 d-grid d-sm-block",
+          wrapper: "mt-4 d-grid d-sm-block",
         },
         items: [
           [
@@ -335,13 +337,13 @@ module.exports = {
           label: "Save",
           type: "submit",
           variant: "primary",
-          wrapper: "mt-4 d-grid d-sm-block",
+          wrapper: "mt-4 mt-md-2 d-grid d-sm-block",
         },
         items: [
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Picture",
               id: "picture",
@@ -351,7 +353,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Position",
               id: "position",
@@ -361,7 +363,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "City",
               id: "city",
@@ -371,7 +373,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "First name",
               id: "firstName",
@@ -381,7 +383,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Gender",
               id: "gender",
@@ -390,7 +392,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Nationality",
               id: "nationality",
@@ -399,7 +401,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Last name",
               id: "lastName",
@@ -409,7 +411,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Working languages",
               id: "workingLanguages",
@@ -418,7 +420,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "mb-3 col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Date of birth",
               id: "dateOfBirth",
@@ -427,7 +429,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Organisation",
               id: "organisation",
@@ -437,7 +439,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Country",
               id: "country",
@@ -447,7 +449,7 @@ module.exports = {
           [
             {
               input_type: "checkbox",
-              classes: "col-sm-6 col-md-4",
+              classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
               required: true,
               label: "Bio",
               id: "bio",

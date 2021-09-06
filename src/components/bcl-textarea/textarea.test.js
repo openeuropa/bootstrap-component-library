@@ -67,4 +67,12 @@ describe("OE - textarea", () => {
       render({ ...demoData, horizontal: true })
     ).resolves.toMatchSnapshot();
   });
+
+  test("renders correctly with text", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, text: "Sample text presented inside" })
+    ).resolves.toMatchSnapshot();
+  });
 });

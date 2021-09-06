@@ -160,6 +160,11 @@ exports[`OE - User edit renders correctly 1`] = `
     <div
       class="container mt-5"
     >
+      <h2
+        class="fw-bold mb-3 mb-md-5 d-inline-block"
+      >
+        Edit my profile
+      </h2>
       <div
         class="mb-4 float-lg-end"
       >
@@ -176,11 +181,6 @@ exports[`OE - User edit renders correctly 1`] = `
           Back to my profile
         </a>
       </div>
-      <h2
-        class="fw-bold mb-3 mb-md-5"
-      >
-        Edit my profile
-      </h2>
       <ul
         class="nav nav-tabs"
         role="tablist"
@@ -231,7 +231,7 @@ exports[`OE - User edit renders correctly 1`] = `
             class="row"
           >
             <div
-              class="offset-3 col-6 offset-lg-0 col-lg-2 mt-5"
+              class="offset-3 col-6 offset-lg-0 col-lg-2 mt-4 pt-3"
             >
               <img
                 alt="profile-image"
@@ -253,7 +253,7 @@ exports[`OE - User edit renders correctly 1`] = `
                   type="file"
                 />
                 <button
-                  class="btn btn-link btn-md"
+                  class="mt-2 btn btn-link btn-md"
                   type="button"
                 >
                   Remove picture
@@ -264,7 +264,7 @@ exports[`OE - User edit renders correctly 1`] = `
               class="col-12 col-lg-10"
             >
               <h3
-                class="fw-bold mt-5 mb-4"
+                class="fw-bold mt-4 mb-3 pt-3"
               >
                 Profile information
               </h3>
@@ -410,7 +410,9 @@ exports[`OE - User edit renders correctly 1`] = `
                       class="form-control"
                       required="true"
                       rows="4"
-                    />
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                    </textarea>
                     <div
                       class="form-text"
                     >
@@ -556,7 +558,7 @@ exports[`OE - User edit renders correctly 1`] = `
           role="tabpanel"
         >
           <h3
-            class="fw-bold mt-5 mb-4"
+            class="fw-bold pt-2 mt-4 mb-4"
           >
             Privacy settings
           </h3>
@@ -601,7 +603,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mt-2 d-grid d-sm-block"
+              class="mt-4 d-grid d-sm-block"
             >
               <button
                 class="btn btn-primary btn-md"
@@ -612,7 +614,7 @@ exports[`OE - User edit renders correctly 1`] = `
             </div>
           </form>
           <h3
-            class="fw-bold mt-5 mb-4"
+            class="fw-bold my-4"
           >
             Public profile contents
           </h3>
@@ -632,7 +634,7 @@ exports[`OE - User edit renders correctly 1`] = `
             onsubmit="return false;"
           >
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -653,7 +655,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -674,7 +676,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -695,7 +697,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -716,7 +718,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -736,7 +738,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -756,7 +758,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -777,7 +779,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -797,7 +799,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mb-3 col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -817,7 +819,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -838,7 +840,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -859,7 +861,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="col-sm-6 col-md-4"
+              class="mb-1 mb-md-3 col-sm-6 col-md-4"
             >
               <div
                 class="form-check"
@@ -880,7 +882,7 @@ exports[`OE - User edit renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="mt-4 d-grid d-sm-block"
+              class="mt-4 mt-md-2 d-grid d-sm-block"
             >
               <button
                 class="btn btn-primary btn-md"
@@ -891,7 +893,7 @@ exports[`OE - User edit renders correctly 1`] = `
             </div>
           </form>
           <h3
-            class="fw-bold mt-5 mb-4"
+            class="fw-bold my-4"
           >
             Delete account
           </h3>
