@@ -101,71 +101,106 @@ module.exports = {
         extra_classes: "mb-lg-4",
         id: "offcanvasExampleLabel",
       },
-      search_input: {
-        placeholder: "Keyword",
-        size: "sm",
-        attributes: new drupalAttribute(),
-      },
-      multi_select: {
-        size: "sm",
-        attributes: new drupalAttribute().addClass("multi-select"),
-        multiple: true,
-        clean_class: true,
-        options: [
-          { value: 1, label: "a select option" },
-          { value: 2, label: "another select option" },
-          { value: 3, label: "another option" },
-          { value: 4, label: "last option" },
-          { label: "the selected option", selected: true },
+      search_form: {
+        attributes: new drupalAttribute()
+          .setAttribute("novalidate", true)
+          .setAttribute("onsubmit", "return false;"),
+        items: [
+          [
+            {
+              classes: "mb-3",
+              input_type: "text",
+              placeholder: "Keyword",
+              size: "sm",
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Content types",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+                { label: "the selected option", selected: true },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Filter A",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute().addClass("multi-select"),
+              multiple: true,
+              clean_class: true,
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+                { label: "the selected option", selected: true },
+              ],
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              classes: "col-sm-10",
+              legend: "Filter B",
+              fieldset_classes: "mb-3",
+              legend_classes: "col-form-label",
+            },
+            {
+              input_type: "checkbox",
+              label: "Checked checkbox",
+              checked: true,
+            },
+            {
+              input_type: "checkbox",
+              label: "Default checkbox",
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              legend: "Filter C",
+              fieldset_classes: "mb-3",
+              legend_classes: "col-form-label",
+            },
+            {
+              input_type: "date",
+              size: "sm",
+              attributes: new drupalAttribute().addClass("mb-2"),
+            },
+            {
+              input_type: "date",
+              size: "sm",
+            },
+          ],
         ],
-      },
-      single_select: {
-        size: "sm",
-        attributes: new drupalAttribute(),
-        options: [
-          { value: 1, label: "a select option" },
-          { value: 2, label: "another select option" },
-          { value: 3, label: "another option" },
-          { value: 4, label: "last option" },
-          { label: "the selected option", selected: true },
-        ],
-      },
-      first_input_filter: {
-        input_type: "checkbox",
-        label: "Checked checkbox",
-        size: "sm",
-        checked: true,
-        id: "first-check",
-        attributes: new drupalAttribute(),
-      },
-      second_input_filter: {
-        input_type: "checkbox",
-        label: "Default checkbox",
-        size: "sm",
-        id: "second-check",
-        attributes: new drupalAttribute(),
-      },
-      first_datepicker_filter: {
-        input_type: "date",
-        size: "sm",
-        attributes: new drupalAttribute().addClass("mb-2"),
-      },
-      second_datepicker_filter: {
-        size: "sm",
-        input_type: "date",
-        attributes: new drupalAttribute(),
-      },
-      button_primary: {
-        label: "Refine",
-        type: "submit",
-        variant: "primary",
-        attributes: new drupalAttribute().addClass("me-2"),
-      },
-      button_secondary: {
-        label: "Clear",
-        type: "submit",
-        variant: "secondary",
-        attributes: new drupalAttribute(),
+        submit: {
+          multiple: true,
+          wrapper: "mt-4",
+          items: [
+            {
+              label: "Refine",
+              type: "submit",
+              variant: "primary",
+              attributes: new drupalAttribute().addClass("me-2"),
+            },
+            {
+              label: "Clear",
+              type: "submit",
+              variant: "secondary",
+            },
+          ],
+        },
       },
     },
     cards: [

@@ -101,37 +101,100 @@ module.exports = {
         extra_classes: "mb-lg-4",
         id: "offcanvasExampleLabel",
       },
-      search_input: {
-        placeholder: "Search by name or surname",
-        size: "sm",
-        attributes: new drupalAttribute(),
-      },
-      text_input: {
-        placeholder: "Placeholder",
-        size: "sm",
-        attributes: new drupalAttribute(),
-      },
-      single_select: {
-        size: "sm",
-        attributes: new drupalAttribute(),
-        options: [
-          { value: 1, label: "a select option" },
-          { value: 2, label: "another select option" },
-          { value: 3, label: "another option" },
-          { value: 4, label: "last option" },
+      search_form: {
+        attributes: new drupalAttribute()
+          .setAttribute("novalidate", true)
+          .setAttribute("onsubmit", "return false;"),
+        items: [
+          [
+            {
+              classes: "mb-3 pb-3 border-bottom",
+              input_type: "text",
+              placeholder: "Search by name or surname",
+              size: "sm",
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Organisation",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Profile Type",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3 pb-3 border-bottom",
+              label: "Group",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Option 1",
+              input_type: "text",
+              placeholder: "Placeholder",
+              size: "sm",
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Option 2",
+              input_type: "text",
+              placeholder: "Placeholder",
+              size: "sm",
+            },
+          ],
         ],
-      },
-      button_primary: {
-        label: "Refine",
-        type: "submit",
-        variant: "primary",
-        attributes: new drupalAttribute().addClass("me-2"),
-      },
-      button_secondary: {
-        label: "Clear",
-        type: "submit",
-        variant: "secondary",
-        attributes: new drupalAttribute(),
+        submit: {
+          multiple: true,
+          wrapper: "mt-4",
+          items: [
+            {
+              label: "Refine",
+              type: "submit",
+              variant: "primary",
+              attributes: new drupalAttribute().addClass("me-2"),
+            },
+            {
+              label: "Clear",
+              type: "submit",
+              variant: "secondary",
+            },
+          ],
+        },
       },
     },
     cards: [

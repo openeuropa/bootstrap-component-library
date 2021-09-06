@@ -191,147 +191,172 @@ exports[`OE - Search renders correctly 1`] = `
             <div
               class="offcanvas-body p-lg-0"
             >
-              <input
-                class="form-control form-control-sm"
-                placeholder="Keyword"
-                type="text"
-              />
-              <p
-                class="mt-4 mb-3"
+              <form
+                novalidate="true"
+                onsubmit="return false;"
               >
-                Content types
-              </p>
-              <select
-                class="form-select form-select-sm"
-              >
-                <option
-                  value="1"
+                <div
+                  class="mb-3"
                 >
-                  a select option
-                </option>
-                <option
-                  value="2"
+                  <input
+                    class="form-control form-control-sm"
+                    placeholder="Keyword"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="mb-3"
                 >
-                  another select option
-                </option>
-                <option
-                  value="3"
+                  <label
+                    class="form-label"
+                  >
+                    Content types
+                  </label>
+                  <select
+                    class="form-select form-select-sm"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      the selected option
+                    </option>
+                  </select>
+                </div>
+                <div
+                  class="mb-3"
                 >
-                  another option
-                </option>
-                <option
-                  value="4"
+                  <label
+                    class="form-label"
+                  >
+                    Filter A
+                  </label>
+                  <select
+                    class="multi-select"
+                    multiple="true"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      the selected option
+                    </option>
+                  </select>
+                </div>
+                <fieldset
+                  class="mb-3"
                 >
-                  last option
-                </option>
-                <option
-                  selected=""
-                  value=""
+                  <legend
+                    class="col-form-label"
+                  >
+                    Filter B
+                  </legend>
+                  <div
+                    class="col-sm-10"
+                  >
+                    <div
+                      class="form-check"
+                    >
+                      <input
+                        checked="true"
+                        class="form-check-input"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                      >
+                        Checked checkbox
+                      </label>
+                    </div>
+                    <div
+                      class="form-check"
+                    >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                      >
+                        Default checkbox
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset
+                  class="mb-3"
                 >
-                  the selected option
-                </option>
-              </select>
-              <p
-                class="mt-4 mb-3"
-              >
-                Filter A
-              </p>
-              <select
-                class="multi-select"
-                multiple="true"
-              >
-                <option
-                  value="1"
+                  <legend
+                    class="col-form-label"
+                  >
+                    Filter C
+                  </legend>
+                  <input
+                    class="mb-2 form-control form-control-sm"
+                    type="date"
+                  />
+                  <input
+                    class="form-control form-control-sm"
+                    type="date"
+                  />
+                </fieldset>
+                <div
+                  class="mt-4"
                 >
-                  a select option
-                </option>
-                <option
-                  value="2"
-                >
-                  another select option
-                </option>
-                <option
-                  value="3"
-                >
-                  another option
-                </option>
-                <option
-                  value="4"
-                >
-                  last option
-                </option>
-                <option
-                  selected=""
-                  value=""
-                >
-                  the selected option
-                </option>
-              </select>
-              <p
-                class="mt-4 mb-3"
-              >
-                Filter B
-              </p>
-              <div
-                class="form-check"
-              >
-                <input
-                  checked="true"
-                  class="form-check-input"
-                  id="first-check"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="first-check"
-                >
-                  Checked checkbox
-                </label>
-              </div>
-              <div
-                class="form-check"
-              >
-                <input
-                  class="form-check-input"
-                  id="second-check"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="second-check"
-                >
-                  Default checkbox
-                </label>
-              </div>
-              <p
-                class="mt-4 mb-3"
-              >
-                Filter C
-              </p>
-              <input
-                class="mb-2 form-control form-control-sm"
-                type="date"
-              />
-              <input
-                class="form-control form-control-sm"
-                type="date"
-              />
-              <div
-                class="mt-4"
-              >
-                <button
-                  class="me-2 btn btn-primary btn-md"
-                  type="submit"
-                >
-                  Refine
-                </button>
-                <button
-                  class="btn btn-secondary btn-md"
-                  type="submit"
-                >
-                  Clear
-                </button>
-              </div>
+                  <button
+                    class="me-2 btn btn-primary btn-md"
+                    type="submit"
+                  >
+                    Refine
+                  </button>
+                  <button
+                    class="btn btn-secondary btn-md"
+                    type="submit"
+                  >
+                    Clear
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
