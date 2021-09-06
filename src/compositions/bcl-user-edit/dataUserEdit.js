@@ -87,6 +87,21 @@ module.exports = {
         ],
       },
     },
+    button: {
+      attributes: new drupalAttribute().addClass([
+        "mb-4",
+        "mt-md-5",
+        "float-md-end",
+        "d-inline-block",
+      ]),
+      label: "Back to my profile",
+      variant: "link",
+      icon: {
+        position: "before",
+        name: "arrow-left",
+        path: "static/media/bootstrap/bootstrap-icons.svg",
+      },
+    },
     navigation: {
       tabs: true,
       tabs_content: true,

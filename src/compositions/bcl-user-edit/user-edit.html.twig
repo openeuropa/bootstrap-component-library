@@ -5,6 +5,8 @@
 </header>
 <main>
   <div class="container mt-5">
+    <h2 class="fw-bold mb-4">Edit my profile</h2>
+    {% include '@oe-bcl/bcl-link/link.html.twig' with data.button only %}
     {% include '@oe-bcl/bcl-user-edit/edit-contents.html.twig' with data.navigation only %}
   </div>
 </main>
