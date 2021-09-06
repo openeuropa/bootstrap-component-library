@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - master
+      - development
 
 jobs:
   audit:
@@ -66,6 +67,25 @@ jobs:
         with:
           alias: preview-${{ github.event.number }}
           publish-dir: "build/${{ steps.extract_branch.outputs.branch }}"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  deploy-development-branch:
+    name: deploy preview for the development branch
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/development'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Package application
+        run: yarn dist
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.1
+        with:
+          alias: dev
+          publish-dir: "build"
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
