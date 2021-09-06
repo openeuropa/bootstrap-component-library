@@ -10,7 +10,9 @@
         {% include '@oe-bcl/bcl-card/card.html.twig' with data.user only %}
       </div>
       <div class="col-12 col-md-2 text-end">
-        {% include '@oe-bcl/bcl-button/button.html.twig' with data.editButton only %}
+        <div class="d-grid d-md-block">
+          {% include '@oe-bcl/bcl-button/button.html.twig' with data.editButton only %}
+        </div>
       </div>
     </div>
     <div class="my-3">

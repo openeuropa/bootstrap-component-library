@@ -112,7 +112,7 @@ module.exports = {
     editButton: {
       label: "Manage profile",
       variant: "secondary",
-      attributes: new drupalAttribute().addClass(["w-100", "mb-3"]),
+      attributes: new drupalAttribute().addClass("mb-3"),
     },
   },
 };
