@@ -3,16 +3,26 @@
 {% block contents %}
   <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
     <div class="row">
-      <div class="col-2">
-        <img src="https://picsum.photos/seed/1002/600/400" alt="profile-image">
-        <label class="btn btn-primary" for="my-file-selector">
-            <input id="my-file-selector" type="file" class="d-none">
-            Button Text Here
-        </label>
+      <div class="offset-3 col-6 offset-lg-0 col-lg-2 mt-5">
+        <img src="https://picsum.photos/seed/1002/400/400" class="img-fluid" alt="profile-image">
+        <div class="mt-3 d-grid">
+          {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with imageUploadInput only %}
+          {% include '@oe-bcl/bcl-button/button.html.twig' with removeImageButton only %}
+        </div>
+      </div>
+      <div class="col-12 col-lg-10">
+        <div class="float-end d-none d-lg-block mt-5">
+          {% include '@oe-bcl/bcl-link/link.html.twig' with profileBack only %}
+        </div>
+        <h3 class="fw-bold mt-5 mb-4">Profile information</h3>
+        {% include '@oe-bcl/bcl-form/form.html.twig' with profileInformation only %}
       </div>
     </div>
   </div>
   <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
+    <div class="float-end d-none d-lg-block">
+      {% include '@oe-bcl/bcl-link/link.html.twig' with profileBack only %}
+    </div>
     <h3 class="fw-bold mt-5 mb-4">Privacy settings</h3>
     {% include '@oe-bcl/bcl-form/form.html.twig' with privacySettings only %}
     <h3 class="fw-bold mt-5 mb-4">Public profile contents</h3>

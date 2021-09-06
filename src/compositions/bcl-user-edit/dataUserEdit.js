@@ -87,21 +87,6 @@ module.exports = {
         ],
       },
     },
-    button: {
-      attributes: new drupalAttribute().addClass([
-        "mb-4",
-        "mt-md-5",
-        "float-md-end",
-        "d-inline-block",
-      ]),
-      label: "Back to my profile",
-      variant: "link",
-      icon: {
-        position: "before",
-        name: "arrow-left",
-        path: "static/media/bootstrap/bootstrap-icons.svg",
-      },
-    },
     navigation: {
       tabs: true,
       tabs_content: true,
@@ -130,6 +115,188 @@ module.exports = {
             .setAttribute("aria-controls", "privacy"),
         },
       ],
+      profileBack: {
+        label: "Back to my profile",
+        icon_position: "before",
+        icon: {
+          name: "arrow-left",
+        },
+      },
+      imageUploadInput: {
+        wrapper_classes: "mb-3",
+        input_type: "file",
+        label: "Change picture",
+        id: "image-profile",
+        toggle: true,
+        toggle_variant: "secondary",
+        attributes: new drupalAttribute().addClass("d-none"),
+      },
+      removeImageButton: {
+        label: "Remove picture",
+        variant: "link",
+      },
+      profileInformation: {
+        attributes: new drupalAttribute()
+          .addClass(["mb-3", "row"])
+          .setAttribute("novalidate", true)
+          .setAttribute("onsubmit", "return false;"),
+        submit: {
+          label: "Save",
+          type: "submit",
+          variant: "primary",
+          wrapper: "mt-4 d-grid d-sm-block",
+        },
+        items: [
+          [
+            {
+              type: "fieldset",
+              legend: "Personal information",
+              fieldset_classes: "col-12 mb-3",
+              legend_classes: "fw-bold mb-0",
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              fieldset_classes: "col-12 col-lg-6",
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "First name",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute("value", "Stefan"),
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "Last name",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute("value", "Mayer"),
+            },
+            {
+              wrapper_classes: "mb-3",
+              type: "select",
+              required: true,
+              label: "Gender",
+              helper_text: "Helper text",
+              options: [
+                { value: 2, label: "Male" },
+                { value: 3, label: "Female" },
+              ],
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "Nationality",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute("value", "German"),
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "date",
+              required: true,
+              label: "Birth date",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute(
+                "value",
+                "1972-01-22"
+              ),
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              fieldset_classes: "col-12 col-lg-6",
+            },
+            {
+              wrapper_classes: "mb-3",
+              type: "textarea",
+              required: true,
+              label: "Bio",
+              helper_text: "Helper text",
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "Country",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute(
+                "value",
+                "Germany"
+              ),
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "City",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute(
+                "value",
+                "Düsseldorf"
+              ),
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              legend: "Professional information",
+              fieldset_classes: "col-md-12 mb-3",
+              legend_classes: "fw-bold mb-0",
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              fieldset_classes: "col-md-6",
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "Organisation",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute(
+                "value",
+                "DG digit"
+              ),
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "Position",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute(
+                "value",
+                "Officer"
+              ),
+            },
+          ],
+          [
+            {
+              type: "fieldset",
+              fieldset_classes: "col-md-6",
+            },
+            {
+              wrapper_classes: "mb-3",
+              input_type: "text",
+              required: true,
+              label: "Working languages",
+              helper_text: "Helper text",
+              attributes: new drupalAttribute().setAttribute(
+                "value",
+                "English, German"
+              ),
+            },
+          ],
+        ],
+      },
       privacySettings: {
         attributes: new drupalAttribute()
           .addClass("mb-3")
@@ -139,7 +306,7 @@ module.exports = {
           label: "Save",
           type: "submit",
           variant: "primary",
-          wrapper: "mt-4 d-grid d-sm-block",
+          wrapper: "mt-2 d-grid d-sm-block",
         },
         items: [
           [
