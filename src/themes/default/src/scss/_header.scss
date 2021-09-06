@@ -1,6 +1,8 @@
-$header-margin: 0.5rem !default;
-
 // header
+$header-background: #004494 !default;
+$header-link-active-background: #003776 !default;
+$header-margin: 1.5rem 0.5rem !default;
+
 .oe-header {
   display: flex;
   align-items: center;
@@ -8,14 +10,39 @@ $header-margin: 0.5rem !default;
   margin: $header-margin;
 }
 
+.oe-header__navbar {
+  background-color: $header-background;
+}
+
+.oe-navbar-header {
+  align-items: flex-end;
+}
+
+.oe-header__navbar .nav-link.active {
+  background-color: $header-link-active-background;
+}
+
+.oe-header__navbar .navbar-nav .nav-link {
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .oe-header__navbar .nav-link.active {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+    margin-top: -#{map-get($spacers, 2)};
+    margin-bottom: -#{map-get($spacers, 2)};
+  }
+}
+
 // language list
-$language-background: $light !default;
-$language-color: $dark !default;
-$language-list-gap: $spacer !default;
-$language-item-background: transparent !default;
-$language-item-color: $link-color !default;
-$language-item-background-hover: transparent !default;
-$language-item-color-hover: $link-hover-color !default;
+$language-background: $header-background !default;
+$language-color: #fff !default;
+$language-list-gap: map-get($spacers, 2) !default;
+$language-item-background: #fff !default;
+$language-item-color: $header-background !default;
+$language-item-background-hover: #ffd617 !default;
+$language-item-color-hover: $dark !default;
 
 .oe-language .modal-content {
   color: $language-color;
@@ -25,27 +52,33 @@ $language-item-color-hover: $link-hover-color !default;
 .oe-language__list {
   display: grid;
   gap: $language-list-gap;
-  margin-bottom: $language-list-gap;
+  margin-bottom: map-get($spacers, 4);
+}
+
+.oe-language__title {
+  margin-bottom: map-get($spacers, 4);
 }
 
 .oe-language__item {
+  padding: map-get($spacers, 2) $spacer;
+  font-weight: $font-weight-bold;
   color: $language-item-color;
+  text-decoration: none; //should be handled at link level
   background-color: $language-item-background;
 
   &:hover,
   &:focus {
     color: $language-item-color-hover;
+    text-decoration: underline;
     background-color: $language-item-background-hover;
   }
 }
 
-$navbar-background: transparent !default;
-$navbar-link-active-background: transparent !default;
-
-.oe-header__navbar {
-  background-color: $navbar-background;
+.oe-language .modal-body {
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
 }
 
-.oe-header__navbar .nav-link.active {
-  background-color: $navbar-link-active-background;
+.oe-language .btn-close {
+  filter: $btn-close-white-filter;
 }

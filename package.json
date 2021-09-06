@@ -11,7 +11,6 @@
   "scripts": {
     "build:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run build",
     "build:theme:default": "lerna --scope \"@openeuropa/bcl-theme-default\" run build",
-    "build:theme:ecl": "lerna --scope \"@openeuropa/bcl-theme-ecl\" run build",
     "build:theme:joinup": "lerna --scope \"@openeuropa/bcl-theme-joinup\" run build",
     "build:storybook": "lerna --scope \"@openeuropa/bcl-storybook-*\" run build",
     "changelog": "lerna-changelog",
@@ -25,7 +24,6 @@
     "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-*\" run dist",
     "dist-project": "run-s clean build:theme:{1} copy:assets  dist-storybook:{1} --",
     "dist-storybook:default": "lerna --scope \"@openeuropa/bcl-storybook-default\" run dist",
-    "dist-storybook:ecl": "lerna --scope \"@openeuropa/bcl-storybook-ecl\" run dist",
     "dist-storybook:joinup": "lerna --scope \"@openeuropa/bcl-storybook-joinup\" run dist",
     "jest": "jest",
     "patch": "patch-package",
@@ -39,7 +37,6 @@
     "server": "browser-sync start --proxy localhost:5000 --files \"assets/*\"",
     "storybook": "start-storybook -s assets/",
     "storybook:default": "start-storybook -p 5000 -c src/themes/default/storybook/.storybook -s assets/ --ci",
-    "storybook:ecl": "start-storybook -p 5000 -c src/themes/ecl/storybook/.storybook -s assets/ --ci",
     "storybook:joinup": "start-storybook -p 5000 -c src/themes/joinup/storybook/.storybook -s assets/ --ci",
     "test": "npm-run-all css-lint twig:snapshots",
     "twig:snapshots": "npm run jest",
