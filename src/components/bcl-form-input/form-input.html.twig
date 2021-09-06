@@ -116,9 +116,6 @@
 {% if _helper_text_id is not empty %}
   {% set attributes = attributes.setAttribute('aria-describedby', _helper_text_id) %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ " " ~ _extra_classes %}
-{% endif %}
 
 {% if _label is not empty %}
   {% set _label_block %}
