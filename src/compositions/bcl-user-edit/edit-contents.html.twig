@@ -11,18 +11,12 @@
         </div>
       </div>
       <div class="col-12 col-lg-10">
-        <div class="float-end d-none d-lg-block mt-5">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with profileBack only %}
-        </div>
         <h3 class="fw-bold mt-5 mb-4">Profile information</h3>
         {% include '@oe-bcl/bcl-form/form.html.twig' with profileInformation only %}
       </div>
     </div>
   </div>
   <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
-    <div class="float-end d-none d-lg-block">
-      {% include '@oe-bcl/bcl-link/link.html.twig' with profileBack only %}
-    </div>
     <h3 class="fw-bold mt-5 mb-4">Privacy settings</h3>
     {% include '@oe-bcl/bcl-form/form.html.twig' with privacySettings only %}
     <h3 class="fw-bold mt-5 mb-4">Public profile contents</h3>
