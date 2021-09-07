@@ -1,6 +1,9 @@
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
+import headerData from "@openeuropa/bcl-data-header/data-ecl.js";
 import search from "@openeuropa/bcl-search/search.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+
+demoData.data.header = headerData;
 
 export default {
   title: "Compositions/Search",

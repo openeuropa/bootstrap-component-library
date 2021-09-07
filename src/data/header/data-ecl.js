@@ -3,7 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   logo: {
-    src: "https://ec.europa.eu/info/sites/info/themes/europa/images/svg/logo/logo--en.svg",
+    src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
     width: "240",
     height: "60",
   },
