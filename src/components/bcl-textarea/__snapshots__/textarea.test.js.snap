@@ -270,3 +270,37 @@ exports[`OE - textarea renders correctly with floating label 1`] = `
   </div>
 </jest>
 `;
+
+exports[`OE - textarea renders correctly with text 1`] = `
+<jest>
+  <label
+    class="form-label"
+    for="example-textarea-1"
+  >
+    Example textarea
+  </label>
+  <textarea
+    class="form-control form-control-sm"
+    id="example-textarea-1"
+    placeholder="Text here"
+    rows="4"
+  >
+    Sample text presented inside
+  </textarea>
+  <div
+    class="invalid-feedback"
+  >
+    Invalid feedback example
+  </div>
+  <div
+    class="valid-feedback"
+  >
+    Valid feedback example
+  </div>
+  <div
+    class="form-text"
+  >
+    An helper text
+  </div>
+</jest>
+`;

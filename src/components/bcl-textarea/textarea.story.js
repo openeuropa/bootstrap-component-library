@@ -17,6 +17,7 @@ const getArgs = (data) => {
     floating: false,
     readonly: false,
     rows: 4,
+    text: "",
     size: "sm",
     invalid_feedback: data.invalid_feedback,
     valid_feedback: data.valid_feedback,
@@ -35,6 +36,15 @@ const getArgTypes = (data) => {
         step: 1,
         defaultValue: { summary: "4" },
         category: "Size",
+      },
+    },
+    text: {
+      type: { name: "string" },
+      description: "Text filled",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
       },
     },
   };
