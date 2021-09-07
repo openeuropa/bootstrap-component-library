@@ -2,10 +2,49 @@ const demoData = require("./data.js");
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  logo: {
-    src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-    width: "240",
-    height: "60",
+  // logo: {
+  //   src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+  //   width: "240",
+  //   height: "60",
+  // },
+  navbar_settings: {
+    attributes: new drupalAttribute().addClass("w-100"),
+    disable_collapse: true,
+    brand: {
+      src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+    },
+    navigation: {
+      items: [
+        {
+          label: "Link",
+          icon_position: "before",
+          icon: {
+            name: "link",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+          }
+        },
+        {
+          label: "Link",
+          icon_position: "before",
+          icon: {
+            name: "link",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+          }
+        },
+        {
+          label: "English",
+          icon_position: "before",
+          icon: {
+            name: "chat-left-dots-fill",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+            size: "xs",
+          }
+        },
+        {
+          label: "Log in",
+        },
+      ],
+    },
   },
   navbar: {
     color_set: "dark",

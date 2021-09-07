@@ -17,6 +17,7 @@
     options: ['sm', 'md', 'lg']
   - color_set (string) (default: 'light')
     options ['light', 'dark']
+  - disable_collapse (boolean) (default: false)
 #}
 {% set _collapse_id = collapse_id|default('') %}
 {% set _background = background|default('') %}
@@ -25,6 +26,7 @@
 {% set _expand = expand|default('lg') %}
 {% set _brand = brand|default({}) %}
 {% set _color_set = color_set|default('light') %}
+{% set _disable_collapse = disable_collapse|default(false) %}
 {% set _classes = ['navbar', 'navbar-expand-' ~ _expand] %}
 {% if _background is not empty %}
   {% set _classes = _classes|merge(['bg-' ~ _background]) %}
@@ -60,6 +62,7 @@
       {%- endif -%}
       </a>
     {% endif %}
+    {% if not _disable_collapse %}
     <button
       class='navbar-toggler'
       type='button'
@@ -72,13 +75,16 @@
       <span class='navbar-toggler-icon'></span>
     </button>
     <div class='collapse navbar-collapse' id='{{ _collapse_id }}'>
+    {% endif %}
       {% if _navigation is not empty %}
         {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with _navigation only %}
       {% endif %}
       {% if _form is not empty %}
         {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
       {% endif %}
+    {% if not _disable_collapse %}
     </div>
+    {% endif %}
   </div>
 </nav>
 

@@ -20,12 +20,15 @@
     - modal
 #}
 
-{% set _logo = {
+{# {% set _logo = {
   src: logo.src|default(''),
   width: logo.width|default(100),
   height: navbar.height|default(60)
-} %}
+} %} #}
+
 {% set _navbar = navbar|default({}) %}
+{% set _navbar_settings = navbar_settings|default({}) %}
+
 {% set _login = {
   link: {
     label: login.link.label|default(''),
@@ -47,26 +50,16 @@
   <!-- header -->
   <div class="container">
     <div class="oe-header">
-      <a class="navbar-brand" href="#">
-        <img src={{ _logo.src }} width={{ _logo.width }} height={{ _logo.height }} />
-      </a>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href={{ _login.link.label }} role="button" data-bs-toggle="modal" data-bs-target="#{{ _login.link.target }}">
-            {{ _login.link.label }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={{ _language.link.label }} role="button" data-bs-toggle="modal" data-bs-target="#{{ _language.link.target }}">
-            {{ _language.link.label }}
-          </a>
-        </li>
-      </ul>
+      {% if _navbar_settings is not empty %}
+        {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar_settings only %}
+      {% endif %}
     </div>
   </div>
 
   <!-- navbar -->
-  {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+  {% if _navbar is not empty %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+  {% endif %}
 </header>
 
 <!-- Modal - Login -->
