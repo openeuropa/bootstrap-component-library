@@ -1,8 +1,10 @@
 {% spaceless %}
 
+{% if data.header is defined %}
 <header>
-  {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with data.navbar only %}
+  {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
 </header>
+{% endif %}
 <main>
   <div class="container mt-5">
     <h2 class="fw-bold mb-3 mb-md-5 d-inline-block">Edit my profile</h2>
