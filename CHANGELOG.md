@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.0 (2021-09-08)
+
+#### :rocket: New Feature
+* [#54](https://github.com/openeuropa/bootstrap-component-library/pull/54) feat(user-edit): Added composition of user edit - Front 3040 ([@tibi2303](https://github.com/tibi2303))
+* [#49](https://github.com/openeuropa/bootstrap-component-library/pull/49) feat(user-listing): Added user listing - Front 2451 ([@tibi2303](https://github.com/tibi2303))
+
+#### :boom: Breaking Change
+* [#51](https://github.com/openeuropa/bootstrap-component-library/pull/51) feat(user-view): Added user view - Front 2901 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#53](https://github.com/openeuropa/bootstrap-component-library/pull/53) feat(form-sidebar): Changed user listing and search sidebar to use form component - FRONT-3056 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#55](https://github.com/openeuropa/bootstrap-component-library/pull/55) chore: Removing ECL, using ecl header as default, updating compositions ([@planctus](https://github.com/planctus))
+* [#52](https://github.com/openeuropa/bootstrap-component-library/pull/52) feat(figma-links): Added Figma links - Front 3042 ([@tibi2303](https://github.com/tibi2303))
+* [#50](https://github.com/openeuropa/bootstrap-component-library/pull/50) chore(deps): Updates 30-08-21 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.6.0 (2021-08-20)
 
 #### :nail_care: Enhancement
