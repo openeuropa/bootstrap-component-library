@@ -2,91 +2,6 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   data: {
-    navbar: {
-      collapse_id: "navbar",
-      attributes: new drupalAttribute(),
-      background: "light",
-      brand: {
-        label: "Navbar",
-        link: "/example.html",
-      },
-      navigation: {
-        navbar: true,
-        attributes: new drupalAttribute().addClass("me-auto"),
-        items: [
-          {
-            label: "I'm a link",
-            path: "#first",
-          },
-          {
-            label: "I'm a link 2",
-            path: "#first",
-          },
-          {
-            label: "I'm a link 3",
-            path: "#first",
-          },
-          {
-            id: "dropdown-1",
-            link: true,
-            dropdown: true,
-            trigger: {
-              label: "Dropdown Toggle",
-              attributes: new drupalAttribute()
-                .addClass("nav-link")
-                .setAttribute("autocomplete", "off"),
-              path: "#",
-            },
-            items: [
-              {
-                label: "I'm a link",
-                path: "/example.html",
-              },
-              {
-                label: "I'm a button",
-                button: true,
-              },
-              {
-                divider: true,
-              },
-              {
-                label: "I'm a disabled button",
-                button: true,
-                disabled: true,
-              },
-              {
-                label: "I'm a active button",
-                button: true,
-                active: true,
-              },
-            ],
-          },
-        ],
-      },
-      form: {
-        attributes: new drupalAttribute().addClass("d-flex"),
-        submit: {
-          wrapper: "ms-2",
-          label: "Search",
-          type: "Search",
-          variant: "primary",
-          attributes: new drupalAttribute(),
-        },
-        items: [
-          [
-            {
-              input_type: "text",
-              required: true,
-              label: "Search",
-              hidden_label: true,
-              placeholder: "Search",
-              id: "inlineFormInputGroupSearch",
-              attributes: new drupalAttribute(),
-            },
-          ],
-        ],
-      },
-    },
     offcanvas: {
       id: "bcl-offcanvas",
       attributes: new drupalAttribute().addClass(
@@ -101,47 +16,108 @@ module.exports = {
         extra_classes: "mb-lg-4",
         id: "offcanvasExampleLabel",
       },
-      search_input: {
-        placeholder: "Search by name or surname",
-        size: "sm",
-        attributes: new drupalAttribute(),
-      },
-      text_input: {
-        placeholder: "Placeholder",
-        size: "sm",
-        attributes: new drupalAttribute(),
-      },
-      single_select: {
-        size: "sm",
-        attributes: new drupalAttribute(),
-        options: [
-          { value: 1, label: "a select option" },
-          { value: 2, label: "another select option" },
-          { value: 3, label: "another option" },
-          { value: 4, label: "last option" },
+      search_form: {
+        attributes: new drupalAttribute()
+          .setAttribute("novalidate", true)
+          .setAttribute("onsubmit", "return false;"),
+        items: [
+          [
+            {
+              classes: "mb-3 pb-3 border-bottom",
+              input_type: "text",
+              placeholder: "Search by name or surname",
+              size: "sm",
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Organisation",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Profile Type",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3 pb-3 border-bottom",
+              label: "Group",
+              type: "select",
+              size: "sm",
+              attributes: new drupalAttribute(),
+              options: [
+                { value: 1, label: "a select option" },
+                { value: 2, label: "another select option" },
+                { value: 3, label: "another option" },
+                { value: 4, label: "last option" },
+              ],
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Option 1",
+              input_type: "text",
+              placeholder: "Placeholder",
+              size: "sm",
+            },
+          ],
+          [
+            {
+              classes: "mb-3",
+              label: "Option 2",
+              input_type: "text",
+              placeholder: "Placeholder",
+              size: "sm",
+            },
+          ],
         ],
-      },
-      button_primary: {
-        label: "Refine",
-        type: "submit",
-        variant: "primary",
-        attributes: new drupalAttribute().addClass("me-2"),
-      },
-      button_secondary: {
-        label: "Clear",
-        type: "submit",
-        variant: "secondary",
-        attributes: new drupalAttribute(),
+        submit: {
+          multiple: true,
+          wrapper: "mt-4",
+          items: [
+            {
+              label: "Refine",
+              type: "submit",
+              variant: "primary",
+              attributes: new drupalAttribute().addClass("me-2"),
+            },
+            {
+              label: "Clear",
+              type: "submit",
+              variant: "secondary",
+            },
+          ],
+        },
       },
     },
     cards: [
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -155,16 +131,6 @@ module.exports = {
           content: "Stefan Mayer",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -177,10 +143,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -194,16 +158,6 @@ module.exports = {
           content: "Adjur Tichar",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -216,10 +170,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -235,16 +187,6 @@ module.exports = {
         },
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=3",
@@ -255,10 +197,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -272,16 +212,6 @@ module.exports = {
           content: "Daniel Cardoso Rocha",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -294,10 +224,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -311,16 +239,6 @@ module.exports = {
           content: "Aurelia Panicucci",
           classes: "mb-3",
         },
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
@@ -333,10 +251,8 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col: 2,
-          left_col_responsive: "md",
-          right_col: 10,
-          right_col_responsive: "md",
+          left_col_classes: "col-md-2",
+          right_col_classes: "col-md-10",
           gutter: 2,
         },
         badges: [
@@ -352,16 +268,6 @@ module.exports = {
         },
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        card_tags: [
-          {
-            label: "Organisation",
-            classes: "text-muted me-2",
-          },
-          {
-            label: "Position",
-            classes: "text-muted me-2",
-          },
-        ],
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
         image: {
           path: "https://picsum.photos/200/200?random=6",

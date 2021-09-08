@@ -15,6 +15,7 @@
   - "helper_text" (string) (default: '')
   - "helper_text_id" (string) (default: '')
   - "hidden_label" (boolean) (default: false)
+  - "text" (string) (default: '')
   - "floating" (boolean) (default: false)
   - "horizontal" (boolean) (default: false)
   - "horizontal_class" (string) (default: col-sm-10)
@@ -35,6 +36,7 @@
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
 {% set _hidden_label = hidden_label|default(false) %}
+{% set _text = text|default('') %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_class = horizontal_class|default('col-sm-10') %}
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
@@ -116,6 +118,7 @@
   <textarea
     {{ attributes }}
   >
+  {{- _text -}}
   </textarea>
 {% if _horizontal and floating == false %}
 </div>

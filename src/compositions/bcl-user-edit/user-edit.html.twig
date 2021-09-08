@@ -1,0 +1,18 @@
+{% spaceless %}
+
+{% if data.header is defined %}
+<header>
+  {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
+</header>
+{% endif %}
+<main>
+  <div class="container mt-5">
+    <h2 class="fw-bold mb-3 mb-md-5 d-inline-block">Edit my profile</h2>
+    <div class="mb-4 float-lg-end">
+      {% include '@oe-bcl/bcl-link/link.html.twig' with data.navigation.profileBack only %}
+    </div>
+    {% include '@oe-bcl/bcl-user-edit/edit-contents.html.twig' with data.navigation only %}
+  </div>
+</main>
+
+{% endspaceless %}

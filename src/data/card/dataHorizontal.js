@@ -3,9 +3,9 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   horizontal: true,
   horizontal_grid: {
-    left_col: 4,
-    right_col: 8,
-    gutter: 0,
+    left_col_classes: "col-4",
+    right_col_classes: "col-8",
+    gutter: "0",
   },
   title: {
     content: "Title card",

@@ -2,160 +2,6 @@
 
 exports[`OE - Search renders correctly 1`] = `
 <jest>
-  <header>
-    <nav
-      class="navbar navbar-expand-lg bg-light navbar-light"
-    >
-      <div
-        class="container"
-      >
-        <a
-          class="navbar-brand"
-          href="/example.html"
-        >
-          Navbar
-        </a>
-        <button
-          aria-controls="navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbar"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbar"
-        >
-          <ul
-            class="me-auto navbar-nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="#first"
-              >
-                I'm a link
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="#first"
-              >
-                I'm a link 2
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="#first"
-              >
-                I'm a link 3
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
-                aria-expanded="false"
-                autocomplete="off"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                id="dropdown-1"
-                role="button"
-              >
-                Dropdown Toggle
-              </a>
-              <ul
-                aria-labelledby="dropdown-1"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    I'm a link
-                  </a>
-                </li>
-                <li>
-                  <button
-                    class="dropdown-item"
-                    type="button"
-                  >
-                    I'm a button
-                  </button>
-                </li>
-                <li>
-                  <hr
-                    class="dropdown-divider"
-                  />
-                </li>
-                <li>
-                  <button
-                    aria-disabled="true"
-                    class="dropdown-item"
-                    disabled="true"
-                    type="button"
-                  >
-                    I'm a disabled button
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="dropdown-item active"
-                    type="button"
-                  >
-                    I'm a active button
-                  </button>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex"
-          >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
-            >
-              Search
-            </label>
-            <input
-              class="form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
-            <div
-              class="ms-2"
-            >
-              <button
-                class="btn btn-primary btn-md"
-                type="Search"
-              >
-                Search
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
   <main>
     <div
       class="container mt-5"
@@ -191,147 +37,172 @@ exports[`OE - Search renders correctly 1`] = `
             <div
               class="offcanvas-body p-lg-0"
             >
-              <input
-                class="form-control form-control-sm"
-                placeholder="Keyword"
-                type="text"
-              />
-              <p
-                class="mt-4 mb-3"
+              <form
+                novalidate="true"
+                onsubmit="return false;"
               >
-                Content types
-              </p>
-              <select
-                class="form-select form-select-sm"
-              >
-                <option
-                  value="1"
+                <div
+                  class="mb-3"
                 >
-                  a select option
-                </option>
-                <option
-                  value="2"
+                  <input
+                    class="form-control form-control-sm"
+                    placeholder="Keyword"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="mb-3"
                 >
-                  another select option
-                </option>
-                <option
-                  value="3"
+                  <label
+                    class="form-label"
+                  >
+                    Content types
+                  </label>
+                  <select
+                    class="form-select form-select-sm"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      the selected option
+                    </option>
+                  </select>
+                </div>
+                <div
+                  class="mb-3"
                 >
-                  another option
-                </option>
-                <option
-                  value="4"
+                  <label
+                    class="form-label"
+                  >
+                    Filter A
+                  </label>
+                  <select
+                    class="multi-select"
+                    multiple="true"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      the selected option
+                    </option>
+                  </select>
+                </div>
+                <fieldset
+                  class="mb-3"
                 >
-                  last option
-                </option>
-                <option
-                  selected=""
-                  value=""
+                  <legend
+                    class="col-form-label"
+                  >
+                    Filter B
+                  </legend>
+                  <div
+                    class="col-sm-10"
+                  >
+                    <div
+                      class="form-check"
+                    >
+                      <input
+                        checked="true"
+                        class="form-check-input"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                      >
+                        Checked checkbox
+                      </label>
+                    </div>
+                    <div
+                      class="form-check"
+                    >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                      >
+                        Default checkbox
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset
+                  class="mb-3"
                 >
-                  the selected option
-                </option>
-              </select>
-              <p
-                class="mt-4 mb-3"
-              >
-                Filter A
-              </p>
-              <select
-                class="multi-select"
-                multiple="true"
-              >
-                <option
-                  value="1"
+                  <legend
+                    class="col-form-label"
+                  >
+                    Filter C
+                  </legend>
+                  <input
+                    class="mb-2 form-control form-control-sm"
+                    type="date"
+                  />
+                  <input
+                    class="form-control form-control-sm"
+                    type="date"
+                  />
+                </fieldset>
+                <div
+                  class="mt-4"
                 >
-                  a select option
-                </option>
-                <option
-                  value="2"
-                >
-                  another select option
-                </option>
-                <option
-                  value="3"
-                >
-                  another option
-                </option>
-                <option
-                  value="4"
-                >
-                  last option
-                </option>
-                <option
-                  selected=""
-                  value=""
-                >
-                  the selected option
-                </option>
-              </select>
-              <p
-                class="mt-4 mb-3"
-              >
-                Filter B
-              </p>
-              <div
-                class="form-check"
-              >
-                <input
-                  checked="true"
-                  class="form-check-input"
-                  id="first-check"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="first-check"
-                >
-                  Checked checkbox
-                </label>
-              </div>
-              <div
-                class="form-check"
-              >
-                <input
-                  class="form-check-input"
-                  id="second-check"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="second-check"
-                >
-                  Default checkbox
-                </label>
-              </div>
-              <p
-                class="mt-4 mb-3"
-              >
-                Filter C
-              </p>
-              <input
-                class="mb-2 form-control form-control-sm"
-                type="date"
-              />
-              <input
-                class="form-control form-control-sm"
-                type="date"
-              />
-              <div
-                class="mt-4"
-              >
-                <button
-                  class="me-2 btn btn-primary btn-md"
-                  type="submit"
-                >
-                  Refine
-                </button>
-                <button
-                  class="btn btn-secondary btn-md"
-                  type="submit"
-                >
-                  Clear
-                </button>
-              </div>
+                  <button
+                    class="me-2 btn btn-primary btn-md"
+                    type="submit"
+                  >
+                    Refine
+                  </button>
+                  <button
+                    class="btn btn-secondary btn-md"
+                    type="submit"
+                  >
+                    Clear
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -355,52 +226,52 @@ exports[`OE - Search renders correctly 1`] = `
             </svg>
           </button>
           <div
-            class="float-end d-none d-md-block"
+            class="mb-3 clearfix"
           >
-            <label
-              class="form-label"
+            <div
+              class="float-end d-none d-md-block"
             >
-              Sort by
-            </label>
-            <select
-              class="mb-4 form-select form-select-sm"
+              <label
+                class="form-label"
+              >
+                Sort by
+              </label>
+              <select
+                class="mb-4 form-select form-select-sm"
+              >
+                <option
+                  value="1"
+                >
+                  a select option
+                </option>
+                <option
+                  value="2"
+                >
+                  another select option
+                </option>
+                <option
+                  value="3"
+                >
+                  another option
+                </option>
+                <option
+                  value="4"
+                >
+                  last option
+                </option>
+                <option
+                  selected=""
+                  value=""
+                >
+                  A-Z
+                </option>
+              </select>
+            </div>
+            <h4
+              class="mb-4"
             >
-              <option
-                value="1"
-              >
-                a select option
-              </option>
-              <option
-                value="2"
-              >
-                another select option
-              </option>
-              <option
-                value="3"
-              >
-                another option
-              </option>
-              <option
-                value="4"
-              >
-                last option
-              </option>
-              <option
-                selected=""
-                value=""
-              >
-                A-Z
-              </option>
-            </select>
-          </div>
-          <h4
-            class="mb-3 mb-md-4"
-          >
-            Search results (18)
-          </h4>
-          <div
-            class="mb-4"
-          >
+              Search results (18)
+            </h4>
             <span
               class="me-2 badge bg-primary"
             >

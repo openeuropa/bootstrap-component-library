@@ -126,19 +126,21 @@
 {% endif %}
 {% if _tabs_content %}
 <div class="tab-content">
-  {% if _items is not empty and _items is iterable %}
-    {% for _item in _items %}
-      {% if _item.content is not empty %}
-        {% set _content_class = 'tab-pane fade' %}
-        {% if _item.active %}
-          {% set _content_class = _content_class ~ ' show active' %}
+  {%- block contents -%}
+    {% if _items is not empty and _items is iterable %}
+      {% for _item in _items %}
+        {% if _item.content is not empty %}
+          {% set _content_class = 'tab-pane fade' %}
+          {% if _item.active %}
+            {% set _content_class = _content_class ~ ' show active' %}
+          {% endif %}
+          <div class="{{ _content_class }}" id="{{ _item.target }}" role="tabpanel" aria-labelledby="{{ _item.id }}">
+            {{- _item.content -}}
+          </div>
         {% endif %}
-        <div class="{{ _content_class }}" id="{{ _item.target }}" role="tabpanel" aria-labelledby="{{ _item.id }}">
-          {{- _item.content -}}
-        </div>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+      {% endfor %}
+    {% endif %}
+  {%- endblock -%}
 </div>
 {% endif %}
 
