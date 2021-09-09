@@ -77,6 +77,20 @@ const getArgTypes = (data) => {
   };
 };
 
+const initToast = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var options = { autohide: false };
+      var toastList = toastElList.map(function (toastEl) {
+        var toast = new bootstrap.Toast(toastEl, options);
+        toast.show();
+      });
+    </script>
+  ${demo}`;
+};
+
 const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
@@ -111,9 +125,11 @@ export const Toast = (args) => toasts(applyArgs(demoSingle, args));
 Toast.storyName = "Single toast";
 Toast.args = getArgs(demoSingle);
 Toast.argTypes = getArgTypes(demoSingle);
+Toast.decorators = [initToast];
 
 export const Toasts = (args) => toasts(applyArgs(demoMultiple, args));
 
 Toasts.storyName = "Multiple toasts";
 Toasts.args = getArgs(demoMultiple);
 Toasts.argTypes = getArgTypes(demoMultiple);
+Toasts.decorators = [initToast];

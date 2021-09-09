@@ -86,6 +86,20 @@ const getArgTypes = (data) => {
   };
 };
 
+const initOffcanvas = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var offcanvasElementList = [].slice.call(
+        document.querySelectorAll(".offcanvas")
+      );
+      var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+        var offCanvas = new bootstrap.Offcanvas(offcanvasEl);
+      });
+    </script>
+  ${demo}`;
+};
+
 const offCanvasTrigger = (story) => {
   const demo = story();
   return `<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -140,4 +154,4 @@ export const Default = (args) => offCanvas(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-Default.decorators = [offCanvasTrigger];
+Default.decorators = [offCanvasTrigger, initOffcanvas];
