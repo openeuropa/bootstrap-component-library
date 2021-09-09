@@ -7,6 +7,7 @@ demoData.data.header = headerData;
 
 export default {
   title: "Compositions/Search",
+  decoratos: [scriptInit],
   parameters: {
     design: [
       {
@@ -51,4 +52,3 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
-Default.decorators = [scriptInit];

@@ -128,7 +128,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Offcanvas",
-  decorators: [withDesign],
+  decorators: [withDesign, initOffcanvas],
   parameters: {
     design: [
       {
@@ -154,4 +154,4 @@ export const Default = (args) => offCanvas(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-Default.decorators = [offCanvasTrigger, initOffcanvas];
+Default.decorators = [offCanvasTrigger];

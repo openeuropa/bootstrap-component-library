@@ -27,7 +27,7 @@ const initScrollspy = (story) => {
 
 export default {
   title: "Components/Scrollspy",
-  decorators: [withDesign],
+  decorators: [withDesign, initScrollspy],
   parameters: {
     controls: { disable: true },
     viewport: {
@@ -45,8 +45,6 @@ export default {
 
 export const Navigation = () => navScrollspy;
 Navigation.storyName = "Navigation";
-Navigation.decorators = [initScrollspy];
 
 export const ListGroup = () => groupScrollspy;
 ListGroup.storyName = "List Group";
-ListGroup.decorators = [initScrollspy];

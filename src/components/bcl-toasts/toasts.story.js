@@ -98,7 +98,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Toasts",
-  decorators: [withDesign],
+  decorators: [withDesign, initToast],
   parameters: {
     design: [
       {
@@ -125,11 +125,9 @@ export const Toast = (args) => toasts(applyArgs(demoSingle, args));
 Toast.storyName = "Single toast";
 Toast.args = getArgs(demoSingle);
 Toast.argTypes = getArgTypes(demoSingle);
-Toast.decorators = [initToast];
 
 export const Toasts = (args) => toasts(applyArgs(demoMultiple, args));
 
 Toasts.storyName = "Multiple toasts";
 Toasts.args = getArgs(demoMultiple);
 Toasts.argTypes = getArgTypes(demoMultiple);
-Toasts.decorators = [initToast];
