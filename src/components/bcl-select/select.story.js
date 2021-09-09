@@ -57,6 +57,21 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
+const initMultiselect = (story) => {
+  const demo = story();
+  return `
+    <script>
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
 // Stories
 export default {
   title: "Components/Forms/Select",
@@ -91,6 +106,7 @@ export const Multiselect = (args) => select(applyArgs(demoMultiData, args));
 
 Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
 Multiselect.args = getArgs(demoMultiData, "multiselect");
+Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
   design: [
     {
