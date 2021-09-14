@@ -5,7 +5,7 @@ const outputFolder = path.resolve(__dirname);
 module.exports = {
   copy: [
     {
-      from: ["../../../{components,compositions,paragraphs}/**/*.story.js"],
+      from: ["../../../{components,compositions}/**/*.story.js"],
       to: path.resolve(outputFolder, "bcl-stories"),
       options: { up: true },
     },
