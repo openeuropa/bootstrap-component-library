@@ -42,6 +42,7 @@ module.exports = {
                   icon_position: "before",
                   icon: {
                     name: "facebook",
+                    size: "xs",
                   },
                 },
                 {
@@ -49,6 +50,7 @@ module.exports = {
                   icon_position: "before",
                   icon: {
                     name: "twitter",
+                    size: "xs",
                   },
                 },
                 {
@@ -56,6 +58,7 @@ module.exports = {
                   icon_position: "before",
                   icon: {
                     name: "linkedin",
+                    size: "xs",
                   },
                 },
               ],
