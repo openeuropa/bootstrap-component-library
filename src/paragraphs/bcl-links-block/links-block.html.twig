@@ -1,0 +1,29 @@
+{% spaceless %}
+
+{# Parameters:
+  - title
+  - links
+    - url
+    - link-text
+#}
+
+{% set _title = title|default('') %}
+{% set _links = links|default([])%}
+
+<div class="bg-light">
+HEY
+  {% if _title is not empty %}
+    <h5 class="">{{ _title }}</h5>
+  {% endif %}
+  {% if _links is not empty and _links is iterable %}
+    <ul class="">
+      {% for _link in _links %}
+        <li class="">
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
+{% endspaceless %}
