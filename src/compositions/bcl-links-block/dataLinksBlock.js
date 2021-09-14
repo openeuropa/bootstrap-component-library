@@ -5,16 +5,16 @@ module.exports = {
     title: "More information",
     links: [
       {
-        url: "#",
-        link_text: "European Commission",
+        path: "#",
+        label: "European Commission",
       },
       {
-        url: "#",
-        link_text: "Priorities",
+        path: "#",
+        label: "Priorities",
       },
       {
-        url: "#",
-        link_text: "Jobs, Growth and Investment",
+        path: "#",
+        label: "Jobs, Growth and Investment",
       },
     ],
   },

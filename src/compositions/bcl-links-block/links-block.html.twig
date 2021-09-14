@@ -3,22 +3,22 @@
 {# Parameters:
   - title
   - links
-    - url
-    - link-text
+    - path
+    - label
 #}
 
-{% set _title = title|default('') %}
-{% set _links = links|default([])%}
+{% set _title = data.title|default('') %}
+{% set _links = data.links|default([])%}
 
-<div class="bg-light">
-HEY
+<div class="bg-light p-3">
   {% if _title is not empty %}
-    <h5 class="">{{ _title }}</h5>
+    <p class="fs-5 fw-bold mb-2">{{ _title }}</p>
+    <hr class="divider"/>
   {% endif %}
   {% if _links is not empty and _links is iterable %}
-    <ul class="">
+    <ul class="ps-0 mb-0">
       {% for _link in _links %}
-        <li class="">
+        <li class="list-unstyled pb-2">
           {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
         </li>
       {% endfor %}

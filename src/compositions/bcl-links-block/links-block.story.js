@@ -2,7 +2,7 @@ import demoData from "@openeuropa/bcl-links-block/dataLinksBlock.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 export default {
-  title: "Paragraphs/Links Block",
+  title: "Compositions/Links Block",
   parameters: {
     design: [
       {
