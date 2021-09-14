@@ -1,25 +1,52 @@
 {% spaceless %}
 
 {# Parameters:
-  - title
-  - links
-    - path
-    - label
+  - title (object) (default: {}) (optional) format: {
+    label: (string) (default: '')
+    classes: (string) (default: '')
+    tag: (string) (default: '')
+  }
+  - links (array of objects) (default: []) format: [
+    path: (string) (default: '#')
+    label: (string) (default: '')
+  ]
 #}
 
-{% set _title = data.title|default('') %}
-{% set _links = data.links|default([])%}
+{% set _title = title|default({}) %}
+{% set _links = links|default([])%}
+
+{% if _title_attributes is empty %}
+  {% set _title_attributes = create_attribute() %}
+{% endif %}
+
+{% set _classes = ['fs-5', 'fw-bold', 'mb-2'] %}
+
+{% if title.classes is not empty %}
+  {% set _classes = _classes|merge([title.classes]) %}
+{% endif %}
+
+{% if title.tag is not empty %}
+  {% set _title_tag = _title.tag %}
+{% else %}
+  {% set _title_tag = 'p' %}
+{% endif %}
+
+{% set _title_attributes = _title_attributes.addClass(_classes) %}
 
 <div class="bg-light p-3">
-  {% if _title is not empty %}
-    <p class="fs-5 fw-bold mb-2">{{ _title }}</p>
+  {% if _title.label is not empty %}
+    <{{ _title_tag }} {{ _title_attributes }}>{{ _title.label }}</{{ _title_tag }}>
     <hr class="divider"/>
   {% endif %}
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">
       {% for _link in _links %}
-        <li class="list-unstyled pb-2">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+        <li class="list-unstyled">
+          {% include '@oe-bcl/bcl-link/link.html.twig' with {
+            path: _link.path,
+            label: _link.label,
+            attributes: create_attribute().addClass(['pb-2', 'd-inline-block'])
+          } only %}
         </li>
       {% endfor %}
     </ul>
