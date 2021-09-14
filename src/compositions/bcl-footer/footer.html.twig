@@ -1,0 +1,83 @@
+{% spaceless %}
+
+{# Parameters:
+  - rows (default: []) - Array of predefined objects
+    format: [
+      {
+        extra_classes: ""
+        cols: [
+          {
+            classes: "",
+            items: [
+              {
+                type: "image",
+                path: "",
+                alt: "",
+                classes: ""
+              },
+              {
+                type: "content",
+                content: "",
+              },
+              {
+                type: "links",
+                links: [
+                  {
+                    link component object
+                  },
+                  ...
+                ],
+              },
+            ]
+          }
+        ]
+      },
+      ...
+    ]
+#}
+
+{% set _rows = rows|default([]) %}
+
+<footer class="oe-footer">
+  <div class="container">
+    {% if rows is not empty and rows is iterable %}
+      {% for row in _rows %}
+        <div class="{{ row.extra_classes ? ' ' ~ row.extra_classes ~ ' row' : 'row' }}">
+          {% for col in row.cols %}
+            <div class="{{ col.classes }}">
+              {% if col.items is not empty and col.items is iterable %}
+                {% for item in col.items %}
+                  {% if item.type == 'image' %}
+                    <img
+                      {% if item.path is not empty %}
+                        src="{{ item.path }}"
+                      {% endif %}
+                      {% if item.alt is not empty %}
+                        alt="{{ item.alt }}"
+                      {% endif %}
+                      {% if item.classes is not empty %}
+                        class="{{ item.classes }}"
+                      {% endif %}
+                    >
+                  {% endif %}
+                  {% if item.type == 'content' %}
+                    {{ item.content }}
+                  {% endif %}
+                  {% if item.type == 'links' %}
+                    {% for link in item.links %}
+                      {% include '@oe-bcl/bcl-link/link.html.twig' with link|merge({
+                        attributes: create_attribute().addClass(['d-block', 'text-decoration-none'])
+                      }) only %}
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</footer>
+
+{% endspaceless %}
