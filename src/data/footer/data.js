@@ -1,6 +1,7 @@
 module.exports = {
   rows: [
     {
+      extra_classes: "pt-4 pt-lg-5",
       cols: [
         {
           classes: "col-12 col-lg-4",
@@ -13,7 +14,7 @@ module.exports = {
           ],
         },
         {
-          classes: "col-12 col-lg-4",
+          classes: "col-12 col-lg-4 pb-4 pb-lg-0",
           items: [
             {
               type: "content",
@@ -91,10 +92,10 @@ module.exports = {
       ],
     },
     {
-      extra_classes: "pt-5 border-top mt-5",
+      extra_classes: "pt-4 border-top mt-4 pt-lg-5 mt-lg-5 pb-4",
       cols: [
         {
-          classes: "col-12 col-lg-4",
+          classes: "col-12 col-lg-4 pb-4",
           items: [
             {
               type: "image",
@@ -167,7 +168,7 @@ module.exports = {
             {
               type: "content",
               content:
-                "<p class='fw-bold border-bottom pb-2'>EU institutions</p>",
+                "<p class='fw-bold border-bottom pb-2 pt-4 pt-lg-0  '>EU institutions</p>",
             },
             {
               type: "links",

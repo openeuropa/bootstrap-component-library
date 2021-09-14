@@ -42,7 +42,7 @@
   <div class="container">
     {% if rows is not empty and rows is iterable %}
       {% for row in _rows %}
-        <div class="{{ row.extra_classes ? ' ' ~ row.extra_classes ~ ' row' : 'row' }}">
+        <div class="{{ row.extra_classes ? row.extra_classes ~ ' row' : 'row' }}">
           {% for col in row.cols %}
             <div class="{{ col.classes }}">
               {% if col.items is not empty and col.items is iterable %}
