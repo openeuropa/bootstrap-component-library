@@ -1,11 +1,8 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: {
-    label: "More information",
-    classes: "",
-    tag: "h3",
-  },
+  variant: "gray",
+  title: "More information",
   links: [
     {
       path: "#",

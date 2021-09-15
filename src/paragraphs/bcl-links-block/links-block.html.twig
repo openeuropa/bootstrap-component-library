@@ -1,0 +1,51 @@
+{% spaceless %}
+
+{# Parameters:
+  - variant: (string) (default: "gray")
+    - options ["gray", "white"]
+  - title: (string) (default: "")
+  - links (array of objects) (default: []) format: [
+    path: (string) (default: "#")
+    label: (string) (default: "")
+  ]
+#}
+
+{% set _variant = variant|default("gray") %}
+{% set _title = title|default("") %}
+{% set _links = links|default([])%}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set _classes = ["p-3"] %}
+
+{% if _variant == "gray" %}
+  {% set _classes = _classes|merge(["bg-light"]) %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
+
+<div 
+  {{ attributes }}
+>
+  {% if _title is not empty %}
+    <h5 class="fs-5 fw-bold mb-2">{{ _title }}</h5>
+    <hr/>
+  {% endif %}
+  {% if _links is not empty and _links is iterable %}
+    <ul class="ps-0 mb-0">
+      {% for _link in _links %}
+        <li class="list-unstyled">
+          {% include "@oe-bcl/bcl-link/link.html.twig" with {
+            path: _link.path,
+            label: _link.label,
+            attributes: create_attribute().addClass(["pb-2", "d-inline-block"])
+          } only %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
+{% endspaceless %}
