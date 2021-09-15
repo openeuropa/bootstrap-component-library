@@ -37,5 +37,3 @@ const correctPaths = (data) => {
 };
 
 export const Footer = () => footer(correctPaths(footerData));
-
-Footer.storyName = "Default";

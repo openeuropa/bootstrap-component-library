@@ -1,44 +1,45 @@
 {% spaceless %}
 
 {# Parameters:
-  - rows (default: []) - Array of predefined objects
-    format: [
-      {
-        extra_classes: ""
-        cols: [
-          {
-            classes: "",
-            items: [
-              {
-                type: "image",
+  - rows (default: []) - Array of predefined objects - format: 
+  [
+    {
+      extra_classes: ""
+      cols: [
+        {
+          classes: "",
+          items: [
+            {
+              type: "links" or "content" or "image",
+              -- for type "links" --
+                links: Array of links object,
+
+              -- for type "image" --
                 path: "",
                 alt: "",
                 classes: ""
-              },
-              {
-                type: "content",
+
+              -- for type "content" --
                 content: "",
-              },
-              {
-                type: "links",
-                links: [
-                  {
-                    link component object
-                  },
-                  ...
-                ],
-              },
-            ]
-          }
-        ]
-      },
-      ...
-    ]
+            },
+          ]
+        }
+      ]
+    },
+    ...
+  ]
 #}
 
 {% set _rows = rows|default([]) %}
 
-<footer class="oe-footer">
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% set attributes = attributes.addClass('oe-footer') %}
+
+<footer
+  {{ attributes }}
+>
   <div class="container">
     {% if rows is not empty and rows is iterable %}
       {% for row in _rows %}

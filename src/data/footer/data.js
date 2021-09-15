@@ -140,7 +140,7 @@ module.exports = {
             {
               type: "content",
               content:
-                "<p>Search for <a href='#'>EU social media channels</a></p>",
+                "<p>Search for <a href='#' class='text-decoration-none'>EU social media channels</a></p>",
             },
             {
               type: "content",
