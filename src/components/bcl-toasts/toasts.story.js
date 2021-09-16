@@ -77,6 +77,20 @@ const getArgTypes = (data) => {
   };
 };
 
+const initToast = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var options = { autohide: false };
+      var toastList = toastElList.map(function (toastEl) {
+        var toast = new bootstrap.Toast(toastEl, options);
+        toast.show();
+      });
+    </script>
+  ${demo}`;
+};
+
 const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
@@ -84,7 +98,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Toasts",
-  decorators: [withDesign],
+  decorators: [withDesign, initToast],
   parameters: {
     design: [
       {
