@@ -9,8 +9,8 @@ const getArgs = (data) => {
   return {
     role: data.role || "group",
     aria_label: "",
-    toolbar: data.toolbar,
-    toolbar_aria_label: data.toolbar_aria_label || '',
+    toolbar: data.toolbar || false,
+    toolbar_aria_label: data.toolbar_aria_label || "",
     size: "md",
     vertical: false,
   };
