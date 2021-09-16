@@ -11,4 +11,16 @@ describe("OE - Links block", () => {
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
+  test("renders correctly with horizontal", () => {
+    expect.assertions(1);
+    return expect(
+      render({ ...demoData, direction: "horizontal" })
+    ).resolves.toMatchSnapshot();
+  });
+  test("renders correctly with white background", () => {
+    expect.assertions(1);
+    return expect(
+      render({ ...demoData, variant: "white" })
+    ).resolves.toMatchSnapshot();
+  });
 });

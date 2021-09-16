@@ -21,15 +21,13 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if list_attributes is empty %}
-  {% set list_attributes = create_attribute() %}
-{% endif %}
-
-{% set _classes = ["p-3"] %}
+{% set _classes = [] %}
 {% set _list_classes = ["list-unstyled"] %}
 
 {% if _variant == "gray" %}
-  {% set _classes = _classes|merge(["bg-light"]) %}
+  {% set _classes = _classes|merge(["bg-light", "p-3"]) %}
+{% elseif _variant == "white" %}
+  {% set _classes = _classes|merge(["bg-white"]) %}
 {% endif %}
 
 {% if _direction == "horizontal" %}
@@ -37,28 +35,26 @@
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
-{% set list_attributes = list_attributes.addClass(_list_classes) %}
 
 <div 
   {{ attributes }}
 >
   {% if _title is not empty %}
-    <h5 class="fs-5 fw-bold mb-2">{{ _title }}</h5>
-    <hr/>
+    <h5 class="fs-5 fw-bold pb-2 border-bottom">{{ _title }}</h5>
   {% endif %}
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">
       {% for _link in _links %}
         {% if loop.last == false %}
-          {% set list_attributes = list_attributes.addClass(["me-4"]) %}
+          {% set _list_classes = _list_classes|merge(["me-4"]) %}
         {% endif %}
         <li 
-          {{ list_attributes }}
+          {{ create_attribute().addClass(_list_classes) }}
         >
           {% include "@oe-bcl/bcl-link/link.html.twig" with {
             path: _link.path,
             label: _link.label,
-            attributes: create_attribute().addClass(["pb-2", "d-inline-block"])
+            attributes: create_attribute().addClass(["pb-3", "d-inline-block"])
           } only %}
         </li>
       {% endfor %}

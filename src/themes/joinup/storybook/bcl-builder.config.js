@@ -8,7 +8,7 @@ const excludePaths = [];
 if (stories.length) {
   stories.forEach((story) => {
     excludePaths.push(
-      `../../../{components,compositions,paragraphs}/**/${story}.story.js`
+      `../../../{components,compositions}/**/${story}.story.js`
     );
   });
 }
@@ -16,7 +16,7 @@ if (stories.length) {
 module.exports = {
   copy: [
     {
-      from: ["../../../{components,compositions,paragraphs}/**/*.story.js"],
+      from: ["../../../{components,compositions}/**/*.story.js"],
       to: path.resolve(outputFolder, "bcl-stories"),
       options: { up: true, exclude: excludePaths },
     },

@@ -6,15 +6,15 @@ module.exports = {
   title: "More information",
   links: [
     {
-      path: "#",
+      path: "/example.html",
       label: "European Commission",
     },
     {
-      path: "#",
+      path: "/example.html",
       label: "Priorities",
     },
     {
-      path: "#",
+      path: "/example.html",
       label: "Jobs, Growth and Investment",
     },
   ],
