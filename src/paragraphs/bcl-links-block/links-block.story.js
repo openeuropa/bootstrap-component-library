@@ -4,6 +4,7 @@ import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 const getArgs = (data) => {
   return {
     variant: data.variant || "gray",
+    direction: data.direction || "vertical",
   };
 };
 
@@ -11,11 +12,25 @@ const getArgTypes = (data) => {
   return {
     variant: {
       type: { name: "select" },
-      options: ["white", "gray"],
       description: "Variant of the background",
+      options: ["gray", "white"],
+      control: {
+        type: "inline-radio",
+      },
       table: {
-        type: { summary: "string" },
         defaultValue: { summary: "gray" },
+        category: "Style",
+      },
+    },
+    direction: {
+      type: { name: "select" },
+      description: "Direction in which the links are displayed",
+      options: ["vertical", "horizontal"],
+      control: {
+        type: "inline-radio",
+      },
+      table: {
+        defaultValue: { summary: "vertical" },
         category: "Style",
       },
     },

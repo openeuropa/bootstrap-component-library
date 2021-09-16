@@ -3,6 +3,8 @@
 {# Parameters:
   - variant: (string) (default: "gray")
     - options ["gray", "white"]
+  - direction: (string) (default: "vertical")
+    - options ["vertical", "horizontal"]
   - title: (string) (default: "")
   - links (array of objects) (default: []) format: [
     path: (string) (default: "#")
@@ -11,6 +13,7 @@
 #}
 
 {% set _variant = variant|default("gray") %}
+{% set _direction = direction|default("vertical") %}
 {% set _title = title|default("") %}
 {% set _links = links|default([])%}
 
@@ -18,13 +21,23 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% if list_attributes is empty %}
+  {% set list_attributes = create_attribute() %}
+{% endif %}
+
 {% set _classes = ["p-3"] %}
+{% set _list_classes = ["list-unstyled"] %}
 
 {% if _variant == "gray" %}
   {% set _classes = _classes|merge(["bg-light"]) %}
 {% endif %}
 
+{% if _direction == "horizontal" %}
+  {% set _list_classes = _list_classes|merge(["d-inline"]) %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
+{% set list_attributes = list_attributes.addClass(_list_classes) %}
 
 <div 
   {{ attributes }}
@@ -36,7 +49,12 @@
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">
       {% for _link in _links %}
-        <li class="list-unstyled">
+        {% if loop.last == false %}
+          {% set list_attributes = list_attributes.addClass(["me-4"]) %}
+        {% endif %}
+        <li 
+          {{ list_attributes }}
+        >
           {% include "@oe-bcl/bcl-link/link.html.twig" with {
             path: _link.path,
             label: _link.label,
