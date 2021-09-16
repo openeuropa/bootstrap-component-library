@@ -1,5 +1,5 @@
 import demoData from "@openeuropa/bcl-user-listing/dataUserListing.js";
-import headerData from "@openeuropa/bcl-data-header/data-ecl.js";
+import headerData from "@openeuropa/bcl-data-header/data.js";
 import userListing from "@openeuropa/bcl-user-listing/user-listing.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 

@@ -21,7 +21,6 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "link",
-            path: "static/media/bootstrap/bootstrap-icons.svg",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -30,7 +29,6 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "link",
-            path: "static/media/bootstrap/bootstrap-icons.svg",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -40,7 +38,6 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "chat-left-dots-fill",
-            path: "static/media/bootstrap/bootstrap-icons.svg",
             size: "xs",
           },
           attributes: new drupalAttribute()
@@ -54,7 +51,6 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "person-fill",
-            path: "static/media/bootstrap/bootstrap-icons.svg",
             size: "xs",
           },
           attributes: new drupalAttribute()
@@ -68,7 +64,6 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "bell-fill",
-            path: "static/media/bootstrap/bootstrap-icons.svg",
             size: "s",
           },
           attributes: new drupalAttribute().addClass([
