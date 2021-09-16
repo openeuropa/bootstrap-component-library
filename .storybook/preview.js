@@ -1,5 +1,4 @@
 import { addParameters } from "@storybook/html";
-import { withCssResources } from "@storybook/addon-cssresources";
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 addParameters({
@@ -50,7 +49,6 @@ addParameters({
   },
 });
 
-export const decorators = [withCssResources];
 export const parameters = {
   layout: "padded",
   options: {

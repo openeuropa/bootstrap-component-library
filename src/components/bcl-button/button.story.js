@@ -154,6 +154,34 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
+const initPopover = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
+  ${demo}`;
+};
+
+const initTooltip = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  ${demo}`;
+};
+
 export default {
   title: "Components/Button",
   decorators: [withDesign],
@@ -209,6 +237,7 @@ export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 Popover.storyName = "Popover";
 Popover.args = getArgs(popoverDemoData);
 Popover.argTypes = getArgTypes(popoverDemoData);
+Popover.decorators = [initPopover];
 Popover.parameters = {
   design: [
     {
@@ -229,6 +258,7 @@ export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
 Tooltip.storyName = "Tooltip";
 Tooltip.args = getArgs(tooltipDemoData);
 Tooltip.argTypes = getArgTypes(tooltipDemoData);
+Tooltip.decorators = [initTooltip];
 Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",

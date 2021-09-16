@@ -7,6 +7,7 @@ demoData.data.header = headerData;
 
 export default {
   title: "Compositions/Search",
+  decoratos: [scriptInit],
   parameters: {
     design: [
       {
@@ -31,6 +32,13 @@ const scriptInit = (story) => {
           })
         }
       });
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
     </script>
   ${demo}`;
 };
@@ -44,4 +52,3 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
-Default.decorators = [scriptInit];
