@@ -10,7 +10,7 @@ const getArgs = (data) => {
     role: data.role || "group",
     aria_label: "",
     toolbar: data.toolbar,
-    toolbar_aria_label: data.toolbar_aria_label,
+    toolbar_aria_label: data.toolbar_aria_label || '',
     size: "md",
     vertical: false,
   };
@@ -85,6 +85,7 @@ const getArgTypes = (data) => {
 const resetAttrs = (data) => {
   data.attributes
     .removeClass("btn-group-" + data.size)
+    .removeClass("btn-group")
     .removeClass("btn-group-vertical");
 };
 
