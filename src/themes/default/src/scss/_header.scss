@@ -1,37 +1,88 @@
 // header
 $header-background: #004494 !default;
+$header-background-start: #003399 !default;
+$header-background-end: #1B4AC3 !default;
 $header-link-active-background: #003776 !default;
 $header-margin: 1.5rem 0.5rem !default;
 
 .oe-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: $header-margin;
 }
 
+.oe-header__project,
 .oe-header__navbar {
   background-color: $header-background;
+  background: linear-gradient(90deg, $header-background-start 0%, $header-background-end 100%);
 }
 
 .oe-navbar-header {
   align-items: flex-end;
 }
 
-.oe-header__navbar .nav-link.active {
-  background-color: $header-link-active-background;
+.oe-header__navbar .navbar-nav .nav-link {
+  color: $gray-400;
 }
 
-.oe-header__navbar .navbar-nav .nav-link {
+.oe-header__navbar .navbar-nav .nav-link:focus,
+.oe-header__navbar .navbar-nav .nav-link:hover,
+.oe-header__navbar .navbar-nav .nav-link.active {
   color: #fff;
 }
 
+.oe-header .notification {
+  position: relative;
+}
+
+.oe-header .notification span{
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 0.6rem;
+  padding-left: 6px;
+  position: absolute;
+  right: 8px;
+  top: 18px;
+}
+
+.oe-header__project {
+  padding-top: map-get($spacers, 3);
+}
+
+.oe-header__project h1 {
+  color: $white;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.oe-header .navbar-toggler {
+  position: absolute;
+  right: 14px;
+  bottom: calc(100% - 0.45rem);
+  border-color: $gray-500;
+}
+
 @media (min-width: 992px) {
+  .oe-header .navbar-toggler {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
   .oe-header__navbar .nav-link.active {
     padding-top: $spacer;
     padding-bottom: $spacer;
     margin-top: -#{map-get($spacers, 2)};
     margin-bottom: -#{map-get($spacers, 2)};
+  }
+  .oe-header__project {
+    padding-bottom: map-get($spacers, 3);
+  }
+  .oe-header__project h1 {
+    padding-left: map-get($spacers, 3);
+    font-weight: 500;
+    font-size: 2.5rem;
   }
 }
 

@@ -1,71 +1,73 @@
 {% spaceless %}
 
 {# Parameters:
-  - logo
-    - src
-    - width
-    - height
-  - navbar
-  - login
-    - link
-      - label
-      - href
-      - target
-    - modal
-  - language
-    - link
-      - label
-      - href
-      - target
-    - modal
+  - navbar (Navbar object) (default: {})
+  - project_logo (object) (default: {})
+    format: {
+        image: {
+          path: "",
+          alt: "",
+          classes: ""
+        },
+        title: ""
+      }
+  - navbar_settings (Navbar object) (default: {})
+  - breadcrumbs (Breadcrumbs object) (default: {})
 #}
 
-{# {% set _logo = {
-  src: logo.src|default(''),
-  width: logo.width|default(100),
-  height: navbar.height|default(60)
-} %} #}
-
 {% set _navbar = navbar|default({}) %}
+{% set _project_logo = project_logo|default({}) %}
 {% set _navbar_settings = navbar_settings|default({}) %}
-
-{% set _login = {
-  link: {
-    label: login.link.label|default(''),
-    href: login.link.href|default('#'),
-    target: login.link.target|default(login.modal.id|default('')),
-  },
-  modal: login.modal|default({}),
-} %}
-{% set _language = {
-  link: {
-    label: language.link.label|default(''),
-    href: language.link.href|default('#'),
-    target: language.link.target|default(language.modal.id|default('')),
-  },
-  modal: language.modal|default({}),
-} %}
+{% set _breadcrumbs = breadcrumbs|default({}) %}
+{% set _modals = modals|default([]) %}
 
 <header>
-  <!-- header -->
-  <div class="container">
-    <div class="oe-header">
-      {% if _navbar_settings is not empty %}
-        {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar_settings only %}
-      {% endif %}
-    </div>
-  </div>
+  <div class="oe-header">
+    <!-- navbar_settings -->
+    {% if _navbar_settings is not empty %}
+      {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar_settings only %}
+    {% endif %}
 
-  <!-- navbar -->
-  {% if _navbar is not empty %}
-    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
-  {% endif %}
+    <!-- project name -->
+    {% if _project_logo is not empty %}
+    <div class="oe-header__project">
+      <div class="container">
+      {% if _project_logo.image is not empty %}
+        <img
+        {% if _project_logo.image.path is not empty %}
+          src="{{ _project_logo.image.path }}"
+        {% endif %}
+        {% if _project_logo.image.alt is not empty %}
+          alt="{{ _project_logo.image.alt }}"
+        {% endif %}
+        {% if _project_logo.image.classes is not empty %}
+          class="{{ _project_logo.image.classes }}"
+        {% endif %}
+        />
+      {% endif %}
+      {% if _project_logo.title is not empty %}
+        <h1>{{ _project_logo.title }}</h1>
+      {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- navbar -->
+    {% if _navbar is not empty %}
+      {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+    {% endif %}
+
+    <!-- breadcrumbs -->
+    {% if _breadcrumbs is not empty %}
+      <div class="container">
+        {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
+      </div>
+    {% endif %}
+  </div>
 </header>
 
-<!-- Modal - Login -->
-{% include '@oe-bcl/bcl-modal/modal.html.twig' with _login.modal only %}
-
-<!-- Modal - Language -->
-{% include '@oe-bcl/bcl-modal/modal.html.twig' with _language.modal only %}
+{% for modal in _modals %}
+  {% include '@oe-bcl/bcl-modal/modal.html.twig' with modal only %}
+{% endfor %}
 
 {% endspaceless %}

@@ -1,11 +1,83 @@
-// Simple content for demo
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  logo: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/638px-Placeholder_view_vector.svg.png",
+  project_logo: {
+    image: {
+      path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
+      classes: "d-none d-lg-inline-block",
+    },
+    title: "Project name",
+  },
+  navbar_settings: {
+    attributes: new drupalAttribute().addClass("w-100"),
+    disable_collapse: true,
+    brand: {
+      src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+    },
+    navigation: {
+      items: [
+        {
+          label: "Link",
+          icon_position: "before",
+          icon: {
+            name: "link",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+          },
+          attributes: new drupalAttribute().addClass(['d-none', 'd-lg-block'])
+        },
+        {
+          label: "Link",
+          icon_position: "before",
+          icon: {
+            name: "link",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+          },
+          attributes: new drupalAttribute().addClass(['d-none', 'd-lg-block'])
+        },
+        {
+          label: "<span class='d-block d-lg-inline-block'>English</span>",
+          path: "#",
+          icon_position: "before",
+          icon: {
+            name: "chat-left-dots-fill",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+            size: "xs",
+          },
+          attributes: new drupalAttribute()
+                      .setAttribute('data-bs-toggle', 'modal')
+                      .setAttribute('data-bs-target', '#languageModal')
+                      .addClass('text-center')
+        },
+        {
+          label: "<span class='d-block d-lg-inline-block'>Log in</span>",
+          path: "#",
+          icon_position: "before",
+          icon: {
+            name: "person-fill",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+            size: "xs",
+          },
+          attributes: new drupalAttribute()
+                      .setAttribute('data-bs-toggle', 'modal')
+                      .setAttribute('data-bs-target', '#loginModal')
+                      .addClass('text-center')
+        },
+        {
+          label: "<span class='badge bg-danger'>5</span>",
+          path: "#",
+          icon_position: "before",
+          icon: {
+            name: "bell-fill",
+            path: "static/media/bootstrap/bootstrap-icons.svg",
+            size: "s",
+          },
+          attributes: new drupalAttribute().addClass(["notification", "mt-2", "mt-lg-0"]),
+        },
+      ],
+    },
   },
   navbar: {
+    color_set: "dark",
     collapse_id: "navbarNavDropdown",
     attributes: new drupalAttribute().addClass("oe-header__navbar"),
     navigation: {
@@ -34,8 +106,8 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Dropdown link",
-            attributes: new drupalAttribute().addClass("nav-link"),
             path: "#",
+            attributes: new drupalAttribute().addClass("nav-link"),
           },
           items: [
             {
@@ -55,11 +127,8 @@ module.exports = {
       ],
     },
   },
-  login: {
-    link: {
-      label: "Log in",
-    },
-    modal: {
+  modals: [
+    {
       id: "loginModal",
       header:
         '<h5 class="modal-title" id="loginModalLabel">Log in</h5>' +
@@ -73,12 +142,7 @@ module.exports = {
         '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>' +
         '<button type="button" class="btn btn-primary">Access EU login</button>',
     },
-  },
-  language: {
-    link: {
-      label: "English",
-    },
-    modal: {
+    {
       id: "languageModal",
       size: "fullscreen",
       attributes: new drupalAttribute().addClass("oe-language"),
@@ -130,6 +194,17 @@ module.exports = {
         "</div>",
       footer:
         '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>',
-    },
-  },
+    }
+  ],
+  breadcrumbs: {
+    attributes: new drupalAttribute().addClass(['mt-3', 'd-none', 'd-lg-block']),
+    links: [
+      { label: "Home", path: "/example" },
+      {
+        label: "About the European Commission",
+        path: "/example",
+      },
+      { label: "News" },
+    ],
+  }
 };
