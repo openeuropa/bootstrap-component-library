@@ -44,6 +44,9 @@ const applyArgs = (data, args) => {
 export default {
   title: "Paragraphs/Links Block",
   parameters: {
+    viewport: {
+      defaultViewport: "tablet",
+    },
     design: [
       {
         name: "Wireframe",
