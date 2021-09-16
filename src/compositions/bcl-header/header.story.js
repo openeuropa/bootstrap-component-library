@@ -14,4 +14,3 @@ export default {
 };
 
 export const Header = () => header(headerData);
-

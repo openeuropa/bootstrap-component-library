@@ -23,7 +23,7 @@ module.exports = {
             name: "link",
             path: "static/media/bootstrap/bootstrap-icons.svg",
           },
-          attributes: new drupalAttribute().addClass(['d-none', 'd-lg-block'])
+          attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
         {
           label: "Link",
@@ -32,7 +32,7 @@ module.exports = {
             name: "link",
             path: "static/media/bootstrap/bootstrap-icons.svg",
           },
-          attributes: new drupalAttribute().addClass(['d-none', 'd-lg-block'])
+          attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
         {
           label: "<span class='d-block d-lg-inline-block'>English</span>",
@@ -44,9 +44,9 @@ module.exports = {
             size: "xs",
           },
           attributes: new drupalAttribute()
-                      .setAttribute('data-bs-toggle', 'modal')
-                      .setAttribute('data-bs-target', '#languageModal')
-                      .addClass('text-center')
+            .setAttribute("data-bs-toggle", "modal")
+            .setAttribute("data-bs-target", "#languageModal")
+            .addClass("text-center"),
         },
         {
           label: "<span class='d-block d-lg-inline-block'>Log in</span>",
@@ -58,9 +58,9 @@ module.exports = {
             size: "xs",
           },
           attributes: new drupalAttribute()
-                      .setAttribute('data-bs-toggle', 'modal')
-                      .setAttribute('data-bs-target', '#loginModal')
-                      .addClass('text-center')
+            .setAttribute("data-bs-toggle", "modal")
+            .setAttribute("data-bs-target", "#loginModal")
+            .addClass("text-center"),
         },
         {
           label: "<span class='badge bg-danger'>5</span>",
@@ -71,7 +71,11 @@ module.exports = {
             path: "static/media/bootstrap/bootstrap-icons.svg",
             size: "s",
           },
-          attributes: new drupalAttribute().addClass(["notification", "mt-2", "mt-lg-0"]),
+          attributes: new drupalAttribute().addClass([
+            "notification",
+            "mt-2",
+            "mt-lg-0",
+          ]),
         },
       ],
     },
@@ -194,10 +198,14 @@ module.exports = {
         "</div>",
       footer:
         '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>',
-    }
+    },
   ],
   breadcrumbs: {
-    attributes: new drupalAttribute().addClass(['mt-3', 'd-none', 'd-lg-block']),
+    attributes: new drupalAttribute().addClass([
+      "mt-3",
+      "d-none",
+      "d-lg-block",
+    ]),
     links: [
       { label: "Home", path: "/example" },
       {
@@ -206,5 +214,5 @@ module.exports = {
       },
       { label: "News" },
     ],
-  }
+  },
 };

@@ -1,7 +1,7 @@
 // header
 $header-background: #004494 !default;
-$header-background-start: #003399 !default;
-$header-background-end: #1B4AC3 !default;
+$header-background-start: #039 !default;
+$header-background-end: #1b4ac3 !default;
 $header-link-active-background: #003776 !default;
 $header-margin: 1.5rem 0.5rem !default;
 
@@ -11,8 +11,12 @@ $header-margin: 1.5rem 0.5rem !default;
 
 .oe-header__project,
 .oe-header__navbar {
+  background: linear-gradient(
+    90deg,
+    $header-background-start 0%,
+    $header-background-end 100%
+  );
   background-color: $header-background;
-  background: linear-gradient(90deg, $header-background-start 0%, $header-background-end 100%);
 }
 
 .oe-navbar-header {
@@ -33,15 +37,15 @@ $header-margin: 1.5rem 0.5rem !default;
   position: relative;
 }
 
-.oe-header .notification span{
-  border-radius: 50%;
+.oe-header .notification span {
+  position: absolute;
+  top: 18px;
+  right: 8px;
   width: 18px;
   height: 18px;
-  line-height: 0.6rem;
   padding-left: 6px;
-  position: absolute;
-  right: 8px;
-  top: 18px;
+  line-height: 0.6rem;
+  border-radius: 50%;
 }
 
 .oe-header__project {
@@ -49,12 +53,12 @@ $header-margin: 1.5rem 0.5rem !default;
 }
 
 .oe-header__project h1 {
-  color: $white;
   display: inline-block;
-  vertical-align: middle;
-  font-weight: 300;
-  font-size: 1.3rem;
   margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: $white;
+  vertical-align: middle;
 }
 
 .oe-header .navbar-toggler {
@@ -67,8 +71,8 @@ $header-margin: 1.5rem 0.5rem !default;
 @media (min-width: 992px) {
   .oe-header .navbar-toggler {
     position: relative;
-    bottom: 0;
     right: 0;
+    bottom: 0;
   }
   .oe-header__navbar .nav-link.active {
     padding-top: $spacer;
@@ -81,8 +85,8 @@ $header-margin: 1.5rem 0.5rem !default;
   }
   .oe-header__project h1 {
     padding-left: map-get($spacers, 3);
-    font-weight: 500;
     font-size: 2.5rem;
+    font-weight: 500;
   }
 }
 
