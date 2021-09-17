@@ -50,15 +50,17 @@
       {%- if _brand.label is defined -%}
         {{- _brand.label -}}
       {%- else -%}
-        <img
-          src='{{ _brand.src }}'
-          {% if _brand.alt is not empty %}
-          alt='{{ _brand.alt }}'
-          {% endif %}
-          {% if _brand.class is not empty %}
-          class='{{ _brand.class }}'
-          {% endif %}
-        />
+        {% for logo in _brand.logos %}
+          <img
+            src='{{ logo.src }}'
+            {% if logo.alt is not empty %}
+            alt='{{ logo.alt }}'
+            {% endif %}
+            {% if logo.class is not empty %}
+            class='{{ logo.class }}'
+            {% endif %}
+          />
+        {% endfor %}
       {%- endif -%}
       </a>
     {% endif %}

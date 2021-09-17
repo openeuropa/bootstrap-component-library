@@ -21,49 +21,55 @@
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _modals = modals|default([]) %}
 
-<header>
-  <div class="oe-header">
-    <!-- navbar_settings -->
-    {% if _navbar_settings is not empty %}
-      {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar_settings only %}
-    {% endif %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
 
-    <!-- project name -->
-    {% if _project_logo is not empty %}
-    <div class="oe-header__project">
-      <div class="container">
-      {% if _project_logo.image is not empty %}
-        <img
-        {% if _project_logo.image.path is not empty %}
-          src="{{ _project_logo.image.path }}"
-        {% endif %}
-        {% if _project_logo.image.alt is not empty %}
-          alt="{{ _project_logo.image.alt }}"
-        {% endif %}
-        {% if _project_logo.image.classes is not empty %}
-          class="{{ _project_logo.image.classes }}"
-        {% endif %}
-        />
+{% set attributes = attributes.addClass("oe-header") %}
+
+<header
+  {{ attributes }}
+>
+  <!-- navbar_settings -->
+  {% if _navbar_settings is not empty %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar_settings only %}
+  {% endif %}
+
+  <!-- project name -->
+  {% if _project_logo is not empty %}
+  <div class="oe-header__project">
+    <div class="container">
+    {% if _project_logo.image is not empty %}
+      <img
+      {% if _project_logo.image.path is not empty %}
+        src="{{ _project_logo.image.path }}"
       {% endif %}
-      {% if _project_logo.title is not empty %}
-        <h1>{{ _project_logo.title }}</h1>
+      {% if _project_logo.image.alt is not empty %}
+        alt="{{ _project_logo.image.alt }}"
       {% endif %}
-      </div>
+      {% if _project_logo.image.classes is not empty %}
+        class="{{ _project_logo.image.classes }}"
+      {% endif %}
+      />
+    {% endif %}
+    {% if _project_logo.title is not empty %}
+      <p>{{ _project_logo.title }}</p>
+    {% endif %}
     </div>
-    {% endif %}
-
-    <!-- navbar -->
-    {% if _navbar is not empty %}
-      {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
-    {% endif %}
-
-    <!-- breadcrumbs -->
-    {% if _breadcrumbs is not empty %}
-      <div class="container">
-        {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
-      </div>
-    {% endif %}
   </div>
+  {% endif %}
+
+  <!-- navbar -->
+  {% if _navbar is not empty %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+  {% endif %}
+
+  <!-- breadcrumbs -->
+  {% if _breadcrumbs is not empty %}
+    <div class="container">
+      {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
+    </div>
+  {% endif %}
 </header>
 
 {% for modal in _modals %}
