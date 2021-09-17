@@ -2,7 +2,7 @@
 
 {# Parameters:
   - variant: (string) (default: "gray")
-    - options ["gray", "white"]
+    - options ["gray", "transparent"]
   - direction: (string) (default: "vertical")
     - options ["vertical", "horizontal"]
   - title: (string) (default: "")
@@ -26,8 +26,6 @@
 
 {% if _variant == "gray" %}
   {% set _classes = _classes|merge(["bg-light", "p-3"]) %}
-{% elseif _variant == "white" %}
-  {% set _classes = _classes|merge(["bg-white"]) %}
 {% endif %}
 
 {% if _direction == "horizontal" %}

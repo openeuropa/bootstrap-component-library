@@ -17,10 +17,10 @@ describe("OE - Links block", () => {
       render({ ...demoData, direction: "horizontal" })
     ).resolves.toMatchSnapshot();
   });
-  test("renders correctly with white background", () => {
+  test("renders correctly with transparent background", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoData, variant: "white" })
+      render({ ...demoData, variant: "transparent" })
     ).resolves.toMatchSnapshot();
   });
 });

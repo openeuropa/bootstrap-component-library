@@ -12,7 +12,7 @@ const getArgTypes = (data) => {
   return {
     variant: {
       description: "Variant of the background",
-      options: ["gray", "white"],
+      options: ["gray", "transparent"],
       control: {
         type: "inline-radio",
       },
