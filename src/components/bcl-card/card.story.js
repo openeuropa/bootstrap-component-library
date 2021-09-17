@@ -11,6 +11,8 @@ const getArgs = (data, type) => {
     subtitle: data.subtitle,
     text: data.text,
     content: data.content,
+    card_header: data.card_header || "",
+    card_footer: data.card_footer || "",
     variant: data.variant,
     text_color: data.text_color,
     border_variant: data.border_variant,
@@ -73,6 +75,32 @@ const getArgTypes = (data, type) => {
         category: "Content",
       },
     },
+    card_header: {
+      name: "header",
+      type: { name: "text" },
+      description: "Content of the card header",
+      control: {
+        type: "text",
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    card_footer: {
+      name: "footer",
+      type: { name: "text" },
+      description: "Content of the card footer",
+      control: {
+        type: "text",
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
     variant: {
       type: { name: "select" },
       description: "Variant of the card",
@@ -117,6 +145,7 @@ const getArgTypes = (data, type) => {
       },
     };
     argTypes.horizontal_grid = {
+      name: "grid of the horizontal card",
       type: { name: "object" },
       description: "Horizontal grid layout",
       control: {
@@ -128,7 +157,20 @@ const getArgTypes = (data, type) => {
         category: "Layout",
       },
     };
+  } else {
+    argTypes.image_position = {
+      name: "position of the image",
+      type: { name: "select" },
+      options: ["bottom", "background", "top"],
+      description: "Text color of the card",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Style",
+      },
+    };
   }
+
   return argTypes;
 };
 
@@ -142,6 +184,7 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+  data.image.position = args.image_position;
   resetAttrs(data);
   return Object.assign(data, args);
 };

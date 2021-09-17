@@ -145,3 +145,4 @@ export const Masonry = (args) => cardLayout(applyArgs(demoDataMasonry, args));
 Masonry.args = getArgs(demoDataMasonry, "masonry");
 Masonry.argTypes = getArgTypes(demoDataMasonry, "masonry");
 Masonry.decorators = [withScript];
+Masonry.parameters = { options: { showPanel: false } };
