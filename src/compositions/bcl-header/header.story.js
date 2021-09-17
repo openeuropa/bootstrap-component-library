@@ -20,6 +20,7 @@ const correctPaths = (data) => {
       item.icon.path = defaultSprite;
     }
   });
+  data.navbar.form.submit.icon.path = defaultSprite;
   return data;
 };
 

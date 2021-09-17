@@ -169,7 +169,7 @@ exports[`OE - Header renders correctly 1`] = `
             id="navbarNavDropdown"
           >
             <ul
-              class="navbar-nav"
+              class="me-auto navbar-nav"
             >
               <li
                 class="nav-item"
@@ -246,6 +246,35 @@ exports[`OE - Header renders correctly 1`] = `
                 </ul>
               </li>
             </ul>
+            <form
+              class="d-flex mt-3 mt-lg-0"
+            >
+              <label
+                class="form-label visually-hidden"
+                for="inlineFormInputGroupSearch"
+              >
+                Search
+              </label>
+              <input
+                class="border-start-0 rounded-0 rounded-start form-control"
+                id="inlineFormInputGroupSearch"
+                placeholder="Search"
+                required="true"
+                type="text"
+              />
+              <button
+                class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+                type="button"
+              >
+                <svg
+                  class="bi icon--s"
+                >
+                  <use
+                    xlink:href="#search"
+                  />
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </nav>
