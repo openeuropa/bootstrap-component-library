@@ -5,12 +5,12 @@ $header-background-end: #1b4ac3 !default;
 $header-link-active-background: #003776 !default;
 $header-margin: 1.5rem 0.5rem !default;
 
-.oe-header {
+.bcl-header {
   margin: $header-margin;
 }
 
-.oe-header__project,
-.oe-header__navbar {
+.bcl-header__project,
+.bcl-header__navbar {
   background: linear-gradient(
     90deg,
     $header-background-start 0%,
@@ -18,39 +18,34 @@ $header-margin: 1.5rem 0.5rem !default;
   );
 }
 
-.ecl__header .oe-header__project,
-.ecl__header .oe-header__navbar {
+.ec__header .bcl-header__project,
+.ec__header .bcl-header__navbar {
   background: $header-background;
 }
 
-.oe-header__project.light,
-.ecl__header .oe-header__project.light {
-  background: $white;
-}
-
-.oe-navbar-header {
+.bcl-navbar-header {
   align-items: flex-end;
 }
 
-.oe-header__navbar .navbar-nav .nav-link {
+.bcl-header__navbar .navbar-nav .nav-link {
   color: $gray-400;
 }
 
-.oe-header__navbar .navbar-nav .nav-link:focus,
-.oe-header__navbar .navbar-nav .nav-link:hover,
-.oe-header__navbar .navbar-nav .nav-link.active {
+.bcl-header__navbar .navbar-nav .nav-link:focus,
+.bcl-header__navbar .navbar-nav .nav-link:hover,
+.bcl-header__navbar .navbar-nav .nav-link.active {
   color: #fff;
 }
 
-.oe-header .notification {
+.bcl-header .notification {
   position: relative;
 }
 
-.oe-header .navbar-brand img {
+.bcl-header .navbar-brand img {
   width: 100px;
 }
 
-.oe-header .notification span {
+.bcl-header .notification span {
   position: absolute;
   top: 18px;
   right: 8px;
@@ -61,11 +56,11 @@ $header-margin: 1.5rem 0.5rem !default;
   border-radius: 50%;
 }
 
-.oe-header__project {
+.bcl-header__project {
   padding-top: map-get($spacers, 3);
 }
 
-.oe-header__project p {
+.bcl-header__project p {
   display: inline-block;
   margin-bottom: 0;
   font-size: 1.3rem;
@@ -74,36 +69,40 @@ $header-margin: 1.5rem 0.5rem !default;
   vertical-align: middle;
 }
 
-.oe-header__project.light p {
+.bcl-header__project.light p {
   color: $black;
 }
 
-.oe-header .navbar-toggler {
+.bcl-header .navbar-toggler {
   position: absolute;
   right: 14px;
   bottom: calc(100% - 0.45rem);
   border-color: $gray-500;
 }
 
-@media (min-width: 992px) {
-  .oe-header .navbar-toggler {
+@include media-breakpoint-up(lg) {
+  .bcl-header__project.light,
+  .ec__header .bcl-header__project.light {
+    background: $white;
+  }
+  .bcl-header .navbar-toggler {
     position: relative;
     right: 0;
     bottom: 0;
   }
-  .oe-header .navbar-brand img {
+  .bcl-header .navbar-brand img {
     width: auto;
   }
-  .oe-header__navbar .nav-link.active {
+  .bcl-header__navbar .nav-link.active {
     padding-top: $spacer;
     padding-bottom: $spacer;
     margin-top: -#{map-get($spacers, 2)};
     margin-bottom: -#{map-get($spacers, 2)};
   }
-  .oe-header__project {
+  .bcl-header__project {
     padding-bottom: map-get($spacers, 3);
   }
-  .oe-header__project p {
+  .bcl-header__project p {
     padding-left: map-get($spacers, 4);
     font-weight: 500;
   }
@@ -122,22 +121,22 @@ $language-item-color: $header-background !default;
 $language-item-background-hover: #ffd617 !default;
 $language-item-color-hover: $dark !default;
 
-.oe-language .modal-content {
+.bcl-language .modal-content {
   color: $language-color;
   background-color: $language-background;
 }
 
-.oe-language__list {
+.bcl-language__list {
   display: grid;
   gap: $language-list-gap;
   margin-bottom: map-get($spacers, 4);
 }
 
-.oe-language__title {
+.bcl-language__title {
   margin-bottom: map-get($spacers, 4);
 }
 
-.oe-language__item {
+.bcl-language__item {
   padding: map-get($spacers, 2) $spacer;
   font-weight: $font-weight-bold;
   color: $language-item-color;
@@ -152,11 +151,11 @@ $language-item-color-hover: $dark !default;
   }
 }
 
-.oe-language .modal-body {
+.bcl-language .modal-body {
   padding-top: map-get($spacers, 5);
   padding-bottom: map-get($spacers, 5);
 }
 
-.oe-language .btn-close {
+.bcl-language .btn-close {
   filter: $btn-close-white-filter;
 }

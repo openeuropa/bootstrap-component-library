@@ -1,15 +1,13 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  site_name: "Project name",
   project_logo: {
-    image: {
-      path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
-      classes: "d-none d-lg-inline-block",
-    },
-    title: "Project name",
+    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
+    classes: "d-none d-lg-inline-block",
   },
-  navbar_settings: {
-    attributes: new drupalAttribute().addClass(["w-100"]),
+  head: {
+    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
     disable_collapse: true,
     brand: {
       logos: [
@@ -82,7 +80,7 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    attributes: new drupalAttribute().addClass("oe-header__navbar"),
+    attributes: new drupalAttribute().addClass("bcl-header__navbar"),
     form: {
       attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
       submit: {
@@ -180,7 +178,7 @@ module.exports = {
     {
       id: "languageModal",
       size: "fullscreen",
-      attributes: new drupalAttribute().addClass("oe-language"),
+      attributes: new drupalAttribute().addClass("bcl-language"),
       header:
         '<h5 class="modal-title" id="languageeModalLabel">Select your language</h5>' +
         '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
@@ -188,41 +186,41 @@ module.exports = {
         '<div class="container">' +
         '<div class="row">' +
         '<div class="col col-lg-8 offset-lg-2">' +
-        '<h5 class="oe-language__title">EU official languages</h5>' +
+        '<h5 class="bcl-language__title">EU official languages</h5>' +
         "</div>" +
         "</div>" +
         '<div class="row">' +
         '<div class="col col-lg-4 offset-lg-2">' +
-        '<div class="oe-language__list">' +
-        '<a href="#" class="oe-language__item">Language 01</a>' +
-        '<a href="#" class="oe-language__item">Language 02</a>' +
-        '<a href="#" class="oe-language__item">Language 03</a>' +
+        '<div class="bcl-language__list">' +
+        '<a href="#" class="bcl-language__item">Language 01</a>' +
+        '<a href="#" class="bcl-language__item">Language 02</a>' +
+        '<a href="#" class="bcl-language__item">Language 03</a>' +
         "</div>" +
         "</div>" +
         '<div class="col col-lg-4">' +
-        '<div class="oe-language__list">' +
-        '<a href="#" class="oe-language__item">Language 04</a>' +
-        '<a href="#" class="oe-language__item">Language 05</a>' +
-        '<a href="#" class="oe-language__item">Language 06</a>' +
+        '<div class="bcl-language__list">' +
+        '<a href="#" class="bcl-language__item">Language 04</a>' +
+        '<a href="#" class="bcl-language__item">Language 05</a>' +
+        '<a href="#" class="bcl-language__item">Language 06</a>' +
         "</div>" +
         "</div>" +
         "</div>" +
         '<div class="row">' +
         '<div class="col col-lg-8 offset-lg-2">' +
-        '<h5 class="oe-language__title">Non EU languages</h5>' +
+        '<h5 class="bcl-language__title">Non EU languages</h5>' +
         "</div>" +
         "</div>" +
         '<div class="row">' +
         '<div class="col col-lg-4 offset-lg-2">' +
-        '<div class="oe-language__list">' +
-        '<a href="#" class="oe-language__item">Language 07</a>' +
-        '<a href="#" class="oe-language__item">Language 08</a>' +
+        '<div class="bcl-language__list">' +
+        '<a href="#" class="bcl-language__item">Language 07</a>' +
+        '<a href="#" class="bcl-language__item">Language 08</a>' +
         "</div>" +
         "</div>" +
         '<div class="col col-lg-4">' +
-        '<div class="oe-language__list">' +
-        '<a href="#" class="oe-language__item">Language 09</a>' +
-        '<a href="#" class="oe-language__item">Language 10</a>' +
+        '<div class="bcl-language__list">' +
+        '<a href="#" class="bcl-language__item">Language 09</a>' +
+        '<a href="#" class="bcl-language__item">Language 10</a>' +
         "</div>" +
         "</div>" +
         "</div>" +

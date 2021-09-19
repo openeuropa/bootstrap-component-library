@@ -4,56 +4,62 @@
   - navbar (Navbar object) (default: {})
   - project_logo (object) (default: {})
     format: {
-        image: {
-          path: "",
-          alt: "",
-          classes: ""
-        },
-        title: ""
+        path: "",
+        alt: "",
+        classes: ""
       }
-  - navbar_settings (Navbar object) (default: {})
+  - site_name (string) (default: "")
+  - head (Navbar object) (default: {})
   - breadcrumbs (Breadcrumbs object) (default: {})
+  - light (boolean) (default: false)
 #}
 
 {% set _navbar = navbar|default({}) %}
 {% set _project_logo = project_logo|default({}) %}
-{% set _navbar_settings = navbar_settings|default({}) %}
+{% set _site_name = site_name|default('') %}
+{% set _head = head|default({}) %}
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _modals = modals|default([]) %}
+{% set _light = light|default(false) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass("oe-header") %}
+{% set attributes = attributes.addClass("bcl-header") %}
+
+{% set _project_classes = 'bcl-header__project' %}
+{% if _light is not empty %}
+  {% set _project_classes = _project_classes ~ ' light' %}
+{% endif %}
 
 <header
   {{ attributes }}
 >
   <!-- navbar_settings -->
-  {% if _navbar_settings is not empty %}
-    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar_settings only %}
+  {% if _head is not empty %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _head only %}
   {% endif %}
 
   <!-- project name -->
-  {% if _project_logo is not empty %}
-  <div class="oe-header__project">
+  {% if _project_logo is not empty or _site_name is not empty %}
+  <div class="{{ _project_classes  }}">
     <div class="container">
-    {% if _project_logo.image is not empty %}
+    {% if _project_logo is not empty %}
       <img
-      {% if _project_logo.image.path is not empty %}
-        src="{{ _project_logo.image.path }}"
+      {% if _project_logo.path is not empty %}
+        src="{{ _project_logo.path }}"
       {% endif %}
-      {% if _project_logo.image.alt is not empty %}
-        alt="{{ _project_logo.image.alt }}"
+      {% if _project_logo.alt is not empty %}
+        alt="{{ _project_logo.alt }}"
       {% endif %}
-      {% if _project_logo.image.classes is not empty %}
-        class="{{ _project_logo.image.classes }}"
+      {% if _project_logo.classes is not empty %}
+        class="{{ _project_logo.classes }}"
       {% endif %}
       />
     {% endif %}
-    {% if _project_logo.title is not empty %}
-      <p>{{ _project_logo.title }}</p>
+    {% if _site_name is not empty %}
+      <p>{{ _site_name }}</p>
     {% endif %}
     </div>
   </div>
