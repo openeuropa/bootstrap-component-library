@@ -1,0 +1,61 @@
+{% spaceless %}
+
+{# Parameters:
+  - variant: (string) (default: "gray")
+    - options ["gray", "transparent"]
+  - direction: (string) (default: "vertical")
+    - options ["vertical", "horizontal"]
+  - title: (string) (default: "")
+  - links (array of objects) (default: []) format: [
+    path: (string) (default: "#")
+    label: (string) (default: "")
+  ]
+#}
+
+{% set _variant = variant|default("gray") %}
+{% set _direction = direction|default("vertical") %}
+{% set _title = title|default("") %}
+{% set _links = links|default([])%}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _variant == "gray" %}
+  {% set attributes = attributes.addClass(["bg-light", "px-4", "py-3"]) %}
+{% endif %}
+
+<div 
+  {{ attributes }}
+>
+  {% if _title is not empty %}
+    <h5 class="fw-bold pb-3 mb-3 border-bottom">{{ _title }}</h5>
+  {% endif %}
+  {% if _links is not empty and _links is iterable %}
+    <ul class="ps-0 mb-0">
+      {% for _link in _links %}
+        {% if _link.attributes is empty %}
+          {% set _link = _link|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
+        {% set _link = _link|merge({
+          clean_class: true,
+          attributes: _link.attributes.addClass(["pb-3", "d-inline-block"])
+        }) %}
+        {% set _list_item_classes = "list-unstyled" %}
+        {% if _direction == "horizontal" %}
+          {% set _list_item_classes = _list_item_classes ~ ' d-inline' %}
+        {% endif %}
+        {% if loop.last == false %}
+          {% set _list_item_classes = _list_item_classes ~ '  me-4-5' %}
+        {% endif %}
+        <li class="{{ _list_item_classes }}">
+          {% include "@oe-bcl/bcl-link/link.html.twig" with _link only %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
+{% endspaceless %}
