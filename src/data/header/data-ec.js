@@ -244,5 +244,5 @@ module.exports = {
       { label: "News" },
     ],
   },
-  attributes: new drupalAttribute().addClass("ecl__header"),
+  attributes: new drupalAttribute().addClass("ec__header"),
 };

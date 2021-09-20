@@ -80,6 +80,12 @@ $header-margin: 1.5rem 0.5rem !default;
   border-color: $gray-500;
 }
 
+@include media-breakpoint-up(md) {
+  .ec__header .navbar-brand img {
+    width: 180px;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .bcl-header__project.light,
   .ec__header .bcl-header__project.light {
@@ -107,7 +113,7 @@ $header-margin: 1.5rem 0.5rem !default;
     font-weight: 500;
   }
 
-  .ecl__header .navbar-brand img {
+  .ec__header .navbar-brand img {
     width: 285px;
   }
 }
