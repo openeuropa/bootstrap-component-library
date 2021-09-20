@@ -43,7 +43,14 @@
           clean_class: true,
           attributes: _link.attributes.addClass(["pb-3", "d-inline-block"])
         }) %}
-        <li class="list-unstyled{% if _direction == "horizontal" %} d-inline{% endif %}{% if loop.last == false %} me-4-5{% endif %}">
+        {% set _list_item_classes = "list-unstyled" %}
+        {% if _direction == "horizontal" %}
+          {% set _list_item_classes = _list_item_classes ~ ' d-inline' %}
+        {% endif %}
+        {% if loop.last == false %}
+          {% set _list_item_classes = _list_item_classes ~ '  me-4-5' %}
+        {% endif %}
+        <li class="{{ _list_item_classes }}">
           {% include "@oe-bcl/bcl-link/link.html.twig" with _link only %}
         </li>
       {% endfor %}
