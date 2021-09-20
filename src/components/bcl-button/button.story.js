@@ -12,14 +12,14 @@ import drupalAttribute from "drupal-attribute";
 const withCollapse = (story) => {
   const demo = story();
   return `
-    ${demo} 
+    ${demo}
     <div class="collapse mt-3" id="collapseExample">
       ${toggleDemoData.collapse_text}
     </div>`;
 };
 
-const getArgs = (data) => {
-  return {
+const getArgs = (data, type) => {
+  const args = {
     label: data.label,
     type: "button",
     assistive_text: "",
@@ -33,10 +33,16 @@ const getArgs = (data) => {
     icon_size: "",
     icon_position: "after",
   };
+
+  if (type === "tooltip") {
+    args.tooltip_position = "bottom";
+  }
+
+  return args;
 };
 
-const getArgTypes = (data) => {
-  return {
+const getArgTypes = (data, type) => {
+  const argTypes = {
     label: {
       type: { name: "string" },
       description: "Label of the button",
@@ -121,6 +127,21 @@ const getArgTypes = (data) => {
     },
     ...getIconControls("button"),
   };
+  if (type === "tooltip") {
+    argTypes.tooltip_position = {
+      name: "tooltip position",
+      type: "select",
+      options: ["top", "bottom", "left", "right"],
+      description: "Position for the tooltip",
+      table: {
+        type: { summary: "attribute" },
+        defaultValue: { summary: "top" },
+        category: "Tooltip",
+      },
+    };
+  }
+
+  return argTypes;
 };
 
 const resetAttrs = (data, args) => {
@@ -151,6 +172,10 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
+  if (args.tooltip_position) {
+    data.attributes.setAttribute("data-bs-placement", args.tooltip_position);
+  }
+
   return Object.assign(data, args);
 };
 
@@ -179,7 +204,7 @@ const initTooltip = (story) => {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
     </script>
-  ${demo}`;
+    <div style="padding: 2rem 0 2rem 8rem" class="bg-light">${demo}</div>`;
 };
 
 export default {
@@ -256,8 +281,8 @@ Popover.parameters = {
 export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
 
 Tooltip.storyName = "Tooltip";
-Tooltip.args = getArgs(tooltipDemoData);
-Tooltip.argTypes = getArgTypes(tooltipDemoData);
+Tooltip.args = getArgs(tooltipDemoData, "tooltip");
+Tooltip.argTypes = getArgTypes(tooltipDemoData, "tooltip");
 Tooltip.decorators = [initTooltip];
 Tooltip.parameters = {
   design: {
