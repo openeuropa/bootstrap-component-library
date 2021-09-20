@@ -2,6 +2,8 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
   return {
@@ -10,6 +12,7 @@ const getArgs = (data) => {
     heading: data.heading,
     dismissible: true,
     animated_dismiss: true,
+    icon: true,
   };
 };
 
@@ -43,6 +46,13 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
+    icon: {
+      type: { name: "boolean" },
+      description: "Toggle icon visibility",
+      table: {
+        category: "Content",
+      },
+    },
     dismissible: {
       type: { name: "boolean" },
       description: "Enable the close button",
@@ -65,6 +75,8 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes = new drupalAttribute();
+  data.icons_path = args.icon ? defaultSprite : "";
   return Object.assign(data, args);
 };
 
