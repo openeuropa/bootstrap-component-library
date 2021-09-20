@@ -25,7 +25,7 @@
 {% set _list_classes = ["list-unstyled"] %}
 
 {% if _variant == "gray" %}
-  {% set _classes = _classes|merge(["bg-light", "p-3"]) %}
+  {% set _classes = _classes|merge(["bg-light", "px-4", "py-3"]) %}
 {% endif %}
 
 {% if _direction == "horizontal" %}
@@ -38,13 +38,13 @@
   {{ attributes }}
 >
   {% if _title is not empty %}
-    <h5 class="fs-5 fw-bold pb-2 border-bottom">{{ _title }}</h5>
+    <h5 class="fs-5 fw-bold pb-3 mb-3 border-bottom">{{ _title }}</h5>
   {% endif %}
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">
       {% for _link in _links %}
         {% if loop.last == false %}
-          {% set _list_classes = _list_classes|merge(["me-4"]) %}
+          {% set _list_classes = _list_classes|merge(["me-4-5"]) %}
         {% endif %}
         <li 
           {{ create_attribute().addClass(_list_classes) }}
