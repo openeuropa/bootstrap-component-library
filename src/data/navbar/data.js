@@ -64,7 +64,7 @@ module.exports = {
       wrapper: "ms-2",
       label: "Search",
       type: "Search",
-      variant: "primary",
+      variant: "light",
     },
     items: [
       [
