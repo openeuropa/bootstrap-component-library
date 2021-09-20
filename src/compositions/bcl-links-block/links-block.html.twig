@@ -21,18 +21,9 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _classes = [] %}
-{% set _list_classes = ["list-unstyled"] %}
-
 {% if _variant == "gray" %}
-  {% set _classes = _classes|merge(["bg-light", "px-4", "py-3"]) %}
+  {% set attributes = attributes.addClass(["bg-light", "px-4", "py-3"]) %}
 {% endif %}
-
-{% if _direction == "horizontal" %}
-  {% set _list_classes = _list_classes|merge(["d-inline"]) %}
-{% endif %}
-
-{% set attributes = attributes.addClass(_classes) %}
 
 <div 
   {{ attributes }}
@@ -43,17 +34,17 @@
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">
       {% for _link in _links %}
-        {% if loop.last == false %}
-          {% set _list_classes = _list_classes|merge(["me-4-5"]) %}
+        {% if _link.attributes is empty %}
+          {% set _link = _link|merge({
+            attributes: create_attribute()
+          }) %}
         {% endif %}
-        <li 
-          {{ create_attribute().addClass(_list_classes) }}
-        >
-          {% include "@oe-bcl/bcl-link/link.html.twig" with {
-            path: _link.path,
-            label: _link.label,
-            attributes: create_attribute().addClass(["pb-3", "d-inline-block"])
-          } only %}
+        {% set _link = _link|merge({
+          clean_class: true,
+          attributes: _link.attributes.addClass(["pb-3", "d-inline-block"])
+        }) %}
+        <li class="list-unstyled{% if _direction == "horizontal" %} d-inline{% endif %}{% if loop.last == false %} me-4-5{% endif %}">
+          {% include "@oe-bcl/bcl-link/link.html.twig" with _link only %}
         </li>
       {% endfor %}
     </ul>

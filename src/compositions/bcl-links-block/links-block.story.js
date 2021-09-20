@@ -19,6 +19,7 @@ const getArgTypes = (data) => {
       table: {
         defaultValue: { summary: "gray" },
         category: "Style",
+        type: { summary: "string" },
       },
     },
     direction: {
@@ -30,6 +31,7 @@ const getArgTypes = (data) => {
       table: {
         defaultValue: { summary: "vertical" },
         category: "Style",
+        type: { summary: "string" },
       },
     },
   };
