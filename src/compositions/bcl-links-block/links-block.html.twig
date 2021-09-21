@@ -1,9 +1,9 @@
 {% spaceless %}
 
 {# Parameters:
-  - variant: (string) (default: "gray")
+  - background: (string) (default: "gray")
     - options ["gray", "transparent"]
-  - direction: (string) (default: "vertical")
+  - variant: (string) (default: "vertical")
     - options ["vertical", "horizontal"]
   - title: (string) (default: "")
   - links (array of objects) (default: []) format: [
@@ -12,8 +12,8 @@
   ]
 #}
 
-{% set _variant = variant|default("gray") %}
-{% set _direction = direction|default("vertical") %}
+{% set _background = background|default("gray") %}
+{% set _variant = variant|default("vertical") %}
 {% set _title = title|default("") %}
 {% set _links = links|default([])%}
 
@@ -21,7 +21,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if _variant == "gray" %}
+{% if _background == "gray" %}
   {% set attributes = attributes.addClass(["bg-light", "px-4", "py-3"]) %}
 {% endif %}
 
@@ -44,7 +44,7 @@
           attributes: _link.attributes.addClass(["pb-3", "d-inline-block"])
         }) %}
         {% set _list_item_classes = "list-unstyled" %}
-        {% if _direction == "horizontal" %}
+        {% if _variant == "horizontal" %}
           {% set _list_item_classes = _list_item_classes ~ ' d-inline' %}
         {% endif %}
         {% if loop.last == false %}

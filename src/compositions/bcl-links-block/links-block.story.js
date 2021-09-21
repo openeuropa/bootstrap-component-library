@@ -3,15 +3,15 @@ import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 const getArgs = (data) => {
   return {
+    background: data.background,
     variant: data.variant,
-    direction: data.direction,
   };
 };
 
 const getArgTypes = (data) => {
   return {
-    variant: {
-      description: "Variant of the background",
+    background: {
+      description: "Color of the background",
       options: ["gray", "transparent"],
       control: {
         type: "inline-radio",
@@ -22,7 +22,7 @@ const getArgTypes = (data) => {
         type: { summary: "string" },
       },
     },
-    direction: {
+    variant: {
       description: "Direction in which the links are displayed",
       options: ["vertical", "horizontal"],
       control: {
