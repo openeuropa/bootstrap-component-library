@@ -54,7 +54,7 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Components', 'Compositions'],
+      order: ['Components', 'Compositions', 'Paragraphs'],
     },
   },
 };
