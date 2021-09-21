@@ -1,5 +1,6 @@
 import demoData from "@openeuropa/bcl-social-media-follow/dataSocialMediaFollow.js";
 import socialMediaFollow from "@openeuropa/bcl-social-media-follow/social-media-follow.html.twig";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
   return {
@@ -38,6 +39,12 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  for (let i = 0; i < data.links.length; i++) {
+    if ("icon" in data.links[i]) {
+      data.links[i].icon.path = defaultSprite;
+      data.links[i].icon_position = "before";
+    }
+  }
   return Object.assign(data, args);
 };
 
