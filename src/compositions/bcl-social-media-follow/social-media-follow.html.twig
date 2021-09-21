@@ -1,0 +1,34 @@
+{% spaceless %}
+
+{# Parameters:
+  - background: (string) (default: "gray")
+    - options ["gray", "transparent"]
+  - variant: (string) (default: "vertical")
+    - options ["vertical", "horizontal"]
+  - title: (string) (default: "")
+  - links (array of objects) (default: []) format: [
+    path: (string) (default: "#")
+    label: (string) (default: "")
+  ]
+#}
+
+{% set _background = background|default("gray") %}
+{% set _variant = variant|default("vertical") %}
+{% set _title = title|default("") %}
+{% set _links = links|default([])%}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _background == "gray" %}
+  {% set attributes = attributes.addClass(["bg-light", "px-4", "py-3"]) %}
+{% endif %}
+
+{% include "@oe-bcl/bcl-links-block/links-block.html.twig" with {
+  background: _background,
+  variant: _variant,
+  title: _title,
+  links: _links,
+} only %}
+{% endspaceless %}
