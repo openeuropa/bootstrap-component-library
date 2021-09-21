@@ -1,6 +1,8 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  extra_classes: "",
+  extra_attributes: [],
   background: "gray",
   variant: "vertical",
   title: "Follow us",

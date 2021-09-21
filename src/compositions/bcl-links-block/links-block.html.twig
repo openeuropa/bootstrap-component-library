@@ -1,6 +1,13 @@
 {% spaceless %}
 
 {# Parameters:
+  - extra_classes: (string) (default: "")
+  - extra_attributes: (array of objects) (default: []) format: [
+    {
+      "name" (string) (default: ''),
+      "value" (optional) (string),
+    }
+  ]
   - background: (string) (default: "gray")
     - options ["gray", "transparent"]
   - variant: (string) (default: "vertical")
@@ -12,6 +19,8 @@
   ]
 #}
 
+{% set _extra_classes = extra_classes|default("") %}
+{% set _extra_attributes = extra_attributes|default([]) %}
 {% set _background = background|default("gray") %}
 {% set _variant = variant|default("vertical") %}
 {% set _title = title|default("") %}
@@ -19,6 +28,16 @@
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _extra_classes is not empty %}
+  {% set attributes = attributes.addClass(_extra_classes) %}
+{% endif %}
+
+{% if _extra_attributes is not empty %}
+  {% for attribute in _extra_attributes %}
+    {% set attributes = attributes.setAttribute(attribute.name, attribute.value) %}
+  {% endfor %}
 {% endif %}
 
 {% if _background == "gray" %}
