@@ -37,11 +37,11 @@
 {% set _label_class = 'form-label' %}
 {% set _hidden_label = hidden_label|default(false) %}
 
-{% set _classes = _classes|merge(['form-select-' ~ _size]) %}
-
 {% if _clean_class %}
   {% set _classes = [] %}
 {% endif %}
+
+{% set _classes = _classes|merge(['form-select-' ~ _size]) %}
 
 {% if _invalid %}
   {% set _classes = _classes|merge(['is-invalid']) %}

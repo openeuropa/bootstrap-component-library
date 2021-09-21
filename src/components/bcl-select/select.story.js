@@ -16,10 +16,8 @@ const getArgs = (data, type) => {
     valid: false,
     invalid_feedback: data.invalid_feedback,
     valid_feedback: data.valid_feedback,
+    size: "sm",
   };
-  if (type === "select") {
-    args.size = "sm";
-  }
 
   return args;
 };
