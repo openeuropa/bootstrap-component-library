@@ -1,27 +1,12 @@
 {% spaceless %}
 
 {# Parameters:
-  - extra_classes: (string) (default: "")
-  - extra_attributes: (array of objects) (default: []) format: [
-    {
-      "name" (string) (default: ''),
-      "value" (optional) (string),
-    }
-  ]
   - background: (string) (default: "gray")
     - options ["gray", "transparent"]
   - variant: (string) (default: "vertical")
     - options ["vertical", "horizontal"]
   - title: (string) (default: "")
-  - links (array of objects) (default: []) format: [
-    path: (string) (default: "#")
-    label: (string) (default: "")
-    icon: (object) format: {
-      name: (string) (defaut:"")
-      path: (string) (default: "")
-    }
-    icon_position: (string) (default:"")
-  ]
+  - links (array of link objects) (default: [])
 #}
 
 {% set _background = background|default("gray") %}
@@ -60,7 +45,7 @@
           {% set _list_item_classes = _list_item_classes ~ ' d-inline' %}
         {% endif %}
         {% if loop.last == false %}
-          {% set _list_item_classes = _list_item_classes ~ '  me-4-5' %}
+          {% set _list_item_classes = _list_item_classes ~ ' me-4-5' %}
         {% endif %}
         <li class="{{ _list_item_classes }}">
           {% include "@oe-bcl/bcl-link/link.html.twig" with _link only %}
