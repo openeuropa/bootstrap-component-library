@@ -1,5 +1,7 @@
 import demoData from "@openeuropa/bcl-links-block/dataLinksBlock.js";
+import socialMediaFollowData from "@openeuropa/bcl-links-block/dataSocialMediaFollow";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
   return {
@@ -38,6 +40,12 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  for (let i = 0; i < data.links.length; i++) {
+    if ("icon" in data.links[i]) {
+      data.links[i].icon.path = defaultSprite;
+      data.links[i].icon_position = "before";
+    }
+  }
   return Object.assign(data, args);
 };
 
@@ -61,3 +69,9 @@ export const LinksBlock = (args) => linksBlock(applyArgs(demoData, args));
 
 LinksBlock.args = getArgs(demoData);
 LinksBlock.argTypes = getArgTypes(demoData);
+
+export const SocialMediaFollow = (args) =>
+  linksBlock(applyArgs(socialMediaFollowData, args));
+
+SocialMediaFollow.args = getArgs(socialMediaFollowData);
+SocialMediaFollow.argTypes = getArgTypes(socialMediaFollowData);
