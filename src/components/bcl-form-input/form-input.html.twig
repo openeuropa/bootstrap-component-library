@@ -21,6 +21,7 @@
   - "hidden_label" (boolean) (default: false)
   - "size" (string) (default: '')
   - "switch" (boolean) (default: false)
+  - "icon" (object) (default: {})
   - "toggle" (boolean) (default: false)
   - "toggle_variant" (string) (default: 'primary')
   - "remove_wrapper" (boolean) (default: false)
@@ -47,6 +48,7 @@
 {% set _horizontal_class = horizontal_class|default('col-sm-10') %}
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
 {% set _switch = switch|default(false) %}
+{% set _icon = icon|default({}) %}
 {% set _toggle = toggle|default(false) %}
 {% set _toggle_variant = toggle_variant|default('primary') %}
 {% set _remove_wrapper = remove_wrapper|default(false) %}
@@ -149,9 +151,16 @@
 {% if _horizontal and floating == false %}
   <div class="{{ _horizontal_class }}">
 {% endif %}
+{% if _icon is not empty %}
+<div class="d-flex">
+  {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+{% endif %}
     <input
       {{ attributes }}
     >
+{% if _icon is not empty %}
+  </div>
+{% endif %}
 {% if _horizontal and floating == false %}
   </div>
 {% endif %}

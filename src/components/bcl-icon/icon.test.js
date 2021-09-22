@@ -32,4 +32,12 @@ describe("OE - Icon", () => {
       ).resolves.toMatchSnapshot();
     });
   });
+
+  test(`with wrapper renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, wrapper_classes: "class-1" })
+    ).resolves.toMatchSnapshot();
+  });
 });
