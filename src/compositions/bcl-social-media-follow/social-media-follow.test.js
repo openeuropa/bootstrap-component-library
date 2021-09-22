@@ -2,8 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-social-media-follow/dataSocialMediaFollow";
 
-const template =
-  "@oe-bcl/bcl-social-media-follow/social-media-follow.html.twig";
+const template = "@oe-bcl/bcl-links-block/links-block.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Social Media Follow", () => {

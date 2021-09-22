@@ -1,5 +1,5 @@
 import demoData from "@openeuropa/bcl-social-media-follow/dataSocialMediaFollow.js";
-import socialMediaFollow from "@openeuropa/bcl-social-media-follow/social-media-follow.html.twig";
+import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
@@ -65,7 +65,7 @@ export default {
 };
 
 export const SocialMediaFollow = (args) =>
-  socialMediaFollow(applyArgs(demoData, args));
+  linksBlock(applyArgs(demoData, args));
 
 SocialMediaFollow.args = getArgs(demoData);
 SocialMediaFollow.argTypes = getArgTypes(demoData);
