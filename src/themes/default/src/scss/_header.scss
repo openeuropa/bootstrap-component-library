@@ -113,6 +113,9 @@ $header-margin: 1.5rem 0.5rem !default;
     margin-top: -#{map-get($spacers, 2)};
     margin-bottom: -#{map-get($spacers, 2)};
   }
+  .bcl-header__navbar .dropdown-menu {
+    z-index: 1050; // Make sure dropdown overlaps the search offcanvas
+  }
   .bcl-header__project {
     padding-bottom: map-get($spacers, 3);
   }
