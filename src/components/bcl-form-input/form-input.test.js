@@ -1,7 +1,6 @@
 import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-form-input/data";
-import demoDataSearch from "@openeuropa/bcl-data-form-input/dataSearch.js";
 
 const template = "@oe-bcl/bcl-form-input/form-input.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
@@ -119,11 +118,5 @@ describe("OE - Form Input", () => {
         toggle_variant: "primary",
       })
     ).resolves.toMatchSnapshot();
-  });
-
-  test("with icon renders correctly", () => {
-    expect.assertions(1);
-
-    return expect(render(demoDataSearch)).resolves.toMatchSnapshot();
   });
 });

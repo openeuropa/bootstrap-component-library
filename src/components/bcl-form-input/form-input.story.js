@@ -1,8 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-form-input/data.js";
-import demoDataSearch from "@openeuropa/bcl-data-form-input/dataSearch.js";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
 import drupalAttribute from "drupal-attribute";
 
@@ -100,12 +98,6 @@ const applyArgs = (data, args) => {
   }
   resetAttrs(data, args);
   return Object.assign(data, args);
-};
-
-const correctPath = (data) => {
-  data.icon.path = defaultSprite;
-
-  return data;
 };
 
 // Stories
@@ -242,10 +234,3 @@ File.parameters = {
     },
   ],
 };
-
-export const Search = (args) =>
-  formInput(applyArgs(correctPath(demoDataSearch), args));
-
-Search.storyName = "Search";
-Search.args = getArgs(demoDataSearch, "text");
-Search.argTypes = getArgTypes(demoDataSearch, "text");

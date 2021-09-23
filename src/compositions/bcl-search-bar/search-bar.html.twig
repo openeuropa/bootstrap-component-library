@@ -1,0 +1,20 @@
+{% spaceless %}
+
+{# Parameters:
+  - pill: (boolean) (default: false)
+  ]
+#}
+
+{% set _pill = pill|default(false) %}
+
+{% set classes = "bcl-search-bar" %}
+
+{% if pill %}
+  {% set classes = classes ~ " rounded" %}
+{% endif %}
+
+<div class="{{ classes }}">
+  {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _context only %}
+</div>
+
+{% endspaceless %}

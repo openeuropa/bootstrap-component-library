@@ -7,7 +7,6 @@
     - options ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"]
   - transformation (string) (default: '')
     - options ["rotate-90", "rotate-180", "rotate-270", "flip-horizontal", "flip-vertical"]
-  - wrapper_classes (string) (default: '')
 #}
 
 {% set _name = name|default('') %}
@@ -27,16 +26,10 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-{% if wrapper_classes is not empty %}
-<div class="{{ wrapper_classes }}">
-{% endif %}
 <svg
   {{ attributes }}
 >
   <use xlink:href="{{ _path ~ "#" ~ _name }}"/>
 </svg>
-{% if wrapper_classes is not empty %}
-</div>
-{% endif %}
 
 {% endspaceless %}

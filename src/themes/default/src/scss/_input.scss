@@ -1,0 +1,17 @@
+.bcl-search-bar {
+  .bcl-search-bar__icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .bcl-search-bar__input {
+    padding-left: 3rem;
+  }
+
+  &.rounded {
+    .bcl-search-bar__input {
+      border-radius: 70px;
+    }
+  }
+}
