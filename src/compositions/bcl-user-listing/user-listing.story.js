@@ -8,7 +8,7 @@ demoData.data.header = headerData;
 export default {
   title: "Compositions/Users/Listing",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     design: [
       {
         name: "Wireframe",

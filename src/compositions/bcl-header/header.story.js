@@ -45,7 +45,7 @@ export default {
   title: "Compositions/Header",
   decorators: [withDesign],
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     design: [
       {
         name: "Wireframe",

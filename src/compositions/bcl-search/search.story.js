@@ -9,7 +9,7 @@ export default {
   title: "Compositions/Search",
   decoratos: [scriptInit],
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     design: [
       {
         name: "Wireframe",
