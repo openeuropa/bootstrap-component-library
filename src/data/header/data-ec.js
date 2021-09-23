@@ -87,6 +87,7 @@ module.exports = {
         variant: "light",
         icon: {
           name: "search",
+          size: "xs",
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",
