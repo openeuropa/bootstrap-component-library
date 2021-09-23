@@ -59,14 +59,13 @@ $header-margin: 1.5rem 0.5rem !default;
 }
 
 .bcl-header .notification span {
-  position: absolute;
-  top: 18px;
-  right: 9px;
+  border-radius: 10px;
   height: 18px;
-  padding-right: 5px;
-  padding-left: 5px;
   line-height: 0.6rem;
-  border-radius: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+  transform: translate(-11px, 5px);
+  z-index: 1;
 }
 
 .bcl-header__project {
@@ -89,7 +88,7 @@ $header-margin: 1.5rem 0.5rem !default;
 .bcl-header .navbar-toggler {
   position: absolute;
   right: 14px;
-  bottom: calc(100% - 0.45rem);
+  bottom: calc(100% - 0.3rem);
   border-color: $white;
 }
 
