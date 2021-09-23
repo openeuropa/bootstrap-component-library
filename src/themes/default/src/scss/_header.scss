@@ -22,6 +22,10 @@ $header-margin: 1.5rem 0 !default;
   position: relative;
 }
 
+.bcl-header__navbar .navbar-collapse {
+  padding-bottom: map-get($spacers, 3);
+}
+
 .ec__header .bcl-header__project,
 .ec__header .bcl-header__navbar {
   background: $header-background;
@@ -92,8 +96,8 @@ $header-margin: 1.5rem 0 !default;
 
 .bcl-header .navbar-toggler {
   position: absolute;
-  right: 14px;
   top: -43px;
+  right: 14px;
   border-color: $white;
 }
 
@@ -119,6 +123,9 @@ $header-margin: 1.5rem 0 !default;
   }
   .bcl-header .navbar-brand img {
     width: auto;
+  }
+  .bcl-header__navbar .navbar-collapse {
+    padding-bottom: 0;
   }
   .bcl-header__navbar .nav-link.active {
     padding-top: $spacer;
