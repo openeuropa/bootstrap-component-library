@@ -9,22 +9,22 @@ import drupalAttribute from "drupal-attribute";
 const getArgs = (data, input_type) => {
   let args = {
     input_type: input_type,
-    label: data.label,
+    label: data.label || "",
     hidden_label: false,
-    helper_text: data.helper_text,
-    invalid: data.invalid,
-    disabled: data.disabled,
-    required: data.required,
-    valid: false,
-    invalid_feedback: data.invalid_feedback,
-    valid_feedback: data.valid_feedback,
+    helper_text: data.helper_text || "",
+    invalid: data.invalid || false,
+    disabled: data.disabled || false,
+    required: data.required || false,
+    valid: data.valid || false,
+    invalid_feedback: data.invalid_feedback || "",
+    valid_feedback: data.valid_feedback || "",
   };
   if (input_type === "text" || input_type === "file") {
-    args.readonly = data.readonly;
+    args.readonly = data.readonly || false;
   }
   if (input_type !== "file") {
     args.floating = false;
-    args.placeholder = "text here";
+    args.placeholder = data.placeholder || "text here";
   } else {
     args.placeholder = "";
   }
