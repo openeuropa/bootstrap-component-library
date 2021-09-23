@@ -92,11 +92,13 @@ module.exports = {
         variant: "light",
         icon: {
           name: "search",
+          attributes: new drupalAttribute().addClass(["align-self-center"]),
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",
           "rounded-0",
           "rounded-end",
+          "d-flex",
         ]),
       },
       items: [
