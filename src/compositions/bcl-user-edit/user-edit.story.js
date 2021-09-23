@@ -7,6 +7,9 @@ demoData.data.header = headerData;
 
 export default {
   title: "Compositions/Users/Edit",
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 const correctPaths = (data) => {
