@@ -85,10 +85,6 @@ $header-link-active-background: #003776 !default;
   vertical-align: middle;
 }
 
-.bcl-header__project.light p {
-  color: $black;
-}
-
 .bcl-header .navbar-toggler {
   position: absolute;
   top: -43px;
@@ -116,6 +112,9 @@ $header-link-active-background: #003776 !default;
   .bcl-header__project.light,
   .ec__header .bcl-header__project.light {
     background: $white;
+  }
+  .bcl-header__project.light p {
+    color: $black;
   }
   .bcl-header .navbar-toggler {
     position: relative;
