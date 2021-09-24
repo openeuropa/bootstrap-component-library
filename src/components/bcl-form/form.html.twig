@@ -96,9 +96,11 @@
 {% endif %}
 {# submit #}
 {% if _submit is not empty %}
-  {% set _submit = _submit|merge({
-    items: [_submit]
-  }) %}
+  {% if _submit.items is empty %}
+    {% set _submit = _submit|merge({
+      items: [_submit]
+    }) %}
+  {% endif %}
   {% if _submit.wrapper is defined and _submit.wrapper is not empty %}
   <div class="{{ _submit.wrapper }}">
   {% endif %}

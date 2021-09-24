@@ -7,9 +7,7 @@ demoData.data.header = headerData;
 
 export default {
   title: "Compositions/Search",
-  decoratos: [scriptInit],
   parameters: {
-    layout: "fullscreen",
     design: [
       {
         name: "Wireframe",
@@ -53,3 +51,4 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
+Default.decorators = [scriptInit];

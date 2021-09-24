@@ -3,11 +3,6 @@ $header-background: #004494 !default;
 $header-background-start: #039 !default;
 $header-background-end: #1b4ac3 !default;
 $header-link-active-background: #003776 !default;
-$header-margin: 1.5rem 0 !default;
-
-.bcl-header {
-  margin: $header-margin;
-}
 
 .bcl-header__project,
 .bcl-header__navbar {
@@ -103,6 +98,12 @@ $header-margin: 1.5rem 0 !default;
 
 .bcl-header .navbar-toggler .navbar-toggler-icon {
   background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+@include media-breakpoint-down(sm) {
+  .bcl-header .navbar:first-child .nav-link {
+    padding: 0.5rem 0.4rem;
+  }
 }
 
 @include media-breakpoint-up(md) {
