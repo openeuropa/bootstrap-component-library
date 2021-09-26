@@ -5,7 +5,7 @@ import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const getArgs = (data) => {
   return {
-    small: false,
+    size: data.size || "",
     variant: data.variant,
     type: "border",
     assistive_text: data.assistive_text,
@@ -14,12 +14,17 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    small: {
-      type: { name: "boolean" },
-      description: "Small spinner",
+    size: {
+      type: { name: "select" },
+      description: "Size spinner",
+      options: {
+        large: "lg",
+        medium: "",
+        small: "sm",
+      },
       table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
+        type: { summary: "select" },
+        defaultValue: { summary: "" },
         category: "Style",
       },
     },
