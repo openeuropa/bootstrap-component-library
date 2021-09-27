@@ -106,7 +106,7 @@ module.exports = {
       ],
     },
     {
-      extra_classes: "py-4 border-top mt-4 py-lg-5 mt-lg-5",
+      extra_classes: "pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row",
       cols: [
         {
           classes: "col-12 col-lg-4",
@@ -137,7 +137,7 @@ module.exports = {
       ],
     },
     {
-      extra_classes: "pt-4 border-top pt-lg-5 pb-4",
+      extra_classes: "pb-4 pb-lg-5 bcl-footer__bordered-row",
       cols: [
         {
           classes: "col-12 col-lg-4 pb-lg-4",

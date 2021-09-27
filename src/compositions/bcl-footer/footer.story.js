@@ -8,6 +8,7 @@ export default {
   title: "Compositions/Footer",
   decorators: [withDesign],
   parameters: {
+    layout: "fullscreen",
     design: {
       type: "figma",
       url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=4195%3A41441",

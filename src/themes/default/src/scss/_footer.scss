@@ -1,3 +1,5 @@
+// stylelint-disable declaration-no-important
+
 $footer-border-color: #adb5bd !default;
 
 .bcl-footer {
@@ -13,6 +15,21 @@ $footer-border-color: #adb5bd !default;
   color: $white;
 }
 
-.bcl-footer.ec__footer *[class^="border-"] {
-  border-color: $footer-border-color;
+.bcl-footer *[class*="border-"] {
+  border-color: $footer-border-color !important;
+}
+
+.bcl-footer__bordered-row::before {
+  display: block;
+  width: 100%;
+  margin: 0 12px;
+  margin-bottom: map-get($spacers, 4);
+  content: "";
+  border-bottom: 1px solid $footer-border-color;
+}
+
+@include media-breakpoint-up(lg) {
+  .bcl-footer__bordered-row::before {
+    margin-bottom: map-get($spacers, 5);
+  }
 }
