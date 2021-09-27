@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
 import footerData from "@openeuropa/bcl-data-footer/data";
+import footerDataEC from "@openeuropa/bcl-data-footer/data-ec";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 export default {
@@ -37,3 +38,9 @@ const correctPaths = (data) => {
 };
 
 export const Footer = () => footer(correctPaths(footerData));
+
+Footer.storyName = "Footer EU";
+
+export const FooterEC = (args) => footer(correctPaths(footerDataEC));
+
+FooterEC.storyName = "Footer EC";

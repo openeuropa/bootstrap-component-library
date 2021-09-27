@@ -1,3 +1,18 @@
-.oe-footer {
-  background: $gray-100;
+$footer-border-color: #adb5bd !default;
+
+.bcl-footer {
+  background: $eu-light-blue;
+}
+
+.bcl-footer.ec__footer {
+  background: $ec-blue;
+}
+
+.bcl-footer.ec__footer a,
+.bcl-footer.ec__footer p {
+  color: $white;
+}
+
+.bcl-footer.ec__footer *[class^="border-"] {
+  border-color: $footer-border-color;
 }
