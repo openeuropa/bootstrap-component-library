@@ -12,7 +12,7 @@ addParameters({
     manual: false,
   },
   controls: { expanded: true },
-  layout: "fullscreen",
+  layout: "padded",
   viewport: {
     defaultViewport: "responsive",
     viewports: {
@@ -50,7 +50,6 @@ addParameters({
 });
 
 export const parameters = {
-  layout: "padded",
   options: {
     storySort: {
       method: 'alphabetical',
