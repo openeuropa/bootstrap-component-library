@@ -112,10 +112,20 @@ module.exports = {
         },
       },
     },
-    users: [
+    cards: [
       {
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-3",
+          "d-flex",
+          "flex-row",
+          "align-items-center",
+        ]),
+        extra_classes_body: "flex-grow-1 ms-3-5 p-0",
         title: {
           content: "Stefan Mayer",
+          tag: "a",
+          classes: "fs-5 text-decoration-none d-block mb-0",
           attributes: new drupalAttribute().setAttribute(
             "href",
             "example.html"
@@ -123,15 +133,27 @@ module.exports = {
         },
         content:
           "<span class='text-muted me-4-5'>DG Test</span><span class='text-muted me-4-5'>Manager</span>",
+        extra_classes_image: "rounded-pill",
         image: {
           path: "https://picsum.photos/50/50?random=1",
           alt: "alt img",
-          position: "top",
+          position: "left",
+          size_auto: true,
         },
       },
       {
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-3",
+          "d-flex",
+          "flex-row",
+          "align-items-center",
+        ]),
+        extra_classes_body: "flex-grow-1 ms-3-5 p-0",
         title: {
-          content: "Adjur Tichar",
+          content: "Ajdur Tichar",
+          tag: "a",
+          classes: "fs-5 text-decoration-none d-block mb-0",
           attributes: new drupalAttribute().setAttribute(
             "href",
             "example.html"
@@ -139,15 +161,27 @@ module.exports = {
         },
         content:
           "<span class='text-muted me-4-5'>DG Test</span><span class='text-muted me-4-5'>Manager</span>",
+        extra_classes_image: "rounded-pill",
         image: {
           path: "https://picsum.photos/50/50?random=2",
           alt: "alt img",
-          position: "top",
+          position: "left",
+          size_auto: true,
         },
       },
       {
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-3",
+          "d-flex",
+          "flex-row",
+          "align-items-center",
+        ]),
+        extra_classes_body: "flex-grow-1 ms-3-5 p-0",
         title: {
           content: "Szép Mara",
+          tag: "a",
+          classes: "fs-5 text-decoration-none d-block mb-0",
           attributes: new drupalAttribute().setAttribute(
             "href",
             "example.html"
@@ -155,15 +189,27 @@ module.exports = {
         },
         content:
           "<span class='text-muted me-4-5'>DG Test</span><span class='text-muted me-4-5'>Manager</span>",
+        extra_classes_image: "rounded-pill",
         image: {
           path: "https://picsum.photos/50/50?random=3",
           alt: "alt img",
-          position: "top",
+          position: "left",
+          size_auto: true,
         },
       },
       {
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-3",
+          "d-flex",
+          "flex-row",
+          "align-items-center",
+        ]),
+        extra_classes_body: "flex-grow-1 ms-3-5 p-0",
         title: {
           content: "Daniel Cardoso Rocha",
+          tag: "a",
+          classes: "fs-5 text-decoration-none d-block mb-0",
           attributes: new drupalAttribute().setAttribute(
             "href",
             "example.html"
@@ -171,15 +217,27 @@ module.exports = {
         },
         content:
           "<span class='text-muted me-4-5'>DG Test</span><span class='text-muted me-4-5'>Manager</span>",
+        extra_classes_image: "rounded-pill",
         image: {
           path: "https://picsum.photos/50/50?random=4",
           alt: "alt img",
-          position: "top",
+          position: "left",
+          size_auto: true,
         },
       },
       {
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-3",
+          "d-flex",
+          "flex-row",
+          "align-items-center",
+        ]),
+        extra_classes_body: "flex-grow-1 ms-3-5 p-0",
         title: {
           content: "Aurelia Panicucci",
+          tag: "a",
+          classes: "fs-5 text-decoration-none d-block mb-0",
           attributes: new drupalAttribute().setAttribute(
             "href",
             "example.html"
@@ -187,15 +245,27 @@ module.exports = {
         },
         content:
           "<span class='text-muted me-4-5'>DG Test</span><span class='text-muted me-4-5'>Manager</span>",
+        extra_classes_image: "rounded-pill",
         image: {
           path: "https://picsum.photos/50/50?random=5",
           alt: "alt img",
-          position: "top",
+          position: "left",
+          size_auto: true,
         },
       },
       {
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-3",
+          "d-flex",
+          "flex-row",
+          "align-items-center",
+        ]),
+        extra_classes_body: "flex-grow-1 ms-3-5 p-0",
         title: {
           content: "Felicyta Kowalska",
+          tag: "a",
+          classes: "fs-5 text-decoration-none d-block mb-0",
           attributes: new drupalAttribute().setAttribute(
             "href",
             "example.html"
@@ -203,10 +273,12 @@ module.exports = {
         },
         content:
           "<span class='text-muted me-4-5'>DG Test</span><span class='text-muted me-4-5'>Manager</span>",
+        extra_classes_image: "rounded-pill",
         image: {
           path: "https://picsum.photos/50/50?random=6",
           alt: "alt img",
-          position: "top",
+          position: "left",
+          size_auto: true,
         },
       },
     ],
