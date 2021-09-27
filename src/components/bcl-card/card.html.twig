@@ -93,8 +93,8 @@
   {% set _img_classes = 'card-img-bottom' %}
 {% elseif _image.position == 'background' %}
   {% set _img_classes = 'card-img' %}
-{% elseif _image.position == 'custom' %}
-  {% set _img_classes = [''] %}
+{% elseif _image.size_auto == true %}
+  {% set _img_classes = '' %}
 {% else %}
   {% set _img_classes = 'card-img-top' %}
 {% endif %}
