@@ -4,17 +4,18 @@
   - type (string) (default: 'border')
     - options ['border', 'grow']
   - variant (string) (default: '')
-  - small (boolean) (default: false)
+  - size (string) (default: '')
+    - options ['sm', 'lg']
   - assistive_text (string) (default: '')
 #}
 
 {% set _type = type|default('border') %}
 {% set _variant = variant|default('') %}
-{% set _small = small|default(false) %}
+{% set _size = size|default('') %}
 {% set _assistive_text = assistive_text|default('') %}
 {% set _classes = ['spinner-' ~ _type] %}
-{% if _small %}
-  {% set _classes = _classes|merge(['spinner-' ~ _type ~ '-sm']) %}
+{% if _size is not empty %}
+  {% set _classes = _classes|merge(['spinner-' ~ _type ~ '-' ~ _size]) %}
 {% endif %}
 {% if _variant is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _variant]) %}
