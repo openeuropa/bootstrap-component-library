@@ -140,19 +140,16 @@ export const getFormControls = (data, type) => {
     argTypes.size = {
       name: "size",
       type: { name: "select" },
-      options: ["sm", "lg"],
+      options: {
+        large: "lg",
+        medium: "",
+        small: "sm",
+      },
       description: "The width of the form element {sm: small, lg: large}",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: data.size },
         category: "Size",
-      },
-      control: {
-        type: "select",
-        labels: {
-          sm: "small",
-          lg: "large",
-        },
       },
     };
   }

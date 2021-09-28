@@ -29,6 +29,7 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data, args) => {
+  data.attributes.removeClass("form-select-md");
   data.attributes.removeClass("form-select-" + data.size);
   if (!args.disabled) {
     data.attributes.removeAttribute("disabled");

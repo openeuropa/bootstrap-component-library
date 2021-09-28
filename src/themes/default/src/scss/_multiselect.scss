@@ -4,11 +4,11 @@
 );
 
 .ss-main.multi-select {
+  padding: 0;
   &.is-invalid,
   &.is-valid {
     .ss-multi-selected {
       background-repeat: no-repeat;
-      background-position: right 1.8rem center, center right 2.25rem;
       background-size: 1.4rem 1.4rem;
     }
   }
@@ -27,16 +27,62 @@
   .ss-value-text {
     font-weight: 700;
   }
+  &.form-select-sm {
+    &.is-invalid,
+    &.is-valid {
+      .ss-multi-selected {
+        background-position: right 1.8rem center, center right 2.25rem;
+      }
+    }
+    .ss-plus {
+      height: 10px;
+      margin-right: 10px;
+      &::after {
+        top: 4px;
+        left: -4px;
+        width: 10px;
+      }
+    }
+    .ss-values {
+      .ss-disabled {
+        padding: 6px 5px;
+      }
+      .ss-value {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  &.form-select-md {
+    .ss-plus {
+      height: 18px;
+      margin-right: 10px;
+      &::after {
+        top: 8px;
+        left: -8px;
+        width: 18px;
+      }
+    }
+    &.is-invalid,
+    &.is-valid {
+      .ss-multi-selected {
+        background-position: right 2.4rem center, center right 2.25rem;
+      }
+    }
+    .ss-values {
+      .ss-value {
+        font-size: 1rem;
+      }
+      .ss-disabled {
+        padding: 8px 5px;
+      }
+    }
+  }
   &.form-select-lg {
-    padding: 0;
     &.is-invalid,
     &.is-valid {
       .ss-multi-selected {
         background-position: right 2.8rem center, center right 2.25rem;
       }
-    }
-    .ss-value {
-      font-size: 1.2rem;
     }
     .ss-plus {
       height: 22px;
@@ -45,6 +91,14 @@
         top: 10px;
         left: -10px;
         width: 22px;
+      }
+    }
+    .ss-values {
+      .ss-disabled {
+        padding: 8px 5px;
+      }
+      .ss-value {
+        font-size: 1.2rem;
       }
     }
   }
