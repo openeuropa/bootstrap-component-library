@@ -12,12 +12,7 @@ module.exports = {
     brand: {
       logos: [
         {
-          class: "d-none d-lg-block",
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-        },
-        {
-          class: "d-lg-none",
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
+          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
         },
       ],
     },
@@ -252,4 +247,5 @@ module.exports = {
       { label: "News" },
     ],
   },
+  attributes: new drupalAttribute().addClass("ec__header"),
 };
