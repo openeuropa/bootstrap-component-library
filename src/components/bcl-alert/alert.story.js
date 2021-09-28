@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
-import { getVariants } from "@openeuropa/bcl-story-utils";
+import { getVariants, getIconNames } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
@@ -18,16 +18,6 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    variant: {
-      type: { name: "select" },
-      options: getVariants(),
-      description: "Variant of the alert",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "primary" },
-        category: "Style",
-      },
-    },
     message: {
       type: { name: "string" },
       description: "Content of the alert",
@@ -46,13 +36,6 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
-    icon: {
-      type: { name: "boolean" },
-      description: "Toggle icon visibility",
-      table: {
-        category: "Content",
-      },
-    },
     dismissible: {
       type: { name: "boolean" },
       description: "Enable the close button",
@@ -60,6 +43,16 @@ const getArgTypes = (data) => {
         type: { summary: "boolean" },
         defaultValue: { summary: "true" },
         category: "Content",
+      },
+    },
+    variant: {
+      type: { name: "select" },
+      options: getVariants(),
+      description: "Variant of the alert",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "primary" },
+        category: "Style",
       },
     },
     animated_dismiss: {
@@ -71,12 +64,34 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    icon: {
+      type: { name: "boolean" },
+      description: "Toggle icon visibility",
+      table: {
+        category: "Icon",
+      },
+    },
+    icon_name: {
+      name: "icon name",
+      type: { name: "select" },
+      options: getIconNames(),
+      description: "Icon name (optional, to set a custom icon)",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Icon",
+      },
+    },
   };
 };
 
 const applyArgs = (data, args) => {
   data.attributes = new drupalAttribute();
   data.icons_path = args.icon ? defaultSprite : "";
+  if (args.icon_name === "none") {
+    data.icons_path = "";
+  }
+
   return Object.assign(data, args);
 };
 
