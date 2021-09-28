@@ -204,7 +204,7 @@ const initTooltip = (story) => {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
     </script>
-    <div style="padding: 2rem 0 2rem 8rem" class="bg-light">${demo}</div>`;
+    <div style="padding: 2rem 0 2rem 8rem">${demo}</div>`;
 };
 
 export default {
