@@ -30,11 +30,11 @@ describe("OE - badge", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly dismissible and with url", () => {
+  test("renders correctly dismissible", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dismissible: true, dismissible_url: "/test" })
+      render({ ...demoData, dismissible: true })
     ).resolves.toMatchSnapshot();
   });
 
