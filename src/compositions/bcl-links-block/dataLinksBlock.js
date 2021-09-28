@@ -1,8 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
-  variant: "gray",
-  direction: "vertical",
+  background: "gray",
+  variant: "vertical",
   title: "More information",
   links: [
     {
