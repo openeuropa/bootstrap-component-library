@@ -1,5 +1,5 @@
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
-import headerData from "@openeuropa/bcl-data-header/data-ecl.js";
+import headerData from "@openeuropa/bcl-data-header/data.js";
 import search from "@openeuropa/bcl-search/search.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
@@ -7,7 +7,6 @@ demoData.data.header = headerData;
 
 export default {
   title: "Compositions/Search",
-  decoratos: [scriptInit],
   parameters: {
     design: [
       {
@@ -52,3 +51,4 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
+Default.decorators = [scriptInit];
