@@ -6,6 +6,7 @@
   - url (string) (default: '')
   - title (string) (default: label)
   - dismissible (boolean) (default: false)
+  - dismissible_url (string) (default: "")
   - assistive_text (string) (default: '')
   - rounded_pill (boolean) (default: false)
   - icons_path (string) (default: '')
@@ -19,6 +20,7 @@
 {% set _icons_path = icons_path|default('') %}
 {% set _title = title|default(_label) %}
 {% set _dismissible = dismissible|default(false) %}
+{% set _dismissible_url = dismissible_url|default("") %}
 {% set _assistive_text = assistive_text|default('') %}
 
 {% if _rounded_pill %}
@@ -48,12 +50,12 @@
   {%- endif -%}
     {{- _label -}}
   {%- if _dismissible -%}
-    <span class="icon--close" aria-hidden="true">
+    <a href="{{ _dismissible_url ?: "javascript:void(0)" }}" class="icon--close" aria-hidden="true">
       {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
         name: "x",
         path: _icons_path,
       } only %}
-    </span>
+    </a>
   {%- endif -%}
   </span>
 {%- if _url is not empty -%}

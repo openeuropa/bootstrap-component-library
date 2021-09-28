@@ -60,6 +60,29 @@ exports[`OE - badge renders correctly as a rounded pill 1`] = `
 </jest>
 `;
 
+exports[`OE - badge renders correctly dismissible and with url 1`] = `
+<jest>
+  <span
+    class="badge bg-primary"
+  >
+    A simple badge!
+    <a
+      aria-hidden="true"
+      class="icon--close"
+      href="/test"
+    >
+      <svg
+        class="bi icon--s"
+      >
+        <use
+          xlink:href="#x"
+        />
+      </svg>
+    </a>
+  </span>
+</jest>
+`;
+
 exports[`OE - badge renders correctly with a link 1`] = `
 <jest>
   <a
