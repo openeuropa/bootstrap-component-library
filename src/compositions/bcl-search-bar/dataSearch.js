@@ -4,7 +4,7 @@ module.exports = {
   placeholder: "Search",
   size: "sm",
   attributes: new drupalAttribute().addClass(["bcl-search-bar__input"]),
-  label: "test",
+  label: "Search bar label",
   icon: {
     name: "search",
     size: "xs",

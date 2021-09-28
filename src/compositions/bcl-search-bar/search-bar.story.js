@@ -13,9 +13,9 @@ const getArgs = (data) => {
     disabled: data.disabled || false,
     required: data.required || false,
     valid: data.valid || false,
+    readonly: data.readonly || false,
     invalid_feedback: data.invalid_feedback || "",
     valid_feedback: data.valid_feedback || "",
-    floating: false,
     placeholder: data.placeholder || "text here",
   };
 
@@ -24,7 +24,7 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    ...getFormControls(data, "text"),
+    ...getFormControls(data, "search"),
   };
 };
 

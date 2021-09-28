@@ -91,7 +91,12 @@ export const getFormControls = (data, type) => {
       },
     },
   };
-  if (type === "text" || type === "textarea" || type === "multiselect") {
+  if (
+    type === "text" ||
+    type === "textarea" ||
+    type === "multiselect" ||
+    type === "search"
+  ) {
     argTypes.placeholder = {
       name: "placeholder text",
       type: "string",
@@ -104,7 +109,12 @@ export const getFormControls = (data, type) => {
     };
   }
 
-  if (type === "text" || type === "textarea" || type === "file") {
+  if (
+    type === "text" ||
+    type === "textarea" ||
+    type === "file" ||
+    type === "search"
+  ) {
     argTypes.readonly = {
       name: "readonly",
       type: "boolean",
@@ -125,6 +135,7 @@ export const getFormControls = (data, type) => {
           type: { summary: "boolean" },
           defaultValue: { summary: "false" },
           category: "Style",
+          disable: type === "search",
         },
       };
     }
