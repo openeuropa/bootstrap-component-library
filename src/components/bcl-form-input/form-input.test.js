@@ -86,6 +86,14 @@ describe("OE - Form Input", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("range renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, input_type: "range" })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("switch renders correctly", () => {
     expect.assertions(1);
 
