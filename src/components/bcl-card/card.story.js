@@ -184,8 +184,16 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+
   data.image.position = args.image_position;
+  // Reset header and footer when using image overlays.
+  if (args.image_position === "background") {
+    args.card_header = "";
+    args.card_footer = "";
+  }
+
   resetAttrs(data);
+
   return Object.assign(data, args);
 };
 
