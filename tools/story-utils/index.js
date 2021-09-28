@@ -145,7 +145,8 @@ export const getFormControls = (data, type) => {
         medium: "",
         small: "sm",
       },
-      description: "The width of the form element {sm: small, md: medium, lg: large}",
+      description:
+        "The width of the form element {sm: small, md: medium, lg: large}",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: data.size },
