@@ -62,6 +62,8 @@ exports[`OE - select renders correctly as a multiple choice select 1`] = `
   <select
     class=""
     multiple="true"
+    onchange="this.slim.slim.container.classList.remove('is-invalid')"
+    oninvalid="this.slim.slim.container.classList.add('is-invalid')"
     required="true"
   >
     <optgroup
@@ -254,6 +256,8 @@ exports[`OE - select renders correctly when multiple 1`] = `
   <select
     class="form-select form-select-md"
     multiple="true"
+    onchange="this.slim.slim.container.classList.remove('is-invalid')"
+    oninvalid="this.slim.slim.container.classList.add('is-invalid')"
     required="true"
   >
     <option
