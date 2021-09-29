@@ -25,7 +25,6 @@
       path (string),
       alt (string),
       position (string)
-      size_auto (boolean)
     }
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
@@ -40,7 +39,6 @@
     options: ['dark', 'white']
   - card_header (string) (default: '')
   - card_footer (string) (default: '')
-  - extra_classes_image (string) (default: '')
   - extra_classes_body (string) (default: '')
   - extra_classes_header (string) (default: '')
   - extra_classes_footer (string) (default: '')
@@ -62,7 +60,6 @@
 {% set _text_color = text_color|default('') %}
 {% set _card_header = card_header|default('') %}
 {% set _card_footer = card_footer|default('') %}
-{% set _extra_classes_image = extra_classes_image|default('') %}
 {% set _extra_classes_body = extra_classes_body|default('') %}
 {% set _extra_classes_header = extra_classes_header|default('') %}
 {% set _extra_classes_footer = extra_classes_footer|default('') %}
@@ -87,24 +84,6 @@
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
-{% endif %}
-
-{% if _image.position == 'bottom' %}
-  {% set _img_classes = 'card-img-bottom' %}
-{% elseif _image.position == 'background' %}
-  {% set _img_classes = 'card-img' %}
-{% elseif _image.size_auto == true %}
-  {% set _img_classes = '' %}
-{% else %}
-  {% set _img_classes = 'card-img-top' %}
-{% endif %}
-
-{% if _extra_classes_image is not empty %}
-  {% if _img_classes is empty %}
-    {% set _img_classes = _extra_classes_image %}
-  {% else %}
-    {% set _img_classes = _img_classes ~ ' ' ~ _extra_classes_image %}
-  {% endif %}
 {% endif %}
 
 {% set _body_classes = 'card-body' %}
@@ -136,20 +115,18 @@
 <div class='{{ _row_classes }}'>
 {% endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
+  {% set _img_class = 'card-img-top' %}
+  {% if _image.position == 'background' %}
+    {% set _img_class = 'card-img' %}
+  {% endif %}
   {% if _horizontal %}
   <div class='{{ _horizontal_grid.left_col_classes  }}'>
-  {% endif %}
-  {% if _image.size_auto == true %}
-    <div class="flex-shrink-0">
   {% endif %}
   <img
     src='{{ _image.path }}'
     alt='{{ _image.alt }}'
-    class='{{ _img_classes }}'
+    class='{{ _img_class }}'
   >
-  {% if _image.size_auto == true %}
-    </div>
-  {% endif %}
   {% if _horizontal %}
   </div>
   {% endif %}
@@ -177,7 +154,6 @@
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
       class='card-title{{ title.classes ? ' ' ~ title.classes }}'
-      {{ title.attributes ? title.attributes }}
     >
       {{- title.content -}}
     </{{ _title_tag }}>
@@ -221,7 +197,7 @@
     <img
       src='{{ _image.path }}'
       alt='{{ _image.alt }}'
-      class='{{ _img_classes }}'
+      class='card-img-bottom'
     >
     {% if _horizontal %}
     </div>
