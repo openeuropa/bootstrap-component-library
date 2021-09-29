@@ -17,6 +17,7 @@ export const getFormControls = (data, type) => {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
         category: "Style",
+        disable: type === "search",
       },
     },
     helper_text: {

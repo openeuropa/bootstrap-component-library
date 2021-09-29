@@ -1,19 +1,27 @@
 {% spaceless %}
 
 {# Parameters:
+  - icon: (icon Object) (default: {})
   - pill: (boolean) (default: false)
   ]
 #}
 
 {% set _pill = pill|default(false) %}
+{% set _icon = icon|default({}) %}
 
 {% set classes = "bcl-search-bar" %}
 
-{% if pill %}
+{% if _pill %}
   {% set classes = classes ~ " rounded" %}
 {% endif %}
 
+{% if size is not empty %}
+  {% set classes = classes ~ " size-" ~ size %}
+{% endif %}
+
+<p class="form-label">{{ label }}</p>
 <div class="{{ classes }}">
+  {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
   {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _context only %}
 </div>
 

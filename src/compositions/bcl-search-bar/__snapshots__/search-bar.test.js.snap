@@ -2,30 +2,31 @@
 
 exports[`OE - Search Bar renders correctly 1`] = `
 <jest>
-  <div
-    class="bcl-search-bar"
+  <p
+    class="form-label"
   >
+    Search bar label
+  </p>
+  <div
+    class="bcl-search-bar size-sm"
+  >
+    <svg
+      class="bcl-search-bar__icon bi icon--xs"
+    >
+      <use
+        xlink:href="#search"
+      />
+    </svg>
     <label
       class="form-label"
     >
       Search bar label
     </label>
-    <div
-      class="position-relative"
-    >
-      <svg
-        class="bcl-search-bar__icon bi icon--xs"
-      >
-        <use
-          xlink:href="#search"
-        />
-      </svg>
-      <input
-        class="bcl-search-bar__input form-control form-control-sm"
-        placeholder="Search"
-        type="search"
-      />
-    </div>
+    <input
+      class="bcl-search-bar__input form-control form-control-sm"
+      placeholder="Search"
+      type="search"
+    />
   </div>
 </jest>
 `;
