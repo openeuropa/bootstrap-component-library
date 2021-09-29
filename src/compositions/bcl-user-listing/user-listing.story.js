@@ -1,5 +1,4 @@
 import demoData from "@openeuropa/bcl-user-listing/dataUserListing.js";
-import demoDataSmall from "@openeuropa/bcl-user-listing/dataUserListingSmall.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import userListing from "@openeuropa/bcl-user-listing/user-listing.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
@@ -47,6 +46,3 @@ const correctPaths = (data) => {
 
 export const Default = () => userListing(correctPaths(demoData));
 Default.decorators = [scriptInit];
-
-export const SmallTeaser = () => userListing(correctPaths(demoDataSmall));
-SmallTeaser.decorators = [scriptInit];
