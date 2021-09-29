@@ -9,6 +9,7 @@
     .ss-multi-selected {
       background-repeat: no-repeat;
       background-size: 1.4rem 1.4rem;
+      background-position: right 2.4rem center, center right 2.25rem;
     }
   }
   &.is-invalid {
@@ -26,6 +27,27 @@
   .ss-value-text {
     font-weight: 700;
   }
+  .ss-multi-selected {
+    .ss-add {
+      .ss-plus {
+        height: 18px;
+        margin-right: 10px;
+        &::after {
+          top: 8px;
+          left: -8px;
+          width: 18px;
+        }
+      }
+    }
+  }
+  .ss-values {
+    .ss-value {
+      font-size: 1rem;
+    }
+    .ss-disabled {
+      padding: 8px 5px;
+    }
+  }
   &.form-select-sm {
     &.is-invalid,
     &.is-valid {
@@ -33,13 +55,17 @@
         background-position: right 1.8rem center, center right 2.25rem;
       }
     }
-    .ss-plus {
-      height: 10px;
-      margin-right: 10px;
-      &::after {
-        top: 4px;
-        left: -4px;
-        width: 10px;
+    .ss-multi-selected {
+      .ss-add {
+        .ss-plus {
+          height: 10px;
+          margin-right: 10px;
+          &::after {
+            top: 4px;
+            left: -4px;
+            width: 10px;
+          }
+        }
       }
     }
     .ss-values {
@@ -51,31 +77,6 @@
       }
     }
   }
-  &.form-select-md {
-    .ss-plus {
-      height: 18px;
-      margin-right: 10px;
-      &::after {
-        top: 8px;
-        left: -8px;
-        width: 18px;
-      }
-    }
-    &.is-invalid,
-    &.is-valid {
-      .ss-multi-selected {
-        background-position: right 2.4rem center, center right 2.25rem;
-      }
-    }
-    .ss-values {
-      .ss-value {
-        font-size: 1rem;
-      }
-      .ss-disabled {
-        padding: 8px 5px;
-      }
-    }
-  }
   &.form-select-lg {
     &.is-invalid,
     &.is-valid {
@@ -83,13 +84,17 @@
         background-position: right 2.8rem center, center right 2.25rem;
       }
     }
-    .ss-plus {
-      height: 22px;
-      margin-right: 15px;
-      &::after {
-        top: 10px;
-        left: -10px;
-        width: 22px;
+    .ss-multi-selected {
+      .ss-add {
+        .ss-plus {
+          height: 22px;
+          margin-right: 15px;
+          &::after {
+            top: 10px;
+            left: -10px;
+            width: 22px;
+          }
+        }
       }
     }
     .ss-values {

@@ -12,7 +12,7 @@
   - "invalid_feedback" (string) (default: '')
   - "valid_feedback" (string) (default: '')
   - "required" (boolean) (default: false)
-  - "size" (string) (default: 'md') (sm, lg, md)
+  - "size" (string) (default: '') (sm, lg)
   - "multiple" (boolean) (default: false)
   - "options": (array of objects with value and label keys) (default: [])
   - "aria_label": (string) (default: '')
@@ -22,7 +22,7 @@
 {% set _disabled = disabled|default(false) %}
 {% set _options = options|default([]) %}
 {% set _aria_label = aria_label|default('') %}
-{% set _size = size|default('md') %}
+{% set _size = size|default('') %}
 {% set _required = required|default(false) %}
 {% set _multiple = multiple|default(false) %}
 {% set _invalid = invalid|default(false) %}
@@ -41,7 +41,9 @@
   {% set _classes = [] %}
 {% endif %}
 
-{% set _classes = _classes|merge(['form-select-' ~ _size]) %}
+{% if _size is not empty %}
+  {% set _classes = _classes|merge(['form-select-' ~ _size]) %}
+{% endif %}
 
 {% if _invalid %}
   {% set _classes = _classes|merge(['is-invalid']) %}
