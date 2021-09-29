@@ -6,14 +6,29 @@
   - variant (string) (default: 'primary')
   - dismissible (boolean) (default: true)
   - animated_dismiss (boolean) (default: true)
+  - icons_path (string) (default: '')
+  - icon_name (string) (default: '')
 #}
 
 {% set _message = message|default('') %}
 {% set _variant = variant|default('primary') %}
 {% set _heading = heading|default('') %}
+{% set _icons_path = icons_path|default('') %}
 {% set _dismissible = dismissible ?? true %}
 {% set _animated_dismiss = animated_dismiss ?? true %}
-{% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr')] %}
+{% set _icon_name = icon_name|default('') %}
+{% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr'), 'd-flex', 'align-items-center'] %}
+{% set _icon_names = {
+    primary: "info-circle-fill",
+    secondary: "info-circle-fill",
+    success: "check-circle-fill",
+    danger: "dash-circle-fill",
+    warning: "exclamation-triangle-fill",
+    light: "info-circle-fill",
+    info: "info-circle-fill",
+    dark: "info-circle-fill",
+  }
+%}
 
 {% if _dismissible %}
   {% set _classes = _classes|merge(['alert-dismissible']) %}
@@ -25,10 +40,22 @@
 {% set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') %}
 
 <div {{ attributes }}>
-{%- if _heading is not empty -%}
-  <h4 class="alert-heading">{{ _heading }}</h4>
-{%- endif -%}
-  {{- _message -}}
+{% if _icons_path is not empty %}
+  {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    name: _icon_name ?: _icon_names[_variant],
+    size: 's',
+    path: _icons_path,
+    attributes: create_attribute().addClass(['flex-shrink-0 me-3 mt-1 align-self-start']),
+  } only %}
+{% endif %}
+  <div class="alert-content">
+  {%- if _heading is not empty -%}
+    <h4 class="alert-heading">{{ _heading }}</h4>
+  {%- endif -%}
+  {%- if _message is not empty -%}
+    {{- _message -}}
+  {%- endif -%}
+  </div>
 {%- if _dismissible -%}
   <button
     type="button"
