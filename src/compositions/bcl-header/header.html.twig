@@ -1,78 +1,86 @@
 {% spaceless %}
 
 {# Parameters:
-  - logo
-    - src
-    - width
-    - height
-  - navbar
-  - login
-    - link
-      - label
-      - href
-      - target
-    - modal
-  - language
-    - link
-      - label
-      - href
-      - target
-    - modal
+  - navbar (Navbar object) (default: {})
+  - project_logo (object) (default: {})
+    format: {
+        path: "",
+        alt: "",
+        classes: ""
+      }
+  - site_name (string) (default: "")
+  - head (Navbar object) (default: {})
+  - breadcrumbs (Breadcrumbs object) (default: {})
+  - light (boolean) (default: false)
+  - modals (Array of modal objects) (default: [])
 #}
 
-{% set _logo = {
-  src: logo.src|default(''),
-  width: logo.width|default(100),
-  height: navbar.height|default(60)
-} %}
 {% set _navbar = navbar|default({}) %}
-{% set _login = {
-  link: {
-    label: login.link.label|default(''),
-    href: login.link.href|default('#'),
-    target: login.link.target|default(login.modal.id|default('')),
-  },
-  modal: login.modal|default({}),
-} %}
-{% set _language = {
-  link: {
-    label: language.link.label|default(''),
-    href: language.link.href|default('#'),
-    target: language.link.target|default(language.modal.id|default('')),
-  },
-  modal: language.modal|default({}),
-} %}
+{% set _project_logo = project_logo|default({}) %}
+{% set _site_name = site_name|default('') %}
+{% set _head = head|default({}) %}
+{% set _breadcrumbs = breadcrumbs|default({}) %}
+{% set _modals = modals|default([]) %}
+{% set _light = light|default(false) %}
 
-<header>
-  <!-- header -->
-  <div class="container">
-    <div class="oe-header">
-      <a class="navbar-brand" href="#">
-        <img src={{ _logo.src }} width={{ _logo.width }} height={{ _logo.height }} />
-      </a>
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href={{ _login.link.label }} role="button" data-bs-toggle="modal" data-bs-target="#{{ _login.link.target }}">
-            {{ _login.link.label }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={{ _language.link.label }} role="button" data-bs-toggle="modal" data-bs-target="#{{ _language.link.target }}">
-            {{ _language.link.label }}
-          </a>
-        </li>
-      </ul>
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass("bcl-header") %}
+
+{% set _project_classes = 'bcl-header__project' %}
+{% if _light is not empty %}
+  {% set _project_classes = _project_classes ~ ' light' %}
+{% endif %}
+
+<header
+  {{ attributes }}
+>
+  <!-- navbar_settings -->
+  {% if _head is not empty %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _head only %}
+  {% endif %}
+
+  <!-- project name -->
+  {% if _project_logo is not empty or _site_name is not empty %}
+  <div class="{{ _project_classes  }}">
+    <div class="container">
+    {% if _project_logo is not empty %}
+      <img
+      {% if _project_logo.path is not empty %}
+        src="{{ _project_logo.path }}"
+      {% endif %}
+      {% if _project_logo.alt is not empty %}
+        alt="{{ _project_logo.alt }}"
+      {% endif %}
+      {% if _project_logo.classes is not empty %}
+        class="{{ _project_logo.classes }}"
+      {% endif %}
+      />
+    {% endif %}
+    {% if _site_name is not empty %}
+      <p>{{ _site_name }}</p>
+    {% endif %}
     </div>
   </div>
+  {% endif %}
 
   <!-- navbar -->
-  {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+  {% if _navbar is not empty %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+  {% endif %}
+
+  <!-- breadcrumbs -->
+  {% if _breadcrumbs is not empty %}
+    <div class="container">
+      {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
+    </div>
+  {% endif %}
 </header>
 
-<!-- Modal - Login -->
-{% include '@oe-bcl/bcl-modal/modal.html.twig' with _login.modal only %}
-
-<!-- Modal - Language -->
-{% include '@oe-bcl/bcl-modal/modal.html.twig' with _language.modal only %}
+{% for modal in _modals %}
+  {% include '@oe-bcl/bcl-modal/modal.html.twig' with modal only %}
+{% endfor %}
 
 {% endspaceless %}

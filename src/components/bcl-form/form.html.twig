@@ -96,7 +96,7 @@
 {% endif %}
 {# submit #}
 {% if _submit is not empty %}
-  {% if _submit.label is not empty %}
+  {% if _submit.items is empty %}
     {% set _submit = _submit|merge({
       items: [_submit]
     }) %}

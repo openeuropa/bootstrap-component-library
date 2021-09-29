@@ -1,7 +1,7 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-header/data";
-import demoDataEcl from "@openeuropa/bcl-data-header/data-ecl";
+import demoDataEC from "@openeuropa/bcl-data-header/data-ec";
 
 const template = "@oe-bcl/bcl-header/header.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -14,10 +14,10 @@ describe("OE - Header", () => {
   });
 });
 
-describe("OE - Header ECL", () => {
+describe("OE - Header EC", () => {
   test("renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(demoDataEcl)).resolves.toMatchSnapshot();
+    return expect(render(demoDataEC)).resolves.toMatchSnapshot();
   });
 });
