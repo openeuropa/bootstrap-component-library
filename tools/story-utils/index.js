@@ -134,8 +134,7 @@ export const getFormControls = (data, type) => {
     type === "text" ||
     type === "textarea" ||
     type === "file" ||
-    type === "select" ||
-    type === "multiselect"
+    type === "select"
   ) {
     argTypes.size = {
       name: "size",
