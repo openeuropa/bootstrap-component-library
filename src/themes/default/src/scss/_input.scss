@@ -17,16 +17,6 @@
   .form-label {
     display: none;
   }
-  &.size-sm {
-    .bcl-search-bar__icon {
-      top: 8px;
-    }
-  }
-  &.size-lg {
-    .bcl-search-bar__icon {
-      top: 17px;
-    }
-  }
 }
 .bcl-search-bar__input[type="search"]::-webkit-search-cancel-button {
   width: 16px;
@@ -36,7 +26,7 @@
   appearance: none;
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   .bcl-search-bar {
     .bcl-search-bar__icon {
       top: 11px;

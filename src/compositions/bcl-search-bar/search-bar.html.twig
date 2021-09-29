@@ -15,10 +15,6 @@
   {% set classes = classes ~ " rounded" %}
 {% endif %}
 
-{% if size is not empty %}
-  {% set classes = classes ~ " size-" ~ size %}
-{% endif %}
-
 <p class="form-label">{{ label }}</p>
 <div class="{{ classes }}">
   {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}

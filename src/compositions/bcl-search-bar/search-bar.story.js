@@ -29,7 +29,6 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass("form-control-" + data.size);
   if (!args.readonly) {
     data.attributes.removeAttribute("readonly");
   }
