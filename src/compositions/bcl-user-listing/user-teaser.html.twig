@@ -1,0 +1,36 @@
+{% spaceless %}
+
+{# Parameters:
+  - picture (object) format: {
+    - "path" (string) (default: '')
+    - "alt" (string) (default: '')
+  }
+  - name (object) format: {
+    - "text" (string) (default: '')
+    - "link" (string) (default: '')
+  }
+  - department (string) (default: '')
+  - role (string) (default: '')
+#}
+
+{% set attributes = create_attribute().addClass(["d-flex", "align-items-center", "mb-3"]) %}
+
+<div
+  {{ attributes }}
+>
+  <div class="flex-shrink-0">
+    <img
+      class="rounded-pill"
+      src="{{ picture.path }}"
+      alt="{{ picture.alt }}"
+    >
+  </div>
+  <div class="flex-grow-1 ms-3">
+    <a href="{{ name.link }}" class="fs-5 text-decoration-none d-block mb-0">{{ name.text }}</a>
+    {% for info in infos %}
+      <span class="text-muted{{ loop.last ? '' :' me-4-5'}}">{{ info }}</span>
+    {% endfor %}
+  </div>
+</div>
+
+{% endspaceless %}
