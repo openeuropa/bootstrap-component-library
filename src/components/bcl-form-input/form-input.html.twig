@@ -66,11 +66,9 @@
 {% endif %}
 {% if _invalid is not empty %}
   {% set _classes = _classes|merge(['is-invalid']) %}
-  {% set _icon_container_classes = _icon_container_classes ~ ' is-invalid' %}
 {% endif %}
 {% if _valid is not empty %}
   {% set _classes = _classes|merge(['is-valid']) %}
-  {% set _icon_container_classes = _icon_container_classes ~ ' is-valid' %}
 {% endif %}
 {% if _horizontal %}
   {% set _label_class = 'col-form-label ' ~ _horizontal_label_class %}
