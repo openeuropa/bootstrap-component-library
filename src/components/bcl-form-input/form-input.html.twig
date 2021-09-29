@@ -57,8 +57,8 @@
 {% if _size is not empty %}
   {% set _classes = _classes|merge(['form-control-' ~ size]) %}
 {% endif %}
-{% if type == 'range' %}
-  {% set _classes = _classes|merge(['form-range']) %}
+{% if input_type == 'range' %}
+  {% set _classes = ['form-range'] %}
 {% endif %}
 {% if _input_type == 'checkbox' or _input_type == 'radio' %}
   {% set _classes = ['form-check-input'] %}

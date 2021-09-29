@@ -5,7 +5,7 @@ module.exports = {
   show_spinner: true,
   spinner: {
     variant: "info",
-    small: true,
+    size: "sm",
     assistive_text: "Loading...",
     attributes: new drupalAttribute().addClass("me-1"),
   },

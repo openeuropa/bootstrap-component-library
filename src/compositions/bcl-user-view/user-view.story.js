@@ -1,5 +1,5 @@
 import demoData from "@openeuropa/bcl-user-view/dataUserView.js";
-import headerData from "@openeuropa/bcl-data-header/data-ecl.js";
+import headerData from "@openeuropa/bcl-data-header/data.js";
 import userView from "@openeuropa/bcl-user-view/user-view.html.twig";
 
 demoData.data.header = headerData;
@@ -7,6 +7,7 @@ demoData.data.header = headerData;
 export default {
   title: "Compositions/Users/View",
   parameters: {
+    layout: "fullscreen",
     design: [
       {
         name: "Wireframe",
