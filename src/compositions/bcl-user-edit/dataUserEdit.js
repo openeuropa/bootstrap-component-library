@@ -231,7 +231,6 @@ module.exports = {
               label: "Who can consult my data",
               wrapper_classes: "col-sm-6 col-lg-3",
               type: "select",
-              size: "md",
               helper_text: "Helper text",
               helper_text_id: "helperText",
               options: [
