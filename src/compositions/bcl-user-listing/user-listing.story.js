@@ -1,12 +1,9 @@
 import demoData from "@openeuropa/bcl-user-listing/data-user-listing.js";
-import demoDataTeaser from "@openeuropa/bcl-user-listing/data-user-teaser.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import userListing from "@openeuropa/bcl-user-listing/user-listing.html.twig";
-import userListingTeaser from "@openeuropa/bcl-user-listing/user-listing-teaser.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 demoData.data.header = headerData;
-demoDataTeaser.data.header = headerData;
 
 export default {
   title: "Compositions/Users/Listing",
@@ -49,5 +46,3 @@ const correctPaths = (data) => {
 
 export const Default = () => userListing(correctPaths(demoData));
 Default.decorators = [scriptInit];
-
-export const Teaser = () => userListingTeaser(correctPaths(demoDataTeaser));
