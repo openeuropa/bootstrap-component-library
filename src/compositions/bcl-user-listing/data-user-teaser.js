@@ -122,18 +122,18 @@ module.exports = {
           text: "Stefan Mayer",
           link: "example.html",
         },
-        infos: ["DG Test", "Manager"],
+        infos: ["DIGIT", "Data Scientist", "Madrid, Spain", "He/Him"],
       },
       {
         picture: {
           path: "https://picsum.photos/50/50?random=2",
-          alt: "Ajdur Tichar profile picture",
+          alt: "Xenocrates Alphonse profile picture",
         },
         name: {
-          text: "Ajdur Tichar",
+          text: "Xenocrates Alphonse",
           link: "example.html",
         },
-        infos: ["DG Test", "Manager"],
+        infos: ["DIGIT", "Software Architect", "Antwerp, Belgium", "She/Her"],
       },
       {
         picture: {
@@ -144,7 +144,7 @@ module.exports = {
           text: "Szép Mara",
           link: "example.html",
         },
-        infos: ["DG Test", "Manager"],
+        infos: ["EEAS", "Spokesperson", "Brussels, Belgium", "She/Her"],
       },
       {
         picture: {
@@ -155,7 +155,7 @@ module.exports = {
           text: "Daniel Cardoso Rocha",
           link: "example.html",
         },
-        infos: ["DG Test", "Manager"],
+        infos: ["DIGIT", "Software Architect", "Trondheim, Norway", "He/Him"],
       },
       {
         picture: {
@@ -166,7 +166,12 @@ module.exports = {
           text: "Aurelia Panicucci",
           link: "example.html",
         },
-        infos: ["DG Test", "Manager"],
+        infos: [
+          "External Relations",
+          "Program Assistant",
+          "Krakow, Poland",
+          "She/Her",
+        ],
       },
       {
         picture: {
@@ -177,7 +182,18 @@ module.exports = {
           text: "Felicyta Kowalska",
           link: "example.html",
         },
-        infos: ["DG Test", "Manager"],
+        infos: ["DC", "Policy Coordinator", "Brussels, Belgium", "She/Her"],
+      },
+      {
+        picture: {
+          path: "https://picsum.photos/50/50?random=7",
+          alt: "Liljana Vedran Amalasuintha profile picture",
+        },
+        name: {
+          text: "Liljana Vedran Amalasuintha",
+          link: "example.html",
+        },
+        infos: ["DIGIT", "Front-end developer", "Brussels, Belgium", "She/Her"],
       },
     ],
     pagination: {

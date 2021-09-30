@@ -13,7 +13,7 @@
   - role (string) (default: '')
 #}
 
-{% set attributes = create_attribute().addClass(["d-flex", "align-items-center", "mb-3"]) %}
+{% set attributes = create_attribute().addClass(["d-flex", "mb-3"]) %}
 
 <div
   {{ attributes }}
@@ -26,10 +26,13 @@
     >
   </div>
   <div class="flex-grow-1 ms-3">
-    <a href="{{ name.link }}" class="fs-5 text-decoration-none d-block mb-0">{{ name.text }}</a>
-    {% for info in infos %}
-      <span class="text-muted{{ loop.last ? '' :' me-4-5'}}">{{ info }}</span>
-    {% endfor %}
+    <a href="{{ name.link }}" class="fs-5 text-decoration-none mb-0">{{ name.text }}</a>
+    <br>
+    <div class="d-flex flex-wrap">
+      {% for info in infos %}
+        <span class="text-muted text-nowrap{{ loop.last ? '' :' me-4-5'}}">{{ info }}</span>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
