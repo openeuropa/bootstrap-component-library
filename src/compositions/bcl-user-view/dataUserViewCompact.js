@@ -7,7 +7,7 @@ module.exports = {
   },
   name: {
     text: "Stefan Mayer",
-    link: "example.html",
+    link: "/example.html",
   },
   infos: ["DG Test", "Director"],
 };

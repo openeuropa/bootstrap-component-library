@@ -1,6 +1,8 @@
 import demoData from "@openeuropa/bcl-user-view/dataUserView.js";
+import demoDataCompact from "@openeuropa/bcl-user-view/dataUserViewCompact.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import userView from "@openeuropa/bcl-user-view/user-view.html.twig";
+import userViewCompact from "@openeuropa/bcl-user-view/user-view-compact.html.twig";
 
 demoData.data.header = headerData;
 
@@ -19,3 +21,5 @@ export default {
 };
 
 export const Default = () => userView(demoData);
+
+export const Compact = () => userViewCompact(demoDataCompact);
