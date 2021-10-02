@@ -1,0 +1,40 @@
+{% spaceless %}
+
+{# Parameters:
+  - icon: (icon Object) (default: {})
+  - input: (form input Object) (default: {})
+  - pill: (boolean) (default: false)
+  - input_attributes: (drupal attribute object) (default: null) - INFO: for input attribute to not override the form attribute
+  ]
+#}
+
+{% set _pill = pill|default(false) %}
+{% set _icon = icon|default({}) %}
+{% set _input = input|default({}) %}
+
+{% set _classes = ["bcl-search-form"] %}
+
+{% if _pill %}
+  {% set _classes = _classes|merge(['rounded']) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass( _classes ) %}
+
+{% set _input = _context|merge({
+  attributes: input_attributes
+}) %}
+
+<form
+  {{ attributes }}
+>
+  <div class="bcl-search-form__group">
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
+    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _input only %}
+  </div>
+</div>
+
+{% endspaceless %}

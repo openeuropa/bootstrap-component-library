@@ -1,5 +1,5 @@
-import demoData from "@openeuropa/bcl-search-bar/dataSearch.js";
-import searchBar from "@openeuropa/bcl-search-bar/search-bar.html.twig";
+import demoData from "@openeuropa/bcl-search-form/dataSearch.js";
+import searchForm from "@openeuropa/bcl-search-form/search-form.html.twig";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import drupalAttribute from "drupal-attribute";
@@ -30,32 +30,32 @@ const getArgTypes = (data) => {
 
 const resetAttrs = (data, args) => {
   if (!args.readonly) {
-    data.attributes.removeAttribute("readonly");
+    data.input_attributes.removeAttribute("readonly");
   }
   if (!args.required) {
-    data.attributes.removeAttribute("required");
+    data.input_attributes.removeAttribute("required");
   }
   if (!args.invalid) {
-    data.attributes.removeClass("is-invalid");
+    data.input_attributes.removeClass("is-invalid");
   }
   if (!args.valid) {
-    data.attributes.removeClass("is-valid");
+    data.input_attributes.removeClass("is-valid");
   }
   if (!args.placeholder) {
-    data.attributes.removeAttribute("placeholder");
+    data.input_attributes.removeAttribute("placeholder");
   }
 };
 
 const applyArgs = (data, args) => {
-  if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+  if (!data.input_attributes) {
+    data.input_attributes = new drupalAttribute();
   }
   resetAttrs(data, args);
   return Object.assign(data, args);
 };
 
 export default {
-  title: "Compositions/Search Bar",
+  title: "Compositions/Search Form",
   parameters: {
     design: [
       {
@@ -74,14 +74,14 @@ const correctPaths = (data) => {
 };
 
 export const Default = (args) =>
-  searchBar(applyArgs(correctPaths(demoData), args));
+  searchForm(applyArgs(correctPaths(demoData), args));
 
 Default.storyName = "Default";
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 
 export const Pill = (args) =>
-  searchBar(applyArgs(correctPaths({ ...demoData, pill: true }), args));
+  searchForm(applyArgs(correctPaths({ ...demoData, pill: true }), args));
 
 Pill.storyName = "Pill";
 Pill.args = getArgs(demoData);

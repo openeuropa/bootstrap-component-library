@@ -1,16 +1,18 @@
-.bcl-search-bar {
-  position: relative;
-  .bcl-search-bar__icon {
+.bcl-search-form {
+  .bcl-search-form__group {
+    position: relative;
+  }
+  .bcl-search-form__icon {
     position: absolute;
     top: 17px;
     left: 16px;
   }
-  .bcl-search-bar__input {
+  .bcl-search-form__input {
     padding-left: 3rem;
   }
 
   &.rounded {
-    .bcl-search-bar__input {
+    .bcl-search-form__input {
       border-radius: 70px;
     }
   }
@@ -18,7 +20,7 @@
     display: none;
   }
 }
-.bcl-search-bar__input[type="search"]::-webkit-search-cancel-button {
+.bcl-search-form__input[type="search"]::-webkit-search-cancel-button {
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -27,8 +29,8 @@
 }
 
 @include media-breakpoint-up(md) {
-  .bcl-search-bar {
-    .bcl-search-bar__icon {
+  .bcl-search-form {
+    .bcl-search-form__icon {
       top: 11px;
     }
   }

@@ -1,10 +1,10 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-search-bar/dataSearch";
+import demoData from "@openeuropa/bcl-search-form/dataSearch";
 
-const template = "@oe-bcl/bcl-search-bar/search-bar.html.twig";
+const template = "@oe-bcl/bcl-search-form/search-form.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
-describe("OE - Search Bar", () => {
+describe("OE - Search Form", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 

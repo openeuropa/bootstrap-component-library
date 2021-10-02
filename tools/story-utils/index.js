@@ -146,7 +146,6 @@ export const getFormControls = (data, type) => {
     type === "text" ||
     type === "textarea" ||
     type === "file" ||
-    type === "search" ||
     type === "select"
   ) {
     argTypes.size = {
