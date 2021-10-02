@@ -1,3 +1,5 @@
+// stylelint-disable no-duplicate-selectors
+
 .form-select {
   padding-top: $input-padding-y-lg;
   padding-bottom: $input-padding-y-lg;
@@ -16,27 +18,27 @@
       (-$input-padding-x-lg);
   }
 }
-.form-check {
+.form-check:not(.form-switch) {
   .form-check-input {
     margin-left: -1.8rem;
   }
-}
-.form-check-input {
-  width: $form-check-input-size-lg;
-  height: $form-check-input-size-lg;
-  margin-top: 0.15rem;
+  .form-check-input {
+    width: $form-check-input-size-lg;
+    height: $form-check-input-size-lg;
+    margin-top: 0.15rem;
+  }
 }
 
 @include media-breakpoint-up(md) {
-  .form-check {
+  .form-check:not(.form-switch) {
     .form-check-input {
       margin-left: -1.5rem;
     }
-  }
-  .form-check-input {
-    width: $form-check-input-width;
-    height: $form-check-input-width;
-    margin-top: 0.25rem;
+    .form-check-input {
+      width: $form-check-input-width;
+      height: $form-check-input-width;
+      margin-top: 0.25rem;
+    }
   }
 
   .form-select {
