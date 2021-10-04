@@ -7,6 +7,7 @@ const browserslist = require("browserslist");
 const { buildStyles } = require("../scripts/styles");
 const copyFiles = require("../scripts/copy");
 const pkg = require("../package.json");
+const rename = require("../scripts/rename");
 
 const loadConfig = (configFile) => {
   const conf = configFile || "bcl-builder.config.js";
@@ -62,6 +63,16 @@ program
     const config = loadConfig(program.config);
     config.copy.forEach((conf) =>
       copyFiles(conf.from || "**", conf.to, conf.options)
+    );
+  });
+
+program
+  .command("rename")
+  .description("rename static files")
+  .action(() => {
+    const config = loadConfig(program.config);
+    config.rename.forEach((conf) =>
+      rename(conf.folder, conf.match, conf.newName)
     );
   });
 
