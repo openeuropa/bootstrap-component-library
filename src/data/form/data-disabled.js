@@ -29,7 +29,6 @@ module.exports = {
         wrapper_classes: "mb-3",
         type: "select",
         id: "disabledSelect",
-        size: "md",
         helper_text: "Helper text for the select element",
         helper_text_id: "helperText",
         options: [

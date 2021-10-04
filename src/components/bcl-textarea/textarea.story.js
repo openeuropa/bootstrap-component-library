@@ -18,7 +18,6 @@ const getArgs = (data) => {
     readonly: false,
     rows: 4,
     text: "",
-    size: "sm",
     invalid_feedback: data.invalid_feedback,
     valid_feedback: data.valid_feedback,
   };
@@ -51,7 +50,6 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass(`form-control-${data.size}`);
   if (!args.required) {
     data.attributes.removeAttribute("required");
   }
