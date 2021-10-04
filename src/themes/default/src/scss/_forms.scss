@@ -17,7 +17,16 @@
     }
   }
   .form-label {
-    display: none;
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    visibility: visible;
+    white-space: nowrap;
+    width: 1px;
   }
 }
 .bcl-search-form__input[type="search"]::-webkit-search-cancel-button {
