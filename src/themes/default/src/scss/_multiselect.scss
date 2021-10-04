@@ -1,7 +1,8 @@
 @use "slim-select/src/slim-select/slimselect.scss" with
   ($primary-color: $primary);
 
-.multi-select {
+// stylelint-disable selector-no-qualifying-type
+select.multi-select {
   position: absolute;
   display: inline-block;
   max-width: 0;
