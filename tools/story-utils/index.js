@@ -17,7 +17,6 @@ export const getFormControls = (data, type) => {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
         category: "Style",
-        disable: type === "search",
       },
     },
     helper_text: {
@@ -95,8 +94,7 @@ export const getFormControls = (data, type) => {
   if (
     type === "text" ||
     type === "textarea" ||
-    type === "multiselect" ||
-    type === "search"
+    type === "multiselect"
   ) {
     argTypes.placeholder = {
       name: "placeholder text",
@@ -113,8 +111,7 @@ export const getFormControls = (data, type) => {
   if (
     type === "text" ||
     type === "textarea" ||
-    type === "file" ||
-    type === "search"
+    type === "file"
   ) {
     argTypes.readonly = {
       name: "readonly",
@@ -136,7 +133,6 @@ export const getFormControls = (data, type) => {
           type: { summary: "boolean" },
           defaultValue: { summary: "false" },
           category: "Style",
-          disable: type === "search",
         },
       };
     }
