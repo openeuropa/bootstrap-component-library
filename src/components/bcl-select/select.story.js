@@ -16,7 +16,6 @@ const getArgs = (data, type) => {
     valid: false,
     invalid_feedback: data.invalid_feedback,
     valid_feedback: data.valid_feedback,
-    size: "sm",
   };
 
   return args;
