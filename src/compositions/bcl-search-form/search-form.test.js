@@ -10,4 +10,12 @@ describe("OE - Search Form", () => {
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
+
+  test(`as pill renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, pill: true })
+    ).resolves.toMatchSnapshot();
+  });
 });
