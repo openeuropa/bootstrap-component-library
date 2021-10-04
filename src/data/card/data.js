@@ -8,6 +8,15 @@ module.exports = {
     content: "Subtitle card",
     classes: "mb-2",
   },
+  badges: [
+    {
+      label: "I'm a badge",
+    },
+    {
+      label: "I'm also a badge",
+      attributes: new drupalAttribute().addClass("test-class"),
+    },
+  ],
   text: {
     content: "Text card with longer text which is supported",
     classes: "mb-2",

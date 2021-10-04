@@ -20,11 +20,15 @@ const getArgs = (data, input_type) => {
   if (input_type === "text" || input_type === "file") {
     args.readonly = data.readonly;
   }
-  if (input_type !== "file") {
-    args.floating = false;
-    args.placeholder = "text here";
-  } else {
-    args.placeholder = "";
+  if (
+    input_type === "text" ||
+    input_type === "textarea" ||
+    input_type === "multiselect"
+  ) {
+    args.placeholder = data.placeholder || "text here";
+    if (input_type !== "file") {
+      args.floating = false;
+    }
   }
   if (input_type === "checkbox") {
     args.switch = data.switch || false;
@@ -74,7 +78,6 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass("form-control-" + data.size);
   if (!args.readonly) {
     data.attributes.removeAttribute("readonly");
   }

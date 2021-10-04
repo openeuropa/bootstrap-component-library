@@ -130,30 +130,6 @@ export const getFormControls = (data, type) => {
     }
   }
 
-  if (
-    type === "text" ||
-    type === "textarea" ||
-    type === "file" ||
-    type === "select"
-  ) {
-    argTypes.size = {
-      name: "size",
-      type: { name: "select" },
-      options: {
-        large: "lg",
-        medium: "",
-        small: "sm",
-      },
-      description:
-        "The width of the form element {sm: small, '': medium, lg: large}",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: data.size },
-        category: "Size",
-      },
-    };
-  }
-
   if (type === "checkbox") {
     argTypes.switch = {
       type: { name: "boolean" },

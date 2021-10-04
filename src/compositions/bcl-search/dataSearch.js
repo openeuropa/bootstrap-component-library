@@ -26,7 +26,6 @@ module.exports = {
               classes: "mb-3",
               input_type: "text",
               placeholder: "Keyword",
-              size: "sm",
             },
           ],
           [
@@ -34,7 +33,6 @@ module.exports = {
               classes: "mb-3",
               label: "Content types",
               type: "select",
-              size: "sm",
               attributes: new drupalAttribute(),
               options: [
                 { value: 1, label: "a select option" },
@@ -50,7 +48,6 @@ module.exports = {
               classes: "mb-3",
               label: "Filter A",
               type: "select",
-              size: "sm",
               attributes: new drupalAttribute().addClass("multi-select"),
               multiple: true,
               clean_class: true,
@@ -90,12 +87,10 @@ module.exports = {
             },
             {
               input_type: "date",
-              size: "sm",
               attributes: new drupalAttribute().addClass("mb-2"),
             },
             {
               input_type: "date",
-              size: "sm",
             },
           ],
         ],
@@ -329,7 +324,6 @@ module.exports = {
     ],
     sort_select: {
       label: "Sort by",
-      size: "sm",
       attributes: new drupalAttribute().addClass("mb-4"),
       options: [
         { value: 1, label: "a select option" },

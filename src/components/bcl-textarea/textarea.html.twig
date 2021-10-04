@@ -19,11 +19,9 @@
   - "floating" (boolean) (default: false)
   - "horizontal" (boolean) (default: false)
   - "horizontal_class" (string) (default: col-sm-10)
-  - "size" (string) (default: '')
 #}
 
 {% set _id = id|default('') %}
-{% set _size = size|default('') %}
 {% set _label = label|default('') %}
 {% set _required = required|default(false) %}
 {% set _disabled = disabled|default(false) %}
@@ -45,9 +43,6 @@
 {% set _classes = ['form-control'] %}
 
 {% set _rows = rows|default('4') %}
-{% if _size is not empty %}
-  {% set _classes = _classes|merge(['form-control-' ~ _size]) %}
-{% endif %}
 {% if _invalid is not empty %}
   {% set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
