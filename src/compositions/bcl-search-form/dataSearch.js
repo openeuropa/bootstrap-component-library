@@ -10,4 +10,5 @@ module.exports = {
     size: "xs",
     attributes: new drupalAttribute().addClass(["bcl-search-form__icon"]),
   },
+  attributes: new drupalAttribute(),
 };
