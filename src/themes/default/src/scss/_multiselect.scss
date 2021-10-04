@@ -2,6 +2,13 @@
 @use "slim-select/src/slim-select/slimselect.scss" with
   ($primary-color: $primary);
 
+// Multiselect Spacers
+$multiselect-spacers: (
+  "disabled-spacer": calc(map-get($spacers, 1) - 1px),
+  "select-spacer": calc(map-get($spacers, 2) + 2px),
+  "select-spacer-md": calc(map-get($spacers, 1) + 1px),
+);
+
 .ss-main.multi-select {
   padding: 0;
   &.is-invalid,
@@ -24,30 +31,31 @@
       border-color: $success;
     }
   }
-  .ss-value-text {
-    font-weight: 700;
+  .ss-values {
+    .ss-value {
+      display: inline-block;
+      padding: $badge-padding-y $badge-padding-x;
+      @include font-size($badge-font-size);
+      font-weight: $badge-font-weight;
+      line-height: 1;
+      color: $badge-color;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      @include border-radius($badge-border-radius);
+      @include gradient-bg();
+    }
+    .ss-disabled {
+      padding-top: map-get($multiselect-spacers, "disabled-spacer");
+      padding-bottom: map-get($multiselect-spacers, "disabled-spacer");
+    }
   }
   .ss-multi-selected {
+    padding: map-get($multiselect-spacers, "select-spacer") 0
+      map-get($multiselect-spacers, "select-spacer")
+      map-get($multiselect-spacers, "select-spacer");
     .ss-add {
-      .ss-plus {
-        height: 22px;
-        margin-top: 3px;
-        margin-right: 15px;
-        &::after {
-          top: 10px;
-          left: -10px;
-          width: 22px;
-        }
-      }
-    }
-  }
-  .ss-values {
-    padding: 4px 0;
-    .ss-disabled {
-      padding: 9px 5px;
-    }
-    .ss-value {
-      font-size: 1.1rem;
+      margin-top: map-get($spacers, 2);
     }
   }
 }
@@ -61,27 +69,9 @@
       }
     }
     .ss-multi-selected {
-      .ss-add {
-        .ss-plus {
-          height: 18px;
-          margin-top: 0;
-          margin-right: 10px;
-          &::after {
-            top: 8px;
-            left: -8px;
-            width: 18px;
-          }
-        }
-      }
-    }
-    .ss-values {
-      padding: 1px 0;
-      .ss-disabled {
-        padding: 7px 5px;
-      }
-      .ss-value {
-        font-size: 0.9rem;
-      }
+      padding: map-get($multiselect-spacers, "select-spacer-md") 0
+        map-get($multiselect-spacers, "select-spacer-md")
+        map-get($multiselect-spacers, "select-spacer-md");
     }
   }
 }
