@@ -17,9 +17,6 @@ const getArgs = (data, type) => {
     invalid_feedback: data.invalid_feedback,
     valid_feedback: data.valid_feedback,
   };
-  if (type === "select") {
-    args.size = "sm";
-  }
 
   return args;
 };
@@ -31,7 +28,6 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass("form-select-" + data.size);
   if (!args.disabled) {
     data.attributes.removeAttribute("disabled");
   }
