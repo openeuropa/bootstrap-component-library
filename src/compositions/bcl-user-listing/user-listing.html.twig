@@ -19,7 +19,7 @@
             extra_classes: "w-auto d-inline-block ms-2"
           }) only %}
         </div>
-        <h4 class="mb-4">Users (18)</h4>
+        <h4 class="mb-4">Users ({{ data.cards.length }})</h4>
         {% if data.badges is not empty and data.badges is iterable %}
           {% for badge in data.badges %}
             {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge only %}
