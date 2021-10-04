@@ -91,11 +91,7 @@ export const getFormControls = (data, type) => {
       },
     },
   };
-  if (
-    type === "text" ||
-    type === "textarea" ||
-    type === "multiselect"
-  ) {
+  if (type === "text" || type === "textarea" || type === "multiselect") {
     argTypes.placeholder = {
       name: "placeholder text",
       type: "string",
@@ -108,11 +104,7 @@ export const getFormControls = (data, type) => {
     };
   }
 
-  if (
-    type === "text" ||
-    type === "textarea" ||
-    type === "file"
-  ) {
+  if (type === "text" || type === "textarea" || type === "file") {
     argTypes.readonly = {
       name: "readonly",
       type: "boolean",
