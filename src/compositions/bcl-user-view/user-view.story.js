@@ -23,3 +23,14 @@ export default {
 export const Default = () => userView(demoData);
 
 export const Compact = () => userViewCompact(demoDataCompact);
+
+Compact.parameters = {
+  layout: "padded",
+  design: [
+    {
+      name: "Wireframe",
+      type: "figma",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=4362%3A43580",
+    },
+  ],
+};
