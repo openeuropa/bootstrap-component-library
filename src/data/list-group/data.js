@@ -24,7 +24,6 @@ module.exports = {
       label: "Example form input",
       readonly: false,
       id: "example-form-input-1",
-      size: "sm",
       input: true,
       input_type: "checkbox",
     },
