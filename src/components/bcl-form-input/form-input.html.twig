@@ -19,7 +19,6 @@
   - "horizontal" (boolean) (default: false)
   - "horizontal_class" (string) (default: col-sm-10)
   - "hidden_label" (boolean) (default: false)
-  - "size" (string) (default: '')
   - "switch" (boolean) (default: false)
   - "toggle" (boolean) (default: false)
   - "toggle_variant" (string) (default: 'primary')
@@ -28,7 +27,6 @@
 
 {% set _id = id|default('') %}
 {% set _input_type = input_type|default('text') %}
-{% set _size = size|default('') %}
 {% set _label = label|default('') %}
 {% set _required = required|default(false) %}
 {% set _checked = checked|default(false) %}
@@ -54,9 +52,6 @@
 {% set _label_class = 'form-label' %}
 {% set _classes = ['form-control'] %}
 
-{% if _size is not empty %}
-  {% set _classes = _classes|merge(['form-control-' ~ size]) %}
-{% endif %}
 {% if input_type == 'range' %}
   {% set _classes = ['form-range'] %}
 {% endif %}

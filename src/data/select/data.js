@@ -1,7 +1,6 @@
 module.exports = {
   label: "A select form element",
   required: true,
-  size: "md",
   helper_text: "Helper text for the select element",
   helper_text_id: "helperText",
   invalid_feedback: "Invalid feedback example",
