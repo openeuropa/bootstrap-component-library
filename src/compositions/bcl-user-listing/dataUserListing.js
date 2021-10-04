@@ -26,7 +26,6 @@ module.exports = {
               classes: "mb-3 pb-3 border-bottom",
               input_type: "text",
               placeholder: "Search by name or surname",
-              size: "sm",
             },
           ],
           [
@@ -34,7 +33,6 @@ module.exports = {
               classes: "mb-3",
               label: "Organisation",
               type: "select",
-              size: "sm",
               attributes: new drupalAttribute(),
               options: [
                 { value: 1, label: "a select option" },
@@ -49,7 +47,6 @@ module.exports = {
               classes: "mb-3",
               label: "Profile Type",
               type: "select",
-              size: "sm",
               attributes: new drupalAttribute(),
               options: [
                 { value: 1, label: "a select option" },
@@ -64,7 +61,6 @@ module.exports = {
               classes: "mb-3 pb-3 border-bottom",
               label: "Group",
               type: "select",
-              size: "sm",
               attributes: new drupalAttribute(),
               options: [
                 { value: 1, label: "a select option" },
@@ -80,7 +76,6 @@ module.exports = {
               label: "Option 1",
               input_type: "text",
               placeholder: "Placeholder",
-              size: "sm",
             },
           ],
           [
@@ -89,7 +84,6 @@ module.exports = {
               label: "Option 2",
               input_type: "text",
               placeholder: "Placeholder",
-              size: "sm",
             },
           ],
         ],
@@ -340,7 +334,6 @@ module.exports = {
     ],
     sort_select: {
       label: "Sort by",
-      size: "sm",
       attributes: new drupalAttribute().addClass("mb-4"),
       options: [
         { value: 1, label: "a select option" },

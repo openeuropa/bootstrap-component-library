@@ -1,7 +1,6 @@
-import { addParameters } from "@storybook/html";
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-addParameters({
+export const parameters = {
   a11y: {
     element: "#root",
     config: {},
@@ -47,13 +46,10 @@ addParameters({
       },
     },
   },
-});
-
-export const parameters = {
   options: {
     storySort: {
-      method: 'alphabetical',
-      order: ['Components', 'Compositions', 'Paragraphs'],
+      method: "alphabetical",
+      order: ["Components", "Compositions"],
     },
   },
 };
