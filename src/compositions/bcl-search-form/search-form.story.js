@@ -24,8 +24,4 @@ const correctPaths = (data) => {
 
 export const Default = () => searchForm(correctPaths(demoData));
 
-Default.storyName = "Default";
-
 export const Pill = () => searchForm(correctPaths({ ...demoData, pill: true }));
-
-Pill.storyName = "Pill";
