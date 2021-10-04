@@ -69,11 +69,6 @@
 
 {% if _required %}
   {% set attributes = attributes.setAttribute('required', true) %}
-
-  {% if _multiple %}
-    {% set attributes = attributes.setAttribute('oninvalid', "this.slim.slim.container.classList.add('is-invalid')") %}
-    {% set attributes = attributes.setAttribute('onchange', "this.slim.slim.container.classList.remove('is-invalid')") %}
-  {% endif %}
 {% endif %}
 
 {% if _hidden_label %}

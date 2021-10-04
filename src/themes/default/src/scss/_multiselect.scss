@@ -1,6 +1,15 @@
 @use "slim-select/src/slim-select/slimselect.scss" with
   ($primary-color: $primary);
 
+.multi-select {
+  position: absolute;
+  display: inline-block;
+  max-width: 0;
+  max-height: 35px;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .ss-main.multi-select {
   &.is-invalid,
   &.is-valid {
