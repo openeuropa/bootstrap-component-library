@@ -53,7 +53,7 @@ select.multi-select {
 
 .ss-main.multi-select.is-invalid,
 .ss-main.multi-select.is-valid,
-.was-validated .multi-select.invalid + .ss-main.multi-select,
+.was-validated .multi-select:invalid + .ss-main.multi-select,
 .was-validated .multi-select:valid + .ss-main.multi-select {
   .ss-multi-selected {
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@ select.multi-select {
   }
 }
 .ss-main.multi-select.is-invalid,
-.was-validated .multi-select.invalid + .ss-main.multi-select {
+.was-validated .multi-select:invalid + .ss-main.multi-select {
   .ss-multi-selected {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8 4C7.46459 4 7.04623 4.46229 7.0995 4.99504L7.45025 8.50248C7.47849 8.78492 7.71616 9 8 9C8.28384 9 8.52151 8.78492 8.54975 8.50248L8.9005 4.99504C8.95377 4.46228 8.53541 4 8 4ZM8.00154 10C7.44926 10 7.00154 10.4477 7.00154 11C7.00154 11.5523 7.44926 12 8.00154 12C8.55383 12 9.00154 11.5523 9.00154 11C9.00154 10.4477 8.55383 10 8.00154 10Z' fill='%23D72E3D'/%3E%3C/svg%3E%0A");
     border-color: $danger;
@@ -87,7 +87,7 @@ select.multi-select {
 
   .ss-main.multi-select.is-invalid,
   .ss-main.multi-select.is-valid,
-  .was-validated .multi-select.invalid + .ss-main.multi-select,
+  .was-validated .multi-select:invalid + .ss-main.multi-select,
   .was-validated .multi-select:valid + .ss-main.multi-select {
     .ss-multi-selected {
       background-position: right 2.4rem center, center right 2.25rem;
