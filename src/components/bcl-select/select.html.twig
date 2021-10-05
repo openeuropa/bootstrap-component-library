@@ -71,7 +71,9 @@
   {% set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
 
+{% if _classes is not empty %}
 {% set attributes = attributes.addClass(_classes) %}
+{% endif %}
 
 {% if _label is not empty %}
   {% set _label_block %}
