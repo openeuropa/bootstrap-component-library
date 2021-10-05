@@ -111,8 +111,13 @@
 <div
   {{ attributes }}
 >
+{% if _card_header is not empty %}
+  <div class='{{ _header_classes }}'>
+    {{- _card_header -}}
+  </div>
+{% endif %}
 {% if _horizontal %}
-<div class='{{ _row_classes }}'>
+  <div class='{{ _row_classes }}'>
 {% endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
   {% set _img_class = 'card-img-top' %}
@@ -137,9 +142,7 @@
 {% if _horizontal %}
 <div class='{{ _horizontal_grid.right_col_classes }}'>
 {% endif %}
-{% if _card_header is not empty or _badges is not empty %}
-  <div class='{{ _header_classes }}'>
-    {{- _card_header -}}
+  <div class='{{ _body_classes }}'>
     {%- if _badges is not empty and _badges is iterable -%}
       <div class="mb-3">
       {% for _badge in _badges %}
@@ -158,9 +161,6 @@
       {% endfor %}
       </div>
     {%- endif -%}
-  </div>
-{% endif %}
-  <div class='{{ _body_classes }}'>
   {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
@@ -189,11 +189,6 @@
     {{- _content -}}
   {%- endif -%}
   </div>
-{% if _card_footer is not empty %}
-  <div class='{{ _footer_classes }}'>
-    {{- _card_footer -}}
-  </div>
-{% endif %}
 {% if _horizontal %}
 </div>
 {% endif %}
@@ -215,9 +210,14 @@
     {% endif %}
   {% endif %}
 {% endif %}
-</div>
 {% if _horizontal %}
-</div>
+  </div>
 {% endif %}
+{% if _card_footer is not empty %}
+  <div class='{{ _footer_classes }}'>
+    {{- _card_footer -}}
+  </div>
+{% endif %}
+</div>
 
 {% endspaceless %}
