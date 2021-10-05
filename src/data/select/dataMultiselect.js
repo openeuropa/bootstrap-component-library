@@ -4,6 +4,7 @@ module.exports = {
   multiple: true,
   clean_class: true,
   required: true,
+  size: "md",
   helper_text: "Helper text for the select element",
   helper_text_id: "helperText",
   invalid_feedback: "Invalid feedback example",
