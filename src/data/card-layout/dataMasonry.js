@@ -11,16 +11,10 @@ module.exports = {
       title: {
         content: "Title card 1",
       },
-      subtitle: {
-        content: "Subtitle card 1",
-        classes: "mb-2",
-      },
       text: {
         content: "Text card with longer text which is supported 1",
         classes: "mb-2",
       },
-      card_header: "Header of card 1",
-      card_footer: "Footer of card 1",
       wrapper_class: "col",
       content: "<button class='btn btn-primary'>Custom action</button>",
       attributes: new drupalAttribute().addClass("mb-3"),
@@ -42,7 +36,6 @@ module.exports = {
         alt: "alt img",
         position: "bottom",
       },
-      card_header: "Header of card 2",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
       content:
@@ -52,10 +45,6 @@ module.exports = {
       title: {
         content: "Title card 3",
       },
-      subtitle: {
-        content: "Subtitle card 3",
-        classes: "mb-2",
-      },
       text: {
         content: "Text card with longer text which is supported 3",
         classes: "mb-2",
@@ -75,8 +64,6 @@ module.exports = {
         content: "Text card with longer text which is supported 3",
         classes: "mb-2",
       },
-      card_header: "Header of card 3",
-      card_footer: "Footer of card 3",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
       content:
@@ -100,7 +87,6 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      card_header: "Header of card 4",
       wrapper_class: "col",
       content: "<button class='btn btn-success'>Custom action</button>",
       attributes: new drupalAttribute().addClass("mb-3"),
@@ -117,7 +103,11 @@ module.exports = {
         content: "Text card with longer text which is supported 5",
         classes: "mb-2",
       },
-      card_footer: "Footer of card 5",
+      image: {
+        path: "https://picsum.photos/seed/1008/600/400",
+        alt: "alt img",
+        position: "background",
+      },
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass(["mb-3", "text-center"]),
     },
@@ -125,15 +115,10 @@ module.exports = {
       title: {
         content: "Title card 6",
       },
-      subtitle: {
-        content: "Subtitle card 6",
-        classes: "mb-2",
-      },
       text: {
         content: "Text card with longer text which is supported 6",
         classes: "mb-2",
       },
-      card_footer: "Footer of card 6",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
       content:
