@@ -11,7 +11,8 @@ $multiselect-spacers: (
 
 select.multi-select {
   position: absolute;
-  display: inline-block;
+  // stylelint-disable declaration-no-important
+  display: inline-block !important;
   max-width: 0;
   max-height: 35px;
   pointer-events: none;
@@ -52,7 +53,8 @@ select.multi-select {
 
 .ss-main.multi-select.is-invalid,
 .ss-main.multi-select.is-valid,
-.multi-select:invalid + .ss-main.multi-select {
+.was-validated .multi-select.invalid + .ss-main.multi-select,
+.was-validated .multi-select:valid + .ss-main.multi-select {
   .ss-multi-selected {
     background-repeat: no-repeat;
     background-position: right 2.8rem center, center right 2.25rem;
@@ -60,13 +62,14 @@ select.multi-select {
   }
 }
 .ss-main.multi-select.is-invalid,
-.multi-select:invalid + .ss-main.multi-select {
+.was-validated .multi-select.invalid + .ss-main.multi-select {
   .ss-multi-selected {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM8 4C7.46459 4 7.04623 4.46229 7.0995 4.99504L7.45025 8.50248C7.47849 8.78492 7.71616 9 8 9C8.28384 9 8.52151 8.78492 8.54975 8.50248L8.9005 4.99504C8.95377 4.46228 8.53541 4 8 4ZM8.00154 10C7.44926 10 7.00154 10.4477 7.00154 11C7.00154 11.5523 7.44926 12 8.00154 12C8.55383 12 9.00154 11.5523 9.00154 11C9.00154 10.4477 8.55383 10 8.00154 10Z' fill='%23D72E3D'/%3E%3C/svg%3E%0A");
     border-color: $danger;
   }
 }
-.ss-main.multi-select.is-valid {
+.ss-main.multi-select.is-valid,
+.was-validated .multi-select:valid + .ss-main.multi-select {
   .ss-multi-selected {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM12.0303 4.96967C11.7374 4.67678 11.2626 4.67678 10.9697 4.96967C10.9626 4.97674 10.9559 4.98424 10.9498 4.9921L7.4774 9.41674L5.38388 7.32322C5.09098 7.03033 4.61611 7.03033 4.32322 7.32322C4.03032 7.61612 4.03032 8.09099 4.32322 8.38388L6.96966 11.0303C7.26256 11.3232 7.73743 11.3232 8.03032 11.0303C8.03685 11.0238 8.043 11.0169 8.04876 11.0097L12.041 6.01947C12.3232 5.72582 12.3196 5.25897 12.0303 4.96967Z' fill='%2328A745'/%3E%3C/svg%3E%0A");
     border-color: $success;
@@ -84,7 +87,8 @@ select.multi-select {
 
   .ss-main.multi-select.is-invalid,
   .ss-main.multi-select.is-valid,
-  .multi-select:invalid + .ss-main.multi-select {
+  .was-validated .multi-select.invalid + .ss-main.multi-select,
+  .was-validated .multi-select:valid + .ss-main.multi-select {
     .ss-multi-selected {
       background-position: right 2.4rem center, center right 2.25rem;
     }
