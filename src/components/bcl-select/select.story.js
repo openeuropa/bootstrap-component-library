@@ -7,15 +7,15 @@ import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data, type) => {
   const args = {
-    label: data.label,
-    hidden_label: false,
-    helper_text: data.helper_text,
-    invalid: false,
-    disabled: false,
-    required: true,
-    valid: false,
-    invalid_feedback: data.invalid_feedback,
-    valid_feedback: data.valid_feedback,
+    label: data.label || "",
+    hidden_label: data.hidden_label || false,
+    helper_text: data.helper_text || "",
+    invalid: data.invalid || false,
+    disabled: data.disabled || false,
+    required: data.required || true,
+    valid: data.valid || false,
+    invalid_feedback: data.invalid_feedback || "",
+    valid_feedback: data.valid_feedback || "",
   };
 
   return args;
