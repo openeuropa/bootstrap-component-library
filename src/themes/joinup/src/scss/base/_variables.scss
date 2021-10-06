@@ -18,14 +18,23 @@ $success: #18bf80;
 $warning: #eba843;
 $danger: #eb3434;
 
-$theme-colors: (
-  "brand": $brand,
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "warning": $warning,
-  "danger": $danger,
+// EU/EC color variables
+$ec-blue: #17458f;
+$eu-blue: #1b4ac3;
+$eu-light-blue: #f4f6fb;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "brand": $brand,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
+  )
 );
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 $gray-100: #fafbfc;
 $gray-200: #f5f6f7;
@@ -36,9 +45,6 @@ $gray-600: #6d7173;
 $gray-700: #555859;
 $gray-800: #3d3f40;
 $gray-900: #242626;
-
-$ec-blue: #1b4ac3;
-$eu-blue: #17458f;
 
 // Links
 $link-color: $brand;
