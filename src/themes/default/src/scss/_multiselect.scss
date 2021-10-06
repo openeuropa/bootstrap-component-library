@@ -5,12 +5,14 @@
 
 // Multiselect Spacers
 $multiselect-spacers: (
-  "disabled-spacer": calc(map-get($spacers, 1) + 0.05rem),
-  "select-spacer": map-get($spacers, 2),
-  "select-spacer-md": calc(map-get($spacers, 1) - 0.05rem),
+  "disabled-spacer": calc(map-get($spacers, 2) - 1px),
+  "disabled-spacer-md": calc(map-get($spacers, 1) - 1px),
+  "select-spacer": calc(map-get($spacers, 2) - 2px),
+  "select-spacer-md": calc(map-get($spacers, 1) + 0.05rem),
   "badge-padding-x": map-get($spacers, 1),
   "badge-padding-y": map-get($spacers, 1),
-  "add-margin-top": calc(map-get($spacers, 2) + 2px),
+  "add-margin-top": map-get($spacers, "2-5"),
+  "add-margin-top-md": map-get($spacers, 2),
   "icon-position-x": map-get($spacers, 4),
 );
 
@@ -48,11 +50,11 @@ $multiselect-spacers: (
     }
   }
   .ss-values {
+    @include font-size($h4-font-size);
     .ss-value {
       display: inline-block;
-      padding: map-get($multiselect-spacers, "badge-padding-y")
-        map-get($multiselect-spacers, "badge-padding-x");
-      @include font-size(1rem);
+      padding: $badge-padding-y $badge-padding-x;
+      @include font-size($badge-font-size);
       font-weight: $badge-font-weight;
       line-height: 1;
       color: $badge-color;
@@ -65,6 +67,7 @@ $multiselect-spacers: (
     .ss-disabled {
       padding-top: map-get($multiselect-spacers, "disabled-spacer");
       padding-bottom: map-get($multiselect-spacers, "disabled-spacer");
+      @include font-size(1rem);
     }
   }
   .ss-multi-selected {
@@ -96,6 +99,16 @@ $multiselect-spacers: (
       padding: map-get($multiselect-spacers, "select-spacer-md") 0
         map-get($multiselect-spacers, "select-spacer-md")
         map-get($multiselect-spacers, "select-spacer-md");
+      .ss-add {
+        margin-top: map-get($multiselect-spacers, "add-margin-top-md");
+      }
+    }
+    .ss-values {
+      @include font-size(1rem);
+      .ss-disabled {
+        padding-top: map-get($multiselect-spacers, "disabled-spacer-md");
+        padding-bottom: map-get($multiselect-spacers, "disabled-spacer-md");
+      }
     }
   }
 }
