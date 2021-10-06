@@ -91,7 +91,7 @@ export const getFormControls = (data, type) => {
       },
     },
   };
-  if (type === "text" || type === "textarea" || type === "multiselect") {
+  if (type === "text" || type === "textarea") {
     argTypes.placeholder = {
       name: "placeholder text",
       type: "string",
