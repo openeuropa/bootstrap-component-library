@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.0 (2021-10-06)
+
+#### :rocket: New Feature
+
+* [#72](https://github.com/openeuropa/bootstrap-component-library/pull/72) feat(search): Added search - FRONT-3177 ([@tibi2303](https://github.com/tibi2303))
+* [#74](https://github.com/openeuropa/bootstrap-component-library/pull/74) feat(user-small-teaser): Create composition for small user view - FRONT-3175 ([@theosuja](https://github.com/theosuja))
+* [#81](https://github.com/openeuropa/bootstrap-component-library/pull/81) feat(Sizes): Redo form elements sizes. - FRONT-3229 ([@tibi2303](https://github.com/tibi2303))
+* [#60](https://github.com/openeuropa/bootstrap-component-library/pull/60) feat(footer): Added composition of footer - Front 3064 ([@tibi2303](https://github.com/tibi2303))
+* [#73](https://github.com/openeuropa/bootstrap-component-library/pull/73) feat(spinner): added large size - FRONT-3168 ([@tibi2303](https://github.com/tibi2303))
+* [#63](https://github.com/openeuropa/bootstrap-component-library/pull/63) feat(header): Added header compositions - Front 3065 ([@tibi2303](https://github.com/tibi2303))
+* [#71](https://github.com/openeuropa/bootstrap-component-library/pull/71) feat(social media follow): Add social media follow paragraph - Front 3140 ([@theosuja](https://github.com/theosuja))
+* [#67](https://github.com/openeuropa/bootstrap-component-library/pull/67) feat(variables): Added new colors. - FRONT-3180 ([@tibi2303](https://github.com/tibi2303))
+* [#61](https://github.com/openeuropa/bootstrap-component-library/pull/61) feat(links block): Add composition of links block - Front 3136 ([@theosuja](https://github.com/theosuja))
+* [#58](https://github.com/openeuropa/bootstrap-component-library/pull/58) feat(Update-scripts): Moved script inits - FRONT-3129 ([@tibi2303](https://github.com/tibi2303))
+* [#54](https://github.com/openeuropa/bootstrap-component-library/pull/54) feat(user-edit): Added composition of user edit - Front 3040 ([@tibi2303](https://github.com/tibi2303))
+
+#### :boom: Breaking Change
+
+* [#51](https://github.com/openeuropa/bootstrap-component-library/pull/51) feat(user-view): Added user view - Front 2901 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+* [#85](https://github.com/openeuropa/bootstrap-component-library/pull/85) fix(joinup): Map-merge and map-loop color variables to fix utilities - FRONT-3251 ([@theosuja](https://github.com/theosuja))
+* [#77](https://github.com/openeuropa/bootstrap-component-library/pull/77) fix(badge): Fixing close icon display issue when the badge is a link - FRONT-3214 ([@tibi2303](https://github.com/tibi2303))
+* [#64](https://github.com/openeuropa/bootstrap-component-library/pull/64) fix(form-input): Range input type renders correctly - front-3173 ([@planctus](https://github.com/planctus))
+* [#62](https://github.com/openeuropa/bootstrap-component-library/pull/62) fix(button-group): Reset all btn-group styles when changing vertical state - FRONT-3166 ([@gingapa](https://github.com/gingapa))
+
+#### :nail_care: Enhancement
+
+* [#78](https://github.com/openeuropa/bootstrap-component-library/pull/78) feat(multiselect): Add invalid state during validation - FRONT-3226 ([@papegaill](https://github.com/papegaill))
+* [#79](https://github.com/openeuropa/bootstrap-component-library/pull/79) fix(toasts): Improvements on the template - FRONT-3212 ([@planctus](https://github.com/planctus))
+* [#84](https://github.com/openeuropa/bootstrap-component-library/pull/84) feat(multiselect): Improvements - FRONT-3250 ([@tibi2303](https://github.com/tibi2303))
+* [#68](https://github.com/openeuropa/bootstrap-component-library/pull/68) feat(tooltip): Adding control for tooltip position in button and link - FRONT-3172 ([@planctus](https://github.com/planctus))
+* [#65](https://github.com/openeuropa/bootstrap-component-library/pull/65) fix(card): Header and footer, improving stories - FRONT-3165 ([@planctus](https://github.com/planctus))
+* [#70](https://github.com/openeuropa/bootstrap-component-library/pull/70) feat(multiselect): Bug fix and large size. - FRONT-3178 ([@tibi2303](https://github.com/tibi2303))
+* [#80](https://github.com/openeuropa/bootstrap-component-library/pull/80) feat(card): Add default right margin for badges in the cards - FRONT-3215 ([@gingapa](https://github.com/gingapa))
+* [#76](https://github.com/openeuropa/bootstrap-component-library/pull/76) feat(joinup): Fine-tune btn-light - FRONT-3210 ([@theosuja](https://github.com/theosuja))
+* [#69](https://github.com/openeuropa/bootstrap-component-library/pull/69) feat(alert): Adding icons to the alert component - FRONT-3176 ([@planctus](https://github.com/planctus))
+* [#53](https://github.com/openeuropa/bootstrap-component-library/pull/53) feat(form-sidebar): Changed user listing and search sidebar to use form component - FRONT-3056 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#82](https://github.com/openeuropa/bootstrap-component-library/pull/82) chore(deps): updates - 04-10-21 ([@planctus](https://github.com/planctus))
+* [#75](https://github.com/openeuropa/bootstrap-component-library/pull/75) chore(deps): Updates - 28/09/21 ([@planctus](https://github.com/planctus))
+* [#66](https://github.com/openeuropa/bootstrap-component-library/pull/66) feat(Navbar): Change color of the search button - FRONT-3170 ([@gingapa](https://github.com/gingapa))
+* [#59](https://github.com/openeuropa/bootstrap-component-library/pull/59) chore(size-limit): Adding basic size limits checks in the ci ([@planctus](https://github.com/planctus))
+* [#57](https://github.com/openeuropa/bootstrap-component-library/pull/57) chore(deps): updates 09-11-21 ([@planctus](https://github.com/planctus))
+* [#55](https://github.com/openeuropa/bootstrap-component-library/pull/55) chore: Removing ECL, using ecl header as default, updating compositions ([@planctus](https://github.com/planctus))
+
+#### Committers: 5
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- Paulo Gingao ([@gingapa](https://github.com/gingapa))
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.7.0 (2021-09-08)
 
 #### :rocket: New Feature
