@@ -18,14 +18,18 @@ $success: #18bf80;
 $warning: #eba843;
 $danger: #eb3434;
 
-$theme-colors: (
-  "brand": $brand,
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "warning": $warning,
-  "danger": $danger,
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "brand": $brand,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
+  )
 );
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 $gray-100: #fafbfc;
 $gray-200: #f5f6f7;
@@ -37,8 +41,10 @@ $gray-700: #555859;
 $gray-800: #3d3f40;
 $gray-900: #242626;
 
-$ec-blue: #1b4ac3;
-$eu-blue: #17458f;
+// EU/EC color variables
+$ec-blue: #17458f;
+$eu-blue: #1b4ac3;
+$eu-light-blue: #f4f6fb;
 
 // Links
 $link-color: $brand;
@@ -92,3 +98,9 @@ $h6-font-size: $font-size-base; // 16px
 $input-focus-border-color: tint-color($component-active-bg, 50%);
 $input-focus-width: 0;
 $input-btn-focus-box-shadow: none;
+
+$form-check-input-size-lg: $form-check-input-width + 0.3em !default;
+$form-font-size: $font-size-base !default;
+$form-font-size-lg: $font-size-base + 0.25rem !default;
+$form-select-height: 3rem !default;
+$form-select-height-md: 2.375rem !default;

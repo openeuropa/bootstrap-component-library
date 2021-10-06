@@ -6,6 +6,7 @@ module.exports = {
   wrapper_aria_live: "polite",
   with_container: true,
   container_classes: "position-absolute top-0 end-0 p-3",
+  attributes: new drupalAttribute(),
   toasts: [
     {
       role: "alert",
@@ -21,7 +22,7 @@ module.exports = {
       header: `<strong class="me-auto">Bootstrap</strong><small class="text-muted">2 seconds ago</small>`,
       body: "Heads up, toasts will stack automatically.",
       close_aria_label: "Close",
-      attributes: new drupalAttribute(),
+      attributes: new drupalAttribute().addClass("test-class"),
     },
   ],
 };

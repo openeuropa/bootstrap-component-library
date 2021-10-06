@@ -15,6 +15,7 @@
       - "autohide" (boolean) (default: false)
       - "with_body_wrapper" (boolean) (default: false)
       - "body_wrapper_classes" (string) (default: '')
+      - "attributes" (drupal object) (default: undefined)
     },
     ...
   ]
@@ -33,11 +34,16 @@
 
 {# wrapper #}
 {% if _with_wrapper %}
-<div
-  aria-atomic="true"
-  {{- _wrapper_aria_live ? 'aria-live="' ~ _wrapper_aria_live ~ '"' -}}
-  {{- _wrapper_classes ? 'class="' ~ _wrapper_classes ~ '"' -}}
->
+  {% set attributes = attributes.setAttribute('aria-atomic', "true") %}
+  {% if _wrapper_aria_live %}
+    {% set attributes = attributes.setAttribute('aria-live', _wrapper_aria_live) %}
+  {% endif %}
+  {% if _wrapper_classes %}
+    {% set attributes = attributes.addClass(_wrapper_classes|split(' ')) %}
+  {% endif %}
+
+<div {{ attributes }}>
+
 {% endif %}
 {# container #}
 {% if _with_container %}
@@ -54,22 +60,19 @@
     {% set _autohide = _toast.autohide ?? true %}
     {% set _with_body_wrapper = _toast.with_body_wrapper|default(false) %}
     {% set _body_wrapper_classes = _toast.body_wrapper_classes|default('') %}
-
-    {% set attributes = _toast.attributes.addClass(_classes).setAttribute('aria-atomic', 'true') %}
+    {% set _toast_attributes = _toast.attributes ?: create_attribute() %}
+    {% set _toast_attributes =  _toast_attributes.addClass(_classes).setAttribute('aria-atomic', 'true') %}
     {% if _aria_live is not empty %}
-      {% set attributes = attributes.setAttribute('aria-live', _aria_live) %}
+      {% set _toast_attributes = _toast_attributes.setAttribute('aria-live', _aria_live) %}
     {% endif %}
     {% if _role is not empty %}
-      {% set attributes = attributes.setAttribute('role', _role) %}
+      {% set _toast_attributes = _toast_attributes.setAttribute('role', _role) %}
     {% endif %}
     {% if not _autohide %}
-      {% set attributes = attributes.setAttribute('data-bs-autohide', 'false') %}
+      {% set _toast_attributes = _toast_attributes.setAttribute('data-bs-autohide', 'false') %}
     {% endif %}
-    {% set _toast = _toast|merge({
-      attributes: attributes
-    }) %}
     <div
-      {{ _toast.attributes }}
+      {{ _toast_attributes }}
     >
     {% if _with_close or
       (_toast.header is defined and _toast.header is not empty)
