@@ -12,12 +12,12 @@ export default {
     layout: "fullscreen",
     design: [
       {
-        name: "Wireframe - Profile Information",
+        name: "Mockup - Profile Information",
         type: "figma",
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=1126%3A39536",
       },
       {
-        name: "Wireframe - Privacy Settings",
+        name: "Mockup - Privacy Settings",
         type: "figma",
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=1142%3A34290",
       },

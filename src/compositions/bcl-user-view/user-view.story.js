@@ -13,7 +13,7 @@ export default {
     controls: { disable: true },
     design: [
       {
-        name: "Wireframe",
+        name: "Mockup",
         type: "figma",
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=1126%3A38732",
       },
@@ -29,7 +29,7 @@ Compact.parameters = {
   layout: "padded",
   design: [
     {
-      name: "Wireframe",
+      name: "Mockup",
       type: "figma",
       url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=4362%3A43580",
     },

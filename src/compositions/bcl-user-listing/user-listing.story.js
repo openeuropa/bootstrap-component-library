@@ -12,7 +12,7 @@ export default {
     controls: { disable: true },
     design: [
       {
-        name: "Wireframe",
+        name: "Mockup",
         type: "figma",
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=1122%3A33486",
       },
