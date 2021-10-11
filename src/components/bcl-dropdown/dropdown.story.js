@@ -55,9 +55,14 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
+const paddingBody = (story) => {
+  const demo = story();
+  return `<div style="padding: 10rem 0 10rem 14rem">${demo}</div>`;
+};
+
 export default {
   title: "Components/Dropdown",
-  decorators: [withDesign],
+  decorators: [withDesign, paddingBody],
   parameters: {
     design: [
       {

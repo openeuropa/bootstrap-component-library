@@ -108,7 +108,7 @@ Multiselect.parameters = {
     {
       name: "Wireframe",
       type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
+      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/BCL-Wireframe-kit?node-id=3765%3A98",
     },
     {
       name: "Mockup",

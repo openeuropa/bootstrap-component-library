@@ -9,6 +9,7 @@ export default {
   title: "Compositions/Users/Listing",
   parameters: {
     layout: "fullscreen",
+    controls: { disable: true },
     design: [
       {
         name: "Wireframe",

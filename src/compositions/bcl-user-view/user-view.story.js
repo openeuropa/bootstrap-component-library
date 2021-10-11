@@ -10,6 +10,7 @@ export default {
   title: "Compositions/Users/View",
   parameters: {
     layout: "fullscreen",
+    controls: { disable: true },
     design: [
       {
         name: "Wireframe",

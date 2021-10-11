@@ -81,6 +81,7 @@ const resetAttrs = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass("bg-dark");
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
@@ -98,6 +99,9 @@ const applyArgs = (data, args) => {
   }
   if (args.tooltip_position) {
     data.attributes.setAttribute("data-bs-placement", args.tooltip_position);
+  }
+  if (args.variant == "light") {
+    data.attributes.addClass("bg-dark");
   }
 
   return Object.assign(data, args);

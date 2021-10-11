@@ -8,6 +8,7 @@ demoData.data.header = headerData;
 export default {
   title: "Compositions/Search",
   parameters: {
+    controls: { disable: true },
     design: [
       {
         name: "Wireframe",
