@@ -8,9 +8,10 @@ demoData.data.header = headerData;
 export default {
   title: "Compositions/Search",
   parameters: {
+    controls: { disable: true },
     design: [
       {
-        name: "Wireframe",
+        name: "Mockup",
         type: "figma",
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=43%3A0",
       },

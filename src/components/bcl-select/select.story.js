@@ -81,14 +81,9 @@ Default.argTypes = getArgTypes(demoData, "select");
 Default.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3807%3A21838",
     },
     {
       name: "Bootstrap docs",
@@ -106,14 +101,9 @@ Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3626%3A0",
     },
     {
       name: "Slim select docs",

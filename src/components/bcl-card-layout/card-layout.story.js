@@ -117,9 +117,9 @@ export default {
   parameters: {
     design: [
       {
-        name: "Wireframe",
+        name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2788%3A0",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=4150%3A35066",
       },
       {
         name: "Bootstrap docs",
