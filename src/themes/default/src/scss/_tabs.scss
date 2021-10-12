@@ -4,8 +4,8 @@
     border: none;
     .nav-link {
       color: $black;
-      border-radius: 0;
       border: none;
+      border-radius: 0;
       &:hover {
         background: rgba($primary, 0.3);
       }
@@ -15,10 +15,10 @@
       &.active {
         position: relative;
         background: transparent;
-        border-bottom: map-get($border-widths, 2) solid $primary;
-        border-left: none;
         border-top: none;
         border-right: none;
+        border-bottom: map-get($border-widths, 2) solid $primary;
+        border-left: none;
       }
     }
   }
