@@ -1,8 +1,8 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  pills: true,
   nav: true,
+  tabs: true,
   attributes: new drupalAttribute().addClass("bcl__nav"),
   items: [
     {
