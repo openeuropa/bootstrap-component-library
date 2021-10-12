@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData.js";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData.js";
@@ -78,10 +79,10 @@ const getArgTypes = (data, type) => {
 
 const resetAttrs = (data) => {
   data.attributes.removeClass(`link-${data.variant}`);
+  data.attributes.removeClass("bg-dark");
 };
 
 const applyArgs = (data, args) => {
-  data.attributes.removeClass("bg-dark");
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
