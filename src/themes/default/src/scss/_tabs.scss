@@ -1,6 +1,7 @@
 /* stylelint-disable declaration-no-important */
 .nav {
   &.bcl__nav {
+    border: none;
     .nav-link {
       color: $black;
       border-radius: 0;
@@ -12,9 +13,8 @@
       }
       &.active {
         position: relative;
-        font-weight: 700;
         background: transparent;
-        border-bottom: map-get($border-widths, 4) solid $primary;
+        border-bottom: map-get($border-widths, 2) solid $primary;
       }
     }
   }
@@ -38,13 +38,12 @@
       .nav-item {
         z-index: 1;
       }
-      &::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        content: "";
-        border-bottom: 1px solid $gray-300;
+      .nav-link {
+        border-bottom: map-get($border-widths, 1) solid $gray-300;
+        margin-bottom: 0;
+        &.active {
+          border-bottom: none;
+        }
       }
       .dropdown-menu {
         position: fixed !important;
