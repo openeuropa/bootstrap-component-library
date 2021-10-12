@@ -34,8 +34,8 @@ const getArgs = (data, type) => {
     icon_position: "after",
   };
 
-  if (type === "tooltip") {
-    args.tooltip_position = "bottom";
+  if (type === "tooltip" || type === "popover") {
+    args.placement = "bottom";
   }
 
   return args;
@@ -127,16 +127,20 @@ const getArgTypes = (data, type) => {
     },
     ...getIconControls("button"),
   };
-  if (type === "tooltip") {
-    argTypes.tooltip_position = {
-      name: "tooltip position",
+  if (type === "tooltip" || type === "popover") {
+    let defaultPosition = "top";
+    if (type === "popover") {
+      defaultPosition = "right";
+    }
+    argTypes.placement = {
+      name: type + " position",
       type: "select",
       options: ["top", "bottom", "left", "right"],
-      description: "Position for the tooltip",
+      description: "Position for the " + type,
       table: {
         type: { summary: "attribute" },
-        defaultValue: { summary: "top" },
-        category: "Tooltip",
+        defaultValue: { summary: defaultPosition },
+        category: "Behaviour",
       },
     };
   }
@@ -172,8 +176,8 @@ const applyArgs = (data, args) => {
   if (args.name == "none") {
     data.icon = null;
   }
-  if (args.tooltip_position) {
-    data.attributes.setAttribute("data-bs-placement", args.tooltip_position);
+  if (args.placement) {
+    data.attributes.setAttribute("data-bs-placement", args.placement);
   }
 
   return Object.assign(data, args);
@@ -190,7 +194,7 @@ const initPopover = (story) => {
         return new bootstrap.Popover(popoverTriggerEl);
       });
     </script>
-  ${demo}`;
+    <div style="padding: 6rem 0 6rem 14rem">${demo}</div>`;
 };
 
 const initTooltip = (story) => {
@@ -219,14 +223,9 @@ Default.argTypes = getArgTypes(demoData);
 Default.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2624%3A00",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=1%3A815",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=1%3A815",
     },
     {
       name: "Bootstrap docs",
@@ -245,9 +244,9 @@ Collapse.decorators = [withCollapse];
 Collapse.parameters = {
   design: [
     {
-      name: "Wireframe",
+      name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2726%3A0",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=16%3A105",
     },
     {
       name: "Bootstrap docs",
@@ -260,8 +259,8 @@ Collapse.parameters = {
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
 Popover.storyName = "Popover";
-Popover.args = getArgs(popoverDemoData);
-Popover.argTypes = getArgTypes(popoverDemoData);
+Popover.args = getArgs(popoverDemoData, "popover");
+Popover.argTypes = getArgTypes(popoverDemoData, "popover");
 Popover.decorators = [initPopover];
 Popover.parameters = {
   design: [
