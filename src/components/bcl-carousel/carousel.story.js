@@ -5,7 +5,6 @@ import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
   return {
-    id: data.id,
     items: data.items,
     autoinit: true,
     autoplay: true,
@@ -21,15 +20,6 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    id: {
-      type: { name: "string", required: true },
-      description: "Id attribute of the carousel",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
     items: {
       type: { name: "object", required: true },
       description: "Carousel items",
@@ -132,19 +122,6 @@ const getArgTypes = (data) => {
   };
 };
 
-const parseImages = (data) => {
-  data.items.forEach((slide) => {
-    if (slide.image) {
-      let alt = ``;
-      if (slide.image.alt) {
-        alt = `alt="${slide.image.alt}"`;
-      }
-      slide.image = `<img src="${slide.image.src}" ${alt} class="d-block w-100">`;
-    }
-  });
-  return data;
-};
-
 const resetAttrs = (data, args) => {
   data.attributes.removeClass("carousel-fade");
   data.attributes.removeClass("carousel-dark");
@@ -163,8 +140,8 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
-  parseImages(data);
   resetAttrs(data, args);
+
   return Object.assign(data, args);
 };
 
