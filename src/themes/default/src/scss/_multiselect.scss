@@ -114,6 +114,9 @@ select.multi-select {
     }
     .ss-values {
       @include font-size(1rem);
+      .ss-value {
+        @include font-size($badge-font-size-desktop);
+      }
       .ss-disabled {
         padding-top: map-get($multiselect-spacers, "disabled-spacer-md");
         padding-bottom: map-get($multiselect-spacers, "disabled-spacer-md");
