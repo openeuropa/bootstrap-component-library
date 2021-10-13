@@ -53,7 +53,7 @@
         {% for _meta in _activity.meta %}
         <p class="mb-0">
           {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
-          {{ _meta.label }}
+          {{- _meta.label -}}
         </p>
         {% endfor %}
       {% endif %}
