@@ -110,6 +110,11 @@ const closeInit = (story) => {
         close.addEventListener('click', event => {
           close.parentElement.remove();
         });
+        if (badge.parentNode.nodeName.toLowerCase() === 'a') {
+          badge.parentNode.addEventListener('click', event => {
+            event.preventDefault();
+          });
+        }
       }
     </script>
   ${demo}`;
