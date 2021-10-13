@@ -54,6 +54,8 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass(["text-left", "text-end", "text-center"]);
+
   return Object.assign(data, args);
 };
 
