@@ -73,7 +73,7 @@ const getArgTypes = (data) => {
 const resetAttrs = (data) => {
   data.attributes
     .removeClass([`btn-group-${data.size}`, "btn-group", "btn-group-vertical"])
-    .removeAttribute("aria-label")
+    .removeAttribute("aria-label");
 };
 
 const applyArgs = (data, args) => {
