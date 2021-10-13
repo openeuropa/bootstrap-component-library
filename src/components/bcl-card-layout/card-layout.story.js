@@ -89,15 +89,22 @@ const getArgTypes = (data, type) => {
       },
     };
   }
+
   return argTypes;
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass([
+    `g-${data.gutter}`,
+    `row-cols-${data.grid_columns}`,
+    `row-cols-${data.responsiveness}-${data.responsive_colums}`,
+  ]);
   data.items.forEach((item) => {
     if (item.attributes) {
       item.attributes.removeClass("h-100");
     }
   });
+
   return Object.assign(data, args);
 };
 

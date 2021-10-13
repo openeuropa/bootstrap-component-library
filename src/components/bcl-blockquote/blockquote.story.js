@@ -54,7 +54,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  data.attributes.removeClass(["text-left", "text-end", "text-center"]);
+  data.attributes.removeClass(`text-${data.alignment}`);
 
   return Object.assign(data, args);
 };

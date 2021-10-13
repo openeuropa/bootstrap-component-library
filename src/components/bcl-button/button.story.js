@@ -151,6 +151,8 @@ const getArgTypes = (data, type) => {
 const resetAttrs = (data, args) => {
   data.attributes.removeClass(`btn-${data.variant}`);
   data.attributes.removeClass(`btn-outline-${data.variant}`);
+  data.attributes.removeClass(`btn-${data.size}`);
+
   if (!args.disabled) {
     data.attributes.removeAttribute("disabled");
     data.attributes.removeAttribute("aria-disabled");

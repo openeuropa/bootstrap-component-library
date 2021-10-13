@@ -59,12 +59,7 @@ const getArgTypes = () => {
 const resetAttrs = (data) => {
   data.attributes.removeClass([
     "list-group-flush",
-    "list-group-horizontal",
-    "list-group-horizontal-sm",
-    "list-group-horizontal-md",
-    "list-group-horizontal-lg",
-    "list-group-horizontal-xl",
-    "list-group-horizontal-xxl",
+    `list-group-${data.horizontal}`,
   ]);
 };
 
