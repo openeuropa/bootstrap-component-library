@@ -17,7 +17,6 @@ export default {
 };
 
 const correctPaths = (data) => {
-  console.log(data);
   data.activities.forEach((activity) => {
     activity.meta.forEach((meta) => {
       meta.icon.path = defaultSprite;
