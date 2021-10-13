@@ -13,8 +13,8 @@
       </div>
       <div class="col-12 col-lg-9">
       {% include '@oe-bcl/bcl-button/button.html.twig' with data.filter_button only %}
-      <div class="mb-3 clearfix">
-        <div class="float-end d-none d-md-block">
+      <div class="mb-4 clearfix">
+        <div class="float-end d-none d-md-flex align-items-baseline">
           {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
             extra_classes: "w-auto d-inline-block ms-2"
           }) only %}
@@ -26,7 +26,7 @@
           {% endfor %}
         {% endif %}
       </div>
-      <hr class="d-none d-md-block mb-4"/>
+      <hr class="d-none d-md-block mt-4 mb-4-75"/>
       <div class="d-md-none">
         {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
           extra_classes: "mb-4"
@@ -35,9 +35,9 @@
       {% if data.cards is not empty and data.cards is iterable %}
         {% for card in data.cards %}
           {% include '@oe-bcl/bcl-card/card.html.twig' with card only %}
+          <hr class="d-md-none mb-4-5">
         {% endfor %}
       {% endif %}
-        <hr/>
         {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with data.pagination only %}
       </div>
     </div>
