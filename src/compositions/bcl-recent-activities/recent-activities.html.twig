@@ -1,0 +1,67 @@
+{% spaceless %}
+
+{# Parameters:
+  - activities (array of custom object) (default: [])
+    format: [
+      {
+        image: {
+          path: "",
+          alt: "",
+          class: "",
+        },
+        content: "",
+        meta: [
+          {
+            icon (icon object): {},
+            label: ""
+          }
+        ]
+      },
+      ...
+    ]
+#}
+
+{% set _activities = activities|default([]) %}
+
+<div 
+  {{ attributes }}
+>
+{% if _activities is not empty and _activities is iterable %}
+  {% for _activity in _activities %}
+  <div class="d-flex bg-light px-3 py-3-5 mb-3-5">
+    {% if _activity.image is not empty %}
+    <div>
+      {% set _image_classes = "rounded-circle me-3-5" %}
+      {% if _activity.image.class is not empty %}
+        {% set _image_classes = _image_classes ~ " " ~ _activity.image.class %}
+      {% endif %}
+      <img
+        src="{{ _activity.image.path }}"
+        class="{{ _image_classes }}"
+      {% if _activity.image.alt is not empty %}
+        alt="{{ _activity.image.alt }}"
+      {% endif %}
+      >
+    </div>
+    {% endif %}
+    {% if _activity.content is not empty and _activity.meta is not empty %}
+    <div>
+      {% if _activity.content is not empty %}
+        {{- _activity.content -}}
+      {% endif %}
+      {% if _activity.meta is not empty and _activity.meta is iterable %}
+        {% for _meta in _activity.meta %}
+        <p class="mb-0">
+          {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
+          {{ _meta.label }}
+        </p>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+{% endif %}
+</div>
+
+{% endspaceless %}
