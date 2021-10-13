@@ -9,11 +9,11 @@ const getArgs = (data, type) => {
   if (type == "grid") {
     args.equal_height = true;
   }
-  if (type == "grid" || type == "masonry") {
+  if (type == "grid") {
     args.grid_columns = 1;
     args.responsive_colums = data.responsive_colums;
     args.responsiveness = data.responsiveness;
-    args.gutter = 4;
+    args.gutter = data.gutter || 4;
   }
 
   return args;
@@ -147,9 +147,7 @@ export const Grid = (args) => cardLayout(applyArgs(demoDataGrid, args));
 Grid.args = getArgs(demoDataGrid, "grid");
 Grid.argTypes = getArgTypes(demoDataGrid, "grid");
 
-export const Masonry = (args) => cardLayout(applyArgs(demoDataMasonry, args));
+export const Masonry = () => cardLayout(demoDataMasonry);
 
-Masonry.args = getArgs(demoDataMasonry, "masonry");
-Masonry.argTypes = getArgTypes(demoDataMasonry, "masonry");
 Masonry.decorators = [withScript];
 Masonry.parameters = { options: { showPanel: false } };
