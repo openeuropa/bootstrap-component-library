@@ -117,14 +117,9 @@ FormInput.argTypes = getArgTypes(demoData, "text");
 FormInput.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3700%3A3078",
     },
     {
       name: "Bootstrap docs",
@@ -143,14 +138,9 @@ Checkbox.argTypes = getArgTypes(checkboxData, "checkbox");
 Checkbox.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3555%3A5",
     },
     {
       name: "Bootstrap docs",
@@ -169,14 +159,9 @@ Switch.argTypes = getArgTypes(switchData, "checkbox");
 Switch.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3555%3A5",
     },
     {
       name: "Bootstrap docs",
@@ -195,14 +180,9 @@ Radio.argTypes = getArgTypes(radioData, "radio");
 Radio.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3555%3A5",
     },
     {
       name: "Bootstrap docs",
@@ -221,14 +201,9 @@ File.argTypes = getArgTypes(fileData, "file");
 File.parameters = {
   design: [
     {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2695%3A58",
-    },
-    {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=53%3A24",
+      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3812%3A21840",
     },
     {
       name: "Bootstrap docs",

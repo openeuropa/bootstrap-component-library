@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData.js";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData.js";
@@ -78,6 +79,7 @@ const getArgTypes = (data, type) => {
 
 const resetAttrs = (data) => {
   data.attributes.removeClass(`link-${data.variant}`);
+  data.attributes.removeClass("bg-dark");
 };
 
 const applyArgs = (data, args) => {
@@ -99,6 +101,9 @@ const applyArgs = (data, args) => {
   if (args.tooltip_position) {
     data.attributes.setAttribute("data-bs-placement", args.tooltip_position);
   }
+  if (args.variant == "light") {
+    data.attributes.addClass("bg-dark");
+  }
 
   return Object.assign(data, args);
 };
@@ -119,6 +124,16 @@ const initTooltip = (story) => {
 
 export default {
   title: "Components/Link",
+  decorators: [withDesign],
+  parameters: {
+    design: [
+      {
+        name: "Mockup",
+        type: "figma",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3854%3A47229",
+      },
+    ],
+  },
 };
 
 export const Default = (args) => link(applyArgs(demoData, args));

@@ -41,7 +41,7 @@ module.exports = {
         classes: "mb-3",
         required: true,
         label: "Check me out *",
-        id: "exampleInputPassword1",
+        id: "exampleInputCheck1",
         valid_feedback: "Valid feedback regarding check.",
         invalid_feedback: "Please check the required checkbox.",
       },
