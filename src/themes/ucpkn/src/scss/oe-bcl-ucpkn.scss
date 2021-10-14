@@ -1,19 +1,12 @@
 // Configuration
 @import "@openeuropa/bcl-bootstrap/scss/functions";
 @import "@openeuropa/bcl-bootstrap/scss/variables";
-
-// Override Bootstrap variables
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/variables";
-
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
+
+// Custom variables
+@import "@openeuropa/bcl-theme-default/src/scss/variables";
+
 @import "@openeuropa/bcl-bootstrap/scss/utilities";
-
-// Import base elements
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/fonts";
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/typography";
-
-// Modify utilities
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/utilities";
 
 // Layout & components
 @import "@openeuropa/bcl-bootstrap/scss/root";
@@ -55,6 +48,7 @@
 
 // Custom styles
 @import "@openeuropa/bcl-theme-default/src/scss/header";
+@import "@openeuropa/bcl-theme-default/src/scss/footer";
 @import "@openeuropa/bcl-theme-default/src/scss/icon";
 @import "@openeuropa/bcl-theme-default/src/scss/search-form";
 @import "@openeuropa/bcl-theme-default/src/scss/input";
