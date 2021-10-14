@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.0 (2021-10-14)
+
+#### :bug: Bug Fix
+
+* [#92](https://github.com/openeuropa/bootstrap-component-library/pull/92) fix(toasts): removing most of the controls - FRONT-3265 ([@planctus](https://github.com/planctus))
+* [#91](https://github.com/openeuropa/bootstrap-component-library/pull/91) fix(carousel): Fixing controls and documentation - FRONT-3264 ([@planctus](https://github.com/planctus))
+* [#87](https://github.com/openeuropa/bootstrap-component-library/pull/87) fix(joinup): Assign correct font color to btn-light. - FRONT-3210 ([@theosuja](https://github.com/theosuja))
+
+#### :nail_care: Enhancement
+
+* [#89](https://github.com/openeuropa/bootstrap-component-library/pull/89) feat(SB-improvements): Added improvements. - FRONT-3263 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#97](https://github.com/openeuropa/bootstrap-component-library/pull/97) chore(ucpkn): Adding ucpkn theme package ([@planctus](https://github.com/planctus))
+* [#90](https://github.com/openeuropa/bootstrap-component-library/pull/90) chore(deps): updates 12-10-21 ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.8.0 (2021-10-06)
 
 #### :rocket: New Feature
