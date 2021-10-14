@@ -33,6 +33,7 @@ const correctPaths = (data) => {
     }
   });
   data.navbar.form.submit.icon.path = defaultSprite;
+  data.breadcrumbs.icons_path = defaultSprite;
   return data;
 };
 

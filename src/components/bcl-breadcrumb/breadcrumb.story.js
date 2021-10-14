@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-breadcrumb/data.js";
 import breadcrumb from "@openeuropa/bcl-breadcrumb/breadcrumb.html.twig";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
   return {
@@ -22,6 +23,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.icons_path = defaultSprite;
   return Object.assign(data, args);
 };
 

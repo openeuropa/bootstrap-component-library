@@ -9,7 +9,7 @@ exports[`OE - Breadcrumb renders correctly 1`] = `
       class="breadcrumb"
     >
       <li
-        class="breadcrumb-item"
+        class="breadcrumb-item d-none d-lg-block"
       >
         <a
           href="/example"
@@ -18,17 +18,33 @@ exports[`OE - Breadcrumb renders correctly 1`] = `
         </a>
       </li>
       <li
+        class="breadcrumb-item d-none d-lg-block"
+      >
+        <a
+          href="/example"
+        >
+          European Commission
+        </a>
+      </li>
+      <li
         class="breadcrumb-item"
       >
         <a
           href="/example"
         >
+          <svg
+            class="d-lg-none ms-0 me-2 bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#arrow-left"
+            />
+          </svg>
           About the European Commission
         </a>
       </li>
       <li
         aria-current="page"
-        class="breadcrumb-item active"
+        class="breadcrumb-item d-none d-lg-block active"
       >
         News
       </li>
