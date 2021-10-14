@@ -19,10 +19,10 @@
   >
     {% for _link in _links %}
 
+      {% set _segment_classes = 'breadcrumb-item d-none d-lg-block' %}  
+      
       {% if loop.revindex == 2 %}
         {% set _segment_classes = 'breadcrumb-item' %}
-      {% else %}
-        {% set _segment_classes = 'breadcrumb-item d-none d-lg-block' %}  
       {% endif %}
 
       {% set _segment_attrs = '' %}
