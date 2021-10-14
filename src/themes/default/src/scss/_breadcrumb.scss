@@ -1,5 +1,5 @@
-.breadcrumb-item + .breadcrumb-item {
-  @include media-breakpoint-down(lg) {
+@include media-breakpoint-down(lg) {
+  .breadcrumb-item + .breadcrumb-item {
     &::before {
       display: none;
       content: "";
