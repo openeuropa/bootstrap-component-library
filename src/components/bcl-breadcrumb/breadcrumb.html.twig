@@ -18,13 +18,10 @@
     class="{{ _classes }}"
   >
     {% for _link in _links %}
-
       {% set _segment_classes = 'breadcrumb-item d-none d-lg-block' %}  
-      
       {% if loop.revindex == 2 %}
         {% set _segment_classes = 'breadcrumb-item' %}
       {% endif %}
-
       {% set _segment_attrs = '' %}
       {% if loop.last %}
         {% set _segment_classes = _segment_classes ~ ' active' %}
@@ -35,20 +32,16 @@
         {{ _segment_attrs }}
       >
         {%- if _link.path -%}
-          
           {% if loop.revindex == 2 %}
-            {% set _link_icon = {
+            {% set _link = _link|merge({
               icon_position: 'before',
-              icon: {
-                name: "arrow-left",
-                path: _icons_path,
-                attributes: create_attribute().addClass(['d-lg-none ms-0 me-2']),
+                icon: {
+                  name: "arrow-left",
+                  path: _icons_path,
+                  attributes: create_attribute().addClass(['d-lg-none ms-0 me-2']),
                 },
-              }
-            %}
-            {% set _link = _link|merge(_link_icon) %}
+             }) %}
           {% endif %}
-          
           {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
         {% else %}
           {{- _link.label -}}
