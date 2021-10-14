@@ -5,16 +5,12 @@ import toasts from "@openeuropa/bcl-toast/toasts.html.twig";
 
 const getArgs = (data) => {
   return {
-    with_wrapper: data.with_wrapper,
-    wrapper_classes: data.wrapper_classes,
-    wrapper_aria_live: data.wrapper_aria_live,
-    with_container: data.with_container,
-    container_classes: data.container_classes,
-    toasts: data.toasts,
+    with_wrapper: data.with_wrapper || false,
+    with_container: data.with_container || false,
   };
 };
 
-const getArgTypes = (data) => {
+const getArgTypes = () => {
   return {
     with_wrapper: {
       name: "with a wrapper",
@@ -26,26 +22,6 @@ const getArgTypes = (data) => {
         category: "Wrapper",
       },
     },
-    wrapper_classes: {
-      name: "classes for the wrapper",
-      type: { name: "string" },
-      description: "External wrapper classes, if any.",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Wrapper",
-      },
-    },
-    wrapper_aria_live: {
-      name: "aria live for the wrapper",
-      type: { name: "string" },
-      description: "aria-live attribute to be set on the wrapper",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Wrapper",
-      },
-    },
     with_container: {
       name: "with a container",
       type: { name: "boolean" },
@@ -54,24 +30,6 @@ const getArgTypes = (data) => {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
         category: "Container",
-      },
-    },
-    container_classes: {
-      type: { name: "string" },
-      name: "classes for the container",
-      description: "Container classes, if any.",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Container",
-      },
-    },
-    toasts: {
-      type: { name: "object" },
-      description: "Toasts",
-      table: {
-        type: { summary: "object" },
-        category: "Content",
       },
     },
   };
@@ -119,10 +77,10 @@ export const Toast = (args) => toasts(applyArgs(demoSingle, args));
 
 Toast.storyName = "Single toast";
 Toast.args = getArgs(demoSingle);
-Toast.argTypes = getArgTypes(demoSingle);
+Toast.argTypes = getArgTypes();
 
 export const Toasts = (args) => toasts(applyArgs(demoMultiple, args));
 
 Toasts.storyName = "Multiple toasts";
 Toasts.args = getArgs(demoMultiple);
-Toasts.argTypes = getArgTypes(demoMultiple);
+Toasts.argTypes = getArgTypes();
