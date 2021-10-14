@@ -3,10 +3,10 @@
   &.bcl__nav {
     border: none;
     .nav-link {
+      padding: map-get($spacers, 3);
       color: $black;
       border: none;
       border-radius: 0;
-      padding: map-get($spacers, 3);
       &:hover {
         background: rgba($primary, 0.3);
       }
