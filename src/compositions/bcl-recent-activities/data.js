@@ -3,12 +3,10 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   activities: [
     {
-      image: {
-        path: "https://picsum.photos/50/50?random=1",
-        alt: "profile image",
-      },
+      image:
+        "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=1'>",
       content:
-        "<p class='mb-2'><a href='#' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#'>SpaceX satellites spotted: how good is this for our health and environment?</a></p>",
+        "<a href='#' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
           icon: {
@@ -25,12 +23,10 @@ module.exports = {
       ],
     },
     {
-      image: {
-        path: "https://picsum.photos/50/50?random=2",
-        alt: "profile image",
-      },
+      image:
+        "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=2'>",
       content:
-        "<p class='mb-2'><a href='#' class='fw-bold'>Steve Di Marzio</a> published the article <a href='#'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='#'>News</a></p>",
+        "<a href='#' class='fw-bold'>Steve Di Marzio</a> published the article <a href='#'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='#'>News</a>",
       meta: [
         {
           icon: {
@@ -47,12 +43,10 @@ module.exports = {
       ],
     },
     {
-      image: {
-        path: "https://picsum.photos/50/50?random=3",
-        alt: "profile image",
-      },
+      image:
+        "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=3'>",
       content:
-        "<p class='mb-2'><a href='#' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#'>SpaceX satellites spotted: how good is this for our health and environment?</a></p>",
+        "<a href='#' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
           icon: {
