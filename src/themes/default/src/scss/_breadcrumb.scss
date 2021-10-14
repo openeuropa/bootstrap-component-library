@@ -1,8 +1,8 @@
-.breadcrumb-item+.breadcrumb-item {
+.breadcrumb-item + .breadcrumb-item {
   @include media-breakpoint-down(lg) {
     &::before {
-      content: '';
       display: none;
+      content: "";
     }
   }
 }
