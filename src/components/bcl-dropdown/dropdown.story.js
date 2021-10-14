@@ -55,20 +55,20 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
+const paddingBody = (story) => {
+  const demo = story();
+  return `<div style="padding: 10rem 0 10rem 14rem">${demo}</div>`;
+};
+
 export default {
   title: "Components/Dropdown",
-  decorators: [withDesign],
+  decorators: [withDesign, paddingBody],
   parameters: {
     design: [
       {
-        name: "Wireframe",
-        type: "figma",
-        url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2726%3A46",
-      },
-      {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=21%3A16",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=21%3A16",
       },
       {
         name: "Bootstrap docs",

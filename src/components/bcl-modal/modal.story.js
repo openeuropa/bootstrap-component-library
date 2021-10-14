@@ -83,14 +83,9 @@ export default {
   parameters: {
     design: [
       {
-        name: "Wireframe",
-        type: "figma",
-        url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2617%3A191",
-      },
-      {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=29%3A0",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=29%3A0",
       },
       {
         name: "Bootstrap docs",
