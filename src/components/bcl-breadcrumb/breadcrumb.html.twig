@@ -6,6 +6,7 @@
 
 {% set _classes = 'breadcrumb' %}
 {% set _links = links|default([]) %}
+{% set _icons_path = icons_path|default('') %}
 
 {% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
 
@@ -17,7 +18,10 @@
     class="{{ _classes }}"
   >
     {% for _link in _links %}
-      {% set _segment_classes = 'breadcrumb-item' %}
+      {% set _segment_classes = 'breadcrumb-item d-none d-md-block' %}  
+      {% if loop.revindex == 2 %}
+        {% set _segment_classes = 'breadcrumb-item' %}
+      {% endif %}
       {% set _segment_attrs = '' %}
       {% if loop.last %}
         {% set _segment_classes = _segment_classes ~ ' active' %}
@@ -28,6 +32,16 @@
         {{ _segment_attrs }}
       >
         {%- if _link.path -%}
+          {% if loop.revindex == 2 %}
+            {% set _link = _link|merge({
+              icon_position: 'before',
+                icon: {
+                  name: "arrow-left",
+                  path: _icons_path,
+                  attributes: create_attribute().addClass(['d-md-none ms-0 me-2']),
+                },
+             }) %}
+          {% endif %}
           {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
         {% else %}
           {{- _link.label -}}
