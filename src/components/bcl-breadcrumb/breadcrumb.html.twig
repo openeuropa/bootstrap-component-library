@@ -18,7 +18,7 @@
     class="{{ _classes }}"
   >
     {% for _link in _links %}
-      {% set _segment_classes = 'breadcrumb-item d-none d-lg-block' %}  
+      {% set _segment_classes = 'breadcrumb-item d-none d-md-block' %}  
       {% if loop.revindex == 2 %}
         {% set _segment_classes = 'breadcrumb-item' %}
       {% endif %}
@@ -38,7 +38,7 @@
                 icon: {
                   name: "arrow-left",
                   path: _icons_path,
-                  attributes: create_attribute().addClass(['d-lg-none ms-0 me-2']),
+                  attributes: create_attribute().addClass(['d-md-none ms-0 me-2']),
                 },
              }) %}
           {% endif %}

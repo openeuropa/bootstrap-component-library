@@ -251,5 +251,6 @@ module.exports = {
       },
       { label: "News" },
     ],
+    icons_path: "/icons.svg",
   },
 };
