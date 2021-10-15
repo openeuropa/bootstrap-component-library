@@ -2,9 +2,9 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   type: "grid",
-  responsive_colums: "3",
+  responsive_colums: 3,
   responsiveness: "md",
-  gutters: "2",
+  gutter: 2,
   attributes: new drupalAttribute(),
   items: [
     {

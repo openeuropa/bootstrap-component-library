@@ -107,12 +107,15 @@ const closeInit = (story) => {
       var badge = document.querySelector(".badge");
       var close = badge.getElementsByTagName('span')[0];
       if(close) {
-        close.addEventListener('click', event => {
-          close.parentElement.remove();
+        badge.addEventListener('click', event => {
+          if (event.target.className.baseVal === 'bi icon--s') {
+            close.parentElement.remove();
+            event.preventDefault();
+          }
         });
       }
     </script>
-  ${demo}`;
+    ${demo}`;
 };
 
 export default {
