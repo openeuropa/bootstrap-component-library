@@ -7,7 +7,6 @@ import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
   return {
-    role: data.role || "group",
     aria_label: "",
     toolbar: data.toolbar || false,
     toolbar_aria_label: data.toolbar_aria_label || "",
@@ -18,14 +17,13 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    role: {
-      name: "role of the container",
-      type: { name: "select" },
-      options: ["group", "toolbar"],
-      description: "Describe the role of container for assistive technologies",
+    toolbar: {
+      type: { name: "boolean" },
+      description:
+        "Enables support for multiple button groups in a toolbar style",
       table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "group" },
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
         category: "Content",
       },
     },
@@ -37,16 +35,6 @@ const getArgTypes = (data) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
-    toolbar: {
-      type: { name: "boolean" },
-      description:
-        "Enables support for multiple button groups in a toolbar style",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
         category: "Content",
       },
     },
@@ -84,9 +72,8 @@ const getArgTypes = (data) => {
 
 const resetAttrs = (data) => {
   data.attributes
-    .removeClass("btn-group-" + data.size)
-    .removeClass("btn-group")
-    .removeClass("btn-group-vertical");
+    .removeClass([`btn-group-${data.size}`, "btn-group", "btn-group-vertical"])
+    .removeAttribute("aria-label");
 };
 
 const applyArgs = (data, args) => {
