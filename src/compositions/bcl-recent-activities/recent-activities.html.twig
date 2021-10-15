@@ -1,0 +1,57 @@
+{% spaceless %}
+
+{# Parameters:
+  - activities (array of custom object) (default: [])
+    format: [
+      {
+        image: {
+          path: "",
+          alt: "",
+          class: "",
+        },
+        content: "",
+        meta: [
+          {
+            icon (icon object): {},
+            label: ""
+          }
+        ]
+      },
+      ...
+    ]
+#}
+
+{% set _activities = activities|default([]) %}
+
+<div 
+  {{ attributes }}
+>
+{% if _activities is not empty and _activities is iterable %}
+  {% for _activity in _activities %}
+  <div class="d-flex bg-light py-3 px-3 px-md-3-5 mb-3-5">
+    {% if _activity.image is not empty %}
+    <div>
+      {{- _activity.image -}}
+    </div>
+    {% endif %}
+    {% if _activity.content is not empty and _activity.meta is not empty %}
+    <div>
+      {% if _activity.content is not empty %}
+        <p class="mb-2">{{- _activity.content -}}</p>
+      {% endif %}
+      {% if _activity.meta is not empty and _activity.meta is iterable %}
+        {% for _meta in _activity.meta %}
+        <p class="mb-0">
+          {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
+          {{- _meta.label -}}
+        </p>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+{% endif %}
+</div>
+
+{% endspaceless %}
