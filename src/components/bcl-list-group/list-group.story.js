@@ -57,8 +57,10 @@ const getArgTypes = () => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass("list-group-flush");
-  data.attributes.removeClass(`list-group-${data.horizontal}`);
+  data.attributes.removeClass([
+    "list-group-flush",
+    `list-group-${data.horizontal}`,
+  ]);
 };
 
 const applyArgs = (data, args) => {
@@ -66,6 +68,7 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data);
+
   return Object.assign(data, args);
 };
 
