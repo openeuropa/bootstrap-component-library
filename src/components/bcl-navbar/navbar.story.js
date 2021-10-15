@@ -6,9 +6,6 @@ import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
   return {
-    brand: data.brand,
-    navigation: data.navigation,
-    form: data.form,
     color_set: "light",
     expand: "lg",
   };
@@ -16,45 +13,6 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    brand: {
-      name: "brand",
-      type: { name: "object" },
-      description: "Logo as label or image",
-      table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
-        category: "Content",
-      },
-      control: {
-        type: "object",
-      },
-    },
-    navigation: {
-      name: "navigation",
-      type: { name: "object" },
-      description: "Links and labels for navigation",
-      table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
-        category: "Content",
-      },
-      control: {
-        type: "object",
-      },
-    },
-    form: {
-      name: "form",
-      type: { name: "object" },
-      description: "Input in navigation",
-      table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
-        category: "Content",
-      },
-      control: {
-        type: "object",
-      },
-    },
     color_set: {
       name: "color set",
       type: { name: "select" },
