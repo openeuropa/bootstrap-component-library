@@ -5,8 +5,6 @@ import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
   return {
-    id: data.id,
-    title: data.title,
     body: data.body,
     with_close: true,
     placement: data.placement,
@@ -17,23 +15,6 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    id: {
-      type: { name: "string" },
-      description: "Id attribute of the offcanvas",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
-    title: {
-      type: { name: "object" },
-      description: "Title of the offcanvas",
-      table: {
-        type: { summary: "object" },
-        category: "Content",
-      },
-    },
     body: {
       type: { name: "string" },
       description: "Content of the offcanvas",

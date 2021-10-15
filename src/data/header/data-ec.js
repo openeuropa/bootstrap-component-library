@@ -233,19 +233,20 @@ module.exports = {
     },
   ],
   breadcrumbs: {
-    attributes: new drupalAttribute().addClass([
-      "mt-3",
-      "d-none",
-      "d-lg-block",
-    ]),
+    attributes: new drupalAttribute().addClass(["mt-3"]),
     links: [
       { label: "Home", path: "/example" },
+      {
+        label: "European Commission",
+        path: "/example",
+      },
       {
         label: "About the European Commission",
         path: "/example",
       },
       { label: "News" },
     ],
+    icons_path: "/icons.svg",
   },
   attributes: new drupalAttribute().addClass("ec__header"),
 };
