@@ -184,6 +184,101 @@ exports[`OE - navigation renders correctly on vertical 1`] = `
 </jest>
 `;
 
+exports[`OE - navigation renders correctly with custom styles 1`] = `
+<jest>
+  <nav
+    class="nav nav-tabs"
+  >
+    <a
+      class="nav-link"
+      href="/example.html"
+    >
+      I'm a link 1
+    </a>
+    <a
+      class="nav-link"
+      href="/example.html"
+    >
+      I'm a link 2
+    </a>
+    <a
+      class="nav-link"
+      href="/example.html"
+    >
+      I'm a link 3
+    </a>
+    <a
+      class="nav-link active"
+      href="/example.html"
+    >
+      I'm a link active
+    </a>
+    <a
+      aria-disabled="true"
+      class="nav-link disabled"
+      href="/example.html"
+      tabindex="-1"
+    >
+      I'm a link disabled
+    </a>
+    <a
+      aria-expanded="false"
+      class="nav-link dropdown-toggle"
+      data-bs-toggle="dropdown"
+      href="#"
+      id="dropdown-1"
+      role="button"
+    >
+      Dropdown Toggle
+    </a>
+    <ul
+      aria-labelledby="dropdown-1"
+      class="dropdown-menu"
+    >
+      <li>
+        <a
+          class="dropdown-item"
+          href="/example.html"
+        >
+          I'm a link
+        </a>
+      </li>
+      <li>
+        <button
+          class="dropdown-item"
+          type="button"
+        >
+          I'm a button
+        </button>
+      </li>
+      <li>
+        <hr
+          class="dropdown-divider"
+        />
+      </li>
+      <li>
+        <button
+          aria-disabled="true"
+          class="dropdown-item"
+          disabled="true"
+          type="button"
+        >
+          I'm a disabled button
+        </button>
+      </li>
+      <li>
+        <button
+          class="dropdown-item active"
+          type="button"
+        >
+          I'm a active button
+        </button>
+      </li>
+    </ul>
+  </nav>
+</jest>
+`;
+
 exports[`OE - navigation renders correctly with elements aligned right 1`] = `
 <jest>
   <nav

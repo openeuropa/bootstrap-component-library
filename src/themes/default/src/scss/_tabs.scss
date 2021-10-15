@@ -1,0 +1,56 @@
+/* stylelint-disable declaration-no-important */
+.nav {
+  &.bcl__nav {
+    border: none;
+    .nav-link {
+      padding: map-get($spacers, 3);
+      color: $black;
+      border: none;
+      border-radius: 0;
+      &:hover {
+        background: rgba($primary, 0.3);
+      }
+      &.disabled {
+        color: $gray-600;
+      }
+      &.active {
+        position: relative;
+        background: transparent;
+        border-top: none;
+        border-right: none;
+        border-bottom: map-get($border-widths, 2) solid $primary;
+        border-left: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .nav-tabs {
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    border: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    .nav-item {
+      z-index: 1;
+    }
+    .nav-link {
+      margin-bottom: 0;
+      border-bottom: map-get($border-widths, 1) solid $gray-300;
+      &.active {
+        border-bottom: none;
+      }
+    }
+    .dropdown-menu {
+      position: fixed !important;
+    }
+  }
+}
