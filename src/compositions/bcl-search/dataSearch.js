@@ -97,13 +97,13 @@ module.exports = {
         ],
         submit: {
           multiple: true,
-          wrapper: "mt-4",
+          wrapper: "mt-4 d-grid gap-4-25 d-md-block",
           items: [
             {
               label: "Refine",
               type: "submit",
               variant: "primary",
-              attributes: new drupalAttribute().addClass("me-2"),
+              attributes: new drupalAttribute().addClass("me-md-3"),
             },
             {
               label: "Clear",
@@ -443,6 +443,7 @@ module.exports = {
       label: "Filter options",
       type: "button",
       variant: "light",
+      size: "lg",
       attributes: new drupalAttribute()
         .addClass(["d-lg-none", "w-100", "mb-4"])
         .setAttribute("data-bs-toggle", "offcanvas")
@@ -451,7 +452,6 @@ module.exports = {
       icon_position: "before",
       icon: {
         name: "filter",
-        size: "xs",
         attributes: new drupalAttribute().addClass(["me-2"]),
       },
     },
