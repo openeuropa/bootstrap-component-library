@@ -43,5 +43,10 @@
     </div>
   </div>
 </main>
+{% if data.footer is defined %}
+<footer>
+  {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
+</footer>
+{% endif %}
 
 {% endspaceless %}
