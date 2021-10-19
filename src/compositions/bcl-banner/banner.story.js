@@ -123,9 +123,6 @@ const applyArgs = (data, args) => {
 export default {
   title: "Paragraphs/Banners",
   parameters: {
-    viewport: {
-      defaultViewport: "tablet",
-    },
     design: [
       {
         name: "Mockup",
