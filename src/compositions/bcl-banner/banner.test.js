@@ -8,47 +8,47 @@ import dataShade from "@openeuropa/bcl-banner/dataShade.js";
 const template = "@oe-bcl/bcl-banner/banner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
-describe("OE - Page banners", () => {
-  test("Default banner renders correctly", () => {
+describe("OE - Page banners - ", () => {
+  test("default renders correctly", () => {
     expect.assertions(1);
 
     return expect(render(dataDefault)).resolves.toMatchSnapshot();
   });
-  test("Primary banner renders correctly", () => {
+  test("primary renders correctly", () => {
     expect.assertions(1);
     return expect(render(dataPrimary)).resolves.toMatchSnapshot();
   });
-  test("Image text-block banner renders correctly", () => {
+  test("image text-block renders correctly", () => {
     expect.assertions(1);
     return expect(render(dataImage)).resolves.toMatchSnapshot();
   });
-  test("Image shade banner renders correctly", () => {
+  test("image shade renders correctly", () => {
     expect.assertions(1);
     return expect(render(dataShade)).resolves.toMatchSnapshot();
   });
 });
 
 describe("OE - Hero banners", () => {
-  test("Default banner renders correctly", () => {
+  test("default renders correctly", () => {
     expect.assertions(1);
 
     return expect(
       render({ ...dataDefault, hero: true })
     ).resolves.toMatchSnapshot();
   });
-  test("Primary banner renders correctly", () => {
+  test("primary renders correctly", () => {
     expect.assertions(1);
     return expect(
       render({ ...dataPrimary, hero: true })
     ).resolves.toMatchSnapshot();
   });
-  test("Image text-block banner renders correctly", () => {
+  test("image text-block renders correctly", () => {
     expect.assertions(1);
     return expect(
       render({ ...dataImage, hero: true })
     ).resolves.toMatchSnapshot();
   });
-  test("Image shade banner renders correctly", () => {
+  test("image shade renders correctly", () => {
     expect.assertions(1);
     return expect(
       render({ ...dataShade, hero: true })

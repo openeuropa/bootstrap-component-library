@@ -32,14 +32,14 @@
   {{ attributes }}
 >
   {% if _image is not empty %}
-   <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
+    <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
   {% endif %}
   <div class="bcl-banner__content">
   {% if _title is not empty %}
     <div class="display-6 mb-3">{{ _title }}</div>
     <p class="mb-4">{{ _description }}</p>
     {% if _link.path %}
-    {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
     {% endif %}
   {% endif %}
   </div>
