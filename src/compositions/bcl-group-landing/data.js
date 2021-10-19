@@ -6,7 +6,7 @@ module.exports = {
       image: {
         path: "https://picsum.photos/seed/1002/1100/255",
         alt: "alt img",
-        class: "w-100",
+        class: "d-none d-md-block w-100",
       },
       title: "Group Name",
       actions: [
@@ -15,9 +15,10 @@ module.exports = {
           label: "Leave group",
           path: "/example.html",
           attributes: new drupalAttribute().addClass([
-            "d-inline-block",
+            "d-md-inline-block",
             "me-2",
             "p-2",
+            "d-none",
           ]),
         },
         {
@@ -27,7 +28,13 @@ module.exports = {
           trigger: {
             label: "Create content",
             path: "#",
-            attributes: new drupalAttribute().addClass("d-inline-block"),
+            attributes: new drupalAttribute().addClass([
+              "d-inline-block",
+              "mt-3",
+              "mt-md-0",
+              "mb-4",
+              "mb-md-0",
+            ]),
           },
           items: [
             {
@@ -117,6 +124,21 @@ module.exports = {
       ],
     },
     banner_description: {
+      collapse_trigger: {
+        label: "See group detail",
+        path: "#banner-description",
+        icon_position: "after",
+        icon: {
+          name: "caret-down-fill",
+          size: "xs",
+        },
+        attributes: new drupalAttribute()
+          .addClass(["w-100", "text-center", "py-4", " d-block", "d-md-none"])
+          .setAttribute("aria-controls", "banner-description")
+          .setAttribute("aria-expanded", "false")
+          .setAttribute("data-bs-toggle", "collapse")
+          .setAttribute("role", "button"),
+      },
       metas: [
         {
           label: "Public group",
@@ -383,7 +405,7 @@ module.exports = {
           size: "xs",
         },
         attributes: new drupalAttribute().addClass([
-          "py-3",
+          "pb-3",
           "d-inline-block",
           "mb-4",
         ]),
@@ -412,13 +434,14 @@ module.exports = {
               classes: "mb-2",
             },
             content:
-              "<div class='mb-4 mt-4'><span class='text-muted me-3'>8 hours ago</span><span class='text-muted me-3'>1 comment</span></div>",
+              "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
             image: {
               path: "https://picsum.photos/seed/1002/600/400",
               alt: "alt img",
               position: "top",
             },
             wrapper_class: "col",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           {
             title: {
@@ -438,13 +461,14 @@ module.exports = {
               classes: "mb-2",
             },
             content:
-              "<div class='mb-4 mt-4'><span class='text-muted me-3'>8 hours ago</span><span class='text-muted me-3'>1 comment</span></div>",
+              "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
             image: {
               path: "https://picsum.photos/seed/1002/600/400",
               alt: "alt img",
               position: "top",
             },
             wrapper_class: "col",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           {
             title: {
@@ -461,13 +485,14 @@ module.exports = {
               classes: "mb-2",
             },
             content:
-              "<div class='mb-4 mt-4'><span class='text-muted me-3'>8 hours ago</span><span class='text-muted me-3'>1 comment</span></div>",
+              "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
             image: {
               path: "https://picsum.photos/seed/1002/600/400",
               alt: "alt img",
               position: "top",
             },
             wrapper_class: "col",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
         ],
       },

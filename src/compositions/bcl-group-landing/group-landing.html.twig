@@ -21,10 +21,10 @@
         />
       {% endif %}
       {% if data.banner.title is not empty %}
-        <div class="p-3-5 bg-light">
-          <h2 class="mb-0 d-inline-block">{{ data.banner.title }}</h2>
+        <div class="p-md-3-5 bg-md-light d-md-flex">
+          <h2 class="mb-0 d-inline-block fw-bold">{{ data.banner.title }}</h2>
           {% if data.banner.actions is not empty and data.banner.actions is iterable %}
-          <div class="float-end">
+          <div class="d-grid d-md-block ms-auto">
             {% for _action in data.banner.actions %}
               {% if _action.type == "link" %}
                 {% include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
@@ -42,43 +42,46 @@
     {% endif %}
     {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with data.navigation only %}
     {% if data.banner_description is not empty and data.contact is not empty %}
-    <div class="row mt-4 mb-5 pb-5">
-      <div class="col-8">
-        <div class="ps-3">
-          {% if data.banner_description.metas is not empty and data.banner_description.metas is iterable %}
-          <div class="d-block">
-            {% for _meta in data.banner_description.metas %}
-            <p class="mb-0 me-4 d-inline-block text-muted">
-              {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
-              {{- _meta.label -}}
-            </p>
-            {% endfor %}
+    {% include '@oe-bcl/bcl-link/link.html.twig' with data.banner_description.collapse_trigger only %}
+    <div class="collapse d-md-block" id="banner-description">
+      <div class="row mt-md-4 mb-md-5 pb-md-5">
+        <div class="col-md-8">
+          <div class="ps-md-3">
+            {% if data.banner_description.metas is not empty and data.banner_description.metas is iterable %}
+            <div class="d-block">
+              {% for _meta in data.banner_description.metas %}
+              <p class="mb-0 me-4 d-inline-block text-muted">
+                {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
+                {{- _meta.label -}}
+              </p>
+              {% endfor %}
+            </div>
+            {% endif %}
+            {{ data.banner_description.content }}
           </div>
-          {% endif %}
-          {{ data.banner_description.content }}
         </div>
-      </div>
-      <div class="col-4">
-        <h4 class="mb-3 pb-2">{{ data.contact.title }}</h4>
-        {% if data.contact.profiles is not empty and data.contact.profiles is iterable %}
-          {% for _profile in data.contact.profiles %}
-            {% include '@oe-bcl/bcl-user-view/user-view-compact.html.twig' with _profile only %}
-          {% endfor %}
-        {% endif %}
-        {% if data.contact.more_link is not empty %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with data.contact.more_link only %}
-        {% endif %}
+        <div class="col-md-4">
+          <h4 class="mb-3 pb-2">{{ data.contact.title }}</h4>
+          {% if data.contact.profiles is not empty and data.contact.profiles is iterable %}
+            {% for _profile in data.contact.profiles %}
+              {% include '@oe-bcl/bcl-user-view/user-view-compact.html.twig' with _profile only %}
+            {% endfor %}
+          {% endif %}
+          {% if data.contact.more_link is not empty %}
+            {% include '@oe-bcl/bcl-link/link.html.twig' with data.contact.more_link only %}
+          {% endif %}
+        </div>
       </div>
     </div>
     {% endif %}
     {% if data.recent is not empty and data.members is not empty %}
-    <div class="row mt-5 pt-5">
-      <div class="col-8">
+    <div class="row mt-3 mt-md-5 pt-md-5">
+      <div class="col-md-8">
         <h4 class="mb-4 pb-2">{{ data.recent.title }}</h4>
         {% include '@oe-bcl/bcl-recent-activities/recent-activities.html.twig' with data.recent.block_data only %}
       </div>
-      <div class="col-4">
-        <h4 class="mb-4 pb-2">{{ data.members.title}}</h4>
+      <div class="col-md-4">
+        <h4 class="mt-4 mt-md-0 mb-4 pb-2">{{ data.members.title}}</h4>
         {% if data.members.profiles is not empty and data.members.profiles is iterable %}
           {% for _profile in data.members.profiles %}
             {% include '@oe-bcl/bcl-user-view/user-view-compact.html.twig' with _profile only %}

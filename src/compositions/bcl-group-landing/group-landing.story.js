@@ -62,6 +62,7 @@ const correctPaths = (data) => {
   data.data.banner_description.metas.forEach((meta) => {
     meta.icon.path = defaultSprite;
   });
+  data.data.banner_description.collapse_trigger.icon.path = defaultSprite;
   data.data.contributions.more_link.icon.path = defaultSprite;
   data.data.members.more_link.icon.path = defaultSprite;
   return data;
