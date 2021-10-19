@@ -95,10 +95,17 @@ const getArgTypes = (data) => {
   return argTypes;
 };
 
+const resetAttrs = (data) => {
+  data.attributes.removeClass("text-center");
+  data.attributes.removeClass("hero");
+  data.attributes.removeClass("full-width");
+};
+
 const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+  resetAttrs(data);
   data.title = args.title;
   data.description = args.description;
   data.link.label = args.label;
@@ -106,18 +113,27 @@ const applyArgs = (data, args) => {
     data.link.icon.path = defaultSprite;
   }
   if (args.centered) {
-    data.attributes.removeClass("text-center");
-  } else {
     data.attributes.addClass("text-center");
   }
   if (args.hero) {
-    data.attributes.removeClass("hero");
-  } else {
     data.attributes.addClass("hero");
   }
-  data.full_width = args.width === "inside";
+  if (args.full_width) {
+    data.attributes.addClass("full-width");
+  }
 
   return Object.assign(data, args);
+};
+
+const renderStory = (data, args) => {
+  let story = banner(applyArgs(data, args));
+  if (args.full_width) {
+    story = `<div class="container">${story}</div>`;
+    story +=
+      '<div class="container"><p class="my-3">Content inside the grid</p></div>';
+  }
+
+  return story;
 };
 
 export default {
@@ -133,23 +149,25 @@ export default {
   },
 };
 
-export const Default = (args) => banner(applyArgs(dataDefault, args));
+export const Default = (args) => renderStory(dataDefault, args);
 
+Default.storyName = "Simple - default";
 Default.args = getArgs(dataDefault);
 Default.argTypes = getArgTypes(dataDefault);
 
-export const Primary = (args) => banner(applyArgs(dataPrimary, args));
+export const Primary = (args) => renderStory(dataPrimary, args);
 
+Primary.storyName = "Simple - primary";
 Primary.args = getArgs(dataPrimary);
 Primary.argTypes = getArgTypes(dataPrimary);
 
-export const Image = (args) => banner(applyArgs(dataImage, args));
+export const Image = (args) => renderStory(dataImage, args);
 
 Image.storyName = "Image - text-block";
 Image.args = getArgs(dataImage);
 Image.argTypes = getArgTypes(dataImage);
 
-export const Shade = (args) => banner(applyArgs(dataShade, args));
+export const Shade = (args) => renderStory(dataShade, args);
 
 Shade.storyName = "Image - shade";
 Shade.args = getArgs(dataShade);

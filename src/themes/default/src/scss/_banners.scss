@@ -47,7 +47,7 @@
     &.overlay {
       .bcl-banner__content {
         background: $white;
-        border-bottom: 4px solid $primary;
+        border-bottom: 4px solid transparent;
       }
     }
 
@@ -76,14 +76,15 @@
       .bcl-banner__content {
         margin-left: 2.5rem;
         border-bottom: 0;
-        border-left: 4px solid $primary;
+        border-left: 4px solid transparent;
       }
+    }
 
-      &.bg-primary {
-        .bcl-banner__content {
-          border-color: $white;
-        }
-      }
+    &.full-width {
+      left: 50%;
+      width: 100vw;
+      margin-left: -50vw;
+      border-radius: 0;
     }
   }
 
@@ -104,5 +105,13 @@
     height: 100%;
     overflow: hidden;
     background-size: cover;
+  }
+
+  .container {
+    .bcl-banner:not(.text-center):not(.shade) {
+      .bcl-banner__content {
+        margin-left: 0;
+      }
+    }
   }
 }

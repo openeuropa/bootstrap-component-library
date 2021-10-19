@@ -13,6 +13,7 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["btn", "btn-primary"]),
   },
   image: "https://picsum.photos/id/154/1200/800",
+  content_attributes: new drupalAttribute().addClass(["border-primary"]),
   attributes: new drupalAttribute().addClass([
     "bg-light",
     "text-dark",
