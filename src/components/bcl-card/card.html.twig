@@ -124,6 +124,9 @@
   {% if _image.position == 'background' %}
     {% set _img_class = 'card-img' %}
   {% endif %}
+  {% if _image.classes is not empty %}
+    {% set _img_class = _img_class ~ " " ~ _image.classes %}
+  {% endif %}
   {% if _horizontal %}
   <div class='{{ _horizontal_grid.left_col_classes  }}'>
   {% endif %}
@@ -196,6 +199,10 @@
   {% if _image.position == 'background' %}
   </div>
   {% endif %}
+  {% set _img_class = "card-img-bottom" %}
+  {% if _image.classes is not empty %}
+    {% set _img_class = _img_class ~ " " ~ _image.classes %}
+  {% endif %}
   {% if _image.position == 'bottom' %}
     {% if _horizontal %}
     <div class='col-4'>
@@ -203,7 +210,7 @@
     <img
       src='{{ _image.path }}'
       alt='{{ _image.alt }}'
-      class='card-img-bottom'
+      class='{{ _img_class }}'
     >
     {% if _horizontal %}
     </div>
