@@ -97,7 +97,7 @@ module.exports = {
         ],
         submit: {
           multiple: true,
-          wrapper: "mt-4 d-grid gap-4-25 d-md-block",
+          wrapper: "mt-4 d-grid gap-4 d-md-block",
           items: [
             {
               label: "Refine",
