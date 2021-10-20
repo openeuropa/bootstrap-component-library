@@ -99,5 +99,8 @@
     </div>
   </div>
 </main>
+{% if data.footer is defined %}
+  {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
+{% endif %}
 
 {% endspaceless %}
