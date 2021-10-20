@@ -9,7 +9,7 @@ demoData.data.header = headerData;
 demoData.data.footer = footerData;
 
 export default {
-  title: "Compositions/Group Landing",
+  title: "Compositions/Group/Landing",
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",

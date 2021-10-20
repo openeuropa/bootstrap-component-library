@@ -1,9 +1,7 @@
 {% spaceless %}
 
 {% if data.header is defined %}
-<header>
   {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
-</header>
 {% endif %}
 <main>
   <div class="container">
@@ -21,7 +19,7 @@
         />
       {% endif %}
       {% if data.banner.title is not empty %}
-        <div class="p-md-3-5 bg-md-light d-md-flex">
+        <div class="p-md-3-5 pt-3 bg-light d-md-flex">
           <h2 class="mb-0 d-inline-block fw-bold">{{ data.banner.title }}</h2>
           {% if data.banner.actions is not empty and data.banner.actions is iterable %}
           <div class="d-grid d-md-block ms-auto">
@@ -105,9 +103,7 @@
   </div>
 </main>
 {% if data.footer is defined %}
-<footer>
   {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
-</footer>
 {% endif %}
 
 {% endspaceless %}
