@@ -15,14 +15,9 @@ export default {
     layout: "fullscreen",
     design: [
       {
-        name: "Mockup - Footer Desktop",
+        name: "Mockup - Group",
         type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5118%3A65509",
-      },
-      {
-        name: "Mockup - Footer Mobile",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5222%3A62722",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=482%3A2559",
       },
     ],
     controls: {
