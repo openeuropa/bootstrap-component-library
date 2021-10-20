@@ -59,6 +59,7 @@ module.exports = {
         "bg-gray",
         "mb-3-5",
         "mb-lg-5",
+        "n-mx-container",
       ]),
       items: [
         {
@@ -448,6 +449,18 @@ module.exports = {
       {
         label: "Group name",
         background: "light",
+        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+      },
+      {
+        label: "Restricted",
+        background: "light",
+        dismissible: true,
+        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+      },
+      {
+        label: "Private",
+        background: "light",
+        dismissible: true,
         attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
       },
     ],

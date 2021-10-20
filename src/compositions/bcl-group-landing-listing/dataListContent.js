@@ -59,6 +59,7 @@ module.exports = {
         "bg-gray",
         "mb-3-5",
         "mb-lg-5",
+        "n-mx-container",
       ]),
       items: [
         {
