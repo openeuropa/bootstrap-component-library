@@ -120,7 +120,11 @@
   <div class='{{ _row_classes }}'>
 {% endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
-  {% set _img_class = 'card-img-top' %}
+  {% if _image.classes is not empty %}
+    {% set _img_class = _image.classes ~ ' card-img-top' %}
+  {% else %}
+    {% set _img_class = 'card-img-top' %}
+  {% endif %}
   {% if _image.position == 'background' %}
     {% set _img_class = 'card-img' %}
   {% endif %}
@@ -168,6 +172,11 @@
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
       class='card-title{{ title.classes ? ' ' ~ title.classes }}'
+      {% if _title.attributes is not empty and _title.attributes is iterable %}
+        {% for attribute in _title.attributes %}
+          {{ create_attribute().set(attribute.name, attribute.value) }}
+        {% endfor %}
+      {% endif %}
     >
       {{- title.content -}}
     </{{ _title_tag }}>
