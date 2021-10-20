@@ -1,11 +1,21 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  title: "Listing item block title",
   type: "grid",
   responsive_columns: 3,
   responsiveness: "md",
-  gutter: 2,
+  gutter: 4,
+  cols_extra_classes: "mt-4-5",
   attributes: new drupalAttribute(),
+  link: {
+    path: "/example",
+    label: "Listing item block CTA",
+    icon: {
+      path: "/icons.svg",
+      name: "chevron-right",
+    },
+  },
   items: [
     {
       title: {
@@ -24,11 +34,10 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      card_header: "Header of card 1",
-      card_footer: "Footer of card 1",
       wrapper_class: "col",
-      content: "<button class='btn btn-primary'>Custom action</button>",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new drupalAttribute().addClass(
+        "mb-3 border-0 bg-light h-100"
+      ),
     },
     {
       title: {
@@ -47,10 +56,10 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      card_header: "Header of card 2",
-      card_footer: "Footer of card 2",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new drupalAttribute().addClass(
+        "mb-3 border-0 bg-light h-100"
+      ),
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
@@ -72,11 +81,11 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      card_header: "Header of card 3",
-      card_footer: "Footer of card 3",
       wrapper_class: "col",
       content: "<p>Custom text</p>",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new drupalAttribute().addClass(
+        "mb-3 border-0 bg-light h-100"
+      ),
     },
     {
       title: {
@@ -95,10 +104,10 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      card_header: "Header of card 4",
-      card_footer: "Footer of card 4",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new drupalAttribute().addClass(
+        "mb-3 border-0 bg-light h-100"
+      ),
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
@@ -119,10 +128,10 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      card_header: "Header of card 5",
-      card_footer: "Footer of card 5",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new drupalAttribute().addClass(
+        "mb-3 border-0 bg-light h-100"
+      ),
     },
     {
       title: {
@@ -141,10 +150,10 @@ module.exports = {
         alt: "alt img",
         position: "bottom",
       },
-      card_header: "Header of card 6",
-      card_footer: "Footer of card 6",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new drupalAttribute().addClass(
+        "mb-3 border-0 bg-light h-100"
+      ),
       content:
         "<p>Some representative placeholder content for the first card.</p>",
     },

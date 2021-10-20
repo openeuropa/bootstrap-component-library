@@ -1,5 +1,5 @@
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
-
+console.log(MINIMAL_VIEWPORTS);
 export const parameters = {
   a11y: {
     element: "#root",
