@@ -1,7 +1,6 @@
 {% spaceless %}
 
 {# Parameters:
-  - title (string) (default: '')
   - type (string) (default: 'group')
     options: ['group', 'grid', 'masonry']
   - items (array of Card) (default: [])
@@ -28,8 +27,6 @@
 {% set _equal_height = equal_height|default(false) %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
 {% set _cols_classes = 'col' %}
-{% set _title = title|default('') %}
-{% set _link = link|default({}) %}
 
 {% if _cols_extra_classes is not empty %}
   {% set _cols_classes = _cols_classes ~ ' ' ~ _cols_extra_classes %}
@@ -47,16 +44,6 @@
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
-
-{% if _title is not empty %}
-  {% set _title_classes = 'fw-bold mb-3-5' %}
-  {% if _title.extra_classes is not empty %}
-    {% set _title_classes = _title_classes ~ ' ' ~ title.extra_classes %}
-  {% endif %}
-  <h4 class="{{ _title_classes }}">
-    {{ _title.label }}
-  </h4>
-{% endif %}
 
 <div
   {{ attributes }}
@@ -87,7 +74,5 @@
   {% endfor %}
 {% endif %}
 </div>
-{% if _link is not empty %}
-  {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-{% endif %}
+
 {% endspaceless %}
