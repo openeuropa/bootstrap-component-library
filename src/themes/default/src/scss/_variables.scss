@@ -1,4 +1,6 @@
 // Colors variables
+$gray-100: #f0f0f0;
+$light: $gray-100;
 $blue-50: tint-color($blue, 90%);
 $red-50: tint-color($red, 90%);
 $yellow-50: tint-color($yellow, 90%);
@@ -21,6 +23,13 @@ $custom-cyans: (
   "cyan-50": $cyan-50,
 );
 
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "light": $light,
+  )
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 $blues: map-merge($blues, $custom-blues);
 $reds: map-merge($reds, $custom-reds);
 $yellows: map-merge($yellows, $custom-yellows);
@@ -50,3 +59,8 @@ $form-font-size: $font-size-base !default;
 $form-font-size-lg: $font-size-base + 0.25rem !default;
 $form-select-height: 3rem !default;
 $form-select-height-md: 2.375rem !default;
+
+// Badges
+$badge-font-weight: $font-weight-normal; // 400
+$badge-font-size: 1.125rem; // 18px
+$badge-font-size-desktop: 1rem; // 16px
