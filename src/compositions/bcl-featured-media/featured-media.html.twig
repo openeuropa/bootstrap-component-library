@@ -1,0 +1,45 @@
+{% spaceless %}
+
+{# Parameters:
+  - type: (string) (default: "image")
+    - options ["image", "video"]
+  - image: (string) (default: "")
+  - content: (string) (default: "")
+  - content_classes: (string) (default: "")
+  - ratio: (string) (default: "16x9")
+    - options ["1x1", "4x3", "16x9", "21x9"]
+  ]
+#}
+
+{% set _type = type|default("image") %}
+{% set _image = image|default("") %}
+{% set _content = content|default("") %}
+{% set _content_classes = content_classes|default("") %}
+{% set _ratio = ratio|default("16x9") %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _type == "video" %}
+  {% set _video_classes = "ratio ratio-" ~ _ratio %}
+  <div class="{{ _video_classes }}">
+    <iframe
+      {{ attributes }}
+    ></iframe>
+  </div>
+{% else %}
+  {{ _image }}
+{% endif %}
+
+{% if _content is not empty %}
+  <div
+    {% if _content_classes is not empty %}
+    class="{{ _content_classes }}"
+    {% endif %}
+  >
+    {{ _content }}
+  </div>
+{% endif %}
+
+{% endspaceless %}
