@@ -46,6 +46,20 @@
 // Utilities
 @import "@openeuropa/bcl-bootstrap/scss/utilities/api";
 
+// Create responsive classes for padding
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding":
+      map-merge(
+        map-get($utilities, "padding"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
 // Custom styles
 @import "@openeuropa/bcl-theme-default/src/scss/header";
 @import "@openeuropa/bcl-theme-default/src/scss/footer";

@@ -49,7 +49,13 @@
 {% set attributes = attributes.addClass(_classes) %}
 
 {% if _title is not empty %}
-  <h4 class="fw-bold mb-3">{{ _title }}</h4>
+  {% set _title_classes = 'fw-bold mb-3-5' %}
+  {% if _title.extra_classes is not empty %}
+    {% set _title_classes = _title_classes ~ ' ' ~ title.extra_classes %}
+  {% endif %}
+  <h4 class="{{ _title_classes }}">
+    {{ _title.label }}
+  </h4>
 {% endif %}
 
 <div
@@ -80,9 +86,8 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+</div>
 {% if _link is not empty %}
   {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
 {% endif %}
-</div>
-
 {% endspaceless %}

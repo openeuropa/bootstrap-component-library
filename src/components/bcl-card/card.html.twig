@@ -25,6 +25,7 @@
       path (string),
       alt (string),
       position (string)
+      rounded (integer)
     }
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
@@ -120,8 +121,11 @@
   {% if _image.position == 'background' %}
     {% set _img_class = 'card-img' %}
   {% endif %}
+  {% if _image.rounded is not empty %}
+    {% set _img_class = _img_class ~ ' rounded-' ~ _image.rounded %}
+  {% endif %}
   {% if _horizontal %}
-  <div class="{{ _horizontal_grid.left_col_classes  }}">
+  <div class="{{ _horizontal_grid.left_col_classes ~ (image.position == 'right' ? ' order-1') }}">
   {% endif %}
   <img
     src='{{ _image.path }}'
@@ -136,7 +140,7 @@
   {% endif %}
 {% endif %}
 {% if _horizontal %}
-  <div class="{{ _horizontal_grid.right_col_classes }}">
+  <div class="{{ _horizontal_grid.right_col_classes ~ (image.position == 'right' ? ' order-0') }}">
 {% endif %}
   <div class="{{ _body_classes }}">
     {%- if _badges is not empty and _badges is iterable -%}

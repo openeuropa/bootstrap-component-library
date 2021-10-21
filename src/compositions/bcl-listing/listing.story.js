@@ -1,23 +1,17 @@
-import demoSimpleData from "@openeuropa/bcl-listing/data/listing--simple.js";
+import demoSimpleData from "@openeuropa/bcl-listing/data/listing--horizontal.js";
 import demoVerticalData from "@openeuropa/bcl-listing/data/listing--vertical.js";
-import demoCardsData from "@openeuropa/bcl-listing/data/listing--cards.js";
-import demoCardsVerticalData from "@openeuropa/bcl-listing/data/listing--vertical-cards.js";
-import demoCardsVertical2ColsData from "@openeuropa/bcl-listing/data/listing--vertical-2cols.js";
-import listing from "@openeuropa/bcl-card-layout/card-layout.html.twig";
+import demoVertical3ColsData from "@openeuropa/bcl-listing/data/listing--vertical3cols.js";
+import demoCardsData from "@openeuropa/bcl-listing/data/listing--cards-horizontal.js";
+import demoCardsVerticalData from "@openeuropa/bcl-listing/data/listing--cards-vertical-3cols.js";
+import demoCardsVertical2ColsData from "@openeuropa/bcl-listing/data/listing--cards-vertical.js";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
-const getArgs = (data) => {
-  return {};
-};
+import listing from "@openeuropa/bcl-listing/listing.html.twig";
 
-const getArgTypes = (data) => {
-  return {};
-};
-
-const applyArgs = (data, args) => {
+const adapter = (data) => {
   data.link.icon.path = defaultSprite;
 
-  return Object.assign(data, args);
+  return data;
 };
 
 export default {
@@ -30,29 +24,42 @@ export default {
         url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5903%3A69651",
       },
     ],
+    controls: {
+      disable: true,
+    },
   },
 };
 
-export const Horizontal = (args) => listing(applyArgs(demoSimpleData, args));
+export const Horizontal = (args) => listing(adapter(demoSimpleData));
 
-Horizontal.args = getArgs(demoSimpleData);
-Horizontal.argTypes = getArgTypes(demoSimpleData);
+Horizontal.storyName = "Content item (horizontal)";
 Horizontal.parameters = {
   viewport: {
     defaultViewport: "tablet",
   },
 };
 
-export const Vertical = (args) => listing(applyArgs(demoVerticalData, args));
+export const Vertical = (args) => listing(adapter(demoVerticalData));
 
-Vertical.args = getArgs(demoVerticalData);
-Vertical.argTypes = getArgTypes(demoVerticalData);
+Vertical.storyName = "Content item ( vertical, 2cols)";
+Vertical.parameters = {
+  viewport: {
+    defaultViewport: "tablet",
+  },
+};
 
-export const Cards = (args) => listing(applyArgs(demoCardsData, args));
+export const Vertical3Cols = () => listing(adapter(demoVertical3ColsData));
+
+Vertical3Cols.storyName = "Content item (vertical, 3cols)";
+Vertical3Cols.parameters = {
+  viewport: {
+    defaultViewport: "1366x768",
+  },
+};
+
+export const Cards = () => listing(adapter(demoCardsData));
 
 Cards.storyName = "Horizontal with cards";
-Cards.args = getArgs(demoCardsData);
-Cards.argTypes = getArgTypes(demoCardsData);
 Cards.parameters = {
   viewport: {
     defaultViewport: "mobile2",
@@ -60,15 +67,15 @@ Cards.parameters = {
 };
 
 export const CardsTwoCols = (args) =>
-  listing(applyArgs(demoCardsVertical2ColsData, args));
+  listing(adapter(demoCardsVertical2ColsData));
 
-CardsTwoCols.storyName = "Vertical with cards (2 cols)";
-CardsTwoCols.args = getArgs(demoCardsVertical2ColsData);
-CardsTwoCols.argTypes = getArgTypes(demoCardsVertical2ColsData);
+CardsTwoCols.storyName = "With cards (vertical, 2 cols)";
+CardsTwoCols.parameters = {
+  viewport: {
+    defaultViewport: "1366x768",
+  },
+};
 
-export const VerticalCards = (args) =>
-  listing(applyArgs(demoCardsVerticalData, args));
+export const VerticalCards = () => listing(adapter(demoCardsVerticalData));
 
-VerticalCards.storyName = "Vertical with cards (3 cols)";
-VerticalCards.args = getArgs(demoCardsVerticalData);
-VerticalCards.argTypes = getArgTypes(demoCardsVerticalData);
+VerticalCards.storyName = "With cards (vertical, 3 cols)";

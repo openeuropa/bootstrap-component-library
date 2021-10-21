@@ -1,17 +1,11 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
+  variant: "cards-3-cols",
   title: "Listing item block title",
-  attributes: new drupalAttribute(),
-  type: "grid",
-  gutter: 4,
-  cols_extra_classes: "mt-4-5",
   link: {
     path: "/example",
     label: "Listing item block CTA",
     icon: {
       path: "/icons.svg",
-      name: "chevron-right",
     },
   },
   items: [
@@ -20,7 +14,8 @@ module.exports = {
         content: '<a href="/example">Card title</a>',
       },
       text: {
-        content: "Text card with longer text which is supported 1",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
         classes: "mb-2",
       },
       image: {
@@ -28,9 +23,6 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      body_classes: "pb-4",
-      wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("border-0 bg-light"),
     },
     {
       title: {
@@ -46,8 +38,6 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("border-0 bg-light"),
     },
     {
       title: {
@@ -63,16 +53,14 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      wrapper_class: "col",
-      content: "<p>Custom text</p>",
-      attributes: new drupalAttribute().addClass("border-0 bg-light"),
     },
     {
       title: {
         content: '<a href="/example">Card title</a>',
       },
       text: {
-        content: "Text card with longer text which is supported 4",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         classes: "mb-2",
       },
       image: {
@@ -80,10 +68,6 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("border-0 bg-light"),
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: {
@@ -98,12 +82,10 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("border-0 bg-light"),
     },
     {
       title: {
-        content: "Title card 6",
+        content: '<a href="/example">Card title</a>',
       },
       text: {
         content: "Text card with longer text which is supported 6",
@@ -114,10 +96,6 @@ module.exports = {
         alt: "alt img",
         position: "bottom",
       },
-      wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("border-0 bg-light"),
-      content:
-        "<p>Some representative placeholder content for the first card.</p>",
     },
   ],
 };

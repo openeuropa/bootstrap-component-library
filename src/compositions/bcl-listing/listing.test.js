@@ -1,11 +1,12 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoSimpleData from "@openeuropa/bcl-listing/data/listing--simple.js";
+import demoSimpleData from "@openeuropa/bcl-listing/data/listing--horizontal.js";
 import demoVerticalData from "@openeuropa/bcl-listing/data/listing--vertical.js";
-import demoCardsData from "@openeuropa/bcl-listing/data/listing--cards.js";
-import demoCardsVerticalData from "@openeuropa/bcl-listing/data/listing--vertical-cards.js";
-import demoCardsVertical2ColsData from "@openeuropa/bcl-listing/data/listing--vertical-2cols.js";
-const template = "@oe-bcl/bcl-card-layout/card-layout.html.twig";
+import demoVertical3ColsData from "@openeuropa/bcl-listing/data/listing--vertical3cols.js";
+import demoCardsData from "@openeuropa/bcl-listing/data/listing--cards-horizontal.js";
+import demoCardsVerticalData from "@openeuropa/bcl-listing/data/listing--cards-vertical-3cols.js";
+import demoCardsVertical2ColsData from "@openeuropa/bcl-listing/data/listing--cards-vertical.js";
+const template = "@oe-bcl/bcl-listing/listing.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);
 
@@ -16,9 +17,14 @@ describe("OE - Listing", () => {
     return expect(render(demoSimpleData)).resolves.toMatchSnapshot();
   });
 
-  test("vertical renders correctly", () => {
+  test("vertical renders correctly (2cols)", () => {
     expect.assertions(1);
     return expect(render(demoVerticalData)).resolves.toMatchSnapshot();
+  });
+
+  test("vertical renders correctly (3cols)", () => {
+    expect.assertions(1);
+    return expect(render(demoVertical3ColsData)).resolves.toMatchSnapshot();
   });
 
   test("with cards renders correctly", () => {
