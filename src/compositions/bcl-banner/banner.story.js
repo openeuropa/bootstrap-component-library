@@ -105,22 +105,10 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
-  resetAttrs(data);
-  data.title = args.title;
-  data.description = args.description;
-  data.link.label = args.label;
   if (data.link.icon) {
     data.link.icon.path = defaultSprite;
   }
-  if (args.centered) {
-    data.attributes.addClass("text-center");
-  }
-  if (args.hero) {
-    data.attributes.addClass("hero");
-  }
-  if (args.full_width) {
-    data.attributes.addClass("full-width");
-  }
+  resetAttrs(data);
 
   return Object.assign(data, args);
 };

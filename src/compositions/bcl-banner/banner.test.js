@@ -8,7 +8,7 @@ import dataShade from "@openeuropa/bcl-banner/dataShade.js";
 const template = "@oe-bcl/bcl-banner/banner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
-describe("OE - Page banner - ", () => {
+describe("OE - Page banner", () => {
   test("default renders correctly", () => {
     expect.assertions(1);
 
@@ -28,7 +28,7 @@ describe("OE - Page banner - ", () => {
   });
 });
 
-describe("OE - Hero banner -", () => {
+describe("OE - Hero banner", () => {
   test("default renders correctly", () => {
     expect.assertions(1);
 
