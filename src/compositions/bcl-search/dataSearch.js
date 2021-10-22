@@ -160,12 +160,9 @@ module.exports = {
           "mb-4-5",
           "mb-md-4-75",
         ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
+        image:
+          '<img alt="alt img" class="d-none d-md-block card-img-top" src="https://picsum.photos/175/200?random=1" />',
+        image_position: "top",
         content:
           "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
       },
@@ -206,12 +203,9 @@ module.exports = {
           "mb-4-5",
           "mb-md-4-75",
         ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=2",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
+        image:
+          '<img alt="alt img" class="d-none d-md-block card-img-top" src="https://picsum.photos/175/200?random=2" />',
+        image_position: "top",
         content:
           "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
       },
@@ -256,12 +250,9 @@ module.exports = {
           "mb-4-5",
           "mb-md-4-75",
         ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=3",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
+        image:
+          '<img alt="alt img" class="d-none d-md-block card-img-top" src="https://picsum.photos/175/200?random=3" />',
+        image_position: "top",
         content:
           "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
       },
@@ -301,12 +292,9 @@ module.exports = {
           "mb-4-5",
           "mb-md-4-75",
         ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=4",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
+        image:
+          '<img alt="alt img" class="d-none d-md-block card-img-top" src="https://picsum.photos/175/200?random=4" />',
+        image_position: "top",
         content:
           "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
       },
@@ -351,12 +339,9 @@ module.exports = {
           "mb-4-5",
           "mb-md-4-75",
         ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=5",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
+        image:
+          '<img alt="alt img" class="d-none d-md-block card-img-top" src="https://picsum.photos/175/200?random=5" />',
+        image_position: "top",
         content:
           "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
       },
@@ -401,12 +386,9 @@ module.exports = {
           "mb-4-5",
           "mb-md-4-75",
         ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=6",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
+        image:
+          '<img alt="alt img" class="d-none d-md-block card-img-top" src="https://picsum.photos/175/200?random=6" />',
+        image_position: "top",
         content:
           "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
       },

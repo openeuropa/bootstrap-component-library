@@ -107,8 +107,8 @@ module.exports = {
           items: [
             {
               type: "image",
-              path: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-              alt: "logo",
+              image:
+                '<img alt="logo" src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg" />',
             },
           ],
         },

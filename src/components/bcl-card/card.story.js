@@ -20,6 +20,8 @@ const getArgs = (data, type) => {
   if (type == "horizontal") {
     args.horizontal = data.horizontal;
     args.horizontal_grid = data.horizontal_grid;
+  } else {
+    args.image_position = data.image_position || "top";
   }
 
   return args;
@@ -162,7 +164,7 @@ const getArgTypes = (data, type) => {
       name: "position of the image",
       type: { name: "select" },
       options: ["bottom", "background", "top"],
-      description: "Text color of the card",
+      description: "Image position inside card",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -185,9 +187,16 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
 
-  data.image.position = args.image_position;
   // Reset header and footer when using image overlays.
-  if (args.image_position === "background") {
+  if (args.image_position === "top") {
+    data.image =
+      '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1002/600/400" />';
+  } else if (args.image_position === "bottom") {
+    data.image =
+      '<img alt="alt img" class="card-img-bottom" src="https://picsum.photos/seed/1002/600/400" />';
+  } else if (args.image_position === "background") {
+    data.image =
+      '<img alt="alt img" class="card-img" src="https://picsum.photos/seed/1002/600/600" />';
     args.card_header = "";
     args.card_footer = "";
   }

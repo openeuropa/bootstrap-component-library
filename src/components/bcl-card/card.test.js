@@ -16,7 +16,15 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, image: { ...image, position: "bottom" } }, true)
+      render(
+        {
+          ...demoData,
+          image_position: "bottom",
+          image:
+            '<img alt="alt img" class="card-img-bottom" src="https://picsum.photos/seed/1002/600/400" />',
+        },
+        true
+      )
     ).resolves.toMatchSnapshot();
   });
 

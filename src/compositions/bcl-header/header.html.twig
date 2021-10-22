@@ -2,12 +2,7 @@
 
 {# Parameters:
   - navbar (Navbar object) (default: {})
-  - project_logo (object) (default: {})
-    format: {
-        path: "",
-        alt: "",
-        classes: ""
-      }
+  - project_logo (string) <img> tag (default: "")
   - site_name (string) (default: "")
   - head (Navbar object) (default: {})
   - breadcrumbs (Breadcrumbs object) (default: {})
@@ -16,7 +11,7 @@
 #}
 
 {% set _navbar = navbar|default({}) %}
-{% set _project_logo = project_logo|default({}) %}
+{% set _project_logo = project_logo|default("") %}
 {% set _site_name = site_name|default('') %}
 {% set _head = head|default({}) %}
 {% set _breadcrumbs = breadcrumbs|default({}) %}
@@ -47,17 +42,7 @@
   <div class="{{ _project_classes  }}">
     <div class="container">
     {% if _project_logo is not empty %}
-      <img
-      {% if _project_logo.path is not empty %}
-        src="{{ _project_logo.path }}"
-      {% endif %}
-      {% if _project_logo.alt is not empty %}
-        alt="{{ _project_logo.alt }}"
-      {% endif %}
-      {% if _project_logo.classes is not empty %}
-        class="{{ _project_logo.classes }}"
-      {% endif %}
-      />
+      {{- _project_logo -}}
     {% endif %}
     {% if _site_name is not empty %}
       <p>{{ _site_name }}</p>

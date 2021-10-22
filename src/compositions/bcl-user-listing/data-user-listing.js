@@ -128,11 +128,9 @@ module.exports = {
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-        },
+        image:
+          '<img alt="alt img" class="card-img-top" src="https://picsum.photos/200/200?random=1" />',
+        image_position: "top",
       },
       {
         horizontal: true,
@@ -155,11 +153,9 @@ module.exports = {
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=2",
-          alt: "alt img",
-          position: "top",
-        },
+        image:
+          '<img alt="alt img" class="card-img-top" src="https://picsum.photos/200/200?random=2" />',
+        image_position: "top",
       },
       {
         horizontal: true,
@@ -182,11 +178,9 @@ module.exports = {
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=3",
-          alt: "alt img",
-          position: "top",
-        },
+        image:
+          '<img alt="alt img" class="card-img-top" src="https://picsum.photos/200/200?random=3" />',
+        image_position: "top",
       },
       {
         horizontal: true,
@@ -209,11 +203,9 @@ module.exports = {
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=4",
-          alt: "alt img",
-          position: "top",
-        },
+        image:
+          '<img alt="alt img" class="card-img-top" src="https://picsum.photos/200/200?random=4" />',
+        image_position: "top",
       },
       {
         horizontal: true,
@@ -236,11 +228,9 @@ module.exports = {
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=5",
-          alt: "alt img",
-          position: "top",
-        },
+        image:
+          '<img alt="alt img" class="card-img-top" src="https://picsum.photos/200/200?random=5" />',
+        image_position: "top",
       },
       {
         horizontal: true,
@@ -263,11 +253,9 @@ module.exports = {
         content:
           "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
         attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=6",
-          alt: "alt img",
-          position: "top",
-        },
+        image:
+          '<img alt="alt img" class="card-img-top" src="https://picsum.photos/200/200?random=6" />',
+        image_position: "top",
       },
     ],
     pagination: {

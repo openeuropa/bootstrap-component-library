@@ -20,12 +20,8 @@
       classes: ''
     }
   - content (string) (default: '')
-  - image (object) (default: {})
-    format: {
-      path (string),
-      alt (string),
-      position (string)
-    }
+  - image (string) (default: "")
+  - image_position (string) (default: "top")
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
     format: {
@@ -49,7 +45,8 @@
 {% set _subtitle = subtitle|default({}) %}
 {% set _text = text|default({}) %}
 {% set _content = content|default('') %}
-{% set _image = image|default({}) %}
+{% set _image = image|default("") %}
+{% set _image_position = image_position|default("top") %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_grid = horizontal_grid|default({
@@ -119,27 +116,15 @@
 {% if _horizontal %}
   <div class='{{ _row_classes }}'>
 {% endif %}
-{% if _image is not empty and _image.position != 'bottom' %}
-  {% if _image.classes is not empty %}
-    {% set _img_class = _image.classes ~ ' card-img-top' %}
-  {% else %}
-    {% set _img_class = 'card-img-top' %}
-  {% endif %}
-  {% if _image.position == 'background' %}
-    {% set _img_class = 'card-img' %}
-  {% endif %}
+{% if _image is not empty and _image_position != 'bottom' %}
   {% if _horizontal %}
   <div class='{{ _horizontal_grid.left_col_classes  }}'>
   {% endif %}
-  <img
-    src='{{ _image.path }}'
-    alt='{{ _image.alt }}'
-    class='{{ _img_class }}'
-  >
+  {{- _image -}}
   {% if _horizontal %}
   </div>
   {% endif %}
-  {% if _image.position == 'background' %}
+  {% if _image_position == 'background' %}
   <div class='card-img-overlay'>
   {% endif %}
 {% endif %}
@@ -202,18 +187,14 @@
 </div>
 {% endif %}
 {% if _image is not empty %}
-  {% if _image.position == 'background' %}
+  {% if _image_position == 'background' %}
   </div>
   {% endif %}
-  {% if _image.position == 'bottom' %}
+  {% if _image_position == 'bottom' %}
     {% if _horizontal %}
     <div class='col-4'>
     {% endif %}
-    <img
-      src='{{ _image.path }}'
-      alt='{{ _image.alt }}'
-      class='card-img-bottom'
-    >
+    {{- _image -}}
     {% if _horizontal %}
     </div>
     {% endif %}

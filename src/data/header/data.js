@@ -2,23 +2,15 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   site_name: "Project name",
-  project_logo: {
-    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
-    classes: "d-none d-lg-inline-block",
-  },
+  project_logo:
+    '<img class="d-none d-lg-inline-block" src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg" />',
   head: {
     attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
     disable_collapse: true,
     brand: {
       logos: [
-        {
-          class: "d-none d-lg-block",
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-        },
-        {
-          class: "d-lg-none",
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
-        },
+        '<img class="d-none d-lg-block" src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg" />',
+        '<img class="d-lg-none" src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg" />',
       ],
     },
     navigation: {

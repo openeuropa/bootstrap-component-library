@@ -16,11 +16,9 @@ module.exports = {
         content: "Text card with longer text which is supported 1",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1008/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1008/600/400" />',
+      image_position: "top",
       card_header: "Header of card 1",
       card_footer: "Footer of card 1",
       wrapper_class: "col",
@@ -39,11 +37,9 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1009/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1009/600/400" />',
+      image_position: "top",
       card_header: "Header of card 2",
       card_footer: "Footer of card 2",
       wrapper_class: "col",
@@ -61,11 +57,9 @@ module.exports = {
         content: "Text card with longer text which is supported 3",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1010/600/400",
-        alt: "alt img",
-        position: "bottom",
-      },
+      image:
+        '<img alt="alt img" class="card-img-bottom" src="https://picsum.photos/seed/1010/600/400" />',
+      image_position: "bottom",
       card_header: "Header of card 3",
       card_footer: "Footer of card 3",
       wrapper_class: "col",

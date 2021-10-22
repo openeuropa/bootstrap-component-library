@@ -19,11 +19,9 @@ module.exports = {
         content: "Text card with longer text which is supported 1",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1002/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1002/600/400" />',
+      image_position: "top",
       card_header: "Header of card 1",
       card_footer: "Footer of card 1",
       wrapper_class: "col",
@@ -42,11 +40,9 @@ module.exports = {
         content: "Text card with longer text which is supported 2",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1003/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1003/600/400" />',
+      image_position: "top",
       card_header: "Header of card 2",
       card_footer: "Footer of card 2",
       wrapper_class: "col",
@@ -67,11 +63,9 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1004/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1004/600/400" />',
+      image_position: "top",
       card_header: "Header of card 3",
       card_footer: "Footer of card 3",
       wrapper_class: "col",
@@ -90,11 +84,9 @@ module.exports = {
         content: "Text card with longer text which is supported 4",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1005/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1005/600/400" />',
+      image_position: "top",
       card_header: "Header of card 4",
       card_footer: "Footer of card 4",
       wrapper_class: "col",
@@ -114,11 +106,9 @@ module.exports = {
         content: "Text card with longer text which is supported 5",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1006/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1006/600/400" />',
+      image_position: "top",
       card_header: "Header of card 5",
       card_footer: "Footer of card 5",
       wrapper_class: "col",
@@ -136,11 +126,9 @@ module.exports = {
         content: "Text card with longer text which is supported 6",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1007/600/400",
-        alt: "alt img",
-        position: "bottom",
-      },
+      image:
+        '<img alt="alt img" class="card-img-bottom" src="https://picsum.photos/seed/1007/600/400" />',
+      image_position: "bottom",
       card_header: "Header of card 6",
       card_footer: "Footer of card 6",
       wrapper_class: "col",

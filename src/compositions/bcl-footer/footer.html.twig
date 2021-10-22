@@ -15,9 +15,7 @@
                 links: Array of links object,
 
               -- for type "image" --
-                path: "",
-                alt: "",
-                classes: ""
+                image: ""  <img> tag,
 
               -- for type "content" --
                 content: "",
@@ -49,17 +47,7 @@
               {% if col.items is not empty and col.items is iterable %}
                 {% for item in col.items %}
                   {% if item.type == 'image' %}
-                    <img
-                      {% if item.path is not empty %}
-                        src="{{ item.path }}"
-                      {% endif %}
-                      {% if item.alt is not empty %}
-                        alt="{{ item.alt }}"
-                      {% endif %}
-                      {% if item.classes is not empty %}
-                        class="{{ item.classes }}"
-                      {% endif %}
-                    >
+                    {{- item.image -}}
                   {% endif %}
                   {% if item.type == 'content' %}
                     {{ item.content }}

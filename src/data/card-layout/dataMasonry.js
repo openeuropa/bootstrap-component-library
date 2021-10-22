@@ -31,11 +31,9 @@ module.exports = {
         content: "Text card with longer text which is supported 2",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1011/600/400",
-        alt: "alt img",
-        position: "bottom",
-      },
+      image:
+        '<img alt="alt img" class="card-img-bottom" src="https://picsum.photos/seed/1011/600/400" />',
+      image_position: "bottom",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
       content:
@@ -82,11 +80,9 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1012/600/400",
-        alt: "alt img",
-        position: "top",
-      },
+      image:
+        '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1012/600/400" />',
+      image_position: "top",
       wrapper_class: "col",
       content: "<button class='btn btn-success'>Custom action</button>",
       attributes: new drupalAttribute().addClass("mb-3"),
@@ -103,11 +99,9 @@ module.exports = {
         content: "Text card with longer text which is supported 5",
         classes: "mb-2",
       },
-      image: {
-        path: "https://picsum.photos/seed/1008/600/400",
-        alt: "alt img",
-        position: "background",
-      },
+      image:
+        '<img alt="alt img" class="card-img" src="https://picsum.photos/seed/1008/600/400" />',
+      image_position: "background",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass(["mb-3", "text-center"]),
     },

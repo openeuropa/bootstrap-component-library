@@ -10,6 +10,7 @@
       class: '',
       label: '', (optional: only for string label)
       link: '',
+      logos (array of string with <img> tag)
     }
   - navigation (object Navigation) (default: {})
   - form (object Form) (default: {})
@@ -51,15 +52,7 @@
         {{- _brand.label -}}
       {%- else -%}
         {% for logo in _brand.logos %}
-          <img
-            src='{{ logo.src }}'
-            {% if logo.alt is not empty %}
-            alt='{{ logo.alt }}'
-            {% endif %}
-            {% if logo.class is not empty %}
-            class='{{ logo.class }}'
-            {% endif %}
-          />
+          {{- logo -}}
         {% endfor %}
       {%- endif -%}
       </a>

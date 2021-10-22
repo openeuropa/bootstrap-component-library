@@ -18,11 +18,8 @@ module.exports = {
     content: "Text card with longer text which is supported",
     classes: "mb-2",
   },
-  image: {
-    path: "https://picsum.photos/seed/1019/400/600",
-    alt: "alt img",
-    position: "top",
-  },
+  image:
+    '<img alt="alt img" class="card-img-top" src="https://picsum.photos/seed/1019/400/600" />',
   content: "<button class='btn btn-primary'>Custom action</button>",
   attributes: new drupalAttribute().addClass("w-50"),
 };
