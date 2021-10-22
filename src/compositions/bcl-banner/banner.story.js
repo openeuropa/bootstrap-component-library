@@ -96,9 +96,7 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass("text-center");
-  data.attributes.removeClass("hero");
-  data.attributes.removeClass("full-width");
+  data.attributes.removeClass(["text-center", "hero", "full-width"]);
 };
 
 const applyArgs = (data, args) => {
