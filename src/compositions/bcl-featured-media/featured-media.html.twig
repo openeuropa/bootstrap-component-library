@@ -1,45 +1,82 @@
 {% spaceless %}
 
 {# Parameters:
-  - type: (string) (default: "image")
-    - options ["image", "video"]
   - image: (string) (default: "")
+  - poster_image: (string) (default: "")
   - content: (string) (default: "")
   - content_classes: (string) (default: "")
   - ratio: (string) (default: "16x9")
     - options ["1x1", "4x3", "16x9", "21x9"]
+  - sources: (array of sources) (default: []) format: [
+    {
+      type: "",
+      src: ""
+    }
   ]
+  - tracks: (array of tracks) (default: []) format: [
+    {
+      kind: "",
+      label: "",
+      src: "",
+      src_lang: ""
+    }
+  ]
+
+  Blocks:
+    - "embedded_media"
 #}
 
-{% set _type = type|default("image") %}
+{% set _embedded_media = embedded_media|default('') %}
 {% set _image = image|default("") %}
+{% set _poster_image = poster_image|default("") %}
 {% set _content = content|default("") %}
 {% set _content_classes = content_classes|default("") %}
 {% set _ratio = ratio|default("16x9") %}
+{% set _sources = sources|default([]) %}
+{% set _tracks = tracks|default([]) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
 
-{% if _type == "video" %}
+<figure
+  {{ attributes }}
+>
+{% if _embedded_media is not empty %}
   {% set _video_classes = "ratio ratio-" ~ _ratio %}
   <div class="{{ _video_classes }}">
-    <iframe
-      {{ attributes }}
-    ></iframe>
+    {%- block embedded_media _embedded_media -%}
   </div>
+{% elseif _sources is not empty and _sources is iterable %}
+  <video
+    controls
+    poster="{{ _poster_image }}"
+    class="w-100 d-block"
+  >
+  {% for source in _sources %}
+  <source type="{{ source.type }}" src="{{ source.src }}" />
+  {% endfor %}
+  {% if _tracks is not empty and _tracks is iterable %}
+    {% for track in _tracks %}
+    <track
+      kind="{{ track.kind }}"
+      label="{{ track.label }}"
+      src="{{ track.src }}"
+      srclang="{{ track.src_lang }}"
+    />
+    {% endfor %}
+  {% endif %}
+  </video>
 {% else %}
   {{ _image }}
 {% endif %}
 
 {% if _content is not empty %}
-  <div
+  <figcaption
     {% if _content_classes is not empty %}
     class="{{ _content_classes }}"
     {% endif %}
   >
-    {{ _content }}
-  </div>
+    {{- _content -}}
+  </figcaption>
 {% endif %}
+</figure>
 
 {% endspaceless %}

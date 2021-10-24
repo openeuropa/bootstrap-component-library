@@ -1,18 +1,22 @@
 import demoData from "@openeuropa/bcl-featured-media/data";
+import demoDataVideo from "@openeuropa/bcl-featured-media/dataVideo";
+import demoDataImage from "@openeuropa/bcl-featured-media/dataImage";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 
-const getArgs = (data) => {
-  return {
+const getArgs = (data, type) => {
+  const args = {
     content: data.content || "",
     content_classes: data.content_classes || "",
-    image: data.image || "",
-    type: data.type || "",
-    ratio: data.ratio || "16x9",
   };
+  if (type === "iframe") {
+    args.ratio = data.ratio || "16x9";
+  }
+
+  return args;
 };
 
-const getArgTypes = () => {
-  return {
+const getArgTypes = (data, type) => {
+  const argTypes = {
     content: {
       description: "Content under featured media",
       type: { name: "string" },
@@ -32,27 +36,10 @@ const getArgTypes = () => {
         category: "Style",
       },
     },
-    image: {
-      name: "Image",
-      description: "Tag image of the featured media",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
-    type: {
-      type: { name: "select" },
-      description: "Type of featured media",
-      options: ["image", "video"],
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "image" },
-        category: "Content",
-      },
-    },
-    ratio: {
+  };
+
+  if (type === "iframe") {
+    argTypes.ratio = {
       type: { name: "select" },
       description: "Ratio for iframe",
       options: ["1x1", "4x3", "16x9", "21x9"],
@@ -61,15 +48,17 @@ const getArgTypes = () => {
         defaultValue: { summary: "16x9" },
         category: "Style",
       },
-    },
-  };
+    };
+  }
+
+  return argTypes;
 };
 
 const adjustWidth = (story) => {
   const demo = story();
   return `
   <div class="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-4">
       ${demo}
     </div>
   </div>`;
@@ -108,10 +97,20 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
-export const Default = (args) => featuredMedia(applyArgs(demoData, args));
-Default.args = getArgs(demoData);
-Default.argTypes = getArgTypes(demoData);
-Default.decorators = [adjustWidth];
+export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
+Iframe.args = getArgs(demoData, "iframe");
+Iframe.argTypes = getArgTypes(demoData, "iframe");
+Iframe.decorators = [adjustWidth];
+
+export const Video = (args) => featuredMedia(applyArgs(demoDataVideo, args));
+Video.args = getArgs(demoData);
+Video.argTypes = getArgTypes(demoData);
+Video.decorators = [adjustWidth];
+
+export const Image = (args) => featuredMedia(applyArgs(demoDataImage, args));
+Image.args = getArgs(demoDataImage);
+Image.argTypes = getArgTypes(demoDataImage);
+Image.decorators = [adjustWidth];
 
 export const insideTextContainer = (args) =>
   featuredMedia(applyArgs(demoData, args));

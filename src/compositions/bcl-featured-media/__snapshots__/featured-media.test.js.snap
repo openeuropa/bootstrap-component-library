@@ -1,36 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Featured media renders correctly 1`] = `
+exports[`OE - Featured media renders correctly with iframe 1`] = `
 <jest>
-  <div
-    class="ratio ratio-16x9"
+  <figure
+    src="https://www.youtube.com/embed/VFYlYeFAEH4"
   >
-    <iframe
-      src="https://www.youtube.com/embed/VFYlYeFAEH4"
-    />
-  </div>
-  <div
-    class="bg-light p-3"
-  >
-    
-    Media description text goes here.
-  
-  </div>
+    <div
+      class="ratio ratio-16x9"
+    >
+      <iframe
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""
+        frameborder="0"
+        height="197"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="New digital strategy"
+        width="350"
+      />
+    </div>
+    <figcaption
+      class="bg-light p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
 </jest>
 `;
 
-exports[`OE - Featured media renders correctly with an image 1`] = `
+exports[`OE - Featured media renders correctly with image 1`] = `
 <jest>
-  <img
-    class="img-fluid"
-    src="https://picsum.photos/1000/400?random=1"
-  />
-  <div
-    class="bg-light p-3"
-  >
-    
-    Media description text goes here.
-  
-  </div>
+  <figure>
+    <img
+      class="img-fluid"
+      src="https://picsum.photos/1000/400?random=1"
+    />
+    <figcaption
+      class="bg-light p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
+</jest>
+`;
+
+exports[`OE - Featured media renders correctly with video 1`] = `
+<jest>
+  <figure>
+    <video
+      class="w-100 d-block"
+      controls=""
+      poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    >
+      <source
+        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+        type="video/mp4"
+      />
+      <track
+        kind="captions"
+        label="English"
+        src="example.vtt"
+        srclang=""
+      />
+    </video>
+    <figcaption
+      class="bg-light p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
 </jest>
 `;
