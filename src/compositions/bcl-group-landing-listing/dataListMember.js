@@ -65,11 +65,11 @@ module.exports = {
         {
           label: "Home",
           path: "/example.html",
-          active: true,
         },
         {
           label: "Members",
           path: "/example.html",
+          active: true,
         },
         {
           label: "Content",
@@ -135,75 +135,30 @@ module.exports = {
         items: [
           [
             {
-              classes: "mb-3",
-              label: "Content types",
-              type: "select",
-              attributes: new drupalAttribute(),
-              options: [
-                { value: 1, label: "a select option" },
-                { value: 2, label: "another select option" },
-                { value: 3, label: "another option" },
-                { value: 4, label: "last option" },
-                { label: "the selected option", selected: true },
-              ],
+              type: "fieldset",
+              classes: "col-sm-10",
+              legend: "Search by name",
+              fieldset_classes: "mb-3",
+              legend_classes: "col-form-label",
             },
-          ],
-          [
             {
               classes: "mb-3",
-              label: "Filter A",
-              type: "select",
-              attributes: new drupalAttribute().addClass("multi-select"),
-              multiple: true,
-              clean_class: true,
-              options: [
-                { value: 1, label: "a select option" },
-                { value: 2, label: "another select option" },
-                { value: 3, label: "another option" },
-                { value: 4, label: "last option" },
-                { label: "the selected option", selected: true },
-              ],
+              input_type: "text",
+              placeholder: "Name",
             },
           ],
           [
             {
               type: "fieldset",
               classes: "col-sm-10",
-              legend: "Filter B",
+              legend: "Search by email",
               fieldset_classes: "mb-3",
               legend_classes: "col-form-label",
             },
             {
-              input_type: "checkbox",
-              label: "Checked checkbox",
-              checked: true,
-            },
-            {
-              input_type: "checkbox",
-              label: "Default checkbox",
-            },
-          ],
-          [
-            {
-              type: "fieldset",
-              legend: "Creation date (from)",
-              legend_classes: "col-form-label",
-            },
-            {
-              input_type: "date",
-              attributes: new drupalAttribute().addClass("mb-2"),
-            },
-          ],
-          [
-            {
-              type: "fieldset",
-              legend: "Creation date (to)",
-              fieldset_classes: "mb-3",
-              legend_classes: "col-form-label",
-            },
-            {
-              input_type: "date",
-              attributes: new drupalAttribute().addClass("mb-2"),
+              classes: "mb-3",
+              input_type: "text",
+              placeholder: "Email",
             },
           ],
         ],
@@ -230,28 +185,25 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
           gutter: 2,
         },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
-          content: "Group name",
+          content: "Stefan Mayer",
           classes: "mb-3",
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
-          path: "https://picsum.photos/200/200?random=1",
+          path: "https://picsum.photos/200/160?random=1",
           alt: "alt img",
           position: "top",
         },
@@ -259,28 +211,25 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
           gutter: 2,
         },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
-          content: "Group name",
+          content: "Adjur Tichar",
           classes: "mb-3",
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
-          path: "https://picsum.photos/200/200?random=1",
+          path: "https://picsum.photos/200/160?random=1",
           alt: "alt img",
           position: "top",
         },
@@ -288,28 +237,25 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
           gutter: 2,
         },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
-          content: "Group name",
+          content: "Szép Mara",
           classes: "mb-3",
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
-          path: "https://picsum.photos/200/200?random=1",
+          path: "https://picsum.photos/200/160?random=1",
           alt: "alt img",
           position: "top",
         },
@@ -317,28 +263,25 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
           gutter: 2,
         },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
-          content: "Group name",
+          content: "Daniel Cardoso Rocha",
           classes: "mb-3",
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
-          path: "https://picsum.photos/200/200?random=1",
+          path: "https://picsum.photos/200/160?random=1",
           alt: "alt img",
           position: "top",
         },
@@ -346,28 +289,25 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
           gutter: 2,
         },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
-          content: "Group name",
+          content: "Aurelia Panicucci",
           classes: "mb-3",
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
-          path: "https://picsum.photos/200/200?random=1",
+          path: "https://picsum.photos/200/160?random=1",
           alt: "alt img",
           position: "top",
         },
@@ -375,35 +315,136 @@ module.exports = {
       {
         horizontal: true,
         horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
           gutter: 2,
         },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         extra_classes_body: "pt-0",
         title: {
-          content: "Group name",
+          content: "Felicyta Kowalska",
           classes: "mb-3",
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
-          path: "https://picsum.photos/200/200?random=1",
+          path: "https://picsum.photos/200/160?random=1",
+          alt: "alt img",
+          position: "top",
+        },
+      },
+      {
+        horizontal: true,
+        horizontal_grid: {
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
+          gutter: 2,
+        },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        extra_classes_body: "pt-0",
+        title: {
+          content: "Lorenzo Olson",
+          classes: "mb-3",
+        },
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
+        image: {
+          path: "https://picsum.photos/200/160?random=1",
+          alt: "alt img",
+          position: "top",
+        },
+      },
+      {
+        horizontal: true,
+        horizontal_grid: {
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
+          gutter: 2,
+        },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        extra_classes_body: "pt-0",
+        title: {
+          content: "Nino Treviño Montalvo",
+          classes: "mb-3",
+        },
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
+        image: {
+          path: "https://picsum.photos/200/160?random=1",
+          alt: "alt img",
+          position: "top",
+        },
+      },
+      {
+        horizontal: true,
+        horizontal_grid: {
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
+          gutter: 2,
+        },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        extra_classes_body: "pt-0",
+        title: {
+          content: "José Luis Pabón Barrios",
+          classes: "mb-3",
+        },
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
+        image: {
+          path: "https://picsum.photos/200/160?random=1",
+          alt: "alt img",
+          position: "top",
+        },
+      },
+      {
+        horizontal: true,
+        horizontal_grid: {
+          left_col_classes: "col-4 col-md-2",
+          right_col_classes: "col-8 col-md-10 align-self-center",
+          gutter: 2,
+        },
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        extra_classes_body: "pt-0",
+        title: {
+          content: "Maddison Marsh",
+          classes: "mb-3",
+        },
+        content:
+          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
+        image: {
+          path: "https://picsum.photos/200/160?random=1",
           alt: "alt img",
           position: "top",
         },
       },
     ],
     pagination: {
-      attributes: new drupalAttribute().addClass(["mt-5"]),
+      attributes: new drupalAttribute().addClass(["my-5"]),
       alignment: "center",
       prev: {
         label: "Previous",
@@ -449,18 +490,6 @@ module.exports = {
       {
         label: "Group name",
         background: "light",
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
-      },
-      {
-        label: "Restricted",
-        background: "light",
-        dismissible: true,
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
-      },
-      {
-        label: "Private",
-        background: "light",
-        dismissible: true,
         attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
       },
     ],

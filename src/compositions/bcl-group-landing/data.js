@@ -69,7 +69,11 @@ module.exports = {
     navigation: {
       nav: true,
       tabs: true,
-      attributes: new drupalAttribute().addClass(["bcl__nav", "bg-gray"]),
+      attributes: new drupalAttribute().addClass([
+        "bcl__nav",
+        "bg-gray",
+        "n-mx-container",
+      ]),
       items: [
         {
           label: "Home",

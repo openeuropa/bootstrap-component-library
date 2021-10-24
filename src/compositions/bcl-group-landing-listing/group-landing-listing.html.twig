@@ -54,9 +54,12 @@
       {% if data.cards is not empty and data.cards is iterable %}
         {% for card in data.cards %}
           {% include '@oe-bcl/bcl-card/card.html.twig' with card only %}
-          <hr class="d-md-none mb-4-5">
+          {% if card.border_bottom %}
+            <hr class="d-md-none mb-4-5">
+          {% endif %}
         {% endfor %}
       {% endif %}
+      <hr class="d-none d-md-block mb-4-5">
       {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with data.pagination only %}
       </div>
     </div>

@@ -92,11 +92,11 @@ GroupList.storyName = "List";
 GroupList.decorators = [scriptInit];
 
 export const GroupListMember = () =>
-  GroupLandingListing(correctPaths(demoDataListContent));
+  GroupLandingListing(correctPaths(demoDataListMember));
 GroupListMember.storyName = "Member List";
 GroupListMember.decorators = [scriptInit];
 
 export const GroupListContent = () =>
-  GroupLandingListing(correctPaths(demoDataListMember));
+  GroupLandingListing(correctPaths(demoDataListContent));
 GroupListContent.storyName = "Content List";
 GroupListContent.decorators = [scriptInit];
