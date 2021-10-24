@@ -21,6 +21,10 @@ $header-link-active-background: #003776 !default;
   padding-bottom: map-get($spacers, 3);
 }
 
+.bcl-header__project {
+  padding-top: map-get($spacers, 3);
+}
+
 .ec__header .bcl-header__project,
 .ec__header .bcl-header__navbar {
   background: $header-background;
@@ -30,12 +34,12 @@ $header-link-active-background: #003776 !default;
   align-items: flex-end;
 }
 
-.bcl-header.ec__header .nav-link {
-  color: $ec-blue;
-}
-
 .bcl-header .nav-link {
   color: $eu-blue;
+}
+
+.bcl-header.ec__header .nav-link {
+  color: $ec-blue;
 }
 
 .bcl-header__navbar .navbar-nav .nav-link {
@@ -70,10 +74,6 @@ $header-link-active-background: #003776 !default;
   line-height: 0.6rem;
   border-radius: 10px;
   transform: translate(-11px, 5px);
-}
-
-.bcl-header__project {
-  padding-top: map-get($spacers, 3);
 }
 
 .bcl-header__project p {
@@ -113,6 +113,10 @@ $header-link-active-background: #003776 !default;
   .ec__header .bcl-header__project.light {
     background: $white;
   }
+  .bcl-header__project p {
+    padding-left: map-get($spacers, 4);
+    font-weight: 500;
+  }
   .bcl-header__project.light p {
     color: $black;
   }
@@ -139,11 +143,6 @@ $header-link-active-background: #003776 !default;
   .bcl-header__project {
     padding-bottom: map-get($spacers, 3);
   }
-  .bcl-header__project p {
-    padding-left: map-get($spacers, 4);
-    font-weight: 500;
-  }
-
   .ec__header .navbar-brand img {
     width: 285px;
   }
