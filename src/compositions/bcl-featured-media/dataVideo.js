@@ -17,7 +17,7 @@ module.exports = {
       src: "https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4",
     },
     {
-      type: "video/mp4",
+      type: "video/webm",
       src: "https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm",
     },
   ],
