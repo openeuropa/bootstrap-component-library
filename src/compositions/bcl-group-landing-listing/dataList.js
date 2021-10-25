@@ -107,7 +107,14 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Group name",
-          classes: "mb-3",
+          classes: "mb-3 h5 text-decoration-none d-block",
+          tag: "a",
+          attributes: [
+            {
+              name: "href",
+              value: "example.html",
+            },
+          ],
         },
         text: {
           content:
@@ -136,7 +143,14 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Group name",
-          classes: "mb-3",
+          classes: "mb-3 h5 text-decoration-none d-block",
+          tag: "a",
+          attributes: [
+            {
+              name: "href",
+              value: "example.html",
+            },
+          ],
         },
         text: {
           content:
@@ -165,7 +179,14 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Group name",
-          classes: "mb-3",
+          classes: "mb-3 h5 text-decoration-none d-block",
+          tag: "a",
+          attributes: [
+            {
+              name: "href",
+              value: "example.html",
+            },
+          ],
         },
         text: {
           content:
@@ -194,7 +215,14 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Group name",
-          classes: "mb-3",
+          classes: "mb-3 h5 text-decoration-none d-block",
+          tag: "a",
+          attributes: [
+            {
+              name: "href",
+              value: "example.html",
+            },
+          ],
         },
         text: {
           content:
@@ -223,7 +251,14 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Group name",
-          classes: "mb-3",
+          classes: "mb-3 h5 text-decoration-none d-block",
+          tag: "a",
+          attributes: [
+            {
+              name: "href",
+              value: "example.html",
+            },
+          ],
         },
         text: {
           content:
@@ -252,7 +287,14 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Group name",
-          classes: "mb-3",
+          classes: "mb-3 h5 text-decoration-none d-block",
+          tag: "a",
+          attributes: [
+            {
+              name: "href",
+              value: "example.html",
+            },
+          ],
         },
         text: {
           content:
