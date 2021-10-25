@@ -1,5 +1,5 @@
 module.exports = {
-  variant: "cards-3-cols",
+  variant: "highlight-3-cols",
   title: "Listing item block title",
   link: {
     path: "/example",

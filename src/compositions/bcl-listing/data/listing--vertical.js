@@ -25,7 +25,11 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+          </div>`,
     },
     {
       title: {
@@ -41,7 +45,11 @@ module.exports = {
         alt: "alt img",
         position: "top",
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+          </div>`,
     },
     {
       title: {
@@ -58,7 +66,11 @@ module.exports = {
         position: "top",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+          </div>`,
     },
     {
       title: {
@@ -75,7 +87,11 @@ module.exports = {
         position: "top",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+          </div>`,
     },
     {
       title: {
@@ -91,7 +107,11 @@ module.exports = {
         alt: "alt img",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+          </div>`,
     },
     {
       title: {
@@ -108,7 +128,11 @@ module.exports = {
         position: "right",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+          </div>`,
     },
   ],
 };

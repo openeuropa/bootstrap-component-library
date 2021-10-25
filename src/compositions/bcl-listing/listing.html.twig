@@ -2,7 +2,7 @@
 
 {# Parameters:
   - variant: (string) (default: "horizontal") optioons:
-  [ horizontal, horizontal-card, 2-cols, 3-cols, cards-2-cols, cards-3-cols ]
+  [ horizontal, horizontal-highlight, 2-cols, 3-cols, highlight-2-cols, highlight-3-cols ]
   - title: (string) (default: {})
   - items: (array of objects of type card)
   - link: (object of type link)
@@ -50,7 +50,7 @@
     {% endif %}
 
     {% if _variant == '2-cols' or _variant == '3-cols' %}
-      {% set _card_attributes = _card_attributes.addClass(['px-3 border-0']) %}
+      {% set _card_attributes = _card_attributes.addClass(['px-3', 'border-0']) %}
       {% set _card = _card|merge({
         body_classes: "p-md-0 pt-sm-3",
         horizontal: true,
@@ -62,8 +62,8 @@
       {% if _variant == '2-cols' %}
         {% set _card = _card|merge({
           horizontal_grid: {
-            left_col_classes: "col-lg-3 col-md-6",
-            right_col_classes: "col-lg-9 col-md-6",
+            left_col_classes: "col-lg-3 col-md-4",
+            right_col_classes: "col-lg-9 col-md-8",
           },
         }) %}
         {% set _card_layout = _card_layout|merge({
@@ -80,12 +80,13 @@
         {% set _card_layout = _card_layout|merge({
           gutter: 2,
           responsive_columns: 3,
+          responsiveness: 'lg',
         }) %}
       {% endif %}
     {% endif %}
 
-    {% if _variant == 'cards' %}
-     {% set _card_attributes = _card_attributes.addClass(['border-0, bg-light']) %}
+    {% if _variant == 'highlight' %}
+     {% set _card_attributes = _card_attributes.addClass(['border-0', 'bg-light']) %}
      {% set _card = _card|merge({
          body_classes: "pb-4",
          wrapper_class: "col",
@@ -96,14 +97,14 @@
      }) %}
     {% endif %}
 
-    {% if _variant == 'cards-2-cols' or variant == 'cards-3-cols' %}
-      {% set _card_attributes = _card_attributes.addClass(['border-0 bg-light h-100 rounded-2']) %}
+    {% if _variant == 'highlight-2-cols' or variant == 'highlight-3-cols' %}
+      {% set _card_attributes = _card_attributes.addClass(['border-0', 'bg-light', 'h-100', 'rounded-2']) %}
       {% set _card = _card|merge({
         wrapper_class: "col",
         cols_extra_classes: "mt-4-5",
         attributes: _card_attributes,
       }) %}
-      {% if variant == 'cards-2-cols' %}
+      {% if variant == 'highlight-2-cols' %}
         {% set _card_layout = _card_layout|merge({ responsive_columns: 2 }) %}
       {% else %}
         {% set _card_layout = _card_layout|merge({ responsive_columns: 3 }) %}
@@ -119,13 +120,14 @@
 {% if _link is not empty %}
   {% set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
   {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-block']) %}
-  {% if _variant == 'horizontal' or _variant == 'two-cols' or variant == '3-cols' %}
+  {% if _variant == 'horizontal' or _variant == '2-cols' or variant == '3-cols' %}
     {% set _link_attributes = _link_attributes.addClass(['ps-3-5']) %}
   {% endif %}
   {% include '@oe-bcl/bcl-link/link.html.twig' with _link|merge({
     attributes: _link_attributes,
     icon: _link.icon|merge({
       name: 'chevron-right',
+      size: 'xs',
     }),
   }) only %}
 {% endif %}

@@ -23,7 +23,11 @@ module.exports = {
         alt: "alt img",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+                  <span class="d-md-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+                </div>`,
     },
     {
       body_classes: "p-md-0 pt-sm-3",
@@ -35,7 +39,11 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         classes: "mb-3",
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+                  <span class="d-md-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+                </div>`,
     },
     {
       title: {
@@ -51,7 +59,11 @@ module.exports = {
         alt: "alt img",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+                  <span class=" text-muted d-md-inline d-block mb-2 mb-md-0">17 October 2019</span>
+                </div>`,
     },
     {
       title: {
@@ -67,7 +79,11 @@ module.exports = {
         alt: "alt img",
         rounded: 1,
       },
-      content: `<div><span class="text-muted">Article</span><span class="text-muted">Brussels, Belgium</span><span class="text-muted">17 October 2019</span></div>`,
+      content: `<div>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
+                  <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
+                  <span class="d-md-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+                </div>`,
     },
   ],
 };

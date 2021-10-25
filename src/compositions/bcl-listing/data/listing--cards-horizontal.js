@@ -1,4 +1,5 @@
 module.exports = {
+  variant: "highlight",
   title: "Listing item block title",
   link: {
     path: "/example",

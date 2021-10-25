@@ -30,52 +30,29 @@ export default {
   },
 };
 
-export const Horizontal = (args) => listing(adapter(demoSimpleData));
+export const Horizontal = () => listing(adapter(demoSimpleData));
 
-Horizontal.storyName = "Content item (horizontal)";
-Horizontal.parameters = {
-  viewport: {
-    defaultViewport: "tablet",
-  },
-};
+export const Vertical = () => listing(adapter(demoVerticalData));
 
-export const Vertical = (args) => listing(adapter(demoVerticalData));
-
-Vertical.storyName = "Content item ( vertical, 2cols)";
-Vertical.parameters = {
-  viewport: {
-    defaultViewport: "tablet",
-  },
-};
+Vertical.storyName = "Vertical, 2cols";
 
 export const Vertical3Cols = () => listing(adapter(demoVertical3ColsData));
 
-Vertical3Cols.storyName = "Content item (vertical, 3cols)";
-Vertical3Cols.parameters = {
-  viewport: {
-    defaultViewport: "1366x768",
-  },
-};
+Vertical3Cols.storyName = "Vertical, 3cols";
 
 export const Cards = () => listing(adapter(demoCardsData));
 
-Cards.storyName = "Horizontal with cards";
+Cards.storyName = "Horizontal highlights";
 Cards.parameters = {
   viewport: {
-    defaultViewport: "mobile2",
+    defaultViewport: "tablet",
   },
 };
 
-export const CardsTwoCols = (args) =>
-  listing(adapter(demoCardsVertical2ColsData));
+export const CardsTwoCols = () => listing(adapter(demoCardsVertical2ColsData));
 
-CardsTwoCols.storyName = "With cards (vertical, 2 cols)";
-CardsTwoCols.parameters = {
-  viewport: {
-    defaultViewport: "1366x768",
-  },
-};
+CardsTwoCols.storyName = "Vertical highlights, 2 cols";
 
 export const VerticalCards = () => listing(adapter(demoCardsVerticalData));
 
-VerticalCards.storyName = "With cards (vertical, 3 cols)";
+VerticalCards.storyName = "Vertical highlights, 3 cols";
