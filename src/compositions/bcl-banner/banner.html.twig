@@ -18,10 +18,6 @@
 {% set _hero = hero|default(false) %}
 {% set _full_width = full_width|default(false) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
-
 {% set _classes = [
   'bcl-banner',
   _shade ? 'shade',

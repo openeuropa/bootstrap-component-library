@@ -95,8 +95,11 @@ const getArgTypes = (data) => {
   return argTypes;
 };
 
-const resetAttrs = (data) => {
+const resetAttrs = (data, args) => {
   data.attributes.removeClass(["text-center", "hero", "full-width"]);
+  if (args.centered) {
+    data.attributes.addClass("text-center");
+  }
 };
 
 const applyArgs = (data, args) => {
@@ -106,7 +109,7 @@ const applyArgs = (data, args) => {
   if (data.link.icon) {
     data.link.icon.path = defaultSprite;
   }
-  resetAttrs(data);
+  resetAttrs(data, args);
 
   return Object.assign(data, args);
 };
