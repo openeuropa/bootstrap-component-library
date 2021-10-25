@@ -1,4 +1,7 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute(),
   variant: "horizontal",
   title: "Listing item block title",
   link: {

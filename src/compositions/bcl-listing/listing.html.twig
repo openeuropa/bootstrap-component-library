@@ -12,6 +12,7 @@
 {% set _variant = variant|default('horizontal') %}
 {% set _title = title|default('') %}
 {% set _link = link|default({}) %}
+{% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
 {% set _card_layout = {
   type: 'grid',
@@ -19,6 +20,7 @@
   responsiveness: "md",
   attributes: create_attribute(),
 } %}
+{% set attributes = attributes.addClass(_classes) %}
 
 <div {{ attributes }}>
 
