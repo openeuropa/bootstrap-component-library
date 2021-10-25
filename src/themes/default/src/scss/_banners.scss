@@ -45,8 +45,8 @@
 
 @include media-breakpoint-up(md) {
   .bcl-banner {
-    border-radius: 4px;
     overflow: hidden;
+    border-radius: 4px;
 
     &.overlay {
       .bcl-banner__content {
@@ -123,9 +123,9 @@
 // Banners ratio
 @include media-breakpoint-up(lg) {
   .bcl-banner {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     min-height: 300px;
 
@@ -134,10 +134,10 @@
     }
 
     &::before {
-      content: "";
       display: block;
-      padding-top: 25%;
       width: 100%;
+      padding-top: 25%;
+      content: "";
     }
 
     &.hero {
