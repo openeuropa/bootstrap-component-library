@@ -11,6 +11,9 @@ const getArgs = (data, type) => {
   if (type === "iframe") {
     args.ratio = data.ratio || "16x9";
   }
+  if (type === "text") {
+    args.alignment = "left";
+  }
 
   return args;
 };
@@ -51,6 +54,20 @@ const getArgTypes = (data, type) => {
     };
   }
 
+  if (type === "text") {
+    argTypes.alignment = {
+      name: "alignment",
+      type: { name: "select" },
+      description: "Alignment inside text containter",
+      options: ["left", "right"],
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Layout",
+      },
+    };
+  }
+
   return argTypes;
 };
 
@@ -64,17 +81,22 @@ const adjustWidth = (story) => {
   </div>`;
 };
 
-const withText = (story) => {
+const withText = (story, params) => {
   const demo = story();
+  const alignment = params.args.alignment;
   return `
+  <h3 class="mb-4">Lorem ipsum dolor sit amet.</h3>
   <div class="row">
-    <div class="col-12 col-md-6">
-      <h3>Lorem ipsum dolor sit amet.</h3>
+    <div class="col-12 col-md-6 ${
+      alignment == "right" ? "order-md-1" : "order-md-2"
+    }">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <a href="#" class="mb-5 d-block">Read More</a>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 ${
+      alignment == "right" ? "order-md-2" : "order-md-1"
+    }">
       ${demo}
     </div>
   </div>`;
@@ -114,6 +136,6 @@ Image.decorators = [adjustWidth];
 
 export const insideTextContainer = (args) =>
   featuredMedia(applyArgs(demoData, args));
-insideTextContainer.args = getArgs(demoData);
-insideTextContainer.argTypes = getArgTypes(demoData);
+insideTextContainer.args = getArgs(demoData, "text");
+insideTextContainer.argTypes = getArgTypes(demoData, "text");
 insideTextContainer.decorators = [withText];
