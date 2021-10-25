@@ -1,0 +1,15 @@
+.page-item {
+  .page-link {
+    .bi {
+      color: $link-color;
+    }
+    &:hover {
+      font-weight: 700;
+    }
+  }
+  &.active {
+    .page-link {
+      font-weight: 700;
+    }
+  }
+}
