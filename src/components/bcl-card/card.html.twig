@@ -137,7 +137,7 @@
     class='{{ _img_class }}'
   >
   {% if _horizontal %}
-  </div><!-- card left-->
+  </div>
   {% endif %}
   {% if _image.position == 'background' %}
   <div class='card-img-overlay'>
@@ -199,7 +199,7 @@
   {%- endif -%}
   </div>
 {% if _horizontal %}
-  </div><!-- card right-->
+  </div>
 {% endif %}
 {% if _image is not empty %}
   {% if _image.position == 'background' %}
@@ -220,13 +220,13 @@
   {% endif %}
 {% endif %}
 {% if _horizontal %}
-  </div><!-- card row-->
+  </div>
 {% endif %}
 {% if _card_footer is not empty %}
   <div class='{{ _footer_classes }}'>
     {{- _card_footer -}}
   </div>
 {% endif %}
-</div><!-- card -->
+</div>
 
 {% endspaceless %}
