@@ -1,11 +1,11 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoSimpleData from "@openeuropa/bcl-listing/data/listing--horizontal.js";
-import demoVerticalData from "@openeuropa/bcl-listing/data/listing--vertical.js";
-import demoVertical3ColsData from "@openeuropa/bcl-listing/data/listing--vertical3cols.js";
-import demoCardsData from "@openeuropa/bcl-listing/data/listing--cards-horizontal.js";
-import demoCardsVerticalData from "@openeuropa/bcl-listing/data/listing--cards-vertical-3cols.js";
-import demoCardsVertical2ColsData from "@openeuropa/bcl-listing/data/listing--cards-vertical.js";
+import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
+import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
+import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col.js";
+import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
+import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col.js";
+import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col.js";
 const template = "@oe-bcl/bcl-listing/listing.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);
@@ -14,33 +14,31 @@ describe("OE - Listing", () => {
   test("horizontal renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(demoSimpleData)).resolves.toMatchSnapshot();
+    return expect(render(demoDefaultData)).resolves.toMatchSnapshot();
   });
 
-  test("vertical renders correctly (2cols)", () => {
+  test("Default listing item in 2 columns renders correctly", () => {
     expect.assertions(1);
-    return expect(render(demoVerticalData)).resolves.toMatchSnapshot();
+    return expect(render(demoDefault2ColData)).resolves.toMatchSnapshot();
   });
 
-  test("vertical renders correctly (3cols)", () => {
+  test("Default listing item in 3 columns renders correctly", () => {
     expect.assertions(1);
-    return expect(render(demoVertical3ColsData)).resolves.toMatchSnapshot();
+    return expect(render(demoDefault3ColData)).resolves.toMatchSnapshot();
   });
 
-  test("with cards renders correctly", () => {
+  test("with highlight listing item renders correctly", () => {
     expect.assertions(1);
-    return expect(render(demoCardsData)).resolves.toMatchSnapshot();
+    return expect(render(demoHighlightData)).resolves.toMatchSnapshot();
   });
 
-  test("with cards in two columns renders correctly", () => {
+  test("with highlight listing item in 2 columns renders correctly", () => {
     expect.assertions(1);
-    return expect(
-      render(demoCardsVertical2ColsData)
-    ).resolves.toMatchSnapshot();
+    return expect(render(demoHighlight2ColData)).resolves.toMatchSnapshot();
   });
 
-  test("with cards in three columns renders correctly", () => {
+  test("with highlight listing item in 3 columns renders correctly", () => {
     expect.assertions(1);
-    return expect(render(demoCardsVerticalData)).resolves.toMatchSnapshot();
+    return expect(render(demoHighlight3ColData)).resolves.toMatchSnapshot();
   });
 });

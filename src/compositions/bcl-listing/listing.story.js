@@ -1,12 +1,33 @@
-import demoSimpleData from "@openeuropa/bcl-listing/data/listing--horizontal.js";
-import demoVerticalData from "@openeuropa/bcl-listing/data/listing--vertical.js";
-import demoVertical3ColsData from "@openeuropa/bcl-listing/data/listing--vertical3cols.js";
-import demoCardsData from "@openeuropa/bcl-listing/data/listing--cards-horizontal.js";
-import demoCardsVerticalData from "@openeuropa/bcl-listing/data/listing--cards-vertical-3cols.js";
-import demoCardsVertical2ColsData from "@openeuropa/bcl-listing/data/listing--cards-vertical.js";
+import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
+import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
+import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col.js";
+import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
+import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col.js";
+import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col.js";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 import listing from "@openeuropa/bcl-listing/listing.html.twig";
+
+const getArgs = (data) => {
+  return {
+    variant: data.variant,
+  };
+};
+
+const getArgTypes = (data) => {
+  return {
+    variant: {
+      type: { name: "select" },
+      options: [data.variant],
+      description: "Variant used in the example",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "default-1-col" },
+        category: "Style",
+      },
+    },
+  };
+};
 
 const adapter = (data) => {
   data.link.icon.path = defaultSprite;
@@ -24,35 +45,45 @@ export default {
         url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5903%3A69651",
       },
     ],
-    controls: {
-      disable: true,
-    },
   },
 };
 
-export const Horizontal = () => listing(adapter(demoSimpleData));
+export const Horizontal = (args) => listing(adapter(demoDefaultData));
+Horizontal.storyName = "Default, 1 col";
+Horizontal.args = getArgs(demoDefaultData);
+Horizontal.argTypes = getArgs(demoDefaultData);
 
-export const Vertical = () => listing(adapter(demoVerticalData));
+export const Vertical = (args) => listing(adapter(demoDefault2ColData));
 
-Vertical.storyName = "Vertical, 2cols";
+Vertical.storyName = "Default, 2 col";
+Vertical.args = getArgs(demoDefault2ColData);
+Vertical.argTypes = getArgTypes(demoDefault2ColData);
 
-export const Vertical3Cols = () => listing(adapter(demoVertical3ColsData));
+export const Vertical3Cols = (args) => listing(adapter(demoDefault3ColData));
 
-Vertical3Cols.storyName = "Vertical, 3cols";
+Vertical3Cols.storyName = "Default, 3 col";
+Vertical3Cols.args = getArgs(demoDefault3ColData);
+Vertical3Cols.artTypes = getArgTypes(demoDefault3ColData);
 
-export const Cards = () => listing(adapter(demoCardsData));
+export const Cards = (args) => listing(adapter(demoHighlightData));
 
-Cards.storyName = "Horizontal highlights";
+Cards.storyName = "Highlight, 1 col";
+Cards.args = getArgs(demoHighlightData);
+Cards.argTypes = getArgTypes(demoHighlightData);
 Cards.parameters = {
   viewport: {
     defaultViewport: "tablet",
   },
 };
 
-export const CardsTwoCols = () => listing(adapter(demoCardsVertical2ColsData));
+export const CardsTwoCols = (args) => listing(adapter(demoHighlight2ColData));
 
-CardsTwoCols.storyName = "Vertical highlights, 2 cols";
+CardsTwoCols.storyName = "Highlight, 2 col";
+CardsTwoCols.args = getArgs(demoHighlight2ColData);
+CardsTwoCols.argTypes = getArgTypes(demoHighlight2ColData);
 
-export const VerticalCards = () => listing(adapter(demoCardsVerticalData));
+export const VerticalCards = (args) => listing(adapter(demoHighlight3ColData));
 
-VerticalCards.storyName = "Vertical highlights, 3 cols";
+VerticalCards.storyName = "Highlight, 3 col";
+VerticalCards.args = getArgs(demoHighlight3ColData);
+VerticalCards.argTypes = getArgTypes(demoHighlight3ColData);
