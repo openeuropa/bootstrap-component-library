@@ -32,7 +32,7 @@
       </div>
       <div class="col-12 col-lg-9">
       {% include '@oe-bcl/bcl-button/button.html.twig' with data.filter_button only %}
-      <div class="mb-4 clearfix">
+      <div class="mb-3 mb-md-4 clearfix">
         <div class="float-end d-none d-md-flex align-items-baseline">
           {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
             extra_classes: "w-auto d-inline-block ms-2"
@@ -59,7 +59,9 @@
           {% endif %}
         {% endfor %}
       {% endif %}
-      <hr class="d-none d-md-block mb-4-5">
+      {% if data.pagination.border_top %}
+        <hr class="d-none d-md-block mb-4-5">
+      {% endif %}
       {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with data.pagination only %}
       </div>
     </div>

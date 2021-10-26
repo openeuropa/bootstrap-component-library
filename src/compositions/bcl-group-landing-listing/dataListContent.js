@@ -120,7 +120,7 @@ module.exports = {
         "bcl-offcanvas offcanvas-start"
       ),
       extra_classes_close: "d-lg-none",
-      extra_classes_header: "p-lg-0",
+      extra_classes_header: "pb-2-5 p-lg-0",
       with_body_scroll: true,
       title: {
         label: "Filter options",
@@ -209,13 +209,17 @@ module.exports = {
         ],
         submit: {
           multiple: true,
-          wrapper: "mt-4",
+          wrapper: "mt-4 d-grid d-sm-block",
           items: [
             {
               label: "Refine",
               type: "submit",
               variant: "primary",
-              attributes: new drupalAttribute().addClass("me-2"),
+              attributes: new drupalAttribute().addClass([
+                "me-md-3",
+                "mb-3-5",
+                "mb-md-0",
+              ]),
             },
             {
               label: "Clear",
@@ -488,6 +492,7 @@ module.exports = {
     pagination: {
       attributes: new drupalAttribute().addClass(["my-5"]),
       alignment: "center",
+      border_top: true,
       prev: {
         label: "Previous",
         path: "#",
@@ -532,19 +537,31 @@ module.exports = {
       {
         label: "Group name",
         background: "light",
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+        attributes: new drupalAttribute().addClass([
+          "me-2",
+          "text-dark",
+          "mb-2",
+        ]),
       },
       {
         label: "Restricted",
         background: "light",
         dismissible: true,
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+        attributes: new drupalAttribute().addClass([
+          "me-2",
+          "text-dark",
+          "mb-2",
+        ]),
       },
       {
         label: "Private",
         background: "light",
         dismissible: true,
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+        attributes: new drupalAttribute().addClass([
+          "me-2",
+          "text-dark",
+          "mb-2",
+        ]),
       },
     ],
     sort_select: {

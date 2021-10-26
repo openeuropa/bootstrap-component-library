@@ -9,7 +9,7 @@ module.exports = {
         "bcl-offcanvas offcanvas-start"
       ),
       extra_classes_close: "d-lg-none",
-      extra_classes_header: "p-lg-0",
+      extra_classes_header: "pb-2-5 p-lg-0",
       with_body_scroll: true,
       title: {
         label: "Filter options",
@@ -73,13 +73,17 @@ module.exports = {
         ],
         submit: {
           multiple: true,
-          wrapper: "mt-4",
+          wrapper: "mt-4 d-grid d-sm-block",
           items: [
             {
               label: "Refine",
               type: "submit",
               variant: "primary",
-              attributes: new drupalAttribute().addClass("me-2"),
+              attributes: new drupalAttribute().addClass([
+                "me-md-3",
+                "mb-3-5",
+                "mb-md-0",
+              ]),
             },
             {
               label: "Clear",
@@ -104,7 +108,7 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
+        extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
           classes: "mb-3 h5 text-decoration-none d-block",
@@ -120,12 +124,18 @@ module.exports = {
           content:
             "Some quick example text to build on the card and title and make up the bulk of the cards content.",
         },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
+          classes: "d-none d-md-block",
         },
+        border_bottom: true,
       },
       {
         horizontal: true,
@@ -140,7 +150,7 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
+        extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
           classes: "mb-3 h5 text-decoration-none d-block",
@@ -156,12 +166,18 @@ module.exports = {
           content:
             "Some quick example text to build on the card and title and make up the bulk of the cards content.",
         },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
+          classes: "d-none d-md-block",
         },
+        border_bottom: true,
       },
       {
         horizontal: true,
@@ -176,7 +192,7 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
+        extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
           classes: "mb-3 h5 text-decoration-none d-block",
@@ -192,12 +208,18 @@ module.exports = {
           content:
             "Some quick example text to build on the card and title and make up the bulk of the cards content.",
         },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
+          classes: "d-none d-md-block",
         },
+        border_bottom: true,
       },
       {
         horizontal: true,
@@ -212,7 +234,7 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
+        extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
           classes: "mb-3 h5 text-decoration-none d-block",
@@ -228,12 +250,18 @@ module.exports = {
           content:
             "Some quick example text to build on the card and title and make up the bulk of the cards content.",
         },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
+          classes: "d-none d-md-block",
         },
+        border_bottom: true,
       },
       {
         horizontal: true,
@@ -248,7 +276,7 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
+        extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
           classes: "mb-3 h5 text-decoration-none d-block",
@@ -264,12 +292,18 @@ module.exports = {
           content:
             "Some quick example text to build on the card and title and make up the bulk of the cards content.",
         },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
+          classes: "d-none d-md-block",
         },
+        border_bottom: true,
       },
       {
         horizontal: true,
@@ -284,7 +318,7 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
+        extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
           classes: "mb-3 h5 text-decoration-none d-block",
@@ -300,11 +334,16 @@ module.exports = {
           content:
             "Some quick example text to build on the card and title and make up the bulk of the cards content.",
         },
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
+        attributes: new drupalAttribute().addClass([
+          "border-0",
+          "mb-4",
+          "mb-md-5",
+        ]),
         image: {
           path: "https://picsum.photos/200/200?random=1",
           alt: "alt img",
           position: "top",
+          classes: "d-none d-md-block",
         },
       },
     ],
@@ -356,19 +395,31 @@ module.exports = {
         label: "Public",
         background: "light",
         dismissible: true,
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+        attributes: new drupalAttribute().addClass([
+          "me-2",
+          "text-dark",
+          "mb-2",
+        ]),
       },
       {
         label: "Restricted",
         background: "light",
         dismissible: true,
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+        attributes: new drupalAttribute().addClass([
+          "me-2",
+          "text-dark",
+          "mb-2",
+        ]),
       },
       {
         label: "Private",
         background: "light",
         dismissible: true,
-        attributes: new drupalAttribute().addClass(["me-2", "text-dark"]),
+        attributes: new drupalAttribute().addClass([
+          "me-2",
+          "text-dark",
+          "mb-2",
+        ]),
       },
     ],
     sort_select: {
