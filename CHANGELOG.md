@@ -7,6 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 #### :rocket: New Feature
 
+* [#102](https://github.com/openeuropa/bootstrap-component-library/pull/102) feat(featured-media): Added compositions. - FRONT-2568 ([@tibi2303](https://github.com/tibi2303))
 * [#88](https://github.com/openeuropa/bootstrap-component-library/pull/88) feat(Responsive-tabs): Added responsive tabs. - FRONT-3236 ([@tibi2303](https://github.com/tibi2303))
 * [#93](https://github.com/openeuropa/bootstrap-component-library/pull/93) feat(Recent-activities): Added new block. - FRONT-3270 ([@tibi2303](https://github.com/tibi2303))
 * [#96](https://github.com/openeuropa/bootstrap-component-library/pull/96) feat(Improvements): Removed buggy controls - FRONT-3267 ([@tibi2303](https://github.com/tibi2303))
