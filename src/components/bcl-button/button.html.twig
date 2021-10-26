@@ -55,6 +55,30 @@
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
 {% set attributes = attributes.setAttribute('type', _type) %}
+{% if _icon is not empty %}
+  {% if _label is not empty %}
+    {% if _icon.attributes is empty %}
+      {% set _icon = _icon|merge({
+          attributes: create_attribute()
+        })
+      %}
+    {% endif %}
+    {% if _icon_position == 'before' %}
+      {% set _icon = _icon|merge({
+          attributes: _icon.attributes.addClass('me-2-5')
+        })
+      %}
+    {% else %}
+      {% set _icon = _icon|merge({
+          attributes: _icon.attributes.addClass('ms-2-5')
+        })
+      %}
+    {% endif %}
+  {% endif %}
+  {%- set _icon_markup -%}
+    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+  {%- endset -%}
+{% endif %}
 
 <button
   {{ attributes }}
@@ -65,16 +89,12 @@
 {%- if _assistive_text is not empty -%}
   <span class="visually-hidden">{{- _assistive_text -}}</span>
 {% endif %}
-{%- if _icon_position == 'before' -%}
-{% if _icon is not empty %}
-  {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
-{% endif %}
+{%- if _icon_position == 'before' and _icon_markup is defined -%}
+  {{ _icon_markup|raw }}
 {%- endif -%}
   {{- _label -}}
-{%- if _icon_position == 'after' -%}
-{%- if _icon is not empty -%}
-  {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
-{%- endif -%}
+{%- if _icon_position == 'after' and _icon_markup is defined -%}
+  {{ _icon_markup|raw }}
 {%- endif -%}
 </button>
 

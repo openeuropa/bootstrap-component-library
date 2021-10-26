@@ -22,6 +22,25 @@
 {% set _classes = [] %}
 
 {% if _icon is not empty %}
+  {% if _label is not empty %}
+    {% if _icon.attributes is empty %}
+      {% set _icon = _icon|merge({
+          attributes: create_attribute()
+        })
+      %}
+    {% endif %}
+    {% if _icon_position == 'before' %}
+      {% set _icon = _icon|merge({
+          attributes: _icon.attributes.addClass('me-2-5')
+        })
+      %}
+    {% else %}
+      {% set _icon = _icon|merge({
+          attributes: _icon.attributes.addClass('me-2-5')
+        })
+      %}
+    {% endif %}
+  {% endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
   {%- endset -%}
