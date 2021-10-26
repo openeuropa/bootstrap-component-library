@@ -17,7 +17,8 @@ describe("OE - Toasts", () => {
 
     const withBodyClasses = { ...demoSingle };
     withBodyClasses.toasts[0].with_body_wrapper = true;
-    withBodyClasses.toasts[0].body_wrapper_classes = "wrapper-class another-wrapper-class";
+    withBodyClasses.toasts[0].body_wrapper_classes =
+      "wrapper-class another-wrapper-class";
 
     return expect(render(withBodyClasses)).resolves.toMatchSnapshot();
   });
