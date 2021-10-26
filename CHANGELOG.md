@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.0 (2021-10-26)
+
+#### :rocket: New Feature
+
+* [#88](https://github.com/openeuropa/bootstrap-component-library/pull/88) feat(Responsive-tabs): Added responsive tabs. - FRONT-3236 ([@tibi2303](https://github.com/tibi2303))
+* [#93](https://github.com/openeuropa/bootstrap-component-library/pull/93) feat(Recent-activities): Added new block. - FRONT-3270 ([@tibi2303](https://github.com/tibi2303))
+* [#96](https://github.com/openeuropa/bootstrap-component-library/pull/96) feat(Improvements): Removed buggy controls - FRONT-3267 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#108](https://github.com/openeuropa/bootstrap-component-library/pull/108) fix(toast): Fixing bug on wrapper extra classes - FRONT-2491 ([@planctus](https://github.com/planctus))
+* [#94](https://github.com/openeuropa/bootstrap-component-library/pull/94) fix(controls): Fixing controls in multiple stories - FRONT-3266 ([@planctus](https://github.com/planctus))
+
+#### :nail_care: Enhancement
+
+* [#106](https://github.com/openeuropa/bootstrap-component-library/pull/106) feat(pagination): Styling Joinup pagination. - FRONT-2629 ([@gingapa](https://github.com/gingapa))
+* [#95](https://github.com/openeuropa/bootstrap-component-library/pull/95) feat(search page): Update search page with design changes - FRONT-3235 ([@theosuja](https://github.com/theosuja))
+* [#98](https://github.com/openeuropa/bootstrap-component-library/pull/98) feat(improvements): Breadcrumb on mobile - FRONT-3271 ([@gingapa](https://github.com/gingapa))
+
+#### :house: Internal
+
+* [#105](https://github.com/openeuropa/bootstrap-component-library/pull/105) chore(deps): Updates, 22-10-21 ([@planctus](https://github.com/planctus))
+
+#### Committers: 4
+
+- Paulo Gingao ([@gingapa](https://github.com/gingapa))
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.9.0 (2021-10-14)
 
 #### :bug: Bug Fix
