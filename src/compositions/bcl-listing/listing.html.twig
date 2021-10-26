@@ -36,10 +36,12 @@
 
 {% if _items is not empty %}
   {% for _card in _items %}
+    {% set _card_classes = [] %}
     {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
 
     {% if _variant == 'horizontal' %}
-      {% set _card_attributes = _card_attributes.addClass(['px-3', 'mb-2', 'border-0']) %}
+      {% set _card_classes = ['listing-item', 'px-3', 'mb-2', 'border-0'] %}
+      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         horizontal: true,
         body_classes: 'p-md-0 pt-sm-3',
@@ -52,7 +54,12 @@
     {% endif %}
 
     {% if _variant == '2-cols' or _variant == '3-cols' %}
-      {% set _card_attributes = _card_attributes.addClass(['px-3', 'border-0']) %}
+      {% set _card_classes = [
+        'listing-item',
+        'px-3',
+        'border-0'
+      ] %}
+      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         body_classes: "p-md-0 pt-sm-3",
         horizontal: true,
@@ -88,7 +95,12 @@
     {% endif %}
 
     {% if _variant == 'highlight' %}
-     {% set _card_attributes = _card_attributes.addClass(['border-0', 'bg-light']) %}
+      {% set _card_classes = [
+        'listing-item--highlight',
+        'border-0',
+        'bg-light'
+      ] %}
+     {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
      {% set _card = _card|merge({
          body_classes: "pb-4",
          wrapper_class: "col",
@@ -100,7 +112,13 @@
     {% endif %}
 
     {% if _variant == 'highlight-2-cols' or variant == 'highlight-3-cols' %}
-      {% set _card_attributes = _card_attributes.addClass(['border-0', 'bg-light', 'h-100', 'rounded-2']) %}
+      {% set _card_classes  = [
+        'listing-item--highlight',
+        'border-0', 'bg-light',
+        'h-100',
+        'rounded-2'
+      ] %}
+      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         wrapper_class: "col",
         cols_extra_classes: "mt-4-5",
