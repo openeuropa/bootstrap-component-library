@@ -12,6 +12,16 @@ describe("OE - Toasts", () => {
     return expect(render(demoSingle)).resolves.toMatchSnapshot();
   });
 
+  test(`render correctly with body wrapper classes`, () => {
+    expect.assertions(1);
+
+    const withBodyClasses = { ...demoSingle };
+    withBodyClasses.toasts[0].with_body_wrapper = true;
+    withBodyClasses.toasts[0].body_wrapper_classes = "wrapper-class another-wrapper-class";
+
+    return expect(render(withBodyClasses)).resolves.toMatchSnapshot();
+  });
+
   test(`render correctly with multiple toasts`, () => {
     expect.assertions(1);
 
