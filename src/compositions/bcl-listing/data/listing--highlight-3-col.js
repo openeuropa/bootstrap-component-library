@@ -97,7 +97,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/seed/1007/600/400",
         alt: "alt img",
-        position: "bottom",
       },
     },
   ],
