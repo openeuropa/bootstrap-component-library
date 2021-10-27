@@ -1,4 +1,4 @@
-/* stylelint-disable no-descending-specificity */
+/* stylelint-disable no-descending-specificity, declaration-no-important */
 // Banners
 .bcl-banner {
   position: relative;
@@ -10,6 +10,12 @@
 
   &.shade {
     color: $dark;
+  }
+
+  &.bg-primary {
+    .bcl-banner__content {
+      border-color: $white !important;
+    }
   }
 
   &.hero {
@@ -24,6 +30,7 @@
 
 .bcl-banner__content {
   padding: map-get($spacers, "4-75") map-get($spacers, "4-5");
+  border-color: $primary !important;
 }
 
 .bcl-banner__image {
@@ -52,7 +59,7 @@
     &.overlay {
       .bcl-banner__content {
         background: $white;
-        border-bottom: 4px solid transparent;
+        border-bottom: 4px solid $primary;
       }
     }
 

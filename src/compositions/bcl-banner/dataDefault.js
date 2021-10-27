@@ -12,7 +12,6 @@ module.exports = {
     },
     attributes: new drupalAttribute().addClass(["btn", "btn-primary"]),
   },
-  content_attributes: new drupalAttribute().addClass(["border-primary"]),
   attributes: new drupalAttribute().addClass([
     "bg-light",
     "text-dark",
