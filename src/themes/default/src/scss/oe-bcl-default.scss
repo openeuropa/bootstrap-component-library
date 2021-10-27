@@ -8,6 +8,20 @@
 
 @import "@openeuropa/bcl-bootstrap/scss/utilities";
 
+// Create responsive classes for padding
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding":
+      map-merge(
+        map-get($utilities, "padding"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
 // Layout & components
 @import "@openeuropa/bcl-bootstrap/scss/root";
 @import "@openeuropa/bcl-bootstrap/scss/reboot";
