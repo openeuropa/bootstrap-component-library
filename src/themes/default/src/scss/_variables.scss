@@ -37,7 +37,6 @@ $greens: map-merge($greens, $custom-greens);
 $cyans: map-merge($cyans, $custom-cyans);
 
 // Custom color variables
-
 $ec-blue: #17458f;
 
 $eu-blue: #1b4ac3;
@@ -54,6 +53,7 @@ $spacers-extended: (
 
 $spacers: map-merge($spacers, $spacers-extended);
 
+// Forms
 $form-check-input-size-lg: $form-check-input-width + 0.3em !default;
 $form-font-size: $font-size-base !default;
 $form-font-size-lg: $font-size-base + 0.25rem !default;
@@ -64,3 +64,6 @@ $form-select-height-md: 2.375rem !default;
 $badge-font-weight: $font-weight-normal; // 400
 $badge-font-size: 1.125rem; // 18px
 $badge-font-size-desktop: 1rem; // 16px
+
+// banners
+$banner-content-border-color: $primary;
