@@ -1,12 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
-import GroupLanding from "@openeuropa/bcl-group-landing/group-landing.html.twig";
+import groupLanding from "@openeuropa/bcl-group-landing/group-landing.html.twig";
 import demoData from "@openeuropa/bcl-group-landing/data";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
-
-demoData.data.header = headerData;
-demoData.data.footer = footerData;
 
 export default {
   title: "Compositions/Group/Landing",
@@ -27,6 +24,8 @@ export default {
 };
 
 const correctPaths = (data) => {
+  data.data.header = headerData;
+  data.data.footer = footerData;
   data.data.header.head.navigation.items.forEach((item) => {
     if (item.icon) {
       item.icon.path = defaultSprite;
@@ -63,4 +62,4 @@ const correctPaths = (data) => {
   return data;
 };
 
-export const Default = () => GroupLanding(correctPaths(demoData));
+export const Default = () => groupLanding(correctPaths(demoData));
