@@ -129,7 +129,8 @@ module.exports = {
     },
     banner_description: {
       collapse_trigger: {
-        label: "See group detail",
+        label:
+          "<span class='text-not-collapsed'>See group detail</span><span class='text-collapsed'>Hide group detail</span>",
         path: "#banner-description",
         icon_position: "after",
         icon: {

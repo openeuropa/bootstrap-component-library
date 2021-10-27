@@ -209,7 +209,7 @@ module.exports = {
         ],
         submit: {
           multiple: true,
-          wrapper: "mt-4 d-grid d-sm-block",
+          wrapper: "mt-4 d-grid d-md-block",
           items: [
             {
               label: "Refine",
