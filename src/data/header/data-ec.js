@@ -63,6 +63,7 @@ module.exports = {
         {
           label: "<span class='badge bg-danger'>5</span>",
           path: "#",
+          remove_icon_spacers: true,
           icon_position: "before",
           icon: {
             name: "bell-fill",

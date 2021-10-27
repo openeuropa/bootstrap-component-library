@@ -59,6 +59,7 @@
   {% if _label is not empty %}
     {% if _icon.attributes is empty %}
       {% set _icon = _icon|merge({
+          size: "fluid",
           attributes: create_attribute()
         })
       %}

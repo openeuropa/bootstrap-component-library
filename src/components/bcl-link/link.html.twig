@@ -7,6 +7,7 @@
     - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
   - id (string) (default: '')
   - disabled (boolean) (default: false)
+  - remove_icon_spacers (boolean) (default: false)
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
     - options ["after", "before"]
@@ -19,10 +20,11 @@
 {% set _disabled = disabled|default(false) %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
+{% set _remove_icon_spacers = remove_icon_spacers|default(false) %}
 {% set _classes = [] %}
 
 {% if _icon is not empty %}
-  {% if _label is not empty %}
+  {% if _label is not empty and not _remove_icon_spacers %}
     {% if _icon.attributes is empty %}
       {% set _icon = _icon|merge({
           attributes: create_attribute()
@@ -36,7 +38,7 @@
       %}
     {% else %}
       {% set _icon = _icon|merge({
-          attributes: _icon.attributes.addClass('me-2-5')
+          attributes: _icon.attributes.addClass('ms-2-5')
         })
       %}
     {% endif %}
