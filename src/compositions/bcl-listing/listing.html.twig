@@ -1,0 +1,156 @@
+{% spaceless %}
+
+{# Parameters:
+  - variant: (string) (default: "horizontal") options:
+  [ default-1-col, highlight-1-col, default-2-col, default-3-col, highlight-2-col, highlight-3-col ]
+  - title: (string) (default: {})
+  - items: (array of objects of type card)
+  - link: (object of type link)
+#}
+
+{% set _items = items|default([]) %}
+{% set _variant = variant|default('default-1-col') %}
+{% set _title = title|default('') %}
+{% set _link = link|default({}) %}
+{% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
+{% set _cards = [] %}
+{% set _card_layout = {
+  type: 'grid',
+  gutter: 4,
+  responsiveness: "md",
+  attributes: create_attribute(),
+} %}
+{% set attributes = attributes.addClass(_classes) %}
+
+<div {{ attributes }}>
+
+{% if _title is not empty %}
+  {% set _title_classes = 'fw-bold mb-3-5' %}
+  {% if _variant == 'default-1-col' or _variant == 'default-3-col' or _variant == 'default-2-col' %}
+    {% set _title_classes = _title_classes ~ ' ps-3' %}
+  {% endif %}
+  <h4 class="{{ _title_classes }}">
+    {{ _title }}
+  </h4>
+{% endif %}
+
+{% if _items is not empty %}
+  {% for _card in _items %}
+    {% set _card_classes = [] %}
+    {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
+
+    {% if _variant == 'default-1-col' %}
+      {% set _card_classes = ['listing-item', 'px-3', 'mb-2', 'border-0'] %}
+      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
+      {% set _card = _card|merge({
+        horizontal: true,
+        body_classes: 'p-md-0 pt-sm-3',
+        horizontal_grid: {
+          left_col_classes: 'col-md-3 col-lg-2 rounded',
+          right_col_classes: 'col-md-9 col-lg-10',
+        },
+        attributes: _card_attributes,
+      }) %}
+    {% endif %}
+
+    {% if _variant == 'default-2-col' or _variant == 'default-3-col' %}
+      {% set _card_classes = [
+        'listing-item',
+        'px-3',
+        'border-0'
+      ] %}
+      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
+      {% set _card = _card|merge({
+        body_classes: "p-md-0 pt-sm-3",
+        horizontal: true,
+        attributes: _card_attributes,
+      }) %}
+      {% set _card_layout = _card_layout|merge({
+        cols_extra_classes: "mt-4-5",
+      }) %}
+      {% if _variant == 'default-2-col' %}
+        {% set _card = _card|merge({
+          horizontal_grid: {
+            left_col_classes: "col-lg-3 col-md-4",
+            right_col_classes: "col-lg-9 col-md-8",
+          },
+        }) %}
+        {% set _card_layout = _card_layout|merge({
+          gutter: 2,
+          responsive_columns: 2,
+        }) %}
+      {% else %}
+        {% set _card = _card|merge({
+          horizontal_grid: {
+            left_col_classes: "col-md-6",
+            right_col_classes: "col-md-6",
+          },
+        }) %}
+        {% set _card_layout = _card_layout|merge({
+          gutter: 2,
+          responsive_columns: 3,
+          responsiveness: 'lg',
+        }) %}
+      {% endif %}
+    {% endif %}
+
+    {% if _variant == 'highlight-1-col' %}
+      {% set _card_classes = [
+        'listing-item--highlight',
+        'border-0',
+        'bg-light'
+      ] %}
+     {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
+     {% set _card = _card|merge({
+         body_classes: "pb-4",
+         wrapper_class: "col",
+         attributes: _card_attributes,
+      }) %}
+     {% set _card_layout = _card_layout|merge({
+       cols_extra_classes: "mt-4-5",
+     }) %}
+    {% endif %}
+
+    {% if _variant == 'highlight-2-col' or variant == 'highlight-3-col' %}
+      {% set _card_classes  = [
+        'listing-item--highlight',
+        'border-0', 'bg-light',
+        'h-100',
+        'rounded-2'
+      ] %}
+      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
+      {% set _card = _card|merge({
+        wrapper_class: "col",
+        cols_extra_classes: "mt-4-5",
+        attributes: _card_attributes,
+      }) %}
+      {% if variant == 'highlight-2-col' %}
+        {% set _card_layout = _card_layout|merge({ responsive_columns: 2 }) %}
+      {% else %}
+        {% set _card_layout = _card_layout|merge({ responsive_columns: 3 }) %}
+      {% endif %}
+    {% endif %}
+
+    {% set _cards = _cards|merge([_card]) %}
+  {% endfor %}
+{% endif %}
+
+  {% include "@oe-bcl/bcl-card-layout/card-layout.html.twig" with _card_layout|merge({ items: _cards }) only %}
+
+{% if _link is not empty %}
+  {% set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
+  {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-block']) %}
+  {% if _variant == 'default-1-col' or _variant == 'default-2-col' or variant == 'default-3-col' %}
+    {% set _link_attributes = _link_attributes.addClass(['ps-3-5']) %}
+  {% endif %}
+  {% include '@oe-bcl/bcl-link/link.html.twig' with _link|merge({
+    attributes: _link_attributes,
+    icon: _link.icon|merge({
+      name: 'chevron-right',
+      size: 'xs',
+    }),
+  }) only %}
+{% endif %}
+</div>
+
+{% endspaceless %}

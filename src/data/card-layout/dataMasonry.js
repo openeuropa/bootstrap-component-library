@@ -2,7 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   type: "masonry",
-  responsive_colums: "3",
+  responsive_columns: "3",
   responsiveness: "md",
   gutters: "2",
   attributes: new drupalAttribute(),

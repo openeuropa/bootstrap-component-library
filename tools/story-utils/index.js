@@ -245,6 +245,7 @@ export const getIconControls = (type, data) => {
         type: { summary: "string" },
         defaultValue: { summary: "s" },
         category: "Icon",
+        disable: type == "button",
       },
     };
     argTypes.icon_position = {

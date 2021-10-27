@@ -1,0 +1,54 @@
+{% spaceless %}
+
+{# Parameters:
+  - title: (string) (default: "")
+  - description: (string) (default: "")
+  - link: (link object) (default: {}): predefined structure for Link component
+  - image: (string) <img> tag
+  - shade: (boolean) (default: false)
+  - hero: (boolean) (default: false)
+  - full_width: (boolean) (default: false)
+#}
+
+{% set _title = title|default("") %}
+{% set _description = description|default("") %}
+{% set _link = link|default({}) %}
+{% set _image = image|default("") %}
+{% set _shade = shade|default(false) %}
+{% set _hero = hero|default(false) %}
+{% set _full_width = full_width|default(false) %}
+
+{% set _classes = [
+  'bcl-banner',
+  _shade ? 'shade',
+  _image and not _shade ? 'overlay',
+  _hero ? 'hero',
+  _full_width ? 'full-width' 
+  ] %}
+{% set attributes = attributes.addClass(_classes) %}
+
+{% if content_attributes is empty %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+
+{% set _content_classes = ['bcl-banner__content'] %}
+{% set content_attributes = content_attributes.addClass(_content_classes) %}
+
+<div {{ attributes }}>
+  {% if _image is not empty %}
+    <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
+  {% endif %}
+  <div class="container">
+    <div {{ content_attributes }}>
+    {% if _title is not empty %}
+      <div class="display-6 mb-3">{{ _title }}</div>
+      <p class="mb-4">{{ _description }}</p>
+      {% if _link.path %}
+        {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+      {% endif %}
+    {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endspaceless %}
