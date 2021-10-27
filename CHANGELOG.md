@@ -3,7 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 1.0.0 (2021-10-26)
+## 0.11.0 (2021-10-27)
+
+#### :rocket: New Feature
+
+* [#103](https://github.com/openeuropa/bootstrap-component-library/pull/103) feat(listing): Adding listing template for content items - FRONT-3135 ([@planctus](https://github.com/planctus))
+* [#100](https://github.com/openeuropa/bootstrap-component-library/pull/100) feat(banners): Add composition - FRONT-2559 ([@papegaill](https://github.com/papegaill))
+
+#### :nail_care: Enhancement
+
+* [#107](https://github.com/openeuropa/bootstrap-component-library/pull/107) feat(icons): Alignment inside links/buttons - FRONT-3285 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#110](https://github.com/openeuropa/bootstrap-component-library/pull/110) chore(deps): Updates 27-10-21 ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+## 0.10.0 (2021-10-26)
 
 #### :rocket: New Feature
 
