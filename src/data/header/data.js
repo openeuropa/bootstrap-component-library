@@ -94,7 +94,6 @@ module.exports = {
         icon: {
           name: "search",
           size: "xs",
-          attributes: new drupalAttribute().addClass(["align-self-center"]),
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",

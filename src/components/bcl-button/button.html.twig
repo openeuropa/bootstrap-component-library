@@ -56,10 +56,13 @@
 {% endif %}
 {% set attributes = attributes.setAttribute('type', _type) %}
 {% if _icon is not empty %}
+    {% set _icon = _icon|merge({
+        size: "fluid",
+      })
+    %}
   {% if _label is not empty %}
     {% if _icon.attributes is empty %}
       {% set _icon = _icon|merge({
-          size: "fluid",
           attributes: create_attribute()
         })
       %}
