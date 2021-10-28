@@ -93,11 +93,8 @@
     {% endif %}
     {% if data.contributions is not empty %}
       <h4 class="my-4 pt-3 pb-2">{{ data.contributions.title}}</h4>
-      {% if data.contributions.card_layout is not empty %}
-        {% include '@oe-bcl/bcl-card-layout/card-layout.html.twig' with data.contributions.card_layout only %}
-      {% endif %}
-      {% if data.contributions.more_link is not empty %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with data.contributions.more_link only %}
+      {% if data.contributions.listing is not empty %}
+        {% include '@oe-bcl/bcl-listing/listing.html.twig' with data.contributions.listing only %}
       {% endif %}
     {% endif %}
   </div>

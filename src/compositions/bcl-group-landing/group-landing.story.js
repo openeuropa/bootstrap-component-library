@@ -57,7 +57,7 @@ const correctPaths = (data) => {
     meta.icon.path = defaultSprite;
   });
   data.data.banner_description.collapse_trigger.icon.path = defaultSprite;
-  data.data.contributions.more_link.icon.path = defaultSprite;
+  data.data.contributions.listing.link.icon.path = defaultSprite;
   data.data.members.more_link.icon.path = defaultSprite;
   return data;
 };

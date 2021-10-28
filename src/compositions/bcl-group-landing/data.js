@@ -401,38 +401,28 @@ module.exports = {
     },
     contributions: {
       title: "Latest contributions",
-      more_link: {
-        label: "See all group contributions",
-        path: "/example.html",
-        icon_position: "after",
-        icon: {
-          name: "chevron-right",
-          size: "xs",
+      listing: {
+        attributes: new drupalAttribute().addClass("mb-4"),
+        variant: "highlight-3-col",
+        link: {
+          attributes: new drupalAttribute().addClass([
+            "mb-4-5",
+            "pt-1",
+            "pb-2",
+          ]),
+          path: "/example.html",
+          label: "Listing item block CTA",
+          icon: {
+            name: "chevron-right",
+            path: "/icons.svg",
+          },
         },
-        attributes: new drupalAttribute().addClass([
-          "pb-3",
-          "d-inline-block",
-          "mb-4",
-        ]),
-      },
-      card_layout: {
-        type: "grid",
-        responsive_colums: 3,
-        responsiveness: "md",
-        attributes: new drupalAttribute().addClass("mb-3"),
         items: [
           {
             title: {
-              content: "Content title",
+              content:
+                '<a class="text-decoration-none" href="/example">Card title</a>',
             },
-            badges: [
-              {
-                label: "Label",
-              },
-              {
-                label: "Label",
-              },
-            ],
             text: {
               content:
                 "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -445,21 +435,20 @@ module.exports = {
               alt: "alt img",
               position: "top",
             },
-            wrapper_class: "col",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            badges: [
+              {
+                label: "Label",
+              },
+              {
+                label: "Label",
+              },
+            ],
           },
           {
             title: {
-              content: "Content title",
+              content:
+                '<a class="text-decoration-none" href="/example">Card title</a>',
             },
-            badges: [
-              {
-                label: "Label",
-              },
-              {
-                label: "Label",
-              },
-            ],
             text: {
               content:
                 "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -468,22 +457,27 @@ module.exports = {
             content:
               "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
             image: {
-              path: "https://picsum.photos/seed/1002/600/400",
+              path: "https://picsum.photos/seed/1003/600/400",
               alt: "alt img",
               position: "top",
             },
-            wrapper_class: "col",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            badges: [
+              {
+                label: "Label",
+              },
+              {
+                label: "Label",
+              },
+              {
+                label: "Label",
+              },
+            ],
           },
           {
             title: {
-              content: "Content title",
+              content:
+                '<a class="text-decoration-none" href="/example">Card title</a>',
             },
-            badges: [
-              {
-                label: "Label",
-              },
-            ],
             text: {
               content:
                 "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -492,12 +486,15 @@ module.exports = {
             content:
               "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
             image: {
-              path: "https://picsum.photos/seed/1002/600/400",
+              path: "https://picsum.photos/seed/1004/600/400",
               alt: "alt img",
               position: "top",
             },
-            wrapper_class: "col",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            badges: [
+              {
+                label: "Label",
+              },
+            ],
           },
         ],
       },
