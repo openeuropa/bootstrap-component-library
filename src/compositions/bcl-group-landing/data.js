@@ -411,7 +411,7 @@ module.exports = {
             "pb-2",
           ]),
           path: "/example.html",
-          label: "Listing item block CTA",
+          label: "See all group contributions",
           icon: {
             name: "chevron-right",
             path: "/icons.svg",
