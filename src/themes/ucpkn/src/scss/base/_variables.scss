@@ -1,0 +1,34 @@
+// Override Bootstrap's Sass default variables for Joinup
+
+// General
+
+$primary: #221684;
+$secondary: #F25924;
+$success: #28A745;
+$danger: #D72E3D;
+$warning: #FFC107;
+$info: #1698AF;
+$light: #F0F0F0;
+$dark: #2E3338;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "danger": $danger,
+    "warning": $warning,
+    "info": $info,
+    "light": $light,
+    "dark": $dark,
+  )
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$link-color: $primary;
+
+// Typography
+
+$font-family-sans-serif: "Arial", sans-serif;
+$font-family-base: "Arial", sans-serif;
