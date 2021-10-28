@@ -25,7 +25,6 @@
       path (string),
       alt (string),
       position (string)
-      rounded (integer)
     }
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
@@ -65,7 +64,6 @@
 {% set _extra_classes_header = extra_classes_header|default('') %}
 {% set _extra_classes_footer = extra_classes_footer|default('') %}
 {% set _badges = badges|default([]) %}
-{% set _body_classes = body_classes ? body_classes ~ ' card-body' : 'card-body' %}
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
@@ -84,6 +82,11 @@
   {% set _classes = _classes|merge(['border-' ~ _border_variant]) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set _body_classes = 'card-body' %}
 {% if _extra_classes_body is not empty %}
   {% set _body_classes = _body_classes ~ ' ' ~ _extra_classes_body %}
 {% endif %}
@@ -117,19 +120,18 @@
   <div class='{{ _row_classes }}'>
 {% endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
-  {% if _image.classes is not empty %}
-    {% set _img_class = _image.classes ~ ' card-img-top' %}
-  {% else %}
-    {% set _img_class = 'card-img-top' %}
-  {% endif %}
+  {% set _img_class = 'card-img-top' %}
   {% if _image.position == 'background' %}
     {% set _img_class = 'card-img' %}
   {% endif %}
   {% if _image.rounded is not empty %}
     {% set _img_class = _img_class ~ ' rounded-' ~ _image.rounded %}
   {% endif %}
+  {% if _image.classes is not empty %}
+    {% set _img_class = _img_class ~ " " ~ _image.classes %}
+  {% endif %}
   {% if _horizontal %}
-  <div class="{{ _horizontal_grid.left_col_classes ~ (image.position == 'right' ? ' order-1') }}">
+  <div class='{{ _horizontal_grid.left_col_classes  }}'>
   {% endif %}
   <img
     src='{{ _image.path }}'
@@ -144,9 +146,9 @@
   {% endif %}
 {% endif %}
 {% if _horizontal %}
-  <div class="{{ _horizontal_grid.right_col_classes ~ (image.position == 'right' ? ' order-0') }}">
+<div class='{{ _horizontal_grid.right_col_classes }}'>
 {% endif %}
-  <div class="{{ _body_classes }}">
+  <div class='{{ _body_classes }}'>
     {%- if _badges is not empty and _badges is iterable -%}
       <div class="mb-3">
       {% for _badge in _badges %}
@@ -199,11 +201,15 @@
   {%- endif -%}
   </div>
 {% if _horizontal %}
-  </div>
+</div>
 {% endif %}
 {% if _image is not empty %}
   {% if _image.position == 'background' %}
   </div>
+  {% endif %}
+  {% set _img_class = "card-img-bottom" %}
+  {% if _image.classes is not empty %}
+    {% set _img_class = _img_class ~ " " ~ _image.classes %}
   {% endif %}
   {% if _image.position == 'bottom' %}
     {% if _horizontal %}
@@ -212,7 +218,7 @@
     <img
       src='{{ _image.path }}'
       alt='{{ _image.alt }}'
-      class='card-img-bottom'
+      class='{{ _img_class }}'
     >
     {% if _horizontal %}
     </div>

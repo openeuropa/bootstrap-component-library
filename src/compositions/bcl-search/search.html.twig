@@ -1,9 +1,7 @@
 {% spaceless %}
 
 {% if data.header is defined %}
-<header>
   {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
-</header>
 {% endif %}
 <main>
   <div class="container mt-5">
@@ -44,9 +42,7 @@
   </div>
 </main>
 {% if data.footer is defined %}
-<footer>
   {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
-</footer>
 {% endif %}
 
 {% endspaceless %}

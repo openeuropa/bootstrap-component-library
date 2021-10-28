@@ -1,0 +1,8 @@
+[data-bs-toggle="collapse"] {
+  &[aria-expanded="false"] .text-collapsed {
+    display: none;
+  }
+  &[aria-expanded="true"] .text-not-collapsed {
+    display: none;
+  }
+}
