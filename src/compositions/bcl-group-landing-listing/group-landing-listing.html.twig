@@ -1,0 +1,74 @@
+{% spaceless %}
+
+{% if data.header is defined %}
+  {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
+{% endif %}
+<main>
+  <div class="container mt-4 mt-md-5">
+    {% if data.banner.title is not empty %}
+      <div class="p-md-3-5 pt-3 bg-light d-md-flex n-mx-container">
+        <h2 class="mb-0 d-inline-block fw-bold">{{ data.banner.title }}</h2>
+        {% if data.banner.actions is not empty and data.banner.actions is iterable %}
+        <div class="d-grid d-md-block ms-auto">
+          {% for _action in data.banner.actions %}
+            {% if _action.type == "link" %}
+              {% include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
+            {% elseif _action.type == "button" %}
+              {% include '@oe-bcl/bcl-button/button.html.twig' with _action only %}
+            {% elseif _action.type == "dropdown" %}
+              {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _action only %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if data.navigation is not empty %}
+      {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with data.navigation only %}
+    {% endif %}
+    <div class="row">
+      <div class="col-md-3">
+        {% include '@oe-bcl/bcl-group-landing-listing/group-landing-listing-offcanvas.html.twig' with data.offcanvas only %}
+      </div>
+      <div class="col-12 col-lg-9">
+      {% include '@oe-bcl/bcl-button/button.html.twig' with data.filter_button only %}
+      <div class="mb-3 mb-md-4 clearfix">
+        <div class="float-end d-none d-md-flex align-items-baseline">
+          {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
+            extra_classes: "w-auto d-inline-block ms-2"
+          }) only %}
+        </div>
+        <h4 class="mb-4">{{ data.main_title }}</h4>
+        {% if data.badges is not empty and data.badges is iterable %}
+          {% for badge in data.badges %}
+            {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge only %}
+          {% endfor %}
+        {% endif %}
+      </div>
+      <hr class="d-none d-md-block mt-4 mb-4-75"/>
+      <div class="d-md-none">
+        {% include '@oe-bcl/bcl-select/select.html.twig' with data.sort_select|merge({
+          extra_classes: "mb-4"
+        }) only %}
+      </div>
+      {% if data.cards is not empty and data.cards is iterable %}
+        {% for card in data.cards %}
+          {% include '@oe-bcl/bcl-card/card.html.twig' with card only %}
+          {% if card.border_bottom %}
+            <hr class="d-md-none mb-4-5">
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if data.pagination.border_top %}
+        <hr class="d-none d-md-block mb-4-5">
+      {% endif %}
+      {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with data.pagination only %}
+      </div>
+    </div>
+  </div>
+</main>
+{% if data.footer is defined %}
+  {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
+{% endif %}
+
+{% endspaceless %}

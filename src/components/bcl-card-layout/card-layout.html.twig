@@ -8,28 +8,33 @@
     options: ['1', '2', '3']
   - responsiveness (string) (default: '')
     options: ['sm', 'md', 'lg', 'xl', 'xxl']
-  - responsive_colums (int) (default: '')
+  - responsive_columns (int) (default: '')
     options: ['1', '2', '3']
   - gutter (int) (default: '')
     options: ['0', '1', '2', '3', '4', '5']
   - equal_height (boolean) (default: false)
+  - cols_extra_classes (string) (default: '')
 #}
 
 {% set _type = type|default('group') %}
 {% set _items = items|default([]) %}
 {% set _grid_columns = grid_columns|default(1) %}
 {% set _responsiveness = responsiveness|default('md') %}
-{% set _responsive_colums = responsive_colums|default('') %}
+{% set _responsive_columns = responsive_columns|default('') %}
 {% set _gutter = gutter|default('') %}
 {% set _equal_height = equal_height|default(false) %}
-{% set _classes = [] %}
+{% set _cols_extra_classes = cols_extra_classes|default('') %}
+{% set _cols_classes = 'col' %}
 
+{% if _cols_extra_classes is not empty %}
+  {% set _cols_classes = _cols_classes ~ ' ' ~ _cols_extra_classes %}
+{% endif %}
 {% if _type == 'group' %}
   {% set _classes = ['card-group'] %}
 {% elseif type == 'grid' or type == 'masonry' %}
-  {% set _classes = _classes|merge(['row', 'row-cols-' ~ _grid_columns]) %}
-  {% if _responsive_colums is not empty %}
-    {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_colums]) %}
+  {% set _classes = ['row', 'row-cols-' ~ _grid_columns] %}
+  {% if _responsive_columns is not empty %}
+    {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns]) %}
   {% endif %}
   {% if _gutter is not empty %}
     {% set _classes = _classes|merge(['g-' ~ _gutter]) %}
@@ -58,7 +63,7 @@
       %}
     {% endif %}
     {% if _type == 'grid' or _type == 'masonry' %}
-      <div class='col'>
+      <div class="{{ _cols_classes }}">
     {% endif %}
       {% include '@oe-bcl/bcl-card/card.html.twig' with _item only %}
     {% if _type == 'grid' or _type == 'masonry' %}

@@ -68,6 +68,7 @@ module.exports = {
         {
           label: "<span class='badge bg-danger'>5</span>",
           path: "#",
+          remove_icon_spacers: true,
           icon_position: "before",
           icon: {
             name: "bell-fill",
@@ -93,7 +94,6 @@ module.exports = {
         icon: {
           name: "search",
           size: "xs",
-          attributes: new drupalAttribute().addClass(["align-self-center"]),
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",

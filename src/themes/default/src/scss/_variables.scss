@@ -28,7 +28,7 @@ $theme-colors: map-merge(
   (
     "light": $light,
   )
-);
+) !default;
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 $blues: map-merge($blues, $custom-blues);
 $reds: map-merge($reds, $custom-reds);
@@ -44,6 +44,7 @@ $eu-light-blue: #f4f6fb;
 
 // Spacers
 $spacers-extended: (
+  "1-5": $spacer * 0.375,
   "2-5": $spacer * 0.75,
   "3-5": $spacer * 1.25,
   "4-25": $spacer * 1.75,
