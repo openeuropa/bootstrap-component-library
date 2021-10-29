@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-fact-figures/data/data";
+import demoData from "@openeuropa/bcl-fact-figures/data/data.js";
 
 const template = "@oe-bcl/bcl-fact-figures/fact-figures.html.twig";
 
