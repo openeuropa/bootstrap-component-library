@@ -1,0 +1,95 @@
+{% spaceless %}
+
+{#
+Parameters:
+  - "id": (integer) (default: random(1000))
+  - "toggle_collapsed": (string) (default: '')
+  - "toggle_expanded": (string) (default: '')
+  - "hide" (object): (default: undefined)
+    - "from": (integer) (default: items.length) Item index after which to start hiding timeline items
+    - "to": (integer) (default: items.length) Item index after which to resume displaying timeline items
+  - "items" (array) (default: []):
+    - "id": (string) (default: '')
+    - "label": (string) (default: '')
+    - "title": (string) (default: '')
+    - "content": (block) (default: '')
+  - "icon_path" (string) (default: ''): file containing the svg icons
+#}
+
+{# Internal properties #}
+
+{% set _id = id|default(random(1000)) %}
+{% set _items = items|default([]) %}
+{% set _icon_path = icon_path|default('') %}
+{% set _toggle_collapsed = toggle_collapsed|default('') %}
+{% set _toggle_expanded = toggle_expanded|default('') %}
+{% set _hide_from = hide.from|default(items|length) %}
+{% set _hide_to = hide.to|default(items|length) %}
+{% set _toggler = false %}
+
+{% set attributes = attributes.addClass('bcl-timeline') %}
+
+{# Internal logic - Process properties #}
+
+{% set _display_amount = items|length %}
+{% set _hide_amount = 0 %}
+{% set _bottom_amount = 0 %}
+
+{% if _hide_from > 0 %}
+  {% if _hide_to > 0 %}
+    {% set _bottom_amount = _display_amount - _hide_to %}
+  {% else %}
+    {% set _bottom_amount = _hide_to|abs %}
+  {% endif %}
+  {% set _countbase = items|length - _bottom_amount %}
+  {% set _display_amount = _hide_from %}
+  {% set _hide_amount = _countbase - _display_amount %}
+  {% set _toggle_collapsed = _toggle_collapsed|replace({'%d': _hide_amount}) %}
+  {% set _toggle_expanded = _toggle_expanded|replace({'%d': _hide_amount}) %}
+{% endif %}
+
+{# Print the result #}
+<ol {{ attributes }}>
+  {% if _items is not empty %}
+    {% for _item in _items %}
+      {# Decide on per item if it should display. #}
+      {% set extra_class = (loop.index > _display_amount and loop.revindex > _bottom_amount) ? "collapse collapse-#{_id}" %}
+      <li
+        {% if extra_class is not empty %}
+          class="{{ extra_class }}"
+        {% endif %}
+        {% if _item.id is defined and _item.id is not empty %}
+          id="{{ _item.id }}"
+        {% endif %}>
+          <h5>{{ _item.label }}</h5>
+          {% if _item.title is defined and _item.title is not empty %}
+          <h6>{{ _item.title }}</h6>
+          {% endif %}
+          <div>{{ _item.content|default('') }}</div>
+      </li>
+      {# Display the show more button if required. #}
+      {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
+        {% set _toggler = true %}
+        <li class="bcl-timeline__item--toggle">
+          {% include '@oe-bcl/bcl-button/button.html.twig' with {
+            label: "<span class='label-collapsed'>#{_toggle_collapsed}</span><span class='label-expanded'>#{_toggle_expanded}</span>",
+            type: "button",
+            variant: "light",
+            attributes: create_attribute()
+              .setAttribute("aria-expanded", "false")
+              .setAttribute("aria-control", _toggle_collapsed)
+              .setAttribute("data-bs-toggle", "collapse")
+              .setAttribute("data-bs-target", ".collapse-#{_id}"),
+            icon: {
+              name: "chevron-down",
+              size: "fluid",
+              path: _icon_path,
+            },
+          } only %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</ol>
+
+{% endspaceless %}
