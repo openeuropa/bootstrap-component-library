@@ -1,0 +1,11 @@
+{% spaceless %}
+
+{% if data.header is defined %}
+  {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
+{% endif %}
+
+{% if data.footer is defined %}
+  {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
+{% endif %}
+
+{% endspaceless %}
