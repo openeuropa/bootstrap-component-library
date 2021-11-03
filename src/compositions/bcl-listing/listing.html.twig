@@ -3,7 +3,9 @@
 {# Parameters:
   - variant: (string) (default: "horizontal") options:
   [ default-1-col, highlight-1-col, default-2-col, default-3-col, highlight-2-col, highlight-3-col ]
-  - title: (string) (default: {})
+  - title: (string) (default: "")
+  - title_tag: (string) (default: "h4")
+  - remove_equal_height: (boolean) (default: false)
   - items: (array of objects of type card)
   - link: (object of type link)
 #}
@@ -11,6 +13,8 @@
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('default-1-col') %}
 {% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h4') %}
+{% set _remove_equal_height = remove_equal_height|default(false) %}
 {% set _link = link|default({}) %}
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
@@ -29,9 +33,9 @@
   {% if _variant == 'default-1-col' or _variant == 'default-3-col' or _variant == 'default-2-col' %}
     {% set _title_classes = _title_classes ~ ' ps-3' %}
   {% endif %}
-  <h4 class="{{ _title_classes }}">
+  <{{ _title_tag }} class="{{ _title_classes }}">
     {{ _title }}
-  </h4>
+  </{{ _title_tag }}>
 {% endif %}
 
 {% if _items is not empty %}
@@ -115,9 +119,11 @@
       {% set _card_classes  = [
         'listing-item--highlight',
         'border-0', 'bg-light',
-        'h-100',
         'rounded-2'
       ] %}
+      {% if not _remove_equal_height %}
+        {% set _card_classes  = _card_classes|merge(['h-100']) %}
+      {% endif %}
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         wrapper_class: "col",

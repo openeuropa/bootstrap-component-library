@@ -4,6 +4,60 @@
   {% include '@oe-bcl/bcl-header/header.html.twig' with data.header only %}
 {% endif %}
 
+{% if data.main_banner is defined %}
+  {% include '@oe-bcl/bcl-banner/banner.html.twig' with data.main_banner only %}
+{% endif %}
+
+<div class="container">
+
+{% if data.featured_section is defined %}
+  <div class="my-4">
+    <h2 class="mb-4 fw-bold">{{ data.featured_section.title }}</h2>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {{ data.featured_section.content }}
+      </div>
+      <div class="col-12 col-md-6">
+        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with data.featured_section.featured_media only %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% if data.listing_section is defined %}
+  <div class="my-4">
+    {% include '@oe-bcl/bcl-listing/listing.html.twig' with data.listing_section only %}
+  </div>
+{% endif %}
+
+{% if data.inpage_banner is defined %}
+  <div class="my-4">
+    {% include '@oe-bcl/bcl-banner/banner.html.twig' with data.inpage_banner only %}
+  </div>
+{% endif %}
+
+{% if data.second_featured_section is defined %}
+  <div class="my-4">
+    <h2 class="mb-4 fw-bold">{{ data.second_featured_section.title }}</h2>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {{ data.second_featured_section.content }}
+      </div>
+      <div class="col-12 col-md-6">
+        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with data.second_featured_section.featured_media only %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% if data.activities_section is defined %}
+  <div class="my-4">
+    {% include '@oe-bcl/bcl-listing/listing.html.twig' with data.activities_section only %}
+  </div>
+{% endif %}
+
+</div>
+
 {% if data.footer is defined %}
   {% include '@oe-bcl/bcl-footer/footer.html.twig' with data.footer only %}
 {% endif %}

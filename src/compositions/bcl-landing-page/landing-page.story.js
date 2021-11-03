@@ -45,6 +45,9 @@ const correctPaths = (data) => {
       }
     });
   });
+  data.data.inpage_banner.link.icon.path = defaultSprite;
+  data.data.listing_section.link.icon.path = defaultSprite;
+  data.data.activities_section.link.icon.path = defaultSprite;
 
   return data;
 };
