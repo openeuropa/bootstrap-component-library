@@ -71,31 +71,31 @@
   {% endif %}
   >
     <div class="{{ _grid_classes|join(' ') }}">
-    {% if items is defined and items is not empty and items is iterable %}
-      {% for item in items %}
+    {% if _items is defined and _items is not empty and _items is iterable %}
+      {% for _item in _items %}
       <div class="{{ _cols_classes }}">
-      {% if item.icon is defined and item.icon is not empty and _display_icons %}
-        {% set item = item|merge({
-          icon: item.icon|merge({
+      {% if _item.icon is defined and _item.icon is not empty and _display_icons %}
+        {% set _item = _item|merge({
+          icon: _item.icon|merge({
             path: _icons_path,
-            size: 'l', 
+            size: 'l',
           })
         }) %}
-        {% include '@oe-bcl/bcl-icon/icon.html.twig' with item.icon only %}
+        {% include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
       {% endif %}
-      {% if item.title is defined and item.title is not empty %}
+      {% if _item.title is defined and _item.title is not empty %}
         <h3 class="text-capitalize fw-bold mt-2">
-          {{- item.title -}}
+          {{- _item.title -}}
         </h3>
       {% endif %}
-      {% if item.subtitle is defined and item.subtitle is not empty %}
+      {% if _item.subtitle is defined and _item.subtitle is not empty %}
         <h5 class="fw-bold">
-          {{- item.subtitle -}}
+          {{- _item.subtitle -}}
         </h5>
       {% endif %}
-      {% if item.description is defined and item.description is not empty %}
+      {% if _item.description is defined and _item.description is not empty %}
         <p>
-          {{- item.description -}}
+          {{- _item.description -}}
         </p>
       {% endif %}
       </div>
