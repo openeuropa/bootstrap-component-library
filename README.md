@@ -67,9 +67,9 @@ files available to each of the theme packages.
 
 ### BCL builder
 
-The `@openeuropa/bcl-builder` is a package providing three scripts, `styles`, `scripts`
-and `copy` that can be used respectively to compile SASS files and minify css
-files, compile and minify js files and to copy files in the filesystem.
+The `@openeuropa/bcl-builder` is a package providing three scripts, `styles`, `scripts`,
+`copy` and `rename` that can be used respectively to compile SASS files and minify css
+files, compile and minify js files, to copy files in the filesystem and to rename files.
 It comes with a `bin` file that is available when the package is installed and
 can be run as `npm run ecl-builder scriptName`.
 It supports a configuration file `bcl-builder.config.js` where each script can
@@ -100,7 +100,7 @@ package name so that they can be directly used with a loader defining the
 
 The twig packages are available as individual npm packages but also directly
 available in the theme packages, the `@openeuropa/bcl-twig-templates` package
-which is a collection of all the BCL default templates stored in a folder 
+which is a collection of all the BCL default templates stored in a folder
 with the package name.
 
 #### Twig loader

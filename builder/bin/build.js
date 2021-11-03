@@ -5,6 +5,7 @@ const program = require("commander");
 const buildScript = require("../scripts/scripts");
 const browserslist = require("browserslist");
 const { buildStyles } = require("../scripts/styles");
+const rename = require("../scripts/rename");
 const copyFiles = require("../scripts/copy");
 const pkg = require("../package.json");
 
@@ -64,6 +65,16 @@ program
       copyFiles(conf.from || "**", conf.to, conf.options)
     );
   });
+
+  program
+    .command("rename")
+    .description("rename files")
+    .action(() => {
+      const config = loadConfig(program.config);
+      config.rename.forEach((conf) =>
+        rename(conf.from, conf.to, conf.options)
+      );
+    });
 
 // If no arguments provided, display help menu.
 if (process.argv.slice(2).length <= 0) {
