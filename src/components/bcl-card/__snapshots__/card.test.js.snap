@@ -119,6 +119,70 @@ exports[`OE - Card renders correctly with badges 1`] = `
 </jest>
 `;
 
+exports[`OE - Card renders correctly with custom title attributes 1`] = `
+<jest>
+  <div
+    class="card"
+  >
+    <div
+      class="card-header"
+    >
+      Header of card
+    </div>
+    <img
+      alt="alt img"
+      class="card-img-top"
+      src="https://picsum.photos/seed/1002/600/400"
+    />
+    <div
+      class="card-body"
+    >
+      <div
+        class="mb-3"
+      >
+        <span
+          class="me-2 badge bg-primary"
+        >
+          I'm a badge
+        </span>
+        <span
+          class="test-class badge bg-primary"
+        >
+          I'm also a badge
+        </span>
+      </div>
+      <h5
+        attribute="with a value"
+        class="card-title"
+        test="value"
+      >
+        Title card
+      </h5>
+      <h6
+        class="card-subtitle mb-2"
+      >
+        Subtitle card
+      </h6>
+      <p
+        class="card-text mb-2"
+      >
+        Text card with longer text which is supported
+      </p>
+      <button
+        class="btn btn-primary"
+      >
+        Custom action
+      </button>
+    </div>
+    <div
+      class="card-footer"
+    >
+      Footer of card
+    </div>
+  </div>
+</jest>
+`;
+
 exports[`OE - Card renders horizontal correctly 1`] = `
 <jest>
   <div
