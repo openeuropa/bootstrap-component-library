@@ -2,7 +2,6 @@
 
 {#
   Parameters:
-  - "column" (integer) (default: 3): Number of columns to divide the items with
   - "background" (string) (default: '')
   - "items" (array) (default: []):
     - "icon" (associate array) (default: { size: 'm' })
@@ -25,7 +24,6 @@
 {% set _title = title|default('') %}
 {% set _css_classes = ['bcl-fact-figures'] %}
 {% set _background = background|default('') %}
-{% set _columns = column|default(3) %}
 {% set _display_icons = display_icons ?? true %}
 {% set _items = items|default([]) %}
 {% set _grid_columns = grid_columns|default(1) %}
