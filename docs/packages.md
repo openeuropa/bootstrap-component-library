@@ -24,6 +24,7 @@
 -   @openeuropa/bcl-accordion
 -   @openeuropa/bcl-alert
 -   @openeuropa/bcl-badge
+-   @openeuropa/bcl-banner
 -   @openeuropa/bcl-blockquote
 -   @openeuropa/bcl-breadcrumb
 -   @openeuropa/bcl-button-group
@@ -32,11 +33,16 @@
 -   @openeuropa/bcl-card
 -   @openeuropa/bcl-carousel
 -   @openeuropa/bcl-dropdown
+-   @openeuropa/bcl-featured-item
+-   @openeuropa/bcl-footer
 -   @openeuropa/bcl-form-input
 -   @openeuropa/bcl-form
+-   @openeuropa/bcl-group-landing
+-   @openeuropa/bcl-group-landing-listing
 -   @openeuropa/bcl-header
 -   @openeuropa/bcl-icon
 -   @openeuropa/bcl-link
+-   @openeuropa/bcl-listing
 -   @openeuropa/bcl-list-group
 -   @openeuropa/bcl-modal
 -   @openeuropa/bcl-navbar
@@ -44,11 +50,16 @@
 -   @openeuropa/bcl-offcanvas
 -   @openeuropa/bcl-pagination
 -   @openeuropa/bcl-progress
+-   @openeuropa/bcl-recent-activities
+-   @openeuropa/bcl-search
+-   @openeuropa/bcl-search-form
 -   @openeuropa/bcl-select
 -   @openeuropa/bcl-spinner
 -   @openeuropa/bcl-table
 -   @openeuropa/bcl-textarea
 -   @openeuropa/bcl-toast
+-   @openeuropa/bcl-user-listing
+-   @openeuropa/bcl-user-view
 
 ### Data packages (only used for the demo)
 
