@@ -7,22 +7,43 @@ demoData.icons_path = defaultSprite;
 const linkMore = { ...demoData.link_more };
 const getArgs = (data) => {
   return {
+    variant: "default",
     title: data.title,
-    background: false,
     responsive_columns: 3,
     responsiveness: "md",
     more: true,
+    display_icons: true,
   };
 };
 
 const getArgTypes = (data) => {
   return {
+    variant: {
+      type: { name: "select" },
+      options: ["default", "block", "block-primary"],
+      description: "Variant of the composition",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "default" },
+        category: "Content",
+      },
+    },
     title: {
       type: { name: "string" },
       description: "Title of the block",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    display_icons: {
+      name: "icons visibility",
+      type: { name: "boolean" },
+      description: "Toggle icon visibility",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "true" },
         category: "Content",
       },
     },
@@ -36,20 +57,11 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
-    background: {
-      type: { name: "boolean" },
-      description: "Toggle background",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-        category: "Style",
-      },
-    },
     responsive_columns: {
       name: "columns number",
       type: { name: "select" },
       options: [1, 2, 3],
-      description: "",
+      description: "One two or three columns layout",
       table: {
         type: { summary: "integer" },
         defaultValue: { summary: 3 },
@@ -71,6 +83,11 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  data.attributes.removeClass([
+    `bcl-fact-figures--${data.variant}`,
+    "text-primary",
+  ]);
+
   if (!args.more) {
     delete data.link_more;
     delete args.more;

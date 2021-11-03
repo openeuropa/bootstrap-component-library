@@ -2,7 +2,6 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   attributes: new drupalAttribute(),
-  background: true,
   responsive_columns: 3,
   icons_path: "/icons.svg",
   equal_height: true,

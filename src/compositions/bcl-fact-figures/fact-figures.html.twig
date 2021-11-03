@@ -2,7 +2,8 @@
 
 {#
   Parameters:
-  - "background" (string) (default: '')
+  - "variant" (string) (default: '') options:
+    [ default, block, block-primary ]
   - "items" (array) (default: []):
     - "icon" (associate array) (default: { size: 'm' })
     - "subtitle" (string) (default: '')
@@ -22,8 +23,8 @@
 {# Parameters #}
 
 {% set _title = title|default('') %}
-{% set _css_classes = ['bcl-fact-figures'] %}
-{% set _background = background|default('') %}
+{% set _variant = variant|default('default') %}
+{% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _display_icons = display_icons ?? true %}
 {% set _items = items|default([]) %}
 {% set _grid_columns = grid_columns|default(1) %}
@@ -37,7 +38,6 @@
 {% set _link_more = link_more|default({}) %}
 {% set _wrapper_classes = [] %}
 
-{% set attributes = attributes.addClass(_css_classes) %}
 {% set _grid_classes = [
   'row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns,
   'row', 'row-cols-' ~ _grid_columns
@@ -45,7 +45,7 @@
 {% if _responsive_columns == 3 %}
  {% set _grid_classes = _grid_classes|merge(['row-cols-sm-2']) %}
 {% endif %}
-{% if _background is not empty %}
+{% if _variant == 'block' or _variant == 'block-primary' %}
   {% set _wrapper_classes = _wrapper_classes|merge(['bg-light p-3-5 pt-0']) %}
 {% endif %}
 {% if _gutter is not empty %}
@@ -54,10 +54,13 @@
 {% if _title is not empty %}
   {% set _grid_classes = _grid_classes|merge(['mt-3']) %}
 {% endif %}
-
 {% if _equal_height %}
   {% set  _cols_classes =  _cols_classes ~ ' h-100' %}
 {% endif %}
+{% if _variant == 'block-primary' %}
+  {% set _css_classes = _css_classes|merge(['text-primary']) %}
+{% endif %}
+{% set attributes = attributes.addClass(_css_classes) %}
 
 <div {{ attributes }}>
 {% if _title is not empty %}
