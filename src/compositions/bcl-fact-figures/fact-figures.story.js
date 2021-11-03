@@ -10,7 +10,6 @@ const getArgs = (data) => {
     variant: "default",
     title: data.title,
     responsive_columns: 3,
-    responsiveness: "md",
     more: true,
     display_icons: true,
   };
@@ -20,7 +19,7 @@ const getArgTypes = (data) => {
   return {
     variant: {
       type: { name: "select" },
-      options: ["default", "block", "block-primary"],
+      options: ["default", "block"],
       description: "Variant of the composition",
       table: {
         type: { summary: "string" },
@@ -65,7 +64,7 @@ const getArgTypes = (data) => {
       table: {
         type: { summary: "integer" },
         defaultValue: { summary: 3 },
-        category: "Style",
+        category: "Layout",
       },
     },
     responsiveness: {
@@ -76,7 +75,7 @@ const getArgTypes = (data) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
-        category: "Style",
+        category: "Layout",
       },
     },
   };
@@ -107,7 +106,7 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=1126%3A38732",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=6012%3A69751",
       },
     ],
   },

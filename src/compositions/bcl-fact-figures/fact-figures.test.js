@@ -36,11 +36,4 @@ describe("OE - Fact and figures", () => {
       render({ ...demoData, variant: "block" })
     ).resolves.toMatchSnapshot();
   });
-
-  test(`renders correctly with primary variant`, () => {
-    demoData.attributes = new drupalAttribute();
-    return expect(
-      render({ ...demoData, variant: "block-primary" })
-    ).resolves.toMatchSnapshot();
-  });
 });

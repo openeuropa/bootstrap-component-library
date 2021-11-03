@@ -3,7 +3,7 @@
 {#
   Parameters:
   - "variant" (string) (default: '') options:
-    [ default, block, block-primary ]
+    [ default, block ]
   - "items" (array) (default: []):
     - "icon" (associate array) (default: { size: 'm' })
     - "subtitle" (string) (default: '')
@@ -56,9 +56,6 @@
 {% endif %}
 {% if _equal_height %}
   {% set  _cols_classes =  _cols_classes ~ ' h-100' %}
-{% endif %}
-{% if _variant == 'block-primary' %}
-  {% set _css_classes = _css_classes|merge(['text-primary']) %}
 {% endif %}
 {% set attributes = attributes.addClass(_css_classes) %}
 
