@@ -9,6 +9,7 @@ module.exports = {
     icon: {
       name: "chevron-right",
       path: "boostrap-icons.svg",
+      size: "fluid",
     },
     attributes: new drupalAttribute().addClass(["btn", "btn-light"]),
   },
