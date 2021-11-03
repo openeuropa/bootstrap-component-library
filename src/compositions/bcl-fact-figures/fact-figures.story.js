@@ -15,7 +15,7 @@ const getArgs = (data) => {
   };
 };
 
-const getArgTypes = (data) => {
+const getArgTypes = () => {
   return {
     variant: {
       type: { name: "select" },
@@ -115,4 +115,4 @@ export default {
 export const Default = (args) => factFigures(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
-Default.argTypes = getArgTypes(demoData);
+Default.argTypes = getArgTypes();
