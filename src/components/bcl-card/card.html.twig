@@ -170,11 +170,13 @@
   {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
-      class='card-title{{ title.classes ? ' ' ~ title.classes }}'
+      class="card-title{{ title.classes ? ' ' ~ title.classes }}"
       {% if _title.attributes is not empty and _title.attributes is iterable %}
+        {% set _title_attributes = create_attribute() %}
         {% for attribute in _title.attributes %}
-          {{ create_attribute().set(attribute.name, attribute.value) }}
+          {% set _title_attributes =  _title_attributes.setAttribute(attribute.name, attribute.value) %}
         {% endfor %}
+        {{ _title_attributes }}
       {% endif %}
     >
       {{- title.content -}}
