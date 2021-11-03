@@ -12,3 +12,11 @@ describe("OE - Landing page", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 });
+
+describe("OE - Landing page UCPKN", () => {
+  test("renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(render(demoData)).resolves.toMatchSnapshot();
+  });
+});

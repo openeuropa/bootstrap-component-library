@@ -2,8 +2,30 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   data: {
+    header: {
+      site_name: "Union Civil Protection Knowledge Network",
+      project_logo: {
+        path: "/ucpkn_logo.svg",
+      },
+      head: {
+        attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
+        disable_collapse: true,
+        brand: {
+          logos: [
+            {
+              class: "d-none d-lg-block",
+              src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            },
+            {
+              class: "d-lg-none",
+              src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
+            },
+          ],
+        },
+      },
+    },
     main_banner: {
-      title: "Demo banner title",
+      title: "UCPKN Project",
       content_classes: "border-secondary",
       image: "https://picsum.photos/id/154/1200/800",
       attributes: new drupalAttribute().addClass([
@@ -108,7 +130,7 @@ module.exports = {
       ],
     },
     second_featured_section: {
-      title: "Activities",
+      title: "UCPKN activities",
       content:
         "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><a href='#' class='d-block mb-4'>Read more</a>",
       featured_media: {

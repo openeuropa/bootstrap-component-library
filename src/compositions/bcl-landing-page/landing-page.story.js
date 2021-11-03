@@ -1,4 +1,5 @@
 import demoData from "@openeuropa/bcl-landing-page/data.js";
+import demoDataUCPKN from "@openeuropa/bcl-landing-page/dataUCPKN.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
@@ -7,8 +8,7 @@ import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 demoData.data.header = headerData;
 demoData.data.footer = footerData;
 
-demoData.data.header.breadcrumbs = null;
-demoData.data.header.light = true;
+demoDataUCPKN.data.footer = footerData;
 
 export default {
   title: "Compositions/Landing Page",
@@ -24,12 +24,18 @@ export default {
 };
 
 const correctPaths = (data) => {
-  data.data.header.head.navigation.items.forEach((item) => {
-    if (item.icon) {
-      item.icon.path = defaultSprite;
-    }
-  });
-  data.data.header.navbar.form.submit.icon.path = defaultSprite;
+  data.data.header.light = true;
+  data.data.header.breadcrumbs = null;
+  if (data.data.header.head.navigation) {
+    data.data.header.head.navigation.items.forEach((item) => {
+      if (item.icon) {
+        item.icon.path = defaultSprite;
+      }
+    });
+  }
+  if (data.data.header.navbar) {
+    data.data.header.navbar.form.submit.icon.path = defaultSprite;
+  }
   data.data.footer.rows.forEach((row) => {
     row.cols.forEach((col) => {
       if (col.items) {
@@ -52,4 +58,7 @@ const correctPaths = (data) => {
   return data;
 };
 
-export const Default = () => landingPage(correctPaths(demoData));
+export const Platform = () => landingPage(correctPaths(demoData));
+
+export const PlatformUCPKN = () => landingPage(correctPaths(demoDataUCPKN));
+PlatformUCPKN.storyName = "Platform - UCPKN";
