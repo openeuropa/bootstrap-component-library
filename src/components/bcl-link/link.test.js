@@ -20,7 +20,7 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, hover_underline: true })
+      render({ ...demoData, standalone: true })
     ).resolves.toMatchSnapshot();
   });
 

@@ -58,10 +58,9 @@ const getArgTypes = (data, type) => {
         category: "Style",
       },
     },
-    hover_underline: {
-      name: "Hover underline",
+    standalone: {
       type: { name: "boolean" },
-      description: "Has underline on hover",
+      description: "Standalone link",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
