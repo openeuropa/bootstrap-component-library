@@ -1,13 +1,14 @@
 import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data-ec";
+import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 
-const getArgs = () => {
+const getArgs = (data) => {
   return {
-    light: false,
+    light: data.light || false,
   };
 };
 
@@ -27,13 +28,19 @@ const getArgTypes = () => {
 };
 
 const correctPaths = (data) => {
-  data.head.navigation.items.forEach((item) => {
-    if (item.icon) {
-      item.icon.path = defaultSprite;
-    }
-  });
-  data.navbar.form.submit.icon.path = defaultSprite;
-  data.breadcrumbs.icons_path = defaultSprite;
+  if (data.head.navigation) {
+    data.head.navigation.items.forEach((item) => {
+      if (item.icon) {
+        item.icon.path = defaultSprite;
+      }
+    });
+  }
+  if (data.navbar) {
+    data.navbar.form.submit.icon.path = defaultSprite;
+  }
+  if (data.breadcrumbs) {
+    data.breadcrumbs.icons_path = defaultSprite;
+  }
   return data;
 };
 
@@ -73,3 +80,9 @@ export const HeaderEC = (args) => header(applyArgs(headerDataEC, args));
 HeaderEC.storyName = "Header EC";
 HeaderEC.args = getArgs(headerDataEC);
 HeaderEC.argTypes = getArgTypes(headerDataEC);
+
+export const HeaderUPCKN = (args) => header(applyArgs(headerDataUCPKN, args));
+
+HeaderUPCKN.storyName = "Header UCPKN";
+HeaderUPCKN.args = getArgs(headerDataUCPKN);
+HeaderUPCKN.argTypes = getArgTypes(headerDataUCPKN);
