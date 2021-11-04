@@ -18,7 +18,7 @@ const getArgs = (data, type) => {
     label: data.label,
     path: data.path,
     variant: data.variant,
-    hover_underline: data.hover_underline || false,
+    standalone: data.standalone || false,
     name: "none",
   };
   if (type === "tooltip") {
@@ -64,7 +64,7 @@ const getArgTypes = (data, type) => {
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
-        category: "Behaviour",
+        category: "Style",
       },
     },
     ...getIconControls("link"),
