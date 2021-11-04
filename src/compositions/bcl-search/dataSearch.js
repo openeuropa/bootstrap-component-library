@@ -136,7 +136,7 @@ module.exports = {
         ],
         title: {
           tag: "a",
-          classes: "fs-5 text-decoration-none mb-2",
+          classes: "fs-5 text-underline-hover mb-2",
           attributes: [
             {
               name: "href",
@@ -186,7 +186,7 @@ module.exports = {
         ],
         title: {
           tag: "a",
-          classes: "fs-5 text-decoration-none mb-2",
+          classes: "fs-5 text-underline-hover mb-2",
           attributes: [
             {
               name: "href",
@@ -236,7 +236,7 @@ module.exports = {
         ],
         title: {
           tag: "a",
-          classes: "fs-5 text-decoration-none mb-2",
+          classes: "fs-5 text-underline-hover mb-2",
           attributes: [
             {
               name: "href",
@@ -281,7 +281,7 @@ module.exports = {
         ],
         title: {
           tag: "a",
-          classes: "fs-5 text-decoration-none mb-2",
+          classes: "fs-5 text-underline-hover mb-2",
           attributes: [
             {
               name: "href",
@@ -331,7 +331,7 @@ module.exports = {
         ],
         title: {
           tag: "a",
-          classes: "fs-5 text-decoration-none mb-2",
+          classes: "fs-5 text-underline-hover mb-2",
           attributes: [
             {
               name: "href",
@@ -381,7 +381,7 @@ module.exports = {
         ],
         title: {
           tag: "a",
-          classes: "fs-5 text-decoration-none mb-2",
+          classes: "fs-5 text-underline-hover mb-2",
           attributes: [
             {
               name: "href",

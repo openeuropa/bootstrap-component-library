@@ -14,7 +14,8 @@ module.exports = {
   items: [
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -34,7 +35,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -75,7 +77,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -96,7 +99,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -117,7 +121,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
