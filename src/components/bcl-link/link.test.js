@@ -16,6 +16,14 @@ describe("OE - Link", () => {
     return expect(render(demoData, true)).resolves.toMatchSnapshot();
   });
 
+  test(`with underline hover class renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, hover_underline: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   variants.forEach((variant) => {
     test(`${variant} renders correctly`, () => {
       expect.assertions(1);
