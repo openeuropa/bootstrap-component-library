@@ -14,7 +14,8 @@ module.exports = {
   items: [
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content: "Text card with longer text which is supported 1",
@@ -28,7 +29,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -43,7 +45,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -58,7 +61,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -73,7 +77,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content: "Text card with longer text which is supported 5",
