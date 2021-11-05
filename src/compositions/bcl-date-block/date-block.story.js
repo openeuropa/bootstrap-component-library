@@ -18,7 +18,7 @@ const getArgTypes = () => {
       description: "Day",
       table: {
         type: { summary: "integer" },
-        StandaloneValue: { summary: "" },
+        defaultValue: { summary: "" },
       },
     },
     month: {
@@ -26,7 +26,7 @@ const getArgTypes = () => {
       description: "Month",
       table: {
         type: { summary: "string" },
-        StandaloneValue: { summary: "" },
+        defaultValue: { summary: "" },
       },
     },
     year: {
@@ -34,7 +34,7 @@ const getArgTypes = () => {
       description: "Year",
       table: {
         type: { summary: "integer" },
-        StandaloneValue: { summary: "" },
+        defaultValue: { summary: "" },
       },
     },
   };
