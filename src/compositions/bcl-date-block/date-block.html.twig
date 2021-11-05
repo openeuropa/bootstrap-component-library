@@ -1,0 +1,38 @@
+{% spaceless %}
+
+{#
+  Parameters:
+    - "variant" (string) (default: '')
+    - "day" (integer) (default: '')
+    - "month" (string) (default: '')
+    - "year" (integer) (default: '')
+#}
+
+{% set _month = month|default('') %}
+{% set _day = day|default('') %}
+{% set _year = year|default('') %}
+{% set _date_time = date_time|default('') %}
+{% set _variant = variant|default('') %}
+{% set _css_classes = [
+  'bcl-date-block',
+  'd-flex',
+  'flex-column',
+  'align-items-center',
+  'justify-content-center',
+  'bg-date',
+  'text-light',
+  'pt-3',
+  'rounded-top-4',
+  'm-auto',
+] %}
+
+{% set _date_time = _year ~ '-' ~ _month ~ '-' ~ _day  %}
+{% set attributes = attributes.addClass(_css_classes).setAttribute('datetime', _date_time) %}
+
+<time {{ attributes }}>
+  <span>{{ _day }}</span>
+  <span class="pb-3">{{ _month }}</span>
+  <span class="bg-light w-100 text-center py-2 text-dark">{{ _year }}</span>
+</time>
+
+{% endspaceless %}

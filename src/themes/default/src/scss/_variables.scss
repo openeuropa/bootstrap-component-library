@@ -1,4 +1,5 @@
 // Colors variables
+$date: #1698af;
 $gray-100: #f0f0f0;
 $light: $gray-100;
 $blue-50: tint-color($blue, 90%);
@@ -29,6 +30,7 @@ $theme-colors: map-merge(
     "light": $light,
   )
 ) !default;
+
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 $blues: map-merge($blues, $custom-blues);
 $reds: map-merge($reds, $custom-reds);

@@ -44,7 +44,7 @@
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         horizontal: true,
-        body_classes: 'p-md-0 pt-sm-3',
+        extra_classes_body: 'p-md-0 pt-sm-3',
         horizontal_grid: {
           left_col_classes: 'col-md-3 col-lg-2 rounded',
           right_col_classes: 'col-md-9 col-lg-10',
@@ -61,7 +61,7 @@
       ] %}
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
-        body_classes: "p-md-0 pt-sm-3",
+        extra_classes_body: "p-md-0 pt-sm-3",
         horizontal: true,
         attributes: _card_attributes,
       }) %}
@@ -102,7 +102,7 @@
       ] %}
      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
      {% set _card = _card|merge({
-         body_classes: "pb-4",
+         extra_classes_body: "pb-4",
          wrapper_class: "col",
          attributes: _card_attributes,
       }) %}

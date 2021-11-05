@@ -1,3 +1,59 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "background-color"), "values"),
+              (
+                date: $date,
+              )
+            ),
+        )
+      ),
+    // Extend rounded-top utility.
+    "max-width":
+      map-merge(
+        map-get($utilities, "max-width"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "max-width"), "values"),
+              (
+                date: 10rem,
+              )
+            ),
+        )
+      ),
+    // Extend rounded-top utility.
+    "rounded-top":
+      map-merge(
+        map-get($utilities, "rounded-top"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "rounded-top"), "values"),
+              (
+                0: 0,
+                4: 1rem,
+              )
+            ),
+        )
+      ),
+    // Create responsive classes for padding
+    "padding":
+      map-merge(
+        map-get($utilities, "padding"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
 .text-underline-hover {
   text-decoration: none;
 }
