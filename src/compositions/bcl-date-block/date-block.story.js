@@ -1,13 +1,12 @@
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
-import listing from "@openeuropa/bcl-listing/listing.html.twig";
 import demoData from "@openeuropa/bcl-date-block/data/data";
-import demoListingData from "@openeuropa/bcl-date-block/data/data--listing";
 
 const getArgs = (data) => {
   return {
     day: data.day,
     month: data.month,
     year: data.year,
+    date_time: data.date_time,
   };
 };
 
@@ -37,6 +36,15 @@ const getArgTypes = () => {
         defaultValue: { summary: "" },
       },
     },
+    date_time: {
+      name: "datetime attribute",
+      type: { name: "string" },
+      description: "Valid date format",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+      },
+    },
   };
 };
 
@@ -57,12 +65,3 @@ export const Standalone = (args) => dateBlock(applyArgs(demoData));
 
 Standalone.args = getArgs(demoData);
 Standalone.argTypes = getArgTypes();
-
-export const Listing = () => listing(demoListingData);
-
-Listing.storyName = "In a listing item";
-Listing.parameters = {
-  viewport: {
-    defaultViewport: "responsive",
-  },
-};
