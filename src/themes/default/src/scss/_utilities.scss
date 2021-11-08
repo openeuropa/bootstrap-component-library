@@ -29,22 +29,6 @@ $utilities: map-merge(
             ),
         )
       ),
-    // Extend rounded-top utility.
-    "rounded-top":
-      map-merge(
-        map-get($utilities, "rounded-top"),
-        (
-          values:
-            map-merge(
-              map-get(map-get($utilities, "rounded-top"), "values"),
-              (
-                0: 0,
-                1: 0.25rem,
-                4: 1rem,
-              )
-            ),
-        )
-      ),
     // Create responsive classes for padding
     "padding":
       map-merge(
