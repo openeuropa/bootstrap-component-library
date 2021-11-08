@@ -106,170 +106,128 @@ module.exports = {
         },
       },
     },
-    cards: [
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Profile Type",
+    listing: {
+      attributes: new drupalAttribute(),
+      variant: "default-1-col",
+      remove_horizontal_spacer: true,
+      alignment: "center",
+      items: [
+        {
+          badges: [
+            {
+              label: "Profile Type",
+            },
+          ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Stefan Mayer",
+            classes: "mb-3",
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Stefan Mayer",
-          classes: "mb-3",
-        },
-        content:
-          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Profile Type",
+          content:
+            "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+          image: {
+            path: "https://picsum.photos/200/200?random=1",
+            alt: "alt img",
+            position: "top",
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Adjur Tichar",
-          classes: "mb-3",
         },
-        content:
-          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=2",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Profile Type",
+        {
+          badges: [
+            {
+              label: "Profile Type",
+            },
+          ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Adjur Tichar",
+            classes: "mb-3",
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Szép Mara",
-          classes: "mb-3",
-        },
-        content:
-          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=3",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Profile Type",
+          content:
+            "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+          image: {
+            path: "https://picsum.photos/200/200?random=2",
+            alt: "alt img",
+            position: "top",
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Daniel Cardoso Rocha",
-          classes: "mb-3",
         },
-        content:
-          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=4",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Profile Type",
+        {
+          badges: [
+            {
+              label: "Profile Type",
+            },
+          ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Szép Mara",
+            classes: "mb-3",
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Aurelia Panicucci",
-          classes: "mb-3",
-        },
-        content:
-          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=5",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Profile Type",
+          content:
+            "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+          image: {
+            path: "https://picsum.photos/200/200?random=3",
+            alt: "alt img",
+            position: "top",
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Felicyta Kowalska",
-          classes: "mb-3",
         },
-        content:
-          "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
-        attributes: new drupalAttribute().addClass(["border-0", "mb-5"]),
-        image: {
-          path: "https://picsum.photos/200/200?random=6",
-          alt: "alt img",
-          position: "top",
+        {
+          badges: [
+            {
+              label: "Profile Type",
+            },
+          ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Daniel Cardoso Rocha",
+            classes: "mb-3",
+          },
+          content:
+            "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+          image: {
+            path: "https://picsum.photos/200/200?random=4",
+            alt: "alt img",
+            position: "top",
+          },
         },
-      },
-    ],
+        {
+          badges: [
+            {
+              label: "Profile Type",
+            },
+          ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Aurelia Panicucci",
+            classes: "mb-3",
+          },
+          content:
+            "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+          image: {
+            path: "https://picsum.photos/200/200?random=5",
+            alt: "alt img",
+            position: "top",
+          },
+        },
+        {
+          badges: [
+            {
+              label: "Profile Type",
+            },
+          ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Felicyta Kowalska",
+            classes: "mb-3",
+          },
+          content:
+            "<div><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+          image: {
+            path: "https://picsum.photos/200/200?random=6",
+            alt: "alt img",
+            position: "top",
+          },
+        },
+      ],
+    },
     pagination: {
       attributes: new drupalAttribute().addClass(["mt-5"]),
       alignment: "center",
