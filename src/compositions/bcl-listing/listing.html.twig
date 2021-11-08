@@ -6,12 +6,17 @@
   - title: (string) (default: {})
   - items: (array of objects of type card)
   - link: (object of type link)
+  - alignment: (string) (default: '') options:
+  ['start', 'end', 'center', 'baseline', 'stretch']
+  - remove_horizontal_spacer: (boolean) (default: false)
 #}
 
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('default-1-col') %}
 {% set _title = title|default('') %}
+{% set _alignment = alignment|default('') %}
 {% set _link = link|default({}) %}
+{% set _remove_horizontal_spacer = remove_horizontal_spacer|default(false) %}
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
 {% set _card_layout = {
@@ -40,14 +45,17 @@
     {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
 
     {% if _variant == 'default-1-col' %}
-      {% set _card_classes = ['listing-item', 'px-3', 'mb-2', 'border-0'] %}
+      {% set _card_classes = ['listing-item', 'mb-2', 'border-0'] %}
+      {% if not _remove_horizontal_spacer %}
+        {% set _card_classes = _card_classes|merge(['px-3']) %}
+      {% endif %}
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         horizontal: true,
-        body_classes: 'p-md-0 pt-sm-3',
+        extra_classes_body: 'p-md-0 pt-sm-3',
         horizontal_grid: {
-          left_col_classes: 'col-md-3 col-lg-2 rounded',
-          right_col_classes: 'col-md-9 col-lg-10',
+          left_col_classes: 'col-md-3 col-lg-2 rounded' ~ (_alignment ? ' align-self-' ~ _alignment : ''),
+          right_col_classes: 'col-md-9 col-lg-10' ~ (_alignment ? ' align-self-' ~ _alignment : ''),
         },
         attributes: _card_attributes,
       }) %}
@@ -56,12 +64,14 @@
     {% if _variant == 'default-2-col' or _variant == 'default-3-col' %}
       {% set _card_classes = [
         'listing-item',
-        'px-3',
         'border-0'
       ] %}
+      {% if not _remove_horizontal_spacer %}
+        {% set _card_classes = _card_classes|merge(['px-3']) %}
+      {% endif %}
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
-        body_classes: "p-md-0 pt-sm-3",
+        extra_classes_body: "p-md-0 pt-sm-3",
         horizontal: true,
         attributes: _card_attributes,
       }) %}
@@ -71,8 +81,8 @@
       {% if _variant == 'default-2-col' %}
         {% set _card = _card|merge({
           horizontal_grid: {
-            left_col_classes: "col-lg-3 col-md-4",
-            right_col_classes: "col-lg-9 col-md-8",
+            left_col_classes: "col-lg-3 col-md-4" ~ (_alignment ? ' align-self-' ~ _alignment : ''),
+            right_col_classes: "col-lg-9 col-md-8" ~ (_alignment ? ' align-self-' ~ _alignment : ''),
           },
         }) %}
         {% set _card_layout = _card_layout|merge({
@@ -82,8 +92,8 @@
       {% else %}
         {% set _card = _card|merge({
           horizontal_grid: {
-            left_col_classes: "col-md-6",
-            right_col_classes: "col-md-6",
+            left_col_classes: "col-md-6" ~ (_alignment ? ' align-self-' ~ _alignment : ''),
+            right_col_classes: "col-md-6" ~ (_alignment ? ' align-self-' ~ _alignment : ''),
           },
         }) %}
         {% set _card_layout = _card_layout|merge({
@@ -102,7 +112,7 @@
       ] %}
      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
      {% set _card = _card|merge({
-         body_classes: "pb-4",
+         extra_classes_body: "pb-4",
          wrapper_class: "col",
          attributes: _card_attributes,
       }) %}
@@ -114,7 +124,7 @@
     {% if _variant == 'highlight-2-col' or variant == 'highlight-3-col' %}
       {% set _card_classes  = [
         'listing-item--highlight',
-        'border-0', 'bg-light',
+        'border-bottom-1', 'border-md-0', 'bg-light',
         'h-100',
         'rounded-2'
       ] %}

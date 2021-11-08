@@ -114,303 +114,230 @@ module.exports = {
         },
       },
     },
-    cards: [
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-3",
-          right_col_classes: "col-md-9",
-          gutter: 0,
-        },
-        extra_classes_body: "p-0 p-md-3",
-        badges: [
-          {
-            label: "Category 1",
-            background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
-          },
-          {
-            label: "Category 2",
-            background: "primary",
-          },
-        ],
-        title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
+    listing: {
+      attributes: new drupalAttribute(),
+      variant: "default-1-col",
+      remove_horizontal_spacer: true,
+      items: [
+        {
+          badges: [
             {
-              name: "href",
-              value: "/example.html",
+              label: "Category 1",
+              background: "primary",
+              attributes: new drupalAttribute().addClass(["me-2"]),
             },
             {
-              name: "target",
-              value: "_blank",
+              label: "Category 2",
+              background: "primary",
             },
           ],
-          content: "Lorem ipsum dolor sit amet",
-        },
-        text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          classes: "mb-3",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "p-0",
-          "mb-4-5",
-          "mb-md-4-75",
-        ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-3",
-          right_col_classes: "col-md-9",
-          gutter: 0,
-        },
-        extra_classes_body: "p-0 p-md-3",
-        badges: [
-          {
-            label: "Category 1",
-            background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
+          title: {
+            tag: "a",
+            classes: "fs-5 text-underline-hover mb-2",
+            attributes: [
+              {
+                name: "href",
+                value: "/example.html",
+              },
+              {
+                name: "target",
+                value: "_blank",
+              },
+            ],
+            content: "Lorem ipsum dolor sit amet",
           },
-        ],
-        title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
+          text: {
+            content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            classes: "mb-3",
+          },
+          image: {
+            path: "https://picsum.photos/175/200?random=1",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+          content:
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "/example.html",
+              label: "Category 1",
+              background: "primary",
+              attributes: new drupalAttribute().addClass(["me-2"]),
             },
           ],
-          content: "Incididunt ut labore et dolore",
-        },
-        text: {
+          title: {
+            tag: "a",
+            classes: "fs-5 text-underline-hover mb-2",
+            attributes: [
+              {
+                name: "href",
+                value: "/example.html",
+              },
+            ],
+            content: "Incididunt ut labore et dolore",
+          },
+          text: {
+            content:
+              "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+            classes: "mb-3",
+          },
+          image: {
+            path: "https://picsum.photos/175/200?random=2",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
           content:
-            "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-          classes: "mb-3",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "p-0",
-          "mb-4-5",
-          "mb-md-4-75",
-        ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=2",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-3",
-          right_col_classes: "col-md-9",
-          gutter: 0,
-        },
-        extra_classes_body: "p-0 p-md-3",
-        badges: [
-          {
-            label: "Category 1",
-            background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
-          },
-          {
-            label: "Category 2",
-            background: "primary",
-          },
-        ],
-        title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
+        {
+          badges: [
             {
-              name: "href",
-              value: "/example.html",
+              label: "Category 1",
+              background: "primary",
+              attributes: new drupalAttribute().addClass(["me-2"]),
+            },
+            {
+              label: "Category 2",
+              background: "primary",
             },
           ],
-          content: "Quis nostrud exercitation ullamco",
-        },
-        text: {
-          content:
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-3",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "p-0",
-          "mb-4-5",
-          "mb-md-4-75",
-        ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=3",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-3",
-          right_col_classes: "col-md-9",
-          gutter: 0,
-        },
-        extra_classes_body: "p-0 p-md-3",
-        badges: [
-          {
-            label: "Category 1",
-            background: "primary",
+          title: {
+            tag: "a",
+            classes: "fs-5 text-underline-hover mb-2",
+            attributes: [
+              {
+                name: "href",
+                value: "/example.html",
+              },
+            ],
+            content: "Quis nostrud exercitation ullamco",
           },
-        ],
-        title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
+          text: {
+            content:
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            classes: "mb-3",
+          },
+          image: {
+            path: "https://picsum.photos/175/200?random=3",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+          content:
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "/example.html",
+              label: "Category 1",
+              background: "primary",
             },
           ],
-          content: "Quis nostrud exercitation ullamco",
-        },
-        text: {
+          title: {
+            tag: "a",
+            classes: "fs-5 text-underline-hover mb-2",
+            attributes: [
+              {
+                name: "href",
+                value: "/example.html",
+              },
+            ],
+            content: "Quis nostrud exercitation ullamco",
+          },
+          text: {
+            content:
+              "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            classes: "mb-3",
+          },
+          image: {
+            path: "https://picsum.photos/175/200?random=4",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
           content:
-            "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-3",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "p-0",
-          "mb-4-5",
-          "mb-md-4-75",
-        ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=4",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-3",
-          right_col_classes: "col-md-9",
-          gutter: 0,
-        },
-        extra_classes_body: "p-0 p-md-3",
-        badges: [
-          {
-            label: "Category 1",
-            background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
-          },
-          {
-            label: "Category 2",
-            background: "primary",
-          },
-        ],
-        title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
+        {
+          badges: [
             {
-              name: "href",
-              value: "/example.html",
+              label: "Category 1",
+              background: "primary",
+              attributes: new drupalAttribute().addClass(["me-2"]),
+            },
+            {
+              label: "Category 2",
+              background: "primary",
             },
           ],
-          content: "Duis aute irure dolor in Excepteur",
-        },
-        text: {
+          title: {
+            tag: "a",
+            classes: "fs-5 text-underline-hover mb-2",
+            attributes: [
+              {
+                name: "href",
+                value: "/example.html",
+              },
+            ],
+            content: "Duis aute irure dolor in Excepteur",
+          },
+          text: {
+            content:
+              "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            classes: "mb-3",
+          },
+          image: {
+            path: "https://picsum.photos/175/200?random=5",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
           content:
-            "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-3",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "p-0",
-          "mb-4-5",
-          "mb-md-4-75",
-        ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=5",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-3",
-          right_col_classes: "col-md-9",
-          gutter: 0,
-        },
-        extra_classes_body: "p-0 p-md-3",
-        badges: [
-          {
-            label: "Category 1",
-            background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
-          },
-          {
-            label: "Category 2",
-            background: "primary",
-          },
-        ],
-        title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
+        {
+          badges: [
             {
-              name: "href",
-              value: "/example.html",
+              label: "Category 1",
+              background: "primary",
+              attributes: new drupalAttribute().addClass(["me-2"]),
+            },
+            {
+              label: "Category 2",
+              background: "primary",
             },
           ],
-          content: "Excepteur sint occaecat cupidatat non",
-        },
-        text: {
+          title: {
+            tag: "a",
+            classes: "fs-5 text-underline-hover mb-2",
+            attributes: [
+              {
+                name: "href",
+                value: "/example.html",
+              },
+            ],
+            content: "Excepteur sint occaecat cupidatat non",
+          },
+          text: {
+            content:
+              "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            classes: "mb-3",
+          },
+          image: {
+            path: "https://picsum.photos/175/200?random=6",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
           content:
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-3",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "p-0",
-          "mb-4-5",
-          "mb-md-4-75",
-        ]),
-        image: {
-          path: "https://picsum.photos/175/200?random=6",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
-      },
-    ],
+      ],
+    },
     pagination: {
       attributes: new drupalAttribute().addClass(["mt-5"]),
       alignment: "center",
