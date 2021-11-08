@@ -58,23 +58,17 @@ const getArgTypes = () => {
     },
     responsive_columns: {
       name: "columns number",
-      type: { name: "select" },
-      options: [1, 2, 3],
+      type: { name: "range" },
+      control: {
+        type: "range",
+        steps: 1,
+        min: 1,
+        max: 3,
+      },
       description: "One two or three columns layout",
       table: {
         type: { summary: "integer" },
         defaultValue: { summary: 3 },
-        category: "Layout",
-      },
-    },
-    responsiveness: {
-      name: "breakpoint",
-      type: { name: "select" },
-      options: ["xs", "sm", "md", "xl"],
-      description: "Breakpoint to limit the columns layout to",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "md" },
         category: "Layout",
       },
     },
