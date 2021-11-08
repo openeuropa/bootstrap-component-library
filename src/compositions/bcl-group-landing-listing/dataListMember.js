@@ -210,6 +210,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -231,6 +232,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -273,6 +275,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -294,6 +297,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -315,6 +319,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -336,6 +341,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -357,6 +363,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -378,6 +385,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -399,6 +407,7 @@ module.exports = {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
       ],

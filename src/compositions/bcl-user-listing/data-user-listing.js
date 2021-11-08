@@ -129,6 +129,7 @@ module.exports = {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -148,6 +149,7 @@ module.exports = {
             path: "https://picsum.photos/200/200?random=2",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -167,6 +169,7 @@ module.exports = {
             path: "https://picsum.photos/200/200?random=3",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -186,6 +189,7 @@ module.exports = {
             path: "https://picsum.photos/200/200?random=4",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -205,6 +209,7 @@ module.exports = {
             path: "https://picsum.photos/200/200?random=5",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -224,6 +229,7 @@ module.exports = {
             path: "https://picsum.photos/200/200?random=6",
             alt: "alt img",
             position: "top",
+            classes: "mt-3 mt-md-0",
           },
         },
       ],

@@ -45,14 +45,14 @@
     {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
 
     {% if _variant == 'default-1-col' %}
-      {% set _card_classes = ['listing-item', 'mb-2', 'border-0'] %}
+      {% set _card_classes = ['listing-item', 'mb-md-3', 'border-0', 'border-bottom-mobile'] %}
       {% if not _remove_horizontal_spacer %}
         {% set _card_classes = _card_classes|merge(['px-3']) %}
       {% endif %}
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         horizontal: true,
-        extra_classes_body: 'p-md-0 pt-sm-3',
+        extra_classes_body: 'pb-4-5 px-0 p-md-0 pt-sm-3',
         horizontal_grid: {
           left_col_classes: 'col-md-3 col-lg-2 rounded' ~ (_alignment ? ' align-self-' ~ _alignment : ''),
           right_col_classes: 'col-md-9 col-lg-10' ~ (_alignment ? ' align-self-' ~ _alignment : ''),
@@ -64,14 +64,15 @@
     {% if _variant == 'default-2-col' or _variant == 'default-3-col' %}
       {% set _card_classes = [
         'listing-item',
-        'border-0'
+        'border-0',
+        'border-bottom-mobile'
       ] %}
       {% if not _remove_horizontal_spacer %}
         {% set _card_classes = _card_classes|merge(['px-3']) %}
       {% endif %}
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
-        extra_classes_body: "p-md-0 pt-sm-3",
+        extra_classes_body: 'pb-4-5 px-0 p-md-0 pt-sm-3',
         horizontal: true,
         attributes: _card_attributes,
       }) %}
