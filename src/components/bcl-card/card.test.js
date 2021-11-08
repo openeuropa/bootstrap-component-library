@@ -57,4 +57,14 @@ describe("OE - Card", () => {
       render({ ...demoData, text_color: "white" }, true)
     ).resolves.toMatchSnapshot();
   });
+
+  test(`renders correctly with custom title attributes`, () => {
+    expect.assertions(1);
+    demoData.title.attributes = [
+      { name: "test", value: "value" },
+      { name: "attribute", value: "with a value" },
+    ];
+
+    return expect(render(demoData, true)).resolves.toMatchSnapshot();
+  });
 });

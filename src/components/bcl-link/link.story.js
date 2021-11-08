@@ -18,6 +18,7 @@ const getArgs = (data, type) => {
     label: data.label,
     path: data.path,
     variant: data.variant,
+    standalone: data.standalone || false,
     name: "none",
   };
   if (type === "tooltip") {
@@ -57,6 +58,15 @@ const getArgTypes = (data, type) => {
         category: "Style",
       },
     },
+    standalone: {
+      type: { name: "boolean" },
+      description: "Standalone link",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
     ...getIconControls("link"),
   };
 
@@ -78,6 +88,7 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data) => {
+  data.attributes.removeClass("text-underline-hover");
   data.attributes.removeClass(`link-${data.variant}`);
   data.attributes.removeClass("bg-dark");
 };

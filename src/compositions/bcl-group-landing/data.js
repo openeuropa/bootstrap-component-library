@@ -219,7 +219,7 @@ module.exports = {
             image:
               "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=1'>",
             content:
-              "<a href='/example.html' class='fw-bold text-decoration-none'>Adjur Tichar</a> commented on the article <a href='#' class='text-decoration-none'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+              "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='#' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
             meta: [
               {
                 icon: {
@@ -239,7 +239,7 @@ module.exports = {
             image:
               "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=2'>",
             content:
-              "<a href='/example.html' class='fw-bold text-decoration-none'>Adjur Tichar</a> commented on the article <a href='#' class='text-decoration-none'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+              "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='#' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
             meta: [
               {
                 icon: {
@@ -259,7 +259,7 @@ module.exports = {
             image:
               "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=3'>",
             content:
-              "<a href='/example.html' class='fw-bold text-decoration-none'>Adjur Tichar</a> commented on the article <a href='#' class='text-decoration-none'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+              "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='#' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
             meta: [
               {
                 icon: {
@@ -279,7 +279,7 @@ module.exports = {
             image:
               "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=4'>",
             content:
-              "<a href='/example.html' class='fw-bold text-decoration-none'>Steve Di Marzio</a> published the article <a href='/example.html' class='text-decoration-none'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='/example.html' class='text-decoration-none'>News</a>",
+              "<a href='/example.html' class='fw-bold text-underline-hover'>Steve Di Marzio</a> published the article <a href='/example.html' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='/example.html' class='text-underline-hover'>News</a>",
             meta: [
               {
                 icon: {
@@ -299,7 +299,7 @@ module.exports = {
             image:
               "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=5'>",
             content:
-              "<a href='/example.html' class='fw-bold text-decoration-none'>Adjur Tichar</a> commented on the article <a href='/example.html' class='text-decoration-none'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+              "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='/example.html' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
             meta: [
               {
                 icon: {
@@ -421,7 +421,7 @@ module.exports = {
           {
             title: {
               content:
-                '<a class="text-decoration-none" href="/example">Card title</a>',
+                '<a class="text-underline-hover" href="/example">Card title</a>',
             },
             text: {
               content:
@@ -447,7 +447,7 @@ module.exports = {
           {
             title: {
               content:
-                '<a class="text-decoration-none" href="/example">Card title</a>',
+                '<a class="text-underline-hover" href="/example">Card title</a>',
             },
             text: {
               content:
@@ -476,7 +476,7 @@ module.exports = {
           {
             title: {
               content:
-                '<a class="text-decoration-none" href="/example">Card title</a>',
+                '<a class="text-underline-hover" href="/example">Card title</a>',
             },
             text: {
               content:

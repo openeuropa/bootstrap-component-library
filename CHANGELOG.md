@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.12.0 (2021-11-03)
+
+#### :rocket: New Feature
+
+* [#112](https://github.com/openeuropa/bootstrap-component-library/pull/112) feat(ucpkn-variables): Added ucpkn variables. - FRONT-3330 ([@tibi2303](https://github.com/tibi2303))
+* [#99](https://github.com/openeuropa/bootstrap-component-library/pull/99) feat(group): Added composition. - FRONT-3269 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#119](https://github.com/openeuropa/bootstrap-component-library/pull/119) fix(toast): Fixing issue with the autoescape - FRONT-3353 ([@planctus](https://github.com/planctus))
+* [#120](https://github.com/openeuropa/bootstrap-component-library/pull/120) fix(card): Fixing bug in title attributes - front-3349 ([@planctus](https://github.com/planctus))
+* [#114](https://github.com/openeuropa/bootstrap-component-library/pull/114) fix(banner): Add fluid size for button icon and code clean-up - FRONT-3344 ([@papegaill](https://github.com/papegaill))
+
+#### :nail_care: Enhancement
+
+* [#115](https://github.com/openeuropa/bootstrap-component-library/pull/115) feat(builder): Adding rename script - FRONT-3338 ([@planctus](https://github.com/planctus))
+
+#### :house: Internal
+
+* [#118](https://github.com/openeuropa/bootstrap-component-library/pull/118) chore(deps): updates 03-11-21 ([@planctus](https://github.com/planctus))
+* [#113](https://github.com/openeuropa/bootstrap-component-library/pull/113) feat(npm): Made compositions packages public - FRONT-3346 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 3
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.11.0 (2021-10-27)
 
 #### :rocket: New Feature
