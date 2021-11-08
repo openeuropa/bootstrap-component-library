@@ -5,6 +5,7 @@
     - "variant" (string) (default: '')
     - "day" (integer) (default: '')
     - "month" (string) (default: '')
+    - "daytime" (string) (default: '')
     - "year" (integer) (default: '')
 #}
 
@@ -22,16 +23,20 @@
   'bg-date',
   'text-light',
   'pt-3',
-  'rounded-top-4',
+  'rounded-top-1',
   'm-auto',
+  'mw-date',
 ] %}
 
-{% set _date_time = _year ~ '-' ~ _month ~ '-' ~ _day  %}
-{% set attributes = attributes.addClass(_css_classes).setAttribute('datetime', _date_time) %}
+{% set attributes = attributes.addClass(_css_classes) %}
+
+{% if _date_time is not empty %}
+  {% set attributes = attributes.setAttribute('datetime', _date_time) %}
+{% endif %}
 
 <time {{ attributes }}>
   <span>{{ _day }}</span>
-  <span class="pb-3">{{ _month }}</span>
+  <span class="pb-3 text-uppercase">{{ _month }}</span>
   <span class="bg-light w-100 text-center py-2 text-dark">{{ _year }}</span>
 </time>
 

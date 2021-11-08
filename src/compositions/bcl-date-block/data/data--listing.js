@@ -25,7 +25,7 @@ module.exports = {
       date: {
         attributes: new drupalAttribute(),
         year: "2021",
-        month: "January",
+        month: "JAN",
         day: "23",
       },
       content: `<div>
@@ -47,7 +47,7 @@ module.exports = {
       date: {
         attributes: new drupalAttribute(),
         year: "2021",
-        month: "January",
+        month: "JAN",
         day: "23",
       },
       content: `<div>
@@ -68,7 +68,7 @@ module.exports = {
       date: {
         attributes: new drupalAttribute(),
         year: "2021",
-        month: "January",
+        month: "JAN",
         day: "23",
       },
       content: `<div>
@@ -90,7 +90,7 @@ module.exports = {
       date: {
         attributes: new drupalAttribute(),
         year: "2021",
-        month: "January",
+        month: "JAN",
         day: "23",
       },
       content: `<div>
@@ -112,7 +112,7 @@ module.exports = {
       date: {
         attributes: new drupalAttribute(),
         year: "2021",
-        month: "January",
+        month: "JAN",
         day: "23",
       },
       content: `<div>
@@ -134,7 +134,7 @@ module.exports = {
       date: {
         attributes: new drupalAttribute(),
         year: "2021",
-        month: "January",
+        month: "JAN",
         day: "23",
       },
       content: `<div>

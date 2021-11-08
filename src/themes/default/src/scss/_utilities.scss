@@ -23,7 +23,8 @@ $utilities: map-merge(
             map-merge(
               map-get(map-get($utilities, "max-width"), "values"),
               (
-                date: 10rem,
+                date: 7.5rem,
+                "listing-img": 10rem,
               )
             ),
         )
@@ -38,6 +39,7 @@ $utilities: map-merge(
               map-get(map-get($utilities, "rounded-top"), "values"),
               (
                 0: 0,
+                1: 0.25rem,
                 4: 1rem,
               )
             ),
@@ -47,6 +49,14 @@ $utilities: map-merge(
     "padding":
       map-merge(
         map-get($utilities, "padding"),
+        (
+          responsive: true,
+        )
+      ),
+    // Create responsive classes for borders
+    "border":
+      map-merge(
+        map-get($utilities, "border"),
         (
           responsive: true,
         )
