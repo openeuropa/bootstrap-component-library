@@ -4,7 +4,7 @@ module.exports = {
   site_name: "Union Civil Protection Knowledge Network",
   light: true,
   project_logo: {
-    path: "/ucpkn_logo.svg",
+    path: "ucpkn_logo.svg",
   },
   head: {
     attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
