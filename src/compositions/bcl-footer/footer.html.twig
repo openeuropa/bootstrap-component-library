@@ -67,7 +67,7 @@
                   {% if item.type == 'links' %}
                     {% for link in item.links %}
                       {% include '@oe-bcl/bcl-link/link.html.twig' with link|merge({
-                        attributes: create_attribute().addClass(['d-block', 'text-decoration-none', 'mb-1'])
+                        attributes: create_attribute().addClass(['d-block', 'text-underline-hover', 'mb-1'])
                       }) only %}
                     {% endfor %}
                   {% endif %}

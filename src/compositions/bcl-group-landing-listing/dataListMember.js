@@ -197,7 +197,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Stefan Mayer",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -230,7 +230,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Adjur Tichar",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -263,7 +263,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Szép Mara",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -296,7 +296,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Daniel Cardoso Rocha",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -329,7 +329,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Aurelia Panicucci",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -362,7 +362,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Felicyta Kowalska",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -395,7 +395,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Lorenzo Olson",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -428,7 +428,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Nino Treviño Montalvo",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -461,7 +461,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "José Luis Pabón Barrios",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -494,7 +494,7 @@ module.exports = {
         extra_classes_body: "pt-0",
         title: {
           content: "Maddison Marsh",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {

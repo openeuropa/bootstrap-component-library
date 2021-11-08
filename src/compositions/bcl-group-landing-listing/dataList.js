@@ -111,7 +111,7 @@ module.exports = {
         extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -153,7 +153,7 @@ module.exports = {
         extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -195,7 +195,7 @@ module.exports = {
         extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -237,7 +237,7 @@ module.exports = {
         extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -279,7 +279,7 @@ module.exports = {
         extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
@@ -321,7 +321,7 @@ module.exports = {
         extra_classes_body: "pt-0 px-0 px-md-2-5",
         title: {
           content: "Group name",
-          classes: "mb-3 h5 text-decoration-none d-block",
+          classes: "mb-3 h5 text-underline-hover d-block",
           tag: "a",
           attributes: [
             {
