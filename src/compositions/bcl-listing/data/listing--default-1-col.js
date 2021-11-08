@@ -14,7 +14,8 @@ module.exports = {
   items: [
     {
       title: {
-        content: '<a href="/example">Card title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Card title</a>',
       },
       text: {
         content:
@@ -35,7 +36,8 @@ module.exports = {
     {
       body_classes: "p-md-0 pt-sm-3",
       title: {
-        content: '<a href="/example">Article title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Article title</a>',
       },
       text: {
         content:
@@ -50,7 +52,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Article title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Article title</a>',
       },
       text: {
         content:
@@ -70,7 +73,8 @@ module.exports = {
     },
     {
       title: {
-        content: '<a href="/example">Article title</a>',
+        content:
+          '<a href="/example" class="text-underline-hover">Article title</a>',
       },
       text: {
         content:
