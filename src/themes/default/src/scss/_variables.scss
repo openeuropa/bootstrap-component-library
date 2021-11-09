@@ -1,6 +1,10 @@
+$enable-negative-margins: true;
+$negative-spacers: negativify-map($spacers);
+
 // Colors variables
 $light: #f0f0f0;
 $lighter: $gray-100;
+$date: #1698af;
 $blue-50: tint-color($blue, 90%);
 $red-50: tint-color($red, 90%);
 $yellow-50: tint-color($yellow, 90%);
@@ -46,6 +50,7 @@ $spacers-extended: (
 );
 
 $spacers: map-merge($spacers, $spacers-extended);
+$gutters: $spacers;
 
 // Forms
 $form-check-input-size-lg: $form-check-input-width + 0.3em !default;
