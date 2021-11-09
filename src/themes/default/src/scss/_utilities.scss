@@ -13,3 +13,16 @@
     margin-left: -$container-padding-x;
   }
 }
+
+// Override theme-color "light"
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "light": $light,
+  )
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+.bg-lighter {
+  background-color: $lighter;
+}
