@@ -11,6 +11,15 @@ $yellow-50: tint-color($yellow, 90%);
 $green-50: tint-color($green, 90%);
 $cyan-50: tint-color($cyan, 90%);
 
+// Override theme-color "light"
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "light": $light,
+  )
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
 $custom-blues: (
   "blue-50": $blue-50,
 );
