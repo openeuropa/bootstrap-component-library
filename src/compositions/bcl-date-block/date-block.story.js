@@ -54,11 +54,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Date block",
-  parameters: {
-    viewport: {
-      defaultViewport: "mobile1",
-    },
-  },
 };
 
 export const Standalone = (args) => dateBlock(applyArgs(demoData));

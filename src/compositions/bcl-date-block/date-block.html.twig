@@ -23,8 +23,7 @@
   'bg-date',
   'text-light',
   'pt-3',
-  'rounded',
-  'm-auto',
+  'rounded-top',
   'mw-date',
 ] %}
 
@@ -37,7 +36,7 @@
 <time {{ attributes }}>
   <span>{{ _day }}</span>
   <span class="pb-3 text-uppercase">{{ _month }}</span>
-  <span class="bg-light w-100 text-center py-2 text-dark">{{ _year }}</span>
+  <span class="bg-light w-100 text-center py-2 text-dark rounded-bottom mb-n1">{{ _year }}</span>
 </time>
 
 {% endspaceless %}
