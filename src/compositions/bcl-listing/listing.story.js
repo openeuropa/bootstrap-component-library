@@ -1,4 +1,5 @@
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
+import demoDateData from "@openeuropa/bcl-listing/data/listing--date.js";
 import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
 import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col.js";
 import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
@@ -87,3 +88,9 @@ export const VerticalCards = (args) => listing(adapter(demoHighlight3ColData));
 VerticalCards.storyName = "Highlight, 3 col";
 VerticalCards.args = getArgs(demoHighlight3ColData);
 VerticalCards.argTypes = getArgTypes(demoHighlight3ColData);
+
+export const Date = (args) => listing(adapter(demoDateData));
+
+Date.storyName = "Date listing";
+Date.args = getArgs(demoDateData);
+Date.argTypes = getArgTypes(demoDateData);
