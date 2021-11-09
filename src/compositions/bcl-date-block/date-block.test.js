@@ -6,7 +6,7 @@ const template = "@oe-bcl/bcl-date-block/date-block.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - Date block", () => {
-  test("renders correctly with iframe", () => {
+  test("renders correctly", () => {
     expect.assertions(1);
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
