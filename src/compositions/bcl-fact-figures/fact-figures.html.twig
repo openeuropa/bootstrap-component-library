@@ -1,0 +1,111 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - "variant" (string) (default: '') options:
+    [ default, block ]
+  - "items" (array) (default: []):
+    - "icon" (associate array) (default: { size: 'm' })
+    - "subtitle" (string) (default: '')
+    - "title" (string) (default: '')
+    - "description" (string) (default:'')
+  - "display_icons" (boolean) (default: true)
+  - "grid_columns" (int) (default: 1)
+  - "gutter" (int) (default: 4)
+  - "equal_height" (boolean) (default: true)
+  - "cols_extra_classes" (string) (default: '')
+  - "responsiveness" (string) (default: 'md')
+  - "icons_path" (string) (default: '')
+  - "link_more" (object of type link) (default {})
+
+#}
+
+{# Parameters #}
+
+{% set _title = title|default('') %}
+{% set _variant = variant|default('default') %}
+{% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
+{% set _display_icons = display_icons ?? true %}
+{% set _items = items|default([]) %}
+{% set _grid_columns = grid_columns|default(1) %}
+{% set _responsiveness = responsiveness|default('md') %}
+{% set _responsive_columns = responsive_columns|default(3) %}
+{% set _gutter = gutter|default(4) %}
+{% set _equal_height = equal_height|default(false) %}
+{% set _cols_extra_classes = cols_extra_classes|default('') %}
+{% set _cols_classes = 'col' %}
+{% set _icons_path = icons_path|default('') %}
+{% set _link_more = link_more|default({}) %}
+{% set _wrapper_classes = [] %}
+
+{% set _grid_classes = [
+  'row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns,
+  'row', 'row-cols-' ~ _grid_columns
+] %}
+{% if _responsive_columns == 3 %}
+ {% set _grid_classes = _grid_classes|merge(['row-cols-sm-2']) %}
+{% endif %}
+{% if _variant == 'block' or _variant == 'block-primary' %}
+  {% set _wrapper_classes = _wrapper_classes|merge(['bg-light p-3-5 pt-0']) %}
+{% endif %}
+{% if _gutter is not empty %}
+  {% set _grid_classes = _grid_classes|merge(['g-' ~ _gutter]) %}
+{% endif %}
+{% if _title is not empty %}
+  {% set _grid_classes = _grid_classes|merge(['mt-3']) %}
+{% endif %}
+{% if _equal_height %}
+  {% set  _cols_classes =  _cols_classes ~ ' h-100' %}
+{% endif %}
+{% set attributes = attributes.addClass(_css_classes) %}
+
+<div {{ attributes }}>
+{% if _title is not empty %}
+  <h4 class="fw-bold">{{ _title }}</h4>
+{% endif %}
+  <div
+  {% if _wrapper_classes is not empty %}
+    class="{{ _wrapper_classes|join(' ') }}"
+  {% endif %}
+  >
+    <div class="{{ _grid_classes|join(' ') }}">
+    {% if _items is defined and _items is not empty and _items is iterable %}
+      {% for _item in _items %}
+      <div class="{{ _cols_classes }}">
+      {% if _item.icon is defined and _item.icon is not empty and _display_icons %}
+        {% set _item = _item|merge({
+          icon: _item.icon|merge({
+            path: _icons_path,
+            size: 'l',
+          })
+        }) %}
+        {% include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
+      {% endif %}
+      {% if _item.title is defined and _item.title is not empty %}
+        <h3 class="text-capitalize fw-bold mt-2">
+          {{- _item.title -}}
+        </h3>
+      {% endif %}
+      {% if _item.subtitle is defined and _item.subtitle is not empty %}
+        <h5 class="fw-bold">
+          {{- _item.subtitle -}}
+        </h5>
+      {% endif %}
+      {% if _item.description is defined and _item.description is not empty %}
+        <p>
+          {{- _item.description -}}
+        </p>
+      {% endif %}
+      </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+    {% if _link_more is defined and _link_more is not empty %}
+      <div class="border-top d-block pt-3 mt-3">
+        {% include '@oe-bcl/bcl-link/link.html.twig' with _link_more only %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endspaceless %}
