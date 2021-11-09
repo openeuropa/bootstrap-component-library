@@ -22,11 +22,3 @@ describe("OE - Header EC", () => {
     return expect(render(demoDataEC)).resolves.toMatchSnapshot();
   });
 });
-
-describe("OE - Header UCPKN", () => {
-  test("renders correctly", () => {
-    expect.assertions(1);
-
-    return expect(render(headerDataUCPKN)).resolves.toMatchSnapshot();
-  });
-});

@@ -83,9 +83,3 @@ export const HeaderEC = (args) => header(applyArgs(headerDataEC, args));
 HeaderEC.storyName = "Header EC";
 HeaderEC.args = getArgs(headerDataEC);
 HeaderEC.argTypes = getArgTypes(headerDataEC);
-
-export const HeaderUPCKN = (args) => header(applyArgs(headerDataUCPKN, args));
-
-HeaderUPCKN.storyName = "Header UCPKN";
-HeaderUPCKN.args = getArgs(headerDataUCPKN);
-HeaderUPCKN.argTypes = getArgTypes(headerDataUCPKN);
