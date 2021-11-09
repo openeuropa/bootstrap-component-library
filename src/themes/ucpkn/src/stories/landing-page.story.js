@@ -1,10 +1,13 @@
 import demoData from "@openeuropa/bcl-landing-page/data.js";
-import headerData from "@openeuropa/bcl-data-header/data.js";
+import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import logo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
 
-demoData.data.header = headerData;
+demoData.data.header = headerDataUCPKN;
+demoData.data.header.project_logo.path = logo;
+demoData.data.main_banner.title = "UCPKN Project";
 demoData.data.footer = footerData;
 
 export default {
@@ -22,13 +25,6 @@ export default {
 };
 
 const correctPaths = (data) => {
-  data.data.header.breadcrumbs.icons_path = defaultSprite;
-  data.data.header.head.navigation.items.forEach((item) => {
-    if (item.icon) {
-      item.icon.path = defaultSprite;
-    }
-  });
-  data.data.header.navbar.form.submit.icon.path = defaultSprite;
   data.data.footer.rows.forEach((row) => {
     row.cols.forEach((col) => {
       if (col.items) {

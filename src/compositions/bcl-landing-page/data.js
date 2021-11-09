@@ -107,7 +107,7 @@ module.exports = {
         },
       ],
     },
-    second_featured_section: {
+    activity_featured: {
       title: "Activities",
       content:
         "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><a href='#' class='d-block mb-4'>Read more</a>",
@@ -122,12 +122,11 @@ module.exports = {
         ),
       },
     },
-    activities_section: {
+    activity_listing: {
       attributes: new drupalAttribute(),
       variant: "highlight-3-col",
       title: "What are those activities",
       title_tag: "h2",
-      remove_equal_height: true,
       link: {
         path: "/example",
         label: "Listing item block CTA",

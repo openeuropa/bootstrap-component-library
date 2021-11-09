@@ -36,23 +36,23 @@
   </div>
 {% endif %}
 
-{% if data.second_featured_section is defined %}
+{% if data.activity_featured is defined %}
   <div class="my-4">
-    <h2 class="mb-4 fw-bold">{{ data.second_featured_section.title }}</h2>
+    <h2 class="mb-4 fw-bold">{{ data.activity_featured.title }}</h2>
     <div class="row">
       <div class="col-12 col-md-6">
-        {{ data.second_featured_section.content }}
+        {{ data.activity_featured.content }}
       </div>
       <div class="col-12 col-md-6">
-        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with data.second_featured_section.featured_media only %}
+        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with data.activity_featured.featured_media only %}
       </div>
     </div>
   </div>
 {% endif %}
 
-{% if data.activities_section is defined %}
+{% if data.activity_listing is defined %}
   <div class="my-4">
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with data.activities_section only %}
+    {% include '@oe-bcl/bcl-listing/listing.html.twig' with data.activity_listing only %}
   </div>
 {% endif %}
 
