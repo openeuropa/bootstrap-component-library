@@ -51,4 +51,4 @@ const correctPaths = (data) => {
   return data;
 };
 
-export const Platform = () => landingPage(correctPaths(demoData));
+export const Default = () => landingPage(correctPaths(demoData));
