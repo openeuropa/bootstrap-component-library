@@ -205,12 +205,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -227,12 +226,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -249,7 +247,7 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -270,12 +268,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -292,12 +289,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -314,12 +310,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -336,12 +331,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -358,12 +352,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -380,12 +373,11 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
         {
@@ -402,18 +394,17 @@ module.exports = {
             ],
           },
           content:
-            "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
             position: "top",
-            classes: "mt-3 mt-md-0",
           },
         },
       ],
     },
     pagination: {
-      attributes: new drupalAttribute().addClass(["my-5"]),
+      attributes: new drupalAttribute().addClass(["mb-5", "mt-4"]),
       alignment: "center",
       border_top: true,
       prev: {

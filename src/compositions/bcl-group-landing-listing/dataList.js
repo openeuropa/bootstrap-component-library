@@ -98,6 +98,7 @@ module.exports = {
       attributes: new drupalAttribute(),
       variant: "default-1-col",
       remove_horizontal_spacer: true,
+      responsive_vertical_spacer: "md",
       items: [
         {
           badges: [
@@ -275,7 +276,7 @@ module.exports = {
       ],
     },
     pagination: {
-      attributes: new drupalAttribute().addClass(["mt-5"]),
+      attributes: new drupalAttribute().addClass(["mb-5", "mt-4"]),
       alignment: "center",
       prev: {
         label: "Previous",

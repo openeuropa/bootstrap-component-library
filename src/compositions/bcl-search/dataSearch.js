@@ -118,6 +118,7 @@ module.exports = {
       attributes: new drupalAttribute(),
       variant: "default-1-col",
       remove_horizontal_spacer: true,
+      responsive_vertical_spacer: "md",
       items: [
         {
           badges: [
@@ -158,7 +159,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
         },
         {
           badges: [
@@ -191,7 +192,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
         },
         {
           badges: [
@@ -228,7 +229,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
         },
         {
           badges: [
@@ -260,7 +261,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
         },
         {
           badges: [
@@ -297,7 +298,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
         },
         {
           badges: [
@@ -334,12 +335,12 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+            "<div><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
         },
       ],
     },
     pagination: {
-      attributes: new drupalAttribute().addClass(["mt-5"]),
+      attributes: new drupalAttribute().addClass(["mt-4"]),
       alignment: "center",
       prev: {
         label: "Previous",

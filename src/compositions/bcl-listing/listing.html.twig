@@ -9,6 +9,8 @@
   - alignment: (string) (default: '') options:
   ['start', 'end', 'center', 'baseline', 'stretch']
   - remove_horizontal_spacer: (boolean) (default: false)
+  - responsive_vertical_spacer: (string) (default: '') options:
+  ['sm', 'md', 'lg', 'xl']
 #}
 
 {% set _items = items|default([]) %}
@@ -17,13 +19,17 @@
 {% set _alignment = alignment|default('') %}
 {% set _link = link|default({}) %}
 {% set _remove_horizontal_spacer = remove_horizontal_spacer|default(false) %}
+{% set _responsive_vertical_spacer = responsive_vertical_spacer|default('') %}
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
+{% if _responsive_vertical_spacer is not empty %}
+  {% set _responsive_vertical_spacer = _responsive_vertical_spacer ~ '-' %}
+{% endif %}
 {% set _card_layout = {
   type: 'grid',
   responsiveness: 'md',
   gutter: '2',
-  attributes: create_attribute().addClass(['gy-4-5']),
+  attributes: create_attribute().addClass(['gy-' ~ _responsive_vertical_spacer ~ '4']),
 } %}
 {% set attributes = attributes.addClass(_classes) %}
 
@@ -53,7 +59,7 @@
     {% if _variant == 'default-1-col' %}
       {% set _card_classes = [
         'listing-item',
-        'mb-2',
+        'mb-' ~ _responsive_vertical_spacer ~ '2',
         'border-bottom',
         'border-md-0',
         'border-0',
