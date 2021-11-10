@@ -1,13 +1,17 @@
 import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data-ec";
+import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
+import ucpknLogo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
 
-const getArgs = () => {
+headerDataUCPKN.project_logo.path = ucpknLogo;
+
+const getArgs = (data) => {
   return {
-    light: false,
+    light: data.light || false,
   };
 };
 
@@ -27,13 +31,19 @@ const getArgTypes = () => {
 };
 
 const correctPaths = (data) => {
-  data.head.navigation.items.forEach((item) => {
-    if (item.icon) {
-      item.icon.path = defaultSprite;
-    }
-  });
-  data.navbar.form.submit.icon.path = defaultSprite;
-  data.breadcrumbs.icons_path = defaultSprite;
+  if (data.head.navigation) {
+    data.head.navigation.items.forEach((item) => {
+      if (item.icon) {
+        item.icon.path = defaultSprite;
+      }
+    });
+  }
+  if (data.navbar) {
+    data.navbar.form.submit.icon.path = defaultSprite;
+  }
+  if (data.breadcrumbs) {
+    data.breadcrumbs.icons_path = defaultSprite;
+  }
   return data;
 };
 
