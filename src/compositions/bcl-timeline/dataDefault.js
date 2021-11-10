@@ -8,7 +8,7 @@ module.exports = {
     from: 5,
     to: -2,
   },
-  icon_path: "boostrap-icons.svg",
+  icons_path: "boostrap-icons.svg",
   items: [
     {
       label: "13 September 2017",

@@ -13,14 +13,14 @@ Parameters:
     - "label": (string) (default: '')
     - "title": (string) (default: '')
     - "content": (block) (default: '')
-  - "icon_path" (string) (default: ''): file containing the svg icons
+  - "icons_path" (string) (default: ''): file containing the svg icons
 #}
 
 {# Internal properties #}
 
 {% set _id = id|default(random(1000)) %}
 {% set _items = items|default([]) %}
-{% set _icon_path = icon_path|default('') %}
+{% set _icons_path = icons_path|default('') %}
 {% set _toggle_collapsed = toggle_collapsed|default('') %}
 {% set _toggle_expanded = toggle_expanded|default('') %}
 {% set _hide_from = hide.from|default(items|length) %}
@@ -65,26 +65,30 @@ Parameters:
           {% if _item.title is defined and _item.title is not empty %}
           <h6>{{ _item.title }}</h6>
           {% endif %}
-          <div>{{ _item.content|default('') }}</div>
+          {% if _item.content is defined and _item.content is not empty %}
+          <div>{{ _item.content }}</div>
+          {% endif %}
       </li>
       {# Display the show more button if required. #}
       {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
         {% set _toggler = true %}
         <li class="bcl-timeline__item--toggle">
-          {% include '@oe-bcl/bcl-button/button.html.twig' with {
-            label: "<span class='label-collapsed'>#{_toggle_collapsed}</span><span class='label-expanded'>#{_toggle_expanded}</span>",
-            type: "button",
-            variant: "light",
-            attributes: create_attribute()
-              .setAttribute("aria-expanded", "false")
-              .setAttribute("data-bs-toggle", "collapse")
-              .setAttribute("data-bs-target", ".collapse-#{_id}"),
-            icon: {
-              name: "chevron-down",
-              size: "fluid",
-              path: _icon_path,
-            },
-          } only %}
+          <button
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target=".collapse-1"
+            class="btn btn-light btn-md"
+            type="button"
+          >
+            <span class="label-collapsed">{{ _toggle_collapsed }}</span>
+            <span class="label-expanded">{{ _toggle_expanded }}</span>
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: 'chevron-down',
+              size: 'fluid',
+              path: _icons_path,
+              attributes: create_attribute().addClass('ms-2-5'),
+            } only %}
+          </button>
         </li>
       {% endif %}
     {% endfor %}
