@@ -25,7 +25,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=5",
         alt: "alt img",
-        position: "top",
       },
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
@@ -46,7 +45,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=4",
         alt: "alt img",
-        position: "top",
       },
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
@@ -88,7 +86,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=2",
         alt: "alt img",
-        position: "top",
         rounded: 1,
       },
       content: `<div>

@@ -39,6 +39,11 @@ module.exports = {
         content:
           '<a href="/example" class="text-underline-hover">Article title</a>',
       },
+      image: {
+        path: "https://picsum.photos/160?random=8",
+        alt: "alt img",
+        rounded: 1,
+      },
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",

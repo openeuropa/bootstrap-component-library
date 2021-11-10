@@ -1,3 +1,53 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "background-color"), "values"),
+              (
+                date: $date,
+              )
+            ),
+        )
+      ),
+    // Extend rounded-top utility.
+    "max-width":
+      map-merge(
+        map-get($utilities, "max-width"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "max-width"), "values"),
+              (
+                date: 7.5rem,
+                "listing-img": 10rem,
+              )
+            ),
+        )
+      ),
+    // Create responsive classes for padding
+    "padding":
+      map-merge(
+        map-get($utilities, "padding"),
+        (
+          responsive: true,
+        )
+      ),
+    // Create responsive classes for borders
+    "border":
+      map-merge(
+        map-get($utilities, "border"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
 .text-underline-hover {
   text-decoration: none;
 }
@@ -12,4 +62,8 @@
     margin-right: -$container-padding-x;
     margin-left: -$container-padding-x;
   }
+}
+
+.bg-lighter {
+  background-color: $lighter;
 }
