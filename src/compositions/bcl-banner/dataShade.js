@@ -15,5 +15,5 @@ module.exports = {
   },
   image: "https://picsum.photos/id/154/1200/800",
   shade: true,
-  attributes: new drupalAttribute().addClass(["bg-light", "text-center"]),
+  attributes: new drupalAttribute().addClass(["bg-lighter", "text-center"]),
 };
