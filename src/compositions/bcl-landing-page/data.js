@@ -62,7 +62,8 @@ module.exports = {
       items: [
         {
           title: {
-            content: '<a href="/example">Listing item title</a>',
+            content:
+              '<a href="/example" class="text-underline-hover">Listing item title</a>',
           },
           text: {
             content:
@@ -77,7 +78,8 @@ module.exports = {
         },
         {
           title: {
-            content: '<a href="/example">Listing item title</a>',
+            content:
+              '<a href="/example" class="text-underline-hover">Listing item title</a>',
           },
           text: {
             content:
@@ -92,7 +94,8 @@ module.exports = {
         },
         {
           title: {
-            content: '<a href="/example">Listing item title</a>',
+            content:
+              '<a href="/example" class="text-underline-hover">Listing item title</a>',
           },
           text: {
             content:
@@ -137,7 +140,8 @@ module.exports = {
       items: [
         {
           title: {
-            content: '<a href="/example">Capacity development</a>',
+            content:
+              '<a href="/example" class="text-underline-hover">Capacity development</a>',
           },
           text: {
             content:
@@ -152,7 +156,8 @@ module.exports = {
         },
         {
           title: {
-            content: '<a href="/example">Science, Research & innovation</a>',
+            content:
+              '<a href="/example" class="text-underline-hover">Science, Research & innovation</a>',
           },
           text: {
             content:
@@ -167,7 +172,8 @@ module.exports = {
         },
         {
           title: {
-            content: '<a href="/example">KN Horizontal activities</a>',
+            content:
+              '<a href="/example" class="text-underline-hover">KN Horizontal activities</a>',
           },
           text: {
             content:

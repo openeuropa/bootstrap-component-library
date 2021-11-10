@@ -1,10 +1,12 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  site_name: "Union Civil Protection Knowledge Network",
+  site_name:
+    "<p class='pb-3 pb-lg-0'>Union Civil Protection Knowledge Network</p>",
   light: true,
   project_logo: {
     path: "ucpkn_logo.svg",
+    classes: "d-none d-lg-inline-block",
   },
   head: {
     attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),

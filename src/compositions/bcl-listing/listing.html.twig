@@ -153,7 +153,7 @@
 
 {% if _link is not empty %}
   {% set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
-  {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-block']) %}
+  {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-inline-block']) %}
   {% if _variant == 'default-1-col' or _variant == 'default-2-col' or variant == 'default-3-col' %}
     {% set _link_attributes = _link_attributes.addClass(['ps-3-5']) %}
   {% endif %}
