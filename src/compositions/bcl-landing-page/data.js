@@ -85,7 +85,7 @@ module.exports = {
             classes: "mb-2",
           },
           image: {
-            path: "https://picsum.photos/seed/1002/600/400",
+            path: "https://picsum.photos/seed/1003/600/400",
             alt: "alt img",
             position: "top",
           },
@@ -100,7 +100,7 @@ module.exports = {
             classes: "mb-2",
           },
           image: {
-            path: "https://picsum.photos/seed/1002/600/400",
+            path: "https://picsum.photos/seed/1004/600/400",
             alt: "alt img",
             position: "top",
           },
@@ -145,7 +145,7 @@ module.exports = {
             classes: "mb-2",
           },
           image: {
-            path: "https://picsum.photos/seed/1002/600/400",
+            path: "https://picsum.photos/seed/1005/600/400",
             alt: "alt img",
             position: "top",
           },
@@ -160,7 +160,7 @@ module.exports = {
             classes: "mb-2",
           },
           image: {
-            path: "https://picsum.photos/seed/1002/600/400",
+            path: "https://picsum.photos/seed/1006/600/400",
             alt: "alt img",
             position: "top",
           },
@@ -175,7 +175,7 @@ module.exports = {
             classes: "mb-2",
           },
           image: {
-            path: "https://picsum.photos/seed/1002/600/400",
+            path: "https://picsum.photos/seed/1007/600/400",
             alt: "alt img",
             position: "top",
           },
