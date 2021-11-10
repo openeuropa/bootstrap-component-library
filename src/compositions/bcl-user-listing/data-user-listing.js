@@ -124,7 +124,7 @@ module.exports = {
             classes: "mb-3",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+            "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
@@ -143,7 +143,7 @@ module.exports = {
             classes: "mb-3",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+            "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
           image: {
             path: "https://picsum.photos/200/200?random=2",
             alt: "alt img",
@@ -162,7 +162,7 @@ module.exports = {
             classes: "mb-3",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+            "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
           image: {
             path: "https://picsum.photos/200/200?random=3",
             alt: "alt img",
@@ -181,7 +181,7 @@ module.exports = {
             classes: "mb-3",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+            "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
           image: {
             path: "https://picsum.photos/200/200?random=4",
             alt: "alt img",
@@ -200,7 +200,7 @@ module.exports = {
             classes: "mb-3",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+            "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
           image: {
             path: "https://picsum.photos/200/200?random=5",
             alt: "alt img",
@@ -219,7 +219,7 @@ module.exports = {
             classes: "mb-3",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span></div>",
+            "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
           image: {
             path: "https://picsum.photos/200/200?random=6",
             alt: "alt img",

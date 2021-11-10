@@ -159,7 +159,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
         {
           badges: [
@@ -192,7 +192,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
         {
           badges: [
@@ -229,7 +229,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
         {
           badges: [
@@ -261,7 +261,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
         {
           badges: [
@@ -298,7 +298,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<div class='mb-2'><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
         {
           badges: [
@@ -335,7 +335,7 @@ module.exports = {
             classes: "d-none d-md-block",
           },
           content:
-            "<div><span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
         },
       ],
     },

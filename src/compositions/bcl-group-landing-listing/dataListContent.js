@@ -259,7 +259,7 @@ module.exports = {
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span></div>",
+            "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
@@ -290,7 +290,7 @@ module.exports = {
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span></div>",
+            "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
@@ -321,7 +321,7 @@ module.exports = {
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span></div>",
+            "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
@@ -352,7 +352,7 @@ module.exports = {
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span></div>",
+            "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
@@ -383,7 +383,7 @@ module.exports = {
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span></div>",
+            "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",
@@ -414,7 +414,7 @@ module.exports = {
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span></div>",
+            "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
             path: "https://picsum.photos/200/200?random=1",
             alt: "alt img",

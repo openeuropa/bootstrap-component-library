@@ -205,7 +205,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -226,7 +226,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -247,7 +247,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -268,7 +268,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -289,7 +289,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -310,7 +310,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -331,7 +331,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -352,7 +352,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -373,7 +373,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
@@ -394,7 +394,7 @@ module.exports = {
             ],
           },
           content:
-            "<div class='mb-2'><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
           image: {
             path: "https://picsum.photos/200/160?random=1",
             alt: "alt img",
