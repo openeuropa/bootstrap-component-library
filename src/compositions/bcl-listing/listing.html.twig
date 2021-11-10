@@ -3,7 +3,8 @@
 {# Parameters:
   - variant: (string) (default: "horizontal") options:
   [ default-1-col, highlight-1-col, default-2-col, default-3-col, highlight-2-col, highlight-3-col ]
-  - title: (string) (default: {})
+  - title: (string) (default: "")
+  - title_tag: (string) (default: "h4")
   - items: (array of objects of type card)
   - link: (object of type link)
   - alignment: (string) (default: '') options:
@@ -17,6 +18,7 @@
 {% set _variant = variant|default('default-1-col') %}
 {% set _title = title|default('') %}
 {% set _alignment = alignment|default('') %}
+{% set _title_tag = title_tag|default('h4') %}
 {% set _link = link|default({}) %}
 {% set _remove_horizontal_spacer = remove_horizontal_spacer|default(false) %}
 {% set _responsive_vertical_spacer = responsive_vertical_spacer|default('') %}
@@ -40,9 +42,9 @@
   {% if _variant == 'default-1-col' or _variant == 'default-3-col' or _variant == 'default-2-col' %}
     {% set _title_classes = _title_classes ~ ' ps-3' %}
   {% endif %}
-  <h4 class="{{ _title_classes }}">
+  <{{ _title_tag }} class="{{ _title_classes }}">
     {{ _title }}
-  </h4>
+  </{{ _title_tag }}>
 {% endif %}
 
 {% if _items is not empty %}
@@ -125,7 +127,7 @@
       {% set _card_classes = [
         'listing-item--highlight',
         'border-0',
-        'bg-light'
+        'bg-lighter'
       ] %}
      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
      {% set _card = _card|merge({
@@ -142,7 +144,7 @@
       {% set _card_classes  = [
         'listing-item--highlight',
         'border-0',
-        'bg-light',
+        'bg-lighter',
         'h-100',
         'rounded-2'
       ] %}
@@ -151,6 +153,7 @@
         wrapper_class: 'col',
         attributes: _card_attributes,
       }) %}
+      {% set _card_layout = _card_layout|merge({ gutter: '4' }) %}
       {% if variant == 'highlight-2-col' %}
         {% set _card_layout = _card_layout|merge({ responsive_columns: 2 }) %}
       {% else %}
@@ -166,7 +169,7 @@
 
 {% if _link is not empty %}
   {% set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
-  {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-block']) %}
+  {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-inline-block']) %}
   {% if _variant == 'default-1-col' or _variant == 'default-2-col' or variant == 'default-3-col' %}
     {% set _link_attributes = _link_attributes.addClass(['ps-3-5']) %}
   {% endif %}

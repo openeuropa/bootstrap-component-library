@@ -1,0 +1,78 @@
+/* stylelint-disable declaration-no-important */
+// timeline
+.bcl-timeline {
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  max-width: 648px;
+
+  > li {
+    position: relative;
+    padding-bottom: map-get($spacers, "4-5");
+    padding-left: calc(22px + map-get($spacers, 3));
+
+    &::before {
+      content: "";
+      background: $white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid $primary;
+      left: 0;
+      width: 22px;
+      height: 22px;
+    }
+
+    &::after {
+      content: "";
+      background: $gray-300;
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      top: 22px;
+      width: 2px;
+      height: 100%;
+    }
+
+    &.collapsing {
+      transition: none !important;
+    }
+
+    &.bcl-timeline__item--toggle {
+      &::before {
+        border-color: $gray-600;
+        top: 7px;
+      }
+      &::after {
+        top: 30px;
+        background: repeating-linear-gradient(
+          to bottom,
+          $gray-300,
+          $gray-300 3px,
+          $white 3px,
+          $white 6px
+        );
+      }
+    }
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  button[aria-expanded="false"] {
+    .label-expanded {
+      display: none;
+    }
+  }
+  button[aria-expanded="true"] {
+    .label-collapsed {
+      display: none;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
