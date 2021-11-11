@@ -16,7 +16,7 @@ Parameters:
 {# Print the result #}
 <div class="row">
   <div class="col-md-3 d-none d-md-block">
-    <div class="position-sticky top-0" id="bcl-inpage-navigation">
+    <nav class="position-sticky" id="bcl-inpage-navigation">
       {% if _title is defined and _title is not empty %}
         <h5>{{ title }}</h5>
         <hr>
@@ -26,7 +26,7 @@ Parameters:
         'vertical': true,
         'items': _links,
       } only %}
-    </div>
+    </nav>
   </div>
   <div class="col-md-9">
     {{ content }}

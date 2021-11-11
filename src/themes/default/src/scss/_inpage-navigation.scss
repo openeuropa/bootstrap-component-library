@@ -1,0 +1,23 @@
+#bcl-inpage-navigation {
+  top: map-get($spacers, 3); // needed for position-sticky
+  background-color: $light;
+
+  h5 {
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: map-get($spacers, "3-5");
+  }
+  hr {
+    background-color: $gray-300;
+    margin: 0;
+    opacity: 1;
+  }
+  ul {
+    padding: map-get($spacers, "2-5");
+
+    .nav-link {
+      padding: map-get($spacers, 2);
+      margin-bottom: map-get($spacers, 2);
+    }
+  }
+}
