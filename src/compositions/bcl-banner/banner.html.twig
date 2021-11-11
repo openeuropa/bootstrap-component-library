@@ -8,6 +8,7 @@
   - shade: (boolean) (default: false)
   - hero: (boolean) (default: false)
   - full_width: (boolean) (default: false)
+  - content_classes: (string) (default: "")
 #}
 
 {% set _title = title|default("") %}
@@ -17,6 +18,18 @@
 {% set _shade = shade|default(false) %}
 {% set _hero = hero|default(false) %}
 {% set _full_width = full_width|default(false) %}
+{% set _content_classes = content_classes|default("") %}
+
+
+{% set _content_class = 'bcl-banner__content' %}
+{% if _content_classes is not empty %}
+  {% set _content_class = _content_class ~ " " ~ _content_classes %}
+{% endif %}
+
+{% set _title_classes = "display-6" %}
+{% if _description is not empty or _link is not empty %}
+  {% set _title_classes = _title_classes ~ " mb-3" %}
+{% endif %}
 
 {% set _classes = [
   'bcl-banner',
@@ -32,10 +45,12 @@
     <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
   {% endif %}
   <div class="container">
-    <div class="bcl-banner__content">
+    <div class="{{ _content_class }}">
     {% if _title is not empty %}
-      <div class="display-6 mb-3">{{ _title }}</div>
+      <div class="{{ _title_classes }}">{{ _title }}</div>
+      {% if _description is not empty %}
       <p class="mb-4">{{ _description }}</p>
+      {% endif %}
       {% if _link.path %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
       {% endif %}
