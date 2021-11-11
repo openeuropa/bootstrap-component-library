@@ -18,8 +18,7 @@ Parameters:
   <div class="col-md-3 d-none d-md-block">
     <nav class="position-sticky" id="bcl-inpage-navigation">
       {% if _title is defined and _title is not empty %}
-        <h5>{{ title }}</h5>
-        <hr>
+        <h5>{{ _title }}</h5>
       {% endif %}
       {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
         'pills': true,
@@ -28,8 +27,8 @@ Parameters:
       } only %}
     </nav>
   </div>
-  <div class="col-md-9">
-    {{ content }}
+  <div class="col-md-9 col-lg-8">
+    {{ _content }}
   </div>
 </div>
 
