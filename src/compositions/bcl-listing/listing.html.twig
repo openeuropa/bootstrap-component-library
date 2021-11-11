@@ -23,7 +23,7 @@
   type: 'grid',
   responsiveness: 'md',
   gutter: '2',
-  attributes: create_attribute().addClass(['gy-4']),
+  attributes: create_attribute().addClass(['gy-4-5']),
 } %}
 {% set attributes = attributes.addClass(_classes) %}
 
@@ -91,6 +91,7 @@
         extra_classes_body: 'p-0 pb-md-0 pb-3',
         horizontal: true,
         attributes: _card_attributes,
+        image: _image,
       }) %}
 
       {% if _variant == 'default-2-col' %}
