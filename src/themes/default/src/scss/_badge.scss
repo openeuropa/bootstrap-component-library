@@ -2,7 +2,8 @@
 .badge {
   font-size: $badge-font-size;
   font-weight: $badge-font-weight;
-  vertical-align: 15%;
+  display: inline-flex;
+  align-items: center;
   @include media-breakpoint-up(md) {
     font-size: $badge-font-size-desktop;
   }
