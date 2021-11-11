@@ -185,340 +185,226 @@ module.exports = {
         },
       },
     },
-    cards: [
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
+    listing: {
+      attributes: new drupalAttribute(),
+      variant: "default-1-col",
+      alignment: "center",
+      remove_horizontal_spacer: true,
+      items: [
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Stefan Mayer",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=1",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Stefan Mayer",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Adjur Tichar",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=2",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Szép Mara",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=3",
+            alt: "alt img",
+            position: "top",
+          },
         },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Daniel Cardoso Rocha",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=4",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Adjur Tichar",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Aurelia Panicucci",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=5",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Felicyta Kowalska",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=6",
+            alt: "alt img",
+            position: "top",
+          },
         },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Lorenzo Olson",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=7",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Szép Mara",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Nino Treviño Montalvo",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=8",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "José Luis Pabón Barrios",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=9",
+            alt: "alt img",
+            position: "top",
+          },
         },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
+        {
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Maddison Marsh",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          content:
+            "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
+          image: {
+            path: "https://picsum.photos/200/160?random=4",
+            alt: "alt img",
+            position: "top",
+          },
         },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Daniel Cardoso Rocha",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
-        },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Aurelia Panicucci",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
-        },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Felicyta Kowalska",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
-        },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Lorenzo Olson",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
-        },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Nino Treviño Montalvo",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
-        },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "José Luis Pabón Barrios",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-4 col-md-2",
-          right_col_classes: "col-8 col-md-10 align-self-center",
-          gutter: 2,
-        },
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0",
-        title: {
-          content: "Maddison Marsh",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
-            {
-              name: "href",
-              value: "example.html",
-            },
-          ],
-        },
-        content:
-          "<div><span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span></div>",
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/160?random=1",
-          alt: "alt img",
-          position: "top",
-        },
-      },
-    ],
+      ],
+    },
     pagination: {
-      attributes: new drupalAttribute().addClass(["my-5"]),
+      attributes: new drupalAttribute().addClass(["mb-5", "mt-4"]),
       alignment: "center",
       border_top: true,
       prev: {

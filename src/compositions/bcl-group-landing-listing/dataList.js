@@ -94,261 +94,189 @@ module.exports = {
         },
       },
     },
-    cards: [
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0 px-0 px-md-2-5",
-        title: {
-          content: "Group name",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
+    listing: {
+      attributes: new drupalAttribute(),
+      variant: "default-1-col",
+      remove_horizontal_spacer: true,
+      responsive_vertical_spacer: "md",
+      items: [
+        {
+          badges: [
             {
-              name: "href",
-              value: "example.html",
+              label: "Public",
             },
           ],
-        },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        border_bottom: true,
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Public",
+          title: {
+            content: "Group name",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0 px-0 px-md-2-5",
-        title: {
-          content: "Group name",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
+          text: {
+            content:
+              "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+          },
+          image: {
+            path: "https://picsum.photos/160?random=1",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "example.html",
+              label: "Public",
             },
           ],
-        },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        border_bottom: true,
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Public",
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Group name",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0 px-0 px-md-2-5",
-        title: {
-          content: "Group name",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
+          text: {
+            content:
+              "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+          },
+          image: {
+            path: "https://picsum.photos/160?random=2",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "example.html",
+              label: "Public",
             },
           ],
-        },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        border_bottom: true,
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Public",
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Group name",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0 px-0 px-md-2-5",
-        title: {
-          content: "Group name",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
+          text: {
+            content:
+              "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+          },
+          image: {
+            path: "https://picsum.photos/160?random=3",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "example.html",
+              label: "Public",
             },
           ],
-        },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        border_bottom: true,
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Public",
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Group name",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0 px-0 px-md-2-5",
-        title: {
-          content: "Group name",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
+          text: {
+            content:
+              "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+          },
+          image: {
+            path: "https://picsum.photos/160?random=4",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "example.html",
+              label: "Public",
             },
           ],
-        },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-        border_bottom: true,
-      },
-      {
-        horizontal: true,
-        horizontal_grid: {
-          left_col_classes: "col-md-2",
-          right_col_classes: "col-md-10",
-          gutter: 2,
-        },
-        badges: [
-          {
-            label: "Public",
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Group name",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
           },
-        ],
-        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        extra_classes_body: "pt-0 px-0 px-md-2-5",
-        title: {
-          content: "Group name",
-          classes: "mb-3 h5 text-underline-hover d-block",
-          tag: "a",
-          attributes: [
+          text: {
+            content:
+              "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+          },
+          image: {
+            path: "https://picsum.photos/160?random=5",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
+        },
+        {
+          badges: [
             {
-              name: "href",
-              value: "example.html",
+              label: "Public",
             },
           ],
+          extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+          title: {
+            content: "Group name",
+            classes: "mb-3 h5 text-underline-hover d-block",
+            tag: "a",
+            attributes: [
+              {
+                name: "href",
+                value: "example.html",
+              },
+            ],
+          },
+          text: {
+            content:
+              "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+          },
+          image: {
+            path: "https://picsum.photos/160?random=6",
+            alt: "alt img",
+            position: "top",
+            classes: "d-none d-md-block",
+          },
         },
-        text: {
-          content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-0",
-          "mb-4",
-          "mb-md-5",
-        ]),
-        image: {
-          path: "https://picsum.photos/200/200?random=1",
-          alt: "alt img",
-          position: "top",
-          classes: "d-none d-md-block",
-        },
-      },
-    ],
+      ],
+    },
     pagination: {
-      attributes: new drupalAttribute().addClass(["mt-5"]),
+      attributes: new drupalAttribute().addClass(["mb-5", "mt-4"]),
       alignment: "center",
       prev: {
         label: "Previous",
