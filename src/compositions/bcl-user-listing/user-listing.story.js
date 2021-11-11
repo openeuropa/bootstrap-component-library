@@ -1,9 +1,11 @@
 import demoData from "@openeuropa/bcl-user-listing/data-user-listing.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
+import footerData from "@openeuropa/bcl-data-footer/data.js";
 import userListing from "@openeuropa/bcl-user-listing/user-listing.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 demoData.data.header = headerData;
+demoData.data.footer = footerData;
 
 export default {
   title: "Compositions/Users/Listing",

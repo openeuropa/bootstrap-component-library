@@ -1,5 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
+import demoDateData from "@openeuropa/bcl-listing/data/listing--date.js";
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
 import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
 import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col.js";
@@ -40,5 +41,10 @@ describe("OE - Listing", () => {
   test("with highlight listing item in 3 columns renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoHighlight3ColData)).resolves.toMatchSnapshot();
+  });
+
+  test("with date listing items renders correctly", () => {
+    expect.assertions(1);
+    return expect(render(demoDateData)).resolves.toMatchSnapshot();
   });
 });

@@ -30,13 +30,10 @@
           extra_classes: "mb-4"
         }) only %}
       </div>
-      {% if data.cards is not empty and data.cards is iterable %}
-        {% for card in data.cards %}
-          {% include '@oe-bcl/bcl-card/card.html.twig' with card only %}
-          <hr class="d-md-none mb-4-5">
-        {% endfor %}
+      {% if data.listing is not empty %}
+        {% include '@oe-bcl/bcl-listing/listing.html.twig' with data.listing only %}
       {% endif %}
-        {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with data.pagination only %}
+      {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with data.pagination only %}
       </div>
     </div>
   </div>
