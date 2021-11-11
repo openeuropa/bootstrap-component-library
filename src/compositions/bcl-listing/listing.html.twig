@@ -30,11 +30,7 @@
 <div {{ attributes }}>
 
 {% if _title is not empty %}
-  {% set _title_classes = 'fw-bold mb-4' %}
-  {% if _variant == 'default-1-col' or _variant == 'default-3-col' or _variant == 'default-2-col' %}
-    {% set _title_classes = _title_classes ~ ' ps-3' %}
-  {% endif %}
-  <{{ _title_tag }} class="{{ _title_classes }}">
+  <{{ _title_tag }} class="fw-bold mb-4">
     {{ _title }}
   </{{ _title_tag }}>
 {% endif %}
