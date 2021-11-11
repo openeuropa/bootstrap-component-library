@@ -23,7 +23,7 @@
   type: 'grid',
   responsiveness: 'md',
   gutter: '2',
-  attributes: create_attribute().addClass(['gy-4-5']),
+  attributes: create_attribute().addClass(['gy-4']),
 } %}
 {% set attributes = attributes.addClass(_classes) %}
 
@@ -45,11 +45,10 @@
     {% set _image = {} %}
     {% if _card.image is not empty %}
       {% set _max_width = 'mw-listing-img' %}
-      {% set _image = {
-        path: _card.image.path,
-        classes: _card.image.classes ? _card.image.classes ~ " mb-3" : "mb-3",
-        alt: _card.image.alt ?: "",
-      } %}
+      {% set _image_classes = _card.image.classes ? _card.image.classes ~ " mb-3" : "mb-3" %}
+      {% set _card = _card|merge({image: _card.image|merge({
+        classes: _image_classes
+      })}) %}
     {% elseif _card.date is not empty %}
       {% set _max_width = 'mw-date' %}
     {% endif %}
@@ -74,7 +73,6 @@
           left_col_classes: 'col-md-3 col-lg-2 rounded ' ~ _max_width ~ _alignment,
           right_col_classes: 'col-md-9 col-lg-10' ~ _alignment,
         },
-        image: _image,
         attributes: _card_attributes,
       }) %}
     {% endif %}
@@ -91,7 +89,6 @@
         extra_classes_body: 'p-0 pb-md-0 pb-3',
         horizontal: true,
         attributes: _card_attributes,
-        image: _image,
       }) %}
 
       {% if _variant == 'default-2-col' %}
@@ -147,6 +144,7 @@
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         wrapper_class: 'col',
+        extra_classes_body: 'pt-0',
         attributes: _card_attributes,
       }) %}
       {% set _card_layout = _card_layout|merge({ gutter: '4' }) %}
