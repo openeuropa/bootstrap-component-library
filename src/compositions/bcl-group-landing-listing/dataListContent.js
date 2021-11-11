@@ -261,7 +261,7 @@ module.exports = {
           content:
             "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
-            path: "https://picsum.photos/200/200?random=1",
+            path: "https://picsum.photos/160?random=1",
             alt: "alt img",
             position: "top",
           },
@@ -292,7 +292,7 @@ module.exports = {
           content:
             "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
-            path: "https://picsum.photos/200/200?random=2",
+            path: "https://picsum.photos/160?random=2",
             alt: "alt img",
             position: "top",
           },
@@ -323,7 +323,7 @@ module.exports = {
           content:
             "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
-            path: "https://picsum.photos/200/200?random=3",
+            path: "https://picsum.photos/160?random=3",
             alt: "alt img",
             position: "top",
           },
@@ -354,7 +354,7 @@ module.exports = {
           content:
             "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
-            path: "https://picsum.photos/200/200?random=4",
+            path: "https://picsum.photos/160?random=4",
             alt: "alt img",
             position: "top",
           },
@@ -385,7 +385,7 @@ module.exports = {
           content:
             "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
-            path: "https://picsum.photos/200/200?random=5",
+            path: "https://picsum.photos/160?random=5",
             alt: "alt img",
             position: "top",
           },
@@ -416,7 +416,7 @@ module.exports = {
           content:
             "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
           image: {
-            path: "https://picsum.photos/200/200?random=6",
+            path: "https://picsum.photos/160?random=6",
             alt: "alt img",
             position: "top",
           },
