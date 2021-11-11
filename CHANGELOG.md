@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.0 (2021-11-11)
+
+#### :rocket: New Feature
+
+* [#130](https://github.com/openeuropa/bootstrap-component-library/pull/130) feat(compositions): Add inpage navigation - FRONT-3138 ([@papegaill](https://github.com/papegaill))
+* [#122](https://github.com/openeuropa/bootstrap-component-library/pull/122) feat(landing): Added landing page compositions - FRONT-3329 ([@tibi2303](https://github.com/tibi2303))
+* [#117](https://github.com/openeuropa/bootstrap-component-library/pull/117) feat(compositions): Add Timeline composition - FRONT-2571 ([@papegaill](https://github.com/papegaill))
+* [#116](https://github.com/openeuropa/bootstrap-component-library/pull/116) feat(compositions): Adding Fact & Figures composition - FRONT-3256 ([@planctus](https://github.com/planctus))
+* [#124](https://github.com/openeuropa/bootstrap-component-library/pull/124) feat(date-block): Adding composition - FRONT-3320 ([@planctus](https://github.com/planctus))
+* [#123](https://github.com/openeuropa/bootstrap-component-library/pull/123) feat(links): Added Underline hover class on link - FRONT-3334 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#129](https://github.com/openeuropa/bootstrap-component-library/pull/129) fix(badge): Fix badge icon misalignment on Safari and IE - FRONT-3374 ([@gingapa](https://github.com/gingapa))
+
+#### :nail_care: Enhancement
+
+* [#125](https://github.com/openeuropa/bootstrap-component-library/pull/125) feat(listing): Listing on all compositions - FRONT-3357 ([@tibi2303](https://github.com/tibi2303))
+* [#126](https://github.com/openeuropa/bootstrap-component-library/pull/126) feat(utilities): Add bg-lighter utility. - FRONT-3363 ([@theosuja](https://github.com/theosuja))
+
+#### :house: Internal
+
+* [#127](https://github.com/openeuropa/bootstrap-component-library/pull/127) feat(npmignore): Added npmignore to all compositions - FRONT-3365 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 5
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- Paulo Gingao ([@gingapa](https://github.com/gingapa))
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.12.0 (2021-11-03)
 
 #### :rocket: New Feature
