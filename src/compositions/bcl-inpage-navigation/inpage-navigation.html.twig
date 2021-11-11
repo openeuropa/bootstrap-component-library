@@ -1,0 +1,36 @@
+{% spaceless %}
+
+{#
+Parameters:
+  - "title": (string) (default: '')
+  - "links": (array of link objects) (default: [])
+  - "content": (string) (default: '')
+#}
+
+{# Internal properties #}
+
+{% set _title = title|default('') %}
+{% set _links = links|default([]) %}
+{% set _content = content|default('') %}
+
+{# Print the result #}
+<div class="row">
+  <div class="col-md-3 d-none d-md-block">
+    <div class="position-sticky top-0" id="bcl-inpage-navigation">
+      {% if _title is defined and _title is not empty %}
+        <h5>{{ title }}</h5>
+        <hr>
+      {% endif %}
+      {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
+        'pills': true,
+        'vertical': true,
+        'items': _links,
+      } only %}
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{ content }}
+  </div>
+</div>
+
+{% endspaceless %}
