@@ -18,7 +18,7 @@ module.exports = {
   },
   icon: {
     name: "file-pdf-fill",
-    size: "xl"
+    size: "xl",
   },
   other_dropdown: {
     id: "language-dropdown",
@@ -76,9 +76,10 @@ module.exports = {
       },
       {
         type: "content",
-        content: "<p class='mb-2'>Looking for another language which is not on the list? </p><a href='/example.html' class='d-block text-underline-hover'>Find out why.</a>",
-      }
-    ]
+        content:
+          "<p class='mb-2'>Looking for another language which is not on the list? </p><a href='/example.html' class='d-block text-underline-hover'>Find out why.</a>",
+      },
+    ],
   },
   attributes: new drupalAttribute(),
 };

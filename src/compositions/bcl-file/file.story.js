@@ -42,12 +42,11 @@ const correctPaths = (data) => {
   data.icon.path = defaultSprite;
   data.download.icon.path = defaultSprite;
   data.other_dropdown.dropdown_label.icon.path = defaultSprite;
-  data.other_dropdown.items.forEach(item => {
+  data.other_dropdown.items.forEach((item) => {
     if (item.type != "content") {
       item.download.icon.path = defaultSprite;
     }
   });
-
 
   return data;
 };
