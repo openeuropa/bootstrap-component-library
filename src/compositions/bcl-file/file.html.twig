@@ -28,25 +28,45 @@
 {% set _download = download|default({}) %}
 {% set _other_dropdown = other_dropdown|default({}) %}
 {% set _inline_download = inline_download|default(true) %}
+{% set _card = card|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(["border", "rounded"]) %}
+
+{% if _card is not empty %}
+  {% set attributes = attributes.addClass(["border-start", "border-end", "border-top", "rounded-bottom"]) %}
+
+  {%- include '@oe-bcl/bcl-card/card.html.twig' with _card|merge({
+    extra_classes_body: "p-0",
+    attributes: create_attribute().addClass(["rounded-0", "rounded-top", "p-4", "border-bottom-0"])
+  }) only -%}
+{% else %}
+  {% set attributes = attributes.addClass(["border", "rounded"]) %}
+{% endif %}
 
 <div
   {{ attributes }}
 >
-  <div class="px-4 py-3">
+  <div class="px-3-5 py-3">
     <div class="d-flex">
-      {% set _icon = _icon|merge({
-        attributes: create_attribute().addClass(["mt-1", "text-secondary"])
-      }) %}
-      {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
-      <div class="{{ 'w-100 ms-2-5' ~ ( _inline_download ? ' d-md-flex' : '' ) }}">
+      {% set _container_classes = "w-100" %}
+      {% if _icon is not empty %}
+        {% set _container_classes = _container_classes ~ " ms-2-5" %}
+        {% set _icon = _icon|merge({
+          attributes: create_attribute().addClass(["mt-1", "text-secondary"])
+        }) %}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+      {% endif %}
+      {% if _inline_download %}
+        {% set _container_classes = _container_classes ~ " d-md-flex" %}
+      {% endif %}
+      <div class="{{ _container_classes }}">
         <div class="flex-grow-1">
-          <p class="fw-bold m-0">{{ _title }}</p>
+          {% if _title is not empty %}
+            <p class="fw-bold m-0">{{ _title }}</p>
+          {% endif %}
           <small class="fw-bold m-0">
             {{ _file.language }}
             <span class="fw-normal">
@@ -64,7 +84,7 @@
     </div>
   </div>
   {% if _other_dropdown is not empty %}
-  <div class="bg-light py-3 px-4">
+  <div class="bg-light py-3 px-4 border-top">
     {% if _other_dropdown.alignment is not empty %}
     <div class="text-{{ _other_dropdown.alignment }}">
     {% endif %}
@@ -88,12 +108,32 @@
         {% if _item.type == "content" %}
           {{ _item.content }}
         {% else %}
-          <small class="fw-bold">{{ _item.language }} <span class="fw-normal">({{ _item.size ~ " - " ~ _item.extension }})</span></small>
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
-            attributes: create_attribute()
-                        .setAttribute("download", _item.download.url)
-                        .addClass(["d-block", "text-underline-hover", "mt-1"])
-          }) only %}
+          {% if _item.inline_download %}
+            <div class="row">
+          {% endif %}
+          {% if _item.inline_download %}
+            <div class="col-10">
+          {% endif %}
+              {% if _item.title is not empty %}
+                <p class="fw-bold m-0">{{ _item.title }}</p>
+              {% endif %}
+              {% if _item.title is not empty %}
+                <p class="m-0">{{ _item.description }}</p>
+              {% endif %}
+              <small class="fw-bold">{{ _item.language }} <span class="fw-normal">({{ _item.size ~ " - " ~ _item.extension }})</span></small>
+          {% if _item.inline_download %}
+            </div>
+            <div class="col-2 align-self-end">
+          {% endif %}
+            {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
+              attributes: create_attribute()
+                          .setAttribute("download", _item.download.url)
+                          .addClass(["d-block", "text-underline-hover", "mt-1"])
+            }) only %}
+          {% if _item.inline_download %}
+              </div>
+            </div>
+          {% endif %}
         {% endif %}
         </div>
       {% endfor %}

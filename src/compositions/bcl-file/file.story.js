@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data";
+import demoCardData from "@openeuropa/bcl-file/dataCard";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
@@ -28,6 +29,9 @@ export default {
   title: "Paragraphs/File",
   decorators: [withDesign],
   parameters: {
+    viewport: {
+      defaultViewport: "tablet",
+    },
     design: [
       {
         name: "Mockup - File",
@@ -39,7 +43,9 @@ export default {
 };
 
 const correctPaths = (data) => {
-  data.icon.path = defaultSprite;
+  if (data.icon) {
+    data.icon.path = defaultSprite;
+  }
   data.download.icon.path = defaultSprite;
   data.other_dropdown.dropdown_label.icon.path = defaultSprite;
   data.other_dropdown.items.forEach((item) => {
@@ -51,8 +57,12 @@ const correctPaths = (data) => {
   return data;
 };
 
-export const File = () => file(correctPaths(demoData));
+export const Default = () => file(correctPaths(demoData));
 
-File.storyName = "File";
-File.args = getArgs(demoData);
-File.argTypes = getArgTypes();
+Default.args = getArgs(demoData);
+Default.argTypes = getArgTypes();
+
+export const Card = () => file(correctPaths(demoCardData));
+
+Card.args = getArgs(demoData);
+Card.argTypes = getArgTypes();
