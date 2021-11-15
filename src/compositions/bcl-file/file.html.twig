@@ -1,0 +1,106 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - icon (icon Object) (default: {})
+  - title (string) (default: '')
+  - file (string) (default: '')
+  - download (link Object) (default: {})
+  - other_dropdown (object) (default: {}) format: {
+    id: "",
+    alignment: "",
+    dropdown_label: {}, - link Object
+    items: [
+      {
+        extension: "",
+        language: "",
+        size: "",
+        download: {}, - link Object
+      },
+  }
+#}
+
+{# Internal properties #}
+
+{% set _icon = icon|default({}) %}
+{% set _title = title|default('') %}
+{% set _file = file|default('') %}
+{% set _download = download|default({}) %}
+{% set _other_dropdown = other_dropdown|default({}) %}
+{% set _inline_download = inline_download|default(true) %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(["border", "rounded"]) %}
+
+<div
+  {{ attributes }}
+>
+  <div class="px-4 py-3">
+    <div class="d-flex">
+      {% set _icon = _icon|merge({
+        attributes: create_attribute().addClass(["mt-1", "text-secondary"])
+      }) %}
+      {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+      <div class="{{ 'w-100 ms-2-5' ~ ( _inline_download ? ' d-md-flex' : '' ) }}">
+        <div class="flex-grow-1">
+          <p class="fw-bold m-0">{{ _title }}</p>
+          <small class="fw-bold m-0">
+            {{ _file.language }}
+            <span class="fw-normal">
+              ({{ _file.size ~ " " ~ _file.extension }})
+            </span>
+          </small>
+        </div>
+        {% set _download = _download|merge({
+          attributes: create_attribute()
+                      .setAttribute("download", _download.url)
+                      .addClass(["text-underline-hover", "align-self-center", "d-inline-block", "mt-1", "mt-md-0"])
+        }) %}
+        {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
+      </div>
+    </div>
+  </div>
+  {% if _other_dropdown is not empty %}
+  <div class="bg-light py-3 px-4">
+    {% if _other_dropdown.alignment is not empty %}
+    <div class="text-{{ _other_dropdown.alignment }}">
+    {% endif %}
+    {% include '@oe-bcl/bcl-link/link.html.twig' with _other_dropdown.dropdown_label|merge({
+      path: "#" ~ _other_dropdown.id,
+      attributes: create_attribute()
+                  .addClass(['text-underline-hover'])
+                  .setAttribute("aria-controls", _other_dropdown.id)
+                  .setAttribute("data-bs-toggle", "collapse")
+                  .setAttribute("aria-expanded", "false")
+                  .setAttribute("role", "button"),
+    }) only %}
+    {% if _other_dropdown.alignment is not empty %}
+    </div>
+    {% endif %}
+    {% if _other_dropdown.items is not empty and _other_dropdown.items is iterable %}
+    <div class="collapse" id="{{ _other_dropdown.id }}">
+      {% for _item in _other_dropdown.items %}
+        {% set _item_classes = loop.last ? "pt-3" : "py-3 border-bottom" %}
+        <div class="{{ _item_classes }}">
+        {% if _item.type == "content" %}
+          {{ _item.content }}
+        {% else %}
+          <small class="fw-bold">{{ _item.language }} <span class="fw-normal">({{ _item.size ~ " - " ~ _item.extension }})</span></small>
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
+            attributes: create_attribute()
+                        .setAttribute("download", _item.download.url)
+                        .addClass(["d-block", "text-underline-hover", "mt-1"])
+          }) only %}
+        {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+{% endspaceless %}
