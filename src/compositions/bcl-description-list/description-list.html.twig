@@ -1,0 +1,53 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - "horizontal" (boolean) (default: false)
+  - "label" (string) (default: "")
+  - "content" (string) (default: "")
+  - "icon" (icon Object) (default: {})
+
+#}
+
+{# Parameters #}
+
+
+{% set _horizontal = horizontal|default(false) %}
+{% set _label = label|default('') %}
+{% set _content = content|default('') %}
+{% set _icon = icon|default({}) %}
+
+<div
+  {{ attributes }}
+>
+
+{% if _horizontal %}
+<div class="row">
+  <div class="col-3">
+{% endif %}
+  <div class="d-flex">
+{% if _icon is not empty %}
+  <div>
+  {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+    attributes: create_attribute().addClass("me-2")
+  }) only %}
+  </div>
+{% endif %}
+    {{- _label -}}
+  </div>
+{% if _horizontal %}
+  </div>
+{% endif %}
+
+{% if _horizontal %}
+  <div class="col-9">
+{% endif %}
+  {{- _content -}}
+{% if _horizontal %}
+  </div>
+</div>
+{% endif %}
+
+</div>
+
+{% endspaceless %}
