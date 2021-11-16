@@ -18,7 +18,7 @@ const getArgTypes = () => {
       description: "Inline download button",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: true },
+        defaultValue: { summary: "false" },
         category: "Style",
       },
     },
@@ -47,8 +47,8 @@ const correctPaths = (data) => {
     data.icon.path = defaultSprite;
   }
   data.download.icon.path = defaultSprite;
-  data.other_dropdown.dropdown_label.icon.path = defaultSprite;
-  data.other_dropdown.items.forEach((item) => {
+  data.translation.label.icon.path = defaultSprite;
+  data.translation.items.forEach((item) => {
     if (item.type != "content") {
       item.download.icon.path = defaultSprite;
     }
@@ -57,12 +57,15 @@ const correctPaths = (data) => {
   return data;
 };
 
-export const Default = () => file(correctPaths(demoData));
+const applyArgs = (data, args) => {
+  correctPaths(data);
+  return Object.assign(data, args);
+};
 
+export const Default = (args) => file(applyArgs(demoData, args));
 Default.args = getArgs(demoData);
-Default.argTypes = getArgTypes();
+Default.argTypes = getArgTypes(demoData);
 
-export const Card = () => file(correctPaths(demoCardData));
-
-Card.args = getArgs(demoData);
-Card.argTypes = getArgTypes();
+export const Card = (args) => file(applyArgs(demoCardData, args));
+Card.args = getArgs(demoCardData);
+Card.argTypes = getArgTypes(demoCardData);

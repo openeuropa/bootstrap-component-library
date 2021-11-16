@@ -2,11 +2,9 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   title: "File title",
-  file: {
-    extension: "PDF",
-    language: "English",
-    size: "16.2 MB",
-  },
+  language: "English",
+  meta: "(16.2 MB - PDF)",
+  inline_download: true,
   download: {
     label: "Download",
     url: "/example.html",
@@ -20,10 +18,10 @@ module.exports = {
     name: "file-pdf-fill",
     size: "xl",
   },
-  other_dropdown: {
+  translation: {
     id: "language-dropdown",
     alignment: "center",
-    dropdown_label: {
+    label: {
       label: "Other languages (3)",
       icon_position: "after",
       icon: {
@@ -33,9 +31,8 @@ module.exports = {
     },
     items: [
       {
-        extension: "PDF",
         language: "български",
-        size: "16.2 MB",
+        meta: "(16.2 MB - PDF)",
         download: {
           label: "Download",
           url: "/example.html",
@@ -47,9 +44,8 @@ module.exports = {
         },
       },
       {
-        extension: "PDF",
         language: "Español",
-        size: "16.2 MB",
+        meta: "(16.2 MB - PDF)",
         download: {
           label: "Download",
           url: "/example.html",
@@ -61,9 +57,8 @@ module.exports = {
         },
       },
       {
-        extension: "PDF",
         language: "Français",
-        size: "16.2 MB",
+        meta: "(16.2 MB - PDF)",
         download: {
           label: "Download",
           url: "/example.html",

@@ -1,11 +1,8 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  file: {
-    extension: "PDF",
-    language: "English",
-    size: "16.2 MB",
-  },
+  language: "English",
+  meta: "(16.2 MB - PDF)",
   download: {
     label: "Download",
     url: "/example.html",
@@ -15,10 +12,12 @@ module.exports = {
       size: "fluid",
     },
   },
-  other_dropdown: {
+  variant: "card",
+  inline_download: true,
+  translation: {
     id: "language-dropdown",
     alignment: "center",
-    dropdown_label: {
+    label: {
       label: "Other languages (3)",
       icon_position: "after",
       icon: {
@@ -31,9 +30,8 @@ module.exports = {
         title: "File title FR",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
-        extension: "PDF",
         language: "Français",
-        size: "16.2 MB",
+        meta: "(16.2 MB - PDF)",
         inline_download: true,
         download: {
           label: "Download",
@@ -49,9 +47,8 @@ module.exports = {
         title: "File title ES",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
-        extension: "PDF",
         language: "Español",
-        size: "16.2 MB",
+        meta: "(16.2 MB - PDF)",
         inline_download: true,
         download: {
           label: "Download",
@@ -67,9 +64,8 @@ module.exports = {
         title: "File title BG",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
-        extension: "PDF",
         language: "български",
-        size: "16.2 MB",
+        meta: "(16.2 MB - PDF)",
         inline_download: true,
         download: {
           label: "Download",
@@ -89,11 +85,6 @@ module.exports = {
     ],
   },
   card: {
-    horizontal: true,
-    horizontal_grid: {
-      left_col_classes: "col-4 order-2",
-      right_col_classes: "col-8",
-    },
     title: {
       content: "Title card",
     },
@@ -103,11 +94,10 @@ module.exports = {
       classes: "mb-2",
     },
     content:
-      "<span class='text-muted me-3 text-nowrap'>Resource type</span><span class='text-muted me-3 text-nowrap'>17 October 2019</span>",
+      "<span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Brussels, Belgium</span><span class='text-muted d-block d-md-inline-block me-3 text-nowrap'>17 October 2019</span>",
     image: {
       path: "https://picsum.photos/seed/1002/600/400",
       alt: "alt img",
-      position: "top",
     },
     badges: [
       {
