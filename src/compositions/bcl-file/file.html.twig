@@ -30,11 +30,6 @@
 {% set _inline_download = inline_download|default(true) %}
 {% set _card = card|default({}) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
-
-
 {% if _card is not empty %}
   {% set attributes = attributes.addClass(["border-start", "border-end", "border-top", "rounded-bottom"]) %}
 
