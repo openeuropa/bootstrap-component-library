@@ -2,11 +2,75 @@
 
 exports[`OE - Description List renders correctly 1`] = `
 <jest>
-  <div>
+  <dl>
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="#geo-alt-fill"
+        />
+      </svg>
+      <p
+        class="d-inline-block mb-0"
+      >
+        Only title label with icon
+      </p>
+    </dt>
+    <dd>
+      <p
+        class="mb-4"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      First title label
+    </dt>
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="#geo-alt-fill"
+        />
+      </svg>
+      <p
+        class="mb-0 d-inline-block"
+      >
+        Second title label
+      </p>
+    </dt>
+    <dd>
+      <p
+        class="mb-4"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      
+          Only title label
+    </dt>
+    <dd>
+      Description text goes here.
+    </dd>
+    <dd>
+      Description text goes here.
+    </dd>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List renders correctly 2`] = `
+<jest>
+  <dl>
     <div
-      class="d-flex"
+      class="row"
     >
-      <div>
+      <dt
+        class="col col-md-3"
+      >
         <svg
           class="me-2 bi icon--xs"
         >
@@ -14,56 +78,80 @@ exports[`OE - Description List renders correctly 1`] = `
             xlink:href="#geo-alt-fill"
           />
         </svg>
-      </div>
-      <p
-        class="fw-bold mb-0"
+        <p
+          class="mb-4 d-inline-block"
+        >
+          Only title label with icon
+        </p>
+      </dt>
+      <dd
+        class="col col-md-9"
       >
-        Exemple of very long label that can wrap on 2 lines
-      </p>
+        <p
+          class="mb-4"
+        >
+          Description text goes here.
+        </p>
+      </dd>
     </div>
-    <p>
-      Description text goes here.
-    </p>
-  </div>
-</jest>
-`;
-
-exports[`OE - Description List renders correctly 2`] = `
-<jest>
-  <div>
     <div
       class="row"
     >
       <div
-        class="col-3"
+        class="col col-md-3"
       >
-        <div
-          class="d-flex"
-        >
-          <div>
-            <svg
-              class="me-2 bi icon--xs"
-            >
-              <use
-                xlink:href="#geo-alt-fill"
-              />
-            </svg>
-          </div>
+        <dt>
           <p
-            class="fw-bold mb-0"
+            class="mb-0"
           >
-            Exemple of very long label that can wrap on 2 lines
+            First title label
           </p>
-        </div>
+        </dt>
+        <dt>
+          <svg
+            class="me-2 bi icon--xs"
+          >
+            <use
+              xlink:href="#geo-alt-fill"
+            />
+          </svg>
+          <p
+            class="mb-4 d-inline-block"
+          >
+            Second title label
+          </p>
+        </dt>
       </div>
-      <div
-        class="col-9"
+      <dd
+        class="col col-md-9"
       >
-        <p>
+        <p
+          class="mb-4"
+        >
           Description text goes here.
         </p>
+      </dd>
+    </div>
+    <div
+      class="row"
+    >
+      <dt
+        class="col col-md-3"
+      >
+        
+          Only title label
+      </dt>
+      <div
+        class="col col-md-9"
+      >
+        <dd>
+          Description text goes here.
+        </dd>
+        <dd>
+          Description text goes here.
+        </dd>
       </div>
     </div>
-  </div>
+  </dl>
 </jest>
 `;

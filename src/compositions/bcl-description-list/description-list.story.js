@@ -1,38 +1,33 @@
 import demoData from "@openeuropa/bcl-description-list/data.js";
+import demoDataHorizontal from "@openeuropa/bcl-description-list/dataHorizontal";
 import descriptionList from "@openeuropa/bcl-description-list/description-list.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
-const getArgs = (data) => {
-  return {
-    horizontal: data.horizontal || false,
-  };
-};
-
-const getArgTypes = () => {
-  return {
-    horizontal: {
-      name: "horizontal",
-      type: { name: "boolean" },
-      description: "Description list on horizontal layout",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: true },
-        category: "Style",
-      },
-    },
-  };
-};
-
-const applyArgs = (data, args) => {
-  if (data.icon) {
-    data.icon.path = defaultSprite;
-  }
-  return Object.assign(data, args);
+const correctPath = (data) => {
+  data.items.forEach((item) => {
+    if (item.term) {
+      if (Array.isArray(item.term)) {
+        item.term.forEach((term) => {
+          if (term.icon) {
+            term.icon.path = defaultSprite;
+          }
+        });
+      } else {
+        if (item.term.icon) {
+          item.term.icon.path = defaultSprite;
+        }
+      }
+    }
+  });
+  return data;
 };
 
 export default {
   title: "Paragraphs/Description List",
   parameters: {
+    controls: {
+      disable: true,
+    },
     design: [
       {
         name: "Mockup",
@@ -43,7 +38,7 @@ export default {
   },
 };
 
-export const Default = (args) => descriptionList(applyArgs(demoData, args));
+export const Default = () => descriptionList(correctPath(demoData));
 
-Default.args = getArgs(demoData);
-Default.argTypes = getArgTypes();
+export const Horizontal = () =>
+  descriptionList(correctPath(demoDataHorizontal));

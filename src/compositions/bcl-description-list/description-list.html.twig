@@ -2,52 +2,94 @@
 
 {#
   Parameters:
-  - "horizontal" (boolean) (default: false)
-  - "label" (string) (default: "")
-  - "content" (string) (default: "")
-  - "icon" (icon Object) (default: {})
+  - "items" (array) (default: []): format: [
+      {
+        "term" (object or array of object) -format: {
+          icon: {} - icon object,
+          label: ""
+        }
+        "definition" (block or array of string)
+      },
+      ...
+    ]
+  - "variant" (string) (default: '') 
+    - option: ["horizontal"]
 
 #}
 
 {# Parameters #}
 
 
-{% set _horizontal = horizontal|default(false) %}
-{% set _label = label|default('') %}
-{% set _content = content|default('') %}
-{% set _icon = icon|default({}) %}
+{% set _items = items|default([]) %}
+{% set _variant = variant|default('') %}
 
-<div
+<dl
   {{ attributes }}
 >
-
-{% if _horizontal %}
-<div class="row">
-  <div class="col-3">
-{% endif %}
-  <div class="d-flex">
-{% if _icon is not empty %}
-  <div>
-  {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
-    attributes: create_attribute().addClass("me-2")
-  }) only %}
-  </div>
-{% endif %}
-    {{- _label -}}
-  </div>
-{% if _horizontal %}
-  </div>
-{% endif %}
-
-{% if _horizontal %}
-  <div class="col-9">
-{% endif %}
-  {{- _content -}}
-{% if _horizontal %}
-  </div>
-</div>
-{% endif %}
-
-</div>
+  {% for _item in _items %}
+    {% if _variant == 'horizontal' %}
+      <div class="row">
+    {% endif %}
+    {% if _item.term is not empty %}
+      {% if _item.term is iterable %}
+        {% if _variant == 'horizontal' %}
+          <div class="col col-md-3">
+        {% endif %}
+        {% for _term in _item.term %}
+          <dt>
+            {%- if _term.icon is not empty -%}
+              {% include '@oe-bcl/bcl-icon/icon.html.twig' with _term.icon|merge({
+                attributes: create_attribute().addClass('me-2')
+              }) only %}
+            {%- endif -%}
+            {{- _term.label -}}
+          </dt>
+        {% endfor %}
+        {% if _variant == 'horizontal' %}
+        </div>
+        {% endif %}
+      {% else %}
+        <dt
+        {% if _variant == 'horizontal' %}
+          class="col col-md-3"
+        {% endif %}
+        >
+          {% if _item.term.icon is not empty %}
+            {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.term.icon|merge({
+              attributes: create_attribute().addClass('me-2')
+            }) only -%}
+          {% endif %}
+          {{- _item.term.label -}}
+        </dt>
+      {% endif %}
+    {% endif %}
+    {% if _item.definition is not empty %}
+      {% if _item.definition is iterable %}
+        {% if _variant == 'horizontal' %}
+          <div class="col col-md-9">
+        {% endif %}
+        {% for _definition in _item.definition %}
+          {% if _definition.label is not defined %}
+            <dd>{{- _definition -}}</dd>
+          {% endif %}
+        {% endfor %}
+        {% if _variant == 'horizontal' %}
+        </div>
+        {% endif %}
+      {% else %}
+        <dd
+        {% if _variant == 'horizontal' %}
+          class="col col-md-9"
+        {% endif %}
+        >
+          {%- block definition _item.definition -%}
+        </dd>
+      {% endif %}
+    {% endif %}
+    {% if _variant == 'horizontal' %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</dl>
 
 {% endspaceless %}
