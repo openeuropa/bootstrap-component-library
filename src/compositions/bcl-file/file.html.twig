@@ -42,7 +42,7 @@
 {% set _variant = variant|default('default') %}
 {% set _download = download|default({}) %}
 {% set _translation = translation|default({}) %}
-{% set _card = card|default({}) %}
+{% set _icon_path = icon_path|default({}) %}
 
 {% set _container_classes = 'w-100 d-md-flex' %}
 {% if _icon is not empty %}
@@ -87,7 +87,9 @@
   <div class="px-3-5 py-3">
     <div class="d-flex">
       {% if _icon is not empty %}
-        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+          path: _icon_path,
+        }) only -%}
       {% endif %}
       <div class="{{ _container_classes }}">
         <div class="flex-grow-1">
@@ -112,7 +114,7 @@
           icon: {
             name: "download",
             size: "fluid",
-            path: _download.icon_path,
+            path: _icon_path,
           },
           attributes: create_attribute()
                       .setAttribute('download', _download.url)
@@ -172,7 +174,7 @@
               icon: {
                 name: "download",
                 size: "fluid",
-                path: _item.icon_path,
+                path: _icon_path,
               },
               attributes: create_attribute()
                           .setAttribute("download", _item.download.url)
