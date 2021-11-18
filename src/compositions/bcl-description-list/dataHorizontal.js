@@ -5,13 +5,13 @@ module.exports = {
   items: [
     {
       term: {
-        label: '<p class="mb-4 d-inline-block">Only title label with icon</p>',
+        label: '<p class="mb-0 d-inline-block">Only title label with icon</p>',
         icon: {
           name: "geo-alt-fill",
           size: "xs",
         },
       },
-      definition: '<p class="mb-4">Description text goes here.</p>',
+      definition: '<p class="mb-5">Description text goes here.</p>',
     },
     {
       term: [
@@ -19,14 +19,14 @@ module.exports = {
           label: '<p class="mb-0">First title label</p>',
         },
         {
-          label: '<p class="mb-4 d-inline-block">Second title label</p>',
+          label: '<p class="mb-0 d-inline-block">Second title label</p>',
           icon: {
             name: "geo-alt-fill",
             size: "xs",
           },
         },
       ],
-      definition: '<p class="mb-4">Description text goes here.</p>',
+      definition: '<p class="mb-5">Description text goes here.</p>',
     },
     {
       term: {
@@ -34,7 +34,7 @@ module.exports = {
       },
       definition: [
         "Description text goes here.",
-        "Description text goes here.",
+        '<p class="mb-5">Description text goes here.</p>',
       ],
     },
   ],

@@ -67,3 +67,8 @@ $utilities: map-merge(
 .bg-lighter {
   background-color: $lighter;
 }
+
+.grid-3-9 {
+  grid-template-columns: 25% max-content;
+  grid-gap: map-get($gutters, "2-5");
+}
