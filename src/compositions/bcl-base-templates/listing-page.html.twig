@@ -35,14 +35,14 @@
   <hr class="d-none d-md-block mb-4"/>
   <div class="d-md-none">
     {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
-      extra_classes: "mb-4"
+      extra_classes: 'mb-4',
     }) only %}
   </div>
 {% endblock %}
 
 {% block content %}
   {% if _listing is not empty %}
-    {% include "@oe-bcl/bcl-listing/listing.html.twig" with  _listing %}
+    {% include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing %}
   {% endif %}
 {% endblock %}
 
