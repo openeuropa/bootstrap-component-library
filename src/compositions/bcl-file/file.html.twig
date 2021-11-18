@@ -54,7 +54,7 @@
 {% endif %}
 
 {% if _variant == 'card' %}
-  {% set attributes = attributes.addClass(['border-start', 'border-end', 'border-top', 'rounded-bottom']) %}
+  {% set attributes = attributes.addClass(['border', 'rounded-bottom']) %}
   {% set _image = _image|merge({
     position: "top",
     classes: "mb-3"
@@ -126,8 +126,7 @@
     </div>
   </div>
   {% if _translation is not empty %}
-  
-  <div class="bg-light py-3 px-4 border-top">
+  <div class="bg-lighter py-3 px-4 border-top">
     {% set _id = _translation.id|default('language-dropdown' ~ random(1000)) %}
     <div class="text-end text-md-center">
       {% include '@oe-bcl/bcl-link/link.html.twig' with _translation.label|merge({
