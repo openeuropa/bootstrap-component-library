@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import header from "@openeuropa/bcl-data-header/data";
+import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
@@ -33,6 +33,8 @@ const demoListing = {
   ...dataListing,
   with_sidebar: true,
 };
+
+demoListing.footer.attributes.addClass("mt-3-5");
 
 const correctPaths = (data) => {
   if (data.header.head.navigation) {

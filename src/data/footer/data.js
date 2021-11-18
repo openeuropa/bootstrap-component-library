@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  attributes: new drupalAttribute(),
   rows: [
     {
       extra_classes: "pt-4 pt-lg-5",

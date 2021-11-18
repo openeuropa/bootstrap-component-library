@@ -48,6 +48,7 @@
 
 {% block content_bottom %}
   {% if _pagination is not empty %}
+    <hr class="d-none d-md-block mt-4-5">
     {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with _pagination only %}
   {% endif %}
 {% endblock %}
