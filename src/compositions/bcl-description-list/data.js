@@ -10,7 +10,7 @@ module.exports = {
           size: "xs",
         },
       },
-      definition: "<p class='mb-4'>Description text goes here.</p>",
+      definition: "<p class='mb-2'>Description text goes here.</p>",
     },
     {
       term: [
@@ -25,7 +25,7 @@ module.exports = {
           },
         },
       ],
-      definition: "<p class='mb-4'>Description text goes here.</p>",
+      definition: "<p class='mb-2'>Description text goes here.</p>",
     },
     {
       term: {
