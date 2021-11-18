@@ -4,7 +4,6 @@ module.exports = {
   title: "File title",
   language: "English",
   meta: "(16.2 MB - PDF)",
-  inline_download: true,
   download: {
     label: "Download",
     url: "/example.html",

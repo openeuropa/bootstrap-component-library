@@ -13,7 +13,7 @@ exports[`OE - File Card renders correctly 1`] = `
       >
         <img
           alt="alt img"
-          class="card-img-top mb-0 mb-md-3"
+          class="card-img-top mb-3"
           src="https://picsum.photos/seed/1002/600/400"
         />
       </div>
@@ -40,7 +40,12 @@ exports[`OE - File Card renders correctly 1`] = `
           <h5
             class="card-title"
           >
-            Title card
+            <a
+              class="text-underline-hover"
+              href="#"
+            >
+              Article title
+            </a>
           </h5>
           <p
             class="card-text mb-2"
@@ -113,7 +118,7 @@ exports[`OE - File Card renders correctly 1`] = `
       class="bg-light py-3 px-4 border-top"
     >
       <div
-        class="text-center"
+        class="text-end text-md-center"
       >
         <a
           aria-controls="language-dropdown"
@@ -144,7 +149,7 @@ exports[`OE - File Card renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-10"
+              class="col-12 col-md-9"
             >
               <p
                 class="fw-bold m-0"
@@ -168,7 +173,7 @@ exports[`OE - File Card renders correctly 1`] = `
               </small>
             </div>
             <div
-              class="col-2 align-self-end"
+              class="col-12 col-md-3 align-self-end text-md-end"
             >
               <a
                 class="d-block text-underline-hover mt-1"
@@ -194,7 +199,7 @@ exports[`OE - File Card renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-10"
+              class="col-12 col-md-9"
             >
               <p
                 class="fw-bold m-0"
@@ -218,7 +223,7 @@ exports[`OE - File Card renders correctly 1`] = `
               </small>
             </div>
             <div
-              class="col-2 align-self-end"
+              class="col-12 col-md-3 align-self-end text-md-end"
             >
               <a
                 class="d-block text-underline-hover mt-1"
@@ -244,7 +249,7 @@ exports[`OE - File Card renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-10"
+              class="col-12 col-md-9"
             >
               <p
                 class="fw-bold m-0"
@@ -268,7 +273,7 @@ exports[`OE - File Card renders correctly 1`] = `
               </small>
             </div>
             <div
-              class="col-2 align-self-end"
+              class="col-12 col-md-3 align-self-end text-md-end"
             >
               <a
                 class="d-block text-underline-hover mt-1"
@@ -369,7 +374,7 @@ exports[`OE - File renders correctly 1`] = `
       class="bg-light py-3 px-4 border-top"
     >
       <div
-        class="text-center"
+        class="text-end text-md-center"
       >
         <a
           aria-controls="language-dropdown"
@@ -396,86 +401,122 @@ exports[`OE - File renders correctly 1`] = `
         <div
           class="py-3 border-bottom"
         >
-          <small
-            class="fw-bold m-0"
+          <div
+            class="row"
           >
-            български
-            <span
-              class="fw-normal"
+            <div
+              class="col-12 col-md-9"
             >
-               (16.2 MB - PDF)
-            </span>
-          </small>
-          <a
-            class="d-block text-underline-hover mt-1"
-            download="/example.html"
-            href="#"
-          >
-            Download
-            <svg
-              class="ms-2-5 bi icon--fluid"
+              <small
+                class="fw-bold m-0"
+              >
+                български
+                <span
+                  class="fw-normal"
+                >
+                   (16.2 MB - PDF)
+                </span>
+              </small>
+            </div>
+            <div
+              class="col-12 col-md-3 align-self-end text-md-end"
             >
-              <use
-                xlink:href="#download"
-              />
-            </svg>
-          </a>
+              <a
+                class="d-block text-underline-hover mt-1"
+                download="/example.html"
+                href="#"
+              >
+                Download
+                <svg
+                  class="ms-2-5 bi icon--fluid"
+                >
+                  <use
+                    xlink:href="#download"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
         <div
           class="py-3 border-bottom"
         >
-          <small
-            class="fw-bold m-0"
+          <div
+            class="row"
           >
-            Español
-            <span
-              class="fw-normal"
+            <div
+              class="col-12 col-md-9"
             >
-               (16.2 MB - PDF)
-            </span>
-          </small>
-          <a
-            class="d-block text-underline-hover mt-1"
-            download="/example.html"
-            href="#"
-          >
-            Download
-            <svg
-              class="ms-2-5 bi icon--fluid"
+              <small
+                class="fw-bold m-0"
+              >
+                Español
+                <span
+                  class="fw-normal"
+                >
+                   (16.2 MB - PDF)
+                </span>
+              </small>
+            </div>
+            <div
+              class="col-12 col-md-3 align-self-end text-md-end"
             >
-              <use
-                xlink:href="#download"
-              />
-            </svg>
-          </a>
+              <a
+                class="d-block text-underline-hover mt-1"
+                download="/example.html"
+                href="#"
+              >
+                Download
+                <svg
+                  class="ms-2-5 bi icon--fluid"
+                >
+                  <use
+                    xlink:href="#download"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
         <div
           class="py-3 border-bottom"
         >
-          <small
-            class="fw-bold m-0"
+          <div
+            class="row"
           >
-            Français
-            <span
-              class="fw-normal"
+            <div
+              class="col-12 col-md-9"
             >
-               (16.2 MB - PDF)
-            </span>
-          </small>
-          <a
-            class="d-block text-underline-hover mt-1"
-            download="/example.html"
-            href="#"
-          >
-            Download
-            <svg
-              class="ms-2-5 bi icon--fluid"
+              <small
+                class="fw-bold m-0"
+              >
+                Français
+                <span
+                  class="fw-normal"
+                >
+                   (16.2 MB - PDF)
+                </span>
+              </small>
+            </div>
+            <div
+              class="col-12 col-md-3 align-self-end text-md-end"
             >
-              <use
-                xlink:href="#download"
-              />
-            </svg>
-          </a>
+              <a
+                class="d-block text-underline-hover mt-1"
+                download="/example.html"
+                href="#"
+              >
+                Download
+                <svg
+                  class="ms-2-5 bi icon--fluid"
+                >
+                  <use
+                    xlink:href="#download"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
         <div
           class="pt-3"

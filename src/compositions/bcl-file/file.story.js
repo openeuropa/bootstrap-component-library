@@ -4,33 +4,15 @@ import demoData from "@openeuropa/bcl-file/data";
 import demoCardData from "@openeuropa/bcl-file/dataCard";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
-const getArgs = (data) => {
-  return {
-    inline_download: data.inline_download || true,
-  };
-};
-
-const getArgTypes = () => {
-  return {
-    inline_download: {
-      name: "inline download",
-      type: { name: "boolean" },
-      description: "Inline download button",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
-    },
-  };
-};
-
 export default {
   title: "Paragraphs/File",
   decorators: [withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",
+    },
+    controls: {
+      disable: true,
     },
     design: [
       {
@@ -57,15 +39,6 @@ const correctPaths = (data) => {
   return data;
 };
 
-const applyArgs = (data, args) => {
-  correctPaths(data);
-  return Object.assign(data, args);
-};
+export const Default = () => file(correctPaths(demoData));
 
-export const Default = (args) => file(applyArgs(demoData, args));
-Default.args = getArgs(demoData);
-Default.argTypes = getArgTypes(demoData);
-
-export const Card = (args) => file(applyArgs(demoCardData, args));
-Card.args = getArgs(demoCardData);
-Card.argTypes = getArgTypes(demoCardData);
+export const Card = () => file(correctPaths(demoCardData));
