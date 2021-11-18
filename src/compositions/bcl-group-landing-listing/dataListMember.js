@@ -194,11 +194,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Stefan Mayer",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Stefan Mayer</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -211,11 +208,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Adjur Tichar",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Adjur Tichar</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -228,11 +222,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Szép Mara",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Szép Mara</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -245,11 +236,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Daniel Cardoso Rocha",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Daniel Cardoso Rocha</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -262,11 +250,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Aurelia Panicucci",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Aurelia Panicucci</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -279,11 +264,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Felicyta Kowalska",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Felicyta Kowalska</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -296,11 +278,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Lorenzo Olson",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Lorenzo Olson</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -313,11 +292,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Nino Treviño Montalvo",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Nino Treviño Montalvo</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -330,11 +306,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "José Luis Pabón Barrios",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>José Luis Pabón Barrios</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -347,11 +320,8 @@ module.exports = {
         {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Maddison Marsh",
-            tag: "a",
-            attributes: new drupalAttribute()
-              .setAttribute("href", "/example.html")
-              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
+            content:
+              "<a href='/example.html' class='text-underline-hover h5 mb-3 d-block'>Maddison Marsh</a>",
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
