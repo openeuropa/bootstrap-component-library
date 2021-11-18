@@ -1,0 +1,85 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - "items" (array) (default: []): format: [
+      {
+        "term" (object or array of object) -format: {
+          icon: {} - icon object,
+          label: ""
+        }
+        "definition" (block or array of string)
+      },
+      ...
+    ]
+  - "variant" (string) (default: '') 
+    - option: ["horizontal"]
+
+#}
+
+{# Parameters #}
+
+
+{% set _items = items|default([]) %}
+{% set _variant = variant|default('') %}
+
+{% if _variant == 'horizontal' %}
+  {% set attributes = attributes.addClass(["d-md-grid", "grid-3-9"]) %}
+{% endif %}
+
+<dl
+  {{ attributes }}
+>
+  {% for _item in _items %}
+    {% if _item.term is not empty %}
+      {% if _item.term is iterable %}
+        {% if _variant == 'horizontal' %}
+          <div>
+        {% endif %}
+        {% for _term in _item.term %}
+          <dt>
+            {%- if _term.icon is not empty -%}
+              {% include '@oe-bcl/bcl-icon/icon.html.twig' with _term.icon|merge({
+                attributes: create_attribute().addClass('me-2')
+              }) only %}
+            {%- endif -%}
+            <div class="align-middle d-inline-block">{{- _term.label -}}</div>
+          </dt>
+        {% endfor %}
+        {% if _variant == 'horizontal' %}
+          </div>
+        {% endif %}
+      {% else %}
+        <dt>
+          {% if _item.term.icon is not empty %}
+            {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.term.icon|merge({
+              attributes: create_attribute().addClass('me-2')
+            }) only -%}
+          {% endif %}
+          <div class="align-middle d-inline-block">{{- _item.term.label -}}</div>
+        </dt>
+      {% endif %}
+    {% endif %}
+    {% if _item.definition is not empty %}
+      {% if _item.definition is iterable %}
+        {% if _variant == 'horizontal' %}
+          <div>
+        {% endif %}
+        {% for _definition in _item.definition %}
+          {% if _definition.label is not defined %}
+            <dd>{{- _definition -}}</dd>
+          {% endif %}
+        {% endfor %}
+        {% if _variant == 'horizontal' %}
+          </div>
+        {% endif %}
+      {% else %}
+        <dd>
+          {%- block definition _item.definition -%}
+        </dd>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</dl>
+
+{% endspaceless %}
