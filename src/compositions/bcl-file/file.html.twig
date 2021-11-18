@@ -108,6 +108,12 @@
           {% endif %}
         </div>
         {% set _download = _download|merge({
+          icon_position: "after",
+          icon: {
+            name: "download",
+            size: "fluid",
+            path: _download.icon_path,
+          },
           attributes: create_attribute()
                       .setAttribute('download', _download.url)
                       .addClass(['text-underline-hover', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0'])
@@ -162,6 +168,12 @@
             </div>
             <div class="col-12 col-md-3 align-self-end text-md-end">
             {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
+              icon_position: "after",
+              icon: {
+                name: "download",
+                size: "fluid",
+                path: _item.icon_path,
+              },
               attributes: create_attribute()
                           .setAttribute("download", _item.download.url)
                           .addClass(['d-block', 'text-underline-hover', 'mt-1'])

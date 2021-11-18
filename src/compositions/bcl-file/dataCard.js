@@ -22,11 +22,6 @@ module.exports = {
   download: {
     label: "Download",
     url: "/example.html",
-    icon_position: "after",
-    icon: {
-      name: "download",
-      size: "fluid",
-    },
   },
   variant: "card",
   translation: {
@@ -47,15 +42,9 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
         language: "Français",
         meta: "(16.2 MB - PDF)",
-        inline_download: true,
         download: {
           label: "Download",
           url: "/example.html",
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-          },
         },
       },
       {
@@ -64,15 +53,9 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
         language: "Español",
         meta: "(16.2 MB - PDF)",
-        inline_download: true,
         download: {
           label: "Download",
           url: "/example.html",
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-          },
         },
       },
       {
@@ -81,15 +64,9 @@ module.exports = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
         language: "български",
         meta: "(16.2 MB - PDF)",
-        inline_download: true,
         download: {
           label: "Download",
           url: "/example.html",
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-          },
         },
       },
       {

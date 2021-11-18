@@ -28,11 +28,11 @@ const correctPaths = (data) => {
   if (data.icon) {
     data.icon.path = defaultSprite;
   }
-  data.download.icon.path = defaultSprite;
+  data.download.icon_path = defaultSprite;
   data.translation.label.icon.path = defaultSprite;
   data.translation.items.forEach((item) => {
     if (item.type != "content") {
-      item.download.icon.path = defaultSprite;
+      item.download.icon_path = defaultSprite;
     }
   });
 

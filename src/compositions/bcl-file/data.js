@@ -7,11 +7,6 @@ module.exports = {
   download: {
     label: "Download",
     url: "/example.html",
-    icon_position: "after",
-    icon: {
-      name: "download",
-      size: "fluid",
-    },
   },
   icon: {
     name: "file-pdf-fill",
@@ -35,11 +30,6 @@ module.exports = {
         download: {
           label: "Download",
           url: "/example.html",
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-          },
         },
       },
       {
@@ -48,11 +38,6 @@ module.exports = {
         download: {
           label: "Download",
           url: "/example.html",
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-          },
         },
       },
       {
@@ -61,11 +46,6 @@ module.exports = {
         download: {
           label: "Download",
           url: "/example.html",
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-          },
         },
       },
       {
