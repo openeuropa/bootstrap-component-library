@@ -244,14 +244,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           text: {
             classes: "mb-2",
@@ -275,14 +271,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           text: {
             classes: "mb-2",
@@ -306,14 +298,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           text: {
             classes: "mb-2",
@@ -337,14 +325,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           text: {
             classes: "mb-2",
@@ -368,14 +352,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           text: {
             classes: "mb-2",
@@ -399,14 +379,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           text: {
             classes: "mb-2",

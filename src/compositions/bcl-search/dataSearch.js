@@ -134,17 +134,9 @@ module.exports = {
           ],
           title: {
             tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-              {
-                name: "target",
-                value: "_blank",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["fs-5", "text-underline-hover", "mb-2"]),
             content: "Lorem ipsum dolor sit amet",
           },
           text: {
@@ -171,13 +163,9 @@ module.exports = {
           ],
           title: {
             tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["fs-5", "text-underline-hover", "mb-2"]),
             content: "Incididunt ut labore et dolore",
           },
           text: {
@@ -208,13 +196,9 @@ module.exports = {
           ],
           title: {
             tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["fs-5", "text-underline-hover", "mb-2"]),
             content: "Quis nostrud exercitation ullamco",
           },
           text: {
@@ -240,13 +224,9 @@ module.exports = {
           ],
           title: {
             tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["fs-5", "text-underline-hover", "mb-2"]),
             content: "Quis nostrud exercitation ullamco",
           },
           text: {
@@ -277,13 +257,9 @@ module.exports = {
           ],
           title: {
             tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["fs-5", "text-underline-hover", "mb-2"]),
             content: "Duis aute irure dolor in Excepteur",
           },
           text: {
@@ -314,13 +290,9 @@ module.exports = {
           ],
           title: {
             tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["fs-5", "text-underline-hover", "mb-2"]),
             content: "Excepteur sint occaecat cupidatat non",
           },
           text: {

@@ -1,6 +1,7 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData, { image } from "@openeuropa/bcl-data-card/data";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal";
+import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/bcl-card/card.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
@@ -60,10 +61,9 @@ describe("OE - Card", () => {
 
   test(`renders correctly with custom title attributes`, () => {
     expect.assertions(1);
-    demoData.title.attributes = [
-      { name: "test", value: "value" },
-      { name: "attribute", value: "with a value" },
-    ];
+    demoData.title.attributes = new drupalAttribute()
+      .setAttribute("test", "value")
+      .setAttribute("attribute", "with a value");
 
     return expect(render(demoData, true)).resolves.toMatchSnapshot();
   });

@@ -195,14 +195,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Stefan Mayer",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -216,14 +212,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Adjur Tichar",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -237,14 +229,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Szép Mara",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -258,14 +246,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Daniel Cardoso Rocha",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -279,14 +263,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Aurelia Panicucci",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -300,14 +280,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Felicyta Kowalska",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -321,14 +297,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Lorenzo Olson",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -342,14 +314,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Nino Treviño Montalvo",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -363,14 +331,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "José Luis Pabón Barrios",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -384,14 +348,10 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Maddison Marsh",
-            classes: "mb-3 h5 text-underline-hover d-block",
             tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            attributes: new drupalAttribute()
+              .setAttribute("href", "/example.html")
+              .addClass(["mb-3", "h5", "text-underline-hover", "d-block"]),
           },
           content:
             "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
