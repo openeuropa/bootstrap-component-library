@@ -132,3 +132,4 @@ FullPage.storyName = "News page";
 export const Listing = () => listingPage(correctPaths(demoListing, "listing"));
 
 Listing.storyName = "News listing";
+Listing.decorators = [scriptInit];
