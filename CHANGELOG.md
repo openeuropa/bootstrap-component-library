@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.14.0 (2021-11-19)
+
+#### :rocket: New Feature
+
+* [#135](https://github.com/openeuropa/bootstrap-component-library/pull/135) feat(news): Adding News screens - FRONT-3395 ([@planctus](https://github.com/planctus))
+* [#136](https://github.com/openeuropa/bootstrap-component-library/pull/136) fix(card): Fix title attributes and duplicated image in card component - FRONT-3398 ([@tibi2303](https://github.com/tibi2303))
+* [#132](https://github.com/openeuropa/bootstrap-component-library/pull/132) feat(file): Added file paragraph. - Front 3139 ([@tibi2303](https://github.com/tibi2303))
+* [#133](https://github.com/openeuropa/bootstrap-component-library/pull/133) feat(description-list): Added description list - FRONT-2562 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+
+* [#134](https://github.com/openeuropa/bootstrap-component-library/pull/134) feat(ucpkn): Changed variables - FRONT-3372 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.13.0 (2021-11-11)
 
 #### :rocket: New Feature
