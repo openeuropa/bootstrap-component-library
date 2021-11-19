@@ -53,22 +53,3 @@ export const parameters = {
     },
   },
 };
-
-const scriptInit = (story) => {
-  const demo = story();
-  return `
-    <script>
-      var badges = document.querySelectorAll(".badge");
-      badges.forEach(element => {
-        var close = element.getElementsByTagName('span')[0];
-        if (close) {
-          close.addEventListener('click', event => {
-            close.parentElement.remove();
-          })
-        }
-      });
-    </script>
-  ${demo}`;
-};
-
-export const decorators = [scriptInit];

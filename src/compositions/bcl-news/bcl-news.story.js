@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import { initScript } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
@@ -35,9 +34,7 @@ const demoListing = {
   with_sidebar: true,
 };
 
-demoListing.footer.attributes.addClass("mt-3-5");
-
-const correctPaths = (data) => {
+const correctPaths = (data, variant) => {
   if (data.header.head.navigation) {
     data.header.head.navigation.items.forEach((item) => {
       if (item.icon) {
@@ -75,9 +72,29 @@ const correctPaths = (data) => {
         }
       });
     });
+    if (variant === "listing") {
+      data.footer.attributes.addClass("mt-3-5");
+    }
   }
 
   return data;
+};
+
+const scriptInit = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var badges = document.querySelectorAll(".badge");
+      badges.forEach(element => {
+        var close = element.getElementsByTagName('span')[0];
+        if (close) {
+          close.addEventListener('click', event => {
+            close.parentElement.remove();
+          })
+        }
+      });
+    </script>
+  ${demo}`;
 };
 
 export default {
@@ -86,7 +103,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     controls: {
-      disabled: true,
+      disable: true,
     },
     design: [
       {
@@ -103,11 +120,11 @@ export default {
   },
 };
 
-export const FullPage = () => news(correctPaths(demoData));
+export const FullPage = () => news(correctPaths(demoData, "default"));
 
 FullPage.storyName = "News page";
 
-export const Listing = () => listingPage(correctPaths(demoListing));
+export const Listing = () => listingPage(correctPaths(demoListing, "listing"));
 
 Listing.storyName = "News listing";
-Listing.decorators = [initScript];
+Listing.decorators = [initScript, withDesign];
