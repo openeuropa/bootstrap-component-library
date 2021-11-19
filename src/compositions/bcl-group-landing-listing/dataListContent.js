@@ -243,15 +243,8 @@ module.exports = {
           ],
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
-            tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Group name</a>",
           },
           text: {
             classes: "mb-2",
@@ -274,15 +267,8 @@ module.exports = {
           ],
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
-            tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Group name</a>",
           },
           text: {
             classes: "mb-2",
@@ -305,15 +291,8 @@ module.exports = {
           ],
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
-            tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Group name</a>",
           },
           text: {
             classes: "mb-2",
@@ -336,15 +315,8 @@ module.exports = {
           ],
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
-            tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Group name</a>",
           },
           text: {
             classes: "mb-2",
@@ -367,15 +339,8 @@ module.exports = {
           ],
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
-            tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Group name</a>",
           },
           text: {
             classes: "mb-2",
@@ -398,15 +363,8 @@ module.exports = {
           ],
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
-            content: "Group name",
-            classes: "mb-3 h5 text-underline-hover d-block",
-            tag: "a",
-            attributes: [
-              {
-                name: "href",
-                value: "example.html",
-              },
-            ],
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Group name</a>",
           },
           text: {
             classes: "mb-2",
