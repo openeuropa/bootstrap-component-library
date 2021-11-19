@@ -133,19 +133,8 @@ module.exports = {
             },
           ],
           title: {
-            tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-              {
-                name: "target",
-                value: "_blank",
-              },
-            ],
-            content: "Lorem ipsum dolor sit amet",
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Lorem ipsum dolor sit amet</a>",
           },
           text: {
             content:
@@ -170,15 +159,8 @@ module.exports = {
             },
           ],
           title: {
-            tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
-            content: "Incididunt ut labore et dolore",
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Incididunt ut labore et dolore</a>",
           },
           text: {
             content:
@@ -207,15 +189,8 @@ module.exports = {
             },
           ],
           title: {
-            tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
-            content: "Quis nostrud exercitation ullamco",
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Quis nostrud exercitation ullamco</a>",
           },
           text: {
             content:
@@ -239,15 +214,8 @@ module.exports = {
             },
           ],
           title: {
-            tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
-            content: "Quis nostrud exercitation ullamco",
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Quis nostrud exercitation ullamco</a>",
           },
           text: {
             content:
@@ -276,15 +244,8 @@ module.exports = {
             },
           ],
           title: {
-            tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
-            content: "Duis aute irure dolor in Excepteur",
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Duis aute irure dolor in Excepteur</a>",
           },
           text: {
             content:
@@ -313,15 +274,8 @@ module.exports = {
             },
           ],
           title: {
-            tag: "a",
-            classes: "fs-5 text-underline-hover mb-2",
-            attributes: [
-              {
-                name: "href",
-                value: "/example.html",
-              },
-            ],
-            content: "Excepteur sint occaecat cupidatat non",
+            content:
+              "<a href='/example.html' class='text-underline-hover'>Excepteur sint occaecat cupidatat non</a>",
           },
           text: {
             content:

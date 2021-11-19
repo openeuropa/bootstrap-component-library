@@ -121,7 +121,7 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Stefan Mayer",
-            classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           content:
             "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -140,7 +140,7 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Adjur Tichar",
-            classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           content:
             "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -159,7 +159,7 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Szép Mara",
-            classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           content:
             "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -178,7 +178,7 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Daniel Cardoso Rocha",
-            classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           content:
             "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -197,7 +197,7 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Aurelia Panicucci",
-            classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           content:
             "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -216,7 +216,7 @@ module.exports = {
           extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
           title: {
             content: "Felicyta Kowalska",
-            classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
           content:
             "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",

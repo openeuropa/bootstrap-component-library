@@ -138,7 +138,7 @@
 {% endif %}
   {% if _date is not empty %}
     {% include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
-  {% elseif _image is not empty %}
+  {% elseif _image is not empty and _image.position != "bottom" %}
     <img
       src="{{ _image.path }}"
       alt="{{ _image.alt }}"
@@ -176,14 +176,9 @@
   {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
-      class="card-title{{ title.classes ? ' ' ~ title.classes }}"
-      {% if _title.attributes is not empty and _title.attributes is iterable %}
-        {% set _title_attributes = create_attribute() %}
-        {% for attribute in _title.attributes %}
-          {% set _title_attributes =  _title_attributes.setAttribute(attribute.name, attribute.value) %}
-        {% endfor %}
-        {{ _title_attributes }}
-      {% endif %}
+      {% set _title_attributes = title.attributes ?: create_attribute() %}
+      {% set _title_attributes = _title_attributes.addClass("card-title") %}
+      {{ _title_attributes }}
     >
       {{- title.content -}}
     </{{ _title_tag }}>
