@@ -1,0 +1,194 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - icon (icon Object) (default: {})
+  - title (string) (default: '')
+  - text (string) (default: '')
+  - content (string) (default: '')
+  - image (object) (default: {}) - format: {
+    path:"",
+    alt: "",
+  }
+  - badges (array of badges Object) (default: [])
+  - meta (string) (default: '')
+  - language (string) (default: '')
+  - variant (string) (default: 'default')
+    - options: ['default', 'card']
+  - download (link Object) (default: {})
+  - translation (object) (default: {}) format: {
+    id: "",
+    label: {}, - link Object
+    items: [
+      {
+        extension: "",
+        language: "",
+        size: "",
+        download: {}, - link Object
+      },
+  }
+  - icon_path (string) (default: '')
+#}
+
+{# Internal properties #}
+
+{% set _icon = icon|default({}) %}
+{% set _title = title|default('') %}
+{% set _text = text|default('') %}
+{% set _content = content|default('') %}
+{% set _image = image|default({}) %}
+{% set _badges = badges|default([]) %}
+{% set _meta = meta|default('') %}
+{% set _language = language|default('') %}
+{% set _variant = variant|default('default') %}
+{% set _download = download|default({}) %}
+{% set _translation = translation|default({}) %}
+{% set _icon_path = icon_path|default({}) %}
+
+{% set _container_classes = 'w-100 d-md-flex' %}
+{% if _icon is not empty %}
+  {% set _container_classes = _container_classes ~ ' ms-2-5' %}
+  {% set _icon = _icon|merge({
+    attributes: create_attribute().addClass(['mt-1', 'text-secondary'])
+  }) %}
+{% endif %}
+
+{% if _variant == 'card' %}
+  {% set attributes = attributes.addClass(['border', 'rounded-bottom']) %}
+  {% set _image = _image|merge({
+    position: "top",
+    classes: "mb-3"
+  }) %}
+  {% include '@oe-bcl/bcl-card/card.html.twig' with {
+    horizontal: true,
+    horizontal_grid: {
+      left_col_classes: "col-12 col-md-4 order-md-2",
+      right_col_classes: "col-12 col-md-8",
+    },
+    badges: _badges,
+    title: {
+      content: _title,
+    },
+    text: {
+      content: _text,
+      classes: "mb-2",
+    },
+    content: _content,
+    image: _image,
+    extra_classes_body: "p-0",
+    attributes: create_attribute().addClass(['rounded-0', 'rounded-top', 'p-4', 'border-bottom-0'])
+  } only %}
+{% else %}
+  {% set attributes = attributes.addClass(['border', 'rounded']) %}
+{% endif %}
+
+<div
+  {{ attributes }}
+>
+  <div class="px-3-5 py-3">
+    <div class="d-flex">
+      {% if _icon is not empty %}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+          path: _icon_path,
+        }) only -%}
+      {% endif %}
+      <div class="{{ _container_classes }}">
+        <div class="flex-grow-1">
+          {% if _title is not empty and _variant == 'default' %}
+            <p class="fw-bold m-0">{{ _title }}</p>
+          {% endif %}
+          {% if _language is not empty or _meta is not empty %}
+          <small class="fw-bold m-0">
+            {%- if _language is not empty -%}
+              {{- _language -}}
+            {%- endif -%}
+            {%- if _meta is not empty -%}
+              <span class="fw-normal">
+                {{- ' ' ~ _meta -}}
+              </span>
+            {%- endif -%}
+          </small>
+          {% endif %}
+        </div>
+        {% set _download = _download|merge({
+          icon_position: "after",
+          icon: {
+            name: "download",
+            size: "fluid",
+            path: _icon_path,
+          },
+          attributes: create_attribute()
+                      .setAttribute('download', _download.url)
+                      .addClass(['text-underline-hover', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0'])
+        }) %}
+        {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
+      </div>
+    </div>
+  </div>
+  {% if _translation is not empty %}
+  <div class="bg-lighter py-3 px-4 border-top">
+    {% set _id = _translation.id|default('language-dropdown' ~ random(1000)) %}
+    <div class="text-end text-md-center">
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _translation.label|merge({
+        path: '#' ~ _id,
+        attributes: create_attribute()
+                    .addClass(['text-underline-hover'])
+                    .setAttribute('aria-controls', _id)
+                    .setAttribute('data-bs-toggle', 'collapse')
+                    .setAttribute('aria-expanded', 'false')
+                    .setAttribute('role', 'button'),
+      }) only %}
+    </div>
+    {% if _translation.items is not empty and _translation.items is iterable %}
+    <div class="collapse" id="{{ _id }}">
+      {% for _item in _translation.items %}
+        {% set _item_classes = loop.last ? 'pt-3' : 'py-3 border-bottom' %}
+        <div class="{{ _item_classes }}">
+        {% if _item.type == 'content' %}
+          {{ _item.content }}
+        {% else %}
+          <div class="row">
+            <div class="col-12 col-md-9">
+              {% if _item.title is not empty %}
+                <p class="fw-bold m-0">{{ _item.title }}</p>
+              {% endif %}
+              {% if _item.title is not empty %}
+                <p class="m-0">{{ _item.description }}</p>
+              {% endif %}
+              {% if _item.language is not empty or _item.meta is not empty %}
+              <small class="fw-bold m-0">
+                {%- if _item.language is not empty -%}
+                  {{- _item.language -}}
+                {%- endif -%}
+                {%- if _item.meta is not empty -%}
+                  <span class="fw-normal">
+                    {{- ' ' ~ _item.meta -}}
+                  </span>
+                {%- endif -%}
+              </small>
+              {% endif %}
+            </div>
+            <div class="col-12 col-md-3 align-self-end text-md-end">
+            {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
+              icon_position: "after",
+              icon: {
+                name: "download",
+                size: "fluid",
+                path: _icon_path,
+              },
+              attributes: create_attribute()
+                          .setAttribute("download", _item.download.url)
+                          .addClass(['d-block', 'text-underline-hover', 'mt-1'])
+            }) only %}
+            </div>
+          </div>
+        {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+{% endspaceless %}

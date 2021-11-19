@@ -91,13 +91,15 @@
         border-left: 4px solid transparent;
       }
     }
+  }
 
-    &.full-width {
-      left: 50%;
-      width: 100vw;
-      margin-left: -50vw;
-      border-radius: 0;
-    }
+  .bcl-banner.full-width,
+  .bcl-content-banner {
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    border-radius: 0;
+    position: relative;
   }
 
   .bcl-banner__content {

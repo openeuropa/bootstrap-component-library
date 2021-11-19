@@ -1,0 +1,92 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - with_header (boolean) (default: false)
+  - with_footer (boolean) (default: false)
+  - with_banner (boolean) (default: false)
+  - with_sidebar (boolean) (default: false)
+  - title (string) (default: '')
+  - columns (string) (default: 3-9 )
+  - content_type (string) (default: '')
+  - attributes (drupal attrs)
+
+  BLOCKS:
+  - header
+  - footer
+  - content
+  - sidebar
+  - banner
+  - feedback
+  - share
+  - related
+#}
+
+{% set _with_header = header|default(false) %}
+{% set _with_footer = footer|default(false) %}
+{% set _with_banner = banner|default(false) %}
+{% set _with_sidebar = sidebar|default(false) %}
+{% set _columns = columns|default('3-9') %}
+{% set _title = title|default('') %}
+{% set _content_type = content_type|default('') %}
+{% set _classes = ['bcl-node-type'] %}
+{% set _col_classes = { left: 'col-md-3', right: 'col-12 col-lg-9' } %}
+
+{% if _columns == '4-8' %}
+  {% set _col_classes = { left: 'col-md-4', right: 'col-12 col-lg-8' } %}
+{% elseif _columns == '2-10' %}
+  {% set _col_classes = { left: 'col-md-2', right: 'col-12 col-lg-10' } %}
+{% endif %}
+
+{% if _content_type is not empty %}
+  {% set _classes = _classes|merge(['bcl-' ~ _content_type]) %}
+{% endif %}
+
+{% if _with_header %}
+  {% include '@oe-bcl/bcl-header/header.html.twig' with header only %}
+{% endif %}
+
+<main {{ attributes }}>
+  {% if _with_banner %}
+    {% block banner %}
+      {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
+    {% endblock %}
+  {% endif %}
+  <div class="container mt-md-4-75 mt-4">
+    <div class="row">
+    {% if _with_sidebar %}
+      <div class="{{ _col_classes.left }}">
+        {% block sidebar %}{% endblock %}
+      </div>
+      <div class="{{ _col_classes.right }}">
+    {% else %}
+      <div class="col-md-12">
+    {% endif %}
+      {% block content_top %}
+        {{ content_top }}
+      {% endblock %}
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+      {% block content_bottom %}
+        {{ content_bottom }}
+      {% endblock %}
+    </div>
+  </div>
+</main>
+
+{% block related %}
+  {{ related }}
+{% endblock %}
+{% block feedback %}
+  {{ feedback }}
+{% endblock %}
+{% block share %}
+  {{ share }}
+{% endblock %}
+
+{% if _with_footer %}
+  {% include '@oe-bcl/bcl-footer/footer.html.twig' with footer only %}
+{% endif %}
+
+{% endspaceless %}
