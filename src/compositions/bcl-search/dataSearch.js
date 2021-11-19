@@ -134,7 +134,7 @@ module.exports = {
           ],
           title: {
             content:
-              "<a href='/example.html' class='text-underline-hover h5 mb-2 d-block'>Lorem ipsum dolor sit amet</a>",
+              "<a href='/example.html' class='text-underline-hover'>Lorem ipsum dolor sit amet</a>",
           },
           text: {
             content:
@@ -160,7 +160,7 @@ module.exports = {
           ],
           title: {
             content:
-              "<a href='/example.html' class='text-underline-hover h5 mb-2 d-block'>Incididunt ut labore et dolore</a>",
+              "<a href='/example.html' class='text-underline-hover'>Incididunt ut labore et dolore</a>",
           },
           text: {
             content:
@@ -190,7 +190,7 @@ module.exports = {
           ],
           title: {
             content:
-              "<a href='/example.html' class='text-underline-hover h5 mb-2 d-block'>Quis nostrud exercitation ullamco</a>",
+              "<a href='/example.html' class='text-underline-hover'>Quis nostrud exercitation ullamco</a>",
           },
           text: {
             content:
@@ -215,7 +215,7 @@ module.exports = {
           ],
           title: {
             content:
-              "<a href='/example.html' class='text-underline-hover h5 mb-2 d-block'>Quis nostrud exercitation ullamco</a>",
+              "<a href='/example.html' class='text-underline-hover'>Quis nostrud exercitation ullamco</a>",
           },
           text: {
             content:
@@ -245,7 +245,7 @@ module.exports = {
           ],
           title: {
             content:
-              "<a href='/example.html' class='text-underline-hover h5 mb-2 d-block'>Duis aute irure dolor in Excepteur</a>",
+              "<a href='/example.html' class='text-underline-hover'>Duis aute irure dolor in Excepteur</a>",
           },
           text: {
             content:
@@ -275,7 +275,7 @@ module.exports = {
           ],
           title: {
             content:
-              "<a href='/example.html' class='text-underline-hover h5 mb-2 d-block'>Excepteur sint occaecat cupidatat non</a>",
+              "<a href='/example.html' class='text-underline-hover'>Excepteur sint occaecat cupidatat non</a>",
           },
           text: {
             content:
