@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  background: "gray",
   title: {
     content: "This is the title of this news",
   },
@@ -33,4 +34,26 @@ module.exports = {
     variant: "secondary",
     attributes: new drupalAttribute().addClass("mb-3"),
   },
+  service_buttons: [
+    {
+      label: "Print",
+      variant: "light",
+      attributes: new drupalAttribute().addClass("w-auto mt-3 me-3"),
+      icon: {
+        path: "/icons.svg",
+        name: "printer-fill",
+        size: "s",
+      },
+    },
+    {
+      label: "Export",
+      variant: "light",
+      attributes: new drupalAttribute().addClass("w-auto mt-3"),
+      icon: {
+        path: "/icons.svg",
+        name: "file-arrow-down-fill",
+        size: "s",
+      },
+    },
+  ],
 };

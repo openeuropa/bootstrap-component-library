@@ -3,10 +3,10 @@ import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
-import banner from "@openeuropa/bcl-news/data/data_banner.js";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import news from "@openeuropa/bcl-news/news.html.twig";
+import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
 import drupalAttribute from "drupal-attribute";
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
@@ -72,6 +72,11 @@ const correctPaths = (data, variant) => {
         }
       });
     });
+    if (data.banner) {
+      data.banner.service_buttons.forEach((btn) => {
+        btn.icon.path = defaultSprite;
+      });
+    }
     if (variant === "listing") {
       data.footer.attributes.addClass("mt-3-5");
     }
@@ -127,4 +132,3 @@ FullPage.storyName = "News page";
 export const Listing = () => listingPage(correctPaths(demoListing, "listing"));
 
 Listing.storyName = "News listing";
-Listing.decorators = [withDesign];

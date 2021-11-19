@@ -3,7 +3,7 @@
 exports[`OE - Content banner renders correctly 1`] = `
 <jest>
   <div
-    class="bcl-content-banner vw-100 py-md-4-75 py-4 bg-white"
+    class="bcl-content-banner vw-100 py-md-4-75 py-4 bg-lighter"
   >
     <div
       class="container"
@@ -12,7 +12,7 @@ exports[`OE - Content banner renders correctly 1`] = `
         class="row"
       >
         <div
-          class="bg-transparent border-0 col-md-10 card"
+          class="bg-transparent border-0 card"
         >
           <div
             class="row"
@@ -73,18 +73,34 @@ exports[`OE - Content banner renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="col-12 col-md-2 text-end"
+          class="d-flex justify-content-end"
         >
-          <div
-            class="d-grid d-md-block"
+          <button
+            class="w-auto mt-3 me-3 btn btn-light btn-md"
+            type="button"
           >
-            <button
-              class="mb-3 btn btn-secondary btn-md"
-              type="button"
+            Print
+            <svg
+              class="ms-2-5 bi icon--fluid"
             >
-              Action button
-            </button>
-          </div>
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-auto mt-3 btn btn-light btn-md"
+            type="button"
+          >
+            Export
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#file-arrow-down-fill"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

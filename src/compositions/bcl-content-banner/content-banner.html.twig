@@ -4,13 +4,20 @@
   Parameters:
     - "background" (string) (default: 'white')
       options: [ white, gray ]
-    - "banner" (object) (default: '')
-    - "button" (object) (default: {})
+    - "banner" (object)
+    - "title" (object)
+    - "image" (object)
+    - "content" (string)
+    - "badges" (array of objects of type badge)
+    - "action_button" (object of type button) (default: {})
+    - "service_buttons" (array of objects of type button) (default: [])
     - "attributes" (drupal attrs)
 #}
 
 {% set _background = background|default('white') %}
-{% set _button = button|default({}) %}
+{% set _action_button = action_button|default({}) %}
+{% set _service_buttons = service_buttons|default([]) %}
+
 {% set _css_classes = [
   'bcl-content-banner',
   'vw-100',
@@ -20,7 +27,7 @@
 
 {% set _modifiers = {
   'white': 'bg-white',
-  'gray': 'bg-light',
+  'gray': 'bg-lighter',
 } %}
 
 {% set _card = {
@@ -54,14 +61,20 @@
     <div class="row">
     {% include '@oe-bcl/bcl-card/card.html.twig' with _card %}
 
-  {% if _button is not empty %}
+  {% if _action_button is not empty %}
     <div class="col-12 col-md-2 text-end">
       <div class="d-grid d-md-block">
-        {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with _action_button only %}
       </div>
     </div>
   {% endif %}
-
+  {% if _service_buttons is not empty %}
+    <div class="d-flex justify-content-end">
+    {% for _button in _service_buttons %}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+    {% endfor %}
+    </div>
+  {% endif %}
   </div>
   </div>
 </div>

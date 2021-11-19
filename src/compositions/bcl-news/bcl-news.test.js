@@ -3,7 +3,7 @@ import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import header from "@openeuropa/bcl-data-header/data";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
-import banner from "@openeuropa/bcl-news/data/data_banner.js";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
 
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
@@ -31,7 +31,7 @@ const demoListing = {
   with_sidebar: true,
 };
 
-const template = "@oe-bcl/bcl-news/news.html.twig";
+const template = "@oe-bcl/bcl-base-templates/content-type.html.twig";
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);
