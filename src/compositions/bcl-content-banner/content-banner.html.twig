@@ -1,0 +1,82 @@
+{% spaceless %}
+
+{#
+  Parameters:
+    - "background" (string) (default: 'white')
+      options: [ white, gray ]
+    - "banner" (object)
+    - "title" (object)
+    - "image" (object)
+    - "content" (string)
+    - "badges" (array of objects of type badge)
+    - "action_button" (object of type button) (default: {})
+    - "service_buttons" (array of objects of type button) (default: [])
+    - "attributes" (drupal attrs)
+#}
+
+{% set _background = background|default('white') %}
+{% set _action_button = action_button|default({}) %}
+{% set _service_buttons = service_buttons|default([]) %}
+
+{% set _css_classes = [
+  'bcl-content-banner',
+  'vw-100',
+  'py-md-4-75',
+  'py-4',
+] %}
+
+{% set _modifiers = {
+  'white': 'bg-white',
+  'gray': 'bg-lighter',
+} %}
+
+{% set _card = {
+  horizontal: true,
+  title: title|default({})|merge({
+    tag: 'h2',
+    classes: 'fw-bold',
+  }),
+  extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',
+  extra_classes_body: 'pt-md-0 px-0 px-md-3 pb-0',
+} %}
+
+{% if image is not empty %}
+  {% set _card = _card|merge({
+    horizontal_grid: {
+      left_col_classes: 'col-md-3',
+      right_col_classes: 'col-md-9',
+    },
+  }) %}
+{% endif %}
+
+{% set _css_classes = _css_classes|merge([_modifiers[_background]]) %}
+{% set _attributes = attributes.addClass(['bg-transparent', 'border-0']) %}
+
+{% if _button is not empty %}
+  {% set _attributes = attributes.addClass(['col-md-10']) %}
+{% endif %}
+
+<div class="{{ _css_classes|join(' ') }}">
+  <div class="container">
+    <div class="row">
+    {% include '@oe-bcl/bcl-card/card.html.twig' with _card %}
+
+  {% if _action_button is not empty %}
+    <div class="col-12 col-md-2 text-end">
+      <div class="d-grid d-md-block">
+        {% include '@oe-bcl/bcl-button/button.html.twig' with _action_button only %}
+      </div>
+    </div>
+  {% endif %}
+  {% if _service_buttons is not empty %}
+    <div class="d-flex justify-content-end">
+    {% for _button in _service_buttons %}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+    {% endfor %}
+    </div>
+  {% endif %}
+  </div>
+  </div>
+</div>
+
+{% endspaceless %}

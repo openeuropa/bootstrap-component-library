@@ -1,0 +1,58 @@
+{#
+  Parameters:
+  - listing (object) (default: {})
+  - pagination (object) (default: {})
+  - sidebar (object) (default: '')
+#}
+
+{% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
+
+{% set _listing = listing|default({}) %}
+{% set _pagination = pagination|default({}) %}
+{% set _search = search|default({}) %}
+{% set _sidebar = sidebar|default({}) %}
+
+{% block content_top %}
+  {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
+  <div class="mb-3 clearfix">
+    <div class="float-end d-none d-md-flex align-items-center">
+      {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
+        attributes: create_attribute().addClass(['ms-2 mb-2']),
+      }) only %}
+    </div>
+    <h4 class="mb-4">
+      <span class="text-capitalize">
+        {{ content_type }}
+      </span>
+      ({{ listing.items.length }})
+    </h4>
+    {% if badges is not empty and badges is iterable %}
+      {% for badge in badges %}
+        {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge only %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  <hr class="d-none d-md-block mb-4"/>
+  <div class="d-md-none">
+    {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
+      extra_classes: 'mb-4',
+    }) only %}
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% if _listing is not empty %}
+    {% include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing %}
+  {% endif %}
+{% endblock %}
+
+{% block content_bottom %}
+  {% if _pagination is not empty %}
+    <hr class="d-none d-md-block mt-4-5">
+    {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with _pagination only %}
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+  {% include '@oe-bcl/bcl-base-templates/sidebar-search.html.twig' with _sidebar only %}
+{% endblock %}
