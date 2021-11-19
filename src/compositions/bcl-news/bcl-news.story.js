@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { initScript } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
