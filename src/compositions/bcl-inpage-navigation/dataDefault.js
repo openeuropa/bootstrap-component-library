@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  full_layout: true,
   title: "Page content",
   links: [
     {

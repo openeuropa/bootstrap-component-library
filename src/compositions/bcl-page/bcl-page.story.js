@@ -1,0 +1,191 @@
+import { withDesign } from "storybook-addon-designs";
+import header from "@openeuropa/bcl-data-header/data--simple";
+import listing from "@openeuropa/bcl-page/data/data_listing.js";
+import listingDefault from "@openeuropa/bcl-page/data/data-listing--default.js";
+import footer from "@openeuropa/bcl-data-footer/data";
+import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple.js";
+import blockquote from "@openeuropa/bcl-data-blockquote/data.js";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
+import accordion from "@openeuropa/bcl-data-accordion/data.js";
+import timeline from "@openeuropa/bcl-timeline/dataDefault.js";
+import simpleBanner from "@openeuropa/bcl-content-banner/data/data--simple.js";
+import pageBanner from "@openeuropa/bcl-banner/dataImage.js";
+import featuredItem from "@openeuropa/bcl-featured-media/dataImage.js";
+import file from "@openeuropa/bcl-file/data.js";
+import fileThumbnail from "@openeuropa/bcl-file/dataCard.js";
+import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import page from "@openeuropa/bcl-page/page.html.twig";
+import drupalAttribute from "drupal-attribute";
+
+const files = [file, file];
+const filesThumbnail = [fileThumbnail, fileThumbnail];
+const serviceButtons = [...banner.service_buttons];
+
+const baseData = {
+  content_type: "page",
+  header: header,
+  footer: footer,
+  sidebar: sidebar,
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  listing: listing,
+  with_sidebar: true,
+};
+
+const demoData = {
+  ...baseData,
+  blockquote: blockquote,
+  page_banner: pageBanner,
+  banner: banner,
+  files: files,
+};
+
+const demoData1 = {
+  ...baseData,
+  banner: simpleBanner,
+  listing: listing,
+  files: filesThumbnail,
+  accordion: {
+    ...accordion,
+    attributes: new drupalAttribute().addClass(["pb-4"]),
+  },
+};
+
+const demoData2 = {
+  ...baseData,
+  banner: {
+    ...simpleBanner,
+    background: "gray",
+    service_buttons: serviceButtons,
+  },
+  listing: listingDefault,
+  files: filesThumbnail,
+  timeline: timeline,
+};
+
+const correctPaths = (data, variant) => {
+  if (data.header.head.navigation) {
+    data.header.head.navigation.items.forEach((item) => {
+      if (item.icon) {
+        item.icon.path = defaultSprite;
+      }
+    });
+  }
+  if (data.header.navbar) {
+    data.header.navbar.form.submit.icon.path = defaultSprite;
+  }
+  if (data.breadcrumbs) {
+    data.breadcrumbs.icons_path = defaultSprite;
+  }
+  if (data.filter_button) {
+    data.filter_button.icon.path = defaultSprite;
+  }
+  if (data.badges) {
+    data.badges.forEach((badge) => {
+      badge.icons_path = defaultSprite;
+    });
+  }
+  if (data.footer) {
+    data.footer.rows.forEach((row) => {
+      row.cols.forEach((col) => {
+        if (col.items) {
+          col.items.forEach((item) => {
+            if (item.type == "links") {
+              item.links.forEach((link) => {
+                if (link.icon) {
+                  link.icon.path = defaultSprite;
+                }
+              });
+            }
+          });
+        }
+      });
+    });
+    if (data.banner && data.banner.service_buttons) {
+      data.banner.service_buttons.forEach((btn) => {
+        btn.icon.path = defaultSprite;
+      });
+    }
+    data.footer.attributes.addClass("mt-4-5");
+  }
+
+  return data;
+};
+
+const scriptInit = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var badges = document.querySelectorAll(".badge");
+      badges.forEach(element => {
+        var close = element.getElementsByTagName('span')[0];
+        if (close) {
+          close.addEventListener('click', event => {
+            close.parentElement.remove();
+          })
+        }
+      });
+    </script>
+  ${demo}`;
+};
+
+const initScrollspy = (story) => {
+  const demo = story();
+  return `
+    <script>
+      if (
+        document.getElementById("bcl-inpage-navigation") &&
+        typeof bootstrap !== "undefined"
+      ) {
+        document.body.setAttribute("data-bs-spy", "scroll");
+        document.body.setAttribute("data-bs-target", "#bcl-inpage-navigation");
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
+        if (scrollspyBody) {
+          scrollspyBody.dispose();
+        }
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+          target: "#bcl-inpage-navigation",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
+export default {
+  title: "Content types/Page",
+  parameters: {
+    layout: "fullscreen",
+    controls: {
+      disable: true,
+    },
+    design: [
+      {
+        name: "Mockup - Page (desktop)",
+        type: "figma",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3504%3A123262",
+      },
+      {
+        name: "Mockup -Page (mobile)",
+        type: "figma",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3378%3A107467",
+      },
+    ],
+  },
+};
+
+export const FullPage = () => page(correctPaths(demoData, "default"));
+
+FullPage.storyName = "Full article (example 1)";
+FullPage.decorators = [withDesign, initScrollspy];
+
+export const FullPage1 = () => page(correctPaths(demoData1, "default"));
+
+FullPage1.storyName = "Full article (example 2)";
+FullPage1.decorators = [withDesign, initScrollspy];
+
+export const FullPage2 = () => page(correctPaths(demoData2, "default"));
+
+FullPage2.storyName = "Full article (example 3)";
+FullPage2.decorators = [withDesign, initScrollspy];
