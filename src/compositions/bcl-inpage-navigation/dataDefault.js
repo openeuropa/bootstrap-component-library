@@ -2,6 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   full_layout: true,
+  id: "bcl-inpage-navigation",
   title: "Page content",
   links: [
     {

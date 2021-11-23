@@ -41,19 +41,21 @@
 {% set _card = {
   title: title|default({})|merge({
     tag: 'h2',
-    classes: 'fw-bold',
+    attributes: create_attribute().addClass(['fw-bold']),
   }),
+  horizontal: true,
+  horizontal_grid: {
+    right_col_classes: 'col-md-8 col-lg-9 col-xxl-8',
+  },
   extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',
   extra_classes_body: 'pt-md-0 px-0 pb-0',
 } %}
 
 {% if _image is not empty %}
   {% set _card = _card|merge({
-    horizontal: true,
-    horizontal_grid: {
-      left_col_classes: 'col-md-3',
-      right_col_classes: 'col-md-9',
-    },
+    horizontal_grid: _card.horizontal_grid|merge({
+      left_col_classes: 'col-md-4 col-lg-3',
+    }),
     extra_classes_body: 'pt-md-0 px-0 px-md-3 pb-0',
   }) %}
 {% endif %}

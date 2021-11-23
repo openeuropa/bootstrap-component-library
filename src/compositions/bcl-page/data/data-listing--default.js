@@ -15,6 +15,7 @@ module.exports = {
       title: {
         content:
           '<a href="/example" class="text-underline-hover">Card title</a>',
+        attributes: new drupalAttribute().addClass("mt-4"),
       },
       text: {
         content:
@@ -26,6 +27,7 @@ module.exports = {
       title: {
         content:
           '<a href="/example" class="text-underline-hover">Card title</a>',
+        attributes: new drupalAttribute().addClass("mt-4"),
       },
       text: {
         content:
@@ -36,6 +38,7 @@ module.exports = {
     {
       title: {
         content: "Title card",
+        attributes: new drupalAttribute().addClass("mt-4"),
       },
       text: {
         content:
@@ -47,6 +50,7 @@ module.exports = {
       title: {
         content:
           '<a href="/example" class="text-underline-hover">Card title</a>',
+        attributes: new drupalAttribute().addClass("mt-4"),
       },
       text: {
         content:

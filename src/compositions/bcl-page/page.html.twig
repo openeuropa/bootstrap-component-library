@@ -12,6 +12,10 @@
   sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
   </p>
   <h3 id="item-1" class="fw-bold my-4">Section 1</h3>
+  {% if featured_item %}
+    {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
+  {% endif %}
+
   {% if page_banner %}
     {% include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
   {% endif %}
@@ -45,4 +49,16 @@
   Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
   sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
   </p>
+
+  <h3 id="item-3" class="fw-bold my-4">Section 3</h3>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
+  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
+  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
+  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+  </p>
+
+  {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
+  {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
 {% endblock %}
