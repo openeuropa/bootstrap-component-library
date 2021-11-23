@@ -1,11 +1,39 @@
 import { withDesign } from "storybook-addon-designs";
-import headerData from "@openeuropa/bcl-data-header/data.js";
-import footerData from "@openeuropa/bcl-data-footer/data.js";
+import header from "@openeuropa/bcl-data-header/data--simple";
+import footer from "@openeuropa/bcl-data-footer/data";
 import groupLandingListing from "@openeuropa/bcl-group-landing-listing/group-landing-listing.html.twig";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import demoDataList from "@openeuropa/bcl-group-landing-listing/dataList";
 import demoDataListContent from "@openeuropa/bcl-group-landing-listing/dataListContent";
 import demoDataListMember from "@openeuropa/bcl-group-landing-listing/dataListMember";
+
+const baseData = {
+  header: header,
+  footer: footer,
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  with_sidebar: true,
+};
+
+const dataListing = {
+  content_type: "Groups",
+  ...baseData,
+  ...demoDataList,
+};
+
+const dataListingContent = {
+  content_type: "Content in the group",
+  ...baseData,
+  ...demoDataListContent,
+};
+
+const dataListingMember = {
+  content_type: "Group members",
+  ...baseData,
+  ...demoDataListMember,
+};
 
 const scriptInit = (story) => {
   const demo = story();
@@ -50,16 +78,13 @@ export default {
 };
 
 const correctPaths = (data) => {
-  data.data.header = headerData;
-  data.data.footer = footerData;
-  data.data.header.head.navigation.items.forEach((item) => {
+  data.header.head.navigation.items.forEach((item) => {
     if (item.icon) {
       item.icon.path = defaultSprite;
     }
   });
-  data.data.header.navbar.form.submit.icon.path = defaultSprite;
-  data.data.header.breadcrumbs.icons_path = defaultSprite;
-  data.data.footer.rows.forEach((row) => {
+  data.header.breadcrumbs.icons_path = defaultSprite;
+  data.footer.rows.forEach((row) => {
     row.cols.forEach((col) => {
       if (col.items) {
         col.items.forEach((item) => {
@@ -74,17 +99,19 @@ const correctPaths = (data) => {
       }
     });
   });
-  data.data.badges.forEach((badge) => {
+  data.header.navbar.form.submit.icon.path = defaultSprite;
+  data.footer.attributes.addClass("mt-3-5");
+  data.badges.forEach((badge) => {
     badge.icons_path = defaultSprite;
   });
-  data.data.filter_button.icon.path = defaultSprite;
+  data.filter_button.icon.path = defaultSprite;
   return data;
 };
 
-export const List = () => groupLandingListing(correctPaths(demoDataList));
+export const List = () => listingPage(correctPaths(dataListing));
 
 export const MemberList = () =>
-  groupLandingListing(correctPaths(demoDataListMember));
+  groupLandingListing(correctPaths(dataListingMember));
 
 export const ContentList = () =>
-  groupLandingListing(correctPaths(demoDataListContent));
+  groupLandingListing(correctPaths(dataListingContent));

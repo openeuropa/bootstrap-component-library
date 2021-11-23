@@ -35,7 +35,8 @@ const template = "@oe-bcl/bcl-base-templates/content-type.html.twig";
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);
-const renderListing = (params) => renderTwigFileAsNode(template, params, true);
+const renderListing = (params) =>
+  renderTwigFileAsNode(listingTemplate, params, true);
 
 describe("OE - News", () => {
   test("News page renders correctly", () => {

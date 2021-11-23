@@ -7,7 +7,6 @@ import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
-import drupalAttribute from "drupal-attribute";
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 
