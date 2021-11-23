@@ -1,10 +1,9 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: "A title for a featured item",
   with_text: true,
   wrapper_classes: "pb-4",
-  text: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  description: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
     commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -26,4 +25,5 @@ module.exports = {
     "src",
     "https://www.youtube.com/embed/VFYlYeFAEH4"
   ),
+  title: "A title for a featured item",
 };

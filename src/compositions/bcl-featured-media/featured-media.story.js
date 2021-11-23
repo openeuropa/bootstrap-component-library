@@ -14,6 +14,7 @@ const getArgs = (data, type) => {
   }
   if (type === "text") {
     args.alignment = "right";
+    args.title = data.title;
   }
 
   return args;
@@ -56,8 +57,16 @@ const getArgTypes = (data, type) => {
   }
 
   if (type === "text") {
+    argTypes.title = {
+      type: { name: "string" },
+      description: "Title of the block",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    };
     argTypes.alignment = {
-      name: "alignment",
       type: { name: "select" },
       description: "Alignment inside featured item",
       options: ["left", "right"],
@@ -100,11 +109,13 @@ const applyArgs = (data, args) => {
 };
 
 export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
+
 Iframe.args = getArgs(demoData, "iframe");
 Iframe.argTypes = getArgTypes(demoData, "iframe");
 Iframe.decorators = [adjustWidth];
 
 export const Video = (args) => featuredMedia(applyArgs(demoDataVideo, args));
+
 Video.args = getArgs(demoData);
 Video.argTypes = getArgTypes(demoData);
 Video.decorators = [adjustWidth];
@@ -114,8 +125,9 @@ Image.args = getArgs(demoDataImage);
 Image.argTypes = getArgTypes(demoDataImage);
 Image.decorators = [adjustWidth];
 
-export const insideTextContainer = (args) =>
+export const FeaturedItem = (args) =>
   featuredMedia(applyArgs(demoFeaturedItem, args));
-(insideTextContainer.storyName = "Featured Item"),
-  (insideTextContainer.args = getArgs(demoFeaturedItem, "text"));
-insideTextContainer.argTypes = getArgTypes(demoFeaturedItem, "text");
+
+FeaturedItem.storyName = "Featured Item";
+FeaturedItem.args = getArgs(demoFeaturedItem, "text");
+FeaturedItem.argTypes = getArgTypes(demoFeaturedItem, "text");

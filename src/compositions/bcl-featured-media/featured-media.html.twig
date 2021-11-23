@@ -10,7 +10,7 @@
   - wrapper_classes: (default: '')
   - content_classes: (string) (default: "")
   - read_more (object) (default: {})
-  - text (string) (default: '')
+  - description (string) (default: '')
   - ratio: (string) (default: "16x9")
     - options ["1x1", "4x3", "16x9", "21x9"]
   - sources: (array of sources) (default: []) format: [
@@ -36,7 +36,7 @@
 {% set _title_tag = title_tag|default('h3') %}
 {% set _with_text = with_text|default(false) %}
 {% set _wrapper_classes = 'bcl-featured-item' %}
-{% set _text = text|default('') %}
+{% set _description = description|default('') %}
 {% set _embedded_media = embedded_media|default('') %}
 {% set _image = image|default('') %}
 {% set _poster_image = poster_image|default('') %}
@@ -65,7 +65,7 @@
 
   <div class="row">
     <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
-      {{- _text -}}
+      {{- _description|default('') -}}
 
       {% if _read_more is not empty %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _read_more only %}
