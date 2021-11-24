@@ -1,10 +1,13 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  merge,
+  renderTwigFileAsNode,
+  getVariants,
+} from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-button/data";
 import toggleDemoData from "@openeuropa/bcl-data-button/toggleData";
 import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
 import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
 import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
-import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/bcl-button/button.html.twig";

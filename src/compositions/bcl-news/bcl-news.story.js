@@ -4,10 +4,11 @@ import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
 import banner from "@openeuropa/bcl-content-banner/data/data.js";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
 import drupalAttribute from "drupal-attribute";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
+
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 
@@ -32,57 +33,6 @@ const demoListing = {
   ...baseData,
   ...dataListing,
   with_sidebar: true,
-};
-
-const correctPaths = (data, variant) => {
-  if (data.header.head.navigation) {
-    data.header.head.navigation.items.forEach((item) => {
-      if (item.icon) {
-        item.icon.path = defaultSprite;
-      }
-    });
-  }
-  if (data.header.navbar) {
-    data.header.navbar.form.submit.icon.path = defaultSprite;
-  }
-  if (data.breadcrumbs) {
-    data.breadcrumbs.icons_path = defaultSprite;
-  }
-  if (data.filter_button) {
-    data.filter_button.icon.path = defaultSprite;
-  }
-  if (data.badges) {
-    data.badges.forEach((badge) => {
-      badge.icons_path = defaultSprite;
-    });
-  }
-  if (data.footer) {
-    data.footer.rows.forEach((row) => {
-      row.cols.forEach((col) => {
-        if (col.items) {
-          col.items.forEach((item) => {
-            if (item.type == "links") {
-              item.links.forEach((link) => {
-                if (link.icon) {
-                  link.icon.path = defaultSprite;
-                }
-              });
-            }
-          });
-        }
-      });
-    });
-    if (data.banner) {
-      data.banner.service_buttons.forEach((btn) => {
-        btn.icon.path = defaultSprite;
-      });
-    }
-    if (variant === "listing") {
-      data.footer.attributes.addClass("mt-3-5");
-    }
-  }
-
-  return data;
 };
 
 const scriptInit = (story) => {
