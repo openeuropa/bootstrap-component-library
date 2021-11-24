@@ -2,22 +2,23 @@
 
 {#
   Parameters:
+  - "title" (string) (default: '')
   - "variant" (string) (default: '') options:
     [ default, block ]
+  - "display_icons" (boolean) (default: true)
   - "items" (array) (default: []):
     - "icon" (associate array) (default: { size: 'm' })
     - "subtitle" (string) (default: '')
     - "title" (string) (default: '')
     - "description" (string) (default:'')
-  - "display_icons" (boolean) (default: true)
   - "grid_columns" (int) (default: 1)
-  - "gutter" (int) (default: 4)
-  - "equal_height" (boolean) (default: true)
-  - "cols_extra_classes" (string) (default: '')
   - "responsiveness" (string) (default: 'md')
+  - "responsive_columns" (integer) (default: 3)
+  - "gutter" (int) (default: 4)
+  - "equal_height" (boolean) (default: false)
+  - "cols_extra_classes" (string) (default: '')
   - "icons_path" (string) (default: '')
   - "link_more" (object of type link) (default {})
-
 #}
 
 {# Parameters #}
