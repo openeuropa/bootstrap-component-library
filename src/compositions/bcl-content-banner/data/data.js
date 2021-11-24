@@ -3,7 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   background: "gray",
   title: {
-    content: "This is the title of this news",
+    content: "This is the title of this page",
   },
   badges: [
     {

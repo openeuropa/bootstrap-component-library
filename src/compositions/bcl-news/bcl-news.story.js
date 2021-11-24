@@ -53,7 +53,7 @@ const scriptInit = (story) => {
 };
 
 export default {
-  title: "Compositions/News",
+  title: "Content types/News",
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",

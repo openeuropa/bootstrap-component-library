@@ -3,6 +3,9 @@ import demoData from "@openeuropa/bcl-file/data.js";
 import demoCardData from "@openeuropa/bcl-file/dataCard";
 const template = "@oe-bcl/bcl-file/file.html.twig";
 
+demoData.translation.id = "language-dropdown";
+demoCardData.translation.id = "language-dropdown";
+
 const render = (params) => renderTwigFileAsNode(template, params);
 
 describe("OE - File", () => {
