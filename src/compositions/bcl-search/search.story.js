@@ -5,7 +5,8 @@ import footer from "@openeuropa/bcl-data-footer/data";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const dataListing = {
-  content_type: "Search results",
+  page_title: "Search results",
+  content_type: "search",
   header: header,
   footer: footer,
   with_banner: true,

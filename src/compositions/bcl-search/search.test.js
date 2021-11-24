@@ -7,7 +7,8 @@ const template = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 const dataListing = {
-  content_type: "Search results",
+  content_type: "search",
+  page_title: "Search results",
   header: header,
   footer: footer,
   with_banner: true,

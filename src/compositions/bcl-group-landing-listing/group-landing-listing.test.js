@@ -1,35 +1,39 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
+import demoData from "@openeuropa/bcl-group-landing-listing/data";
 import demoDataList from "@openeuropa/bcl-group-landing-listing/dataList";
 import demoDataListContent from "@openeuropa/bcl-group-landing-listing/dataListContent";
 import demoDataListMember from "@openeuropa/bcl-group-landing-listing/dataListMember";
 
-const baseData = {
+let baseData = {
+  content_type: "group",
   header: header,
   footer: footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
-};
-
-const dataListing = {
-  content_type: "Groups",
-  ...baseData,
-  ...demoDataList,
+  ...demoData,
 };
 
 const dataListingContent = {
-  content_type: "Content in the group",
+  page_title: "Content in the group",
   ...baseData,
   ...demoDataListContent,
 };
 
 const dataListingMember = {
-  content_type: "Group members",
+  page_title: "Group members",
   ...baseData,
   ...demoDataListMember,
+};
+
+delete baseData.banner;
+const dataListing = {
+  page_title: "Groups",
+  ...baseData,
+  ...demoDataList,
 };
 
 const template =

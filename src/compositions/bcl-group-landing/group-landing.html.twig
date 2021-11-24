@@ -62,7 +62,7 @@
           <h4 class="mb-3 pb-2">{{ data.contact.title }}</h4>
           {% if data.contact.profiles is not empty and data.contact.profiles is iterable %}
             {% for _profile in data.contact.profiles %}
-              {% include '@oe-bcl/bcl-user-view/user-view-compact.html.twig' with _profile only %}
+              {% include '@oe-bcl/bcl-user/view-compact.html.twig' with _profile only %}
             {% endfor %}
           {% endif %}
           {% if data.contact.more_link is not empty %}
@@ -82,7 +82,7 @@
         <h4 class="mt-4 mt-md-0 mb-4 pb-2">{{ data.members.title}}</h4>
         {% if data.members.profiles is not empty and data.members.profiles is iterable %}
           {% for _profile in data.members.profiles %}
-            {% include '@oe-bcl/bcl-user-view/user-view-compact.html.twig' with _profile only %}
+            {% include '@oe-bcl/bcl-user/view-compact.html.twig' with _profile only %}
           {% endfor %}
         {% endif %}
         {% if data.members.more_link is not empty %}

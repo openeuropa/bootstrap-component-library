@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Group landing listing Content renders correctly 1`] = `
+exports[`OE - User -edit renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header"
@@ -28,6 +28,40 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
         <ul
           class="nav"
         >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
           <li
             class="nav-item"
           >
@@ -74,10 +108,46 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
               </span>
             </a>
           </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="notification mt-2 mt-lg-0 nav-link"
+              href="#"
+            >
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="#bell-fill"
+                />
+              </svg>
+              <span
+                class="badge bg-danger"
+              >
+                5
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <!-- project name -->
+    <div
+      class="bcl-header__project"
+    >
+      <div
+        class="container"
+      >
+        <img
+          class="d-none d-lg-inline-block"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
+        />
+        <p>
+          Project name
+        </p>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
@@ -238,7 +308,7 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
             <a
               href="/example"
             >
-              European Union
+              European Commission
             </a>
           </li>
           <li
@@ -254,7 +324,7 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
                   xlink:href="/icons.svg#arrow-left"
                 />
               </svg>
-              About the European Union
+              About the European Commission
             </a>
           </li>
           <li
@@ -511,158 +581,1681 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="container mt-4 mt-md-5"
+      class="container mt-md-4-75 mt-4"
     >
       <div
-        class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
+        class="row"
       >
-        <h2
-          class="mb-0 d-inline-block fw-bold"
-        >
-          Group Name
-        </h2>
         <div
-          class="d-grid d-md-block ms-auto"
+          class="col-md-12"
         >
-          <button
-            aria-expanded="false"
-            autocomplete="off"
-            class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-            data-bs-toggle="dropdown"
-            id="dropdown-1"
-            type="button"
+          <h2
+            class="fw-bold mb-3 mb-md-5 d-inline-block"
           >
-            Create content
-          </button>
-          <ul
-            aria-labelledby="dropdown-1"
-            class="dropdown-menu"
+            Edit my profile
+          </h2>
+          <div
+            class="mb-4 float-lg-end"
           >
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
+            <a
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
               >
-                I'm a link
+                <use
+                  xlink:href="#arrow-left"
+                />
+              </svg>
+              Back to my profile
+            </a>
+          </div>
+          <ul
+            class="nav nav-tabs"
+            role="tablist"
+          >
+            <li
+              class="nav-item"
+              role="presentation"
+            >
+              <a
+                aria-controls="profile"
+                autocomplete="off"
+                class="nav-link active"
+                data-bs-target="#profile"
+                data-bs-toggle="tab"
+                href="#profile"
+                id="profile-tab"
+              >
+                Profile information
               </a>
             </li>
-            <li>
-              <button
-                class="dropdown-item"
-                type="button"
+            <li
+              class="nav-item"
+              role="presentation"
+            >
+              <a
+                aria-controls="privacy"
+                autocomplete="off"
+                class="nav-link"
+                data-bs-target="#privacy"
+                data-bs-toggle="tab"
+                href="#"
+                id="privacy-tab"
               >
-                I'm a button
-              </button>
-            </li>
-            <li>
-              <hr
-                class="dropdown-divider"
-              />
-            </li>
-            <li>
-              <button
-                aria-disabled="true"
-                class="dropdown-item"
-                disabled="true"
-                type="button"
-              >
-                I'm a disabled button
-              </button>
-            </li>
-            <li>
-              <button
-                class="dropdown-item active"
-                type="button"
-              >
-                I'm a active button
-              </button>
+                Privacy settings
+              </a>
             </li>
           </ul>
+          <div
+            class="tab-content"
+          />
+          <div
+            class="tab-content"
+          >
+            <div
+              aria-labelledby="profile-tab"
+              class="tab-pane fade show active"
+              id="profile"
+              role="tabpanel"
+            >
+              <div
+                class="row"
+              >
+                <div
+                  class="offset-3 col-6 offset-lg-0 col-lg-2 mt-4 pt-3"
+                >
+                  <img
+                    alt="profile-image"
+                    class="img-fluid"
+                    src="https://picsum.photos/seed/1002/400/400"
+                  />
+                  <div
+                    class="mt-3 d-grid"
+                  >
+                    <label
+                      class="form-label btn btn-secondary"
+                      for="image-profile"
+                    >
+                      Change picture
+                    </label>
+                    <input
+                      class="d-none form-control btn-check"
+                      id="image-profile"
+                      type="file"
+                    />
+                    <button
+                      class="mt-2 btn btn-link btn-md"
+                      type="button"
+                    >
+                      Remove picture
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-lg-10"
+                >
+                  <h3
+                    class="fw-bold mt-4 mb-3 pt-3"
+                  >
+                    Profile information
+                  </h3>
+                  <form
+                    class="mb-3 row"
+                    novalidate="true"
+                    onsubmit="return false;"
+                  >
+                    <fieldset
+                      class="col-12 mb-3"
+                    >
+                      <legend
+                        class="fw-bold mb-0"
+                      >
+                        Personal information
+                      </legend>
+                    </fieldset>
+                    <fieldset
+                      class="col-12 col-lg-6"
+                    >
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          First name
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="Stefan"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Last name
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="Mayer"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Gender
+                        </label>
+                        <select
+                          class="form-select"
+                          required="true"
+                        >
+                          <option
+                            value="2"
+                          >
+                            Male
+                          </option>
+                          <option
+                            value="3"
+                          >
+                            Female
+                          </option>
+                        </select>
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Nationality
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="German"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Birth date
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="date"
+                          value="1972-01-22"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="col-12 col-lg-6"
+                    >
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Bio
+                        </label>
+                        <textarea
+                          class="form-control"
+                          required="true"
+                          rows="4"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                        </textarea>
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Country
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="Germany"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          City
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="Düsseldorf"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="col-md-12 mb-3"
+                    >
+                      <legend
+                        class="fw-bold mb-0"
+                      >
+                        Professional information
+                      </legend>
+                    </fieldset>
+                    <fieldset
+                      class="col-md-6"
+                    >
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Organisation
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="DG digit"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Position
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="Officer"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="col-md-6"
+                    >
+                      <div
+                        class="mb-3"
+                      >
+                        <label
+                          class="form-label"
+                        >
+                          Working languages
+                        </label>
+                        <input
+                          class="form-control"
+                          required="true"
+                          type="text"
+                          value="English, German"
+                        />
+                        <div
+                          class="form-text"
+                        >
+                          Helper text
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div
+                      class="mt-4 d-grid d-sm-block"
+                    >
+                      <button
+                        class="btn btn-primary btn-md"
+                        type="submit"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="privacy-tab"
+              class="tab-pane fade"
+              id="privacy"
+              role="tabpanel"
+            >
+              <h3
+                class="fw-bold pt-2 mt-4 mb-4"
+              >
+                Privacy settings
+              </h3>
+              <form
+                class="mb-3"
+                novalidate="true"
+                onsubmit="return false;"
+              >
+                <div
+                  class="col-sm-6 col-lg-3"
+                >
+                  <label
+                    class="form-label"
+                  >
+                    Who can consult my data
+                  </label>
+                  <select
+                    class="form-select"
+                  >
+                    <option
+                      value="1"
+                    >
+                      Anonymous users
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      Nobody
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      Authenticated users only
+                    </option>
+                  </select>
+                  <div
+                    class="form-text"
+                    id="helperText"
+                  >
+                    Helper text
+                  </div>
+                </div>
+                <div
+                  class="mt-4 d-grid d-sm-block"
+                >
+                  <button
+                    class="btn btn-primary btn-md"
+                    type="submit"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+              <h3
+                class="fw-bold my-4"
+              >
+                Public profile contents
+              </h3>
+              <p
+                class="mb-0"
+              >
+                Select what information should be displayed to your profile.
+              </p>
+              <p
+                class="mb-4"
+              >
+                Only people who have access to your data will be able to consult these informations.
+              </p>
+              <form
+                class="row mb-3"
+                novalidate="true"
+                onsubmit="return false;"
+              >
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="picture"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="picture"
+                    >
+                      Picture
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="position"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="position"
+                    >
+                      Position
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="city"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="city"
+                    >
+                      City
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="firstName"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="firstName"
+                    >
+                      First name
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="gender"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="gender"
+                    >
+                      Gender
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="nationality"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="nationality"
+                    >
+                      Nationality
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="lastName"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="lastName"
+                    >
+                      Last name
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="workingLanguages"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="workingLanguages"
+                    >
+                      Working languages
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="dateOfBirth"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="dateOfBirth"
+                    >
+                      Date of birth
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="organisation"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="organisation"
+                    >
+                      Organisation
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="country"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="country"
+                    >
+                      Country
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-1 mb-md-3 col-sm-6 col-md-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      id="bio"
+                      required="true"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="bio"
+                    >
+                      Bio
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mt-4 mt-md-2 d-grid d-sm-block"
+                >
+                  <button
+                    class="btn btn-primary btn-md"
+                    type="submit"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+              <h3
+                class="fw-bold my-4"
+              >
+                Delete account
+              </h3>
+              <p
+                class="mb-0"
+              >
+                Account deletion is permanent and cannot be undone.
+              </p>
+              <p>
+                If you delete your account, all content created by you (comments, articles, ...) will be anonymized.
+              </p>
+              <form
+                novalidate="true"
+                onsubmit="return false;"
+              >
+                <div
+                  class="mt-4 d-grid d-sm-block"
+                >
+                  <button
+                    class="btn btn-danger btn-md"
+                    type="submit"
+                  >
+                    Delete my account
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <nav
-        class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
+    </div>
+  </main>
+  <footer
+    class="bcl-footer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="pt-4 pt-lg-5 row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold mb-2"
+          >
+            [Project name]
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
+          </p>
+        </div>
+        <div
+          class="col-12 col-lg-4 pb-4 pb-lg-0"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Contact [project name]
+          </p>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Link
+          </a>
+          <p
+            class="fw-bold border-bottom pb-2 mt-3 mb-2"
+          >
+            Follow us on social media
+          </p>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            <svg
+              class="me-2 me-2-5 bi icon--xs"
+            >
+              <use
+                xlink:href="#facebook"
+              />
+            </svg>
+            Facebook
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            <svg
+              class="me-2 me-2-5 bi icon--xs"
+            >
+              <use
+                xlink:href="#twitter"
+              />
+            </svg>
+            Twitter
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            <svg
+              class="me-2 me-2-5 bi icon--xs"
+            >
+              <use
+                xlink:href="#linkedin"
+              />
+            </svg>
+            Linkedin
+          </a>
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Optional links
+          </p>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Link
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Link
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Link
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
+      >
+        <div
+          class="col-12 col-lg-4 pb-4"
+        >
+          <img
+            alt="logo"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Contact the EU
+          </p>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Call us 00 800 6 7 8 9 10 11
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Use other telephone options
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Write us via our contact form
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Meet us at a local EU office
+          </a>
+          <p
+            class="fw-bold border-bottom pb-2 pt-3 mb-2"
+          >
+            Social media
+          </p>
+          <p>
+            Search for 
+            <a
+              class="text-underline-hover mb-2"
+              href="#"
+            >
+              EU social media channels
+            </a>
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 pt-3 mb-2"
+          >
+            Legal
+          </p>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Language policy
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Privacy policy
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Legal notice
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Cookies
+          </a>
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 pt-4 pt-lg-0 mb-2"
+          >
+            EU institutions
+          </p>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Parliament
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Council
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Council of the European Union
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Commission
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Court of Justice of the European Union
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Central Bank
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Court of Auditors
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European External Action Service
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Economic and Social Committee
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Committee of the Region
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Investment Bank
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Ombudsman
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Data Protection Supervisor
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Data Protection Board
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            European Personnel Selection Office
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Publications Office of the European Union
+          </a>
+          <a
+            class="d-block text-underline-hover mb-1"
+            href="#"
+          >
+            Agencies
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</jest>
+`;
+
+exports[`OE - User -list renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header"
+  >
+    <!-- navbar_settings -->
+    <nav
+      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
       >
         <a
-          class="nav-link"
-          href="/example.html"
+          class="navbar-brand"
+          href=""
         >
-          Home
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Members
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Content
-        </a>
-        <a
-          aria-expanded="false"
-          class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown"
-          href="#"
-          id="dropdown-1"
-          role="button"
-        >
-          Links
+          <img
+            class="d-none d-lg-block"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+          <img
+            class="d-lg-none"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
+          />
         </a>
         <ul
-          aria-labelledby="dropdown-1"
-          class="dropdown-menu"
+          class="nav"
         >
-          <li>
+          <li
+            class="nav-item"
+          >
             <a
-              class="dropdown-item"
-              href="/example.html"
+              class="d-none d-lg-block nav-link"
+              href="#"
             >
-              I'm a link
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="#link"
+                />
+              </svg>
+              Link
             </a>
           </li>
-          <li>
-            <button
-              class="dropdown-item"
-              type="button"
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
             >
-              I'm a button
-            </button>
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="#link"
+                />
+              </svg>
+              Link
+            </a>
           </li>
-          <li>
-            <hr
-              class="dropdown-divider"
-            />
-          </li>
-          <li>
-            <button
-              aria-disabled="true"
-              class="dropdown-item"
-              disabled="true"
-              type="button"
+          <li
+            class="nav-item"
+          >
+            <a
+              class="text-center nav-link"
+              data-bs-target="#languageModal"
+              data-bs-toggle="modal"
+              href="#"
             >
-              I'm a disabled button
-            </button>
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="#chat-left-dots-fill"
+                />
+              </svg>
+              <span
+                class="d-block d-lg-inline-block"
+              >
+                English
+              </span>
+            </a>
           </li>
-          <li>
-            <button
-              class="dropdown-item active"
-              type="button"
+          <li
+            class="nav-item"
+          >
+            <a
+              class="text-center nav-link"
+              data-bs-target="#loginModal"
+              data-bs-toggle="modal"
+              href="#"
             >
-              I'm a active button
-            </button>
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="#person-fill"
+                />
+              </svg>
+              <span
+                class="d-block d-lg-inline-block"
+              >
+                Log in
+              </span>
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="notification mt-2 mt-lg-0 nav-link"
+              href="#"
+            >
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="#bell-fill"
+                />
+              </svg>
+              <span
+                class="badge bg-danger"
+              >
+                5
+              </span>
+            </a>
           </li>
         </ul>
-        <a
-          class="nav-link"
-          href="/example.html"
+      </div>
+    </nav>
+    <!-- project name -->
+    <div
+      class="bcl-header__project"
+    >
+      <div
+        class="container"
+      >
+        <img
+          class="d-none d-lg-inline-block"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
+        />
+        <p>
+          Project name
+        </p>
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
         >
-          Link
-        </a>
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
+              type="button"
+            >
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example"
+            >
+              European Commission
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Commission
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
       </nav>
     </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-labelledby="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="languageeModalLabel"
+          >
+            Select your language
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-8 offset-lg-2"
+              >
+                <h5
+                  class="bcl-language__title"
+                >
+                  EU official languages
+                </h5>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-4 offset-lg-2"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 01
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 02
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 03
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col col-lg-4"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 04
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 05
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 06
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-8 offset-lg-2"
+              >
+                <h5
+                  class="bcl-language__title"
+                >
+                  Non EU languages
+                </h5>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-4 offset-lg-2"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 07
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 08
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col col-lg-4"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 09
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 10
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
     <div
       class="container mt-md-4-75 mt-4"
     >
@@ -680,7 +2273,7 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
             tabindex="-1"
           >
             <div
-              class="offcanvas-header pb-2-5 p-lg-0"
+              class="offcanvas-header p-lg-0"
             >
               <h4
                 class="offcanvas-title mb-lg-4"
@@ -702,12 +2295,21 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
                 onsubmit="return false;"
               >
                 <div
+                  class="mb-3 pb-3 border-bottom"
+                >
+                  <input
+                    class="form-control"
+                    placeholder="Search by name or surname"
+                    type="text"
+                  />
+                </div>
+                <div
                   class="mb-3"
                 >
                   <label
                     class="form-label"
                   >
-                    Content types
+                    Organisation
                   </label>
                   <select
                     class="form-select"
@@ -732,12 +2334,6 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
                     >
                       last option
                     </option>
-                    <option
-                      selected=""
-                      value=""
-                    >
-                      the selected option
-                    </option>
                   </select>
                 </div>
                 <div
@@ -746,11 +2342,10 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
                   <label
                     class="form-label"
                   >
-                    Filter A
+                    Profile Type
                   </label>
                   <select
-                    class="multi-select"
-                    multiple="true"
+                    class="form-select"
                   >
                     <option
                       value="1"
@@ -772,89 +2367,80 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
                     >
                       last option
                     </option>
+                  </select>
+                </div>
+                <div
+                  class="mb-3 pb-3 border-bottom"
+                >
+                  <label
+                    class="form-label"
+                  >
+                    Group
+                  </label>
+                  <select
+                    class="form-select"
+                  >
                     <option
-                      selected=""
-                      value=""
+                      value="1"
                     >
-                      the selected option
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
                     </option>
                   </select>
                 </div>
-                <fieldset
-                  class="mb-3"
-                >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Filter B
-                  </legend>
-                  <div
-                    class="col-sm-10"
-                  >
-                    <div
-                      class="form-check"
-                    >
-                      <input
-                        checked="true"
-                        class="form-check-input"
-                        type="checkbox"
-                      />
-                      <label
-                        class="form-check-label"
-                      >
-                        Checked checkbox
-                      </label>
-                    </div>
-                    <div
-                      class="form-check"
-                    >
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                      />
-                      <label
-                        class="form-check-label"
-                      >
-                        Default checkbox
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (from)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <fieldset
-                  class="mb-3"
-                >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (to)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
                 <div
-                  class="mt-4 d-grid d-md-block"
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                  >
+                    Option 1
+                  </label>
+                  <input
+                    class="form-control"
+                    placeholder="Placeholder"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                  >
+                    Option 2
+                  </label>
+                  <input
+                    class="form-control"
+                    placeholder="Placeholder"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="mt-4"
                 >
                   <button
-                    class="me-md-3 mb-3-5 mb-md-0 btn btn-primary btn-md"
+                    class="me-2 btn btn-primary btn-md"
                     type="submit"
                   >
                     Refine
                   </button>
                   <button
-                    class="btn btn-light btn-md"
+                    class="btn btn-secondary btn-md"
                     type="submit"
                   >
                     Clear
@@ -869,19 +2455,19 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
         >
           <button
             aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-3-5 btn btn-light btn-md"
+            class="d-lg-none w-100 mb-4 btn btn-primary btn-md"
             data-bs-target="#bcl-offcanvas"
             data-bs-toggle="offcanvas"
             type="button"
           >
+            Filter options
             <svg
-              class="ms-2 me-2-5 bi icon--fluid"
+              class="ms-2 ms-2-5 bi icon--fluid"
             >
               <use
-                xlink:href="#filter"
+                xlink:href="#sliders"
               />
             </svg>
-            Filter options
           </button>
           <div
             class="mb-3 clearfix"
@@ -921,7 +2507,7 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
                   selected=""
                   value=""
                 >
-                  Joined date
+                  A-Z
                 </option>
               </select>
             </div>
@@ -931,21 +2517,16 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
               <span
                 class="text-capitalize"
               >
-                Content in the group
+                users
               </span>
               
       (6)
     
             </h4>
             <span
-              class="me-2 text-dark mb-2 badge bg-light"
+              class="me-2 badge bg-primary"
             >
-              Group name
-            </span>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Restricted
+              Name
               <span
                 aria-hidden="true"
                 class="icon--close"
@@ -960,1691 +2541,9 @@ exports[`OE - Group landing listing Content renders correctly 1`] = `
               </span>
             </span>
             <span
-              class="me-2 text-dark mb-2 badge bg-light"
+              class="me-2 badge bg-primary"
             >
-              Private
-              <span
-                aria-hidden="true"
-                class="icon--close"
-              >
-                <svg
-                  class="bi icon--s"
-                >
-                  <use
-                    xlink:href="#x"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
-          <hr
-            class="d-none d-md-block mb-4"
-          />
-          <div
-            class="d-md-none"
-          >
-            <label
-              class="form-label"
-            >
-              Sort by
-            </label>
-            <select
-              class="mb-4 mb-md-0 ms-md-4 form-select"
-            >
-              <option
-                value="1"
-              >
-                a select option
-              </option>
-              <option
-                value="2"
-              >
-                another select option
-              </option>
-              <option
-                value="3"
-              >
-                another option
-              </option>
-              <option
-                value="4"
-              >
-                last option
-              </option>
-              <option
-                selected=""
-                value=""
-              >
-                Joined date
-              </option>
-            </select>
-          </div>
-          <div
-            class="bcl-listing bcl-listing--default-1-col"
-          >
-            <div
-              class="row row-cols-1 g-4"
-            >
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/160?random=1"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text mb-2"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          1 comment
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/160?random=2"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text mb-2"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          1 comment
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/160?random=3"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text mb-2"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          1 comment
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/160?random=4"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text mb-2"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          1 comment
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/160?random=5"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text mb-2"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          1 comment
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/160?random=6"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text mb-2"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted me-4"
-                        >
-                          1 comment
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr
-            class="d-none d-md-block mt-4-5"
-          />
-          <nav
-            class="mb-5 mt-4"
-          >
-            <ul
-              class="pagination justify-content-center"
-            >
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  Previous
-                </a>
-              </li>
-              <li
-                class="page-item active"
-              >
-                <a
-                  aria-current="page"
-                  class="page-link"
-                  href="#"
-                >
-                  1
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  2
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  3
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  Next
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer
-    class="bcl-footer"
-  >
-    <div
-      class="container"
-    >
-      <div
-        class="pt-4 pt-lg-5 row"
-      >
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold mb-2"
-          >
-            [Project name]
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
-          </p>
-        </div>
-        <div
-          class="col-12 col-lg-4 pb-4 pb-lg-0"
-        >
-          <p
-            class="fw-bold border-bottom pb-2 mb-2"
-          >
-            Contact [project name]
-          </p>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Link
-          </a>
-          <p
-            class="fw-bold border-bottom pb-2 mt-3 mb-2"
-          >
-            Follow us on social media
-          </p>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            <svg
-              class="me-2 me-2-5 bi icon--xs"
-            >
-              <use
-                xlink:href="#facebook"
-              />
-            </svg>
-            Facebook
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            <svg
-              class="me-2 me-2-5 bi icon--xs"
-            >
-              <use
-                xlink:href="#twitter"
-              />
-            </svg>
-            Twitter
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            <svg
-              class="me-2 me-2-5 bi icon--xs"
-            >
-              <use
-                xlink:href="#linkedin"
-              />
-            </svg>
-            Linkedin
-          </a>
-        </div>
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold border-bottom pb-2 mb-2"
-          >
-            Optional links
-          </p>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Link
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Link
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Link
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Link
-          </a>
-        </div>
-      </div>
-      <div
-        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
-      >
-        <div
-          class="col-12 col-lg-4 pb-4"
-        >
-          <img
-            alt="logo"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
-          />
-        </div>
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold border-bottom pb-2 mb-2"
-          >
-            Contact the EU
-          </p>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Call us 00 800 6 7 8 9 10 11
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Use other telephone options
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Write us via our contact form
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Meet us at a local EU office
-          </a>
-          <p
-            class="fw-bold border-bottom pb-2 pt-3 mb-2"
-          >
-            Social media
-          </p>
-          <p>
-            Search for 
-            <a
-              class="text-underline-hover mb-2"
-              href="#"
-            >
-              EU social media channels
-            </a>
-          </p>
-          <p
-            class="fw-bold border-bottom pb-2 pt-3 mb-2"
-          >
-            Legal
-          </p>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Language policy
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Privacy policy
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Legal notice
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Cookies
-          </a>
-        </div>
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold border-bottom pb-2 pt-4 pt-lg-0 mb-2"
-          >
-            EU institutions
-          </p>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Parliament
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Council
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Council of the European Union
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Commission
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Court of Justice of the European Union
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Central Bank
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Court of Auditors
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European External Action Service
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Economic and Social Committee
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Committee of the Region
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Investment Bank
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Ombudsman
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Data Protection Supervisor
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Data Protection Board
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            European Personnel Selection Office
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Publications Office of the European Union
-          </a>
-          <a
-            class="d-block text-underline-hover mb-1"
-            href="#"
-          >
-            Agencies
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</jest>
-`;
-
-exports[`OE - Group landing listing Member renders correctly 1`] = `
-<jest>
-  <header
-    class="bcl-header"
-  >
-    <!-- navbar_settings -->
-    <nav
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
-    >
-      <div
-        class="container"
-      >
-        <a
-          class="navbar-brand"
-          href=""
-        >
-          <img
-            class="d-none d-lg-block"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
-          />
-          <img
-            class="d-lg-none"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
-          />
-        </a>
-        <ul
-          class="nav"
-        >
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
-                English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
-                Log in
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- project name -->
-    <!-- navbar -->
-    <nav
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
-    >
-      <div
-        class="container"
-      >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-              >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
-          >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
-            >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
-            <button
-              class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
-              type="button"
-            >
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="#search"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!-- breadcrumbs -->
-    <div
-      class="container"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="mt-3"
-      >
-        <ol
-          class="breadcrumb"
-        >
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example"
-            >
-              European Union
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item"
-          >
-            <a
-              href="/example"
-            >
-              <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#arrow-left"
-                />
-              </svg>
-              About the European Union
-            </a>
-          </li>
-          <li
-            aria-current="page"
-            class="breadcrumb-item d-none d-md-block active"
-          >
-            News
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </header>
-  <div
-    aria-hidden="true"
-    aria-labelledby="loginModalLabel"
-    class="modal fade"
-    id="loginModal"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="loginModalLabel"
-          >
-            Log in
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
-          <h5>
-            Disclaimer 1
-          </h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
-          </p>
-          <h5>
-            Disclaimer 2
-          </h5>
-          <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
-          </p>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
-          <button
-            class="btn btn-primary"
-            type="button"
-          >
-            Access EU login
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
-    id="languageModal"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog modal-fullscreen"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
-          >
-            Select your language
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
-          <div
-            class="container"
-          >
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <main>
-    <div
-      class="container mt-4 mt-md-5"
-    >
-      <div
-        class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
-      >
-        <h2
-          class="mb-0 d-inline-block fw-bold"
-        >
-          Group Name
-        </h2>
-        <div
-          class="d-grid d-md-block ms-auto"
-        >
-          <button
-            aria-expanded="false"
-            autocomplete="off"
-            class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-            data-bs-toggle="dropdown"
-            id="dropdown-1"
-            type="button"
-          >
-            Create content
-          </button>
-          <ul
-            aria-labelledby="dropdown-1"
-            class="dropdown-menu"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                href="#"
-              >
-                I'm a link
-              </a>
-            </li>
-            <li>
-              <button
-                class="dropdown-item"
-                type="button"
-              >
-                I'm a button
-              </button>
-            </li>
-            <li>
-              <hr
-                class="dropdown-divider"
-              />
-            </li>
-            <li>
-              <button
-                aria-disabled="true"
-                class="dropdown-item"
-                disabled="true"
-                type="button"
-              >
-                I'm a disabled button
-              </button>
-            </li>
-            <li>
-              <button
-                class="dropdown-item active"
-                type="button"
-              >
-                I'm a active button
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <nav
-        class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
-      >
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Home
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Members
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Content
-        </a>
-        <a
-          aria-expanded="false"
-          class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown"
-          href="#"
-          id="dropdown-1"
-          role="button"
-        >
-          Links
-        </a>
-        <ul
-          aria-labelledby="dropdown-1"
-          class="dropdown-menu"
-        >
-          <li>
-            <a
-              class="dropdown-item"
-              href="/example.html"
-            >
-              I'm a link
-            </a>
-          </li>
-          <li>
-            <button
-              class="dropdown-item"
-              type="button"
-            >
-              I'm a button
-            </button>
-          </li>
-          <li>
-            <hr
-              class="dropdown-divider"
-            />
-          </li>
-          <li>
-            <button
-              aria-disabled="true"
-              class="dropdown-item"
-              disabled="true"
-              type="button"
-            >
-              I'm a disabled button
-            </button>
-          </li>
-          <li>
-            <button
-              class="dropdown-item active"
-              type="button"
-            >
-              I'm a active button
-            </button>
-          </li>
-        </ul>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Link
-        </a>
-      </nav>
-    </div>
-    <div
-      class="container mt-md-4-75 mt-4"
-    >
-      <div
-        class="row"
-      >
-        <div
-          class="col-md-3"
-        >
-          <div
-            aria-labelledby="offcanvasExampleLabel"
-            class="bcl-offcanvas offcanvas-start offcanvas"
-            data-bs-scroll="true"
-            id="bcl-offcanvas"
-            tabindex="-1"
-          >
-            <div
-              class="offcanvas-header pb-2-5 p-lg-0"
-            >
-              <h4
-                class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
-              >
-                Filter options
-              </h4>
-              <button
-                class="btn-close text-reset d-lg-none"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              />
-            </div>
-            <div
-              class="offcanvas-body p-lg-0"
-            >
-              <form
-                novalidate="true"
-                onsubmit="return false;"
-              >
-                <fieldset
-                  class="mb-3"
-                >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Search by name
-                  </legend>
-                  <div
-                    class="col-sm-10"
-                  >
-                    <input
-                      class="form-control"
-                      placeholder="Name"
-                      type="text"
-                    />
-                  </div>
-                </fieldset>
-                <fieldset
-                  class="mb-3"
-                >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Search by email
-                  </legend>
-                  <div
-                    class="col-sm-10"
-                  >
-                    <input
-                      class="form-control"
-                      placeholder="Email"
-                      type="text"
-                    />
-                  </div>
-                </fieldset>
-                <div
-                  class="mt-4 d-grid d-md-block"
-                >
-                  <button
-                    class="me-md-3 mb-3-5 mb-md-0 btn btn-primary btn-md"
-                    type="submit"
-                  >
-                    Refine
-                  </button>
-                  <button
-                    class="btn btn-light btn-md"
-                    type="submit"
-                  >
-                    Clear
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-lg-9"
-        >
-          <button
-            aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-3-5 btn btn-light btn-md"
-            data-bs-target="#bcl-offcanvas"
-            data-bs-toggle="offcanvas"
-            type="button"
-          >
-            <svg
-              class="ms-2 me-2-5 bi icon--fluid"
-            >
-              <use
-                xlink:href="#filter"
-              />
-            </svg>
-            Filter options
-          </button>
-          <div
-            class="mb-3 clearfix"
-          >
-            <div
-              class="float-end d-none d-md-flex align-items-center"
-            >
-              <label
-                class="form-label"
-              >
-                Sort by
-              </label>
-              <select
-                class="ms-2 mb-2 form-select"
-              >
-                <option
-                  value="1"
-                >
-                  a select option
-                </option>
-                <option
-                  value="2"
-                >
-                  another select option
-                </option>
-                <option
-                  value="3"
-                >
-                  another option
-                </option>
-                <option
-                  value="4"
-                >
-                  last option
-                </option>
-                <option
-                  selected=""
-                  value=""
-                >
-                  Joined date
-                </option>
-              </select>
-            </div>
-            <h4
-              class="mb-4"
-            >
-              <span
-                class="text-capitalize"
-              >
-                Group members
-              </span>
-              
-      (10)
-    
-            </h4>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Group name
-            </span>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Restricted
-              <span
-                aria-hidden="true"
-                class="icon--close"
-              >
-                <svg
-                  class="bi icon--s"
-                >
-                  <use
-                    xlink:href="#x"
-                  />
-                </svg>
-              </span>
-            </span>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Private
+              Organisation
               <span
                 aria-hidden="true"
                 class="icon--close"
@@ -2697,7 +2596,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                 selected=""
                 value=""
               >
-                Joined date
+                A-Z
               </option>
             </select>
           </div>
@@ -2722,7 +2621,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <img
                         alt="alt img"
                         class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=1"
+                        src="https://picsum.photos/160?random=1"
                       />
                     </div>
                     <div
@@ -2731,25 +2630,29 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title"
+                        <div
+                          class="mb-3"
                         >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
+                          <span
+                            class="badge bg-primary"
                           >
-                            Stefan Mayer
-                          </a>
+                            Profile Type
+                          </span>
+                        </div>
+                        <h5
+                          class="mb-3 card-title"
+                        >
+                          Stefan Mayer
                         </h5>
                         <span
                           class="text-muted me-2"
                         >
-                          DG Demo
+                          Organisation
                         </span>
                         <span
                           class="text-muted me-2"
                         >
-                          Director
+                          Position
                         </span>
                       </div>
                     </div>
@@ -2771,7 +2674,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <img
                         alt="alt img"
                         class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=2"
+                        src="https://picsum.photos/160?random=2"
                       />
                     </div>
                     <div
@@ -2780,25 +2683,29 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title"
+                        <div
+                          class="mb-3"
                         >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
+                          <span
+                            class="badge bg-primary"
                           >
-                            Adjur Tichar
-                          </a>
+                            Profile Type
+                          </span>
+                        </div>
+                        <h5
+                          class="mb-3 card-title"
+                        >
+                          Adjur Tichar
                         </h5>
                         <span
                           class="text-muted me-2"
                         >
-                          DG Demo
+                          Organisation
                         </span>
                         <span
                           class="text-muted me-2"
                         >
-                          Director
+                          Position
                         </span>
                       </div>
                     </div>
@@ -2820,7 +2727,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <img
                         alt="alt img"
                         class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=3"
+                        src="https://picsum.photos/160?random=3"
                       />
                     </div>
                     <div
@@ -2829,25 +2736,29 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title"
+                        <div
+                          class="mb-3"
                         >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
+                          <span
+                            class="badge bg-primary"
                           >
-                            Szép Mara
-                          </a>
+                            Profile Type
+                          </span>
+                        </div>
+                        <h5
+                          class="mb-3 card-title"
+                        >
+                          Szép Mara
                         </h5>
                         <span
                           class="text-muted me-2"
                         >
-                          DG Demo
+                          Organisation
                         </span>
                         <span
                           class="text-muted me-2"
                         >
-                          Director
+                          Position
                         </span>
                       </div>
                     </div>
@@ -2869,7 +2780,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <img
                         alt="alt img"
                         class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=4"
+                        src="https://picsum.photos/160?random=4"
                       />
                     </div>
                     <div
@@ -2878,25 +2789,29 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title"
+                        <div
+                          class="mb-3"
                         >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
+                          <span
+                            class="badge bg-primary"
                           >
-                            Daniel Cardoso Rocha
-                          </a>
+                            Profile Type
+                          </span>
+                        </div>
+                        <h5
+                          class="mb-3 card-title"
+                        >
+                          Daniel Cardoso Rocha
                         </h5>
                         <span
                           class="text-muted me-2"
                         >
-                          DG Demo
+                          Organisation
                         </span>
                         <span
                           class="text-muted me-2"
                         >
-                          Director
+                          Position
                         </span>
                       </div>
                     </div>
@@ -2918,7 +2833,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <img
                         alt="alt img"
                         class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=5"
+                        src="https://picsum.photos/160?random=5"
                       />
                     </div>
                     <div
@@ -2927,25 +2842,29 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title"
+                        <div
+                          class="mb-3"
                         >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
+                          <span
+                            class="badge bg-primary"
                           >
-                            Aurelia Panicucci
-                          </a>
+                            Profile Type
+                          </span>
+                        </div>
+                        <h5
+                          class="mb-3 card-title"
+                        >
+                          Aurelia Panicucci
                         </h5>
                         <span
                           class="text-muted me-2"
                         >
-                          DG Demo
+                          Organisation
                         </span>
                         <span
                           class="text-muted me-2"
                         >
-                          Director
+                          Position
                         </span>
                       </div>
                     </div>
@@ -2967,7 +2886,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <img
                         alt="alt img"
                         class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=6"
+                        src="https://picsum.photos/160?random=6"
                       />
                     </div>
                     <div
@@ -2976,221 +2895,29 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title"
+                        <div
+                          class="mb-3"
                         >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
+                          <span
+                            class="badge bg-primary"
                           >
-                            Felicyta Kowalska
-                          </a>
+                            Profile Type
+                          </span>
+                        </div>
+                        <h5
+                          class="mb-3 card-title"
+                        >
+                          Felicyta Kowalska
                         </h5>
                         <span
                           class="text-muted me-2"
                         >
-                          DG Demo
+                          Organisation
                         </span>
                         <span
                           class="text-muted me-2"
                         >
-                          Director
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=7"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10 align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Lorenzo Olson
-                          </a>
-                        </h5>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          DG Demo
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Director
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=8"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10 align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Nino Treviño Montalvo
-                          </a>
-                        </h5>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          DG Demo
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Director
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=9"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10 align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            José Luis Pabón Barrios
-                          </a>
-                        </h5>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          DG Demo
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Director
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top mb-3"
-                        src="https://picsum.photos/200/160?random=4"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10 align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self- align-self-center"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Maddison Marsh
-                          </a>
-                        </h5>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          DG Demo
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Director
+                          Position
                         </span>
                       </div>
                     </div>
@@ -3247,6 +2974,26 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
                   href="#"
                 >
                   3
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  4
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  5
                 </a>
               </li>
               <li
@@ -3583,7 +3330,7 @@ exports[`OE - Group landing listing Member renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Group landing listing renders correctly 1`] = `
+exports[`OE - User -view renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header"
@@ -3611,6 +3358,40 @@ exports[`OE - Group landing listing renders correctly 1`] = `
         <ul
           class="nav"
         >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
           <li
             class="nav-item"
           >
@@ -3657,10 +3438,46 @@ exports[`OE - Group landing listing renders correctly 1`] = `
               </span>
             </a>
           </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="notification mt-2 mt-lg-0 nav-link"
+              href="#"
+            >
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="#bell-fill"
+                />
+              </svg>
+              <span
+                class="badge bg-danger"
+              >
+                5
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <!-- project name -->
+    <div
+      class="bcl-header__project"
+    >
+      <div
+        class="container"
+      >
+        <img
+          class="d-none d-lg-inline-block"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
+        />
+        <p>
+          Project name
+        </p>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
@@ -3821,7 +3638,7 @@ exports[`OE - Group landing listing renders correctly 1`] = `
             <a
               href="/example"
             >
-              European Union
+              European Commission
             </a>
           </li>
           <li
@@ -3837,7 +3654,7 @@ exports[`OE - Group landing listing renders correctly 1`] = `
                   xlink:href="/icons.svg#arrow-left"
                 />
               </svg>
-              About the European Union
+              About the European Commission
             </a>
           </li>
           <li
@@ -4100,686 +3917,279 @@ exports[`OE - Group landing listing renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-md-3"
+          class="col-md-12"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
-            class="bcl-offcanvas offcanvas-start offcanvas"
-            data-bs-scroll="true"
-            id="bcl-offcanvas"
-            tabindex="-1"
+            class="row"
           >
             <div
-              class="offcanvas-header pb-2-5 p-lg-0"
+              class="col-12 col-md-10"
             >
-              <h4
-                class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
+              <div
+                class="border-0 mb-md-3 card"
               >
-                Filter options
-              </h4>
-              <button
-                class="btn-close text-reset d-lg-none"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              />
-            </div>
-            <div
-              class="offcanvas-body p-lg-0"
-            >
-              <form
-                novalidate="true"
-                onsubmit="return false;"
-              >
-                <fieldset
-                  class="mb-3"
+                <div
+                  class="row"
                 >
-                  <legend
-                    class="col-form-label mb-2"
-                  >
-                    Group type
-                  </legend>
                   <div
-                    class="col-sm-10"
+                    class="col-6 col-md-3 offset-3 offset-md-0"
+                  >
+                    <img
+                      alt="alt img"
+                      class="card-img-top"
+                      src="https://picsum.photos/200/200?random=6"
+                    />
+                  </div>
+                  <div
+                    class="col-md-9"
                   >
                     <div
-                      class="mb-3"
+                      class="card-body pt-md-0 px-0 px-md-3"
                     >
+                      <h2
+                        class="fw-bold card-title"
+                      >
+                        Stefan Mayer
+                      </h2>
                       <div
-                        class="form-check"
+                        class="mb-4 mt-4"
                       >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
+                        <span
+                          class="text-muted me-3"
                         >
-                          Public groups
-                        </label>
-                      </div>
-                    </div>
-                    <div
-                      class="mb-3"
-                    >
-                      <div
-                        class="form-check"
-                      >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
+                          DG Test
+                        </span>
+                        <span
+                          class="text-muted me-3"
                         >
-                          Restricted groups
-                        </label>
+                          Director
+                        </span>
                       </div>
-                    </div>
-                    <div
-                      class="form-check"
-                    >
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                      />
-                      <label
-                        class="form-check-label"
-                      >
-                        Private groups
-                      </label>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                      </p>
                     </div>
                   </div>
-                </fieldset>
-                <fieldset>
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (from)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <fieldset
-                  class="mb-3"
-                >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (to)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <div
-                  class="mt-4 d-grid d-md-block"
-                >
-                  <button
-                    class="me-md-3 mb-3-5 mb-md-0 btn btn-primary btn-md"
-                    type="submit"
-                  >
-                    Refine
-                  </button>
-                  <button
-                    class="btn btn-light btn-md"
-                    type="submit"
-                  >
-                    Clear
-                  </button>
                 </div>
-              </form>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-2 text-end"
+            >
+              <div
+                class="d-grid d-md-block"
+              >
+                <button
+                  class="mb-3 btn btn-secondary btn-md"
+                  type="button"
+                >
+                  Manage profile
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="col-12 col-lg-9"
-        >
-          <button
-            aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-3-5 btn btn-light btn-md"
-            data-bs-target="#bcl-offcanvas"
-            data-bs-toggle="offcanvas"
-            type="button"
-          >
-            <svg
-              class="ms-2 me-2-5 bi icon--fluid"
-            >
-              <use
-                xlink:href="#filter"
-              />
-            </svg>
-            Filter options
-          </button>
           <div
-            class="mb-3 clearfix"
+            class="my-3"
           >
-            <div
-              class="float-end d-none d-md-flex align-items-center"
-            >
-              <label
-                class="form-label"
-              >
-                Sort by
-              </label>
-              <select
-                class="ms-2 mb-2 form-select"
-              >
-                <option
-                  value="1"
-                >
-                  a select option
-                </option>
-                <option
-                  value="2"
-                >
-                  another select option
-                </option>
-                <option
-                  value="3"
-                >
-                  another option
-                </option>
-                <option
-                  value="4"
-                >
-                  last option
-                </option>
-                <option
-                  selected=""
-                  value=""
-                >
-                  Joined date
-                </option>
-              </select>
-            </div>
             <h4
-              class="mb-4"
+              class="fw-bold mb-4"
             >
-              <span
-                class="text-capitalize"
-              >
-                Groups
-              </span>
-              
-      (6)
-    
+              Personal information
             </h4>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Group name
-            </span>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Restricted
-              <span
-                aria-hidden="true"
-                class="icon--close"
-              >
-                <svg
-                  class="bi icon--s"
-                >
-                  <use
-                    xlink:href="#x"
-                  />
-                </svg>
-              </span>
-            </span>
-            <span
-              class="me-2 text-dark mb-2 badge bg-light"
-            >
-              Private
-              <span
-                aria-hidden="true"
-                class="icon--close"
-              >
-                <svg
-                  class="bi icon--s"
-                >
-                  <use
-                    xlink:href="#x"
-                  />
-                </svg>
-              </span>
-            </span>
-          </div>
-          <hr
-            class="d-none d-md-block mb-4"
-          />
-          <div
-            class="d-md-none"
-          >
-            <label
-              class="form-label"
-            >
-              Sort by
-            </label>
-            <select
-              class="mb-4 mb-md-0 ms-md-4 form-select"
-            >
-              <option
-                value="1"
-              >
-                a select option
-              </option>
-              <option
-                value="2"
-              >
-                another select option
-              </option>
-              <option
-                value="3"
-              >
-                another option
-              </option>
-              <option
-                value="4"
-              >
-                last option
-              </option>
-              <option
-                selected=""
-                value=""
-              >
-                Joined date
-              </option>
-            </select>
-          </div>
-          <div
-            class="bcl-listing bcl-listing--default-1-col"
-          >
             <div
-              class="row row-cols-1 g-4"
+              class="row"
             >
               <div
-                class="col"
+                class="col-12 col-md-6"
               >
                 <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                  class="row"
                 >
                   <div
-                    class="row"
+                    class="col-12 col-md-4"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <p
+                      class="mb-0"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=1"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
+                      Gender:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      Male
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md-4"
+                  >
+                    <p
+                      class="mb-0"
                     >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                      </div>
-                    </div>
+                      Nationality:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      German
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md-4"
+                  >
+                    <p
+                      class="mb-0"
+                    >
+                      Date of birth:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      22/01/1972
+                    </p>
                   </div>
                 </div>
               </div>
               <div
-                class="col"
+                class="col-12 col-md-6"
               >
                 <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                  class="row"
                 >
                   <div
-                    class="row"
+                    class="col-12 col-md-4"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <p
+                      class="mb-0"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=2"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                      </div>
-                    </div>
+                      Country:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      Germany
+                    </p>
                   </div>
                 </div>
-              </div>
-              <div
-                class="col"
-              >
                 <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                  class="row"
                 >
                   <div
-                    class="row"
+                    class="col-12 col-md-4"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <p
+                      class="mb-0"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=3"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                      </div>
-                    </div>
+                      City:
+                    </p>
                   </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
                   <div
-                    class="row"
+                    class="col-12 col-md-8"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=4"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=5"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item border-bottom border-md-0 border-0 card"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=6"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Public
-                          </span>
-                        </div>
-                        <h5
-                          class="card-title"
-                        >
-                          <a
-                            class="text-underline-hover"
-                            href="/example.html"
-                          >
-                            Group name
-                          </a>
-                        </h5>
-                        <p
-                          class="card-text"
-                        >
-                          Some quick example text to build on the card and title and make up the bulk of the cards content.
-                        </p>
-                      </div>
-                    </div>
+                    <p>
+                      Düsseldorf
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <hr
-            class="d-none d-md-block mt-4-5"
-          />
-          <nav
-            class="mb-5 mt-4"
+          <div
+            class="my-3"
           >
-            <ul
-              class="pagination justify-content-center"
+            <h4
+              class="fw-bold mb-4"
             >
-              <li
-                class="page-item"
+              Professional information
+            </h4>
+            <div
+              class="row"
+            >
+              <div
+                class="col-12 col-md-6"
               >
-                <a
-                  class="page-link"
-                  href="#"
+                <div
+                  class="row"
                 >
-                  Previous
-                </a>
-              </li>
-              <li
-                class="page-item active"
+                  <div
+                    class="col-12 col-md-4"
+                  >
+                    <p
+                      class="mb-0"
+                    >
+                      Organisation:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      DG Test
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md-4"
+                  >
+                    <p
+                      class="mb-0"
+                    >
+                      Position:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      Director
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-6"
               >
-                <a
-                  aria-current="page"
-                  class="page-link"
-                  href="#"
+                <div
+                  class="row"
                 >
-                  1
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  2
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  3
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                >
-                  Next
-                </a>
-              </li>
-            </ul>
-          </nav>
+                  <div
+                    class="col-12 col-md-4"
+                  >
+                    <p
+                      class="mb-0"
+                    >
+                      Working languages:
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-8"
+                  >
+                    <p>
+                      English, German
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -5099,5 +4509,47 @@ exports[`OE - Group landing listing renders correctly 1`] = `
       </div>
     </div>
   </footer>
+</jest>
+`;
+
+exports[`OE - User -view-compact renders correctly 1`] = `
+<jest>
+  <div
+    class="d-flex mb-3"
+  >
+    <div
+      class="flex-shrink-0"
+    >
+      <img
+        alt="Stefan Mayer profile picture"
+        class="rounded-pill"
+        src="https://picsum.photos/50/50"
+      />
+    </div>
+    <div
+      class="flex-grow-1 ms-3"
+    >
+      <a
+        class="fs-5 text-underline-hover mb-0"
+        href="/example.html"
+      >
+        Stefan Mayer
+      </a>
+      <div
+        class="d-flex flex-wrap"
+      >
+        <span
+          class="text-muted text-nowrap me-4-5"
+        >
+          DG Test
+        </span>
+        <span
+          class="text-muted text-nowrap"
+        >
+          Director
+        </span>
+      </div>
+    </div>
+  </div>
 </jest>
 `;

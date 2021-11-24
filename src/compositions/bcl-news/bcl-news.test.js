@@ -10,6 +10,7 @@ const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>
 
 const baseData = {
   content_type: "news",
+  page_title: "News",
   header: header,
   footer: footer,
   with_banner: true,
