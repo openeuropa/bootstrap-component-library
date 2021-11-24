@@ -2,8 +2,10 @@
 
 {#
   Parameters:
-  - icon (icon Object) (default: {})
   - title (string) (default: '')
+  - title_tag (string) (default: 'h4')
+  - item_title (string) (default: '')
+  - icon (icon Object) (default: {})
   - text (string) (default: '')
   - content (string) (default: '')
   - image (object) (default: {}) - format: {
@@ -34,6 +36,8 @@
 
 {% set _icon = icon|default({}) %}
 {% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h4') %}
+{% set _item_title = item_title|default('') %}
 {% set _text = text|default('') %}
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
@@ -53,6 +57,13 @@
   }) %}
 {% endif %}
 
+{% if _title is not empty %}
+  {% set _title_classes = 'fw-bold mb-4' %}
+  <{{ _title_tag }} class="{{ _title_classes }}">
+    {{ _title }}
+  </{{ _title_tag }}>
+{% endif %}
+
 {% if _variant == 'card' %}
   {% set attributes = attributes.addClass(['border', 'rounded-bottom']) %}
   {% set _image = _image|merge({
@@ -67,7 +78,7 @@
     },
     badges: _badges,
     title: {
-      content: _title,
+      content: _item_title,
     },
     text: {
       content: _text,
@@ -94,8 +105,8 @@
       {% endif %}
       <div class="{{ _container_classes }}">
         <div class="flex-grow-1">
-          {% if _title is not empty and _variant == 'default' %}
-            <p class="fw-bold m-0">{{ _title }}</p>
+          {% if _item_title is not empty and _variant == 'default' %}
+            <p class="fw-bold m-0">{{ _item_title }}</p>
           {% endif %}
           {% if _language is not empty or _meta is not empty %}
           <small class="fw-bold m-0">

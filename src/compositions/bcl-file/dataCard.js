@@ -1,7 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: "<a href='#' class='text-underline-hover'>Article title</a>",
+  item_title: "<a href='#' class='text-underline-hover'>Article title</a>",
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
   content:
     "<span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Brussels, Belgium</span><span class='text-muted d-block d-md-inline-block me-3 text-nowrap'>17 October 2019</span>",

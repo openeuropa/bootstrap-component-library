@@ -1,6 +1,8 @@
 {% spaceless %}
 
 {# Parameters:
+  - title: (string) (default: "")
+  - title_tag: (string) (default: "h4")
   - image: (string) (default: "")
   - poster_image: (string) (default: "")
   - content: (string) (default: "")
@@ -26,15 +28,23 @@
     - "embedded_media"
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h4') %}
 {% set _embedded_media = embedded_media|default('') %}
-{% set _image = image|default("") %}
-{% set _poster_image = poster_image|default("") %}
-{% set _content = content|default("") %}
-{% set _content_classes = content_classes|default("") %}
-{% set _ratio = ratio|default("16x9") %}
+{% set _image = image|default('') %}
+{% set _poster_image = poster_image|default('') %}
+{% set _content = content|default('') %}
+{% set _content_classes = content_classes|default('') %}
+{% set _ratio = ratio|default('16x9') %}
 {% set _sources = sources|default([]) %}
 {% set _tracks = tracks|default([]) %}
 
+{% if _title is not empty %}
+  {% set _title_classes = 'fw-bold mb-4' %}
+  <{{ _title_tag }} class="{{ _title_classes }}">
+    {{ _title }}
+  </{{ _title_tag }}>
+{% endif %}
 
 <figure
   {{ attributes }}

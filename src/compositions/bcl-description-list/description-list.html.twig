@@ -2,6 +2,8 @@
 
 {#
   Parameters:
+  - title: (string) (default: "")
+  - title_tag: (string) (default: "h4")
   - "items" (array) (default: []): format: [
       {
         "term" (object or array of object) -format: {
@@ -14,17 +16,24 @@
     ]
   - "variant" (string) (default: '') 
     - option: ["horizontal"]
-
 #}
 
 {# Parameters #}
 
-
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h4') %}
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('') %}
 
 {% if _variant == 'horizontal' %}
   {% set attributes = attributes.addClass(["d-md-grid", "grid-3-9"]) %}
+{% endif %}
+
+{% if _title is not empty %}
+  {% set _title_classes = 'fw-bold mb-4' %}
+  <{{ _title_tag }} class="{{ _title_classes }}">
+    {{ _title }}
+  </{{ _title_tag }}>
 {% endif %}
 
 <dl

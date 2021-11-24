@@ -8,6 +8,8 @@ Parameters:
   - "hide" (object): (default: undefined)
     - "from": (integer) (default: items.length) Item index after which to start hiding timeline items
     - "to": (integer) (default: items.length) Item index after which to resume displaying timeline items
+  - title: (string) (default: "")
+  - title_tag: (string) (default: "h4")
   - "items" (array) (default: []):
     - "id": (string) (default: '')
     - "label": (string) (default: '')
@@ -19,6 +21,8 @@ Parameters:
 {# Internal properties #}
 
 {% set _id = id|default(random(1000)) %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h4') %}
 {% set _items = items|default([]) %}
 {% set _icons_path = icons_path|default('') %}
 {% set _toggle_collapsed = toggle_collapsed|default('') %}
@@ -46,6 +50,13 @@ Parameters:
   {% set _hide_amount = _countbase - _display_amount %}
   {% set _toggle_collapsed = _toggle_collapsed|replace({'%d': _hide_amount}) %}
   {% set _toggle_expanded = _toggle_expanded|replace({'%d': _hide_amount}) %}
+{% endif %}
+
+{% if _title is not empty %}
+  {% set _title_classes = 'fw-bold mb-4' %}
+  <{{ _title_tag }} class="{{ _title_classes }}">
+    {{ _title }}
+  </{{ _title_tag }}>
 {% endif %}
 
 {# Print the result #}
