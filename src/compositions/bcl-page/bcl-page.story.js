@@ -19,6 +19,7 @@ import drupalAttribute from "drupal-attribute";
 
 const files = [file, file];
 const filesThumbnail = [fileThumbnail, fileThumbnail];
+
 delete banner.service_buttons;
 delete featuredItem.title;
 
@@ -112,7 +113,7 @@ const correctPaths = (data) => {
   }
 
   if (data.files) {
-    data.files.forEach((file) => {
+    data.files.forEach((file, i) => {
       file.attributes = file.attributes.addClass("mb-4");
       file.icon_path = defaultSprite;
       file.translation.label.icon.path = defaultSprite;

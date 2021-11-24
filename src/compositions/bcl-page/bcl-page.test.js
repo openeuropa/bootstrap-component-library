@@ -7,6 +7,8 @@ import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple.js";
 import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import file from "@openeuropa/bcl-file/data.js";
 
+file.translation.id = "language-dropdown";
+
 const files = [file, file];
 
 const demoData = {
