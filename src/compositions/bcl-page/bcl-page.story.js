@@ -111,6 +111,14 @@ const correctPaths = (data) => {
     data.footer.attributes.addClass("mt-4-5");
   }
 
+  if (data.files) {
+    data.files.forEach((file) => {
+      file.attributes = file.attributes.addClass("mb-4");
+      file.icon_path = defaultSprite;
+      file.translation.label.icon.path = defaultSprite;
+    });
+  }
+
   return data;
 };
 
