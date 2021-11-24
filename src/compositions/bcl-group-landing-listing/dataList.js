@@ -273,6 +273,7 @@ module.exports = {
       icon: {
         name: "filter",
         size: "xs",
+        path: "/icons.svg",
         attributes: new drupalAttribute().addClass(["ms-2"]),
       },
     },

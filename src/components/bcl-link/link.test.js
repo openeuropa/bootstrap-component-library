@@ -55,7 +55,7 @@ describe("OE - Link", () => {
           icon: {
             name: "mouse",
             transformation: "rotate-90",
-            path: "bootstrap-icons.svg",
+            path: "/icons.svg",
             attributes: new drupalAttribute(),
           },
         },

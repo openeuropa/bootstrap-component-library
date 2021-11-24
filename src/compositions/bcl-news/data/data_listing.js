@@ -101,6 +101,7 @@ module.exports = {
     icon_position: "before",
     icon: {
       name: "filter",
+      path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
   },

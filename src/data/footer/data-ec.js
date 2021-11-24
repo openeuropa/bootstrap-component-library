@@ -166,6 +166,7 @@ module.exports = {
                   icon: {
                     name: "box-arrow-up-right",
                     size: "xs",
+                    path: "/icons.svg",
                     attributes: new drupalAttribute().addClass(["ms-2"]),
                   },
                 },

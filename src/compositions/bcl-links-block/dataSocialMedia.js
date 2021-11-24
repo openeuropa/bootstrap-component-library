@@ -8,6 +8,7 @@ module.exports = {
       label: "Facebook",
       icon: {
         name: "facebook",
+        path: "/icons.svg",
       },
     },
     {
@@ -15,6 +16,7 @@ module.exports = {
       label: "Twitter",
       icon: {
         name: "twitter",
+        path: "/icons.svg",
       },
     },
     {
@@ -22,6 +24,7 @@ module.exports = {
       label: "Instagram",
       icon: {
         name: "instagram",
+        path: "/icons.svg",
       },
     },
     {
@@ -29,6 +32,7 @@ module.exports = {
       label: "Github",
       icon: {
         name: "github",
+        path: "/icons.svg",
       },
     },
     {
@@ -36,6 +40,7 @@ module.exports = {
       label: "Telegram",
       icon: {
         name: "telegram",
+        path: "/icons.svg",
       },
     },
     {
@@ -43,6 +48,7 @@ module.exports = {
       label: "Drive",
       icon: {
         name: "google",
+        path: "/icons.svg",
       },
     },
     {
@@ -50,6 +56,7 @@ module.exports = {
       label: "Twitch",
       icon: {
         name: "twitch",
+        path: "/icons.svg",
       },
     },
     {
@@ -57,6 +64,7 @@ module.exports = {
       label: "Discord",
       icon: {
         name: "discord",
+        path: "/icons.svg",
       },
     },
     {
