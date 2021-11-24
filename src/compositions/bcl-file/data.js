@@ -13,7 +13,6 @@ module.exports = {
     size: "xl",
   },
   translation: {
-    id: "language-dropdown",
     alignment: "center",
     label: {
       label: "Other languages (3)",
