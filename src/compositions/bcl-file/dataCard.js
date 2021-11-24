@@ -25,7 +25,6 @@ module.exports = {
   },
   variant: "card",
   translation: {
-    id: "language-dropdown",
     alignment: "center",
     label: {
       label: "Other languages (3)",

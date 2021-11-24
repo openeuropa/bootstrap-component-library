@@ -1,6 +1,7 @@
 import demoData from "@openeuropa/bcl-featured-media/data";
 import demoDataVideo from "@openeuropa/bcl-featured-media/dataVideo";
 import demoDataImage from "@openeuropa/bcl-featured-media/dataImage";
+import demoFeaturedItem from "@openeuropa/bcl-featured-media/dataFeaturedItem";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 
 const getArgs = (data, type) => {
@@ -12,7 +13,8 @@ const getArgs = (data, type) => {
     args.ratio = data.ratio || "16x9";
   }
   if (type === "text") {
-    args.alignment = "left";
+    args.alignment = "right";
+    args.title = data.title;
   }
 
   return args;
@@ -55,10 +57,18 @@ const getArgTypes = (data, type) => {
   }
 
   if (type === "text") {
+    argTypes.title = {
+      type: { name: "string" },
+      description: "Title of the block",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    };
     argTypes.alignment = {
-      name: "alignment",
       type: { name: "select" },
-      description: "Alignment inside text containter",
+      description: "Alignment inside featured item",
       options: ["left", "right"],
       table: {
         type: { summary: "string" },
@@ -76,27 +86,6 @@ const adjustWidth = (story) => {
   return `
   <div class="row">
     <div class="col-12 col-md-4">
-      ${demo}
-    </div>
-  </div>`;
-};
-
-const withText = (story, params) => {
-  const demo = story();
-  const alignment = params.args.alignment;
-  return `
-  <h3 class="mb-4">Lorem ipsum dolor sit amet.</h3>
-  <div class="row">
-    <div class="col-12 col-md-6 ${
-      alignment == "right" ? "order-md-1" : "order-md-2"
-    }">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <a href="#" class="mb-5 d-block">Read More</a>
-    </div>
-    <div class="col-12 col-md-6 ${
-      alignment == "right" ? "order-md-2" : "order-md-1"
-    }">
       ${demo}
     </div>
   </div>`;
@@ -120,11 +109,13 @@ const applyArgs = (data, args) => {
 };
 
 export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
+
 Iframe.args = getArgs(demoData, "iframe");
 Iframe.argTypes = getArgTypes(demoData, "iframe");
 Iframe.decorators = [adjustWidth];
 
 export const Video = (args) => featuredMedia(applyArgs(demoDataVideo, args));
+
 Video.args = getArgs(demoData);
 Video.argTypes = getArgTypes(demoData);
 Video.decorators = [adjustWidth];
@@ -134,8 +125,9 @@ Image.args = getArgs(demoDataImage);
 Image.argTypes = getArgTypes(demoDataImage);
 Image.decorators = [adjustWidth];
 
-export const insideTextContainer = (args) =>
-  featuredMedia(applyArgs(demoData, args));
-insideTextContainer.args = getArgs(demoData, "text");
-insideTextContainer.argTypes = getArgTypes(demoData, "text");
-insideTextContainer.decorators = [withText];
+export const FeaturedItem = (args) =>
+  featuredMedia(applyArgs(demoFeaturedItem, args));
+
+FeaturedItem.storyName = "Featured Item";
+FeaturedItem.args = getArgs(demoFeaturedItem, "text");
+FeaturedItem.argTypes = getArgTypes(demoFeaturedItem, "text");

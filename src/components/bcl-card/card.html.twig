@@ -133,7 +133,7 @@
     {% set _img_class = _img_class ~ " " ~ _image.classes %}
   {% endif %}
 {% endif %}
-{% if _horizontal %}
+{% if _horizontal and (_image is not empty or _date is not empty)  %}
   <div class='{{ _horizontal_grid.left_col_classes  }}'>
 {% endif %}
   {% if _date is not empty %}
@@ -145,7 +145,7 @@
       class="{{ _img_class }}"
     >
   {% endif %}
-{% if _horizontal %}
+{% if _horizontal and (_image is not empty or _date is not empty) %}
   </div>
 {% endif %}
 {% if _image.position == 'background' %}
