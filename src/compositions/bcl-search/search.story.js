@@ -1,4 +1,8 @@
-import { initListings, initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import {
+  initListings,
+  initBadges,
+  correctPaths,
+} from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
