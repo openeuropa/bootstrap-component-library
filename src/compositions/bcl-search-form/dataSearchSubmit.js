@@ -6,6 +6,7 @@ module.exports = {
     icon: {
       name: "search",
       size: "xs",
+      path: "/icons.svg",
     },
   },
   input: {

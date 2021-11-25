@@ -1,3 +1,5 @@
+import iconPath from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+
 export const getFormControls = (data, type) => {
   const argTypes = {
     label: {
@@ -356,4 +358,17 @@ export const initTooltip = (story) => {
       });
     </script>
     <div style="padding: 2rem 0 2rem 8rem">${demo}</div>`;
+};
+
+export const correctPaths = (data) => {
+  Object.keys(data).forEach((prop) => {
+    if (typeof data[prop] === "string" && data[prop].includes("icons.svg")) {
+      data[prop] = iconPath;
+    }
+    if (data[prop] !== null && typeof data[prop] === "object") {
+      data[prop] = correctPaths(data[prop]);
+    }
+  });
+
+  return data;
 };

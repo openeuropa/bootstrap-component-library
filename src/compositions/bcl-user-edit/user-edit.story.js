@@ -1,7 +1,7 @@
 import demoData from "@openeuropa/bcl-user-edit/dataUserEdit.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import userEdit from "@openeuropa/bcl-user-edit/user-edit.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 demoData.data.header = headerData;
 
@@ -23,12 +23,6 @@ export default {
       },
     ],
   },
-};
-
-const correctPaths = (data) => {
-  data.data.navigation.profileBack.icon.path = defaultSprite;
-
-  return data;
 };
 
 export const Default = () => userEdit(correctPaths(demoData));

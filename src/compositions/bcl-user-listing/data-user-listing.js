@@ -275,17 +275,20 @@ module.exports = {
       icon: {
         name: "sliders",
         size: "xs",
+        path: "/icons.svg",
         attributes: new drupalAttribute().addClass(["ms-2"]),
       },
     },
     badges: [
       {
         label: "Name",
+        icons_path: "/icons.svg",
         dismissible: true,
         attributes: new drupalAttribute().addClass(["me-2"]),
       },
       {
         label: "Organisation",
+        icons_path: "/icons.svg",
         dismissible: true,
         attributes: new drupalAttribute().addClass(["me-2"]),
       },

@@ -27,6 +27,7 @@ module.exports = {
           label: "Link",
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "link",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
@@ -35,6 +36,7 @@ module.exports = {
           label: "Link",
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "link",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
@@ -44,6 +46,7 @@ module.exports = {
           path: "#",
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "chat-left-dots-fill",
             size: "xs",
           },
@@ -57,6 +60,7 @@ module.exports = {
           path: "#",
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "person-fill",
             size: "xs",
           },
@@ -71,6 +75,7 @@ module.exports = {
           remove_icon_spacers: true,
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "bell-fill",
             size: "s",
           },
@@ -92,6 +97,7 @@ module.exports = {
       submit: {
         variant: "light",
         icon: {
+          path: "/icons.svg",
           name: "search",
           size: "xs",
         },

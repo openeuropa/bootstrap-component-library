@@ -1,6 +1,6 @@
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 const button = { ...dataDefault.button };
 
@@ -44,16 +44,6 @@ const applyArgs = (data, args) => {
 
   data.background = args.background;
   correctPaths(data);
-
-  return data;
-};
-
-const correctPaths = (data) => {
-  if (data.service_buttons) {
-    data.service_buttons.forEach((btn) => {
-      btn.icon.path = defaultSprite;
-    });
-  }
 
   return data;
 };

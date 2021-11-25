@@ -4,6 +4,7 @@ module.exports = {
   icon: {
     name: "search",
     size: "xs",
+    path: "/icons.svg",
     attributes: new drupalAttribute().addClass(["bcl-search-form__icon"]),
   },
   input: {

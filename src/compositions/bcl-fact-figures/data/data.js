@@ -22,6 +22,7 @@ module.exports = {
     {
       icon: {
         name: "ui-checks",
+        path: "/icons.svg",
       },
       subtitle: "Feature tickets",
       title: "337 Features",

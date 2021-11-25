@@ -1,26 +1,7 @@
 import demoData from "@openeuropa/bcl-description-list/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-description-list/dataHorizontal";
 import descriptionList from "@openeuropa/bcl-description-list/description-list.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
-
-const correctPath = (data) => {
-  data.items.forEach((item) => {
-    if (item.term) {
-      if (Array.isArray(item.term)) {
-        item.term.forEach((term) => {
-          if (term.icon) {
-            term.icon.path = defaultSprite;
-          }
-        });
-      } else {
-        if (item.term.icon) {
-          item.term.icon.path = defaultSprite;
-        }
-      }
-    }
-  });
-  return data;
-};
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 export default {
   title: "Paragraphs/Description List",
@@ -41,4 +22,4 @@ export default {
 export const Default = () => descriptionList(correctPath(demoData));
 
 export const Horizontal = () =>
-  descriptionList(correctPath(demoDataHorizontal));
+  descriptionList(correctPaths(demoDataHorizontal));
