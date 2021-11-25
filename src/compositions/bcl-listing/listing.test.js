@@ -14,7 +14,6 @@ const render = (params) => renderTwigFileAsNode(template, params, true);
 describe("OE - Listing", () => {
   test("horizontal renders correctly", () => {
     expect.assertions(1);
-
     return expect(render(demoDefaultData)).resolves.toMatchSnapshot();
   });
 
@@ -46,5 +45,78 @@ describe("OE - Listing", () => {
   test("with date listing items renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoDateData)).resolves.toMatchSnapshot();
+  });
+
+  test("horizontal renders correctly with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDefaultData,
+        title: "Listing test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly in 2 columns with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDefault2ColData,
+        title: "Listing test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly in 3 columns with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDefault3ColData,
+        title: "Listing test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with highlight and with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoHighlightData,
+        title: "Listing test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly in 2 columns with highlight and with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoHighlight2ColData,
+        title: "Listing test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly in 3 columns with highlight and with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoHighlight3ColData,
+        title: "Listing test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with date and with title", () => {
+    expect.assertions(1);
+    return expect(
+      render({ ...demoDateData, title: "Listing test title", title_tag: "h6" })
+    ).resolves.toMatchSnapshot();
   });
 });

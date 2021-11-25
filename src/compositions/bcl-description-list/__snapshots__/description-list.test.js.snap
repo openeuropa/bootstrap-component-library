@@ -1,83 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Description List renders correctly 1`] = `
-<jest>
-  <dl>
-    <dt>
-      <svg
-        class="me-2 bi icon--xs"
-      >
-        <use
-          xlink:href="/icons.svg#geo-alt-fill"
-        />
-      </svg>
-      <div
-        class="align-middle d-inline-block"
-      >
-        <p
-          class="d-inline-block mb-0"
-        >
-          Only title label with icon
-        </p>
-      </div>
-    </dt>
-    <dd>
-      <p
-        class="mb-2"
-      >
-        Description text goes here.
-      </p>
-    </dd>
-    <dt>
-      <div
-        class="align-middle d-inline-block"
-      >
-        First title label
-      </div>
-    </dt>
-    <dt>
-      <svg
-        class="me-2 bi icon--xs"
-      >
-        <use
-          xlink:href="/icons.svg#geo-alt-fill"
-        />
-      </svg>
-      <div
-        class="align-middle d-inline-block"
-      >
-        <p
-          class="mb-0 d-inline-block"
-        >
-          Second title label
-        </p>
-      </div>
-    </dt>
-    <dd>
-      <p
-        class="mb-2"
-      >
-        Description text goes here.
-      </p>
-    </dd>
-    <dt>
-      <div
-        class="align-middle d-inline-block"
-      >
-        Only title label
-      </div>
-    </dt>
-    <dd>
-      Description text goes here.
-    </dd>
-    <dd>
-      Description text goes here.
-    </dd>
-  </dl>
-</jest>
-`;
-
-exports[`OE - Description List renders correctly 2`] = `
+exports[`OE - Description List horizontal renders correctly 1`] = `
 <jest>
   <dl
     class="d-md-grid grid-3-9"
@@ -156,6 +79,257 @@ exports[`OE - Description List renders correctly 2`] = `
         Description text goes here.
       </dd>
     </div>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List renders correctly 1`] = `
+<jest>
+  <dl>
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="/icons.svg#geo-alt-fill"
+        />
+      </svg>
+      <div
+        class="align-middle d-inline-block"
+      >
+        <p
+          class="d-inline-block mb-0"
+        >
+          Only title label with icon
+        </p>
+      </div>
+    </dt>
+    <dd>
+      <p
+        class="mb-2"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      <div
+        class="align-middle d-inline-block"
+      >
+        First title label
+      </div>
+    </dt>
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="/icons.svg#geo-alt-fill"
+        />
+      </svg>
+      <div
+        class="align-middle d-inline-block"
+      >
+        <p
+          class="mb-0 d-inline-block"
+        >
+          Second title label
+        </p>
+      </div>
+    </dt>
+    <dd>
+      <p
+        class="mb-2"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      <div
+        class="align-middle d-inline-block"
+      >
+        Only title label
+      </div>
+    </dt>
+    <dd>
+      Description text goes here.
+    </dd>
+    <dd>
+      Description text goes here.
+    </dd>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List with title horizontal renders correctly 1`] = `
+<jest>
+  <h6
+    class="fw-bold mb-4"
+  >
+    
+    Description list test title
+  
+  </h6>
+  <dl
+    class="d-md-grid grid-3-9"
+  >
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="/icons.svg#geo-alt-fill"
+        />
+      </svg>
+      <div
+        class="align-middle d-inline-block"
+      >
+        <p
+          class="mb-0 d-inline-block"
+        >
+          Only title label with icon
+        </p>
+      </div>
+    </dt>
+    <dd>
+      Description text goes here.
+    </dd>
+    <div>
+      <dt>
+        <div
+          class="align-middle d-inline-block"
+        >
+          <p
+            class="mb-0"
+          >
+            First title label
+          </p>
+        </div>
+      </dt>
+      <dt>
+        <svg
+          class="me-2 bi icon--xs"
+        >
+          <use
+            xlink:href="/icons.svg#geo-alt-fill"
+          />
+        </svg>
+        <div
+          class="align-middle d-inline-block"
+        >
+          <p
+            class="mb-0 d-inline-block"
+          >
+            Second title label
+          </p>
+        </div>
+      </dt>
+    </div>
+    <dd>
+      <p
+        class="mb-0"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      <div
+        class="align-middle d-inline-block"
+      >
+        Only title label
+      </div>
+    </dt>
+    <div>
+      <dd>
+        Description text goes here.
+      </dd>
+      <dd>
+        Description text goes here.
+      </dd>
+    </div>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List with title renders correctly 1`] = `
+<jest>
+  <h6
+    class="fw-bold mb-4"
+  >
+    
+    Description list test title
+  
+  </h6>
+  <dl>
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="/icons.svg#geo-alt-fill"
+        />
+      </svg>
+      <div
+        class="align-middle d-inline-block"
+      >
+        <p
+          class="d-inline-block mb-0"
+        >
+          Only title label with icon
+        </p>
+      </div>
+    </dt>
+    <dd>
+      <p
+        class="mb-2"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      <div
+        class="align-middle d-inline-block"
+      >
+        First title label
+      </div>
+    </dt>
+    <dt>
+      <svg
+        class="me-2 bi icon--xs"
+      >
+        <use
+          xlink:href="/icons.svg#geo-alt-fill"
+        />
+      </svg>
+      <div
+        class="align-middle d-inline-block"
+      >
+        <p
+          class="mb-0 d-inline-block"
+        >
+          Second title label
+        </p>
+      </div>
+    </dt>
+    <dd>
+      <p
+        class="mb-2"
+      >
+        Description text goes here.
+      </p>
+    </dd>
+    <dt>
+      <div
+        class="align-middle d-inline-block"
+      >
+        Only title label
+      </div>
+    </dt>
+    <dd>
+      Description text goes here.
+    </dd>
+    <dd>
+      Description text goes here.
+    </dd>
   </dl>
 </jest>
 `;
