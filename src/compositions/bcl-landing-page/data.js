@@ -36,6 +36,7 @@ module.exports = {
         icon: {
           name: "chevron-right",
           size: "fluid",
+          path: "/icons.svg",
         },
         attributes: new drupalAttribute().addClass(["btn", "btn-primary"]),
       },

@@ -32,6 +32,7 @@ module.exports = {
       icon: {
         name: "caret-down-fill",
         size: "2xs",
+        path: "/icons.svg",
       },
     },
     items: [

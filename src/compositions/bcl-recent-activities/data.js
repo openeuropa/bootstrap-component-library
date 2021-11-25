@@ -12,6 +12,7 @@ module.exports = {
           icon: {
             name: "clock",
             size: "xs",
+            path: "/icons.svg",
             attributes: new drupalAttribute().addClass([
               "me-2",
               "align-top",
@@ -32,6 +33,7 @@ module.exports = {
           icon: {
             name: "clock",
             size: "xs",
+            path: "/icons.svg",
             attributes: new drupalAttribute().addClass([
               "me-2",
               "align-top",
@@ -52,6 +54,7 @@ module.exports = {
           icon: {
             name: "clock",
             size: "xs",
+            path: "/icons.svg",
             attributes: new drupalAttribute().addClass([
               "me-2",
               "align-top",

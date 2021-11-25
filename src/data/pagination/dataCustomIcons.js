@@ -9,7 +9,7 @@ module.exports = {
     path: "#",
     icon: {
       name: "arrow-left-short",
-      path: "boostrap-icons.svg",
+      path: "/icons.svg",
     },
   },
   next: {
@@ -17,7 +17,7 @@ module.exports = {
     path: "#",
     icon: {
       name: "arrow-right-short",
-      path: "boostrap-icons.svg",
+      path: "/icons.svg",
     },
   },
   items: [

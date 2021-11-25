@@ -1,6 +1,6 @@
 import demoData from "@openeuropa/bcl-recent-activities/data.js";
 import recentActivities from "@openeuropa/bcl-recent-activities/recent-activities.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 export default {
   title: "Compositions/Recent Activities",
@@ -14,15 +14,6 @@ export default {
       },
     ],
   },
-};
-
-const correctPaths = (data) => {
-  data.activities.forEach((activity) => {
-    activity.meta.forEach((meta) => {
-      meta.icon.path = defaultSprite;
-    });
-  });
-  return data;
 };
 
 export const Default = () => recentActivities(correctPaths(demoData));

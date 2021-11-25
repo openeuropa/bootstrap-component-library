@@ -136,6 +136,7 @@ module.exports = {
         icon: {
           name: "caret-down-fill",
           size: "xs",
+          path: "/icons.svg",
         },
         attributes: new drupalAttribute()
           .addClass(["w-100", "text-center", "py-4", " d-block", "d-md-none"])
@@ -150,6 +151,7 @@ module.exports = {
           icon: {
             name: "key-fill",
             size: "xs",
+            path: "/icons.svg",
             attributes: new drupalAttribute().addClass([
               "me-2",
               "align-top",
@@ -162,6 +164,7 @@ module.exports = {
           icon: {
             name: "people-fill",
             size: "xs",
+            path: "/icons.svg",
             attributes: new drupalAttribute().addClass([
               "me-2",
               "align-top",
@@ -225,6 +228,7 @@ module.exports = {
                 icon: {
                   name: "clock",
                   size: "xs",
+                  path: "/icons.svg",
                   attributes: new drupalAttribute().addClass([
                     "me-2",
                     "align-top",
@@ -245,6 +249,7 @@ module.exports = {
                 icon: {
                   name: "clock",
                   size: "xs",
+                  path: "/icons.svg",
                   attributes: new drupalAttribute().addClass([
                     "me-2",
                     "align-top",
@@ -265,6 +270,7 @@ module.exports = {
                 icon: {
                   name: "clock",
                   size: "xs",
+                  path: "/icons.svg",
                   attributes: new drupalAttribute().addClass([
                     "me-2",
                     "align-top",
@@ -285,6 +291,7 @@ module.exports = {
                 icon: {
                   name: "clock",
                   size: "xs",
+                  path: "/icons.svg",
                   attributes: new drupalAttribute().addClass([
                     "me-2",
                     "align-top",
@@ -305,6 +312,7 @@ module.exports = {
                 icon: {
                   name: "clock",
                   size: "xs",
+                  path: "/icons.svg",
                   attributes: new drupalAttribute().addClass([
                     "me-2",
                     "align-top",
@@ -395,6 +403,7 @@ module.exports = {
         icon: {
           name: "chevron-right",
           size: "xs",
+          path: "/icons.svg",
         },
         attributes: new drupalAttribute().addClass(["py-2", "d-inline-block"]),
       },

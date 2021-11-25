@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data";
 import demoCardData from "@openeuropa/bcl-file/dataCard";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 export default {
   title: "Paragraphs/File",
@@ -22,13 +22,6 @@ export default {
       },
     ],
   },
-};
-
-const correctPaths = (data) => {
-  data.icon_path = defaultSprite;
-  data.translation.label.icon.path = defaultSprite;
-
-  return data;
 };
 
 export const Default = () => file(correctPaths(demoData));
