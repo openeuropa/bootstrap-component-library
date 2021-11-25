@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { initListings } from "@openeuropa/bcl-story-utils";
+import { initListings, initBadges } from "@openeuropa/bcl-story-utils";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
 import groupLandingListing from "@openeuropa/bcl-group-landing-listing/group-landing-listing.html.twig";
@@ -10,7 +10,7 @@ import demoDataListMember from "@openeuropa/bcl-group-landing-listing/dataListMe
 
 export default {
   title: "Compositions/Group/Listing",
-  decorators: [withDesign, initListings],
+  decorators: [withDesign, initListings, initBadges],
   parameters: {
     layout: "fullscreen",
     design: [

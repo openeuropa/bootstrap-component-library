@@ -10,6 +10,7 @@ demoData.data.footer = footerData;
 
 export default {
   title: "Compositions/Landing Page",
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

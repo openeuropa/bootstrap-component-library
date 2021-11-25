@@ -1,4 +1,4 @@
-import { initListings } from "@openeuropa/bcl-story-utils";
+import { initListings, initBadges } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
@@ -11,6 +11,7 @@ demoData.data.footer = footerData;
 
 export default {
   title: "Compositions/Search",
+  decorators: [withDesign, initListings, initBadges],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
@@ -55,5 +56,3 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
-
-Default.decorators = [initListings, withDesign];

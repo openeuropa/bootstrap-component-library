@@ -52,6 +52,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Links Block",
+  decorators: [withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",

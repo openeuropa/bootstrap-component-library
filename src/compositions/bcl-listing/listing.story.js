@@ -39,6 +39,7 @@ const adapter = (data) => {
 
 export default {
   title: "Paragraphs/Listings",
+  decorators: [withDesign],
   parameters: {
     design: [
       {

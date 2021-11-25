@@ -318,7 +318,6 @@ export const initBadges = (story) => {
     <script>
       var badges = document.querySelectorAll(".badge");
       badges.forEach(element => {
-        console.log('cucu');
         var close = element.getElementsByTagName('span')[0];
         if(close) {
           close.addEventListener('click', event => {
@@ -334,15 +333,6 @@ export const initListings = (story) => {
   const demo = story();
   return `
     <script>
-      var badges = document.querySelectorAll(".badge");
-      badges.forEach(element => {
-        var close = element.getElementsByTagName('span')[0];
-        if(close) {
-          close.addEventListener('click', event => {
-            close.parentElement.remove();
-          })
-        }
-      });
       if (document.querySelector(".multi-select")) {
         new SlimSelect({
           select: ".multi-select",

@@ -26,6 +26,7 @@ const getArgTypes = () => {
 
 export default {
   title: "Compositions/Search Form",
+  decorators: [withDesign],
   parameters: {
     design: [
       {
