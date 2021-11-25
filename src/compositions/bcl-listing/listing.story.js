@@ -5,7 +5,7 @@ import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3
 import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
 import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col.js";
 import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col.js";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import listing from "@openeuropa/bcl-listing/listing.html.twig";
 
@@ -30,12 +30,6 @@ const getArgTypes = (data) => {
   };
 };
 
-const adapter = (data) => {
-  data.link.icon.path = defaultSprite;
-
-  return data;
-};
-
 export default {
   title: "Paragraphs/Listings",
   parameters: {
@@ -49,7 +43,8 @@ export default {
   },
 };
 
-export const Horizontal = (args) => listing(adapter(demoDefaultData));
+export const Horizontal = (args) => listing(correctPaths(demoDefaultData));
+
 Horizontal.storyName = "Default, 1 col";
 Horizontal.args = getArgs(demoDefaultData);
 Horizontal.argTypes = getArgs(demoDefaultData);

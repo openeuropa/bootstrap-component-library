@@ -8,6 +8,7 @@ module.exports = {
         icon: {
           name: "geo-alt-fill",
           size: "xs",
+          path: "/icons.svg",
         },
       },
       definition: "<p class='mb-2'>Description text goes here.</p>",
@@ -22,6 +23,7 @@ module.exports = {
           icon: {
             name: "geo-alt-fill",
             size: "xs",
+            path: "/icons.svg",
           },
         },
       ],

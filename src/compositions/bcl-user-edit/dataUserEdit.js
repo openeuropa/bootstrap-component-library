@@ -35,6 +35,7 @@ module.exports = {
         icon_position: "before",
         icon: {
           name: "arrow-left",
+          path: "/icons.svg",
         },
       },
       imageUploadInput: {

@@ -23,6 +23,7 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "link",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -31,6 +32,7 @@ module.exports = {
           icon_position: "before",
           icon: {
             name: "link",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -41,6 +43,7 @@ module.exports = {
           icon: {
             name: "chat-left-dots-fill",
             size: "xs",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -54,6 +57,7 @@ module.exports = {
           icon: {
             name: "person-fill",
             size: "xs",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -68,6 +72,7 @@ module.exports = {
           icon: {
             name: "bell-fill",
             size: "s",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass([
             "notification",
@@ -89,6 +94,7 @@ module.exports = {
         icon: {
           name: "search",
           size: "xs",
+          path: "/icons.svg",
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",

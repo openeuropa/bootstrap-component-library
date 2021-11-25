@@ -3,7 +3,7 @@ import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data-ec";
 import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 import ucpknLogo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
 
@@ -30,25 +30,9 @@ const getArgTypes = () => {
   };
 };
 
-const correctPaths = (data) => {
-  if (data.head.navigation) {
-    data.head.navigation.items.forEach((item) => {
-      if (item.icon) {
-        item.icon.path = defaultSprite;
-      }
-    });
-  }
-  if (data.navbar) {
-    data.navbar.form.submit.icon.path = defaultSprite;
-  }
-  if (data.breadcrumbs) {
-    data.breadcrumbs.icons_path = defaultSprite;
-  }
-  return data;
-};
-
 const applyArgs = (data, args) => {
-  correctPaths(data, args);
+  correctPaths(data);
+
   return Object.assign(data, args);
 };
 

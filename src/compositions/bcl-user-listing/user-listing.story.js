@@ -2,7 +2,7 @@ import demoData from "@openeuropa/bcl-user-listing/data-user-listing.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
 import userListing from "@openeuropa/bcl-user-listing/user-listing.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 demoData.data.header = headerData;
 demoData.data.footer = footerData;
@@ -39,13 +39,6 @@ const scriptInit = (story) => {
   ${demo}`;
 };
 
-const correctPaths = (data) => {
-  data.data.filter_button.icon.path = defaultSprite;
-  data.data.badges.forEach((badge) => {
-    badge.icons_path = defaultSprite;
-  });
-  return data;
-};
-
 export const Default = () => userListing(correctPaths(demoData));
+
 Default.decorators = [scriptInit];
