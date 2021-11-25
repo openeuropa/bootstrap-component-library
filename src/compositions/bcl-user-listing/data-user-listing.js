@@ -282,11 +282,13 @@ module.exports = {
     badges: [
       {
         label: "Name",
+        icons_path: "/icons.svg",
         dismissible: true,
         attributes: new drupalAttribute().addClass(["me-2"]),
       },
       {
         label: "Organisation",
+        icons_path: "/icons.svg",
         dismissible: true,
         attributes: new drupalAttribute().addClass(["me-2"]),
       },

@@ -282,6 +282,7 @@ module.exports = {
         label: "Public",
         background: "light",
         dismissible: true,
+        icons_path: "/icons.svg",
         attributes: new drupalAttribute().addClass([
           "me-2",
           "text-dark",
@@ -292,6 +293,7 @@ module.exports = {
         label: "Restricted",
         background: "light",
         dismissible: true,
+        icons_path: "/icons.svg",
         attributes: new drupalAttribute().addClass([
           "me-2",
           "text-dark",
@@ -302,6 +304,7 @@ module.exports = {
         label: "Private",
         background: "light",
         dismissible: true,
+        icons_path: "/icons.svg",
         attributes: new drupalAttribute().addClass([
           "me-2",
           "text-dark",
