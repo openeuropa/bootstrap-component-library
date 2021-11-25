@@ -1,27 +1,6 @@
+import { initScrollspy } from "@openeuropa/bcl-story-utils";
 import dataDefault from "@openeuropa/bcl-inpage-navigation/dataDefault.js";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
-
-const initScrollspy = (story) => {
-  const demo = story();
-  return `
-    <script>
-      if (
-        document.getElementById("bcl-inpage-navigation") &&
-        typeof bootstrap !== "undefined"
-      ) {
-        document.body.setAttribute("data-bs-spy", "scroll");
-        document.body.setAttribute("data-bs-target", "#bcl-inpage-navigation");
-        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
-        if (scrollspyBody) {
-          scrollspyBody.dispose();
-        }
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-          target: "#bcl-inpage-navigation",
-        });
-      }
-    </script>
-  ${demo}`;
-};
 
 export default {
   title: "Compositions/Inpage navigation",

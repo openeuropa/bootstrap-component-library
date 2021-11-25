@@ -1,3 +1,5 @@
+import { initListings } from "@openeuropa/bcl-story-utils";
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
@@ -20,30 +22,6 @@ export default {
       },
     ],
   },
-};
-
-const scriptInit = (story) => {
-  const demo = story();
-  return `
-    <script>
-      var badges = document.querySelectorAll(".badge");
-      badges.forEach(element => {
-        var close = element.getElementsByTagName('span')[0];
-        if(close) {
-          close.addEventListener('click', event => {
-            close.parentElement.remove();
-          })
-        }
-      });
-      if (document.querySelector(".multi-select")) {
-        new SlimSelect({
-          select: ".multi-select",
-          selectByGroup: true,
-          placeholder: "Please select a value",
-        });
-      }
-    </script>
-  ${demo}`;
 };
 
 const correctPaths = (data) => {
@@ -77,4 +55,5 @@ const correctPaths = (data) => {
 };
 
 export const Default = () => search(correctPaths(demoData));
-Default.decorators = [scriptInit];
+
+Default.decorators = [initListings, withDesign];

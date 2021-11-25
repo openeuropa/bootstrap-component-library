@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { initBadges } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
@@ -72,7 +73,7 @@ const correctPaths = (data, variant) => {
         }
       });
     });
-    if (data.banner) {
+    if (data.banner && data.banner.service_buttons) {
       data.banner.service_buttons.forEach((btn) => {
         btn.icon.path = defaultSprite;
       });
@@ -83,23 +84,6 @@ const correctPaths = (data, variant) => {
   }
 
   return data;
-};
-
-const scriptInit = (story) => {
-  const demo = story();
-  return `
-    <script>
-      var badges = document.querySelectorAll(".badge");
-      badges.forEach(element => {
-        var close = element.getElementsByTagName('span')[0];
-        if (close) {
-          close.addEventListener('click', event => {
-            close.parentElement.remove();
-          })
-        }
-      });
-    </script>
-  ${demo}`;
 };
 
 export default {
@@ -132,4 +116,4 @@ FullPage.storyName = "News page";
 export const Listing = () => listingPage(correctPaths(demoListing, "listing"));
 
 Listing.storyName = "News listing";
-Listing.decorators = [scriptInit];
+Listing.decorators = [initBadges];

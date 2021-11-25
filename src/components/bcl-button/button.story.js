@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { initTooltip } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-button/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-button/toggleData.js";
 import popoverDemoData from "@openeuropa/bcl-data-button/popoverData.js";
@@ -199,20 +200,6 @@ const initPopover = (story) => {
       });
     </script>
     <div style="padding: 6rem 0 6rem 14rem">${demo}</div>`;
-};
-
-const initTooltip = (story) => {
-  const demo = story();
-  return `
-    <script>
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    </script>
-    <div style="padding: 2rem 0 2rem 8rem">${demo}</div>`;
 };
 
 export default {

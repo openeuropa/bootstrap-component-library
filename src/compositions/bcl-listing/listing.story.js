@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
 import demoDateData from "@openeuropa/bcl-listing/data/listing--date.js";
 import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
