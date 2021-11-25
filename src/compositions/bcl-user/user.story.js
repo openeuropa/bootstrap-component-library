@@ -5,9 +5,9 @@ import demoDataViewCompact from "@openeuropa/bcl-user/data-user-view-compact";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import editUser from "@openeuropa/bcl-user/edit.html.twig";
-import viewUser from "@openeuropa/bcl-user/view.html.twig";
-import viewUserCompact from "@openeuropa/bcl-user/view-compact.html.twig";
+import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
+import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
+import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const data = {

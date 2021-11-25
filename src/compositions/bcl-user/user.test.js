@@ -9,13 +9,13 @@ import demoDataViewCompact from "@openeuropa/bcl-user/data-user-view-compact";
 const templateList = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const renderList = (params) => renderTwigFileAsNode(templateList, params);
 
-const templateEdit = "@oe-bcl/bcl-user/edit.html.twig";
+const templateEdit = "@oe-bcl/bcl-user/user-edit.html.twig";
 const renderEdit = (params) => renderTwigFileAsNode(templateEdit, params);
 
-const templateView = "@oe-bcl/bcl-user/view.html.twig";
+const templateView = "@oe-bcl/bcl-user/user-view.html.twig";
 const renderView = (params) => renderTwigFileAsNode(templateView, params);
 
-const templateViewCompact = "@oe-bcl/bcl-user/view-compact.html.twig";
+const templateViewCompact = "@oe-bcl/bcl-user/user-view-compact.html.twig";
 const renderViewCompact = (params) =>
   renderTwigFileAsNode(templateViewCompact, params);
 

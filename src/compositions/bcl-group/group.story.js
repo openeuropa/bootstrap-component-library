@@ -1,13 +1,15 @@
 import { withDesign } from "storybook-addon-designs";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
-import groupLandingListing from "@openeuropa/bcl-group-landing-listing/group-landing-listing.html.twig";
+import groupListing from "@openeuropa/bcl-group/group.html.twig";
+import groupLanding from "@openeuropa/bcl-group/group-landing.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
-import demoData from "@openeuropa/bcl-group-landing-listing/data";
-import demoDataList from "@openeuropa/bcl-group-landing-listing/dataList";
-import demoDataListContent from "@openeuropa/bcl-group-landing-listing/dataListContent";
-import demoDataListMember from "@openeuropa/bcl-group-landing-listing/dataListMember";
+import demoData from "@openeuropa/bcl-group/data";
+import demoDataList from "@openeuropa/bcl-group/dataList";
+import demoDataListContent from "@openeuropa/bcl-group/dataListContent";
+import demoDataListMember from "@openeuropa/bcl-group/dataListMember";
+import demoDataLanding from "@openeuropa/bcl-group/dataLanding";
 
 let baseData = {
   content_type: "group",
@@ -39,6 +41,17 @@ const dataListing = {
   ...demoDataList,
 };
 
+const dataLanding = {
+  page_title: "Group members",
+  content_type: "group",
+  header: header,
+  footer: footer,
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  ...demoDataLanding,
+};
+
 const scriptInit = (story) => {
   const demo = story();
   return `
@@ -64,7 +77,7 @@ const scriptInit = (story) => {
 };
 
 export default {
-  title: "Compositions/Group/Listing",
+  title: "Compositions/Group",
   decorators: [withDesign, scriptInit],
   parameters: {
     layout: "fullscreen",
@@ -105,17 +118,30 @@ const correctPaths = (data) => {
   });
   data.header.navbar.form.submit.icon.path = defaultSprite;
   data.footer.attributes.addClass("mt-3-5");
-  data.badges.forEach((badge) => {
-    badge.icons_path = defaultSprite;
-  });
-  data.filter_button.icon.path = defaultSprite;
+  if (data.badges) {
+    data.badges.forEach((badge) => {
+      badge.icons_path = defaultSprite;
+    });
+  }
+  if (data.filter_button) {
+    data.filter_button.icon.path = defaultSprite;
+  }
   return data;
 };
 
 export const List = () => listingPage(correctPaths(dataListing));
 
-export const MemberList = () =>
-  groupLandingListing(correctPaths(dataListingMember));
+export const MemberList = () => groupListing(correctPaths(dataListingMember));
 
-export const ContentList = () =>
-  groupLandingListing(correctPaths(dataListingContent));
+export const ContentList = () => groupListing(correctPaths(dataListingContent));
+
+export const Landing = () => groupLanding(correctPaths(dataLanding));
+Landing.parameters = {
+  design: [
+    {
+      name: "Mockup - Group",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=482%3A2559",
+    },
+  ],
+};
