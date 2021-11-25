@@ -1,4 +1,4 @@
-import { initScrollspy } from "@openeuropa/bcl-story-utils";
+import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-page/data/data_listing.js";
@@ -65,63 +65,6 @@ const demoData2 = {
   listing: listingDefault,
   files: filesThumbnail,
   timeline: timeline,
-};
-
-const correctPaths = (data) => {
-  if (data.header.head.navigation) {
-    data.header.head.navigation.items.forEach((item) => {
-      if (item.icon) {
-        item.icon.path = defaultSprite;
-      }
-    });
-  }
-  if (data.header.navbar) {
-    data.header.navbar.form.submit.icon.path = defaultSprite;
-  }
-  if (data.breadcrumbs) {
-    data.breadcrumbs.icons_path = defaultSprite;
-  }
-  if (data.filter_button) {
-    data.filter_button.icon.path = defaultSprite;
-  }
-  if (data.badges) {
-    data.badges.forEach((badge) => {
-      badge.icons_path = defaultSprite;
-    });
-  }
-  if (data.footer) {
-    data.footer.rows.forEach((row) => {
-      row.cols.forEach((col) => {
-        if (col.items) {
-          col.items.forEach((item) => {
-            if (item.type == "links") {
-              item.links.forEach((link) => {
-                if (link.icon) {
-                  link.icon.path = defaultSprite;
-                }
-              });
-            }
-          });
-        }
-      });
-    });
-    if (data.banner && data.banner.service_buttons) {
-      data.banner.service_buttons.forEach((btn) => {
-        btn.icon.path = defaultSprite;
-      });
-    }
-    data.footer.attributes.addClass("mt-4-5");
-  }
-
-  if (data.files) {
-    data.files.forEach((file, i) => {
-      file.attributes = file.attributes.addClass("mb-4");
-      file.icon_path = defaultSprite;
-      file.translation.label.icon.path = defaultSprite;
-    });
-  }
-
-  return data;
 };
 
 export default {
