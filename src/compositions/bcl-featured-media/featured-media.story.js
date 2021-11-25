@@ -66,6 +66,15 @@ const getArgTypes = (data, type) => {
         category: "Content",
       },
     };
+    argTypes.title_tag = {
+      type: { name: "string" },
+      description: "Tag of the title",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "h4" },
+        category: "Content",
+      },
+    };
     argTypes.alignment = {
       type: { name: "select" },
       description: "Alignment inside featured item",
