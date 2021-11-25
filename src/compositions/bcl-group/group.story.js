@@ -77,7 +77,7 @@ const scriptInit = (story) => {
 };
 
 export default {
-  title: "Compositions/Group",
+  title: "Pages/Group",
   decorators: [withDesign, scriptInit],
   parameters: {
     layout: "fullscreen",

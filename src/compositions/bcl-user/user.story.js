@@ -39,7 +39,7 @@ const dataView = {
 };
 
 export default {
-  title: "Compositions/Users",
+  title: "Pages/Users",
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

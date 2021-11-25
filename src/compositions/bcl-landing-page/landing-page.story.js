@@ -15,7 +15,7 @@ const dataLanding = {
 };
 
 export default {
-  title: "Compositions/Landing Page",
+  title: "Pages/Landing Page",
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

@@ -17,7 +17,7 @@ const dataListing = {
 };
 
 export default {
-  title: "Compositions/Search",
+  title: "Pages/Search",
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
