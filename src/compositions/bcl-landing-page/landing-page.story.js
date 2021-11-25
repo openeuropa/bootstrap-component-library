@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-landing-page/data.js";
 import headerData from "@openeuropa/bcl-data-header/data.js";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
@@ -9,6 +10,7 @@ demoData.data.footer = footerData;
 
 export default {
   title: "Compositions/Landing Page",
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

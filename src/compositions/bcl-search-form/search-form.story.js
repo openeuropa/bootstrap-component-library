@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search-form/dataSearch";
 import demoDataSubmittable from "@openeuropa/bcl-search-form/dataSearchSubmit";
 import searchForm from "@openeuropa/bcl-search-form/search-form.html.twig";
@@ -25,6 +26,7 @@ const getArgTypes = () => {
 
 export default {
   title: "Compositions/Search Form",
+  decorators: [withDesign],
   parameters: {
     design: [
       {
