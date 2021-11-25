@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-links-block/dataLinksBlock.js";
 import socialMediaData from "@openeuropa/bcl-links-block/dataSocialMedia";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
@@ -51,6 +52,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Links Block",
+  decorators: [withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",

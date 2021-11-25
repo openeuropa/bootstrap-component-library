@@ -3,7 +3,11 @@ import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData.js";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData.js";
 import link from "@openeuropa/bcl-link/link.html.twig";
-import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
+import {
+  getIconControls,
+  getVariants,
+  initTooltip,
+} from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
@@ -117,20 +121,6 @@ const applyArgs = (data, args) => {
   }
 
   return Object.assign(data, args);
-};
-
-const initTooltip = (story) => {
-  const demo = story();
-  return `
-    <script>
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    </script>
-    <div style="padding: 2rem 0 2rem 8rem">${demo}</div>`;
 };
 
 export default {

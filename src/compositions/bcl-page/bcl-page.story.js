@@ -1,3 +1,4 @@
+import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-page/data/data_listing.js";
@@ -16,7 +17,6 @@ import fileThumbnail from "@openeuropa/bcl-file/dataCard.js";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import page from "@openeuropa/bcl-page/page.html.twig";
 import drupalAttribute from "drupal-attribute";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 const files = [file, file];
 const filesThumbnail = [fileThumbnail, fileThumbnail];
@@ -65,28 +65,6 @@ const demoData2 = {
   listing: listingDefault,
   files: filesThumbnail,
   timeline: timeline,
-};
-
-const initScrollspy = (story) => {
-  const demo = story();
-  return `
-    <script>
-      if (
-        document.getElementById("bcl-inpage-navigation") &&
-        typeof bootstrap !== "undefined"
-      ) {
-        document.body.setAttribute("data-bs-spy", "scroll");
-        document.body.setAttribute("data-bs-target", "#bcl-inpage-navigation");
-        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
-        if (scrollspyBody) {
-          scrollspyBody.dispose();
-        }
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-          target: "#bcl-inpage-navigation",
-        });
-      }
-    </script>
-  ${demo}`;
 };
 
 export default {
