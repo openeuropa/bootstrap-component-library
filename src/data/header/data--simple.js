@@ -23,6 +23,7 @@ module.exports = {
           path: "#",
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "chat-left-dots-fill",
             size: "xs",
           },
@@ -38,6 +39,7 @@ module.exports = {
           icon: {
             name: "person-fill",
             size: "xs",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -58,6 +60,7 @@ module.exports = {
         icon: {
           name: "search",
           size: "xs",
+          path: "/icons.svg",
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",

@@ -1,6 +1,9 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  merge,
+  renderTwigFileAsNode,
+  getVariants,
+} from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-badge/data";
-import { getVariants } from "@openeuropa/bcl-story-utils";
 
 const template = "@oe-bcl/bcl-badge/badge.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);

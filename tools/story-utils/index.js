@@ -1,3 +1,5 @@
+import iconPath from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+
 export const getFormControls = (data, type) => {
   const argTypes = {
     label: {
@@ -288,4 +290,85 @@ export const getIconNames = () => {
     "eye",
     "eye-slash",
   ];
+};
+
+export const initScrollspy = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
+      console.log(element);
+      if (element && typeof bootstrap !== "undefined") {
+        console.log('mmhh');
+        document.body.setAttribute("data-bs-spy", "scroll");
+        document.body.setAttribute("data-bs-target", "#${element.id}");
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
+        if (scrollspyBody) {
+          scrollspyBody.dispose();
+        }
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+          target: "#${element.id}",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
+export const initBadges = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var badges = document.querySelectorAll(".badge");
+      badges.forEach(element => {
+        var close = element.getElementsByTagName('span')[0];
+        if(close) {
+          close.addEventListener('click', event => {
+            close.parentElement.remove();
+          })
+        }
+      });
+    </script>
+  ${demo}`;
+};
+
+export const initListings = (story) => {
+  const demo = story();
+  return `
+    <script>
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
+export const initTooltip = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+    <div style="padding: 2rem 0 2rem 8rem">${demo}</div>`;
+};
+
+export const correctPaths = (data) => {
+  Object.keys(data).forEach((prop) => {
+    if (typeof data[prop] === "string" && data[prop].includes("icons.svg")) {
+      data[prop] = iconPath;
+    }
+    if (data[prop] !== null && typeof data[prop] === "object") {
+      data[prop] = correctPaths(data[prop]);
+    }
+  });
+
+  return data;
 };

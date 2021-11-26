@@ -272,6 +272,7 @@ module.exports = {
     icon: {
       name: "sliders",
       size: "xs",
+      path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["ms-2"]),
     },
   },

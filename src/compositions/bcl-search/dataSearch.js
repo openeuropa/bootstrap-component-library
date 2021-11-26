@@ -331,6 +331,7 @@ module.exports = {
     icon_position: "before",
     icon: {
       name: "filter",
+      path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
   },
@@ -338,18 +339,21 @@ module.exports = {
     {
       label: "News",
       background: "light",
+      icons_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 01",
       background: "light",
+      icons_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 02",
       background: "light",
+      icons_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },

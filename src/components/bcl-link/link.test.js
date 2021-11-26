@@ -1,8 +1,7 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-link/data";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData";
-import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/bcl-link/link.html.twig";
@@ -56,7 +55,7 @@ describe("OE - Link", () => {
           icon: {
             name: "mouse",
             transformation: "rotate-90",
-            path: "bootstrap-icons.svg",
+            path: "/icons.svg",
             attributes: new drupalAttribute(),
           },
         },

@@ -17,7 +17,29 @@ const renderTwigFileAsNode = (file, options, reset) =>
     }
   });
 
+const getVariants = (outline, add) => {
+  let variants = [
+    "primary",
+    "secondary",
+    "success",
+    "danger",
+    "warning",
+    "info",
+    "light",
+    "dark",
+  ];
+  if (outline) {
+    variants = [...variants, ...variants.map((el) => `outline-${el}`)];
+  }
+  if (add) {
+    variants = [...variants, ...add];
+  }
+
+  return variants;
+};
+
 module.exports = {
   merge,
   renderTwigFileAsNode,
+  getVariants,
 };

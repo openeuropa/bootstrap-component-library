@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
 import footerData from "@openeuropa/bcl-data-footer/data";
 import footerDataEC from "@openeuropa/bcl-data-footer/data-ec";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 export default {
   title: "Compositions/Footer",
@@ -25,25 +25,6 @@ export default {
       disable: true,
     },
   },
-};
-
-const correctPaths = (data) => {
-  data.rows.forEach((row) => {
-    row.cols.forEach((col) => {
-      if (col.items) {
-        col.items.forEach((item) => {
-          if (item.type == "links") {
-            item.links.forEach((link) => {
-              if (link.icon) {
-                link.icon.path = defaultSprite;
-              }
-            });
-          }
-        });
-      }
-    });
-  });
-  return data;
 };
 
 export const Footer = () => footer(correctPaths(footerData));

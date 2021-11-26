@@ -34,6 +34,7 @@ module.exports = {
     label: "Back to my profile",
     icon_position: "before",
     icon: {
+      path: "/icons.svg",
       name: "arrow-left",
     },
   },

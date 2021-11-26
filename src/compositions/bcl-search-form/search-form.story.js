@@ -1,7 +1,8 @@
+import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search-form/dataSearch";
 import demoDataSubmittable from "@openeuropa/bcl-search-form/dataSearchSubmit";
 import searchForm from "@openeuropa/bcl-search-form/search-form.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 const getArgs = (data) => {
   return {
@@ -25,6 +26,7 @@ const getArgTypes = () => {
 
 export default {
   title: "Compositions/Search Form",
+  decorators: [withDesign],
   parameters: {
     design: [
       {
@@ -40,18 +42,6 @@ const resetAttrs = (data, args) => {
   if (!args.pill) {
     data.attributes.removeClass("rounded");
   }
-};
-
-const correctPaths = (data) => {
-  if (data.submit) {
-    data.submit.icon.path = defaultSprite;
-  }
-
-  if (data.icon) {
-    data.icon.path = defaultSprite;
-  }
-
-  return data;
 };
 
 const applyArgs = (data, args) => {
