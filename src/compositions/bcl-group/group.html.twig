@@ -1,21 +1,12 @@
-{#
-  Parameters:
-  - banner (object) (default: {})
-  - navigation (object) (default: {})
-#}
-
 {% extends "@oe-bcl/bcl-base-templates/listing-page.html.twig" %}
-
-{% set _banner = banner|default({}) %}
-{% set _navigation = navigation|default({}) %}
 
 {% block banner %}
   <div class="container mt-4 mt-md-5">
     <div class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container">
-      <h2 class="mb-0 d-inline-block fw-bold">{{ _banner.title }}</h2>
-      {% if _banner.actions is not empty and _banner.actions is iterable %}
+      <h2 class="mb-0 d-inline-block fw-bold">{{ banner.title }}</h2>
+      {% if banner.actions is not empty and banner.actions is iterable %}
       <div class="d-grid d-md-block ms-auto">
-        {% for _action in _banner.actions %}
+        {% for _action in banner.actions %}
           {% if _action.type == "link" %}
             {% include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
           {% elseif _action.type == "button" %}
@@ -27,8 +18,8 @@
       </div>
       {% endif %}
     </div>
-    {% if _navigation is not empty %}
-      {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with _navigation only %}
+    {% if navigation is not empty %}
+      {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
     {% endif %}
   </div>
 {% endblock %}
