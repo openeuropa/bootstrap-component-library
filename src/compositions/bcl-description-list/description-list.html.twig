@@ -37,26 +37,42 @@
           <div>
         {% endif %}
         {% for _term in _item.term %}
-          <dt>
+          <dt
+          {% if _variant == 'horizontal' and _term.icon is not empty %}
+            class="d-flex"
+          {% endif %}
+          >
             {%- if _term.icon is not empty -%}
+              {% set _icon_classes = ["me-2"] %}
+              {% if _variant == 'horizontal' %}
+                {% set _icon_classes = _icon_classes|merge(["mt-1"]) %}
+              {% endif %}
               {% include '@oe-bcl/bcl-icon/icon.html.twig' with _term.icon|merge({
-                attributes: create_attribute().addClass('me-2')
+                attributes: create_attribute().addClass(_icon_classes)
               }) only %}
             {%- endif -%}
-            <div class="align-middle d-inline-block">{{- _term.label -}}</div>
+            {{- _term.label -}}
           </dt>
         {% endfor %}
         {% if _variant == 'horizontal' %}
           </div>
         {% endif %}
       {% else %}
-        <dt>
+        <dt
+          {% if _variant == 'horizontal' and _item.term.icon is not empty %}
+            class="d-flex"
+          {% endif %}
+        >
           {% if _item.term.icon is not empty %}
+              {% set _icon_classes = ["me-2"] %}
+              {% if _variant == 'horizontal' %}
+                {% set _icon_classes = _icon_classes|merge(["mt-1"]) %}
+              {% endif %}
             {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.term.icon|merge({
-              attributes: create_attribute().addClass('me-2')
+              attributes: create_attribute().addClass(_icon_classes)
             }) only -%}
           {% endif %}
-          <div class="align-middle d-inline-block">{{- _item.term.label -}}</div>
+          {{- _item.term.label -}}
         </dt>
       {% endif %}
     {% endif %}
