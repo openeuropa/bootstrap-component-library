@@ -11,6 +11,7 @@ module.exports = {
   icon: {
     name: "file-pdf-fill",
     size: "xl",
+    path: "/icons.svg",
   },
   translation: {
     alignment: "center",

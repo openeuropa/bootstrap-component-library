@@ -1,0 +1,25 @@
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+
+{% block sidebar %}
+  <div class="bcl-event-details">
+    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with sidebar only %}
+    {% for badge in badges %}
+      {% include '@oe-bcl/badge/badge.html.twig' with sidebar.badges only %}
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block content %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
+  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
+  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
+  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+  </p>
+  <h3 class="fw-bold my-4">Description</h3>
+
+
+  <h3 class="fw-bold my-4">Related documents</h3>
+  {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
+  {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+{% endblock %}

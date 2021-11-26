@@ -52,6 +52,9 @@
       {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
     {% endblock %}
   {% endif %}
+  {% if _with_banner == false and content_top is empty %}
+    <h2>{{ _title }}</h2>
+  {% endif %}
   <div class="container mt-md-4-75 mt-4">
     <div class="row">
     {% if _with_sidebar %}
