@@ -280,11 +280,13 @@ module.exports = {
     {
       label: "Name",
       dismissible: true,
+      icons_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Organisation",
       dismissible: true,
+      icons_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
   ],

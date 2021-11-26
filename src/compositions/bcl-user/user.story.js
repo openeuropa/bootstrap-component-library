@@ -1,3 +1,4 @@
+import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
 import demoDataListing from "@openeuropa/bcl-user/data-user-listing.js";
 import demoDataEdit from "@openeuropa/bcl-user/data-user-edit.js";
 import demoDataView from "@openeuropa/bcl-user/data-user-view.js";
@@ -8,7 +9,6 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const data = {
   with_header: true,
@@ -46,64 +46,9 @@ export default {
   },
 };
 
-const scriptInit = (story) => {
-  const demo = story();
-  return `
-    <script>
-      var badges = document.querySelectorAll(".badge");
-      badges.forEach(element => {
-        var close = element.getElementsByTagName('span')[0];
-        if (close) {
-          close.addEventListener('click', event => {
-            close.parentElement.remove();
-          })
-        }
-      });
-    </script>
-  ${demo}`;
-};
-
-const correctPaths = (data) => {
-  data.header.head.navigation.items.forEach((item) => {
-    if (item.icon) {
-      item.icon.path = defaultSprite;
-    }
-  });
-  data.header.breadcrumbs.icons_path = defaultSprite;
-  data.footer.rows.forEach((row) => {
-    row.cols.forEach((col) => {
-      if (col.items) {
-        col.items.forEach((item) => {
-          if (item.type == "links") {
-            item.links.forEach((link) => {
-              if (link.icon) {
-                link.icon.path = defaultSprite;
-              }
-            });
-          }
-        });
-      }
-    });
-  });
-  data.header.navbar.form.submit.icon.path = defaultSprite;
-  data.footer.attributes.addClass("mt-3-5");
-  if (data.filter_button) {
-    data.filter_button.icon.path = defaultSprite;
-  }
-  if (data.badges) {
-    data.badges.forEach((badge) => {
-      badge.icons_path = defaultSprite;
-    });
-  }
-  if (data.profile_back) {
-    data.profile_back.icon.path = defaultSprite;
-  }
-  return data;
-};
-
 export const Listing = () => listingPage(correctPaths(dataListing));
 
-Listing.decorators = [scriptInit];
+Listing.decorators = [initBadges];
 Listing.parameters = {
   design: [
     {

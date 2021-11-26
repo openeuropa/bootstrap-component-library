@@ -297,17 +297,15 @@ export const initScrollspy = (story) => {
   return `
     <script>
       var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
-      console.log(element);
       if (element && typeof bootstrap !== "undefined") {
-        console.log('mmhh');
         document.body.setAttribute("data-bs-spy", "scroll");
-        document.body.setAttribute("data-bs-target", "#${element.id}");
+        document.body.setAttribute("data-bs-target", "#" + element.id + "");
         var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
         if (scrollspyBody) {
           scrollspyBody.dispose();
         }
         var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-          target: "#${element.id}",
+          target: "#" + element.id + "",
         });
       }
     </script>

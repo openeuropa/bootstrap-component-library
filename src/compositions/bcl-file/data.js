@@ -10,6 +10,7 @@ module.exports = {
   },
   icon: {
     name: "file-pdf-fill",
+    path: "/icons.svg",
     size: "xl",
   },
   translation: {
@@ -19,6 +20,7 @@ module.exports = {
       icon_position: "after",
       icon: {
         name: "caret-down-fill",
+        path: "/icons.svg",
         size: "2xs",
       },
     },
