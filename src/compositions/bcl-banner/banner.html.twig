@@ -2,6 +2,7 @@
 
 {# Parameters:
   - title: (string) (default: "")
+  - title_tag: (string) (default: "div")
   - description: (string) (default: "")
   - link: (link object) (default: {}): predefined structure for Link component
   - image: (string) <img> tag
@@ -11,14 +12,15 @@
   - content_classes: (string) (default: "")
 #}
 
-{% set _title = title|default("") %}
-{% set _description = description|default("") %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('div') %}
+{% set _description = description|default('') %}
 {% set _link = link|default({}) %}
-{% set _image = image|default("") %}
+{% set _image = image|default('') %}
 {% set _shade = shade|default(false) %}
 {% set _hero = hero|default(false) %}
 {% set _full_width = full_width|default(false) %}
-{% set _content_classes = content_classes|default("") %}
+{% set _content_classes = content_classes|default('') %}
 
 
 {% set _content_class = 'bcl-banner__content' %}
@@ -47,7 +49,7 @@
   <div class="container">
     <div class="{{ _content_class }}">
     {% if _title is not empty %}
-      <div class="{{ _title_classes }}">{{ _title }}</div>
+      <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
       {% if _description is not empty %}
       <p class="mb-4">{{ _description }}</p>
       {% endif %}

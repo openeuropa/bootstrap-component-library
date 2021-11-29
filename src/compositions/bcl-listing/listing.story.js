@@ -11,9 +11,12 @@ import { correctPaths } from "@openeuropa/bcl-story-utils";
 import listing from "@openeuropa/bcl-listing/listing.html.twig";
 
 const getArgs = (data) => {
-  return {
+  const args = {
     variant: data.variant,
+    title: data.title || "",
+    title_tag: data.title_tag || "",
   };
+  return args;
 };
 
 const getArgTypes = (data) => {
@@ -28,7 +31,32 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    title: {
+      type: { name: "string" },
+      description: "Title of the block",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    title_tag: {
+      type: { name: "string" },
+      description: "Tag of the title",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "h4" },
+        category: "Content",
+      },
+    },
   };
+};
+
+const applyArgs = (data, args) => {
+  if (data.link.icon) {
+    data.link.icon.path = defaultSprite;
+  }
+  return Object.assign(data, args);
 };
 
 export default {
@@ -45,25 +73,25 @@ export default {
   },
 };
 
-export const Horizontal = (args) => listing(correctPaths(demoDefaultData));
-
+export const Horizontal = (args) => listing(applyArgs(demoDefaultData, args));
 Horizontal.storyName = "Default, 1 col";
 Horizontal.args = getArgs(demoDefaultData);
-Horizontal.argTypes = getArgs(demoDefaultData);
+Horizontal.argTypes = getArgTypes(demoDefaultData);
 
-export const Vertical = (args) => listing(adapter(demoDefault2ColData));
+export const Vertical = (args) => listing(applyArgs(demoDefault2ColData, args));
 
 Vertical.storyName = "Default, 2 col";
 Vertical.args = getArgs(demoDefault2ColData);
 Vertical.argTypes = getArgTypes(demoDefault2ColData);
 
-export const Vertical3Cols = (args) => listing(adapter(demoDefault3ColData));
+export const Vertical3Cols = (args) =>
+  listing(applyArgs(demoDefault3ColData, args));
 
 Vertical3Cols.storyName = "Default, 3 col";
 Vertical3Cols.args = getArgs(demoDefault3ColData);
-Vertical3Cols.artTypes = getArgTypes(demoDefault3ColData);
+Vertical3Cols.argTypes = getArgTypes(demoDefault3ColData);
 
-export const Cards = (args) => listing(adapter(demoHighlightData));
+export const Cards = (args) => listing(applyArgs(demoHighlightData, args));
 
 Cards.storyName = "Highlight, 1 col";
 Cards.args = getArgs(demoHighlightData);
@@ -74,19 +102,21 @@ Cards.parameters = {
   },
 };
 
-export const CardsTwoCols = (args) => listing(adapter(demoHighlight2ColData));
+export const CardsTwoCols = (args) =>
+  listing(applyArgs(demoHighlight2ColData, args));
 
 CardsTwoCols.storyName = "Highlight, 2 col";
 CardsTwoCols.args = getArgs(demoHighlight2ColData);
 CardsTwoCols.argTypes = getArgTypes(demoHighlight2ColData);
 
-export const VerticalCards = (args) => listing(adapter(demoHighlight3ColData));
+export const VerticalCards = (args) =>
+  listing(applyArgs(demoHighlight3ColData, args));
 
 VerticalCards.storyName = "Highlight, 3 col";
 VerticalCards.args = getArgs(demoHighlight3ColData);
 VerticalCards.argTypes = getArgTypes(demoHighlight3ColData);
 
-export const Date = (args) => listing(adapter(demoDateData));
+export const Date = (args) => listing(applyArgs(demoDateData, args));
 
 Date.storyName = "Date listing";
 Date.args = getArgs(demoDateData);
