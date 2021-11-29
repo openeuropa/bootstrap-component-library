@@ -1,7 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: "File title",
+  item_title: "File title",
   language: "English",
   meta: "(16.2 MB - PDF)",
   icon_path: "/icons.svg",
