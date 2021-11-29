@@ -5,12 +5,12 @@ module.exports = {
     {
       rounded_pill: true,
       label: "Culture",
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new drupalAttribute().addClass(["me-2 mb-2"]),
     },
     {
       rounded_pill: true,
       label: "Technology",
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new drupalAttribute().addClass(["me-2 mb-2"]),
     },
   ],
   items: [

@@ -7,7 +7,7 @@ import dataListing from "@openeuropa/bcl-event/data/dataListing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import eventCt from "@openeuropa/bcl-event/event.html.twig";
+import event from "@openeuropa/bcl-event/event.html.twig";
 import file from "@openeuropa/bcl-file/data.js";
 import drupalAttribute from "drupal-attribute";
 
@@ -31,7 +31,6 @@ const baseData = {
 const demoData = {
   ...baseData,
   sidebar: sidebar,
-  with_banner: true,
   banner: {
     attributes: new drupalAttribute(),
     title: {
@@ -49,7 +48,6 @@ const demoData1 = {
     ...sidebar,
     image: true,
   },
-  with_banner: true,
   banner: {
     attributes: new drupalAttribute(),
     title: {
@@ -95,11 +93,11 @@ export default {
   },
 };
 
-export const FullPage = () => eventCt(correctPaths(demoData));
+export const FullPage = () => event(correctPaths(demoData));
 
 FullPage.storyName = "Event page";
 
-export const FullPage1 = () => eventCt(correctPaths(demoData1));
+export const FullPage1 = () => event(correctPaths(demoData1));
 
 FullPage1.storyName = "Event page with image";
 

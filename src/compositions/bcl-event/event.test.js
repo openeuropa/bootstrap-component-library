@@ -30,7 +30,6 @@ const demoData = {
     ...sidebar,
     image: true,
   },
-  with_banner: true,
   banner: {
     attributes: new drupalAttribute(),
     title: {

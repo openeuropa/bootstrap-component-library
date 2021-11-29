@@ -28,12 +28,12 @@
 {% set _columns = columns|default('3-9') %}
 {% set _content_type = content_type|default('') %}
 {% set _classes = ['bcl-node-type'] %}
-{% set _col_classes = { left: 'col-md-3', right: 'col-12 col-lg-9' } %}
+{% set _col_classes = { left: 'col-md-3', right: 'col-12 col-md-9' } %}
 
 {% if _columns == '4-8' %}
-  {% set _col_classes = { left: 'col-md-4', right: 'col-12 col-lg-8' } %}
+  {% set _col_classes = { left: 'col-md-4', right: 'col-12 col-md-8' } %}
 {% elseif _columns == '2-10' %}
-  {% set _col_classes = { left: 'col-md-2', right: 'col-12 col-lg-10' } %}
+  {% set _col_classes = { left: 'col-md-2', right: 'col-12 col-md-10' } %}
 {% endif %}
 
 {% if _content_type is not empty %}
