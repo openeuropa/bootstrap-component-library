@@ -32,7 +32,7 @@
 {% if _title is not empty %}
   {% set _title_classes = 'fw-bold mb-4' %}
   <{{ _title_tag }} class="{{ _title_classes }}">
-    {{ _title }}
+    {{- _title -}}
   </{{ _title_tag }}>
 {% endif %}
 
