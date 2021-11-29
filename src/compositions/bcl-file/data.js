@@ -4,13 +4,13 @@ module.exports = {
   item_title: "File title",
   language: "English",
   meta: "(16.2 MB - PDF)",
+  icon_path: "/icons.svg",
   download: {
     label: "Download",
     url: "/example.html",
   },
   icon: {
     name: "file-pdf-fill",
-    path: "/icons.svg",
     size: "xl",
   },
   translation: {
