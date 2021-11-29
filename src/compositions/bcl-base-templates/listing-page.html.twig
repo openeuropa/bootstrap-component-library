@@ -3,6 +3,7 @@
   - listing (object) (default: {})
   - pagination (object) (default: {})
   - sidebar (object) (default: '')
+  - page_title (string) (default: '')
 #}
 
 {% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
@@ -11,6 +12,7 @@
 {% set _pagination = pagination|default({}) %}
 {% set _search = search|default({}) %}
 {% set _sidebar = sidebar|default({}) %}
+{% set _page_title = page_title|default({}) %}
 
 {% block content_top %}
   {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
@@ -22,7 +24,7 @@
     </div>
     <h4 class="mb-4">
       <span class="text-capitalize">
-        {{ content_type }}
+        {{- _page_title -}}
       </span>
       ({{ listing.items.length }})
     </h4>

@@ -14,12 +14,17 @@ import simpleBanner from "@openeuropa/bcl-content-banner/data/data--simple.js";
 import pageBanner from "@openeuropa/bcl-banner/dataImage.js";
 import file from "@openeuropa/bcl-file/data.js";
 import fileThumbnail from "@openeuropa/bcl-file/dataCard.js";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 import page from "@openeuropa/bcl-page/page.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-const files = [file, file];
-const filesThumbnail = [fileThumbnail, fileThumbnail];
+const files = [
+  { ...file, attributes: new drupalAttribute().addClass(["mb-3"]) },
+  { ...file, attributes: new drupalAttribute().addClass(["mb-3"]) },
+];
+const filesThumbnail = [
+  { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
+  { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
+];
 
 delete banner.service_buttons;
 delete featuredItem.title;

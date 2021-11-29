@@ -4,6 +4,7 @@ module.exports = {
   item_title: "File title",
   language: "English",
   meta: "(16.2 MB - PDF)",
+  icon_path: "/icons.svg",
   download: {
     label: "Download",
     url: "/example.html",
@@ -19,6 +20,7 @@ module.exports = {
       icon_position: "after",
       icon: {
         name: "caret-down-fill",
+        path: "/icons.svg",
         size: "2xs",
       },
     },
