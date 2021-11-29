@@ -1,10 +1,20 @@
 {
-  "name": "@openeuropa/bcl-search",
+  "name": "@openeuropa/bcl-user",
   "author": "European Commission",
   "license": "EUPL-1.2",
   "version": "0.14.0",
-  "description": "OE - BCL search",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "OE - BCL user",
+  "dependencies": {
+    "@openeuropa/bcl-base-templates": "^0.14.0",
+    "@openeuropa/bcl-link": "^0.14.0",
+    "@openeuropa/bcl-form": "^0.14.0",
+    "@openeuropa/bcl-navigation": "^0.14.0",
+    "@openeuropa/bcl-card": "^0.14.0",
+    "@openeuropa/bcl-button": "^0.14.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openeuropa/bootstrap-component-library.git"

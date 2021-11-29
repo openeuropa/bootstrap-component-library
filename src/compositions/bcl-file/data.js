@@ -20,6 +20,7 @@ module.exports = {
       icon_position: "after",
       icon: {
         name: "caret-down-fill",
+        path: "/icons.svg",
         size: "2xs",
       },
     },

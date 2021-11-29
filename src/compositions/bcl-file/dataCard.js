@@ -9,6 +9,7 @@ module.exports = {
     path: "https://picsum.photos/seed/1002/600/400",
     alt: "alt img",
   },
+  icon_path: "/icons.svg",
   badges: [
     {
       label: "Label",

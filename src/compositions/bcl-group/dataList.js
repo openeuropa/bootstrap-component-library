@@ -1,0 +1,232 @@
+const drupalAttribute = require("drupal-attribute");
+
+module.exports = {
+  sidebar: {
+    id: "bcl-offcanvas",
+    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    extra_classes_close: "d-lg-none",
+    extra_classes_header: "pb-2-5 p-lg-0",
+    with_body_scroll: true,
+    title: {
+      label: "Filter options",
+      heading: 4,
+      extra_classes: "mb-lg-4",
+      id: "offcanvasExampleLabel",
+    },
+    search_form: {
+      attributes: new drupalAttribute()
+        .setAttribute("novalidate", true)
+        .setAttribute("onsubmit", "return false;"),
+      items: [
+        [
+          {
+            type: "fieldset",
+            classes: "col-sm-10",
+            legend: "Group type",
+            fieldset_classes: "mb-3",
+            legend_classes: "col-form-label mb-2",
+          },
+          {
+            input_type: "checkbox",
+            label: "Public groups",
+            wrapper_classes: "mb-3",
+            checked: true,
+          },
+          {
+            input_type: "checkbox",
+            label: "Restricted groups",
+            wrapper_classes: "mb-3",
+            checked: true,
+          },
+          {
+            input_type: "checkbox",
+            label: "Private groups",
+          },
+        ],
+        [
+          {
+            type: "fieldset",
+            legend: "Creation date (from)",
+            legend_classes: "col-form-label",
+          },
+          {
+            input_type: "date",
+            attributes: new drupalAttribute().addClass("mb-2"),
+          },
+        ],
+        [
+          {
+            type: "fieldset",
+            legend: "Creation date (to)",
+            fieldset_classes: "mb-3",
+            legend_classes: "col-form-label",
+          },
+          {
+            input_type: "date",
+            attributes: new drupalAttribute().addClass("mb-2"),
+          },
+        ],
+      ],
+      submit: {
+        multiple: true,
+        wrapper: "mt-4 d-grid d-md-block",
+        items: [
+          {
+            label: "Refine",
+            type: "submit",
+            variant: "primary",
+            attributes: new drupalAttribute().addClass([
+              "me-md-3",
+              "mb-3-5",
+              "mb-md-0",
+            ]),
+          },
+          {
+            label: "Clear",
+            type: "submit",
+            variant: "light",
+          },
+        ],
+      },
+    },
+  },
+  listing: {
+    attributes: new drupalAttribute(),
+    variant: "default-1-col",
+    remove_horizontal_spacer: true,
+    responsive_vertical_spacer: "md",
+    items: [
+      {
+        badges: [
+          {
+            label: "Public",
+          },
+        ],
+        title: {
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+        },
+        text: {
+          content:
+            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+        },
+        image: {
+          path: "https://picsum.photos/160?random=1",
+          alt: "alt img",
+          position: "top",
+          classes: "d-none d-md-block",
+        },
+      },
+      {
+        badges: [
+          {
+            label: "Public",
+          },
+        ],
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        title: {
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+        },
+        text: {
+          content:
+            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+        },
+        image: {
+          path: "https://picsum.photos/160?random=2",
+          alt: "alt img",
+          position: "top",
+          classes: "d-none d-md-block",
+        },
+      },
+      {
+        badges: [
+          {
+            label: "Public",
+          },
+        ],
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        title: {
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+        },
+        text: {
+          content:
+            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+        },
+        image: {
+          path: "https://picsum.photos/160?random=3",
+          alt: "alt img",
+          position: "top",
+          classes: "d-none d-md-block",
+        },
+      },
+      {
+        badges: [
+          {
+            label: "Public",
+          },
+        ],
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        title: {
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+        },
+        text: {
+          content:
+            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+        },
+        image: {
+          path: "https://picsum.photos/160?random=4",
+          alt: "alt img",
+          position: "top",
+          classes: "d-none d-md-block",
+        },
+      },
+      {
+        badges: [
+          {
+            label: "Public",
+          },
+        ],
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        title: {
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+        },
+        text: {
+          content:
+            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+        },
+        image: {
+          path: "https://picsum.photos/160?random=5",
+          alt: "alt img",
+          position: "top",
+          classes: "d-none d-md-block",
+        },
+      },
+      {
+        badges: [
+          {
+            label: "Public",
+          },
+        ],
+        extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
+        title: {
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+        },
+        text: {
+          content:
+            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+        },
+        image: {
+          path: "https://picsum.photos/160?random=6",
+          alt: "alt img",
+          position: "top",
+          classes: "d-none d-md-block",
+        },
+      },
+    ],
+  },
+};

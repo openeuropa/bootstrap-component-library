@@ -294,24 +294,22 @@ export const getIconNames = () => {
 
 export const initScrollspy = (story) => {
   const demo = story();
-  return (
-    "<script>" +
-    'var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");' +
-    'if (element && typeof bootstrap !== "undefined") {' +
-    "var id = element.id;" +
-    'document.body.setAttribute("data-bs-spy", "scroll");' +
-    'document.body.setAttribute("data-bs-target", "#" + id);' +
-    "var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);" +
-    "if (scrollspyBody) {" +
-    "scrollspyBody.dispose();" +
-    "}" +
-    "var scrollSpy = new bootstrap.ScrollSpy(document.body, {" +
-    'target: "#" + id,' +
-    "});" +
-    "}" +
-    "</script>" +
-    demo
-  );
+  return `
+    <script>
+      var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
+      if (element && typeof bootstrap !== "undefined") {
+        document.body.setAttribute("data-bs-spy", "scroll");
+        document.body.setAttribute("data-bs-target", "#" + element.id + "");
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
+        if (scrollspyBody) {
+          scrollspyBody.dispose();
+        }
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+          target: "#" + element.id + "",
+        });
+      }
+    </script>
+  ${demo}`;
 };
 
 export const initBadges = (story) => {
