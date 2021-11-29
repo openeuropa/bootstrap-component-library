@@ -5,15 +5,24 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
-import headerData from "@openeuropa/bcl-data-header/data.js";
-import footerData from "@openeuropa/bcl-data-footer/data.js";
-import search from "@openeuropa/bcl-search/search.html.twig";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import header from "@openeuropa/bcl-data-header/data--simple";
+import footer from "@openeuropa/bcl-data-footer/data";
 
-demoData.data.header = headerData;
-demoData.data.footer = footerData;
+const dataListing = {
+  page_title: "Search results",
+  content_type: "search",
+  header: header,
+  footer: footer,
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  with_sidebar: true,
+  ...demoData,
+};
 
 export default {
-  title: "Compositions/Search",
+  title: "Pages/Search",
   decorators: [withDesign, initListings, initBadges],
   parameters: {
     layout: "fullscreen",
@@ -28,4 +37,4 @@ export default {
   },
 };
 
-export const Default = () => search(correctPaths(demoData));
+export const Default = () => listingPage(correctPaths(dataListing));

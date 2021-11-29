@@ -53,9 +53,6 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  if (data.link.icon) {
-    data.link.icon.path = defaultSprite;
-  }
   return Object.assign(data, args);
 };
 
@@ -73,25 +70,28 @@ export default {
   },
 };
 
-export const Horizontal = (args) => listing(applyArgs(demoDefaultData, args));
+export const Horizontal = (args) =>
+  listing(applyArgs(correctPaths(demoDefaultData), args));
 Horizontal.storyName = "Default, 1 col";
 Horizontal.args = getArgs(demoDefaultData);
 Horizontal.argTypes = getArgTypes(demoDefaultData);
 
-export const Vertical = (args) => listing(applyArgs(demoDefault2ColData, args));
+export const Vertical = (args) =>
+  listing(applyArgs(correctPaths(demoDefault2ColData), args));
 
 Vertical.storyName = "Default, 2 col";
 Vertical.args = getArgs(demoDefault2ColData);
 Vertical.argTypes = getArgTypes(demoDefault2ColData);
 
 export const Vertical3Cols = (args) =>
-  listing(applyArgs(demoDefault3ColData, args));
+  listing(applyArgs(correctPaths(demoDefault3ColData), args));
 
 Vertical3Cols.storyName = "Default, 3 col";
 Vertical3Cols.args = getArgs(demoDefault3ColData);
 Vertical3Cols.argTypes = getArgTypes(demoDefault3ColData);
 
-export const Cards = (args) => listing(applyArgs(demoHighlightData, args));
+export const Cards = (args) =>
+  listing(applyArgs(correctPaths(demoHighlightData), args));
 
 Cards.storyName = "Highlight, 1 col";
 Cards.args = getArgs(demoHighlightData);
@@ -103,20 +103,21 @@ Cards.parameters = {
 };
 
 export const CardsTwoCols = (args) =>
-  listing(applyArgs(demoHighlight2ColData, args));
+  listing(applyArgs(correctPaths(demoHighlight2ColData), args));
 
 CardsTwoCols.storyName = "Highlight, 2 col";
 CardsTwoCols.args = getArgs(demoHighlight2ColData);
 CardsTwoCols.argTypes = getArgTypes(demoHighlight2ColData);
 
 export const VerticalCards = (args) =>
-  listing(applyArgs(demoHighlight3ColData, args));
+  listing(applyArgs(correctPaths(demoHighlight3ColData), args));
 
 VerticalCards.storyName = "Highlight, 3 col";
 VerticalCards.args = getArgs(demoHighlight3ColData);
 VerticalCards.argTypes = getArgTypes(demoHighlight3ColData);
 
-export const Date = (args) => listing(applyArgs(demoDateData, args));
+export const Date = (args) =>
+  listing(applyArgs(correctPaths(demoDateData), args));
 
 Date.storyName = "Date listing";
 Date.args = getArgs(demoDateData);
