@@ -43,8 +43,8 @@
   {% endif %}
 
   <!-- project name -->
-  {% if _project_logo is not empty or _site_name is not empty %}
   <div class="{{ _project_classes  }}">
+    {% if _project_logo is not empty or _site_name is not empty %}
     <div class="container">
     {% if _project_logo is not empty %}
       <img
@@ -63,8 +63,8 @@
       {{ _site_name }}
     {% endif %}
     </div>
+    {% endif %}
   </div>
-  {% endif %}
 
   <!-- navbar -->
   {% if _navbar is not empty %}
