@@ -14,8 +14,8 @@
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('default-1-col') %}
 {% set _title = title|default('') %}
-{% set _alignment = alignment|default('') %}
 {% set _title_tag = title_tag|default('h4') %}
+{% set _alignment = alignment|default('') %}
 {% set _link = link|default({}) %}
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
@@ -32,7 +32,7 @@
 {% if _title is not empty %}
   {% set _title_classes = 'fw-bold mb-4' %}
   <{{ _title_tag }} class="{{ _title_classes }}">
-    {{ _title }}
+    {{- _title -}}
   </{{ _title_tag }}>
 {% endif %}
 

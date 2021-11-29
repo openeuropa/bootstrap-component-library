@@ -32,6 +32,15 @@ const getArgTypes = (data) => {
         category: "Content",
       },
     },
+    title_tag: {
+      type: { name: "string", required: false },
+      description: "Tag of the heading",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "div" },
+        category: "Content",
+      },
+    },
     description: {
       type: "string",
       description: "Sub-heading of the banner",

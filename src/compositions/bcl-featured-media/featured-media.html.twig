@@ -33,7 +33,7 @@
 #}
 
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('h3') %}
+{% set _title_tag = title_tag|default('h4') %}
 {% set _with_text = with_text|default(false) %}
 {% set _wrapper_classes = 'bcl-featured-item' %}
 {% set _description = description|default('') %}
@@ -59,7 +59,7 @@
 {% if _title is not empty %}
   {% set _title_classes = 'fw-bold mb-4' %}
   <{{ _title_tag }} class="{{ _title_classes }}">
-    {{ _title }}
+    {{- _title -}}
   </{{ _title_tag }}>
 {% endif %}
 

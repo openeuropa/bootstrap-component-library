@@ -36,6 +36,15 @@ const getArgTypes = () => {
         category: "Content",
       },
     },
+    title_tag: {
+      type: { name: "string" },
+      description: "Tag of the title",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "h4" },
+        category: "Content",
+      },
+    },
     display_icons: {
       name: "icons visibility",
       type: { name: "boolean" },

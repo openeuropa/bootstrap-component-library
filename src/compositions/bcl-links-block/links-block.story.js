@@ -13,6 +13,24 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
+    title: {
+      type: { name: "string" },
+      description: "Title of the block",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    title_tag: {
+      type: { name: "string" },
+      description: "Tag of the title",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "h5" },
+        category: "Content",
+      },
+    },
     background: {
       description: "Color of the background",
       options: ["gray", "transparent"],

@@ -19,7 +19,7 @@ export default {
   },
 };
 
-export const Default = () => descriptionList(correctPath(demoData));
+export const Default = () => descriptionList(correctPaths(demoData));
 
 export const Horizontal = () =>
   descriptionList(correctPaths(demoDataHorizontal));

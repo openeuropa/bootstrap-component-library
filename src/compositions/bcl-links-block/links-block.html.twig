@@ -6,12 +6,14 @@
   - variant: (string) (default: "vertical")
     - options ["vertical", "horizontal"]
   - title: (string) (default: "")
+  - title_tag: (string) (default: "h5")
   - links (array of link objects) (default: [])
 #}
 
 {% set _background = background|default("gray") %}
 {% set _variant = variant|default("vertical") %}
 {% set _title = title|default("") %}
+{% set _title_tag = title_tag|default("h5") %}
 {% set _links = links|default([])%}
 
 {% if attributes is empty %}
@@ -26,7 +28,8 @@
   {{ attributes }}
 >
   {% if _title is not empty %}
-    <h5 class="fw-bold pb-3 mb-3 border-bottom">{{ _title }}</h5>
+    {% set _title_classes = 'fw-bold pb-3 mb-3 border-bottom' %}
+    <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
   {% endif %}
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">

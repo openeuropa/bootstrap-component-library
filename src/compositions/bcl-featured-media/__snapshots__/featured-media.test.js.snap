@@ -2,11 +2,158 @@
 
 exports[`OE - Featured media featured item renders correctly 1`] = `
 <jest>
-  <figure>
-    <img
-      class="img-fluid"
-      src="https://picsum.photos/1000/400?random=1"
-    />
+  <div
+    class="bcl-featured-item pb-4"
+  >
+    <h4
+      class="fw-bold mb-4"
+    >
+      A title for a featured item
+    </h4>
+    <div
+      class="row"
+    >
+      <div
+        class="col-12 col-md-6 order-1"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat.
+        </p>
+        <a
+          href="/example.html"
+        >
+          Read more
+        </a>
+      </div>
+      <div
+        class="col-12 col-md-6 order-2"
+      >
+        <figure
+          src="https://www.youtube.com/embed/VFYlYeFAEH4"
+        >
+          <div
+            class="ratio ratio-16x9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              frameborder="0"
+              height="197"
+              src="https://www.youtube.com/embed/fgi-GSCB6ho"
+              title="New digital strategy"
+              width="350"
+            />
+          </div>
+          <figcaption
+            class="bg-lighter p-3"
+          >
+            Media description text goes here.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Featured media featured item renders correctly with title 1`] = `
+<jest>
+  <div
+    class="bcl-featured-item pb-4"
+  >
+    <h6
+      class="fw-bold mb-4"
+    >
+      Featured media test title
+    </h6>
+    <div
+      class="row"
+    >
+      <div
+        class="col-12 col-md-6 order-1"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat.
+        </p>
+        <a
+          href="/example.html"
+        >
+          Read more
+        </a>
+      </div>
+      <div
+        class="col-12 col-md-6 order-2"
+      >
+        <figure
+          src="https://www.youtube.com/embed/VFYlYeFAEH4"
+        >
+          <div
+            class="ratio ratio-16x9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              frameborder="0"
+              height="197"
+              src="https://www.youtube.com/embed/fgi-GSCB6ho"
+              title="New digital strategy"
+              width="350"
+            />
+          </div>
+          <figcaption
+            class="bg-lighter p-3"
+          >
+            Media description text goes here.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Featured media renders correctly with iframe 1`] = `
+<jest>
+  <figure
+    src="https://www.youtube.com/embed/VFYlYeFAEH4"
+  >
+    <div
+      class="ratio ratio-16x9"
+    >
+      <iframe
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""
+        frameborder="0"
+        height="197"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="New digital strategy"
+        width="350"
+      />
+    </div>
     <figcaption
       class="bg-lighter p-3"
     >
@@ -16,7 +163,7 @@ exports[`OE - Featured media featured item renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Featured media renders correctly with iframe 1`] = `
+exports[`OE - Featured media renders correctly with iframe and with title 1`] = `
 <jest>
   <figure
     src="https://www.youtube.com/embed/VFYlYeFAEH4"
@@ -59,7 +206,55 @@ exports[`OE - Featured media renders correctly with image 1`] = `
 </jest>
 `;
 
+exports[`OE - Featured media renders correctly with image and with title 1`] = `
+<jest>
+  <figure>
+    <img
+      class="img-fluid"
+      src="https://picsum.photos/1000/400?random=1"
+    />
+    <figcaption
+      class="bg-lighter p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
+</jest>
+`;
+
 exports[`OE - Featured media renders correctly with video 1`] = `
+<jest>
+  <figure>
+    <video
+      class="w-100 d-block"
+      controls=""
+      poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    >
+      <source
+        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+        type="video/webm"
+      />
+      <track
+        kind="captions"
+        label="English"
+        src="example.vtt"
+        srclang=""
+      />
+    </video>
+    <figcaption
+      class="bg-lighter p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
+</jest>
+`;
+
+exports[`OE - Featured media renders correctly with video and with title 1`] = `
 <jest>
   <figure>
     <video

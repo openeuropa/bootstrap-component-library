@@ -31,6 +31,24 @@ const getArgTypes = (data) => {
         category: "Display",
       },
     },
+    title: {
+      type: { name: "string" },
+      description: "Title of the block",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    title_tag: {
+      type: { name: "string" },
+      description: "Tag of the title",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "h4" },
+        category: "Content",
+      },
+    },
   };
 };
 
