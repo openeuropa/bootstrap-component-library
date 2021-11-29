@@ -32,7 +32,10 @@ delete featuredItem.title;
 const baseData = {
   content_type: "page",
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-3-5"),
+  },
   sidebar: sidebar,
   with_banner: true,
   with_header: true,

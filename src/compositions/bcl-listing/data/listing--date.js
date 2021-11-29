@@ -33,6 +33,18 @@ module.exports = {
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
             <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
           </div>`,
+      badges: [
+        {
+          rounded_pill: true,
+          label: "Culture",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Technology",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+      ],
     },
     {
       title: {
@@ -55,6 +67,18 @@ module.exports = {
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
             <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
           </div>`,
+      badges: [
+        {
+          rounded_pill: true,
+          label: "Culture",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Technology",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+      ],
     },
     {
       title: {
@@ -76,6 +100,18 @@ module.exports = {
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
             <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
           </div>`,
+      badges: [
+        {
+          rounded_pill: true,
+          label: "Culture",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Technology",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+      ],
     },
     {
       title: {
@@ -98,6 +134,18 @@ module.exports = {
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
             <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
           </div>`,
+      badges: [
+        {
+          rounded_pill: true,
+          label: "Culture",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Technology",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+      ],
     },
     {
       title: {
@@ -120,6 +168,18 @@ module.exports = {
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
             <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
           </div>`,
+      badges: [
+        {
+          rounded_pill: true,
+          label: "Culture",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Technology",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+      ],
     },
     {
       title: {
@@ -142,6 +202,18 @@ module.exports = {
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
             <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
           </div>`,
+      badges: [
+        {
+          rounded_pill: true,
+          label: "Culture",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Technology",
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+      ],
     },
   ],
 };

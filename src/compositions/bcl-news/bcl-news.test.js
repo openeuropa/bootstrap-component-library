@@ -40,13 +40,13 @@ const renderListing = (params) =>
   renderTwigFileAsNode(listingTemplate, params, true);
 
 describe("OE - News", () => {
-  test("News page renders correctly", () => {
+  test("full page renders correctly", () => {
     expect.assertions(1);
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
-  test("News listing renders correctly", () => {
+  test("listing renders correctly", () => {
     expect.assertions(1);
 
     return expect(renderListing(demoListing)).resolves.toMatchSnapshot();

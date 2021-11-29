@@ -6,7 +6,6 @@
   - with_footer (boolean) (default: false)
   - with_banner (boolean) (default: false)
   - with_sidebar (boolean) (default: false)
-  - title (string) (default: '')
   - columns (string) (default: 3-9 )
   - content_type (string) (default: '')
   - attributes (drupal attrs)
@@ -27,15 +26,14 @@
 {% set _with_banner = banner|default(false) %}
 {% set _with_sidebar = sidebar|default(false) %}
 {% set _columns = columns|default('3-9') %}
-{% set _title = title|default('') %}
 {% set _content_type = content_type|default('') %}
 {% set _classes = ['bcl-node-type'] %}
-{% set _col_classes = { left: 'col-md-3', right: 'col-12 col-lg-9' } %}
+{% set _col_classes = { left: 'col-md-3', right: 'col-12 col-md-9' } %}
 
 {% if _columns == '4-8' %}
-  {% set _col_classes = { left: 'col-md-4', right: 'col-12 col-lg-8' } %}
+  {% set _col_classes = { left: 'col-md-4', right: 'col-12 col-md-8' } %}
 {% elseif _columns == '2-10' %}
-  {% set _col_classes = { left: 'col-md-2', right: 'col-12 col-lg-10' } %}
+  {% set _col_classes = { left: 'col-md-2', right: 'col-12 col-md-10' } %}
 {% endif %}
 
 {% if _content_type is not empty %}
@@ -47,11 +45,12 @@
 {% endif %}
 
 <main {{ attributes }}>
-  {% if _with_banner %}
-    {% block banner %}
-      {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
-    {% endblock %}
-  {% endif %}
+{% if _with_banner %}
+  {% block banner %}
+    {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
+  {% endblock %}
+{% endif %}
+
   <div class="container mt-md-4-75 mt-4">
     <div class="row">
     {% if _with_sidebar %}
@@ -71,13 +70,13 @@
       {% block content_bottom %}
         {{ content_bottom }}
       {% endblock %}
+      {% block related %}
+        {{ related }}
+      {% endblock %}
     </div>
   </div>
 </main>
 
-{% block related %}
-  {{ related }}
-{% endblock %}
 {% block feedback %}
   {{ feedback }}
 {% endblock %}
