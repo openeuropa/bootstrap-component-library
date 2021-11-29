@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.0 (2021-11-29)
+
+#### :rocket: New Feature
+
+* [#149](https://github.com/openeuropa/bootstrap-component-library/pull/149) feat(event): Add Event examples - FRONT-3394 ([@planctus](https://github.com/planctus))
+* [#139](https://github.com/openeuropa/bootstrap-component-library/pull/139) feat(page): Adding content type examples - FRONT-3391 ([@planctus](https://github.com/planctus))
+
+#### :boom: Breaking Change
+
+* [#142](https://github.com/openeuropa/bootstrap-component-library/pull/142) feat(paragraphs): Homogenize titles across all Paragraphs. - FRONT-3418 ([@theosuja](https://github.com/theosuja))
+
+#### :bug: Bug Fix
+
+* [#148](https://github.com/openeuropa/bootstrap-component-library/pull/148) fix(header): Added header fix - FRONT-3419 ([@tibi2303](https://github.com/tibi2303))
+* [#146](https://github.com/openeuropa/bootstrap-component-library/pull/146) bug(utilities): Fixing 3-9 grid - FRONT-3438 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+
+* [#140](https://github.com/openeuropa/bootstrap-component-library/pull/140) feat(listing-base): Replace all listing to base listing template - FRONT-3415 ([@tibi2303](https://github.com/tibi2303))
+
+#### :memo: Documentation
+
+* [#141](https://github.com/openeuropa/bootstrap-component-library/pull/141) docs(fact-figures): Add missing documentation - FRONT-3417 ([@theosuja](https://github.com/theosuja))
+
+#### :house: Internal
+
+* [#145](https://github.com/openeuropa/bootstrap-component-library/pull/145) chore: Adding decorators as story utilities ([@planctus](https://github.com/planctus))
+* [#143](https://github.com/openeuropa/bootstrap-component-library/pull/143) chore: adding correctPaths() utility ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.14.0 (2021-11-19)
 
 #### :rocket: New Feature
