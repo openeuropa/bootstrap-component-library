@@ -20,57 +20,8 @@ module.exports = {
       items: [
         [
           {
-            classes: "mb-3 pb-3 border-bottom",
-            input_type: "text",
-            placeholder: "Search by name or surname",
-          },
-        ],
-        [
-          {
             classes: "mb-3",
-            label: "Organisation",
-            type: "select",
-            attributes: new drupalAttribute(),
-            options: [
-              { value: 1, label: "a select option" },
-              { value: 2, label: "another select option" },
-              { value: 3, label: "another option" },
-              { value: 4, label: "last option" },
-            ],
-          },
-        ],
-        [
-          {
-            classes: "mb-3",
-            label: "Profile Type",
-            type: "select",
-            attributes: new drupalAttribute(),
-            options: [
-              { value: 1, label: "a select option" },
-              { value: 2, label: "another select option" },
-              { value: 3, label: "another option" },
-              { value: 4, label: "last option" },
-            ],
-          },
-        ],
-        [
-          {
-            classes: "mb-3 pb-3 border-bottom",
-            label: "Group",
-            type: "select",
-            attributes: new drupalAttribute(),
-            options: [
-              { value: 1, label: "a select option" },
-              { value: 2, label: "another select option" },
-              { value: 3, label: "another option" },
-              { value: 4, label: "last option" },
-            ],
-          },
-        ],
-        [
-          {
-            classes: "mb-3",
-            label: "Option 1",
+            label: "Name",
             input_type: "text",
             placeholder: "Placeholder",
           },
@@ -78,7 +29,7 @@ module.exports = {
         [
           {
             classes: "mb-3",
-            label: "Option 2",
+            label: "Organisation",
             input_type: "text",
             placeholder: "Placeholder",
           },
@@ -97,7 +48,7 @@ module.exports = {
           {
             label: "Clear",
             type: "submit",
-            variant: "secondary",
+            variant: "light",
           },
         ],
       },
@@ -233,28 +184,31 @@ module.exports = {
   filter_button: {
     label: "Filter options",
     type: "button",
-    variant: "primary",
+    variant: "light",
+    size: "lg",
     attributes: new drupalAttribute()
       .addClass(["d-lg-none", "w-100", "mb-4"])
       .setAttribute("data-bs-toggle", "offcanvas")
       .setAttribute("data-bs-target", "#bcl-offcanvas")
       .setAttribute("aria-controls", "bcl-offcanvas"),
+    icon_position: "before",
     icon: {
-      name: "sliders",
-      size: "xs",
+      name: "filter",
       path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["ms-2"]),
+      attributes: new drupalAttribute().addClass(["me-2"]),
     },
   },
   badges: [
     {
       label: "Name",
+      background: "light",
       dismissible: true,
       icons_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Organisation",
+      background: "light",
       dismissible: true,
       icons_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),

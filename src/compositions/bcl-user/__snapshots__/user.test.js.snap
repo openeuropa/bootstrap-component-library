@@ -2295,120 +2295,12 @@ exports[`OE - User -list renders correctly 1`] = `
                 onsubmit="return false;"
               >
                 <div
-                  class="mb-3 pb-3 border-bottom"
-                >
-                  <input
-                    class="form-control"
-                    placeholder="Search by name or surname"
-                    type="text"
-                  />
-                </div>
-                <div
                   class="mb-3"
                 >
                   <label
                     class="form-label"
                   >
-                    Organisation
-                  </label>
-                  <select
-                    class="form-select"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                  >
-                    Profile Type
-                  </label>
-                  <select
-                    class="form-select"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3 pb-3 border-bottom"
-                >
-                  <label
-                    class="form-label"
-                  >
-                    Group
-                  </label>
-                  <select
-                    class="form-select"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                  >
-                    Option 1
+                    Name
                   </label>
                   <input
                     class="form-control"
@@ -2422,7 +2314,7 @@ exports[`OE - User -list renders correctly 1`] = `
                   <label
                     class="form-label"
                   >
-                    Option 2
+                    Organisation
                   </label>
                   <input
                     class="form-control"
@@ -2440,7 +2332,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     Refine
                   </button>
                   <button
-                    class="btn btn-secondary btn-md"
+                    class="btn btn-light btn-md"
                     type="submit"
                   >
                     Clear
@@ -2455,19 +2347,19 @@ exports[`OE - User -list renders correctly 1`] = `
         >
           <button
             aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-4 btn btn-primary btn-md"
+            class="d-lg-none w-100 mb-4 btn btn-light btn-lg"
             data-bs-target="#bcl-offcanvas"
             data-bs-toggle="offcanvas"
             type="button"
           >
-            Filter options
             <svg
-              class="ms-2 ms-2-5 bi icon--fluid"
+              class="me-2 me-2-5 bi icon--fluid"
             >
               <use
-                xlink:href="/icons.svg#sliders"
+                xlink:href="/icons.svg#filter"
               />
             </svg>
+            Filter options
           </button>
           <div
             class="mb-3 clearfix"
@@ -2524,7 +2416,7 @@ exports[`OE - User -list renders correctly 1`] = `
     
             </h4>
             <span
-              class="me-2 badge bg-primary"
+              class="me-2 badge bg-light text-dark"
             >
               Name
               <span
@@ -2541,7 +2433,7 @@ exports[`OE - User -list renders correctly 1`] = `
               </span>
             </span>
             <span
-              class="me-2 badge bg-primary"
+              class="me-2 badge bg-light text-dark"
             >
               Organisation
               <span
