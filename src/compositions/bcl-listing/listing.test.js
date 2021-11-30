@@ -17,6 +17,13 @@ describe("OE - Listing", () => {
     return expect(render(demoDefaultData)).resolves.toMatchSnapshot();
   });
 
+  test("alignment classes render correctly", () => {
+    expect.assertions(1);
+    return expect(
+      render({ ...demoDefaultData, alignment: "start" })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("Default listing item in 2 columns renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoDefault2ColData)).resolves.toMatchSnapshot();
