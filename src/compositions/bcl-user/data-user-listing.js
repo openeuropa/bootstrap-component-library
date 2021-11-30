@@ -110,18 +110,13 @@ module.exports = {
     alignment: "center",
     items: [
       {
-        badges: [
-          {
-            label: "Profile Type",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content: "Stefan Mayer",
-          attributes: new drupalAttribute().addClass("mb-3"),
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Stefan Mayer</a>",
         },
         content:
-          "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
+          "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
         image: {
           path: "https://picsum.photos/160?random=1",
           alt: "alt img",
@@ -129,18 +124,13 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Profile Type",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content: "Adjur Tichar",
-          attributes: new drupalAttribute().addClass("mb-3"),
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Adjur Tichar</a>",
         },
         content:
-          "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
+          "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
         image: {
           path: "https://picsum.photos/160?random=2",
           alt: "alt img",
@@ -148,18 +138,13 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Profile Type",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content: "Szép Mara",
-          attributes: new drupalAttribute().addClass("mb-3"),
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Szép Mara</a>",
         },
         content:
-          "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
+          "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
         image: {
           path: "https://picsum.photos/160?random=3",
           alt: "alt img",
@@ -167,18 +152,13 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Profile Type",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content: "Daniel Cardoso Rocha",
-          attributes: new drupalAttribute().addClass("mb-3"),
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Daniel Cardoso Rocha</a>",
         },
         content:
-          "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
+          "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
         image: {
           path: "https://picsum.photos/160?random=4",
           alt: "alt img",
@@ -186,18 +166,13 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Profile Type",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content: "Aurelia Panicucci",
-          attributes: new drupalAttribute().addClass("mb-3"),
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Aurelia Panicucci</a>",
         },
         content:
-          "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
+          "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
         image: {
           path: "https://picsum.photos/160?random=5",
           alt: "alt img",
@@ -205,18 +180,13 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Profile Type",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content: "Felicyta Kowalska",
-          attributes: new drupalAttribute().addClass("mb-3"),
+          content:
+            "<a href='/example.html' class='text-underline-hover'>Felicyta Kowalska</a>",
         },
         content:
-          "<span class='text-muted me-2'>Organisation</span><span class='text-muted me-2'>Position</span>",
+          "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
         image: {
           path: "https://picsum.photos/160?random=6",
           alt: "alt img",
