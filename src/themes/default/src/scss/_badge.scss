@@ -89,5 +89,12 @@ a {
     border: $border-width solid $value;
     color: $value !important;
     background: transparent !important;
+    .icon--close {
+      background: $value;
+      color: $white;
+      @if $color == light {
+        color: $black;
+      }
+    }
   }
 }
