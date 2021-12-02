@@ -3,7 +3,7 @@
 exports[`OE - Header EC renders correctly 1`] = `
 <jest>
   <header
-    class="ec__header bcl-header"
+    class="bcl-header bcl-header--ec"
   >
     <!-- navbar_settings -->
     <nav
@@ -138,9 +138,1181 @@ exports[`OE - Header EC renders correctly 1`] = `
           class="d-none d-lg-inline-block"
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
-        <p>
-          Project name
-        </p>
+        <div
+          class="h5 d-inline-block d-lg-none"
+        >
+          <p>
+            Project name
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
+              type="button"
+            >
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example"
+            >
+              European Commission
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Commission
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-labelledby="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="languageeModalLabel"
+          >
+            Select your language
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-8 offset-lg-2"
+              >
+                <h5
+                  class="bcl-language__title"
+                >
+                  EU official languages
+                </h5>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-4 offset-lg-2"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 01
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 02
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 03
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col col-lg-4"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 04
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 05
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 06
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-8 offset-lg-2"
+              >
+                <h5
+                  class="bcl-language__title"
+                >
+                  Non EU languages
+                </h5>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-4 offset-lg-2"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 07
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 08
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col col-lg-4"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 09
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 10
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Header EU renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header bcl-header--eu"
+  >
+    <!-- navbar_settings -->
+    <nav
+      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href=""
+        >
+          <img
+            class="d-none d-lg-block"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+          <img
+            class="d-lg-none"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
+          />
+        </a>
+        <ul
+          class="nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="text-center nav-link"
+              data-bs-target="#languageModal"
+              data-bs-toggle="modal"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#chat-left-dots-fill"
+                />
+              </svg>
+              <span
+                class="d-block d-lg-inline-block"
+              >
+                English
+              </span>
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="text-center nav-link"
+              data-bs-target="#loginModal"
+              data-bs-toggle="modal"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#person-fill"
+                />
+              </svg>
+              <span
+                class="d-block d-lg-inline-block"
+              >
+                Log in
+              </span>
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="notification mt-2 mt-lg-0 nav-link"
+              href="#"
+            >
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#bell-fill"
+                />
+              </svg>
+              <span
+                class="badge bg-danger"
+              >
+                5
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- project name -->
+    <div
+      class="bcl-header__project"
+    >
+      <div
+        class="container"
+      >
+        <img
+          class="d-none d-lg-inline-block"
+          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
+        />
+        <div
+          class="h5 d-inline-block d-lg-none"
+        >
+          <p>
+            Project name
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
+              type="button"
+            >
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example"
+            >
+              European Commission
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Commission
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-labelledby="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="languageeModalLabel"
+          >
+            Select your language
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-8 offset-lg-2"
+              >
+                <h5
+                  class="bcl-language__title"
+                >
+                  EU official languages
+                </h5>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-4 offset-lg-2"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 01
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 02
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 03
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col col-lg-4"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 04
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 05
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 06
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-8 offset-lg-2"
+              >
+                <h5
+                  class="bcl-language__title"
+                >
+                  Non EU languages
+                </h5>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col col-lg-4 offset-lg-2"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 07
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 08
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col col-lg-4"
+              >
+                <div
+                  class="bcl-language__list"
+                >
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 09
+                  </a>
+                  <a
+                    class="bcl-language__item"
+                    href="#"
+                  >
+                    Language 10
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Header Neutral renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header bcl-header--neutral"
+  >
+    <!-- navbar_settings -->
+    <nav
+      class="w-100 navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href=""
+        >
+          <img
+            src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
+          />
+          <div
+            class="h5 ms-4-5 d-none d-lg-inline-block"
+          >
+            Project name
+          </div>
+        </a>
+        <ul
+          class="nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="d-none d-lg-block nav-link"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#link"
+                />
+              </svg>
+              Link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="text-center nav-link"
+              data-bs-target="#languageModal"
+              data-bs-toggle="modal"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#chat-left-dots-fill"
+                />
+              </svg>
+              <span
+                class="d-block d-lg-inline-block"
+              >
+                English
+              </span>
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="text-center nav-link"
+              data-bs-target="#loginModal"
+              data-bs-toggle="modal"
+              href="#"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#person-fill"
+                />
+              </svg>
+              <span
+                class="d-block d-lg-inline-block"
+              >
+                Log in
+              </span>
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="notification mt-2 mt-lg-0 nav-link"
+              href="#"
+            >
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#bell-fill"
+                />
+              </svg>
+              <span
+                class="badge bg-danger"
+              >
+                5
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- project name -->
+    <div
+      class="bcl-header__project light"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="h5 d-inline-block d-lg-none"
+        >
+          <p>
+            Project name
+          </p>
+        </div>
       </div>
     </div>
     <!-- navbar -->
@@ -580,7 +1752,7 @@ exports[`OE - Header EC renders correctly 1`] = `
 exports[`OE - Header UCPKN renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header"
+    class="bcl-header bcl-header--neutral"
   >
     <!-- navbar_settings -->
     <nav
@@ -615,597 +1787,19 @@ exports[`OE - Header UCPKN renders correctly 1`] = `
           class="d-none d-lg-inline-block"
           src="ucpkn_logo.svg"
         />
-        <p
-          class="pb-3 pb-lg-0"
+        <div
+          class="h5 d-inline-block d-lg-none"
         >
-          Union Civil Protection Knowledge Network
-        </p>
+          <p
+            class="pb-3 pb-lg-0"
+          >
+            Union Civil Protection Knowledge Network
+          </p>
+        </div>
       </div>
     </div>
     <!-- navbar -->
     <!-- breadcrumbs -->
   </header>
-</jest>
-`;
-
-exports[`OE - Header renders correctly 1`] = `
-<jest>
-  <header
-    class="bcl-header"
-  >
-    <!-- navbar_settings -->
-    <nav
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
-    >
-      <div
-        class="container"
-      >
-        <a
-          class="navbar-brand"
-          href=""
-        >
-          <img
-            class="d-none d-lg-block"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
-          />
-          <img
-            class="d-lg-none"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
-          />
-        </a>
-        <ul
-          class="nav"
-        >
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
-                English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
-                Log in
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="notification mt-2 mt-lg-0 nav-link"
-              href="#"
-            >
-              <svg
-                class="bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#bell-fill"
-                />
-              </svg>
-              <span
-                class="badge bg-danger"
-              >
-                5
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- project name -->
-    <div
-      class="bcl-header__project"
-    >
-      <div
-        class="container"
-      >
-        <img
-          class="d-none d-lg-inline-block"
-          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
-        />
-        <p>
-          Project name
-        </p>
-      </div>
-    </div>
-    <!-- navbar -->
-    <nav
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
-    >
-      <div
-        class="container"
-      >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-              >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
-          >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
-            >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
-            <button
-              class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
-              type="button"
-            >
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!-- breadcrumbs -->
-    <div
-      class="container"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="mt-3"
-      >
-        <ol
-          class="breadcrumb"
-        >
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example"
-            >
-              European Commission
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item"
-          >
-            <a
-              href="/example"
-            >
-              <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#arrow-left"
-                />
-              </svg>
-              About the European Commission
-            </a>
-          </li>
-          <li
-            aria-current="page"
-            class="breadcrumb-item d-none d-md-block active"
-          >
-            News
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </header>
-  <div
-    aria-hidden="true"
-    aria-labelledby="loginModalLabel"
-    class="modal fade"
-    id="loginModal"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="loginModalLabel"
-          >
-            Log in
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
-          <h5>
-            Disclaimer 1
-          </h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
-          </p>
-          <h5>
-            Disclaimer 2
-          </h5>
-          <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
-          </p>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
-          <button
-            class="btn btn-primary"
-            type="button"
-          >
-            Access EU login
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
-    id="languageModal"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog modal-fullscreen"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
-          >
-            Select your language
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
-          <div
-            class="container"
-          >
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 </jest>
 `;

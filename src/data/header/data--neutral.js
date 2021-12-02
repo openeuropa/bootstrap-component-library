@@ -1,35 +1,27 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  variant: "eu",
+  light: true,
   site_name: "<p>Project name</p>",
-  project_logo: {
-    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
-    classes: "d-none d-lg-inline-block",
-  },
   head: {
-    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
-    disable_collapse: true,
     brand: {
       logos: [
         {
-          class: "d-none d-lg-block",
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-        },
-        {
-          class: "d-lg-none",
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
+          src: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
         },
       ],
+      label: "Project name",
     },
+    attributes: new drupalAttribute().addClass(["w-100"]),
+    disable_collapse: true,
     navigation: {
       items: [
         {
           label: "Link",
           icon_position: "before",
           icon: {
-            path: "/icons.svg",
             name: "link",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -37,8 +29,8 @@ module.exports = {
           label: "Link",
           icon_position: "before",
           icon: {
-            path: "/icons.svg",
             name: "link",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -47,9 +39,9 @@ module.exports = {
           path: "#",
           icon_position: "before",
           icon: {
-            path: "/icons.svg",
             name: "chat-left-dots-fill",
             size: "xs",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -61,9 +53,9 @@ module.exports = {
           path: "#",
           icon_position: "before",
           icon: {
-            path: "/icons.svg",
             name: "person-fill",
             size: "xs",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -76,9 +68,9 @@ module.exports = {
           remove_icon_spacers: true,
           icon_position: "before",
           icon: {
-            path: "/icons.svg",
             name: "bell-fill",
             size: "s",
+            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass([
             "notification",
@@ -98,9 +90,9 @@ module.exports = {
       submit: {
         variant: "light",
         icon: {
-          path: "/icons.svg",
           name: "search",
           size: "xs",
+          path: "/icons.svg",
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",

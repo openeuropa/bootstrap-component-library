@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  variant: "",
   site_name:
     "<p class='pb-3 pb-lg-0'>Union Civil Protection Knowledge Network</p>",
   light: true,

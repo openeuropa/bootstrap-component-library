@@ -21,14 +21,20 @@ $header-link-active-background: #003776 !default;
   padding-bottom: map-get($spacers, 3);
 }
 
-.bcl-header__project {
-  padding-top: map-get($spacers, 3);
-  min-height: map-get($spacers, 5);
+.bcl-header--ec .bcl-header__project,
+.bcl-header--ec .bcl-header__navbar {
+  background: $header-background;
 }
 
-.ec__header .bcl-header__project,
-.ec__header .bcl-header__navbar {
-  background: $header-background;
+.bcl-header--neutral {
+  .bcl-header__project,
+  .bcl-header__navbar {
+    background: $gray-600;
+  }
+}
+
+.bcl-header:not(.bcl-header--neutral) .bcl-header__project {
+  padding-top: map-get($spacers, 3);
 }
 
 .bcl-navbar-header {
@@ -39,7 +45,7 @@ $header-link-active-background: #003776 !default;
   color: $eu-blue;
 }
 
-.bcl-header.ec__header .nav-link {
+.bcl-header.bcl-header--ec .nav-link {
   color: $ec-blue;
 }
 
@@ -97,6 +103,12 @@ $header-link-active-background: #003776 !default;
   background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+@media only screen and (max-width: 400px) {
+  .bcl-header--neutral .bcl-header__project-logo {
+    display: none;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .bcl-header .navbar:first-child .nav-link {
     padding: 0.5rem 0.4rem;
@@ -104,47 +116,63 @@ $header-link-active-background: #003776 !default;
 }
 
 @include media-breakpoint-up(md) {
-  .ec__header .navbar-brand img {
+  .bcl-header--ec .navbar-brand img {
     width: 180px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .bcl-header__project {
+    min-height: map-get($spacers, 5);
+    padding-top: map-get($spacers, 3);
   }
 }
 
 @include media-breakpoint-up(lg) {
   .bcl-header__project.light,
-  .ec__header .bcl-header__project.light {
+  .bcl-header--ec .bcl-header__project.light {
     background: $white;
   }
+
   .bcl-header__project p {
     padding-left: map-get($spacers, 4);
     font-weight: 500;
   }
+
   .bcl-header__project.light p {
     color: $black;
   }
+
   .bcl-header .navbar-toggler {
     position: relative;
     right: 0;
     bottom: 0;
   }
+
   .bcl-header .navbar-brand img {
     width: auto;
   }
+
   .bcl-header__navbar .navbar-collapse {
     padding-bottom: 0;
   }
+
   .bcl-header__navbar .nav-link.active {
     padding-top: $spacer;
     padding-bottom: $spacer;
     margin-top: -#{map-get($spacers, 2)};
     margin-bottom: -#{map-get($spacers, 2)};
   }
+
   .bcl-header__navbar .dropdown-menu {
     z-index: 1050; // Make sure dropdown overlaps the search offcanvas
   }
-  .bcl-header__project {
+
+  .bcl-header:not(.bcl-header--neutral) .bcl-header__project {
     padding-bottom: map-get($spacers, 3);
   }
-  .ec__header .navbar-brand img {
+
+  .bcl-header--ec .navbar-brand img {
     width: 285px;
   }
 }

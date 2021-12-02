@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  variant: "ec",
   site_name: "<p>Project name</p>",
   project_logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
@@ -254,5 +255,4 @@ module.exports = {
     ],
     icons_path: "/icons.svg",
   },
-  attributes: new drupalAttribute().addClass("ec__header"),
 };
