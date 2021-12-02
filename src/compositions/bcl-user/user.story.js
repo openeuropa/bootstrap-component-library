@@ -10,6 +10,8 @@ import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
 
+footer.attributes.addClass(["mt-4-5"]);
+
 const data = {
   with_header: true,
   with_footer: true,
