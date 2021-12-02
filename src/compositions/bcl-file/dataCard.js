@@ -13,9 +13,13 @@ module.exports = {
   badges: [
     {
       label: "Label",
+      outline: true,
+      rounded_pill: true,
     },
     {
       label: "Label",
+      outline: true,
+      rounded_pill: true,
     },
   ],
   language: "English",

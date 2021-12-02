@@ -9,10 +9,14 @@ module.exports = {
     {
       label: "Category 1",
       attributes: new drupalAttribute(),
+      outline: true,
+      rounded_pill: true,
     },
     {
       label: "Category 2",
       attributes: new drupalAttribute(),
+      outline: true,
+      rounded_pill: true,
     },
   ],
   content: `<div class="mb-4 mt-4">

@@ -11,9 +11,13 @@ module.exports = {
   badges: [
     {
       label: "I'm a badge",
+      outline: true,
+      rounded_pill: true,
     },
     {
       label: "I'm also a badge",
+      outline: true,
+      rounded_pill: true,
       attributes: new drupalAttribute().addClass("test-class"),
     },
   ],
