@@ -263,6 +263,7 @@ module.exports = {
   filter_button: {
     label: "Filter options",
     type: "button",
+    size: "lg",
     variant: "primary",
     attributes: new drupalAttribute()
       .addClass(["d-lg-none", "w-100", "mb-4"])
@@ -273,7 +274,6 @@ module.exports = {
       name: "sliders",
       size: "xs",
       path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["ms-2"]),
     },
   },
   badges: [

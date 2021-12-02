@@ -143,6 +143,7 @@ module.exports = {
     label: "Filter options",
     type: "button",
     variant: "light",
+    size: "lg",
     attributes: new drupalAttribute()
       .addClass(["d-lg-none", "w-100", "mb-3-5"])
       .setAttribute("data-bs-toggle", "offcanvas")
@@ -153,7 +154,6 @@ module.exports = {
       name: "filter",
       path: "/icons.svg",
       size: "xs",
-      attributes: new drupalAttribute().addClass(["ms-2"]),
     },
   },
   badges: [
