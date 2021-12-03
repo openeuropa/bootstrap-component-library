@@ -3,8 +3,9 @@
    no-descending-specificity,
    function-calc-no-unspaced-operator,
 */
-@use "slim-select/src/slim-select/slimselect.scss" with
-  ($primary-color: $primary);
+@use "slim-select/src/slim-select/slimselect.scss" with (
+  $primary-color: $primary
+);
 
 // Multiselect Spacers
 $multiselect-spacers: (
