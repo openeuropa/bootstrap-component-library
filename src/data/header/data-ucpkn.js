@@ -1,9 +1,9 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  variant: "",
-  site_name:
-    "<p class='pb-3 pb-lg-0'>Union Civil Protection Knowledge Network</p>",
+  variant: "ucpkn",
+  site_name_classes: "pb-3 pb-lg-0",
+  site_name: "Union Civil Protection Knowledge Network",
   light: true,
   project_logo: {
     path: "ucpkn_logo.svg",

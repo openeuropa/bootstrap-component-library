@@ -139,11 +139,9 @@ exports[`OE - Header EC renders correctly 1`] = `
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
         <div
-          class="h5 d-inline-block d-lg-none"
+          class="bcl-header__site-name"
         >
-          <p>
-            Project name
-          </p>
+          Project name
         </div>
       </div>
     </div>
@@ -725,11 +723,9 @@ exports[`OE - Header EU renders correctly 1`] = `
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
         <div
-          class="h5 d-inline-block d-lg-none"
+          class="bcl-header__site-name"
         >
-          <p>
-            Project name
-          </p>
+          Project name
         </div>
       </div>
     </div>
@@ -1301,17 +1297,15 @@ exports[`OE - Header Neutral renders correctly 1`] = `
     </nav>
     <!-- project name -->
     <div
-      class="bcl-header__project light"
+      class="bcl-header__project"
     >
       <div
         class="container"
       >
         <div
-          class="h5 d-inline-block d-lg-none"
+          class="bcl-header__site-name h5 d-inline-block d-lg-none"
         >
-          <p>
-            Project name
-          </p>
+          Project name
         </div>
       </div>
     </div>
@@ -1752,7 +1746,7 @@ exports[`OE - Header Neutral renders correctly 1`] = `
 exports[`OE - Header UCPKN renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header bcl-header--neutral"
+    class="bcl-header bcl-header--ucpkn"
   >
     <!-- navbar_settings -->
     <nav
@@ -1788,13 +1782,9 @@ exports[`OE - Header UCPKN renders correctly 1`] = `
           src="ucpkn_logo.svg"
         />
         <div
-          class="h5 d-inline-block d-lg-none"
+          class="bcl-header__site-name pb-3 pb-lg-0"
         >
-          <p
-            class="pb-3 pb-lg-0"
-          >
-            Union Civil Protection Knowledge Network
-          </p>
+          Union Civil Protection Knowledge Network
         </div>
       </div>
     </div>

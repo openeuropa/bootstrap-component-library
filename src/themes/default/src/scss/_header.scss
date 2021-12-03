@@ -86,7 +86,7 @@ $header-link-active-background: #003776 !default;
   transform: translate(-11px, 5px);
 }
 
-.bcl-header__project p {
+.bcl-header__project .bcl-header__site-name {
   display: inline-block;
   margin-bottom: 0;
   font-size: 1.3rem;
@@ -132,6 +132,18 @@ $header-link-active-background: #003776 !default;
     min-height: map-get($spacers, 5);
     padding-top: map-get($spacers, 3);
   }
+
+  .bcl-header nav + nav {
+    min-height: map-get($spacers, 5);
+
+    .navbar-toggler {
+      position: static;
+    }
+
+    .container {
+      justify-content: right;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -141,12 +153,12 @@ $header-link-active-background: #003776 !default;
     background: $white;
   }
 
-  .bcl-header__project p {
+  .bcl-header__site-name {
     padding-left: map-get($spacers, 4);
     font-weight: 500;
   }
 
-  .bcl-header__project.light p {
+  .bcl-header__project.light .bcl-header__site-name {
     color: $black;
   }
 

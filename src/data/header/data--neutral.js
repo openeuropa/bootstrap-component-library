@@ -1,8 +1,8 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  light: true,
-  site_name: "<p>Project name</p>",
+  site_name: "Project name",
+  site_name_classes: "h5 d-inline-block d-lg-none",
   head: {
     brand: {
       logos: [
