@@ -1,4 +1,5 @@
 import iconPath from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import flagList from "@ecl/resources-flag-icons/dist/lists/flag.json";
 
 export const getFormControls = (data, type) => {
   const argTypes = {
@@ -290,6 +291,10 @@ export const getIconNames = () => {
     "eye",
     "eye-slash",
   ];
+};
+
+export const getFlagNames = () => {
+  return flagList;
 };
 
 export const initScrollspy = (story) => {
