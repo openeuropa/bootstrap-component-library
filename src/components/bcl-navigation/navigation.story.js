@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-navigation/data.js";
 import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs.js";
 import demoDataCustom from "@openeuropa/bcl-data-navigation/dataCustom.js";
+import demoDataMultiple from "@openeuropa/bcl-data-navigation/dataMultiple.js";
 import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 import drupalAttribute from "drupal-attribute";
 
@@ -121,3 +122,13 @@ export const CustomTabs = (args) => navigation(applyArgs(demoDataCustom, args));
 
 CustomTabs.args = getArgs(demoDataCustom);
 CustomTabs.argTypes = getArgTypes(demoDataCustom);
+
+export const Multiple = (args) => navigation(applyArgs(demoDataMultiple, args));
+
+Multiple.args = getArgs(demoDataMultiple);
+Multiple.argTypes = getArgTypes(demoDataMultiple);
+Multiple.parameters = {
+  controls: {
+    disable: true,
+  }
+};
