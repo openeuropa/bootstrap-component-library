@@ -14,7 +14,7 @@ module.exports = {
             path: "/example.html",
           },
         ],
-      }
+      },
     },
     {
       label: "I'm a link 2",
@@ -30,7 +30,7 @@ module.exports = {
             path: "/example.html",
           },
         ],
-      }
+      },
     },
     {
       label: "I'm a link 3",
@@ -59,7 +59,7 @@ module.exports = {
                   path: "/example.html",
                 },
               ],
-            }
+            },
           },
           {
             label: "I'm a child link",
@@ -70,7 +70,7 @@ module.exports = {
             path: "/example.html",
           },
         ],
-      }
+      },
     },
     {
       label: "I'm a link disabled",

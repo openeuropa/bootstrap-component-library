@@ -130,5 +130,5 @@ Multiple.argTypes = getArgTypes(demoDataMultiple);
 Multiple.parameters = {
   controls: {
     disable: true,
-  }
+  },
 };
