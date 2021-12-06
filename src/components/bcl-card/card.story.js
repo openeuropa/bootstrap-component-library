@@ -5,6 +5,14 @@ import card from "@openeuropa/bcl-card/card.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
+const withBodyPadding = (story) => {
+  const demo = story();
+  return `
+    <div class="px-5">
+      ${demo}
+    </div>`;
+};
+
 const getArgs = (data, type) => {
   const args = {
     title: data.title,
@@ -199,7 +207,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Card",
-  decorators: [withDesign],
+  decorators: [withDesign, withBodyPadding],
   parameters: {
     design: [
       {
