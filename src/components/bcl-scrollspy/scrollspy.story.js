@@ -28,5 +28,4 @@ Navigation.storyName = "Navigation";
 export const ListGroup = () => groupScrollspy;
 ListGroup.storyName = "List Group";
 
-export const List = () => listScrollspy;
-List.storyName = "List";
+export const NestedLists = () => listScrollspy;
