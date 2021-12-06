@@ -16,30 +16,33 @@
 
 {% block content_top %}
   {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
-  <div class="mb-3 clearfix">
-    <div class="float-end d-none d-md-flex align-items-center">
-      {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
-        attributes: create_attribute().addClass(['ms-2 mb-2']),
-      }) only %}
+  <div class="row">
+    <div class="col-md-6 col-lg-8">
+      <h4>
+        <span class="text-capitalize">
+          {{- _page_title -}}
+        </span>
+        ({{ listing.items.length }})
+      </h4>
     </div>
-    <h4 class="mb-4">
-      <span class="text-capitalize">
-        {{- _page_title -}}
-      </span>
-      ({{ listing.items.length }})
-    </h4>
-    {% if badges is not empty and badges is iterable %}
-      {% for badge in badges %}
-        {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge only %}
-      {% endfor %}
-    {% endif %}
+    <div class="col-md-12 order-md-2 mt-3 mt-md-1">
+      {% if badges is not empty and badges is iterable %}
+        {% for badge in badges %}
+          {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge|merge({
+            attributes: create_attribute().addClass(["mb-2", "me-2"])
+          }) only %}
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col-md-6 col-lg-4 mt-3 mt-md-0">
+      <div class="float-md-end d-md-flex align-items-center mb-4 mb-md-0">
+        {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
+          attributes: create_attribute().addClass(['ms-md-2 mb-2']),
+        }) only %}
+      </div>
+    </div>
   </div>
   <hr class="d-none d-md-block mb-4"/>
-  <div class="d-md-none">
-    {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
-      extra_classes: 'mb-4',
-    }) only %}
-  </div>
 {% endblock %}
 
 {% block content %}

@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  variant: "eu",
   head: {
     attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
     disable_collapse: true,

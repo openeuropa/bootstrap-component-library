@@ -1,7 +1,8 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  site_name: "<p>Project name</p>",
+  variant: "eu",
+  site_name: "Project name",
   project_logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
     classes: "d-none d-lg-inline-block",

@@ -122,11 +122,15 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -136,7 +140,7 @@ module.exports = {
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          classes: "mb-3",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=1",
@@ -153,6 +157,8 @@ module.exports = {
             label: "Category 1",
             background: "primary",
             attributes: new drupalAttribute().addClass(["me-2"]),
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -162,7 +168,7 @@ module.exports = {
         text: {
           content:
             "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-          classes: "mb-3",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=2",
@@ -179,10 +185,14 @@ module.exports = {
             label: "Category 1",
             background: "primary",
             attributes: new drupalAttribute().addClass(["me-2"]),
+            outline: true,
+            rounded_pill: true,
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -192,7 +202,7 @@ module.exports = {
         text: {
           content:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-3",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=3",
@@ -208,6 +218,8 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -217,7 +229,7 @@ module.exports = {
         text: {
           content:
             "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-3",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=4",
@@ -234,10 +246,14 @@ module.exports = {
             label: "Category 1",
             background: "primary",
             attributes: new drupalAttribute().addClass(["me-2"]),
+            outline: true,
+            rounded_pill: true,
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -247,7 +263,7 @@ module.exports = {
         text: {
           content:
             "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-3",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=5",
@@ -264,10 +280,14 @@ module.exports = {
             label: "Category 1",
             background: "primary",
             attributes: new drupalAttribute().addClass(["me-2"]),
+            outline: true,
+            rounded_pill: true,
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -277,7 +297,7 @@ module.exports = {
         text: {
           content:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-3",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=6",

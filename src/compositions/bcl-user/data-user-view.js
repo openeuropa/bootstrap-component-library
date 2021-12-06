@@ -25,7 +25,7 @@ module.exports = {
   },
   edit_button: {
     label: "Manage profile",
-    variant: "secondary",
+    variant: "light",
     attributes: new drupalAttribute().addClass("mb-3"),
   },
 };

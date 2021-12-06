@@ -8,13 +8,15 @@
   - dismissible (boolean) (default: false)
   - assistive_text (string) (default: '')
   - rounded_pill (boolean) (default: false)
+  - outline (boolean) (default: false)
   - icons_path (string) (default: '')
 #}
 
 {% set _rounded_pill = rounded_pill|default(false) %}
+{% set _outline = outline|default(false) %}
 {% set _background = background|default('primary') %}
 {% set _label = label|default('') %}
-{% set _classes = ['badge', 'bg-' ~ _background] %}
+{% set _classes = ['badge'] %}
 {% set _url = url|default('') %}
 {% set _icons_path = icons_path|default('') %}
 {% set _title = title|default(_label) %}
@@ -23,6 +25,12 @@
 
 {% if _rounded_pill %}
   {% set _classes = _classes|merge(['rounded-pill']) %}
+{% endif %}
+
+{% if _outline %}
+  {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
+{% else %}
+  {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
 {% endif %}
 
 {% if _background in ['light', 'warning', 'info'] %}

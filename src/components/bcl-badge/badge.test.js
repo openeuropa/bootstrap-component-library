@@ -49,5 +49,13 @@ describe("OE - badge", () => {
         render({ ...demoData, background: background })
       ).resolves.toMatchSnapshot();
     });
+
+    test(`${background} outline renders correctly`, () => {
+      expect.assertions(1);
+
+      return expect(
+        render({ ...demoData, background: background, outline: true })
+      ).resolves.toMatchSnapshot();
+    });
   });
 });
