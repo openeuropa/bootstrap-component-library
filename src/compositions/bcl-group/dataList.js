@@ -100,6 +100,8 @@ module.exports = {
         badges: [
           {
             label: "Public",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
@@ -108,7 +110,8 @@ module.exports = {
         },
         text: {
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=1",
@@ -121,6 +124,8 @@ module.exports = {
         badges: [
           {
             label: "Public",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
@@ -130,7 +135,8 @@ module.exports = {
         },
         text: {
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=2",
@@ -143,6 +149,8 @@ module.exports = {
         badges: [
           {
             label: "Public",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
@@ -152,7 +160,8 @@ module.exports = {
         },
         text: {
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=3",
@@ -165,6 +174,8 @@ module.exports = {
         badges: [
           {
             label: "Public",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
@@ -174,7 +185,8 @@ module.exports = {
         },
         text: {
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=4",
@@ -187,6 +199,8 @@ module.exports = {
         badges: [
           {
             label: "Public",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
@@ -196,7 +210,8 @@ module.exports = {
         },
         text: {
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=5",
@@ -209,6 +224,8 @@ module.exports = {
         badges: [
           {
             label: "Public",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
@@ -218,7 +235,8 @@ module.exports = {
         },
         text: {
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=6",

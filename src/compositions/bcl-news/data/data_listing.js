@@ -150,32 +150,25 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
-            {
-              name: "href",
-              value: "/example.html",
-            },
-            {
-              name: "target",
-              value: "_blank",
-            },
-          ],
-          content: "Lorem ipsum dolor sit amet",
+          content:
+            "<a href='/example.html' class='text-underline-hover'>News title</a>",
         },
         text: {
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          classes: "mb-3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=1",
@@ -183,32 +176,26 @@ module.exports = {
           position: "top",
           classes: "d-none d-md-block",
         },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        content: "<span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
         title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
-            {
-              name: "href",
-              value: "/example.html",
-            },
-          ],
-          content: "Incididunt ut labore et dolore",
+          content:
+            "<a href='/example.html' class='text-underline-hover'>News title</a>",
         },
         text: {
           content:
-            "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-          classes: "mb-3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=2",
@@ -216,36 +203,38 @@ module.exports = {
           position: "top",
           classes: "d-none d-md-block",
         },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        content: "<span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
+          },
+          {
+            label: "Category 3",
+            background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
-            {
-              name: "href",
-              value: "/example.html",
-            },
-          ],
-          content: "Quis nostrud exercitation ullamco",
+          content:
+            "<a href='/example.html' class='text-underline-hover'>News title</a>",
         },
         text: {
           content:
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=3",
@@ -253,31 +242,26 @@ module.exports = {
           position: "top",
           classes: "d-none d-md-block",
         },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        content: "<span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
         title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
-            {
-              name: "href",
-              value: "/example.html",
-            },
-          ],
-          content: "Quis nostrud exercitation ullamco",
+          content:
+            "<a href='/example.html' class='text-underline-hover'>News title</a>",
         },
         text: {
           content:
-            "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          classes: "mb-3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=4",
@@ -285,36 +269,32 @@ module.exports = {
           position: "top",
           classes: "d-none d-md-block",
         },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        content: "<span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
           },
         ],
         title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
-            {
-              name: "href",
-              value: "/example.html",
-            },
-          ],
-          content: "Duis aute irure dolor in Excepteur",
+          content:
+            "<a href='/example.html' class='text-underline-hover'>News title</a>",
         },
         text: {
           content:
-            "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=5",
@@ -322,36 +302,26 @@ module.exports = {
           position: "top",
           classes: "d-none d-md-block",
         },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        content: "<span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
           {
             label: "Category 1",
             background: "primary",
+            outline: true,
+            rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
-          },
-          {
-            label: "Category 2",
-            background: "primary",
           },
         ],
         title: {
-          tag: "a",
-          classes: "fs-5 text-underline-hover mb-2",
-          attributes: [
-            {
-              name: "href",
-              value: "/example.html",
-            },
-          ],
-          content: "Excepteur sint occaecat cupidatat non",
+          content:
+            "<a href='/example.html' class='text-underline-hover'>News title</a>",
         },
         text: {
           content:
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          classes: "mb-3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          classes: "mb-2-5",
         },
         image: {
           path: "https://picsum.photos/160?random=6",
@@ -359,8 +329,7 @@ module.exports = {
           position: "top",
           classes: "d-none d-md-block",
         },
-        content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+        content: "<span class='text-muted text-nowrap'>17 October 2019</span>",
       },
     ],
   },

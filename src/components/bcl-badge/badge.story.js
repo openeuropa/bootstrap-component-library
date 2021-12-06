@@ -13,6 +13,7 @@ const getArgs = (data) => {
     title: data.label,
     background: data.background || "primary",
     rounded_pill: false,
+    outline: false,
     assistive_text: "",
   };
 };
@@ -69,6 +70,15 @@ const getArgTypes = (data) => {
     rounded_pill: {
       type: { name: "boolean" },
       description: "Mane the badge a rounded pill",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    outline: {
+      type: { name: "boolean" },
+      description: "Outline",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },

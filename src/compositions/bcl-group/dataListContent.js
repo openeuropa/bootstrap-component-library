@@ -121,23 +121,18 @@ module.exports = {
     remove_horizontal_spacer: true,
     items: [
       {
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+            "<a href='/example.html' class='text-underline-hover'>Article title</a>",
         },
         text: {
-          classes: "mb-2",
+          classes: "mb-2-5",
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         },
         content:
-          "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
+          "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
         image: {
           path: "https://picsum.photos/160?random=1",
           alt: "alt img",
@@ -145,23 +140,18 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
             "<a href='/example.html' class='text-underline-hover'>Group name</a>",
         },
         text: {
-          classes: "mb-2",
+          classes: "mb-2-5",
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         },
         content:
-          "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
+          "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
         image: {
           path: "https://picsum.photos/160?random=2",
           alt: "alt img",
@@ -169,23 +159,18 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
             "<a href='/example.html' class='text-underline-hover'>Group name</a>",
         },
         text: {
-          classes: "mb-2",
+          classes: "mb-2-5",
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         },
         content:
-          "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
+          "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
         image: {
           path: "https://picsum.photos/160?random=3",
           alt: "alt img",
@@ -193,23 +178,18 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
             "<a href='/example.html' class='text-underline-hover'>Group name</a>",
         },
         text: {
-          classes: "mb-2",
+          classes: "mb-2-5",
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         },
         content:
-          "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
+          "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
         image: {
           path: "https://picsum.photos/160?random=4",
           alt: "alt img",
@@ -217,23 +197,18 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
             "<a href='/example.html' class='text-underline-hover'>Group name</a>",
         },
         text: {
-          classes: "mb-2",
+          classes: "mb-2-5",
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         },
         content:
-          "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
+          "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
         image: {
           path: "https://picsum.photos/160?random=5",
           alt: "alt img",
@@ -241,23 +216,18 @@ module.exports = {
         },
       },
       {
-        badges: [
-          {
-            label: "Public",
-          },
-        ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
             "<a href='/example.html' class='text-underline-hover'>Group name</a>",
         },
         text: {
-          classes: "mb-2",
+          classes: "mb-2-5",
           content:
-            "Some quick example text to build on the card and title and make up the bulk of the cards content.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
         },
         content:
-          "<span class='text-muted me-4'>8 hours ago</span><span class='text-muted me-4'>1 comment</span>",
+          "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
         image: {
           path: "https://picsum.photos/160?random=6",
           alt: "alt img",

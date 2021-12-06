@@ -676,7 +676,7 @@ exports[`OE - User -edit renders correctly 1`] = `
                     class="mt-3 d-grid"
                   >
                     <label
-                      class="form-label btn btn-secondary"
+                      class="form-label btn btn-light"
                       for="image-profile"
                     >
                       Change picture
@@ -703,7 +703,7 @@ exports[`OE - User -edit renders correctly 1`] = `
                     Profile information
                   </h3>
                   <form
-                    class="mb-3 row"
+                    class="row"
                     novalidate="true"
                     onsubmit="return false;"
                   >
@@ -2299,120 +2299,12 @@ exports[`OE - User -list renders correctly 1`] = `
                 onsubmit="return false;"
               >
                 <div
-                  class="mb-3 pb-3 border-bottom"
-                >
-                  <input
-                    class="form-control"
-                    placeholder="Search by name or surname"
-                    type="text"
-                  />
-                </div>
-                <div
                   class="mb-3"
                 >
                   <label
                     class="form-label"
                   >
-                    Organisation
-                  </label>
-                  <select
-                    class="form-select"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                  >
-                    Profile Type
-                  </label>
-                  <select
-                    class="form-select"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3 pb-3 border-bottom"
-                >
-                  <label
-                    class="form-label"
-                  >
-                    Group
-                  </label>
-                  <select
-                    class="form-select"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                  >
-                    Option 1
+                    Name
                   </label>
                   <input
                     class="form-control"
@@ -2426,7 +2318,7 @@ exports[`OE - User -list renders correctly 1`] = `
                   <label
                     class="form-label"
                   >
-                    Option 2
+                    Organisation
                   </label>
                   <input
                     class="form-control"
@@ -2444,7 +2336,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     Refine
                   </button>
                   <button
-                    class="btn btn-secondary btn-md"
+                    class="btn btn-light btn-md"
                     type="submit"
                   >
                     Clear
@@ -2459,19 +2351,19 @@ exports[`OE - User -list renders correctly 1`] = `
         >
           <button
             aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-4 btn btn-primary btn-md"
+            class="d-lg-none w-100 mb-4 btn btn-light btn-lg"
             data-bs-target="#bcl-offcanvas"
             data-bs-toggle="offcanvas"
             type="button"
           >
-            Filter options
             <svg
-              class="ms-2 ms-2-5 bi icon--fluid"
+              class="me-2 me-2-5 bi icon--fluid"
             >
               <use
-                xlink:href="/icons.svg#sliders"
+                xlink:href="/icons.svg#filter"
               />
             </svg>
+            Filter options
           </button>
           <div
             class="mb-3 clearfix"
@@ -2528,7 +2420,7 @@ exports[`OE - User -list renders correctly 1`] = `
     
             </h4>
             <span
-              class="me-2 badge bg-primary"
+              class="me-2 badge bg-light text-dark"
             >
               Name
               <span
@@ -2545,7 +2437,7 @@ exports[`OE - User -list renders correctly 1`] = `
               </span>
             </span>
             <span
-              class="me-2 badge bg-primary"
+              class="me-2 badge bg-light text-dark"
             >
               Organisation
               <span
@@ -2624,7 +2516,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top mb-3"
+                        class="card-img-top"
                         src="https://picsum.photos/160?random=1"
                       />
                     </div>
@@ -2634,22 +2526,18 @@ exports[`OE - User -list renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Profile Type
-                          </span>
-                        </div>
                         <h5
-                          class="mb-3 card-title"
+                          class="card-title"
                         >
-                          Stefan Mayer
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            Stefan Mayer
+                          </a>
                         </h5>
                         <span
-                          class="text-muted me-2"
+                          class="text-muted me-4-5"
                         >
                           Organisation
                         </span>
@@ -2677,7 +2565,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top mb-3"
+                        class="card-img-top"
                         src="https://picsum.photos/160?random=2"
                       />
                     </div>
@@ -2687,22 +2575,18 @@ exports[`OE - User -list renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Profile Type
-                          </span>
-                        </div>
                         <h5
-                          class="mb-3 card-title"
+                          class="card-title"
                         >
-                          Adjur Tichar
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            Adjur Tichar
+                          </a>
                         </h5>
                         <span
-                          class="text-muted me-2"
+                          class="text-muted me-4-5"
                         >
                           Organisation
                         </span>
@@ -2730,7 +2614,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top mb-3"
+                        class="card-img-top"
                         src="https://picsum.photos/160?random=3"
                       />
                     </div>
@@ -2740,22 +2624,18 @@ exports[`OE - User -list renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Profile Type
-                          </span>
-                        </div>
                         <h5
-                          class="mb-3 card-title"
+                          class="card-title"
                         >
-                          Szép Mara
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            Szép Mara
+                          </a>
                         </h5>
                         <span
-                          class="text-muted me-2"
+                          class="text-muted me-4-5"
                         >
                           Organisation
                         </span>
@@ -2783,7 +2663,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top mb-3"
+                        class="card-img-top"
                         src="https://picsum.photos/160?random=4"
                       />
                     </div>
@@ -2793,22 +2673,18 @@ exports[`OE - User -list renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Profile Type
-                          </span>
-                        </div>
                         <h5
-                          class="mb-3 card-title"
+                          class="card-title"
                         >
-                          Daniel Cardoso Rocha
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            Daniel Cardoso Rocha
+                          </a>
                         </h5>
                         <span
-                          class="text-muted me-2"
+                          class="text-muted me-4-5"
                         >
                           Organisation
                         </span>
@@ -2836,7 +2712,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top mb-3"
+                        class="card-img-top"
                         src="https://picsum.photos/160?random=5"
                       />
                     </div>
@@ -2846,22 +2722,18 @@ exports[`OE - User -list renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Profile Type
-                          </span>
-                        </div>
                         <h5
-                          class="mb-3 card-title"
+                          class="card-title"
                         >
-                          Aurelia Panicucci
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            Aurelia Panicucci
+                          </a>
                         </h5>
                         <span
-                          class="text-muted me-2"
+                          class="text-muted me-4-5"
                         >
                           Organisation
                         </span>
@@ -2889,7 +2761,7 @@ exports[`OE - User -list renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top mb-3"
+                        class="card-img-top"
                         src="https://picsum.photos/160?random=6"
                       />
                     </div>
@@ -2899,22 +2771,18 @@ exports[`OE - User -list renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Profile Type
-                          </span>
-                        </div>
                         <h5
-                          class="mb-3 card-title"
+                          class="card-title"
                         >
-                          Felicyta Kowalska
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            Felicyta Kowalska
+                          </a>
                         </h5>
                         <span
-                          class="text-muted me-2"
+                          class="text-muted me-4-5"
                         >
                           Organisation
                         </span>
@@ -2934,7 +2802,7 @@ exports[`OE - User -list renders correctly 1`] = `
             class="d-none d-md-block mt-4-5"
           />
           <nav
-            class="mb-5 mt-4"
+            class="mt-4-5"
           >
             <ul
               class="pagination justify-content-center"
@@ -3986,7 +3854,7 @@ exports[`OE - User -view renders correctly 1`] = `
                 class="d-grid d-md-block"
               >
                 <button
-                  class="mb-3 btn btn-secondary btn-md"
+                  class="mb-3 btn btn-light btn-md"
                   type="button"
                 >
                   Manage profile
