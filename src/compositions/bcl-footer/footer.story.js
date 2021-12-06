@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
 import footerData from "@openeuropa/bcl-data-footer/data";
+import footerDataEU from "@openeuropa/bcl-data-footer/data-eu";
 import footerDataEC from "@openeuropa/bcl-data-footer/data-ec";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
@@ -29,7 +30,11 @@ export default {
 
 export const Footer = () => footer(correctPaths(footerData));
 
-Footer.storyName = "Footer EU";
+Footer.storyName = "Footer";
+
+export const FooterEU = () => footer(correctPaths(footerDataEU));
+
+FooterEU.storyName = "Footer EU";
 
 export const FooterEC = (args) => footer(correctPaths(footerDataEC));
 
