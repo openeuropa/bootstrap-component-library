@@ -28,9 +28,8 @@ export default {
   },
 };
 
-export const Footer = () => footer(correctPaths(footerData));
-
-Footer.storyName = "Footer";
+export const NeutralFooter = () => footer(correctPaths(footerData));
+NeutralFooter.storyName = "Neutral footer";
 
 export const FooterEU = () => footer(correctPaths(footerDataEU));
 
