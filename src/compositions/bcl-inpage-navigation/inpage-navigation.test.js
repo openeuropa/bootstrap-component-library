@@ -1,6 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import dataDefault from "@openeuropa/bcl-inpage-navigation/dataDefault.js";
-import dataNested from "@openeuropa/bcl-inpage-navigation/dataNested.js";
 
 const template = "@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -10,11 +9,5 @@ describe("OE - Inpage navigation", () => {
     expect.assertions(1);
 
     return expect(render(dataDefault)).resolves.toMatchSnapshot();
-  });
-
-  test("as nested lists renders correctly", () => {
-    expect.assertions(1);
-
-    return expect(render(dataNested)).resolves.toMatchSnapshot();
   });
 });

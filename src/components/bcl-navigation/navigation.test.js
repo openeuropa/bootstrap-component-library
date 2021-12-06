@@ -2,7 +2,6 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-navigation/data";
 import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs";
 import demoCustom from "@openeuropa/bcl-data-navigation/dataCustom";
-import demoMultiple from "@openeuropa/bcl-data-navigation/dataMultiple";
 
 const template = "@oe-bcl/bcl-navigation/navigation.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
@@ -63,11 +62,5 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(render(demoCustom)).resolves.toMatchSnapshot();
-  });
-
-  test("renders correctly with multiple child items", () => {
-    expect.assertions(1);
-
-    return expect(render(demoMultiple)).resolves.toMatchSnapshot();
   });
 });
