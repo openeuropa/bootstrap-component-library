@@ -5,16 +5,6 @@ import demoDataCustom from "@openeuropa/bcl-data-navigation/dataCustom.js";
 import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-const sidebar = (story) => {
-  const demo = story();
-  return `
-    <div class="row">
-      <div class="col-12 col-md-4 bg-light py-3">
-        ${demo}
-      </div>
-    </div>`;
-};
-
 const getArgs = (data, type) => {
   let args = {
     full_width: false,
