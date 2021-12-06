@@ -1,22 +1,19 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  variant: "ec",
   site_name: "Project name",
-  project_logo: {
-    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
-    classes: "d-none d-lg-inline-block",
-  },
+  site_name_classes: "h5 d-inline-block d-lg-none",
   head: {
-    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
-    disable_collapse: true,
     brand: {
       logos: [
         {
-          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
+          src: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
         },
       ],
+      label: "Project name",
     },
+    attributes: new drupalAttribute().addClass(["w-100"]),
+    disable_collapse: true,
     navigation: {
       items: [
         {

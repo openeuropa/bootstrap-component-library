@@ -45,26 +45,28 @@
   {{ attributes }}
 >
   <div class='container'>
-    {% if _brand is not empty %}
-      <a class='navbar-brand' href='{{ _brand.link }}'>
-      {%- if _brand.label is defined -%}
-        {{- _brand.label -}}
-      {%- else -%}
-        {% for logo in _brand.logos %}
-          <img
-            src='{{ logo.src }}'
-            {% if logo.alt is not empty %}
-            alt='{{ logo.alt }}'
-            {% endif %}
-            {% if logo.class is not empty %}
-            class='{{ logo.class }}'
-            {% endif %}
-          />
-        {% endfor %}
-      {%- endif -%}
-      </a>
-    {% endif %}
-    {% if not _disable_collapse %}
+  {% if _brand is not empty %}
+    <a class='navbar-brand' href='{{ _brand.link }}'>
+    {% for logo in _brand.logos %}
+      <img
+        src='{{ logo.src }}'
+        {% if logo.alt is not empty %}
+        alt='{{ logo.alt }}'
+        {% endif %}
+        {% if logo.class is not empty %}
+        class='{{ logo.class }}'
+        {% endif %}
+      />
+    {% endfor %}
+  {%- if _brand.label is defined -%}
+   <div class="h5 ms-4-5 d-none d-lg-inline-block">
+    {{- _brand.label -}}
+    </div>
+  {% endif %}
+    </a>
+  {% endif %}
+
+  {% if not _disable_collapse %}
     <button
       class='navbar-toggler'
       type='button'
