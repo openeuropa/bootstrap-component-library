@@ -433,7 +433,7 @@ module.exports = {
             classes: "mb-2",
           },
           content:
-            "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
           image: {
             path: "https://picsum.photos/seed/1002/600/400",
             alt: "alt img",
@@ -442,9 +442,13 @@ module.exports = {
           badges: [
             {
               label: "Label",
+              outline: true,
+              rounded_pill: true,
             },
             {
               label: "Label",
+              outline: true,
+              rounded_pill: true,
             },
           ],
         },
@@ -459,7 +463,7 @@ module.exports = {
             classes: "mb-2",
           },
           content:
-            "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
           image: {
             path: "https://picsum.photos/seed/1003/600/400",
             alt: "alt img",
@@ -468,12 +472,18 @@ module.exports = {
           badges: [
             {
               label: "Label",
+              outline: true,
+              rounded_pill: true,
             },
             {
               label: "Label",
+              outline: true,
+              rounded_pill: true,
             },
             {
               label: "Label",
+              outline: true,
+              rounded_pill: true,
             },
           ],
         },
@@ -488,7 +498,7 @@ module.exports = {
             classes: "mb-2",
           },
           content:
-            "<div class='mb-4 mt-4'><span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span></div>",
+            "<span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
           image: {
             path: "https://picsum.photos/seed/1004/600/400",
             alt: "alt img",
@@ -497,6 +507,8 @@ module.exports = {
           badges: [
             {
               label: "Label",
+              outline: true,
+              rounded_pill: true,
             },
           ],
         },

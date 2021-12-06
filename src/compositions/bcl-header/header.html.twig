@@ -1,6 +1,7 @@
 {% spaceless %}
 
 {# Parameters:
+  - variant (string) (default: 'neutral')
   - navbar (Navbar object) (default: {})
   - project_logo (object) (default: {})
     format: {
@@ -15,9 +16,11 @@
   - modals (Array of modal objects) (default: [])
 #}
 
+{% set _variant = variant|default('neutral') %}
 {% set _navbar = navbar|default({}) %}
 {% set _project_logo = project_logo|default({}) %}
 {% set _site_name = site_name|default('') %}
+{% set _site_name_classes = 'bcl-header__site-name' %}
 {% set _head = head|default({}) %}
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _modals = modals|default([]) %}
@@ -27,7 +30,11 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass("bcl-header") %}
+{% set attributes = attributes.addClass(['bcl-header', 'bcl-header--' ~ _variant]) %}
+
+{% if site_name_classes is not empty %}
+  {% set _site_name_classes = _site_name_classes ~ ' ' ~ site_name_classes %}
+{% endif %}
 
 {% set _project_classes = 'bcl-header__project' %}
 {% if _light is not empty %}
@@ -43,8 +50,8 @@
   {% endif %}
 
   <!-- project name -->
+  {% if _project_logo is not empty or _site_name is not empty %}
   <div class="{{ _project_classes  }}">
-    {% if _project_logo is not empty or _site_name is not empty %}
     <div class="container">
     {% if _project_logo is not empty %}
       <img
@@ -60,11 +67,13 @@
       />
     {% endif %}
     {% if _site_name is not empty %}
-      {{ _site_name }}
+      <div class="{{ _site_name_classes }}">
+       {{- _site_name -}}
+       </div>
     {% endif %}
     </div>
-    {% endif %}
   </div>
+  {% endif %}
 
   <!-- navbar -->
   {% if _navbar is not empty %}

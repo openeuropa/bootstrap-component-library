@@ -44,7 +44,7 @@ module.exports = {
     label: "Change picture",
     id: "image-profile",
     toggle: true,
-    toggle_variant: "secondary",
+    toggle_variant: "light",
     attributes: new drupalAttribute().addClass("d-none"),
   },
   remove_image_button: {
@@ -54,7 +54,7 @@ module.exports = {
   },
   profile_information: {
     attributes: new drupalAttribute()
-      .addClass(["mb-3", "row"])
+      .addClass(["row"])
       .setAttribute("novalidate", true)
       .setAttribute("onsubmit", "return false;"),
     submit: {

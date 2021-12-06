@@ -11,9 +11,13 @@ module.exports = {
   badges: [
     {
       label: "I'm a badge",
+      outline: true,
+      rounded_pill: true,
     },
     {
       label: "I'm also a badge",
+      outline: true,
+      rounded_pill: true,
       attributes: new drupalAttribute().addClass("test-class"),
     },
   ],
@@ -26,7 +30,6 @@ module.exports = {
     alt: "alt img",
     position: "top",
   },
-  content: "<button class='btn btn-primary'>Custom action</button>",
   card_header: "Header of card",
   card_footer: "Footer of card",
   attributes: new drupalAttribute().addClass("w-25"),

@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data-ec";
+import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
 import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
@@ -56,14 +57,20 @@ export default {
   },
 };
 
-export const Header = (args) => header(applyArgs(headerData, args));
+export const Neutral = (args) => header(applyArgs(headerDataNeutral, args));
 
-Header.storyName = "Header EU";
-Header.args = getArgs(headerData);
-Header.argTypes = getArgTypes(headerData);
+Neutral.storyName = "Neutral header";
+Neutral.args = getArgs(headerDataNeutral);
+Neutral.argTypes = getArgTypes(headerDataNeutral);
 
 export const HeaderEC = (args) => header(applyArgs(headerDataEC, args));
 
-HeaderEC.storyName = "Header EC";
+HeaderEC.storyName = "EC Header";
 HeaderEC.args = getArgs(headerDataEC);
 HeaderEC.argTypes = getArgTypes(headerDataEC);
+
+export const Header = (args) => header(applyArgs(headerData, args));
+
+Header.storyName = "EU Header";
+Header.args = getArgs(headerData);
+Header.argTypes = getArgTypes(headerData);

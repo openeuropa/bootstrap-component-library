@@ -15,6 +15,7 @@ const getArgs = (data) => {
     variant: data.variant,
     title: data.title || "",
     title_tag: data.title_tag || "",
+    alignment: "",
   };
   return args;
 };
@@ -41,11 +42,22 @@ const getArgTypes = (data) => {
       },
     },
     title_tag: {
+      name: "title tag",
       type: { name: "string" },
       description: "Tag of the title",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "h4" },
+        category: "Content",
+      },
+    },
+    alignment: {
+      type: { name: "select" },
+      description: "Alignment of the elements inside the items",
+      options: ["start", "end", "center", "baseline", "stretch"],
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
         category: "Content",
       },
     },
@@ -96,6 +108,7 @@ export const Cards = (args) =>
 Cards.storyName = "Highlight, 1 col";
 Cards.args = getArgs(demoHighlightData);
 Cards.argTypes = getArgTypes(demoHighlightData);
+Cards.argTypes.alignment.table = { disable: true };
 Cards.parameters = {
   viewport: {
     defaultViewport: "tablet",
@@ -108,6 +121,7 @@ export const CardsTwoCols = (args) =>
 CardsTwoCols.storyName = "Highlight, 2 col";
 CardsTwoCols.args = getArgs(demoHighlight2ColData);
 CardsTwoCols.argTypes = getArgTypes(demoHighlight2ColData);
+CardsTwoCols.argTypes.alignment.table = { disable: true };
 
 export const VerticalCards = (args) =>
   listing(applyArgs(correctPaths(demoHighlight3ColData), args));
@@ -115,6 +129,7 @@ export const VerticalCards = (args) =>
 VerticalCards.storyName = "Highlight, 3 col";
 VerticalCards.args = getArgs(demoHighlight3ColData);
 VerticalCards.argTypes = getArgTypes(demoHighlight3ColData);
+VerticalCards.argTypes.alignment.table = { disable: true };
 
 export const Date = (args) =>
   listing(applyArgs(correctPaths(demoDateData), args));

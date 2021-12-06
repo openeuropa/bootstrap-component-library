@@ -3,7 +3,7 @@
 exports[`OE - News full page renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header"
+    class="bcl-header bcl-header--eu"
   >
     <!-- navbar_settings -->
     <nav
@@ -143,9 +143,11 @@ exports[`OE - News full page renders correctly 1`] = `
           class="d-none d-lg-inline-block"
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
-        <p>
+        <div
+          class="bcl-header__site-name"
+        >
           Project name
-        </p>
+        </div>
       </div>
     </div>
     <!-- navbar -->
@@ -610,20 +612,6 @@ exports[`OE - News full page renders correctly 1`] = `
                 <div
                   class="card-body pt-md-0 px-0 px-md-3 pb-0"
                 >
-                  <div
-                    class="mb-3"
-                  >
-                    <span
-                      class="me-2 badge bg-primary"
-                    >
-                      Category 1
-                    </span>
-                    <span
-                      class="badge bg-primary"
-                    >
-                      Category 2
-                    </span>
-                  </div>
                   <h2
                     class="fw-bold card-title"
                   >
@@ -646,6 +634,20 @@ exports[`OE - News full page renders correctly 1`] = `
         Duis tristique fringilla magna, eu egestas dolor molestie non.
      
                   </p>
+                  <div
+                    class="mt-2-5"
+                  >
+                    <span
+                      class="me-2 badge rounded-pill badge-outline-primary"
+                    >
+                      Category 1
+                    </span>
+                    <span
+                      class="badge rounded-pill badge-outline-primary"
+                    >
+                      Category 2
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1055,7 +1057,7 @@ exports[`OE - News full page renders correctly 1`] = `
 exports[`OE - News listing renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header"
+    class="bcl-header bcl-header--eu"
   >
     <!-- navbar_settings -->
     <nav
@@ -1195,9 +1197,11 @@ exports[`OE - News listing renders correctly 1`] = `
           class="d-none d-lg-inline-block"
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
-        <p>
+        <div
+          class="bcl-header__site-name"
+        >
           Project name
-        </p>
+        </div>
       </div>
     </div>
     <!-- navbar -->
@@ -1882,38 +1886,40 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
+                        <h5
+                          class="card-title"
+                        >
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            News title
+                          </a>
+                        </h5>
+                        <p
+                          class="card-text mb-2-5"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                        </p>
+                        <span
+                          class="text-muted text-nowrap"
+                        >
+                          17 October 2019
+                        </span>
                         <div
-                          class="mb-3"
+                          class="mt-2-5"
                         >
                           <span
-                            class="me-2 badge bg-primary"
+                            class="me-2 badge rounded-pill badge-outline-primary"
                           >
                             Category 1
                           </span>
                           <span
-                            class="badge bg-primary"
+                            class="badge rounded-pill badge-outline-primary"
                           >
                             Category 2
                           </span>
                         </div>
-                        <a>
-                          Lorem ipsum dolor sit amet
-                        </a>
-                        <p
-                          class="card-text mb-3"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap me-4-5"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          1 comment
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -1943,33 +1949,35 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
+                        <h5
+                          class="card-title"
+                        >
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            News title
+                          </a>
+                        </h5>
+                        <p
+                          class="card-text mb-2-5"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                        </p>
+                        <span
+                          class="text-muted text-nowrap"
+                        >
+                          17 October 2019
+                        </span>
                         <div
-                          class="mb-3"
+                          class="mt-2-5"
                         >
                           <span
-                            class="me-2 badge bg-primary"
+                            class="me-2 badge rounded-pill badge-outline-primary"
                           >
                             Category 1
                           </span>
                         </div>
-                        <a>
-                          Incididunt ut labore et dolore
-                        </a>
-                        <p
-                          class="card-text mb-3"
-                        >
-                          Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap me-4-5"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          1 comment
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -1999,38 +2007,45 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
+                        <h5
+                          class="card-title"
+                        >
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            News title
+                          </a>
+                        </h5>
+                        <p
+                          class="card-text mb-2-5"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                        </p>
+                        <span
+                          class="text-muted text-nowrap"
+                        >
+                          17 October 2019
+                        </span>
                         <div
-                          class="mb-3"
+                          class="mt-2-5"
                         >
                           <span
-                            class="me-2 badge bg-primary"
+                            class="me-2 badge rounded-pill badge-outline-primary"
                           >
                             Category 1
                           </span>
                           <span
-                            class="badge bg-primary"
+                            class="me-2 badge rounded-pill badge-outline-primary"
                           >
                             Category 2
                           </span>
+                          <span
+                            class="badge rounded-pill badge-outline-primary"
+                          >
+                            Category 3
+                          </span>
                         </div>
-                        <a>
-                          Quis nostrud exercitation ullamco
-                        </a>
-                        <p
-                          class="card-text mb-3"
-                        >
-                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap me-4-5"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          1 comment
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -2060,33 +2075,35 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
+                        <h5
+                          class="card-title"
+                        >
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            News title
+                          </a>
+                        </h5>
+                        <p
+                          class="card-text mb-2-5"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                        </p>
+                        <span
+                          class="text-muted text-nowrap"
+                        >
+                          17 October 2019
+                        </span>
                         <div
-                          class="mb-3"
+                          class="mt-2-5"
                         >
                           <span
-                            class="badge bg-primary"
+                            class="me-2 badge rounded-pill badge-outline-primary"
                           >
                             Category 1
                           </span>
                         </div>
-                        <a>
-                          Quis nostrud exercitation ullamco
-                        </a>
-                        <p
-                          class="card-text mb-3"
-                        >
-                          Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap me-4-5"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          1 comment
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -2116,38 +2133,40 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
+                        <h5
+                          class="card-title"
+                        >
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
+                          >
+                            News title
+                          </a>
+                        </h5>
+                        <p
+                          class="card-text mb-2-5"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                        </p>
+                        <span
+                          class="text-muted text-nowrap"
+                        >
+                          17 October 2019
+                        </span>
                         <div
-                          class="mb-3"
+                          class="mt-2-5"
                         >
                           <span
-                            class="me-2 badge bg-primary"
+                            class="me-2 badge rounded-pill badge-outline-primary"
                           >
                             Category 1
                           </span>
                           <span
-                            class="badge bg-primary"
+                            class="badge rounded-pill badge-outline-primary"
                           >
                             Category 2
                           </span>
                         </div>
-                        <a>
-                          Duis aute irure dolor in Excepteur
-                        </a>
-                        <p
-                          class="card-text mb-3"
-                        >
-                          Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap me-4-5"
-                        >
-                          8 hours ago
-                        </span>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          1 comment
-                        </span>
                       </div>
                     </div>
                   </div>
@@ -2177,38 +2196,35 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <div
-                          class="mb-3"
+                        <h5
+                          class="card-title"
                         >
-                          <span
-                            class="me-2 badge bg-primary"
+                          <a
+                            class="text-underline-hover"
+                            href="/example.html"
                           >
-                            Category 1
-                          </span>
-                          <span
-                            class="badge bg-primary"
-                          >
-                            Category 2
-                          </span>
-                        </div>
-                        <a>
-                          Excepteur sint occaecat cupidatat non
-                        </a>
+                            News title
+                          </a>
+                        </h5>
                         <p
-                          class="card-text mb-3"
+                          class="card-text mb-2-5"
                         >
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
                         </p>
-                        <span
-                          class="text-muted text-nowrap me-4-5"
-                        >
-                          8 hours ago
-                        </span>
                         <span
                           class="text-muted text-nowrap"
                         >
-                          1 comment
+                          17 October 2019
                         </span>
+                        <div
+                          class="mt-2-5"
+                        >
+                          <span
+                            class="me-2 badge rounded-pill badge-outline-primary"
+                          >
+                            Category 1
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
