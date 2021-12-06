@@ -112,7 +112,7 @@ module.exports = {
     ],
   },
   pagination: {
-    attributes: new drupalAttribute().addClass(["mb-5", "mt-4"]),
+    attributes: new drupalAttribute().addClass(["mt-4"]),
     alignment: "center",
     border_top: true,
     prev: {
