@@ -1,7 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute().addClass("eu__footer"),
+  variant: "eu",
   rows: [
     {
       extra_classes: "pt-4 pt-lg-5",

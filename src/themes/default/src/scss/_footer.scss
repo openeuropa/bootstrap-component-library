@@ -1,31 +1,27 @@
 // stylelint-disable declaration-no-important
 
 $footer-border-color: #adb5bd !default;
-$footer-background: $gray-600;
 
-.bcl-footer {
-  background: $footer-background;
+.bcl-footer--neutral {
+  background: $gray-600;
+  a,
+  p {
+    color: $white;
+  }
 }
 
-.bcl-footer a,
-.bcl-footer p {
-  color: $white;
-}
-
-.bcl-footer.eu__footer {
+.bcl-footer--eu,
+.eu__footer {
   background: $eu-light-blue;
 }
 
-.bcl-footer.eu__footer a {
-  color: $link-color;
-}
-
-.bcl-footer.eu__footer p {
-  color: $body-color;
-}
-
-.bcl-footer.ec__footer {
+.bcl-footer--ec,
+.ec__footer {
   background: $ec-blue;
+  a,
+  p {
+    color: $white;
+  }
 }
 
 .bcl-footer *[class*="border-"] {
