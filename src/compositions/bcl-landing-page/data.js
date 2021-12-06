@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  landing: true,
   banner: {
     title: "Demo banner title",
     content_classes: "border-secondary",

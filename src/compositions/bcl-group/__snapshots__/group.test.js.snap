@@ -881,7 +881,7 @@ exports[`OE - Group landing renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-md-12"
+          class="col-12"
         >
           <div
             class="row mt-3"
@@ -2384,26 +2384,106 @@ exports[`OE - Group listing Content renders correctly 1`] = `
       class="container mt-4 mt-md-5"
     >
       <div
-        class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
+        class="col-xxl-11"
       >
-        <h2
-          class="mb-0 d-inline-block fw-bold"
-        >
-          Group Name
-        </h2>
         <div
-          class="d-grid d-md-block ms-auto"
+          class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
         >
-          <button
-            aria-expanded="false"
-            autocomplete="off"
-            class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-            data-bs-toggle="dropdown"
-            id="dropdown-1"
-            type="button"
+          <h2
+            class="mb-0 d-inline-block fw-bold"
           >
-            Create content
-          </button>
+            Group Name
+          </h2>
+          <div
+            class="d-grid d-md-block ms-auto"
+          >
+            <button
+              aria-expanded="false"
+              autocomplete="off"
+              class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="dropdown-1"
+              type="button"
+            >
+              Create content
+            </button>
+            <ul
+              aria-labelledby="dropdown-1"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                >
+                  I'm a link
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                >
+                  I'm a button
+                </button>
+              </li>
+              <li>
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
+                  class="dropdown-item"
+                  disabled="true"
+                  type="button"
+                >
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav
+          class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
+        >
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Home
+          </a>
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Members
+          </a>
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Content
+          </a>
+          <a
+            aria-expanded="false"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            id="dropdown-1"
+            role="button"
+          >
+            Links
+          </a>
           <ul
             aria-labelledby="dropdown-1"
             class="dropdown-menu"
@@ -2411,7 +2491,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
             <li>
               <a
                 class="dropdown-item"
-                href="#"
+                href="/example.html"
               >
                 I'm a link
               </a>
@@ -2448,90 +2528,14 @@ exports[`OE - Group listing Content renders correctly 1`] = `
               </button>
             </li>
           </ul>
-        </div>
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Link
+          </a>
+        </nav>
       </div>
-      <nav
-        class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
-      >
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Home
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Members
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Content
-        </a>
-        <a
-          aria-expanded="false"
-          class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown"
-          href="#"
-          id="dropdown-1"
-          role="button"
-        >
-          Links
-        </a>
-        <ul
-          aria-labelledby="dropdown-1"
-          class="dropdown-menu"
-        >
-          <li>
-            <a
-              class="dropdown-item"
-              href="/example.html"
-            >
-              I'm a link
-            </a>
-          </li>
-          <li>
-            <button
-              class="dropdown-item"
-              type="button"
-            >
-              I'm a button
-            </button>
-          </li>
-          <li>
-            <hr
-              class="dropdown-divider"
-            />
-          </li>
-          <li>
-            <button
-              aria-disabled="true"
-              class="dropdown-item"
-              disabled="true"
-              type="button"
-            >
-              I'm a disabled button
-            </button>
-          </li>
-          <li>
-            <button
-              class="dropdown-item active"
-              type="button"
-            >
-              I'm a active button
-            </button>
-          </li>
-        </ul>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Link
-        </a>
-      </nav>
     </div>
     <div
       class="container mt-md-4-75 mt-4"
@@ -2540,7 +2544,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-md-3"
+          class="col-12 col-md-4 col-lg-3"
         >
           <div
             aria-labelledby="offcanvasExampleLabel"
@@ -2735,7 +2739,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="col-12 col-md-9"
+          class="col-12 col-md-8 col-lg-9 col-xxl-8"
         >
           <button
             aria-controls="bcl-offcanvas"
@@ -4090,26 +4094,106 @@ exports[`OE - Group listing Member renders correctly 1`] = `
       class="container mt-4 mt-md-5"
     >
       <div
-        class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
+        class="col-xxl-11"
       >
-        <h2
-          class="mb-0 d-inline-block fw-bold"
-        >
-          Group Name
-        </h2>
         <div
-          class="d-grid d-md-block ms-auto"
+          class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
         >
-          <button
-            aria-expanded="false"
-            autocomplete="off"
-            class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-            data-bs-toggle="dropdown"
-            id="dropdown-1"
-            type="button"
+          <h2
+            class="mb-0 d-inline-block fw-bold"
           >
-            Create content
-          </button>
+            Group Name
+          </h2>
+          <div
+            class="d-grid d-md-block ms-auto"
+          >
+            <button
+              aria-expanded="false"
+              autocomplete="off"
+              class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="dropdown-1"
+              type="button"
+            >
+              Create content
+            </button>
+            <ul
+              aria-labelledby="dropdown-1"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                >
+                  I'm a link
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                >
+                  I'm a button
+                </button>
+              </li>
+              <li>
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
+                  class="dropdown-item"
+                  disabled="true"
+                  type="button"
+                >
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav
+          class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
+        >
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Home
+          </a>
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Members
+          </a>
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Content
+          </a>
+          <a
+            aria-expanded="false"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            id="dropdown-1"
+            role="button"
+          >
+            Links
+          </a>
           <ul
             aria-labelledby="dropdown-1"
             class="dropdown-menu"
@@ -4117,7 +4201,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
             <li>
               <a
                 class="dropdown-item"
-                href="#"
+                href="/example.html"
               >
                 I'm a link
               </a>
@@ -4154,90 +4238,14 @@ exports[`OE - Group listing Member renders correctly 1`] = `
               </button>
             </li>
           </ul>
-        </div>
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            Link
+          </a>
+        </nav>
       </div>
-      <nav
-        class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
-      >
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Home
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Members
-        </a>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Content
-        </a>
-        <a
-          aria-expanded="false"
-          class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown"
-          href="#"
-          id="dropdown-1"
-          role="button"
-        >
-          Links
-        </a>
-        <ul
-          aria-labelledby="dropdown-1"
-          class="dropdown-menu"
-        >
-          <li>
-            <a
-              class="dropdown-item"
-              href="/example.html"
-            >
-              I'm a link
-            </a>
-          </li>
-          <li>
-            <button
-              class="dropdown-item"
-              type="button"
-            >
-              I'm a button
-            </button>
-          </li>
-          <li>
-            <hr
-              class="dropdown-divider"
-            />
-          </li>
-          <li>
-            <button
-              aria-disabled="true"
-              class="dropdown-item"
-              disabled="true"
-              type="button"
-            >
-              I'm a disabled button
-            </button>
-          </li>
-          <li>
-            <button
-              class="dropdown-item active"
-              type="button"
-            >
-              I'm a active button
-            </button>
-          </li>
-        </ul>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Link
-        </a>
-      </nav>
     </div>
     <div
       class="container mt-md-4-75 mt-4"
@@ -4246,7 +4254,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-md-3"
+          class="col-12 col-md-4 col-lg-3"
         >
           <div
             aria-labelledby="offcanvasExampleLabel"
@@ -4334,7 +4342,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="col-12 col-md-9"
+          class="col-12 col-md-8 col-lg-9 col-xxl-8"
         >
           <button
             aria-controls="bcl-offcanvas"
@@ -5858,7 +5866,7 @@ exports[`OE - Group listing renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-md-3"
+          class="col-12 col-md-4 col-lg-3"
         >
           <div
             aria-labelledby="offcanvasExampleLabel"
@@ -5996,7 +6004,7 @@ exports[`OE - Group listing renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="col-12 col-md-9"
+          class="col-12 col-md-8 col-lg-9 col-xxl-8"
         >
           <button
             aria-controls="bcl-offcanvas"

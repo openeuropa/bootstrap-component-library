@@ -187,7 +187,7 @@ module.exports = {
     size: "lg",
     variant: "primary",
     attributes: new drupalAttribute()
-      .addClass(["d-lg-none", "w-100", "mb-4"])
+      .addClass(["d-md-none", "w-100", "mb-4"])
       .setAttribute("data-bs-toggle", "offcanvas")
       .setAttribute("data-bs-target", "#bcl-offcanvas")
       .setAttribute("aria-controls", "bcl-offcanvas"),

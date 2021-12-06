@@ -6,7 +6,9 @@
   - with_footer (boolean) (default: false)
   - with_banner (boolean) (default: false)
   - with_sidebar (boolean) (default: false)
-  - columns (string) (default: 3-9 )
+  - sidebar_size (string) (default: 'normal')
+  - landing (boolean) (default: false)
+    options: ['normal', 'large']
   - content_type (string) (default: '')
   - attributes (drupal attrs)
 
@@ -25,15 +27,29 @@
 {% set _with_footer = footer|default(false) %}
 {% set _with_banner = banner|default(false) %}
 {% set _with_sidebar = sidebar|default(false) %}
-{% set _columns = columns|default('3-9') %}
+{% set _sidebar_size = sidebar_size|default('normal') %}
+{% set _landing = landing|default(false) %}
 {% set _content_type = content_type|default('') %}
 {% set _classes = ['bcl-node-type'] %}
-{% set _col_classes = { left: 'col-md-3', right: 'col-12 col-md-9' } %}
 
-{% if _columns == '4-8' %}
-  {% set _col_classes = { left: 'col-md-4', right: 'col-12 col-md-8' } %}
-{% elseif _columns == '2-10' %}
-  {% set _col_classes = { left: 'col-md-2', right: 'col-12 col-md-10' } %}
+{% if _with_sidebar %}
+  {% set _col_classes = {
+    left: [
+      'col-12',
+      'col-md-4',
+    ],
+    right: [
+      'col-12',
+      'col-md-8',
+    ],
+  } %}
+
+  {% if _sidebar_size == 'normal' %}
+    {% set _col_classes = _col_classes|merge({
+      left: _col_classes.left|merge(['col-lg-3']),
+      right: _col_classes.right|merge(['col-lg-9', 'col-xxl-8']),
+    }) %}
+  {% endif %}
 {% endif %}
 
 {% if _content_type is not empty %}
@@ -54,12 +70,16 @@
   <div class="container mt-md-4-75 mt-4">
     <div class="row">
     {% if _with_sidebar %}
-      <div class="{{ _col_classes.left }}">
+      <div class="{{ _col_classes.left|join(' ') }}">
         {% block sidebar %}{% endblock %}
       </div>
-      <div class="{{ _col_classes.right }}">
+      <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}
-      <div class="col-md-12">
+      {% if _landing %}
+      <div class="col-12">
+      {% else %}
+      <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+      {% endif %}
     {% endif %}
       {% block content_top %}
         {{ content_top }}
