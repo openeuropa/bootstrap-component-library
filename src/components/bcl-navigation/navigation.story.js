@@ -6,6 +6,28 @@ import demoDataMultiple from "@openeuropa/bcl-data-navigation/dataMultiple.js";
 import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const sidebar = (story) => {
+  const demo = story();
+  return `
+    <div class="row">
+      <div class="col-12 col-md-4 bg-light py-3">
+        ${demo}
+      </div>
+      <div class="d-none d-md-block col-md-8 py-3">
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ac libero efficitur laoreet. Duis vestibulum ultrices lectus et rutrum. Ut interdum enim libero, sed commodo odio eleifend sed. Phasellus maximus est nec diam mollis, eget sollicitudin purus placerat. Nam dapibus neque eget ligula pharetra molestie. Sed fringilla libero sollicitudin nibh vestibulum, vitae auctor urna ornare. Cras dictum pharetra euismod. Sed congue, justo nec fermentum egestas, nibh dolor imperdiet risus, vel accumsan neque nisl ut odio. Vivamus quis condimentum nulla. Maecenas finibus molestie accumsan. Nunc volutpat tellus tortor, non semper mauris laoreet non. Donec blandit placerat enim, in suscipit nulla ullamcorper in. Nullam laoreet dolor ut arcu dapibus euismod. In et cursus justo. Cras cursus hendrerit tortor.</p>
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ac libero efficitur laoreet. Duis vestibulum ultrices lectus et rutrum. Ut interdum enim libero, sed commodo odio eleifend sed. Phasellus maximus est nec diam mollis, eget sollicitudin purus placerat. Nam dapibus neque eget ligula pharetra molestie. Sed fringilla libero sollicitudin nibh vestibulum, vitae auctor urna ornare. Cras dictum pharetra euismod. Sed congue, justo nec fermentum egestas, nibh dolor imperdiet risus, vel accumsan neque nisl ut odio. Vivamus quis condimentum nulla. Maecenas finibus molestie accumsan. Nunc volutpat tellus tortor, non semper mauris laoreet non. Donec blandit placerat enim, in suscipit nulla ullamcorper in. Nullam laoreet dolor ut arcu dapibus euismod. In et cursus justo. Cras cursus hendrerit tortor.</p>
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ac libero efficitur laoreet. Duis vestibulum ultrices lectus et rutrum. Ut interdum enim libero, sed commodo odio eleifend sed. Phasellus maximus est nec diam mollis, eget sollicitudin purus placerat. Nam dapibus neque eget ligula pharetra molestie. Sed fringilla libero sollicitudin nibh vestibulum, vitae auctor urna ornare. Cras dictum pharetra euismod. Sed congue, justo nec fermentum egestas, nibh dolor imperdiet risus, vel accumsan neque nisl ut odio. Vivamus quis condimentum nulla. Maecenas finibus molestie accumsan. Nunc volutpat tellus tortor, non semper mauris laoreet non. Donec blandit placerat enim, in suscipit nulla ullamcorper in. Nullam laoreet dolor ut arcu dapibus euismod. In et cursus justo. Cras cursus hendrerit tortor.</p>
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ac libero efficitur laoreet. Duis vestibulum ultrices lectus et rutrum. Ut interdum enim libero, sed commodo odio eleifend sed. Phasellus maximus est nec diam mollis, eget sollicitudin purus placerat. Nam dapibus neque eget ligula pharetra molestie. Sed fringilla libero sollicitudin nibh vestibulum, vitae auctor urna ornare. Cras dictum pharetra euismod. Sed congue, justo nec fermentum egestas, nibh dolor imperdiet risus, vel accumsan neque nisl ut odio. Vivamus quis condimentum nulla. Maecenas finibus molestie accumsan. Nunc volutpat tellus tortor, non semper mauris laoreet non. Donec blandit placerat enim, in suscipit nulla ullamcorper in. Nullam laoreet dolor ut arcu dapibus euismod. In et cursus justo. Cras cursus hendrerit tortor.</p>
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ac libero efficitur laoreet. Duis vestibulum ultrices lectus et rutrum. Ut interdum enim libero, sed commodo odio eleifend sed. Phasellus maximus est nec diam mollis, eget sollicitudin purus placerat. Nam dapibus neque eget ligula pharetra molestie. Sed fringilla libero sollicitudin nibh vestibulum, vitae auctor urna ornare. Cras dictum pharetra euismod. Sed congue, justo nec fermentum egestas, nibh dolor imperdiet risus, vel accumsan neque nisl ut odio. Vivamus quis condimentum nulla. Maecenas finibus molestie accumsan. Nunc volutpat tellus tortor, non semper mauris laoreet non. Donec blandit placerat enim, in suscipit nulla ullamcorper in. Nullam laoreet dolor ut arcu dapibus euismod. In et cursus justo. Cras cursus hendrerit tortor.</p>
+      </div>
+    </div>`;
+};
+
 const getArgs = (data, type) => {
   let args = {
     full_width: false,
@@ -123,11 +145,13 @@ export const CustomTabs = (args) => navigation(applyArgs(demoDataCustom, args));
 CustomTabs.args = getArgs(demoDataCustom);
 CustomTabs.argTypes = getArgTypes(demoDataCustom);
 
-export const Multiple = (args) => navigation(applyArgs(demoDataMultiple, args));
+export const NestedLists = (args) =>
+  navigation(applyArgs(demoDataMultiple, args));
 
-Multiple.args = getArgs(demoDataMultiple);
-Multiple.argTypes = getArgTypes(demoDataMultiple);
-Multiple.parameters = {
+NestedLists.args = getArgs(demoDataMultiple);
+NestedLists.argTypes = getArgTypes(demoDataMultiple);
+NestedLists.decorators = [sidebar];
+NestedLists.parameters = {
   controls: {
     disable: true,
   },

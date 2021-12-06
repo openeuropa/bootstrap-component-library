@@ -22,11 +22,11 @@ module.exports = {
       navigation: {
         items: [
           {
-            label: "I'm a child link",
+            label: "I'm a child",
             path: "/example.html",
           },
           {
-            label: "I'm a child link",
+            label: "I'm a child",
             path: "/example.html",
           },
         ],
