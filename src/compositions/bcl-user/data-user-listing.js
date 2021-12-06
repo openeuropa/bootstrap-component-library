@@ -184,8 +184,8 @@ module.exports = {
   filter_button: {
     label: "Filter options",
     type: "button",
-    variant: "light",
     size: "lg",
+    variant: "primary",
     attributes: new drupalAttribute()
       .addClass(["d-lg-none", "w-100", "mb-4"])
       .setAttribute("data-bs-toggle", "offcanvas")
