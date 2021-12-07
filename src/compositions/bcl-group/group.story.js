@@ -14,11 +14,15 @@ import demoDataList from "@openeuropa/bcl-group/dataList";
 import demoDataListContent from "@openeuropa/bcl-group/dataListContent";
 import demoDataListMember from "@openeuropa/bcl-group/dataListMember";
 import demoDataLanding from "@openeuropa/bcl-group/dataLanding";
+import drupalAttribute from "drupal-attribute";
 
 let baseData = {
   content_type: "group",
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
   with_banner: true,
   with_header: true,
   with_footer: true,

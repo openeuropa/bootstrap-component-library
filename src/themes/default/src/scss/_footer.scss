@@ -2,17 +2,26 @@
 
 $footer-border-color: #adb5bd !default;
 
-.bcl-footer {
+.bcl-footer--neutral {
+  background: $gray-600;
+  a,
+  p {
+    color: $white;
+  }
+}
+
+.bcl-footer--eu,
+.eu__footer {
   background: $eu-light-blue;
 }
 
-.bcl-footer.ec__footer {
+.bcl-footer--ec,
+.ec__footer {
   background: $ec-blue;
-}
-
-.bcl-footer.ec__footer a,
-.bcl-footer.ec__footer p {
-  color: $white;
+  a,
+  p {
+    color: $white;
+  }
 }
 
 .bcl-footer *[class*="border-"] {
