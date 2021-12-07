@@ -9,14 +9,16 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
-
-footer.attributes.addClass(["mt-4-5"]);
+import drupalAttribute from "drupal-attribute";
 
 const data = {
   with_header: true,
   with_footer: true,
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
   content_type: "users",
 };
 
