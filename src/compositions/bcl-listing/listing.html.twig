@@ -124,10 +124,14 @@
       ] %}
      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
      {% set _card = _card|merge({
-         extra_classes_body: 'pb-4',
          wrapper_class: 'col',
          attributes: _card_attributes,
       }) %}
+      {% if _card.image is defined and _card.image is not empty %}
+        {% set _card = _card|merge({
+          extra_classes_body: "pt-0",
+        }) %}
+      {% endif %}
      {% set _card_layout = _card_layout|merge({
        cols_extra_classes: 'mt-4-5',
      }) %}
@@ -144,9 +148,13 @@
       {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
       {% set _card = _card|merge({
         wrapper_class: 'col',
-        extra_classes_body: 'pt-0',
         attributes: _card_attributes,
       }) %}
+      {% if _card.image is defined and _card.image is not empty %}
+        {% set _card = _card|merge({
+          extra_classes_body: 'pt-0',
+        }) %}
+      {% endif %}
       {% set _card_layout = _card_layout|merge({ gutter: '4' }) %}
       {% if variant == 'highlight-2-col' %}
         {% set _card_layout = _card_layout|merge({ responsive_columns: 2 }) %}
@@ -164,9 +172,6 @@
 {% if _link is not empty %}
   {% set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
   {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-inline-block']) %}
-  {% if _variant == 'default-1-col' or _variant == 'default-2-col' or variant == 'default-3-col' %}
-    {% set _link_attributes = _link_attributes.addClass(['ps-3-5']) %}
-  {% endif %}
   {% include '@oe-bcl/bcl-link/link.html.twig' with _link|merge({
     attributes: _link_attributes,
     icon: _link.icon|merge({
