@@ -3,11 +3,15 @@ import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 const dataLanding = {
   content_type: "landing-page",
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
   with_banner: true,
   with_header: true,
   with_footer: true,
