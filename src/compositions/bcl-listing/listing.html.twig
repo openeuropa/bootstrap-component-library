@@ -124,13 +124,12 @@
       ] %}
      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
      {% set _card = _card|merge({
-         extra_classes_body: 'pb-4',
          wrapper_class: 'col',
          attributes: _card_attributes,
       }) %}
       {% if _card.image is defined and _card.image is not empty %}
         {% set _card = _card|merge({
-          extra_classes_body: _card.extra_classes_body ~ " pt-0",
+          extra_classes_body: "pt-0",
         }) %}
       {% endif %}
      {% set _card_layout = _card_layout|merge({
