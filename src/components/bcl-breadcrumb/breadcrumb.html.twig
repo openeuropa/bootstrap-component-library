@@ -18,7 +18,7 @@
     class="{{ _classes }}"
   >
     {% for _link in _links %}
-      {% set _segment_classes = 'breadcrumb-item d-none d-md-block' %}  
+      {% set _segment_classes = 'breadcrumb-item d-none d-md-block' %}
       {% if loop.revindex == 2 %}
         {% set _segment_classes = 'breadcrumb-item' %}
       {% endif %}
@@ -29,7 +29,7 @@
       {% endif %}
       <li
         class="{{ _segment_classes }}"
-        {{ _segment_attrs }}
+        {{ _segment_attrs|raw }}
       >
         {%- if _link.path -%}
           {% if loop.revindex == 2 %}
