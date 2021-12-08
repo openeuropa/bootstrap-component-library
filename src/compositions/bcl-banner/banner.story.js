@@ -13,6 +13,7 @@ const getArgs = (data) => {
     centered: true,
     hero: false,
     full_width: false,
+    title_tag: "div",
   };
   if (data.image) {
     args.image = data.image || "";
@@ -25,7 +26,7 @@ const getArgTypes = (data) => {
   const argTypes = {
     title: {
       type: { name: "string", required: true },
-      description: "Heading of the banner",
+      description: "Ttile of the banner",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -33,8 +34,9 @@ const getArgTypes = (data) => {
       },
     },
     title_tag: {
+      name: "title tag",
       type: { name: "string", required: false },
-      description: "Tag of the heading",
+      description: "Html tag of the title",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "div" },

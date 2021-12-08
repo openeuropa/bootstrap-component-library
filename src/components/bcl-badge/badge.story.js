@@ -13,6 +13,7 @@ const getArgs = (data) => {
     title: data.label,
     background: data.background || "primary",
     rounded_pill: false,
+    dismissible: false,
     outline: false,
     assistive_text: "",
   };
@@ -41,7 +42,6 @@ const getArgTypes = (data) => {
     dismissible: {
       type: { name: "boolean" },
       description: "Dismissible badge",
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -86,8 +86,9 @@ const getArgTypes = (data) => {
       },
     },
     assistive_text: {
+      name: "assistive text",
       type: { name: "string" },
-      description: "Assistive, hidden text",
+      description: "hidden text, for accessibility",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },

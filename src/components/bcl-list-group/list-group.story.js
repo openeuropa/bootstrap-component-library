@@ -8,7 +8,7 @@ import drupalAttribute from "drupal-attribute";
 const getArgs = () => {
   return {
     flush: false,
-    horizontal: "",
+    horizontal: "none",
   };
 };
 
@@ -27,7 +27,7 @@ const getArgTypes = () => {
       type: { name: "select" },
       description: "Horizontal style for each media query",
       options: [
-        "",
+        "none",
         "horizontal",
         "horizontal-sm",
         "horizontal-md",
@@ -38,7 +38,7 @@ const getArgTypes = () => {
       control: {
         type: "select",
         labels: {
-          "": "none",
+          none: "none",
           horizontal: "horizontal",
           "horizontal-sm": "horizontal small",
           "horizontal-md": "horizontal medium",
@@ -67,6 +67,10 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+  if (args.horizontal === "none") {
+    args.horizontal = "";
+  }
+
   resetAttrs(data);
 
   return Object.assign(data, args);

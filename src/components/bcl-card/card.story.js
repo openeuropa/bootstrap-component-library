@@ -18,7 +18,7 @@ const getArgs = (data, type) => {
     title: data.title,
     subtitle: data.subtitle,
     text: data.text,
-    content: data.content,
+    content: data.content || "",
     card_header: data.card_header || "",
     card_footer: data.card_footer || "",
     variant: data.variant,

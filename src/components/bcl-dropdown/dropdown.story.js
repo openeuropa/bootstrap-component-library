@@ -5,7 +5,7 @@ import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
   return {
-    direction: "",
+    direction: "default",
     dark: false,
   };
 };
@@ -15,15 +15,9 @@ const getArgTypes = (data) => {
     direction: {
       type: { name: "select" },
       description: "Direction of dropdown menu",
-      options: ["", "dropup", "dropend", "dropstart"],
+      options: ["default", "dropup", "dropend", "dropstart"],
       control: {
         type: "select",
-        labels: {
-          "": "dropdown",
-          dropup: "dropup",
-          dropend: "dropend",
-          dropstart: "dropstart",
-        },
       },
       table: {
         type: { summary: "string" },
@@ -51,7 +45,13 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+
+  if (args.direction === "default") {
+    args.direction = "";
+  }
+
   resetAttrs(data);
+
   return Object.assign(data, args);
 };
 

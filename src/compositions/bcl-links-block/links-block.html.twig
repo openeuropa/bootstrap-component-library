@@ -13,7 +13,7 @@
 {% set _background = background|default("gray") %}
 {% set _variant = variant|default("vertical") %}
 {% set _title = title|default("") %}
-{% set _title_tag = title_tag|default("h5") %}
+{% set _title_tag = title_tag|default("h4") %}
 {% set _links = links|default([])%}
 
 {% if attributes is empty %}
@@ -24,7 +24,7 @@
   {% set attributes = attributes.addClass(["bg-light", "px-4", "py-3"]) %}
 {% endif %}
 
-<div 
+<div
   {{ attributes }}
 >
   {% if _title is not empty %}

@@ -4,7 +4,7 @@ import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
 const getArgs = () => {
   return {
-    size: "",
+    size: "default",
     static_backdrop: false,
     verticaly_centered: false,
     scrollable: false,
@@ -17,7 +17,7 @@ const getArgTypes = () => {
       name: "size",
       type: { name: "select" },
       description: "Modal size",
-      options: ["", "sm", "lg", "xl", "fullscreen"],
+      options: ["default", "sm", "lg", "xl", "fullscreen"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -26,7 +26,7 @@ const getArgTypes = () => {
       control: {
         type: "select",
         labels: {
-          "": "default",
+          default: "default",
           sm: "small",
           lg: "large",
           xl: "extra large",
@@ -67,6 +67,10 @@ const getArgTypes = () => {
 };
 
 const applyArgs = (data, args) => {
+  if (args.size === "default") {
+    args.size = "";
+  }
+
   return Object.assign(data, args);
 };
 

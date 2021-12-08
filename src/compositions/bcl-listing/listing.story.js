@@ -14,8 +14,8 @@ const getArgs = (data) => {
   const args = {
     variant: data.variant,
     title: data.title || "",
-    title_tag: data.title_tag || "",
-    alignment: "",
+    title_tag: "h4",
+    alignment: "default",
   };
   return args;
 };
@@ -54,7 +54,7 @@ const getArgTypes = (data) => {
     alignment: {
       type: { name: "select" },
       description: "Alignment of the elements inside the items",
-      options: ["start", "end", "center", "baseline", "stretch"],
+      options: ["default", "start", "end", "center", "baseline", "stretch"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -65,6 +65,10 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  if (args.alignment === "default") {
+    args.alignment = "";
+  }
+
   return Object.assign(data, args);
 };
 
