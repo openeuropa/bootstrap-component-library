@@ -1,16 +1,16 @@
-// stylelint-disable declaration-no-important
-
-@media screen and (min-width: 992px) {
+@include media-breakpoint-up(lg) {
   .bcl-offcanvas {
     position: relative;
     width: auto;
-    visibility: visible !important;
+    visibility: visible !important; // stylelint-disable-line declaration-no-important
     border: none;
     transform: none;
+
     .offcanvas-body {
       overflow: visible;
     }
   }
+
   .bcl-offcanvas + .offcanvas-backdrop {
     display: none;
   }

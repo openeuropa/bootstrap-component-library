@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  landing: true,
   banner: {
     image: {
       path: "https://picsum.photos/seed/1002/1100/255",
