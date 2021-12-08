@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.0 (2021-12-08)
+
+#### :rocket: New Feature
+
+* [#152](https://github.com/openeuropa/bootstrap-component-library/pull/152) feat(badges): Added outline "variant" - FRONT-3429 ([@tibi2303](https://github.com/tibi2303))
+* [#157](https://github.com/openeuropa/bootstrap-component-library/pull/157) feat(header): Adding "neutral" variant - FRONT-3431 ([@planctus](https://github.com/planctus))
+* [#154](https://github.com/openeuropa/bootstrap-component-library/pull/154) feat(flags): Adding flag example in icon, distributing sprite with the themes - FRONT-3430 ([@planctus](https://github.com/planctus))
+
+#### :bug: Bug Fix
+
+* [#164](https://github.com/openeuropa/bootstrap-component-library/pull/164) fix(breadcrumb): fixing segment attributes - FRONT-840 ([@planctus](https://github.com/planctus))
+* [#161](https://github.com/openeuropa/bootstrap-component-library/pull/161) fix(inpage-navigation): Changing selector used for styling - OEL-839 ([@tibi2303](https://github.com/tibi2303))
+* [#151](https://github.com/openeuropa/bootstrap-component-library/pull/151) fix(listing): Fixing alignment classes - FRONT-3405 ([@planctus](https://github.com/planctus))
+
+#### :nail_care: Enhancement
+
+* [#162](https://github.com/openeuropa/bootstrap-component-library/pull/162) feat(layout): Adaptive layout approach - OEL-828 ([@planctus](https://github.com/planctus))
+* [#166](https://github.com/openeuropa/bootstrap-component-library/pull/166) style(accordion): Accordion active state - OEL-844 ([@tibi2303](https://github.com/tibi2303))
+* [#165](https://github.com/openeuropa/bootstrap-component-library/pull/165) enhancement(listing): Fix for listing when image is not available - OEL-841 ([@tibi2303](https://github.com/tibi2303))
+* [#159](https://github.com/openeuropa/bootstrap-component-library/pull/159) feat(navigation): Added support for nested lists - OEL-834 ([@tibi2303](https://github.com/tibi2303))
+* [#160](https://github.com/openeuropa/bootstrap-component-library/pull/160) feat(footer): Added footer neutral - OEL-827 ([@tibi2303](https://github.com/tibi2303))
+* [#155](https://github.com/openeuropa/bootstrap-component-library/pull/155) enhancement(sort): Redone duplicate sort listing - OEL-727 ([@tibi2303](https://github.com/tibi2303))
+
+#### :memo: Documentation
+
+* [#156](https://github.com/openeuropa/bootstrap-component-library/pull/156) feat(icon-list): Updated list of icons - FRONT-3437 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#167](https://github.com/openeuropa/bootstrap-component-library/pull/167) chore(storybook): Using storybook 6.4.8 ([@planctus](https://github.com/planctus))
+* [#158](https://github.com/openeuropa/bootstrap-component-library/pull/158) chore(deps): green updates ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.15.0 (2021-11-29)
 
 #### :rocket: New Feature
