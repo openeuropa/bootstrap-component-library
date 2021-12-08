@@ -56,7 +56,7 @@ export default {
   title: "Compositions/Date block",
 };
 
-export const Standalone = (args) => dateBlock(applyArgs(demoData));
+export const Standalone = (args) => dateBlock(applyArgs(demoData, args));
 
 Standalone.args = getArgs(demoData);
-Standalone.argTypes = getArgTypes();
+Standalone.argTypes = getArgTypes(demoData);
