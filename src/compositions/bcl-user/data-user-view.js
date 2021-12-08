@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  landing: true,
   user: {
     horizontal: true,
     horizontal_grid: {
