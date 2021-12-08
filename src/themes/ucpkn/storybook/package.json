@@ -10,8 +10,8 @@
     "clean": "rimraf bcl-stories",
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
-    "start": "start-storybook -p 9001 -c .storybook -s ../../../../assets/",
-    "dist": "build-storybook -c .storybook -s ../../../../assets -o ../../../../build/ucpkn"
+    "start": "start-storybook -p 9001 -c .storybook",
+    "dist": "build-storybook -c .storybook -o ../../../../build/ucpkn"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
