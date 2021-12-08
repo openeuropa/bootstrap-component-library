@@ -185,9 +185,9 @@ module.exports = {
     label: "Filter options",
     type: "button",
     size: "lg",
-    variant: "primary",
+    variant: "light",
     attributes: new drupalAttribute()
-      .addClass(["d-md-none", "w-100", "mb-4"])
+      .addClass(["d-lg-none", "w-100", "mb-4"])
       .setAttribute("data-bs-toggle", "offcanvas")
       .setAttribute("data-bs-target", "#bcl-offcanvas")
       .setAttribute("aria-controls", "bcl-offcanvas"),
