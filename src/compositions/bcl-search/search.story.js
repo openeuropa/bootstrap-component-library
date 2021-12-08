@@ -8,12 +8,16 @@ import demoData from "@openeuropa/bcl-search/dataSearch.js";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
+import drupalAttribute from "drupal-attribute";
 
 const dataListing = {
   page_title: "Search results",
   content_type: "search",
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
   with_banner: true,
   with_header: true,
   with_footer: true,

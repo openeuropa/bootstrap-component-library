@@ -1,7 +1,6 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute(),
   rows: [
     {
       extra_classes: "pt-4 pt-lg-5",
@@ -25,12 +24,8 @@ module.exports = {
                 "<p class='fw-bold border-bottom pb-2 mb-2'>Contact [project name]</p>",
             },
             {
-              type: "links",
-              links: [
-                {
-                  label: "Link",
-                },
-              ],
+              type: "content",
+              content: "<p>Contact information of the DG</p>",
             },
             {
               type: "content",
@@ -44,9 +39,9 @@ module.exports = {
                   label: "Facebook",
                   icon_position: "before",
                   icon: {
+                    path: "/icons.svg",
                     name: "facebook",
                     size: "xs",
-                    path: "/icons.svg",
                     attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
@@ -54,9 +49,9 @@ module.exports = {
                   label: "Twitter",
                   icon_position: "before",
                   icon: {
+                    path: "/icons.svg",
                     name: "twitter",
                     size: "xs",
-                    path: "/icons.svg",
                     attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
@@ -64,8 +59,8 @@ module.exports = {
                   label: "Linkedin",
                   icon_position: "before",
                   icon: {
-                    path: "/icons.svg",
                     name: "linkedin",
+                    path: "/icons.svg",
                     size: "xs",
                     attributes: new drupalAttribute().addClass(["me-2"]),
                   },
@@ -77,6 +72,15 @@ module.exports = {
         {
           classes: "col-12 col-lg-4",
           items: [
+            {
+              type: "content",
+              content:
+                "<p class='fw-bold border-bottom pb-2 mb-2'>About us</p>",
+            },
+            {
+              type: "content",
+              content: "<p>Information about the DG</p>",
+            },
             {
               type: "content",
               content:
@@ -107,135 +111,26 @@ module.exports = {
       extra_classes: "pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row",
       cols: [
         {
-          classes: "col-12 col-lg-4 pb-4",
-          items: [
-            {
-              type: "image",
-              path: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-              alt: "logo",
-            },
-          ],
-        },
-        {
           classes: "col-12 col-lg-4",
           items: [
             {
               type: "content",
-              content:
-                "<p class='fw-bold border-bottom pb-2 mb-2'>Contact the EU</p>",
+              content: "<p class='fw-bold pb-2 mb-2'>More information on:</p>",
             },
             {
               type: "links",
               links: [
                 {
-                  label: "Call us 00 800 6 7 8 9 10 11",
+                  label: "Link",
                 },
                 {
-                  label: "Use other telephone options",
+                  label: "Link",
                 },
                 {
-                  label: "Write us via our contact form",
+                  label: "Link",
                 },
                 {
-                  label: "Meet us at a local EU office",
-                },
-              ],
-            },
-            {
-              type: "content",
-              content:
-                "<p class='fw-bold border-bottom pb-2 pt-3 mb-2'>Social media</p>",
-            },
-            {
-              type: "content",
-              content:
-                "<p>Search for <a href='#' class='text-underline-hover mb-2'>EU social media channels</a></p>",
-            },
-            {
-              type: "content",
-              content:
-                "<p class='fw-bold border-bottom pb-2 pt-3 mb-2'>Legal</p>",
-            },
-            {
-              type: "links",
-              links: [
-                {
-                  label: "Language policy",
-                },
-                {
-                  label: "Privacy policy",
-                },
-                {
-                  label: "Legal notice",
-                },
-                {
-                  label: "Cookies",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          classes: "col-12 col-lg-4",
-          items: [
-            {
-              type: "content",
-              content:
-                "<p class='fw-bold border-bottom pb-2 pt-4 pt-lg-0 mb-2'>EU institutions</p>",
-            },
-            {
-              type: "links",
-              links: [
-                {
-                  label: "European Parliament",
-                },
-                {
-                  label: "European Council",
-                },
-                {
-                  label: "Council of the European Union",
-                },
-                {
-                  label: "European Commission",
-                },
-                {
-                  label: "Court of Justice of the European Union",
-                },
-                {
-                  label: "European Central Bank",
-                },
-                {
-                  label: "European Court of Auditors",
-                },
-                {
-                  label: "European External Action Service",
-                },
-                {
-                  label: "European Economic and Social Committee",
-                },
-                {
-                  label: "European Committee of the Region",
-                },
-                {
-                  label: "European Investment Bank",
-                },
-                {
-                  label: "European Ombudsman",
-                },
-                {
-                  label: "European Data Protection Supervisor",
-                },
-                {
-                  label: "European Data Protection Board",
-                },
-                {
-                  label: "European Personnel Selection Office",
-                },
-                {
-                  label: "Publications Office of the European Union",
-                },
-                {
-                  label: "Agencies",
+                  label: "Link",
                 },
               ],
             },

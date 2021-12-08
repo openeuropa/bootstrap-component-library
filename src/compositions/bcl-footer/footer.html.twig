@@ -1,6 +1,7 @@
 {% spaceless %}
 
 {# Parameters:
+  - variant (string) (default: 'neutral')
   - rows (default: []) - Array of predefined objects - format: 
   [
     {
@@ -30,12 +31,13 @@
   ]
 #}
 
+{% set _variant = variant|default('neutral') %}
 {% set _rows = rows|default([]) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
-{% set attributes = attributes.addClass('bcl-footer') %}
+{% set attributes = attributes.addClass(['bcl-footer', 'bcl-footer--' ~ _variant]) %}
 
 <footer
   {{ attributes }}

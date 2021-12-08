@@ -5,7 +5,6 @@ import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import dataListing from "@openeuropa/bcl-event/data/dataListing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
-import content from "@openeuropa/bcl-news/data/data_content.js";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import event from "@openeuropa/bcl-event/event.html.twig";
 import file from "@openeuropa/bcl-file/data.js";

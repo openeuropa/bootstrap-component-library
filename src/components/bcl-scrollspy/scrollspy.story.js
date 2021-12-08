@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { initScrollspy } from "@openeuropa/bcl-story-utils";
 import navScrollspy from "@openeuropa/bcl-scrollspy/navScrollspy.html";
 import groupScrollspy from "@openeuropa/bcl-scrollspy/groupScrollspy.html";
+import listScrollspy from "@openeuropa/bcl-scrollspy/listScrollspy.html";
 
 export default {
   title: "Components/Scrollspy",
@@ -26,3 +27,5 @@ Navigation.storyName = "Navigation";
 
 export const ListGroup = () => groupScrollspy;
 ListGroup.storyName = "List Group";
+
+export const NestedLists = () => listScrollspy;
