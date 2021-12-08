@@ -8,7 +8,7 @@ import drupalAttribute from "drupal-attribute";
 const getArgs = (data, type) => {
   let args = {
     full_width: false,
-    alignment: "",
+    alignment: "default",
   };
   if (type === "default") {
     args.pills = data.pills;
@@ -33,11 +33,11 @@ const getArgTypes = (data, type) => {
     alignment: {
       type: { name: "select" },
       description: "Alignment menu",
-      options: ["", "start", "center", "end"],
+      options: ["default", "start", "center", "end"],
       control: {
         type: "select",
         labels: {
-          "": "none",
+          default: "default",
           start: "left",
           center: "center",
           end: "right",
@@ -84,7 +84,13 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+
+  if (args.alignment === "default") {
+    args.alignment = "";
+  }
+
   resetAttrs(data);
+
   return Object.assign(data, args);
 };
 

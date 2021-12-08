@@ -123,7 +123,6 @@ export const getFormControls = (data, type) => {
         name: "floating label",
         type: { name: "boolean" },
         description: "Floating label",
-        defaultValue: false,
         table: {
           type: { summary: "boolean" },
           defaultValue: { summary: "false" },
@@ -137,7 +136,6 @@ export const getFormControls = (data, type) => {
     argTypes.switch = {
       type: { name: "boolean" },
       description: "Turns a checkbox into a switcher",
-      defaultValue: data.switch,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -150,7 +148,6 @@ export const getFormControls = (data, type) => {
     argTypes.toggle = {
       type: { name: "boolean" },
       description: `Turns a ${type} into a button`,
-      defaultValue: false,
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -243,7 +240,6 @@ export const getIconControls = (type, data) => {
       options: ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"],
       type: { name: "select" },
       description: "Size of icon",
-      defaultValue: "s",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "s" },
@@ -256,7 +252,6 @@ export const getIconControls = (type, data) => {
       options: ["before", "after"],
       type: { name: "inline-radio" },
       description: "Icon position inside the button or link",
-      defaultValue: "after",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "after" },

@@ -7,7 +7,7 @@ const getArgs = (data) => {
   return {
     striped: false,
     animated: false,
-    variant: "",
+    variant: "primary",
     progress: data.progress,
     label: data.label,
     bar_label: "",
@@ -82,6 +82,10 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  if (args.variant === "primary") {
+    args.variant = "";
+  }
+
   return Object.assign(data, args);
 };
 

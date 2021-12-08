@@ -2,6 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   attributes: new drupalAttribute(),
+  type: "ordered",
   items: [
     {
       variant: "info",

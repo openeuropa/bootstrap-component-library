@@ -44,6 +44,7 @@ const webpackFinal = (config) => {
 };
 
 module.exports = {
+  staticDirs: ["../../../../../assets/"],
   stories,
   addons,
   webpackFinal,

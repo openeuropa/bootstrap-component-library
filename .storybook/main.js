@@ -1,6 +1,6 @@
 const path = require("path");
 
-const stories = ["../src/{components,compositions}/**/*.story.js"];
+const stories = ["../src/*/*/*.story.js"];
 
 const addons = [
   "@storybook/addon-docs",
@@ -44,6 +44,7 @@ const webpackFinal = (config) => {
 };
 
 module.exports = {
+  staticDirs: ['../assets/'],
   stories,
   addons,
   webpackFinal,

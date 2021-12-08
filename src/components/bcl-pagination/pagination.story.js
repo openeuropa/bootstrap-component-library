@@ -6,8 +6,8 @@ import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
   return {
-    size: "",
-    alignment: "",
+    size: "default",
+    alignment: "default",
     enable_icon: data.enable_icon,
   };
 };
@@ -17,12 +17,12 @@ const getArgTypes = (data) => {
     size: {
       type: { name: "select" },
       description: "size",
-      options: ["", "sm", "lg"],
+      options: ["default", "sm", "lg"],
       control: {
         type: "select",
         labels: {
           sm: "small",
-          "": "medium",
+          default: "default",
           lg: "large",
         },
       },
@@ -35,11 +35,11 @@ const getArgTypes = (data) => {
     alignment: {
       type: { name: "select" },
       description: "alignment",
-      options: ["", "center", "end"],
+      options: ["default", "center", "end"],
       control: {
         type: "select",
         labels: {
-          "": "left",
+          default: "default",
           center: "center",
           end: "right",
         },
@@ -68,10 +68,20 @@ const applyArgs = (data, args) => {
     data.next.icon.path = defaultSprite;
     data.next.icon.size = "m";
   }
+
   if (data.prev.icon) {
     data.prev.icon.path = defaultSprite;
     data.prev.icon.size = "m";
   }
+
+  if (args.size === "default") {
+    args.size = "";
+  }
+
+  if (args.alignment === "default") {
+    args.alignment = "";
+  }
+
   return Object.assign(data, args);
 };
 

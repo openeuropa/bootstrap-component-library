@@ -4,6 +4,8 @@ import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 const getArgs = (data) => {
   return {
+    title: "",
+    title_tag: "h4",
     from: data.hide.from,
     to: data.hide.to,
   };
@@ -41,8 +43,9 @@ const getArgTypes = (data) => {
       },
     },
     title_tag: {
+      name: "title tag",
       type: { name: "string" },
-      description: "Tag of the title",
+      description: "Html tag of the title",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "h4" },

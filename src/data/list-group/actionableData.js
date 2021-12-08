@@ -2,6 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   attributes: new drupalAttribute(),
+  type: "actionable",
   items: [
     {
       label: "Button 1",

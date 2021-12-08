@@ -10,8 +10,8 @@
     "clean": "rimraf bcl-stories",
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
-    "start": "start-storybook -p 9001 -c .storybook -s ../../../../assets/",
-    "dist": "build-storybook -c .storybook -s ../../../../assets -o ../../../../build/default"
+    "start": "start-storybook -p 9001 -c .storybook",
+    "dist": "build-storybook -c .storybook -o ../../../../build/default"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
@@ -19,11 +19,11 @@
     "@babel/preset-env": "7.16.4",
     "@babel/preset-react": "7.16.0",
     "@babel/runtime": "7.16.3",
-    "@storybook/addon-a11y": "6.3.12",
-    "@storybook/addon-controls": "6.3.12",
-    "@storybook/addon-docs": "6.3.12",
-    "@storybook/addon-viewport": "6.3.12",
-    "@storybook/html": "6.3.12",
+    "@storybook/addon-a11y": "6.4.8",
+    "@storybook/addon-controls": "6.4.8",
+    "@storybook/addon-docs": "6.4.8",
+    "@storybook/addon-viewport": "6.4.8",
+    "@storybook/html": "6.4.8",
     "@whitespace/storybook-addon-code": "1.0.2",
     "@whitespace/storybook-addon-html": "5.0.0",
     "babel-loader": "8.2.3",
