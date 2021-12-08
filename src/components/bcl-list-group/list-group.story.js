@@ -56,7 +56,7 @@ const getArgTypes = () => {
   };
 };
 
-const resetAttrs = (data) => {
+const resetAttrs = (data, args) => {
   data.attributes.removeClass([
     "list-group-flush",
     `list-group-${data.horizontal}`,
@@ -67,11 +67,12 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+
   if (args.horizontal === "none") {
     args.horizontal = "";
   }
 
-  resetAttrs(data);
+  resetAttrs(data, args);
 
   return Object.assign(data, args);
 };
@@ -100,14 +101,11 @@ export const Unordered = (args) => listGroup(applyArgs(demoData, args));
 Unordered.args = getArgs(demoData);
 Unordered.argTypes = getArgTypes(demoData);
 
-export const Ordered = (args) =>
-  listGroup(applyArgs({ ...orderedData, type: "ordered" }, args));
-
-Ordered.args = getArgs();
-Ordered.argTypes = getArgTypes();
+export const Ordered = (args) => listGroup(applyArgs(orderedData, args));
+Ordered.args = getArgs(orderedData);
+Ordered.argTypes = getArgTypes(orderedData);
 
 export const Actionable = (args) =>
-  listGroup(applyArgs({ ...actionableDemoData, type: "actionable" }, args));
-
-Actionable.args = getArgs();
-Actionable.argTypes = getArgTypes();
+  listGroup(applyArgs(actionableDemoData, args));
+Actionable.args = getArgs(actionableDemoData);
+Actionable.argTypes = getArgTypes(actionableDemoData);

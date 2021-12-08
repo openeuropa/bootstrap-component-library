@@ -9,7 +9,6 @@ const getArgs = (data) => {
   const args = {
     title: data.title,
     description: data.description,
-    label: data.link.label,
     centered: true,
     hero: false,
     full_width: false,
@@ -46,15 +45,6 @@ const getArgTypes = (data) => {
     description: {
       type: "string",
       description: "Sub-heading of the banner",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
-    label: {
-      type: "string",
-      description: "Label of the call to action link",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },

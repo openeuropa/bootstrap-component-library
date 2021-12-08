@@ -83,7 +83,7 @@ const modalButton = (story) => {
 // Stories
 export default {
   title: "Components/Modal",
-  decorators: [withDesign],
+  decorators: [withDesign, modalButton],
   parameters: {
     design: [
       {
@@ -100,9 +100,6 @@ export default {
   },
 };
 
-export const Modal = (args) => modal(applyArgs(demoData, args));
-
-Modal.storyName = "default";
-Modal.args = getArgs();
-Modal.argTypes = getArgTypes();
-Modal.decorators = [modalButton];
+export const Default = (args) => modal(applyArgs(demoData, args));
+Default.args = getArgs();
+Default.argTypes = getArgTypes();
