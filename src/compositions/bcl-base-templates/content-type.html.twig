@@ -48,6 +48,13 @@
       right: _col_classes.right|merge(['col-lg-9', 'col-xxl-8']),
     }) %}
   {% endif %}
+
+  {% if _sidebar_size == 'large' %}
+    {% set _col_classes = _col_classes|merge({
+      left: _col_classes.left|merge(['col-lg-4']),
+      right: _col_classes.right|merge(['col-lg-8']),
+    }) %}
+  {% endif %}
 {% endif %}
 
 {% if _content_type is not empty %}
