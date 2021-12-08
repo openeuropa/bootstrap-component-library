@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  landing: true,
   navigation: {
     tabs: true,
     tabs_content: true,
