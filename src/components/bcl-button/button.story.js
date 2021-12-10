@@ -14,8 +14,12 @@ const withCollapse = (story) => {
   const demo = story();
   return `
     ${demo}
-    <div class="collapse mt-3" id="collapseExample">
-      ${toggleDemoData.collapse_text}
+    <div class="collapse mt-3${
+      toggleDemoData.horizontal_collapse ? " collapse-horizontal" : ""
+    }" id="collapseExample">
+      <div class="card card-body" style="width: 300px;">
+        ${toggleDemoData.collapse_text}
+      </div>
     </div>`;
 };
 
@@ -37,6 +41,10 @@ const getArgs = (data, type) => {
 
   if (type === "tooltip" || type === "popover") {
     args.placement = "bottom";
+  }
+
+  if (type === "collapse") {
+    args.horizontal_collapse = false;
   }
 
   return args;
@@ -145,6 +153,18 @@ const getArgTypes = (data, type) => {
       },
     };
   }
+  if (type === "collapse") {
+    argTypes.horizontal_collapse = {
+      type: { name: "boolean" },
+      name: "horizontal collapse",
+      description: "Make the collapse shows horizontal",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    };
+  }
 
   return argTypes;
 };
@@ -221,7 +241,7 @@ Default.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/components/buttons/",
+      url: "https://getbootstrap.com/docs/5.1/components/buttons/",
     },
   ],
 };
@@ -229,8 +249,8 @@ Default.parameters = {
 export const Collapse = (args) => button(applyArgs(toggleDemoData, args));
 
 Collapse.storyName = "Collapse";
-Collapse.args = getArgs(toggleDemoData);
-Collapse.argTypes = getArgTypes(toggleDemoData);
+Collapse.args = getArgs(toggleDemoData, "collapse");
+Collapse.argTypes = getArgTypes(toggleDemoData, "collapse");
 Collapse.decorators = [withCollapse];
 Collapse.parameters = {
   design: [
@@ -242,7 +262,7 @@ Collapse.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/components/collapse/",
+      url: "https://getbootstrap.com/docs/5.1/components/collapse/",
     },
   ],
 };
@@ -263,7 +283,7 @@ Popover.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/components/popovers/",
+      url: "https://getbootstrap.com/docs/5.1/components/popovers/",
     },
   ],
 };
@@ -278,7 +298,7 @@ Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.0/components/tooltips/",
+    url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };
 
@@ -297,7 +317,7 @@ Spinner.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/components/spinners/",
+      url: "https://getbootstrap.com/docs/5.1/components/spinners/",
     },
   ],
 };

@@ -8,6 +8,7 @@
       {
         title: (string),
         content: (block),
+        stay_open (boolean) (default: false) stay open after another selected
       },
       ...
     ]
@@ -55,7 +56,9 @@
       id="collapse-{{ _id }}-{{ loop.index }}"
       class="accordion-collapse collapse{{ _open_item ? ' show' }}"
       aria-labelledby="heading-{{ _id }}-{{ loop.index }}"
+    {% if not _item.stay_open %}
       data-bs-parent="#accordion-{{ _id }}"
+    {% endif %}
     >
       <div class="accordion-body">
         {%- set _content = _item.content|default('') %}

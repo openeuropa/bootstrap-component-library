@@ -28,6 +28,7 @@
 @import "@openeuropa/bcl-bootstrap/scss/accordion";
 @import "@openeuropa/bcl-bootstrap/scss/breadcrumb";
 @import "@openeuropa/bcl-bootstrap/scss/pagination";
+@import "@openeuropa/bcl-bootstrap/scss/placeholders";
 @import "@openeuropa/bcl-bootstrap/scss/badge";
 @import "@openeuropa/bcl-bootstrap/scss/alert";
 @import "@openeuropa/bcl-bootstrap/scss/progress";
@@ -47,20 +48,6 @@
 
 // Utilities
 @import "@openeuropa/bcl-bootstrap/scss/utilities/api";
-
-// Create responsive classes for padding
-$utilities: map-merge(
-  $utilities,
-  (
-    "padding":
-      map-merge(
-        map-get($utilities, "padding"),
-        (
-          responsive: true,
-        )
-      ),
-  )
-);
 
 // Custom styles
 @import "@openeuropa/bcl-theme-default/src/scss/reset";

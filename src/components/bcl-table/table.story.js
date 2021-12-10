@@ -111,7 +111,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.0/content/tables/",
+        url: "https://getbootstrap.com/docs/5.1/content/tables/",
       },
     ],
   },

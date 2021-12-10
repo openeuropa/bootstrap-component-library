@@ -97,7 +97,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.0/components/button-group/",
+        url: "https://getbootstrap.com/docs/5.1/components/button-group/",
       },
     ],
   },

@@ -124,7 +124,7 @@ FormInput.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/forms/form-control/",
+      url: "https://getbootstrap.com/docs/5.1/forms/form-control/",
     },
   ],
 };
@@ -145,7 +145,7 @@ Checkbox.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/forms/checks-radios/",
+      url: "https://getbootstrap.com/docs/5.1/forms/checks-radios/",
     },
   ],
 };
@@ -166,7 +166,7 @@ Switch.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/forms/checks-radios/#switches",
+      url: "https://getbootstrap.com/docs/5.1/forms/checks-radios/#switches",
     },
   ],
 };
@@ -187,7 +187,7 @@ Radio.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/forms/checks-radios/",
+      url: "https://getbootstrap.com/docs/5.1/forms/checks-radios/",
     },
   ],
 };
@@ -208,7 +208,7 @@ File.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/forms/form-control/#file-input",
+      url: "https://getbootstrap.com/docs/5.1/forms/form-control/#file-input",
     },
   ],
 };

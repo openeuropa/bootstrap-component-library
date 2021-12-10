@@ -108,7 +108,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.0/components/alerts/",
+        url: "https://getbootstrap.com/docs/5.1/components/alerts/",
       },
     ],
   },
