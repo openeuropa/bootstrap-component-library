@@ -333,11 +333,14 @@ export const initListings = (story) => {
   const demo = story();
   return `
     <script>
-      if (document.querySelector(".multi-select")) {
-        new SlimSelect({
-          select: ".multi-select",
-          selectByGroup: true,
-          placeholder: "Please select a value",
+      var multiselects = document.querySelectorAll(".multi-select");
+      if (multiselects) {
+        multiselects.forEach(element => {
+          new SlimSelect({
+            select: element,
+            selectByGroup: true,
+            placeholder: "Please select a value",
+          });
         });
       }
     </script>
