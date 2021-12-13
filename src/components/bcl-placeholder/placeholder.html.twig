@@ -1,0 +1,43 @@
+{% spaceless %}
+
+{# Parameters:
+  - width (int) (default: 0) - between 0-100
+  - variant (string) (default: '')
+    - options : ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
+  - size (string) (default: '')
+    - options : ["xs", "lg"]
+  - animation (string) (default: '')
+    - options : ["glow", "wave"]
+#}
+
+{% set _width = width|default(0) %}
+{% set _variant = variant|default('') %}
+{% set _size = size|default('') %}
+{% set _animation = animation|default('') %}
+{% set _classes = ['placeholder'] %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _size is not empty %}
+  {% set _classes = _classes|merge(['placeholder-' ~ _size]) %}
+{% endif %}
+
+{% if _variant is not empty %}
+  {% set _classes = _classes|merge(['bg-' ~ _variant]) %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
+{% set attributes = attributes.setAttribute('style', 'width: ' ~ _width ~ '%;') %}
+
+{% if _animation is not empty %}
+  <p class="placeholder-{{ _animation }}">
+{% endif %}
+<span {{- attributes -}} >
+</span>
+{% if _animation is not empty %}
+  </p>
+{% endif %}
+
+{% endspaceless %}

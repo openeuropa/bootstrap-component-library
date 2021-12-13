@@ -14,7 +14,14 @@ import drupalAttribute from "drupal-attribute";
 const withCollapse = (story) => {
   const demo = story();
   const target = toggleDemoData.path.substring(1);
-  return `${demo} <div class="collapse mt-3" id="${target}">${toggleDemoData.collapse_text}</div>`;
+  return `${demo} 
+  <div class="collapse mt-3${
+    toggleDemoData.horizontal_collapse ? " collapse-horizontal" : ""
+  }" id="${target}">
+    <div class="card card-body" style="width: 300px;">
+      ${toggleDemoData.collapse_text}
+    </div>
+  </div>`;
 };
 
 const getArgs = (data, type) => {
@@ -27,6 +34,10 @@ const getArgs = (data, type) => {
   };
   if (type === "tooltip") {
     args.tooltip_position = "top";
+  }
+
+  if (type === "collapse") {
+    args.horizontal_collapse = false;
   }
 
   return args;
@@ -87,6 +98,18 @@ const getArgTypes = (data, type) => {
       },
     };
   }
+  if (type === "collapse") {
+    argTypes.horizontal_collapse = {
+      type: { name: "boolean" },
+      name: "horizontal collapse",
+      description: "Make the collapse shows horizontal",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    };
+  }
 
   return argTypes;
 };
@@ -144,14 +167,14 @@ Default.argTypes = getArgTypes(demoData);
 
 export const Collapse = (args) => link(applyArgs(toggleDemoData, args));
 
-Collapse.args = getArgs(toggleDemoData);
-Collapse.argTypes = getArgTypes(toggleDemoData);
+Collapse.args = getArgs(toggleDemoData, "collapse");
+Collapse.argTypes = getArgTypes(toggleDemoData, "collapse");
 Collapse.decorators = [withCollapse];
 Collapse.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.0/components/collapse/",
+    url: "https://getbootstrap.com/docs/5.1/components/collapse/",
   },
 };
 
@@ -164,6 +187,6 @@ Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.0/components/tooltips/",
+    url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };

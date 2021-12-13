@@ -77,7 +77,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.0/content/typography/#blockquotes",
+        url: "https://getbootstrap.com/docs/5.1/content/typography/#blockquotes",
       },
     ],
   },

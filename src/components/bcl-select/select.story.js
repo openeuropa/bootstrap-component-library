@@ -88,7 +88,7 @@ Default.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.0/forms/select/",
+      url: "https://getbootstrap.com/docs/5.1/forms/select/",
     },
   ],
 };
