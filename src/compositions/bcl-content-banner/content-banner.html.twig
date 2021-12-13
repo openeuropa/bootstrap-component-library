@@ -42,6 +42,10 @@
   'gray': 'bg-lighter',
 } %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set _card = {
   title: title|default({})|merge({
     tag: 'h2',

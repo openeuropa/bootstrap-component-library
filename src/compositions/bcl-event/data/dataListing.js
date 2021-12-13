@@ -24,7 +24,6 @@ module.exports = {
             classes: "mb-4",
             label: "Type",
             type: "select",
-            attributes: new drupalAttribute(),
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -39,7 +38,6 @@ module.exports = {
             classes: "mb-4",
             label: "Location",
             type: "select",
-            attributes: new drupalAttribute(),
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },

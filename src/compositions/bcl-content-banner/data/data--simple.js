@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   background: "white",
   title: {
@@ -14,5 +12,4 @@ module.exports = {
         Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
         Duis tristique fringilla magna, eu egestas dolor molestie non.
      </p>`,
-  attributes: new drupalAttribute(),
 };

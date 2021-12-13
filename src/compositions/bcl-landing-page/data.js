@@ -49,7 +49,6 @@ module.exports = {
     ]),
   },
   listing_section: {
-    attributes: new drupalAttribute(),
     variant: "highlight-3-col",
     title: "Listing item block title",
     title_tag: "h2",
@@ -127,7 +126,6 @@ module.exports = {
     },
   },
   activity_listing: {
-    attributes: new drupalAttribute(),
     variant: "highlight-3-col",
     title: "What are those activities",
     title_tag: "h2",

@@ -39,5 +39,4 @@ module.exports = {
       definition: "<p class='mb-2'>Barcelona, Spain.</p>",
     },
   ],
-  attributes: new drupalAttribute(),
 };

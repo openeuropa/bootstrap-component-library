@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   picture: {
     path: "https://picsum.photos/50/50",

@@ -12,7 +12,11 @@
   - infos (array of strings) (default: [])
 #}
 
-{% set attributes = create_attribute().addClass(["d-flex", "mb-3"]) %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(["d-flex", "mb-3"]) %}
 
 <div
   {{ attributes }}

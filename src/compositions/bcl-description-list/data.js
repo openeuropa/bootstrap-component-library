@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   items: [
     {
@@ -39,5 +37,4 @@ module.exports = {
       ],
     },
   ],
-  attributes: new drupalAttribute(),
 };

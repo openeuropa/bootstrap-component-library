@@ -32,6 +32,7 @@
 {% set _type = type|default('unordered') %}
 {% set _items = items|default([]) %}
 {% set _classes = ['list-group'] %}
+
 {% if _flush %}
   {% set _classes = _classes|merge(['list-group-flush']) %}
 {% endif %}
@@ -41,6 +42,11 @@
 {% if _horizontal is not empty %}
   {% set _classes = _classes|merge(['list-group-' ~ _horizontal]) %}
 {% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _id is not empty %}
   {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}

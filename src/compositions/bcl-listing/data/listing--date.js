@@ -1,7 +1,6 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute(),
   variant: "default-2-col",
   title: "Listing item block title",
   link: {
@@ -23,7 +22,6 @@ module.exports = {
         classes: "mb-3",
       },
       date: {
-        attributes: new drupalAttribute(),
         year: "2021",
         month: "JAN",
         day: "23",
@@ -58,7 +56,6 @@ module.exports = {
         classes: "mb-3",
       },
       date: {
-        attributes: new drupalAttribute(),
         year: "2021",
         month: "JAN",
         day: "23",
@@ -92,7 +89,6 @@ module.exports = {
         classes: "mb-3",
       },
       date: {
-        attributes: new drupalAttribute(),
         year: "2021",
         month: "JAN",
         day: "23",
@@ -127,7 +123,6 @@ module.exports = {
         classes: "mb-3",
       },
       date: {
-        attributes: new drupalAttribute(),
         year: "2021",
         month: "JAN",
         day: "23",
@@ -162,7 +157,6 @@ module.exports = {
         classes: "mb-3",
       },
       date: {
-        attributes: new drupalAttribute(),
         year: "2021",
         month: "JAN",
         day: "23",
@@ -198,7 +192,6 @@ module.exports = {
         classes: "mb-3",
       },
       date: {
-        attributes: new drupalAttribute(),
         year: "2021",
         month: "JAN",
         day: "23",
