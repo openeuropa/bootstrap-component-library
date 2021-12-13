@@ -7,6 +7,7 @@ const browserslist = require("browserslist");
 const { buildStyles } = require("../scripts/styles");
 const rename = require("../scripts/rename");
 const copyFiles = require("../scripts/copy");
+const makeSprite = require("../scripts/sprite");
 const pkg = require("../package.json");
 
 const loadConfig = (configFile) => {
@@ -53,6 +54,16 @@ program
     const config = loadConfig(program.config);
     config.styles.forEach((conf) =>
       buildStyles(conf.entry, conf.dest, conf.options)
+    );
+  });
+
+program
+  .command("sprite")
+  .description("make svg sprites")
+  .action(() => {
+    const config = loadConfig(program.config);
+    config.sprite.forEach((conf) =>
+      makeSprite(conf.entry || "**", conf.dest, conf.options)
     );
   });
 
