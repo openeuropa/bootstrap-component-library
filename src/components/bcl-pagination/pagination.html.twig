@@ -47,11 +47,15 @@
   {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _aria_label is not empty %}
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 {% if _extra_classes is not empty %}
-{% set _class = _class ~ ' ' ~ _extra_classes %}
+  {% set _class = _class ~ ' ' ~ _extra_classes %}
 {% endif %}
 
 <nav

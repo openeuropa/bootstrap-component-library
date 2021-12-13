@@ -55,7 +55,6 @@ module.exports = {
     },
   },
   listing: {
-    attributes: new drupalAttribute(),
     variant: "default-1-col",
     remove_horizontal_spacer: true,
     alignment: "center",

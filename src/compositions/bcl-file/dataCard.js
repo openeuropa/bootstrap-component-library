@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   item_title: "<a href='#' class='text-underline-hover'>Article title</a>",
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -82,5 +80,4 @@ module.exports = {
     ],
   },
   icon_path: "/icons.svg",
-  attributes: new drupalAttribute(),
 };

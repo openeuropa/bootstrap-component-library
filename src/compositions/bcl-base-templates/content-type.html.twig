@@ -61,6 +61,10 @@
   {% set _classes = _classes|merge(['bcl-' ~ _content_type]) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _with_header %}
   {% include '@oe-bcl/bcl-header/header.html.twig' with header only %}
 {% endif %}

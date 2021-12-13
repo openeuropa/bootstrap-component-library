@@ -6,7 +6,6 @@ module.exports = {
   wrapper_aria_live: "polite",
   with_container: true,
   container_classes: "position-absolute top-0 end-0 p-3",
-  attributes: new drupalAttribute(),
   toasts: [
     {
       role: "alert",
@@ -14,7 +13,6 @@ module.exports = {
       header: `<strong class="me-auto">Bootstrap</strong><small class="text-muted">just now</small>`,
       body: "See? Just like this.",
       close_aria_label: "Close",
-      attributes: new drupalAttribute(),
     },
     {
       role: "alert",

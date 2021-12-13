@@ -5,7 +5,6 @@ module.exports = {
   navigation: {
     tabs: true,
     tabs_content: true,
-    attributes: new drupalAttribute(),
     items: [
       {
         label: "Profile information",

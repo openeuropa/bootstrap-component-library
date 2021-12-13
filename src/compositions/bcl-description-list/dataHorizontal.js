@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   variant: "horizontal",
   items: [
@@ -40,5 +38,4 @@ module.exports = {
       ],
     },
   ],
-  attributes: new drupalAttribute(),
 };

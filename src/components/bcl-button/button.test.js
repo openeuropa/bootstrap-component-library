@@ -4,7 +4,6 @@ import toggleDemoData from "@openeuropa/bcl-data-button/toggleData";
 import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
 import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
 import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
-import drupalAttribute from "drupal-attribute";
 
 const template = "@oe-bcl/bcl-button/button.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
@@ -61,7 +60,6 @@ describe("OE - Button", () => {
             name: "mouse",
             transformation: "rotate-90",
             path: "/icons.svg",
-            attributes: new drupalAttribute(),
           },
         },
         true

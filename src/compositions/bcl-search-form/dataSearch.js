@@ -13,5 +13,4 @@ module.exports = {
     label: "Search bar label",
     input_type: "search",
   },
-  attributes: new drupalAttribute(),
 };

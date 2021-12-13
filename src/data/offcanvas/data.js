@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   placement: "bottom",
   with_close: true,
@@ -10,5 +8,4 @@ module.exports = {
     heading: "5",
   },
   body: "An interesting content for this offcanvas",
-  attributes: new drupalAttribute(),
 };

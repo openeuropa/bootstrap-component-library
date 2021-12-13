@@ -1,9 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   pills: true,
   nav: true,
-  attributes: new drupalAttribute(),
   items: [
     {
       label: "I'm a link 1",

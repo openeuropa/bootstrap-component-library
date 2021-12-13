@@ -60,6 +60,10 @@
 {% if _equal_height %}
   {% set  _cols_classes =  _cols_classes ~ ' h-100' %}
 {% endif %}
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_css_classes) %}
 
 <div {{ attributes }}>

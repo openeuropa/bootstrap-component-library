@@ -1,8 +1,5 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   type: "group",
-  attributes: new drupalAttribute(),
   items: [
     {
       title: {

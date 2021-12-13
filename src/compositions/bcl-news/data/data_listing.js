@@ -140,7 +140,6 @@ module.exports = {
     ],
   },
   listing: {
-    attributes: new drupalAttribute(),
     variant: "default-1-col",
     remove_horizontal_spacer: true,
     responsive_vertical_spacer: "md",

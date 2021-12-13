@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   item_title: "File title",
   language: "English",
@@ -56,5 +54,4 @@ module.exports = {
       },
     ],
   },
-  attributes: new drupalAttribute(),
 };
