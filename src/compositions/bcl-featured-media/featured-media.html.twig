@@ -53,6 +53,10 @@
   {% set _wrapper_classes = _wrapper_classes ~ ' ' ~ wrapper_classes %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _with_text %}
 <div class="{{ _wrapper_classes }}">
 

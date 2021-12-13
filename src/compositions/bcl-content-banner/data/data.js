@@ -8,13 +8,11 @@ module.exports = {
   badges: [
     {
       label: "Category 1",
-      attributes: new drupalAttribute(),
       outline: true,
       rounded_pill: true,
     },
     {
       label: "Category 2",
-      attributes: new drupalAttribute(),
       outline: true,
       rounded_pill: true,
     },
@@ -28,7 +26,6 @@ module.exports = {
         Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
         Duis tristique fringilla magna, eu egestas dolor molestie non.
      </p>`,
-  attributes: new drupalAttribute(),
   image: {
     path: "https://picsum.photos/255/255?random=6",
     alt: "alt img",

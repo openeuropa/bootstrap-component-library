@@ -27,6 +27,10 @@
   'mw-date',
 ] %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_css_classes) %}
 
 {% if _date_time is not empty %}

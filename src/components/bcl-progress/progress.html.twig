@@ -32,6 +32,10 @@
   {% set _classes = _classes ~ ' bg-' ~ _variant %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(['progress']) %}
 
 {% if _bar_label is empty %} 

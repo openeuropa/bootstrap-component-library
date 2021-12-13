@@ -1,6 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-fact-figures/data/data.js";
-import drupalAttribute from "drupal-attribute";
 const template = "@oe-bcl/bcl-fact-figures/fact-figures.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -26,7 +25,6 @@ describe("OE - Fact and figures", () => {
   });
 
   test(`renders correctly with block variant`, () => {
-    demoData.attributes = new drupalAttribute();
     expect.assertions(1);
     return expect(
       render({ ...demoData, variant: "block" })
@@ -55,7 +53,6 @@ describe("OE - Fact and figures", () => {
   });
 
   test(`renders correctly with block variant and with custom title tag`, () => {
-    demoData.attributes = new drupalAttribute();
     expect.assertions(1);
     return expect(
       render({ ...demoData, variant: "block", title_tag: "h6" })

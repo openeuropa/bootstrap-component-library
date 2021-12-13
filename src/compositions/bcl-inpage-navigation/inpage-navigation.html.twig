@@ -14,6 +14,11 @@ Parameters:
 {% set _content = content|default('') %}
 {% set _id = id|default('bcl-inpage-navigation-' ~ random(5)) %}
 {% set _full_layout = full_layout|default(false) %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
 
 {# Print the result #}

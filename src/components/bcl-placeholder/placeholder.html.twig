@@ -16,16 +16,16 @@
 {% set _animation = animation|default('') %}
 {% set _classes = ['placeholder'] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
-
 {% if _size is not empty %}
   {% set _classes = _classes|merge(['placeholder-' ~ _size]) %}
 {% endif %}
 
 {% if _variant is not empty %}
   {% set _classes = _classes|merge(['bg-' ~ _variant]) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}

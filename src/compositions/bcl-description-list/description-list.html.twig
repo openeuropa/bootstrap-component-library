@@ -25,6 +25,10 @@
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('') %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _variant == 'horizontal' %}
   {% set attributes = attributes.addClass(["d-md-grid", "grid-3-9"]) %}
 {% endif %}

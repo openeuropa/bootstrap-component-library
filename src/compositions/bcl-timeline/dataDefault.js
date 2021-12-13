@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   id: 1,
   toggle_collapsed: "Show %d more items",
@@ -150,5 +148,4 @@ module.exports = {
       content: "European Council and Euro Summit",
     },
   ],
-  attributes: new drupalAttribute(),
 };

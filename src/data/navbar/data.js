@@ -2,7 +2,6 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   collapse_id: "navbar",
-  attributes: new drupalAttribute(),
   brand: {
     label: "Navbar",
     link: "/example.html",

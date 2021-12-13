@@ -23,7 +23,6 @@ module.exports = {
             classes: "mb-3",
             label: "Content types",
             type: "select",
-            attributes: new drupalAttribute(),
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -116,7 +115,6 @@ module.exports = {
     },
   },
   listing: {
-    attributes: new drupalAttribute(),
     variant: "default-1-col",
     remove_horizontal_spacer: true,
     items: [

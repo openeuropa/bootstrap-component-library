@@ -31,7 +31,6 @@ const demoData = {
     image: true,
   },
   banner: {
-    attributes: new drupalAttribute(),
     title: {
       content:
         "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",

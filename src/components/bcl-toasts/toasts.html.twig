@@ -32,6 +32,10 @@
   {% set _container_classes = _container_classes ~ ' ' ~ container_classes %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {# wrapper #}
 {% if _with_wrapper %}
   {% set attributes = attributes.setAttribute('aria-atomic', "true") %}

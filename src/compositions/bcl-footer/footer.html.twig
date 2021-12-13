@@ -37,6 +37,7 @@
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
+
 {% set attributes = attributes.addClass(['bcl-footer', 'bcl-footer--' ~ _variant]) %}
 
 <footer

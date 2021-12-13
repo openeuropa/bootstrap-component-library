@@ -31,6 +31,10 @@ Parameters:
 {% set _hide_to = hide.to|default(items|length) %}
 {% set _toggler = false %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass('bcl-timeline') %}
 
 {# Internal logic - Process properties #}
