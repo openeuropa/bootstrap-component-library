@@ -29,14 +29,12 @@
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
-{% set attributes = attributes.setAttribute("style", "width: " ~ _width ~ "%;") %}
+{% set attributes = attributes.setAttribute('style', 'width: ' ~ _width ~ '%;') %}
 
 {% if _animation is not empty %}
   <p class="placeholder-{{ _animation }}">
 {% endif %}
-<span
-  {{ attributes }}
->
+<span {{- attributes -}} >
 </span>
 {% if _animation is not empty %}
   </p>
