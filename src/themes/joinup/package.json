@@ -6,6 +6,7 @@
   "description": "OE - BCL theme joinup",
   "scripts": {
     "build": "npm-run-all build:*",
+    "build:fonts": "copyfiles -f node_modules/@fontsource/roboto/{400,500,700}*.css fonts",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
     "build:copy": "cross-env bcl-builder copy",
@@ -18,6 +19,7 @@
     "@openeuropa/bcl-builder": "^0.16.0",
     "@openeuropa/bcl-theme-default": "^0.16.0",
     "@openeuropa/bcl-twig-templates": "^0.16.0",
+    "@fontsource/roboto": "4.5.1",
     "copyfiles": "2.4.1",
     "cross-env": "7.0.3",
     "glob": "7.2.0",
