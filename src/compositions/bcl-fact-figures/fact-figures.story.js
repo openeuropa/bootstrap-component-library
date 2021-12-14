@@ -1,5 +1,6 @@
 import demoData from "@openeuropa/bcl-fact-figures/data/data.js";
 import factFigures from "@openeuropa/bcl-fact-figures/fact-figures.html.twig";
+import drupalAttribute from "drupal-attribute";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
 demoData.icons_path = defaultSprite;
@@ -87,6 +88,9 @@ const getArgTypes = () => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   data.attributes.removeClass([
     `bcl-fact-figures--${data.variant}`,
     "text-primary",

@@ -29,6 +29,28 @@ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 $link-color: $primary;
 
+// Bootstrap variables that are not overwritten by default variables
+$dropdown-link-active-bg: $primary;
+$input-focus-border-color: tint-color($primary, 50%);
+$input-btn-focus-color: rgba($primary, $input-btn-focus-color-opacity);
+$input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+  $input-btn-focus-color;
+$input-focus-box-shadow: $input-btn-focus-box-shadow;
+$accordion-button-focus-box-shadow: $input-btn-focus-box-shadow;
+$accordion-button-focus-border-color: $input-focus-border-color;
+$progress-bar-bg: $primary;
+$pagination-focus-box-shadow: $input-btn-focus-box-shadow;
+$form-check-input-focus-border: $input-focus-border-color;
+$form-select-focus-border-color: $input-focus-border-color;
+$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width
+  $input-btn-focus-color;
+$form-switch-focus-color: $input-focus-border-color;
+$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-focus-color}'/></svg>");
+$form-check-input-focus-box-shadow: $input-btn-focus-box-shadow;
+$nav-link-hover-color: shift-color($link-color, $link-shade-percentage);
+
+$banner-content-border-color: $primary;
+
 // Typography
 
 $font-family-sans-serif: "Arial", sans-serif;

@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-blockquote/data.js";
+import drupalAttribute from "drupal-attribute";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 
 const getArgs = (data) => {
@@ -54,6 +55,9 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   data.attributes.removeClass(`text-${data.alignment}`);
 
   return Object.assign(data, args);
