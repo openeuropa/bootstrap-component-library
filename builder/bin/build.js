@@ -77,15 +77,13 @@ program
     );
   });
 
-  program
-    .command("rename")
-    .description("rename files")
-    .action(() => {
-      const config = loadConfig(program.config);
-      config.rename.forEach((conf) =>
-        rename(conf.from, conf.to, conf.options)
-      );
-    });
+program
+  .command("rename")
+  .description("rename files")
+  .action(() => {
+    const config = loadConfig(program.config);
+    config.rename.forEach((conf) => rename(conf.from, conf.to, conf.options));
+  });
 
 // If no arguments provided, display help menu.
 if (process.argv.slice(2).length <= 0) {

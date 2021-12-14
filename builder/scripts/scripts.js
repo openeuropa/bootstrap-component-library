@@ -1,3 +1,36 @@
+/**
+ * Compile and bundle js files.
+ *
+ * @param {string} input - Path to a folder or file.
+ * @param {string} dest - String to prefix, suffix or replace the current file name.
+ * @param {object} options - Object
+ *
+ * Example config object: {
+ *
+ * scripts: [
+ *   {
+ *     entry: path.resolve(__dirname, "src/js/index.esm.js"),
+ *     dest: path.resolve(outputFolder, "js/oe-bcl-default.esm.js"),
+ *     options: {
+ *       format: "esm",
+ *       globals: { "@popperjs/core": "Popper" },
+ *       minify: true,
+ *       sourceMap: true,
+ *       minifyOptions: {
+ *         mangle: true,
+ *         format: {
+ *           comments: /^!/,
+ *         },
+ *         compress: {
+ *           passes: 2,
+ *         },
+ *       },
+ *       external: ["@popperjs/core"],
+ *     },
+ *   },
+ * ],
+ */
+
 const path = require("path");
 const { babel } = require("@rollup/plugin-babel");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");

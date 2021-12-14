@@ -1,12 +1,39 @@
-const fs = require('fs');
-const glob = require('glob');
-const mkdirp = require('mkdirp');
-const path = require('path');
-const SVGSpriter = require('svg-sprite');
+/**
+ * Generate svg sprites.
+ *
+ * @param {string} entry - Path to a folder or file.
+ * @param {string} dest - Output folder path
+ * @param {object} options - Object
+ *
+ * Example config object: {
+ *
+ * sprite: [
+ *   {
+ *     entry: path.resolve(nodeModules, "bootstrap-icons/icons/"),
+ *     dest: path.resolve(outputFolder, "icons/"),
+ *     options: {
+ *       file: "bcl-default-icons.svg",
+ *       list: myList,
+ *       transformPlugins: (array of svgo plugins objects)
+ *     },
+ *   },
+ * ],
+ */
+
+const fs = require("fs");
+const glob = require("glob");
+const mkdirp = require("mkdirp");
+const path = require("path");
+const defaultPlugins = require("../conf/svgoDefaultPlugins");
+const SVGSpriter = require("svg-sprite");
 
 module.exports = (entry, dest, options) => {
-  const outputFile = options.file ? `${dest}/${options.file}` : `${dest}/'bcl-icons.svg`;
-  const files = options.list || glob.sync('*.svg', { cwd: entry });
+  const outputFile = options.file
+    ? `${dest}/${options.file}`
+    : `${dest}/'bcl-icons.svg`;
+  const files = options.list || glob.sync("*.svg", { cwd: entry });
+
+  const plugins = options.transformPlugins || defaultPlugins;
 
   const spriter = new SVGSpriter({
     dest,
@@ -15,130 +42,9 @@ module.exports = (entry, dest, options) => {
         {
           svgo: {
             multipass: true,
-            plugins: [
-              {
-                cleanupAttrs: true
-              },
-              {
-                cleanupEnableBackground: true
-              },
-              {
-                cleanupIDs: true
-              },
-              {
-                cleanupListOfValues: true
-              },
-              {
-                cleanupNumericValues: true
-              },
-              {
-                collapseGroups: true
-              },
-              {
-                convertColors: true
-              },
-              {
-                convertPathData: {
-                  noSpaceAfterFlags: false
-                }
-              },
-              {
-                convertShapeToPath: true
-              },
-              {
-                convertStyleToAttrs: true
-              },
-              {
-                convertTransform: true
-              },
-              {
-                inlineStyles: true
-              },
-              {
-                mergePaths: {
-                  noSpaceAfterFlags: false
-                }
-              },
-              {
-                minifyStyles: true
-              },
-              {
-                moveElemsAttrsToGroup: true
-              },
-              {
-                moveGroupAttrsToElems: true
-              },
-              {
-                removeAttrs: {
-                  attrs: [
-                    "data-name",
-                    "fill",
-                    "clip-rule"
-                  ]
-                }
-              },
-              {
-                removeComments: true
-              },
-              {
-                removeDesc: true
-              },
-              {
-                removeDoctype: true
-              },
-              {
-                removeEditorsNSData: true
-              },
-              {
-                removeEmptyAttrs: true
-              },
-              {
-                removeEmptyContainers: true
-              },
-              {
-                removeEmptyText: true
-              },
-              {
-                removeHiddenElems: true
-              },
-              {
-                removeMetadata: true
-              },
-              {
-                removeNonInheritableGroupAttrs: true
-              },
-              {
-                removeTitle: true
-              },
-              {
-                removeUnknownsAndDefaults: {
-                  keepRoleAttr: true
-                }
-              },
-              {
-                removeUnusedNS: true
-              },
-              {
-                removeUselessDefs: true
-              },
-              {
-                removeUselessStrokeAndFill: true
-              },
-              {
-                removeViewBox: false
-              },
-              {
-                removeXMLNS: true
-              },
-              {
-                removeXMLProcInst: true
-              },
-              {
-                sortAttrs: true
-              }
-            ]
-          }
-        }
+            plugins: plugins,
+          },
+        },
       ],
     },
     svg: {
@@ -147,7 +53,7 @@ module.exports = (entry, dest, options) => {
     },
     mode: {
       symbol: {
-        dest: '',
+        dest: "",
         sprite: outputFile,
       },
     },
@@ -158,7 +64,7 @@ module.exports = (entry, dest, options) => {
     spriter.add(
       filePath,
       file,
-      fs.readFileSync(filePath, { encoding: 'utf-8' })
+      fs.readFileSync(filePath, { encoding: "utf-8" })
     );
   });
 

@@ -67,8 +67,9 @@ files available to each of the theme packages.
 
 ### BCL builder
 
-The `@openeuropa/bcl-builder` is a package providing three scripts, `styles`, `scripts`,
-`copy`, `rename`, `sprite` that can be used respectively to compile SASS files and minify css
+The `@openeuropa/bcl-builder` is a package providing scripts to be executed via 
+the command line, `styles`, `scripts`, `copy`, `rename` and `sprite`.
+They can be used respectively to compile SASS files and minify css
 files, compile and minify js files, to copy files or rename files and to generate
 svg sprites.
 It comes with a `bin` file that is available when the package is installed and
