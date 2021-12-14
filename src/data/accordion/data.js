@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   id: "1",
   items: [
@@ -20,5 +18,4 @@ module.exports = {
     },
   ],
   open_item_id: 1,
-  attributes: new drupalAttribute(),
 };

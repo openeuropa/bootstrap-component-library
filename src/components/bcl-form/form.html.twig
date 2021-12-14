@@ -23,6 +23,10 @@
 {% set _items = items|default([]) %}
 {% set _submit = submit|default({}) %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 <form
   {{ attributes }}
 >

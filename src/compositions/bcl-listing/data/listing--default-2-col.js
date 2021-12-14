@@ -1,7 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
-  attributes: new drupalAttribute(),
   variant: "default-2-col",
   title: "Listing item block title",
   link: {

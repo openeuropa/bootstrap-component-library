@@ -8,6 +8,10 @@
 {% set _links = links|default([]) %}
 {% set _icons_path = icons_path|default('') %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
 
 {% if _links is not empty %}

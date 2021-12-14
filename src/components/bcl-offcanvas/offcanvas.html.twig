@@ -41,6 +41,10 @@
   {% set _aria_labelled = _title.id|default('') %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% if _aria_labelled is defined and _aria_labelled is not empty %}
   {% set attributes = attributes.setAttribute('aria-labelledby', _aria_labelled) %}
 {% endif %}

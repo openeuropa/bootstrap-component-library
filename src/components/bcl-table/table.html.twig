@@ -81,6 +81,10 @@
   {% set _classes = _classes|merge(['table-borderless']) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 {% if _table_responsive is not empty %}

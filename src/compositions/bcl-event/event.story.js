@@ -31,7 +31,6 @@ const demoData = {
   ...baseData,
   sidebar: sidebar,
   banner: {
-    attributes: new drupalAttribute(),
     title: {
       content:
         "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
@@ -48,7 +47,6 @@ const demoData1 = {
     image: true,
   },
   banner: {
-    attributes: new drupalAttribute(),
     title: {
       content:
         "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
