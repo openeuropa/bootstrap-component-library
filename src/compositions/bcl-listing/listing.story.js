@@ -14,7 +14,7 @@ const getArgs = (data) => {
   const args = {
     variant: data.variant,
     title: data.title || "",
-    title_tag: "h4",
+    title_tag: "h2",
     alignment: "default",
   };
   return args;
@@ -47,7 +47,7 @@ const getArgTypes = (data) => {
       description: "Tag of the title",
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "h4" },
+        defaultValue: { summary: "h2" },
         category: "Content",
       },
     },

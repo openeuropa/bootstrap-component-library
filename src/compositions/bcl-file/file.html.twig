@@ -3,7 +3,7 @@
 {#
   Parameters:
   - title (string) (default: '')
-  - title_tag (string) (default: 'h4')
+  - title_tag (string) (default: 'h2')
   - item_title (string) (default: '')
   - icon (icon Object) (default: {})
   - text (string) (default: '')
@@ -36,7 +36,7 @@
 
 {% set _icon = icon|default({}) %}
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('h4') %}
+{% set _title_tag = title_tag|default('h2') %}
 {% set _item_title = item_title|default('') %}
 {% set _text = text|default('') %}
 {% set _content = content|default('') %}

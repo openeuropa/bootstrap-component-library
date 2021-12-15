@@ -13,7 +13,7 @@ const getArgs = (data) => {
     responsive_columns: 3,
     more: true,
     display_icons: true,
-    title_tag: "h4",
+    title_tag: "h2",
   };
 };
 
@@ -44,7 +44,7 @@ const getArgTypes = () => {
       description: "Html tag of the title",
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "h4" },
+        defaultValue: { summary: "h2" },
         category: "Content",
       },
     },

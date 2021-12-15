@@ -6,14 +6,14 @@
   - variant: (string) (default: "vertical")
     - options ["vertical", "horizontal"]
   - title: (string) (default: "")
-  - title_tag: (string) (default: "h5")
+  - title_tag: (string) (default: "h2")
   - links (array of link objects) (default: [])
 #}
 
 {% set _background = background|default("gray") %}
 {% set _variant = variant|default("vertical") %}
 {% set _title = title|default("") %}
-{% set _title_tag = title_tag|default("h4") %}
+{% set _title_tag = title_tag|default("h2") %}
 {% set _links = links|default([])%}
 
 {% if attributes is empty %}

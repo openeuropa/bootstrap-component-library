@@ -15,7 +15,7 @@ const getArgs = (data, type) => {
   if (type === "text") {
     args.alignment = "right";
     args.title = data.title;
-    args.title_tag = "h4";
+    args.title_tag = "h2";
   }
 
   return args;
@@ -73,7 +73,7 @@ const getArgTypes = (data, type) => {
       description: "Html tag of the title",
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "h4" },
+        defaultValue: { summary: "h2" },
         category: "Content",
       },
     };
