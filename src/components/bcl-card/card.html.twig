@@ -194,7 +194,7 @@
       {% endif %}
       {% if not loop.last %}
         {% set _badge = _badge|merge({
-            attributes: _badge.attributes.addClass('me-2')
+            attributes: _badge.attributes.addClass(['me-2', 'mb-2'])
           })
         %}
       {% endif %}
