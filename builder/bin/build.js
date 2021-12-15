@@ -7,6 +7,7 @@ const browserslist = require("browserslist");
 const { buildStyles } = require("../scripts/styles");
 const rename = require("../scripts/rename");
 const copyFiles = require("../scripts/copy");
+const makeSprite = require("../scripts/sprite");
 const pkg = require("../package.json");
 
 const loadConfig = (configFile) => {
@@ -57,6 +58,16 @@ program
   });
 
 program
+  .command("sprite")
+  .description("make svg sprites")
+  .action(() => {
+    const config = loadConfig(program.config);
+    config.sprite.forEach((conf) =>
+      makeSprite(conf.entry || "**", conf.dest, conf.options)
+    );
+  });
+
+program
   .command("copy")
   .description("copy static files")
   .action(() => {
@@ -66,15 +77,13 @@ program
     );
   });
 
-  program
-    .command("rename")
-    .description("rename files")
-    .action(() => {
-      const config = loadConfig(program.config);
-      config.rename.forEach((conf) =>
-        rename(conf.from, conf.to, conf.options)
-      );
-    });
+program
+  .command("rename")
+  .description("rename files")
+  .action(() => {
+    const config = loadConfig(program.config);
+    config.rename.forEach((conf) => rename(conf.from, conf.to, conf.options));
+  });
 
 // If no arguments provided, display help menu.
 if (process.argv.slice(2).length <= 0) {

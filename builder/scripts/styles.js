@@ -1,3 +1,24 @@
+/**
+ * Compile scss files.
+ *
+ * @param {string} from - Path to a folder or file.
+ * @param {string} to - String to prefix, suffix or replace the current file name.
+ * @param {object} options - Object
+ *
+ * Example config object: {
+ *
+ *  styles: [
+ *   {
+ *     entry: [path.resolve(nodeModules, "myfile.js")],
+ *     dest: path.resolve(outputFolder, "js"),
+ *     options: {
+ *       includePaths,
+ *       sourceMap: "file",
+ *     },
+ *   },
+ * ],
+ */
+
 const sass = require("sass");
 const path = require("path");
 const fs = require("fs");
