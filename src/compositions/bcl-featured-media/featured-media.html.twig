@@ -3,7 +3,7 @@
 {# Parameters:
   - with_text (boolean) (default: false)
   - title: (string) (default: '')
-  - title_tag: (string) (default: 'h3')
+  - title_tag: (string) (default: 'h2')
   - image: (string) (default: "")
   - poster_image: (string) (default: "")
   - content: (string) (default: "")
@@ -33,7 +33,7 @@
 #}
 
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('h4') %}
+{% set _title_tag = title_tag|default('h2') %}
 {% set _with_text = with_text|default(false) %}
 {% set _wrapper_classes = 'bcl-featured-item' %}
 {% set _description = description|default('') %}

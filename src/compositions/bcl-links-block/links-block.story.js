@@ -9,7 +9,7 @@ const getArgs = (data) => {
     background: data.background,
     variant: data.variant,
     title: data.title,
-    title_tag: "h4",
+    title_tag: "h2",
   };
 };
 
@@ -30,7 +30,7 @@ const getArgTypes = (data) => {
       description: "Html tag of the title",
       table: {
         type: { summary: "string" },
-        defaultValue: { summary: "h4" },
+        defaultValue: { summary: "h2" },
         category: "Content",
       },
     },

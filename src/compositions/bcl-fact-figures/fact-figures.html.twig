@@ -3,7 +3,7 @@
 {#
   Parameters:
   - "title" (string) (default: '')
-  - "title_tag" (string) (default: 'h4')
+  - "title_tag" (string) (default: 'h2')
   - "variant" (string) (default: '') options:
     [ default, block ]
   - "display_icons" (boolean) (default: true)
@@ -25,7 +25,7 @@
 {# Parameters #}
 
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('h4') %}
+{% set _title_tag = title_tag|default('h2') %}
 {% set _variant = variant|default('default') %}
 {% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _display_icons = display_icons ?? true %}
