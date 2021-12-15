@@ -1,5 +1,6 @@
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
+import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 const button = { ...dataDefault.button };
@@ -35,6 +36,9 @@ const getArgTypes = () => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   if (args.action_button) {
     data.action_button = button;
   } else {

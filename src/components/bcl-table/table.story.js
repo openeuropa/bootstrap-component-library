@@ -75,6 +75,9 @@ const getArgTypes = () => {
 };
 
 const resetAttrs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   data.attributes.removeClass("table-" + data.variant);
   data.attributes
     .removeClass("table-bordered")

@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search-form/dataSearch";
 import demoDataSubmittable from "@openeuropa/bcl-search-form/dataSearchSubmit";
 import searchForm from "@openeuropa/bcl-search-form/search-form.html.twig";
+import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 const getArgs = (data) => {
@@ -39,6 +40,9 @@ export default {
 };
 
 const resetAttrs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   if (!args.pill) {
     data.attributes.removeClass("rounded");
   }

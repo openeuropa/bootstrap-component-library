@@ -3,6 +3,7 @@ import demoDataGroup from "@openeuropa/bcl-data-card-layout/dataGroup.js";
 import demoDataGrid from "@openeuropa/bcl-data-card-layout/dataGrid.js";
 import demoDataMasonry from "@openeuropa/bcl-data-card-layout/dataMasonry.js";
 import cardLayout from "@openeuropa/bcl-card-layout/card-layout.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data, type) => {
   let args = { type: type };
@@ -94,6 +95,9 @@ const getArgTypes = (data, type) => {
 };
 
 const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
   data.attributes.removeClass([
     `g-${data.gutter}`,
     `row-cols-${data.grid_columns}`,
