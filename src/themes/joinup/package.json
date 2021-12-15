@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:fonts-css": "copyfiles -f node_modules/@fontsource/roboto/{400,500,700}*.css fonts",
-    "build:font-files": "copyfiles -u 3 node_modules/@fontsource/roboto/files/roboto-all-{400,500,700}-*.woff fonts",
+    "build:font-files": "copyfiles -u 3 node_modules/@fontsource/roboto/files/roboto*{400,500,700}* fonts",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
     "build:copy": "cross-env bcl-builder copy",
