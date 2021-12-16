@@ -192,6 +192,10 @@
           attributes: create_attribute()
         }) %}
       {% endif %}
+      {% set _badge = _badge|merge({
+          attributes: _badge.attributes.addClass('mb-2')
+        })
+      %}
       {% if not loop.last %}
         {% set _badge = _badge|merge({
             attributes: _badge.attributes.addClass('me-2')
