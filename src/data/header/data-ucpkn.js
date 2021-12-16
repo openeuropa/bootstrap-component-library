@@ -2,12 +2,168 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   variant: "ucpkn",
-  site_name_classes: "pb-3 pb-lg-0",
-  site_name: "Union Civil Protection Knowledge Network",
+  site_name: "UCP Knowledge Network: Applied knowledge for action",
   light: true,
   project_logo: {
     path: "ucpkn_logo.svg",
     classes: "d-none d-lg-inline-block",
+  },
+  navbar: {
+    color_set: "dark",
+    collapse_id: "navbarNavDropdown",
+    attributes: new drupalAttribute().addClass("bcl-header__navbar"),
+    form: {
+      attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
+      submit: {
+        variant: "light",
+        icon: {
+          name: "search",
+          size: "xs",
+          path: "/icons.svg",
+        },
+        attributes: new drupalAttribute().addClass([
+          "border-start-0",
+          "rounded-0",
+          "rounded-end",
+          "d-flex",
+        ]),
+      },
+      items: [
+        [
+          {
+            type: "text",
+            required: true,
+            label: "Search",
+            hidden_label: true,
+            placeholder: "Search",
+            id: "inlineFormInputGroupSearch",
+            attributes: new drupalAttribute().addClass([
+              "border-start-0",
+              "rounded-0",
+              "rounded-start",
+            ]),
+          },
+        ],
+      ],
+    },
+    navigation: {
+      navbar: true,
+      attributes: new drupalAttribute().addClass("me-auto"),
+      items: [
+        {
+          id: "navbarDropdownMenuLink",
+          link: true,
+          dropdown: true,
+          trigger: {
+            label: "Knowledge & Capacity",
+            path: "#",
+            attributes: new drupalAttribute().addClass("nav-link"),
+          },
+          items: [
+            {
+              label: "Knowledge Network Capacity Development Pillar",
+              path: "/example.html",
+            },
+            {
+              label: "Disaster Prevention and Risk Management",
+              path: "/example.html",
+            },
+            {
+              label: "Disaster Preparedness",
+              path: "/example.html",
+            },
+            {
+              label: "Emergency Response Coordination Centre",
+              path: "/example.html",
+            },
+            {
+              label: "UCPM Lessons Learnt Programme",
+              path: "/example.html",
+            },
+          ],
+        },
+        {
+          id: "navbarDropdownMenuLinkSecond",
+          link: true,
+          dropdown: true,
+          trigger: {
+            label: "Science & Research",
+            path: "#",
+            attributes: new drupalAttribute().addClass("nav-link"),
+          },
+          items: [
+            {
+              label: "Knowledge Network Science Pillar",
+              path: "/example.html",
+            },
+            {
+              label: "Disaster Risk Management Knowledge Centre",
+              path: "/example.html",
+            },
+            {
+              label: "Knowledge Gaps",
+              path: "/example.html",
+            },
+            {
+              label: "Data & Tools",
+              path: "/example.html",
+            },
+          ],
+        },
+        {
+          id: "navbarDropdownMenuLinkThird",
+          link: true,
+          dropdown: true,
+          trigger: {
+            label: "Projects",
+            path: "#",
+            attributes: new drupalAttribute().addClass("nav-link"),
+          },
+          items: [
+            {
+              label: "Union Civil Protection Mechanism Projects",
+              path: "/example.html",
+            },
+            {
+              label: "Other Disaster Risk Management Projects",
+              path: "/example.html",
+            },
+            {
+              label: "EU funding for disaster management",
+              path: "/example.html",
+            },
+          ],
+        },
+        {
+          label: "Stories",
+          path: "/example",
+        },
+        {
+          id: "navbarDropdownMenuLinkThird",
+          link: true,
+          dropdown: true,
+          trigger: {
+            label: "About",
+            path: "#",
+            attributes: new drupalAttribute().addClass("nav-link"),
+          },
+          items: [
+            {
+              label: "Knowledge Network Governance",
+              path: "/example.html",
+            },
+            {
+              label: "The EU Civil Protection Mechanism",
+              path: "/example.html",
+            },
+            {
+              label: "Information pack",
+              path: "/example.html",
+            },
+          ],
+        },
+      ],
+    },
   },
   head: {
     attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),

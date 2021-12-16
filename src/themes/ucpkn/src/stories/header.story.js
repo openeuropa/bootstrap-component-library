@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data-ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 import ucpknLogo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
 
@@ -27,4 +28,4 @@ export default {
   },
 };
 
-export const Default = () => header(headerData);
+export const Default = () => header(correctPaths(headerData));
