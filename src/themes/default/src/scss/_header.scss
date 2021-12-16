@@ -144,6 +144,22 @@ $header-link-active-background: #003776 !default;
       justify-content: right;
     }
   }
+
+  .bcl-header__navbar .navbar-collapse {
+    max-width: 100%;
+  }
+
+  .bcl-header__navbar .navbar-collapse .nav-item.dropdown {
+    max-width: 100%;
+  }
+
+  .bcl-header__navbar .navbar-collapse .nav-item.dropdown a {
+    white-space: normal;
+  }
+
+  .bcl-header__navbar .navbar-collapse .nav-item.dropdown .dropdown-menu {
+    max-width: 100%;
+  }
 }
 
 @include media-breakpoint-up(lg) {
