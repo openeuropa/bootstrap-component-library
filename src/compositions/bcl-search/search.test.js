@@ -3,7 +3,7 @@ import header from "@openeuropa/bcl-data-header/data";
 import footer from "@openeuropa/bcl-data-footer/data";
 import demoData from "@openeuropa/bcl-search/dataSearch";
 
-const template = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
+const template = "@oe-bcl/bcl-search/search.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 const dataListing = {

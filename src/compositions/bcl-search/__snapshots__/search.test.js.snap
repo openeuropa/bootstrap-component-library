@@ -583,7 +583,7 @@ exports[`OE - Search renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="bcl-content-banner vw-100 pt-lg-4-75 pt-3 bg-white"
+      class="bg-lighter py-4 py-lg-3"
     >
       <div
         class="container"
@@ -592,23 +592,43 @@ exports[`OE - Search renders correctly 1`] = `
           class="row"
         >
           <div
-            class="bg-transparent border-0 card"
+            class="col-12 col-lg-6 offset-lg-3"
           >
-            <div
-              class="row"
+            <form
+              class="bcl-search-form submittable"
             >
               <div
-                class="col-md-8 col-lg-9 col-xxl-8 px-sm-0 px-md-2-5"
+                class="bcl-search-form__group"
               >
-                <div
-                  class="card-body pt-0 px-0 pb-0"
+                <label
+                  class="form-label"
                 >
-                  <h2
-                    class="fw-bold card-title"
-                  />
-                </div>
+                  Search bar label
+                </label>
+                <input
+                  class="bcl-search-form__input form-control"
+                  placeholder="Search"
+                  type="search"
+                />
+                <button
+                  class="bcl-search-form__submit d-lg-flex px-3 ps-lg-2-5 pe-lg-3 btn btn-primary btn-md"
+                  type="button"
+                >
+                  <svg
+                    class="d-inline-block me-lg-2-5 bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#search"
+                    />
+                  </svg>
+                  <span
+                    class="d-none d-lg-inline-block"
+                  >
+                    Search
+                  </span>
+                </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
