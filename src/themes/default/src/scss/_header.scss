@@ -145,6 +145,23 @@ $header-link-active-background: #003776 !default;
       justify-content: right;
     }
   }
+
+  .bcl-header__navbar {
+    .navbar-collapse {
+      max-width: 100%;
+      .nav-item {
+        &.dropdown {
+          max-width: 100%;
+          a {
+            white-space: normal;
+          }
+          .dropdown-menu {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {

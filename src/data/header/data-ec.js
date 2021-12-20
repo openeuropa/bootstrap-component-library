@@ -165,6 +165,11 @@ module.exports = {
               label: "Something else here",
               path: "/example.html",
             },
+            {
+              label:
+                "Very long label with custom text and custom link as an example",
+              path: "/example.html",
+            },
           ],
         },
       ],
