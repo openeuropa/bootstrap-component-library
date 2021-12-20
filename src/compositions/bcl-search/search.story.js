@@ -5,7 +5,7 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import search from "@openeuropa/bcl-search/search.html.twig";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import drupalAttribute from "drupal-attribute";
@@ -41,4 +41,4 @@ export default {
   },
 };
 
-export const Default = () => listingPage(correctPaths(dataListing));
+export const Default = () => search(correctPaths(dataListing));
