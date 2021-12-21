@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       variant: "warning",
-      html: '<div class="ms-2 me-auto"><div class="fw-bold">Subheading</div>Cras justo odio</div>',
+      html: '<div class="ms-2 me-auto">Cras justo odio</div>',
       extra_classes: "d-flex justify-content-between align-items-center",
       badge: {
         label: "10",
