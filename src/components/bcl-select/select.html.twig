@@ -2,6 +2,7 @@
 
 {#
   Parameters:
+  - "id" (string) (default: '')
   - "label" (string) (default: '')
   - "hidden_label" (boolean) (default: false)
   - "helper_text" (string) (default: '')
@@ -18,6 +19,7 @@
 #}
 
 {% set _classes = ['form-select'] %}
+{% set _id = id|default('') %}
 {% set _disabled = disabled|default(false) %}
 {% set _options = options|default([]) %}
 {% set _aria_label = aria_label|default('') %}
@@ -53,6 +55,10 @@
 
 {% if _aria_label is not empty %}
   {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{% endif %}
+
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
 {% if _disabled %}
