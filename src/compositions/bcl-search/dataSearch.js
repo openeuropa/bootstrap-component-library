@@ -13,7 +13,7 @@ module.exports = {
         ]),
         label: "<span class='d-none d-lg-inline-block'>Search</span>",
         icon_position: "before",
-        icon_spacing_responsive: "lg",
+        icon_spacing: "lg",
         icon: {
           name: "search",
           size: "xs",

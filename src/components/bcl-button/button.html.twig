@@ -15,7 +15,7 @@
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
     - options ["after", "before"]
-  - icon_spacing_responsive (string) (default: '')
+  - icon_spacing (string) (default: '')
     - options ["sm", "md", "lg"]
   - clean_class (boolean) (default: false)
   - spinner (spinner object) (default: {})
@@ -33,7 +33,7 @@
 {% set _id = id|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
-{% set _icon_spacing_responsive = icon_spacing_responsive|default('') %}
+{% set _icon_spacing = icon_spacing|default('') %}
 {% set _show_spinner = show_spinner|default(false) %}
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
@@ -57,8 +57,8 @@
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% if _icon_spacing_responsive is not empty %}
-  {% set _icon_spacing_responsive = _icon_spacing_responsive ~ '-' %}
+{% if _icon_spacing is not empty %}
+  {% set _icon_spacing = _icon_spacing ~ '-' %}
 {% endif %}
 {% set attributes = attributes.setAttribute('type', _type) %}
 {% if _icon is not empty %}
@@ -75,12 +75,12 @@
     {% endif %}
     {% if _icon_position == 'before' %}
       {% set _icon = _icon|merge({
-          attributes: _icon.attributes.addClass('me-' ~ _icon_spacing_responsive ~ '2-5')
+          attributes: _icon.attributes.addClass('me-' ~ _icon_spacing ~ '2-5')
         })
       %}
     {% else %}
       {% set _icon = _icon|merge({
-          attributes: _icon.attributes.addClass('ms-' ~ _icon_spacing_responsive ~ '2-5')
+          attributes: _icon.attributes.addClass('ms-' ~ _icon_spacing ~ '2-5')
         })
       %}
     {% endif %}
