@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import header from "@openeuropa/bcl-data-header/data";
+import header from "@openeuropa/bcl-data-header/data--no-form";
 import footer from "@openeuropa/bcl-data-footer/data";
 import demoData from "@openeuropa/bcl-search/dataSearch";
 
