@@ -61,7 +61,14 @@ exports[`OE - select renders correctly 1`] = `
 
 exports[`OE - select renders correctly as a multiple choice select 1`] = `
 <jest>
+  <label
+    class="form-label"
+    for="multiselect-1"
+  >
+    A multiselect form element
+  </label>
   <select
+    id="multiselect-1"
     multiple="true"
     required="true"
   >

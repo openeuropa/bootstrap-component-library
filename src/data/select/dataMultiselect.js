@@ -1,10 +1,12 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  id: "multiselect-1",
   multiple: true,
   clean_class: true,
   required: true,
   size: "md",
+  label: "A multiselect form element",
   helper_text: "Helper text for the select element",
   helper_text_id: "helperText",
   invalid_feedback: "Invalid feedback example",
