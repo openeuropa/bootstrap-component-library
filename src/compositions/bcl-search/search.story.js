@@ -10,10 +10,31 @@ import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import drupalAttribute from "drupal-attribute";
 
+let simple_navbar = {
+  ...header.navbar,
+};
+simple_navbar.form = null;
+
 const dataListing = {
   page_title: "Search results",
   content_type: "search",
-  header: header,
+  header: {
+    variant: {
+      ...header.variant,
+    },
+    head: {
+      ...header.head,
+    },
+    modals: {
+      ...header.modals,
+    },
+    breadcrumbs: {
+      ...header.breadcrumbs,
+    },
+    navbar: {
+      ...simple_navbar,
+    },
+  },
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),
