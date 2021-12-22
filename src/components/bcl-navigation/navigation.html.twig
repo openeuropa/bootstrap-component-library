@@ -68,7 +68,7 @@
     {% set attributes = attributes.setAttribute('id', _id) %}
   {% endif %}
 
-  {% if not _nav and _tabs %}
+  {% if _tabs %}
     {% set attributes = attributes.setAttribute('role', 'tablist') %}
   {% endif %}
   {% set attributes = attributes.addClass(_classes) %}
@@ -109,9 +109,14 @@
         <li
           class="{{ _nav_class }}"
           {% if _tabs %}
-            role="presentation"
+            role="tab"
           {% endif %}
         >
+        {% elseif _tabs %}
+          {% set _item = _item|merge({
+            attributes: _item.attributes.setAttribute("role", "tab"),
+            }) 
+          %}
         {% endif %}
         {% if _item.dropdown is defined %}
           {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _item only %}
