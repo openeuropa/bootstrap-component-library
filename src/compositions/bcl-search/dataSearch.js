@@ -1,6 +1,34 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  banner: {
+    search_bar: {
+      submit: {
+        attributes: new drupalAttribute().addClass([
+          "bcl-search-form__submit",
+          "d-lg-flex",
+          "px-3",
+          "ps-lg-2-5",
+          "pe-lg-3",
+        ]),
+        label: "<span class='d-none d-lg-inline-block'>Search</span>",
+        icon_position: "before",
+        icon_spacing: "lg",
+        icon: {
+          name: "search",
+          size: "xs",
+          path: "/icons.svg",
+          attributes: new drupalAttribute().addClass(["d-inline-block"]),
+        },
+      },
+      input: {
+        placeholder: "Search",
+        attributes: new drupalAttribute().addClass(["bcl-search-form__input"]),
+        label: "Search bar label",
+        input_type: "search",
+      },
+    },
+  },
   sidebar: {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),

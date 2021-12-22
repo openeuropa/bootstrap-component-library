@@ -32,40 +32,6 @@ exports[`OE - Search renders correctly 1`] = `
             class="nav-item"
           >
             <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
               class="text-center nav-link"
               data-bs-target="#languageModal"
               data-bs-toggle="modal"
@@ -108,48 +74,10 @@ exports[`OE - Search renders correctly 1`] = `
               </span>
             </a>
           </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="notification mt-2 mt-lg-0 nav-link"
-              href="#"
-            >
-              <svg
-                class="bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#bell-fill"
-                />
-              </svg>
-              <span
-                class="badge bg-danger"
-              >
-                5
-              </span>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
     <!-- project name -->
-    <div
-      class="bcl-header__project"
-    >
-      <div
-        class="container"
-      >
-        <img
-          class="d-none d-lg-inline-block"
-          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
-        />
-        <div
-          class="bcl-header__site-name"
-        >
-          Project name
-        </div>
-      </div>
-    </div>
     <!-- navbar -->
     <nav
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
@@ -252,35 +180,6 @@ exports[`OE - Search renders correctly 1`] = `
               </ul>
             </li>
           </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
-          >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
-            >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
-            <button
-              class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
-              type="button"
-            >
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -310,7 +209,7 @@ exports[`OE - Search renders correctly 1`] = `
             <a
               href="/example"
             >
-              European Commission
+              European Union
             </a>
           </li>
           <li
@@ -326,7 +225,7 @@ exports[`OE - Search renders correctly 1`] = `
                   xlink:href="/icons.svg#arrow-left"
                 />
               </svg>
-              About the European Commission
+              About the European Union
             </a>
           </li>
           <li
@@ -582,6 +481,57 @@ exports[`OE - Search renders correctly 1`] = `
     </div>
   </div>
   <main>
+    <div
+      class="bg-lighter py-4 py-lg-3"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-12 col-lg-6 offset-lg-3"
+          >
+            <form
+              class="bcl-search-form submittable"
+            >
+              <div
+                class="bcl-search-form__group"
+              >
+                <label
+                  class="form-label"
+                >
+                  Search bar label
+                </label>
+                <input
+                  class="bcl-search-form__input form-control"
+                  placeholder="Search"
+                  type="search"
+                />
+                <button
+                  class="bcl-search-form__submit d-lg-flex px-3 ps-lg-2-5 pe-lg-3 btn btn-primary btn-md"
+                  type="button"
+                >
+                  <svg
+                    class="d-inline-block me-lg-2-5 bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#search"
+                    />
+                  </svg>
+                  <span
+                    class="d-none d-lg-inline-block"
+                  >
+                    Search
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="container mt-md-4-75 mt-4"
     >

@@ -277,11 +277,13 @@ exports[`OE - Form inline renders correctly 1`] = `
     >
       <label
         class="form-label visually-hidden"
+        for="inlineFormSelectPref"
       >
         Preference
       </label>
       <select
         class="form-select"
+        id="inlineFormSelectPref"
         required="true"
       >
         <option
@@ -382,6 +384,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
       >
         <select
           class="form-select"
+          id="disabledSelect"
         >
           <option
             value="1"

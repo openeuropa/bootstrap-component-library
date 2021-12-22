@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.0 (2021-12-22)
+
+#### :rocket: New Feature
+
+* [#185](https://github.com/openeuropa/bootstrap-component-library/pull/185) feat(search): Updates on search page - OEL-914 ([@tibi2303](https://github.com/tibi2303))
+* [#179](https://github.com/openeuropa/bootstrap-component-library/pull/179) feat(title): Changed paragraph titles from h4 to h2 - OEL-860 ([@tibi2303](https://github.com/tibi2303))
+* [#176](https://github.com/openeuropa/bootstrap-component-library/pull/176) chore(joinup): Distributing roboto font files ([@planctus](https://github.com/planctus))
+* [#171](https://github.com/openeuropa/bootstrap-component-library/pull/171) feat(placeholder): Adding component - OEL-849 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#183](https://github.com/openeuropa/bootstrap-component-library/pull/183) fix(featured-media): Fix media caption size with different image size - OEL-910 ([@papegaill](https://github.com/papegaill))
+
+#### :nail_care: Enhancement
+
+* [#187](https://github.com/openeuropa/bootstrap-component-library/pull/187) feat(accessibility): Select & Multiselect report - OEL-918 ([@tibi2303](https://github.com/tibi2303))
+* [#186](https://github.com/openeuropa/bootstrap-component-library/pull/186) feat(accessibility): Accordion fixes - OEL-917 ([@tibi2303](https://github.com/tibi2303))
+* [#181](https://github.com/openeuropa/bootstrap-component-library/pull/181) feat(dropdown-header): Fix for long dropdown items inside header - OEL-891 ([@tibi2303](https://github.com/tibi2303))
+* [#182](https://github.com/openeuropa/bootstrap-component-library/pull/182) feat(ucpkn-header): Fix for overlapping site name - OEL-889 ([@tibi2303](https://github.com/tibi2303))
+* [#180](https://github.com/openeuropa/bootstrap-component-library/pull/180) feat(card): Added margin bottom on card badges - OEL-880 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#188](https://github.com/openeuropa/bootstrap-component-library/pull/188) feat(accessibility): List group report - OEL-920 ([@tibi2303](https://github.com/tibi2303))
+* [#184](https://github.com/openeuropa/bootstrap-component-library/pull/184) chore: Fix wrong library title - OEL-916 ([@papegaill](https://github.com/papegaill))
+* [#178](https://github.com/openeuropa/bootstrap-component-library/pull/178) chore(deps): Updates, 15-12-21 ([@planctus](https://github.com/planctus))
+* [#173](https://github.com/openeuropa/bootstrap-component-library/pull/173) chore(builder): Adding svg sprite command ([@planctus](https://github.com/planctus))
+* [#174](https://github.com/openeuropa/bootstrap-component-library/pull/174) chore(storybook): Fixing sub theme start script ([@tibi2303](https://github.com/tibi2303))
+* [#170](https://github.com/openeuropa/bootstrap-component-library/pull/170) feat(multiselect): Supporting multiple multiselects in our demos - OEL-724 ([@tibi2303](https://github.com/tibi2303))
+* [#169](https://github.com/openeuropa/bootstrap-component-library/pull/169) chore(deps): Audit fix and updates ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.16.0 (2021-12-08)
 
 #### :rocket: New Feature

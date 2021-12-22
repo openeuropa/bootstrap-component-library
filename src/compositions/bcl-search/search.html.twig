@@ -1,0 +1,15 @@
+{% extends "@oe-bcl/bcl-base-templates/listing-page.html.twig" %}
+
+{% block banner %}
+{% if banner.search_bar is defined %}
+  <div class="bg-lighter py-4 py-lg-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+          {% include '@oe-bcl/bcl-search-form/search-form.html.twig' with banner.search_bar only %}
+        </div>
+      </div>  
+    </div>
+  </div>
+{% endif %}
+{% endblock %}

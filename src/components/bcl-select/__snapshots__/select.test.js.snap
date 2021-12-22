@@ -4,11 +4,13 @@ exports[`OE - select renders correctly 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select"
+    id="select-1"
     required="true"
   >
     <option
@@ -59,7 +61,14 @@ exports[`OE - select renders correctly 1`] = `
 
 exports[`OE - select renders correctly as a multiple choice select 1`] = `
 <jest>
+  <label
+    class="form-label"
+    for="multiselect-1"
+  >
+    A multiselect form element
+  </label>
   <select
+    id="multiselect-1"
     multiple="true"
     required="true"
   >
@@ -132,12 +141,14 @@ exports[`OE - select renders correctly when disabled 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select"
     disabled="true"
+    id="select-1"
     required="true"
   >
     <option
@@ -190,11 +201,13 @@ exports[`OE - select renders correctly when invalid 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select is-invalid"
+    id="select-1"
     required="true"
   >
     <option
@@ -247,11 +260,13 @@ exports[`OE - select renders correctly when multiple 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select"
+    id="select-1"
     multiple="true"
     required="true"
   >
@@ -305,11 +320,13 @@ exports[`OE - select renders correctly when readonly 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select"
+    id="select-1"
     required="true"
   >
     <option
@@ -362,11 +379,13 @@ exports[`OE - select renders correctly when required 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select"
+    id="select-1"
     required="true"
   >
     <option
@@ -419,11 +438,13 @@ exports[`OE - select renders correctly when valid 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select form element
   </label>
   <select
     class="form-select is-valid"
+    id="select-1"
     required="true"
   >
     <option
@@ -476,11 +497,13 @@ exports[`OE - select renders correctly with a label 1`] = `
 <jest>
   <label
     class="form-label"
+    for="select-1"
   >
     A select label
   </label>
   <select
     class="form-select"
+    id="select-1"
     required="true"
   >
     <option
@@ -533,11 +556,13 @@ exports[`OE - select renders correctly with an hidden label 1`] = `
 <jest>
   <label
     class="form-label visually-hidden"
+    for="select-1"
   >
     A select label
   </label>
   <select
     class="form-select"
+    id="select-1"
     required="true"
   >
     <option
