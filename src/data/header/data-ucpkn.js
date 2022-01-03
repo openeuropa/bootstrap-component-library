@@ -7,6 +7,7 @@ module.exports = {
   project_logo: {
     path: "ucpkn_logo.svg",
     classes: "d-none d-lg-inline-block",
+    alt: "ucpkn logo",
   },
   navbar: {
     color_set: "dark",
@@ -16,6 +17,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
       submit: {
         variant: "light",
+        assistive_text: "search",
         icon: {
           name: "search",
           size: "xs",
@@ -166,7 +168,9 @@ module.exports = {
     },
   },
   head: {
-    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
+    attributes: new drupalAttribute()
+      .addClass(["w-100", "shadow-sm"])
+      .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {
       logos: [
