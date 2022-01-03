@@ -141,7 +141,7 @@ module.exports = {
           path: "/example",
         },
         {
-          id: "navbarDropdownMenuLinkThird",
+          id: "navbarDropdownMenuLinkProjects",
           link: true,
           dropdown: true,
           trigger: {
@@ -177,10 +177,12 @@ module.exports = {
         {
           class: "d-none d-lg-block",
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+          alt: "desktop european union logo",
         },
         {
           class: "d-lg-none",
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
+          alt: "mobile european union logo",
         },
       ],
     },
