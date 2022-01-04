@@ -57,7 +57,9 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    attributes: new drupalAttribute().addClass("bcl-header__navbar"),
+    attributes: new drupalAttribute()
+      .addClass("bcl-header__navbar")
+      .setAttribute("aria-label", "main-navigation"),
     form: {
       attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
       submit: {
@@ -101,10 +103,9 @@ module.exports = {
           label: "Home",
           path: "/example",
           active: true,
-          attributes: new drupalAttribute().setAttribute(
-            "aria-current",
-            "page"
-          ),
+          attributes: new drupalAttribute()
+            .setAttribute("aria-current", "page")
+            .setAttribute("aria-label", "homepage"),
         },
         {
           label: "Item 01",
@@ -213,7 +214,14 @@ module.exports = {
   breadcrumbs: {
     attributes: new drupalAttribute().addClass(["mt-3"]),
     links: [
-      { label: "Home", path: "/example" },
+      {
+        label: "Home",
+        path: "/example",
+        attributes: new drupalAttribute().setAttribute(
+          "aria-label",
+          "homepage"
+        ),
+      },
       {
         label: "European Union",
         path: "/example",

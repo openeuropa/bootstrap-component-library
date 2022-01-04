@@ -11,7 +11,6 @@ module.exports = {
       label: "Filter options",
       heading: 4,
       extra_classes: "mb-lg-4",
-      id: "offcanvasExampleLabel",
     },
     search_form: {
       attributes: new drupalAttribute()
@@ -23,6 +22,7 @@ module.exports = {
             classes: "mb-3",
             label: "Content types",
             type: "select",
+            id: "content types",
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -37,7 +37,9 @@ module.exports = {
             classes: "mb-3",
             label: "Filter A",
             type: "select",
-            attributes: new drupalAttribute().addClass("multi-select"),
+            attributes: new drupalAttribute()
+              .addClass("multi-select")
+              .setAttribute("aria-label", "multiselect"),
             multiple: true,
             clean_class: true,
             options: [
@@ -61,33 +63,30 @@ module.exports = {
             input_type: "checkbox",
             label: "Checked checkbox",
             checked: true,
+            id: "checked-filter",
           },
           {
             input_type: "checkbox",
             label: "Default checkbox",
+            id: "default-filter",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (from)",
-            legend_classes: "col-form-label",
-          },
-          {
+            label: "Creation date (from)",
             input_type: "date",
             attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date-from",
+            wrapper_classes: "mb-3",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (to)",
-            fieldset_classes: "mb-3",
-            legend_classes: "col-form-label",
-          },
-          {
             input_type: "date",
+            label: "Creation date (to)",
+            wrapper_classes: "mb-3",
             attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date=to",
           },
         ],
       ],
