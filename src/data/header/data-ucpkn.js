@@ -7,6 +7,7 @@ module.exports = {
   project_logo: {
     path: "ucpkn_logo.svg",
     classes: "d-none d-lg-inline-block",
+    alt: "ucpkn logo",
   },
   navbar: {
     color_set: "dark",
@@ -16,6 +17,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
       submit: {
         variant: "light",
+        assistive_text: "search",
         icon: {
           name: "search",
           size: "xs",
@@ -139,7 +141,7 @@ module.exports = {
           path: "/example",
         },
         {
-          id: "navbarDropdownMenuLinkThird",
+          id: "navbarDropdownMenuLinkProjects",
           link: true,
           dropdown: true,
           trigger: {
@@ -166,17 +168,21 @@ module.exports = {
     },
   },
   head: {
-    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
+    attributes: new drupalAttribute()
+      .addClass(["w-100", "shadow-sm"])
+      .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {
       logos: [
         {
           class: "d-none d-lg-block",
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+          alt: "desktop european union logo",
         },
         {
           class: "d-lg-none",
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
+          alt: "mobile european union logo",
         },
       ],
     },

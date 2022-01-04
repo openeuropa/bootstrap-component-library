@@ -6,14 +6,18 @@ module.exports = {
   project_logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
     classes: "d-none d-lg-inline-block",
+    alt: "project logo",
   },
   head: {
-    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
+    attributes: new drupalAttribute()
+      .addClass(["w-100", "shadow-sm"])
+      .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {
       logos: [
         {
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
+          alt: "european commission logo",
         },
       ],
     },
@@ -92,6 +96,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
       submit: {
         variant: "light",
+        assistive_text: "search",
         icon: {
           name: "search",
           size: "xs",
