@@ -86,7 +86,7 @@ module.exports = {
             label: "Creation date (to)",
             wrapper_classes: "mb-3",
             attributes: new drupalAttribute().addClass("mb-2"),
-            id: "creation-date=to",
+            id: "creation-date-to",
           },
         ],
       ],
