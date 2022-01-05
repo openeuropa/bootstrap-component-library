@@ -16,6 +16,7 @@ module.exports = {
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#profile")
+          .setAttribute("role", "tab")
           .setAttribute("aria-controls", "profile"),
       },
       {
@@ -26,6 +27,7 @@ module.exports = {
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#privacy")
+          .setAttribute("role", "tab")
           .setAttribute("aria-controls", "privacy"),
       },
     ],
@@ -83,6 +85,7 @@ module.exports = {
           required: true,
           label: "First name",
           helper_text: "Helper text",
+          id: "first-name",
           attributes: new drupalAttribute().setAttribute("value", "Stefan"),
         },
         {
@@ -91,6 +94,7 @@ module.exports = {
           required: true,
           label: "Last name",
           helper_text: "Helper text",
+          id: "last-name",
           attributes: new drupalAttribute().setAttribute("value", "Mayer"),
         },
         {
@@ -98,6 +102,7 @@ module.exports = {
           type: "select",
           required: true,
           label: "Gender",
+          aria_label: "gender-select",
           helper_text: "Helper text",
           options: [
             { value: 2, label: "Male" },
@@ -109,6 +114,7 @@ module.exports = {
           input_type: "text",
           required: true,
           label: "Nationality",
+          id: "nationality-input",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute("value", "German"),
         },
@@ -117,6 +123,7 @@ module.exports = {
           input_type: "date",
           required: true,
           label: "Birth date",
+          id: "birth-date",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute("value", "1972-01-22"),
         },
@@ -132,6 +139,7 @@ module.exports = {
           required: true,
           label: "Bio",
           helper_text: "Helper text",
+          id: "bio-description",
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
         },
         {
@@ -139,6 +147,7 @@ module.exports = {
           input_type: "text",
           required: true,
           label: "Country",
+          id: "country-input",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute("value", "Germany"),
         },
@@ -147,6 +156,7 @@ module.exports = {
           input_type: "text",
           required: true,
           label: "City",
+          id: "city-input",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute("value", "Düsseldorf"),
         },
@@ -169,6 +179,7 @@ module.exports = {
           input_type: "text",
           required: true,
           label: "Organisation",
+          id: "organisation-input",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute("value", "DG digit"),
         },
@@ -177,6 +188,7 @@ module.exports = {
           input_type: "text",
           required: true,
           label: "Position",
+          id: "position-input",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute("value", "Officer"),
         },
@@ -191,6 +203,7 @@ module.exports = {
           input_type: "text",
           required: true,
           label: "Working languages",
+          id: "working-languages",
           helper_text: "Helper text",
           attributes: new drupalAttribute().setAttribute(
             "value",

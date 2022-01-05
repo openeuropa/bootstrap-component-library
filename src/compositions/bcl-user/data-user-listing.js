@@ -11,7 +11,6 @@ module.exports = {
       label: "Filter options",
       heading: 4,
       extra_classes: "mb-lg-4",
-      id: "offcanvasExampleLabel",
     },
     search_form: {
       attributes: new drupalAttribute()
@@ -216,6 +215,7 @@ module.exports = {
   sort_select: {
     label: "Sort&nbsp;by",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),
+    aria_label: "sort-select",
     options: [
       { value: 1, label: "a select option" },
       { value: 2, label: "another select option" },

@@ -637,6 +637,7 @@ exports[`OE - User -edit renders correctly 1`] = `
                 data-bs-toggle="tab"
                 href="#profile"
                 id="profile-tab"
+                role="tab"
               >
                 Profile information
               </a>
@@ -653,6 +654,7 @@ exports[`OE - User -edit renders correctly 1`] = `
                 data-bs-toggle="tab"
                 href="#"
                 id="privacy-tab"
+                role="tab"
               >
                 Privacy settings
               </a>
@@ -733,11 +735,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="first-name"
                         >
                           First name
                         </label>
                         <input
                           class="form-control"
+                          id="first-name"
                           required="true"
                           type="text"
                           value="Stefan"
@@ -753,11 +757,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="last-name"
                         >
                           Last name
                         </label>
                         <input
                           class="form-control"
+                          id="last-name"
                           required="true"
                           type="text"
                           value="Mayer"
@@ -777,6 +783,7 @@ exports[`OE - User -edit renders correctly 1`] = `
                           Gender
                         </label>
                         <select
+                          aria-label="gender-select"
                           class="form-select"
                           required="true"
                         >
@@ -802,11 +809,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="nationality-input"
                         >
                           Nationality
                         </label>
                         <input
                           class="form-control"
+                          id="nationality-input"
                           required="true"
                           type="text"
                           value="German"
@@ -822,11 +831,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="birth-date"
                         >
                           Birth date
                         </label>
                         <input
                           class="form-control"
+                          id="birth-date"
                           required="true"
                           type="date"
                           value="1972-01-22"
@@ -846,11 +857,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="bio-description"
                         >
                           Bio
                         </label>
                         <textarea
                           class="form-control"
+                          id="bio-description"
                           required="true"
                           rows="4"
                         >
@@ -867,11 +880,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="country-input"
                         >
                           Country
                         </label>
                         <input
                           class="form-control"
+                          id="country-input"
                           required="true"
                           type="text"
                           value="Germany"
@@ -887,11 +902,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="city-input"
                         >
                           City
                         </label>
                         <input
                           class="form-control"
+                          id="city-input"
                           required="true"
                           type="text"
                           value="Düsseldorf"
@@ -920,11 +937,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="organisation-input"
                         >
                           Organisation
                         </label>
                         <input
                           class="form-control"
+                          id="organisation-input"
                           required="true"
                           type="text"
                           value="DG digit"
@@ -940,11 +959,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="position-input"
                         >
                           Position
                         </label>
                         <input
                           class="form-control"
+                          id="position-input"
                           required="true"
                           type="text"
                           value="Officer"
@@ -964,11 +985,13 @@ exports[`OE - User -edit renders correctly 1`] = `
                       >
                         <label
                           class="form-label"
+                          for="working-languages"
                         >
                           Working languages
                         </label>
                         <input
                           class="form-control"
+                          id="working-languages"
                           required="true"
                           type="text"
                           value="English, German"
@@ -2131,7 +2154,6 @@ exports[`OE - User -list renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
             class="bcl-offcanvas offcanvas-start offcanvas"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -2142,7 +2164,6 @@ exports[`OE - User -list renders correctly 1`] = `
             >
               <h4
                 class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
               >
                 Filter options
               </h4>
@@ -2293,6 +2314,7 @@ exports[`OE - User -list renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
+                  aria-label="sort-select"
                   class="ms-md-2 mb-2 form-select"
                 >
                   <option
@@ -3549,11 +3571,11 @@ exports[`OE - User -view renders correctly 1`] = `
           <div
             class="my-3"
           >
-            <h4
+            <h3
               class="fw-bold mb-4"
             >
               Personal information
-            </h4>
+            </h3>
             <div
               class="row"
             >
@@ -3670,11 +3692,11 @@ exports[`OE - User -view renders correctly 1`] = `
           <div
             class="my-3"
           >
-            <h4
+            <h3
               class="fw-bold mb-4"
             >
               Professional information
-            </h4>
+            </h3>
             <div
               class="row"
             >
