@@ -4,6 +4,7 @@ module.exports = {
   prev: {
     label: "Previous",
     path: "#",
+    aria_label: "previous",
     icon: {
       name: "arrow-left-short",
       path: "/icons.svg",
@@ -12,6 +13,7 @@ module.exports = {
   next: {
     label: "Next",
     path: "#",
+    aria_label: "next",
     icon: {
       name: "arrow-right-short",
       path: "/icons.svg",
