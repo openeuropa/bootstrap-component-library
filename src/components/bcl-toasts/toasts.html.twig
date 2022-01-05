@@ -86,6 +86,7 @@
     {% if _with_close %}
       {% set button_attributes = create_attribute()
                                 .addClass(['btn-close'])
+                                .setAttribute('aria-label', 'close')
                                 .setAttribute('data-bs-dismiss', 'toast')
       %}
       {%- include '@oe-bcl/bcl-button/button.html.twig' with {
