@@ -12,6 +12,7 @@
       - path (string)
       - label (string)
       - disabled (boolean)
+      - aria_label (string)
       - icon (Icon component)
     }
   - next (object)
@@ -19,6 +20,7 @@
       - path (string)
       - label (string)
       - disabled (boolean)
+      - aria_label (string)
       - icon (Icon component)
     }
   - items (array of objects)
@@ -75,8 +77,8 @@
         tabindex="-1"
         aria-disabled="true"
         {% endif %}
-        {%- if _enable_icon -%}
-        aria-label="previous"
+        {%- if _prev.aria_label -%}
+        aria-label="{{ _prev.aria_label }}"
         {%- endif -%}
       >
       {%- if _enable_icon -%}
@@ -130,8 +132,8 @@
         tabindex="-1"
         aria-disabled="true"
         {% endif %}
-        {%- if _enable_icon -%}
-        aria-label="next"
+        {%- if _next.aria_label -%}
+        aria-label="{{ _next.aria_label }}"
         {%- endif -%}
       >
       {%- if _enable_icon -%}
