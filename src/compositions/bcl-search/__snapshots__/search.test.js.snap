@@ -17,10 +17,12 @@ exports[`OE - Search renders correctly 1`] = `
           href=""
         >
           <img
+            alt="desktop european union logo"
             class="d-none d-lg-block"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
           />
           <img
+            alt="mobile european union logo"
             class="d-lg-none"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
@@ -542,7 +544,6 @@ exports[`OE - Search renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
             class="bcl-offcanvas offcanvas-start offcanvas"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -553,7 +554,6 @@ exports[`OE - Search renders correctly 1`] = `
             >
               <h4
                 class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
               >
                 Filter options
               </h4>
@@ -575,11 +575,13 @@ exports[`OE - Search renders correctly 1`] = `
                 >
                   <label
                     class="form-label"
+                    for="content-types"
                   >
                     Content types
                   </label>
                   <select
                     class="form-select"
+                    id="content-types"
                   >
                     <option
                       value="1"
@@ -614,11 +616,13 @@ exports[`OE - Search renders correctly 1`] = `
                 >
                   <label
                     class="form-label"
+                    for="filter-select-a"
                   >
                     Filter A
                   </label>
                   <select
                     class="multi-select"
+                    id="filter-select-a"
                     multiple="true"
                   >
                     <option
@@ -669,10 +673,12 @@ exports[`OE - Search renders correctly 1`] = `
                         <input
                           checked="true"
                           class="form-check-input"
+                          id="checked-input"
                           type="checkbox"
                         />
                         <label
                           class="form-check-label"
+                          for="checked-input"
                         >
                           Checked checkbox
                         </label>
@@ -683,40 +689,48 @@ exports[`OE - Search renders correctly 1`] = `
                     >
                       <input
                         class="form-check-input"
+                        id="default-input"
                         type="checkbox"
                       />
                       <label
                         class="form-check-label"
+                        for="default-input"
                       >
                         Default checkbox
                       </label>
                     </div>
                   </div>
                 </fieldset>
-                <fieldset>
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (from)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <fieldset
+                <div
                   class="mb-3"
                 >
-                  <legend
-                    class="col-form-label"
+                  <label
+                    class="form-label"
+                    for="creation-date-from"
                   >
-                    Creation date (to)
-                  </legend>
+                    Creation date (from)
+                  </label>
                   <input
-                    class="form-control"
+                    class="mb-2 form-control"
+                    id="creation-date-from"
                     type="date"
                   />
-                </fieldset>
+                </div>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                    for="creation-date=to"
+                  >
+                    Creation date (to)
+                  </label>
+                  <input
+                    class="mb-2 form-control"
+                    id="creation-date=to"
+                    type="date"
+                  />
+                </div>
                 <div
                   class="mt-4 d-grid gap-4 d-md-block"
                 >
@@ -840,6 +854,7 @@ exports[`OE - Search renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
+                  aria-label="sort-by-select"
                   class="ms-md-2 mb-2 form-select"
                 >
                   <option

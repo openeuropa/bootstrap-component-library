@@ -39,7 +39,6 @@ module.exports = {
       label: "Filter options",
       heading: 4,
       extra_classes: "mb-lg-4",
-      id: "offcanvasExampleLabel",
     },
     search_form: {
       attributes: new drupalAttribute()
@@ -51,6 +50,7 @@ module.exports = {
             classes: "mb-3",
             label: "Content types",
             type: "select",
+            id: "content-types",
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -65,6 +65,7 @@ module.exports = {
             classes: "mb-3",
             label: "Filter A",
             type: "select",
+            id: "filter-select-a",
             attributes: new drupalAttribute().addClass("multi-select"),
             multiple: true,
             clean_class: true,
@@ -90,32 +91,30 @@ module.exports = {
             label: "Checked checkbox",
             wrapper_classes: "mb-3",
             checked: true,
+            id: "checked-input",
           },
           {
             input_type: "checkbox",
             label: "Default checkbox",
+            id: "default-input",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (from)",
-            legend_classes: "col-form-label",
-          },
-          {
+            label: "Creation date (from)",
             input_type: "date",
             attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date-from",
+            wrapper_classes: "mb-3",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (to)",
-            fieldset_classes: "mb-3",
-            legend_classes: "col-form-label",
-          },
-          {
             input_type: "date",
+            label: "Creation date (to)",
+            wrapper_classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date=to",
           },
         ],
       ],
@@ -407,6 +406,7 @@ module.exports = {
   sort_select: {
     label: "Sort&nbsp;by",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),
+    aria_label: "sort-by-select",
     options: [
       { value: 1, label: "a select option" },
       { value: 2, label: "another select option" },

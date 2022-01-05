@@ -11,7 +11,6 @@ module.exports = {
       label: "Filter options",
       heading: 4,
       extra_classes: "mb-lg-4",
-      id: "offcanvasExampleLabel",
     },
     search_form: {
       attributes: new drupalAttribute()
@@ -20,24 +19,18 @@ module.exports = {
       items: [
         [
           {
-            type: "fieldset",
-            legend: "Creation date (from)",
-            legend_classes: "col-form-label",
-          },
-          {
+            label: "Creation date (from)",
+            id: "creation-date-from",
             input_type: "date",
             attributes: new drupalAttribute().addClass("mb-2"),
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (to)",
-            fieldset_classes: "mb-3",
-            legend_classes: "col-form-label",
-          },
-          {
+            label: "Creation date (to)",
+            id: "creation-date-to",
             input_type: "date",
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
         ],
       ],
@@ -130,6 +123,7 @@ module.exports = {
   ],
   sort_select: {
     label: "Sort&nbsp;by",
+    aria_label: "sort-by-select",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0"),
     options: [
       { value: 1, label: "a select option" },
