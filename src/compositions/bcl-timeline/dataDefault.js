@@ -139,8 +139,7 @@ module.exports = {
     },
     {
       label: "11 December 2018",
-      content:
-        'Commission contribution to the <a href="/example">Euro Summit</a>',
+      content: "Commission contribution to the Euro Summit",
     },
     {
       label: "13-14 December 2018",
