@@ -54,6 +54,9 @@ $header-link-active-background: #003776 !default;
 
 .bcl-header__navbar .navbar-nav .nav-link {
   color: $gray-100;
+  &:first-child {
+    padding-left: 0;
+  }
 }
 
 .bcl-header__navbar .navbar-nav .nav-link:focus,
