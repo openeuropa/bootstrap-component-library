@@ -13,7 +13,7 @@ const getArgs = (data) => {
     responsive_columns: 3,
     more: true,
     display_icons: true,
-    title_tag: "h2",
+    title_tag: data.title_tag || "h2",
   };
 };
 
