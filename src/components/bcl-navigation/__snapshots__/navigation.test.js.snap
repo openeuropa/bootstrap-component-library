@@ -188,28 +188,33 @@ exports[`OE - navigation renders correctly with custom styles 1`] = `
 <jest>
   <nav
     class="nav nav-tabs"
+    role="tablist"
   >
     <a
       class="nav-link"
       href="/example.html"
+      role="tab"
     >
       I'm a link 1
     </a>
     <a
       class="nav-link"
       href="/example.html"
+      role="tab"
     >
       I'm a link 2
     </a>
     <a
       class="nav-link"
       href="/example.html"
+      role="tab"
     >
       I'm a link 3
     </a>
     <a
       class="nav-link active"
       href="/example.html"
+      role="tab"
     >
       I'm a link active
     </a>
@@ -217,6 +222,7 @@ exports[`OE - navigation renders correctly with custom styles 1`] = `
       aria-disabled="true"
       class="nav-link disabled"
       href="/example.html"
+      role="tab"
       tabindex="-1"
     >
       I'm a link disabled
@@ -234,6 +240,7 @@ exports[`OE - navigation renders correctly with custom styles 1`] = `
     <ul
       aria-labelledby="dropdown-1"
       class="dropdown-menu"
+      role="tab"
     >
       <li>
         <a
@@ -363,135 +370,59 @@ exports[`OE - navigation renders correctly with pills style on elements 1`] = `
 
 exports[`OE - navigation renders correctly with tabs 1`] = `
 <jest>
-  <ul
+  <nav
     class="nav nav-tabs"
     role="tablist"
   >
-    <li
-      class="nav-item"
-      role="presentation"
+    <a
+      aria-controls="first"
+      class="nav-link"
+      data-bs-toggle="tab"
+      href="#first"
+      id="first-tab"
+      role="tab"
     >
-      <a
-        aria-controls="first"
-        class="nav-link"
-        data-bs-toggle="tab"
-        href="#first"
-        id="first-tab"
-        role="button"
-      >
-        I'm a link
-      </a>
-    </li>
-    <li
-      class="nav-item"
-      role="presentation"
+      I'm a link
+    </a>
+    <button
+      aria-controls="second"
+      autocomplete="off"
+      class="nav-link"
+      data-bs-target="#second"
+      data-bs-toggle="tab"
+      id="second-tab"
+      role="tab"
+      type="button"
     >
-      <button
-        aria-controls="second"
-        autocomplete="off"
-        class="nav-link"
-        data-bs-target="#second"
-        data-bs-toggle="tab"
-        id="second-tab"
-        type="button"
-      >
-        I'm a button
-      </button>
-    </li>
-    <li
-      class="nav-item"
-      role="presentation"
+      I'm a button
+    </button>
+    <button
+      aria-controls="third"
+      aria-disabled="true"
+      autocomplete="off"
+      class="nav-link"
+      data-bs-target="#third"
+      data-bs-toggle="tab"
+      disabled="true"
+      id="third-tab"
+      role="tab"
+      type="button"
     >
-      <button
-        aria-controls="third"
-        aria-disabled="true"
-        autocomplete="off"
-        class="nav-link"
-        data-bs-target="#third"
-        data-bs-toggle="tab"
-        disabled="true"
-        id="third-tab"
-        type="button"
-      >
-        I'm a disabled button
-      </button>
-    </li>
-    <li
-      class="nav-item dropdown"
-      role="presentation"
+      I'm a disabled button
+    </button>
+    <button
+      aria-controls="fourth"
+      autocomplete="off"
+      class="nav-link active"
+      data-bs-target="#fourth"
+      data-bs-toggle="tab"
+      id="fourth-tab"
+      role="tab"
+      type="button"
     >
-      <a
-        aria-expanded="false"
-        class="nav-link dropdown-toggle"
-        data-bs-toggle="dropdown"
-        href="#"
-        id="dropdown-1"
-        role="button"
-      >
-        Dropdown Toggle
-      </a>
-      <ul
-        aria-labelledby="dropdown-1"
-        class="dropdown-menu"
-      >
-        <li>
-          <a
-            class="dropdown-item"
-            href="/example.html"
-          >
-            I'm a link
-          </a>
-        </li>
-        <li>
-          <button
-            class="dropdown-item"
-            type="button"
-          >
-            I'm a button
-          </button>
-        </li>
-        <li>
-          <hr
-            class="dropdown-divider"
-          />
-        </li>
-        <li>
-          <button
-            aria-disabled="true"
-            class="dropdown-item"
-            disabled="true"
-            type="button"
-          >
-            I'm a disabled button
-          </button>
-        </li>
-        <li>
-          <button
-            class="dropdown-item active"
-            type="button"
-          >
-            I'm a active button
-          </button>
-        </li>
-      </ul>
-    </li>
-    <li
-      class="nav-item"
-      role="presentation"
-    >
-      <button
-        aria-controls="fourth"
-        autocomplete="off"
-        class="nav-link active"
-        data-bs-target="#fourth"
-        data-bs-toggle="tab"
-        id="fourth-tab"
-        type="button"
-      >
-        I'm a active button
-      </button>
-    </li>
-  </ul>
+      I'm a active button
+    </button>
+  </nav>
   <div
     class="tab-content"
   >

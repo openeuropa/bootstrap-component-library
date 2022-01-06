@@ -2,6 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   tabs: true,
+  nav: true,
   tabs_content: true,
   items: [
     {
@@ -42,39 +43,6 @@ module.exports = {
         .setAttribute("autocomplete", "off")
         .setAttribute("data-bs-target", "#third")
         .setAttribute("aria-controls", "third"),
-    },
-    {
-      id: "dropdown-1",
-      link: true,
-      dropdown: true,
-      trigger: {
-        label: "Dropdown Toggle",
-        path: "#",
-        attributes: new drupalAttribute().addClass("nav-link"),
-      },
-      items: [
-        {
-          label: "I'm a link",
-          path: "/example.html",
-        },
-        {
-          label: "I'm a button",
-          button: true,
-        },
-        {
-          divider: true,
-        },
-        {
-          label: "I'm a disabled button",
-          button: true,
-          disabled: true,
-        },
-        {
-          label: "I'm a active button",
-          button: true,
-          active: true,
-        },
-      ],
     },
     {
       label: "I'm a active button",

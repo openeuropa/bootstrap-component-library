@@ -83,6 +83,7 @@ exports[`OE - Group landing renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="main-navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -113,6 +114,7 @@ exports[`OE - Group landing renders correctly 1`] = `
             >
               <a
                 aria-current="page"
+                aria-label="homepage"
                 class="nav-link active"
                 href="/example"
               >
@@ -235,6 +237,7 @@ exports[`OE - Group landing renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              aria-label="homepage"
               href="/example"
             >
               Home
@@ -551,13 +554,13 @@ exports[`OE - Group landing renders correctly 1`] = `
               autocomplete="off"
               class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
               data-bs-toggle="dropdown"
-              id="dropdown-1"
+              id="dropdown-content"
               type="button"
             >
               Create content
             </button>
             <ul
-              aria-labelledby="dropdown-1"
+              aria-labelledby="dropdown-content"
               class="dropdown-menu"
             >
               <li>
@@ -605,22 +608,26 @@ exports[`OE - Group landing renders correctly 1`] = `
       </div>
       <nav
         class="bcl__nav bg-gray n-mx-container nav nav-tabs"
+        role="tablist"
       >
         <a
           class="nav-link active"
           href="/example.html"
+          role="tab"
         >
           Home
         </a>
         <a
           class="nav-link"
           href="/example.html"
+          role="tab"
         >
           Members
         </a>
         <a
           class="nav-link"
           href="/example.html"
+          role="tab"
         >
           Content
         </a>
@@ -637,6 +644,7 @@ exports[`OE - Group landing renders correctly 1`] = `
         <ul
           aria-labelledby="dropdown-1"
           class="dropdown-menu"
+          role="tab"
         >
           <li>
             <a
@@ -678,12 +686,6 @@ exports[`OE - Group landing renders correctly 1`] = `
             </button>
           </li>
         </ul>
-        <a
-          class="nav-link"
-          href="/example.html"
-        >
-          Link
-        </a>
       </nav>
       <a
         aria-controls="banner-description"
@@ -908,6 +910,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                 >
                   <div>
                     <img
+                      alt="alt-img-1"
                       class="rounded-circle me-3-5"
                       src="https://picsum.photos/50/50?random=1"
                     />
@@ -924,6 +927,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                       </a>
                        commented on the article 
                       <a
+                        aria-label="read more about spaceX 1"
                         class="text-underline-hover"
                         href="#"
                       >
@@ -949,6 +953,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                 >
                   <div>
                     <img
+                      alt="alt-img-2"
                       class="rounded-circle me-3-5"
                       src="https://picsum.photos/50/50?random=2"
                     />
@@ -965,6 +970,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                       </a>
                        commented on the article 
                       <a
+                        aria-label="read more about spaceX 2"
                         class="text-underline-hover"
                         href="#"
                       >
@@ -990,6 +996,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                 >
                   <div>
                     <img
+                      alt="alt-img-3"
                       class="rounded-circle me-3-5"
                       src="https://picsum.photos/50/50?random=3"
                     />
@@ -1006,6 +1013,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                       </a>
                        commented on the article 
                       <a
+                        aria-label="read more about spaceX 3"
                         class="text-underline-hover"
                         href="#"
                       >
@@ -1031,6 +1039,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                 >
                   <div>
                     <img
+                      alt="alt-img-4"
                       class="rounded-circle me-3-5"
                       src="https://picsum.photos/50/50?random=4"
                     />
@@ -1047,6 +1056,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                       </a>
                        published the article 
                       <a
+                        aria-label="read more about spaceX 4"
                         class="text-underline-hover"
                         href="/example.html"
                       >
@@ -1079,6 +1089,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                 >
                   <div>
                     <img
+                      alt="alt-img-5"
                       class="rounded-circle me-3-5"
                       src="https://picsum.photos/50/50?random=5"
                     />
@@ -1095,6 +1106,7 @@ exports[`OE - Group landing renders correctly 1`] = `
                       </a>
                        commented on the article 
                       <a
+                        aria-label="read more about spaceX 5"
                         class="text-underline-hover"
                         href="/example.html"
                       >
@@ -1804,6 +1816,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="main-navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -1834,6 +1847,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
             >
               <a
                 aria-current="page"
+                aria-label="homepage"
                 class="nav-link active"
                 href="/example"
               >
@@ -1956,6 +1970,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              aria-label="homepage"
               href="/example"
             >
               Home
@@ -2261,13 +2276,13 @@ exports[`OE - Group listing Content renders correctly 1`] = `
               autocomplete="off"
               class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
               data-bs-toggle="dropdown"
-              id="dropdown-1"
+              id="dropdown-content"
               type="button"
             >
               Create content
             </button>
             <ul
-              aria-labelledby="dropdown-1"
+              aria-labelledby="dropdown-content"
               class="dropdown-menu"
             >
               <li>
@@ -2313,23 +2328,28 @@ exports[`OE - Group listing Content renders correctly 1`] = `
           </div>
         </div>
         <nav
+          aria-label="content-navigation"
           class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
+          role="tablist"
         >
           <a
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Home
           </a>
           <a
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Members
           </a>
           <a
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Content
           </a>
@@ -2346,6 +2366,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
           <ul
             aria-labelledby="dropdown-1"
             class="dropdown-menu"
+            role="tab"
           >
             <li>
               <a
@@ -2388,8 +2409,10 @@ exports[`OE - Group listing Content renders correctly 1`] = `
             </li>
           </ul>
           <a
+            aria-label="other-link"
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Link
           </a>
@@ -2406,7 +2429,6 @@ exports[`OE - Group listing Content renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
             class="bcl-offcanvas offcanvas-start offcanvas"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -2417,7 +2439,6 @@ exports[`OE - Group listing Content renders correctly 1`] = `
             >
               <h4
                 class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
               >
                 Filter options
               </h4>
@@ -2439,11 +2460,13 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                 >
                   <label
                     class="form-label"
+                    for="content types"
                   >
                     Content types
                   </label>
                   <select
                     class="form-select"
+                    id="content types"
                   >
                     <option
                       value="1"
@@ -2482,6 +2505,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                     Filter A
                   </label>
                   <select
+                    aria-label="multiselect"
                     class="multi-select"
                     multiple="true"
                   >
@@ -2530,10 +2554,12 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                       <input
                         checked="true"
                         class="form-check-input"
+                        id="checked-filter"
                         type="checkbox"
                       />
                       <label
                         class="form-check-label"
+                        for="checked-filter"
                       >
                         Checked checkbox
                       </label>
@@ -2543,40 +2569,48 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                     >
                       <input
                         class="form-check-input"
+                        id="default-filter"
                         type="checkbox"
                       />
                       <label
                         class="form-check-label"
+                        for="default-filter"
                       >
                         Default checkbox
                       </label>
                     </div>
                   </div>
                 </fieldset>
-                <fieldset>
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (from)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <fieldset
+                <div
                   class="mb-3"
                 >
-                  <legend
-                    class="col-form-label"
+                  <label
+                    class="form-label"
+                    for="creation-date-from"
                   >
-                    Creation date (to)
-                  </legend>
+                    Creation date (from)
+                  </label>
                   <input
                     class="mb-2 form-control"
+                    id="creation-date-from"
                     type="date"
                   />
-                </fieldset>
+                </div>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                    for="creation-date-to"
+                  >
+                    Creation date (to)
+                  </label>
+                  <input
+                    class="mb-2 form-control"
+                    id="creation-date-to"
+                    type="date"
+                  />
+                </div>
                 <div
                   class="mt-4 d-grid d-md-block"
                 >
@@ -2688,6 +2722,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
+                  aria-label="sort-select"
                   class="ms-md-2 mb-2 form-select"
                 >
                   <option
@@ -3365,6 +3400,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="main-navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -3395,6 +3431,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
             >
               <a
                 aria-current="page"
+                aria-label="homepage"
                 class="nav-link active"
                 href="/example"
               >
@@ -3517,6 +3554,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              aria-label="homepage"
               href="/example"
             >
               Home
@@ -3822,13 +3860,13 @@ exports[`OE - Group listing Member renders correctly 1`] = `
               autocomplete="off"
               class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
               data-bs-toggle="dropdown"
-              id="dropdown-1"
+              id="dropdown-content"
               type="button"
             >
               Create content
             </button>
             <ul
-              aria-labelledby="dropdown-1"
+              aria-labelledby="dropdown-content"
               class="dropdown-menu"
             >
               <li>
@@ -3874,23 +3912,28 @@ exports[`OE - Group listing Member renders correctly 1`] = `
           </div>
         </div>
         <nav
+          aria-label="content-navigation"
           class="bcl__nav bg-gray mb-3-5 mb-lg-5 n-mx-container nav nav-tabs"
+          role="tablist"
         >
           <a
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Home
           </a>
           <a
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Members
           </a>
           <a
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Content
           </a>
@@ -3907,6 +3950,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
           <ul
             aria-labelledby="dropdown-1"
             class="dropdown-menu"
+            role="tab"
           >
             <li>
               <a
@@ -3949,8 +3993,10 @@ exports[`OE - Group listing Member renders correctly 1`] = `
             </li>
           </ul>
           <a
+            aria-label="other-link"
             class="nav-link"
             href="/example.html"
+            role="tab"
           >
             Link
           </a>
@@ -3967,7 +4013,6 @@ exports[`OE - Group listing Member renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
             class="bcl-offcanvas offcanvas-start offcanvas"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -3978,7 +4023,6 @@ exports[`OE - Group listing Member renders correctly 1`] = `
             >
               <h4
                 class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
               >
                 Filter options
               </h4>
@@ -4142,6 +4186,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
+                  aria-label="sort-select"
                   class="ms-md-2 mb-2 form-select"
                 >
                   <option
@@ -4985,6 +5030,7 @@ exports[`OE - Group listing renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="main-navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -5015,6 +5061,7 @@ exports[`OE - Group listing renders correctly 1`] = `
             >
               <a
                 aria-current="page"
+                aria-label="homepage"
                 class="nav-link active"
                 href="/example"
               >
@@ -5137,6 +5184,7 @@ exports[`OE - Group listing renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              aria-label="homepage"
               href="/example"
             >
               Home
@@ -5430,7 +5478,6 @@ exports[`OE - Group listing renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
             class="bcl-offcanvas offcanvas-start offcanvas"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -5441,7 +5488,6 @@ exports[`OE - Group listing renders correctly 1`] = `
             >
               <h4
                 class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
               >
                 Filter options
               </h4>
@@ -5478,10 +5524,12 @@ exports[`OE - Group listing renders correctly 1`] = `
                         <input
                           checked="true"
                           class="form-check-input"
+                          id="public-groups"
                           type="checkbox"
                         />
                         <label
                           class="form-check-label"
+                          for="public-groups"
                         >
                           Public groups
                         </label>
@@ -5496,10 +5544,12 @@ exports[`OE - Group listing renders correctly 1`] = `
                         <input
                           checked="true"
                           class="form-check-input"
+                          id="restricted-groups"
                           type="checkbox"
                         />
                         <label
                           class="form-check-label"
+                          for="restricted-groups"
                         >
                           Restricted groups
                         </label>
@@ -5510,40 +5560,48 @@ exports[`OE - Group listing renders correctly 1`] = `
                     >
                       <input
                         class="form-check-input"
+                        id="private-groups"
                         type="checkbox"
                       />
                       <label
                         class="form-check-label"
+                        for="private-groups"
                       >
                         Private groups
                       </label>
                     </div>
                   </div>
                 </fieldset>
-                <fieldset>
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (from)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <fieldset
+                <div
                   class="mb-3"
                 >
-                  <legend
-                    class="col-form-label"
+                  <label
+                    class="form-label"
+                    for="creation-date-from"
                   >
-                    Creation date (to)
-                  </legend>
+                    Creation date (from)
+                  </label>
                   <input
                     class="mb-2 form-control"
+                    id="creation-date-from"
                     type="date"
                   />
-                </fieldset>
+                </div>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                    for="creation-date-to"
+                  >
+                    Creation date (to)
+                  </label>
+                  <input
+                    class="mb-2 form-control"
+                    id="creation-date-to"
+                    type="date"
+                  />
+                </div>
                 <div
                   class="mt-4 d-grid d-md-block"
                 >
@@ -5655,6 +5713,7 @@ exports[`OE - Group listing renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
+                  aria-label="sort-select"
                   class="ms-md-2 mb-2 form-select"
                 >
                   <option
