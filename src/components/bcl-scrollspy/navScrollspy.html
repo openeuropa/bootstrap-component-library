@@ -5,11 +5,12 @@
     >
       <a class="navbar-brand" href="#">Navbar</a>
       <nav
-        class="nav nav-pills flex-column bcl-inpage-navigation"
+        class="nav nav-pills flex-column bcl-inpage-navigation bg-white"
         id="bcl-inpage-navigation"
+        aria-label="navigation"
       >
         <a class="nav-link" href="#item-1">Funding</a>
-        <nav class="nav nav-pills flex-column">
+        <nav class="nav nav-pills flex-column" aria-label="funding">
           <a class="nav-link ms-3 my-1" href="#item-1-1"
             >Research and innovation</a
           >
@@ -17,7 +18,10 @@
         </nav>
         <a class="nav-link" href="#item-2">Food, Farming, Fisheries</a>
         <a class="nav-link" href="#item-3">EU regional and urban development</a>
-        <nav class="nav nav-pills flex-column">
+        <nav
+          class="nav nav-pills flex-column"
+          aria-label="region and urban navigation"
+        >
           <a class="nav-link ms-3 my-1" href="#item-3-1"
             >Financial support for projects</a
           >

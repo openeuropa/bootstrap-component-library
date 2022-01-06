@@ -8,11 +8,14 @@ module.exports = {
       logos: [
         {
           src: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
+          alt: "project logo",
         },
       ],
       label: "Project name",
     },
-    attributes: new drupalAttribute().addClass(["w-100"]),
+    attributes: new drupalAttribute()
+      .addClass(["w-100"])
+      .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     navigation: {
       items: [
@@ -89,6 +92,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
       submit: {
         variant: "light",
+        assistive_text: "search",
         icon: {
           name: "search",
           size: "xs",

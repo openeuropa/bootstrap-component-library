@@ -4,6 +4,7 @@ module.exports = {
   equal_height: true,
   display_icons: true,
   title: "Fact and figures block",
+  title_tag: "h3",
   items: [
     {
       icon: {

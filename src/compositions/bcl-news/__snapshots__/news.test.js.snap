@@ -7,6 +7,7 @@ exports[`OE - News full page renders correctly 1`] = `
   >
     <!-- navbar_settings -->
     <nav
+      aria-label="Top Navigation"
       class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
     >
       <div
@@ -17,10 +18,12 @@ exports[`OE - News full page renders correctly 1`] = `
           href=""
         >
           <img
+            alt="desktop project logo"
             class="d-none d-lg-block"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
           />
           <img
+            alt="mobile project logo"
             class="d-lg-none"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
@@ -140,6 +143,7 @@ exports[`OE - News full page renders correctly 1`] = `
         class="container"
       >
         <img
+          alt="project logo"
           class="d-none d-lg-inline-block"
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
@@ -272,6 +276,11 @@ exports[`OE - News full page renders correctly 1`] = `
               class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
               type="button"
             >
+              <span
+                class="visually-hidden"
+              >
+                search
+              </span>
               <svg
                 class="bi icon--fluid"
               >
@@ -904,6 +913,7 @@ exports[`OE - News listing renders correctly 1`] = `
   >
     <!-- navbar_settings -->
     <nav
+      aria-label="Top Navigation"
       class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
     >
       <div
@@ -914,10 +924,12 @@ exports[`OE - News listing renders correctly 1`] = `
           href=""
         >
           <img
+            alt="desktop project logo"
             class="d-none d-lg-block"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
           />
           <img
+            alt="mobile project logo"
             class="d-lg-none"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
@@ -1037,6 +1049,7 @@ exports[`OE - News listing renders correctly 1`] = `
         class="container"
       >
         <img
+          alt="project logo"
           class="d-none d-lg-inline-block"
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
@@ -1169,6 +1182,11 @@ exports[`OE - News listing renders correctly 1`] = `
               class="border-start-0 rounded-0 rounded-end d-flex btn btn-light btn-md"
               type="button"
             >
+              <span
+                class="visually-hidden"
+              >
+                search
+              </span>
               <svg
                 class="bi icon--fluid"
               >
@@ -1489,7 +1507,6 @@ exports[`OE - News listing renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            aria-labelledby="offcanvasExampleLabel"
             class="bcl-offcanvas offcanvas-start offcanvas"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -1500,7 +1517,6 @@ exports[`OE - News listing renders correctly 1`] = `
             >
               <h4
                 class="offcanvas-title mb-lg-4"
-                id="offcanvasExampleLabel"
               >
                 Filter options
               </h4>
@@ -1517,30 +1533,28 @@ exports[`OE - News listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
-                <fieldset>
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (from)
-                  </legend>
-                  <input
-                    class="mb-2 form-control"
-                    type="date"
-                  />
-                </fieldset>
-                <fieldset
-                  class="mb-3"
+                <label
+                  class="form-label"
+                  for="creation-date-from"
                 >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Creation date (to)
-                  </legend>
-                  <input
-                    class="form-control"
-                    type="date"
-                  />
-                </fieldset>
+                  Creation date (from)
+                </label>
+                <input
+                  class="mb-2 form-control"
+                  id="creation-date-from"
+                  type="date"
+                />
+                <label
+                  class="form-label"
+                  for="creation-date-to"
+                >
+                  Creation date (to)
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="creation-date-to"
+                  type="date"
+                />
                 <div
                   class="mt-4 d-grid gap-4 d-md-block"
                 >
@@ -1664,6 +1678,7 @@ exports[`OE - News listing renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
+                  aria-label="sort-by-select"
                   class="ms-md-2 mb-2 form-select"
                 >
                   <option

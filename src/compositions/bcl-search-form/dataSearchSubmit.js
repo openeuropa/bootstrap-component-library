@@ -3,6 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   submit: {
     attributes: new drupalAttribute().addClass(["bcl-search-form__submit"]),
+    assistive_text: "Search",
     icon: {
       name: "search",
       size: "xs",
