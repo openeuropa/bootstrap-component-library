@@ -4,9 +4,9 @@ module.exports = {
   activities: [
     {
       image:
-        "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=1'>",
+        "<img class='rounded-circle me-3-5' alt='recent-image-1' src='https://picsum.photos/50/50?random=1'>",
       content:
-        "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='#' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+        "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='#' aria-label='spacex-1' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
           icon: {
@@ -25,9 +25,9 @@ module.exports = {
     },
     {
       image:
-        "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=2'>",
+        "<img class='rounded-circle me-3-5' alt='recent-image-2' src='https://picsum.photos/50/50?random=2'>",
       content:
-        "<a href='/example.html' class='fw-bold text-underline-hover'>Steve Di Marzio</a> published the article <a href='/example.html' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='/example.html' class='text-underline-hover'>News</a>",
+        "<a href='/example.html' class='fw-bold text-underline-hover'>Steve Di Marzio</a> published the article <a href='/example.html' aria-label='spacex-2' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='/example.html' class='text-underline-hover'>News</a>",
       meta: [
         {
           icon: {
@@ -46,9 +46,9 @@ module.exports = {
     },
     {
       image:
-        "<img class='rounded-circle me-3-5' src='https://picsum.photos/50/50?random=3'>",
+        "<img class='rounded-circle me-3-5' alt='recent-image-3' src='https://picsum.photos/50/50?random=3'>",
       content:
-        "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='/example.html' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+        "<a href='/example.html' class='fw-bold text-underline-hover'>Adjur Tichar</a> commented on the article <a href='/example.html' aria-label='spacex-3' class='text-underline-hover'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
           icon: {
