@@ -11,7 +11,6 @@ module.exports = {
       label: "Filter options",
       heading: 4,
       extra_classes: "mb-lg-4",
-      id: "offcanvasExampleLabel",
     },
     search_form: {
       attributes: new drupalAttribute()
@@ -31,39 +30,37 @@ module.exports = {
             label: "Public groups",
             wrapper_classes: "mb-3",
             checked: true,
+            id: "public-groups",
           },
           {
             input_type: "checkbox",
             label: "Restricted groups",
             wrapper_classes: "mb-3",
             checked: true,
+            id: "restricted-groups",
           },
           {
             input_type: "checkbox",
             label: "Private groups",
+            id: "private-groups",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (from)",
-            legend_classes: "col-form-label",
-          },
-          {
+            label: "Creation date (from)",
             input_type: "date",
             attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date-from",
+            wrapper_classes: "mb-3",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "Creation date (to)",
-            fieldset_classes: "mb-3",
-            legend_classes: "col-form-label",
-          },
-          {
             input_type: "date",
+            label: "Creation date (to)",
+            wrapper_classes: "mb-3",
             attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date-to",
           },
         ],
       ],

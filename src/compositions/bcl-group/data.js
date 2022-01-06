@@ -6,7 +6,7 @@ module.exports = {
     actions: [
       {
         type: "dropdown",
-        id: "dropdown-1",
+        id: "dropdown-content",
         remove_wrapper: true,
         trigger: {
           label: "Create content",
@@ -52,13 +52,9 @@ module.exports = {
   navigation: {
     nav: true,
     tabs: true,
-    attributes: new drupalAttribute().addClass([
-      "bcl__nav",
-      "bg-gray",
-      "mb-3-5",
-      "mb-lg-5",
-      "n-mx-container",
-    ]),
+    attributes: new drupalAttribute()
+      .addClass(["bcl__nav", "bg-gray", "mb-3-5", "mb-lg-5", "n-mx-container"])
+      .setAttribute("aria-label", "content-navigation"),
     items: [
       {
         label: "Home",
@@ -108,6 +104,10 @@ module.exports = {
       {
         label: "Link",
         path: "/example.html",
+        attributes: new drupalAttribute().setAttribute(
+          "aria-label",
+          "other-link"
+        ),
       },
     ],
   },
@@ -180,6 +180,7 @@ module.exports = {
   sort_select: {
     label: "Sort&nbsp;by",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),
+    aria_label: "sort-select",
     options: [
       { value: 1, label: "a select option" },
       { value: 2, label: "another select option" },
