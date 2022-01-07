@@ -23,7 +23,7 @@ $utilities: map-merge(
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "font-weight"), "values"),
+              map-get(map-get($utilities, "font-size"), "values"),
               (
                 sm: $font-size-sm,
                 // Create fs-sm utility class
