@@ -113,6 +113,14 @@ module.exports = {
     },
     {
       from: [
+        path.resolve(nodeModules, "@ecl/resources-ec-logo/*.svg"),
+        path.resolve(nodeModules, "@ecl/resources-eu-logo/**/*.svg"),
+      ],
+      to: path.resolve(outputFolder, "logos"),
+      options: { up: true },
+    },
+    {
+      from: [
         `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/*.twig`,
       ],
       to: path.resolve(outputFolder, "templates"),
