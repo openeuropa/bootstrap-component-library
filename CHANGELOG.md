@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.0 (2021-12-22)
+
+#### :bug: Bug Fix
+
+* [#209](https://github.com/openeuropa/bootstrap-component-library/pull/209) fix(joinup): Fix custom utilities - ISAICP-6604 ([@theosuja](https://github.com/theosuja))
+
+#### :nail_care: Enhancement
+
+* [#205](https://github.com/openeuropa/bootstrap-component-library/pull/205) feat(navbar): Navbar margins - OEL-963 ([@tibi2303](https://github.com/tibi2303))
+* [#206](https://github.com/openeuropa/bootstrap-component-library/pull/206) feat(footer): EU footer report - OEL-928 ([@tibi2303](https://github.com/tibi2303))
+* [#190](https://github.com/openeuropa/bootstrap-component-library/pull/190) feat(accessibility): Navigation tabs report - OEL-921 ([@tibi2303](https://github.com/tibi2303))
+* [#203](https://github.com/openeuropa/bootstrap-component-library/pull/203) feat(accessibility): Landing page, timeline report report - OEL-952 ([@tibi2303](https://github.com/tibi2303))
+* [#201](https://github.com/openeuropa/bootstrap-component-library/pull/201) feat(accessibility): Recent activities, search, news-listing report - OEL-937 ([@tibi2303](https://github.com/tibi2303))
+* [#199](https://github.com/openeuropa/bootstrap-component-library/pull/199) feat(accessibility): Group report - OEL-929 ([@tibi2303](https://github.com/tibi2303))
+* [#202](https://github.com/openeuropa/bootstrap-component-library/pull/202) feat(accessibility): Facts and figures report - OEL-929 ([@tibi2303](https://github.com/tibi2303))
+* [#200](https://github.com/openeuropa/bootstrap-component-library/pull/200) feat(accessibility): Users report - OEL-941 ([@tibi2303](https://github.com/tibi2303))
+* [#198](https://github.com/openeuropa/bootstrap-component-library/pull/198) feat(accessibility): Featured media report - OEL-947 ([@tibi2303](https://github.com/tibi2303))
+* [#197](https://github.com/openeuropa/bootstrap-component-library/pull/197) feat(accessibility): Search-form report - OEL-940 ([@tibi2303](https://github.com/tibi2303))
+* [#191](https://github.com/openeuropa/bootstrap-component-library/pull/191) feat(accessibility): Pagination icons report - OEL-922 ([@tibi2303](https://github.com/tibi2303))
+* [#195](https://github.com/openeuropa/bootstrap-component-library/pull/195) feat(accessibility): Add new brand-darker variable to JOINUP for btn and badge. - ISAICP-6870 ([@theosuja](https://github.com/theosuja))
+* [#194](https://github.com/openeuropa/bootstrap-component-library/pull/194) feat(accessibility): Toasts report - OEL-925 ([@tibi2303](https://github.com/tibi2303))
+* [#193](https://github.com/openeuropa/bootstrap-component-library/pull/193) feat(accessibility): Scrollspy report - OEL-924 ([@tibi2303](https://github.com/tibi2303))
+* [#192](https://github.com/openeuropa/bootstrap-component-library/pull/192) feat(accessibility): Progress report - OEL-923 ([@tibi2303](https://github.com/tibi2303))
+* [#196](https://github.com/openeuropa/bootstrap-component-library/pull/196) feat(accessibility): Header report - OEL-933 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#204](https://github.com/openeuropa/bootstrap-component-library/pull/204) chore(deps): Updates 06-01-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Theo SUJA ([@theosuja](https://github.com/theosuja))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.17.0 (2021-12-22)
 
 #### :rocket: New Feature
