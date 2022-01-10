@@ -121,12 +121,7 @@ module.exports = {
       options: { up: true },
     },
     {
-      from: [`${nodeModules}/@ecl/resources-ec-logo/*.svg`],
-      to: path.resolve(outputFolder, "logo/ec/positive"),
-      options: { up: true },
-    },
-    {
-      from: [`${nodeModules}/@ecl/resources-ec-logo/negative/*.svg`],
+      from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logo/ec"),
       options: { up: 6 },
     },
