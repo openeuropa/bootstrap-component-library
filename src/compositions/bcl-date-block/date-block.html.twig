@@ -22,7 +22,7 @@
   'justify-content-center',
   'bg-date',
   'text-light',
-  'pt-3',
+  'pt-2',
   'rounded-top',
   'mw-date',
 ] %}
@@ -38,9 +38,8 @@
 {% endif %}
 
 <time {{ attributes }}>
-  <span>{{ _day }}</span>
-  <span class="pb-3 text-uppercase">{{ _month }}</span>
-  <span class="bg-light w-100 text-center py-2 text-dark rounded-bottom mb-n1">{{ _year }}</span>
+  <span class="py-4 bg-white border border-bottom-0 w-100 fs-5 fw-medium text-dark text-center text-uppercase">{{ _day }} {{ _month }}</span>
+  <span class="bg-light border w-100 text-center fs-5 text-dark rounded-bottom mb-n1">{{ _year }}</span>
 </time>
 
 {% endspaceless %}
