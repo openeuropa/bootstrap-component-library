@@ -122,6 +122,27 @@ module.exports = {
     },
     {
       from: [
+        `${nodeModules}/@ecl/resources-ec-logo/*.svg`,
+      ],
+      to: path.resolve(outputFolder, "logos/ec/positive"),
+      options: { up: true },
+    },
+    {
+      from: [
+        `${nodeModules}/@ecl/resources-ec-logo/negative/*.svg`,
+      ],
+      to: path.resolve(outputFolder, "logos/ec"),
+      options: { up: 6 },
+    },
+    {
+      from: [
+        `${nodeModules}/@ecl/resources-eu-logo/**/*.svg`,
+      ],
+      to: path.resolve(outputFolder, "logos/eu"),
+      options: { up: 6 },
+    },
+    {
+      from: [
         `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/*.twig`,
       ],
       to: path.resolve(outputFolder, "templates"),
