@@ -2,13 +2,9 @@ import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data-ec";
 import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
-import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
-import ucpknLogo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
-
-headerDataUCPKN.project_logo.path = ucpknLogo;
 
 const getArgs = (data) => {
   return {
