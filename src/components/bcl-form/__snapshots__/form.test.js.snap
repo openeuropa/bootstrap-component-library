@@ -365,7 +365,6 @@ exports[`OE - Form renders correctly when disabled 1`] = `
           Disabled input
         </label>
         <input
-          aria-describedby="helperText"
           class="form-control"
           id="disabledTextInput"
           placeholder="Disabled input"
@@ -374,7 +373,6 @@ exports[`OE - Form renders correctly when disabled 1`] = `
         />
         <div
           class="form-text"
-          id="helperText"
         >
           Helper text for the form input
         </div>
@@ -383,6 +381,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
         class="mb-3"
       >
         <select
+          aria-label="Disabled select"
           class="form-select"
           id="disabledSelect"
         >
