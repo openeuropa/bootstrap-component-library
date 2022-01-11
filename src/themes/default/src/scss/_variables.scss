@@ -2,7 +2,14 @@ $enable-negative-margins: true;
 $negative-spacers: negativify-map($spacers);
 
 // Colors variables
-$light: #f0f0f0;
+$primary: #0a58ca;
+$secondary: #801f4f;
+$info: #087990;
+$danger: #b02a37;
+$success: #198754;
+$light: #f8f9fa;
+$dark: #212529;
+$text-muted: #495057;
 $lighter: $gray-100;
 $date: #1698af;
 $blue-50: tint-color($blue, 90%);
@@ -15,6 +22,12 @@ $cyan-50: tint-color($cyan, 90%);
 $theme-colors: map-merge(
   $theme-colors,
   (
+    "primary": $primary,
+    "secondary": $secondary,
+    "info": $info,
+    "danger": $danger,
+    "success": $success,
+    "dark": $dark,
     "light": $light,
   )
 );
@@ -81,6 +94,12 @@ $form-font-size: $font-size-base !default;
 $form-font-size-lg: $font-size-base + 0.25rem !default;
 $form-select-height: 3rem !default;
 $form-select-height-md: 2.375rem !default;
+
+// Links
+$link-color: $primary;
+
+//Nav
+$nav-link-color: $primary;
 
 // Navbar
 $navbar-nav-link-padding-x: 0.75rem;
