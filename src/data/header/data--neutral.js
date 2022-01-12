@@ -41,10 +41,13 @@ module.exports = {
           label: "<span class='d-block d-lg-inline-block'>English</span>",
           path: "#",
           icon_position: "before",
+          remove_icon_spacers: true,
           icon: {
             name: "chat-left-dots-fill",
             size: "xs",
             path: "/icons.svg",
+            attributes: new drupalAttribute()
+              .addClass("me-lg-2-5"),
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -55,10 +58,13 @@ module.exports = {
           label: "<span class='d-block d-lg-inline-block'>Log in</span>",
           path: "#",
           icon_position: "before",
+          remove_icon_spacers: true,
           icon: {
             name: "person-fill",
             size: "xs",
             path: "/icons.svg",
+            attributes: new drupalAttribute()
+              .addClass("me-lg-2-5"),
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
