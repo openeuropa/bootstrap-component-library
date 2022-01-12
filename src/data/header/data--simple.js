@@ -32,8 +32,7 @@ module.exports = {
             name: "chat-left-dots-fill",
             size: "xs",
             path: "/icons.svg",
-            attributes: new drupalAttribute()
-              .addClass("me-lg-2-5"),
+            attributes: new drupalAttribute().addClass("me-lg-2-5"),
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
@@ -49,8 +48,7 @@ module.exports = {
             name: "person-fill",
             size: "xs",
             path: "/icons.svg",
-            attributes: new drupalAttribute()
-              .addClass("me-lg-2-5"),
+            attributes: new drupalAttribute().addClass("me-lg-2-5"),
           },
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
