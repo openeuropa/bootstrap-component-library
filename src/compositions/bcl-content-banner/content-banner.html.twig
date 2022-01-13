@@ -21,7 +21,6 @@
 
 {% set _css_classes = [
   'bcl-content-banner',
-  'vw-100',
   'pt-lg-4-75',
 ] %}
 
@@ -69,7 +68,7 @@
 {% else %}
   {% set _card = _card|merge({
     horizontal_grid: {
-      right_col_classes: 'col-md-8 col-lg-9 col-xxl-8 px-sm-0 px-md-2-5',
+      right_col_classes: 'col-md-8 col-lg-9 col-xxl-8',
     },
   }) %}
 {% endif %}
