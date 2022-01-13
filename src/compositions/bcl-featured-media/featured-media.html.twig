@@ -57,6 +57,8 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
+
 {% if _with_text %}
 <div class="{{ _wrapper_classes }}">
 
