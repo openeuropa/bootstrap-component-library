@@ -1,9 +1,12 @@
+// Custom theme colors
+@import "@openeuropa/bcl-theme-joinup/src/scss/base/colors";
+
 // Configuration
 @import "@openeuropa/bcl-bootstrap/scss/functions";
 @import "@openeuropa/bcl-bootstrap/scss/variables";
 
 // Override Bootstrap variables
-@import "@openeuropa/bcl-theme-default/src/scss/variables";
+@import "@openeuropa/bcl-theme-default/src/scss/base/variables";
 @import "@openeuropa/bcl-theme-joinup/src/scss/base/variables";
 
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
@@ -51,7 +54,7 @@
 
 // Helpers
 @import "@openeuropa/bcl-bootstrap/scss/helpers";
-@import "@openeuropa/bcl-theme-default/src/scss/utilities";
+@import "@openeuropa/bcl-theme-default/src/scss/base/utilities";
 
 // Utilities
 @import "@openeuropa/bcl-bootstrap/scss/utilities/api";
