@@ -6,6 +6,7 @@ module.exports = {
     title: "Demo banner title",
     content_classes: "border-secondary",
     image: "https://picsum.photos/id/154/1200/800",
+    full_width: true,
     attributes: new drupalAttribute().addClass([
       "bg-light",
       "text-dark",
