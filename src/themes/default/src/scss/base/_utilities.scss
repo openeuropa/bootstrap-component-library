@@ -45,6 +45,20 @@ $utilities: map-merge(
           responsive: true,
         )
       ),
+    // Create medium font weight class
+    "font-weight":
+      map-merge(
+        map-get($utilities, "font-weight"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "font-weight"), "values"),
+              (
+                medium: 500,
+              )
+            ),
+        )
+      ),
   )
 );
 
