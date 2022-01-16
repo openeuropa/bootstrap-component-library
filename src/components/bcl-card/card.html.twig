@@ -128,6 +128,14 @@
   {% endif %}
   {% if _image.rounded is not empty %}
     {% set _img_class = _img_class ~ ' rounded-' ~ _image.rounded %}
+  {% elseif _horizontal %}
+    {% if attributes.hasClass('border-0') %}
+      {% set _img_class = _img_class ~ ' rounded-1' %}
+    {% else %}
+      {% set _img_class = _img_class ~ ' rounded-0 rounded-start' %}
+    {% endif %}
+  {% elseif _card_header is not empty %}
+    {% set _img_class = _img_class ~ ' rounded-0' %}
   {% endif %}
   {% if _image.classes is not empty %}
     {% set _img_class = _img_class ~ " " ~ _image.classes %}
