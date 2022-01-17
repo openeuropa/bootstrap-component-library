@@ -3,7 +3,18 @@ import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 export const parameters = {
   a11y: {
     element: "#root",
-    config: {},
+    config: {
+      rules: [
+        {
+          id: "aria-input-field-name",
+          selector: ".ss-list",
+        },
+        {
+          id: "landmark-unique",
+          selector: ".shadow-sm",
+        },
+      ],
+    },
     options: {
       checks: { "color-contrast": { options: { noScroll: true } } },
       restoreScroll: true,

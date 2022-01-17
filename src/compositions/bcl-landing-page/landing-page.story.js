@@ -30,6 +30,15 @@ export default {
         url: "https://www.figma.com/file/N0nAH22yz5vfDL6yx8yemr/UCPKN-Mockup?node-id=1024%3A125486",
       },
     ],
+    a11y: {
+      config: {
+        rules: [
+          { id: "frame-tested", enabled: false },
+          { id: "color-contrast", enabled: false },
+          { id: "heading-order", enabled: false },
+        ],
+      },
+    },
   },
 };
 
