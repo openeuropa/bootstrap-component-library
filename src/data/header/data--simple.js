@@ -78,7 +78,6 @@ module.exports = {
           "border-start-0",
           "rounded-0",
           "rounded-end",
-          "d-flex",
         ]),
       },
       items: [
