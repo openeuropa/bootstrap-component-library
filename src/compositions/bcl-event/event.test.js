@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import dataListing from "@openeuropa/bcl-event/data/dataListing.js";
+import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
 import header from "@openeuropa/bcl-data-header/data";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import footer from "@openeuropa/bcl-data-footer/data";

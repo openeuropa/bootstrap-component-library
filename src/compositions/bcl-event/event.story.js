@@ -3,7 +3,7 @@ import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import sidebar from "@openeuropa/bcl-event/data/event-sidebar.js";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
-import dataListing from "@openeuropa/bcl-event/data/dataListing.js";
+import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import event from "@openeuropa/bcl-event/event.html.twig";

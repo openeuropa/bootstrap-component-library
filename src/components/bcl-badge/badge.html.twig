@@ -33,7 +33,7 @@
   {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
 {% endif %}
 
-{% if _background in ['light', 'warning', 'info'] %}
+{% if _background in ['light', 'warning'] %}
   {% set _classes = _classes|merge(['text-dark']) %}
 {% endif %}
 
