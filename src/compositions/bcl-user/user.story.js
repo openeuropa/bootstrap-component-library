@@ -47,6 +47,15 @@ export default {
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
+    a11y: {
+      config: {
+        rules: [
+          { id: "color-contrast", enabled: false },
+          { id: "aria-required-parent", enabled: false },
+          { id: "nested-interactive", enabled: false },
+        ],
+      },
+    },
   },
 };
 

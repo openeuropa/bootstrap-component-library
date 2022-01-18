@@ -79,6 +79,15 @@ export default {
   title: "Content types/Page",
   decorators: [withDesign, initScrollspy],
   parameters: {
+    a11y: {
+      config: {
+        rules: [
+          { id: "heading-order", enabled: false },
+          { id: "color-contrast", enabled: false },
+          { id: "frame-tested", enabled: false },
+        ],
+      },
+    },
     layout: "fullscreen",
     controls: {
       disable: true,

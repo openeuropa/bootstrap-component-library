@@ -149,3 +149,10 @@ export const FeaturedItem = (args) =>
 FeaturedItem.storyName = "Featured Item";
 FeaturedItem.args = getArgs(demoFeaturedItem, "text");
 FeaturedItem.argTypes = getArgTypes(demoFeaturedItem, "text");
+FeaturedItem.parameters = {
+  a11y: {
+    config: {
+      rules: [{ id: "frame-tested", enabled: false }],
+    },
+  },
+};

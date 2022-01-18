@@ -42,6 +42,11 @@ export default {
   title: "Content types/News",
   decorators: [withDesign],
   parameters: {
+    a11y: {
+      config: {
+        rules: [{ id: "color-contrast", enabled: false }],
+      },
+    },
     layout: "fullscreen",
     controls: {
       disable: true,

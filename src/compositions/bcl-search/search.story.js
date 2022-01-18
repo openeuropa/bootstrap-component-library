@@ -29,6 +29,15 @@ export default {
   title: "Pages/Search",
   decorators: [withDesign, initListings, initBadges],
   parameters: {
+    a11y: {
+      config: {
+        rules: [
+          { id: "landmark-unique", enabled: false },
+          { id: "color-contrast", enabled: false },
+          { id: "aria-input-field-name", enabled: false },
+        ],
+      },
+    },
     layout: "fullscreen",
     controls: { disable: true },
     design: [

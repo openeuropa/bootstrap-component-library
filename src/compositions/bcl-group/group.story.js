@@ -65,6 +65,15 @@ export default {
   decorators: [withDesign, initBadges, initListings],
   parameters: {
     layout: "fullscreen",
+    a11y: {
+      config: {
+        rules: [
+          { id: "heading-order", enabled: false },
+          { id: "color-contrast", enabled: false },
+          { id: "aria-input-field-name", enabled: false },
+        ],
+      },
+    },
     design: [
       {
         name: "Mockup - Group",

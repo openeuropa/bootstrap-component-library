@@ -79,6 +79,11 @@ export const Default = (args) => select(applyArgs(demoData, args));
 Default.args = getArgs(demoData, "select");
 Default.argTypes = getArgTypes(demoData, "select");
 Default.parameters = {
+  a11y: {
+    config: {
+      rules: [{ id: "color-contrast", enabled: false }],
+    },
+  },
   design: [
     {
       name: "Mockup",
@@ -99,6 +104,14 @@ Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
 Multiselect.args = getArgs(demoMultiData, "multiselect");
 Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
+  a11y: {
+    config: {
+      rules: [
+        { id: "aria-input-field-name", enabled: false },
+        { id: "scrollable-region-focusable", enabled: false },
+      ],
+    },
+  },
   design: [
     {
       name: "Mockup",
