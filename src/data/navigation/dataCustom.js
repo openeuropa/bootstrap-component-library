@@ -27,38 +27,5 @@ module.exports = {
       path: "/example.html",
       disabled: true,
     },
-    {
-      id: "dropdown-1",
-      link: true,
-      dropdown: true,
-      trigger: {
-        label: "Dropdown Toggle",
-        path: "#",
-        attributes: new drupalAttribute().addClass("nav-link"),
-      },
-      items: [
-        {
-          label: "I'm a link",
-          path: "/example.html",
-        },
-        {
-          label: "I'm a button",
-          button: true,
-        },
-        {
-          divider: true,
-        },
-        {
-          label: "I'm a disabled button",
-          button: true,
-          disabled: true,
-        },
-        {
-          label: "I'm a active button",
-          button: true,
-          active: true,
-        },
-      ],
-    },
   ],
 };

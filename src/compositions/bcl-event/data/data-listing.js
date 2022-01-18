@@ -12,7 +12,6 @@ module.exports = {
       label: "Filter options",
       heading: 4,
       extra_classes: "mb-lg-4",
-      id: "offcanvasExampleLabel",
     },
     search_form: {
       attributes: new drupalAttribute()
@@ -24,6 +23,7 @@ module.exports = {
             classes: "mb-4",
             label: "Type",
             type: "select",
+            id: "type",
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -38,6 +38,7 @@ module.exports = {
             classes: "mb-4",
             label: "Location",
             type: "select",
+            id: "location",
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -49,24 +50,20 @@ module.exports = {
         ],
         [
           {
-            type: "fieldset",
-            legend: "Start date",
-            legend_classes: "col-form-label",
-          },
-          {
+            label: "Start date",
             input_type: "date",
             attributes: new drupalAttribute().addClass("mb-4"),
+            id: "creation-date-from",
+            wrapper_classes: "mb-3",
           },
         ],
         [
           {
-            type: "fieldset",
-            legend: "End date",
-            fieldset_classes: "mb-4",
-            legend_classes: "col-form-label",
-          },
-          {
             input_type: "date",
+            label: "End date",
+            wrapper_classes: "mb-3",
+            attributes: new drupalAttribute().addClass("mb-2"),
+            id: "creation-date-to",
           },
         ],
       ],
@@ -153,6 +150,7 @@ module.exports = {
   sort_select: {
     label: "Sort&nbsp;by",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0"),
+    aria_label: "sort-select",
     options: [
       { value: 1, label: "a select option" },
       { value: 2, label: "another select option" },

@@ -23,7 +23,6 @@ module.exports = {
         id: "disabledTextInput",
         placeholder: "Disabled input",
         helper_text: "Helper text for the form input",
-        helper_text_id: "helperText",
       },
       {
         wrapper_classes: "mb-3",
@@ -38,6 +37,7 @@ module.exports = {
           { value: 4, label: "last option" },
           { label: "the selected option", selected: true },
         ],
+        aria_label: "Disabled select",
       },
       {
         input_type: "checkbox",
