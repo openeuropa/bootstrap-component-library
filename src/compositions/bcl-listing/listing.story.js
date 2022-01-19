@@ -76,11 +76,6 @@ export default {
   title: "Paragraphs/Listings",
   decorators: [withDesign],
   parameters: {
-    a11y: {
-      config: {
-        rules: [{ id: "heading-order", enabled: false }],
-      },
-    },
     design: [
       {
         name: "Mockup",

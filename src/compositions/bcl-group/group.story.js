@@ -67,10 +67,7 @@ export default {
     layout: "fullscreen",
     a11y: {
       config: {
-        rules: [
-          { id: "heading-order", enabled: false },
-          { id: "aria-input-field-name", enabled: false },
-        ],
+        rules: [{ id: "aria-input-field-name", enabled: false }],
       },
     },
     design: [

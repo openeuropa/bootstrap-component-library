@@ -32,10 +32,7 @@ export default {
     ],
     a11y: {
       config: {
-        rules: [
-          { id: "frame-tested", enabled: false },
-          { id: "heading-order", enabled: false },
-        ],
+        rules: [{ id: "frame-tested", enabled: false }],
       },
     },
   },

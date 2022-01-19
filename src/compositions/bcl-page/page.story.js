@@ -81,10 +81,7 @@ export default {
   parameters: {
     a11y: {
       config: {
-        rules: [
-          { id: "heading-order", enabled: false },
-          { id: "frame-tested", enabled: false },
-        ],
+        rules: [{ id: "frame-tested", enabled: false }],
       },
     },
     layout: "fullscreen",
