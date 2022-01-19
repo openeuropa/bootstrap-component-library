@@ -79,11 +79,6 @@ export const Default = (args) => select(applyArgs(demoData, args));
 Default.args = getArgs(demoData, "select");
 Default.argTypes = getArgTypes(demoData, "select");
 Default.parameters = {
-  a11y: {
-    config: {
-      rules: [{ id: "color-contrast", enabled: false }],
-    },
-  },
   design: [
     {
       name: "Mockup",

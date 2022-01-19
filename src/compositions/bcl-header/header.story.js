@@ -70,10 +70,3 @@ export const Header = (args) => header(applyArgs(headerData, args));
 Header.storyName = "EU Header";
 Header.args = getArgs(headerData);
 Header.argTypes = getArgTypes(headerData);
-Header.parameters = {
-  a11y: {
-    config: {
-      rules: [{ id: "color-contrast", enabled: false }],
-    },
-  },
-};

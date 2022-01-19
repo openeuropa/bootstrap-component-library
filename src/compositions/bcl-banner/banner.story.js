@@ -162,10 +162,3 @@ export const Shade = (args) => renderStory(dataShade, args);
 Shade.storyName = "Image - shade";
 Shade.args = getArgs(dataShade);
 Shade.argTypes = getArgTypes(dataShade);
-Shade.parameters = {
-  a11y: {
-    config: {
-      rules: [{ id: "color-contrast", enabled: false }],
-    },
-  },
-};

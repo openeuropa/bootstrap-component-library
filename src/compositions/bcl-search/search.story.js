@@ -33,7 +33,6 @@ export default {
       config: {
         rules: [
           { id: "landmark-unique", enabled: false },
-          { id: "color-contrast", enabled: false },
           { id: "aria-input-field-name", enabled: false },
         ],
       },

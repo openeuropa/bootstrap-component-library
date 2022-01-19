@@ -34,7 +34,6 @@ export default {
       config: {
         rules: [
           { id: "frame-tested", enabled: false },
-          { id: "color-contrast", enabled: false },
           { id: "heading-order", enabled: false },
         ],
       },

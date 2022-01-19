@@ -78,10 +78,7 @@ export default {
   parameters: {
     a11y: {
       config: {
-        rules: [
-          { id: "heading-order", enabled: false },
-          { id: "color-contrast", enabled: false },
-        ],
+        rules: [{ id: "heading-order", enabled: false }],
       },
     },
     design: [

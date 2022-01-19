@@ -50,10 +50,3 @@ export const Horizontal = () => form(demoHorizontal);
 Horizontal.storyName = "Horizontal (with default browser validation)";
 
 export const Inline = () => form(demoInline);
-Inline.parameters = {
-  a11y: {
-    config: {
-      rules: [{ id: "color-contrast", enabled: false }],
-    },
-  },
-};
