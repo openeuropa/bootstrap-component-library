@@ -22,7 +22,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=1",
         alt: "alt img",
-        rounded: 1,
       },
       content: `<div>
                   <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
@@ -39,7 +38,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=8",
         alt: "alt img",
-        rounded: 1,
       },
       text: {
         content:
@@ -65,7 +63,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=2",
         alt: "alt img",
-        rounded: 1,
       },
       content: `<div>
                   <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
@@ -86,7 +83,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=3",
         alt: "alt img",
-        rounded: 1,
       },
       content: `<div>
                   <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Article</span>
