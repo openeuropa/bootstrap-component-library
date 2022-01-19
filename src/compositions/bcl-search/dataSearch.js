@@ -6,10 +6,7 @@ module.exports = {
       submit: {
         attributes: new drupalAttribute().addClass([
           "bcl-search-form__submit",
-          "d-lg-flex",
           "px-3",
-          "ps-lg-2-5",
-          "pe-lg-3",
         ]),
         label: "<span class='d-none d-lg-inline-block'>Search</span>",
         icon_position: "before",
