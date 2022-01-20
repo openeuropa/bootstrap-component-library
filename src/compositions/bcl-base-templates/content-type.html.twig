@@ -21,6 +21,7 @@
   - feedback
   - share
   - related
+  - messages_area
 #}
 
 {% set _with_header = header|default(false) %}
@@ -70,6 +71,16 @@
 {% endif %}
 
 <main {{ attributes }}>
+{% if messages is defined and messages is not empty %}
+  {% block messages_area %}
+  <div class="container mt-5">
+    {% for message in messages %}
+      {% include '@oe-bcl/bcl-alert/alert.html.twig' with message only %}
+    {% endfor %}
+  </div>
+  {% endblock %}
+{% endif %}
+
 {% if _with_banner %}
   {% block banner %}
     {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
