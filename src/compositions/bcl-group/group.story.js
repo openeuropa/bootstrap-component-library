@@ -65,6 +65,11 @@ export default {
   decorators: [withDesign, initBadges, initListings],
   parameters: {
     layout: "fullscreen",
+    a11y: {
+      config: {
+        rules: [{ id: "aria-input-field-name", enabled: false }],
+      },
+    },
     design: [
       {
         name: "Mockup - Group",
