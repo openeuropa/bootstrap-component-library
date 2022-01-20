@@ -25,7 +25,7 @@ const demoListing = {
 };
 
 export default {
-  title: "Pages/Project",
+  title: "Content types/Project",
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
