@@ -24,17 +24,12 @@ module.exports = {
       },
       {
         wrapper_classes: "col-12",
-        type: "select",
+        input_type: "text",
         required: true,
-        label: "Preference",
+        label: "Password",
         hidden_label: true,
-        options: [
-          { selected: true, label: "Choose" },
-          { value: 1, label: "One" },
-          { value: 2, label: "Two" },
-          { value: 3, label: "Three" },
-        ],
-        id: "inlineFormSelectPref",
+        placeholder: "Password",
+        id: "inlineFormInputGroupPassword",
       },
       {
         input_type: "checkbox",
