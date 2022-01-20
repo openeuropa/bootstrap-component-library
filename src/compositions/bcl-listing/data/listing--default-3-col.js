@@ -62,7 +62,6 @@ module.exports = {
         path: "https://picsum.photos/160?random=3",
         alt: "alt img",
         position: "right",
-        rounded: 1,
       },
       content: `<div>
             <span class="text-muted d-block me-4 mb-2 mb-md-0">Article</span>
@@ -83,7 +82,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=2",
         alt: "alt img",
-        rounded: 1,
       },
       content: `<div>
             <span class="text-muted d-block me-4 mb-2 mb-md-0">Article</span>
@@ -104,7 +102,6 @@ module.exports = {
       image: {
         path: "https://picsum.photos/160?random=1",
         alt: "alt img",
-        rounded: 1,
         position: "right",
       },
       content: `<div>
@@ -127,7 +124,6 @@ module.exports = {
         path: "https://picsum.photos/seed/1002/600/400",
         alt: "alt img",
         position: "right",
-        rounded: 1,
       },
       content: `<div>
             <span class="text-muted d-block me-4 mb-2 mb-md-0">Article</span>

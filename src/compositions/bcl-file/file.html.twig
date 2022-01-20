@@ -72,7 +72,8 @@
   {% set attributes = attributes.addClass(['border', 'rounded-bottom']) %}
   {% set _image = _image|merge({
     position: "top",
-    classes: "mb-3"
+    classes: "mb-3",
+    rounded: 0,
   }) %}
   {% include '@oe-bcl/bcl-card/card.html.twig' with {
     horizontal: true,
