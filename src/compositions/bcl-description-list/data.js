@@ -9,7 +9,11 @@ module.exports = {
           path: "/icons.svg",
         },
       },
-      definition: "<p class='mb-2'>Description text goes here.</p>",
+      definition: [
+        {
+          label: "<p class='mb-2'>Description text goes here.</p>",
+        },
+      ],
     },
     {
       term: [
@@ -25,15 +29,23 @@ module.exports = {
           },
         },
       ],
-      definition: "<p class='mb-2'>Description text goes here.</p>",
+      definition: [
+        {
+          label: "<p class='mb-2'>Description text goes here.</p>",
+        },
+      ],
     },
     {
       term: {
         label: "Only title label",
       },
       definition: [
-        "Description text goes here.",
-        "Description text goes here.",
+        {
+          label: "<p class='mb-2'>Description text goes here.</p>",
+        },
+        {
+          label: "<p class='mb-2'>Description text goes here.</p>",
+        },
       ],
     },
   ],
