@@ -99,6 +99,14 @@ Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
 Multiselect.args = getArgs(demoMultiData, "multiselect");
 Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
+  a11y: {
+    config: {
+      rules: [
+        { id: "aria-input-field-name", enabled: false },
+        { id: "scrollable-region-focusable", enabled: false },
+      ],
+    },
+  },
   design: [
     {
       name: "Mockup",

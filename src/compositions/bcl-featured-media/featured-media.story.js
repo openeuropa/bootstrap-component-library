@@ -124,6 +124,13 @@ export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
 Iframe.args = getArgs(demoData, "iframe");
 Iframe.argTypes = getArgTypes(demoData, "iframe");
 Iframe.decorators = [adjustWidth];
+Iframe.parameters = {
+  a11y: {
+    config: {
+      rules: [{ id: "frame-tested", enabled: false }],
+    },
+  },
+};
 
 export const Video = (args) => featuredMedia(applyArgs(demoDataVideo, args));
 
@@ -142,3 +149,10 @@ export const FeaturedItem = (args) =>
 FeaturedItem.storyName = "Featured Item";
 FeaturedItem.args = getArgs(demoFeaturedItem, "text");
 FeaturedItem.argTypes = getArgTypes(demoFeaturedItem, "text");
+FeaturedItem.parameters = {
+  a11y: {
+    config: {
+      rules: [{ id: "frame-tested", enabled: false }],
+    },
+  },
+};
