@@ -1,5 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import { initScrollspy, initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import {
+  initScrollspy,
+  initBadges,
+  correctPaths,
+} from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
