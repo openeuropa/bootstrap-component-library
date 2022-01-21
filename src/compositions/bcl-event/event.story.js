@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import { initScrollspy, initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
@@ -83,10 +83,12 @@ export default {
 export const FullPage = () => event(correctPaths(demoData));
 
 FullPage.storyName = "Event page";
+FullPage.decorators = [initScrollspy];
 
 export const FullPage1 = () => event(correctPaths(demoData1));
 
 FullPage1.storyName = "Event page with image";
+FullPage1.decorators = [initScrollspy];
 
 export const Listing = () => listingPage(correctPaths(demoListing));
 

@@ -48,6 +48,7 @@ module.exports = {
     ],
   },
   details_list: {
+    attributes: new drupalAttribute().addClass(["mt-3", "mb-4"]),
     variant: "horizontal",
     items: [
       {
