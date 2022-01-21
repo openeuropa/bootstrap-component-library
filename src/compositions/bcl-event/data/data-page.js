@@ -48,7 +48,6 @@ module.exports = {
     ],
   },
   details_list: {
-    attributes: new drupalAttribute().addClass("mt-3"),
     variant: "horizontal",
     items: [
       {
@@ -64,7 +63,7 @@ module.exports = {
       },
       {
         term: {
-          label: '<p class="mb-4 d-inline-block">Location</p>',
+          label: '<p class="mb-0 d-inline-block">Location</p>',
           icon: {
             name: "geo-alt-fill",
             size: "xs",
