@@ -25,6 +25,7 @@ module.exports = {
         label: "Your name*",
         id: "exampleInputText1",
         placeholder: "Placeholder",
+        invalid_feedback: "Please type your name.",
       },
     ],
     [
@@ -47,6 +48,7 @@ module.exports = {
         label: "Subject*",
         id: "exampleInputText2",
         placeholder: "Placeholder",
+        invalid_feedback: "Please choose a subject for your message",
       },
     ],
     [
@@ -57,6 +59,7 @@ module.exports = {
         label: "Message*",
         id: "exampleInputText3",
         placeholder: "Placeholder",
+        invalid_feedback: "Please provide a message.",
       },
     ],
     [
@@ -99,6 +102,7 @@ module.exports = {
         label: "Phone*",
         id: "exampleInputPhone",
         placeholder: "Placeholder",
+        invalid_feedback: "Please provide a valid phone number.",
       },
     ],
     [
@@ -118,6 +122,7 @@ module.exports = {
         label: `I have read and agree with the <a href="#/example">data protection terms</a>`,
         id: "exampleInputCheck1",
         wrapper_classes: "mt-4",
+        invalid_feedback: "Please check and approve the data protection terms.",
       },
     ],
   ],

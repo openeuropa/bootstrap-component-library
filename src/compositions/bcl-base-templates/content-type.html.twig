@@ -73,7 +73,7 @@
 <main {{ attributes }}>
 {% if messages is defined and messages is not empty %}
   {% block messages_area %}
-  <div class="container mt-5">
+  <div class="container mt-lg-5 mt-2">
     {% for message in messages %}
       {% include '@oe-bcl/bcl-alert/alert.html.twig' with message only %}
     {% endfor %}

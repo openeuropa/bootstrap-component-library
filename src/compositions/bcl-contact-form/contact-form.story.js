@@ -37,10 +37,25 @@ const dataSuccess = {
   ...dataDefault,
   messages: [success],
 };
-console.log(dataError);
+
+const clientValidation = (story) => {
+  const demo = story();
+  return `<script>
+  var form = document.querySelector('.needs-validation');
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+  </script>${demo}`;
+};
+
 export default {
   title: "Pages/Contact form",
-  decorators: [withDesign],
+  decorators: [withDesign, clientValidation],
   parameters: {
     layout: "fullscreen",
     controls: {
