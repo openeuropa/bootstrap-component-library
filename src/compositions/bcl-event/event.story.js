@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
-import sidebar from "@openeuropa/bcl-event/data/event-sidebar.js";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
+import dataPage from "@openeuropa/bcl-event/data/data-page.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import event from "@openeuropa/bcl-event/event.html.twig";
@@ -29,28 +29,18 @@ const baseData = {
 
 const demoData = {
   ...baseData,
-  sidebar: sidebar,
-  banner: {
-    title: {
-      content:
-        "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
-      tag: "h2",
-    },
-  },
+  ...dataPage,
   files: files,
 };
 
 const demoData1 = {
   ...baseData,
-  sidebar: {
-    ...sidebar,
-    image: true,
-  },
+  ...dataPage,
   banner: {
-    title: {
-      content:
-        "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
-      tag: "h2",
+    ...dataPage.banner,
+    image: {
+      path: "https://picsum.photos/255/255?random=6",
+      alt: "alt img",
     },
   },
   files: files,

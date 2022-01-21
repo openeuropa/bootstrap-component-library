@@ -1,9 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
+import dataPage from "@openeuropa/bcl-event/data/data-page.js";
 import header from "@openeuropa/bcl-data-header/data";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import footer from "@openeuropa/bcl-data-footer/data";
-import sidebar from "@openeuropa/bcl-event/data/event-sidebar.js";
 import file from "@openeuropa/bcl-file/data.js";
 import drupalAttribute from "drupal-attribute";
 
@@ -26,17 +26,7 @@ const baseData = {
 
 const demoData = {
   ...baseData,
-  sidebar: {
-    ...sidebar,
-    image: true,
-  },
-  banner: {
-    title: {
-      content:
-        "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
-      tag: "h2",
-    },
-  },
+  ...dataPage,
   files: files,
 };
 
