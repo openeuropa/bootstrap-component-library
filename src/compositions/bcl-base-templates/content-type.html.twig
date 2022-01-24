@@ -21,6 +21,7 @@
   - feedback
   - share
   - related
+  - messages_area
 #}
 
 {% set _with_header = header|default(false) %}
@@ -70,6 +71,19 @@
 {% endif %}
 
 <main {{ attributes }}>
+{% if messages is defined and messages is not empty %}
+  {% block messages_area %}
+  <div class="container">
+    {% for message in messages %}
+    {% set message_attributes = create_attribute().addClass(['mt-lg-5', 'mt-2']) %}
+      {% include '@oe-bcl/bcl-alert/alert.html.twig' with message|merge({
+        attributes: message_attributes,
+      }) only %}
+    {% endfor %}
+  </div>
+  {% endblock %}
+{% endif %}
+
 {% if _with_banner %}
   {% block banner %}
     {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
