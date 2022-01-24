@@ -114,7 +114,6 @@ module.exports = {
         required: true,
         label: "Send yourself a copy",
         id: "exampleInputCheck1",
-
       },
       {
         input_type: "checkbox",
