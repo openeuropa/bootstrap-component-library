@@ -99,6 +99,11 @@ export default {
   title: "Components/Alert",
   decorators: [withDesign],
   parameters: {
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup",
