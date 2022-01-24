@@ -1,4 +1,5 @@
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 
 export const parameters = {
   a11y: {
@@ -23,6 +24,22 @@ export const parameters = {
   },
   controls: { expanded: true },
   layout: "padded",
+  badgesConfig: {
+    [BADGE.STABLE]: {
+      title: "v1",
+      styles: {
+        fontSize: "20",
+        paddingInline: "24px",
+        backgroundColor: "#1EA7FD",
+        borderColor: "#DCDCDC",
+        color: "#F5F5F5",
+        textTransform: "lowercase",
+        borderWidth: "2px",
+        paddingBlock: "5px",
+      },
+    },
+  },
+  badges: [BADGE.STABLE],
   viewport: {
     defaultViewport: "responsive",
     viewports: {
