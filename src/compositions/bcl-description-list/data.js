@@ -32,8 +32,12 @@ module.exports = {
         label: "Only title label",
       },
       definition: [
-        "Description text goes here.",
-        "Description text goes here.",
+        {
+          label: "<p class='mb-2'>Description text goes here.</p>",
+        },
+        {
+          label: "<p class='mb-2'>Description text goes here.</p>",
+        },
       ],
     },
   ],
