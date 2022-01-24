@@ -73,9 +73,12 @@
 <main {{ attributes }}>
 {% if messages is defined and messages is not empty %}
   {% block messages_area %}
-  <div class="container mt-lg-5 mt-2">
+  <div class="container">
     {% for message in messages %}
-      {% include '@oe-bcl/bcl-alert/alert.html.twig' with message only %}
+    {% set message_attributes = create_attribute().addClass(['mt-lg-5', 'mt-2']) %}
+      {% include '@oe-bcl/bcl-alert/alert.html.twig' with message|merge({
+        attributes: message_attributes,
+      }) only %}
     {% endfor %}
   </div>
   {% endblock %}

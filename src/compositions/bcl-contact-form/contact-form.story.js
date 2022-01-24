@@ -72,7 +72,6 @@ export default {
 };
 
 export const Contact = () => contactForm(correctPaths(dataDefault));
-console.log({ ...baseData, dataDefault });
 
 Contact.storyName = "Default";
 

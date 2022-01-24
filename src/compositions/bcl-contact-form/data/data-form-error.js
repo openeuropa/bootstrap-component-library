@@ -64,7 +64,7 @@ module.exports = {
     ],
     [
       {
-        wrapper_classes: "gy-4",
+        wrapper_classes: "col-lg-6 gy-4",
         type: "select",
         required: true,
         label: "Topic*",
@@ -80,7 +80,7 @@ module.exports = {
     ],
     [
       {
-        wrapper_classes: "gy-4",
+        wrapper_classes: "col-lg-6 gy-4",
         type: "select",
         required: true,
         label: "Country of residence*",
