@@ -96,11 +96,11 @@
         {% endif %}
         {% for _definition in _item.definition %}
           <dd>
-            {% if _definition.button is defined %}
+            {%- if _definition.button is defined -%}
               {% include '@oe-bcl/bcl-button/button.html.twig' with _definition.button only %}
-            {% elseif _definition.link is defined %}
+            {%- elseif _definition.link is defined -%}
               {% include '@oe-bcl/bcl-link/link.html.twig' with _definition.link only %}
-            {% elseif _definition.label is defined %}
+            {%- elseif _definition.label is defined -%}
               {% if _definition.icon is defined %}
                 {% set _icon_classes = ["me-2"] %}
                 {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _definition.icon|merge({
@@ -108,9 +108,9 @@
                 }) only -%}
               {% endif %}
               {{- _definition.label -}}
-            {% else %}
+            {%- else -%}
               {{- _definition -}}
-            {% endif %}
+            {%- endif -%}
           </dd>
         {% endfor %}
         {% if _variant == 'horizontal' %}
