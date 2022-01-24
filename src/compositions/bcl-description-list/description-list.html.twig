@@ -100,7 +100,7 @@
               {% include '@oe-bcl/bcl-button/button.html.twig' with _definition.button only %}
             {% elseif _definition.link is defined %}
               {% include '@oe-bcl/bcl-link/link.html.twig' with _definition.link only %}
-            {% else %}
+            {% elseif _definition.label is defined %}
               {% if _definition.icon is defined %}
                 {% set _icon_classes = ["me-2"] %}
                 {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _definition.icon|merge({
@@ -108,6 +108,8 @@
                 }) only -%}
               {% endif %}
               {{- _definition.label -}}
+            {% else %}
+              {{- _definition -}}
             {% endif %}
           </dd>
         {% endfor %}
