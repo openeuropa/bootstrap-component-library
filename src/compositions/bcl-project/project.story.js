@@ -1,5 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import {
+  initBadges,
+  correctPaths,
+  initScrollspy,
+} from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-project/data/data_listing.js";
 import dataDetails from "@openeuropa/bcl-project/data/data_details.js";
@@ -17,6 +21,7 @@ const baseData = {
   footer: footer,
   with_header: true,
   with_footer: true,
+  with_sidebar: true,
 };
 
 const demoDetails = {
@@ -29,15 +34,28 @@ const demoDetailsClosed = {
   ...baseData,
   ...dataDetails,
   share: share,
-  status_badge: {
-    background: "dark",
-    label: "Closed",
-    attributes: new drupalAttribute().addClass(["mb-3", "mb-md-0"]),
-  },
-  progress: {
-    progress: 100,
-    variant: "dark",
-    hidden_label: true,
+  status: {
+    title: "Status",
+    badge: {
+      background: "dark",
+      label: "Closed",
+      attributes: new drupalAttribute().addClass(["mb-3", "mb-md-0"]),
+    },
+    progress: {
+      progress: 100,
+      variant: "dark",
+      hidden_label: true,
+    },
+    start_date: `
+    <p class="fw-bold">
+      Start <br>
+      <span class="fw-normal">19/12/2020</span>
+    </p>`,
+    end_date: `
+    <p class="fw-bold text-end">
+      End <br>
+      <span class="fw-normal">19/12/2027</span>
+    </p>`,
   },
 };
 
@@ -45,32 +63,51 @@ const demoDetailsNotStarted = {
   ...baseData,
   ...dataDetails,
   share: share,
-  status_badge: {
-    background: "secondary",
-    label: "Not started",
-    attributes: new drupalAttribute().addClass(["mb-3", "mb-md-0"]),
-  },
-  progress: {
-    progress: 0,
-    variant: "secondary",
-    hidden_label: true,
+  status: {
+    title: "Status",
+    badge: {
+      background: "secondary",
+      label: "Not started",
+      attributes: new drupalAttribute().addClass(["mb-3", "mb-md-0"]),
+    },
+    progress: {
+      progress: 0,
+      variant: "secondary",
+      hidden_label: true,
+    },
+    start_date: `
+    <p class="fw-bold">
+      Start <br>
+      <span class="fw-normal">19/12/2020</span>
+    </p>`,
+    end_date: `
+    <p class="fw-bold text-end">
+      End <br>
+      <span class="fw-normal">19/12/2027</span>
+    </p>`,
   },
 };
 
 const demoListing = {
   ...baseData,
   ...dataListing,
-  with_sidebar: true,
 };
 
 export default {
   title: "Content types/Project",
-  decorators: [withDesign],
+  decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {
       disable: true,
     },
+    design: [
+      {
+        name: "Mockup",
+        type: "figma",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=4298%3A144965",
+      },
+    ],
   },
 };
 

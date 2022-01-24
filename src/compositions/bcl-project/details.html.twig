@@ -5,65 +5,57 @@
 {% endblock %}
 
 {% block content %}
-  <h3 class="fw-bold mb-4">Project details</h3>
+  <h3 class="fw-bold mb-4" id="{{ id }}">{{ title }}</h3>
   <div class="border-bottom pb-4 mb-4">
     <div class="row">
       <div class="col-12 col-md-3">
-        <p class="fw-bold">Status</p>
-        {% include '@oe-bcl/bcl-badge/badge.html.twig' with status_badge only %}
+        <p class="fw-bold">{{ status.title }}</p>
+        {% include '@oe-bcl/bcl-badge/badge.html.twig' with status.badge only %}
       </div>
       <div class="col-12 col-md-9">
         <div class="d-flex justify-content-between">
-          <p class="fw-bold">
-            Start <br>
-            <span class="fw-normal">19/12/2020</span>
-          </p>
-          <p class="fw-bold text-end">
-            End <br>
-            <span class="fw-normal">19/12/2027</span>
-          </p>
+          {{ status.start_date }}
+          {{ status.end_date }}
         </div>
-        {% include '@oe-bcl/bcl-progress/progress.html.twig' with progress only %}
+        {% include '@oe-bcl/bcl-progress/progress.html.twig' with status.progress only %}
       </div>
     </div>
   </div>
+  {% block charts %}
+  <div class="border-bottom pb-4 mb-4">
+    {{ charts_placeholder }}
+  </div>
+  {% endblock %}
   <div class="border-bottom mb-4">
     {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
   </div>
   {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with cordinator_list only %}
-  <h3 class="fw-bold mb-4">Summary</h3>
-  <p>
-    This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
-  </p>
-  <h3 class="fw-bold mb-4">Objective</h3>
-  <p>
-    This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
-  </p>
-  <h3 class="fw-bold mb-4">Impact</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
-  </p>
-  <h3 class="fw-bold mb-4">Contributors</h3>
-  {% for contributor in contributors %}
-    {% if contributor.title is not empty %}
-      <h4 class="fw-bold mb-4">{{ contributor.title }}</h4>
+  {% for paragraph in paragraphs %}
+    {% if paragraph.title is not empty %}
+      <h3 class="fw-bold mb-4" id="{{ paragraph.id }}">{{ paragraph.title }}</h3>
     {% endif %}
-    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contributor.list only %}
+    {{ paragraph.content }}
   {% endfor %}
-  <h3 class="fw-bold my-4">Achievements and Milestones</h3>
-  <p>
-    This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
-  </p>
-  <h3 class="fw-bold mb-4">Gallery</h3>
-  {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_gallery only %}
-  {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with carousel_gallery only %}
+  {% if contributors is not empty %}
+    <h3 class="fw-bold mb-4" id="{{ contributors.id }}">{{ contributors.main_title }}</h3>
+    {% for contributor in contributors.listing %}
+      {% if contributor.title is not empty %}
+        <h4 class="fw-bold mb-3">{{ contributor.title }}</h4>
+      {% endif %}
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contributor.list only %}
+    {% endfor %}
+  {% endif %}
+  {% if achievements is not empty %}
+    {% for achievement in achievements %}
+      {% if achievement.title is not empty %}
+        <h3 class="fw-bold mb-4" id="{{ achievement.id }}">{{ achievement.title }}</h3>
+      {% endif %}
+      {{ achievement.content }}
+    {% endfor %}
+  {% endif %}
+  {% if gallery is not empty %}
+    <h3 class="fw-bold mb-4" id="{{ gallery.id }}">{{ gallery.title }}</h3>
+    {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with gallery.featured only %}
+    {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with gallery.carousel only %}
+  {% endif %}
 {% endblock %}
