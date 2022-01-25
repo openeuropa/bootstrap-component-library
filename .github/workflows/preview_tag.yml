@@ -22,7 +22,6 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2.1
         with:
           alias: ${{ env.TAG }}-
-          production-deploy: true
           publish-dir: "build"
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
