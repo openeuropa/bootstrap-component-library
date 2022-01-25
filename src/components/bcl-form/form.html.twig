@@ -1,6 +1,10 @@
 {% spaceless %}
 
 {# Parameters:
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h2')
+  - helper_text (string) (default: '')
+  - antispam (string) (default: '')
   - items (array of array of objects) (default: []) format: [
    [
     {
@@ -20,11 +24,26 @@
   - submit (object) (default: {}) Array of objects or object of type button
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _helper_text = helper_text|default('') %}
 {% set _items = items|default([]) %}
+{% set _antispam = antispam|default('') %}
 {% set _submit = submit|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _title is not empty %}
+  {% set _title_classes = 'fw-bold mb-4' %}
+  <{{ _title_tag }} class="{{ _title_classes }}">
+    {{- _title -}}
+  </{{ _title_tag }}>
+{% endif %}
+
+{% if _helper_text is not empty %}
+  <p>{{ _helper_text }}</p>
 {% endif %}
 
 <form
@@ -97,6 +116,13 @@
   {% endif %}
   {% endif %}
 {% endfor %}
+{% endif %}
+{% if _antispam is not empty %}
+  <div class="mt-4 mb-2">
+    <div class="bg-light">
+      {{ _antispam }}
+    </div>
+  </div>
 {% endif %}
 {# submit #}
 {% if _submit is not empty %}
