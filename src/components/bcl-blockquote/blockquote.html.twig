@@ -12,7 +12,13 @@
 {% set _attribution = attribution|default('') %}
 {% set _cite = cite|default('') %}
 {% set _alignment = alignment|default('left') %}
-{% set _classes = ['text-' ~ _alignment, "bg-lighter", "p-2", "border-4", "border-secondary"] %}
+{% set _classes = [
+  'text-' ~ _alignment,
+  "bg-lighter",
+  "p-2",
+  "border-4",
+  "border-secondary"
+] %}
 
 {% if _alignment == "center" %}
   {% set _classes = _classes|merge(["border-top"]) %}
