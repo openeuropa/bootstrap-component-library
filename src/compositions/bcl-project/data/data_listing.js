@@ -42,10 +42,10 @@ module.exports = {
           },
           {
             input_type: "checkbox",
-            label: "Ongoin",
+            label: "Ongoing",
             wrapper_classes: "mb-3",
             checked: true,
-            id: "ongoin",
+            id: "ongoing",
           },
           {
             input_type: "checkbox",

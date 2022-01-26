@@ -32,12 +32,12 @@
   {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with cordinator_list only %}
   {% for paragraph in paragraphs %}
     {% if paragraph.title is not empty %}
-      <h3 class="fw-bold mb-4" id="{{ paragraph.id }}">{{ paragraph.title }}</h3>
+      <h3 class="fw-bold mb-4 pt-3" id="{{ paragraph.id }}">{{ paragraph.title }}</h3>
     {% endif %}
     {{ paragraph.content }}
   {% endfor %}
   {% if contributors is not empty %}
-    <h3 class="fw-bold mb-4" id="{{ contributors.id }}">{{ contributors.main_title }}</h3>
+    <h3 class="fw-bold mb-4 pt-2" id="{{ contributors.id }}">{{ contributors.main_title }}</h3>
     {% for contributor in contributors.listing %}
       {% if contributor.title is not empty %}
         <h4 class="fw-bold mb-3">{{ contributor.title }}</h4>
@@ -48,13 +48,13 @@
   {% if achievements is not empty %}
     {% for achievement in achievements %}
       {% if achievement.title is not empty %}
-        <h3 class="fw-bold mb-4" id="{{ achievement.id }}">{{ achievement.title }}</h3>
+        <h3 class="fw-bold mb-4 pt-2" id="{{ achievement.id }}">{{ achievement.title }}</h3>
       {% endif %}
       {{ achievement.content }}
     {% endfor %}
   {% endif %}
   {% if gallery is not empty %}
-    <h3 class="fw-bold mb-4" id="{{ gallery.id }}">{{ gallery.title }}</h3>
+    <h3 class="fw-bold mb-4 pt-2" id="{{ gallery.id }}">{{ gallery.title }}</h3>
     {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with gallery.featured only %}
     {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with gallery.carousel only %}
   {% endif %}
