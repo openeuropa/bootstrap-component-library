@@ -7,6 +7,7 @@
   - items (array) (default: []): format: [
       {
         title: (string),
+        title_tag: (string),
         content: (block),
         stay_open (boolean) (default: false) stay open after another selected
       },
@@ -42,7 +43,11 @@
     {% set _button_classes = _button_classes|merge(['collapsed']) %}
   {% endif %}
   <div class="accordion-item">
-    <h2 class="accordion-header" id="heading-{{ _id }}-{{ loop.index }}">
+    {%- set _item_title_tag = _item.title_tag|default('h2') %}
+    <{{ _item_title_tag }} 
+      class="accordion-header" 
+      id="heading-{{ _id }}-{{ loop.index }}"
+    >
       {% set button_attributes = create_attribute()
                                 .addClass(_button_classes)
                                 .setAttribute('data-bs-toggle', 'collapse')
@@ -56,7 +61,7 @@
         clean_class: true,
         attributes: button_attributes
       } only %}
-    </h2>
+    </{{ _item_title_tag }}>
     <div
       id="collapse-{{ _id }}-{{ loop.index }}"
       class="accordion-collapse collapse{{ _open_item ? ' show' }}"
