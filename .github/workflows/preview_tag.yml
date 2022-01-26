@@ -1,0 +1,29 @@
+name: Deploy preview for a tag
+
+on:
+  push:
+    branches:
+      - "!*"
+    tags:
+      - "v*"
+jobs:
+  deploy-master:
+    name: deploy master branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the tag name
+        run: echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Package application
+        run: yarn dist
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2.1
+        with:
+          alias: ${{ env.TAG }}-
+          publish-dir: "build"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
