@@ -94,7 +94,7 @@ const demoListing = {
 };
 
 export default {
-  title: "Content types/Project",
+  title: "Features/Project",
   decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
