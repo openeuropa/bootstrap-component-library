@@ -19,10 +19,11 @@ const dataLanding = {
 };
 
 export default {
-  title: "Pages/Landing Page",
+  title: "Features/Landing Page",
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
+    badges: ["stable"],
     design: [
       {
         name: "Mockup",

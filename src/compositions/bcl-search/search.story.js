@@ -26,7 +26,7 @@ const dataListing = {
 };
 
 export default {
-  title: "Pages/Search",
+  title: "Features/Search",
   decorators: [withDesign, initListings, initBadges],
   parameters: {
     a11y: {
@@ -37,6 +37,7 @@ export default {
         ],
       },
     },
+    badges: ["stable"],
     layout: "fullscreen",
     controls: { disable: true },
     design: [

@@ -61,7 +61,7 @@ const dataLanding = {
 };
 
 export default {
-  title: "Pages/Group",
+  title: "Features/Group",
   decorators: [withDesign, initBadges, initListings],
   parameters: {
     layout: "fullscreen",
@@ -77,6 +77,7 @@ export default {
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=482%3A2559",
       },
     ],
+    badges: ["stable"],
     controls: {
       disable: true,
     },
