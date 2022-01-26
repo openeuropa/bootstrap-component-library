@@ -28,7 +28,6 @@ export const parameters = {
       }
     },
   },
-  badges: [BADGE.STABLE],
   viewport: {
     defaultViewport: "responsive",
     viewports: {
@@ -66,7 +65,12 @@ export const parameters = {
   options: {
     storySort: {
       method: "alphabetical",
-      order: ["Components", "Compositions"],
+      order: [
+        "Components",
+        "Compositions",
+        "Paragraphs",
+        "Features"
+      ],
     },
   },
 };

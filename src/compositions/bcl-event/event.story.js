@@ -68,13 +68,14 @@ const demoListing = {
 };
 
 export default {
-  title: "Content types/Event",
+  title: "Features/Event",
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {
       disable: true,
     },
+    badges: ["stable"],
     design: [
       {
         name: "Mockup - Event (desktop)",
