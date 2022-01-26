@@ -76,7 +76,7 @@ const demoData2 = {
 };
 
 export default {
-  title: "Content types/Page",
+  title: "Features/Page",
   decorators: [withDesign, initScrollspy],
   parameters: {
     a11y: {
@@ -84,6 +84,7 @@ export default {
         rules: [{ id: "frame-tested", enabled: false }],
       },
     },
+    badges: ["stable"],
     layout: "fullscreen",
     controls: {
       disable: true,

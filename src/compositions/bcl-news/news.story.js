@@ -39,13 +39,14 @@ const demoListing = {
 };
 
 export default {
-  title: "Content types/News",
+  title: "Features/News",
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {
       disable: true,
     },
+    badges: ["stable"],
     design: [
       {
         name: "Mockup - News (desktop)",
