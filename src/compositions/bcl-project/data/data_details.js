@@ -398,6 +398,7 @@ module.exports = {
   sidebar: {
     title: "Page content",
     id: "bcl-inpage-navigation",
+    attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
     links: [
       {
         label: "Project detail",
