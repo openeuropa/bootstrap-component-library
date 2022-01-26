@@ -43,10 +43,11 @@ const dataView = {
 };
 
 export default {
-  title: "Pages/Users",
+  title: "Features/Users",
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
+    badges: ["stable"],
     a11y: {
       config: {
         rules: [
