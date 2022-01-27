@@ -53,7 +53,7 @@
 {% if _icon is not empty %}
   {% set _container_classes = _container_classes ~ ' ms-2-5' %}
   {% set _icon = _icon|merge({
-    attributes: create_attribute().addClass(['mt-1', 'text-secondary'])
+    attributes: create_attribute().addClass(['mt-1', 'icon--file'])
   }) %}
 {% endif %}
 
