@@ -43,7 +43,7 @@ const getArgTypes = (data) => {
     },
     alignment: {
       type: { name: "select" },
-      options: ["left", "center", "end"],
+      options: { left: "left", center: "center", right: "end" },
       description: "Text alignment",
       table: {
         type: { summary: "string" },
@@ -76,7 +76,7 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/MPL8vE2LF4RQKLY4HcxHTs/OEL-Mockup-kit?node-id=2889%3A0",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=2889%3A0",
       },
       {
         name: "Bootstrap docs",
