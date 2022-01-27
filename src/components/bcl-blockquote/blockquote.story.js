@@ -43,7 +43,7 @@ const getArgTypes = (data) => {
     },
     alignment: {
       type: { name: "select" },
-      options: ["left", "center", "end"],
+      options: { left: "left", center: "center", right: "end" },
       description: "Text alignment",
       table: {
         type: { summary: "string" },
