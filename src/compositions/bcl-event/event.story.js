@@ -69,17 +69,21 @@ export default {
     controls: {
       disable: true,
     },
-    badges: ["stable"],
+    badges: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup - Event (desktop)",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3962%3A138013",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5343%3A242940",
       },
       {
         name: "Mockup - Event (mobile)",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3962%3A138148",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5343%3A243030",
       },
     ],
   },
