@@ -1,0 +1,163 @@
+{% spaceless %}
+
+{# Parameters:
+  - title_id (string) (default: "")
+  - title (string) (default: "")
+  - title_tag (string) (default: "h3")
+  - status (object) (default: {}) format: 
+    {
+      title (string),
+      badge (badge object),
+      start_date (string),
+      end_date (string),
+      progress (progress object)
+    }
+  - charts (string) (default: "")
+  - details_list (description-list object) (default: {})
+  - cordinator_list (description-list object) (default: {})
+  - paragraphs (array of object) (default: []) format:
+    [{
+      title (string)
+      content (string)
+    }]
+  - contributors (object) (default: {}) format 
+    {
+      main_title (string)
+      main_title_id (string)
+      listing (array) format 
+      [{
+        title (string)
+        list (description-list object)
+      }]
+    }
+  - achievements (array of object) (default: []) format:
+    [{
+      title (string)
+      title_id (string)
+      content (string)
+    }]
+  - gallery (object) (default: {}) format:
+    {
+      title (string)
+      title_id (string)
+      featured (featured-media object)
+      carousel (carousel object)
+    }
+
+  Blocks - charts
+#}
+
+{% set _title_id = title_id|default('') %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _status = status|default({}) %}
+{% set _charts = charts|default('') %}
+{% set _details_list = details_list|default({}) %}
+{% set _cordinator_list = cordinator_list|default({}) %}
+{% set _paragraphs = paragraphs|default([]) %}
+{% set _contributors = contributors|default({}) %}
+{% set _achievements = achievements|default({}) %}
+{% set _gallery = gallery|default({}) %}
+
+<{{ _title_tag }}
+  class="fw-bold mb-4" 
+  {% if title_id is not empty %}
+    id="{{ title_id }}"
+  {% endif %}
+>
+  {{ title }}
+</{{ _title_tag }}>
+{% if _status is not empty %}
+<div class="border-bottom pb-4 mb-4">
+  <div class="row">
+    <div class="col-12 col-md-3">
+      {% if _status.title is not empty %}
+      <p class="fw-bold">{{ _status.title }}</p>
+      {% endif %}
+      {% include '@oe-bcl/bcl-badge/badge.html.twig' with _status.badge only %}
+    </div>
+    <div class="col-12 col-md-9">
+      <div class="d-flex justify-content-between">
+        {{ _status.start_date }}
+        {{ _status.end_date }}
+      </div>
+      {% include '@oe-bcl/bcl-progress/progress.html.twig' with _status.progress only %}
+    </div>
+  </div>
+</div>
+{% endif %}
+{% if _charts is not empty %}
+<div class="border-bottom pb-4 mb-4">
+  {%- block charts _charts -%}
+</div>
+{% endif %}
+{% if _details_list is not empty %}
+<div class="border-bottom mb-4">
+  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _details_list only %}
+</div>
+{% endif %}
+{% if _cordinator_list is not empty %}
+{% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _cordinator_list only %}
+{% endif %}
+{% if _paragraphs is not empty and _paragraphs is iterable %}
+{% for _paragraph in _paragraphs %}
+  {% if _paragraph.title is not empty %}
+    <h3
+      class="fw-bold mb-4 pt-3"
+      {% if _paragraph.title_id is not empty %}
+      id="{{ _paragraph.title_id }}"
+      {% endif %}
+    >
+      {{ _paragraph.title }}
+    </h3>
+  {% endif %}
+  {{ _paragraph.content }}
+{% endfor %}
+{% endif %}
+{% if _contributors is not empty %}
+  <h3
+    class="fw-bold mb-4 pt-2" 
+    {% if _contributors.main_title_id is not empty %}
+    id="{{ _contributors.main_title_id }}"
+    {% endif %}
+  >
+    {{ _contributors.main_title }}
+  </h3>
+  {% for _contributor in _contributors.listing %}
+    {% if _contributor.title is not empty %}
+      <h4 class="fw-bold mb-3">{{ _contributor.title }}</h4>
+    {% endif %}
+    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _contributor.list only %}
+  {% endfor %}
+{% endif %}
+{% if _achievements is not empty %}
+  {% for _achievement in _achievements %}
+    {% if _achievement.title is not empty %}
+      <h3
+        class="fw-bold mb-4 pt-2" 
+        {% if _achievement.title_id is not empty %}
+        id="{{ _achievement.title_id }}"
+        {% endif %}
+      >
+        {{ _achievement.title }}
+      </h3>
+    {% endif %}
+    {{ _achievement.content }}
+  {% endfor %}
+{% endif %}
+{% if _gallery is not empty %}
+  {% if _gallery.title is not empty %}
+    <h3
+      class="fw-bold mb-4 pt-2" 
+      {% if _gallery.title_id is not empty %}
+      id="{{ _gallery.title_id }}"
+      {% endif %}
+    >
+      {{ _gallery.title }}
+    </h3>
+  {% endif %}
+  {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with _gallery.featured only %}
+  {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with _gallery.carousel only %}
+{% endif %}
+
+{% endspaceless %}
