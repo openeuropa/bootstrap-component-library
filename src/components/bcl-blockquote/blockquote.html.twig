@@ -12,7 +12,22 @@
 {% set _attribution = attribution|default('') %}
 {% set _cite = cite|default('') %}
 {% set _alignment = alignment|default('left') %}
-{% set _classes = ['text-' ~ _alignment] %}
+{% set _classes = [
+  'text-' ~ _alignment,
+  "bg-lighter",
+  "p-2",
+  "px-2-5",
+  "border-4",
+  "border-secondary"
+] %}
+
+{% if _alignment == "center" %}
+  {% set _classes = _classes|merge(["border-top"]) %}
+{% elseif _alignment == "end" %}
+  {% set _classes = _classes|merge(["border-end"]) %}
+{% else %}
+  {% set _classes = _classes|merge(["border-start"]) %}
+{% endif %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -23,11 +38,11 @@
 <figure
   {{ attributes }}
 >
-  <blockquote class="blockquote">
+  <blockquote class="blockquote mb-2">
     <p>{{- _quote -}}</p>
   </blockquote>
 {% if _attribution is not empty %}
-  <figcaption class="blockquote-footer">
+  <figcaption class="blockquote-footer m-0">
     {{- _attribution -}}
   {% if _cite is not empty %}
     <cite title="{{ _cite }}">{{- _cite -}}</cite>
