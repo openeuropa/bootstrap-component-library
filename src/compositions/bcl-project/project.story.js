@@ -6,9 +6,9 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-project/data/data_listing";
-import dataOngoing from "@openeuropa/bcl-project-details/data/data--ongoing";
-import dataPlanned from "@openeuropa/bcl-project-details/data/data--planned";
-import dataClosed from "@openeuropa/bcl-project-details/data/data--closed";
+import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
+import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
+import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
