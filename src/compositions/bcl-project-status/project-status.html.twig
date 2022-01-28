@@ -1,0 +1,109 @@
+{% spaceless %}
+
+{# Parameters:
+  - title_id (string) (default: "")
+  - title (string) (default: "")
+  - title_tag (string) (default: "h3")
+  - status (string) (default: 'planned')
+  - start_date (string) (default: '')
+  - start_label (string) (default: '')
+  - end_date (string) (default: '')
+  - end_label (string) (default: '')
+  - label (string) (default: '')
+  - badge (string) (default: ''),
+  - progress (string) (default: '')
+
+  Blocks - charts
+#}
+
+{% set _title_id = title_id|default('') %}
+{% set _title = title|default('') %}
+{% set _label = label|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _status = status|default('planned') %}
+{% set _charts = charts|default('') %}
+{% set _badge = badge|default('') %}
+{% set _start_date = start_date|default('') %}
+{% set _end_date = end_date|default('') %}
+{% set _start_label = start_label|default('') %}
+{% set _end_label = end_label|default('') %}
+{% set _progress = progress|default('') %}
+
+{% set _bgs = {
+    ongoing: 'info',
+    closed: 'dark',
+    planned: 'secondary',
+  } %}
+{% set _bg = _bgs[_status]|default('secondary') %}
+
+
+<{{ _title_tag }}
+  class="fw-bold mb-4"
+  {% if title_id is not empty %}
+    id="{{ title_id }}"
+  {% endif %}
+>
+  {{ title }}
+</{{ _title_tag }}>
+
+<div class="border-bottom pb-4 mb-4">
+  <div class="row">
+    <div class="col-12 col-md-3">
+    {% if _label is not empty %}
+      <p class="fw-bold">{{ _label }}</p>
+    {% endif %}
+
+    {% if _badge is not empty %}
+      {% include '@oe-bcl/bcl-badge/badge.html.twig' with {
+        label: _badge,
+        background: _bg,
+        attributes: create_attribute().addClass(['mb-3', 'mb-md-0']),
+      } only %}
+    {% endif %}
+
+    </div>
+
+    <div class="col-12 col-md-9">
+      <div class="d-flex justify-content-between">
+
+      {% if _start_date is not empty and _start_label is not empty %}
+        <p class="fw-bold">
+          {{- _start_label -}} <br>
+          <span class="fw-normal">
+            {{- _start_date -}}
+          </span>
+        </p>
+      {% endif %}
+
+      {% if _end_date is not empty and _end_label is not empty %}
+        <p class="fw-bold text-end">
+          {{- _end_label -}} <br>
+          <span class="fw-normal">
+            {{- _end_date -}}
+          </span>
+        </p>
+      {% endif %}
+      </div>
+
+    {% if _progress is not empty or _status != 'ongoing' %}
+      {% if _progress is empty %}
+        {% set _progress = _status == 'closed' ? 100 : 0 %}
+      {% endif %}
+      {% include '@oe-bcl/bcl-progress/progress.html.twig' with {
+        variant: _bg,
+        hidden_label: true,
+        progress: _progress,
+      } only %}
+    {% endif %}
+
+    </div>
+  </div>
+</div>
+
+{% if _charts is not empty %}
+<div class="border-bottom pb-4 mb-4">
+  {%- block charts _charts -%}
+</div>
+{% endif %}
+
+{% endspaceless %}
