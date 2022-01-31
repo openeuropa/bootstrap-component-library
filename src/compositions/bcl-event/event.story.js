@@ -1,9 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
-import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
-import sidebar from "@openeuropa/bcl-event/data/event-sidebar.js";
+import {
+  initScrollspy,
+  initBadges,
+  correctPaths,
+} from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
+import dataPage from "@openeuropa/bcl-event/data/data-page.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import event from "@openeuropa/bcl-event/event.html.twig";
@@ -29,28 +33,18 @@ const baseData = {
 
 const demoData = {
   ...baseData,
-  sidebar: sidebar,
-  banner: {
-    title: {
-      content:
-        "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
-      tag: "h2",
-    },
-  },
+  ...dataPage,
   files: files,
 };
 
 const demoData1 = {
   ...baseData,
-  sidebar: {
-    ...sidebar,
-    image: true,
-  },
+  ...dataPage,
   banner: {
-    title: {
-      content:
-        "Translation, Interpreting, Culture 2: Human Factor in translation Technologies",
-      tag: "h2",
+    ...dataPage.banner,
+    image: {
+      path: "https://picsum.photos/255/255?random=6",
+      alt: "alt img",
     },
   },
   files: files,
@@ -76,16 +70,21 @@ export default {
       disable: true,
     },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup - Event (desktop)",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3962%3A138013",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5343%3A242940",
       },
       {
         name: "Mockup - Event (mobile)",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3962%3A138148",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5343%3A243030",
       },
     ],
   },
@@ -94,10 +93,12 @@ export default {
 export const FullPage = () => event(correctPaths(demoData));
 
 FullPage.storyName = "Event page";
+FullPage.decorators = [initScrollspy];
 
 export const FullPage1 = () => event(correctPaths(demoData1));
 
 FullPage1.storyName = "Event page with image";
+FullPage1.decorators = [initScrollspy];
 
 export const Listing = () => listingPage(correctPaths(demoListing));
 
