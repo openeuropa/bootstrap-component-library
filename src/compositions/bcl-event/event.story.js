@@ -64,17 +64,17 @@ const demoListing = {
 export default {
   title: "Features/Event",
   decorators: [withDesign],
-  badgesConfig: {
-    stable: {
-      title: "v1.1",
-    },
-  },
   parameters: {
     layout: "fullscreen",
     controls: {
       disable: true,
     },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup - Event (desktop)",
