@@ -15,7 +15,6 @@ import footer from "@openeuropa/bcl-data-footer/data";
 import dataCharts from "@openeuropa/bcl-project/data/data--chart";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 const chart = `<img src="${dataCharts.charts}">`;

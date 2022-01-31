@@ -25,14 +25,7 @@ module.exports = {
           path: "/icons.svg",
         },
       },
-      definition: [
-        {
-          label: "From: 19/122/2021",
-        },
-        {
-          label: "To: 21/12/2021",
-        },
-      ],
+      definition: ["From: 19/122/2021", "To: 21/12/2021"],
     },
     {
       term: {
