@@ -84,8 +84,10 @@
             {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.term.icon|merge({
               attributes: create_attribute().addClass(_icon_classes)
             }) only -%}
+            <p class="mb-0 d-inline-block">{{ _item.term.label }}</p>
+          {% else %}
+            {{- _item.term.label -}}
           {% endif %}
-          {{- _item.term.label -}}
         </dt>
       {% endif %}
     {% endif %}
@@ -106,8 +108,10 @@
                 {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _definition.icon|merge({
                   attributes: create_attribute().addClass(_icon_classes)
                 }) only -%}
+               <p class="mb-0 d-inline-block">{{ _definition.label }}</p>
+              {% else %}
+                {{- _definition.label -}}
               {% endif %}
-              {{- _definition.label -}}
             {% endif %}
           </dd>
         {% endfor %}

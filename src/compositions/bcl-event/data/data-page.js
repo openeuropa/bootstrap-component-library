@@ -53,18 +53,18 @@ module.exports = {
     items: [
       {
         term: {
-          label: '<p class="mb-0 d-inline-block">Date</p>',
+          label: 'Date',
           icon: {
             name: "calendar-fill",
             size: "xs",
             path: "/icons.svg",
           },
         },
-        definition: "<p class='mb-2'>19/12/2021 to 21/12/2021</p>",
+        definition: "19/12/2021 to 21/12/2021",
       },
       {
         term: {
-          label: '<p class="mb-0 d-inline-block">Location</p>',
+          label: 'Location',
           icon: {
             name: "geo-alt-fill",
             size: "xs",
