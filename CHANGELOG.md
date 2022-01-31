@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.19.0 (2022-01-31)
+
+#### :rocket: New Feature
+
+* [#230](https://github.com/openeuropa/bootstrap-component-library/pull/230) feat(project): Adding examples - OEL-1048 ([@tibi2303](https://github.com/tibi2303))
+* [#238](https://github.com/openeuropa/bootstrap-component-library/pull/238) feat(blockquote): Blockquote new design - OEL-1064 ([@tibi2303](https://github.com/tibi2303))
+* [#240](https://github.com/openeuropa/bootstrap-component-library/pull/240) feat(accordion): Added accordion title_tag - OEL-1071 ([@tibi2303](https://github.com/tibi2303))
+* [#232](https://github.com/openeuropa/bootstrap-component-library/pull/232) feat(contact-form): Adding examples - OEL-1055 ([@planctus](https://github.com/planctus))
+* [#229](https://github.com/openeuropa/bootstrap-component-library/pull/229) feat(accessibility): Disable unnecessary rules - OEL-946 ([@tibi2303](https://github.com/tibi2303))
+* [#208](https://github.com/openeuropa/bootstrap-component-library/pull/208) feat(logos): Added scripts - OEL-953 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#231](https://github.com/openeuropa/bootstrap-component-library/pull/231) chore(themes): Align scss for joinup and ucpkn themes - OEL-1030 ([@papegaill](https://github.com/papegaill))
+* [#235](https://github.com/openeuropa/bootstrap-component-library/pull/235) fix(button): Center align button label by default - OEL-1058 ([@papegaill](https://github.com/papegaill))
+* [#226](https://github.com/openeuropa/bootstrap-component-library/pull/226) fix(featured-media): Fix spacing on mobile - OEL-1028 ([@papegaill](https://github.com/papegaill))
+* [#224](https://github.com/openeuropa/bootstrap-component-library/pull/224) fix(landing-page): Use full_width banner - OEL-1012 ([@papegaill](https://github.com/papegaill))
+* [#219](https://github.com/openeuropa/bootstrap-component-library/pull/219) fix(headers): Review mobile alignement of language and login icons - OEL-1009 ([@papegaill](https://github.com/papegaill))
+* [#215](https://github.com/openeuropa/bootstrap-component-library/pull/215) fix(page): Remove card titles top margin - OEL-933 ([@papegaill](https://github.com/papegaill))
+* [#213](https://github.com/openeuropa/bootstrap-component-library/pull/213) fix(event): Review image display on event content types - OEL-992 ([@papegaill](https://github.com/papegaill))
+
+#### :nail_care: Enhancement
+* [#234](https://github.com/openeuropa/bootstrap-component-library/pull/234) feat(event): Revamp to v1.1 - OEL-1056 ([@papegaill](https://github.com/papegaill))
+* [#227](https://github.com/openeuropa/bootstrap-component-library/pull/227) feat(cards): Fix for cards border - OEL-1029 ([@tibi2303](https://github.com/tibi2303))
+* [#228](https://github.com/openeuropa/bootstrap-component-library/pull/228) feat(border-radius): Fix border-radius for recent activities and links block - OEL-1031 ([@tibi2303](https://github.com/tibi2303))
+* [#214](https://github.com/openeuropa/bootstrap-component-library/pull/214) feat(colors): Update color palette (variables) - OEL-989 ([@tibi2303](https://github.com/tibi2303))
+* [#225](https://github.com/openeuropa/bootstrap-component-library/pull/225) fix(header): Review button display and icon alignement - OEL-1023 ([@papegaill](https://github.com/papegaill))
+* [#212](https://github.com/openeuropa/bootstrap-component-library/pull/212) feat(date-block): Revamp composition - OEL-988 ([@papegaill](https://github.com/papegaill))
+* [#223](https://github.com/openeuropa/bootstrap-component-library/pull/223) feat(banner): Redone paddings on banner - OEL-1013 ([@tibi2303](https://github.com/tibi2303))
+* [#218](https://github.com/openeuropa/bootstrap-component-library/pull/218) feat(color-overwrite): Fix for color variables overwrite - OEL-893 ([@tibi2303](https://github.com/tibi2303))
+* [#221](https://github.com/openeuropa/bootstrap-component-library/pull/221) feat(featured-media): Add default border radius - OEL-1011 ([@papegaill](https://github.com/papegaill))
+* [#220](https://github.com/openeuropa/bootstrap-component-library/pull/220) fix(inpage-navigation): Review spacing for the sub-items - OEL-1010 ([@papegaill](https://github.com/papegaill))
+* [#217](https://github.com/openeuropa/bootstrap-component-library/pull/217) fix(breadcrumb): Remove left padding on mobile - OEL-1008 ([@papegaill](https://github.com/papegaill))
+
+#### :house: Internal
+
+* [#242](https://github.com/openeuropa/bootstrap-component-library/pull/242) chore(deps): Updates 31-01-22 ([@planctus](https://github.com/planctus))
+* [#241](https://github.com/openeuropa/bootstrap-component-library/pull/241) chore(deps): updates 26-01-22 ([@planctus](https://github.com/planctus))
+* [#236](https://github.com/openeuropa/bootstrap-component-library/pull/236) chore(versions): Adding badges ([@planctus](https://github.com/planctus))
+* [#237](https://github.com/openeuropa/bootstrap-component-library/pull/237) chore(deps): updates - 24 01 22 ([@planctus](https://github.com/planctus))
+* [#211](https://github.com/openeuropa/bootstrap-component-library/pull/211) chore(deps): Green and orange updates - 10-01-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.18.0 (2021-12-22)
 
 #### :bug: Bug Fix
