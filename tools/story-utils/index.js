@@ -1,4 +1,5 @@
 import iconPath from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import flagPath from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
 import flagList from "@ecl/resources-flag-icons/dist/lists/flag.json";
 
 export const getFormControls = (data, type) => {
@@ -363,8 +364,12 @@ export const initTooltip = (story) => {
 
 export const correctPaths = (data) => {
   Object.keys(data).forEach((prop) => {
-    if (typeof data[prop] === "string" && data[prop].includes("icons.svg")) {
-      data[prop] = iconPath;
+    if (typeof data[prop] === "string") {
+      if (data[prop].includes("icons.svg")) {
+        data[prop] = iconPath;
+      } else if (data[prop].includes("flags.svg")) {
+        data[prop] = flagPath;
+      }
     }
     if (data[prop] !== null && typeof data[prop] === "object") {
       data[prop] = correctPaths(data[prop]);

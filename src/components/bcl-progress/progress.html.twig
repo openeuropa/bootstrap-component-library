@@ -6,6 +6,7 @@
   - max (int) (default: 100)
   - striped (boolean) (default: false)
   - animated (boolean) (default: false)
+  - hidden_label (boolean) (default: false)
   - label (string) (default: '')
   - bar_label (string) (default: '')
   - variant (string) (default: '')
@@ -17,6 +18,7 @@
 {% set _max = max|default(100) %}
 {% set _striped = striped|default(false) %}
 {% set _animated = animated|default(false) %}
+{% set _hidden_label = hidden_label|default(false) %}
 {% set _label = label|default('') %}
 {% set _bar_label = bar_label|default('') %}
 {% set _variant = variant|default('') %}
@@ -57,7 +59,9 @@
     aria-valuemin="{{ _min }}"
     aria-valuemax="{{ _max }}"
   >
-  {{- _bar_label -}}
+  {%- if not _hidden_label -%}
+    {{- _bar_label -}}
+  {%- endif -%}
   </div>
 </div>
 {% if _message is not empty %}

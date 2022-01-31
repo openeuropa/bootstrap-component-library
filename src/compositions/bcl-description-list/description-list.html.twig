@@ -95,9 +95,21 @@
           <div>
         {% endif %}
         {% for _definition in _item.definition %}
-          {% if _definition.label is not defined %}
-            <dd>{{- _definition -}}</dd>
-          {% endif %}
+          <dd>
+            {%- if _definition.button is defined -%}
+              {% include '@oe-bcl/bcl-button/button.html.twig' with _definition.button only %}
+            {%- elseif _definition.link is defined -%}
+              {% include '@oe-bcl/bcl-link/link.html.twig' with _definition.link only %}
+            {%- else -%}
+              {%- if _definition.icon is defined -%}
+                {%- set _icon_classes = ["me-2"] -%}
+                {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _definition.icon|merge({
+                  attributes: create_attribute().addClass(_icon_classes)
+                }) only -%}
+              {%- endif -%}
+              {{- _definition.label -}}
+            {%- endif -%}
+          </dd>
         {% endfor %}
         {% if _variant == 'horizontal' %}
           </div>
