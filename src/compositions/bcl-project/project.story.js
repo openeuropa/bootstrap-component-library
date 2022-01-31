@@ -17,7 +17,7 @@ import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
-const chart = `<img src="${dataCharts.charts}">`;
+const chart = `<img alt="chart" src="${dataCharts.charts}">`;
 
 const baseData = {
   content_type: "listing",

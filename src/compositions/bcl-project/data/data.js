@@ -364,6 +364,7 @@ module.exports = {
           caption_classes: "d-none d-md-block",
           image: `<img
                     src="https://picsum.photos/800/400?random=3"
+                    alt="Third slide"
                     class="d-block w-100"
                   />`,
         },
