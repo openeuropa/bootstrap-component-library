@@ -65,6 +65,7 @@ export default {
     controls: {
       disable: true,
     },
+    badges: ["stable"],
     design: [
       {
         name: "Mockup",
