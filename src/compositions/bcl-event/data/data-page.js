@@ -53,7 +53,7 @@ module.exports = {
     items: [
       {
         term: {
-          label: 'Date',
+          label: "Date",
           icon: {
             name: "calendar-fill",
             size: "xs",
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         term: {
-          label: 'Location',
+          label: "Location",
           icon: {
             name: "geo-alt-fill",
             size: "xs",

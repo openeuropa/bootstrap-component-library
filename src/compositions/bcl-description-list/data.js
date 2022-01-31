@@ -17,7 +17,7 @@ module.exports = {
           label: "First title label",
         },
         {
-          label: 'Second title label',
+          label: "Second title label",
           icon: {
             name: "geo-alt-fill",
             size: "xs",

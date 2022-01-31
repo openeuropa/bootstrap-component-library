@@ -3,7 +3,7 @@ module.exports = {
   items: [
     {
       term: {
-        label: 'Only title label with icon',
+        label: "Only title label with icon",
         icon: {
           name: "geo-alt-fill",
           size: "xs",
@@ -15,10 +15,10 @@ module.exports = {
     {
       term: [
         {
-          label: 'First title label',
+          label: "First title label",
         },
         {
-          label: 'Second title label',
+          label: "Second title label",
           icon: {
             name: "geo-alt-fill",
             size: "xs",
@@ -26,7 +26,7 @@ module.exports = {
           },
         },
       ],
-      definition: 'text goes here.',
+      definition: "text goes here.",
     },
     {
       term: {
