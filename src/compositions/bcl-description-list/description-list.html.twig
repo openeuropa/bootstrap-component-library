@@ -63,8 +63,10 @@
               {% include '@oe-bcl/bcl-icon/icon.html.twig' with _term.icon|merge({
                 attributes: create_attribute().addClass(_icon_classes)
               }) only %}
-            {%- endif -%}
+            <p class="mb-0 d-inline-block">{{ _term.label }}</p>
+          {%- else -%}
             {{- _term.label -}}
+          {%- endif -%}
           </dt>
         {% endfor %}
         {% if _variant == 'horizontal' %}
@@ -76,16 +78,18 @@
             class="d-flex"
           {% endif %}
         >
-          {% if _item.term.icon is not empty %}
-              {% set _icon_classes = ["me-2"] %}
-              {% if _variant == 'horizontal' %}
-                {% set _icon_classes = _icon_classes|merge(["mt-1"]) %}
-              {% endif %}
+          {%- if _item.term.icon is not empty -%}
+            {% set _icon_classes = ["me-2"] %}
+            {% if _variant == 'horizontal' %}
+              {% set _icon_classes = _icon_classes|merge(["mt-1"]) %}
+            {% endif %}
             {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.term.icon|merge({
               attributes: create_attribute().addClass(_icon_classes)
             }) only -%}
-          {% endif %}
-          {{- _item.term.label -}}
+            <p class="mb-0 d-inline-block">{{ _item.term.label }}</p>
+          {%- else -%}
+            {{- _item.term.label -}}
+          {%- endif -%}
         </dt>
       {% endif %}
     {% endif %}
@@ -95,9 +99,23 @@
           <div>
         {% endif %}
         {% for _definition in _item.definition %}
-          {% if _definition.label is not defined %}
-            <dd>{{- _definition -}}</dd>
-          {% endif %}
+          <dd>
+            {%- if _definition.button is defined -%}
+              {% include '@oe-bcl/bcl-button/button.html.twig' with _definition.button only %}
+            {%- elseif _definition.link is defined %}
+              {% include '@oe-bcl/bcl-link/link.html.twig' with _definition.link only -%}
+            {%- else -%}
+              {%- if _definition.icon is defined -%}
+                {%- set _icon_classes = ["me-2"] -%}
+                {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _definition.icon|merge({
+                  attributes: create_attribute().addClass(_icon_classes)
+                }) only -%}
+               <p class="mb-0 d-inline-block">{{ _definition.label }}</p>
+              {%- else -%}
+                {{- _definition.label -}}
+              {%- endif -%}
+            {%- endif -%}
+          </dd>
         {% endfor %}
         {% if _variant == 'horizontal' %}
           </div>

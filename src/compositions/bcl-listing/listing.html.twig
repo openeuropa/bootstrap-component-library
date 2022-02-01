@@ -168,6 +168,12 @@
       {% endif %}
     {% endif %}
 
+    {% if _card.image is empty and _card.date is empty %}
+      {% set _card = _card|merge({
+        horizontal: false,
+      }) %}
+    {% endif %}
+
     {% set _cards = _cards|merge([_card]) %}
   {% endfor %}
 {% endif %}

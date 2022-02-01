@@ -2,14 +2,18 @@ module.exports = {
   items: [
     {
       term: {
-        label: "<p class='d-inline-block mb-0'>Only title label with icon</p>",
+        label: "Only title label with icon",
         icon: {
           name: "geo-alt-fill",
           size: "xs",
           path: "/icons.svg",
         },
       },
-      definition: "<p class='mb-2'>Description text goes here.</p>",
+      definition: [
+        {
+          label: "Description text goes here.",
+        },
+      ],
     },
     {
       term: [
@@ -17,7 +21,7 @@ module.exports = {
           label: "First title label",
         },
         {
-          label: '<p class="mb-0 d-inline-block">Second title label</p>',
+          label: "Second title label",
           icon: {
             name: "geo-alt-fill",
             size: "xs",
@@ -25,15 +29,23 @@ module.exports = {
           },
         },
       ],
-      definition: "<p class='mb-2'>Description text goes here.</p>",
+      definition: [
+        {
+          label: "Description text goes here.",
+        },
+      ],
     },
     {
       term: {
         label: "Only title label",
       },
       definition: [
-        "Description text goes here.",
-        "Description text goes here.",
+        {
+          label: "Description text goes here.",
+        },
+        {
+          label: "Description text goes here.",
+        },
       ],
     },
   ],

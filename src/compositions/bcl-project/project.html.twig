@@ -1,0 +1,60 @@
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+
+{% block sidebar %}
+  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+{% endblock %}
+
+{% block content %}
+  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_details|merge({ charts: charts }) %}
+
+  <div class="border-bottom mb-4">
+    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
+  </div>
+
+  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with coordinator_list only %}
+
+  {% for paragraph in paragraphs %}
+      <h3
+        class="fw-bold mb-4 pt-3"
+        id="{{ paragraph.title_id }}"
+      >
+        {{ paragraph.title }}
+      </h3>
+
+    {{ paragraph.content }}
+  {% endfor %}
+
+  <h3
+    class="fw-bold mb-4 pt-2"
+    id="{{ contributors.main_title_id }}"
+  >
+    {{ contributors.main_title }}
+  </h3>
+
+{% for contributor in contributors.listing %}
+  <h4 class="fw-bold mb-3">{{ contributor.title }}</h4>
+
+  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contributor.list only %}
+
+{% endfor %}
+
+{% for achievement in achievements %}
+  <h3
+    class="fw-bold mb-4 pt-2"
+    id="{{ achievement.title_id }}"
+  >
+    {{ achievement.title }}
+  </h3>
+  {{ achievement.content }}
+{% endfor %}
+
+  <h3
+    class="fw-bold mb-4 pt-2"
+    id="{{ gallery.title_id }}"
+  >
+    {{ gallery.title }}
+  </h3>
+
+  {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with gallery.featured only %}
+  {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with gallery.carousel only %}
+{% endblock %}

@@ -3,7 +3,7 @@ module.exports = {
   items: [
     {
       term: {
-        label: '<p class="mb-0 d-inline-block">Only title label with icon</p>',
+        label: "Only title label with icon",
         icon: {
           name: "geo-alt-fill",
           size: "xs",
@@ -15,10 +15,10 @@ module.exports = {
     {
       term: [
         {
-          label: '<p class="mb-0">First title label</p>',
+          label: "First title label",
         },
         {
-          label: '<p class="mb-0 d-inline-block">Second title label</p>',
+          label: "Second title label",
           icon: {
             name: "geo-alt-fill",
             size: "xs",
@@ -26,15 +26,19 @@ module.exports = {
           },
         },
       ],
-      definition: '<p class="mb-0">Description text goes here.',
+      definition: "text goes here.",
     },
     {
       term: {
         label: "Only title label",
       },
       definition: [
-        "Description text goes here.",
-        "Description text goes here.",
+        {
+          label: "Description text goes here.",
+        },
+        {
+          label: "Description text goes here.",
+        },
       ],
     },
   ],
