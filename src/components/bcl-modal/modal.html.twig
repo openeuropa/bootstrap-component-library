@@ -42,15 +42,19 @@
   {{- _static_backdrop ? ' data-bs-backdrop="static"' -}}
   >
     <div class="modal-content">
+      {% if header is not empty %}
       <div class="modal-header">
         {%- block header _header -%}
       </div>
+      {% endif %}
       <div class="modal-body">
         {%- block body _body -%}
       </div>
+      {% if footer is not empty %}
       <div class="modal-footer">
         {%- block footer _footer -%}
       </div>
+      {% endif %}
     </div>
   </div>
 </div>

@@ -1,0 +1,30 @@
+.bcl-language {
+  .btn {
+    background: $white;
+    color: $primary;
+    border-color: $gray-400;
+    &:hover {
+      text-decoration: underline;
+      border-color: $eu-cta-color;
+    }
+  }
+  &.bcl-language--ec,
+  &.bcl-language--eu {
+    .btn {
+      color: $eu-cta-color;
+    }
+  }
+  &.bcl-language--eu {
+    .btn {
+      border: 2px solid $eu-cta-color;
+    }
+  }
+  &.bcl-language--ec {
+    .main {
+      background: $eu-background-color;
+      h5 {
+        color: $white;
+      }
+    }
+  }
+}

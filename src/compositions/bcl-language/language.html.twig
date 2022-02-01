@@ -1,0 +1,122 @@
+{% spaceless %}
+
+{# Parameters:
+  - modal (boolean) (default: false)
+  - variant (string) (default: 'neutral')
+  - logos_alignment (string) (default: "")
+    options: "start", "center", "end"
+  - logos (array of objest) (default: []) format: [
+    {
+      src (string),
+      alt (string),
+      class (string),
+    }
+  ]
+  - listings (array of objects) (default: []) format: [
+    {
+      title (string),
+      grid (array of objects) format: [
+        {
+          class (string) (default: col-12 col-md)
+          buttons (array of buttons)
+        }
+      ]
+    }
+  ]
+#}
+
+{% set _modal = modal|default(false) %}
+{% set _variant = variant|default('neutral') %}
+{% set _logos_alignment = logos_alignment|default('') %}
+{% set _logos = logos|default([]) %}
+{% set _listings = listings|default([]) %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(['bcl-language', 'bcl-language--' ~ _variant]) %}
+
+{% if not modal %}
+  {% set attributes = attributes.addClass(['pt-5']) %}
+{% endif %}
+
+<div
+  {{ attributes }}
+>
+  {% if _logos is not empty and _logos is iterable %}
+  <div class="container">
+    {% if _logos_alignment is not empty %}
+    <div class="text-{{ _logos_alignment }}">
+    {% endif %}
+    {% for _logo in _logos %}
+      <div class="d-inline-flex align-items-center">
+        <img
+          {% if _logo.src is not empty %}
+          src="{{ _logo.src }}"
+          {% endif %}
+          {% if _logo.alt is not empty %}
+          alt="{{ _logo.alt }}"
+          {% endif %}
+          {% if _logo.class is not empty %}
+          class="{{ _logo.class }}"
+          {% endif %}
+        />
+        {% if _logo.title is not empty %}
+        <h5 class="h5 ms-4">{{ _logo.title }}</h5>
+        {% endif %}
+      </div>
+    {% endfor %}
+    {% if _logos_alignment is not empty %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if _listings is not empty and _listings is iterable %}
+  <div class="main pt-4">
+    <div class="container">
+    {% for _listing in _listings %}
+      <div class="pb-2">
+        {% if _listing.title is not empty %}
+        <h5 class="mb-4">{{ _listing.title }}</h5>
+        {% endif %}
+        {% if _listing.grid is not empty and _listing.grid is iterable %}
+        <div class="row">
+          {% for _column in _listing.grid %}
+          <div
+            {% if _column.class is not empty %}
+              class="{{ _column.class }}"
+            {% else %}
+              class="col-12 col-md"
+            {% endif %}
+            >
+            {% if _column.buttons is not empty and _column.buttons is iterable %}
+              {% for _trigger in _column.buttons %}
+                {% if _trigger.attributes is empty %}
+                  {% set _trigger = _trigger|merge({
+                    attributes: create_attribute()
+                  }) %}
+                {% endif %}
+                {% set _trigger = _trigger|merge({
+                  attributes: _trigger.attributes.addClass(['w-100', 'mb-2-5', 'justify-content-start'])
+                }) %}
+                {% if _trigger.link %}
+                  {% include '@oe-bcl/bcl-link/link.html.twig' with _trigger only %}
+                {% else %}
+                  {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% endspaceless %}

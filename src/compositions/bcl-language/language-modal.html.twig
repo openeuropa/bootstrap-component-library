@@ -1,0 +1,61 @@
+{#
+  Parameters:
+  - variant (string) (default: 'neutral')
+  - title (string) (default: {})
+  - icon (icon object) (default: {})
+  - content (language object) (default: '')
+#}
+
+{% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
+
+{% set _title = title|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _content = content|default({}) %}
+{% set _variant = variant|default('neutral') %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(['bcl-language-modal', 'bcl-language-modal--' ~ _variant]) %}
+
+{% block header %}
+  {% if size == 'fullscreen' %}
+  <div class="container">
+    {% if variant == 'eu' or variant == 'ec' %}
+    <div class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5">
+      <div class="py-3-5 px-3 px-sm-0 px-md-3">
+    {% endif %}
+    <div class="d-flex justify-content-between align-items-center">
+  {% endif %}
+  <div class="d-flex align-items-center">
+    {% set _title_classes = 'mb-0' %}
+    {% if _icon is not empty %}
+      {% set _title_classes = _title_classes ~ ' ms-2' %}
+      {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
+    {% endif %}
+    <h5 class="{{ _title_classes }}">{{ _title }}</h5>
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  {% if size == 'fullscreen' %}
+    </div>
+  {% if variant == 'eu' or variant == 'ec' %}
+    </div>
+  </div>
+  {% endif %}
+  </div>
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+  {% if _content is defined and _content is not empty %}
+    <div class="px-3 px-md-0">
+    {% set _content = _content|merge({
+      modal: true
+    }) %}
+    {% include '@oe-bcl/bcl-language/language.html.twig' with _content|merge({
+      variant: _variant,
+    }) only %}
+    </div>
+  {% endif %}
+{% endblock %}

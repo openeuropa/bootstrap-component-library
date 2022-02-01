@@ -220,50 +220,55 @@ $header-link-active-background: #003776 !default;
   }
 }
 
-// language list
-$language-background: $header-background !default;
-$language-color: #fff !default;
-$language-list-gap: map-get($spacers, 2) !default;
-$language-item-background: #fff !default;
-$language-item-color: $header-background !default;
-$language-item-background-hover: #ffd617 !default;
-$language-item-color-hover: $dark !default;
-
-.bcl-language .modal-content {
-  color: $language-color;
-  background-color: $language-background;
-}
-
-.bcl-language__list {
-  display: grid;
-  gap: $language-list-gap;
-  margin-bottom: map-get($spacers, 4);
-}
-
-.bcl-language__title {
-  margin-bottom: map-get($spacers, 4);
-}
-
-.bcl-language__item {
-  padding: map-get($spacers, 2) $spacer;
-  font-weight: $font-weight-bold;
-  color: $language-item-color;
-  text-decoration: none; //should be handled at link level
-  background-color: $language-item-background;
-
-  &:hover,
-  &:focus {
-    color: $language-item-color-hover;
-    text-decoration: underline;
-    background-color: $language-item-background-hover;
+.bcl-language-modal {
+  .btn-close {
+    opacity: 1;
   }
-}
-
-.bcl-language .modal-body {
-  padding-top: map-get($spacers, 5);
-  padding-bottom: map-get($spacers, 5);
-}
-
-.bcl-language .btn-close {
-  filter: $btn-close-white-filter;
+  .modal-body {
+    overflow-y: visible;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal-content {
+    height: auto;
+  }
+  &.bcl-language-modal--ec,
+  &.bcl-language-modal--eu {
+    .modal-header {
+      border: 0;
+      padding: 0;
+    }
+    .modal-body {
+      padding-top: map-get($spacers, 2);
+    }
+  }
+  &.bcl-language-modal--eu {
+    .modal-dialog {
+      background: $white;
+    }
+    h5 {
+      color: $eu-cta-color;
+    }
+    svg {
+      color: $eu-cta-color;
+    }
+    .btn-close {
+      filter: $btn-close-eu-filter;
+    }
+  }
+  &.bcl-language-modal--ec {
+    background: $eu-background-color;
+    .modal-content {
+      background: $eu-background-color;
+    }
+    h5 {
+      color: $white;
+    }
+    svg {
+      color: $white;
+    }
+    .btn-close {
+      filter: $btn-close-white-filter;
+    }
+  }
 }
