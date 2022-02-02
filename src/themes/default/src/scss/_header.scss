@@ -228,9 +228,13 @@ $header-link-active-background: #003776 !default;
   &.bcl-language-modal--eu {
     .modal-body {
       padding-top: map-get($spacers, 2);
+      overflow: visible;
     }
   }
   &.bcl-language-modal--eu {
+    .modal-body {
+      background: $white;
+    }
     .modal-dialog {
       background: $white;
     }
