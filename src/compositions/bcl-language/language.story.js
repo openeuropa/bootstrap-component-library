@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-language/data/data--neutral.js";
 import demoDataEU from "@openeuropa/bcl-language/data/data--eu.js";
 import demoDataEC from "@openeuropa/bcl-language/data/data--ec.js";
@@ -19,11 +20,13 @@ export default {
   },
 };
 
-export const Language = () => language(demoData);
+export const Language = () => language(correctPaths(demoData));
 Language.storyName = "Neutral";
 
-export const LanguageEU = () => language({ ...demoDataEU, variant: "eu" });
+export const LanguageEU = () =>
+  language(correctPaths({ ...demoDataEU, variant: "eu" }));
 LanguageEU.storyName = "EU";
 
-export const LanguageEC = () => language({ ...demoDataEC, variant: "ec" });
+export const LanguageEC = () =>
+  language(correctPaths({ ...demoDataEC, variant: "ec" }));
 LanguageEC.storyName = "EC";

@@ -92,20 +92,21 @@
             {% endif %}
             >
             {% if _column.buttons is not empty and _column.buttons is iterable %}
-              {% for _trigger in _column.buttons %}
-                {% if _trigger.attributes is empty %}
-                  {% set _trigger = _trigger|merge({
+              {% for _button in _column.buttons %}
+                {% if _button.attributes is empty %}
+                  {% set _button = _button|merge({
                     attributes: create_attribute()
                   }) %}
                 {% endif %}
-                {% set _trigger = _trigger|merge({
-                  attributes: _trigger.attributes.addClass(['w-100', 'mb-2-5', 'justify-content-start'])
-                }) %}
-                {% if _trigger.link %}
-                  {% include '@oe-bcl/bcl-link/link.html.twig' with _trigger only %}
-                {% else %}
-                  {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
+                {% if _button.selected %}
+                  {% set _button = _button|merge({
+                    attributes: _button.attributes.addClass(['selected', 'justify-content-between'])
+                  }) %}
                 {% endif %}
+                {% set _button = _button|merge({
+                  attributes: _button.attributes.addClass(['w-100', 'mb-2-5', 'justify-content-start'])
+                }) %}
+                {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
               {% endfor %}
             {% endif %}
           </div>

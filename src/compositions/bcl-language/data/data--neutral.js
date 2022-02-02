@@ -34,6 +34,11 @@ module.exports = {
             },
             {
               label: "English",
+              selected: true,
+              icon: {
+                name: "check-lg",
+                path: "/icons.svg",
+              },
             },
             {
               label: "français",

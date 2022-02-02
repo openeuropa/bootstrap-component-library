@@ -7,11 +7,28 @@
       text-decoration: underline;
       border-color: $eu-cta-color;
     }
+    &.selected {
+      background: $secondary;
+      color: $white;
+      border-color: $secondary;
+      svg {
+        color: $white;
+      }
+    }
   }
   &.bcl-language--ec,
   &.bcl-language--eu {
     .btn {
       color: $eu-cta-color;
+      font-weight: $font-weight-bold;
+      &.selected {
+        background: $eu-selected-background;
+        color: $black;
+        border-color: $eu-selected-background;
+        svg {
+          color: $black;
+        }
+      }
     }
   }
   &.bcl-language--eu {

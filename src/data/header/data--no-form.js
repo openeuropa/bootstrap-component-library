@@ -123,60 +123,112 @@ module.exports = {
         '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>' +
         '<button type="button" class="btn btn-primary">Access EU login</button>',
     },
-    {
-      id: "languageModal",
-      size: "fullscreen",
-      attributes: new drupalAttribute().addClass("bcl-language"),
-      header:
-        '<h5 class="modal-title" id="languageeModalLabel">Select your language</h5>' +
-        '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
-      body:
-        '<div class="container">' +
-        '<div class="row">' +
-        '<div class="col col-lg-8 offset-lg-2">' +
-        '<h5 class="bcl-language__title">EU official languages</h5>' +
-        "</div>" +
-        "</div>" +
-        '<div class="row">' +
-        '<div class="col col-lg-4 offset-lg-2">' +
-        '<div class="bcl-language__list">' +
-        '<a href="#" class="bcl-language__item">Language 01</a>' +
-        '<a href="#" class="bcl-language__item">Language 02</a>' +
-        '<a href="#" class="bcl-language__item">Language 03</a>' +
-        "</div>" +
-        "</div>" +
-        '<div class="col col-lg-4">' +
-        '<div class="bcl-language__list">' +
-        '<a href="#" class="bcl-language__item">Language 04</a>' +
-        '<a href="#" class="bcl-language__item">Language 05</a>' +
-        '<a href="#" class="bcl-language__item">Language 06</a>' +
-        "</div>" +
-        "</div>" +
-        "</div>" +
-        '<div class="row">' +
-        '<div class="col col-lg-8 offset-lg-2">' +
-        '<h5 class="bcl-language__title">Non EU languages</h5>' +
-        "</div>" +
-        "</div>" +
-        '<div class="row">' +
-        '<div class="col col-lg-4 offset-lg-2">' +
-        '<div class="bcl-language__list">' +
-        '<a href="#" class="bcl-language__item">Language 07</a>' +
-        '<a href="#" class="bcl-language__item">Language 08</a>' +
-        "</div>" +
-        "</div>" +
-        '<div class="col col-lg-4">' +
-        '<div class="bcl-language__list">' +
-        '<a href="#" class="bcl-language__item">Language 09</a>' +
-        '<a href="#" class="bcl-language__item">Language 10</a>' +
-        "</div>" +
-        "</div>" +
-        "</div>" +
-        "</div>",
-      footer:
-        '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>',
-    },
   ],
+  language_modal: {
+    id: "languageModal",
+    size: "fullscreen",
+    title: "Select your language",
+    header: true,
+    variant: "eu",
+    icon: {
+      name: "globe",
+      path: "/icons.svg",
+    },
+    content: {
+      variant: "eu",
+      listings: [
+        {
+          grid: [
+            {
+              buttons: [
+                {
+                  label: "български",
+                },
+                {
+                  label: "español",
+                },
+                {
+                  label: "čeština",
+                },
+                {
+                  label: "dansk",
+                },
+                {
+                  label: "Deutsch",
+                },
+                {
+                  label: "eesti",
+                },
+                {
+                  label: "ελληνικά",
+                },
+                {
+                  label: "English",
+                  selected: true,
+                  icon: {
+                    name: "check-lg",
+                    path: "/icons.svg",
+                  },
+                },
+                {
+                  label: "français",
+                },
+                {
+                  label: "Gaeilge",
+                },
+                {
+                  label: "hrvatski",
+                },
+                {
+                  label: "italiano",
+                },
+              ],
+            },
+            {
+              buttons: [
+                {
+                  label: "latviešu",
+                },
+                {
+                  label: "lietuvių",
+                },
+                {
+                  label: "magyar",
+                },
+                {
+                  label: "Malti",
+                },
+                {
+                  label: "Nederlands",
+                },
+                {
+                  label: "polski",
+                },
+                {
+                  label: "português",
+                },
+                {
+                  label: "română",
+                },
+                {
+                  label: "slovenčina",
+                },
+                {
+                  label: "slovenščina",
+                },
+                {
+                  label: "suomi",
+                },
+                {
+                  label: "svenska",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
   breadcrumbs: {
     attributes: new drupalAttribute().addClass(["mt-3"]),
     links: [
