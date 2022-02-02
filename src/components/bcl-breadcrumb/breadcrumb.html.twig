@@ -2,6 +2,9 @@
 
 {# Parameters:
   - links (array of objects of type link)
+
+  Blocks
+    - breadcrumb_link
 #}
 
 {% set _classes = 'breadcrumb' %}
@@ -46,7 +49,9 @@
                 },
              }) %}
           {% endif %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+          {% block breadcrumb_link %}
+            {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+          {% endblock %}
         {% else %}
           {{- _link.label -}}
         {%- endif -%}

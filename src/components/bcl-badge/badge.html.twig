@@ -10,6 +10,9 @@
   - rounded_pill (boolean) (default: false)
   - outline (boolean) (default: false)
   - icons_path (string) (default: '')
+
+  Blocks
+    - badge_icon
 #}
 
 {% set _rounded_pill = rounded_pill|default(false) %}
@@ -57,10 +60,12 @@
     {{- _label -}}
   {%- if _dismissible -%}
     <span class="icon--close" aria-hidden="true">
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-        name: "x",
-        path: _icons_path,
-      } only %}
+      {% block badge_icon %}
+        {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+          name: "x",
+          path: _icons_path,
+        } only %}
+      {% endblock %}
     </span>
   {%- endif -%}
   </span>
