@@ -15,6 +15,9 @@
     ]
   - open_item_id (int) (default: 0) index value of the item to open (starting from 1),
     all closed by default (0)
+
+  Blocks
+    - accordion_button
 #}
 
 {% set _id = id|default(random(1000)) %}
@@ -56,11 +59,13 @@
                                 .setAttribute('aria-controls', 'collapse-' ~ _id ~ '-' ~ loop.index)
                                 .setAttribute('aria-expanded', open_item ? 'true' : 'false')
       %}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with {
-        label: _item.title,
-        clean_class: true,
-        attributes: button_attributes
-      } only %}
+      {% block accordion_button %}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with {
+          label: _item.title,
+          clean_class: true,
+          attributes: button_attributes
+        } only %}
+      {% endblock %}
     </{{ _item_title_tag }}>
     <div
       id="collapse-{{ _id }}-{{ loop.index }}"
