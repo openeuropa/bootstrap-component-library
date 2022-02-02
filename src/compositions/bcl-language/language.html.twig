@@ -75,7 +75,9 @@
 
   {% if _listings is not empty and _listings is iterable %}
   <div class="main pt-4">
+    {% if not (_variant == 'neutral' and _modal) %}
     <div class="container">
+    {% endif %}
     {% for _listing in _listings %}
       <div class="pb-2">
         {% if _listing.title is not empty %}
@@ -115,7 +117,9 @@
         {% endif %}
       </div>
     {% endfor %}
+    {% if not (_variant == 'neutral' and _modal) %}
     </div>
+    {% endif %}
   </div>
   {% endif %}
 </div>

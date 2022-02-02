@@ -22,10 +22,6 @@
 {% block header %}
   {% if size == 'fullscreen' %}
   <div class="container">
-    {% if variant == 'eu' or variant == 'ec' %}
-    <div class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5">
-      <div class="py-3-5 px-3 px-sm-0 px-md-3">
-    {% endif %}
     <div class="d-flex justify-content-between align-items-center">
   {% endif %}
   <div class="d-flex align-items-center">
@@ -39,23 +35,17 @@
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   {% if size == 'fullscreen' %}
     </div>
-  {% if variant == 'eu' or variant == 'ec' %}
-    </div>
-  </div>
-  {% endif %}
   </div>
   {% endif %}
 {% endblock %}
 
 {% block body %}
   {% if _content is defined and _content is not empty %}
-    <div class="px-3 px-md-0">
     {% set _content = _content|merge({
       modal: true
     }) %}
     {% include '@oe-bcl/bcl-language/language.html.twig' with _content|merge({
       variant: _variant,
     }) only %}
-    </div>
   {% endif %}
 {% endblock %}

@@ -199,6 +199,7 @@ module.exports = {
       name: "globe",
       path: "/icons.svg",
     },
+    fullscreen_responsive: "md",
     content: {
       listings: [
         {

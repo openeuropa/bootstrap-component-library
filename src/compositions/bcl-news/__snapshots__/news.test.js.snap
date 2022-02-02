@@ -433,38 +433,30 @@ exports[`OE - News full page renders correctly 1`] = `
             class="container"
           >
             <div
-              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+              class="d-flex justify-content-between align-items-center"
             >
               <div
-                class="py-3-5 px-3 px-sm-0 px-md-3"
+                class="d-flex align-items-center"
               >
-                <div
-                  class="d-flex justify-content-between align-items-center"
+                <svg
+                  class="bi icon--s"
                 >
-                  <div
-                    class="d-flex align-items-center"
-                  >
-                    <svg
-                      class="bi icon--s"
-                    >
-                      <use
-                        xlink:href="/icons.svg#globe"
-                      />
-                    </svg>
-                    <h5
-                      class="mb-0 ms-2"
-                    >
-                      Select your language
-                    </h5>
-                  </div>
-                  <button
-                    aria-label="Close"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    type="button"
+                  <use
+                    xlink:href="/icons.svg#globe"
                   />
-                </div>
+                </svg>
+                <h5
+                  class="mb-0 ms-2"
+                >
+                  Select your language
+                </h5>
               </div>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              />
             </div>
           </div>
         </div>
@@ -472,182 +464,178 @@ exports[`OE - News full page renders correctly 1`] = `
           class="modal-body"
         >
           <div
-            class="px-3 px-md-0"
+            class="bcl-language bcl-language--eu"
           >
             <div
-              class="bcl-language bcl-language--eu"
+              class="main pt-4"
             >
               <div
-                class="main pt-4"
+                class="container"
               >
                 <div
-                  class="container"
+                  class="pb-2"
                 >
                   <div
-                    class="pb-2"
+                    class="row"
                   >
                     <div
-                      class="row"
+                      class="col-12 col-md"
                     >
-                      <div
-                        class="col-12 col-md"
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
                       >
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          български
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          español
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          čeština
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          dansk
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Deutsch
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          eesti
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          ελληνικά
-                        </button>
-                        <button
-                          class="selected justify-content-between w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          English
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#check-lg"
-                            />
-                          </svg>
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          français
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Gaeilge
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          hrvatski
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          italiano
-                        </button>
-                      </div>
-                      <div
-                        class="col-12 col-md"
+                        български
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
                       >
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
+                        español
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        čeština
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        dansk
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Deutsch
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        eesti
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        ελληνικά
+                      </button>
+                      <button
+                        class="selected justify-content-between w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
                         >
-                          latviešu
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          lietuvių
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          magyar
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Malti
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Nederlands
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          polski
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          português
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          română
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          slovenčina
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          slovenščina
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          suomi
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          svenska
-                        </button>
-                      </div>
+                          <use
+                            xlink:href="/icons.svg#check-lg"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        français
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Gaeilge
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        hrvatski
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        italiano
+                      </button>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        latviešu
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        lietuvių
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        magyar
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Malti
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Nederlands
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        polski
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        português
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        română
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        slovenčina
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        slovenščina
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        suomi
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        svenska
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1407,38 +1395,30 @@ exports[`OE - News listing renders correctly 1`] = `
             class="container"
           >
             <div
-              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+              class="d-flex justify-content-between align-items-center"
             >
               <div
-                class="py-3-5 px-3 px-sm-0 px-md-3"
+                class="d-flex align-items-center"
               >
-                <div
-                  class="d-flex justify-content-between align-items-center"
+                <svg
+                  class="bi icon--s"
                 >
-                  <div
-                    class="d-flex align-items-center"
-                  >
-                    <svg
-                      class="bi icon--s"
-                    >
-                      <use
-                        xlink:href="/icons.svg#globe"
-                      />
-                    </svg>
-                    <h5
-                      class="mb-0 ms-2"
-                    >
-                      Select your language
-                    </h5>
-                  </div>
-                  <button
-                    aria-label="Close"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    type="button"
+                  <use
+                    xlink:href="/icons.svg#globe"
                   />
-                </div>
+                </svg>
+                <h5
+                  class="mb-0 ms-2"
+                >
+                  Select your language
+                </h5>
               </div>
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              />
             </div>
           </div>
         </div>
@@ -1446,182 +1426,178 @@ exports[`OE - News listing renders correctly 1`] = `
           class="modal-body"
         >
           <div
-            class="px-3 px-md-0"
+            class="bcl-language bcl-language--eu"
           >
             <div
-              class="bcl-language bcl-language--eu"
+              class="main pt-4"
             >
               <div
-                class="main pt-4"
+                class="container"
               >
                 <div
-                  class="container"
+                  class="pb-2"
                 >
                   <div
-                    class="pb-2"
+                    class="row"
                   >
                     <div
-                      class="row"
+                      class="col-12 col-md"
                     >
-                      <div
-                        class="col-12 col-md"
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
                       >
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          български
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          español
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          čeština
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          dansk
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Deutsch
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          eesti
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          ελληνικά
-                        </button>
-                        <button
-                          class="selected justify-content-between w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          English
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#check-lg"
-                            />
-                          </svg>
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          français
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Gaeilge
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          hrvatski
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          italiano
-                        </button>
-                      </div>
-                      <div
-                        class="col-12 col-md"
+                        български
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
                       >
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
+                        español
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        čeština
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        dansk
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Deutsch
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        eesti
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        ελληνικά
+                      </button>
+                      <button
+                        class="selected justify-content-between w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
                         >
-                          latviešu
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          lietuvių
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          magyar
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Malti
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          Nederlands
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          polski
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          português
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          română
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          slovenčina
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          slovenščina
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          suomi
-                        </button>
-                        <button
-                          class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
-                          type="button"
-                        >
-                          svenska
-                        </button>
-                      </div>
+                          <use
+                            xlink:href="/icons.svg#check-lg"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        français
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Gaeilge
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        hrvatski
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        italiano
+                      </button>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        latviešu
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        lietuvių
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        magyar
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Malti
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        Nederlands
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        polski
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        português
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        română
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        slovenčina
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        slovenščina
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        suomi
+                      </button>
+                      <button
+                        class="w-100 mb-2-5 justify-content-start btn btn-primary btn-md"
+                        type="button"
+                      >
+                        svenska
+                      </button>
                     </div>
                   </div>
                 </div>
