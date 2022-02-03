@@ -14,7 +14,7 @@ const openModal = (story) => {
       if (typeof(backdrop) != 'undefined' && backdrop != null) {
         backdrop.remove()
       }
-      var languageModal = new bootstrap.Modal(document.getElementById('languageModal', { backdrop: false }))
+      var languageModal = new bootstrap.Modal(document.getElementById('languageModal'))
       languageModal.show()
     </script>
     `;
@@ -29,7 +29,7 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5568%3A231237",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5477%3A223304",
       },
     ],
   },
