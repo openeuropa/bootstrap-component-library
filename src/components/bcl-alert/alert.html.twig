@@ -48,13 +48,14 @@
 
 <div {{ attributes }}>
 {% if _icons_path is not empty %}
-  {% block accordion_button %}
-    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-      name: _icon_name ?: _icon_names[_variant],
-      size: 's',
-      path: _icons_path,
-      attributes: create_attribute().addClass(['flex-shrink-0 me-3 mt-1 align-self-start']),
-    } only %}
+  {% set _icon = {
+    name: _icon_name ?: _icon_names[_variant],
+    size: 's',
+    path: _icons_path,
+    attributes: create_attribute().addClass(['flex-shrink-0 me-3 mt-1 align-self-start']),
+  } %}
+  {% block alert_icon %}
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
   {% endblock %}
 {% endif %}
   <div class="alert-content flex-grow-1">

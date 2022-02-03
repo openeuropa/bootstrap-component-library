@@ -59,12 +59,13 @@
                                 .setAttribute('aria-controls', 'collapse-' ~ _id ~ '-' ~ loop.index)
                                 .setAttribute('aria-expanded', open_item ? 'true' : 'false')
       %}
+      {% set _button = {
+        label: _item.title,
+        clean_class: true,
+        attributes: button_attributes
+      } %}
       {% block accordion_button %}
-        {% include '@oe-bcl/bcl-button/button.html.twig' with {
-          label: _item.title,
-          clean_class: true,
-          attributes: button_attributes
-        } only %}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
       {% endblock %}
     </{{ _item_title_tag }}>
     <div

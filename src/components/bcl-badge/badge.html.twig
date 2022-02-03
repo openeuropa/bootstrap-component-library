@@ -60,11 +60,12 @@
     {{- _label -}}
   {%- if _dismissible -%}
     <span class="icon--close" aria-hidden="true">
-      {% block badge_icon %}
-        {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+      {% set _icon = {
           name: "x",
           path: _icons_path,
-        } only %}
+      } %}
+      {% block badge_icon %}
+        {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
       {% endblock %}
     </span>
   {%- endif -%}
