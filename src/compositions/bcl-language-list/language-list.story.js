@@ -1,12 +1,12 @@
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-language/data/data--neutral.js";
-import demoDataEU from "@openeuropa/bcl-language/data/data--eu.js";
-import demoDataEC from "@openeuropa/bcl-language/data/data--ec.js";
-import language from "@openeuropa/bcl-language/language.html.twig";
+import demoData from "@openeuropa/bcl-language-list/data/data--neutral.js";
+import demoDataEU from "@openeuropa/bcl-language-list/data/data--eu.js";
+import demoDataEC from "@openeuropa/bcl-language-list/data/data--ec.js";
+import language from "@openeuropa/bcl-language-list/language-list.html.twig";
 
 export default {
-  title: "Compositions/Language Splash",
+  title: "Compositions/Language List",
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",

@@ -220,18 +220,22 @@ $header-link-active-background: #003776 !default;
   }
 }
 
-.bcl-language-modal {
+.bcl-language-list-modal {
   .btn-close {
     opacity: 1;
   }
-  &.bcl-language-modal--ec,
-  &.bcl-language-modal--eu {
+  &.bcl-language-list-modal--ec,
+  &.bcl-language-list-modal--eu {
     .modal-body {
       padding-top: map-get($spacers, 2);
       overflow: visible;
     }
+    .modal-header {
+      border: 0;
+      padding: 0;
+    }
   }
-  &.bcl-language-modal--eu {
+  &.bcl-language-list-modal--eu {
     .modal-body {
       background: $white;
     }
@@ -248,7 +252,7 @@ $header-link-active-background: #003776 !default;
       filter: $btn-close-eu-filter;
     }
   }
-  &.bcl-language-modal--ec {
+  &.bcl-language-list-modal--ec {
     background: $eu-background-color;
     .modal-content {
       background: $eu-background-color;

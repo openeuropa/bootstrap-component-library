@@ -1,4 +1,4 @@
-.bcl-language {
+.bcl-language-list {
   .btn {
     background: $white;
     color: $primary;
@@ -16,8 +16,8 @@
       }
     }
   }
-  &.bcl-language--ec,
-  &.bcl-language--eu {
+  &.bcl-language-list--ec,
+  &.bcl-language-list--eu {
     .btn {
       color: $eu-cta-color;
       font-weight: $font-weight-bold;
@@ -31,17 +31,21 @@
       }
     }
   }
-  &.bcl-language--eu {
+  &.bcl-language-list--eu {
     .btn {
       border: 2px solid $eu-cta-color;
     }
   }
-  &.bcl-language--ec {
+  &.bcl-language-list--ec {
     .main {
       background: $eu-background-color;
       h5 {
         color: $white;
       }
+    }
+    .btn {
+      border-radius: 0;
+      border-color: transparent;
     }
   }
 }
