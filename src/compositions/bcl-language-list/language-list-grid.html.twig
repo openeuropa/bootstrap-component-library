@@ -1,0 +1,68 @@
+{% spaceless %}
+
+{#
+  Parameters:
+  - items (array) (default: []) format: [
+    {
+      lang (string)
+      label (string)
+      path (string)
+      active (boolean)
+    }
+  ]
+  - category (string) (default: '')
+  - icon_path (string) (default: '')
+#}
+
+{% set _items = items|default([]) %}
+{% set _icon_path = icon_path|default('') %}
+{% set _category = category|default('') %}
+
+{% set _columns = [] %}
+{% set _columns = _columns|merge([_items|slice(0, (items|length / 2)|round(0, 'ceil'))]) %}
+{% set _columns = _columns|merge([_items|slice((items|length / 2)|round(0, 'ceil'), items|length)]) %}
+
+<div class="pb-2">
+  {% if _category is not empty %}
+  <h5 class="mb-4">{{ _category }}</h5>
+  {% endif %}
+  {% if _columns is not empty and _columns is iterable %}
+  <div class="row">
+    {% for _column in _columns %}
+      <div class="col-12 col-md">
+      {% for _item in _column %}
+        {% if _item.attributes is empty %}
+          {% set _item = _item|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
+        {% set _item = _item|merge({
+          attributes: _item.attributes.addClass(['w-100', 'mb-2-5', 'btn', 'w-100'])
+        }) %}
+        {% if _item.active %}
+          {% set _item = _item|merge({
+            icon: {
+              name: "check2",
+              path: _icon_path,
+            },
+            attributes: _item.attributes.addClass(['selected', 'justify-content-between'])
+          }) %}
+        {% else %}
+          {% set _item = _item|merge({
+            attributes: _item.attributes.addClass('justify-content-start')
+          }) %}
+        {% endif %}
+        {% if _item.lang is not empty %}
+          {% set _item = _item|merge({
+            attributes: _item.attributes.setAttribute('lang', _item.lang).setAttribute('hreflang', _item.lang)
+          }) %}
+        {% endif %}
+        {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+      {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+{% endspaceless %}

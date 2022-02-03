@@ -1,35 +1,38 @@
 {% spaceless %}
 
 {# Parameters:
-  - modal (boolean) (default: false)
+  - overlay (boolean) (default: false)
   - variant (string) (default: 'neutral')
-  - logos_alignment (string) (default: "")
-    options: "start", "center", "end"
-  - logos (array of objest) (default: []) format: [
-    {
-      src (string),
+  - title (string) (default: '')
+  - logo (object) (default: {}) format: {
+      path (string),
       alt (string),
       class (string),
     }
-  ]
-  - listings (array of objects) (default: []) format: [
-    {
-      title (string),
-      grid (array of objects) format: [
-        {
-          class (string) (default: col-12 col-md)
-          buttons (array of buttons)
-        }
-      ]
-    }
-  ]
+  - icon_path (string) (default: '')
+  - eu_category (string) (default: '');
+  - non_eu_category (string) (default: '')
+  - items (array) (default: [])
+    - "lang" (string) (default: '')
+    - "label" (string) (default: '')
+    - "path" (string) (default: '')
+    - "active (boolean) (default: false)
+  - non_eu_items (array) (default: [])
+    - "lang" (string) (default: '')
+    - "label" (string) (default: '')
+    - "path" (string) (default: '')
+    - "active (boolean) (default: false)
 #}
 
-{% set _modal = modal|default(false) %}
+{% set _overlay = overlay|default(false) %}
 {% set _variant = variant|default('neutral') %}
-{% set _logos_alignment = logos_alignment|default('') %}
-{% set _logos = logos|default([]) %}
-{% set _listings = listings|default([]) %}
+{% set _title = title|default('') %}
+{% set _logo = logo|default({}) %}
+{% set _icon_path = icon_path|default('') %}
+{% set _eu_category = eu_category|default('') %}
+{% set _non_eu_category = non_eu_category|default('') %}
+{% set _items = items|default([]) %}
+{% set _non_eu_items = non_eu_items|default([]) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -37,87 +40,60 @@
 
 {% set attributes = attributes.addClass(['bcl-language-list', 'bcl-language-list--' ~ _variant]) %}
 
-{% if not modal %}
+{% if not overlay %}
   {% set attributes = attributes.addClass(['pt-5']) %}
 {% endif %}
 
 <div
   {{ attributes }}
 >
-  {% if _logos is not empty and _logos is iterable %}
+  {% if _logo is not empty %}
   <div class="container">
-    {% if _logos_alignment is not empty %}
-    <div class="text-{{ _logos_alignment }}">
+    {% if _title is empty %}
+    <div class="text-center">
     {% endif %}
-    {% for _logo in _logos %}
-      <div class="d-inline-flex align-items-center">
-        <img
-          {% if _logo.src is not empty %}
-          src="{{ _logo.src }}"
-          {% endif %}
-          {% if _logo.alt is not empty %}
-          alt="{{ _logo.alt }}"
-          {% endif %}
-          {% if _logo.class is not empty %}
-          class="{{ _logo.class }}"
-          {% endif %}
-        />
-        {% if _logo.title is not empty %}
-        <h5 class="h5 ms-4">{{ _logo.title }}</h5>
+    <div class="d-inline-flex align-items-center">
+      <img
+        {% if _logo.path is not empty %}
+        src="{{ _logo.path }}"
         {% endif %}
-      </div>
-    {% endfor %}
-    {% if _logos_alignment is not empty %}
+        {% if _logo.alt is not empty %}
+        alt="{{ _logo.alt }}"
+        {% endif %}
+        {% if _logo.class is not empty %}
+        class="{{ _logo.class }}"
+        {% endif %}
+      />
+      {% if _title is not empty %}
+      <h5 class="h5 ms-4">{{ _title }}</h5>
+      {% endif %}
+    </div>
+    {% if _title is empty %}
     </div>
     {% endif %}
   </div>
   {% endif %}
 
-  {% if _listings is not empty and _listings is iterable %}
+  {% if _items is not empty or _non_eu_items is not empty %}
   <div class="main pt-4">
-    {% if not (_variant == 'neutral' and _modal) %}
+    {% if not (_variant == 'neutral' and _overlay) %}
     <div class="container">
     {% endif %}
-    {% for _listing in _listings %}
-      <div class="pb-2">
-        {% if _listing.title is not empty %}
-        <h5 class="mb-4">{{ _listing.title }}</h5>
-        {% endif %}
-        {% if _listing.grid is not empty and _listing.grid is iterable %}
-        <div class="row">
-          {% for _column in _listing.grid %}
-          <div
-            {% if _column.class is not empty %}
-              class="{{ _column.class }}"
-            {% else %}
-              class="col-12 col-md"
-            {% endif %}
-            >
-            {% if _column.buttons is not empty and _column.buttons is iterable %}
-              {% for _button in _column.buttons %}
-                {% if _button.attributes is empty %}
-                  {% set _button = _button|merge({
-                    attributes: create_attribute()
-                  }) %}
-                {% endif %}
-                {% if _button.selected %}
-                  {% set _button = _button|merge({
-                    attributes: _button.attributes.addClass(['selected', 'justify-content-between'])
-                  }) %}
-                {% endif %}
-                {% set _button = _button|merge({
-                  attributes: _button.attributes.addClass(['w-100', 'mb-2-5', 'justify-content-start'])
-                }) %}
-                {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
-              {% endfor %}
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-        {% endif %}
-      </div>
-    {% endfor %}
-    {% if not (_variant == 'neutral' and _modal) %}
+    {% if _items is not empty and _items is iterable %}
+      {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+          items: _items,
+          icon_path: _icon_path,
+          category: eu_category,
+      } only %}
+    {% endif %}
+    {% if _non_eu_items is not empty and _non_eu_items is iterable %}
+      {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+          items: _non_eu_items,
+          icon_path: _icon_path,
+          category: non_eu_category,
+      } only %}
+    {% endif %}
+    {% if not (_variant == 'neutral' and _overlay) %}
     </div>
     {% endif %}
   </div>

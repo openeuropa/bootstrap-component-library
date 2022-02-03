@@ -2,14 +2,16 @@
   Parameters:
   - variant (string) (default: 'neutral')
   - title (string) (default: {})
-  - icon (icon object) (default: {})
+  - icon_path (string) (default: {})
+  - close_label (string) (default: '')
   - content (language-list object) (default: '')
 #}
 
 {% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
 
 {% set _title = title|default('') %}
-{% set _icon = icon|default({}) %}
+{% set _icon_path = icon_path|default('') %}
+{% set _close_label = close_label|default('') %}
 {% set _content = content|default({}) %}
 {% set _variant = variant|default('neutral') %}
 
@@ -30,13 +32,20 @@
   {% endif %}
   <div class="d-flex align-items-center">
     {% set _title_classes = 'mb-0' %}
-    {% if _icon is not empty %}
+    {% if _icon_path is not empty %}
       {% set _title_classes = _title_classes ~ ' ms-2' %}
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
+      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+        name: "globe",
+        path: _icon_path
+      } only %}
     {% endif %}
     <h5 class="{{ _title_classes }}">{{ _title }}</h5>
   </div>
-  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <button type="button" class="btn-close" data-bs-dismiss="modal"
+    {% if _close_label is not empty %}
+      aria-label="{{ _close_label }}"
+    {% endif %}
+  ></button>
   {% if size == 'fullscreen' %}
     </div>
     {% if variant == 'eu' or variant == 'ec' %}
@@ -51,7 +60,8 @@
   {% if _content is defined and _content is not empty %}
     {% include '@oe-bcl/bcl-language-list/language-list.html.twig' with _content|merge({
       variant: _variant,
-      modal: true
+      overlay: true,
+      icon_path: _icon_path
     }) only %}
   {% endif %}
 {% endblock %}
