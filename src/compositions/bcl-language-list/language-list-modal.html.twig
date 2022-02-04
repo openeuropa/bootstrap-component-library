@@ -1,23 +1,18 @@
-{#
-  Parameters:
-  - variant (string) (default: 'neutral')
-  - title (string) (default: {})
-  - icon_path (string) (default: {})
-  - close_label (string) (default: '')
-  - content (language-list object) (default: '')
-#}
-
 {% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
 
-{% set _title = title|default('') %}
-{% set _icon_path = icon_path|default('') %}
-{% set _close_label = close_label|default('') %}
-{% set _content = content|default({}) %}
-{% set _variant = variant|default('neutral') %}
-
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{% if _title is not empty %}
+  {% set header = true %}
 {% endif %}
+
+{% if _variant == 'neutral' %}
+  {% set size = "xl" %}
+  {% set fullscreen_responsive = "md" %}
+{% else %}
+  {% set size = "fullscreen" %}
+{% endif %}
+
+{% set overlay = false %}
+{% set inside_container = true %}
 
 {% set attributes = attributes.addClass(['bcl-language-list-modal', 'bcl-language-list-modal--' ~ _variant]) %}
 
@@ -57,11 +52,7 @@
 {% endblock %}
 
 {% block body %}
-  {% if _content is defined and _content is not empty %}
-    {% include '@oe-bcl/bcl-language-list/language-list.html.twig' with _content|merge({
-      variant: _variant,
-      overlay: true,
-      icon_path: _icon_path
-    }) only %}
-  {% endif %}
+  {% include '@oe-bcl/bcl-language-list/language-list.html.twig' with {
+    attributes: create_attribute()
+  } %}
 {% endblock %}
