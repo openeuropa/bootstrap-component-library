@@ -58,6 +58,7 @@ export default {
   decorators: [withDesign, openModal],
   parameters: {
     layout: "fullscreen",
+    controls: { disable: true },
     design: [
       {
         name: "Mockup",

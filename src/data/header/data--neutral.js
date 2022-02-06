@@ -193,7 +193,7 @@ module.exports = {
   language_modal: {
     id: "languageModal",
     title: "Select your language",
-    icon_path: "/icons.svg",
+    icons_path: "/icons.svg",
     close_label: "Close",
     overlay: true,
     items: [

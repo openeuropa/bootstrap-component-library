@@ -5,7 +5,7 @@ module.exports = {
     alt: "logo",
     class: "w-100 mb-3",
   },
-  icon_path: "/icons.svg",
+  icons_path: "/icons.svg",
   items: [
     {
       label: "български",

@@ -10,6 +10,7 @@ export default {
   decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
+    controls: { disable: true },
     design: [
       {
         name: "Mockup",

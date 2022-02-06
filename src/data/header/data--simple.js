@@ -167,7 +167,7 @@ module.exports = {
     title: "Select your language",
     header: true,
     variant: "eu",
-    icon_path: "/icons.svg",
+    icons_path: "/icons.svg",
     content: {
       variant: "eu",
       listings: [

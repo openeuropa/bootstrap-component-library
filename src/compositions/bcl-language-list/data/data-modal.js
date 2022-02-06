@@ -1,12 +1,9 @@
 module.exports = {
-  variant: "eu",
-  logos_alignment: "center",
-  logo: {
-    path: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/logo-eu--mute.svg",
-    alt: "logo",
-    class: "w-100",
-  },
+  id: "languageModal",
+  title: "Select your language",
   icons_path: "/icons.svg",
+  close_label: "Close",
+  overlay: true,
   items: [
     {
       label: "български",
@@ -106,4 +103,28 @@ module.exports = {
       lang: "sv",
     },
   ],
+  non_eu_items: [
+    {
+      label: "中文",
+      lang: "zh",
+    },
+    {
+      label: "Türk",
+      lang: "tr",
+    },
+    {
+      label: "pусский",
+      lang: "ru",
+    },
+    {
+      label: "Català",
+      lang: "ca",
+    },
+    {
+      label: "عَرَبِيّ",
+      lang: "ar",
+    },
+  ],
+  eu_category: "EU official languages",
+  non_eu_category: "Other languages",
 };
