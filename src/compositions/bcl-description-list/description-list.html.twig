@@ -63,10 +63,12 @@
               {% include '@oe-bcl/bcl-icon/icon.html.twig' with _term.icon|merge({
                 attributes: create_attribute().addClass(_icon_classes)
               }) only %}
-            <p class="mb-0 d-inline-block">{{ _term.label }}</p>
-          {%- else -%}
-            {{- _term.label -}}
-          {%- endif -%}
+              <p class="mb-0 d-inline-block">{{ _term.label }}</p>
+            {%- elseif _term.color is not empty -%}
+              <span class="p-2 me-1 d-inline-block rounded-1 {{ _term.color }}"></span>{{- _term.label -}}
+            {%- else -%}
+              {{- _term.label -}}
+            {%- endif -%}
           </dt>
         {% endfor %}
         {% if _variant == 'horizontal' %}
@@ -87,6 +89,8 @@
               attributes: create_attribute().addClass(_icon_classes)
             }) only -%}
             <p class="mb-0 d-inline-block">{{ _item.term.label }}</p>
+          {%- elseif _item.term.color is not empty -%}
+            <span class="p-2 me-1 d-inline-block rounded-1 {{ _item.term.color }}"></span>{{- _item.term.label -}}
           {%- else -%}
             {{- _item.term.label -}}
           {%- endif -%}
