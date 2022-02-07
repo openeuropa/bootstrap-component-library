@@ -5,9 +5,8 @@ import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
 import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import subscription from "@openeuropa/bcl-subscription/subscription.html.twig";
-import data from "@openeuropa/bcl-subscription/data/data.js";
-const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
-const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
+import block_data from "@openeuropa/bcl-subscription/data/data.js";
+import modal_data from "@openeuropa/bcl-subscription/data/data-modal.js";
 
 const baseData = {
   content_type: "news",
@@ -21,15 +20,32 @@ const baseData = {
 
 const demoData = {
   ...baseData,
-  subscription: { ...data },
+  subscription: block_data,
+  subscription_modal: modal_data,
   banner: banner,
   content: content,
-  feedback: feedback,
-  share: share,
+};
+
+const clientValidation = (story) => {
+  const demo = story();
+  return `<script>
+  var submit = document.querySelector('.form-submit');
+  var form = document.querySelector('.needs-validation');
+
+  submit.addEventListener('click', function () {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+      form.classList.add('was-validated')
+    } else {
+      form.submit();
+    }
+  });
+  </script>${demo}`;
 };
 
 export default {
-  title: "Compositions/Subscription",
+  title: "Features/Subscription",
   decorators: [withDesign],
   parameters: {
     design: [
@@ -43,3 +59,4 @@ export default {
 };
 
 export const Default = () => subscription(correctPaths(demoData));
+Default.decorators = [clientValidation];

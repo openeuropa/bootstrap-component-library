@@ -1,3 +1,5 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
   title: "Subscribe",
   content:
@@ -10,5 +12,8 @@ module.exports = {
       name: "chevron-right",
       path: "/icons.svg",
     },
+    attributes: new drupalAttribute()
+      .setAttribute("data-bs-toggle", "modal")
+      .setAttribute("data-bs-target", "#subscribeModal"),
   },
 };
