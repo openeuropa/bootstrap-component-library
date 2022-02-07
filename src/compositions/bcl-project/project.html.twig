@@ -32,7 +32,9 @@
   </h3>
 
 {% for contributor in contributors.listing %}
+  {% if contributor.title is not empty %}
   <h4 class="fw-bold mb-3">{{ contributor.title }}</h4>
+  {% endif %}
 
   {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contributor.list only %}
 

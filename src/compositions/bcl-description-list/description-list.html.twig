@@ -104,10 +104,10 @@
     {% if _item.definition is not empty %}
       {% if _item.definition is iterable %}
         {% if _variant == 'horizontal' %}
-          <div>
+          <dd>
         {% endif %}
         {% for _definition in _item.definition %}
-          <dd>
+          {% if _variant == 'horizontal' %}<div>{% else %}<dd>{% endif %}
             {%- if _definition.button is defined -%}
               {% include '@oe-bcl/bcl-button/button.html.twig' with _definition.button only %}
             {%- elseif _definition.link is defined %}
@@ -123,10 +123,10 @@
                 {{- _definition.label -}}
               {%- endif -%}
             {%- endif -%}
-          </dd>
+          {% if _variant == 'horizontal' %}</div>{% else %}</dd>{% endif %}
         {% endfor %}
         {% if _variant == 'horizontal' %}
-          </div>
+          </dd>
         {% endif %}
       {% else %}
         <dd>
