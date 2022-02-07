@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_details %}
+  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_details|merge({ charts: charts }) %}
 
   <div class="border-bottom mb-4">
     {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
