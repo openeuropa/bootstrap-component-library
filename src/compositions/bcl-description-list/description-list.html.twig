@@ -65,7 +65,9 @@
               }) only %}
               <p class="mb-0 d-inline-block">{{ _term.label }}</p>
             {%- elseif _term.color is not empty -%}
-              <span class="p-2 me-1 d-inline-block rounded-1 {{ _term.color }}"></span>{{- _term.label -}}
+              <div class="d-flex align-items-center">
+                <span class="p-2 me-2 d-inline-block rounded-1 {{ _term.color }}"></span>{{- _term.label -}}
+              </div>
             {%- else -%}
               {{- _term.label -}}
             {%- endif -%}
@@ -90,7 +92,9 @@
             }) only -%}
             <p class="mb-0 d-inline-block">{{ _item.term.label }}</p>
           {%- elseif _item.term.color is not empty -%}
-            <span class="p-2 me-1 d-inline-block rounded-1 {{ _item.term.color }}"></span>{{- _item.term.label -}}
+            <div class="d-flex align-items-center">
+              <span class="p-2 me-2 d-inline-block rounded-1 {{ _item.term.color }}"></span>{{- _item.term.label -}}
+            </div>
           {%- else -%}
             {{- _item.term.label -}}
           {%- endif -%}
