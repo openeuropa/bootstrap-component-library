@@ -48,6 +48,7 @@ module.exports = {
             path: "/icons.svg",
             attributes: new drupalAttribute().addClass("me-lg-2-5"),
           },
+          id: "modal-trigger",
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#languageModal")
