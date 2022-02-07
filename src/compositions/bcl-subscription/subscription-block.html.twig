@@ -1,0 +1,34 @@
+{% spaceless %}
+
+{# Parameters:
+  - title: (string) (default: '')
+  - content: (string) (default: '')
+  - button: (button Object) (default: {})
+  - modal: (modal Object) (default: {})
+  ]
+#}
+
+{% set _title = title|default(false) %}
+{% set _content = content|default('') %}
+{% set _button = button|default({}) %}
+{% set _modal = modal|default({}) %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(['bg-light', 'px-4-5', 'pt-4', 'pb-4-5']) %}
+
+<div
+  {{ attributes }}
+>
+  <h2 class="fw-normal">{{ _title }}</h2>
+  {{ _content }}
+  <div class="pb-2">
+    {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+  </div>
+</div>
+
+{% include '@oe-bcl/bcl-modal/modal.html.twig' with _modal only %}
+
+{% endspaceless %}

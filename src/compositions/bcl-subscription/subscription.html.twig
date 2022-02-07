@@ -1,0 +1,9 @@
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+
+{% block sidebar %}
+  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+{% endblock %}
+
+{% block content_bottom %}
+  {% include '@oe-bcl/bcl-subscription/subscription-block.html.twig' with subscription only %}
+{% endblock %}
