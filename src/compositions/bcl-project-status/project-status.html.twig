@@ -12,8 +12,10 @@
   - label (string) (default: '')
   - badge (string) (default: ''),
   - progress (string) (default: '')
+  - chart_progress (string) (default: '') // value every 5 percent
+  - chart_details_list (object) (default: {})
 
-  Blocks - charts
+    Blocks - charts
 #}
 
 {% set _title_id = title_id|default('') %}
@@ -28,6 +30,8 @@
 {% set _start_label = start_label|default('') %}
 {% set _end_label = end_label|default('') %}
 {% set _progress = progress|default('') %}
+{% set _chart_progress = chart_progress|default('') %}
+{% set _chart_details_list = chart_details_list|default({}) %}
 
 {% set _bgs = {
     ongoing: 'info',
@@ -99,11 +103,26 @@
     </div>
   </div>
 </div>
-
-{% if _charts is not empty %}
+{% if _chart_progress is not empty and _chart_details_list is not empty %}
 <div class="border-bottom pb-4 mb-4">
-  {%- block charts _charts -%}
+  {% block charts %}
+  <div class="row">
+    <div class="col-5 col-md-3">
+      <div class="circular-progress" data-percentage="{{ _chart_progress }}">
+        <span class="circular-progress-left">
+          <span class="circular-progress-bar"></span>
+        </span>
+        <span class="circular-progress-right">
+          <span class="circular-progress-bar"></span>
+        </span>
+      </div>
+    </div>
+    <div class="col-7 col-md-9 align-self-center">
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _chart_details_list only %}
+    </div>
+  </div>
+  {% endblock %} 
 </div>
-{% endif %}
+{% endif %} 
 
 {% endspaceless %}
