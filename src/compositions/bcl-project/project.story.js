@@ -12,10 +12,12 @@ import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
+import dataCharts from "@openeuropa/bcl-project/data/data--chart";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
+const chart = `<img alt="chart" src="${dataCharts.charts}">`;
 
 const baseData = {
   content_type: "listing",
@@ -31,6 +33,7 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  charts: chart,
   share: share,
 };
 

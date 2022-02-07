@@ -8,9 +8,11 @@ import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
+import dataCharts from "@openeuropa/bcl-project/data/data--chart";
 import drupalAttribute from "drupal-attribute";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
+const chart = `<img src="${dataCharts.charts}">`;
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const detailsTemplate = "@oe-bcl/bcl-project/project.html.twig";
 
@@ -28,6 +30,7 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  charts: chart,
   share: share,
 };
 
