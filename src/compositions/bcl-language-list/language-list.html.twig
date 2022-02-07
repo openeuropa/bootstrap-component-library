@@ -1,0 +1,111 @@
+{% spaceless %}
+
+{# Parameters:
+  - overlay (boolean) (default: false)
+  - inside_container (boolean) (default: false)
+  - variant (string) (default: 'neutral')
+  - title (string) (default: '')
+  - logo (object) (default: {}) format: {
+      path (string),
+      alt (string),
+      class (string),
+    }
+  - icons_path (string) (default: '')
+  - eu_category (string) (default: '');
+  - non_eu_category (string) (default: '')
+  - items (array) (default: [])
+    - "lang" (string) (default: '')
+    - "label" (string) (default: '')
+    - "path" (string) (default: '')
+    - "active (boolean) (default: false)
+  - non_eu_items (array) (default: [])
+    - "lang" (string) (default: '')
+    - "label" (string) (default: '')
+    - "path" (string) (default: '')
+    - "active (boolean) (default: false)
+  - close_label (string) (default: '')
+#}
+
+{% set _overlay = overlay|default(false) %}
+{% set _inside_container = inside_container|default(false) %}
+{% set _variant = variant|default('neutral') %}
+{% set _title = title|default('') %}
+{% set _logo = logo|default({}) %}
+{% set _icons_path = icons_path|default('') %}
+{% set _eu_category = eu_category|default('') %}
+{% set _non_eu_category = non_eu_category|default('') %}
+{% set _items = items|default([]) %}
+{% set _non_eu_items = non_eu_items|default([]) %}
+{% set _close_label = close_label|default('') %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _overlay %}
+  {% include '@oe-bcl/bcl-language-list/language-list-modal.html.twig' %}
+{% else %}
+  {% set attributes = attributes.addClass(['bcl-language-list', 'bcl-language-list--' ~ _variant]) %}
+
+  {% if not _inside_container %}
+    {% set attributes = attributes.addClass(['pt-5']) %}
+  {% endif %}
+
+  <div
+    {{ attributes }}
+  >
+    {% if _logo is not empty %}
+    <div class="container">
+      {% if _title is empty %}
+      <div class="text-center">
+      {% endif %}
+      <div class="d-inline-flex align-items-center">
+        <img
+          {% if _logo.path is not empty %}
+          src="{{ _logo.path }}"
+          {% endif %}
+          {% if _logo.alt is not empty %}
+          alt="{{ _logo.alt }}"
+          {% endif %}
+          {% if _logo.class is not empty %}
+          class="{{ _logo.class }}"
+          {% endif %}
+        />
+        {% if _title is not empty %}
+        <h5 class="h5 ms-4">{{ _title }}</h5>
+        {% endif %}
+      </div>
+      {% if _title is empty %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if _items is not empty or _non_eu_items is not empty %}
+    <div class="main pt-4">
+      {% if not (_variant == 'neutral' and _inside_container) %}
+      <div class="container">
+      {% endif %}
+      {% if _items is not empty and _items is iterable %}
+        {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+            items: _items,
+            icons_path: _icons_path,
+            category: eu_category,
+        } only %}
+      {% endif %}
+      {% if _non_eu_items is not empty and _non_eu_items is iterable %}
+        {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+            items: _non_eu_items,
+            icons_path: _icons_path,
+            category: non_eu_category,
+        } only %}
+      {% endif %}
+      {% if not (_variant == 'neutral' and _inside_container) %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% endspaceless %}

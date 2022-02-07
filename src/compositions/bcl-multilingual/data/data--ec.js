@@ -1,22 +1,26 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  variant: "ec",
   site_name: "Project name",
-  site_name_classes: "h5 d-inline-block d-lg-none",
+  project_logo: {
+    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
+    classes: "d-none d-lg-inline-block",
+    alt: "project logo",
+  },
   head: {
+    attributes: new drupalAttribute()
+      .addClass(["w-100", "shadow-sm"])
+      .setAttribute("aria-label", "Top Navigation"),
+    disable_collapse: true,
     brand: {
       logos: [
         {
-          src: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
-          alt: "project logo",
+          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
+          alt: "european commission logo",
         },
       ],
-      label: "Project name",
     },
-    attributes: new drupalAttribute()
-      .addClass(["w-100"])
-      .setAttribute("aria-label", "Top Navigation"),
-    disable_collapse: true,
     navigation: {
       items: [
         {
@@ -48,6 +52,7 @@ module.exports = {
             path: "/icons.svg",
             attributes: new drupalAttribute().addClass("me-lg-2-5"),
           },
+          id: "modal-trigger",
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#languageModal")
@@ -169,6 +174,11 @@ module.exports = {
               label: "Something else here",
               path: "/example.html",
             },
+            {
+              label:
+                "Very long label with custom text and custom link as an example",
+              path: "/example.html",
+            },
           ],
         },
       ],
@@ -193,6 +203,7 @@ module.exports = {
   language_modal: {
     id: "languageModal",
     title: "Select your language",
+    variant: "ec",
     icons_path: "/icons.svg",
     close_label: "Close",
     overlay: true,
@@ -295,6 +306,30 @@ module.exports = {
         lang: "sv",
       },
     ],
+    non_eu_items: [
+      {
+        label: "中文",
+        lang: "zh",
+      },
+      {
+        label: "Türk",
+        lang: "tr",
+      },
+      {
+        label: "pусский",
+        lang: "ru",
+      },
+      {
+        label: "Català",
+        lang: "ca",
+      },
+      {
+        label: "عَرَبِيّ",
+        lang: "ar",
+      },
+    ],
+    eu_category: "EU official languages",
+    non_eu_category: "Other languages",
   },
   breadcrumbs: {
     attributes: new drupalAttribute().addClass(["mt-3"]),

@@ -2,25 +2,51 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   variant: "eu",
+  site_name: "Project name",
+  project_logo: {
+    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
+    classes: "d-none d-lg-inline-block",
+    alt: "project logo",
+  },
   head: {
-    attributes: new drupalAttribute().addClass(["w-100", "shadow-sm"]),
+    attributes: new drupalAttribute()
+      .addClass(["w-100", "shadow-sm"])
+      .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {
       logos: [
         {
           class: "d-none d-lg-block",
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
-          alt: "desktop european union logo",
+          alt: "desktop project logo",
         },
         {
           class: "d-lg-none",
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
-          alt: "mobile european union logo",
+          alt: "mobile project logo",
         },
       ],
     },
     navigation: {
       items: [
+        {
+          label: "Link",
+          icon_position: "before",
+          icon: {
+            path: "/icons.svg",
+            name: "link",
+          },
+          attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
+        },
+        {
+          label: "Link",
+          icon_position: "before",
+          icon: {
+            path: "/icons.svg",
+            name: "link",
+          },
+          attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
+        },
         {
           label: "<span class='d-block d-lg-inline-block'>English</span>",
           path: "#",
@@ -32,6 +58,7 @@ module.exports = {
             path: "/icons.svg",
             attributes: new drupalAttribute().addClass("me-lg-2-5"),
           },
+          id: "modal-trigger",
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#languageModal")
@@ -53,6 +80,22 @@ module.exports = {
             .setAttribute("data-bs-target", "#loginModal")
             .addClass("text-center"),
         },
+        {
+          label: "<span class='badge bg-danger'>5</span>",
+          path: "#",
+          remove_icon_spacers: true,
+          icon_position: "before",
+          icon: {
+            path: "/icons.svg",
+            name: "bell-fill",
+            size: "s",
+          },
+          attributes: new drupalAttribute().addClass([
+            "notification",
+            "mt-2",
+            "mt-lg-0",
+          ]),
+        },
       ],
     },
   },
@@ -60,6 +103,40 @@ module.exports = {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
     attributes: new drupalAttribute().addClass("bcl-header__navbar"),
+    form: {
+      attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
+      submit: {
+        variant: "light",
+        assistive_text: "search",
+        icon: {
+          path: "/icons.svg",
+          name: "search",
+          size: "xs",
+        },
+        attributes: new drupalAttribute().addClass([
+          "border-start-0",
+          "rounded-0",
+          "rounded-end",
+        ]),
+      },
+      items: [
+        [
+          {
+            type: "text",
+            required: true,
+            label: "Search",
+            hidden_label: true,
+            placeholder: "Search",
+            id: "inlineFormInputGroupSearch",
+            attributes: new drupalAttribute().addClass([
+              "border-start-0",
+              "rounded-0",
+              "rounded-start",
+            ]),
+          },
+        ],
+      ],
+    },
     navigation: {
       navbar: true,
       attributes: new drupalAttribute().addClass("me-auto"),
@@ -126,116 +203,121 @@ module.exports = {
   ],
   language_modal: {
     id: "languageModal",
-    size: "fullscreen",
     title: "Select your language",
-    header: true,
     variant: "eu",
     icons_path: "/icons.svg",
-    content: {
-      variant: "eu",
-      listings: [
-        {
-          grid: [
-            {
-              buttons: [
-                {
-                  label: "български",
-                },
-                {
-                  label: "español",
-                },
-                {
-                  label: "čeština",
-                },
-                {
-                  label: "dansk",
-                },
-                {
-                  label: "Deutsch",
-                },
-                {
-                  label: "eesti",
-                },
-                {
-                  label: "ελληνικά",
-                },
-                {
-                  label: "English",
-                  selected: true,
-                  icon: {
-                    name: "check-lg",
-                    path: "/icons.svg",
-                  },
-                },
-                {
-                  label: "français",
-                },
-                {
-                  label: "Gaeilge",
-                },
-                {
-                  label: "hrvatski",
-                },
-                {
-                  label: "italiano",
-                },
-              ],
-            },
-            {
-              buttons: [
-                {
-                  label: "latviešu",
-                },
-                {
-                  label: "lietuvių",
-                },
-                {
-                  label: "magyar",
-                },
-                {
-                  label: "Malti",
-                },
-                {
-                  label: "Nederlands",
-                },
-                {
-                  label: "polski",
-                },
-                {
-                  label: "português",
-                },
-                {
-                  label: "română",
-                },
-                {
-                  label: "slovenčina",
-                },
-                {
-                  label: "slovenščina",
-                },
-                {
-                  label: "suomi",
-                },
-                {
-                  label: "svenska",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
+    close_label: "Close",
+    overlay: true,
+    items: [
+      {
+        label: "български",
+        lang: "bg",
+      },
+      {
+        label: "español",
+        lang: "es",
+      },
+      {
+        label: "čeština",
+        lang: "cs",
+      },
+      {
+        label: "dansk",
+        lang: "da",
+      },
+      {
+        label: "Deutsch",
+        lang: "de",
+      },
+      {
+        label: "eesti",
+        lang: "et",
+      },
+      {
+        label: "ελληνικά",
+        lang: "el",
+      },
+      {
+        label: "English",
+        active: true,
+        lang: "en",
+      },
+      {
+        label: "français",
+        lang: "fr",
+      },
+      {
+        label: "Gaeilge",
+        lang: "ga",
+      },
+      {
+        label: "hrvatski",
+        lang: "hr",
+      },
+      {
+        label: "italiano",
+        lang: "it",
+      },
+      {
+        label: "latviešu",
+        lang: "lv",
+      },
+      {
+        label: "lietuvių",
+        lang: "lt",
+      },
+      {
+        label: "magyar",
+        lang: "hu",
+      },
+      {
+        label: "Malti",
+        lang: "mt",
+      },
+      {
+        label: "Nederlands",
+        lang: "nl",
+      },
+      {
+        label: "polski",
+        lang: "pl",
+      },
+      {
+        label: "português",
+        lang: "pt",
+      },
+      {
+        label: "română",
+        lang: "ro",
+      },
+      {
+        label: "slovenčina",
+        lang: "sk",
+      },
+      {
+        label: "slovenščina",
+        lang: "sl",
+      },
+      {
+        label: "suomi",
+        lang: "fi",
+      },
+      {
+        label: "svenska",
+        lang: "sv",
+      },
+    ],
   },
   breadcrumbs: {
     attributes: new drupalAttribute().addClass(["mt-3"]),
     links: [
       { label: "Home", path: "/example" },
       {
-        label: "European Union",
+        label: "European Commission",
         path: "/example",
       },
       {
-        label: "About the European Union",
+        label: "About the European Commission",
         path: "/example",
       },
       { label: "News" },
