@@ -29,6 +29,8 @@
   </div>
 </div>
 
-{% include '@oe-bcl/bcl-modal/modal.html.twig' with _modal only %}
+{% if _modal is not empty %}
+  {% include '@oe-bcl/bcl-subscription/subscription-modal.html.twig' with _modal only %}
+{% endif %}
 
 {% endspaceless %}

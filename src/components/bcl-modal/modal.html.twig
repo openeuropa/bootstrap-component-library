@@ -9,6 +9,7 @@
   - verticaly_centered (boolean) (default: false)
   - scrollable (boolean) (default: false)
   - header (block) (default: '')
+  - outer_body (block) (default: '')
   - body (block) (default: '')
   - footer (block) (default: '')
 #}
@@ -17,6 +18,7 @@
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
+{% set _outer_body = outer_body|default('') %}
 {% set _static_backdrop = static_backdrop|default(false) %}
 {% set _verticaly_centered = verticaly_centered|default(false) %}
 {% set _scrollable = scrollable|default(false) %}
@@ -51,6 +53,7 @@
         {%- block header _header -%}
       </div>
       {% endif %}
+      {%- block outer_body _outer_body -%}
       <div class="modal-body">
         {%- block body _body -%}
       </div>

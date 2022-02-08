@@ -7,21 +7,25 @@ import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import subscription from "@openeuropa/bcl-subscription/subscription.html.twig";
 import block_data from "@openeuropa/bcl-subscription/data/data.js";
 import modal_data from "@openeuropa/bcl-subscription/data/data-modal.js";
+import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
+import drupalAttribute from "drupal-attribute";
 
-const baseData = {
-  content_type: "news",
-  page_title: "News",
+const demoData = {
+  content_type: "subscription",
+  page_title: "Subscription",
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
   with_banner: true,
   with_header: true,
   with_footer: true,
-};
-
-const demoData = {
-  ...baseData,
-  subscription: block_data,
-  subscription_modal: modal_data,
+  sidebar: sidebar,
+  subscription: {
+    ...block_data,
+    modal: { ...modal_data },
+  },
   banner: banner,
   content: content,
 };
@@ -29,19 +33,78 @@ const demoData = {
 const clientValidation = (story) => {
   const demo = story();
   return `<script>
+  var backdrop = document.getElementsByClassName('modal-backdrop')[0];
+  if (typeof(backdrop) != 'undefined' && backdrop != null) {
+    backdrop.remove();
+    document.body.removeAttribute("style")
+  }
+
   var submit = document.querySelector('.form-submit');
+  var successAlert = document.querySelector('.success-alert');
+  var errorAlert = document.querySelector('.error-alert');
   var form = document.querySelector('.needs-validation');
 
   submit.addEventListener('click', function () {
+    successAlert.classList.add("d-none")
+    errorAlert.classList.add("d-none")
     if (!form.checkValidity()) {
       event.preventDefault()
       event.stopPropagation()
-      form.classList.add('was-validated')
+      errorAlert.classList.remove("d-none")
     } else {
-      form.submit();
+      successAlert.classList.remove("d-none")
+      form.closest('.modal-body').remove();
+      submit.classList.add('d-none')
     }
+    
+    form.classList.add('was-validated')
   });
   </script>${demo}`;
+};
+
+const openModal = (story) => {
+  const demo = story();
+  return `
+    ${demo}
+    <script>
+      var backdrop = document.getElementsByClassName('modal-backdrop')[0];
+      if (typeof(backdrop) != 'undefined' && backdrop != null) {
+        backdrop.remove()
+      }
+      var subscribeModal = new bootstrap.Modal(document.getElementById('subscribeModal'))
+      subscribeModal.show()
+    </script>
+    `;
+};
+
+const successState = (story) => {
+  const demo = story();
+  return `
+    ${demo}
+    <script>
+      var submit = document.querySelector('.form-submit');
+      var successAlert = document.querySelector('.success-alert');
+      var form = document.querySelector('.needs-validation');
+
+      successAlert.classList.remove("d-none")
+      form.closest('.modal-body').remove();
+      submit.classList.add('d-none')
+    </script>
+    `;
+};
+
+const errorState = (story) => {
+  const demo = story();
+  return `
+    ${demo}
+    <script>
+      var errorAlert = document.querySelector('.error-alert');
+      var form = document.querySelector('.needs-validation');
+    
+      errorAlert.classList.remove("d-none")
+      form.classList.add('was-validated')
+    </script>
+    `;
 };
 
 export default {
@@ -60,3 +123,9 @@ export default {
 
 export const Default = () => subscription(correctPaths(demoData));
 Default.decorators = [clientValidation];
+
+export const Success = () => subscription(correctPaths(demoData));
+Success.decorators = [openModal, successState];
+
+export const Error = () => subscription(correctPaths(demoData));
+Error.decorators = [openModal, errorState];
