@@ -3,8 +3,7 @@ import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
 import banner from "@openeuropa/bcl-content-banner/data/data.js";
-import block_data from "@openeuropa/bcl-subscription/data/data.js";
-import modal_data from "@openeuropa/bcl-subscription/data/data-modal.js";
+import subscriptionData from "@openeuropa/bcl-subscription/data/data.js";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
 import drupalAttribute from "drupal-attribute";
 
@@ -20,10 +19,7 @@ const demoData = {
   with_header: true,
   with_footer: true,
   sidebar: sidebar,
-  subscription: {
-    ...block_data,
-    modal: { ...modal_data },
-  },
+  subscription: subscriptionData,
   banner: banner,
   content: content,
 };

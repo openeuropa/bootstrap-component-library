@@ -5,7 +5,6 @@
   - content: (string) (default: '')
   - button: (button Object) (default: {})
   - modal: (modal Object) (default: {})
-  ]
 #}
 
 {% set _title = title|default(false) %}
@@ -22,11 +21,17 @@
 <div
   {{ attributes }}
 >
-  <h2 class="fw-normal">{{ _title }}</h2>
-  {{ _content }}
-  <div class="pb-2">
+  {% if _title is not empty %}
+    <div class="fs-2 fw-normal">{{ _title }}</div>
+  {% endif %}
+  {% if _content is not empty %}
+    {{ _content }}
+  {% endif %}
+  {% if _button is not empty %}
+    <div class="pb-2">
     {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
-  </div>
+    </div>
+  {% endif %}
 </div>
 
 {% if _modal is not empty %}
