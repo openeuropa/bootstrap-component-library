@@ -3,6 +3,8 @@
 {# Parameters:
   - size (string) (sm, lg, xl, fullscreen) default('')
   - id (boolean) (default: 'modal-' ~ random(1000))
+  - fullscreen_responsive (string) (default: '')
+    options: sm, md, lg, xl, xxl
   - static_backdrop (boolean) (default: false)
   - verticaly_centered (boolean) (default: false)
   - scrollable (boolean) (default: false)
@@ -12,6 +14,7 @@
 #}
 {% set _size =  size|default('') %}
 {% set _id = id|default('modal-' ~ random(1000)) %}
+{% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _header = header|default('') %}
 {% set _body = body|default('') %}
 {% set _static_backdrop = static_backdrop|default(false) %}
@@ -37,20 +40,25 @@
 >
   <div class="modal-dialog
   {{- _size ? ' modal-' ~ size -}}
+  {{- _fullscreen_responsive ? ' modal-fullscreen-' ~ _fullscreen_responsive ~ '-down' -}}
   {{- _verticaly_centered ? ' modal-dialog-centered' -}}
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
   {{- _static_backdrop ? ' data-bs-backdrop="static"' -}}
   >
     <div class="modal-content">
+      {% if header is not empty %}
       <div class="modal-header">
         {%- block header _header -%}
       </div>
+      {% endif %}
       <div class="modal-body">
         {%- block body _body -%}
       </div>
+      {% if footer is not empty %}
       <div class="modal-footer">
         {%- block footer _footer -%}
       </div>
+      {% endif %}
     </div>
   </div>
 </div>

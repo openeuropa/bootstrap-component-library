@@ -346,12 +346,12 @@ exports[`OE - Project listing renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-fullscreen"
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
     >
       <div
         class="modal-content"
@@ -359,12 +359,22 @@ exports[`OE - Project listing renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
+          <div
+            class="d-flex align-items-center"
           >
-            Select your language
-          </h5>
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
           <button
             aria-label="Close"
             class="btn-close"
@@ -376,146 +386,228 @@ exports[`OE - Project listing renders correctly 1`] = `
           class="modal-body"
         >
           <div
-            class="container"
+            class="bcl-language-list bcl-language-list--neutral"
           >
             <div
-              class="row"
+              class="main pt-4"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="pb-2"
               >
                 <div
-                  class="bcl-language__list"
+                  class="row"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
@@ -1753,12 +1845,12 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-fullscreen"
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
     >
       <div
         class="modal-content"
@@ -1766,12 +1858,22 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
+          <div
+            class="d-flex align-items-center"
           >
-            Select your language
-          </h5>
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
           <button
             aria-label="Close"
             class="btn-close"
@@ -1783,146 +1885,228 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
           class="modal-body"
         >
           <div
-            class="container"
+            class="bcl-language-list bcl-language-list--neutral"
           >
             <div
-              class="row"
+              class="main pt-4"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="pb-2"
               >
                 <div
-                  class="bcl-language__list"
+                  class="row"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
@@ -2164,8 +2348,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <dt>
                 Website
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -2178,13 +2362,13 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
               <dt>
                 Funding Programme
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -2197,13 +2381,13 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
               <dt>
                 Project ID
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -2216,8 +2400,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
             </dl>
           </div>
           <dl
@@ -2230,8 +2414,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Coordinator
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -2244,8 +2428,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 >
                   Bulgaria
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h3
             class="fw-bold mb-4 pt-3"
@@ -2319,13 +2503,13 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Commissariat à l’Energie Atomique 
                 <br />
                 et aux Energies Alternatives
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2333,8 +2517,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -2347,8 +2531,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 >
                   France
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2356,11 +2540,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h4
             class="fw-bold mb-3"
@@ -2377,11 +2561,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2389,8 +2573,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -2403,8 +2587,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 >
                   Bulgaria
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2412,15 +2596,12 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
-          <h4
-            class="fw-bold mb-3"
-          />
           <dl
             class="border-bottom d-md-grid grid-3-9"
           >
@@ -2431,11 +2612,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2443,8 +2624,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -2457,8 +2638,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 >
                   Belgium
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2466,15 +2647,12 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
-          <h4
-            class="fw-bold mb-3"
-          />
           <dl
             class="d-md-grid grid-3-9"
           >
@@ -2485,11 +2663,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2497,8 +2675,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -2511,8 +2689,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 >
                   Denmark
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -2520,11 +2698,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h3
             class="fw-bold mb-4 pt-2"
@@ -3209,12 +3387,12 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-fullscreen"
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
     >
       <div
         class="modal-content"
@@ -3222,12 +3400,22 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
+          <div
+            class="d-flex align-items-center"
           >
-            Select your language
-          </h5>
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
           <button
             aria-label="Close"
             class="btn-close"
@@ -3239,146 +3427,228 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
           class="modal-body"
         >
           <div
-            class="container"
+            class="bcl-language-list bcl-language-list--neutral"
           >
             <div
-              class="row"
+              class="main pt-4"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="pb-2"
               >
                 <div
-                  class="bcl-language__list"
+                  class="row"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
@@ -3620,8 +3890,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <dt>
                 Website
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -3634,13 +3904,13 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
               <dt>
                 Funding Programme
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -3653,13 +3923,13 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
               <dt>
                 Project ID
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -3672,8 +3942,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
             </dl>
           </div>
           <dl
@@ -3686,8 +3956,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Coordinator
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -3700,8 +3970,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 >
                   Bulgaria
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h3
             class="fw-bold mb-4 pt-3"
@@ -3775,13 +4045,13 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Commissariat à l’Energie Atomique 
                 <br />
                 et aux Energies Alternatives
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3789,8 +4059,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -3803,8 +4073,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 >
                   France
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3812,11 +4082,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h4
             class="fw-bold mb-3"
@@ -3833,11 +4103,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3845,8 +4115,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -3859,8 +4129,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 >
                   Bulgaria
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3868,15 +4138,12 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
-          <h4
-            class="fw-bold mb-3"
-          />
           <dl
             class="border-bottom d-md-grid grid-3-9"
           >
@@ -3887,11 +4154,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3899,8 +4166,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -3913,8 +4180,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 >
                   Belgium
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3922,15 +4189,12 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
-          <h4
-            class="fw-bold mb-3"
-          />
           <dl
             class="d-md-grid grid-3-9"
           >
@@ -3941,11 +4205,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3953,8 +4217,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -3967,8 +4231,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 >
                   Denmark
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -3976,11 +4240,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h3
             class="fw-bold mb-4 pt-2"
@@ -4665,12 +4929,12 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-fullscreen"
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
     >
       <div
         class="modal-content"
@@ -4678,12 +4942,22 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
+          <div
+            class="d-flex align-items-center"
           >
-            Select your language
-          </h5>
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
           <button
             aria-label="Close"
             class="btn-close"
@@ -4695,146 +4969,228 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
           class="modal-body"
         >
           <div
-            class="container"
+            class="bcl-language-list bcl-language-list--neutral"
           >
             <div
-              class="row"
+              class="main pt-4"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="pb-2"
               >
                 <div
-                  class="bcl-language__list"
+                  class="row"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
                   >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
@@ -5076,8 +5432,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <dt>
                 Website
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -5090,13 +5446,13 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
               <dt>
                 Funding Programme
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -5109,13 +5465,13 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
               <dt>
                 Project ID
               </dt>
-              <div>
-                <dd>
+              <dd>
+                <div>
                   <a
                     href="/example.html"
                   >
@@ -5128,8 +5484,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       />
                     </svg>
                   </a>
-                </dd>
-              </div>
+                </div>
+              </dd>
             </dl>
           </div>
           <dl
@@ -5142,8 +5498,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Coordinator
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -5156,8 +5512,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 >
                   Bulgaria
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h3
             class="fw-bold mb-4 pt-3"
@@ -5231,13 +5587,13 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Commissariat à l’Energie Atomique 
                 <br />
                 et aux Energies Alternatives
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5245,8 +5601,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -5259,8 +5615,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 >
                   France
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5268,11 +5624,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h4
             class="fw-bold mb-3"
@@ -5289,11 +5645,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5301,8 +5657,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -5315,8 +5671,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 >
                   Bulgaria
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5324,15 +5680,12 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
-          <h4
-            class="fw-bold mb-3"
-          />
           <dl
             class="border-bottom d-md-grid grid-3-9"
           >
@@ -5343,11 +5696,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5355,8 +5708,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -5369,8 +5722,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 >
                   Belgium
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5378,15 +5731,12 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
-          <h4
-            class="fw-bold mb-3"
-          />
           <dl
             class="d-md-grid grid-3-9"
           >
@@ -5397,11 +5747,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Name
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 Lorem Ipsum Color Sit Amet
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5409,8 +5759,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Country
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 <svg
                   class="me-2 bi icon--fluid"
                 >
@@ -5423,8 +5773,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 >
                   Denmark
                 </p>
-              </dd>
-            </div>
+              </div>
+            </dd>
             <dt>
               <p
                 class="mb-0 d-inline-block"
@@ -5432,11 +5782,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 Contribution
               </p>
             </dt>
-            <div>
-              <dd>
+            <dd>
+              <div>
                 EUR 297.700.00
-              </dd>
-            </div>
+              </div>
+            </dd>
           </dl>
           <h3
             class="fw-bold mb-4 pt-2"

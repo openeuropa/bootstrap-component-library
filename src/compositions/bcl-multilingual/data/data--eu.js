@@ -1,30 +1,40 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  variant: "eu",
   site_name: "Project name",
-  site_name_classes: "h5 d-inline-block d-lg-none",
+  project_logo: {
+    path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
+    classes: "d-none d-lg-inline-block",
+    alt: "project logo",
+  },
   head: {
+    attributes: new drupalAttribute()
+      .addClass(["w-100", "shadow-sm"])
+      .setAttribute("aria-label", "Top Navigation"),
+    disable_collapse: true,
     brand: {
       logos: [
         {
-          src: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
-          alt: "project logo",
+          class: "d-none d-lg-block",
+          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+          alt: "desktop project logo",
+        },
+        {
+          class: "d-lg-none",
+          src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg",
+          alt: "mobile project logo",
         },
       ],
-      label: "Project name",
     },
-    attributes: new drupalAttribute()
-      .addClass(["w-100"])
-      .setAttribute("aria-label", "Top Navigation"),
-    disable_collapse: true,
     navigation: {
       items: [
         {
           label: "Link",
           icon_position: "before",
           icon: {
-            name: "link",
             path: "/icons.svg",
+            name: "link",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -32,8 +42,8 @@ module.exports = {
           label: "Link",
           icon_position: "before",
           icon: {
-            name: "link",
             path: "/icons.svg",
+            name: "link",
           },
           attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
         },
@@ -48,6 +58,7 @@ module.exports = {
             path: "/icons.svg",
             attributes: new drupalAttribute().addClass("me-lg-2-5"),
           },
+          id: "modal-trigger",
           attributes: new drupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#languageModal")
@@ -75,9 +86,9 @@ module.exports = {
           remove_icon_spacers: true,
           icon_position: "before",
           icon: {
+            path: "/icons.svg",
             name: "bell-fill",
             size: "s",
-            path: "/icons.svg",
           },
           attributes: new drupalAttribute().addClass([
             "notification",
@@ -98,9 +109,9 @@ module.exports = {
         variant: "light",
         assistive_text: "search",
         icon: {
+          path: "/icons.svg",
           name: "search",
           size: "xs",
-          path: "/icons.svg",
         },
         attributes: new drupalAttribute().addClass([
           "border-start-0",
@@ -193,6 +204,7 @@ module.exports = {
   language_modal: {
     id: "languageModal",
     title: "Select your language",
+    variant: "eu",
     icons_path: "/icons.svg",
     close_label: "Close",
     overlay: true,
