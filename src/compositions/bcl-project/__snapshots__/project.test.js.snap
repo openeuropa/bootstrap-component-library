@@ -344,8 +344,274 @@ exports[`OE - Project listing renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="bcl-language-list bcl-language-list--eu pt-5"
-  />
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="d-flex align-items-center"
+          >
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--neutral"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="pb-2"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <div
       class="container mt-md-4-75 mt-4"
@@ -1577,8 +1843,274 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="bcl-language-list bcl-language-list--eu pt-5"
-  />
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="d-flex align-items-center"
+          >
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--neutral"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="pb-2"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <div
       class="bcl-content-banner pt-lg-4-75 pb-md-4-75 pb-4 pt-4 bg-lighter"
@@ -2911,8 +3443,274 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="bcl-language-list bcl-language-list--eu pt-5"
-  />
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="d-flex align-items-center"
+          >
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--neutral"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="pb-2"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <div
       class="bcl-content-banner pt-lg-4-75 pb-md-4-75 pb-4 pt-4 bg-lighter"
@@ -4245,8 +5043,274 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="bcl-language-list bcl-language-list--eu pt-5"
-  />
+    aria-hidden="true"
+    aria-labelledby="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="d-flex align-items-center"
+          >
+            <svg
+              class="bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#globe"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
+          </div>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--neutral"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="pb-2"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
+                    >
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
+                    >
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
+                      >
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
     <div
       class="bcl-content-banner pt-lg-4-75 pb-md-4-75 pb-4 pt-4 bg-lighter"
