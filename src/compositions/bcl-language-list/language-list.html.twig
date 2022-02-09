@@ -10,7 +10,7 @@
       alt (string),
       class (string),
     }
-  - icons_path (string) (default: '')
+  - icon_path (string) (default: '')
   - eu_category (string) (default: '');
   - non_eu_category (string) (default: '')
   - items (array) (default: [])
@@ -31,7 +31,7 @@
 {% set _variant = variant|default('neutral') %}
 {% set _title = title|default('') %}
 {% set _logo = logo|default({}) %}
-{% set _icons_path = icons_path|default('') %}
+{% set _icon_path = icon_path|default('') %}
 {% set _eu_category = eu_category|default('') %}
 {% set _non_eu_category = non_eu_category|default('') %}
 {% set _items = items|default([]) %}
@@ -89,14 +89,14 @@
       {% if _items is not empty and _items is iterable %}
         {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
             items: _items,
-            icons_path: _icons_path,
+            icon_path: _icon_path,
             category: eu_category,
         } only %}
       {% endif %}
       {% if _non_eu_items is not empty and _non_eu_items is iterable %}
         {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
             items: _non_eu_items,
-            icons_path: _icons_path,
+            icon_path: _icon_path,
             category: non_eu_category,
         } only %}
       {% endif %}

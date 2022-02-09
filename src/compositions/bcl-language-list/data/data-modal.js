@@ -1,7 +1,7 @@
 module.exports = {
   id: "languageModal",
   title: "Select your language",
-  icons_path: "/icons.svg",
+  icon_path: "/icons.svg",
   close_label: "Close",
   overlay: true,
   items: [

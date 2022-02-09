@@ -56,8 +56,8 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  if (data.icons_path) {
-    data.icons_path = defaultSprite;
+  if (data.icon_path) {
+    data.icon_path = defaultSprite;
   }
   data.hide.from = args.from;
   data.hide.to = args.to;

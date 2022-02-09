@@ -87,9 +87,9 @@ const getArgTypes = (data) => {
 
 const applyArgs = (data, args) => {
   data.attributes = new drupalAttribute();
-  data.icons_path = args.icon ? defaultSprite : "";
+  data.icon_path = args.icon ? defaultSprite : "";
   if (args.icon_name === "none") {
-    data.icons_path = "";
+    data.icon_path = "";
   }
 
   return Object.assign(data, args);
