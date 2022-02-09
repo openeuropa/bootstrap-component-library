@@ -1,16 +1,6 @@
 {% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
 
 {% block content %}
-  <div class="row">
-    <div class="col-12 col-md-10">
-      {% include '@oe-bcl/bcl-card/card.html.twig' with user only %}
-    </div>
-    <div class="col-12 col-md-2 text-end">
-      <div class="d-grid d-md-block">
-        {% include '@oe-bcl/bcl-button/button.html.twig' with edit_button only %}
-      </div>
-    </div>
-  </div>
   <div class="my-3">
     <h3 class="fw-bold mb-4">Personal information</h3>
     <div class="row">
