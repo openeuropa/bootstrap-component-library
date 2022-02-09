@@ -1,0 +1,51 @@
+.bcl-language-list {
+  .btn {
+    background: $white;
+    color: $primary;
+    border-color: $gray-400;
+    &:hover {
+      text-decoration: underline;
+      border-color: $eu-cta-color;
+    }
+    &.selected {
+      background: $secondary;
+      color: $white;
+      border-color: $secondary;
+      svg {
+        color: $white;
+      }
+    }
+  }
+  &.bcl-language-list--ec,
+  &.bcl-language-list--eu {
+    .btn {
+      color: $eu-cta-color;
+      font-weight: $font-weight-bold;
+      &.selected {
+        background: $eu-selected-background;
+        color: $black;
+        border-color: $eu-selected-background;
+        svg {
+          color: $black;
+        }
+      }
+    }
+  }
+  &.bcl-language-list--eu {
+    .btn {
+      border: 2px solid $eu-cta-color;
+    }
+  }
+  &.bcl-language-list--ec {
+    .main {
+      background: $eu-background-color;
+      h5 {
+        color: $white;
+      }
+    }
+    .btn {
+      border-radius: 0;
+      border-color: transparent;
+    }
+  }
+}

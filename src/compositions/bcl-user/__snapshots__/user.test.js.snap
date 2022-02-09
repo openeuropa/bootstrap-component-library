@@ -416,7 +416,7 @@ exports[`OE - User -edit renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -429,163 +429,275 @@ exports[`OE - User -edit renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
-          >
-            Select your language
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
           <div
             class="container"
           >
             <div
-              class="row"
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="py-3-5 px-3 px-sm-0 px-md-3"
               >
                 <div
-                  class="bcl-language__list"
+                  class="d-flex justify-content-between align-items-center"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="d-flex align-items-center"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="modal-footer"
+          class="modal-body"
         >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
+          <div
+            class="bcl-language-list bcl-language-list--eu"
           >
-            Close
-          </button>
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="#"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1969,7 +2081,7 @@ exports[`OE - User -list renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -1982,163 +2094,275 @@ exports[`OE - User -list renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
-          >
-            Select your language
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
           <div
             class="container"
           >
             <div
-              class="row"
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="py-3-5 px-3 px-sm-0 px-md-3"
               >
                 <div
-                  class="bcl-language__list"
+                  class="d-flex justify-content-between align-items-center"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="d-flex align-items-center"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="modal-footer"
+          class="modal-body"
         >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
+          <div
+            class="bcl-language-list bcl-language-list--eu"
           >
-            Close
-          </button>
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="#"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -3315,7 +3539,7 @@ exports[`OE - User -view renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-labelledby="languageModalLabel"
-    class="bcl-language modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -3328,168 +3552,357 @@ exports[`OE - User -view renders correctly 1`] = `
         <div
           class="modal-header"
         >
-          <h5
-            class="modal-title"
-            id="languageeModalLabel"
-          >
-            Select your language
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
           <div
             class="container"
           >
             <div
-              class="row"
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
             >
               <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  EU official languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
+                class="py-3-5 px-3 px-sm-0 px-md-3"
               >
                 <div
-                  class="bcl-language__list"
+                  class="d-flex justify-content-between align-items-center"
                 >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
+                  <div
+                    class="d-flex align-items-center"
                   >
-                    Language 01
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 02
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 03
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 04
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 05
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 06
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-8 offset-lg-2"
-              >
-                <h5
-                  class="bcl-language__title"
-                >
-                  Non EU languages
-                </h5>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col col-lg-4 offset-lg-2"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 07
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 08
-                  </a>
-                </div>
-              </div>
-              <div
-                class="col col-lg-4"
-              >
-                <div
-                  class="bcl-language__list"
-                >
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 09
-                  </a>
-                  <a
-                    class="bcl-language__item"
-                    href="#"
-                  >
-                    Language 10
-                  </a>
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="modal-footer"
+          class="modal-body"
         >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
+          <div
+            class="bcl-language-list bcl-language-list--eu"
           >
-            Close
-          </button>
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="#"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <main>
+    <div
+      class="bcl-content-banner pt-lg-4-75 pt-3 bg-white"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-12 col-md-10"
+          >
+            <div
+              class="bg-transparent border-0 card"
+            >
+              <div
+                class="row"
+              >
+                <div
+                  class="col-md-4 col-lg-3"
+                >
+                  <img
+                    alt="alt img"
+                    class="card-img-top rounded-1"
+                    src="https://picsum.photos/200/200?random=6"
+                  />
+                </div>
+                <div
+                  class="col-md-8 col-lg-9 col-xxl-9"
+                >
+                  <div
+                    class="card-body pt-md-0 px-0 px-md-3 pb-0"
+                  >
+                    <h2
+                      class="fw-bold card-title"
+                    >
+                      Stefan Mayer
+                    </h2>
+                    <div
+                      class="mb-4 mt-4"
+                    >
+                      <span
+                        class="text-muted me-3"
+                      >
+                        DG Test
+                      </span>
+                      <span
+                        class="text-muted"
+                      >
+                        Director
+                      </span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-2 text-end mt-3 mt-md-0"
+          >
+            <div
+              class="d-grid d-md-block"
+            >
+              <button
+                class="mb-3 btn btn-light btn-md"
+                type="button"
+              >
+                Manage profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="container mt-md-4-75 mt-4"
     >
@@ -3497,77 +3910,8 @@ exports[`OE - User -view renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12"
+          class="col-12 col-lg-10 col-xl-9 col-xxl-8"
         >
-          <div
-            class="row"
-          >
-            <div
-              class="col-12 col-md-10"
-            >
-              <div
-                class="border-0 mb-md-3 card"
-              >
-                <div
-                  class="row"
-                >
-                  <div
-                    class="col-6 col-md-3 offset-3 offset-md-0"
-                  >
-                    <img
-                      alt="alt img"
-                      class="card-img-top rounded-1"
-                      src="https://picsum.photos/200/200?random=6"
-                    />
-                  </div>
-                  <div
-                    class="col-md-9"
-                  >
-                    <div
-                      class="card-body pt-md-0 px-0 px-md-3"
-                    >
-                      <h2
-                        class="fw-bold card-title"
-                      >
-                        Stefan Mayer
-                      </h2>
-                      <div
-                        class="mb-4 mt-4"
-                      >
-                        <span
-                          class="text-muted me-3"
-                        >
-                          DG Test
-                        </span>
-                        <span
-                          class="text-muted me-3"
-                        >
-                          Director
-                        </span>
-                      </div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-12 col-md-2 text-end"
-            >
-              <div
-                class="d-grid d-md-block"
-              >
-                <button
-                  class="mb-3 btn btn-light btn-md"
-                  type="button"
-                >
-                  Manage profile
-                </button>
-              </div>
-            </div>
-          </div>
           <div
             class="my-3"
           >
