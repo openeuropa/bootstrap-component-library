@@ -36,7 +36,7 @@
     "pretty:check": "prettier --check \"(src|storybook|tools|builder)/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "pretty:fix": "prettier --write \"(src|storybook|tools|builder)/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "publish": "scripts/publish.sh",
-    "start": "run-p \"watch {1}\" \"storybook:{1}\" server --",
+    "start": "run-p build:storybook \"watch {1}\" \"storybook:{1}\" server --",
     "start-dev": "run-p watch-dev storybook server",
     "server": "browser-sync start --proxy localhost:5000 --files \"assets/*\"",
     "size": "size-limit",
