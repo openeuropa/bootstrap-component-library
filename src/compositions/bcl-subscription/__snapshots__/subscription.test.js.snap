@@ -742,9 +742,9 @@ exports[`OE - Subscription renders correctly 1`] = `
               >
                 <a
                   class="nav-link"
-                  href="#item-1"
+                  href="#content"
                 >
-                  Section 1
+                  Content
                 </a>
               </li>
               <li
@@ -752,19 +752,9 @@ exports[`OE - Subscription renders correctly 1`] = `
               >
                 <a
                   class="nav-link"
-                  href="#item-2"
+                  href="#subheading"
                 >
-                  Section 2
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#item-3"
-                >
-                  Section 3
+                  Subheading
                 </a>
               </li>
             </ul>
@@ -773,7 +763,9 @@ exports[`OE - Subscription renders correctly 1`] = `
         <div
           class="col-12 col-lg-9 col-xxl-8"
         >
-          <p>
+          <p
+            id="content"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
           </p>
           <p>
@@ -792,6 +784,7 @@ exports[`OE - Subscription renders correctly 1`] = `
           </ul>
           <h3
             class="fw-bold my-4"
+            id="subheading"
           >
             Sub heading
           </h3>

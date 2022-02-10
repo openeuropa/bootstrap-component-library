@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
@@ -108,7 +108,7 @@ const errorState = (story) => {
 
 export default {
   title: "Features/Subscription",
-  decorators: [withDesign],
+  decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     design: [
