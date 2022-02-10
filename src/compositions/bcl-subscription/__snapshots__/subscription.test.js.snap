@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Page Page renders correctly 1`] = `
+exports[`OE - Subscription renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -614,6 +614,111 @@ exports[`OE - Page Page renders correctly 1`] = `
   </div>
   <main>
     <div
+      class="bcl-content-banner pt-lg-4-75 pb-md-4-75 pb-4 pt-4 bg-lighter"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="bg-transparent border-0 card"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-md-4 col-lg-3"
+              >
+                <img
+                  alt="alt img"
+                  class="card-img-top rounded-1"
+                  src="https://picsum.photos/255/255?random=6"
+                />
+              </div>
+              <div
+                class="col-md-8 col-lg-9 col-xxl-8"
+              >
+                <div
+                  class="card-body pt-md-0 px-0 px-md-3 pb-0"
+                >
+                  <h2
+                    class="fw-bold card-title"
+                  >
+                    This is the title of this page
+                  </h2>
+                  <div
+                    class="mb-4 mt-4"
+                  >
+                    <span
+                      class="text-muted me-3"
+                    >
+                      8 hours ago
+                    </span>
+                  </div>
+                  <p>
+                    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+        Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
+        Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
+        Duis tristique fringilla magna, eu egestas dolor molestie non.
+     
+                  </p>
+                  <div
+                    class="mt-2-5"
+                  >
+                    <span
+                      class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                    >
+                      Category 1
+                    </span>
+                    <span
+                      class="mb-2 badge rounded-pill badge-outline-primary"
+                    >
+                      Category 2
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-end"
+          >
+            <button
+              class="me-3 btn btn-outline-primary btn-md"
+              type="button"
+            >
+              <svg
+                class="me-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#printer-fill"
+                />
+              </svg>
+              Print
+            </button>
+            <button
+              class="btn btn-outline-primary btn-md"
+              data-bs-target="#subscribeModal"
+              data-bs-toggle="modal"
+              type="button"
+            >
+              <svg
+                class="me-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#envelope-fill"
+                />
+              </svg>
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
       class="container mt-md-4-75 mt-4"
     >
       <div
@@ -647,29 +752,9 @@ exports[`OE - Page Page renders correctly 1`] = `
               >
                 <a
                   class="nav-link"
-                  href="#item-1"
+                  href="#subheading"
                 >
-                  Section 1
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#item-2"
-                >
-                  Section 2
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#item-3"
-                >
-                  Section 3
+                  Subheading
                 </a>
               </li>
             </ul>
@@ -681,610 +766,283 @@ exports[`OE - Page Page renders correctly 1`] = `
           <p
             id="content"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
           </p>
+          <p>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras facilisis enim non nisi hendrerit laoreet. Vestibulum id facilisis augue, vitae faucibus justo. Etiam congue malesuada urna vitae suscipit. Mauris a varius leo. Nulla vel facilisis lacus. Suspendisse semper velit sit amet purus egestas, sit amet ullamcorper enim egestas. Vestibulum at lacus at purus ornare auctor nec consequat velit. Pellentesque iaculis sit amet nulla at rutrum.
+          </p>
+          <ul>
+            <li>
+              Vestibulum ante ipsum primis in faucibus
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet
+            </li>
+            <li>
+              Duis ac augue sed tortor elementum dignissim
+            </li>
+          </ul>
           <h3
             class="fw-bold my-4"
-            id="item-1"
+            id="subheading"
           >
-            Section 1
+            Sub heading
           </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+          </p>
+          <p>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras facilisis enim non nisi hendrerit laoreet. Vestibulum id facilisis augue, vitae faucibus justo. Etiam congue malesuada urna vitae suscipit. Mauris a varius leo. Nulla vel facilisis lacus. Suspendisse semper velit sit amet purus egestas, sit amet ullamcorper enim egestas. Vestibulum at lacus at purus ornare auctor nec consequat velit. Pellentesque iaculis sit amet nulla at rutrum.
+          </p>
           <div
-            class="bcl-listing bcl-listing--highlight-3-col"
+            class="bg-light px-4-5 pt-4 pb-4-5"
           >
             <div
-              class="row row-cols-1 row-cols-md-3 g-4"
+              class="fs-2 fw-normal"
             >
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
-                >
-                  <img
-                    alt="alt img"
-                    class="card-img-top mb-3"
-                    src="https://picsum.photos/seed/1002/600/400"
-                  />
-                  <div
-                    class="card-body pt-0"
-                  >
-                    <h5
-                      class="card-title"
-                    >
-                      <a
-                        class="text-underline-hover"
-                        href="/example"
-                      >
-                        Card title
-                      </a>
-                    </h5>
-                    <p
-                      class="card-text mb-2"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
-                >
-                  <img
-                    alt="alt img"
-                    class="card-img-top mb-3"
-                    src="https://picsum.photos/seed/1003/600/400"
-                  />
-                  <div
-                    class="card-body pt-0"
-                  >
-                    <h5
-                      class="card-title"
-                    >
-                      <a
-                        class="text-underline-hover"
-                        href="/example"
-                      >
-                        Card title
-                      </a>
-                    </h5>
-                    <p
-                      class="card-text mb-2"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
-                >
-                  <img
-                    alt="alt img"
-                    class="card-img-top mb-3"
-                    src="https://picsum.photos/seed/1004/600/400"
-                  />
-                  <div
-                    class="card-body pt-0"
-                  >
-                    <h5
-                      class="card-title"
-                    >
-                      <a
-                        class="text-underline-hover"
-                        href="/example"
-                      >
-                        Card title
-                      </a>
-                    </h5>
-                    <p
-                      class="card-text mb-2"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              Subscribe
             </div>
-            <a
-              class="mt-3-5 d-inline-block"
-              href="/example"
+            <p
+              class="fw-bold"
             >
-              Listing item block CTA
-              <svg
-                class="ms-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#chevron-right"
-                />
-              </svg>
-            </a>
-          </div>
-          <h3
-            class="fw-bold my-4"
-            id="item-2"
-          >
-            Section 2
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  
-          </p>
-          <h3
-            class="fw-bold my-4"
-            id="item-3"
-          >
-            Section 3
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  
-          </p>
-          <div
-            class="border rounded"
-          >
+              Get notified lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
             <div
-              class="px-3-5 py-3"
+              class="pb-2"
             >
-              <div
-                class="d-flex"
+              <button
+                class="btn btn-secondary btn-lg"
+                data-bs-target="#subscribeModal"
+                data-bs-toggle="modal"
+                type="button"
               >
+                Subscribe
                 <svg
-                  class="mt-1 icon--file bi icon--xl"
+                  class="ms-2-5 bi icon--fluid"
                 >
                   <use
-                    xlink:href="/icons.svg#file-pdf-fill"
+                    xlink:href="/icons.svg#chevron-right"
                   />
                 </svg>
-                <div
-                  class="w-100 d-md-flex ms-2-5"
-                >
-                  <div
-                    class="flex-grow-1"
-                  >
-                    <p
-                      class="fw-bold m-0"
-                    >
-                      File title
-                    </p>
-                    <small
-                      class="fw-bold m-0"
-                    >
-                      English
-                      <span
-                        class="fw-normal"
-                      >
-                         (16.2 MB - PDF)
-                      </span>
-                    </small>
-                  </div>
-                  <a
-                    class="text-underline-hover align-self-center d-inline-block mt-1 mt-md-0"
-                    download="/example.html"
-                    href="#"
-                  >
-                    Download
-                    <svg
-                      class="ms-2-5 bi icon--fluid"
-                    >
-                      <use
-                        xlink:href="/icons.svg#download"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="bg-lighter py-3 px-4 border-top"
-            >
-              <div
-                class="text-end text-md-center"
-              >
-                <a
-                  aria-controls="language-dropdown"
-                  aria-expanded="false"
-                  class="text-underline-hover"
-                  data-bs-toggle="collapse"
-                  href="#language-dropdown"
-                  role="button"
-                >
-                  Other languages (3)
-                  <svg
-                    class="ms-2-5 bi icon--2xs"
-                  >
-                    <use
-                      xlink:href="/icons.svg#caret-down-fill"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div
-                class="collapse"
-                id="language-dropdown"
-              >
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        български
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block text-underline-hover mt-1"
-                        download="/example.html"
-                        href="#"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        Español
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block text-underline-hover mt-1"
-                        download="/example.html"
-                        href="#"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        Français
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block text-underline-hover mt-1"
-                        download="/example.html"
-                        href="#"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="pt-3"
-                >
-                  <p
-                    class="mb-2"
-                  >
-                    Looking for another language which is not on the list? 
-                  </p>
-                  <a
-                    class="d-block text-underline-hover"
-                    href="/example.html"
-                  >
-                    Find out why.
-                  </a>
-                </div>
-              </div>
+              </button>
             </div>
           </div>
           <div
-            class="border rounded"
+            aria-hidden="true"
+            aria-labelledby="subscribeModalLabel"
+            class="modal fade"
+            id="subscribeModal"
+            tabindex="-1"
           >
             <div
-              class="px-3-5 py-3"
+              class="modal-dialog"
             >
               <div
-                class="d-flex"
+                class="modal-content"
               >
-                <svg
-                  class="mt-1 icon--file bi icon--xl"
-                >
-                  <use
-                    xlink:href="/icons.svg#file-pdf-fill"
-                  />
-                </svg>
                 <div
-                  class="w-100 d-md-flex ms-2-5"
+                  class="modal-header"
                 >
-                  <div
-                    class="flex-grow-1"
+                  <h5
+                    class="modal-title"
                   >
-                    <p
-                      class="fw-bold m-0"
-                    >
-                      File title
-                    </p>
-                    <small
-                      class="fw-bold m-0"
-                    >
-                      English
-                      <span
-                        class="fw-normal"
-                      >
-                         (16.2 MB - PDF)
-                      </span>
-                    </small>
-                  </div>
-                  <a
-                    class="text-underline-hover align-self-center d-inline-block mt-1 mt-md-0"
-                    download="/example.html"
-                    href="#"
-                  >
-                    Download
-                    <svg
-                      class="ms-2-5 bi icon--fluid"
-                    >
-                      <use
-                        xlink:href="/icons.svg#download"
-                      />
-                    </svg>
-                  </a>
+                    Subscribe
+                  </h5>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
                 </div>
-              </div>
-            </div>
-            <div
-              class="bg-lighter py-3 px-4 border-top"
-            >
-              <div
-                class="text-end text-md-center"
-              >
-                <a
-                  aria-controls="language-dropdown"
-                  aria-expanded="false"
-                  class="text-underline-hover"
-                  data-bs-toggle="collapse"
-                  href="#language-dropdown"
-                  role="button"
+                <div
+                  class="success-alert d-none mb-0 alert alert-success d-flex align-items-center fade show"
+                  role="alert"
                 >
-                  Other languages (3)
                   <svg
-                    class="ms-2-5 bi icon--2xs"
+                    class="flex-shrink-0 me-3 mt-1 align-self-start bi icon--s"
                   >
                     <use
-                      xlink:href="/icons.svg#caret-down-fill"
+                      xlink:href="/icons.svg#check-circle-fill"
                     />
                   </svg>
-                </a>
-              </div>
-              <div
-                class="collapse"
-                id="language-dropdown"
-              >
-                <div
-                  class="py-3 border-bottom"
-                >
                   <div
-                    class="row"
+                    class="alert-content flex-grow-1"
                   >
-                    <div
-                      class="col-12 col-md-9"
+                    <h4
+                      class="alert-heading"
                     >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        български
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block text-underline-hover mt-1"
-                        download="/example.html"
-                        href="#"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+                      Thank you!
+                    </h4>
+                    Your subscription has been successfully registered. You can now close this dialog.
                   </div>
                 </div>
                 <div
-                  class="py-3 border-bottom"
+                  class="error-alert d-none mb-0 alert alert-danger d-flex align-items-center fade show"
+                  role="alert"
                 >
-                  <div
-                    class="row"
+                  <svg
+                    class="flex-shrink-0 me-3 mt-1 align-self-start bi icon--s"
                   >
-                    <div
-                      class="col-12 col-md-9"
+                    <use
+                      xlink:href="/icons.svg#dash-circle-fill"
+                    />
+                  </svg>
+                  <div
+                    class="alert-content flex-grow-1"
+                  >
+                    <h4
+                      class="alert-heading"
                     >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        Español
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
+                      Sorry!
+                    </h4>
+                    There was an error!
+                    <hr
+                      class="d-none d-md-block"
+                    />
+                    <p
+                      class="d-none d-md-block mb-0"
                     >
-                      <a
-                        class="d-block text-underline-hover mt-1"
-                        download="/example.html"
-                        href="#"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+                      Please verify your e-mail address and agree with the privacy statement.
+                    </p>
                   </div>
                 </div>
                 <div
-                  class="py-3 border-bottom"
+                  class="modal-body"
                 >
-                  <div
-                    class="row"
+                  <form
+                    class="needs-validation"
+                    novalidate="true"
+                    onsubmit="return false;"
                   >
-                    <div
-                      class="col-12 col-md-9"
-                    >
-                      <small
-                        class="fw-bold m-0"
+                    <fieldset>
+                      <legend
+                        class="h6 fw-normal mb-0"
                       >
-                        Français
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
+                        <p>
+                          Please enter your information & preference to receive the wished information in your mailbox. Your email will not be shared with anyone.
+                        </p>
+                      </legend>
+                    </fieldset>
+                    <div
+                      class="mb-3"
+                    >
+                      <label
+                        class="form-label"
+                      >
+                        E-mail
+                      </label>
+                      <input
+                        class="form-control"
+                        placeholder="Type in your e-mail address"
+                        required="true"
+                        type="email"
+                      />
+                      <div
+                        class="invalid-feedback"
+                      >
+                        Please enter a valid e-mail address
+                      </div>
                     </div>
                     <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
+                      class="mb-3"
                     >
-                      <a
-                        class="d-block text-underline-hover mt-1"
-                        download="/example.html"
-                        href="#"
+                      <label
+                        class="form-label"
+                        for="language-select"
                       >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
+                        Languages
+                      </label>
+                      <select
+                        class="form-select"
+                        id="language-select"
+                        required="true"
+                      >
+                        <option
+                          disabled=""
+                          hidden=""
+                          selected=""
+                          value=""
                         >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
+                          Please select a language
+                        </option>
+                        <option
+                          value="1"
+                        >
+                          a select option
+                        </option>
+                        <option
+                          value="2"
+                        >
+                          another select option
+                        </option>
+                        <option
+                          value="3"
+                        >
+                          another option
+                        </option>
+                        <option
+                          value="4"
+                        >
+                          last option
+                        </option>
+                      </select>
+                      <div
+                        class="invalid-feedback"
+                      >
+                        Please select a language
+                      </div>
                     </div>
-                  </div>
+                    <div
+                      class="mb-3"
+                    >
+                      <div
+                        class="form-check"
+                      >
+                        <input
+                          class="form-check-input"
+                          id="exampleInputCheck1"
+                          required="true"
+                          type="checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="exampleInputCheck1"
+                        >
+                          By checking this box, I confirm that I want to register for this service, and I agree with the 
+                          <a
+                            href="/example.html"
+                          >
+                            privacy statement
+                          </a>
+                        </label>
+                        <div
+                          class="invalid-feedback"
+                        >
+                          Please check the required checkbox.
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div
-                  class="pt-3"
+                  class="modal-footer"
                 >
-                  <p
-                    class="mb-2"
+                  <div
+                    class="text-align-end"
                   >
-                    Looking for another language which is not on the list? 
-                  </p>
-                  <a
-                    class="d-block text-underline-hover"
-                    href="/example.html"
-                  >
-                    Find out why.
-                  </a>
+                    <button
+                      class="btn btn-light"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      class="btn btn-primary form-submit ms-4"
+                    >
+                      Subscribe now
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1294,7 +1052,7 @@ exports[`OE - Page Page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    class="bcl-footer bcl-footer--neutral"
+    class="mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"
