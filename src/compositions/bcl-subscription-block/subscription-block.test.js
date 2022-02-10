@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import blockData from "@openeuropa/bcl-subscription-block/data/data_block.js";
+import demoData from "@openeuropa/bcl-subscription-block/data/data.js";
 
 const template = "@oe-bcl/bcl-subscription-block/subscription-block.html.twig";
 
@@ -9,6 +9,6 @@ describe("OE - Subscription Block", () => {
   test("renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(blockData)).resolves.toMatchSnapshot();
+    return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 });

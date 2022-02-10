@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
 import subscriptionBlock from "@openeuropa/bcl-subscription-block/subscription-block.html.twig";
-import blockData from "@openeuropa/bcl-subscription-block/data/data_block.js";
+import demoData from "@openeuropa/bcl-subscription-block/data/data.js";
 
 export default {
   title: "Compositions/Subscription",
@@ -19,4 +19,4 @@ export default {
   },
 };
 
-export const Block = () => subscriptionBlock(correctPaths(blockData));
+export const Block = () => subscriptionBlock(correctPaths(demoData));

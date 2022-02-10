@@ -7,7 +7,7 @@ import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
 import subscriptionPageData from "@openeuropa/bcl-subscription/data/data.js";
 import modalData from "@openeuropa/bcl-subscription/data/data_modal.js";
-import blockData from "@openeuropa/bcl-subscription-block/data/data_block.js";
+import blockData from "@openeuropa/bcl-subscription-block/data/data.js";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
 import drupalAttribute from "drupal-attribute";
 
