@@ -6,6 +6,7 @@ import content from "@openeuropa/bcl-news/data/data_content.js";
 import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import subscription from "@openeuropa/bcl-subscription/subscription.html.twig";
 import subscriptionData from "@openeuropa/bcl-subscription/data/data.js";
+import modalData from "@openeuropa/bcl-subscription/data/data_modal.js";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
 import drupalAttribute from "drupal-attribute";
 
@@ -22,6 +23,7 @@ const demoData = {
   with_footer: true,
   sidebar: sidebar,
   subscription: subscriptionData,
+  modal: modalData,
   banner: {
     ...banner,
     service_buttons: subscriptionData.service_buttons,
@@ -111,11 +113,12 @@ export default {
   decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
+    controls: { disable: true },
     design: [
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5859%3A239084",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5859%3A239083",
       },
     ],
   },

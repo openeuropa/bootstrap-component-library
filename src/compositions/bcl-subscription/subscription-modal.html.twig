@@ -5,7 +5,7 @@
 
   Blocks:
   - body
-  - outer_body
+  - messages
 #}
 
 {% set _form = form|default({}) %}
@@ -18,7 +18,7 @@
   {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
 {% endblock %}
 
-{% block outer_body %}
+{% block messages %}
   {% include '@oe-bcl/bcl-alert/alert.html.twig' with _success_alert only %}
   {% include '@oe-bcl/bcl-alert/alert.html.twig' with _error_alert only %}
 {% endblock %}

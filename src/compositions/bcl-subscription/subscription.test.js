@@ -4,6 +4,7 @@ import footer from "@openeuropa/bcl-data-footer/data";
 import content from "@openeuropa/bcl-news/data/data_content.js";
 import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import subscriptionData from "@openeuropa/bcl-subscription/data/data.js";
+import modalData from "@openeuropa/bcl-subscription/data/data_modal.js";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
 import drupalAttribute from "drupal-attribute";
 
@@ -20,6 +21,7 @@ const demoData = {
   with_footer: true,
   sidebar: sidebar,
   subscription: subscriptionData,
+  modal: modalData,
   banner: {
     ...banner,
     service_buttons: subscriptionData.service_buttons,

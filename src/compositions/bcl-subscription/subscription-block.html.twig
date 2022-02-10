@@ -4,7 +4,6 @@
   - title: (string) (default: '')
   - content: (string) (default: '')
   - button: (button Object) (default: {})
-  - modal: (modal Object) (default: {})
 #}
 
 {% set _title = title|default(false) %}
@@ -33,9 +32,5 @@
     </div>
   {% endif %}
 </div>
-
-{% if _modal is not empty %}
-  {% include '@oe-bcl/bcl-subscription/subscription-modal.html.twig' with _modal only %}
-{% endif %}
 
 {% endspaceless %}
