@@ -1,9 +1,36 @@
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
-import subscriptionModal from "@openeuropa/bcl-subscription/subscription-modal.html.twig";
-import subscriptionBlock from "@openeuropa/bcl-subscription/subscription-block.html.twig";
+import header from "@openeuropa/bcl-data-header/data--simple";
+import footer from "@openeuropa/bcl-data-footer/data";
+import content from "@openeuropa/bcl-news/data/data_content.js";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
+import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
+import subscriptionPageData from "@openeuropa/bcl-subscription/data/data.js";
 import modalData from "@openeuropa/bcl-subscription/data/data_modal.js";
-import blockData from "@openeuropa/bcl-subscription/data/data_block.js";
+import blockData from "@openeuropa/bcl-subscription-block/data/data_block.js";
+import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
+import drupalAttribute from "drupal-attribute";
+
+const demoData = {
+  content_type: "subscription",
+  page_title: "Subscription",
+  header: header,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  sidebar: sidebar,
+  subscription: blockData,
+  modal: modalData,
+  banner: {
+    ...banner,
+    ...subscriptionPageData,
+  },
+  content: content,
+};
 
 const clientValidation = (story) => {
   const demo = story();
@@ -83,7 +110,7 @@ const errorState = (story) => {
 };
 
 export default {
-  title: "Compositions/Subscription",
+  title: "Features/Subscription",
   decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
@@ -98,14 +125,11 @@ export default {
   },
 };
 
-export const Block = () => subscriptionBlock(correctPaths(blockData));
-Block.decorators = [clientValidation];
+export const Default = () => subscriptionPage(correctPaths(demoData));
+Default.decorators = [clientValidation];
 
-export const Modal = () => subscriptionModal(correctPaths(modalData));
-Modal.decorators = [openModal, clientValidation];
+export const Success = () => subscriptionPage(correctPaths(demoData));
+Success.decorators = [openModal, successState];
 
-export const ModalSuccess = () => subscriptionModal(correctPaths(modalData));
-ModalSuccess.decorators = [openModal, successState];
-
-export const ModalError = () => subscriptionModal(correctPaths(modalData));
-ModalError.decorators = [openModal, errorState];
+export const Error = () => subscriptionPage(correctPaths(demoData));
+Error.decorators = [openModal, errorState];
