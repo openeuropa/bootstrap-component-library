@@ -22,6 +22,14 @@
         border-left: none;
       }
     }
+    &.flex-column {
+      .nav-link {
+        &.active {
+          border-left: map-get($border-widths, 2) solid $primary;
+          border-bottom: none;
+        }
+      }
+    }
   }
   &.bg-gray {
     background: $gray-200;

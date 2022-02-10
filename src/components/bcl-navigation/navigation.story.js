@@ -9,13 +9,22 @@ const getArgs = (data, type) => {
   let args = {
     full_width: false,
     alignment: "default",
+    vertical: false,
   };
   if (type === "default") {
     args.pills = data.pills;
-    args.vertical = false;
   }
 
   return args;
+};
+
+const sidebar = (story) => {
+  const demo = story();
+  return `${
+    demoDataCustom.vertical
+      ? `<div class='row'><div class='col-4'>${demo}</div></div>`
+      : demo
+  }`;
 };
 
 const getArgTypes = (data, type) => {
@@ -49,20 +58,20 @@ const getArgTypes = (data, type) => {
         category: "Style",
       },
     },
-  };
-  if (type === "default") {
-    argTypes.pills = {
+    vertical: {
       type: { name: "boolean" },
-      description: "Menu items as pills",
+      description: "Vertical menu",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
         category: "Style",
       },
-    };
-    argTypes.vertical = {
+    },
+  };
+  if (type === "default") {
+    argTypes.pills = {
       type: { name: "boolean" },
-      description: "Vertical menu",
+      description: "Menu items as pills",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -125,5 +134,6 @@ Tabs.argTypes = getArgTypes(demoTabsData);
 
 export const CustomTabs = (args) => navigation(applyArgs(demoDataCustom, args));
 
+CustomTabs.decorators = [sidebar];
 CustomTabs.args = getArgs(demoDataCustom);
 CustomTabs.argTypes = getArgTypes(demoDataCustom);
