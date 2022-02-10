@@ -687,30 +687,32 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="d-flex justify-content-end"
           >
             <button
-              class="w-auto mt-3 me-3 btn btn-light btn-md"
+              class="me-3 btn btn-outline-primary btn-md"
               type="button"
             >
-              Print
               <svg
-                class="ms-2-5 bi icon--fluid"
+                class="me-2-5 bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#printer-fill"
                 />
               </svg>
+              Print
             </button>
             <button
-              class="w-auto mt-3 btn btn-light btn-md"
+              class="btn btn-outline-primary btn-md"
+              data-bs-target="#subscribeModal"
+              data-bs-toggle="modal"
               type="button"
             >
-              Export
               <svg
-                class="ms-2-5 bi icon--fluid"
+                class="me-2-5 bi icon--fluid"
               >
                 <use
-                  xlink:href="/icons.svg#file-arrow-down-fill"
+                  xlink:href="/icons.svg#envelope-fill"
                 />
               </svg>
+              Subscribe
             </button>
           </div>
         </div>

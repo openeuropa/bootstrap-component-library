@@ -20,7 +20,10 @@ const demoData = {
   with_footer: true,
   sidebar: sidebar,
   subscription: subscriptionData,
-  banner: banner,
+  banner: {
+    ...banner,
+    service_buttons: subscriptionData.service_buttons,
+  },
   content: content,
 };
 
