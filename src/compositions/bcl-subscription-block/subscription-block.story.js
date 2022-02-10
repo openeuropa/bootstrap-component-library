@@ -4,7 +4,7 @@ import subscriptionBlock from "@openeuropa/bcl-subscription-block/subscription-b
 import demoData from "@openeuropa/bcl-subscription-block/data/data.js";
 
 export default {
-  title: "Compositions/Subscription",
+  title: "Compositions/Subscription Block",
   decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
@@ -20,4 +20,4 @@ export default {
   },
 };
 
-export const Block = () => subscriptionBlock(correctPaths(demoData));
+export const Default = () => subscriptionBlock(correctPaths(demoData));
