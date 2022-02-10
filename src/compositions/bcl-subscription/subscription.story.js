@@ -115,6 +115,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
+    badges: ["stable"],
     design: [
       {
         name: "Mockup",
