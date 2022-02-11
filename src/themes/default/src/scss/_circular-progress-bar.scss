@@ -53,9 +53,7 @@ $howManySteps: 20;
   border-top-right-radius: ($size / 2);
   border-bottom-right-radius: ($size / 2);
   border-left: 0;
-  -webkit-transform-origin: center left;
   transform-origin: center left;
-  //animation: loading-2 1.5s linear forwards 1.8s;
 }
 
 .circular-progress-right {
@@ -65,33 +63,11 @@ $howManySteps: 20;
     border-top-left-radius: ($size / 2);
     border-bottom-left-radius: ($size / 2);
     border-right: 0;
-    -webkit-transform-origin: center right;
     transform-origin: center right;
-    //animation: loading-1 1.8s linear forwards;
   }
 }
 
-.circular-progress-value {
-  display: flex;
-  border-radius: 50%;
-  font-size: 36px;
-  text-align: center;
-  line-height: 20px;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  //font-family: $work-sans;
-  font-weight: 300;
-  div {
-    margin-top: 10px;
-  }
-  span {
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-}
-
-/* This for loop creates the 	necessary css animation names 
+/* This for loop creates the necessary css animation names 
 Due to the split circle of progress-left and progress right, we must use the animations on each side. 
 */
 @for $i from 1 through $howManySteps {
@@ -136,11 +112,9 @@ Due to the split circle of progress-left and progress right, we must use the ani
   $degrees: ($degrees * $i);
   @keyframes loading-#{$i} {
     0% {
-      -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     100% {
-      -webkit-transform: rotate($degrees);
       transform: rotate(#{$degrees}deg);
     }
   }
