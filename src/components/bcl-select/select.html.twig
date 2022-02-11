@@ -129,6 +129,9 @@
       {% if _option.disabled %}
         disabled
       {% endif %}
+      {% if _option.hidden %}
+        hidden
+      {% endif %}
       >
         {{- _option.label -}}
       </option>
