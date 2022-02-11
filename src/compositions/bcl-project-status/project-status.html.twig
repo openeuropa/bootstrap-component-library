@@ -12,10 +12,10 @@
   - label (string) (default: '')
   - badge (string) (default: ''),
   - progress (string) (default: '')
-  - chart_progress (string) (default: '') // value every 5 percent
-  - chart_details_list (object) (default: {})
+  - corporate_contribution (string) (default: '') // value every 5 percent
+  - chart_legend (object) (default: {})
 
-    Blocks - charts
+    Blocks - chart
 #}
 
 {% set _title_id = title_id|default('') %}
@@ -30,8 +30,8 @@
 {% set _start_label = start_label|default('') %}
 {% set _end_label = end_label|default('') %}
 {% set _progress = progress|default('') %}
-{% set _chart_progress = chart_progress|default('') %}
-{% set _chart_details_list = chart_details_list|default({}) %}
+{% set _corporate_contribution = corporate_contribution|default('') %}
+{% set _chart_legend = chart_legend|default({}) %}
 
 {% set _bgs = {
     ongoing: 'info',
@@ -103,12 +103,12 @@
     </div>
   </div>
 </div>
-{% if _chart_progress is not empty and _chart_details_list is not empty %}
+{% if _corporate_contribution is not empty and _chart_legend is not empty %}
 <div class="border-bottom pb-4 mb-4">
-  {% block charts %}
+  {% block chart %}
   <div class="row">
     <div class="col-5 col-md-3">
-      <div class="circular-progress" data-percentage="{{ _chart_progress }}">
+      <div class="circular-progress" data-percentage="{{ _corporate_contribution }}">
         <span class="circular-progress-left">
           <span class="circular-progress-bar"></span>
         </span>
@@ -118,7 +118,7 @@
       </div>
     </div>
     <div class="col-7 col-md-9 align-self-center">
-      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _chart_details_list only %}
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _chart_legend only %}
     </div>
   </div>
   {% endblock %} 

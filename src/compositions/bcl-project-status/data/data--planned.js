@@ -12,8 +12,8 @@ module.exports = {
   end_date: "19/12/2027",
   end_label: "End",
   progress: 0,
-  chart_progress: 70,
-  chart_details_list: {
+  corporate_contribution: 70,
+  chart_legend: {
     variant: "horizontal",
     items: [
       {
