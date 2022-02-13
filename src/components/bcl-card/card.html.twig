@@ -7,6 +7,7 @@
       tag: '',
       classes: ''
     }
+  - action_button_title (button title) (default: {})
   - subtitle (object) (default: {})
     format: {
       content: '',
@@ -51,6 +52,7 @@
 #}
 
 {% set _title = title|default({}) %}
+{% set _action_button_title = action_button_title|default({}) %}
 {% set _subtitle = subtitle|default({}) %}
 {% set _text = text|default({}) %}
 {% set _content = content|default('') %}
@@ -169,6 +171,16 @@
 <div class='{{ _horizontal_grid.right_col_classes }}'>
 {% endif %}
   <div class='{{ _body_classes }}'>
+  
+  {%- if _action_button_title is not empty -%}
+  <div class="d-flex d-md-block flex-wrap">
+    <div class="float-end order-2 flex-grow-1 mt-3 mt-md-0">
+      <div class="d-grid d-md-block">
+      {% include '@oe-bcl/bcl-button/button.html.twig' with _action_button_title only %}
+      </div>
+    </div>
+    <div>
+  {%- endif -%}
   {%- if _title is not empty -%}
     {% set _title_tag = _title.tag ?? 'h5' %}
     <{{ _title_tag }}
@@ -222,6 +234,10 @@
       
     {% endfor %}
     </div>
+  {%- endif -%}
+  {%- if _action_button_title is not empty -%}
+    </div>
+  </div>
   {%- endif -%}
   </div>
 {% if _horizontal %}

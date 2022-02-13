@@ -3,7 +3,7 @@ module.exports = {
   title: {
     content: "This is the title of this page",
   },
-  content: `<div class="mb-4 mt-4">
+  content: `<div class="my-3">
       <span class="text-muted me-3">8 hours ago</span>
      </div>
      <p>

@@ -51,16 +51,9 @@
 {% if _image is not empty %}
   {% set _horizontal_classes = {
     left_col_classes: 'col-md-4 col-lg-3',
-    right_col_classes: 'col-md-8 col-lg-9 col-xxl-8'
+    right_col_classes: 'col-md-8 col-lg-9'
   } %}
   {% set _body_classes = 'pt-md-0 px-0 px-md-3 pb-0' %}
-
-  {% if _action_button is not empty %}
-    {% set _horizontal_classes = {
-      left_col_classes: 'col-md-4 col-lg-3',
-      right_col_classes: 'col-md-8 col-lg-9 col-xxl-9'
-    } %}
-  {% endif %}
 {% else %}
   {% set _horizontal_classes = {
     right_col_classes: 'col-md-8 col-lg-9 col-xxl-8',
@@ -81,6 +74,7 @@
   }),
   horizontal: true,
   horizontal_grid: _horizontal_classes,
+  action_button_title: _action_button,
   extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',
   extra_classes_body: _body_classes,
 } %}
@@ -95,28 +89,14 @@
 <div class="{{ _css_classes|join(' ') }}">
   <div class="container">
     <div class="row">
-  {% if _action_button is not empty %}
-    <div class="{{ _card_grid }}">
-  {% endif %}
     {% include '@oe-bcl/bcl-card/card.html.twig' with _card %}
-  {% if _action_button is not empty %}
-  </div>
-  {% endif %}
-
-  {% if _action_button is not empty %}
-    <div class="col-12 col-md-2 text-end mt-3 mt-md-0">
-      <div class="d-grid d-md-block">
-        {% include '@oe-bcl/bcl-button/button.html.twig' with _action_button only %}
+    {% if _service_buttons is not empty %}
+      <div class="d-flex justify-content-end mt-4-5 mt-md-0">
+      {% for _button in _service_buttons %}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+      {% endfor %}
       </div>
-    </div>
-  {% endif %}
-  {% if _service_buttons is not empty %}
-    <div class="d-flex justify-content-end">
-    {% for _button in _service_buttons %}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
-    {% endfor %}
-    </div>
-  {% endif %}
+    {% endif %}
   </div>
   </div>
 </div>
