@@ -3,7 +3,16 @@
 const { spawn } = require('child_process');
 const browsersync = require('browser-sync');
 const path = require('path');
-const theme = process.argv.slice(3)[0] === 'dev' ? 'default' : process.argv.slice(3)[0];
+const instance = process.argv.slice(3)[0] || 'default';
+const ports = {
+  dev: '5000',
+  default: '5001',
+  joinup: '5002',
+  ucpkn: '5003',
+};
+
+const theme = instance === 'dev' ? 'default' : instance;
+const port = ports[instance];
 
 const handlers = [
   {
@@ -81,4 +90,4 @@ handlers.forEach((handler) => {
   });
 });
 
-bs.init({ ...{ open: true, proxy: `localhost:5000` } });
+bs.init({ ...{ open: true, proxy: `localhost:${port}` } });
