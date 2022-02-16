@@ -33,10 +33,6 @@ $howManySteps: 20;
   }
 }
 
-.circular-progress-left {
-  left: 0;
-}
-
 .circular-progress-bar {
   width: 100%;
   height: 100%;
@@ -48,12 +44,15 @@ $howManySteps: 20;
   border-color: $circular-progress-border-color-fill;
 }
 
-.circular-progress-left .circular-progress-bar {
-  left: 100%;
-  border-top-right-radius: ($size / 2);
-  border-bottom-right-radius: ($size / 2);
-  border-left: 0;
-  transform-origin: center left;
+.circular-progress-left {
+  left: 0;
+  .circular-progress-bar {
+    left: 100%;
+    border-top-right-radius: ($size / 2);
+    border-bottom-right-radius: ($size / 2);
+    border-left: 0;
+    transform-origin: center left;
+  }
 }
 
 .circular-progress-right {
