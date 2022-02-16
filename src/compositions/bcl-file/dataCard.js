@@ -75,7 +75,7 @@ module.exports = {
       {
         type: "content",
         content:
-          "<p class='mb-2 d-inline-block me-2'>Looking for another language which is not on the list? </p><a href='/example.html' class='text-underline-hover'>Find out why.</a>",
+          "<p class='mb-2 d-inline-block me-2'>Looking for another language which is not on the list? </p><a href='/example.html'>Find out why.</a>",
       },
     ],
   },

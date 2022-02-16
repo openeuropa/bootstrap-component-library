@@ -62,11 +62,19 @@ $utilities: map-merge(
   )
 );
 
+a:not(.text-underline-hover) {
+  text-decoration-color: rgba($primary, 0.3);
+  text-underline-offset: 2px;
+  &:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
 .text-underline-hover {
   text-decoration: none;
-}
-.text-underline-hover:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @include media-breakpoint-down(md) {
