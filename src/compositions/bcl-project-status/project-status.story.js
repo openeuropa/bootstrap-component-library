@@ -126,6 +126,5 @@ export default {
 
 export const Default = (args) => projectStatus(applyArgs(dataOngoing, args));
 
-Default.storyName = "default";
 Default.args = getArgs(dataOngoing);
 Default.argTypes = getArgTypes(dataOngoing);
