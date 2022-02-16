@@ -62,9 +62,12 @@ $utilities: map-merge(
   )
 );
 
+a {
+  text-underline-offset: 2px;
+}
+
 a:not(.text-underline-hover) {
   text-decoration-color: rgba($primary, 0.3);
-  text-underline-offset: 2px;
   &:hover {
     text-decoration-color: currentColor;
   }
