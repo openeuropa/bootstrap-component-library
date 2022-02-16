@@ -14,10 +14,10 @@
     .nav-link {
       padding: map-get($spacers, 2);
       margin-bottom: map-get($spacers, 2);
-      text-decoration-line: underline;
-      &.active {
+      &:not(.active) {
         &:hover {
-          text-decoration: none;
+          text-decoration-line: underline;
+          text-decoration-color: currentColor;
         }
       }
     }
