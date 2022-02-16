@@ -16,7 +16,7 @@ const port = ports[instance];
 
 const handlers = [
   {
-    pattern: `${path.resolve(__dirname, '..')}/src/themes/*/src/scss/*.scss`,
+    pattern: `${path.resolve(__dirname, '..')}/src/themes/*/src/scss/**/*.scss`,
     events: [
       {
         on: 'change',
@@ -79,7 +79,6 @@ handlers.forEach((handler) => {
         const subprocess = spawn(cmd, args, { stdio: 'inherit' });
         subprocess.on('error', (err) => bs.notify(`${name}: ${err.message}`));
         subprocess.on('exit', () => {
-          console.log('exiting');
           bs.notify(message);
           if (reload) {
             bs.reload(reload);
