@@ -1,0 +1,120 @@
+//styling
+$borderWidth: 12px;
+$animationTime: 1s;
+$size: 120px;
+
+//Create how many steps
+$howManySteps: 20;
+
+.circular-progress {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  background: none;
+  box-shadow: none;
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: $borderWidth solid $circular-progress-border-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.circular-progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: $borderWidth;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  border-color: $circular-progress-border-color-fill;
+}
+
+.circular-progress-left {
+  left: 0;
+  .circular-progress-bar {
+    left: 100%;
+    border-top-right-radius: ($size / 2);
+    border-bottom-right-radius: ($size / 2);
+    border-left: 0;
+    transform-origin: center left;
+  }
+}
+
+.circular-progress-right {
+  right: 0;
+  .circular-progress-bar {
+    left: -100%;
+    border-top-left-radius: ($size / 2);
+    border-bottom-left-radius: ($size / 2);
+    border-right: 0;
+    transform-origin: center right;
+  }
+}
+
+/* This for loop creates the necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+*/
+@for $i from 1 through $howManySteps {
+  $stepName: ($i * (100 / $howManySteps));
+
+  //animation only the left side if below 50%
+  @if $i <= ($howManySteps / 2) {
+    .circular-progress[data-percentage="#{$stepName}"] {
+      .circular-progress-right .circular-progress-bar {
+        animation: loading-#{$i} $animationTime linear forwards;
+      }
+      .circular-progress-left .circular-progress-bar {
+        animation: 0;
+      }
+    }
+  }
+  //animation only the right side if above 50%
+  @if $i > ($howManySteps / 2) {
+    .circular-progress[data-percentage="#{$stepName}"] {
+      .circular-progress-right .circular-progress-bar {
+        // prettier-ignore
+        animation: loading-#{($howManySteps / 2)}
+          $animationTime
+          linear
+          forwards; //set the animation to longest animation
+      }
+      .circular-progress-left .circular-progress-bar {
+        // prettier-ignore
+        animation: loading-#{$i - ($howManySteps / 2)}
+          $animationTime
+          linear
+          forwards
+          $animationTime;
+      }
+    }
+  }
+}
+
+//animation
+@for $i from 1 through ($howManySteps / 2) {
+  $degrees: (180 / ($howManySteps / 2));
+  $degrees: ($degrees * $i);
+  @keyframes loading-#{$i} {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(#{$degrees}deg);
+    }
+  }
+}
