@@ -111,7 +111,7 @@ const getArgTypes = (data) => {
 const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
-  title: "Features/Project",
+  title: "Compositions/Project status",
   decorators: [withDesign],
   parameters: {
     design: [
@@ -126,6 +126,6 @@ export default {
 
 export const Default = (args) => projectStatus(applyArgs(dataOngoing, args));
 
-Default.storyName = "Project status";
+Default.storyName = "default";
 Default.args = getArgs(dataOngoing);
 Default.argTypes = getArgTypes(dataOngoing);
