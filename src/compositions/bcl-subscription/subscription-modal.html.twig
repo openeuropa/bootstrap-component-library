@@ -1,0 +1,24 @@
+{# Parameters:
+  - form: (form object) (default: {})
+  - success_alert: (alert object) (default: {})
+  - error_alert: (button Object) (default: {})
+
+  Blocks:
+  - body
+  - messages
+#}
+
+{% set _form = form|default({}) %}
+{% set _success_alert = success_alert|default({}) %}
+{% set _error_alert = error_alert|default({}) %}
+
+{% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
+
+{% block body %}
+  {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
+{% endblock %}
+
+{% block messages %}
+  {% include '@oe-bcl/bcl-alert/alert.html.twig' with _success_alert only %}
+  {% include '@oe-bcl/bcl-alert/alert.html.twig' with _error_alert only %}
+{% endblock %}

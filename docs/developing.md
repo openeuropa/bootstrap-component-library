@@ -1,5 +1,16 @@
 ## Developer's guidelines
 
+### Quick reference
+
+1) Run `nvm use`
+2) Run `yarn`
+3) Run `yarn start dev` when developing on the default stories
+4) Run `yarn start {theme}` when developing anything related to a sub-theme
+
+`yarn start dev` can be used to develop on the `default` theme, as well as
+`yarn start default`, the only difference is that `start-dev` has to be used when
+working on the story files in `src/components` and `src/compositions`
+
 ### Architecture of the library
 
 The BCL library is the tool meant to develop all the components and compositions

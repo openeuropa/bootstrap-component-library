@@ -18,6 +18,7 @@ const openModal = (story) => {
       var backdrop = document.getElementsByClassName('modal-backdrop')[0];
       if (typeof(backdrop) != 'undefined' && backdrop != null) {
         backdrop.remove()
+        document.body.removeAttribute("style")
       }
       var languageModal = new bootstrap.Modal(document.getElementById('languageModal'))
       languageModal.show()
