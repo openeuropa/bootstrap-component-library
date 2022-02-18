@@ -66,13 +66,15 @@ a {
   text-underline-offset: 2px;
 }
 
-a:not(.text-underline-hover) {
+a:not(.text-underline-hover),
+a:not(.standalone) {
   text-decoration-color: rgba($primary, 0.3);
   &:hover {
     text-decoration-color: currentColor;
   }
 }
 
+.standalone,
 .text-underline-hover {
   text-decoration: none;
   &:hover {

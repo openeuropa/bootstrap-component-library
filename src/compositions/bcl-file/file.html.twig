@@ -135,7 +135,7 @@
           },
           attributes: create_attribute()
                       .setAttribute('download', _download.url)
-                      .addClass(['text-underline-hover', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0'])
+                      .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0'])
         }) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
       </div>
@@ -148,7 +148,7 @@
       {% include '@oe-bcl/bcl-link/link.html.twig' with _translation.label|merge({
         path: '#' ~ _id,
         attributes: create_attribute()
-                    .addClass(['text-underline-hover'])
+                    .addClass(['standalone'])
                     .setAttribute('aria-controls', _id)
                     .setAttribute('data-bs-toggle', 'collapse')
                     .setAttribute('aria-expanded', 'false')
@@ -194,7 +194,7 @@
               },
               attributes: create_attribute()
                           .setAttribute("download", _item.download.url)
-                          .addClass(['d-block', 'text-underline-hover', 'mt-1'])
+                          .addClass(['d-block', 'standalone', 'mt-1'])
             }) only %}
             </div>
           </div>

@@ -421,8 +421,7 @@ module.exports = {
       items: [
         {
           title: {
-            content:
-              '<a class="text-underline-hover" href="/example">Card title</a>',
+            content: '<a class="standalone" href="/example">Card title</a>',
           },
           text: {
             content:
@@ -451,8 +450,7 @@ module.exports = {
         },
         {
           title: {
-            content:
-              '<a class="text-underline-hover" href="/example">Card title</a>',
+            content: '<a class="standalone" href="/example">Card title</a>',
           },
           text: {
             content:
@@ -486,8 +484,7 @@ module.exports = {
         },
         {
           title: {
-            content:
-              '<a class="text-underline-hover" href="/example">Card title</a>',
+            content: '<a class="standalone" href="/example">Card title</a>',
           },
           text: {
             content:

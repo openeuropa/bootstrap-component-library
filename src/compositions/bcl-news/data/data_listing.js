@@ -155,8 +155,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>News title</a>",
+          content: "<a href='/example.html' class='standalone'>News title</a>",
         },
         text: {
           content:
@@ -182,8 +181,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>News title</a>",
+          content: "<a href='/example.html' class='standalone'>News title</a>",
         },
         text: {
           content:
@@ -221,8 +219,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>News title</a>",
+          content: "<a href='/example.html' class='standalone'>News title</a>",
         },
         text: {
           content:
@@ -248,8 +245,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>News title</a>",
+          content: "<a href='/example.html' class='standalone'>News title</a>",
         },
         text: {
           content:
@@ -281,8 +277,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>News title</a>",
+          content: "<a href='/example.html' class='standalone'>News title</a>",
         },
         text: {
           content:
@@ -308,8 +303,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>News title</a>",
+          content: "<a href='/example.html' class='standalone'>News title</a>",
         },
         text: {
           content:

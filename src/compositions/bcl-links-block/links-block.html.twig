@@ -41,7 +41,7 @@
         {% endif %}
         {% set _link = _link|merge({
           clean_class: true,
-          attributes: _link.attributes.addClass(["pb-3", "d-inline-block", "text-underline-hover"])
+          attributes: _link.attributes.addClass(["pb-3", "d-inline-block", "standalone"])
         }) %}
         {% set _list_item_classes = "list-unstyled" %}
         {% if _variant == "horizontal" %}
