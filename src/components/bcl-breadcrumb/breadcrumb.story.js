@@ -23,7 +23,7 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  data.icons_path = defaultSprite;
+  data.icon_path = defaultSprite;
   return Object.assign(data, args);
 };
 

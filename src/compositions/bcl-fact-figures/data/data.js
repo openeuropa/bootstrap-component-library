@@ -1,6 +1,6 @@
 module.exports = {
   responsive_columns: 3,
-  icons_path: "/icons.svg",
+  icon_path: "/icons.svg",
   equal_height: true,
   display_icons: true,
   title: "Fact and figures block",

@@ -6,7 +6,7 @@
 
 {% set _classes = 'breadcrumb' %}
 {% set _links = links|default([]) %}
-{% set _icons_path = icons_path|default('') %}
+{% set _icon_path = icon_path|default('') %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -41,7 +41,7 @@
               icon_position: 'before',
                 icon: {
                   name: "arrow-left",
-                  path: _icons_path,
+                  path: _icon_path,
                   attributes: create_attribute().addClass(['d-md-none ms-0 me-2']),
                 },
              }) %}
