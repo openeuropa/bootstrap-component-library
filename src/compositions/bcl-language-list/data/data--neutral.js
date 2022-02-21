@@ -4,7 +4,7 @@ module.exports = {
     alt: "logo",
   },
   title: "Project name",
-  icons_path: "/icons.svg",
+  icon_path: "/icons.svg",
   items: [
     {
       label: "български",

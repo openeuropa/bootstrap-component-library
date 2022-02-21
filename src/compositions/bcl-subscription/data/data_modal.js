@@ -73,7 +73,7 @@ module.exports = {
     message:
       "Your subscription has been successfully registered. You can now close this dialog.",
     heading: "Thank you!",
-    icons_path: "/icons.svg",
+    icon_path: "/icons.svg",
     variant: "success",
     attributes: new drupalAttribute().addClass([
       "success-alert",
@@ -86,7 +86,7 @@ module.exports = {
     message:
       "There was an error!<hr class='d-none d-md-block' /><p class='d-none d-md-block mb-0'>Please verify your e-mail address and agree with the privacy statement.</p>",
     heading: "Sorry!",
-    icons_path: "/icons.svg",
+    icon_path: "/icons.svg",
     variant: "danger",
     dismissible: false,
     attributes: new drupalAttribute().addClass([

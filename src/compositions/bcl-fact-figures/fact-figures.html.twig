@@ -18,7 +18,7 @@
   - "gutter" (int) (default: 4)
   - "equal_height" (boolean) (default: false)
   - "cols_extra_classes" (string) (default: '')
-  - "icons_path" (string) (default: '')
+  - "icon_path" (string) (default: '')
   - "link_more" (object of type link) (default {})
 #}
 
@@ -37,7 +37,7 @@
 {% set _equal_height = equal_height|default(false) %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
 {% set _cols_classes = 'col' %}
-{% set _icons_path = icons_path|default('') %}
+{% set _icon_path = icon_path|default('') %}
 {% set _link_more = link_more|default({}) %}
 {% set _wrapper_classes = [] %}
 
@@ -83,7 +83,7 @@
       {% if _item.icon is defined and _item.icon is not empty and _display_icons %}
         {% set _item = _item|merge({
           icon: _item.icon|merge({
-            path: _icons_path,
+            path: _icon_path,
             size: 'l',
           })
         }) %}

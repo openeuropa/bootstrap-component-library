@@ -11,5 +11,5 @@ module.exports = {
     },
     { label: "News" },
   ],
-  icons_path: "/icons.svg",
+  icon_path: "/icons.svg",
 };

@@ -20,6 +20,6 @@ module.exports = {
     <dt>Phone</dt>
     <dd>(+33)123456789</dd>
   </dl>`,
-  icons_path: "/icons.svg",
+  icon_path: "/icons.svg",
   variant: "success",
 };
