@@ -64,21 +64,21 @@ $utilities: map-merge(
 
 a {
   text-underline-offset: 2px;
-}
 
-a:not(.text-underline-hover),
-a:not(.standalone) {
-  text-decoration-color: rgba($primary, 0.3);
-  &:hover {
-    text-decoration-color: currentColor;
+  &:not(.text-underline-hover),
+  &:not(.standalone) {
+    text-decoration-color: rgba($primary, 0.3);
+    &:hover {
+      text-decoration-color: currentColor;
+    }
   }
-}
 
-.standalone,
-.text-underline-hover {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+  &.standalone,
+  &.text-underline-hover {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
