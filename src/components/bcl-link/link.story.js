@@ -115,7 +115,7 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass("text-underline-hover");
+  data.attributes.removeClass("standalone");
   data.attributes.removeClass(`link-${data.variant}`);
   data.attributes.removeClass("bg-dark");
 };

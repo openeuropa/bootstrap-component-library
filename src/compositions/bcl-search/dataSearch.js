@@ -157,7 +157,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Lorem ipsum dolor sit amet</a>",
+            "<a href='/example.html' class='standalone'>Lorem ipsum dolor sit amet</a>",
         },
         text: {
           content:
@@ -185,7 +185,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Incididunt ut labore et dolore</a>",
+            "<a href='/example.html' class='standalone'>Incididunt ut labore et dolore</a>",
         },
         text: {
           content:
@@ -219,7 +219,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Quis nostrud exercitation ullamco</a>",
+            "<a href='/example.html' class='standalone'>Quis nostrud exercitation ullamco</a>",
         },
         text: {
           content:
@@ -246,7 +246,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Quis nostrud exercitation ullamco</a>",
+            "<a href='/example.html' class='standalone'>Quis nostrud exercitation ullamco</a>",
         },
         text: {
           content:
@@ -280,7 +280,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Duis aute irure dolor in Excepteur</a>",
+            "<a href='/example.html' class='standalone'>Duis aute irure dolor in Excepteur</a>",
         },
         text: {
           content:
@@ -314,7 +314,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Excepteur sint occaecat cupidatat non</a>",
+            "<a href='/example.html' class='standalone'>Excepteur sint occaecat cupidatat non</a>",
         },
         text: {
           content:
@@ -381,21 +381,21 @@ module.exports = {
     {
       label: "News",
       background: "light",
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 01",
       background: "light",
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 02",
       background: "light",
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },

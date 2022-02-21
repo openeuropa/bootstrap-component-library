@@ -168,21 +168,21 @@ module.exports = {
       label: "Ongoing",
       background: "light",
       dismissible: true,
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2", "mb-2"]),
     },
     {
       label: "Closed",
       background: "light",
       dismissible: true,
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2", "mb-2"]),
     },
     {
       label: "Start date: 22/01/2019",
       background: "light",
       dismissible: true,
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2", "mb-2"]),
     },
   ],
@@ -203,7 +203,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>LIFE IP ARTISAN</a>",
+            "<a href='/example.html' class='standalone'>LIFE IP ARTISAN</a>",
         },
         text: {
           content:
@@ -230,8 +230,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>SMILE</a>",
+          content: "<a href='/example.html' class='standalone'>SMILE</a>",
         },
         text: {
           content:
@@ -259,7 +258,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Project title</a>",
+            "<a href='/example.html' class='standalone'>Project title</a>",
         },
         text: {
           content:
@@ -287,7 +286,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>LIFE IP ARTISAN</a>",
+            "<a href='/example.html' class='standalone'>LIFE IP ARTISAN</a>",
         },
         text: {
           content:
@@ -308,8 +307,7 @@ module.exports = {
           },
         ],
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>SMILE</a>",
+          content: "<a href='/example.html' class='standalone'>SMILE</a>",
         },
         text: {
           content:
@@ -331,7 +329,7 @@ module.exports = {
         ],
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Project title</a>",
+            "<a href='/example.html' class='standalone'>Project title</a>",
         },
         text: {
           content:

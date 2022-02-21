@@ -3,7 +3,7 @@ import factFigures from "@openeuropa/bcl-fact-figures/fact-figures.html.twig";
 import drupalAttribute from "drupal-attribute";
 import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
 
-demoData.icons_path = defaultSprite;
+demoData.icon_path = defaultSprite;
 
 const linkMore = { ...demoData.link_more };
 const getArgs = (data) => {

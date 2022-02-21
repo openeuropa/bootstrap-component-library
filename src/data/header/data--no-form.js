@@ -127,7 +127,7 @@ module.exports = {
   language_modal: {
     id: "languageModal",
     title: "Select your language",
-    icons_path: "/icons.svg",
+    icon_path: "/icons.svg",
     close_label: "Close",
     overlay: true,
     items: [
@@ -244,6 +244,6 @@ module.exports = {
       },
       { label: "News" },
     ],
-    icons_path: "/icons.svg",
+    icon_path: "/icons.svg",
   },
 };

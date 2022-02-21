@@ -135,14 +135,14 @@ module.exports = {
     {
       label: "Culture",
       background: "light",
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Barcelona",
       background: "light",
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
     },

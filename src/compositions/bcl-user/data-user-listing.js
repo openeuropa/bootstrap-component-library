@@ -62,7 +62,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Stefan Mayer</a>",
+            "<a href='/example.html' class='standalone'>Stefan Mayer</a>",
         },
         content:
           "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -76,7 +76,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Adjur Tichar</a>",
+            "<a href='/example.html' class='standalone'>Adjur Tichar</a>",
         },
         content:
           "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -89,8 +89,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Szép Mara</a>",
+          content: "<a href='/example.html' class='standalone'>Szép Mara</a>",
         },
         content:
           "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -104,7 +103,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Daniel Cardoso Rocha</a>",
+            "<a href='/example.html' class='standalone'>Daniel Cardoso Rocha</a>",
         },
         content:
           "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -118,7 +117,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Aurelia Panicucci</a>",
+            "<a href='/example.html' class='standalone'>Aurelia Panicucci</a>",
         },
         content:
           "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -132,7 +131,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Felicyta Kowalska</a>",
+            "<a href='/example.html' class='standalone'>Felicyta Kowalska</a>",
         },
         content:
           "<span class='text-muted me-4-5'>Organisation</span><span class='text-muted me-2'>Position</span>",
@@ -201,14 +200,14 @@ module.exports = {
       label: "Name",
       background: "light",
       dismissible: true,
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Organisation",
       background: "light",
       dismissible: true,
-      icons_path: "/icons.svg",
+      icon_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
   ],

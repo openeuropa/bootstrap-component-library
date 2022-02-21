@@ -108,7 +108,7 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data);
-  data.icons_path = defaultSprite;
+  data.icon_path = defaultSprite;
   return Object.assign(data, args);
 };
 

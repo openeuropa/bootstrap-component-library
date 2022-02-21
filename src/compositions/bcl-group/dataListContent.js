@@ -121,7 +121,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Article title</a>",
+            "<a href='/example.html' class='standalone'>Article title</a>",
         },
         text: {
           classes: "mb-2-5",
@@ -139,8 +139,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+          content: "<a href='/example.html' class='standalone'>Group name</a>",
         },
         text: {
           classes: "mb-2-5",
@@ -158,8 +157,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+          content: "<a href='/example.html' class='standalone'>Group name</a>",
         },
         text: {
           classes: "mb-2-5",
@@ -177,8 +175,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+          content: "<a href='/example.html' class='standalone'>Group name</a>",
         },
         text: {
           classes: "mb-2-5",
@@ -196,8 +193,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+          content: "<a href='/example.html' class='standalone'>Group name</a>",
         },
         text: {
           classes: "mb-2-5",
@@ -215,8 +211,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Group name</a>",
+          content: "<a href='/example.html' class='standalone'>Group name</a>",
         },
         text: {
           classes: "mb-2-5",
