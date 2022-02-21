@@ -30,7 +30,7 @@
   </div>
   <div class="flex-grow-1 ms-3">
     {% if name.link is not empty %}
-      <a href="{{ name.link }}" class="fs-5 text-underline-hover mb-0">{{ name.text }}</a>
+      <a href="{{ name.link }}" class="fs-5 standalone mb-0">{{ name.text }}</a>
     {% else %}
       <p class="fs-5 mb-0 text-primary">{{ name.text }}</p>
     {% endif %}

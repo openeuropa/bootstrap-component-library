@@ -65,7 +65,7 @@
   {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 {% if _standalone %}
-  {% set _classes = _classes|merge(['text-underline-hover']) %}
+  {% set _classes = _classes|merge(['standalone']) %}
 {% endif %}
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}

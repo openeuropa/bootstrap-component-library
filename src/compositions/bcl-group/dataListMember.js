@@ -78,7 +78,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Stefan Mayer</a>",
+            "<a href='/example.html' class='standalone'>Stefan Mayer</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -92,7 +92,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Adjur Tichar</a>",
+            "<a href='/example.html' class='standalone'>Adjur Tichar</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -105,8 +105,7 @@ module.exports = {
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
-          content:
-            "<a href='/example.html' class='text-underline-hover'>Szép Mara</a>",
+          content: "<a href='/example.html' class='standalone'>Szép Mara</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -120,7 +119,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Daniel Cardoso Rocha</a>",
+            "<a href='/example.html' class='standalone'>Daniel Cardoso Rocha</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -134,7 +133,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Aurelia Panicucci</a>",
+            "<a href='/example.html' class='standalone'>Aurelia Panicucci</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -148,7 +147,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Felicyta Kowalska</a>",
+            "<a href='/example.html' class='standalone'>Felicyta Kowalska</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -162,7 +161,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Lorenzo Olson</a>",
+            "<a href='/example.html' class='standalone'>Lorenzo Olson</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -176,7 +175,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Nino Treviño Montalvo</a>",
+            "<a href='/example.html' class='standalone'>Nino Treviño Montalvo</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -190,7 +189,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>José Luis Pabón Barrios</a>",
+            "<a href='/example.html' class='standalone'>José Luis Pabón Barrios</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",
@@ -204,7 +203,7 @@ module.exports = {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
         title: {
           content:
-            "<a href='/example.html' class='text-underline-hover'>Maddison Marsh</a>",
+            "<a href='/example.html' class='standalone'>Maddison Marsh</a>",
         },
         content:
           "<span class='text-muted me-2'>DG Demo</span><span class='text-muted me-2'>Director</span>",

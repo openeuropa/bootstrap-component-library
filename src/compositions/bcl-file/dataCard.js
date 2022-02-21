@@ -1,5 +1,5 @@
 module.exports = {
-  item_title: "<a href='#' class='text-underline-hover'>Article title</a>",
+  item_title: "<a href='#' class='standalone'>Article title</a>",
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
   content:
     "<span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Brussels, Belgium</span><span class='text-muted d-block d-md-inline-block me-3 text-nowrap'>17 October 2019</span>",
@@ -75,7 +75,7 @@ module.exports = {
       {
         type: "content",
         content:
-          "<p class='mb-2 d-inline-block me-2'>Looking for another language which is not on the list? </p><a href='/example.html' class='text-underline-hover'>Find out why.</a>",
+          "<p class='mb-2 d-inline-block me-2'>Looking for another language which is not on the list? </p><a href='/example.html'>Find out why.</a>",
       },
     ],
   },

@@ -11,8 +11,7 @@ module.exports = {
   items: [
     {
       title: {
-        content:
-          '<a href="/example" class="text-underline-hover">Card title</a>',
+        content: '<a href="/example" class="standalone">Card title</a>',
       },
       text: {
         content:
@@ -32,8 +31,7 @@ module.exports = {
     {
       body_classes: "p-md-0 pt-sm-3",
       title: {
-        content:
-          '<a href="/example" class="text-underline-hover">Article title</a>',
+        content: '<a href="/example" class="standalone">Article title</a>',
       },
       image: {
         path: "https://picsum.photos/160?random=8",
@@ -52,8 +50,7 @@ module.exports = {
     },
     {
       title: {
-        content:
-          '<a href="/example" class="text-underline-hover">Article title</a>',
+        content: '<a href="/example" class="standalone">Article title</a>',
       },
       text: {
         content:
@@ -72,8 +69,7 @@ module.exports = {
     },
     {
       title: {
-        content:
-          '<a href="/example" class="text-underline-hover">Article title</a>',
+        content: '<a href="/example" class="standalone">Article title</a>',
       },
       text: {
         content:
