@@ -4,10 +4,11 @@
 name: 'Visual regressions test'
 
 # Event for the workflow
-on: push
-  branches-ignore:
-    - 'master'
-    - 'dependabot/**'
+on: 
+  push:
+    branches-ignore:
+      - 'master'
+      - 'dependabot/**'
 
 # List of jobs
 jobs:
