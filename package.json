@@ -19,7 +19,7 @@
     "build:storybook:dev": "lerna --scope \"@openeuropa/bcl-storybook-default\" run build",
     "build:storybook:joinup": "lerna --scope \"@openeuropa/bcl-storybook-joinup\" run build",
     "build:storybook:ucpkn": "lerna --scope \"@openeuropa/bcl-storybook-ucpkn\" run build",
-    "build:chromatic": "cd src/themes/default/storybook && npm build-storybook",
+    "build:chromatic": "cd src/themes/default/storybook && npm run build-storybook",
     "changelog": "lerna-changelog",
     "clean": "rimraf build assets",
     "clean:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run clean",
