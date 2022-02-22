@@ -16,13 +16,13 @@ jobs:
     steps:
       - name: Install dependencies
         uses: actions/checkout@v2
-          with:
-            fetch-depth: 0
+        with:
+          fetch-depth: 0
         run: yarn install --frozen-lockfile
       - name: Publish to Chromatic
         uses: chromaui/action@v1
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-            buildScriptName: "build:chromatic"
-            exitZeroOnChanges: true
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: "build:chromatic"
+          exitZeroOnChanges: true
