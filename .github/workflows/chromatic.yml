@@ -9,13 +9,9 @@ on:
     branches-ignore:
       - 'master'
       - 'dependabot/**'
-
-# List of jobs
 jobs:
   chromatic-deployment:
-    # Operating System
     runs-on: ubuntu-latest
-    # Job steps
     steps:
         uses: actions/checkout@v2
         with:
