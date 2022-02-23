@@ -28,7 +28,7 @@ jobs:
           outputDir: "./storybook-static"
           exitOnceUploaded: true
           exitZeroOnChanges: true
-    if: contains(github.head_ref, '#')
+    if: ${{ contains(github.head_ref, '#') }}
     steps:
       - uses: actions/checkout@v2
         with:
