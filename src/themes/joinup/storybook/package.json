@@ -7,7 +7,6 @@
   "description": "OE storybook",
   "scripts": {
     "build": "npm run clean && npm run copy",
-    "build-storybook": "build-storybook -c .storybook -o ../../../../build/joinup",
     "clean": "rimraf bcl-stories",
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
