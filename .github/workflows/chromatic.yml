@@ -25,7 +25,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: "build:chromatic:default"
-          outputDir: "./storybook-static"
           exitOnceUploaded: true
           exitZeroOnChanges: true
   chromatic-deployment-theme:
@@ -47,6 +46,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: "build:chromatic:${{ steps.extract_branch.outputs.branch }}"
-          outputDir: "./storybook-static"
           exitOnceUploaded: true
           exitZeroOnChanges: true
