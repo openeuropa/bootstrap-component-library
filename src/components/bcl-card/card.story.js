@@ -4,6 +4,7 @@ import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal.js";
 import card from "@openeuropa/bcl-card/card.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
+import isChromatic from "chromatic/isChromatic";
 
 const withBodyPadding = (story) => {
   const demo = story();
@@ -191,6 +192,10 @@ const resetAttrs = (data) => {
 const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
+  }
+
+  if (data.image && isChromatic()) {
+    image.classes = "chromatic-ignore";
   }
 
   data.image.position = args.image_position;

@@ -2,6 +2,17 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-carousel/data.js";
 import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
 import drupalAttribute from "drupal-attribute";
+import isChromatic from "chromatic/isChromatic";
+
+if (isChromatic()) {
+  items.forEach((item) => {
+    item.image = `<img
+                 src="https://picsum.photos/800/400?random=2"
+                 alt="Second slide"
+                 class="d-block w-100 chromatic-ignore"
+               />`;
+  });
+}
 
 const getArgs = (data) => {
   return {

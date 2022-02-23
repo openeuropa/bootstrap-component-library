@@ -3,6 +3,12 @@ import demoDataVideo from "@openeuropa/bcl-featured-media/dataVideo";
 import demoDataImage from "@openeuropa/bcl-featured-media/dataImage";
 import demoFeaturedItem from "@openeuropa/bcl-featured-media/dataFeaturedItem";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
+import isChromatic from "chromatic/isChromatic";
+
+if (isChromatic()) {
+  data.image =
+    "<img class='img-fluid w-100 chromatic-ignore' alt='random image' src='https://picsum.photos/1000/400?random=1'>";
+}
 
 const getArgs = (data, type) => {
   const args = {
