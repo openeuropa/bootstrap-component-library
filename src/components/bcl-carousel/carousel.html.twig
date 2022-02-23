@@ -20,6 +20,7 @@
   - previous_label (string) (default: '')
   - next_label (string) (default: '')
   - with_indicators (boolean) (default: false)
+  - rounded_indicators (boolean) (default: false)
 #}
 
 {% set _id = id|default('') %}
@@ -29,6 +30,7 @@
 {% set _prev_label = prev_label|default('') %}
 {% set _next_label = next_label|default('') %}
 {% set _with_indicators = with_indicators|default(false) %}
+{% set _rounded_indicators = rounded_indicators|default(false) %}
 {% set _classes = ['carousel slide'] %}
 {% set _autoinit = autoinit ?? true %}
 {% set _autoplay = autoplay ?? true %}
@@ -57,6 +59,10 @@
 
 {% if _disable_touch %}
   {% set attributes = attributes.setAttribute('data-bs-touch', 'false') %}
+{% endif %}
+
+{% if _rounded_indicators %}
+  {% set attributes = attributes.addClass('rounded-indicators') %}
 {% endif %}
 
 {% if not _autoplay %}
@@ -102,7 +108,7 @@
     {% if _item.image is defined and _item.image is not empty %}
       {{ _item.image }}
     {% endif %}
-    {% if _item.caption is defined and _item.caption is not empty %}
+    {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) %}
       {% set _caption_classes = 'carousel-caption' %}
       {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
         {% set _caption_classes = _caption_classes ~ ' ' ~ _item.caption_classes %}
@@ -110,7 +116,14 @@
       <div
         class="{{ _caption_classes }}"
       >
-        {{- _item.caption -}}
+        {% if _item.caption is defined and _item.caption is not empty %}
+        <div class="d-none d-md-block">
+          {{- _item.caption -}}
+        </div>
+        {% endif %}
+        {% if _item.link is defined and _item.link is not empty %}
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
+        {% endif %}
       </div>
     {% endif %}
     </div>

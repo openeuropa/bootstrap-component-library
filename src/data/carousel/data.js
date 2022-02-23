@@ -14,6 +14,14 @@ module.exports = {
                 alt="First slide"
                 class="d-block w-100"
               />`,
+      link: {
+        label: "Link",
+        icon_position: "before",
+        icon: {
+          name: "link",
+          path: "/icons.svg",
+        },
+      },
     },
     {
       image: `<img
