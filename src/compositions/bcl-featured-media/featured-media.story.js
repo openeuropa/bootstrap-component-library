@@ -6,7 +6,7 @@ import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.tw
 import isChromatic from "chromatic/isChromatic";
 
 if (isChromatic()) {
-  data.image =
+  demoDataImage.image =
     "<img class='img-fluid w-100 chromatic-ignore' alt='random image' src='https://picsum.photos/1000/400?random=1'>";
 }
 

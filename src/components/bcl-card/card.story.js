@@ -195,7 +195,7 @@ const applyArgs = (data, args) => {
   }
 
   if (data.image && isChromatic()) {
-    image.classes = "chromatic-ignore";
+    data.image.classes = "chromatic-ignore";
   }
 
   data.image.position = args.image_position;

@@ -8,7 +8,7 @@ if (isChromatic()) {
   items.forEach((item) => {
     item.image = `<img
                  src="https://picsum.photos/800/400?random=2"
-                 alt="Second slide"
+                 alt="slide"
                  class="d-block w-100 chromatic-ignore"
                />`;
   });
