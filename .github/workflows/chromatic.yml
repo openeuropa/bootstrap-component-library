@@ -12,39 +12,39 @@ on:
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.head_ref, '#') }}
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Publish "default" to Chromatic
+      - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: "build:chromatic:default"
-          ci: true
-          output-dir: "./storybook-static"
+          outputDir: "./storybook-static"
           exitOnceUploaded: true
           exitZeroOnChanges: true
-      - name: Publish "joinup" to Chromatic
+    if: contains(github.head_ref, '#')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Get project to be deployed
+        shell: bash
+        run: echo "##[set-output name=branch;]$(grep -oP '(?<=#).*?(?=#)' <<< ${GITHUB_HEAD_REF})"
+        id: extract_branch
+      - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: "build:chromatic:joinup"
-          ci: true
-          output-dir: "./storybook-static"
-          exitOnceUploaded: true
-          exitZeroOnChanges: true
-      - name: Publish "ucpkn" to Chromatic
-        uses: chromaui/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: "build:chromatic:ucpkn"
-          ci: true
-          output-dir: "./storybook-static"
+          buildScriptName: "build:chromatic:${{ steps.extract_branch.outputs.branch }}"
+          outputDir: "./storybook-static"
           exitOnceUploaded: true
           exitZeroOnChanges: true
