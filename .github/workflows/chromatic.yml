@@ -1,7 +1,7 @@
 # .github/workflows/chromatic.yml
 
 # Workflow name
-name: 'Visual regressions test'
+name: 'deployment on chromatic'
 
 # Event for the workflow
 on: 
@@ -11,7 +11,6 @@ on:
       - "dependabot/**"
 jobs:
   chromatic-deployment:
-    name: visual-regressions-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,10 +18,33 @@ jobs:
           fetch-depth: 0
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Publish to Chromatic
+      - name: Publish "default" to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: "build:chromatic"
+          buildScriptName: "build:chromatic:default"
+          ci: true
+          output-dir: "./storybook-static"
+          exitOnceUploaded: true
+          exitZeroOnChanges: true
+      - name: Publish "joinup" to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: "build:chromatic:joinup"
+          ci: true
+          output-dir: "./storybook-static"
+          exitOnceUploaded: true
+          exitZeroOnChanges: true
+      - name: Publish "ucpkn" to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: "build:chromatic:ucpkn"
+          ci: true
+          output-dir: "./storybook-static"
+          exitOnceUploaded: true
           exitZeroOnChanges: true
