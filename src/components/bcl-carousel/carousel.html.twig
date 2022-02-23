@@ -110,16 +110,17 @@
     {% endif %}
     {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) %}
       {% set _caption_classes = 'carousel-caption' %}
-      {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
-        {% set _caption_classes = _caption_classes ~ ' ' ~ _item.caption_classes %}
-      {% endif %}
       <div
-        class="{{ _caption_classes }}"
+        class="carousel-caption"
       >
         {% if _item.caption is defined and _item.caption is not empty %}
-        <div class="d-none d-md-block">
-          {{- _item.caption -}}
-        </div>
+          {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
+            <div class="{{ _item.caption_classes }}">
+          {% endif %}
+            {{- _item.caption -}}
+          {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
+            </div>
+          {% endif %}
         {% endif %}
         {% if _item.link is defined and _item.link is not empty %}
           {% include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}

@@ -39,5 +39,22 @@ module.exports = {
                 class="d-block w-100"
               />`,
     },
+    {
+      classes: "item_extra_class",
+      caption_classes: "d-none d-md-block",
+      image: `<img
+                src="https://picsum.photos/800/400?random=4"
+                alt="First slide"
+                class="d-block w-100"
+              />`,
+      link: {
+        label: "Link",
+        icon_position: "before",
+        icon: {
+          name: "link",
+          path: "/icons.svg",
+        },
+      },
+    },
   ],
 };
