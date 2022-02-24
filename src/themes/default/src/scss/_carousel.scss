@@ -16,9 +16,8 @@ $indicator-size: 8px;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  bottom: 50px;
-  padding-top: map-get($spacers, 3);
-  padding-bottom: 0;
+  bottom: 0;
+  padding: map-get($spacers, 3) 0 map-get($spacers, 4);
   p {
     margin-bottom: 0;
   }
@@ -57,5 +56,12 @@ $indicator-size: 8px;
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     border-radius: 50%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .carousel-caption {
+    bottom: 50px;
+    padding-bottom: 0;
   }
 }

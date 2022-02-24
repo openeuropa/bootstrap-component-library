@@ -75,7 +75,7 @@
   {{ attributes }}
 >
 {% if _with_indicators %}
-  <div class="carousel-indicators">
+  <div class="carousel-indicators d-none d-md-flex">
   {% for _i in 0..(_items|length - 1) %}
     {% set button_attributes = create_attribute()
                               .setAttribute('aria-label', 'Slide ' ~ (_i + 1))
@@ -109,8 +109,12 @@
       {{ _item.image }}
     {% endif %}
     {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) %}
+      {% set _caption_classes = 'carousel-caption' %}
+      {% if _item.caption is not empty and _item.link is empty %}
+        {% set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
+      {% endif %}
       <div
-        class="carousel-caption"
+        class="{{ _caption_classes }}"
       >
         {% if _item.caption is defined and _item.caption is not empty %}
           {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
