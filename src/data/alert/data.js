@@ -1,5 +1,5 @@
 module.exports = {
-  message: "A simple alert. check it out!",
+  message: " <em class='placeholder'>A simple alert</em>. Check it out!",
   heading: "Alert heading",
   icon_path: "/icons.svg",
 };
