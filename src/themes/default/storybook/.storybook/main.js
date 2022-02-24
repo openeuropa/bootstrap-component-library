@@ -1,6 +1,7 @@
 const path = require("path");
+const isChromatic = require("chromatic/isChromatic");
 
-const stories = ["../../**/*.story.js"];
+let stories = ["../../**/!(test*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
@@ -11,6 +12,11 @@ const addons = [
   "@whitespace/storybook-addon-html",
   "@geometricpanda/storybook-addon-badges",
 ];
+
+if (isChromatic()) {
+  stories = ["../../**/*.story.js"];
+  addons.push("@storybook/addon-interactions");
+}
 
 const webpackFinal = (config) => {
   config.module.rules.push(

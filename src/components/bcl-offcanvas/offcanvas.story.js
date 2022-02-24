@@ -124,6 +124,7 @@ export default {
       },
     ],
   },
+  chromatic: { disable: true },
 };
 
 export const Default = (args) => offCanvas(applyArgs(demoData, args));

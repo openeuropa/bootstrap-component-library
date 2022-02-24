@@ -214,6 +214,7 @@ export default {
   title: "Components/Card",
   decorators: [withDesign, withBodyPadding],
   parameters: {
+    chromatic: { viewports: [1200] },
     design: [
       {
         name: "Mockup",
