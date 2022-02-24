@@ -1,5 +1,5 @@
 const path = require("path");
-const isChromatic = require("chromatic/isChromatic");
+const chromatic = process.env.STORYBOOK_ENV;
 
 let stories = ["../../**/!(test*).story.js"];
 
@@ -13,7 +13,7 @@ const addons = [
   "@geometricpanda/storybook-addon-badges",
 ];
 
-if (isChromatic()) {
+if (chromatic) {
   stories = ["../../**/*.story.js"];
   addons.push("@storybook/addon-interactions");
 }
