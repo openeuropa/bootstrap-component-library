@@ -314,7 +314,6 @@ Tooltip.parameters = {
 Tooltip.play = async () => {
   const button = screen.getByRole("button");
   await userEvent.hover(button);
-  await userEvent.clear(button);
 };
 
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));

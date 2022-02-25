@@ -135,6 +135,6 @@ Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.decorators = [offCanvasTrigger];
 Default.play = async () => {
-  const offcanvasButton = screen.getByRole("button");
+  const offCanvasButton = screen.getByRole("button");
   await userEvent.click(offCanvasButton);
 };
