@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import { screen, userEvent } from "@storybook/testing-library";
+import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-form/data.js";
 import demoDisabled from "@openeuropa/bcl-data-form/data-disabled.js";
 import demoGrid from "@openeuropa/bcl-data-form/data-grid.js";
@@ -41,6 +43,35 @@ const clientValidation = (story) => {
 export const Basic = () => form(demoData);
 Basic.storyName = "Basic (with bootstrap validation)";
 Basic.decorators = [clientValidation];
+if (isChromatic()) {
+  Basic.play = async () => {
+    const emailInput = screen.getByLabelText("Email address *", {
+      selector: "input",
+    });
+
+    await userEvent.type(emailInput, "example-email", {
+      delay: 100,
+    });
+
+    const passwordInput = screen.getByLabelText("Password *", {
+      selector: "input",
+    });
+
+    await userEvent.type(passwordInput, "ExamplePassword", {
+      delay: 100,
+    });
+
+    const checkboxInput = screen.getByLabelText("Check me out *", {
+      selector: "input",
+    });
+
+    await userEvent.click(checkboxInput);
+
+    const submitButton = screen.getByRole("button");
+
+    await userEvent.click(submitButton);
+  };
+}
 
 export const Disabled = () => form(demoDisabled);
 

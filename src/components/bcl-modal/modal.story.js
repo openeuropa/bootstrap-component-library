@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { screen, userEvent } from "@storybook/testing-library";
 import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
@@ -103,3 +104,7 @@ export default {
 export const Default = (args) => modal(applyArgs(demoData, args));
 Default.args = getArgs();
 Default.argTypes = getArgTypes();
+Default.play = async () => {
+  const modalButton = screen.getByRole("button");
+  await userEvent.click(modalButton);
+};

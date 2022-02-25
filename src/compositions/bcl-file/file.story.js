@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { screen, userEvent } from "@storybook/testing-library";
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data";
 import demoCardData from "@openeuropa/bcl-file/dataCard";
@@ -27,3 +28,8 @@ export default {
 export const Default = () => file(correctPaths(demoData));
 
 export const Card = () => file(correctPaths(demoCardData));
+
+Card.play = async () => {
+  const languages = screen.getByText("Other languages (3)");
+  await userEvent.click(languages);
+};
