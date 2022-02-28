@@ -1,3 +1,5 @@
+const iconList = require("./src/icons/icons");
+
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
 
@@ -91,6 +93,16 @@ module.exports = {
       },
     },
   ],
+  sprite: [
+    {
+      entry: path.resolve(nodeModules, "bootstrap-icons/icons/"),
+      dest: path.resolve(outputFolder, "icons/"),
+      options: {
+        file: "bootstrap-icons.svg",
+        list: iconList,
+      },
+    },
+  ],
   copy: [
     {
       from: [path.resolve(nodeModules, "slim-select/dist/slimselect.min.js")],
@@ -99,10 +111,6 @@ module.exports = {
     },
     {
       from: [
-        path.resolve(
-          nodeModules,
-          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg"
-        ),
         path.resolve(
           nodeModules,
           "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg"
