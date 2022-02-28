@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import isChromatic from "chromatic/isChromatic";
+import { screen, userEvent } from "@storybook/testing-library";
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
@@ -94,3 +96,9 @@ export const Navbar = (args) => navbar(applyArgs(demoData, args));
 Navbar.storyName = "Default";
 Navbar.args = getArgs(demoData);
 Navbar.argTypes = getArgTypes(demoData);
+if (isChromatic()) {
+  Navbar.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}

@@ -5,6 +5,7 @@ import {
   correctPaths,
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-project/data/data_listing";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
@@ -19,6 +20,9 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
+  dataContent.gallery.carousel.attributes = new drupalAttribute().addClass(
+    "chromatic-ignore"
+  );
   dataExtraDetails.banner.image.classes = "chromatic-ignore";
   dataListing.listing.items.forEach((item) => {
     if (item.image) {

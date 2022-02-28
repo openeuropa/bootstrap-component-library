@@ -119,7 +119,7 @@ export default {
       },
     ],
   },
-  chromatic: { delay: 500 },
+  chromatic: { delay: 1000 },
 };
 
 const applyArgs = (data, args) => {

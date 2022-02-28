@@ -20,13 +20,22 @@ export default {
       },
     ],
   },
-  chromatic: { disableSnapshot: true },
 };
 
 export const Navigation = () => navScrollspy;
 Navigation.storyName = "Navigation";
+Navigation.parameters = {
+  chromatic: { disableSnapshot: true },
+};
 
 export const ListGroup = () => groupScrollspy;
 ListGroup.storyName = "List Group";
+ListGroup.parameters = {
+  chromatic: { disableSnapshot: true },
+};
 
 export const NestedLists = () => listScrollspy;
+ListGroup.storyName = "With nested lists";
+NestedLists.parameters = {
+  chromatic: { disableSnapshot: true },
+};
