@@ -12,7 +12,7 @@ import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-if (!isChromatic()) {
+if (isChromatic()) {
   demoDataViewCompact.picture.classes = "chromatic-ignore";
   demoDataView.banner.image.classes = demoDataView.banner.image.classes
     ? `${demoDataView.banner.image.classes} chromatic-ignore`
