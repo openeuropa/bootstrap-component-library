@@ -20,6 +20,7 @@ export default {
       },
     ],
   },
+  chromatic: { disableSnapshot: true },
 };
 
 export const Navigation = () => navScrollspy;

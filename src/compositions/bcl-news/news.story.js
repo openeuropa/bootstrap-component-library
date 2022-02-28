@@ -13,6 +13,11 @@ const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>
 
 if (isChromatic()) {
   banner.image.classes = "chromatic-ignore";
+  dataListing.listing.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
 }
 
 const baseData = {
