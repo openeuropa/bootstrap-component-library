@@ -1,9 +1,18 @@
+import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-landing-page/data.js";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
+
+if (isChromatic()) {
+  demoData.listing_section.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+}
 
 const dataLanding = {
   content_type: "landing-page",

@@ -4,6 +4,7 @@
   - picture (object) format: {
     - "path" (string) (default: '')
     - "alt" (string) (default: '')
+    - "classes": (string) (default: '')
   }
   - name (object) format: {
     - "text" (string) (default: '')
@@ -12,18 +13,24 @@
   - infos (array of strings) (default: [])
 #}
 
+{% set _picture_classes = "rounded-pill" %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
 {% set attributes = attributes.addClass(["d-flex", "mb-3"]) %}
 
+{% if picture is not empty and picture.classes is not empty %}
+  {% set _picture_classes = _picture_classes ~ ' ' ~ picture.classes %}
+{% endif %}
+
 <div
   {{ attributes }}
 >
   <div class="flex-shrink-0">
     <img
-      class="rounded-pill"
+      class="{{ _picture_classes }}"
       src="{{ picture.path }}"
       alt="{{ picture.alt }}"
     >

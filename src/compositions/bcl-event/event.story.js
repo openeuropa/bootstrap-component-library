@@ -4,6 +4,7 @@ import {
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
+import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
@@ -45,6 +46,7 @@ const demoData1 = {
     image: {
       path: "https://picsum.photos/255/255?random=6",
       alt: "alt img",
+      classes: isChromatic() ? "chromatic-ignore" : "",
     },
   },
   files: files,

@@ -13,6 +13,12 @@ import blockData from "@openeuropa/bcl-subscription-block/data/data.js";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
 import drupalAttribute from "drupal-attribute";
 
+if (isChromatic()) {
+  banner.image.classes = banner.image.classes
+    ? `${banner.image.classes} chromatic-ignore`
+    : "chromatic-ignore";
+}
+
 const demoData = {
   content_type: "subscription",
   page_title: "Subscription",

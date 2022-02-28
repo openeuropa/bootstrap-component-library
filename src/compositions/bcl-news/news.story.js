@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
@@ -9,6 +10,10 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
+
+if (isChromatic()) {
+  banner.image.classes = "chromatic-ignore";
+}
 
 const baseData = {
   content_type: "news",

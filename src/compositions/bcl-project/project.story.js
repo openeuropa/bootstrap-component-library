@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import isChromatic from "chromatic/isChromatic";
 import {
   initBadges,
   correctPaths,
@@ -16,6 +17,17 @@ import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
+
+if (!isChromatic()) {
+  dataExtraDetails.banner.image.classes = "chromatic-ignore";
+  dataListing.listing.items.forEach((item) => {
+    if (item.image) {
+      item.image.classes = item.image.classes
+        ? `${item.image.classes} chromatic-ignore`
+        : "chromatic-ignore";
+    }
+  });
+}
 
 const baseData = {
   content_type: "listing",

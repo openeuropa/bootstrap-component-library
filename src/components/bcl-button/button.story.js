@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import isChromatic from "chromatic/isChromatic";
 import { screen, userEvent } from "@storybook/testing-library";
 import { initTooltip } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-button/data.js";
@@ -267,10 +268,12 @@ Collapse.parameters = {
     },
   ],
 };
-Collapse.play = async () => {
-  const button = screen.getByRole("button");
-  await userEvent.click(button);
-};
+if (isChromatic()) {
+  Collapse.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}
 
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
@@ -292,10 +295,12 @@ Popover.parameters = {
     },
   ],
 };
-Popover.play = async () => {
-  const button = screen.getByRole("button");
-  await userEvent.click(button);
-};
+if (isChromatic()) {
+  Popover.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}
 
 export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
 
@@ -311,10 +316,12 @@ Tooltip.parameters = {
     url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };
-Tooltip.play = async () => {
-  const button = screen.getByRole("button");
-  await userEvent.hover(button);
-};
+if (isChromatic()) {
+  Tooltip.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.hover(button);
+  };
+}
 
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
 

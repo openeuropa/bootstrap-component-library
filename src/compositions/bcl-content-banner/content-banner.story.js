@@ -1,3 +1,4 @@
+import isChromatic from "chromatic/isChromatic";
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 import drupalAttribute from "drupal-attribute";
@@ -44,6 +45,10 @@ const applyArgs = (data, args) => {
   } else {
     delete data.action_button;
     data.attributes.removeClass(["col-md-10"]);
+  }
+
+  if (data.image && isChromatic()) {
+    data.image.classes = "chromatic-ignore";
   }
 
   data.background = args.background;
