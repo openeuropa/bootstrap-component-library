@@ -1,4 +1,6 @@
+import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
 import demoDateData from "@openeuropa/bcl-listing/data/listing--date.js";
 import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
@@ -6,7 +8,6 @@ import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3
 import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
 import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col.js";
 import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col.js";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import listing from "@openeuropa/bcl-listing/listing.html.twig";
 
@@ -67,6 +68,14 @@ const getArgTypes = (data) => {
 const applyArgs = (data, args) => {
   if (args.alignment === "default") {
     args.alignment = "";
+  }
+
+  if (isChromatic()) {
+    data.items.forEach((item) => {
+      if (item.image) {
+        item.image.classes = "chromatic-ignore";
+      }
+    });
   }
 
   return Object.assign(data, args);

@@ -8,6 +8,7 @@ module.exports = {
     classes: "d-none d-lg-inline-block",
     alt: "project logo",
   },
+  project_link: "/example.html",
   head: {
     attributes: new drupalAttribute()
       .addClass(["w-100", "shadow-sm"])

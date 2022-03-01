@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import { screen, userEvent } from "@storybook/testing-library";
+import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/toggleData.js";
 import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData.js";
@@ -177,6 +179,12 @@ Collapse.parameters = {
     url: "https://getbootstrap.com/docs/5.1/components/collapse/",
   },
 };
+if (isChromatic()) {
+  Collapse.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}
 
 export const Tooltip = (args) => link(applyArgs(tooltipDemoData, args));
 
@@ -190,3 +198,9 @@ Tooltip.parameters = {
     url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };
+if (isChromatic()) {
+  Tooltip.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.hover(button);
+  };
+}

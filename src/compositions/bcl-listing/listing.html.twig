@@ -47,12 +47,13 @@
     {% set _max_width = '' %}
     {% set _image = {} %}
     {% if _card.image is not empty %}
-      {% set _max_width = 'mw-listing-img' %}
+      {% set _image_classes = _card.image.classes ?: '' %}
       {% if not _alignment == 'center' %}
-        {% set _image_classes = _card.image.classes ? _card.image.classes ~ ' mb-3' : 'mb-3' %}
+        {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
       {% endif %}
+      {% set _max_width = 'mw-listing-img' %}
       {% set _card = _card|merge({image: _card.image|merge({
-        classes: _image_classes
+        classes: _image_classes,
       })}) %}
     {% elseif _card.date is not empty %}
       {% set _max_width = 'mw-date mb-3' %}

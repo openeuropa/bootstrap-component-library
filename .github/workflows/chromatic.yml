@@ -1,0 +1,50 @@
+# .github/workflows/chromatic.yml
+
+# Workflow name
+name: 'deployment on chromatic'
+
+# Event for the workflow
+on: 
+  push:
+    branches-ignore:
+      - "master"
+      - "dependabot/**"
+jobs:
+  chromatic-deployment-default:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.head_ref, '#') }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: "build:chromatic:default"
+          exitOnceUploaded: true
+          exitZeroOnChanges: true
+  chromatic-deployment-theme:
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.head_ref, '#') }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Get project to be deployed
+        shell: bash
+        run: echo "##[set-output name=branch;]$(grep -oP '(?<=#).*?(?=#)' <<< ${GITHUB_HEAD_REF})"
+        id: extract_branch
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: "build:chromatic:${{ steps.extract_branch.outputs.branch }}"
+          exitOnceUploaded: true
+          exitZeroOnChanges: true

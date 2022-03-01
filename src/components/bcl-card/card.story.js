@@ -4,6 +4,7 @@ import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal.js";
 import card from "@openeuropa/bcl-card/card.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
+import isChromatic from "chromatic/isChromatic";
 
 const withBodyPadding = (story) => {
   const demo = story();
@@ -193,6 +194,10 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
 
+  if (data.image && isChromatic()) {
+    data.image.classes = "chromatic-ignore";
+  }
+
   data.image.position = args.image_position;
   // Reset header and footer when using image overlays.
   if (args.image_position === "background") {
@@ -209,6 +214,7 @@ export default {
   title: "Components/Card",
   decorators: [withDesign, withBodyPadding],
   parameters: {
+    chromatic: { viewports: [1200] },
     design: [
       {
         name: "Mockup",

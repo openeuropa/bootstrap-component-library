@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import isChromatic from "chromatic/isChromatic";
+import { screen, userEvent } from "@storybook/testing-library";
 import { initTooltip } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-button/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-button/toggleData.js";
@@ -266,6 +268,12 @@ Collapse.parameters = {
     },
   ],
 };
+if (isChromatic()) {
+  Collapse.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}
 
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
@@ -287,6 +295,12 @@ Popover.parameters = {
     },
   ],
 };
+if (isChromatic()) {
+  Popover.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}
 
 export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
 
@@ -295,12 +309,19 @@ Tooltip.args = getArgs(tooltipDemoData, "tooltip");
 Tooltip.argTypes = getArgTypes(tooltipDemoData, "tooltip");
 Tooltip.decorators = [initTooltip];
 Tooltip.parameters = {
+  chromatic: { delay: 1000 },
   design: {
     name: "Bootstrap docs",
     type: "iframe",
     url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };
+if (isChromatic()) {
+  Tooltip.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.hover(button);
+  };
+}
 
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
 
@@ -308,6 +329,7 @@ Spinner.storyName = "Spinner";
 Spinner.args = getArgs(spinnerDemoData);
 Spinner.argTypes = getArgTypes(spinnerDemoData);
 Spinner.parameters = {
+  chromatic: { pauseAnimationAtEnd: true },
   design: [
     {
       name: "Wireframe",
