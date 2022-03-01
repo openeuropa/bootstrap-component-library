@@ -35,7 +35,7 @@ ListGroup.parameters = {
 };
 
 export const NestedLists = () => listScrollspy;
-ListGroup.storyName = "With nested lists";
+NestedLists.storyName = "With nested lists";
 NestedLists.parameters = {
   chromatic: { disableSnapshot: true },
 };
