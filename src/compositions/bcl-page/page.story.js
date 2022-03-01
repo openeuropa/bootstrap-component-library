@@ -1,5 +1,6 @@
 import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
+import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-page/data/data_listing.js";
 import listingDefault from "@openeuropa/bcl-page/data/data-listing--default.js";
@@ -16,6 +17,10 @@ import file from "@openeuropa/bcl-file/data.js";
 import fileThumbnail from "@openeuropa/bcl-file/dataCard.js";
 import page from "@openeuropa/bcl-page/page.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+if (isChromatic()) {
+  banner.image.classes = "chromatic-ignore";
+}
 
 const files = [
   { ...file, attributes: new drupalAttribute().addClass(["mb-3"]) },

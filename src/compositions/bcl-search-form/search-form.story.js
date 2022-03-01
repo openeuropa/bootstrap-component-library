@@ -29,6 +29,9 @@ export default {
   title: "Compositions/Search Form",
   decorators: [withDesign],
   parameters: {
+    chromatic: {
+      viewports: [414, 834],
+    },
     design: [
       {
         name: "Mockup",

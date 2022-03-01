@@ -1,4 +1,5 @@
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
+import isChromatic from "chromatic/isChromatic";
 import demoDataListing from "@openeuropa/bcl-user/data-user-listing.js";
 import demoDataEdit from "@openeuropa/bcl-user/data-user-edit.js";
 import demoDataView from "@openeuropa/bcl-user/data-user-view.js";
@@ -10,6 +11,18 @@ import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+if (isChromatic()) {
+  demoDataViewCompact.picture.classes = "chromatic-ignore";
+  demoDataView.banner.image.classes = demoDataView.banner.image.classes
+    ? `${demoDataView.banner.image.classes} chromatic-ignore`
+    : "chromatic-ignore";
+  demoDataListing.listing.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+}
 
 const data = {
   with_header: true,

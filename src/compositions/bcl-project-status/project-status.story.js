@@ -128,3 +128,8 @@ export const Default = (args) => projectStatus(applyArgs(dataOngoing, args));
 
 Default.args = getArgs(dataOngoing);
 Default.argTypes = getArgTypes(dataOngoing);
+Default.parameters = {
+  chromatic: {
+    pauseAnimationAtEnd: true,
+  },
+};

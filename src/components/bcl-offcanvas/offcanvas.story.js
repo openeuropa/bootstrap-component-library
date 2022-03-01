@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import { screen, userEvent } from "@storybook/testing-library";
+import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "@openeuropa/bcl-offcanvas/offcanvas.html.twig";
 import drupalAttribute from "drupal-attribute";
@@ -103,6 +105,7 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+
   resetAttrs(data, args);
   return Object.assign(data, args);
 };
@@ -124,6 +127,7 @@ export default {
       },
     ],
   },
+  chromatic: { disableSnapshot: true },
 };
 
 export const Default = (args) => offCanvas(applyArgs(demoData, args));
@@ -131,3 +135,9 @@ export const Default = (args) => offCanvas(applyArgs(demoData, args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.decorators = [offCanvasTrigger];
+if (isChromatic()) {
+  Default.play = async () => {
+    const offCanvasButton = screen.getByRole("button");
+    await userEvent.click(offCanvasButton);
+  };
+}
