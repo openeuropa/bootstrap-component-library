@@ -12,7 +12,7 @@ on:
 jobs:
   chromatic-deployment-default:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.head_ref, '#') }}
+    if: ${{ !contains(github.ref, '#') }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -29,7 +29,7 @@ jobs:
           exitZeroOnChanges: true
   chromatic-deployment-theme:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.head_ref, '#') }}
+    if: ${{ contains(github.ref, '#') }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -38,7 +38,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Get project to be deployed
         shell: bash
-        run: echo "##[set-output name=branch;]$(grep -oP '(?<=#).*?(?=#)' <<< ${GITHUB_HEAD_REF})"
+        run: echo "##[set-output name=branch;]$(grep -oP '(?<=#).*?(?=#)' <<< ${GITHUB_REF})"
         id: extract_branch
       - name: Publish to Chromatic
         uses: chromaui/action@v1
