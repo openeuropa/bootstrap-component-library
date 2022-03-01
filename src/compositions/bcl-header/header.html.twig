@@ -10,11 +10,7 @@
         classes: ""
       }
   - site_name (string) (default: "")
-  - project_link (object) (default: {})
-    format: {
-      path: "",,
-      extra_classes: "",
-    }
+  - project_link (string) (default: "")
   - head (Navbar object) (default: {})
   - breadcrumbs (Breadcrumbs object) (default: {})
   - light (boolean) (default: false)
@@ -63,10 +59,7 @@
     <div class="container">
     {% if _project_link is defined and _project_link is not empty %}
       <a
-        href="{{ _project_link.path }}"
-      {% if _project_link.extra_classes is not empty %}
-        class="{{ _project_link.extra_classes }}"
-      {% endif %}
+        href="{{ _project_link }}"
       >
     {% endif %}
       {% if _project_logo is not empty %}
