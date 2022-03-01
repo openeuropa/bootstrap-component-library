@@ -10,7 +10,7 @@ import {
   getVariants,
   initTooltip,
 } from "@openeuropa/bcl-story-utils";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 const withCollapse = (story) => {

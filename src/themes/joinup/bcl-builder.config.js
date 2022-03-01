@@ -107,7 +107,6 @@ module.exports = {
       entry: path.resolve(nodeModules, "bootstrap-icons/icons/"),
       dest: path.resolve(outputFolder, "icons/"),
       options: {
-        file: "bootstrap-icons.svg",
         list: iconList,
       },
     },

@@ -1,6 +1,6 @@
 import dataDefault from "@openeuropa/bcl-timeline/dataDefault.js";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => {
   return {

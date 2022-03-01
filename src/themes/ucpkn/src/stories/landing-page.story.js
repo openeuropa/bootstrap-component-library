@@ -2,7 +2,7 @@ import demoData from "@openeuropa/bcl-landing-page/data.js";
 import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
 import footerData from "@openeuropa/bcl-data-footer/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import logo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
 
 demoData.data.header = headerDataUCPKN;
