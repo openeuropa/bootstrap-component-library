@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { screen, userEvent } from "@storybook/testing-library";
+import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
 import drupalAttribute from "drupal-attribute";
@@ -84,7 +85,9 @@ export const Default = (args) => dropdown(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-Default.play = async () => {
-  const button = screen.getByRole("button");
-  await userEvent.click(button);
-};
+if (isChromatic()) {
+  Default.play = async () => {
+    const button = screen.getByRole("button");
+    await userEvent.click(button);
+  };
+}
