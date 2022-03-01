@@ -136,16 +136,20 @@ exports[`OE - Header EC renders correctly 1`] = `
       <div
         class="container"
       >
-        <img
-          alt="project logo"
-          class="d-none d-lg-inline-block"
-          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
-        />
-        <div
-          class="bcl-header__site-name"
+        <a
+          href="/example.html"
         >
-          Project name
-        </div>
+          <img
+            alt="project logo"
+            class="d-none d-lg-inline-block"
+            src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
+          />
+          <span
+            class="bcl-header__site-name"
+          >
+            Project name
+          </span>
+        </a>
       </div>
     </div>
     <!-- navbar -->
@@ -920,11 +924,11 @@ exports[`OE - Header EU renders correctly 1`] = `
           class="d-none d-lg-inline-block"
           src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
         />
-        <div
+        <span
           class="bcl-header__site-name"
         >
           Project name
-        </div>
+        </span>
       </div>
     </div>
     <!-- navbar -->
@@ -1619,11 +1623,11 @@ exports[`OE - Header Neutral renders correctly 1`] = `
       <div
         class="container"
       >
-        <div
+        <span
           class="bcl-header__site-name h5 d-inline-block d-lg-none"
         >
           Project name
-        </div>
+        </span>
       </div>
     </div>
     <!-- navbar -->
@@ -2199,11 +2203,11 @@ exports[`OE - Header UCPKN renders correctly 1`] = `
           class="d-none d-lg-inline-block"
           src="ucpkn_logo.svg"
         />
-        <div
+        <span
           class="bcl-header__site-name"
         >
           UCP Knowledge Network: Applied knowledge for action
-        </div>
+        </span>
       </div>
     </div>
     <!-- navbar -->

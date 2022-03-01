@@ -10,6 +10,7 @@
         classes: ""
       }
   - site_name (string) (default: "")
+  - project_link (string) (default: "")
   - head (Navbar object) (default: {})
   - breadcrumbs (Breadcrumbs object) (default: {})
   - light (boolean) (default: false)
@@ -20,6 +21,7 @@
 {% set _variant = variant|default('neutral') %}
 {% set _navbar = navbar|default({}) %}
 {% set _project_logo = project_logo|default({}) %}
+{% set _project_link = project_link|default('') %}
 {% set _site_name = site_name|default('') %}
 {% set _site_name_classes = 'bcl-header__site-name' %}
 {% set _head = head|default({}) %}
@@ -55,23 +57,31 @@
   {% if _project_logo is not empty or _site_name is not empty %}
   <div class="{{ _project_classes  }}">
     <div class="container">
-    {% if _project_logo is not empty %}
-      <img
-      {% if _project_logo.path is not empty %}
-        src="{{ _project_logo.path }}"
-      {% endif %}
-      {% if _project_logo.alt is not empty %}
-        alt="{{ _project_logo.alt }}"
-      {% endif %}
-      {% if _project_logo.classes is not empty %}
-        class="{{ _project_logo.classes }}"
-      {% endif %}
-      />
+    {% if _project_link is not empty %}
+      <a
+        href="{{ _project_link }}"
+      >
     {% endif %}
-    {% if _site_name is not empty %}
-      <div class="{{ _site_name_classes }}">
-       {{- _site_name -}}
-       </div>
+      {% if _project_logo is not empty %}
+        <img
+        {% if _project_logo.path is not empty %}
+          src="{{ _project_logo.path }}"
+        {% endif %}
+        {% if _project_logo.alt is not empty %}
+          alt="{{ _project_logo.alt }}"
+        {% endif %}
+        {% if _project_logo.classes is not empty %}
+          class="{{ _project_logo.classes }}"
+        {% endif %}
+        />
+      {% endif %}
+      {% if _site_name is not empty %}
+        <span class="{{ _site_name_classes }}">
+        {{- _site_name -}}
+        </span>
+      {% endif %}
+    {% if _project_link is not empty %}
+      </a>
     {% endif %}
     </div>
   </div>
