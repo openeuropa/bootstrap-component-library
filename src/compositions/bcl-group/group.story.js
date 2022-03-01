@@ -73,8 +73,6 @@ const dataListingContent = {
   ...demoDataListContent,
 };
 
-console.log(dataListingContent);
-
 const dataListingMember = {
   page_title: "Group members",
   ...baseData,
