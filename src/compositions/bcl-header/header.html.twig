@@ -21,7 +21,7 @@
 {% set _variant = variant|default('neutral') %}
 {% set _navbar = navbar|default({}) %}
 {% set _project_logo = project_logo|default({}) %}
-{% set _project_link = project_link|default({}) %}
+{% set _project_link = project_link|default('') %}
 {% set _site_name = site_name|default('') %}
 {% set _site_name_classes = 'bcl-header__site-name' %}
 {% set _head = head|default({}) %}
@@ -57,7 +57,7 @@
   {% if _project_logo is not empty or _site_name is not empty %}
   <div class="{{ _project_classes  }}">
     <div class="container">
-    {% if _project_link is defined and _project_link is not empty %}
+    {% if _project_link is not empty %}
       <a
         href="{{ _project_link }}"
       >
@@ -80,7 +80,7 @@
         {{- _site_name -}}
         </span>
       {% endif %}
-    {% if _project_link is defined and _project_link is not empty %}
+    {% if _project_link is not empty %}
       </a>
     {% endif %}
     </div>
