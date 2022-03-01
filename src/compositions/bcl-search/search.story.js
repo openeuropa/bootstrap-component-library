@@ -3,12 +3,21 @@ import {
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
+import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-search/dataSearch.js";
 import search from "@openeuropa/bcl-search/search.html.twig";
 import header from "@openeuropa/bcl-data-header/data--no-form";
 import footer from "@openeuropa/bcl-data-footer/data";
 import drupalAttribute from "drupal-attribute";
+
+if (isChromatic()) {
+  demoData.listing.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : `chromatic-ignore`;
+  });
+}
 
 const dataListing = {
   page_title: "Search results",

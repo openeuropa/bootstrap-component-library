@@ -154,4 +154,7 @@ Grid.argTypes = getArgTypes(demoDataGrid, "grid");
 export const Masonry = () => cardLayout(demoDataMasonry);
 
 Masonry.decorators = [withScript];
-Masonry.parameters = { options: { showPanel: false } };
+Masonry.parameters = {
+  options: { showPanel: false },
+  chromatic: { delay: 1000 },
+};

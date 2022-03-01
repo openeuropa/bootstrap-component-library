@@ -11,7 +11,8 @@
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
     "start": "start-storybook -p 9001 -c .storybook",
-    "dist": "build-storybook -c .storybook -o ../../../../build/default"
+    "dist": "build-storybook -c .storybook -o ../../../../build/default",
+    "dist-chromatic": "STORYBOOK_ENV=chromatic build-storybook -c .storybook -o ../../../../build/default"
   },
   "devDependencies": {
     "@babel/core": "7.17.5",
@@ -27,6 +28,9 @@
     "@storybook/html": "6.4.19",
     "@whitespace/storybook-addon-code": "1.0.2",
     "@whitespace/storybook-addon-html": "5.0.0",
+    "@storybook/addon-interactions": "6.4.19",
+    "@storybook/testing-library": "0.0.9",
+    "@storybook/jest": "0.0.9",
     "babel-loader": "8.2.3",
     "core-js": "3.21.1",
     "drupal-attribute": "1.0.2",
