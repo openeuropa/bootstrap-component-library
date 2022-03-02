@@ -6,6 +6,7 @@ const branch = process.argv.slice(2)[1] || 'master';
 
 const args = [
 	'chromatic',
+	'--debug',
 	'--force-rebuild',
 	'--exit-once-uploaded',
 	'--project-token=f44b33745fa7',
