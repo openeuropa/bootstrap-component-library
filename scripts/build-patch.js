@@ -14,7 +14,7 @@ const args = [
 	`--patch-build ${branch}...development`,
 ];
 
-const buildPatch = spawn('npx', args, { stdio: "inherit", shell: true });
+const buildPatch = spawn('npx', args, { shell: true });
 
 buildPatch.on('error', (err) => console.log(`${name}: ${err.message}`));
 buildPatch.on('exit', () => {
