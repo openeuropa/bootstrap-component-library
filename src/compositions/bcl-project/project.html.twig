@@ -5,58 +5,75 @@
 {% endblock %}
 
 {% block content %}
+
+  {% if project_details.main_title is not empty %}
+    <h3
+      class="fw-bold my-4"
+      {% if project_details.main_title_id is not empty %}
+      id="{{ project_details.main_title_id }}"
+      {% endif %}
+    >{{ project_details.main_title }}</h3>
+  {% endif %}
+
   {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_details %}
 
-  <div class="border-bottom mb-4">
-    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
+  <div class="mb-4">
+    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contribution_details only %}
   </div>
 
-  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with coordinator_list only %}
-
-  {% for paragraph in paragraphs %}
+  {% if paragraphs is defined and paragraphs is not empty %}
+    {% for paragraph in paragraphs %}
+      {% if paragraph.title is not empty %}
       <h3
         class="fw-bold mb-4 pt-3"
+        {% if paragraph.title_id is not empty %}
         id="{{ paragraph.title_id }}"
+        {% endif %}
       >
         {{ paragraph.title }}
       </h3>
+      {% endif %}
 
-    {{ paragraph.content }}
-  {% endfor %}
-
-  <h3
-    class="fw-bold mb-4 pt-2"
-    id="{{ contributors.main_title_id }}"
-  >
-    {{ contributors.main_title }}
-  </h3>
-
-{% for contributor in contributors.listing %}
-  {% if contributor.title is not empty %}
-  <h4 class="fw-bold mb-3">{{ contributor.title }}</h4>
+      {{ paragraph.content }}
+    {% endfor %}
   {% endif %}
 
-  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contributor.list only %}
+  {% if partners is defined and partners is not empty %}
+    <div class="mb-4">
+    {% if partners.main_title is not empty %}
+      <h3
+        class="fw-bold my-4"
+        {% if partners.main_title_id is not empty %}
+        id="{{ partners.main_title_id }}"
+        {% endif %}
+      >{{ partners.main_title }}</h3>
+    {% endif %}
 
-{% endfor %}
+    {% for partner in partners.listing %}
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with partner.list only %}
+    {% endfor %}
+    </div>
+  {% endif %}
 
-{% for achievement in achievements %}
-  <h3
-    class="fw-bold mb-4 pt-2"
-    id="{{ achievement.title_id }}"
-  >
-    {{ achievement.title }}
-  </h3>
-  {{ achievement.content }}
-{% endfor %}
+  {% if gallery is defined and gallery is not empty %}
+  <div class="mt-2">
+    {% for showcase in gallery %}
+      <div class="mb-2-5 pb-4">
+      {% if showcase.carousel %}
+        {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with showcase only %}
+      {% else %}
+        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with showcase only %}
+      {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
 
-  <h3
-    class="fw-bold mb-4 pt-2"
-    id="{{ gallery.title_id }}"
-  >
-    {{ gallery.title }}
-  </h3>
+  {% block social_block %}
+    {{ social_buttons }}
+    {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
+    {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
 
-  {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with gallery.featured only %}
-  {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with gallery.carousel only %}
+  {% endblock %}
+
 {% endblock %}
