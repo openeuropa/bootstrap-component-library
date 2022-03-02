@@ -12,6 +12,8 @@ if (isChromatic()) {
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";
   });
+  demoData.featured_section.featured_media.embedded_media =
+    '<iframe class="chromatic-ignore" title="New digital strategy first" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>';
 }
 
 const dataLanding = {
