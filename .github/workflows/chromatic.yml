@@ -9,10 +9,11 @@ on:
     branches-ignore:
       - "master"
       - "dependabot/**"
+  create:
 jobs:
   chromatic-deployment-default:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.ref, '#') }}
+    if: ${{ !contains(github.ref, '#') && (github.event.ref_type != 'branch') }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -29,7 +30,7 @@ jobs:
           exitZeroOnChanges: true
   chromatic-deployment-theme:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.ref, '#') }}
+    if: ${{ contains(github.ref, '#') && (github.event.ref_type != 'branch') }}
     steps:
       - uses: actions/checkout@v2
         with:
