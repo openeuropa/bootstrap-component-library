@@ -109,6 +109,10 @@ stories belonging to the project's styleguide.
 In a theme package the default stories are copied in `storybook/bcl-stories`
 while the new or overriding ones can be defined in `src/stories`.
 
+##### Chromatic
+
+[Chromatic docs](chromatic.md)
+
 ##### Combining stories in the theme packages
 
 All the default stories are used by default by all the different themes, but
@@ -193,26 +197,10 @@ The configuration of a new theme is mainly the adaptation of the
 `ecl-builder.config.js` file, as previously mentioned this file is taking care
 of setting up all the needed resources for a theme package.
 
-### Github conventions
+### Workflow
 
-On github a loose approach is used while testing the pull request against some
-"semantical" meaning, in particular only the title of the pull request is being
-checked and it should start with `chore or fix or feat optionally followed by an
- argument in () and :`.
- As a convention please report at the end of the pr title also the jira ticket
- number to easily match the pr against a "task".
+[Workflow docs](worflow.md)
 
-### Deployments
-
-Each pull request generate a deployment on netlify on every push of every project
-in the library.
-In order to reduce the time needed for the build and the deployment and to
-limit the resources used as well, it is possible to limit the build to a single
-project by using a specific convention in the branch name:
-if the branch contains two hashes with the project name in between
-Ex: `feat/front-0000#joinup#`
-the only project that will be built in the CI is the one between the hashes, and
-it's also the only one that will be deployed in the preview.
 
 ### Release
 
