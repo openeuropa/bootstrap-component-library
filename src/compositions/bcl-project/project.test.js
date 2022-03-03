@@ -8,7 +8,6 @@ import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
-import drupalAttribute from "drupal-attribute";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
@@ -33,17 +32,17 @@ const demoPage = {
 
 const ongoingDemo = {
   ...demoPage,
-  project_details: dataOngoing,
+  project_status: dataOngoing,
 };
 
 const closedDemo = {
   ...demoPage,
-  project_details: dataClosed,
+  project_status: dataClosed,
 };
 
 const plannedDemo = {
   ...demoPage,
-  project_details: dataPlanned,
+  project_status: dataPlanned,
 };
 
 const demoListing = {

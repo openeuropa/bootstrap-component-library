@@ -31,32 +31,28 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
     links: [
       {
-        label: "Project detail",
-        path: "#project-details",
+        label: "Overview",
+        path: "#overview",
       },
       {
-        label: "Summary",
-        path: "#summary",
+        label: "Description",
+        path: "#description",
       },
       {
-        label: "Objective",
-        path: "#objective",
+        label: "Partner organisations",
+        path: "#partners",
       },
       {
-        label: "Impact",
-        path: "#impact",
+        label: "TBD",
+        path: "#",
       },
       {
-        label: "Contributors",
-        path: "#contributors",
+        label: "TBD",
+        path: "#",
       },
       {
-        label: "Achievements and milestones",
-        path: "#achievements",
-      },
-      {
-        label: "Gallery",
-        path: "#gallery",
+        label: "TBD",
+        path: "#",
       },
     ],
   },

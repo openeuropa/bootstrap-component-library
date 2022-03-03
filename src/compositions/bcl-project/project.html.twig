@@ -6,58 +6,90 @@
 
 {% block content %}
 
-  {% if project_details.main_title is not empty %}
+  {% if project_status.main_title is not empty %}
+    <h3
+      class="fw-bold mb-4"
+      {% if project_status.main_title_id is not empty %}
+      id="{{ project_status.main_title_id }}"
+      {% endif %}
+    >{{ project_status.main_title }}</h3>
+  {% endif %}
+  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
+
+  {% if status_lists.main_title is not empty %}
     <h3
       class="fw-bold my-4"
-      {% if project_details.main_title_id is not empty %}
-      id="{{ project_details.main_title_id }}"
+      {% if status_lists.main_title_id is not empty %}
+      id="{{ status_lists.main_title_id }}"
       {% endif %}
-    >{{ project_details.main_title }}</h3>
+    >{{ status_lists.main_title }}</h3>
+  {% endif %}
+  {% if status_lists.listing is defined and status_lists.listing is not empty %}
+    {% for lists in status_lists.listing %}
+      {% if lists.title is not empty %}
+      <h4 class="fw-bold mb-3">{{ lists.title }}</h4>
+      {% endif %}
+      {% for list in lists.content %}
+        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
+      {% endfor %}
+    {% endfor %}
   {% endif %}
 
-  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_details %}
-
-  <div class="mb-4">
-    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with contribution_details only %}
-  </div>
-
-  {% if paragraphs is defined and paragraphs is not empty %}
-    {% for paragraph in paragraphs %}
-      {% if paragraph.title is not empty %}
-      <h3
-        class="fw-bold mb-4 pt-3"
-        {% if paragraph.title_id is not empty %}
-        id="{{ paragraph.title_id }}"
-        {% endif %}
-      >
-        {{ paragraph.title }}
-      </h3>
-      {% endif %}
+  {% if first_paragraphs is defined and first_paragraphs is not empty %}
+    {% for paragraph in first_paragraphs %}
+        <h3
+          class="fw-bold mb-4 pt-3"
+          id="{{ paragraph.title_id }}"
+        >
+          {{ paragraph.title }}
+        </h3>
 
       {{ paragraph.content }}
     {% endfor %}
   {% endif %}
 
-  {% if partners is defined and partners is not empty %}
-    <div class="mb-4">
-    {% if partners.main_title is not empty %}
-      <h3
-        class="fw-bold my-4"
-        {% if partners.main_title_id is not empty %}
-        id="{{ partners.main_title_id }}"
-        {% endif %}
-      >{{ partners.main_title }}</h3>
-    {% endif %}
-
-    {% for partner in partners.listing %}
-      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with partner.list only %}
+  {% if content_lists.main_title is not empty %}
+    <h3
+      class="fw-bold my-4"
+      {% if content_lists.main_title_id is not empty %}
+      id="{{ content_lists.main_title_id }}"
+      {% endif %}
+    >{{ content_lists.main_title }}</h3>
+  {% endif %}
+  {% if content_lists.listing is defined and content_lists.listing is not empty %}
+    {% for lists in content_lists.listing %}
+      {% if lists.title is not empty %}
+      <h4 class="fw-bold mb-3">{{ lists.title }}</h4>
+      {% endif %}
+      {% for list in lists.content %}
+        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
+      {% endfor %}
     {% endfor %}
-    </div>
   {% endif %}
 
-  {% if gallery is defined and gallery is not empty %}
-  <div class="mt-2">
-    {% for showcase in gallery %}
+  {% if second_paragraphs is defined and second_paragraphs is not empty %}
+    {% for paragraph in second_paragraphs %}
+      <h3
+        class="fw-bold mb-4 pt-2"
+        id="{{ paragraph.title_id }}"
+      >
+        {{ paragraph.title }}
+      </h3>
+      {{ paragraph.content }}
+    {% endfor %}
+  {% endif %}
+
+  {% if gallery.main_title is not empty %}
+    <h3
+      class="fw-bold my-4"
+      {% if gallery.main_title_id is not empty %}
+      id="{{ gallery.main_title_id }}"
+      {% endif %}
+    >{{ gallery.main_title }}</h3>
+  {% endif %}
+  {% if gallery.listing is defined and gallery.listing is not empty %}
+  <div class="mt-3">
+    {% for showcase in gallery.listing %}
       <div class="mb-2-5 pb-4">
       {% if showcase.carousel %}
         {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with showcase only %}
@@ -69,10 +101,12 @@
   </div>
   {% endif %}
 
-  {% block social_block %}
-    {{ social_buttons }}
-    {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
-    {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
-  {% endblock %}
+  {% if social_block is not empty %}
+    {% block social_block %}
+      {{ social_buttons }}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
+      {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
+    {% endblock %}
+  {% endif %}
 
 {% endblock %}
