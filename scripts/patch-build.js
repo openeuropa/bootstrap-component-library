@@ -9,7 +9,6 @@ const args = [
 	'chromatic',
 	'--ci',
 	'--force-rebuild',
-	'--auto-accept-changes',
 	`--project-token=${token}`,
 	`--build-script-name=build:chromatic:${theme}`,
 	`--patch-build ${branch}...development`,
