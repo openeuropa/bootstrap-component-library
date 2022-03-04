@@ -12,7 +12,7 @@
       {% if project_status.main_title_id is not empty %}
       id="{{ project_status.main_title_id }}"
       {% endif %}
-    >{{ project_status.main_title }}</h3>
+    >{{- project_status.main_title -}}</h3>
   {% endif %}
   {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
 
@@ -22,7 +22,7 @@
       {% if status_lists.main_title_id is not empty %}
       id="{{ status_lists.main_title_id }}"
       {% endif %}
-    >{{ status_lists.main_title }}</h3>
+    >{{- status_lists.main_title -}}</h3>
   {% endif %}
   {% if status_lists.listing is defined and status_lists.listing is not empty %}
     {% for lists in status_lists.listing %}
@@ -41,10 +41,10 @@
           class="fw-bold mb-4 pt-3"
           id="{{ paragraph.title_id }}"
         >
-          {{ paragraph.title }}
+          {{- paragraph.title -}}
         </h3>
 
-      {{ paragraph.content }}
+      {{- paragraph.content -}}
     {% endfor %}
   {% endif %}
 
@@ -54,7 +54,7 @@
       {% if content_lists.main_title_id is not empty %}
       id="{{ content_lists.main_title_id }}"
       {% endif %}
-    >{{ content_lists.main_title }}</h3>
+    >{{- content_lists.main_title -}}</h3>
   {% endif %}
   {% if content_lists.listing is defined and content_lists.listing is not empty %}
     {% for lists in content_lists.listing %}
@@ -75,7 +75,7 @@
       >
         {{ paragraph.title }}
       </h3>
-      {{ paragraph.content }}
+      {{- paragraph.content -}}
     {% endfor %}
   {% endif %}
 
@@ -85,7 +85,7 @@
       {% if gallery.main_title_id is not empty %}
       id="{{ gallery.main_title_id }}"
       {% endif %}
-    >{{ gallery.main_title }}</h3>
+    >{{- gallery.main_title -}}</h3>
   {% endif %}
   {% if gallery.listing is defined and gallery.listing is not empty %}
   <div class="mt-3">
