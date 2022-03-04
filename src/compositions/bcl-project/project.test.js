@@ -9,7 +9,6 @@ import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
 
-
 import dataContentUCPKN from "@openeuropa/bcl-project/data/ucpkn/data";
 import dataStatusUCPKN from "@openeuropa/bcl-project/data/ucpkn/data_status";
 import dataExtraDetailsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data_extra_details";
@@ -94,7 +93,7 @@ describe("OE - Project", () => {
     expect.assertions(1);
     return expect(renderDetails(closedDemo)).resolves.toMatchSnapshot();
   });
-  
+
   test("UCPKN page (ongoing) renders correctly", () => {
     expect.assertions(1);
     return expect(renderDetails(ongoingDemoUCPKN)).resolves.toMatchSnapshot();
