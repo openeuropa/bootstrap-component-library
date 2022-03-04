@@ -21,9 +21,7 @@ const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share m
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
-    item.attributes = new drupalAttribute().addClass(
-      "chromatic-ignore"
-    );
+    item.attributes = new drupalAttribute().addClass("chromatic-ignore");
   });
   dataExtraDetails.banner.image.classes = "chromatic-ignore";
   dataListing.listing.items.forEach((item) => {
