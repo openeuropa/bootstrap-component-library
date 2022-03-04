@@ -9,6 +9,11 @@ import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
 
+
+import dataContentUCPKN from "@openeuropa/bcl-project/data/ucpkn/data";
+import dataStatusUCPKN from "@openeuropa/bcl-project/data/ucpkn/data_status";
+import dataExtraDetailsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data_extra_details";
+
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const detailsTemplate = "@oe-bcl/bcl-project/project.html.twig";
@@ -50,6 +55,19 @@ const demoListing = {
   ...dataListing,
 };
 
+const ongoingDemoUCPKN = {
+  ...baseData,
+  ...dataContentUCPKN,
+  ...dataExtraDetailsUCPKN,
+  social_block: true,
+  project_status: {
+    ...dataStatusUCPKN,
+    status: "ongoing",
+    badge: "Ongoing",
+    progress: 25,
+  },
+};
+
 const renderListing = (params) =>
   renderTwigFileAsNode(listingTemplate, params, true);
 
@@ -75,5 +93,10 @@ describe("OE - Project", () => {
   test("page (closed) renders correctly", () => {
     expect.assertions(1);
     return expect(renderDetails(closedDemo)).resolves.toMatchSnapshot();
+  });
+  
+  test("UCPKN page (ongoing) renders correctly", () => {
+    expect.assertions(1);
+    return expect(renderDetails(ongoingDemoUCPKN)).resolves.toMatchSnapshot();
   });
 });
