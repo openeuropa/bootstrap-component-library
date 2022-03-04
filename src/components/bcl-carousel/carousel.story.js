@@ -6,7 +6,7 @@ import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
 
 if (isChromatic()) {
-  items.forEach((item, i) => {
+  demoData.items.forEach((item, i) => {
     item.image = `<img
                  src="https://picsum.photos/800/400?random=${i}"
                  alt="slide ${i}"
@@ -188,6 +188,9 @@ export default {
         url: "https://getbootstrap.com/docs/5.1/components/carousel/",
       },
     ],
+  },
+  chromatic: {
+    viewports: [814],
   },
 };
 
