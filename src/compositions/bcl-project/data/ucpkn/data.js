@@ -334,7 +334,7 @@ module.exports = {
       },
       {
         carousel: true,
-        id: "carouselExample",
+        id: "carouselExampleFirst",
         with_controls: true,
         with_indicators: true,
         prev_label: "Previous",
@@ -394,7 +394,7 @@ module.exports = {
       },
       {
         carousel: true,
-        id: "carouselExample",
+        id: "carouselExampleSecond",
         with_controls: true,
         with_indicators: true,
         prev_label: "Previous",

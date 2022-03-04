@@ -42,18 +42,6 @@ module.exports = {
         label: "Partner organisations",
         path: "#partners",
       },
-      {
-        label: "TBD",
-        path: "#",
-      },
-      {
-        label: "TBD",
-        path: "#",
-      },
-      {
-        label: "TBD",
-        path: "#",
-      },
     ],
   },
 };

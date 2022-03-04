@@ -97,7 +97,7 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=4298%3A144965",
+        url: "https://www.figma.com/file/N0nAH22yz5vfDL6yx8yemr/UCPKN-Mockup?node-id=2472%3A149950",
       },
     ],
   },
