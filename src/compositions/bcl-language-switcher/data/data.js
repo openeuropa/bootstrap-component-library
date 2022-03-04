@@ -1,7 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  id: "1",
+  id: "dropdown-languages",
   message: {
     message: "This page is not available in [language]",
     icon_path: "/icons.svg",
