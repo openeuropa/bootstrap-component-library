@@ -28,18 +28,15 @@
   attributes: _expandable_attributes
 }) only %}
 
-{% set _batch_number = (_languages|length / 6)|round(0, 'ceil') %}
-
 <div class="collapse mt-3" id="{{ _id }}">
-  <div class="row">
-    {% for languages_col in languages|batch(_batch_number) %}
-    <div class="col-12 col-md">
-      {% for language in languages_col %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
-          attributes: create_attribute().addClass(["btn", "btn-link", "d-block", "ps-0", "text-start"])
-        }) only %}
-      {% endfor %}
-    </div>
+  <div
+    class="d-md-grid"
+    style="grid-auto-flow: column; grid-template-rows: repeat(4, 1fr)"
+  >
+    {% for language in languages %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
+        attributes: create_attribute().addClass(["btn", "btn-link", "d-block", "ps-0", "text-start"])
+      }) only %}
     {% endfor %}
   </div>
 </div>
