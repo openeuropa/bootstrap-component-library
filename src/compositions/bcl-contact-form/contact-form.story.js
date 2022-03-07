@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import banner from "@openeuropa/bcl-contact-form/data/data-banner";
