@@ -110,6 +110,7 @@ module.exports = [
   "trash.svg",
   "trash-fill.svg",
   "link.svg",
+  "ui-checks.svg",
 
   //Social.svg
   "skype.svg",
@@ -137,6 +138,7 @@ module.exports = [
   "star-half.svg",
   "diamond.svg",
   "diamond-fill.svg",
+  "x-diamond-fill.svg",
   "triangle.svg",
   "triangle-fill.svg",
   "square.svg",
@@ -274,6 +276,8 @@ module.exports = [
   "house.svg",
   "house-fill.svg",
   "pin-fill.svg",
+  "wallet-fill.svg",
+  "puzzle-fill",
 
   //Geo
   "geo-alt.svg",
