@@ -30,7 +30,7 @@ const SVGSpriter = require("svg-sprite");
 module.exports = (entry, dest, options) => {
   const outputFile = options.file
     ? `${dest}/${options.file}`
-    : `${dest}/'bcl-icons.svg`;
+    : `${dest}/bcl-default-icons.svg`;
   const files = options.list || glob.sync("*.svg", { cwd: entry });
 
   const plugins = options.transformPlugins || defaultPlugins;

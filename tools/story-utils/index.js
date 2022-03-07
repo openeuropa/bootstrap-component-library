@@ -1,4 +1,4 @@
-import iconPath from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import iconPath from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import flagPath from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
 import flagList from "@ecl/resources-flag-icons/dist/lists/flag.json";
 
@@ -268,24 +268,23 @@ export const getIconControls = (type, data) => {
 export const getIconNames = () => {
   return [
     "none",
-    "alarm",
+    "upload",
     "arrow-left",
     "arrow-right",
-    "chat",
-    "cloud",
-    "file-earmark-arrow-down",
-    "wifi",
-    "share",
-    "mouse",
+    "unlock",
+    "person",
+    "geo-alt",
+    "lock",
+    "building",
     "key",
-    "hand-index",
-    "fonts",
-    "fullscreen",
-    "fullscreen-exit",
-    "filter",
-    "files",
-    "eye",
-    "eye-slash",
+    "flag",
+    "wifi",
+    "rss-fill",
+    "clock",
+    "calendar-x",
+    "phone-fill",
+    "diamond",
+    "star",
   ];
 };
 

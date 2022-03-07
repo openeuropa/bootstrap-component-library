@@ -1,7 +1,7 @@
 import demoData from "@openeuropa/bcl-fact-figures/data/data.js";
 import factFigures from "@openeuropa/bcl-fact-figures/fact-figures.html.twig";
 import drupalAttribute from "drupal-attribute";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 demoData.icon_path = defaultSprite;
 
