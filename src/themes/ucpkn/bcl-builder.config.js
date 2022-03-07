@@ -1,3 +1,5 @@
+const iconList = require("@openeuropa/bcl-theme-default/src/icons/icons");
+
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
 const templates = require("./src/templates/bcl-templates");
@@ -100,6 +102,15 @@ module.exports = {
       },
     },
   ],
+  sprite: [
+    {
+      entry: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+      dest: path.resolve(outputFolder, "icons/"),
+      options: {
+        list: iconList,
+      },
+    },
+  ],
   copy: [
     {
       from: [path.resolve(nodeModules, "slim-select/dist/slimselect.min.js")],
@@ -108,10 +119,6 @@ module.exports = {
     },
     {
       from: [
-        path.resolve(
-          nodeModules,
-          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg"
-        ),
         path.resolve(
           nodeModules,
           "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg"

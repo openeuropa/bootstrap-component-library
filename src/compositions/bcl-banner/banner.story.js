@@ -3,7 +3,7 @@ import dataPrimary from "@openeuropa/bcl-banner/dataPrimary.js";
 import dataImage from "@openeuropa/bcl-banner/dataImage.js";
 import dataShade from "@openeuropa/bcl-banner/dataShade.js";
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => {
   const args = {
