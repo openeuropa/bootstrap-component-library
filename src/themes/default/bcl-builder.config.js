@@ -5,6 +5,7 @@ const replace = require("@rollup/plugin-replace");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = "../../../node_modules";
+const bootstrapNodeModules = "../../../bootstrap/node_modules";
 
 // SCSS includePaths
 const includePaths = [nodeModules];
@@ -95,7 +96,7 @@ module.exports = {
   ],
   sprite: [
     {
-      entry: path.resolve(nodeModules, "bootstrap-icons/icons/"),
+      entry: path.resolve(bootstrapNodeModules, "bootstrap-icons/icons/"),
       dest: path.resolve(outputFolder, "icons/"),
       options: {
         list: iconList,
