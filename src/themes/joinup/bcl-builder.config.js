@@ -1,4 +1,4 @@
-const iconList = require("../default/src/icons/icons");
+const iconList = require("@openeuropa/bcl-theme-default/src/icons/icons");
 
 const path = require("path");
 const replace = require("@rollup/plugin-replace");

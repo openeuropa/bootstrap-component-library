@@ -274,6 +274,17 @@ export const getIconNames = () => {
     "unlock",
     "person",
     "geo-alt",
+    "lock",
+    "building",
+    "key",
+    "flag",
+    "wifi",
+    "rss-fill",
+    "clock",
+    "calendar-x",
+    "phone-fill",
+    "diamond",
+    "star",
   ];
 };
 
