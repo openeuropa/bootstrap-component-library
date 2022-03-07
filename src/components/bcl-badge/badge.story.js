@@ -3,7 +3,7 @@ import { initBadges } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {

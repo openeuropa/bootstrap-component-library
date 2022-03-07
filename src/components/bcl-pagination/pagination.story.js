@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-pagination/data.js";
 import demoCustomIconsData from "@openeuropa/bcl-data-pagination/dataCustomIcons.js";
 import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => {
   return {

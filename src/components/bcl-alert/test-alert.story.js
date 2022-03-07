@@ -1,6 +1,6 @@
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 export default {
   title: "Components/Alert",

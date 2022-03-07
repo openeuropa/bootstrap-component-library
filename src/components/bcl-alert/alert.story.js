@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import { getVariants, getIconNames } from "@openeuropa/bcl-story-utils";
-import defaultSprite from "@openeuropa/bcl-bootstrap/bootstrap-icons.svg";
+import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => {
