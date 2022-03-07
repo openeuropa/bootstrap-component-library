@@ -48,9 +48,11 @@ module.exports = [
 
   //Alerts, warnings and signs
   "check-lg.svg",
+  "check2.svg",
   "exclamation-lg.svg",
   "question-lg.svg",
   "info-lg.svg",
+  "x.svg",
   "x-lg.svg",
   "plus-lg.svg",
   "dash-lg.svg",
@@ -109,7 +111,7 @@ module.exports = [
   "trash-fill.svg",
   "link.svg",
 
-  //Soci.svgal
+  //Social.svg
   "skype.svg",
   "reddit.svg",
   "mastodon.svg",
@@ -207,6 +209,7 @@ module.exports = [
   "chat-right-dots-fill.svg",
   "chat-right.svg",
   "chat-right-fill.svg",
+  "chat-left-dots-fill.svg",
   "rss.svg",
   "rss-fill.svg",
   "envelope-open.svg",
@@ -227,6 +230,7 @@ module.exports = [
   "reply-all-fill.svg",
   "reply.svg",
   "reply-fill.svg",
+  "globe.svg",
   "globe2.svg",
   "flag.svg",
   "flag-fill.svg",
