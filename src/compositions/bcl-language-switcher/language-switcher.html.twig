@@ -1,0 +1,44 @@
+{% spaceless %}
+
+{# Parameters:
+  - id (string) (default: collapse-{random number 0-1000}) - collapse custom id - optional
+  - message (alert object) (default: {})
+  - expandable (button object) (default: [])
+  - language (array of link object) (default: [])
+#}
+
+{% set _id = id|default('collapse-' ~ random(1000)) %}
+{% set _message = message|default({}) %}
+{% set _expandable = expandable|default({}) %}
+{% set _languages = languages|default([]) %}
+
+{% set _expandable_attributes = _expandable.attributes ?: create_attribute() %}
+
+{% set _expandable_attributes = _expandable_attributes
+                                .setAttribute('data-bs-toggle', 'collapse')
+                                .setAttribute('autocomplete', 'off')
+                                .setAttribute('aria-expanded', 'false')
+                                .setAttribute('aria-controls', _id)
+                                .setAttribute('data-bs-target', '#' ~ _id)
+%}
+
+{% include '@oe-bcl/bcl-alert/alert.html.twig' with _message only %}
+
+{% include '@oe-bcl/bcl-button/button.html.twig' with _expandable|merge({
+  attributes: _expandable_attributes
+}) only %}
+
+<div class="collapse mt-3" id="{{ _id }}">
+  <div
+    class="d-md-grid"
+    style="grid-auto-flow: column; grid-template-rows: repeat(4, 1fr)"
+  >
+    {% for language in languages %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
+        attributes: create_attribute().addClass(["btn", "btn-link", "d-block", "ps-0", "text-start"])
+      }) only %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endspaceless %}
