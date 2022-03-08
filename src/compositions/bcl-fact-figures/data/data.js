@@ -8,7 +8,7 @@ module.exports = {
   items: [
     {
       icon: {
-        name: "x-diamond-fill",
+        name: "sticky",
         size: "l",
         path: "/icons.svg",
       },
@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       icon: {
-        name: "ui-checks",
+        name: "inboxes",
         path: "/icons.svg",
       },
       subtitle: "Feature tickets",
@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       icon: {
-        name: "wallet-fill",
+        name: "shield-check",
         size: "l",
         path: "/icons.svg",
       },
@@ -39,7 +39,7 @@ module.exports = {
     },
     {
       icon: {
-        name: "file-code-fill",
+        name: "file-earmark-code",
         size: "l",
         path: "/icons.svg",
       },
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       icon: {
-        name: "puzzle-fill",
+        name: "inbox",
         size: "l",
         path: "/icons.svg",
       },
@@ -61,7 +61,7 @@ module.exports = {
     },
     {
       icon: {
-        name: "eye-fill",
+        name: "eye",
         size: "l",
         path: "/icons.svg",
       },
