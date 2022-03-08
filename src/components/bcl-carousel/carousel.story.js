@@ -65,7 +65,7 @@ const getArgTypes = (data) => {
     disable_touch: {
       name: "disable touch swiping",
       type: { name: "boolean" },
-      description: "If set to false the carousel won't swipe",
+      description: "If set to true the swipe behaviour is disabled",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
@@ -79,7 +79,7 @@ const getArgTypes = (data) => {
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
-        category: "Behaviour",
+        category: "Style",
       },
     },
     with_controls: {

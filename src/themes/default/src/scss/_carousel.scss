@@ -27,6 +27,20 @@ $indicator-size: 8px;
   }
 }
 
+.carousel-dark {
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.5);
+    a {
+      color: $black;
+      text-decoration-color: $black;
+    }
+  }
+
+  .carousel-indicators {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
 .carousel-control-next,
 .carousel-control-prev {
   opacity: 1;
@@ -60,8 +74,12 @@ $indicator-size: 8px;
 }
 
 @include media-breakpoint-up(md) {
-  .carousel-caption {
-    bottom: 50px;
-    padding-bottom: 0;
+  .carousel-indicators {
+    & + .carousel-inner {
+      .carousel-caption {
+        bottom: 50px;
+        padding-bottom: 0;
+      }
+    }
   }
 }
