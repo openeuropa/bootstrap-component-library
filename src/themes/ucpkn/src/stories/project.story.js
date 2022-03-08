@@ -8,16 +8,12 @@ import {
 import drupalAttribute from "drupal-attribute";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-project/data/data_listing";
-import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
-import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
-import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
-import dataContent from "@openeuropa/bcl-project/data/data";
-import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
+import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
+import dataStatus from "@openeuropa/bcl-project/data/ucpkn/data_status";
+import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
@@ -37,7 +33,10 @@ const baseData = {
   content_type: "listing",
   page_title: "Projects",
   header: header,
-  footer: footer,
+  footer: {
+    ...footer,
+    attributes: new drupalAttribute().addClass("mt-5"),
+  },
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -47,22 +46,37 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
-  share: share,
+  social_block: true,
 };
 
 const ongoingDemo = {
   ...demoPage,
-  project_status: dataOngoing,
+  project_status: {
+    ...dataStatus,
+    status: "ongoing",
+    badge: "Ongoing",
+    progress: 25,
+  },
 };
 
 const closedDemo = {
   ...demoPage,
-  project_status: dataClosed,
+  project_status: {
+    ...dataStatus,
+    status: "closed",
+    badge: "Closed",
+    progress: 100,
+  },
 };
 
 const plannedDemo = {
   ...demoPage,
-  project_status: dataPlanned,
+  project_status: {
+    ...dataStatus,
+    status: "planned",
+    badge: "Not started",
+    progress: 0,
+  },
 };
 
 const demoListing = {
@@ -83,7 +97,7 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=4298%3A144965",
+        url: "https://www.figma.com/file/N0nAH22yz5vfDL6yx8yemr/UCPKN-Mockup?node-id=2472%3A149950",
       },
     ],
   },

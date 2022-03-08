@@ -1,1 +1,1 @@
-module.exports = ["landing-page", "header"];
+module.exports = ["landing-page", "header", "project"];
