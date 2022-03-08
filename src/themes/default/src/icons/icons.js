@@ -298,6 +298,7 @@ module.exports = [
   "person-square.svg",
   "person-lines-fill.svg",
   "building.svg",
+  "person-x.svg",
   "person-x-fill.svg",
   "person-check.svg",
   "person-check-fill.svg",
