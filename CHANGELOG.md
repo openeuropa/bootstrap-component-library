@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.0 (2022-03-08)
+
+#### :rocket: New Feature
+
+* [#283](https://github.com/openeuropa/bootstrap-component-library/pull/283) feat(language-switcher): Added language switcher - OEL-1243 ([@tibi2303](https://github.com/tibi2303))
+* [#285](https://github.com/openeuropa/bootstrap-component-library/pull/285) feat(project): Project feature for ucpkn - OEL-1237 ([@tibi2303](https://github.com/tibi2303))
+* [#276](https://github.com/openeuropa/bootstrap-component-library/pull/276) feat(icons): Added custom icons to all themes - OEL-1222 ([@tibi2303](https://github.com/tibi2303))
+* [#268](https://github.com/openeuropa/bootstrap-component-library/pull/268) feat(project): Add circular progress bar for project status - OEL-1137 ([@papegaill](https://github.com/papegaill))
+* [#256](https://github.com/openeuropa/bootstrap-component-library/pull/256) feat(subscription): Added subscription page and modal - OEL-1121 ([@tibi2303](https://github.com/tibi2303))
+* [#252](https://github.com/openeuropa/bootstrap-component-library/pull/252) feat(project): Add circular progress bar for project status - OEL-1137 ([@papegaill](https://github.com/papegaill))
+* [#245](https://github.com/openeuropa/bootstrap-component-library/pull/245) feat(multilingual): Added feature - OEL-1084 ([@tibi2303](https://github.com/tibi2303))
+
+#### :boom: Breaking Change
+
+* [#258](https://github.com/openeuropa/bootstrap-component-library/pull/258) fix(icons): Replace icons_path to icon_path parameters - OEL-1141 ([@papegaill](https://github.com/papegaill))
+
+#### :bug: Bug Fix
+
+* [#253](https://github.com/openeuropa/bootstrap-component-library/pull/253) feat(data-multilingual): Updated data for multilingual - OEL-1084 ([@tibi2303](https://github.com/tibi2303))
+* [#248](https://github.com/openeuropa/bootstrap-component-library/pull/248) fix(description-list): Fix accessibility issue - OEL-1115 ([@papegaill](https://github.com/papegaill))
+
+#### :nail_care: Enhancement
+
+* [#286](https://github.com/openeuropa/bootstrap-component-library/pull/286) feat(icon): Added missing icons - OEL-1278 ([@tibi2303](https://github.com/tibi2303))
+* [#275](https://github.com/openeuropa/bootstrap-component-library/pull/275) feat(header): Added support for site name as a link in EC and EU variants - OEL-1221 ([@tibi2303](https://github.com/tibi2303))
+* [#274](https://github.com/openeuropa/bootstrap-component-library/pull/274) feat(placeholder): Reset em placeholder styles - OEL-1184 ([@tibi2303](https://github.com/tibi2303))
+* [#269](https://github.com/openeuropa/bootstrap-component-library/pull/269) feat(banner): Aspect ratio banner - OEL-1183 ([@tibi2303](https://github.com/tibi2303))
+* [#267](https://github.com/openeuropa/bootstrap-component-library/pull/267) feat(links): Added default underline for anchors - OEL-1180 ([@tibi2303](https://github.com/tibi2303))
+* [#271](https://github.com/openeuropa/bootstrap-component-library/pull/271) fix(modal): Aria-labelledby to aria-label - OEL-1179 ([@tibi2303](https://github.com/tibi2303))
+* [#260](https://github.com/openeuropa/bootstrap-component-library/pull/260) feat(navbar): Add branding, navigation and right blocks - OEL-1108 ([@papegaill](https://github.com/papegaill))
+* [#249](https://github.com/openeuropa/bootstrap-component-library/pull/249) feat(card): Create block in the card template - OEL-1125 ([@papegaill](https://github.com/papegaill))
+* [#250](https://github.com/openeuropa/bootstrap-component-library/pull/250) feat(card-layout): Create block in the card_layout template - OEL-1126 ([@papegaill](https://github.com/papegaill))
+* [#257](https://github.com/openeuropa/bootstrap-component-library/pull/257) feat(content_banner): Redone classes and added content_banner - OEL-1149 ([@tibi2303](https://github.com/tibi2303))
+* [#251](https://github.com/openeuropa/bootstrap-component-library/pull/251) feat(multilanguage): Added badge - OEL-1084 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#287](https://github.com/openeuropa/bootstrap-component-library/pull/287) chore(deps): Updates 08-03-22 ([@planctus](https://github.com/planctus))
+* [#284](https://github.com/openeuropa/bootstrap-component-library/pull/284) chore(deps): updates 03-03-22 ([@planctus](https://github.com/planctus))
+* [#272](https://github.com/openeuropa/bootstrap-component-library/pull/272) chore: chromatic ([@planctus](https://github.com/planctus))
+* [#270](https://github.com/openeuropa/bootstrap-component-library/pull/270) chore(deps): Updates 18-02-22 ([@planctus](https://github.com/planctus))
+* [#265](https://github.com/openeuropa/bootstrap-component-library/pull/265) chore: Rewriting dev toolchains ([@planctus](https://github.com/planctus))
+* [#266](https://github.com/openeuropa/bootstrap-component-library/pull/266) chore(deps): updates 14-02-22 ([@planctus](https://github.com/planctus))
+* [#261](https://github.com/openeuropa/bootstrap-component-library/pull/261) chore(deps): Updates 10-02-22 ([@planctus](https://github.com/planctus))
+* [#259](https://github.com/openeuropa/bootstrap-component-library/pull/259) chore(dev): Adding start-dev script, fixing start ([@planctus](https://github.com/planctus))
+* [#247](https://github.com/openeuropa/bootstrap-component-library/pull/247) chore: updates 03-02-22 ([@planctus](https://github.com/planctus))
+* [#244](https://github.com/openeuropa/bootstrap-component-library/pull/244) chore: Using node 16, gallium ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.19.0 (2022-01-31)
 
 #### :rocket: New Feature
