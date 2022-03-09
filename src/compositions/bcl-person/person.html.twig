@@ -1,0 +1,39 @@
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+
+{% block sidebar %}
+  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+{% endblock %}
+
+{% block content %}
+  {% if social_media.main_title is not empty %}
+    <h3
+      class="fw-bold mb-4"
+    >{{- social_media.main_title -}}</h3>
+  {% endif %}
+  
+  {% if social_media.links is defined and social_media.links is not empty %}
+    <div class="mb-4-5">
+    {% for link in social_media.links %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with link only %}
+    {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if information.main_title is not empty %}
+    <h3
+      class="fw-bold mb-4"
+    >{{- information.main_title -}}</h3>
+  {% endif %}
+  {% if information.content is not empty %}
+    <div class="mb-3-5">
+      {{- information.content -}}
+    </div>
+  {% endif %} 
+  {% if information.files is defined and information.files is not empty %}
+    <div class="mb-4-5">
+    {% for file in information.files %}
+      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+    {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}
