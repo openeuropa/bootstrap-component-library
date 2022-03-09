@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-data-carousel/data.js";
 import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
+import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
 
@@ -20,6 +21,7 @@ const getArgs = (data) => {
     autoinit: true,
     autoplay: true,
     disable_touch: false,
+    rounded_indicators: false,
     with_controls: true,
     prev_label: data.prev_label,
     next_label: data.next_label,
@@ -63,11 +65,21 @@ const getArgTypes = (data) => {
     disable_touch: {
       name: "disable touch swiping",
       type: { name: "boolean" },
-      description: "If set to false the carousel won't swipe",
+      description: "If set to true the swipe behaviour is disabled",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
         category: "Behaviour",
+      },
+    },
+    rounded_indicators: {
+      name: "rounded indicators",
+      type: { name: "boolean" },
+      description: "If set to true the indicators would be circles",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
       },
     },
     with_controls: {
@@ -151,6 +163,7 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+  correctPaths(data);
   resetAttrs(data, args);
 
   return Object.assign(data, args);

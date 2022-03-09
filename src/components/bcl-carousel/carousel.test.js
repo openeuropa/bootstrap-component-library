@@ -51,6 +51,14 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with rounded indicators", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, rounded_indicators: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with specific slide", () => {
     expect.assertions(1);
     return expect(
