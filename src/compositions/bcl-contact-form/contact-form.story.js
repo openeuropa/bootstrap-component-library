@@ -54,7 +54,7 @@ const clientValidation = (story) => {
 };
 
 export default {
-  title: "Features/Contact form",
+  title: "Paragraphs/Contact",
   decorators: [withDesign, clientValidation],
   parameters: {
     layout: "fullscreen",

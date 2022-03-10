@@ -154,7 +154,7 @@ Image.decorators = [adjustWidth];
 export const FeaturedItem = (args) =>
   featuredMedia(applyArgs(demoFeaturedItem, args));
 
-FeaturedItem.storyName = "Featured Item";
+FeaturedItem.storyName = "Text with Featured Media";
 FeaturedItem.args = getArgs(demoFeaturedItem, "text");
 FeaturedItem.argTypes = getArgTypes(demoFeaturedItem, "text");
 FeaturedItem.parameters = {

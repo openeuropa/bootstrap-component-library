@@ -23,3 +23,5 @@ export const Default = () => descriptionList(correctPaths(demoData));
 
 export const Horizontal = () =>
   descriptionList(correctPaths(demoDataHorizontal));
+
+Horizontal.storyName = "Horizontal Description List";

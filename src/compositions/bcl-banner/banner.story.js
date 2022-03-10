@@ -127,7 +127,7 @@ const renderStory = (data, args) => {
 };
 
 export default {
-  title: "Paragraphs/Banners",
+  title: "Paragraphs/Banner",
   parameters: {
     design: [
       {
