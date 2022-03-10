@@ -109,7 +109,7 @@ const applyArgs = (data, args) => {
 };
 
 export default {
-  title: "Paragraphs/Fact & Figures",
+  title: "Paragraphs/Fact and Figures",
   parameters: {
     design: [
       {

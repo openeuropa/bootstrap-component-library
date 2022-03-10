@@ -67,7 +67,7 @@ const applyArgs = (data, args) => {
 };
 
 export default {
-  title: "Components/Accordion",
+  title: "Paragraphs/Accordion",
   decorators: [withDesign],
   parameters: {
     design: [

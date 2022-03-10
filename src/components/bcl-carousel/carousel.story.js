@@ -170,7 +170,7 @@ const applyArgs = (data, args) => {
 };
 
 export default {
-  title: "Components/Carousel",
+  title: "Paragraphs/Carousel",
   decorators: [withDesign],
   parameters: {
     viewport: {

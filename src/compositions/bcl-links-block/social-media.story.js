@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@openeuropa/bcl-links-block/dataLinksBlock.js";
+import socialMediaData from "@openeuropa/bcl-links-block/dataSocialMedia";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
@@ -71,7 +71,7 @@ const applyArgs = (data, args) => {
 };
 
 export default {
-  title: "Paragraphs/Links block",
+  title: "Paragraphs/Social Media Follow",
   decorators: [withDesign],
   parameters: {
     viewport: {
@@ -87,8 +87,9 @@ export default {
   },
 };
 
-export const LinksBlock = (args) => linksBlock(applyArgs(demoData, args));
+export const SocialMedia = (args) =>
+  linksBlock(applyArgs(socialMediaData, args));
 
-LinksBlock.storyName = "Links block";
-LinksBlock.args = getArgs(demoData);
-LinksBlock.argTypes = getArgTypes(demoData);
+SocialMedia.storyName = "Default";
+SocialMedia.args = getArgs(socialMediaData);
+SocialMedia.argTypes = getArgTypes(socialMediaData);
