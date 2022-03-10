@@ -1,9 +1,11 @@
+@use "sass:math";
+
 // Search form Spacers
 $search-spacers: (
   "icon-spacer-left": map-get($spacers, 3),
-  "icon-spacer-top": calc(($form-select-height - map-get($icon, "xs")) / 2),
+  "icon-spacer-top": math.div(($form-select-height - map-get($icon, "xs")), 2),
   "icon-spacer-top-md":
-    calc(($form-select-height-md - map-get($icon, "xs")) / 2),
+    math.div(($form-select-height-md - map-get($icon, "xs")), 2),
   "submit-spacer-right": map-get($spacers, 3),
 );
 
