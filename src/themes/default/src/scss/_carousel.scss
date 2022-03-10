@@ -1,0 +1,85 @@
+$indicator-size: 8px;
+
+.carousel-indicators {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  [data-bs-target] {
+    width: $indicator-size;
+    height: $indicator-size;
+    margin: map-get($spacers, "1-5") map-get($spacers, 2) map-get($spacers, 3);
+    border-radius: 50%;
+  }
+}
+
+.carousel-caption {
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  padding: map-get($spacers, 3) 0 map-get($spacers, 4);
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    color: $white;
+    text-decoration-color: $white;
+  }
+}
+
+.carousel-dark {
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.5);
+    a {
+      color: $black;
+      text-decoration-color: $black;
+    }
+  }
+
+  .carousel-indicators {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-size: 60% 60%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.carousel-control-next-icon {
+  background-position: 9px center;
+}
+
+.carousel-control-prev-icon {
+  background-position: 7px center;
+}
+
+.carousel.rounded-indicators {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    border-radius: 50%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .carousel-indicators {
+    & + .carousel-inner {
+      .carousel-caption {
+        bottom: 50px;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
