@@ -87,9 +87,7 @@ export default {
   },
 };
 
-export const SocialMedia = (args) =>
-  linksBlock(applyArgs(socialMediaData, args));
+export const Default = (args) => linksBlock(applyArgs(socialMediaData, args));
 
-SocialMedia.storyName = "Default";
-SocialMedia.args = getArgs(socialMediaData);
-SocialMedia.argTypes = getArgTypes(socialMediaData);
+Default.args = getArgs(socialMediaData);
+Default.argTypes = getArgTypes(socialMediaData);

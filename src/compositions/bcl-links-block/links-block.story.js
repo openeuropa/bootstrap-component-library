@@ -87,8 +87,7 @@ export default {
   },
 };
 
-export const LinksBlock = (args) => linksBlock(applyArgs(demoData, args));
+export const Default = (args) => linksBlock(applyArgs(demoData, args));
 
-LinksBlock.storyName = "Links block";
-LinksBlock.args = getArgs(demoData);
-LinksBlock.argTypes = getArgTypes(demoData);
+Default.args = getArgs(demoData);
+Default.argTypes = getArgTypes(demoData);
