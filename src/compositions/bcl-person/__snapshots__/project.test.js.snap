@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - News full page renders correctly 1`] = `
+exports[`OE - Person details renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -18,12 +18,12 @@ exports[`OE - News full page renders correctly 1`] = `
           href=""
         >
           <img
-            alt="desktop project logo"
+            alt="desktop european union logo"
             class="d-none d-lg-block"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
           />
           <img
-            alt="mobile project logo"
+            alt="mobile european union logo"
             class="d-lg-none"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
@@ -31,40 +31,6 @@ exports[`OE - News full page renders correctly 1`] = `
         <ul
           class="nav"
         >
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
           <li
             class="nav-item"
           >
@@ -111,51 +77,13 @@ exports[`OE - News full page renders correctly 1`] = `
               </span>
             </a>
           </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="notification mt-2 mt-lg-0 nav-link"
-              href="#"
-            >
-              <svg
-                class="bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#bell-fill"
-                />
-              </svg>
-              <span
-                class="badge bg-danger"
-              >
-                5
-              </span>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
     <!-- project name -->
-    <div
-      class="bcl-header__project"
-    >
-      <div
-        class="container"
-      >
-        <img
-          alt="project logo"
-          class="d-none d-lg-inline-block"
-          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
-        />
-        <span
-          class="bcl-header__site-name"
-        >
-          Project name
-        </span>
-      </div>
-    </div>
     <!-- navbar -->
     <nav
+      aria-label="main-navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -186,6 +114,7 @@ exports[`OE - News full page renders correctly 1`] = `
             >
               <a
                 aria-current="page"
+                aria-label="homepage"
                 class="nav-link active"
                 href="/example"
               >
@@ -308,6 +237,7 @@ exports[`OE - News full page renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              aria-label="homepage"
               href="/example"
             >
               Home
@@ -319,7 +249,7 @@ exports[`OE - News full page renders correctly 1`] = `
             <a
               href="/example"
             >
-              European Commission
+              European Union
             </a>
           </li>
           <li
@@ -335,7 +265,7 @@ exports[`OE - News full page renders correctly 1`] = `
                   xlink:href="/icons.svg#arrow-left"
                 />
               </svg>
-              About the European Commission
+              About the European Union
             </a>
           </li>
           <li
@@ -416,12 +346,12 @@ exports[`OE - News full page renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-fullscreen"
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
     >
       <div
         class="modal-content"
@@ -430,269 +360,249 @@ exports[`OE - News full page renders correctly 1`] = `
           class="modal-header"
         >
           <div
-            class="container"
+            class="d-flex align-items-center"
           >
-            <div
-              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+            <svg
+              class="bi icon--s"
             >
-              <div
-                class="py-3-5 px-3 px-sm-0 px-md-3"
-              >
-                <div
-                  class="d-flex justify-content-between align-items-center"
-                >
-                  <div
-                    class="d-flex align-items-center"
-                  >
-                    <svg
-                      class="bi icon--s"
-                    >
-                      <use
-                        xlink:href="/icons.svg#globe2"
-                      />
-                    </svg>
-                    <h5
-                      class="mb-0 ms-2"
-                    >
-                      Select your language
-                    </h5>
-                  </div>
-                  <button
-                    aria-label="Close"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  />
-                </div>
-              </div>
-            </div>
+              <use
+                xlink:href="/icons.svg#globe2"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
           </div>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
         </div>
         <div
           class="modal-body"
         >
           <div
-            class="bcl-language-list bcl-language-list--eu"
+            class="bcl-language-list bcl-language-list--neutral"
           >
             <div
               class="main pt-4"
             >
               <div
-                class="container"
+                class="pb-2"
               >
                 <div
-                  class="pb-2"
+                  class="row"
                 >
                   <div
-                    class="row"
+                    class="col-12 col-md"
                   >
-                    <div
-                      class="col-12 col-md"
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
                     >
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="bg"
-                        lang="bg"
-                      >
-                        български
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="es"
-                        lang="es"
-                      >
-                        español
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="cs"
-                        lang="cs"
-                      >
-                        čeština
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="da"
-                        lang="da"
-                      >
-                        dansk
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="de"
-                        lang="de"
-                      >
-                        Deutsch
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="et"
-                        lang="et"
-                      >
-                        eesti
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="el"
-                        lang="el"
-                      >
-                        ελληνικά
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn selected justify-content-between"
-                        href="#"
-                        hreflang="en"
-                        lang="en"
-                      >
-                        English
-                        <svg
-                          class="ms-2-5 bi icon--s"
-                        >
-                          <use
-                            xlink:href="/icons.svg#check2"
-                          />
-                        </svg>
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="fr"
-                        lang="fr"
-                      >
-                        français
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="ga"
-                        lang="ga"
-                      >
-                        Gaeilge
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="hr"
-                        lang="hr"
-                      >
-                        hrvatski
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="it"
-                        lang="it"
-                      >
-                        italiano
-                      </a>
-                    </div>
-                    <div
-                      class="col-12 col-md"
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
                     >
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="lv"
-                        lang="lv"
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
                       >
-                        latviešu
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="lt"
-                        lang="lt"
-                      >
-                        lietuvių
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="hu"
-                        lang="hu"
-                      >
-                        magyar
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="mt"
-                        lang="mt"
-                      >
-                        Malti
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="nl"
-                        lang="nl"
-                      >
-                        Nederlands
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="pl"
-                        lang="pl"
-                      >
-                        polski
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="pt"
-                        lang="pt"
-                      >
-                        português
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="ro"
-                        lang="ro"
-                      >
-                        română
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="sk"
-                        lang="sk"
-                      >
-                        slovenčina
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="sl"
-                        lang="sl"
-                      >
-                        slovenščina
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="fi"
-                        lang="fi"
-                      >
-                        suomi
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="sv"
-                        lang="sv"
-                      >
-                        svenska
-                      </a>
-                    </div>
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
                   </div>
                 </div>
               </div>
@@ -704,7 +614,7 @@ exports[`OE - News full page renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="bcl-content-banner pt-lg-4-75 pb-md-4-75 pb-4 pt-4 bg-lighter"
+      class="bcl-content-banner pt-lg-4-75 pt-3 bg-white"
     >
       <div
         class="container"
@@ -724,7 +634,7 @@ exports[`OE - News full page renders correctly 1`] = `
                 <img
                   alt="alt img"
                   class="card-img-top rounded-1"
-                  src="https://picsum.photos/255/255?random=6"
+                  src="https://picsum.photos/200/200?random=6"
                 />
               </div>
               <div
@@ -736,7 +646,7 @@ exports[`OE - News full page renders correctly 1`] = `
                   <h2
                     class="fw-bold card-title"
                   >
-                    This is the title of this page
+                    Stefan Mayer
                   </h2>
                   <div
                     class="mb-4 mt-4"
@@ -744,64 +654,20 @@ exports[`OE - News full page renders correctly 1`] = `
                     <span
                       class="text-muted me-3"
                     >
-                      8 hours ago
+                      DG Test
+                    </span>
+                    <span
+                      class="text-muted"
+                    >
+                      Director
                     </span>
                   </div>
                   <p>
-                    
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
-        Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
-        Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
-        Duis tristique fringilla magna, eu egestas dolor molestie non.
-     
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
                   </p>
-                  <div
-                    class="mt-2-5"
-                  >
-                    <span
-                      class="mb-2 me-2 badge rounded-pill badge-outline-primary"
-                    >
-                      Category 1
-                    </span>
-                    <span
-                      class="mb-2 badge rounded-pill badge-outline-primary"
-                    >
-                      Category 2
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="d-flex justify-content-end"
-          >
-            <button
-              class="w-auto mt-3 me-3 btn btn-light btn-md"
-              type="button"
-            >
-              Print
-              <svg
-                class="ms-2-5 bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#printer-fill"
-                />
-              </svg>
-            </button>
-            <button
-              class="w-auto mt-3 btn btn-light btn-md"
-              type="button"
-            >
-              Export
-              <svg
-                class="ms-2-5 bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#file-arrow-down-fill"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -815,51 +681,209 @@ exports[`OE - News full page renders correctly 1`] = `
         <div
           class="col-12 col-lg-10 col-xl-9 col-xxl-8"
         >
-          <p
-            id="content"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-          </p>
-          <p>
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras facilisis enim non nisi hendrerit laoreet. Vestibulum id facilisis augue, vitae faucibus justo. Etiam congue malesuada urna vitae suscipit. Mauris a varius leo. Nulla vel facilisis lacus. Suspendisse semper velit sit amet purus egestas, sit amet ullamcorper enim egestas. Vestibulum at lacus at purus ornare auctor nec consequat velit. Pellentesque iaculis sit amet nulla at rutrum.
-          </p>
-          <ul>
-            <li>
-              Vestibulum ante ipsum primis in faucibus
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet
-            </li>
-            <li>
-              Duis ac augue sed tortor elementum dignissim
-            </li>
-          </ul>
           <h3
-            class="fw-bold my-4"
-            id="subheading"
+            class="fw-bold mb-4"
           >
-            Sub heading
+            Social media
           </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-          </p>
-          <p>
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras facilisis enim non nisi hendrerit laoreet. Vestibulum id facilisis augue, vitae faucibus justo. Etiam congue malesuada urna vitae suscipit. Mauris a varius leo. Nulla vel facilisis lacus. Suspendisse semper velit sit amet purus egestas, sit amet ullamcorper enim egestas. Vestibulum at lacus at purus ornare auctor nec consequat velit. Pellentesque iaculis sit amet nulla at rutrum.
-          </p>
+          <div
+            class="mb-4-5"
+          >
+            <a
+              class="d-block d-md-inline-block mb-3 mb-md-0 me-md-3 standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#linkedin"
+                />
+              </svg>
+              Linkedin
+            </a>
+            <a
+              class="d-block d-md-inline-block mb-3 mb-md-0 mx-md-3 standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#twitter"
+                />
+              </svg>
+              Twitter
+            </a>
+            <a
+              class="d-block d-md-inline-block mb-3 mb-md-0 mx-md-3 standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#facebook"
+                />
+              </svg>
+              Facebook
+            </a>
+            <a
+              class="d-block d-md-inline-block mb-3 mb-md-0 mx-md-3 standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#youtube"
+                />
+              </svg>
+              Youtube
+            </a>
+          </div>
+          <h3
+            class="fw-bold mb-4"
+          >
+            Additional information
+          </h3>
+          <div
+            class="mb-3-5"
+          >
+            <p
+              class="mb-0"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae velit facilisis, ornare sem efficitur, euismod diam. Curabitur quis odio in nisl scelerisque rhoncus nec id nulla. Mauris ultrices a augue in finibus.
+            </p>
+            <ul>
+              <li>
+                Etiam sagittis dictum turpis, eu lacinia tellus pharetra ac
+              </li>
+              <li>
+                Sed auctor purus at tellus cursus dignissim. Sed sit amet ligula nisl
+              </li>
+            </ul>
+          </div>
+          <div
+            class="mb-4-5"
+          >
+            <div
+              class="mb-3 border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0"
+                      download="/example.html"
+                      href="#"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mb-3 border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0"
+                      download="/example.html"
+                      href="#"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <div
-    class="bg-lighter py-4 mt-md-4-5 mt-4 text-center"
-  >
-    Feedback module here
-  </div>
-  <div
-    class="bg-gray-200 py-4 text-center"
-  >
-    Share module here
-  </div>
   <footer
     class="bcl-footer bcl-footer--neutral"
   >
@@ -1021,7 +1045,7 @@ exports[`OE - News full page renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - News listing renders correctly 1`] = `
+exports[`OE - Person listing renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -1039,12 +1063,12 @@ exports[`OE - News listing renders correctly 1`] = `
           href=""
         >
           <img
-            alt="desktop project logo"
+            alt="desktop european union logo"
             class="d-none d-lg-block"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
           />
           <img
-            alt="mobile project logo"
+            alt="mobile european union logo"
             class="d-lg-none"
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
@@ -1052,40 +1076,6 @@ exports[`OE - News listing renders correctly 1`] = `
         <ul
           class="nav"
         >
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="d-none d-lg-block nav-link"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </li>
           <li
             class="nav-item"
           >
@@ -1132,51 +1122,13 @@ exports[`OE - News listing renders correctly 1`] = `
               </span>
             </a>
           </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="notification mt-2 mt-lg-0 nav-link"
-              href="#"
-            >
-              <svg
-                class="bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#bell-fill"
-                />
-              </svg>
-              <span
-                class="badge bg-danger"
-              >
-                5
-              </span>
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
     <!-- project name -->
-    <div
-      class="bcl-header__project"
-    >
-      <div
-        class="container"
-      >
-        <img
-          alt="project logo"
-          class="d-none d-lg-inline-block"
-          src="https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg"
-        />
-        <span
-          class="bcl-header__site-name"
-        >
-          Project name
-        </span>
-      </div>
-    </div>
     <!-- navbar -->
     <nav
+      aria-label="main-navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -1207,6 +1159,7 @@ exports[`OE - News listing renders correctly 1`] = `
             >
               <a
                 aria-current="page"
+                aria-label="homepage"
                 class="nav-link active"
                 href="/example"
               >
@@ -1329,6 +1282,7 @@ exports[`OE - News listing renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              aria-label="homepage"
               href="/example"
             >
               Home
@@ -1340,7 +1294,7 @@ exports[`OE - News listing renders correctly 1`] = `
             <a
               href="/example"
             >
-              European Commission
+              European Union
             </a>
           </li>
           <li
@@ -1356,7 +1310,7 @@ exports[`OE - News listing renders correctly 1`] = `
                   xlink:href="/icons.svg#arrow-left"
                 />
               </svg>
-              About the European Commission
+              About the European Union
             </a>
           </li>
           <li
@@ -1437,12 +1391,12 @@ exports[`OE - News listing renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-fullscreen"
+      class="modal-dialog modal-xl modal-fullscreen-md-down"
     >
       <div
         class="modal-content"
@@ -1451,269 +1405,249 @@ exports[`OE - News listing renders correctly 1`] = `
           class="modal-header"
         >
           <div
-            class="container"
+            class="d-flex align-items-center"
           >
-            <div
-              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+            <svg
+              class="bi icon--s"
             >
-              <div
-                class="py-3-5 px-3 px-sm-0 px-md-3"
-              >
-                <div
-                  class="d-flex justify-content-between align-items-center"
-                >
-                  <div
-                    class="d-flex align-items-center"
-                  >
-                    <svg
-                      class="bi icon--s"
-                    >
-                      <use
-                        xlink:href="/icons.svg#globe2"
-                      />
-                    </svg>
-                    <h5
-                      class="mb-0 ms-2"
-                    >
-                      Select your language
-                    </h5>
-                  </div>
-                  <button
-                    aria-label="Close"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  />
-                </div>
-              </div>
-            </div>
+              <use
+                xlink:href="/icons.svg#globe2"
+              />
+            </svg>
+            <h5
+              class="mb-0 ms-2"
+            >
+              Select your language
+            </h5>
           </div>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
         </div>
         <div
           class="modal-body"
         >
           <div
-            class="bcl-language-list bcl-language-list--eu"
+            class="bcl-language-list bcl-language-list--neutral"
           >
             <div
               class="main pt-4"
             >
               <div
-                class="container"
+                class="pb-2"
               >
                 <div
-                  class="pb-2"
+                  class="row"
                 >
                   <div
-                    class="row"
+                    class="col-12 col-md"
                   >
-                    <div
-                      class="col-12 col-md"
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="bg"
+                      lang="bg"
                     >
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="bg"
-                        lang="bg"
-                      >
-                        български
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="es"
-                        lang="es"
-                      >
-                        español
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="cs"
-                        lang="cs"
-                      >
-                        čeština
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="da"
-                        lang="da"
-                      >
-                        dansk
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="de"
-                        lang="de"
-                      >
-                        Deutsch
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="et"
-                        lang="et"
-                      >
-                        eesti
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="el"
-                        lang="el"
-                      >
-                        ελληνικά
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn selected justify-content-between"
-                        href="#"
-                        hreflang="en"
-                        lang="en"
-                      >
-                        English
-                        <svg
-                          class="ms-2-5 bi icon--s"
-                        >
-                          <use
-                            xlink:href="/icons.svg#check2"
-                          />
-                        </svg>
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="fr"
-                        lang="fr"
-                      >
-                        français
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="ga"
-                        lang="ga"
-                      >
-                        Gaeilge
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="hr"
-                        lang="hr"
-                      >
-                        hrvatski
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="it"
-                        lang="it"
-                      >
-                        italiano
-                      </a>
-                    </div>
-                    <div
-                      class="col-12 col-md"
+                      български
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="es"
+                      lang="es"
                     >
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="lv"
-                        lang="lv"
+                      español
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="cs"
+                      lang="cs"
+                    >
+                      čeština
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="da"
+                      lang="da"
+                    >
+                      dansk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="de"
+                      lang="de"
+                    >
+                      Deutsch
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="et"
+                      lang="et"
+                    >
+                      eesti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="el"
+                      lang="el"
+                    >
+                      ελληνικά
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      href="#"
+                      hreflang="en"
+                      lang="en"
+                    >
+                      English
+                      <svg
+                        class="ms-2-5 bi icon--s"
                       >
-                        latviešu
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="lt"
-                        lang="lt"
-                      >
-                        lietuvių
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="hu"
-                        lang="hu"
-                      >
-                        magyar
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="mt"
-                        lang="mt"
-                      >
-                        Malti
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="nl"
-                        lang="nl"
-                      >
-                        Nederlands
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="pl"
-                        lang="pl"
-                      >
-                        polski
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="pt"
-                        lang="pt"
-                      >
-                        português
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="ro"
-                        lang="ro"
-                      >
-                        română
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="sk"
-                        lang="sk"
-                      >
-                        slovenčina
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="sl"
-                        lang="sl"
-                      >
-                        slovenščina
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="fi"
-                        lang="fi"
-                      >
-                        suomi
-                      </a>
-                      <a
-                        class="w-100 mb-2-5 btn justify-content-start"
-                        href="#"
-                        hreflang="sv"
-                        lang="sv"
-                      >
-                        svenska
-                      </a>
-                    </div>
+                        <use
+                          xlink:href="/icons.svg#check2"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fr"
+                      lang="fr"
+                    >
+                      français
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ga"
+                      lang="ga"
+                    >
+                      Gaeilge
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hr"
+                      lang="hr"
+                    >
+                      hrvatski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="it"
+                      lang="it"
+                    >
+                      italiano
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lv"
+                      lang="lv"
+                    >
+                      latviešu
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="lt"
+                      lang="lt"
+                    >
+                      lietuvių
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="hu"
+                      lang="hu"
+                    >
+                      magyar
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="mt"
+                      lang="mt"
+                    >
+                      Malti
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="nl"
+                      lang="nl"
+                    >
+                      Nederlands
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pl"
+                      lang="pl"
+                    >
+                      polski
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="pt"
+                      lang="pt"
+                    >
+                      português
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ro"
+                      lang="ro"
+                    >
+                      română
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sk"
+                      lang="sk"
+                    >
+                      slovenčina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sl"
+                      lang="sl"
+                    >
+                      slovenščina
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="fi"
+                      lang="fi"
+                    >
+                      suomi
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="sv"
+                      lang="sv"
+                    >
+                      svenska
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1760,33 +1694,25 @@ exports[`OE - News listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
-                <label
-                  class="form-label"
-                  for="creation-date-from"
-                >
-                  Creation date (from)
-                </label>
-                <input
-                  class="mb-2 form-control"
-                  id="creation-date-from"
-                  type="date"
-                />
-                <label
-                  class="form-label"
-                  for="creation-date-to"
-                >
-                  Creation date (to)
-                </label>
-                <input
-                  class="mb-3 form-control"
-                  id="creation-date-to"
-                  type="date"
-                />
                 <div
-                  class="mt-4 d-grid gap-4 d-md-block"
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                  >
+                    Name
+                  </label>
+                  <input
+                    class="form-control"
+                    placeholder="Placeholder"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="mt-4"
                 >
                   <button
-                    class="me-md-3 btn btn-primary btn-md"
+                    class="me-2 btn btn-primary btn-md"
                     type="submit"
                   >
                     Refine
@@ -1833,67 +1759,12 @@ exports[`OE - News listing renders correctly 1`] = `
                 <span
                   class="text-capitalize"
                 >
-                  News
+                  People
                 </span>
                 
         (6)
       
               </h4>
-            </div>
-            <div
-              class="col-md-12 order-md-2 mt-3"
-            >
-              <span
-                class="mb-2 me-2 badge bg-light text-dark"
-              >
-                News
-                <span
-                  aria-hidden="true"
-                  class="icon--close"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="mb-2 me-2 badge bg-light text-dark"
-              >
-                Item 01
-                <span
-                  aria-hidden="true"
-                  class="icon--close"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="mb-2 me-2 badge bg-light text-dark"
-              >
-                Item 02
-                <span
-                  aria-hidden="true"
-                  class="icon--close"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
-                </span>
-              </span>
             </div>
             <div
               class="col-md-6 col-lg-4 mt-3 mt-md-0"
@@ -1907,7 +1778,7 @@ exports[`OE - News listing renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
-                  aria-label="sort-by-select"
+                  aria-label="sort-select"
                   class="ms-md-2 form-select"
                 >
                   <option
@@ -1934,7 +1805,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     selected=""
                     value=""
                   >
-                    publication date
+                    A-Z
                   </option>
                 </select>
               </div>
@@ -1963,7 +1834,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 mb-3"
                         src="https://picsum.photos/160?random=1"
                       />
                     </div>
@@ -1980,33 +1851,19 @@ exports[`OE - News listing renders correctly 1`] = `
                             class="standalone"
                             href="/example.html"
                           >
-                            News title
+                            Stefan Mayer
                           </a>
                         </h5>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
                         <span
-                          class="text-muted text-nowrap"
+                          class="text-muted me-4-5"
                         >
-                          17 October 2019
+                          Organisation
                         </span>
-                        <div
-                          class="mt-2-5"
+                        <span
+                          class="text-muted me-2"
                         >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 1
-                          </span>
-                          <span
-                            class="mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 2
-                          </span>
-                        </div>
+                          Position
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2026,7 +1883,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 mb-3"
                         src="https://picsum.photos/160?random=2"
                       />
                     </div>
@@ -2043,28 +1900,19 @@ exports[`OE - News listing renders correctly 1`] = `
                             class="standalone"
                             href="/example.html"
                           >
-                            News title
+                            Adjur Tichar
                           </a>
                         </h5>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
                         <span
-                          class="text-muted text-nowrap"
+                          class="text-muted me-4-5"
                         >
-                          17 October 2019
+                          Organisation
                         </span>
-                        <div
-                          class="mt-2-5"
+                        <span
+                          class="text-muted me-2"
                         >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 1
-                          </span>
-                        </div>
+                          Position
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2084,7 +1932,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 mb-3"
                         src="https://picsum.photos/160?random=3"
                       />
                     </div>
@@ -2101,38 +1949,19 @@ exports[`OE - News listing renders correctly 1`] = `
                             class="standalone"
                             href="/example.html"
                           >
-                            News title
+                            Szép Mara
                           </a>
                         </h5>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
                         <span
-                          class="text-muted text-nowrap"
+                          class="text-muted me-4-5"
                         >
-                          17 October 2019
+                          Organisation
                         </span>
-                        <div
-                          class="mt-2-5"
+                        <span
+                          class="text-muted me-2"
                         >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 1
-                          </span>
-                          <span
-                            class="mb-2 me-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 2
-                          </span>
-                          <span
-                            class="mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 3
-                          </span>
-                        </div>
+                          Position
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2152,7 +1981,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 mb-3"
                         src="https://picsum.photos/160?random=4"
                       />
                     </div>
@@ -2169,28 +1998,19 @@ exports[`OE - News listing renders correctly 1`] = `
                             class="standalone"
                             href="/example.html"
                           >
-                            News title
+                            Daniel Cardoso Rocha
                           </a>
                         </h5>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
                         <span
-                          class="text-muted text-nowrap"
+                          class="text-muted me-4-5"
                         >
-                          17 October 2019
+                          Organisation
                         </span>
-                        <div
-                          class="mt-2-5"
+                        <span
+                          class="text-muted me-2"
                         >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 1
-                          </span>
-                        </div>
+                          Position
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2210,7 +2030,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 mb-3"
                         src="https://picsum.photos/160?random=5"
                       />
                     </div>
@@ -2227,33 +2047,19 @@ exports[`OE - News listing renders correctly 1`] = `
                             class="standalone"
                             href="/example.html"
                           >
-                            News title
+                            Aurelia Panicucci
                           </a>
                         </h5>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
                         <span
-                          class="text-muted text-nowrap"
+                          class="text-muted me-4-5"
                         >
-                          17 October 2019
+                          Organisation
                         </span>
-                        <div
-                          class="mt-2-5"
+                        <span
+                          class="text-muted me-2"
                         >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 1
-                          </span>
-                          <span
-                            class="mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 2
-                          </span>
-                        </div>
+                          Position
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2273,7 +2079,7 @@ exports[`OE - News listing renders correctly 1`] = `
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 mb-3"
                         src="https://picsum.photos/160?random=6"
                       />
                     </div>
@@ -2290,28 +2096,19 @@ exports[`OE - News listing renders correctly 1`] = `
                             class="standalone"
                             href="/example.html"
                           >
-                            News title
+                            Felicyta Kowalska
                           </a>
                         </h5>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
                         <span
-                          class="text-muted text-nowrap"
+                          class="text-muted me-4-5"
                         >
-                          17 October 2019
+                          Organisation
                         </span>
-                        <div
-                          class="mt-2-5"
+                        <span
+                          class="text-muted me-2"
                         >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Category 1
-                          </span>
-                        </div>
+                          Position
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -2323,7 +2120,7 @@ exports[`OE - News listing renders correctly 1`] = `
             class="d-none d-md-block mt-4-5"
           />
           <nav
-            class="mt-4"
+            class="mt-4-5 mb-5"
           >
             <ul
               class="pagination justify-content-center"
@@ -2339,22 +2136,20 @@ exports[`OE - News listing renders correctly 1`] = `
                 </a>
               </li>
               <li
-                class="page-item disabled"
+                class="page-item active"
               >
                 <a
-                  aria-disabled="true"
+                  aria-current="page"
                   class="page-link"
                   href="#"
-                  tabindex="-1"
                 >
                   1
                 </a>
               </li>
               <li
-                class="page-item active"
+                class="page-item"
               >
                 <a
-                  aria-current="page"
                   class="page-link"
                   href="#"
                 >
@@ -2369,6 +2164,26 @@ exports[`OE - News listing renders correctly 1`] = `
                   href="#"
                 >
                   3
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  4
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  5
                 </a>
               </li>
               <li

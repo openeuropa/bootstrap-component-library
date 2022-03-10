@@ -2770,9 +2770,11 @@ exports[`OE - Project listing renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-md-6 col-lg-8"
+              class="col-md-6 col-lg-8 align-self-center"
             >
-              <h4>
+              <h4
+                class="mb-0"
+              >
                 <span
                   class="text-capitalize"
                 >
@@ -2784,7 +2786,7 @@ exports[`OE - Project listing renders correctly 1`] = `
               </h4>
             </div>
             <div
-              class="col-md-12 order-md-2 mt-3 mt-md-1"
+              class="col-md-12 order-md-2 mt-3"
             >
               <span
                 class="mb-2 me-2 badge bg-light text-dark"
@@ -2845,13 +2847,13 @@ exports[`OE - Project listing renders correctly 1`] = `
                 class="float-md-end d-md-flex align-items-center mb-4 mb-md-0"
               >
                 <label
-                  class="form-label"
+                  class="form-label mb-0"
                 >
                   Sort by
                 </label>
                 <select
                   aria-label="sort-by-select"
-                  class="ms-md-2 mb-2 form-select"
+                  class="ms-md-2 form-select"
                 >
                   <option
                     value="1"
@@ -2884,7 +2886,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             </div>
           </div>
           <hr
-            class="d-none d-md-block mb-4"
+            class="d-none d-md-block mb-4-75"
           />
           <div
             class="bcl-listing bcl-listing--default-1-col"

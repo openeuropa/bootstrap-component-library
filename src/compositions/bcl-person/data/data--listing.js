@@ -25,14 +25,6 @@ module.exports = {
             placeholder: "Placeholder",
           },
         ],
-        [
-          {
-            classes: "mb-3",
-            label: "Organisation",
-            input_type: "text",
-            placeholder: "Placeholder",
-          },
-        ],
       ],
       submit: {
         multiple: true,
@@ -56,7 +48,6 @@ module.exports = {
   listing: {
     variant: "default-1-col",
     remove_horizontal_spacer: true,
-    alignment: "center",
     items: [
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
@@ -144,7 +135,7 @@ module.exports = {
     ],
   },
   pagination: {
-    attributes: new drupalAttribute().addClass(["mt-4-5"]),
+    attributes: new drupalAttribute().addClass(["mt-4-5", "mb-5"]),
     alignment: "center",
     prev: {
       label: "Previous",
@@ -195,22 +186,6 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
   },
-  badges: [
-    {
-      label: "Name",
-      background: "light",
-      dismissible: true,
-      icon_path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2"]),
-    },
-    {
-      label: "Organisation",
-      background: "light",
-      dismissible: true,
-      icon_path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2"]),
-    },
-  ],
   sort_select: {
     label: "Sort&nbsp;by",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),

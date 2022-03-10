@@ -5,9 +5,16 @@
     visibility: visible !important; // stylelint-disable-line declaration-no-important
     border: none;
     transform: none;
+    box-shadow: none;
 
     .offcanvas-body {
       overflow: visible;
+    }
+
+    .offcanvas-title {
+      height: 38px;
+      display: flex;
+      align-items: center;
     }
   }
 

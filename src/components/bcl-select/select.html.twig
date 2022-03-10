@@ -4,6 +4,7 @@
   Parameters:
   - "id" (string) (default: '')
   - "label" (string) (default: '')
+  - "label_extra_classes" (string) (default: '')
   - "hidden_label" (boolean) (default: false)
   - "helper_text" (string) (default: '')
   - "helper_text_id" (string) (default: '')
@@ -16,6 +17,7 @@
   - "multiple" (boolean) (default: false)
   - "options": (array of objects with value and label keys) (default: [])
   - "aria_label": (string) (default: '')
+  - "clean_class": (boolean) (default: false) - removes 'form-select' class
 #}
 
 {% set _classes = ['form-select'] %}
@@ -32,10 +34,11 @@
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
 {% set _label = label|default('') %}
-{% set _extra_classes = extra_classes|default('') %}
+{% set _label_extra_classes = label_extra_classes|default('') %}
 {% set _clean_class = clean_class|default(false) %}
-{% set _label_class = 'form-label' %}
 {% set _hidden_label = hidden_label|default(false) %}
+
+{% set _label_class = 'form-label' %}
 
 {% if _clean_class %}
   {% set _classes = [] %}
@@ -51,6 +54,10 @@
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _label_extra_classes is not empty %}
+  {% set _label_class = _label_class ~ ' ' ~ _label_extra_classes %}
 {% endif %}
 
 {% if _aria_label is not empty %}
@@ -78,7 +85,7 @@
 {% endif %}
 
 {% if _classes is not empty %}
-{% set attributes = attributes.addClass(_classes) %}
+  {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
 
 {% if _label is not empty %}

@@ -404,6 +404,7 @@ module.exports = {
     label: "Sort&nbsp;by",
     attributes: new drupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),
     aria_label: "sort-by-select",
+    label_extra_classes: "mb-0",
     options: [
       { value: 1, label: "a select option" },
       { value: 2, label: "another select option" },
