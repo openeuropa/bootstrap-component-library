@@ -47,7 +47,7 @@
     "publish": "scripts/publish.sh",
     "start": "run-p \"build:theme:{1}\" \"build:storybook:{1}\" \"watch {1}\" \"storybook:{1}\" --",
     "size": "size-limit",
-    "storybook:dev": "start-storybook -p 5000 --ci",
+    "storybook:dev": "STORYBOOK_ENV=chromatic start-storybook -p 5000 --ci",
     "storybook:default": "start-storybook -p 5001 -c src/themes/default/storybook/.storybook --ci",
     "storybook:joinup": "start-storybook -p 5002 -c src/themes/joinup/storybook/.storybook --ci",
     "storybook:ucpkn": "start-storybook -p 5003 -c src/themes/ucpkn/storybook/.storybook --ci",

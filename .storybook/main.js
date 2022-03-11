@@ -10,6 +10,7 @@ const addons = [
   "@storybook/addon-a11y",
   "@whitespace/storybook-addon-html",
   "@geometricpanda/storybook-addon-badges",
+  "@storybook/addon-interactions",
 ];
 
 const webpackFinal = (config) => {

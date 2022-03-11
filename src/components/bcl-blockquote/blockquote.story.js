@@ -64,7 +64,7 @@ const applyArgs = (data, args) => {
 };
 
 export default {
-  title: "Components/Blockquote",
+  title: "Paragraphs/Blockquote",
   decorators: [withDesign],
   parameters: {
     design: [

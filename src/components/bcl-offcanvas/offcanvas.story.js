@@ -5,6 +5,8 @@ import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "@openeuropa/bcl-offcanvas/offcanvas.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 const getArgs = (data) => {
   return {
     body: data.body,
@@ -135,7 +137,7 @@ export const Default = (args) => offCanvas(applyArgs(demoData, args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.decorators = [offCanvasTrigger];
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Default.play = async () => {
     const offCanvasButton = screen.getByRole("button");
     await userEvent.click(offCanvasButton);

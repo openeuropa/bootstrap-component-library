@@ -5,6 +5,8 @@ import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
 import drupalAttribute from "drupal-attribute";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 const getArgs = (data) => {
   return {
     direction: "default",
@@ -85,7 +87,7 @@ export const Default = (args) => dropdown(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Default.play = async () => {
     const button = screen.getByRole("button");
     await userEvent.click(button);
