@@ -13,6 +13,8 @@ import {
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 const withCollapse = (story) => {
   const demo = story();
   const target = toggleDemoData.path.substring(1);
@@ -179,7 +181,7 @@ Collapse.parameters = {
     url: "https://getbootstrap.com/docs/5.1/components/collapse/",
   },
 };
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Collapse.play = async () => {
     const button = screen.getByRole("button");
     await userEvent.click(button);
@@ -198,7 +200,7 @@ Tooltip.parameters = {
     url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Tooltip.play = async () => {
     const button = screen.getByRole("button");
     await userEvent.hover(button);

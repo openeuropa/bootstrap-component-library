@@ -8,6 +8,8 @@ import demoHorizontal from "@openeuropa/bcl-data-form/data-horizontal.js";
 import demoInline from "@openeuropa/bcl-data-form/data-inline.js";
 import form from "@openeuropa/bcl-form/form.html.twig";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 export default {
   title: "Components/Forms/Form",
   decorators: [withDesign],
@@ -43,7 +45,7 @@ const clientValidation = (story) => {
 export const Basic = () => form(demoData);
 Basic.storyName = "Basic (with bootstrap validation)";
 Basic.decorators = [clientValidation];
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Basic.play = async () => {
     const emailInput = screen.getByLabelText("Email address *", {
       selector: "input",

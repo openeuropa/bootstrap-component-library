@@ -13,6 +13,8 @@ import blockData from "@openeuropa/bcl-subscription-block/data/data.js";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
 import drupalAttribute from "drupal-attribute";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 if (isChromatic()) {
   banner.image.classes = banner.image.classes
     ? `${banner.image.classes} chromatic-ignore`
@@ -137,7 +139,7 @@ export default {
 export const Default = () => subscriptionPage(correctPaths(demoData));
 Default.decorators = [clientValidation];
 
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Default.play = async () => {
     const button = screen.getAllByText("Subscribe", {
       selector: "button",

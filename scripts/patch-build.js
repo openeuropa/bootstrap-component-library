@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
 const { spawn } = require("child_process");
 const theme = process.argv.slice(2)[0] || "default";

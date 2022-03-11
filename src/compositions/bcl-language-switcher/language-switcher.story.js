@@ -1,5 +1,6 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
+import { screen, userEvent } from "@storybook/testing-library";
 import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-language-switcher/data/data.js";
 import languageSwitcher from "@openeuropa/bcl-language-switcher/language-switcher.html.twig";
@@ -24,7 +25,7 @@ export default {
 export const Default = () => languageSwitcher(correctPaths(demoData));
 if (isChromatic()) {
   Default.play = async () => {
-    const button = screen.getByRole("button");
+    const button = screen.getByText("Choose another language");
     await userEvent.click(button);
   };
 }
