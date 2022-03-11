@@ -32,7 +32,7 @@ const initGallery = (story) => {
 
       function carouselLazyLoad(slide) {
         const media = slide.querySelector('[data-src]');
-        if(!media.src) {
+        if (media && !media.src) {
           media.src = media.dataset.src;
         }
       }

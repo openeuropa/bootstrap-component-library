@@ -44,6 +44,14 @@
     border-radius: 5px;
   }
 
+  .carousel-control-next,
+  .carousel-control-prev {
+    // avoid overlapping medias and make play button of the video accessible
+    top: 50%;
+    height: 20%;
+    transform: translateY(-50%);
+  }
+
   iframe,
   video {
     width: 100%;

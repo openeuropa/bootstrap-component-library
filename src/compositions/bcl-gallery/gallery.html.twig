@@ -31,7 +31,7 @@ Parameters:
 {% set _carousel_id = carousel.id|default('carousel-' ~ random(1000)) %}
 {% set _modal_id = "modal" ~ _carousel_id|capitalize %}
 {% set _collpase_id = "collapse" ~ _carousel_id|capitalize %}
-{% set _pager_id = "pager" ~ _carousel_id|capitalize %}
+{% set _active_item = carousel.active_item|default(1) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -67,8 +67,8 @@ Parameters:
 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           
-          <div id="{{ _pager_id }}" class="carousel-pager">
-            <span>1</span>&nbsp;/ {{ _carousel.items|length }}
+          <div class="carousel-pager">
+            <span>{{ _active_item }}</span> / {{ _carousel.items|length }}
           </div>
 
           {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with _carousel only %}
