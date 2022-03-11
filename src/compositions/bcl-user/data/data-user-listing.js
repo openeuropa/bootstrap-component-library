@@ -25,6 +25,14 @@ module.exports = {
             placeholder: "Placeholder",
           },
         ],
+        [
+          {
+            classes: "mb-3",
+            label: "Organisation",
+            input_type: "text",
+            placeholder: "Placeholder",
+          },
+        ],
       ],
       submit: {
         multiple: true,
@@ -45,4 +53,20 @@ module.exports = {
       },
     },
   },
+  badges: [
+    {
+      label: "Name",
+      background: "light",
+      dismissible: true,
+      icon_path: "/icons.svg",
+      attributes: new drupalAttribute().addClass(["me-2"]),
+    },
+    {
+      label: "Organisation",
+      background: "light",
+      dismissible: true,
+      icon_path: "/icons.svg",
+      attributes: new drupalAttribute().addClass(["me-2"]),
+    },
+  ],
 };

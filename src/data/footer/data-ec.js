@@ -43,7 +43,6 @@ module.exports = {
                     path: "/icons.svg",
                     name: "facebook",
                     size: "xs",
-                    attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
                 {
@@ -53,7 +52,6 @@ module.exports = {
                     path: "/icons.svg",
                     name: "twitter",
                     size: "xs",
-                    attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
                 {
@@ -63,7 +61,6 @@ module.exports = {
                     name: "linkedin",
                     path: "/icons.svg",
                     size: "xs",
-                    attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
               ],

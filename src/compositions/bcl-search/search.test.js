@@ -1,7 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data--no-form";
 import footer from "@openeuropa/bcl-data-footer/data";
-import demoData from "@openeuropa/bcl-search/dataSearch";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+
+import demoData from "@openeuropa/bcl-search/data/dataSearch";
 
 const template = "@oe-bcl/bcl-search/search.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -15,6 +17,7 @@ const dataListing = {
   with_header: true,
   with_footer: true,
   with_sidebar: true,
+  ...dataListingTemplate,
   ...demoData,
 };
 

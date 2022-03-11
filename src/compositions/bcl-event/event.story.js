@@ -7,13 +7,15 @@ import {
 import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
+import footer from "@openeuropa/bcl-data-footer/data";
+import file from "@openeuropa/bcl-file/data.js";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import drupalAttribute from "drupal-attribute";
+
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
 import dataPage from "@openeuropa/bcl-event/data/data-page.js";
-import footer from "@openeuropa/bcl-data-footer/data";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import event from "@openeuropa/bcl-event/event.html.twig";
-import file from "@openeuropa/bcl-file/data.js";
-import drupalAttribute from "drupal-attribute";
 
 delete file.translation;
 file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
@@ -54,6 +56,7 @@ const demoData1 = {
 
 const demoListing = {
   ...baseData,
+  ...dataListingTemplate,
   ...dataListing,
   listing: {
     ...listing,

@@ -1,14 +1,15 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import header from "@openeuropa/bcl-data-header/data--simple";
-import dataListing from "@openeuropa/bcl-project/data/data_listing";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
-import dataContent from "@openeuropa/bcl-project/data/data";
-import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
 import footer from "@openeuropa/bcl-data-footer/data";
 
+import dataListing from "@openeuropa/bcl-project/data/data_listing";
+import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
+import dataContent from "@openeuropa/bcl-project/data/data";
 import dataContentUCPKN from "@openeuropa/bcl-project/data/ucpkn/data";
 import dataStatusUCPKN from "@openeuropa/bcl-project/data/ucpkn/data_status";
 import dataExtraDetailsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data_extra_details";
@@ -52,6 +53,7 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  ...dataListingTemplate,
 };
 
 const ongoingDemoUCPKN = {

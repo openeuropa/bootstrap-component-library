@@ -5,7 +5,7 @@ module.exports = {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
     extra_classes_close: "d-lg-none",
-    extra_classes_header: "p-lg-0",
+    extra_classes_header: "pb-2-5 p-lg-0",
     with_body_scroll: true,
     title: {
       label: "Filter options",
@@ -19,22 +19,46 @@ module.exports = {
       items: [
         [
           {
+            type: "fieldset",
+            classes: "col-sm-10",
+            legend: "Search by name",
+            fieldset_classes: "mb-3",
+            legend_classes: "col-form-label",
+          },
+          {
             classes: "mb-3",
-            label: "Name",
             input_type: "text",
-            placeholder: "Placeholder",
+            placeholder: "Name",
+          },
+        ],
+        [
+          {
+            type: "fieldset",
+            classes: "col-sm-10",
+            legend: "Search by email",
+            fieldset_classes: "mb-3",
+            legend_classes: "col-form-label",
+          },
+          {
+            classes: "mb-3",
+            input_type: "text",
+            placeholder: "Email",
           },
         ],
       ],
       submit: {
         multiple: true,
-        wrapper: "mt-4",
+        wrapper: "mt-4 d-grid d-md-block",
         items: [
           {
             label: "Refine",
             type: "submit",
             variant: "primary",
-            attributes: new drupalAttribute().addClass("me-2"),
+            attributes: new drupalAttribute().addClass([
+              "me-md-3",
+              "mb-3-5",
+              "mb-md-0",
+            ]),
           },
           {
             label: "Clear",

@@ -1,9 +1,12 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import header from "@openeuropa/bcl-data-header/data--simple";
+import footer from "@openeuropa/bcl-data-footer/data";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import dataProfiles from "@openeuropa/bcl-data-templates/listing/data--profiles";
+
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
 import dataDetails from "@openeuropa/bcl-person/data/data--details";
-import footer from "@openeuropa/bcl-data-footer/data";
 
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const detailsTemplate = "@oe-bcl/bcl-person/person.html.twig";
@@ -25,7 +28,9 @@ const demoDetails = {
 
 const demoListing = {
   ...baseData,
+  ...dataListingTemplate,
   ...dataListing,
+  listing: dataProfiles,
 };
 
 const renderListing = (params) =>

@@ -7,15 +7,17 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import header from "@openeuropa/bcl-data-header/data--simple";
-import dataListing from "@openeuropa/bcl-project/data/data_listing";
+import footer from "@openeuropa/bcl-data-footer/data";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+
+import dataListing from "@openeuropa/bcl-project/data/data_listing";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
-import footer from "@openeuropa/bcl-data-footer/data";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
@@ -68,6 +70,7 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  ...dataListingTemplate,
 };
 
 export default {

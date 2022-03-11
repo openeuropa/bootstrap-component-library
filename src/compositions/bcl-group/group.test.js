@@ -1,11 +1,14 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
-import demoData from "@openeuropa/bcl-group/data";
-import demoDataList from "@openeuropa/bcl-group/dataList";
-import demoDataListContent from "@openeuropa/bcl-group/dataListContent";
-import demoDataListMember from "@openeuropa/bcl-group/dataListMember";
-import demoDataLanding from "@openeuropa/bcl-group/dataLanding";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import dataProfiles from "@openeuropa/bcl-data-templates/listing/data--profiles";
+
+import demoData from "@openeuropa/bcl-group/data/data";
+import demoDataList from "@openeuropa/bcl-group/data/dataList";
+import demoDataListContent from "@openeuropa/bcl-group/data/dataListContent";
+import demoDataListMember from "@openeuropa/bcl-group/data/dataListMember";
+import demoDataLanding from "@openeuropa/bcl-group/data/dataLanding";
 
 let baseData = {
   content_type: "group",
@@ -16,6 +19,7 @@ let baseData = {
   with_footer: true,
   with_sidebar: true,
   ...demoData,
+  ...dataListingTemplate,
 };
 
 const dataListingContent = {
@@ -28,6 +32,7 @@ const dataListingMember = {
   page_title: "Group members",
   ...baseData,
   ...demoDataListMember,
+  listing: dataProfiles,
 };
 
 delete baseData.banner;

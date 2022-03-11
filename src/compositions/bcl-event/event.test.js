@@ -1,11 +1,13 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import header from "@openeuropa/bcl-data-header/data";
+import footer from "@openeuropa/bcl-data-footer/data";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import drupalAttribute from "drupal-attribute";
+
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
 import dataPage from "@openeuropa/bcl-event/data/data-page.js";
-import header from "@openeuropa/bcl-data-header/data";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
-import footer from "@openeuropa/bcl-data-footer/data";
 import file from "@openeuropa/bcl-file/data.js";
-import drupalAttribute from "drupal-attribute";
 
 delete file.translation;
 file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
@@ -32,6 +34,7 @@ const demoData = {
 
 const demoListing = {
   ...demoData,
+  ...dataListingTemplate,
   ...dataListing,
   listing: {
     ...listing,

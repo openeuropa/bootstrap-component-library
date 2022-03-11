@@ -1,16 +1,19 @@
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
-import demoDataListing from "@openeuropa/bcl-user/data-user-listing.js";
-import demoDataEdit from "@openeuropa/bcl-user/data-user-edit.js";
-import demoDataView from "@openeuropa/bcl-user/data-user-view.js";
-import demoDataViewCompact from "@openeuropa/bcl-user/data-user-view-compact";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import dataProfiles from "@openeuropa/bcl-data-templates/listing/data--profiles";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import drupalAttribute from "drupal-attribute";
+
+import demoDataListing from "@openeuropa/bcl-user/data/data-user-listing.js";
+import demoDataEdit from "@openeuropa/bcl-user/data/data-user-edit.js";
+import demoDataView from "@openeuropa/bcl-user/data/data-user-view.js";
+import demoDataViewCompact from "@openeuropa/bcl-user/data/data-user-view-compact";
 import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 if (isChromatic()) {
   demoDataViewCompact.picture.classes = "chromatic-ignore";
@@ -39,8 +42,10 @@ const dataListing = {
   page_title: "users",
   with_banner: true,
   with_sidebar: true,
+  ...dataListingTemplate,
   ...demoDataListing,
   ...data,
+  listing: dataProfiles,
 };
 
 const dataEdit = {

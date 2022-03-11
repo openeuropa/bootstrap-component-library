@@ -70,6 +70,7 @@ module.exports = [
   "plus-circle-fill.svg",
   "dash-circle.svg",
   "dash-circle-fill.svg",
+  "filter.svg",
 
   //Files and folders
   "file-earmark-pdf.svg",

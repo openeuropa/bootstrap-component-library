@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   variant: "eu",
   rows: [
@@ -47,7 +45,6 @@ module.exports = {
                     name: "facebook",
                     size: "xs",
                     path: "/icons.svg",
-                    attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
                 {
@@ -57,7 +54,6 @@ module.exports = {
                     name: "twitter",
                     size: "xs",
                     path: "/icons.svg",
-                    attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
                 {
@@ -67,7 +63,6 @@ module.exports = {
                     path: "/icons.svg",
                     name: "linkedin",
                     size: "xs",
-                    attributes: new drupalAttribute().addClass(["me-2"]),
                   },
                 },
               ],

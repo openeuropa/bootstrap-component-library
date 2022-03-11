@@ -1,10 +1,13 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data";
 import footer from "@openeuropa/bcl-data-footer/data";
-import demoDataListing from "@openeuropa/bcl-user/data-user-listing.js";
-import demoDataEdit from "@openeuropa/bcl-user/data-user-edit.js";
-import demoDataView from "@openeuropa/bcl-user/data-user-view.js";
-import demoDataViewCompact from "@openeuropa/bcl-user/data-user-view-compact";
+import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import dataProfiles from "@openeuropa/bcl-data-templates/listing/data--profiles";
+
+import demoDataListing from "@openeuropa/bcl-user/data/data-user-listing.js";
+import demoDataEdit from "@openeuropa/bcl-user/data/data-user-edit.js";
+import demoDataView from "@openeuropa/bcl-user/data/data-user-view.js";
+import demoDataViewCompact from "@openeuropa/bcl-user/data/data-user-view-compact";
 
 const templateList = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const renderList = (params) => renderTwigFileAsNode(templateList, params);
@@ -31,8 +34,10 @@ const dataListing = {
   page_title: "users",
   with_banner: true,
   with_sidebar: true,
+  ...dataListingTemplate,
   ...demoDataListing,
   ...data,
+  listing: dataProfiles,
 };
 
 const dataEdit = {
