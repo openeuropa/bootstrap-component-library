@@ -17,10 +17,15 @@ SHA1=$3
 # ($COMMIT_SOURCE is empty). Otherwise, keep the default message
 # proposed by Git. Possible commit source: message, template,
 # merge, squash or commit. See https://git-scm.com/docs/githooks
-if [[ "$COMMIT_SOURCE" == "message" && $(cat "$COMMIT_MSG_FILE") != *"[chromatic]"* ]]
+
+BRANCH=$(cat .git/HEAD  | cut -d '_' -f2)
+if [[ "$BRANCH" == *"#"*"#"* ]]
 then
-	msg=$(cat "$COMMIT_MSG_FILE") 
-	echo "$msg" > "$COMMIT_MSG_FILE"
-	echo "[skip-actions]" >> "$COMMIT_MSG_FILE"
-	echo "prepare-commit-msg has added [skip-actions] to your commit message" 
+	if [[ "$COMMIT_SOURCE" == "message" && $(cat "$COMMIT_MSG_FILE") != *"[chromatic]"* ]]
+	then
+		msg=$(cat "$COMMIT_MSG_FILE")
+		echo "$msg" > "$COMMIT_MSG_FILE"
+		echo "[skip-actions]" >> "$COMMIT_MSG_FILE"
+		echo "prepare-commit-msg has added [skip-actions] to your commit message"
+	fi
 fi
