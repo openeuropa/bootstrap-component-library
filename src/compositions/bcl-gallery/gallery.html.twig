@@ -1,0 +1,82 @@
+{% spaceless %}
+
+{#
+Parameters:
+  - "carousel": (object) (default: {})
+    - id (string) (default: '')
+    - autoplay (boolean) (default: true)
+    - autoinit (boolean) (default: true)
+    - dark (boolean) (default: false)
+    - active_item (integer) (default: 1)
+    - items (array of objects) format: [
+      {
+        thumbnails (string) img path
+        image: (string) <img> tag
+        caption (string)
+        caption_classes (string)
+        interval (integer) (default: 0)
+      }
+      ...
+    ],
+    - fade (boolean) (default: false)
+    - with_controls (boolean) (default: true)
+    - previous_label (string) (default: '')
+    - next_label (string) (default: '')
+    - with_indicators (boolean) (default: false)
+    - rounded_indicators (boolean) (default: false)
+
+{# Internal properties #}
+
+{% set _carousel = carousel|default({}) %}
+{% set _carousel_id = carousel.id|default('carousel-' ~ random(1000)) %}
+{% set _modal_id = "modal" ~ _carousel_id|capitalize %}
+{% set _collpase_id = "collapse" ~ _carousel_id|capitalize %}
+{% set _pager_id = "pager" ~ _carousel_id|capitalize %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass('bcl-gallery') %}
+
+{# Print the result #}
+
+{% if _carousel is not empty%}
+
+  <div {{ attributes }}>
+    {% if _carousel.items is iterable %}
+      {% for _item in _carousel.items %}
+        {% if loop.index == 6 %}
+          <p><a class="btn btn-primary ms-2" data-bs-toggle="collapse" href="#{{ _collpase_id }}" role="button" aria-expanded="false" aria-controls="{{ _collpase_id }}">View all</a></p>
+          <div class="collapse" id="{{ _collpase_id }}">
+        {% endif %}
+
+        <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="d-inline-block m-2">
+          <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+        </a>
+
+        {% if loop.index > 6 and loop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+          <div id="{{ _pager_id }}" class="carousel-pager">
+            <span>1</span>&nbsp;/ {{ _carousel.items|length }}
+          </div>
+
+          {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with _carousel only %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endif %}
+
+{% endspaceless %}

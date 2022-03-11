@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
 const { spawn } = require("child_process");
 const browsersync = require("browser-sync");
