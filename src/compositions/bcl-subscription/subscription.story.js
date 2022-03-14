@@ -13,6 +13,7 @@ import drupalAttribute from "drupal-attribute";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
 import subscriptionPageData from "@openeuropa/bcl-subscription/data/data";
 import modalData from "@openeuropa/bcl-subscription/data/data--modal";
+const chromatic = process.env.STORYBOOK_ENV;
 
 if (isChromatic()) {
   banner.image.classes = banner.image.classes
