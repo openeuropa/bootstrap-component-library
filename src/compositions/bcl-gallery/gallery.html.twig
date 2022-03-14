@@ -100,7 +100,7 @@ Parameters:
           </div>
           <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
             <a 
-              class="bcl-gallery__collapse standalone" 
+              class="bcl-gallery__collapse standalone d-none d-sm-inline-block" 
               aria-controls="{{ _collpase_id }}" 
               data-bs-toggle="collapse" 
               aria-expanded="false" 
@@ -115,6 +115,23 @@ Parameters:
                 path: _icon_path,
                 attributes: create_attribute().addClass('ms-2-5'),
               } only %}
+            </a>
+            <a 
+              class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none" 
+              data-bs-target="#{{ _carousel_id }}" 
+              data-bs-slide-to="5" 
+              role="button" 
+              href="#"
+            >
+              <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+                <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _carousel.items|length}) }}</span>
+                {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+                  name: 'caret-down-fill',
+                  size: '2xs',
+                  path: _icon_path,
+                  attributes: create_attribute().addClass('ms-2-5'),
+                } only %}
+              <span>
             </a>
           </div>
         {% endif %}

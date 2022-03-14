@@ -13,6 +13,7 @@ const initGallery = (story) => {
         const carousel = gallery.querySelector('.carousel');
         const carouselPager = gallery.querySelector('.carousel-pager span');
         const carouselActiveItem = gallery.querySelector('.carousel-item.active');
+        const collapseBtn = gallery.querySelector('.bcl-gallery__collapse');
         const modal = gallery.querySelector('.modal');
 
         carousel.addEventListener('slide.bs.carousel', function (e) {

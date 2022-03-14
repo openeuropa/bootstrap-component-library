@@ -186,7 +186,7 @@ exports[`OE - Gallery default renders correctly 1`] = `
       <a
         aria-controls="collapseCarouselExample"
         aria-expanded="false"
-        class="bcl-gallery__collapse standalone"
+        class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
         data-bs-toggle="collapse"
         href="#collapseCarouselExample"
         role="button"
@@ -208,6 +208,32 @@ exports[`OE - Gallery default renders correctly 1`] = `
             xlink:href="/icons.svg#caret-down-fill"
           />
         </svg>
+      </a>
+      <a
+        class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
+        data-bs-slide-to="5"
+        data-bs-target="#carouselExample"
+        href="#"
+        role="button"
+      >
+        <span
+          data-bs-target="#modalCarouselExample"
+          data-bs-toggle="modal"
+        >
+          <span
+            class="label-collapsed"
+          >
+            view the full gallery (10)
+          </span>
+          <svg
+            class="ms-2-5 bi icon--2xs"
+          >
+            <use
+              xlink:href="/icons.svg#caret-down-fill"
+            />
+          </svg>
+          <span />
+        </span>
       </a>
     </div>
     <div
