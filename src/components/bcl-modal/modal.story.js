@@ -4,6 +4,8 @@ import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 const getArgs = () => {
   return {
     size: "default",
@@ -105,7 +107,7 @@ export default {
 export const Default = (args) => modal(applyArgs(demoData, args));
 Default.args = getArgs();
 Default.argTypes = getArgTypes();
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Default.play = async () => {
     const modalButton = screen.getByRole("button");
     await userEvent.click(modalButton);

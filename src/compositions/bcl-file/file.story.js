@@ -6,6 +6,8 @@ import demoData from "@openeuropa/bcl-file/data";
 import demoCardData from "@openeuropa/bcl-file/dataCard";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 export default {
   title: "Paragraphs/File",
   decorators: [withDesign],
@@ -30,7 +32,7 @@ export const Default = () => file(correctPaths(demoData));
 
 export const Card = () => file(correctPaths(demoCardData));
 
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   Card.play = async () => {
     const languages = screen.getByText("Other languages (3)");
     await userEvent.click(languages);
