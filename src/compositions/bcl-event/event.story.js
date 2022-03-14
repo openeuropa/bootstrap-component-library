@@ -10,7 +10,9 @@ import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import file from "@openeuropa/bcl-file/data.js";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
@@ -56,8 +58,10 @@ const demoData1 = {
 
 const demoListing = {
   ...baseData,
-  ...dataListingTemplate,
   ...dataListing,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
   listing: {
     ...listing,
     variant: "default-1-col",

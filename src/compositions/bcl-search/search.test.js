@@ -1,7 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data--no-form";
 import footer from "@openeuropa/bcl-data-footer/data";
-import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 
 import demoData from "@openeuropa/bcl-search/data/dataSearch";
 
@@ -17,7 +19,9 @@ const dataListing = {
   with_header: true,
   with_footer: true,
   with_sidebar: true,
-  ...dataListingTemplate,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
   ...demoData,
 };
 

@@ -1,7 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data";
 import footer from "@openeuropa/bcl-data-footer/data";
-import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
@@ -34,8 +36,10 @@ const demoData = {
 
 const demoListing = {
   ...demoData,
-  ...dataListingTemplate,
   ...dataListing,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
   listing: {
     ...listing,
     variant: "default-1-col",

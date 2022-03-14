@@ -8,8 +8,10 @@ import { withDesign } from "storybook-addon-designs";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import drupalAttribute from "drupal-attribute";
-import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
-import dataProfiles from "@openeuropa/bcl-data-templates/listing/data--profiles";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import groupListing from "@openeuropa/bcl-group/group.html.twig";
@@ -68,7 +70,9 @@ let baseData = {
   with_footer: true,
   with_sidebar: true,
   ...demoData,
-  ...dataListingTemplate,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
 
 const dataListingContent = {

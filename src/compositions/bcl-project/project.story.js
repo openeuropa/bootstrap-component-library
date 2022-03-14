@@ -9,7 +9,9 @@ import drupalAttribute from "drupal-attribute";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import dataListingTemplate from "@openeuropa/bcl-data-templates/listing/data--template";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
@@ -70,7 +72,9 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
-  ...dataListingTemplate,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
 
 export default {
