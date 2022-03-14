@@ -1,5 +1,7 @@
 module.exports = {
   icon_path: "/icons.svg",
+  title: "Media gallery title",
+  counter: "(%d) medias",
   toggle_collapsed: "view the full gallery (%d)",
   toggle_expanded: "view less",
   carousel: {

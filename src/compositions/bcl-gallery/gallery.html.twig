@@ -2,8 +2,12 @@
 
 {#
 Parameters:
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h2')
+  - "counter": (string) (default: '')
   - "toggle_collapsed": (string) (default: '')
   - "toggle_expanded": (string) (default: '')
+  - icon_path (string) (default: '')
   - "carousel": (object) (default: {})
     - id (string) (default: '')
     - autoplay (boolean) (default: true)
@@ -26,18 +30,20 @@ Parameters:
     - next_label (string) (default: '')
     - with_indicators (boolean) (default: false)
     - rounded_indicators (boolean) (default: false)
-  - icon_path (string) (default: '')
 
 {# Internal properties #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _counter = counter|default('') %}
+{% set _toggle_collapsed = toggle_collapsed|default('') %}
+{% set _toggle_expanded = toggle_expanded|default('') %}
+{% set _icon_path = icon_path|default({}) %}
 {% set _carousel = carousel|default({}) %}
 {% set _carousel_id = carousel.id|default('carousel-' ~ random(1000)) %}
 {% set _modal_id = "modal" ~ _carousel_id|capitalize %}
 {% set _collpase_id = "collapse" ~ _carousel_id|capitalize %}
 {% set _active_item = carousel.active_item|default(1) %}
-{% set _toggle_collapsed = toggle_collapsed|default('') %}
-{% set _toggle_expanded = toggle_expanded|default('') %}
-{% set _icon_path = icon_path|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -51,6 +57,22 @@ Parameters:
 
   <div {{ attributes }}>
     {% if _carousel.items is iterable %}
+      <div class="d-sm-flex flex-sm-row align-items-sm-center">
+        <div class="flex-sm-grow-1">
+          {%- if _title is not empty -%}
+            {% set _title_classes = 'fw-bold mb-3' %}
+            <{{ _title_tag }} class="{{ _title_classes }}">
+              {{- _title -}}
+            </{{ _title_tag }}>
+          {%- endif -%}
+        </div>
+        <div class="mb-3 mb-sm-0 fw-bold">
+          {%- if _counter is not empty -%}
+            {{ _counter|replace({'%d': _carousel.items|length}) }}
+          {%- endif -%}
+        </div>
+      </div>
+
       {% for _item in _carousel.items %}
         {% if loop.first %}
           <div class="bcl-gallery__thumbnails">
@@ -63,7 +85,7 @@ Parameters:
         {% endif %}
 
         <li>
-          <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="w-100 img-fluid">
+          <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="d-block w-100 img-fluid">
             <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
           </a>
         </li>
@@ -76,27 +98,24 @@ Parameters:
         {% endif %}
         {% if loop.index > 6 and loop.last %}
           </div>
-          <div class="bg-lighter py-3 px-4 rounded">
-            <div class="text-end text-md-center">
-              <a 
-                class="bcl-gallery__collapse standalone" 
-                aria-controls="{{ _collpase_id }}" 
-                data-bs-toggle="collapse" 
-                aria-expanded="false" 
-                role="button" 
-                href="#{{ _collpase_id }}"
-              >
-                <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _carousel.items|length}) }}</span>
-                <span class="label-expanded">{{ _toggle_expanded }}</span>
-                {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-                  name: 'caret-down-fill',
-                  size: '2xs',
-                  path: _icon_path,
-                  attributes: create_attribute().addClass('ms-2-5'),
-                } only %}
-              </a>
-
-            </div>
+          <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
+            <a 
+              class="bcl-gallery__collapse standalone" 
+              aria-controls="{{ _collpase_id }}" 
+              data-bs-toggle="collapse" 
+              aria-expanded="false" 
+              role="button" 
+              href="#{{ _collpase_id }}"
+            >
+              <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _carousel.items|length}) }}</span>
+              <span class="label-expanded">{{ _toggle_expanded }}</span>
+              {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+                name: 'caret-down-fill',
+                size: '2xs',
+                path: _icon_path,
+                attributes: create_attribute().addClass('ms-2-5'),
+              } only %}
+            </a>
           </div>
         {% endif %}
       {% endfor %}
@@ -105,14 +124,21 @@ Parameters:
     <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
       <div class="modal-dialog modal-dialog-centered modal-fullscreen">
         <div class="modal-content">
-
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          
-          <div class="carousel-pager">
-            <span>{{ _active_item }}</span> / {{ _carousel.items|length }}
+          <div class="modal-header border-0 justify-content-between">
+            {% if _title is not empty %}
+              <h3 class="modal-title">{{- _title -}}</h3>
+            {% endif %}
+            <div class="carousel-pager">
+              <span>{{ _active_item }}</span> / {{ _carousel.items|length }}
+            </div>
+            <div class="modal-close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
           </div>
-
-          {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with _carousel only %}
+          
+          <div class="modal-body d-flex align-items-center justify-content-center">
+            {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with _carousel only %}
+          </div>
         </div>
       </div>
     </div>
