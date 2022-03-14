@@ -1,4 +1,7 @@
 module.exports = {
+  icon_path: "/icons.svg",
+  toggle_collapsed: "view the full gallery (%d)",
+  toggle_expanded: "view less",
   carousel: {
     id: "carouselExample",
     with_controls: true,

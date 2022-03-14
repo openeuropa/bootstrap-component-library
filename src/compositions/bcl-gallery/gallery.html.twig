@@ -2,6 +2,8 @@
 
 {#
 Parameters:
+  - "toggle_collapsed": (string) (default: '')
+  - "toggle_expanded": (string) (default: '')
   - "carousel": (object) (default: {})
     - id (string) (default: '')
     - autoplay (boolean) (default: true)
@@ -24,6 +26,7 @@ Parameters:
     - next_label (string) (default: '')
     - with_indicators (boolean) (default: false)
     - rounded_indicators (boolean) (default: false)
+  - icon_path (string) (default: '')
 
 {# Internal properties #}
 
@@ -32,6 +35,9 @@ Parameters:
 {% set _modal_id = "modal" ~ _carousel_id|capitalize %}
 {% set _collpase_id = "collapse" ~ _carousel_id|capitalize %}
 {% set _active_item = carousel.active_item|default(1) %}
+{% set _toggle_collapsed = toggle_collapsed|default('') %}
+{% set _toggle_expanded = toggle_expanded|default('') %}
+{% set _icon_path = icon_path|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -46,12 +52,14 @@ Parameters:
   <div {{ attributes }}>
     {% if _carousel.items is iterable %}
       {% for _item in _carousel.items %}
+        {% if loop.first %}
+          <div class="bcl-gallery__thumbnails">
+        {% endif %}
         {% if loop.index == 6 %}
-          <p><a class="btn btn-primary" data-bs-toggle="collapse" href="#{{ _collpase_id }}" role="button" aria-expanded="false" aria-controls="{{ _collpase_id }}">View all</a></p>
-          <div class="thumbnails-collaspe collapse" id="{{ _collpase_id }}">
+          <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collpase_id }}">
         {% endif %}
         {% if loop.index % 6 == 0 or loop.first %}
-          <ul class="grid">
+          <ul class="bcl-gallery__grid">
         {% endif %}
 
         <li>
@@ -62,8 +70,33 @@ Parameters:
 
         {% if loop.index % 5 == 0 or loop.last %}
           </ul>
-        {% endif %}                
+        {% endif %}  
+        {% if loop.last %}
+          </div>
+        {% endif %}
         {% if loop.index > 6 and loop.last %}
+          </div>
+          <div class="bg-lighter py-3 px-4 rounded">
+            <div class="text-end text-md-center">
+              <a 
+                class="bcl-gallery__collapse standalone" 
+                aria-controls="{{ _collpase_id }}" 
+                data-bs-toggle="collapse" 
+                aria-expanded="false" 
+                role="button" 
+                href="#{{ _collpase_id }}"
+              >
+                <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _carousel.items|length}) }}</span>
+                <span class="label-expanded">{{ _toggle_expanded }}</span>
+                {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+                  name: 'caret-down-fill',
+                  size: '2xs',
+                  path: _icon_path,
+                  attributes: create_attribute().addClass('ms-2-5'),
+                } only %}
+              </a>
+
+            </div>
           </div>
         {% endif %}
       {% endfor %}

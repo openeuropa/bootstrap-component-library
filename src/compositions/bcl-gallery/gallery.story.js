@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import dataDefault from "@openeuropa/bcl-gallery/dataDefault.js";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 const initGallery = (story) => {
   const demo = story();
@@ -64,4 +65,4 @@ export default {
   },
 };
 
-export const Default = () => gallery(dataDefault);
+export const Default = () => gallery(correctPaths(dataDefault));
