@@ -7,10 +7,10 @@ import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
 
 import demoData from "@openeuropa/bcl-group/data/data";
-import demoDataList from "@openeuropa/bcl-group/data/dataList";
-import demoDataListContent from "@openeuropa/bcl-group/data/dataListContent";
-import demoDataListMember from "@openeuropa/bcl-group/data/dataListMember";
-import demoDataLanding from "@openeuropa/bcl-group/data/dataLanding";
+import demoDataList from "@openeuropa/bcl-group/data/data--list";
+import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
+import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
+import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
 
 let baseData = {
   content_type: "group",

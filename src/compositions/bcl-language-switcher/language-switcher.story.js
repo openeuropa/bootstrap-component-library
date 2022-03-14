@@ -1,7 +1,7 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@openeuropa/bcl-language-switcher/data/data.js";
+import demoData from "@openeuropa/bcl-language-switcher/data";
 import languageSwitcher from "@openeuropa/bcl-language-switcher/language-switcher.html.twig";
 
 export default {

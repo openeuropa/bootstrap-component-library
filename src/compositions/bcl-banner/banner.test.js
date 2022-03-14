@@ -1,9 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import dataDefault from "@openeuropa/bcl-banner/dataDefault.js";
-import dataPrimary from "@openeuropa/bcl-banner/dataPrimary.js";
-import dataImage from "@openeuropa/bcl-banner/dataImage.js";
-import dataShade from "@openeuropa/bcl-banner/dataShade.js";
+import dataDefault from "@openeuropa/bcl-banner/data/data";
+import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
+import dataImage from "@openeuropa/bcl-banner/data/data--image";
+import dataShade from "@openeuropa/bcl-banner/data/data--shade";
 
 const template = "@oe-bcl/bcl-banner/banner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

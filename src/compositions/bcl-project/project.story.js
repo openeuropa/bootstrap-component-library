@@ -12,14 +12,14 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import banner from "@openeuropa/bcl-content-banner/data/data.js";
+import banner from "@openeuropa/bcl-content-banner/data/data";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 
-import dataListing from "@openeuropa/bcl-project/data/data_listing";
+import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataContent from "@openeuropa/bcl-project/data/data";
-import dataExtraDetails from "@openeuropa/bcl-project/data/data_extra_details";
+import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;

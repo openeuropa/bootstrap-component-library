@@ -1,9 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoData from "@openeuropa/bcl-featured-media/data";
-import demoDataVideo from "@openeuropa/bcl-featured-media/dataVideo";
-import demoDataImage from "@openeuropa/bcl-featured-media/dataImage";
-import demoDataFeaturedItem from "@openeuropa/bcl-featured-media/dataFeaturedItem";
+import demoData from "@openeuropa/bcl-featured-media/data/data";
+import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
+import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
+import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
 
 const template = "@oe-bcl/bcl-featured-media/featured-media.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -26,7 +26,7 @@ describe("OE - Featured media", () => {
 
   test("featured item renders correctly", () => {
     expect.assertions(1);
-    return expect(render(demoDataFeaturedItem)).resolves.toMatchSnapshot();
+    return expect(render(demoFeaturedItem)).resolves.toMatchSnapshot();
   });
 
   test("renders correctly with iframe and with title", () => {
@@ -66,7 +66,7 @@ describe("OE - Featured media", () => {
     expect.assertions(1);
     return expect(
       render({
-        ...demoDataFeaturedItem,
+        ...demoFeaturedItem,
         title: "Featured media test title",
         title_tag: "h6",
       })

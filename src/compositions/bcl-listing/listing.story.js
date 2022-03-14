@@ -1,13 +1,14 @@
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
-import demoDateData from "@openeuropa/bcl-listing/data/listing--date.js";
-import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
-import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col.js";
-import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
-import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col.js";
-import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col.js";
+
+import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col";
+import demoDateData from "@openeuropa/bcl-listing/data/listing--date";
+import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col";
+import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col";
+import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col";
+import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col";
+import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col";
 
 import listing from "@openeuropa/bcl-listing/listing.html.twig";
 

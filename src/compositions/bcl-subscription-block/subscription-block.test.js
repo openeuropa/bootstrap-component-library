@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-subscription-block/data/data.js";
+import demoData from "@openeuropa/bcl-subscription-block/data";
 
 const template = "@oe-bcl/bcl-subscription-block/subscription-block.html.twig";
 

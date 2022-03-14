@@ -12,7 +12,7 @@ import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 import drupalAttribute from "drupal-attribute";
 
-import demoData from "@openeuropa/bcl-search/data/dataSearch.js";
+import demoData from "@openeuropa/bcl-search/data/data--search";
 import search from "@openeuropa/bcl-search/search.html.twig";
 
 if (isChromatic()) {

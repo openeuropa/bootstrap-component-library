@@ -9,10 +9,10 @@ import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-import demoDataListing from "@openeuropa/bcl-user/data/data-user-listing.js";
-import demoDataEdit from "@openeuropa/bcl-user/data/data-user-edit.js";
-import demoDataView from "@openeuropa/bcl-user/data/data-user-view.js";
-import demoDataViewCompact from "@openeuropa/bcl-user/data/data-user-view-compact";
+import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
+import demoDataEdit from "@openeuropa/bcl-user/data/data--user-edit";
+import demoDataView from "@openeuropa/bcl-user/data/data--user-view";
+import demoDataViewCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
 import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";

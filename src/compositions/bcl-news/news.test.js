@@ -1,13 +1,13 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data";
 import footer from "@openeuropa/bcl-data-footer/data";
-import banner from "@openeuropa/bcl-content-banner/data/data.js";
+import banner from "@openeuropa/bcl-content-banner/data/data";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 
-import dataListing from "@openeuropa/bcl-news/data/data_listing.js";
-import content from "@openeuropa/bcl-news/data/data_content.js";
+import dataListing from "@openeuropa/bcl-news/data/data--listing";
+import content from "@openeuropa/bcl-news/data/data--content";
 
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;

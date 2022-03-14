@@ -4,13 +4,13 @@ import footer from "@openeuropa/bcl-data-footer/data";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import banner from "@openeuropa/bcl-content-banner/data/data.js";
+import banner from "@openeuropa/bcl-content-banner/data/data";
+import file from "@openeuropa/bcl-file/data/data";
 import drupalAttribute from "drupal-attribute";
 
-import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
-import dataPage from "@openeuropa/bcl-event/data/data-page.js";
-import listing from "@openeuropa/bcl-listing/data/listing--date.js";
-import file from "@openeuropa/bcl-file/data.js";
+import dataListing from "@openeuropa/bcl-event/data/data--listing";
+import dataPage from "@openeuropa/bcl-event/data/data--page";
+import listing from "@openeuropa/bcl-listing/data/listing--date";
 
 delete file.translation;
 file.attributes = new drupalAttribute().addClass(["mb-3-5"]);

@@ -1,4 +1,4 @@
-import demoData from "@openeuropa/bcl-recent-activities/data.js";
+import demoData from "@openeuropa/bcl-recent-activities/data";
 import recentActivities from "@openeuropa/bcl-recent-activities/recent-activities.html.twig";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";

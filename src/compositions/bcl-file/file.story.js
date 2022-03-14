@@ -1,10 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
 import { screen, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
-import file from "@openeuropa/bcl-file/file.html.twig";
-import demoData from "@openeuropa/bcl-file/data";
-import demoCardData from "@openeuropa/bcl-file/dataCard";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+
+import file from "@openeuropa/bcl-file/file.html.twig";
+import demoData from "@openeuropa/bcl-file/data/data";
+import demoCardData from "@openeuropa/bcl-file/data/data--card";
 
 export default {
   title: "Paragraphs/File",

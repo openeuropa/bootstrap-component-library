@@ -1,6 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-search-form/dataSearch";
-import demoDataSubmittable from "@openeuropa/bcl-search-form/dataSearchSubmit";
+import demoData from "@openeuropa/bcl-search-form/data/data--search";
+import demoDataSubmittable from "@openeuropa/bcl-search-form/data/data--search-submit";
 
 const template = "@oe-bcl/bcl-search-form/search-form.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

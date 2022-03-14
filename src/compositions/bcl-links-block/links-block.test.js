@@ -1,6 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoData from "@openeuropa/bcl-links-block/dataLinksBlock";
+import demoData from "@openeuropa/bcl-links-block/data/data";
 
 const template = "@oe-bcl/bcl-links-block/links-block.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

@@ -5,7 +5,7 @@ import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 
-import demoData from "@openeuropa/bcl-search/data/dataSearch";
+import demoData from "@openeuropa/bcl-search/data/data--search";
 
 const template = "@oe-bcl/bcl-search/search.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

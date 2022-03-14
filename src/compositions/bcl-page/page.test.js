@@ -1,9 +1,10 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
-import listing from "@openeuropa/bcl-page/data/data_listing.js";
 import footer from "@openeuropa/bcl-data-footer/data";
-import sidebar from "@openeuropa/bcl-page/data/data_sidebar.js";
-import file from "@openeuropa/bcl-file/data.js";
+import file from "@openeuropa/bcl-file/data/data";
+
+import listing from "@openeuropa/bcl-page/data/data--listing";
+import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
 
 file.translation.id = "language-dropdown";
 

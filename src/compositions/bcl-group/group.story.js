@@ -17,10 +17,10 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import groupListing from "@openeuropa/bcl-group/group.html.twig";
 import groupLanding from "@openeuropa/bcl-group/group-landing.html.twig";
 import demoData from "@openeuropa/bcl-group/data/data";
-import demoDataList from "@openeuropa/bcl-group/data/dataList";
-import demoDataListContent from "@openeuropa/bcl-group/data/dataListContent";
-import demoDataListMember from "@openeuropa/bcl-group/data/dataListMember";
-import demoDataLanding from "@openeuropa/bcl-group/data/dataLanding";
+import demoDataList from "@openeuropa/bcl-group/data/data--list";
+import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
+import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
+import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
 
 if (isChromatic()) {
   demoDataListContent.listing.items.forEach((item) => {

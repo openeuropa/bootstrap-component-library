@@ -1,9 +1,10 @@
-import demoData from "@openeuropa/bcl-featured-media/data";
-import demoDataVideo from "@openeuropa/bcl-featured-media/dataVideo";
-import demoDataImage from "@openeuropa/bcl-featured-media/dataImage";
-import demoFeaturedItem from "@openeuropa/bcl-featured-media/dataFeaturedItem";
-import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 import isChromatic from "chromatic/isChromatic";
+
+import demoData from "@openeuropa/bcl-featured-media/data/data";
+import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
+import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
+import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
+import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 
 if (isChromatic()) {
   demoData.embedded_media = `<iframe class="chromatic-ignore" title="New digital strategy" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>`;

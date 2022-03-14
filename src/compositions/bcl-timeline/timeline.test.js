@@ -1,6 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import dataDefault from "@openeuropa/bcl-timeline/dataDefault.js";
+import dataDefault from "@openeuropa/bcl-timeline/data";
 
 const template = "@oe-bcl/bcl-timeline/timeline.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
