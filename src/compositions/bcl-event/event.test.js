@@ -4,6 +4,7 @@ import footer from "@openeuropa/bcl-data-footer/data";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data-listing.js";
@@ -31,6 +32,7 @@ const baseData = {
 const demoData = {
   ...baseData,
   ...dataPage,
+  banner: banner,
   files: files,
 };
 

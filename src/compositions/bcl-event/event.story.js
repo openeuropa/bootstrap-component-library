@@ -4,11 +4,11 @@ import {
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import listing from "@openeuropa/bcl-listing/data/listing--date.js";
 import footer from "@openeuropa/bcl-data-footer/data";
 import file from "@openeuropa/bcl-file/data.js";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
@@ -36,23 +36,22 @@ const baseData = {
   with_sidebar: true,
 };
 
+let banner_simple = {
+  ...banner,
+};
+delete banner_simple.image;
+
 const demoData = {
   ...baseData,
   ...dataPage,
+  banner: banner_simple,
   files: files,
 };
 
 const demoData1 = {
   ...baseData,
   ...dataPage,
-  banner: {
-    ...dataPage.banner,
-    image: {
-      path: "https://picsum.photos/255/255?random=6",
-      alt: "alt img",
-      classes: isChromatic() ? "chromatic-ignore" : "",
-    },
-  },
+  banner: banner,
   files: files,
 };
 

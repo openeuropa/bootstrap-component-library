@@ -12,6 +12,7 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
 import pagination from "@openeuropa/bcl-data-pagination/data--listing";
 import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import banner from "@openeuropa/bcl-content-banner/data/data.js";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
@@ -51,6 +52,7 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  banner: banner,
   share: share,
 };
 
