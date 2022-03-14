@@ -5,71 +5,85 @@ exports[`OE - Gallery default renders correctly 1`] = `
   <div
     class="bcl-gallery"
   >
-    <a
-      class="d-inline-block m-2"
-      data-bs-slide-to="0"
-      data-bs-target="#carouselExample"
-      href="#"
+    <ul
+      class="grid"
     >
-      <img
-        data-bs-target="#modalCarouselExample"
-        data-bs-toggle="modal"
-        src="https://picsum.photos/100/100?random=1"
-      />
-    </a>
-    <a
-      class="d-inline-block m-2"
-      data-bs-slide-to="1"
-      data-bs-target="#carouselExample"
-      href="#"
-    >
-      <img
-        data-bs-target="#modalCarouselExample"
-        data-bs-toggle="modal"
-        src="https://picsum.photos/100/100?random=2"
-      />
-    </a>
-    <a
-      class="d-inline-block m-2"
-      data-bs-slide-to="2"
-      data-bs-target="#carouselExample"
-      href="#"
-    >
-      <img
-        data-bs-target="#modalCarouselExample"
-        data-bs-toggle="modal"
-        src="https://picsum.photos/100/100?random=3"
-      />
-    </a>
-    <a
-      class="d-inline-block m-2"
-      data-bs-slide-to="3"
-      data-bs-target="#carouselExample"
-      href="#"
-    >
-      <img
-        data-bs-target="#modalCarouselExample"
-        data-bs-toggle="modal"
-        src="https://picsum.photos/100/100?random=4"
-      />
-    </a>
-    <a
-      class="d-inline-block m-2"
-      data-bs-slide-to="4"
-      data-bs-target="#carouselExample"
-      href="#"
-    >
-      <img
-        data-bs-target="#modalCarouselExample"
-        data-bs-toggle="modal"
-        src="https://picsum.photos/100/100?random=5"
-      />
-    </a>
+      <li>
+        <a
+          class="w-100 img-fluid"
+          data-bs-slide-to="0"
+          data-bs-target="#carouselExample"
+          href="#"
+        >
+          <img
+            data-bs-target="#modalCarouselExample"
+            data-bs-toggle="modal"
+            src="https://picsum.photos/400/400?random=1"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="w-100 img-fluid"
+          data-bs-slide-to="1"
+          data-bs-target="#carouselExample"
+          href="#"
+        >
+          <img
+            data-bs-target="#modalCarouselExample"
+            data-bs-toggle="modal"
+            src="https://picsum.photos/400/400?random=2"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="w-100 img-fluid"
+          data-bs-slide-to="2"
+          data-bs-target="#carouselExample"
+          href="#"
+        >
+          <img
+            data-bs-target="#modalCarouselExample"
+            data-bs-toggle="modal"
+            src="https://picsum.photos/400/400?random=3"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="w-100 img-fluid"
+          data-bs-slide-to="3"
+          data-bs-target="#carouselExample"
+          href="#"
+        >
+          <img
+            data-bs-target="#modalCarouselExample"
+            data-bs-toggle="modal"
+            src="https://picsum.photos/400/400?random=4"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="w-100 img-fluid"
+          data-bs-slide-to="4"
+          data-bs-target="#carouselExample"
+          href="#"
+        >
+          <img
+            data-bs-target="#modalCarouselExample"
+            data-bs-toggle="modal"
+            src="https://picsum.photos/400/400?random=5"
+          />
+        </a>
+      </li>
+    </ul>
     <p>
       <a
         aria-controls="collapseCarouselExample"
         aria-expanded="false"
-        class="btn btn-primary ms-2"
+        class="btn btn-primary"
         data-bs-toggle="collapse"
         href="#collapseCarouselExample"
         role="button"
@@ -78,57 +92,83 @@ exports[`OE - Gallery default renders correctly 1`] = `
       </a>
     </p>
     <div
-      class="collapse"
+      class="thumbnails-collaspe collapse"
       id="collapseCarouselExample"
     >
-      <a
-        class="d-inline-block m-2"
-        data-bs-slide-to="5"
-        data-bs-target="#carouselExample"
-        href="#"
+      <ul
+        class="grid"
       >
-        <img
-          data-bs-target="#modalCarouselExample"
-          data-bs-toggle="modal"
-          src="https://picsum.photos/100/100?random=6"
-        />
-      </a>
-      <a
-        class="d-inline-block m-2"
-        data-bs-slide-to="6"
-        data-bs-target="#carouselExample"
-        href="#"
-      >
-        <img
-          data-bs-target="#modalCarouselExample"
-          data-bs-toggle="modal"
-          src="https://picsum.photos/100/100?random=7"
-        />
-      </a>
-      <a
-        class="d-inline-block m-2"
-        data-bs-slide-to="7"
-        data-bs-target="#carouselExample"
-        href="#"
-      >
-        <img
-          data-bs-target="#modalCarouselExample"
-          data-bs-toggle="modal"
-          src="https://picsum.photos/100/100?random=8"
-        />
-      </a>
-      <a
-        class="d-inline-block m-2"
-        data-bs-slide-to="8"
-        data-bs-target="#carouselExample"
-        href="#"
-      >
-        <img
-          data-bs-target="#modalCarouselExample"
-          data-bs-toggle="modal"
-          src="https://picsum.photos/100/100?random=9"
-        />
-      </a>
+        <li>
+          <a
+            class="w-100 img-fluid"
+            data-bs-slide-to="5"
+            data-bs-target="#carouselExample"
+            href="#"
+          >
+            <img
+              data-bs-target="#modalCarouselExample"
+              data-bs-toggle="modal"
+              src="https://picsum.photos/400/400?random=6"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="w-100 img-fluid"
+            data-bs-slide-to="6"
+            data-bs-target="#carouselExample"
+            href="#"
+          >
+            <img
+              data-bs-target="#modalCarouselExample"
+              data-bs-toggle="modal"
+              src="https://picsum.photos/400/400?random=7"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="w-100 img-fluid"
+            data-bs-slide-to="7"
+            data-bs-target="#carouselExample"
+            href="#"
+          >
+            <img
+              data-bs-target="#modalCarouselExample"
+              data-bs-toggle="modal"
+              src="https://picsum.photos/400/400?random=8"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="w-100 img-fluid"
+            data-bs-slide-to="8"
+            data-bs-target="#carouselExample"
+            href="#"
+          >
+            <img
+              data-bs-target="#modalCarouselExample"
+              data-bs-toggle="modal"
+              src="https://picsum.photos/400/400?random=9"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="w-100 img-fluid"
+            data-bs-slide-to="9"
+            data-bs-target="#carouselExample"
+            href="#"
+          >
+            <img
+              data-bs-target="#modalCarouselExample"
+              data-bs-toggle="modal"
+              src="https://picsum.photos/400/400?random=9"
+            />
+          </a>
+        </li>
+      </ul>
     </div>
     <div
       aria-hidden="true"
@@ -156,7 +196,7 @@ exports[`OE - Gallery default renders correctly 1`] = `
             <span>
               1
             </span>
-             / 9
+             / 10
           
           </div>
           <div
@@ -321,6 +361,28 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <img
                   alt="First slide"
                   data-src="https://picsum.photos/800/400?random=8"
+                />
+                <div
+                  class="carousel-caption d-none d-md-block"
+                >
+                  <div
+                    class="d-none d-md-block"
+                  >
+                    <h5>
+                      First slide label
+                    </h5>
+                    <p>
+                      Some representative placeholder content for the first slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="carousel-item"
+              >
+                <img
+                  alt="First slide"
+                  data-src="https://picsum.photos/800/400?random=9"
                 />
                 <div
                   class="carousel-caption d-none d-md-block"

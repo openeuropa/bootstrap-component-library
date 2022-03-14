@@ -47,14 +47,22 @@ Parameters:
     {% if _carousel.items is iterable %}
       {% for _item in _carousel.items %}
         {% if loop.index == 6 %}
-          <p><a class="btn btn-primary ms-2" data-bs-toggle="collapse" href="#{{ _collpase_id }}" role="button" aria-expanded="false" aria-controls="{{ _collpase_id }}">View all</a></p>
-          <div class="collapse" id="{{ _collpase_id }}">
+          <p><a class="btn btn-primary" data-bs-toggle="collapse" href="#{{ _collpase_id }}" role="button" aria-expanded="false" aria-controls="{{ _collpase_id }}">View all</a></p>
+          <div class="thumbnails-collaspe collapse" id="{{ _collpase_id }}">
+        {% endif %}
+        {% if loop.index % 6 == 0 or loop.first %}
+          <ul class="grid">
         {% endif %}
 
-        <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="d-inline-block m-2">
-          <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-        </a>
+        <li>
+          <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="w-100 img-fluid">
+            <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+          </a>
+        </li>
 
+        {% if loop.index % 5 == 0 or loop.last %}
+          </ul>
+        {% endif %}                
         {% if loop.index > 6 and loop.last %}
           </div>
         {% endif %}
