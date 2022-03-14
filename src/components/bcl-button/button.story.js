@@ -318,7 +318,7 @@ Tooltip.parameters = {
     url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
   },
 };
-console.log(process.env);
+
 if (isChromatic() || chromatic) {
   Tooltip.play = async () => {
     const button = screen.getByRole("button");
