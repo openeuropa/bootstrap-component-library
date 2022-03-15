@@ -2,21 +2,22 @@ import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
-import listing from "@openeuropa/bcl-page/data/data_listing.js";
-import listingDefault from "@openeuropa/bcl-page/data/data-listing--default.js";
 import footer from "@openeuropa/bcl-data-footer/data";
-import sidebar from "@openeuropa/bcl-page/data/data_sidebar.js";
-import blockquote from "@openeuropa/bcl-data-blockquote/data.js";
-import banner from "@openeuropa/bcl-content-banner/data/data.js";
-import featuredItem from "@openeuropa/bcl-featured-media/dataFeaturedItem.js";
-import accordion from "@openeuropa/bcl-data-accordion/data.js";
-import timeline from "@openeuropa/bcl-timeline/dataDefault.js";
-import simpleBanner from "@openeuropa/bcl-content-banner/data/data--simple.js";
-import pageBanner from "@openeuropa/bcl-banner/dataImage.js";
-import file from "@openeuropa/bcl-file/data.js";
-import fileThumbnail from "@openeuropa/bcl-file/dataCard.js";
-import page from "@openeuropa/bcl-page/page.html.twig";
+import blockquote from "@openeuropa/bcl-data-blockquote/data";
+import banner from "@openeuropa/bcl-content-banner/data/data";
+import featuredItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
+import accordion from "@openeuropa/bcl-data-accordion/data";
+import timeline from "@openeuropa/bcl-timeline/data";
+import simpleBanner from "@openeuropa/bcl-content-banner/data/data--simple";
+import pageBanner from "@openeuropa/bcl-banner/data/data--image";
+import file from "@openeuropa/bcl-file/data/data";
+import fileThumbnail from "@openeuropa/bcl-file/data/data--card";
 import drupalAttribute from "drupal-attribute";
+
+import listing from "@openeuropa/bcl-page/data/data--listing";
+import listingDefault from "@openeuropa/bcl-page/data/data--listing-default";
+import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
+import page from "@openeuropa/bcl-page/page.html.twig";
 
 if (isChromatic()) {
   banner.image.classes = "chromatic-ignore";

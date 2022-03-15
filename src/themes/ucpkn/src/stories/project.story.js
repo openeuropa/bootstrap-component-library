@@ -7,10 +7,10 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import header from "@openeuropa/bcl-data-header/data--simple";
-import dataListing from "@openeuropa/bcl-project/data/data_listing";
+import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
-import dataStatus from "@openeuropa/bcl-project/data/ucpkn/data_status";
-import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data_extra_details";
+import dataStatus from "@openeuropa/bcl-project/data/ucpkn/data--status";
+import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
 import footer from "@openeuropa/bcl-data-footer/data";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";

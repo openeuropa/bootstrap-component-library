@@ -1,7 +1,8 @@
 import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
+
 import demoData from "@openeuropa/bcl-data-link/data";
-import toggleDemoData from "@openeuropa/bcl-data-link/toggleData";
-import tooltipDemoData from "@openeuropa/bcl-data-link/tooltipData";
+import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
+import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 
 const template = "@oe-bcl/bcl-link/link.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);

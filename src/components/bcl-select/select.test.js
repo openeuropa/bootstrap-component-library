@@ -1,7 +1,7 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-select/data";
-import demoMultiData from "@openeuropa/bcl-data-select/dataMultiselect.js";
+import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect";
 
 const template = "@oe-bcl/bcl-select/select.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);

@@ -1,9 +1,10 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+
 import dataBasic from "@openeuropa/bcl-data-form/data";
-import dataGrid from "@openeuropa/bcl-data-form/data-grid";
-import dataDisabled from "@openeuropa/bcl-data-form/data-disabled";
-import dataInline from "@openeuropa/bcl-data-form/data-inline";
-import dataHorizontal from "@openeuropa/bcl-data-form/data-horizontal";
+import dataGrid from "@openeuropa/bcl-data-form/data--grid";
+import dataDisabled from "@openeuropa/bcl-data-form/data--disabled";
+import dataInline from "@openeuropa/bcl-data-form/data--inline";
+import dataHorizontal from "@openeuropa/bcl-data-form/data--horizontal";
 
 const template = "@oe-bcl/bcl-form/form.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

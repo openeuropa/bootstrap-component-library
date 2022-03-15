@@ -1,11 +1,16 @@
 import { withDesign } from "storybook-addon-designs";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
+import footer from "@openeuropa/bcl-data-footer/data";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
 import dataDetails from "@openeuropa/bcl-person/data/data--details";
-import footer from "@openeuropa/bcl-data-footer/data";
 import detailsPage from "@openeuropa/bcl-person/person.html.twig";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 const baseData = {
   content_type: "listing",
@@ -25,6 +30,10 @@ const demoDetails = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
+  listing: dataProfiles,
 };
 
 export default {

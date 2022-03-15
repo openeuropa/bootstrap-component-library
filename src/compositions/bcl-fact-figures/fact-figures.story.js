@@ -1,9 +1,8 @@
-import demoData from "@openeuropa/bcl-fact-figures/data/data.js";
-import factFigures from "@openeuropa/bcl-fact-figures/fact-figures.html.twig";
 import drupalAttribute from "drupal-attribute";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-demoData.icon_path = defaultSprite;
+import demoData from "@openeuropa/bcl-fact-figures/data";
+import factFigures from "@openeuropa/bcl-fact-figures/fact-figures.html.twig";
 
 const linkMore = { ...demoData.link_more };
 const getArgs = (data) => {
@@ -121,7 +120,8 @@ export default {
   },
 };
 
-export const Default = (args) => factFigures(applyArgs(demoData, args));
+export const Default = (args) =>
+  factFigures(applyArgs(correctPaths(demoData), args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes();

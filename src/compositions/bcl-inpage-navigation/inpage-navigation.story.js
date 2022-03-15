@@ -1,5 +1,6 @@
 import { initScrollspy } from "@openeuropa/bcl-story-utils";
-import dataDefault from "@openeuropa/bcl-inpage-navigation/dataDefault.js";
+
+import demoData from "@openeuropa/bcl-inpage-navigation/data/data";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
 
 export default {
@@ -22,4 +23,4 @@ export default {
   },
 };
 
-export const Default = () => inpage(dataDefault);
+export const Default = () => inpage(demoData);

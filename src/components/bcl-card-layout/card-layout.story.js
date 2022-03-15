@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
-import demoDataGroup from "@openeuropa/bcl-data-card-layout/dataGroup.js";
-import demoDataGrid from "@openeuropa/bcl-data-card-layout/dataGrid.js";
-import demoDataMasonry from "@openeuropa/bcl-data-card-layout/dataMasonry.js";
-import cardLayout from "@openeuropa/bcl-card-layout/card-layout.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+import demoDataGroup from "@openeuropa/bcl-data-card-layout/data--group.js";
+import demoDataGrid from "@openeuropa/bcl-data-card-layout/data--grid.js";
+import demoDataMasonry from "@openeuropa/bcl-data-card-layout/data--masonry.js";
+import cardLayout from "@openeuropa/bcl-card-layout/card-layout.html.twig";
 
 const getArgs = (data, type) => {
   let args = { type: type };
@@ -20,7 +21,7 @@ const getArgs = (data, type) => {
   return args;
 };
 
-const getArgTypes = (data, type) => {
+const getArgTypes = (type) => {
   let argTypes = {};
   argTypes.type = {
     type: { name: "select" },

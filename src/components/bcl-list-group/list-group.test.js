@@ -1,7 +1,8 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+
 import demoData from "@openeuropa/bcl-data-list-group/data";
-import actionableData from "@openeuropa/bcl-data-list-group/actionableData";
-import orderedData from "@openeuropa/bcl-data-list-group/orderedData";
+import actionableData from "@openeuropa/bcl-data-list-group/data--actionable";
+import orderedData from "@openeuropa/bcl-data-list-group/data--ordered";
 
 const template = "@oe-bcl/bcl-list-group/list-group.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

@@ -1,23 +1,28 @@
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
-import demoDataListing from "@openeuropa/bcl-user/data-user-listing.js";
-import demoDataEdit from "@openeuropa/bcl-user/data-user-edit.js";
-import demoDataView from "@openeuropa/bcl-user/data-user-view.js";
-import demoDataViewCompact from "@openeuropa/bcl-user/data-user-view-compact";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import drupalAttribute from "drupal-attribute";
+
+import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
+import demoDataEdit from "@openeuropa/bcl-user/data/data--user-edit";
+import demoDataView from "@openeuropa/bcl-user/data/data--user-view";
+import demoDataViewCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
 import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 if (isChromatic()) {
   demoDataViewCompact.picture.classes = "chromatic-ignore";
   demoDataView.banner.image.classes = demoDataView.banner.image.classes
     ? `${demoDataView.banner.image.classes} chromatic-ignore`
     : "chromatic-ignore";
-  demoDataListing.listing.items.forEach((item) => {
+  dataProfiles.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";
@@ -41,6 +46,10 @@ const dataListing = {
   with_sidebar: true,
   ...demoDataListing,
   ...data,
+  listing: dataProfiles,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
 
 const dataEdit = {

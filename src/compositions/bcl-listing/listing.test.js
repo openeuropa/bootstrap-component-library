@@ -1,12 +1,12 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import demoDateData from "@openeuropa/bcl-listing/data/listing--date.js";
-import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
-import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col.js";
-import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col.js";
-import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col.js";
-import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col.js";
-import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col.js";
+import demoDateData from "@openeuropa/bcl-listing/data/listing--date";
+import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col";
+import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col";
+import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col";
+import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col";
+import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col";
+import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col";
 const template = "@oe-bcl/bcl-listing/listing.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);

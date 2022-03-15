@@ -2,8 +2,8 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-header/data";
 import demoDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
-import demoDataEC from "@openeuropa/bcl-data-header/data-ec";
-import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
+import demoDataEC from "@openeuropa/bcl-data-header/data--ec";
+import headerDataUCPKN from "@openeuropa/bcl-data-header/data--ucpkn";
 
 const template = "@oe-bcl/bcl-header/header.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
