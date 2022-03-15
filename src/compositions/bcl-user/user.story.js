@@ -22,7 +22,7 @@ if (isChromatic()) {
   demoDataView.banner.image.classes = demoDataView.banner.image.classes
     ? `${demoDataView.banner.image.classes} chromatic-ignore`
     : "chromatic-ignore";
-  demoDataListing.listing.items.forEach((item) => {
+  dataProfiles.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";

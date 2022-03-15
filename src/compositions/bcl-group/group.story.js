@@ -28,7 +28,7 @@ if (isChromatic()) {
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";
   });
-  demoDataListMember.listing.items.forEach((item) => {
+  dataProfiles.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";

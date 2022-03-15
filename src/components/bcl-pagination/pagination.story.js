@@ -65,16 +65,6 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  // if (data.next.icon) {
-  //   data.next.icon.path = defaultSprite;
-  //   data.next.icon.size = "m";
-  // }
-
-  // if (data.prev.icon) {
-  //   data.prev.icon.path = defaultSprite;
-  //   data.prev.icon.size = "m";
-  // }
-
   if (args.size === "default") {
     args.size = "";
   }
