@@ -1,5 +1,5 @@
 import demoData from "@openeuropa/bcl-landing-page/data.js";
-import headerDataUCPKN from "@openeuropa/bcl-data-header/data-ucpkn";
+import headerDataUCPKN from "@openeuropa/bcl-data-header/data--ucpkn";
 import footer from "@openeuropa/bcl-data-footer/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
