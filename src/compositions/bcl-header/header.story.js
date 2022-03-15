@@ -1,10 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
-import headerData from "@openeuropa/bcl-data-header/data";
-import headerDataEC from "@openeuropa/bcl-data-header/data-ec";
-import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
-import header from "@openeuropa/bcl-header/header.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
+
+import headerData from "@openeuropa/bcl-data-header/data";
+import headerDataEC from "@openeuropa/bcl-data-header/data--ec";
+import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
+import header from "@openeuropa/bcl-header/header.html.twig";
 
 const getArgs = (data) => {
   return {

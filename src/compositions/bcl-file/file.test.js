@@ -1,6 +1,8 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-file/data.js";
-import demoCardData from "@openeuropa/bcl-file/dataCard";
+
+import demoData from "@openeuropa/bcl-file/data/data";
+import demoCardData from "@openeuropa/bcl-file/data/data--card";
+
 const template = "@oe-bcl/bcl-file/file.html.twig";
 
 demoData.translation.id = "language-dropdown";

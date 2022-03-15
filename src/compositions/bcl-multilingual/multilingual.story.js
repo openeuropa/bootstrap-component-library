@@ -1,12 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
-import MultilingualDataEU from "@openeuropa/bcl-multilingual/data/data--eu.js";
-import MultilingualDataEC from "@openeuropa/bcl-multilingual/data/data--ec.js";
-import MultilingualDataNeutral from "@openeuropa/bcl-multilingual/data/data--neutral.js";
-import content from "@openeuropa/bcl-news/data/data_content.js";
-import banner from "@openeuropa/bcl-content-banner/data/data.js";
+import content from "@openeuropa/bcl-news/data/data--content";
+import banner from "@openeuropa/bcl-content-banner/data/data";
 import contentType from "@openeuropa/bcl-base-templates/content-type.html.twig";
 import footer from "@openeuropa/bcl-data-footer/data";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+
+import MultilingualDataEU from "@openeuropa/bcl-multilingual/data/data--eu";
+import MultilingualDataEC from "@openeuropa/bcl-multilingual/data/data--ec";
+import MultilingualDataNeutral from "@openeuropa/bcl-multilingual/data/data--neutral";
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 

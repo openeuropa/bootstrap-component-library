@@ -1,6 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-description-list/data.js";
-import demoDataHorizontal from "@openeuropa/bcl-description-list/dataHorizontal";
+import demoData from "@openeuropa/bcl-description-list/data/data";
+import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--horizontal";
 const template = "@oe-bcl/bcl-description-list/description-list.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params);

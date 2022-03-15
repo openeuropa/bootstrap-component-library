@@ -1,5 +1,5 @@
 import isChromatic from "chromatic/isChromatic";
-import demoData from "@openeuropa/bcl-landing-page/data.js";
+import demoData from "@openeuropa/bcl-landing-page/data";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";

@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { screen, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
+import drupalAttribute from "drupal-attribute";
+
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 const chromatic = process.env.STORYBOOK_ENV;
 

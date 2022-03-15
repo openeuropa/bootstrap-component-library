@@ -1,7 +1,7 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoDataGroup from "@openeuropa/bcl-data-card-layout/dataGroup";
-import demoDataGrid from "@openeuropa/bcl-data-card-layout/dataGrid";
-import demoDataMasonry from "@openeuropa/bcl-data-card-layout/dataMasonry";
+import demoDataGroup from "@openeuropa/bcl-data-card-layout/data--group";
+import demoDataGrid from "@openeuropa/bcl-data-card-layout/data--grid";
+import demoDataMasonry from "@openeuropa/bcl-data-card-layout/data--masonry";
 
 const template = "@oe-bcl/bcl-card-layout/card-layout.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);

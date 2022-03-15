@@ -1,11 +1,16 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
-import demoData from "@openeuropa/bcl-group/data";
-import demoDataList from "@openeuropa/bcl-group/dataList";
-import demoDataListContent from "@openeuropa/bcl-group/dataListContent";
-import demoDataListMember from "@openeuropa/bcl-group/dataListMember";
-import demoDataLanding from "@openeuropa/bcl-group/dataLanding";
+import filterButton from "@openeuropa/bcl-data-button/data--filter";
+import pagination from "@openeuropa/bcl-data-pagination/data--listing";
+import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
+
+import demoData from "@openeuropa/bcl-group/data/data";
+import demoDataList from "@openeuropa/bcl-group/data/data--list";
+import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
+import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
+import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
 
 let baseData = {
   content_type: "group",
@@ -16,6 +21,9 @@ let baseData = {
   with_footer: true,
   with_sidebar: true,
   ...demoData,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
 
 const dataListingContent = {
@@ -28,6 +36,7 @@ const dataListingMember = {
   page_title: "Group members",
   ...baseData,
   ...demoDataListMember,
+  listing: dataProfiles,
 };
 
 delete baseData.banner;

@@ -1802,7 +1802,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#facebook"
@@ -1815,7 +1815,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#twitter"
@@ -1828,7 +1828,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#linkedin"
@@ -2852,7 +2852,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                   Sort by
                 </label>
                 <select
-                  aria-label="sort-by-select"
+                  aria-label="sort-select"
                   class="ms-md-2 form-select"
                 >
                   <option
@@ -2879,7 +2879,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     selected=""
                     value=""
                   >
-                    Title
+                    A-Z
                   </option>
                 </select>
               </div>
@@ -3197,7 +3197,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             class="d-none d-md-block mt-4-5"
           />
           <nav
-            class="mt-4"
+            class="mt-4-5 mb-5"
           >
             <ul
               class="pagination justify-content-center"
@@ -3213,22 +3213,20 @@ exports[`OE - Project listing renders correctly 1`] = `
                 </a>
               </li>
               <li
-                class="page-item disabled"
+                class="page-item active"
               >
                 <a
-                  aria-disabled="true"
+                  aria-current="page"
                   class="page-link"
                   href="#"
-                  tabindex="-1"
                 >
                   1
                 </a>
               </li>
               <li
-                class="page-item active"
+                class="page-item"
               >
                 <a
-                  aria-current="page"
                   class="page-link"
                   href="#"
                 >
@@ -3243,6 +3241,26 @@ exports[`OE - Project listing renders correctly 1`] = `
                   href="#"
                 >
                   3
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  4
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  5
                 </a>
               </li>
               <li
@@ -3303,7 +3321,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#facebook"
@@ -3316,7 +3334,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#twitter"
@@ -3329,7 +3347,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#linkedin"
@@ -4068,23 +4086,72 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   <h2
                     class="fw-bold card-title"
                   >
-                    Life IP Artisan
+                    This is the title of this page
                   </h2>
+                  <div
+                    class="mb-4 mt-4"
+                  >
+                    <span
+                      class="text-muted me-3"
+                    >
+                      8 hours ago
+                    </span>
+                  </div>
                   <p>
-                    Achieving Resiliency by Triggering Implementation of nature-based Solutions for climate Adaptation at a National scale. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+        Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
+        Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
+        Duis tristique fringilla magna, eu egestas dolor molestie non.
+     
                   </p>
                   <div
                     class="mt-2-5"
                   >
                     <span
+                      class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                    >
+                      Category 1
+                    </span>
+                    <span
                       class="mb-2 badge rounded-pill badge-outline-primary"
                     >
-                      Project type
+                      Category 2
                     </span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            class="d-flex justify-content-end"
+          >
+            <button
+              class="w-auto mt-3 me-3 btn btn-light btn-md"
+              type="button"
+            >
+              Print
+              <svg
+                class="ms-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#printer-fill"
+                />
+              </svg>
+            </button>
+            <button
+              class="w-auto mt-3 btn btn-light btn-md"
+              type="button"
+            >
+              Export
+              <svg
+                class="ms-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#file-arrow-down-fill"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -4907,7 +4974,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#facebook"
@@ -4920,7 +4987,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#twitter"
@@ -4933,7 +5000,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#linkedin"
@@ -5672,23 +5739,72 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   <h2
                     class="fw-bold card-title"
                   >
-                    Life IP Artisan
+                    This is the title of this page
                   </h2>
+                  <div
+                    class="mb-4 mt-4"
+                  >
+                    <span
+                      class="text-muted me-3"
+                    >
+                      8 hours ago
+                    </span>
+                  </div>
                   <p>
-                    Achieving Resiliency by Triggering Implementation of nature-based Solutions for climate Adaptation at a National scale. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+        Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
+        Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
+        Duis tristique fringilla magna, eu egestas dolor molestie non.
+     
                   </p>
                   <div
                     class="mt-2-5"
                   >
                     <span
+                      class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                    >
+                      Category 1
+                    </span>
+                    <span
                       class="mb-2 badge rounded-pill badge-outline-primary"
                     >
-                      Project type
+                      Category 2
                     </span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            class="d-flex justify-content-end"
+          >
+            <button
+              class="w-auto mt-3 me-3 btn btn-light btn-md"
+              type="button"
+            >
+              Print
+              <svg
+                class="ms-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#printer-fill"
+                />
+              </svg>
+            </button>
+            <button
+              class="w-auto mt-3 btn btn-light btn-md"
+              type="button"
+            >
+              Export
+              <svg
+                class="ms-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#file-arrow-down-fill"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -6511,7 +6627,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#facebook"
@@ -6524,7 +6640,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#twitter"
@@ -6537,7 +6653,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#linkedin"
@@ -7276,23 +7392,72 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   <h2
                     class="fw-bold card-title"
                   >
-                    Life IP Artisan
+                    This is the title of this page
                   </h2>
+                  <div
+                    class="mb-4 mt-4"
+                  >
+                    <span
+                      class="text-muted me-3"
+                    >
+                      8 hours ago
+                    </span>
+                  </div>
                   <p>
-                    Achieving Resiliency by Triggering Implementation of nature-based Solutions for climate Adaptation at a National scale. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+        Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
+        Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
+        Duis tristique fringilla magna, eu egestas dolor molestie non.
+     
                   </p>
                   <div
                     class="mt-2-5"
                   >
                     <span
+                      class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                    >
+                      Category 1
+                    </span>
+                    <span
                       class="mb-2 badge rounded-pill badge-outline-primary"
                     >
-                      Project type
+                      Category 2
                     </span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div
+            class="d-flex justify-content-end"
+          >
+            <button
+              class="w-auto mt-3 me-3 btn btn-light btn-md"
+              type="button"
+            >
+              Print
+              <svg
+                class="ms-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#printer-fill"
+                />
+              </svg>
+            </button>
+            <button
+              class="w-auto mt-3 btn btn-light btn-md"
+              type="button"
+            >
+              Export
+              <svg
+                class="ms-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#file-arrow-down-fill"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -8115,7 +8280,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#facebook"
@@ -8128,7 +8293,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#twitter"
@@ -8141,7 +8306,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             href="#"
           >
             <svg
-              class="me-2 me-2-5 bi icon--xs"
+              class="me-2-5 bi icon--xs"
             >
               <use
                 xlink:href="/icons.svg#linkedin"

@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import dataDefault from "@openeuropa/bcl-inpage-navigation/dataDefault.js";
+import dataDefault from "@openeuropa/bcl-inpage-navigation/data/data";
 
 const template = "@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

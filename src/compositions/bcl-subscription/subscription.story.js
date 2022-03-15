@@ -4,15 +4,15 @@ import isChromatic from "chromatic/isChromatic";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
-import content from "@openeuropa/bcl-news/data/data_content.js";
-import banner from "@openeuropa/bcl-content-banner/data/data.js";
-import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
-import subscriptionPageData from "@openeuropa/bcl-subscription/data/data.js";
-import modalData from "@openeuropa/bcl-subscription/data/data_modal.js";
-import blockData from "@openeuropa/bcl-subscription-block/data/data.js";
-import sidebar from "@openeuropa/bcl-inpage-navigation/data--simple";
+import content from "@openeuropa/bcl-news/data/data--content";
+import banner from "@openeuropa/bcl-content-banner/data/data";
+import sidebar from "@openeuropa/bcl-inpage-navigation/data/data--simple";
+import blockData from "@openeuropa/bcl-subscription-block/data";
 import drupalAttribute from "drupal-attribute";
 
+import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
+import subscriptionPageData from "@openeuropa/bcl-subscription/data/data";
+import modalData from "@openeuropa/bcl-subscription/data/data--modal";
 const chromatic = process.env.STORYBOOK_ENV;
 
 if (isChromatic()) {
@@ -139,7 +139,7 @@ export default {
 export const Default = () => subscriptionPage(correctPaths(demoData));
 Default.decorators = [clientValidation];
 
-if (isChromatic() || chromatic) {
+if (isChromatic()) {
   Default.play = async () => {
     const button = screen.getAllByText("Subscribe", {
       selector: "button",

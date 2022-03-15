@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@openeuropa/bcl-data-button-group/data.js";
-import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData.js";
-import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData.js";
-import buttonGroup from "@openeuropa/bcl-button-group/button-group.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-data-button-group/data.js";
+import toolbarData from "@openeuropa/bcl-data-button-group/data--toolbar";
+import inputGroupData from "@openeuropa/bcl-data-button-group/data--input-group";
+import buttonGroup from "@openeuropa/bcl-button-group/button-group.html.twig";
 
 const getArgs = (data) => {
   return {
