@@ -1,7 +1,8 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import demoData, { image } from "@openeuropa/bcl-data-card/data";
-import demoDataHorizontal from "@openeuropa/bcl-data-card/dataHorizontal";
 import drupalAttribute from "drupal-attribute";
+
+import demoData, { image } from "@openeuropa/bcl-data-card/data";
+import demoDataHorizontal from "@openeuropa/bcl-data-card/data--horizontal";
 
 const template = "@oe-bcl/bcl-card/card.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);

@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@openeuropa/bcl-data-navigation/data.js";
-import demoTabsData from "@openeuropa/bcl-data-navigation/dataTabs.js";
-import demoDataCustom from "@openeuropa/bcl-data-navigation/dataCustom.js";
-import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-data-navigation/data.js";
+import demoTabsData from "@openeuropa/bcl-data-navigation/data--tabs";
+import demoDataCustom from "@openeuropa/bcl-data-navigation/data--custom";
+import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 
 const getArgs = (data, type) => {
   let args = {

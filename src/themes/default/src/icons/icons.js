@@ -3,8 +3,6 @@ module.exports = [
   "arrow-up.svg",
   "arrow-down.svg",
   "arrow-left.svg",
-  "arrow-left-short.svg",
-  "arrow-right-short.svg",
   "arrow-right.svg",
   "arrow-clockwise.svg",
   "arrow-90deg-down.svg",

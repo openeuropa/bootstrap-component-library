@@ -6,7 +6,7 @@ module.exports = {
     path: "#",
     aria_label: "previous",
     icon: {
-      name: "arrow-left-short",
+      name: "arrow-left",
       path: "/icons.svg",
     },
   },
@@ -15,7 +15,7 @@ module.exports = {
     path: "#",
     aria_label: "next",
     icon: {
-      name: "arrow-right-short",
+      name: "arrow-right",
       path: "/icons.svg",
     },
   },

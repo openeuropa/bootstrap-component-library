@@ -2,15 +2,16 @@ import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import { screen, userEvent } from "@storybook/testing-library";
 import { initTooltip } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-data-button/data.js";
-import toggleDemoData from "@openeuropa/bcl-data-button/toggleData.js";
-import popoverDemoData from "@openeuropa/bcl-data-button/popoverData.js";
-import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData.js";
-import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData.js";
-import button from "@openeuropa/bcl-button/button.html.twig";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-data-button/data.js";
+import toggleDemoData from "@openeuropa/bcl-data-button/data--toggle";
+import popoverDemoData from "@openeuropa/bcl-data-button/data--popover";
+import tooltipDemoData from "@openeuropa/bcl-data-button/data--tooltip";
+import spinnerDemoData from "@openeuropa/bcl-data-button/data--spinner";
+import button from "@openeuropa/bcl-button/button.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;
 

@@ -3,8 +3,8 @@ import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
 import footerData from "@openeuropa/bcl-data-footer/data";
-import footerDataEU from "@openeuropa/bcl-data-footer/data-eu";
-import footerDataEC from "@openeuropa/bcl-data-footer/data-ec";
+import footerDataEU from "@openeuropa/bcl-data-footer/data--eu";
+import footerDataEC from "@openeuropa/bcl-data-footer/data--ec";
 
 export default {
   title: "Compositions/Footer",

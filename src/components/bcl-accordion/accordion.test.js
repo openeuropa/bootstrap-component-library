@@ -1,6 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-accordion/data";
-import demoCustomTags from "@openeuropa/bcl-data-accordion/dataCustomTags";
+import demoCustomTags from "@openeuropa/bcl-data-accordion/data--custom-tags";
 
 const template = "@oe-bcl/bcl-accordion/accordion.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

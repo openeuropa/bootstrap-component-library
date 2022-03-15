@@ -1,6 +1,7 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+
 import demoData from "@openeuropa/bcl-data-pagination/data";
-import demoCustomIconsData from "@openeuropa/bcl-data-pagination/dataCustomIcons";
+import demoCustomIconsData from "@openeuropa/bcl-data-pagination/data--custom-icons";
 
 const template = "@oe-bcl/bcl-pagination/pagination.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

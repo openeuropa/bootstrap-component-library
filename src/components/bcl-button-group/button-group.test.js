@@ -1,7 +1,7 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-button-group/data";
-import inputGroupData from "@openeuropa/bcl-data-button-group/inputGroupData";
-import toolbarData from "@openeuropa/bcl-data-button-group/toolbarData";
+import inputGroupData from "@openeuropa/bcl-data-button-group/data--input-group";
+import toolbarData from "@openeuropa/bcl-data-button-group/data--toolbar";
 
 const template = "@oe-bcl/bcl-button-group/button-group.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);

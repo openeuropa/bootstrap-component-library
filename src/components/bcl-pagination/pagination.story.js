@@ -1,8 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
+
 import demoData from "@openeuropa/bcl-data-pagination/data.js";
-import demoCustomIconsData from "@openeuropa/bcl-data-pagination/dataCustomIcons.js";
+import demoCustomIconsData from "@openeuropa/bcl-data-pagination/data--custom-icons.js";
 import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => {
   return {
@@ -64,15 +65,15 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  if (data.next.icon) {
-    data.next.icon.path = defaultSprite;
-    data.next.icon.size = "m";
-  }
+  // if (data.next.icon) {
+  //   data.next.icon.path = defaultSprite;
+  //   data.next.icon.size = "m";
+  // }
 
-  if (data.prev.icon) {
-    data.prev.icon.path = defaultSprite;
-    data.prev.icon.size = "m";
-  }
+  // if (data.prev.icon) {
+  //   data.prev.icon.path = defaultSprite;
+  //   data.prev.icon.size = "m";
+  // }
 
   if (args.size === "default") {
     args.size = "";
@@ -104,13 +105,14 @@ export default {
   },
 };
 
-export const Default = (args) => pagination(applyArgs(demoData, args));
+export const Default = (args) =>
+  pagination(applyArgs(correctPaths(demoData), args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 
 export const customIcons = (args) =>
-  pagination(applyArgs(demoCustomIconsData, args));
+  pagination(applyArgs(correctPaths(demoCustomIconsData), args));
 
 customIcons.storyName = "With Custom Icons";
 customIcons.args = getArgs(demoCustomIconsData);

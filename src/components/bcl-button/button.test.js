@@ -1,9 +1,9 @@
 import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
-import demoData from "@openeuropa/bcl-data-button/data";
-import toggleDemoData from "@openeuropa/bcl-data-button/toggleData";
-import popoverDemoData from "@openeuropa/bcl-data-button/popoverData";
-import tooltipDemoData from "@openeuropa/bcl-data-button/tooltipData";
-import spinnerDemoData from "@openeuropa/bcl-data-button/spinnerData";
+import demoData from "@openeuropa/bcl-data-button/data.js";
+import toggleDemoData from "@openeuropa/bcl-data-button/data--toggle";
+import popoverDemoData from "@openeuropa/bcl-data-button/data--popover";
+import tooltipDemoData from "@openeuropa/bcl-data-button/data--tooltip";
+import spinnerDemoData from "@openeuropa/bcl-data-button/data--spinner";
 
 const template = "@oe-bcl/bcl-button/button.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);

@@ -1,8 +1,8 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-footer/data";
-import demoDataEU from "@openeuropa/bcl-data-footer/data-eu";
-import demoDataEC from "@openeuropa/bcl-data-footer/data-ec";
+import demoDataEU from "@openeuropa/bcl-data-footer/data--eu";
+import demoDataEC from "@openeuropa/bcl-data-footer/data--ec";
 
 const template = "@oe-bcl/bcl-footer/footer.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

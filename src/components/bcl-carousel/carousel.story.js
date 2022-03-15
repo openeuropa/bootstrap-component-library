@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
-import demoData from "@openeuropa/bcl-data-carousel/data.js";
-import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
-import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
+
+import demoData from "@openeuropa/bcl-data-carousel/data.js";
+import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
 
 if (isChromatic()) {
   demoData.items.forEach((item, i) => {
