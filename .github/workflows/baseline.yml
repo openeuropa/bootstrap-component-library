@@ -23,15 +23,3 @@ jobs:
         id: extract_branch
       - name: Publish to Chromatic
         run: yarn chromatic --ci --force-rebuild --auto-accept-changes --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --build-script-name=build:chromatic:${{ steps.extract_branch.outputs.branch }} --branch-name=${{ github.event.ref }}
-  create-default-baseline:
-    runs-on: ubuntu-latest
-    if: ${{ (github.event.ref_type == 'branch') && !contains(github.ref, '#') }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: development
-          fetch-depth: 0
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Publish to Chromatic
-        run: yarn chromatic --ci --force-rebuild --auto-accept-changes --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }} --build-script-name=build:chromatic:default --branch-name=${{ github.event.ref }}
