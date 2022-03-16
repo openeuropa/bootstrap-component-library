@@ -33,8 +33,6 @@ const THUMBNAIL_SELECTOR = '.bcl-gallery__grid a'
 const MODAL_SELECTOR = '.modal'
 const EVENT_MODAL_HIDE = 'hide.bs.modal'
 const CAROUSEL_EVENT = 'slide.bs.carousel'
-const SELECTOR_DATA_RIDE = '[data-bs-ride="gallery"]'
-const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 /**
@@ -65,7 +63,7 @@ class Gallery extends BaseComponent {
 
   // Public
   setSlide(event) {
-    const slideFrom = SelectorEngine.findOne('.carousel-item.active', this._carousel)
+    const slideFrom = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this._carousel)
     const slideTo = event.relatedTarget
     this._carouselLazyLoad(slideTo)
     this._carouselPager.textContent = event.to + 1
@@ -73,7 +71,7 @@ class Gallery extends BaseComponent {
   }
 
   stopSlide() {
-    const currentSlide = SelectorEngine.findOne('.carousel-item.active', this._carousel)
+    const currentSlide = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this._carousel)
     this.stopVideo(currentSlide)
   }
 
@@ -109,7 +107,7 @@ class Gallery extends BaseComponent {
 
   _addEventListeners() {
     EventHandler.on(this._carousel, CAROUSEL_EVENT, event => this.setSlide(event))
-    EventHandler.on(this._modal, CAROUSEL_EVENT, event => this.stopSlide(event))
+    EventHandler.on(this._modal, EVENT_MODAL_HIDE, event => this.stopSlide(event))
   }
 
   // Static
