@@ -25,8 +25,10 @@ export const Default = () => gallery(correctPaths(dataDefault));
 
 if (isChromatic() || chromatic) {
   Default.play = async () => {
-    const thumbnail = document.querySelector('.bcl-gallery__grid:first-child li:nth-child(2)')
-    const link = getByRole(thumbnail, 'link');
+    const thumbnail = document.querySelector(
+      ".bcl-gallery__grid:first-child li:nth-child(2) a"
+    );
+    const link = getByRole(thumbnail, "img");
     await userEvent.click(link);
   };
 }
