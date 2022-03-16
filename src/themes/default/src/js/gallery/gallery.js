@@ -52,11 +52,10 @@ class Gallery extends BaseComponent {
     this._modal = SelectorEngine.findOne(MODAL_SELECTOR, this._element)
     this._config = this._getConfig(config)
     this._addEventListeners()
-    this._carouselLazyLoad(this._carouselActiveItem);
+    this._carouselLazyLoad(this._carouselActiveItem)
   }
 
   // Getters
-
   static get NAME() {
     return NAME
   }
@@ -86,7 +85,6 @@ class Gallery extends BaseComponent {
   }
 
   // Private
-
   _carouselLazyLoad(slide) {
     const media = SelectorEngine.findOne('[data-src]', slide);
 
@@ -111,7 +109,6 @@ class Gallery extends BaseComponent {
   }
 
   // Static
-
   static get Default() {
     return Default
   }
@@ -158,7 +155,6 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, THUMBNAIL_SELECTOR, function (ev
 
   Gallery.galleryInterface(gallery, Gallery.getInstance(gallery))
 })
-
 
 /**
  * ------------------------------------------------------------------------

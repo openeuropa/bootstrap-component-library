@@ -10,6 +10,7 @@ Parameters:
   - "toggle_expanded" (string) (default: '')
   - "previous_label" (string) (default: '')
   - "next_label" (string) (default: '')
+  - "max_visible_thumbnails" (int) (default: 5)
   - "items" (array of objects) format: [
       {
         thumbnails (string) img path
@@ -32,11 +33,13 @@ Parameters:
 {% set _next_label = next_label|default('Next') %}
 {% set _prev_label = prev_label|default('Previous') %}
 {% set _items = items|default([]) %}
-{% set _icon_path = icon_path|default({}) %}
+{% set _max_visible_thumbnails = max_visible_thumbnails|default(5) %}
+{% set _icon_path = icon_path|default('') %}
 
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
 {% set _modal_id = "modal" ~ _id|capitalize %}
 {% set _collpase_id = "collapse" ~ _id|capitalize %}
+{% set _max_visible_thumbnails = _max_visible_thumbnails + 1 %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -46,7 +49,7 @@ Parameters:
 
 {# Print the result #}
 
-{% if _items is not empty%}
+{% if _items is not empty %}
 
   <div {{ attributes }}>
     {% if _items is iterable %}
@@ -70,26 +73,24 @@ Parameters:
         {% if loop.first %}
           <div class="bcl-gallery__thumbnails">
         {% endif %}
-        {% if loop.index == 6 %}
-          <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collpase_id }}">
-        {% endif %}
-        {% if loop.index % 6 == 0 or loop.first %}
-          <ul class="bcl-gallery__grid">
-        {% endif %}
-
-        <li>
-          <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="d-block w-100 img-fluid">
-            <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-          </a>
-        </li>
-
-        {% if loop.index % 5 == 0 or loop.last %}
-          </ul>
-        {% endif %}  
-        {% if loop.last %}
-          </div>
-        {% endif %}
-        {% if loop.index > 6 and loop.last %}
+          {% if loop.index == _max_visible_thumbnails %}
+            <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collpase_id }}">
+          {% endif %}
+            {% if loop.index % _max_visible_thumbnails == 0 or loop.first %}
+              <ul class="bcl-gallery__grid">
+            {% endif %}
+                <li>
+                  <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="d-block w-100 img-fluid">
+                    <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+                  </a>
+                </li>
+            {% if loop.index % 5 == 0 or loop.last %}
+              </ul>
+            {% endif %}  
+          {% if loop.last %}
+            </div>
+          {% endif %}
+        {% if loop.index > _max_visible_thumbnails and loop.last %}
           </div>
           <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
             <a 
@@ -112,7 +113,7 @@ Parameters:
             <a 
               class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none" 
               data-bs-target="#{{ _carousel_id }}" 
-              data-bs-slide-to="5" 
+              data-bs-slide-to="{{ _max_visible_thumbnails - 1 }}" 
               role="button" 
               href="#"
             >
@@ -154,7 +155,7 @@ Parameters:
               prev_label: _prev_label,
               next_label: _next_label,
               autoplay: false,
-              items: items,
+              items: _items,
             } only %}
           </div>
         </div>
