@@ -28,10 +28,15 @@ const DATA_API_KEY = '.data-api'
 const CAROUSEL_SELECTOR = '.carousel'
 const CAROUSEL_PAGER_SELECTOR = '.carousel-pager span'
 const CAROUSEL_ACTIVE_SELECTOR = '.carousel-item.active'
+const CAROUSEL_ITEM_SELECTOR = '.carousel-item'
+const THUMBNAIL_SELECTOR = '.bcl-gallery__grid a'
 const MODAL_SELECTOR = '.modal'
+const EVENT_MODAL_HIDE = 'hide.bs.modal'
 const CAROUSEL_EVENT = 'slide.bs.carousel'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="gallery"]'
 const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+
 /**
  * ------------------------------------------------------------------------
  * Class Definition
@@ -43,7 +48,9 @@ class Gallery extends BaseComponent {
     super(element)
     this._carousel = SelectorEngine.findOne(CAROUSEL_SELECTOR, this._element)
     this._carouselPager = SelectorEngine.findOne(CAROUSEL_PAGER_SELECTOR, this._element)
-    this._carouselActiveItem = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this._element)
+    this._carouselStartIndex = element.getAttribute('data-gallery-start')
+    this._carouselActiveItem = SelectorEngine.find(CAROUSEL_ITEM_SELECTOR, this._carousel)[this._carouselStartIndex]
+    this._carouselPager.textContent = Number(this._carouselStartIndex) + 1
     this._modal = SelectorEngine.findOne(MODAL_SELECTOR, this._element)
     this._config = this._getConfig(config)
     this._addEventListeners()
@@ -63,7 +70,6 @@ class Gallery extends BaseComponent {
     this._carouselLazyLoad(slideTo)
     this._carouselPager.textContent = event.to + 1
     this.stopVideo(slideFrom)
-    console.log('io')
   }
 
   stopSlide() {
@@ -85,6 +91,7 @@ class Gallery extends BaseComponent {
 
   _carouselLazyLoad(slide) {
     const media = SelectorEngine.findOne('[data-src]', slide);
+
     if (media && !media.src) {
       media.src = media.dataset.src;
     }
@@ -146,13 +153,14 @@ class Gallery extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  const galleries = SelectorEngine.find(SELECTOR_DATA_RIDE)
+EventHandler.on(document, EVENT_CLICK_DATA_API, THUMBNAIL_SELECTOR, function (event) {
+  const gallery = event.srcElement.closest('div.bcl-gallery')
+  const firstSlide = event.srcElement.parentNode.getAttribute('data-bs-slide-to');
+  gallery.dataset.galleryStart = firstSlide;
 
-  for (let i = 0, len = galleries.length; i < len; i++) {
-    Gallery.galleryInterface(galleries[i], Gallery.getInstance(galleries[i]))
-  }
+  Gallery.galleryInterface(gallery, Gallery.getInstance(gallery))
 })
+
 
 /**
  * ------------------------------------------------------------------------
