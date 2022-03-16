@@ -1,5 +1,5 @@
 import { getByRole, userEvent } from "@storybook/testing-library";
-import dataDefault from "./data/dataDefault.js";
+import dataDefault from "@openeuropa/bcl-gallery/data/data";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
@@ -15,7 +15,7 @@ export const Modal = () => gallery(correctPaths(dataDefault));
 Modal.storyName = "Modal opened";
 
 if (isChromatic() || chromatic) {
-    Modal.play = async () => {
+  Modal.play = async () => {
     const thumbnail = document.querySelector(
       ".bcl-gallery__grid:first-child li:nth-child(2) a"
     );

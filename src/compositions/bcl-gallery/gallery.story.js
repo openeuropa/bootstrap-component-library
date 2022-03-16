@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import dataDefault from "./data/dataDefault.js";
+import dataDefault from "@openeuropa/bcl-gallery/data/data";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
