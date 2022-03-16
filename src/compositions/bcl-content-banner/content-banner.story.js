@@ -10,7 +10,7 @@ const button = { ...dataDefault.button };
 const getArgs = () => {
   return {
     background: "gray",
-    image_size: "lg",
+    image_size: "md",
     action_button: false,
   };
 };
@@ -72,6 +72,17 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Content banner",
+  parameters: {
+    layout: "fullscreen",
+    design: [
+      {
+        name: "Mockup - Content banner",
+        type: "figma",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=9664%3A107055",
+      },
+    ],
+    badges: ["stable"],
+  },
 };
 
 export const Default = (args) => contentBanner(applyArgs(dataDefault, args));
