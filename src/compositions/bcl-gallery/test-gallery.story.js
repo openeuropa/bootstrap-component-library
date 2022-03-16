@@ -10,10 +10,12 @@ export default {
   title: "Paragraphs/Gallery",
 };
 
-export const Default = () => gallery(correctPaths(dataDefault));
+export const Modal = () => gallery(correctPaths(dataDefault));
+
+Modal.storyName = "Modal opened";
 
 if (isChromatic() || chromatic) {
-  Default.play = async () => {
+    Modal.play = async () => {
     const thumbnail = document.querySelector(
       ".bcl-gallery__grid:first-child li:nth-child(2) a"
     );

@@ -18,3 +18,4 @@ export default {
 };
 
 export const Default = () => gallery(correctPaths(dataDefault));
+Default.storyName = "Default";
