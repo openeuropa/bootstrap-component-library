@@ -7,9 +7,10 @@ import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.tw
 
 const button = { ...dataDefault.button };
 
-const getArgs = (data) => {
+const getArgs = () => {
   return {
     background: "gray",
+    image_size: "lg",
     action_button: false,
   };
 };
@@ -26,12 +27,22 @@ const getArgTypes = () => {
       },
     },
     action_button: {
-      name: "Action button",
+      name: "action button",
       type: { name: "boolean" },
       description: "Toggle button",
       table: {
         type: { summary: "object" },
         defaultValue: { summary: "{}" },
+      },
+    },
+    image_size: {
+      name: "image size",
+      type: { name: "select" },
+      options: ["sm", "md", "lg"],
+      description: "Size of the image",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "md" },
       },
     },
   };
@@ -53,6 +64,7 @@ const applyArgs = (data, args) => {
   }
 
   data.background = args.background;
+  data.image_size = args.image_size;
   correctPaths(data);
 
   return data;
@@ -63,6 +75,5 @@ export default {
 };
 
 export const Default = (args) => contentBanner(applyArgs(dataDefault, args));
-
 Default.args = getArgs();
 Default.argTypes = getArgTypes();
