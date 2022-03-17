@@ -6,13 +6,15 @@
   - alignment (string) (default: '')
     - options ["end", "center"]
   - aria_label (string) (default: '')
-  - enable_icon (boolean) (default: false)
+  - enable_prev_next_icon (boolean) (default: false)
+  - enable_first_last_icon (boolean) (default: false)
   - first (object)
     format: {
       - path (string)
       - label (string)
       - disabled (boolean)
       - aria_label (string)
+      - icon (Icon component)
     }
   - prev (object)
     format: {
@@ -36,6 +38,7 @@
       - label (string)
       - disabled (boolean)
       - aria_label (string)
+      - icon (Icon component)
     }
   - items (array of objects)
     format: [
@@ -51,7 +54,8 @@
 {% set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
 {% set _aria_label = aria_label|default('') %}
-{% set _enable_icon = enable_icon|default(false) %}
+{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
+{% set _enable_first_last_icon = enable_first_last_icon|default(false) %}
 {% set _items = items|default([]) %}
 {% set _first = first|default({}) %}
 {% set _next = next|default({}) %}
@@ -97,7 +101,15 @@
         aria-label="{{ _first.aria_label }}"
         {%- endif -%}
       >
-      {{- _first.label -}}
+      {%- if _enable_first_last_icon -%}
+        {%- if _first.icon is not empty -%}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _first.icon only -%}
+        {%- else -%}
+        <span aria-hidden="true">&laquo;</span>
+        {%- endif -%}
+      {%- else -%}
+        {{- _first.label -}}
+      {%- endif -%}
       </a>
     </li>
   {% endif %}
@@ -118,14 +130,14 @@
         aria-label="{{ _prev.aria_label }}"
         {%- endif -%}
       >
-      {%- if _enable_icon -%}
+      {%- if _enable_prev_next_icon -%}
         {%- if _prev.icon is not empty -%}
         {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _prev.icon only -%}
         {%- else -%}
-        <span aria-hidden="true">&laquo;</span>
+        <span aria-hidden="true">&lsaquo;</span>
         {%- endif -%}
       {%- else -%}
-      {{- _prev.label -}}
+        {{- _prev.label -}}
       {%- endif -%}
       </a>
     </li>
@@ -173,11 +185,11 @@
         aria-label="{{ _next.aria_label }}"
         {%- endif -%}
       >
-      {%- if _enable_icon -%}
+      {%- if _enable_prev_next_icon -%}
         {%- if _next.icon is not empty -%}
         {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _next.icon only -%}
         {%- else -%}
-        <span aria-hidden="true">&raquo;</span>
+        <span aria-hidden="true">&rsaquo;</span>
         {%- endif -%}
       {%- else -%}
         {{- _next.label -}}
@@ -202,7 +214,15 @@
         aria-label="{{ _last.aria_label }}"
         {%- endif -%}
       >
+      {%- if _enable_first_last_icon -%}
+        {%- if _last.icon is not empty -%}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _last.icon only -%}
+        {%- else -%}
+        <span aria-hidden="true">&raquo;</span>
+        {%- endif -%}
+      {%- else -%}
         {{- _last.label -}}
+        {%- endif -%}
       </a>
     </li>
   {% endif %}

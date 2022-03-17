@@ -9,12 +9,13 @@ const getArgs = (data) => {
   return {
     size: "default",
     alignment: "default",
-    enable_icon: data.enable_icon,
+    enable_prev_next_icon: data.enable_prev_next_icon,
+    enable_first_last_icon: data.enable_first_last_icon,
   };
 };
 
 const getArgTypes = (data) => {
-  return {
+  const argTypes = {
     size: {
       type: { name: "select" },
       description: "size",
@@ -51,8 +52,8 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
-    enable_icon: {
-      name: "enable icon",
+    enable_prev_next_icon: {
+      name: "enable previous and next icons",
       type: { name: "boolean" },
       description: "Enable icon for previous and next",
       table: {
@@ -62,6 +63,20 @@ const getArgTypes = (data) => {
       },
     },
   };
+  if (data.last && data.first) {
+    argTypes.enable_first_last_icon = {
+      name: "enable first and last icons",
+      type: { name: "boolean" },
+      description: "Enable icon for first and last",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    };
+  }
+
+  return argTypes;
 };
 
 const applyArgs = (data, args) => {

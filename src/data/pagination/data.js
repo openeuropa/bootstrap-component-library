@@ -1,6 +1,7 @@
 module.exports = {
   aria_label: "Test aria label",
-  enable_icon: true,
+  enable_prev_next_icon: false,
+  enable_first_last_icon: true,
   first: {
     label: "First",
     path: "#",
