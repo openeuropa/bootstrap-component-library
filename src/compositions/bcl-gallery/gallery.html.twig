@@ -22,6 +22,8 @@ Parameters:
       ...
     ],
   - "icon_path" (string) (default: '')
+#}
+
 {# Internal properties #}
 
 {% set _id = id|default('gallery-' ~ random(1000)) %}
@@ -137,7 +139,9 @@ Parameters:
         <div class="modal-content">
           <div class="modal-header border-0 justify-content-between">
             {% if _title is not empty %}
-              <h3 class="modal-title d-none d-sm-block">{{- _title -}}</h3>
+              <div class="modal-title">
+                <h3 class="d-none d-sm-block">{{- _title -}}</h3>
+              </div>
             {% endif %}
             <div class="carousel-pager">
               <span>1</span> / {{ _items|length }}
