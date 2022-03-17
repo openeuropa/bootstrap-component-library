@@ -139,8 +139,8 @@ export default {
 export const Default = () => subscriptionPage(correctPaths(demoData));
 Default.decorators = [clientValidation];
 
-if (isChromatic()) {
-  Default.play = async ({ canvsElement }) => {
+if (isChromatic() || chromatic) {
+  Default.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const button = canvas.getAllByText("Subscribe", {
       selector: "button",
