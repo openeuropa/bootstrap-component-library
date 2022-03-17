@@ -25,7 +25,7 @@ if (issue) {
     console.log(`Created and checked out a new branch ${issue}-#${theme}#`);
   });
 
-  args = ["commit", "--allow-empty", "--no-verify", "-m", "[skip-actions]"];
+  args = ["commit", "--allow-empty", "--no-verify", "-m", `${issue}-#${theme}`];
   const createCommit = spawn("git", args, {
     stdio: "inherit",
     cwd: root,
