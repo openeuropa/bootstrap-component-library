@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import isChromatic from "chromatic/isChromatic";
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import filterButton from "@openeuropa/bcl-data-button/data--filter";
@@ -35,6 +36,15 @@ const demoListing = {
   sort_select: sortSelect,
   listing: dataProfiles,
 };
+
+if (isChromatic()) {
+  dataDetails.banner.image.classes = "chromatic-ignore";
+  dataProfiles.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+}
 
 export default {
   title: "Features/Person",
