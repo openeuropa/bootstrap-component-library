@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "@openeuropa/bcl-offcanvas/offcanvas.html.twig";
@@ -138,8 +138,9 @@ Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.decorators = [offCanvasTrigger];
 if (isChromatic() || chromatic) {
-  Default.play = async () => {
-    const offCanvasButton = screen.getByRole("button");
+  Default.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const offCanvasButton = canvas.getByRole("button");
     await userEvent.click(offCanvasButton);
   };
 }

@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import { initTooltip } from "@openeuropa/bcl-story-utils";
 import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
@@ -272,8 +272,9 @@ Collapse.parameters = {
   ],
 };
 if (isChromatic() || chromatic) {
-  Collapse.play = async () => {
-    const button = screen.getByRole("button");
+  Collapse.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
     await userEvent.click(button);
   };
 }
@@ -299,8 +300,9 @@ Popover.parameters = {
   ],
 };
 if (isChromatic() || chromatic) {
-  Popover.play = async () => {
-    const button = screen.getByRole("button");
+  Popover.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
     await userEvent.click(button);
   };
 }
@@ -321,8 +323,9 @@ Tooltip.parameters = {
 };
 
 if (isChromatic() || chromatic) {
-  Tooltip.play = async () => {
-    const button = screen.getByRole("button");
+  Tooltip.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
     await userEvent.hover(button);
   };
 }

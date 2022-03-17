@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 
 import demoData from "@openeuropa/bcl-data-form/data.js";
@@ -47,8 +47,9 @@ export const Basic = () => form(demoData);
 Basic.storyName = "Basic (with bootstrap validation)";
 Basic.decorators = [clientValidation];
 if (isChromatic() || chromatic) {
-  Basic.play = async () => {
-    const emailInput = screen.getByLabelText("Email address *", {
+  Basic.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const emailInput = canvas.getByLabelText("Email address *", {
       selector: "input",
     });
 
@@ -56,7 +57,7 @@ if (isChromatic() || chromatic) {
       delay: 100,
     });
 
-    const passwordInput = screen.getByLabelText("Password *", {
+    const passwordInput = canvas.getByLabelText("Password *", {
       selector: "input",
     });
 
@@ -64,13 +65,13 @@ if (isChromatic() || chromatic) {
       delay: 100,
     });
 
-    const checkboxInput = screen.getByLabelText("Check me out *", {
+    const checkboxInput = canvas.getByLabelText("Check me out *", {
       selector: "input",
     });
 
     await userEvent.click(checkboxInput);
 
-    const submitButton = screen.getByRole("button");
+    const submitButton = canvas.getByRole("button");
 
     await userEvent.click(submitButton);
   };
