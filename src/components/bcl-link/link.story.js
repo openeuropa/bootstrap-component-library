@@ -205,7 +205,7 @@ Tooltip.parameters = {
 if (isChromatic() || chromatic) {
   Tooltip.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const button = screen.getByRole("button");
+    const button = canvas.getByRole("button");
     await userEvent.hover(button);
   };
 }

@@ -24,7 +24,7 @@ export default {
 
 export const Default = () => languageSwitcher(correctPaths(demoData));
 if (isChromatic()) {
-  Default.play = async () => {
+  Default.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const button = canvas.getByText("Choose another language");
     await userEvent.click(button);
