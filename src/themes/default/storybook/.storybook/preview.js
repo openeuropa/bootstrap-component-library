@@ -2,7 +2,7 @@ import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
 
 export const parameters = {
-  chromatic: { viewports: [] },
+  chromatic: { viewports: [1200] },
   a11y: {
     element: "#root",
     config: {
