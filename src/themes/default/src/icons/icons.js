@@ -45,6 +45,10 @@ module.exports = [
   "chevron-down.svg",
   "chevron-left.svg",
   "chevron-right.svg",
+  "chevron-double-up.svg",
+  "chevron-double-down.svg",
+  "chevron-double-left.svg",
+  "chevron-double-right.svg",
 
   //Alerts, warnings and signs
   "check-lg.svg",
