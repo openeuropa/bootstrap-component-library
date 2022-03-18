@@ -73,6 +73,8 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% set attributes = attributes.setAttribute('role', 'navigation') %}
+
 {% if _aria_label is not empty %}
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
