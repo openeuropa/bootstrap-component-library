@@ -82,7 +82,21 @@ Parameters:
               <ul class="bcl-gallery__grid">
             {% endif %}
                 <li>
-                  <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="d-block w-100 img-fluid">
+                  <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="bcl-gallery__item d-block w-100 img-fluid">
+                    <div class="bcl-gallery__item-overlay">
+                    {% if '<iframe' in _item.image or '<video' in _item.image %}
+                      <span class="bcl-gallery__item-play-icon">
+                      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+                        name: 'play-fill',
+                        size: 's',
+                        path: _icon_path,
+                      } only %}
+                      </span>
+                    {% endif %}
+                    {% if _item.caption is not empty %}
+                      <div class="bcl-gallery__item-caption">{{ _item.caption }}</div>
+                    {% endif %}
+                    </div>
                     <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
                   </a>
                 </li>
