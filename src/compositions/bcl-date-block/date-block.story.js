@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
 import demoData from "@openeuropa/bcl-date-block/data/data";
 
@@ -84,6 +85,16 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Date block",
+  decorators: [withDesign],
+  parameters: {
+    design: [
+      {
+        name: "Mockup",
+        type: "figma",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=4332%3A42035",
+      },
+    ],
+  },
 };
 
 export const Standalone = (args) => dateBlock(applyArgs(demoData, args));
