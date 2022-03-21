@@ -48,6 +48,7 @@
       - disabled (boolean)
       - active (boolean)
     }
+  - icon_path (string) (default: '')
   - extra_classes (string) (default: '')
 #}
 
@@ -61,6 +62,7 @@
 {% set _next = next|default({}) %}
 {% set _prev = prev|default({}) %}
 {% set _last = last|default({}) %}
+{% set _icon_path = icon_path|default({}) %}
 {% set _classes = 'pagination' %}
 {% if _size is not empty %}
   {% set _classes = _classes ~ ' pagination-' ~ _size %}
@@ -105,9 +107,17 @@
       >
       {%- if _enable_first_last_icon -%}
         {%- if _first.icon is not empty -%}
-        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _first.icon only -%}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _first.icon only -%}
         {%- else -%}
-        <span aria-hidden="true">&laquo;</span>
+          {%- if _icon_path is not empty -%}
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: "chevron-double-left",
+              size: "fluid",
+              path: _icon_path,
+            } only %}
+          {%- else -%}
+            <span aria-hidden="true">&laquo;</span>
+          {%- endif -%}
         {%- endif -%}
       {%- else -%}
         {{- _first.label -}}
@@ -134,9 +144,17 @@
       >
       {%- if _enable_prev_next_icon -%}
         {%- if _prev.icon is not empty -%}
-        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _prev.icon only -%}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _prev.icon only -%}
         {%- else -%}
-        <span aria-hidden="true">&lsaquo;</span>
+          {%- if _icon_path is not empty -%}
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: "chevron-left",
+              size: "fluid",
+              path: _icon_path,
+            } only %}
+          {%- else -%}
+            <span aria-hidden="true">&lsaquo;</span>
+          {%- endif -%}
         {%- endif -%}
       {%- else -%}
         {{- _prev.label -}}
@@ -189,9 +207,17 @@
       >
       {%- if _enable_prev_next_icon -%}
         {%- if _next.icon is not empty -%}
-        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _next.icon only -%}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _next.icon only -%}
         {%- else -%}
-        <span aria-hidden="true">&rsaquo;</span>
+          {%- if _icon_path is not empty -%}
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: "chevron-right",
+              size: "fluid",
+              path: _icon_path,
+            } only %}
+          {%- else -%}
+            <span aria-hidden="true">&rsaquo;</span>
+          {%- endif -%}
         {%- endif -%}
       {%- else -%}
         {{- _next.label -}}
@@ -218,9 +244,17 @@
       >
       {%- if _enable_first_last_icon -%}
         {%- if _last.icon is not empty -%}
-        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _last.icon only -%}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _last.icon only -%}
         {%- else -%}
-        <span aria-hidden="true">&raquo;</span>
+          {%- if _icon_path is not empty -%}
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: "chevron-double-right",
+              size: "fluid",
+              path: _icon_path,
+            } only %}
+          {%- else -%}
+            <span aria-hidden="true">&raquo;</span>
+          {%- endif -%}
         {%- endif -%}
       {%- else -%}
         {{- _last.label -}}

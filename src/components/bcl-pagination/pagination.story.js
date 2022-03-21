@@ -2,7 +2,6 @@ import { withDesign } from "storybook-addon-designs";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-data-pagination/data.js";
-import demoCustomIconsData from "@openeuropa/bcl-data-pagination/data--custom-icons.js";
 import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
 
 const getArgs = (data) => {
@@ -115,10 +114,3 @@ export const Default = (args) =>
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-
-export const customIcons = (args) =>
-  pagination(applyArgs(correctPaths(demoCustomIconsData), args));
-
-customIcons.storyName = "With Custom Icons";
-customIcons.args = getArgs(demoCustomIconsData);
-customIcons.argTypes = getArgTypes(demoCustomIconsData);
