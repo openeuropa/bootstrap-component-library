@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
 import header from "@openeuropa/bcl-data-header/data--simple";
@@ -139,9 +139,10 @@ export default {
 export const Default = () => subscriptionPage(correctPaths(demoData));
 Default.decorators = [clientValidation];
 
-if (isChromatic()) {
-  Default.play = async () => {
-    const button = screen.getAllByText("Subscribe", {
+if (isChromatic() || chromatic) {
+  Default.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getAllByText("Subscribe", {
       selector: "button",
     });
     await userEvent.click(button[0]);

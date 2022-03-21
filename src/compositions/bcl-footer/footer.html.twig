@@ -69,9 +69,11 @@
                   {% endif %}
                   {% if item.type == 'links' %}
                     {% for link in item.links %}
+                      <div class="mb-1">
                       {% include '@oe-bcl/bcl-link/link.html.twig' with link|merge({
-                        attributes: create_attribute().addClass(['d-block', 'standalone', 'mb-1'])
+                        attributes: create_attribute().addClass(['standalone'])
                       }) only %}
+                      </div>
                     {% endfor %}
                   {% endif %}
                 {% endfor %}

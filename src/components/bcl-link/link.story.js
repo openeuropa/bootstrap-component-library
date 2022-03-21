@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import {
   getIconControls,
@@ -183,8 +183,9 @@ Collapse.parameters = {
   },
 };
 if (isChromatic() || chromatic) {
-  Collapse.play = async () => {
-    const button = screen.getByRole("button");
+  Collapse.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
     await userEvent.click(button);
   };
 }
@@ -202,8 +203,9 @@ Tooltip.parameters = {
   },
 };
 if (isChromatic() || chromatic) {
-  Tooltip.play = async () => {
-    const button = screen.getByRole("button");
+  Tooltip.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
     await userEvent.hover(button);
   };
 }

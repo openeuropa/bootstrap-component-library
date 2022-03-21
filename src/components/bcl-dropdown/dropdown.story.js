@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { screen, userEvent } from "@storybook/testing-library";
+import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
 
@@ -89,8 +89,9 @@ export const Default = (args) => dropdown(applyArgs(demoData, args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 if (isChromatic() || chromatic) {
-  Default.play = async () => {
-    const button = screen.getByRole("button");
+  Default.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
     await userEvent.click(button);
   };
 }

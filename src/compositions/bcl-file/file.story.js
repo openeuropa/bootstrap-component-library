@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import { screen, userEvent } from "@storybook/testing-library";
+import { userEvent, within } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
@@ -32,9 +32,10 @@ export const Default = () => file(correctPaths(demoData));
 
 export const Card = () => file(correctPaths(demoCardData));
 
-if (isChromatic()) {
-  Card.play = async () => {
-    const languages = screen.getByText("Other languages (3)");
+if (isChromatic() || chromatic) {
+  Card.play = async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const languages = canvas.getByText("Other languages (3)");
     await userEvent.click(languages);
   };
 }

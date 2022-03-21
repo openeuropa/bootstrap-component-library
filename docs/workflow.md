@@ -34,10 +34,9 @@ Never add more than one label per type, especially for the tag, because those wo
 Some tests are enforced in the CI to ensure the stability of the project:
 
 - audit (to check the status of the dependency tree of the project)
-- size ( to check the size )
+- size ( to check the size of the main deliverables (css and js))
 - Code style (js, scss, twig), using prettier
 - Snapshots test (jest)
-
 
 ### CI
 
@@ -59,6 +58,7 @@ When code changes are producing also changes in the rendering of the demos in th
 merging the pull request.
 It's possible to assing directly a reviewer in chromiuim and this could speed up the process, when the review is completed the status
 of the check in the github pull request will change accordingly.
+For the documentation about chromatic, consult it [here](docs/chromatic.md)
 
 
 
