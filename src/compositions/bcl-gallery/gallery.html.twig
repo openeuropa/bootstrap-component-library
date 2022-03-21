@@ -14,7 +14,7 @@ Parameters:
   - "items" (array of objects) format: [
       {
         thumbnails (string) img path
-        image: (string) <img> tag
+        media: (string) <img> tag
         caption (string)
         caption_classes (string)
         interval (integer) (default: 0)
@@ -84,7 +84,7 @@ Parameters:
                 <li>
                   <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="bcl-gallery__item d-block w-100 img-fluid">
                     <div class="bcl-gallery__item-overlay" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-                    {% if '<iframe' in _item.image or '<video' in _item.image %}
+                    {% if '<iframe' in _item.media or '<video' in _item.media %}
                       <span class="bcl-gallery__item-play-icon">
                       {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
                         name: 'play-fill',
@@ -97,7 +97,7 @@ Parameters:
                       <div class="bcl-gallery__item-caption">{{ _item.caption }}</div>
                     {% endif %}
                     </div>
-                    <img src="{{ _item.thumbnail }}">
+                    {{ _item.thumbnail }}
                   </a>
                 </li>
             {% if loop.index % 5 == 0 or loop.last %}
@@ -166,6 +166,13 @@ Parameters:
           </div>
           
           <div class="modal-body d-flex align-items-center justify-content-center">
+            {% set _carousel_items = [] %}
+            {% for _item in _items %}
+              {% set _carousel_items = _carousel_items|merge([{
+                caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
+                image: _item.media,
+              }]) %}
+            {% endfor %}
             {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
               id: _carousel_id,
               with_controls: true,
@@ -173,7 +180,7 @@ Parameters:
               prev_label: _prev_label,
               next_label: _next_label,
               autoplay: false,
-              items: _items,
+              items: _carousel_items,
             } only %}
           </div>
         </div>

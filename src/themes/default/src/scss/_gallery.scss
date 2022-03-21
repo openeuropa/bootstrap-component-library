@@ -16,6 +16,7 @@
 
   .bcl-gallery__item-overlay {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -229,9 +230,6 @@
           fill: $black;
         }
       }
-      .bcl-gallery__item-caption {
-        display: block;
-      }
     }
 
     .modal-title,
@@ -241,6 +239,18 @@
 
     .carousel-pager {
       width: 10%;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .bcl-gallery__item:hover {
+      .bcl-gallery__item-caption {
+        display: block;
+      }
+
+      .bcl-gallery__item-play-icon + .bcl-gallery__item-caption {
+        margin-top: map-get($spacers, 2);
+      }
     }
   }
 
