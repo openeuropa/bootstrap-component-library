@@ -7,6 +7,9 @@ const getArgs = (data) => {
     month: data.month,
     year: data.year,
     date_time: data.date_time,
+    end_day: "",
+    end_month: "",
+    end_year: "",
   };
 };
 
@@ -42,6 +45,33 @@ const getArgTypes = () => {
       description: "Valid date format",
       table: {
         type: { summary: "string" },
+        defaultValue: { summary: "" },
+      },
+    },
+    end_day: {
+      name: "end day",
+      type: { name: "string" },
+      description: "End Day",
+      table: {
+        type: { summary: "integer" },
+        defaultValue: { summary: "" },
+      },
+    },
+    end_month: {
+      name: "end month",
+      type: { name: "string" },
+      description: "End Month",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+      },
+    },
+    end_year: {
+      name: "end year",
+      type: { name: "string" },
+      description: "End Year",
+      table: {
+        type: { summary: "integer" },
         defaultValue: { summary: "" },
       },
     },

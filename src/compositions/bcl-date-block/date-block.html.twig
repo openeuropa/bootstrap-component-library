@@ -7,24 +7,28 @@
     - "month" (string) (default: '')
     - "date_time" (string) (default: '')
     - "year" (integer) (default: '')
+    - "end_day" (integer) (default: '')
+    - "end_month" (string) (default: '')
+    - "end_year" (integer) (default: '')
 #}
 
 {% set _month = month|default('') %}
 {% set _day = day|default('') %}
 {% set _year = year|default('') %}
 {% set _date_time = date_time|default('') %}
+{% set _end_day = end_day|default('') %}
+{% set _end_month = end_month|default('') %}
+{% set _end_year = end_year|default('') %}
 {% set _variant = variant|default('') %}
 {% set _css_classes = [
   'bcl-date-block',
   'd-flex',
   'flex-column',
-  'align-items-center',
-  'justify-content-center',
   'bg-date',
-  'text-light',
   'pt-2',
   'rounded-top',
   'mw-date',
+  'text-center'
 ] %}
 
 {% if attributes is empty %}
@@ -38,8 +42,27 @@
 {% endif %}
 
 <time {{ attributes }}>
-  <span class="py-4 bg-white border border-bottom-0 w-100 fs-5 fw-medium text-dark text-center text-uppercase">{{ _day }} {{ _month }}</span>
-  <span class="bg-lighter border w-100 text-center fs-5 text-dark rounded-bottom mb-n1">{{ _year }}</span>
+  <span class="bg-white border border-bottom-0 w-100 fs-5 text-uppercase fw-medium d-flex align-items-center justify-content-center" style="height: 82px;">
+    <div>
+      {{- _day ~ ' ' ~ _month -}}
+      {%- if _end_day is not empty or _end_month is not empty -%}
+        <span> - </span>
+        <br>
+        {%- if _end_day is not empty -%}
+          {{- _end_day -}}
+        {% endif %}
+        {% if _end_month is not empty %}
+          {{- _end_month -}}
+        {%- endif -%}
+      {%- endif -%}
+    </div>
+  </span>
+  <span class="bg-lighter border w-100 rounded-bottom mb-n1 py-1">
+    {{- _year -}}
+    {%- if _end_year is not empty -%}
+      {{ ' - ' ~ _end_year }}
+    {%- endif -%}
+  </span>
 </time>
 
 {% endspaceless %}

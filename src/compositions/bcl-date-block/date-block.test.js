@@ -11,4 +11,12 @@ describe("OE - Date block", () => {
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
+
+  test("with end date renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, end_day: "24", end_month: "Jun", end_year: "2023" })
+    ).resolves.toMatchSnapshot();
+  });
 });
