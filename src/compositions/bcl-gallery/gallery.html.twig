@@ -83,7 +83,7 @@ Parameters:
             {% endif %}
                 <li>
                   <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="bcl-gallery__item d-block w-100 img-fluid">
-                    <div class="bcl-gallery__item-overlay">
+                    <div class="bcl-gallery__item-overlay" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
                     {% if '<iframe' in _item.image or '<video' in _item.image %}
                       <span class="bcl-gallery__item-play-icon">
                       {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
@@ -97,7 +97,7 @@ Parameters:
                       <div class="bcl-gallery__item-caption">{{ _item.caption }}</div>
                     {% endif %}
                     </div>
-                    <img src="{{ _item.thumbnail }}" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+                    <img src="{{ _item.thumbnail }}">
                   </a>
                 </li>
             {% if loop.index % 5 == 0 or loop.last %}

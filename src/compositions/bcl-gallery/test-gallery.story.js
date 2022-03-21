@@ -1,4 +1,4 @@
-import { getByRole, userEvent } from "@storybook/testing-library";
+import { getByTestId, userEvent } from "@storybook/testing-library";
 import dataDefault from "@openeuropa/bcl-gallery/data/data";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
 import isChromatic from "chromatic/isChromatic";
@@ -16,10 +16,12 @@ Modal.storyName = "Modal opened";
 
 if (isChromatic() || chromatic) {
   Modal.play = async () => {
-    const thumbnail = document.querySelector(
+    const container = document.querySelector(
       ".bcl-gallery__grid:first-child li:nth-child(2) a"
     );
-    const link = getByRole(thumbnail, "img");
+    const thumbnail = container.querySelector(".bcl-gallery__item-overlay");
+    thumbnail.dataset.testid = "thumb-test";
+    const link = getByTestId(container, "thumb-test");
     await userEvent.click(link);
   };
 }
