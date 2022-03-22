@@ -56,7 +56,7 @@
 {% set _alignment = alignment|default('') %}
 {% set _aria_label = aria_label|default('') %}
 {% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
-{% set _enable_first_last_icon = enable_first_last_icon|default(true) %}
+{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
 {% set _items = items|default([]) %}
 {% set _first = first|default({}) %}
 {% set _next = next|default({}) %}
