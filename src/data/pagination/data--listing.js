@@ -1,14 +1,24 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  aria_label: "Pagination aria label",
   attributes: new drupalAttribute().addClass(["mt-4-5", "mb-5"]),
   alignment: "center",
+  icon_path: "/icons.svg",
+  first: {
+    label: "First",
+    path: "#",
+  },
   prev: {
     label: "Previous",
     path: "#",
   },
   next: {
     label: "Next",
+    path: "#",
+  },
+  last: {
+    label: "Last",
     path: "#",
   },
   items: [
