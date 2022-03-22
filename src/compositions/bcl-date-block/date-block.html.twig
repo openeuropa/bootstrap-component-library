@@ -23,7 +23,7 @@
 {% set _css_classes = [
   'bcl-date-block',
   'bg-date',
-  'rounded-top',
+  'rounded',
   'mw-date',
   'text-center',
   'd-flex',
@@ -53,7 +53,7 @@
         {{- _end_month -}}
       {%- endif -%}
     </span>
-    <span class="bg-lighter border w-100 rounded-bottom mb-n1 py-1">
+    <span class="bg-lighter border w-100 rounded-bottom py-1">
       {{- _year -}}
       {%- if _end_year is not empty -%}
         {{ ' - ' ~ _end_year }}
