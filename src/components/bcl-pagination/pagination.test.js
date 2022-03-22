@@ -1,7 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-pagination/data";
-import demoCustomIconsData from "@openeuropa/bcl-data-pagination/data--custom-icons";
 
 const template = "@oe-bcl/bcl-pagination/pagination.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
@@ -33,19 +32,5 @@ describe("OE - Pagination", () => {
         render({ ...demoData, alignment: alignment })
       ).resolves.toMatchSnapshot();
     });
-  });
-
-  test(`renders correctly with icons`, () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, enable_icon: true })
-    ).resolves.toMatchSnapshot();
-  });
-
-  test(`renders correctly with custom icons`, () => {
-    expect.assertions(1);
-
-    return expect(render(demoCustomIconsData)).resolves.toMatchSnapshot();
   });
 });

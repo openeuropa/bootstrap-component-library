@@ -1,12 +1,20 @@
 module.exports = {
   aria_label: "Test aria label",
-  enable_icon: false,
+  icon_path: "/icons.svg",
+  first: {
+    label: "First",
+    path: "#",
+  },
   prev: {
     label: "Previous",
     path: "#",
   },
   next: {
     label: "Next",
+    path: "#",
+  },
+  last: {
+    label: "Last",
     path: "#",
   },
   items: [
