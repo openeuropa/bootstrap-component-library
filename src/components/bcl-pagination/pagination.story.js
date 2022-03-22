@@ -8,8 +8,8 @@ const getArgs = (data) => {
   return {
     size: "default",
     alignment: "default",
-    enable_prev_next_icon: data.enable_prev_next_icon,
-    enable_first_last_icon: data.enable_first_last_icon,
+    enable_prev_next_icon: false,
+    enable_first_last_icon: true,
   };
 };
 
