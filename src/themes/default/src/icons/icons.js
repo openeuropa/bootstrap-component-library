@@ -78,6 +78,7 @@ module.exports = [
 
   //Files and folders
   "file-earmark-pdf.svg",
+  "file-arrow-down-fill.svg",
   "file-pdf-fill.svg",
   "file-earmark-bar-graph.svg",
   "file-bar-graph-fill.svg",

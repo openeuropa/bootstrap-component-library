@@ -6,6 +6,7 @@ import dataDefault from "@openeuropa/bcl-content-banner/data/data";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
 const button = { ...dataDefault.button };
+const links = { ...dataDefault.links };
 
 const getArgs = () => {
   return {
@@ -56,7 +57,6 @@ const applyArgs = (data, args) => {
     data.action_button = button;
   } else {
     delete data.action_button;
-    data.attributes.removeClass(["col-md-10"]);
   }
 
   if (data.image && isChromatic()) {
