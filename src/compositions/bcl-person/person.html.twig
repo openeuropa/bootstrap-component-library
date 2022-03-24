@@ -10,7 +10,6 @@
       class="fw-bold mb-4"
     >{{- social_media.main_title -}}</h3>
   {% endif %}
-  
   {% if social_media.links is defined and social_media.links is not empty %}
     <div class="mb-4-5">
     {% for link in social_media.links %}
@@ -25,13 +24,19 @@
     >{{- information.main_title -}}</h3>
   {% endif %}
   {% if information.content is not empty %}
-    <div class="mb-3-5">
+    <div class="mb-4-5">
       {{- information.content -}}
     </div>
   {% endif %} 
-  {% if information.files is defined and information.files is not empty %}
+
+  {% if files.main_title is not empty %}
+    <h3
+      class="fw-bold mb-4"
+    >{{- files.main_title -}}</h3>
+  {% endif %}
+  {% if files.listing is defined and files.listing is not empty %}
     <div class="mb-4-5">
-    {% for file in information.files %}
+    {% for file in files.listing %}
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     {% endfor %}
     </div>

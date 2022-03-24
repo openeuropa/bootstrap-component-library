@@ -1,3 +1,4 @@
+import { withDesign } from "storybook-addon-designs";
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
 import demoData from "@openeuropa/bcl-date-block/data/data";
 
@@ -7,6 +8,9 @@ const getArgs = (data) => {
     month: data.month,
     year: data.year,
     date_time: data.date_time,
+    end_day: "",
+    end_month: "",
+    end_year: "",
   };
 };
 
@@ -45,6 +49,33 @@ const getArgTypes = () => {
         defaultValue: { summary: "" },
       },
     },
+    end_day: {
+      name: "end day",
+      type: { name: "string" },
+      description: "End Day",
+      table: {
+        type: { summary: "integer" },
+        defaultValue: { summary: "" },
+      },
+    },
+    end_month: {
+      name: "end month",
+      type: { name: "string" },
+      description: "End Month",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+      },
+    },
+    end_year: {
+      name: "end year",
+      type: { name: "string" },
+      description: "End Year",
+      table: {
+        type: { summary: "integer" },
+        defaultValue: { summary: "" },
+      },
+    },
   };
 };
 
@@ -54,6 +85,16 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Date block",
+  decorators: [withDesign],
+  parameters: {
+    design: [
+      {
+        name: "Mockup",
+        type: "figma",
+        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=4332%3A42035",
+      },
+    ],
+  },
 };
 
 export const Standalone = (args) => dateBlock(applyArgs(demoData, args));

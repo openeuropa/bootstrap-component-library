@@ -14,7 +14,7 @@ on:
 jobs:
   chromatic-deployment-theme:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.ref, '#') }}
+    if: ${{ contains(github.ref, '#') && !contains(github.event.head_commit.message, '[skip chromatic]') }}
     steps:
       - uses: actions/checkout@v2
         with:
