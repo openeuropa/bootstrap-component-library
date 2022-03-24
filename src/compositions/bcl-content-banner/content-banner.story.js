@@ -2,8 +2,8 @@ import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import dataDefault from "@openeuropa/bcl-content-banner/data/data";
-import dataLinks from "@openeuropa/bcl-content-banner/data/data--links";
+import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
+import dataLinks from "@openeuropa/bcl-content-banner/data/data--links.js";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
 const button = { ...dataDefault.button };
