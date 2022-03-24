@@ -15,6 +15,8 @@ describe("OE - Content banner", () => {
   test("with links renders correctly", () => {
     expect.assertions(1);
 
-    return expect(render(demoLinksData)).resolves.toMatchSnapshot();
+    return expect(
+      render({ ...demoData, ...demoLinksData })
+    ).resolves.toMatchSnapshot();
   });
 });
