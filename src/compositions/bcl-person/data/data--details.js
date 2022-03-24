@@ -99,7 +99,10 @@ module.exports = {
       <li>Sed auctor purus at tellus cursus dignissim. Sed sit amet ligula nisl</li>
     </ul>
     `,
-    files: [
+  },
+  files: {
+    main_title: "Related documents",
+    listing: [
       {
         item_title: "File title",
         language: "English",
