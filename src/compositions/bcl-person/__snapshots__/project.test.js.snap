@@ -744,7 +744,7 @@ exports[`OE - Person details renders correctly 1`] = `
             Additional information
           </h3>
           <div
-            class="mb-3-5"
+            class="mb-4-5"
           >
             <p
               class="mb-0"
@@ -760,6 +760,11 @@ exports[`OE - Person details renders correctly 1`] = `
               </li>
             </ul>
           </div>
+          <h3
+            class="fw-bold mb-4"
+          >
+            Related documents
+          </h3>
           <div
             class="mb-4-5"
           >
@@ -2160,11 +2165,29 @@ exports[`OE - Person listing renders correctly 1`] = `
             class="d-none d-md-block mt-4-5"
           />
           <nav
+            aria-label="Pagination aria label"
             class="mt-4-5 mb-5"
+            role="navigation"
           >
             <ul
               class="pagination justify-content-center"
             >
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  <svg
+                    class="bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#chevron-double-left"
+                    />
+                  </svg>
+                </a>
+              </li>
               <li
                 class="page-item"
               >
@@ -2234,6 +2257,22 @@ exports[`OE - Person listing renders correctly 1`] = `
                   href="#"
                 >
                   Next
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  <svg
+                    class="bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#chevron-double-right"
+                    />
+                  </svg>
                 </a>
               </li>
             </ul>

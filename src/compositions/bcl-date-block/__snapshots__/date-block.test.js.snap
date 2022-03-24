@@ -3,18 +3,55 @@
 exports[`OE - Date block renders correctly 1`] = `
 <jest>
   <time
-    class="bcl-date-block d-flex flex-column align-items-center justify-content-center bg-date text-light pt-2 rounded-top mw-date"
+    class="bcl-date-block bg-date rounded mw-date text-center d-flex flex-column ratio ratio-1x1"
     datetime="2021-01-23"
   >
     <span
-      class="py-4 bg-white border border-bottom-0 w-100 fs-5 fw-medium text-dark text-center text-uppercase"
+      class="d-flex flex-column pt-2"
     >
-      23 Jan
+      <span
+        class="d-flex flex-column align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
+      >
+        <span
+          class="d-block"
+        >
+          23 Jan
+        </span>
+      </span>
+      <span
+        class="bg-lighter border w-100 rounded-bottom py-1"
+      >
+        2021
+      </span>
     </span>
+  </time>
+</jest>
+`;
+
+exports[`OE - Date block with end date renders correctly 1`] = `
+<jest>
+  <time
+    class="bcl-date-block bg-date rounded mw-date text-center d-flex flex-column ratio ratio-1x1"
+    datetime="2021-01-23"
+  >
     <span
-      class="bg-lighter border w-100 text-center fs-5 text-dark rounded-bottom mb-n1"
+      class="d-flex flex-column pt-2"
     >
-      2021
+      <span
+        class="d-flex flex-column align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
+      >
+        <span
+          class="d-block"
+        >
+          23 Jan - 
+        </span>
+        24      Jun
+      </span>
+      <span
+        class="bg-lighter border w-100 rounded-bottom py-1"
+      >
+        2021 - 2023
+      </span>
     </span>
   </time>
 </jest>

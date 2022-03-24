@@ -24,6 +24,7 @@ $utilities: map-merge(
               map-get(map-get($utilities, "max-width"), "values"),
               (
                 date: 7.5rem,
+                col-date: calc(7.5rem + var(--#{$variable-prefix}gutter-x)),
                 "listing-img": 10rem,
               )
             ),
