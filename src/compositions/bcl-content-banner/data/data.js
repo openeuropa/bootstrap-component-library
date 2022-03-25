@@ -30,11 +30,6 @@ module.exports = {
     path: "https://picsum.photos/255/255?random=6",
     alt: "alt img",
   },
-  button: {
-    label: "Action button",
-    variant: "secondary",
-    attributes: new drupalAttribute().addClass("mb-3"),
-  },
   service_buttons: [
     {
       label: "Print",

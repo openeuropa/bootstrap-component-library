@@ -47,8 +47,6 @@
 
   Blocks
     - card_date
-    - card_badge
-    - card_link
 #}
 
 {% set _title = title|default({}) %}
@@ -218,9 +216,7 @@
           })
         %}
       {% endif %}
-      {% block card_badge %}
-        {% include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
-      {% endblock %}
+      {% include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
       
     {% endfor %}
     </div>
@@ -233,20 +229,15 @@
           attributes: create_attribute()
         }) %}
       {% endif %}
-      {% set _link = _link|merge({
-          attributes: _link.attributes.addClass('mb-2')
-        })
-      %}
       {% if not loop.last %}
         {% set _link = _link|merge({
             attributes: _link.attributes.addClass('me-4-5')
           })
         %}
       {% endif %}
-      {% block card_link %}
+      <div class="mb-3 mb-md-0 d-block d-md-inline-block">
         {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-      {% endblock %}
-      
+      </div>
     {% endfor %}
     </div>
   {%- endif -%}

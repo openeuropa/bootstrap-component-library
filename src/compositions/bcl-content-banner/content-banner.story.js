@@ -4,9 +4,10 @@ import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import dataLinks from "@openeuropa/bcl-content-banner/data/data--links.js";
+import dataActionButton from "@openeuropa/bcl-content-banner/data/data--action-button";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
-const button = { ...dataDefault.button };
+const button = { ...dataActionButton.action_button };
 const links = [...dataLinks.links];
 
 const getArgs = () => {

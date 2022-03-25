@@ -1,9 +1,10 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import dataDefault from "@openeuropa/bcl-content-banner/data/data";
 import dataLinks from "@openeuropa/bcl-content-banner/data/data--links";
+import dataActionButton from "@openeuropa/bcl-content-banner/data/data--action-button";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
-const demoData = { ...dataDefault, ...dataLinks };
+const demoData = { ...dataDefault, ...dataLinks, ...dataActionButton };
 
 export default {
   title: "Compositions/Content banner",
