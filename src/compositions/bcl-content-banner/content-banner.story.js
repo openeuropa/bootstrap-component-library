@@ -2,16 +2,22 @@ import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import dataDefault from "@openeuropa/bcl-content-banner/data/data";
+import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
+import dataLinks from "@openeuropa/bcl-content-banner/data/data--links.js";
+import dataActionButton from "@openeuropa/bcl-content-banner/data/data--action-button";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
-const button = { ...dataDefault.button };
+const button = { ...dataActionButton.action_button };
+const links = [...dataLinks.links];
+const badges = [...dataDefault.badges];
 
 const getArgs = () => {
   return {
     background: "gray",
     image_size: "md",
+    badges: true,
     action_button: false,
+    links: false,
   };
 };
 
@@ -35,6 +41,22 @@ const getArgTypes = () => {
         defaultValue: { summary: "{}" },
       },
     },
+    links: {
+      type: { name: "boolean" },
+      description: "Toggle links",
+      table: {
+        type: { summary: "array" },
+        defaultValue: { summary: "[]" },
+      },
+    },
+    badges: {
+      type: { name: "boolean" },
+      description: "Toggle badges",
+      table: {
+        type: { summary: "array" },
+        defaultValue: { summary: "[]" },
+      },
+    },
     image_size: {
       name: "image size",
       type: { name: "select" },
@@ -56,7 +78,18 @@ const applyArgs = (data, args) => {
     data.action_button = button;
   } else {
     delete data.action_button;
-    data.attributes.removeClass(["col-md-10"]);
+  }
+  if (args.links) {
+    data.links = links;
+  } else {
+    delete data.links;
+  }
+  if (!args.badges) {
+    delete data.badges;
+  } else {
+    if (!data.badges) {
+      data.badges = badges;
+    }
   }
 
   if (data.image && isChromatic()) {

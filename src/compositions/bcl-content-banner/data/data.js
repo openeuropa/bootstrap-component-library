@@ -30,16 +30,11 @@ module.exports = {
     path: "https://picsum.photos/255/255?random=6",
     alt: "alt img",
   },
-  button: {
-    label: "Action button",
-    variant: "secondary",
-    attributes: new drupalAttribute().addClass("mb-3"),
-  },
   service_buttons: [
     {
       label: "Print",
-      variant: "light",
-      attributes: new drupalAttribute().addClass("w-auto mt-3 me-3"),
+      outline: true,
+      attributes: new drupalAttribute().addClass("w-auto me-3"),
       icon: {
         path: "/icons.svg",
         name: "printer-fill",
@@ -48,8 +43,8 @@ module.exports = {
     },
     {
       label: "Export",
-      variant: "light",
-      attributes: new drupalAttribute().addClass("w-auto mt-3"),
+      outline: true,
+      attributes: new drupalAttribute().addClass("w-auto"),
       icon: {
         path: "/icons.svg",
         name: "file-arrow-down-fill",
