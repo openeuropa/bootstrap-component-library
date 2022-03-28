@@ -175,7 +175,7 @@ Parameters:
             {% for _item in _items %}
               {% set _carousel_items = _carousel_items|merge([_item|merge({
                 caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
-                image: _item.media|replace({'src=': 'data-src='}),
+                image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
               })]) %}
             {% endfor %}
             {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
