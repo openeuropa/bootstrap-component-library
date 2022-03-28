@@ -52,11 +52,11 @@
     h5 {
       margin-bottom: 0;
     }
+  }
 
-    p {
-      display: none;
-      margin-top: map-get($spacers, 1);
-    }
+  .bcl-gallery__item-description {
+    display: none;
+    margin-top: map-get($spacers, 1);
   }
 
   ul.bcl-gallery__grid li:not(:last-child) {
@@ -255,10 +255,8 @@
   }
 
   @include media-breakpoint-up(lg) {
-    .bcl-gallery__item-caption {
-      p {
-        display: block;
-      }
+    .bcl-gallery__item-description {
+      display: block;
     }
   }
 }
