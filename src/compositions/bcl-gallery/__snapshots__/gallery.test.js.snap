@@ -47,9 +47,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <h5>
                   First slide label
                 </h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
               </div>
             </div>
             <img
@@ -76,9 +73,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <h5>
                   Slide label
                 </h5>
-                <p>
-                  Some representative placeholder content for the slide.
-                </p>
               </div>
             </div>
             <img
@@ -116,9 +110,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <h5>
                   Slide label
                 </h5>
-                <p>
-                  Some representative placeholder content for the slide.
-                </p>
               </div>
             </div>
             <img
@@ -145,9 +136,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <h5>
                   Slide label
                 </h5>
-                <p>
-                  Some representative placeholder content for the slide.
-                </p>
               </div>
             </div>
             <img
@@ -212,9 +200,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                   <h5>
                     Slide label
                   </h5>
-                  <p>
-                    Some representative placeholder content for the slide.
-                  </p>
                 </div>
               </div>
               <img
@@ -241,9 +226,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                   <h5>
                     Slide label
                   </h5>
-                  <p>
-                    Some representative placeholder content for the slide.
-                  </p>
                 </div>
               </div>
               <img
@@ -270,9 +252,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                   <h5>
                     Slide label
                   </h5>
-                  <p>
-                    Some representative placeholder content for the slide.
-                  </p>
                 </div>
               </div>
               <img
@@ -299,9 +278,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                   <h5>
                     Slide label
                   </h5>
-                  <p>
-                    Some representative placeholder content for the slide.
-                  </p>
                 </div>
               </div>
               <img
@@ -328,9 +304,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                   <h5>
                     Last slide label
                   </h5>
-                  <p>
-                    Some representative placeholder content for the last slide.
-                  </p>
                 </div>
               </div>
               <img
@@ -526,23 +499,23 @@ exports[`OE - Gallery default renders correctly 1`] = `
                     poster="https://picsum.photos/id/1081/800/400"
                   >
                     <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                      data-src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
                       type="video/mp4"
                     />
                     <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                      data-src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
                       type="video/webm"
                     />
                     <track
+                      data-src="/captions/bunny-en.vtt"
                       kind="captions"
                       label="English"
-                      src="/captions/bunny-en.vtt"
                       srclang="en"
                     />
                     <track
+                      data-src="/captions/bunny-fr.vtt"
                       kind="captions"
                       label="français"
-                      src="/captions/bunny-fr.vtt"
                       srclang="fr"
                     />
                   </video>

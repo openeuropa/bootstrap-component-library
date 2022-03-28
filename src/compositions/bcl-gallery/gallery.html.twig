@@ -16,6 +16,7 @@ Parameters:
         thumbnails (string) img path
         media: (string) <img> tag
         caption (string)
+        caption_title (string)
         caption_classes (string)
         interval (integer) (default: 0)
       }
@@ -38,6 +39,7 @@ Parameters:
 {% set _max_visible_thumbnails = max_visible_thumbnails|default(5) %}
 {% set _icon_path = icon_path|default('') %}
 
+{% set _carousel_items = [] %}
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
 {% set _modal_id = "modal" ~ _id|capitalize %}
 {% set _collpase_id = "collapse" ~ _id|capitalize %}
@@ -93,8 +95,12 @@ Parameters:
                       } only %}
                       </span>
                     {% endif %}
-                    {% if _item.caption is not empty %}
-                      <div class="bcl-gallery__item-caption">{{ _item.caption }}</div>
+                    {% if _item.caption is not empty or item.caption_title is not empty %}
+                      <div class="bcl-gallery__item-caption">
+                      {% if _item.caption_title is not empty %}
+                        <h5>{{ _item.caption_title }}</h5>
+                      {% endif %}
+                      </div>
                     {% endif %}
                     </div>
                     {{ _item.thumbnail }}
@@ -166,12 +172,11 @@ Parameters:
           </div>
           
           <div class="modal-body d-flex align-items-center justify-content-center">
-            {% set _carousel_items = [] %}
             {% for _item in _items %}
-              {% set _carousel_items = _carousel_items|merge([{
+              {% set _carousel_items = _carousel_items|merge([_item|merge({
                 caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
-                image: _item.media,
-              }]) %}
+                image: _item.media|replace({'src=': 'data-src='}),
+              })]) %}
             {% endfor %}
             {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
               id: _carousel_id,

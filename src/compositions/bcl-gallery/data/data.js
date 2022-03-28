@@ -9,43 +9,44 @@ module.exports = {
   icon_path: "/icons.svg",
   items: [
     {
-      caption: `<h5>First slide label</h5><p>Some representative placeholder content for the first slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the first slide.</p>`,
+      caption_title: "First slide label",
       thumbnail: `<img alt="First slide" 
                     src="https://picsum.photos/id/1005/400/400" 
                   />`,
       media: `<img alt="First slide" 
-                data-src="https://picsum.photos/id/1005/800/400" 
+                src="https://picsum.photos/id/1005/800/400" 
               />`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/101/400/400" 
                   />`,
       media: `<img alt="slide" 
-                data-src="https://picsum.photos/id/101/800/400" 
+                src="https://picsum.photos/id/101/800/400" 
               />`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1012/400/400" 
                   />`,
       media: `<iframe 
-                data-src="https://www.youtube.com/embed/fgi-GSCB6ho" 
+                src="https://www.youtube.com/embed/fgi-GSCB6ho" 
                 frameborder="0"
               ></iframe>`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
       thumbnail: `<img alt="Slide" 
                     src="https://picsum.photos/id/1015/400/400" 
                   />`,
       media: `<img alt="slide" 
-                data-src="https://picsum.photos/id/1015/800/400" 
+                src="https://picsum.photos/id/1015/800/400" 
               />`,
     },
     {
@@ -60,53 +61,58 @@ module.exports = {
               </video>`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
+
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1018/400/400" 
                   />`,
       media: `<img alt="Slide" 
-                data-src="https://picsum.photos/id/1018/800/400" 
+                src="https://picsum.photos/id/1018/800/400" 
               />`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
+
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1026/400/400" 
                   />`,
       media: `<img alt="Slide" 
-                data-src="https://picsum.photos/id/1026/800/400" 
+                src="https://picsum.photos/id/1026/800/400" 
               />`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: "<p>Some representative placeholder content for the slide.</p>",
+      caption_title: "Slide label",
+
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1043/400/400" 
                   />`,
       media: `<img alt="Slide" 
-                data-src="https://picsum.photos/id/1043/800/400" 
+                src="https://picsum.photos/id/1043/800/400" 
               />`,
     },
     {
-      caption: `<h5>Slide label</h5><p>Some representative placeholder content for the slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
+
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1050/400/400" 
                   />`,
       media: `<img alt="First slide" 
-                data-src="https://picsum.photos/id/1050/800/400" 
+                src="https://picsum.photos/id/1050/800/400" 
               />`,
     },
     {
-      caption: `<h5>Last slide label</h5><p>Some representative placeholder content for the last slide.</p>`,
-      caption_classes: "d-none d-md-block",
+      caption: `<p>Some representative placeholder content for the last slide.</p>`,
+      caption_title: "Last slide label",
+
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1071/400/400" 
                   />`,
       media: `<img alt="First slide" 
-                data-src="https://picsum.photos/id/1071/800/400" 
+                src="https://picsum.photos/id/1071/800/400" 
               />`,
     },
   ],
