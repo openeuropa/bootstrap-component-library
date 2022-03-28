@@ -33,8 +33,8 @@ module.exports = {
   service_buttons: [
     {
       label: "Print",
-      variant: "light",
-      attributes: new drupalAttribute().addClass("w-auto mt-3 me-3"),
+      outline: true,
+      attributes: new drupalAttribute().addClass("w-auto me-3"),
       icon: {
         path: "/icons.svg",
         name: "printer-fill",
@@ -43,8 +43,8 @@ module.exports = {
     },
     {
       label: "Export",
-      variant: "light",
-      attributes: new drupalAttribute().addClass("w-auto mt-3"),
+      outline: true,
+      attributes: new drupalAttribute().addClass("w-auto"),
       icon: {
         path: "/icons.svg",
         name: "file-arrow-down-fill",

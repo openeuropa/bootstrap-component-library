@@ -93,16 +93,16 @@
   {% include '@oe-bcl/bcl-card/card.html.twig' with _card %}
 
   {% if _service_buttons is not empty or _action_button is not empty %}
-    <div class="d-flex justify-content-end mt-3 mt-md-2">
-    {% if _action_button is not empty %}
-      <div class="d-grid d-md-block">
-        {% include '@oe-bcl/bcl-button/button.html.twig' with _action_button only %}
-      </div>
-    {% endif %}
+    <div class="d-flex justify-content-end mt-2 align-items-center">
     {% if _service_buttons is not empty %}
       {% for _button in _service_buttons %}
         {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
       {% endfor %}
+    {% endif %}
+    {% if _action_button is not empty %}
+      <div class="d-grid d-md-block ms-3">
+        {% include '@oe-bcl/bcl-button/button.html.twig' with _action_button only %}
+      </div>
     {% endif %}
     </div>
   {% endif %}
