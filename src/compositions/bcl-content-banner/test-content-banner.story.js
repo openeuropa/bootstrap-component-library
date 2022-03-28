@@ -19,3 +19,6 @@ export const SmallImage = () =>
   contentBanner(correctPaths({ ...demoData, image_size: "sm" }));
 
 SmallImage.storyName = "Small image";
+
+export const NoImage = () =>
+  contentBanner(correctPaths({ ...demoData, image: "" }));
