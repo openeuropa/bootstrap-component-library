@@ -1,0 +1,26 @@
+{% spaceless %}
+
+{#
+  Parameters:
+    - "colors"
+#}
+
+{% set _colors = colors|default([]) %}
+<div class="row">
+{% for _color in _colors %}
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+  {% for _value in _color.values %}
+    <div class="p-3 {{ _value.text_color }}" style="padding: 15px; background: {{ _value.color }}">
+      {% if _value.percentage %}
+        <span class="text-capitalize">{{ _color.name }}</span> {{ _value.percentage}} 
+      {% else %}
+        <span class="text-capitalize">{{ _color.name }}</span>
+      {% endif %}
+      <span class="float-end">{{_value.color}}</span>
+    </div>
+  {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
+{% endspaceless %}
