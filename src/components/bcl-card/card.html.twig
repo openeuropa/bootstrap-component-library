@@ -47,7 +47,8 @@
 
   Blocks
     - card_date
-    - card_badge
+    - card_badges
+    - card_links
 #}
 
 {% set _title = title|default({}) %}
@@ -70,6 +71,7 @@
 {% set _extra_classes_header = extra_classes_header|default('') %}
 {% set _extra_classes_footer = extra_classes_footer|default('') %}
 {% set _badges = badges|default([]) %}
+{% set _links = links|default([]) %}
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
@@ -198,31 +200,42 @@
   {%- if _content is not empty -%}
     {{- _content -}}
   {%- endif -%}
-  {%- if _badges is not empty and _badges is iterable -%}
-    <div class="mt-2-5">
-    {% for _badge in _badges %}
-      {% if _badge.attributes is empty %}
+  {% block card_badges %}
+    {%- if _badges is not empty and _badges is iterable -%}
+      <div class="mt-2-5">
+      {% for _badge in _badges %}
+        {% if _badge.attributes is empty %}
+          {% set _badge = _badge|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
         {% set _badge = _badge|merge({
-          attributes: create_attribute()
-        }) %}
-      {% endif %}
-      {% set _badge = _badge|merge({
-          attributes: _badge.attributes.addClass('mb-2')
-        })
-      %}
-      {% if not loop.last %}
-        {% set _badge = _badge|merge({
-            attributes: _badge.attributes.addClass('me-2')
+            attributes: _badge.attributes.addClass('mb-2')
           })
         %}
-      {% endif %}
-      {% block card_badge %}
+        {% if not loop.last %}
+          {% set _badge = _badge|merge({
+              attributes: _badge.attributes.addClass('me-2')
+            })
+          %}
+        {% endif %}
         {% include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
-      {% endblock %}
-      
-    {% endfor %}
-    </div>
-  {%- endif -%}
+        
+      {% endfor %}
+      </div>
+    {%- endif -%}
+  {% endblock %}
+  {% block card_links %}
+    {%- if _links is not empty and _links is iterable -%}
+      <div class="mt-2-5 mb-2">
+      {% for _link in _links %}
+        <div class="mb-3 mb-md-0 d-block d-md-inline-block me-4-5">
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+        </div>
+      {% endfor %}
+      </div>
+    {%- endif -%}
+  {% endblock %}
   </div>
 {% if _horizontal %}
 </div>
