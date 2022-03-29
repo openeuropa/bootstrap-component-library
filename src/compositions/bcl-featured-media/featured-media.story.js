@@ -3,7 +3,7 @@ import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-featured-media/data/data";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
 import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
-import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
+import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item.js";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 
 if (isChromatic()) {

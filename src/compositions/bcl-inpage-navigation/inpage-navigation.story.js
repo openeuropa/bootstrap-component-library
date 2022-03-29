@@ -1,6 +1,6 @@
 import { initScrollspy } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-inpage-navigation/data/data";
+import demoData from "@openeuropa/bcl-inpage-navigation/data/data.js";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
 
 export default {

@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 
-import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
+import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing.js";
 import projectStatus from "@openeuropa/bcl-project-status/project-status.html.twig";
 
 const getArgs = (data) => {
