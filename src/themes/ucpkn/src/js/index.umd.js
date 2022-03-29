@@ -10,6 +10,7 @@ import Button from "@openeuropa/bcl-bootstrap/js/src/button";
 import Carousel from "@openeuropa/bcl-bootstrap/js/src/carousel";
 import Collapse from "@openeuropa/bcl-bootstrap/js/src/collapse";
 import Dropdown from "@openeuropa/bcl-bootstrap/js/src/dropdown";
+import Gallery from "@openeuropa/bcl-theme-default/src/js/gallery/gallery";
 import Modal from "@openeuropa/bcl-bootstrap/js/src/modal";
 import Offcanvas from "@openeuropa/bcl-bootstrap/js/src/offcanvas";
 import Popover from "@openeuropa/bcl-bootstrap/js/src/popover";
