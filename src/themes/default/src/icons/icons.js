@@ -340,4 +340,17 @@ module.exports = [
   "download.svg",
   "bookmarks.svg",
   "bookmarks-fill.svg",
+
+  // Needed by paragraphs OEL-1348
+  "book.svg",
+  "check.svg",
+  "currency-euro.svg",
+  "file.svg",
+  "filter.svg",
+  "box-arrow-up.svg",
+  "image.svg",
+  "info.svg",
+  "files.svg",
+  "share.svg",
+  "camera-video.svg",
 ];
