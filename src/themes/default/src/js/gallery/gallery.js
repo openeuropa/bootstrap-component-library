@@ -29,7 +29,7 @@ const CAROUSEL_SELECTOR = '.carousel'
 const CAROUSEL_PAGER_SELECTOR = '.carousel-pager span'
 const CAROUSEL_ACTIVE_SELECTOR = '.carousel-item.active'
 const CAROUSEL_ITEM_SELECTOR = '.carousel-item'
-const THUMBNAIL_SELECTOR = '.bcl-gallery__grid a'
+const THUMBNAIL_SELECTOR = '.bcl-gallery__grid a, .bcl-gallery__mobile-view-more'
 const MODAL_SELECTOR = '.modal'
 const EVENT_MODAL_HIDE = 'hide.bs.modal'
 const CAROUSEL_EVENT = 'slide.bs.carousel'
@@ -149,8 +149,8 @@ class Gallery extends BaseComponent {
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, THUMBNAIL_SELECTOR, function (event) {
-  const gallery = event.srcElement.closest('div.bcl-gallery')
-  const firstSlide = event.srcElement.parentNode.getAttribute('data-bs-slide-to');
+  const gallery = event.target.closest('div.bcl-gallery')
+  const firstSlide = event.target.parentNode.getAttribute('data-bs-slide-to');
   gallery.dataset.galleryStart = firstSlide;
 
   Gallery.galleryInterface(gallery, Gallery.getInstance(gallery))
