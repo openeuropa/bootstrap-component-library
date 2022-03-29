@@ -11,6 +11,7 @@
       image: (string) <img> tag
       caption (string)
       caption_classes (string)
+      caption_title (string) 
       interval (integer) (default: 0)
      }
      ...
@@ -116,9 +117,12 @@
       <div
         class="{{ _caption_classes }}"
       >
-        {% if _item.caption is defined and _item.caption is not empty %}
+        {% if _item.caption is not empty or _item.caption_title is not empty %}
           {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
             <div class="{{ _item.caption_classes }}">
+          {% endif %}
+          {% if _item.caption_title is not empty %}
+            <h5>{{ _item.caption_title }}</h5>
           {% endif %}
             {{- _item.caption -}}
           {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
