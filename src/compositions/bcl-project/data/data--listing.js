@@ -122,7 +122,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["me-2", "mb-2"]),
     },
     {
-      label: "Start date: 22/01/2019",
+      label: "Start date: 22 January 2019",
       background: "light",
       dismissible: true,
       icon_path: "/icons.svg",
