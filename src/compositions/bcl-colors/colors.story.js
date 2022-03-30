@@ -2,19 +2,47 @@ import colors from "@openeuropa/bcl-colors/colors.html.twig";
 
 const getArgs = () => {
   return {
-    new_color_name: "",
-    new_color_hex: "",
+    main_colors: [
+      {
+        name: "primary",
+        value: getComputedStyle(document.documentElement).getPropertyValue(
+          "--bs-primary"
+        ),
+      },
+      {
+        name: "secondary",
+        value: getComputedStyle(document.documentElement).getPropertyValue(
+          "--bs-secondary"
+        ),
+      },
+      {
+        name: "success",
+        value: getComputedStyle(document.documentElement).getPropertyValue(
+          "--bs-success"
+        ),
+      },
+      {
+        name: "info",
+        value: getComputedStyle(document.documentElement).getPropertyValue(
+          "--bs-info"
+        ),
+      },
+      {
+        name: "warning",
+        value: getComputedStyle(document.documentElement).getPropertyValue(
+          "--bs-warning"
+        ),
+      },
+      {
+        name: "danger",
+        value: getComputedStyle(document.documentElement).getPropertyValue(
+          "--bs-danger"
+        ),
+      },
+    ],
   };
 };
 
-let semanticColors = [
-  "primary",
-  "secondary",
-  "success",
-  "info",
-  "warning",
-  "danger",
-];
 const percentages = [
   -90, -80, -70, -50, -25, -20, -15, 0, 5, 10, 15, 20, 25, 50,
 ];
@@ -47,55 +75,14 @@ let mix = function (color_1, color_2, weight) {
   return color;
 };
 
-semanticColors.forEach((color) => {
-  let hexColor = getComputedStyle(document.documentElement).getPropertyValue(
-    "--bs-" + color
-  );
-  dataColors[color] = {
-    name: color,
-    values: [],
-  };
-  percentages.forEach((percentage) => {
-    let mixedColor = "";
-    if (percentage >= 0) {
-      mixedColor = mix(hexColor, "#000000", percentage);
-    } else {
-      mixedColor = mix(hexColor, "#ffffff", percentage * -1);
-    }
-    let obj = {
-      percentage: percentage,
-      color: mixedColor,
-      text_color: percentage > -50 ? "text-white" : "text-dark",
-    };
-    dataColors[color].values.push(obj);
-  });
-});
-
-const getArgTypes = (data) => {
+const getArgTypes = () => {
   const argTypes = {
-    new_color_name: {
-      name: "new color name",
-      type: { name: "select" },
-      description: "Add new color name",
-      options: [
-        "new-primary",
-        "new-secondary",
-        "new-success",
-        "new-info",
-        "new-warning",
-        "new-danger",
-      ],
+    main_colors: {
+      name: "main colors",
+      type: { name: "array" },
+      description: "array of colors",
       table: {
-        type: { summary: "string" },
-        category: "Content",
-      },
-    },
-    new_color_hex: {
-      name: "new color hex",
-      type: { name: "string" },
-      description: "hexadecimal color value",
-      table: {
-        type: { summary: "string" },
+        type: { summary: "array" },
         category: "Content",
       },
     },
@@ -105,28 +92,29 @@ const getArgTypes = (data) => {
 };
 
 const applyArgs = (data, args) => {
-  let hexReg = /^#([0-9a-f]{3}){1,2}$/i;
-  if (args.new_color_name && hexReg.test(args.new_color_hex)) {
-    let hexColor = args.new_color_hex;
-    dataColors[args.new_color_name] = {
-      name: args.new_color_name,
-      values: [],
-    };
-    percentages.forEach((percentage) => {
-      let mixedColor = "";
-      if (percentage >= 0) {
-        mixedColor = mix(hexColor, "#000000", percentage);
-      } else {
-        mixedColor = mix(hexColor, "#ffffff", percentage * -1);
-      }
-      let obj = {
-        percentage: percentage,
-        color: mixedColor,
-        text_color: percentage > -50 ? "text-white" : "text-dark",
+  args.main_colors.forEach((color) => {
+    if (color.value && color.name) {
+      let hexColor = color.value;
+      let name = color.name;
+      dataColors[name] = {
+        name: name,
+        values: [],
       };
-      dataColors[args.new_color_name].values.push(obj);
-    });
-  }
+      percentages.forEach((percentage) => {
+        let mixedColor = "";
+        if (percentage >= 0) {
+          mixedColor = mix(hexColor, "#000000", percentage);
+        } else {
+          mixedColor = mix(hexColor, "#ffffff", percentage * -1);
+        }
+        let obj = {
+          percentage: percentage,
+          color: mixedColor,
+        };
+        dataColors[name].values.push(obj);
+      });
+    }
+  });
 
   return Object.assign(data, args);
 };
