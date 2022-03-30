@@ -29,7 +29,7 @@ module.exports = {
             path: "/icons.svg",
           },
         },
-        definition: "19/12/2021 to 21/12/2021",
+        definition: "19 December 2021 to 21 March 2022",
       },
       {
         term: {
