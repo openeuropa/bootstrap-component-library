@@ -102,13 +102,18 @@ const applyArgs = (data, args) => {
       };
       percentages.forEach((percentage) => {
         let mixedColor = "";
+        let percentageString = percentage;
+        if (percentage > 0) {
+          percentageString = "+" + percentage;
+        }
         if (percentage >= 0) {
           mixedColor = mix(hexColor, "#000000", percentage);
         } else {
+          percentageString = percentage;
           mixedColor = mix(hexColor, "#ffffff", percentage * -1);
         }
         let obj = {
-          percentage: percentage,
+          percentage: percentageString,
           color: mixedColor,
         };
         dataColors[name].values.push(obj);
