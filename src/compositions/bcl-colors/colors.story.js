@@ -1,6 +1,13 @@
 import colors from "@openeuropa/bcl-colors/colors.html.twig";
 
-const semanticColors = [
+const getArgs = () => {
+  return {
+    new_color_name: "",
+    new_color_hex: "",
+  };
+};
+
+let semanticColors = [
   "primary",
   "secondary",
   "success",
@@ -13,7 +20,7 @@ const percentages = [
 ];
 let dataColors = {};
 
-var mix = function (color_1, color_2, weight) {
+let mix = function (color_1, color_2, weight) {
   function d2h(d) {
     return d.toString(16);
   }
@@ -24,12 +31,12 @@ var mix = function (color_1, color_2, weight) {
   weight = 100 - weight;
   weight = typeof weight !== "undefined" ? weight : 50;
 
-  var color = "#";
+  let color = "#";
   color_1 = color_1.replace(/#/g, "");
   color_2 = color_2.replace(/#/g, "");
 
-  for (var i = 0; i <= 5; i += 2) {
-    var v1 = h2d(color_1.substr(i, 2)),
+  for (let i = 0; i <= 5; i += 2) {
+    let v1 = h2d(color_1.substr(i, 2)),
       v2 = h2d(color_2.substr(i, 2)),
       val = d2h(Math.round(v2 + (v1 - v2) * (weight / 100.0)));
     while (val.length < 2) {
@@ -63,7 +70,61 @@ semanticColors.forEach((color) => {
     dataColors[color].values.push(obj);
   });
 });
-console.log(dataColors);
+
+const getArgTypes = (data) => {
+  const argTypes = {
+    new_color_name: {
+      name: "new color name",
+      type: { name: "string" },
+      description: "Add new color name",
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+    },
+    new_color_hex: {
+      name: "new color hex",
+      type: { name: "string" },
+      description: "hexadecimal color value",
+      table: {
+        type: { summary: "string" },
+        category: "Content",
+      },
+    },
+  };
+
+  return argTypes;
+};
+
+const applyArgs = (data, args) => {
+  let hexReg = /^#([0-9a-f]{3}){1,2}$/i;
+  if (args.new_color_name && hexReg.test(args.new_color_hex)) {
+    let hexColor = args.new_color_hex;
+    dataColors[args.new_color_name] = {
+      name: args.new_color_name,
+      values: [],
+    };
+    percentages.forEach((percentage) => {
+      let mixedColor = "";
+      if (percentage >= 0) {
+        mixedColor = mix(hexColor, "#000000", percentage);
+      } else {
+        mixedColor = mix(hexColor, "#ffffff", percentage * -1);
+      }
+      let obj = {
+        percentage: percentage,
+        color: mixedColor,
+        text_color: percentage > -50 ? "text-white" : "text-dark",
+      };
+      dataColors[args.new_color_name].values.push(obj);
+    });
+  }
+  if (args.new_color_hex) {
+    args.new_color_hex = "";
+  }
+
+  return Object.assign(data, args);
+};
 
 export default {
   title: "Colors",
@@ -78,4 +139,7 @@ export default {
   },
 };
 
-export const Default = () => colors({ colors: dataColors });
+export const Default = (args) =>
+  colors(applyArgs({ colors: dataColors }, args));
+Default.args = getArgs();
+Default.argTypes = getArgTypes();

@@ -10,7 +10,7 @@
 {% for _color in _colors %}
   <div class="col-12 col-md-6 col-lg-4 mb-4">
   {% for _value in _color.values %}
-    <div class="p-3 {{ _value.text_color }}" style="padding: 15px; background: {{ _value.color }}">
+    <div class="p-3 {{ _value.text_color }}" style="background: {{ _value.color }}">
       {% if _value.percentage %}
         <span class="text-capitalize">{{ _color.name }}</span> {{ _value.percentage}} 
       {% else %}
