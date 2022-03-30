@@ -1,7 +1,7 @@
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-fact-figures/data";
+import demoData from "@openeuropa/bcl-fact-figures/data.js";
 import factFigures from "@openeuropa/bcl-fact-figures/fact-figures.html.twig";
 
 const linkMore = { ...demoData.link_more };

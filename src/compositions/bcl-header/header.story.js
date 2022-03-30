@@ -4,7 +4,7 @@ import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data--ec";
-import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
+import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral.js";
 import header from "@openeuropa/bcl-header/header.html.twig";
 
 const getArgs = (data) => {

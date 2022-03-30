@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.21.0 (2022-03-29)
+
+#### :rocket: New Feature
+
+* [#295](https://github.com/openeuropa/bootstrap-component-library/pull/295) feat(gallery): Added gallery paragraph - OEL-1312 ([@papegaill](https://github.com/papegaill))
+* [#289](https://github.com/openeuropa/bootstrap-component-library/pull/289) feat(person): Added person feature - OEL-1268 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#297](https://github.com/openeuropa/bootstrap-component-library/pull/297) fix(icons): Adding missing icons for pagination ([@planctus](https://github.com/planctus))
+
+#### :nail_care: Enhancement
+
+* [#311](https://github.com/openeuropa/bootstrap-component-library/pull/311) feat(icons): Adding icons used in the application - OEL-1348 ([@planctus](https://github.com/planctus))
+* [#307](https://github.com/openeuropa/bootstrap-component-library/pull/307) feat(content-banner): Added links in content banner - OEL-1359 ([@tibi2303](https://github.com/tibi2303))
+* [#306](https://github.com/openeuropa/bootstrap-component-library/pull/306) feat(person-files): Added title for person feature files - OEL-1351 ([@tibi2303](https://github.com/tibi2303))
+* [#304](https://github.com/openeuropa/bootstrap-component-library/pull/304) feat(date-block): Updated date-block - OEL-1336 ([@tibi2303](https://github.com/tibi2303))
+* [#302](https://github.com/openeuropa/bootstrap-component-library/pull/302) feat(pagination): Add first and last params and fix icon alignment - OEL-1316 ([@papegaill](https://github.com/papegaill))
+* [#301](https://github.com/openeuropa/bootstrap-component-library/pull/301) feat(footer): Wrapping inline links in block elements - OEL-1327 ([@planctus](https://github.com/planctus))
+* [#298](https://github.com/openeuropa/bootstrap-component-library/pull/298) feat(content-banner): Content banner update - OEL-1323 ([@tibi2303](https://github.com/tibi2303))
+* [#291](https://github.com/openeuropa/bootstrap-component-library/pull/291) feat(deprecated-css): Used math.div for every dividing css - OEL-1309 ([@tibi2303](https://github.com/tibi2303))
+* [#273](https://github.com/openeuropa/bootstrap-component-library/pull/273) feat(carousel): Carousel update - OEL-1197 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#312](https://github.com/openeuropa/bootstrap-component-library/pull/312) chore(deps): Updates 29-03-22 ([@planctus](https://github.com/planctus))
+)
+* [#299](https://github.com/openeuropa/bootstrap-component-library/pull/299) chore(deps): Updates and dependabot alerts ([@planctus](https://github.com/planctus))
+* [#294](https://github.com/openeuropa/bootstrap-component-library/pull/294) feat(data): Restructuring data files - OEL-1313 ([@tibi2303](https://github.com/tibi2303))
+* [#296](https://github.com/openeuropa/bootstrap-component-library/pull/296) chore(deps): Updates 14-03-22 ([@planctus](https://github.com/planctus))
+* [#290](https://github.com/openeuropa/bootstrap-component-library/pull/290) feat(storybook): Reorganising paragraphs  OEL-1311 ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.20.0 (2022-03-08)
 
 #### :rocket: New Feature

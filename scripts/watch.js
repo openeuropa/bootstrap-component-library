@@ -28,7 +28,7 @@ const handlers = [
     ],
   },
   {
-    pattern: `${path.resolve(__dirname, "..")}/src/themes/*/src/js/*.js`,
+    pattern: `${path.resolve(__dirname, "..")}/src/themes/*/src/js/**/*.js`,
     events: [
       {
         on: "change",

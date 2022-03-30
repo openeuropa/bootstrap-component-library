@@ -1,6 +1,6 @@
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
 
-import dataDefault from "@openeuropa/bcl-banner/data/data";
+import dataDefault from "@openeuropa/bcl-banner/data/data.js";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
 import dataImage from "@openeuropa/bcl-banner/data/data--image";
 import dataShade from "@openeuropa/bcl-banner/data/data--shade";

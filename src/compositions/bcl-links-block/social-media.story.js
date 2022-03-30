@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
-import socialMediaData from "@openeuropa/bcl-links-block/data/data--social-media";
+import socialMediaData from "@openeuropa/bcl-links-block/data/data--social-media.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 const getArgs = (data) => {

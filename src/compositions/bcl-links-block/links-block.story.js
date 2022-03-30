@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 
-import demoData from "@openeuropa/bcl-links-block/data/data";
+import demoData from "@openeuropa/bcl-links-block/data/data.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 

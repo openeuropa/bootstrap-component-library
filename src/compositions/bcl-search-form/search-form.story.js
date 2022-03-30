@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-search-form/data/data--search";
+import demoData from "@openeuropa/bcl-search-form/data/data--search.js";
 import demoDataSubmittable from "@openeuropa/bcl-search-form/data/data--search-submit";
 import searchForm from "@openeuropa/bcl-search-form/search-form.html.twig";
 
