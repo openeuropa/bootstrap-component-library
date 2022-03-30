@@ -75,8 +75,16 @@ const getArgTypes = (data) => {
   const argTypes = {
     new_color_name: {
       name: "new color name",
-      type: { name: "string" },
+      type: { name: "select" },
       description: "Add new color name",
+      options: [
+        "new-primary",
+        "new-secondary",
+        "new-success",
+        "new-info",
+        "new-warning",
+        "new-danger",
+      ],
       table: {
         type: { summary: "string" },
         category: "Content",
@@ -118,9 +126,6 @@ const applyArgs = (data, args) => {
       };
       dataColors[args.new_color_name].values.push(obj);
     });
-  }
-  if (args.new_color_hex) {
-    args.new_color_hex = "";
   }
 
   return Object.assign(data, args);
