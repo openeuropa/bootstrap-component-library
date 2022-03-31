@@ -1,10 +1,13 @@
 import isChromatic from "chromatic/isChromatic";
-import demoData from "@openeuropa/bcl-landing-page/data.js";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-landing-page/data.js";
+import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 
 if (isChromatic()) {
   demoData.listing_section.items.forEach((item) => {
@@ -18,7 +21,7 @@ if (isChromatic()) {
 
 const dataLanding = {
   content_type: "landing-page",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),

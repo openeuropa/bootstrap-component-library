@@ -1,10 +1,14 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import header from "@openeuropa/bcl-data-header/data";
-import footer from "@openeuropa/bcl-data-footer/data";
-import banner from "@openeuropa/bcl-content-banner/data/data";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
@@ -15,7 +19,7 @@ const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>
 const baseData = {
   content_type: "news",
   page_title: "News",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_banner: true,
   with_header: true,

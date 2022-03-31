@@ -1,17 +1,21 @@
 import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import blockquote from "@openeuropa/bcl-data-blockquote/data";
-import banner from "@openeuropa/bcl-content-banner/data/data";
-import featuredItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
-import accordion from "@openeuropa/bcl-data-accordion/data";
-import timeline from "@openeuropa/bcl-timeline/data";
-import simpleBanner from "@openeuropa/bcl-content-banner/data/data--simple";
-import pageBanner from "@openeuropa/bcl-banner/data/data--image";
-import file from "@openeuropa/bcl-file/data/data";
-import fileThumbnail from "@openeuropa/bcl-file/data/data--card";
+import {
+  banner,
+  file,
+  fileThumbnail,
+  featuredItem,
+  accordion,
+  timeline,
+  simpleBanner,
+  pageBanner,
+  blockquote,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 
 import listing from "@openeuropa/bcl-page/data/data--listing";
@@ -39,7 +43,7 @@ delete featuredItem.title;
 
 const baseData = {
   content_type: "page",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-3-5"),

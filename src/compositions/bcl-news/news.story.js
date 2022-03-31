@@ -1,14 +1,18 @@
 import { withDesign } from "storybook-addon-designs";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
-import banner from "@openeuropa/bcl-content-banner/data/data";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
@@ -27,7 +31,7 @@ if (isChromatic()) {
 const baseData = {
   content_type: "news",
   page_title: "News",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_banner: true,
   with_header: true,

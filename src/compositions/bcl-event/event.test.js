@@ -1,16 +1,19 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import header from "@openeuropa/bcl-data-header/data";
-import footer from "@openeuropa/bcl-data-footer/data";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import banner from "@openeuropa/bcl-content-banner/data/data";
-import file from "@openeuropa/bcl-file/data/data";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+  listingDate,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import { file, banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
-import listing from "@openeuropa/bcl-listing/data/listing--date";
 
 delete file.translation;
 file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
@@ -18,7 +21,7 @@ const files = [file, file];
 
 const baseData = {
   content_type: "event",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),
@@ -43,7 +46,7 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: {
-    ...listing,
+    ...listingDate,
     variant: "default-1-col",
     link: false,
     content: "",

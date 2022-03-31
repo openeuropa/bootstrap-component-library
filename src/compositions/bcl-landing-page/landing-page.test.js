@@ -1,7 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import demoData from "@openeuropa/bcl-landing-page/data";
 
 const template = "@oe-bcl/bcl-landing-page/landing-page.html.twig";
@@ -9,7 +11,7 @@ const render = (params) => renderTwigFileAsNode(template, params);
 
 const dataLanding = {
   content_type: "landing-page",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_banner: true,
   with_header: true,

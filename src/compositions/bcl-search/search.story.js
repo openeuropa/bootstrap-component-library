@@ -5,11 +5,15 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
-import header from "@openeuropa/bcl-data-header/data--no-form";
-import footer from "@openeuropa/bcl-data-footer/data";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
+import {
+  headerNoForm,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-search/data/data--search";
@@ -26,7 +30,7 @@ if (isChromatic()) {
 const dataListing = {
   page_title: "Search results",
   content_type: "search",
-  header: header,
+  header: headerNoForm,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),
