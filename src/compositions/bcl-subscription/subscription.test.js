@@ -1,9 +1,14 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  banner,
+  sidebar,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+
 import content from "@openeuropa/bcl-news/data/data--content";
-import banner from "@openeuropa/bcl-content-banner/data/data";
-import sidebar from "@openeuropa/bcl-inpage-navigation/data/data--simple";
 import blockData from "@openeuropa/bcl-subscription-block/data";
 import drupalAttribute from "drupal-attribute";
 
@@ -13,7 +18,7 @@ import modalData from "@openeuropa/bcl-subscription/data/data--modal";
 const demoData = {
   content_type: "subscription",
   page_title: "Subscription",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),

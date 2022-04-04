@@ -6,16 +6,20 @@ import {
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import banner from "@openeuropa/bcl-content-banner/data/data";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataContent from "@openeuropa/bcl-project/data/data";
@@ -41,7 +45,7 @@ if (isChromatic()) {
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_header: true,
   with_footer: true,

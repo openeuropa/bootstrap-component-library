@@ -2,11 +2,16 @@ import { withDesign } from "storybook-addon-designs";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  banner,
+  sidebar,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+
 import content from "@openeuropa/bcl-news/data/data--content";
-import banner from "@openeuropa/bcl-content-banner/data/data";
-import sidebar from "@openeuropa/bcl-inpage-navigation/data/data--simple";
 import blockData from "@openeuropa/bcl-subscription-block/data";
 import drupalAttribute from "drupal-attribute";
 
@@ -24,7 +29,7 @@ if (isChromatic()) {
 const demoData = {
   content_type: "subscription",
   page_title: "Subscription",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),

@@ -1,7 +1,9 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import file from "@openeuropa/bcl-file/data/data";
+import { file } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 
 import listing from "@openeuropa/bcl-page/data/data--listing";
 import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
@@ -12,7 +14,7 @@ const files = [file, file];
 
 const demoData = {
   content_type: "page",
-  header: header,
+  header: headerSimple,
   footer: footer,
   sidebar: sidebar,
   with_banner: true,
