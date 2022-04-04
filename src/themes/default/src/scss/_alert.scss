@@ -1,0 +1,10 @@
+.alert {
+  .alert-content {
+    color: $dark;
+  }
+}
+@each $state, $value in $theme-colors {
+  .alert-#{$state} {
+    color: $value;
+  }
+}
