@@ -66,6 +66,10 @@ $utilities: map-merge(
 a {
   text-underline-offset: 2px;
 
+  &:visited {
+    color: $link-visited;
+  }
+
   &:not(.text-underline-hover),
   &:not(.standalone) {
     text-decoration-color: rgba($primary, 0.3);
