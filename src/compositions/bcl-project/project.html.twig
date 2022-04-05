@@ -48,9 +48,32 @@
     {% endfor %}
   {% endif %}
 
-  {% if content_lists.main_title is not empty %}
+  {% block chart %}
+    {{ chart }}
+  {% endblock %}
+
+  {% if chart_lists.main_title is not empty %}
     <h3
       class="fw-bold my-4"
+      {% if chart_lists.main_title_id is not empty %}
+      id="{{ chart_lists.main_title_id }}"
+      {% endif %}
+    >{{- chart_lists.main_title -}}</h3>
+  {% endif %}
+  {% if chart_lists.listing is defined and chart_lists.listing is not empty %}
+    {% for lists in chart_lists.listing %}
+      {% if lists.title is not empty %}
+      <h4 class="fw-bold mb-3">{{ lists.title }}</h4>
+      {% endif %}
+      {% for list in lists.content %}
+        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  {% if content_lists.main_title is not empty %}
+    <h3
+      class="fw-bold my-4-5"
       {% if content_lists.main_title_id is not empty %}
       id="{{ content_lists.main_title_id }}"
       {% endif %}

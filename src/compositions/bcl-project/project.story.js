@@ -26,7 +26,8 @@ import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
+const share =
+  '<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>';
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
