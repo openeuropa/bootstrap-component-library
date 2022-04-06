@@ -108,7 +108,10 @@ const getArgTypes = (data) => {
   };
 };
 
-const applyArgs = (data, args) => Object.assign(data, args);
+const applyArgs = (data, args) => {
+  delete data.title_id;
+  return Object.assign(data, args);
+};
 
 export default {
   title: "Compositions/Project status",

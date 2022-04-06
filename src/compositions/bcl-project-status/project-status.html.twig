@@ -33,96 +33,110 @@
 {% set _corporate_contribution = corporate_contribution|default('') %}
 {% set _chart_legend = chart_legend|default({}) %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass('bcl-project-status') %}
+
 {% set _bgs = {
     ongoing: 'info',
     closed: 'dark',
     planned: 'secondary',
   } %}
+
 {% set _bg = _bgs[_status]|default('secondary') %}
 
+{% if _title is not empty %}
+  <{{ _title_tag }}
+    class="fw-bold mb-4"
+    {% if title_id is not empty %}
+      id="{{ title_id }}"
+    {% endif %}
+  >
+    {{- title -}}
+  </{{ _title_tag }}>
+{% endif %}
 
-<{{ _title_tag }}
-  class="fw-bold mb-4"
-  {% if title_id is not empty %}
-    id="{{ title_id }}"
+<div {{ attributes }}>
+  <div class="bcl-project-status-progress border-bottom pb-4 mb-4">
+    <div class="row">
+      <div class="col-12 col-md-3">
+      {% if _label is not empty %}
+        <p class="fw-bold">{{ _label }}</p>
+      {% endif %}
+
+      {% if _badge is not empty %}
+        {% include '@oe-bcl/bcl-badge/badge.html.twig' with {
+          label: _badge,
+          background: _bg,
+          attributes: create_attribute().addClass([
+            'bcl-project-status-badge',
+            'mb-3',
+            'mb-md-0',
+          ]),
+        } only %}
+      {% endif %}
+
+      </div>
+
+      <div class="col-12 col-md-9">
+        <div class="d-flex justify-content-between">
+
+        {% if _start_date is not empty and _start_label is not empty %}
+          <p class="fw-bold">
+            {{- _start_label -}} <br>
+            <span class="fw-normal">
+              {{- _start_date -}}
+            </span>
+          </p>
+        {% endif %}
+
+        {% if _end_date is not empty and _end_label is not empty %}
+          <p class="fw-bold text-end">
+            {{- _end_label -}} <br>
+            <span class="fw-normal">
+              {{- _end_date -}}
+            </span>
+          </p>
+        {% endif %}
+        </div>
+
+      {% if _progress is not empty or _status != 'ongoing' %}
+        {% if _progress is empty %}
+          {% set _progress = _status == 'closed' ? 100 : 0 %}
+        {% endif %}
+        {% include '@oe-bcl/bcl-progress/progress.html.twig' with {
+          variant: _bg,
+          hidden_label: true,
+          progress: _progress,
+        } only %}
+      {% endif %}
+
+      </div>
+    </div>
+  </div>
+  {% if _corporate_contribution is not empty and _chart_legend is not empty %}
+  <div class="bcl-project-status-contributions border-bottom pb-4 mb-4">
+    {% block chart %}
+    <div class="row">
+      <div class="col-5 col-md-3">
+        <div class="circular-progress" data-percentage="{{ _corporate_contribution }}">
+          <span class="circular-progress-left">
+            <span class="circular-progress-bar"></span>
+          </span>
+          <span class="circular-progress-right">
+            <span class="circular-progress-bar"></span>
+          </span>
+        </div>
+      </div>
+      <div class="col-7 col-md-9 align-self-center">
+        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _chart_legend only %}
+      </div>
+    </div>
+    {% endblock %}
+  </div>
   {% endif %}
->
-  {{- title -}}
-</{{ _title_tag }}>
-
-<div class="border-bottom pb-4 mb-4">
-  <div class="row">
-    <div class="col-12 col-md-3">
-    {% if _label is not empty %}
-      <p class="fw-bold">{{ _label }}</p>
-    {% endif %}
-
-    {% if _badge is not empty %}
-      {% include '@oe-bcl/bcl-badge/badge.html.twig' with {
-        label: _badge,
-        background: _bg,
-        attributes: create_attribute().addClass(['mb-3', 'mb-md-0']),
-      } only %}
-    {% endif %}
-
-    </div>
-
-    <div class="col-12 col-md-9">
-      <div class="d-flex justify-content-between">
-
-      {% if _start_date is not empty and _start_label is not empty %}
-        <p class="fw-bold">
-          {{- _start_label -}} <br>
-          <span class="fw-normal">
-            {{- _start_date -}}
-          </span>
-        </p>
-      {% endif %}
-
-      {% if _end_date is not empty and _end_label is not empty %}
-        <p class="fw-bold text-end">
-          {{- _end_label -}} <br>
-          <span class="fw-normal">
-            {{- _end_date -}}
-          </span>
-        </p>
-      {% endif %}
-      </div>
-
-    {% if _progress is not empty or _status != 'ongoing' %}
-      {% if _progress is empty %}
-        {% set _progress = _status == 'closed' ? 100 : 0 %}
-      {% endif %}
-      {% include '@oe-bcl/bcl-progress/progress.html.twig' with {
-        variant: _bg,
-        hidden_label: true,
-        progress: _progress,
-      } only %}
-    {% endif %}
-
-    </div>
-  </div>
 </div>
-{% if _corporate_contribution is not empty and _chart_legend is not empty %}
-<div class="border-bottom pb-4 mb-4">
-  {% block chart %}
-  <div class="row">
-    <div class="col-5 col-md-3">
-      <div class="circular-progress" data-percentage="{{ _corporate_contribution }}">
-        <span class="circular-progress-left">
-          <span class="circular-progress-bar"></span>
-        </span>
-        <span class="circular-progress-right">
-          <span class="circular-progress-bar"></span>
-        </span>
-      </div>
-    </div>
-    <div class="col-7 col-md-9 align-self-center">
-      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _chart_legend only %}
-    </div>
-  </div>
-  {% endblock %} 
-</div>
-{% endif %} 
 
 {% endspaceless %}
