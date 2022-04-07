@@ -37,6 +37,7 @@
 {% set _icon = icon|default({}) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_id = title_id|default('') %}
 {% set _item_title = item_title|default('') %}
 {% set _text = text|default('') %}
 {% set _content = content|default('') %}
@@ -63,7 +64,12 @@
 
 {% if _title is not empty %}
   {% set _title_classes = 'fw-bold mb-4' %}
-  <{{ _title_tag }} class="{{ _title_classes }}">
+  <{{ _title_tag }} class="{{ _title_classes }}"
+  
+  {% if _title_id is defined and _title_id is not empty %}
+    id="{{ _title_id }}"
+  {% endif %}
+  >
     {{- _title -}}
   </{{ _title_tag }}>
 {% endif %}
