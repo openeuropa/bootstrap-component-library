@@ -3,7 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   file: {
     title: "File download",
-    title_id: "file-download",
+    title_attributes: new drupalAttribute().setAttribute("id", "file-download"),
     item_title: "File title",
     language: "English",
     meta: "(16.2 MB - PDF)",

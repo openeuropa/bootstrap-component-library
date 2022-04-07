@@ -2,7 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   title: "Project details",
-  title_id: "project-details",
+  title_attributes: new drupalAttribute().setAttribute("id", "project-details"),
   status: "planned",
   status_title: "Status",
   label: "Status",
