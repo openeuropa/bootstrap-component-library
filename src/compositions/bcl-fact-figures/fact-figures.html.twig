@@ -68,8 +68,10 @@
 
 <div {{ attributes }}>
 {% if _title is not empty %}
-  {% set _title_classes = 'fw-bold' %}
-  <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+  } only %}
 {% endif %}
   <div
   {% if _wrapper_classes is not empty %}

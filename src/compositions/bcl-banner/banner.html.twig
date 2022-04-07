@@ -53,14 +53,17 @@
   {% endif %}
   <div class="container">
     <div class="{{ _content_class }}">
-    {% if _title is not empty %}
-      <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
-      {% if _description is not empty %}
+      {% if _title is not empty %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: _title,
+          title_tag: _title_tag,
+        } only %}
+      {% endif %}
+    {% if _description is not empty %}
       <p class="mb-4">{{ _description }}</p>
-      {% endif %}
-      {% if _link.path %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-      {% endif %}
+    {% endif %}
+    {% if _link.path %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
     {% endif %}
     </div>
   </div>

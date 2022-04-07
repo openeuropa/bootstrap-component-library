@@ -32,6 +32,7 @@
 {% set _progress = progress|default('') %}
 {% set _corporate_contribution = corporate_contribution|default('') %}
 {% set _chart_legend = chart_legend|default({}) %}
+{% set _title_attributes =  title_attributes ?: create_attribute() %}
 
 {% set _bgs = {
     ongoing: 'info',
@@ -41,14 +42,13 @@
 {% set _bg = _bgs[_status]|default('secondary') %}
 
 
-<{{ _title_tag }}
-  class="fw-bold mb-4"
-  {% if title_id is not empty %}
-    id="{{ title_id }}"
-  {% endif %}
->
-  {{- title -}}
-</{{ _title_tag }}>
+{% if _title is not empty %}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    attributes: _title_attributes,
+  } only %}
+{% endif %}
 
 <div class="border-bottom pb-4 mb-4">
   <div class="row">

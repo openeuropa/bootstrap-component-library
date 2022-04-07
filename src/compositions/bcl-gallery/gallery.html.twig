@@ -59,12 +59,12 @@ Parameters:
     {% if _items is iterable %}
       <div class="d-sm-flex flex-sm-row align-items-sm-center">
         <div class="flex-sm-grow-1">
-          {%- if _title is not empty -%}
-            {% set _title_classes = 'fw-bold mb-3' %}
-            <{{ _title_tag }} class="{{ _title_classes }}">
-              {{- _title -}}
-            </{{ _title_tag }}>
-          {%- endif -%}
+        {% if _title is not empty %}
+          {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+            title: _title,
+            title_tag: _title_tag,
+          } only %}
+        {% endif %}
         </div>
         <div class="mb-3 mb-sm-0 fw-bold">
           {%- if _counter is not empty -%}

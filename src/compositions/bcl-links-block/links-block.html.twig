@@ -28,8 +28,10 @@
   {{ attributes }}
 >
   {% if _title is not empty %}
-    {% set _title_classes = 'fw-bold pb-3 mb-3 border-bottom' %}
-    <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: _title,
+      title_tag: _title_tag,
+    } only %}
   {% endif %}
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">

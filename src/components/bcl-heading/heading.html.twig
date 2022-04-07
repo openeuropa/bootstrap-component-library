@@ -1,0 +1,43 @@
+{% spaceless %}
+
+{# Parameters:
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - path (string) (default: '')
+  - link: (object) (default: {})
+  - attributes (drupal attrs)
+#}
+
+{% set _title = title|default('') %}
+{% set _path = path|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{%  set _link = link|default({}) %}
+{% set _classes = [
+  'bcl-heading',
+  'fw-bold',
+  'mb-4'
+] %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
+
+{% if _link is not empty and _title is not empty and _link.label is empty %}
+  {% set _link = _link|merge({ label: _title }) %}
+{% endif %}
+
+{% if _title is not empty or _link is not empty %}
+<{{ _title_tag }} 
+  {{- attributes -}}
+>
+{%- if _link is not empty -%}
+  {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+{%- else -%}
+  {{- _title -}}
+{%- endif %}
+</{{ _title_tag }}>
+{% endif -%}
+
+{% endspaceless %}
