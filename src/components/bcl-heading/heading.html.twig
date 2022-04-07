@@ -11,7 +11,7 @@
 {% set _title = title|default('') %}
 {% set _path = path|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
-{%  set _link = link|default({}) %}
+{% set _link = link|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
