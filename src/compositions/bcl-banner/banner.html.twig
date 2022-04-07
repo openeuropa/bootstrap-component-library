@@ -28,9 +28,9 @@
   {% set _content_class = _content_class ~ " " ~ _content_classes %}
 {% endif %}
 
-{% set _title_classes = "display-6" %}
+{% set _title_classes = ['display-6'] %}
 {% if _description is not empty or _link is not empty %}
-  {% set _title_classes = _title_classes ~ " mb-3" %}
+  {% set _title_classes = _title_classes|merge(['mb-3']) %}
 {% endif %}
 
 {% set _classes = [
@@ -57,6 +57,7 @@
         {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: _title,
           title_tag: _title_tag,
+          attributes: create_attribute().addClass(_title_classes)
         } only %}
       {% endif %}
     {% if _description is not empty %}

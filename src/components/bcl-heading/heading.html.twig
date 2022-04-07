@@ -12,17 +12,16 @@
 {% set _path = path|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {%  set _link = link|default({}) %}
-{% set _classes = [
-  'bcl-heading',
-  'fw-bold',
-  'mb-4'
-] %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{%  endif %}
+
+{% if attributes.class is empty %}
+  {% set attributes = attributes.addClass(['fw-bold', 'mb-4']) %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{% set attributes = attributes.addClass(['bcl-heading']) %}
 
 {% if _link is not empty and _title is not empty and _link.label is empty %}
   {% set _link = _link|merge({ label: _title }) %}
