@@ -7,7 +7,7 @@ describe("OE - Heading", () => {
     expect.assertions(1);
 
     return expect(
-      render({ title: 'A title created by the bcl heading template' })
+      render({ title: "A title created by the bcl heading template" })
     ).resolves.toMatchSnapshot();
   });
 
@@ -15,7 +15,10 @@ describe("OE - Heading", () => {
     expect.assertions(1);
 
     return expect(
-      render({ title: 'A title created by the bcl heading template', title_tag: 'h3' })
+      render({
+        title: "A title created by the bcl heading template",
+        title_tag: "h3",
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -23,7 +26,12 @@ describe("OE - Heading", () => {
     expect.assertions(1);
 
     return expect(
-      render({ link: { path:'/example', label: 'A title created by the bcl heading template' }})
+      render({
+        link: {
+          path: "/example",
+          label: "A title created by the bcl heading template",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -31,7 +39,12 @@ describe("OE - Heading", () => {
     expect.assertions(1);
 
     return expect(
-      render({ link: { path:'/example', title: 'A title created by the bcl heading template' }})
+      render({
+        link: {
+          path: "/example",
+          title: "A title created by the bcl heading template",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 });
