@@ -14,6 +14,7 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('div') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _description = description|default('') %}
 {% set _link = link|default({}) %}
 {% set _image = image|default('') %}
@@ -28,10 +29,12 @@
   {% set _content_class = _content_class ~ " " ~ _content_classes %}
 {% endif %}
 
-{% set _title_classes = "display-6" %}
+{% set _title_classes = ['display-6'] %}
 {% if _description is not empty or _link is not empty %}
-  {% set _title_classes = _title_classes ~ " mb-3" %}
+  {% set _title_classes = _title_classes|merge(['mb-3']) %}
 {% endif %}
+
+{% set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
 {% set _classes = [
   'bcl-banner',
@@ -53,14 +56,18 @@
   {% endif %}
   <div class="container">
     <div class="{{ _content_class }}">
-    {% if _title is not empty %}
-      <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
-      {% if _description is not empty %}
+      {% if _title is not empty %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: _title,
+          title_tag: _title_tag,
+          attributes: _title_attributes,
+        } only %}
+      {% endif %}
+    {% if _description is not empty %}
       <p class="mb-4">{{ _description }}</p>
-      {% endif %}
-      {% if _link.path %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-      {% endif %}
+    {% endif %}
+    {% if _link.path %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
     {% endif %}
     </div>
   </div>

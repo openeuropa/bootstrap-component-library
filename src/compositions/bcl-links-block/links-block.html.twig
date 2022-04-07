@@ -7,6 +7,7 @@
     - options ["vertical", "horizontal"]
   - title: (string) (default: "")
   - title_tag: (string) (default: "h2")
+  - title_attributes (drupal attrs)
   - links (array of link objects) (default: [])
 #}
 
@@ -14,6 +15,8 @@
 {% set _variant = variant|default("vertical") %}
 {% set _title = title|default("") %}
 {% set _title_tag = title_tag|default("h2") %}
+{% set _title_classes = ['fw-bold', 'pb-3', 'mb-3', 'border-bottom'] %}
+{% set _title_attributes = title_attributes ?: create_attribute().addClass(_title_classes) %}
 {% set _links = links|default([])%}
 
 {% if attributes is empty %}
@@ -28,8 +31,11 @@
   {{ attributes }}
 >
   {% if _title is not empty %}
-    {% set _title_classes = 'fw-bold pb-3 mb-3 border-bottom' %}
-    <{{ _title_tag }} class="{{ _title_classes }}">{{ _title }}</{{ _title_tag }}>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: _title,
+      title_tag: _title_tag,
+      attributes: _title_attributes,
+    } only %}
   {% endif %}
   {% if _links is not empty and _links is iterable %}
     <ul class="ps-0 mb-0">
