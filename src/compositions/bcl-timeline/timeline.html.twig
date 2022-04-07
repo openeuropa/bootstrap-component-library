@@ -10,6 +10,7 @@ Parameters:
     - "to": (integer) (default: items.length) Item index after which to resume displaying timeline items
   - title: (string) (default: "")
   - title_tag: (string) (default: "h2")
+  - title_attributes (drupal attrs)
   - "items" (array) (default: []):
     - "id": (string) (default: '')
     - "label": (string) (default: '')
@@ -23,6 +24,7 @@ Parameters:
 {% set _id = id|default(random(1000)) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
 {% set _toggle_collapsed = toggle_collapsed|default('') %}
@@ -60,6 +62,7 @@ Parameters:
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
+    attributes: _title_attributes,
   } only %}
 {% endif %}
 

@@ -14,6 +14,7 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('div') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _description = description|default('') %}
 {% set _link = link|default({}) %}
 {% set _image = image|default('') %}
@@ -32,6 +33,8 @@
 {% if _description is not empty or _link is not empty %}
   {% set _title_classes = _title_classes|merge(['mb-3']) %}
 {% endif %}
+
+{% set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
 {% set _classes = [
   'bcl-banner',
@@ -57,7 +60,7 @@
         {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: _title,
           title_tag: _title_tag,
-          attributes: create_attribute().addClass(_title_classes)
+          attributes: _title_attributes,
         } only %}
       {% endif %}
     {% if _description is not empty %}

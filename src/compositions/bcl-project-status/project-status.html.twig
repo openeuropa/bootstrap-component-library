@@ -4,6 +4,7 @@
   - title_id (string) (default: "")
   - title (string) (default: "")
   - title_tag (string) (default: "h3")
+  - title_attributes (drupal attrs)
   - status (string) (default: 'planned')
   - start_date (string) (default: '')
   - start_label (string) (default: '')
@@ -22,6 +23,7 @@
 {% set _title = title|default('') %}
 {% set _label = label|default('') %}
 {% set _title_tag = title_tag|default('h3') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _status = status|default('planned') %}
 {% set _charts = charts|default('') %}
 {% set _badge = badge|default('') %}
@@ -32,7 +34,6 @@
 {% set _progress = progress|default('') %}
 {% set _corporate_contribution = corporate_contribution|default('') %}
 {% set _chart_legend = chart_legend|default({}) %}
-{% set _title_attributes =  title_attributes ?: create_attribute() %}
 
 {% set _bgs = {
     ongoing: 'info',

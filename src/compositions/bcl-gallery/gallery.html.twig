@@ -5,6 +5,7 @@ Parameters:
   - "id" (string) (default: '')
   - "title" (string) (default: '')
   - "title_tag" (string) (default: 'h2')
+  - "title_attributes" (drupal attrs)
   - "counter" (string) (default: '')
   - "toggle_collapsed" (string) (default: '')
   - "toggle_expanded" (string) (default: '')
@@ -30,6 +31,7 @@ Parameters:
 {% set _id = id|default('gallery-' ~ random(1000)) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _counter = counter|default('') %}
 {% set _toggle_collapsed = toggle_collapsed|default('') %}
 {% set _toggle_expanded = toggle_expanded|default('') %}
@@ -63,6 +65,7 @@ Parameters:
           {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
             title: _title,
             title_tag: _title_tag,
+            attributes: _title_attributes,
           } only %}
         {% endif %}
         </div>
