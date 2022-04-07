@@ -1,0 +1,40 @@
+{% spaceless %}
+
+
+{#
+  Parameters:
+  - main_title (string) (default: '')
+  - main_title_id (string) (default: '')
+  - listing (array) (default: [])
+    {
+      title: '',
+      content: [
+        description list object
+      ]
+    }
+#}
+
+{% set _main_title = main_title|default({}) %}
+{% set _main_title_id = main_title_id|default('') %}
+{% set _listing = listing|default([]) %}
+
+{% if _main_title is not empty %}
+  <h3
+    class="fw-bold my-4-5"
+    {% if _main_title_id is not empty %}
+    id="{{ _main_title_id }}"
+    {% endif %}
+  >{{- _main_title -}}</h3>
+{% endif %}
+{% if _listing is defined and _listing is not empty %}
+  {% for _lists in _listing %}
+    {% if _lists.title is not empty %}
+    <h4 class="fw-bold mb-3">{{ _lists.title }}</h4>
+    {% endif %}
+    {% for _list in _lists.content %}
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _list only %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% endspaceless %}

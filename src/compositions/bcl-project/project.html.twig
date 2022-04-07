@@ -14,92 +14,31 @@
       {% endif %}
     >{{- project_status.main_title -}}</h3>
   {% endif %}
+
   {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
 
-  {% if status_lists.main_title is not empty %}
-    <h3
-      class="fw-bold my-4"
-      {% if status_lists.main_title_id is not empty %}
-      id="{{ status_lists.main_title_id }}"
-      {% endif %}
-    >{{- status_lists.main_title -}}</h3>
-  {% endif %}
-  {% if status_lists.listing is defined and status_lists.listing is not empty %}
-    {% for lists in status_lists.listing %}
-      {% if lists.title is not empty %}
-      <h4 class="fw-bold mb-3">{{ lists.title }}</h4>
-      {% endif %}
-      {% for list in lists.content %}
-        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
-      {% endfor %}
-    {% endfor %}
+  {% if status_lists is not empty %}
+    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
   {% endif %}
 
-  {% if first_paragraphs is defined and first_paragraphs is not empty %}
-    {% for paragraph in first_paragraphs %}
-        <h3
-          class="fw-bold mb-4 pt-3"
-          id="{{ paragraph.title_id }}"
-        >
-          {{- paragraph.title -}}
-        </h3>
-
-      {{- paragraph.content -}}
-    {% endfor %}
+  {% if first_paragraphs is not empty %}
+    {% include '@oe-bcl/bcl-project/project-paragraphs.html.twig' with first_paragraphs only %}
   {% endif %}
 
   {% block chart %}
     {{ chart }}
   {% endblock %}
 
-  {% if chart_lists.main_title is not empty %}
-    <h3
-      class="fw-bold my-4"
-      {% if chart_lists.main_title_id is not empty %}
-      id="{{ chart_lists.main_title_id }}"
-      {% endif %}
-    >{{- chart_lists.main_title -}}</h3>
-  {% endif %}
-  {% if chart_lists.listing is defined and chart_lists.listing is not empty %}
-    {% for lists in chart_lists.listing %}
-      {% if lists.title is not empty %}
-      <h4 class="fw-bold mb-3">{{ lists.title }}</h4>
-      {% endif %}
-      {% for list in lists.content %}
-        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
-      {% endfor %}
-    {% endfor %}
+  {% if chart_lists is not empty %}
+    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with chart_lists only %}
   {% endif %}
 
-  {% if content_lists.main_title is not empty %}
-    <h3
-      class="fw-bold my-4-5"
-      {% if content_lists.main_title_id is not empty %}
-      id="{{ content_lists.main_title_id }}"
-      {% endif %}
-    >{{- content_lists.main_title -}}</h3>
-  {% endif %}
-  {% if content_lists.listing is defined and content_lists.listing is not empty %}
-    {% for lists in content_lists.listing %}
-      {% if lists.title is not empty %}
-      <h4 class="fw-bold mb-3">{{ lists.title }}</h4>
-      {% endif %}
-      {% for list in lists.content %}
-        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
-      {% endfor %}
-    {% endfor %}
+  {% if content_lists is not empty %}
+    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with content_lists only %}
   {% endif %}
 
-  {% if second_paragraphs is defined and second_paragraphs is not empty %}
-    {% for paragraph in second_paragraphs %}
-      <h3
-        class="fw-bold mb-4 pt-2"
-        id="{{ paragraph.title_id }}"
-      >
-        {{- paragraph.title -}}
-      </h3>
-      {{- paragraph.content -}}
-    {% endfor %}
+  {% if second_paragraphs is not empty %}
+    {% include '@oe-bcl/bcl-project/project-paragraphs.html.twig' with second_paragraphs only %}
   {% endif %}
 
   {% if gallery.main_title is not empty %}

@@ -5,15 +5,26 @@ import {
   correctPaths,
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
 import drupalAttribute from "drupal-attribute";
-import header from "@openeuropa/bcl-data-header/data--simple";
+
+import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
+import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
+import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
-import dataStatus from "@openeuropa/bcl-project/data/ucpkn/data--status";
 import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
-import footer from "@openeuropa/bcl-data-footer/data";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
@@ -32,7 +43,7 @@ if (isChromatic()) {
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-5"),
@@ -51,37 +62,25 @@ const demoPage = {
 
 const ongoingDemo = {
   ...demoPage,
-  project_status: {
-    ...dataStatus,
-    status: "ongoing",
-    badge: "Ongoing",
-    progress: 25,
-  },
+  project_status: dataOngoing,
 };
 
 const closedDemo = {
   ...demoPage,
-  project_status: {
-    ...dataStatus,
-    status: "closed",
-    badge: "Closed",
-    progress: 100,
-  },
+  project_status: dataClosed,
 };
 
 const plannedDemo = {
   ...demoPage,
-  project_status: {
-    ...dataStatus,
-    status: "planned",
-    badge: "Not started",
-    progress: 0,
-  },
+  project_status: dataPlanned,
 };
 
 const demoListing = {
   ...baseData,
   ...dataListing,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
 
 export default {
