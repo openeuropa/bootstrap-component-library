@@ -18,11 +18,11 @@
   {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
 
   {% if status_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
+    {% include '@oe-bcl/bcl-project/lists.html.twig' with status_lists only %}
   {% endif %}
 
   {% if first_paragraphs is not empty %}
-    {% include '@oe-bcl/bcl-project/project-paragraphs.html.twig' with first_paragraphs only %}
+    {% include '@oe-bcl/bcl-project/paragraphs.html.twig' with first_paragraphs only %}
   {% endif %}
 
   {% block chart %}
@@ -30,15 +30,15 @@
   {% endblock %}
 
   {% if chart_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with chart_lists only %}
+    {% include '@oe-bcl/bcl-project/lists.html.twig' with chart_lists only %}
   {% endif %}
 
   {% if content_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with content_lists only %}
+    {% include '@oe-bcl/bcl-project/lists.html.twig' with content_lists only %}
   {% endif %}
 
   {% if second_paragraphs is not empty %}
-    {% include '@oe-bcl/bcl-project/project-paragraphs.html.twig' with second_paragraphs only %}
+    {% include '@oe-bcl/bcl-project/paragraphs.html.twig' with second_paragraphs only %}
   {% endif %}
 
   {% if gallery.main_title is not empty %}
