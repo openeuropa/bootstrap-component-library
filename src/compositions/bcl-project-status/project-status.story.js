@@ -12,7 +12,6 @@ const title = {
 
 const getArgs = (data) => {
   return {
-    title: data.title,
     status: data.status,
     badge: data.badge,
     start_date: data.start_date,
@@ -25,15 +24,6 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    title: {
-      type: { name: "string", required: true },
-      description: "Project status title",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
     status: {
       type: { name: "select" },
       options: ["ongoing", "planned", "closed"],

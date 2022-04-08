@@ -1,0 +1,56 @@
+{% spaceless %}
+
+{# Parameters:
+  - corporate_contributions (string) (default: '') // value every 5 percent
+  - legend (boolean or object (default: false)
+  - chart (boolean) (default: false)
+
+  Blocks - 
+    project_status_contrib_chart
+    project_status_contrib_legend
+#}
+
+{% set _corporate_contributions = corporate_contributions|default('') %}
+{% set _legend = legend|default(false) %}
+{% set _chart = chart|default(false) %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass([
+  'bcl-project-status-contributions',
+  'border-bottom',
+  'pb-4',
+  'mb-4'
+]) %}
+
+<div {{ attributes }}>
+  <div class="row">
+
+  {% if _chart is not empty %}
+    <div class="bcl-project-status-contributions-chart col-5 col-md-3">
+    {% block project_status_contrib_chart %}
+      <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">
+        <span class="circular-progress-left">
+          <span class="circular-progress-bar"></span>
+        </span>
+        <span class="circular-progress-right">
+          <span class="circular-progress-bar"></span>
+        </span>
+      </div>
+    {% endblock %}
+    </div>
+  {% endif %}
+
+  {% if _legend is not empty %}
+    <div class="bcl-project-status-contributions-legend col-7 col-md-9 align-self-center">
+    {% block project_status_contrib_legend %}
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _legend only %}
+    {% endblock %}
+    </div>
+  {% endif %}
+  </div> 
+</div>
+
+{% endspaceless %}
