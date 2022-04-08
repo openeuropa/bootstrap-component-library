@@ -5,16 +5,18 @@
 {% endblock %}
 
 {% block content %}
-
-  {% if project_status.main_title is not empty %}
-    <h3
-      class="fw-bold mb-4"
-      {% if project_status.main_title_id is not empty %}
-      id="{{ project_status.main_title_id }}"
-      {% endif %}
-    >{{- project_status.main_title -}}</h3>
+  <h3
+    class="fw-bold mb-4 bcl-heading"
+    id="{{ project_status_id }}"
+  >
+      {{- project_status_title -}}
+  </h3>
+  {% if project_status is not empty %}
+    {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
   {% endif %}
-  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
+  {% if project_contributions is not empty %}
+    {% include '@oe-bcl/bcl-project-status/project-status-contributions.html.twig' with project_contributions %}
+  {% endif %}
 
   {% if status_lists.main_title is not empty %}
     <h3

@@ -5,13 +5,21 @@ import {
   correctPaths,
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
-import header from "@openeuropa/bcl-data-header/data--simple";
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
 import dataStatus from "@openeuropa/bcl-project/data/ucpkn/data--status";
+import dataStatusContributions from "@openeuropa/bcl-project-status/data/data--contributions";
 import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
-import footer from "@openeuropa/bcl-data-footer/data";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
@@ -32,7 +40,7 @@ if (isChromatic()) {
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-5"),
@@ -46,6 +54,9 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  project_status_title: "Overview",
+  project_status_id: "overview",
+  project_contributions: dataStatusContributions,
   social_block: true,
 };
 
@@ -82,6 +93,9 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
 
 export default {
