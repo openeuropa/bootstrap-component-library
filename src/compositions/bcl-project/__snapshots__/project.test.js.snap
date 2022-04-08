@@ -643,23 +643,72 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                 <h2
                   class="fw-bold card-title"
                 >
-                  Life IP Artisan
+                  This is the title of this page
                 </h2>
+                <div
+                  class="mb-4 mt-4"
+                >
+                  <span
+                    class="text-muted me-3"
+                  >
+                    8 hours ago
+                  </span>
+                </div>
                 <p>
-                  Achieving Resiliency by Triggering Implementation of nature-based Solutions for climate Adaptation at a National scale. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+        Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
+        Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
+        Duis tristique fringilla magna, eu egestas dolor molestie non.
+     
                 </p>
                 <div
                   class="mt-2-5"
                 >
                   <span
+                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 1
+                  </span>
+                  <span
                     class="mb-2 badge rounded-pill badge-outline-primary"
                   >
-                    Project type
+                    Category 2
                   </span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="d-flex justify-content-end mt-2 align-items-center"
+        >
+          <button
+            class="w-auto me-3 btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Print
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-auto btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Export
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#file-arrow-down-fill"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -687,9 +736,9 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               >
                 <a
                   class="nav-link"
-                  href="#overview"
+                  href="#project-details"
                 >
-                  Overview
+                  Project details
                 </a>
               </li>
               <li
@@ -720,9 +769,9 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
         >
           <h3
             class="fw-bold mb-4 bcl-heading"
-            id="overview"
+            id="project-details"
           >
-            Overview
+            Project details
           </h3>
           <div
             class="border-bottom pb-4 mb-4"
@@ -789,6 +838,71 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               </div>
             </div>
           </div>
+          <div
+            class="border-bottom pb-4 mb-4"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-5 col-md-3"
+              >
+                <div
+                  class="circular-progress"
+                  data-percentage="70"
+                >
+                  <span
+                    class="circular-progress-left"
+                  >
+                    <span
+                      class="circular-progress-bar"
+                    />
+                  </span>
+                  <span
+                    class="circular-progress-right"
+                  >
+                    <span
+                      class="circular-progress-bar"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div
+                class="col-7 col-md-9 align-self-center"
+              >
+                <dl
+                  class="mb-0 d-md-grid grid-3-9"
+                >
+                  <dt>
+                    <div
+                      class="d-flex align-items-center"
+                    >
+                      <span
+                        class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                      />
+                      Total budget
+                    </div>
+                  </dt>
+                  <dd>
+                    EUR 16.314.672,00
+                  </dd>
+                  <dt>
+                    <div
+                      class="d-flex align-items-center"
+                    >
+                      <span
+                        class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                      />
+                      EC contribution
+                    </div>
+                  </dt>
+                  <dd>
+                    EUR 9.994.672,00
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
           <dl
             class="d-md-grid grid-3-9"
           >
@@ -838,23 +952,18 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="description"
           >
             Description
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
-          </p>
-          <p>
-            
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+      
           </p>
           <h3
-            class="fw-bold my-4-5"
+            class="fw-bold my-4-5 bcl-heading"
             id="partners"
           >
             Partner organisations
@@ -4296,7 +4405,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   class="nav-link"
                   href="#project-details"
                 >
-                  Project detail
+                  Project details
                 </a>
               </li>
               <li
@@ -4590,47 +4699,47 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="summary"
           >
             Summary
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="objective"
           >
             Objective
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="impact"
           >
             Impact
           </h3>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <svg
             fill="none"
@@ -4711,8 +4820,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             </defs>
           </svg>
           <h3
-            class="fw-bold my-4-5"
-            id="lead-contributor"
+            class="fw-bold my-4-5 bcl-heading"
           >
             Lead contributor
           </h3>
@@ -4770,13 +4878,13 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold my-4-5"
+            class="fw-bold my-4-5 bcl-heading"
             id="contributors"
           >
             Contributors
           </h3>
           <h4
-            class="fw-bold mb-3"
+            class="fw-bold mb-3 bcl-heading"
           >
             HIT Manufacturing sas
           </h4>
@@ -4834,7 +4942,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             </dd>
           </dl>
           <h4
-            class="fw-bold mb-3"
+            class="fw-bold mb-3 bcl-heading"
           >
             Multi-informatica principado
           </h4>
@@ -4992,23 +5100,23 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="achievements"
           >
             Achievements and Milestones
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold my-4"
+            class="fw-bold my-4 bcl-heading"
             id="gallery"
           >
             Gallery
@@ -6126,7 +6234,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   class="nav-link"
                   href="#project-details"
                 >
-                  Project detail
+                  Project details
                 </a>
               </li>
               <li
@@ -6420,47 +6528,47 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="summary"
           >
             Summary
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="objective"
           >
             Objective
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="impact"
           >
             Impact
           </h3>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <svg
             fill="none"
@@ -6541,8 +6649,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             </defs>
           </svg>
           <h3
-            class="fw-bold my-4-5"
-            id="lead-contributor"
+            class="fw-bold my-4-5 bcl-heading"
           >
             Lead contributor
           </h3>
@@ -6600,13 +6707,13 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold my-4-5"
+            class="fw-bold my-4-5 bcl-heading"
             id="contributors"
           >
             Contributors
           </h3>
           <h4
-            class="fw-bold mb-3"
+            class="fw-bold mb-3 bcl-heading"
           >
             HIT Manufacturing sas
           </h4>
@@ -6664,7 +6771,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             </dd>
           </dl>
           <h4
-            class="fw-bold mb-3"
+            class="fw-bold mb-3 bcl-heading"
           >
             Multi-informatica principado
           </h4>
@@ -6822,23 +6929,23 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="achievements"
           >
             Achievements and Milestones
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold my-4"
+            class="fw-bold my-4 bcl-heading"
             id="gallery"
           >
             Gallery
@@ -7956,7 +8063,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   class="nav-link"
                   href="#project-details"
                 >
-                  Project detail
+                  Project details
                 </a>
               </li>
               <li
@@ -8250,47 +8357,47 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="summary"
           >
             Summary
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="objective"
           >
             Objective
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="impact"
           >
             Impact
           </h3>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <svg
             fill="none"
@@ -8371,8 +8478,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             </defs>
           </svg>
           <h3
-            class="fw-bold my-4-5"
-            id="lead-contributor"
+            class="fw-bold my-4-5 bcl-heading"
           >
             Lead contributor
           </h3>
@@ -8430,13 +8536,13 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold my-4-5"
+            class="fw-bold my-4-5 bcl-heading"
             id="contributors"
           >
             Contributors
           </h3>
           <h4
-            class="fw-bold mb-3"
+            class="fw-bold mb-3 bcl-heading"
           >
             HIT Manufacturing sas
           </h4>
@@ -8494,7 +8600,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             </dd>
           </dl>
           <h4
-            class="fw-bold mb-3"
+            class="fw-bold mb-3 bcl-heading"
           >
             Multi-informatica principado
           </h4>
@@ -8652,23 +8758,23 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             </dd>
           </dl>
           <h3
-            class="fw-bold mb-4 pt-3"
+            class="fw-bold mb-4 pt-3 bcl-heading"
             id="achievements"
           >
             Achievements and Milestones
           </h3>
           <p>
             
-          This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-        
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      
           </p>
           <p>
             
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+      
           </p>
           <h3
-            class="fw-bold my-4"
+            class="fw-bold my-4 bcl-heading"
             id="gallery"
           >
             Gallery

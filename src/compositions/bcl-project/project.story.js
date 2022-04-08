@@ -22,6 +22,7 @@ import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
+import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
@@ -57,6 +58,7 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  ...dataLists,
   banner: banner,
   share: share,
 };

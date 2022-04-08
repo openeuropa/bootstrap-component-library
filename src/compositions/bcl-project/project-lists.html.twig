@@ -1,0 +1,49 @@
+{% spaceless %}
+
+
+{#
+  Parameters:
+  - main_title (string) (default: '')
+  - main_title_id (string) (default: '')
+  - items (array) (default: [])
+    {
+      title: '',
+      content: [
+        description list object
+      ]
+    }
+#}
+
+{% set _main_title = main_title|default({}) %}
+{% set _main_title_id = main_title_id|default('') %}
+{% set _items = items|default([]) %}
+
+{% set _title_attributes = create_attribute().addClass(['fw-bold', 'my-4-5']) %}
+
+{% if _main_title_id is not empty %}
+  {% set _title_attributes = _title_attributes.setAttribute('id', _main_title_id) %}
+{% endif %}
+
+{% if _main_title is not empty %}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _main_title,
+    title_tag: 'h3',
+    attributes: _title_attributes,
+  } only %}
+{% endif %}
+{% if _items is defined and _items is not empty %}
+  {% for _item in _items %}
+    {% if _item.title is not empty %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: _item.title,
+        title_tag: 'h4',
+        attributes: create_attribute().addClass(['fw-bold', 'mb-3']),
+      } only %}
+    {% endif %}
+    {% for _list in _item.content %}
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _list only %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% endspaceless %}

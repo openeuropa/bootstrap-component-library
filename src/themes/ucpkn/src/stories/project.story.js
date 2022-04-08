@@ -16,12 +16,14 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import drupalAttribute from "drupal-attribute";
 
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
+import dataLists from "@openeuropa/bcl-project/data/ucpkn/data--lists";
 import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
@@ -57,6 +59,8 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  ...dataLists,
+  banner: banner,
   social_block: true,
 };
 
