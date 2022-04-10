@@ -15,10 +15,13 @@ import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
+
+import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import dataContent from "@openeuropa/bcl-project/data/data";
+
+import dataListsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data--lists";
 import dataContentUCPKN from "@openeuropa/bcl-project/data/ucpkn/data";
-import dataStatusUCPKN from "@openeuropa/bcl-project/data/ucpkn/data--status";
 import dataExtraDetailsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
 
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
@@ -39,6 +42,7 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  ...dataLists,
   banner: banner,
   share: share,
 };
@@ -70,13 +74,10 @@ const ongoingDemoUCPKN = {
   ...baseData,
   ...dataContentUCPKN,
   ...dataExtraDetailsUCPKN,
+  ...dataListsUCPKN,
+  project_status: dataOngoing,
+  banner: banner,
   social_block: true,
-  project_status: {
-    ...dataStatusUCPKN,
-    status: "ongoing",
-    badge: "Ongoing",
-    progress: 25,
-  },
 };
 
 const renderListing = (params) =>
