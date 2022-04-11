@@ -1,5 +1,6 @@
 import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import {
   banner,
@@ -89,7 +90,7 @@ const demoData2 = {
 
 export default {
   title: "Features/Page",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     a11y: {
       config: {

@@ -9,7 +9,7 @@ const addons = [
   "storybook-addon-designs",
   "@storybook/addon-viewport",
   "@storybook/addon-a11y",
-  "@whitespace/storybook-addon-html",
+  "@openeuropa/storybook-addon-code/register",
   "@geometricpanda/storybook-addon-badges",
 ];
 

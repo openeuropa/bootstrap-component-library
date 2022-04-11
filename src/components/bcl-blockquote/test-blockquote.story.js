@@ -2,7 +2,7 @@ import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 
 export default {
-  title: "Components/Blockquote",
+  title: "Paragraphs/Blockquote",
   parameters: {
     controls: { disable: true },
   },

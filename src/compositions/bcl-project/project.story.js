@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import {
   initBadges,
@@ -85,7 +86,7 @@ const demoListing = {
 
 export default {
   title: "Features/Project",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {

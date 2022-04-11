@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
@@ -114,7 +115,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Offcanvas",
-  decorators: [withDesign, initOffcanvas],
+  decorators: [withCode, withDesign, initOffcanvas],
   parameters: {
     design: [
       {

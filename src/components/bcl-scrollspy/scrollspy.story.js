@@ -1,3 +1,4 @@
+import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import { initScrollspy } from "@openeuropa/bcl-story-utils";
 import navScrollspy from "@openeuropa/bcl-scrollspy/navScrollspy.html";
@@ -6,7 +7,7 @@ import listScrollspy from "@openeuropa/bcl-scrollspy/listScrollspy.html";
 
 export default {
   title: "Components/Scrollspy",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     controls: { disable: true },
     viewport: {

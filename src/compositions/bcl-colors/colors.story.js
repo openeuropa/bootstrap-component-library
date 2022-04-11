@@ -1,4 +1,5 @@
 import colors from "@openeuropa/bcl-colors/colors.html.twig";
+import withCode from "@openeuropa/storybook-addon-code";
 
 const getArgs = () => {
   return {
@@ -126,6 +127,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Colors",
+  decorators: [withCode],
   parameters: {
     design: [
       {

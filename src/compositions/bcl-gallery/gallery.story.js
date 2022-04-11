@@ -1,11 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+
 import dataDefault from "@openeuropa/bcl-gallery/data/data.js";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 export default {
   title: "Paragraphs/Gallery",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

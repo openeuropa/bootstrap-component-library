@@ -1,3 +1,6 @@
+import withCode from "@openeuropa/storybook-addon-code";
+import { withDesign } from "storybook-addon-designs";
+
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
@@ -109,6 +112,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Fact and Figures",
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {
