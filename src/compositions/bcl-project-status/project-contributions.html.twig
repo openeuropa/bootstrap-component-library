@@ -19,7 +19,7 @@
 {% endif %}
 
 {% set attributes = attributes.addClass([
-  'bcl-project-status-contributions',
+  'bcl-project-contributions',
   'border-bottom',
   'pb-4',
   'mb-4'
@@ -29,7 +29,7 @@
   <div class="row">
 
   {% if _chart is not empty %}
-    <div class="bcl-project-status-contributions-chart col-5 col-md-3">
+    <div class="bcl-project-contributions-chart col-5 col-md-3">
     {% block project_status_contrib_chart %}
       <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">
         <span class="circular-progress-left">
@@ -44,7 +44,7 @@
   {% endif %}
 
   {% if _legend is not empty %}
-    <div class="bcl-project-status-contributions-legend col-7 col-md-9 align-self-center">
+    <div class="bcl-project-contributions-legend col-7 col-md-9 align-self-center">
     {% block project_status_contrib_legend %}
       {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _legend only %}
     {% endblock %}

@@ -4,7 +4,7 @@ import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing.js";
 import dataContribs from "@openeuropa/bcl-project-status/data/data--contributions.js";
 import bclTitle from "@openeuropa/bcl-heading/heading.html.twig";
 import projectStatus from "@openeuropa/bcl-project-status/project-status.html.twig";
-import projectStatusContribs from "@openeuropa/bcl-project-status/project-status-contributions.html.twig";
+import projectStatusContribs from "@openeuropa/bcl-project-status/project-contributions.html.twig";
 
 const title = {
   title: "Project details",

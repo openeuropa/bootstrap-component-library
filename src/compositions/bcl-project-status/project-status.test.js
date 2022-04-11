@@ -27,9 +27,8 @@ describe("OE - Project status", () => {
   });
 });
 
-describe("OE - Project status contributions", () => {
-  let template =
-    "@oe-bcl/bcl-project-status/project-status-contributions.html.twig";
+describe("OE - Project contributions", () => {
+  let template = "@oe-bcl/bcl-project-status/project-contributions.html.twig";
   let render = (params) => renderTwigFileAsNode(template, params, true);
 
   test(`renders correctly`, () => {

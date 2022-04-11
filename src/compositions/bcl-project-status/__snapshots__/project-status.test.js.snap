@@ -1,5 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OE - Project contributions renders correctly 1`] = `
+<jest>
+  <div
+    class="bcl-project-contributions border-bottom pb-4 mb-4"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="bcl-project-contributions-chart col-5 col-md-3"
+      >
+        <div
+          class="circular-progress"
+          data-percentage="70"
+        >
+          <span
+            class="circular-progress-left"
+          >
+            <span
+              class="circular-progress-bar"
+            />
+          </span>
+          <span
+            class="circular-progress-right"
+          >
+            <span
+              class="circular-progress-bar"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
+      >
+        <dl
+          class="mb-0 d-md-grid grid-3-9"
+        >
+          <dt>
+            <div
+              class="d-flex align-items-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+              />
+              Total budget
+            </div>
+          </dt>
+          <dd>
+            EUR 16.314.672,00
+          </dd>
+          <dt>
+            <div
+              class="d-flex align-items-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+              />
+              EC contribution
+            </div>
+          </dt>
+          <dd>
+            EUR 9.994.672,00
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Project contributions without chart renders correctly 1`] = `
+<jest>
+  <div
+    class="bcl-project-contributions border-bottom pb-4 mb-4"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="bcl-project-contributions-chart col-5 col-md-3"
+      >
+        <div
+          class="circular-progress"
+          data-percentage="70"
+        >
+          <span
+            class="circular-progress-left"
+          >
+            <span
+              class="circular-progress-bar"
+            />
+          </span>
+          <span
+            class="circular-progress-right"
+          >
+            <span
+              class="circular-progress-bar"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
+      >
+        <dl
+          class="mb-0 d-md-grid grid-3-9"
+        >
+          <dt>
+            <div
+              class="d-flex align-items-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+              />
+              Total budget
+            </div>
+          </dt>
+          <dd>
+            EUR 16.314.672,00
+          </dd>
+          <dt>
+            <div
+              class="d-flex align-items-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+              />
+              EC contribution
+            </div>
+          </dt>
+          <dd>
+            EUR 9.994.672,00
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
 exports[`OE - Project status closed renders correctly 1`] = `
 <jest>
   <div
@@ -64,146 +204,6 @@ exports[`OE - Project status closed renders correctly 1`] = `
             style="width: 100%"
           />
         </div>
-      </div>
-    </div>
-  </div>
-</jest>
-`;
-
-exports[`OE - Project status contributions renders correctly 1`] = `
-<jest>
-  <div
-    class="bcl-project-status-contributions border-bottom pb-4 mb-4"
-  >
-    <div
-      class="row"
-    >
-      <div
-        class="bcl-project-status-contributions-chart col-5 col-md-3"
-      >
-        <div
-          class="circular-progress"
-          data-percentage="70"
-        >
-          <span
-            class="circular-progress-left"
-          >
-            <span
-              class="circular-progress-bar"
-            />
-          </span>
-          <span
-            class="circular-progress-right"
-          >
-            <span
-              class="circular-progress-bar"
-            />
-          </span>
-        </div>
-      </div>
-      <div
-        class="bcl-project-status-contributions-legend col-7 col-md-9 align-self-center"
-      >
-        <dl
-          class="mb-0 d-md-grid grid-3-9"
-        >
-          <dt>
-            <div
-              class="d-flex align-items-center"
-            >
-              <span
-                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-              />
-              Total budget
-            </div>
-          </dt>
-          <dd>
-            EUR 16.314.672,00
-          </dd>
-          <dt>
-            <div
-              class="d-flex align-items-center"
-            >
-              <span
-                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-              />
-              EC contribution
-            </div>
-          </dt>
-          <dd>
-            EUR 9.994.672,00
-          </dd>
-        </dl>
-      </div>
-    </div>
-  </div>
-</jest>
-`;
-
-exports[`OE - Project status contributions without chart renders correctly 1`] = `
-<jest>
-  <div
-    class="bcl-project-status-contributions border-bottom pb-4 mb-4"
-  >
-    <div
-      class="row"
-    >
-      <div
-        class="bcl-project-status-contributions-chart col-5 col-md-3"
-      >
-        <div
-          class="circular-progress"
-          data-percentage="70"
-        >
-          <span
-            class="circular-progress-left"
-          >
-            <span
-              class="circular-progress-bar"
-            />
-          </span>
-          <span
-            class="circular-progress-right"
-          >
-            <span
-              class="circular-progress-bar"
-            />
-          </span>
-        </div>
-      </div>
-      <div
-        class="bcl-project-status-contributions-legend col-7 col-md-9 align-self-center"
-      >
-        <dl
-          class="mb-0 d-md-grid grid-3-9"
-        >
-          <dt>
-            <div
-              class="d-flex align-items-center"
-            >
-              <span
-                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-              />
-              Total budget
-            </div>
-          </dt>
-          <dd>
-            EUR 16.314.672,00
-          </dd>
-          <dt>
-            <div
-              class="d-flex align-items-center"
-            >
-              <span
-                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-              />
-              EC contribution
-            </div>
-          </dt>
-          <dd>
-            EUR 9.994.672,00
-          </dd>
-        </dl>
       </div>
     </div>
   </div>
