@@ -4,7 +4,7 @@ const stories = ["../src/*/*/*.story.js"];
 
 const addons = [
   "@storybook/addon-docs",
-'@openeuropa/storybook-addon-code/register'
+  "@openeuropa/storybook-addon-code/register",
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",

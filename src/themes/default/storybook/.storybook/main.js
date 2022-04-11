@@ -5,11 +5,11 @@ let stories = ["../../**/!(test*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
+  "@openeuropa/storybook-addon-code/register",
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",
   "@storybook/addon-a11y",
-  "@openeuropa/storybook-addon-code/register",
   "@geometricpanda/storybook-addon-badges",
 ];
 

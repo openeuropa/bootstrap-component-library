@@ -14,6 +14,7 @@ if (isChromatic()) {
 
 export default {
   title: "Compositions/Recent Activities",
+  decorators: [withCode, withDesign],
   parameters: {
     controls: { disable: true },
     design: [
