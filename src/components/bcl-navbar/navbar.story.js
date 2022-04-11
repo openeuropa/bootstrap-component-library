@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
@@ -72,7 +73,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Navbar",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

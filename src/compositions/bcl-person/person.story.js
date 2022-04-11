@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import {
@@ -52,7 +53,7 @@ if (isChromatic()) {
 
 export default {
   title: "Features/Person",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

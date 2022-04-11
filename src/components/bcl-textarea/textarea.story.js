@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "@openeuropa/bcl-textarea/textarea.html.twig";
@@ -81,7 +82,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Forms/Textarea",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

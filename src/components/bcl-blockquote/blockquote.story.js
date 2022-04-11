@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import drupalAttribute from "drupal-attribute";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
@@ -65,7 +66,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Blockquote",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

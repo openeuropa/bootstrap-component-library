@@ -1,10 +1,12 @@
+import withCode from "@openeuropa/storybook-addon-code";
+import { withDesign } from "storybook-addon-designs";
+import isChromatic from "chromatic/isChromatic";
+
 import {
   initListings,
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import isChromatic from "chromatic/isChromatic";
-import { withDesign } from "storybook-addon-designs";
 import {
   headerNoForm,
   footer,
@@ -47,7 +49,7 @@ const dataListing = {
 
 export default {
   title: "Features/Search",
-  decorators: [withDesign, initListings, initBadges],
+  decorators: [withCode, withDesign, initListings, initBadges],
   parameters: {
     a11y: {
       config: {
