@@ -41,6 +41,17 @@
       } only %}
     {% endif %}
     {% for _list in _item.content %}
+      {% if _list.attributes is empty %}
+        {% set _list = _list|merge({
+          attributes: create_attribute()
+        }) %}
+      {% endif %}
+      {% if not loop.last %}
+        {% set _list = _list|merge({
+            attributes: _list.attributes.addClass(['border-bottom', 'pb-3'])
+          })
+        %}
+      {% endif %}
       {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _list only %}
     {% endfor %}
   {% endfor %}

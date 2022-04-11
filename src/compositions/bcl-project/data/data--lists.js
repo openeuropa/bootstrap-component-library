@@ -63,10 +63,6 @@ module.exports = {
                 ],
               },
             ],
-            attributes: new drupalAttribute().addClass([
-              "border-bottom",
-              "pb-3",
-            ]),
           },
           {
             variant: "horizontal",
@@ -101,7 +97,6 @@ module.exports = {
         content: [
           {
             variant: "horizontal",
-            attributes: new drupalAttribute().addClass("border-bottom"),
             items: [
               {
                 term: {
@@ -149,7 +144,6 @@ module.exports = {
         content: [
           {
             variant: "horizontal",
-            attributes: new drupalAttribute().addClass("border-bottom"),
             items: [
               {
                 term: {
@@ -188,14 +182,8 @@ module.exports = {
               },
             ],
           },
-        ],
-      },
-      {
-        border: true,
-        content: [
           {
             variant: "horizontal",
-            attributes: new drupalAttribute().addClass("border-bottom"),
             items: [
               {
                 term: {
@@ -234,11 +222,6 @@ module.exports = {
               },
             ],
           },
-        ],
-      },
-      {
-        border: true,
-        content: [
           {
             variant: "horizontal",
             items: [

@@ -64,10 +64,6 @@ module.exports = {
         content: [
           {
             variant: "horizontal",
-            attributes: new drupalAttribute().addClass([
-              "border-bottom",
-              "pb-3",
-            ]),
             items: [
               {
                 term: {
@@ -122,10 +118,6 @@ module.exports = {
           },
           {
             variant: "horizontal",
-            attributes: new drupalAttribute().addClass([
-              "border-bottom",
-              "pb-3",
-            ]),
             items: [
               {
                 term: {
@@ -179,10 +171,6 @@ module.exports = {
           },
           {
             variant: "horizontal",
-            attributes: new drupalAttribute().addClass([
-              "border-bottom",
-              "pb-3",
-            ]),
             items: [
               {
                 term: {
