@@ -100,6 +100,11 @@ export default {
       disable: true,
     },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup",
