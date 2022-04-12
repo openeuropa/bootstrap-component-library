@@ -24,11 +24,13 @@ import dataContributions from "@openeuropa/bcl-project-status/data/data--contrib
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
+import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
+const share =
+  '<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>';
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
@@ -58,6 +60,7 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  ...dataLists,
   project_status_title: "Project details",
   project_status_id: "project-details",
   project_contributions: dataContributions,
@@ -97,6 +100,11 @@ export default {
       disable: true,
     },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup",

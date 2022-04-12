@@ -7,22 +7,28 @@ import {
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
 import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
   filterButton,
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
+
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
+import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
+import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
+import dataLists from "@openeuropa/bcl-project/data/ucpkn/data--lists";
 import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
-import dataStatus from "@openeuropa/bcl-project/data/ucpkn/data--status";
 import dataStatusContributions from "@openeuropa/bcl-project-status/data/data--contributions";
 import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
@@ -55,40 +61,27 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
-  project_status_title: "Overview",
-  project_status_id: "overview",
+  ...dataLists,
+  banner: banner,
+  project_status_title: "Project details",
+  project_status_id: "project-details",
   project_contributions: dataStatusContributions,
   social_block: true,
 };
 
 const ongoingDemo = {
   ...demoPage,
-  project_status: {
-    ...dataStatus,
-    status: "ongoing",
-    badge: "Ongoing",
-    progress: 25,
-  },
+  project_status: dataOngoing,
 };
 
 const closedDemo = {
   ...demoPage,
-  project_status: {
-    ...dataStatus,
-    status: "closed",
-    badge: "Closed",
-    progress: 100,
-  },
+  project_status: dataClosed,
 };
 
 const plannedDemo = {
   ...demoPage,
-  project_status: {
-    ...dataStatus,
-    status: "planned",
-    badge: "Not started",
-    progress: 0,
-  },
+  project_status: dataPlanned,
 };
 
 const demoListing = {
