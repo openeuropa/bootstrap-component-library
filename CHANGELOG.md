@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.0 (2022-04-12)
+
+#### :rocket: New Feature
+
+* [#324](https://github.com/openeuropa/bootstrap-component-library/pull/324) feat(publication): Added publication - OEL-1398 ([@tibi2303](https://github.com/tibi2303))
+* [#322](https://github.com/openeuropa/bootstrap-component-library/pull/322) feat(headings): Adding bcl heading template - OEL-1420 ([@planctus](https://github.com/planctus))
+* [#310](https://github.com/openeuropa/bootstrap-component-library/pull/310) feat(semantic-color): Added semantic colors - OEL-1365 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#319](https://github.com/openeuropa/bootstrap-component-library/pull/319) fix(file): Fixing wrong condition - OEL-1406 ([@planctus](https://github.com/planctus))
+* [#314](https://github.com/openeuropa/bootstrap-component-library/pull/314) fix(gallery): Fix view more button on mobile - OEL-1381 ([@papegaill](https://github.com/papegaill))
+
+#### :nail_care: Enhancement
+
+* [#325](https://github.com/openeuropa/bootstrap-component-library/pull/325) feat(project): Added main contributor - OEL-1399 ([@tibi2303](https://github.com/tibi2303))
+* [#323](https://github.com/openeuropa/bootstrap-component-library/pull/323) feat(project-status): Splitting in two indpendent templates - OEL-1426 ([@planctus](https://github.com/planctus))
+* [#317](https://github.com/openeuropa/bootstrap-component-library/pull/317) feat(alert): Styles udpates - OEL-1391 ([@tibi2303](https://github.com/tibi2303))
+* [#316](https://github.com/openeuropa/bootstrap-component-library/pull/316) feat(data-files): Import bridge file - OEL-1330 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#326](https://github.com/openeuropa/bootstrap-component-library/pull/326) chore(storybook): Replacing problematic plugin for html source ([@planctus](https://github.com/planctus))
+
+#### Committers: 3
+
+- Alexis Gaillard ([@papegaill](https://github.com/papegaill))
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.21.0 (2022-03-29)
 
 #### :rocket: New Feature
