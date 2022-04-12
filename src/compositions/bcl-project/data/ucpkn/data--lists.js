@@ -57,8 +57,11 @@ module.exports = {
     ],
   },
   content_lists: {
-    main_title: "Partner organisations",
-    main_title_id: "partners",
+    title: {
+      title: "Partner organisations",
+      title_tag: "h3",
+      attributes: new drupalAttribute().setAttribute("id", "partners"),
+    },
     items: [
       {
         content: [

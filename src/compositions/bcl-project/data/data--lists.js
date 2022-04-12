@@ -89,11 +89,17 @@ module.exports = {
     ],
   },
   content_lists: {
-    main_title: "Contributors",
-    main_title_id: "contributors",
+    title: {
+      title: "Contributors",
+      title_tag: "h3",
+      attributes: new drupalAttribute().setAttribute("id", "contributors"),
+    },
     items: [
       {
-        title: "HIT Manufacturing sas",
+        title: {
+          title: "HIT Manufacturing sas",
+          title_tag: "h4",
+        },
         content: [
           {
             variant: "horizontal",
@@ -139,7 +145,10 @@ module.exports = {
         ],
       },
       {
-        title: "Multi-informatica principado",
+        title: {
+          title: "Multi-informatica principado",
+          title_tag: "h4",
+        },
         border: true,
         content: [
           {
@@ -268,6 +277,10 @@ module.exports = {
   },
   chart_lists: {
     main_title: "Lead contributor",
+    title: {
+      title: "Lead contributor",
+      title_tag: "h3",
+    },
     items: [
       {
         content: [
