@@ -7,6 +7,10 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
     links: [
       {
+        label: "Authors",
+        path: "#authors",
+      },
+      {
         label: "Description",
         path: "#description",
       },

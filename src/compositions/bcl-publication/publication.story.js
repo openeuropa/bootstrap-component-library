@@ -58,6 +58,7 @@ const demoDetails = {
   share: share,
   authors: {
     title: "Authors",
+    title_id: "authors",
     listing: ["José Luis Pabón Barrios", "Adjur Tichar"],
   },
 };
