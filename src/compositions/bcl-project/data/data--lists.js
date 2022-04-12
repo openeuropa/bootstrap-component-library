@@ -265,7 +265,7 @@ module.exports = {
       },
     ],
   },
-  chart_lists: {
+  featured_lists: {
     title: "Lead contributor",
     items: [
       {

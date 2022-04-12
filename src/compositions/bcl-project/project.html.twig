@@ -38,15 +38,9 @@
       {{- _paragraph.content -}}
     {% endfor %}
   {% endif %}
-  
-  {% if chart is not empty %}
-    {% block chart %}
-      {{ chart }}
-    {% endblock %}
-  {% endif %}
 
-  {% if chart_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with chart_lists only %}
+  {% if featured_lists is not empty %}
+    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with featured_lists only %}
   {% endif %}
 
   {% if content_lists is not empty %}
