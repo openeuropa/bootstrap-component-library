@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { getFlagNames } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-icon/data.js";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
@@ -45,7 +46,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Icon",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

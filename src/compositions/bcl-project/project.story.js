@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import {
   initBadges,
@@ -19,6 +20,7 @@ import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+import dataContributions from "@openeuropa/bcl-project-status/data/data--contributions";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
@@ -59,6 +61,9 @@ const demoPage = {
   ...dataContent,
   ...dataExtraDetails,
   ...dataLists,
+  project_status_title: "Project details",
+  project_status_id: "project-details",
+  project_contributions: dataContributions,
   banner: banner,
   share: share,
 };
@@ -88,7 +93,7 @@ const demoListing = {
 
 export default {
   title: "Features/Project",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {

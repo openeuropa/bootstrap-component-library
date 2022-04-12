@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import demoData from "@openeuropa/bcl-data-table/data.js";
 import table from "@openeuropa/bcl-table/table.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
@@ -103,7 +104,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Table",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

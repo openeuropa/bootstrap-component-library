@@ -1,3 +1,4 @@
+import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
 import demoData from "@openeuropa/bcl-date-block/data/data.js";
@@ -85,7 +86,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Date block",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

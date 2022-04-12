@@ -5,6 +5,7 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import {
   headerSimple,
   footer,
@@ -112,7 +113,7 @@ const dataLanding = {
 
 export default {
   title: "Features/Group",
-  decorators: [withDesign, initBadges, initListings],
+  decorators: [withCode, withDesign, initBadges, initListings],
   parameters: {
     layout: "fullscreen",
     a11y: {

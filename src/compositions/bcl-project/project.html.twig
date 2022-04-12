@@ -5,20 +5,23 @@
 {% endblock %}
 
 {% block content %}
-
-  {% if project_status.main_title is not empty %}
+  {% if project_status_title is not empty %}
     {% set _project_title_attributes = create_attribute().addClass(['fw-bold', 'mb-4']) %}
-    {% if project_status.main_title_id is not empty %}
-      {% set _project_title_attributes = _project_title_attributes.setAttribute('id', project_status.main_title_id) %}
+    {% if project_status_id is not empty %}
+      {% set _project_title_attributes = _project_title_attributes.setAttribute('id', project_status_id) %}
     {% endif %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: _project_title_attributes.main_title,
+      title: project_status_title,
       title_tag: 'h3',
       attributes: _project_title_attributes,
     } only %}
   {% endif %}
-
-  {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
+  {% if project_status is not empty %}
+    {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
+  {% endif %}
+  {% if project_contributions is not empty %}
+    {% include '@oe-bcl/bcl-project-status/project-contributions.html.twig' with project_contributions %}
+  {% endif %}
 
   {% if status_lists is not empty %}
     {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}

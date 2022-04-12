@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
@@ -114,7 +115,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Badge",
-  decorators: [withDesign, initBadges],
+  decorators: [withCode, withDesign, initBadges],
   parameters: {
     design: [
       {

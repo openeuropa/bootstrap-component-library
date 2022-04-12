@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
@@ -213,7 +214,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Card",
-  decorators: [withDesign, withBodyPadding],
+  decorators: [withCode, withDesign, withBodyPadding],
   parameters: {
     chromatic: { viewports: [1200] },
     design: [

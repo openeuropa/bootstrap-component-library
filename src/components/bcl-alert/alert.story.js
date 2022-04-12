@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import { getVariants, getIconNames } from "@openeuropa/bcl-story-utils";
@@ -97,7 +99,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Alert",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {
