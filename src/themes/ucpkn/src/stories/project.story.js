@@ -63,8 +63,8 @@ const demoPage = {
   ...dataExtraDetails,
   ...dataLists,
   banner: banner,
-  project_status_title: "Overview",
-  project_status_id: "overview",
+  project_status_title: "Project details",
+  project_status_id: "project-details",
   project_contributions: dataStatusContributions,
   social_block: true,
 };

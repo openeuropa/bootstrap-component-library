@@ -13,49 +13,38 @@
     }
 #}
 
-{% set _title = title|default({}) %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if _title.attributes is empty %}
-  {% set _title = _title|merge({
-      attributes: create_attribute()
-    })
-  %}
-{% endif %}
-
-{% set _title = _title|merge({
-    attributes: _title.attributes.addClass(['fw-bold', 'my-4-5'])
-  })
-%}
+{% set _title_classes = ['fw-bold', 'my-4-5'] %}
+{% set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
 <div
   {{ attributes }}
 >
 {% if _title is not empty %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with _title only %}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    attributes: _title_attributes,
+  } only %}
 {% endif %}
 {% if _items is defined and _items is not empty %}
   {% for _item in _items %}
     {% if _item.title is not empty %}
-      {% if _item.title.attributes is empty %}
-        {% set _item = _item|merge({
-            title: _item.title|merge({
-              attributes: create_attribute()
-            }),
-          })
-        %}
-      {% endif %}
-      {% set _item = _item|merge({
-          title: _item.title|merge({
-            attributes: _item.title.attributes.addClass(['fw-bold', 'mb-3'])
-          }),
-        })
-      %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with _item.title only %}
+      {% set _item_title_attributes = _item.title_attributes ?: create_attribute() %}
+      {% set _item_title_attributes = _item_title_attributes.addClass(['fw-bold', 'mb-3']) %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: _item.title,
+        title_tag: _item.title_tag|default('h4'),
+        attributes: _item_title_attributes,
+      } only %}
     {% endif %}
     {% for _list in _item.content %}
       {% if _list.attributes is empty %}
