@@ -1,10 +1,6 @@
 {% spaceless %}
 
 {# Parameters:
-  - title_id (string) (default: "")
-  - title (string) (default: "")
-  - title_tag (string) (default: "h3")
-  - title_attributes (drupal attrs)
   - status (string) (default: 'planned')
   - start_date (string) (default: '')
   - start_label (string) (default: '')
@@ -13,17 +9,9 @@
   - label (string) (default: '')
   - badge (string) (default: ''),
   - progress (string) (default: '')
-  - corporate_contribution (string) (default: '') // value every 5 percent
-  - chart_legend (object) (default: {})
-
-    Blocks - chart
 #}
 
-{% set _title_id = title_id|default('') %}
-{% set _title = title|default('') %}
 {% set _label = label|default('') %}
-{% set _title_tag = title_tag|default('h3') %}
-{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _status = status|default('planned') %}
 {% set _charts = charts|default('') %}
 {% set _badge = badge|default('') %}
@@ -32,8 +20,17 @@
 {% set _start_label = start_label|default('') %}
 {% set _end_label = end_label|default('') %}
 {% set _progress = progress|default('') %}
-{% set _corporate_contribution = corporate_contribution|default('') %}
-{% set _chart_legend = chart_legend|default({}) %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass([
+  'bcl-project-status',
+  'border-bottom',
+  'pb-4',
+  'mb-4'
+]) %}
 
 {% set _bgs = {
     ongoing: 'info',
@@ -42,16 +39,7 @@
   } %}
 {% set _bg = _bgs[_status]|default('secondary') %}
 
-
-{% if _title is not empty %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: _title,
-    title_tag: _title_tag,
-    attributes: _title_attributes,
-  } only %}
-{% endif %}
-
-<div class="border-bottom pb-4 mb-4">
+<div {{ attributes }}>
   <div class="row">
     <div class="col-12 col-md-3">
     {% if _label is not empty %}
@@ -104,26 +92,7 @@
     </div>
   </div>
 </div>
-{% if _corporate_contribution is not empty and _chart_legend is not empty %}
-<div class="border-bottom pb-4 mb-4">
-  {% block chart %}
-  <div class="row">
-    <div class="col-5 col-md-3">
-      <div class="circular-progress" data-percentage="{{ _corporate_contribution }}">
-        <span class="circular-progress-left">
-          <span class="circular-progress-bar"></span>
-        </span>
-        <span class="circular-progress-right">
-          <span class="circular-progress-bar"></span>
-        </span>
-      </div>
-    </div>
-    <div class="col-7 col-md-9 align-self-center">
-      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _chart_legend only %}
-    </div>
-  </div>
-  {% endblock %} 
-</div>
-{% endif %} 
+
+
 
 {% endspaceless %}

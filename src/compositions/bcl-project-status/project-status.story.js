@@ -2,11 +2,17 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing.js";
+import dataContribs from "@openeuropa/bcl-project-status/data/data--contributions.js";
+import bclTitle from "@openeuropa/bcl-heading/heading.html.twig";
 import projectStatus from "@openeuropa/bcl-project-status/project-status.html.twig";
+import projectStatusContribs from "@openeuropa/bcl-project-status/project-contributions.html.twig";
+
+const title = {
+  title: "Project details",
+};
 
 const getArgs = (data) => {
   return {
-    title: data.title,
     status: data.status,
     badge: data.badge,
     start_date: data.start_date,
@@ -19,15 +25,6 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   return {
-    title: {
-      type: { name: "string", required: true },
-      description: "Project status title",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
     status: {
       type: { name: "select" },
       options: ["ongoing", "planned", "closed"],
@@ -125,7 +122,10 @@ export default {
   },
 };
 
-export const Default = (args) => projectStatus(applyArgs(dataOngoing, args));
+export const Default = (args) =>
+  `${bclTitle(title)} ${projectStatus(
+    applyArgs(dataOngoing, args)
+  )} ${projectStatusContribs(applyArgs(dataContribs, args))}`;
 
 Default.args = getArgs(dataOngoing);
 Default.argTypes = getArgTypes(dataOngoing);
