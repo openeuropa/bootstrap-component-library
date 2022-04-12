@@ -11,7 +11,7 @@
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
     "start": "start-storybook -p 9001 -c .storybook",
-    "dist": "build-storybook -c .storybook -o ../../../../build/ucpkn",
+    "dist": "STORYBOOK_THEME=ucpkn build-storybook -c .storybook -o ../../../../build/ucpkn",
     "dist-chromatic": "STORYBOOK_ENV=chromatic build-storybook -c .storybook -o ../../../../build/default"
   },
   "devDependencies": {

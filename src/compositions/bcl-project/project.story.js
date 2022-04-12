@@ -7,10 +7,7 @@ import {
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
@@ -29,8 +26,9 @@ import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
-const share =
-  '<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>';
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
@@ -49,8 +47,8 @@ if (isChromatic()) {
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
-  footer: footer,
+  header: header,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,

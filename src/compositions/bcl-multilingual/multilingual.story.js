@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { footer } from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import content from "@openeuropa/bcl-news/data/data--content";
@@ -31,7 +31,7 @@ const openModal = (story) => {
 const baseData = {
   content_type: "multilingual",
   page_title: "Demo page",
-  footer: footer,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
