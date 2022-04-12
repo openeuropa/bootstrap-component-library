@@ -1,11 +1,13 @@
 import { initScrollspy } from "@openeuropa/bcl-story-utils";
+import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 
 import demoData from "@openeuropa/bcl-inpage-navigation/data/data.js";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
 
 export default {
   title: "Paragraphs/Inpage navigation",
-  decorators: [initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     controls: { disable: true },
     design: [

@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-form-input/data.js";
 import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
@@ -106,7 +107,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Forms/Form input",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
 };
 
 export const FormInput = (args) => formInput(applyArgs(demoData, args));

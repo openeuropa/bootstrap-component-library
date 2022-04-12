@@ -1,3 +1,4 @@
+import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-select/data.js";
@@ -71,7 +72,7 @@ const initMultiselect = (story) => {
 // Stories
 export default {
   title: "Components/Forms/Select",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
 };
 
 export const Default = (args) => select(applyArgs(demoData, args));

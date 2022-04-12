@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import demoData from "@openeuropa/bcl-data-spinner/data.js";
 import spinner from "@openeuropa/bcl-spinner/spinner.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
@@ -71,7 +72,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Spinner",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
@@ -67,7 +68,7 @@ const paddingBody = (story) => {
 
 export default {
   title: "Components/Dropdown",
-  decorators: [withDesign, paddingBody],
+  decorators: [withCode, withDesign, paddingBody],
   parameters: {
     design: [
       {

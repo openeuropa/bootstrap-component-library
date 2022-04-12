@@ -1,4 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+
 import {
   initScrollspy,
   initBadges,
@@ -74,7 +76,7 @@ const demoListing = {
 
 export default {
   title: "Features/Event",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {
