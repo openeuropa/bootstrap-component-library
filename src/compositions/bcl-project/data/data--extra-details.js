@@ -7,7 +7,7 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
     links: [
       {
-        label: "Project detail",
+        label: "Project details",
         path: "#project-details",
       },
       {

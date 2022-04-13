@@ -63,6 +63,7 @@ $utilities: map-merge(
   )
 );
 
+/* stylelint-disable no-descending-specificity */
 a {
   text-underline-offset: 2px;
 
@@ -81,7 +82,15 @@ a {
       text-decoration: underline;
     }
   }
+
+  &:visited {
+    color: $link-visited;
+    &:hover {
+      color: shade-color($link-visited, 20%);
+    }
+  }
 }
+/* stylelint-enable no-descending-specificity */
 
 svg {
   fill: currentColor;

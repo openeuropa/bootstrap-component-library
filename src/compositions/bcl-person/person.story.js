@@ -1,12 +1,17 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+  listingProfiles,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
@@ -16,7 +21,7 @@ import detailsPage from "@openeuropa/bcl-person/person.html.twig";
 const baseData = {
   content_type: "listing",
   page_title: "People",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_header: true,
   with_footer: true,
@@ -34,12 +39,12 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
-  listing: dataProfiles,
+  listing: listingProfiles,
 };
 
 if (isChromatic()) {
   dataDetails.banner.image.classes = "chromatic-ignore";
-  dataProfiles.items.forEach((item) => {
+  listingProfiles.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";
@@ -48,7 +53,7 @@ if (isChromatic()) {
 
 export default {
   title: "Features/Person",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

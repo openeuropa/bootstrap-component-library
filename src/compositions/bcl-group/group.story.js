@@ -5,13 +5,18 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
+import withCode from "@openeuropa/storybook-addon-code";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+  listingProfiles,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
 import drupalAttribute from "drupal-attribute";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import dataProfiles from "@openeuropa/bcl-listing/data/listing--profiles";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import groupListing from "@openeuropa/bcl-group/group.html.twig";
@@ -28,7 +33,7 @@ if (isChromatic()) {
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";
   });
-  dataProfiles.items.forEach((item) => {
+  listingProfiles.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`
       : "chromatic-ignore";
@@ -60,7 +65,7 @@ if (isChromatic()) {
 
 let baseData = {
   content_type: "group",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),
@@ -85,7 +90,7 @@ const dataListingMember = {
   page_title: "Group members",
   ...baseData,
   ...demoDataListMember,
-  listing: dataProfiles,
+  listing: listingProfiles,
 };
 
 delete baseData.banner;
@@ -98,7 +103,7 @@ const dataListing = {
 const dataLanding = {
   page_title: "Group members",
   content_type: "group",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_banner: true,
   with_header: true,
@@ -108,7 +113,7 @@ const dataLanding = {
 
 export default {
   title: "Features/Group",
-  decorators: [withDesign, initBadges, initListings],
+  decorators: [withCode, withDesign, initBadges, initListings],
   parameters: {
     layout: "fullscreen",
     a11y: {

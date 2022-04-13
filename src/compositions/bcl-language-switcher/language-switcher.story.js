@@ -1,13 +1,15 @@
+import withCode from "@openeuropa/storybook-addon-code";
+import { withDesign } from "storybook-addon-designs";
+
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { within, userEvent } from "@storybook/testing-library";
-import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-language-switcher/data.js";
 import languageSwitcher from "@openeuropa/bcl-language-switcher/language-switcher.html.twig";
 
 export default {
   title: "Compositions/Language Switcher",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     badges: ["stable"],
     layout: "padded",

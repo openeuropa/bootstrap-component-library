@@ -37,6 +37,14 @@
   {% set _classes = _classes|merge(['fade', 'show']) %}
 {% endif %}
 
+{% set _classes = _classes|merge(['text-dark']) %}
+
+{% set _icon_classes = ['flex-shrink-0 me-3 mt-1 align-self-start' ] %}
+
+{% if _variant != 'light' %}
+  {% set _icon_classes = _icon_classes|merge(['text-' ~ _variant]) %}
+{% endif %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
@@ -49,7 +57,7 @@
     name: _icon_name ?: _icon_names[_variant],
     size: 's',
     path: _icon_path,
-    attributes: create_attribute().addClass(['flex-shrink-0 me-3 mt-1 align-self-start']),
+    attributes: create_attribute().addClass(_icon_classes),
   } only %}
 {% endif %}
   <div class="alert-content flex-grow-1">

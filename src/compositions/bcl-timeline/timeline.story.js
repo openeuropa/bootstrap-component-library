@@ -1,3 +1,6 @@
+import withCode from "@openeuropa/storybook-addon-code";
+import { withDesign } from "storybook-addon-designs";
+
 import dataDefault from "@openeuropa/bcl-timeline/data.js";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
@@ -67,6 +70,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Timeline",
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import {
   initBadges,
@@ -6,23 +7,30 @@ import {
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import footer from "@openeuropa/bcl-data-footer/data";
-import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
-import banner from "@openeuropa/bcl-content-banner/data/data";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+import dataContributions from "@openeuropa/bcl-project-status/data/data--contributions";
+import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-project/data/data--listing";
+import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
+const share =
+  '<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>';
 
 if (isChromatic()) {
   dataContent.gallery.listing.forEach((item) => {
@@ -41,7 +49,7 @@ if (isChromatic()) {
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: header,
+  header: headerSimple,
   footer: footer,
   with_header: true,
   with_footer: true,
@@ -52,6 +60,10 @@ const demoPage = {
   ...baseData,
   ...dataContent,
   ...dataExtraDetails,
+  ...dataLists,
+  project_status_title: "Project details",
+  project_status_id: "project-details",
+  project_contributions: dataContributions,
   banner: banner,
   share: share,
 };
@@ -81,13 +93,18 @@ const demoListing = {
 
 export default {
   title: "Features/Project",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {
       disable: true,
     },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     design: [
       {
         name: "Mockup",

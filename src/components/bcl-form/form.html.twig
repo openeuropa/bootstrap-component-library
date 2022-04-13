@@ -3,6 +3,7 @@
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h2')
+  - title_attributes (drupal attrs)
   - helper_text (string) (default: '')
   - antispam (string) (default: '')
   - items (array of array of objects) (default: []) format: [
@@ -26,6 +27,7 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _helper_text = helper_text|default('') %}
 {% set _items = items|default([]) %}
 {% set _antispam = antispam|default('') %}
@@ -36,10 +38,11 @@
 {% endif %}
 
 {% if _title is not empty %}
-  {% set _title_classes = 'fw-bold mb-4' %}
-  <{{ _title_tag }} class="{{ _title_classes }}">
-    {{- _title -}}
-  </{{ _title_tag }}>
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    attributes: _title_attributes,
+  } only %}
 {% endif %}
 
 {% if _helper_text is not empty %}

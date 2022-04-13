@@ -9,7 +9,7 @@ headerData.project_logo.path = ucpknLogo;
 
 export default {
   title: "Compositions/Header",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     controls: { disable: true },
     layout: "fullscreen",

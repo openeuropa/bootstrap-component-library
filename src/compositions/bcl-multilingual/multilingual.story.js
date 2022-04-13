@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
-import content from "@openeuropa/bcl-news/data/data--content";
-import banner from "@openeuropa/bcl-content-banner/data/data";
-import contentType from "@openeuropa/bcl-base-templates/content-type.html.twig";
-import footer from "@openeuropa/bcl-data-footer/data";
+import withCode from "@openeuropa/storybook-addon-code";
+import { footer } from "@openeuropa/bcl-base-templates/data/layout";
+import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+import content from "@openeuropa/bcl-news/data/data--content";
+import contentType from "@openeuropa/bcl-base-templates/content-type.html.twig";
 
 import MultilingualDataEU from "@openeuropa/bcl-multilingual/data/data--eu";
 import MultilingualDataEC from "@openeuropa/bcl-multilingual/data/data--ec";
@@ -57,7 +58,7 @@ const EUData = {
 
 export default {
   title: "Features/Multilingual",
-  decorators: [withDesign, openModal],
+  decorators: [withCode, withDesign, openModal],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

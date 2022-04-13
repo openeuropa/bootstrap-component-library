@@ -1,10 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: "Project details",
-  title_id: "project-details",
   status: "planned",
-  status_title: "Status",
   label: "Status",
   badge: "Not started",
   start_date: "19 December 2024",
@@ -12,25 +9,4 @@ module.exports = {
   end_date: "01 March 2027",
   end_label: "End",
   progress: 0,
-  corporate_contribution: 70,
-  chart_legend: {
-    variant: "horizontal",
-    items: [
-      {
-        term: {
-          label: "Total budget",
-          color: "bg-gray-400",
-        },
-        definition: "EUR 16.314.672,00",
-      },
-      {
-        term: {
-          label: "EC contribution",
-          color: "bg-primary",
-        },
-        definition: "EUR 9.994.672,00",
-      },
-    ],
-    attributes: new drupalAttribute().addClass("mb-0"),
-  },
 };

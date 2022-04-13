@@ -1,18 +1,23 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+
 import {
   initScrollspy,
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import header from "@openeuropa/bcl-data-header/data--simple";
-import listing from "@openeuropa/bcl-listing/data/listing--date";
-import footer from "@openeuropa/bcl-data-footer/data";
-import file from "@openeuropa/bcl-file/data/data";
-import banner from "@openeuropa/bcl-content-banner/data/data";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+  listingDate,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import { file, banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  headerSimple,
+  footer,
+} from "@openeuropa/bcl-base-templates/data/layout";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import filterButton from "@openeuropa/bcl-data-button/data--filter";
-import pagination from "@openeuropa/bcl-data-pagination/data--listing";
-import sortSelect from "@openeuropa/bcl-data-select/data--sort";
 import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
@@ -25,7 +30,7 @@ const files = [file, file];
 
 const baseData = {
   content_type: "event",
-  header: header,
+  header: headerSimple,
   footer: {
     ...footer,
     attributes: new drupalAttribute().addClass("mt-4"),
@@ -62,7 +67,7 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: {
-    ...listing,
+    ...listingDate,
     variant: "default-1-col",
     link: false,
     title: false,
@@ -71,7 +76,7 @@ const demoListing = {
 
 export default {
   title: "Features/Event",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

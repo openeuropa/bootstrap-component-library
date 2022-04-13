@@ -1,6 +1,4 @@
 module.exports = {
-  title: "Overview",
-  title_id: "overview",
   label: "Status",
   start_date: "19 January 2020",
   start_label: "Start",

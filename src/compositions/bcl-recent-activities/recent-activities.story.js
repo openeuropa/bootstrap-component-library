@@ -1,3 +1,6 @@
+import withCode from "@openeuropa/storybook-addon-code";
+import { withDesign } from "storybook-addon-designs";
+
 import demoData from "@openeuropa/bcl-recent-activities/data.js";
 import recentActivities from "@openeuropa/bcl-recent-activities/recent-activities.html.twig";
 import isChromatic from "chromatic/isChromatic";
@@ -11,6 +14,7 @@ if (isChromatic()) {
 
 export default {
   title: "Compositions/Recent Activities",
+  decorators: [withCode, withDesign],
   parameters: {
     controls: { disable: true },
     design: [
