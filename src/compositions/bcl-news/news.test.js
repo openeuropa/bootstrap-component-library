@@ -4,7 +4,10 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   headerSimple,
   footer,
@@ -41,6 +44,12 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   with_sidebar: true,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "News",
+    },
+  },
 };
 
 const template = "@oe-bcl/bcl-base-templates/content-type.html.twig";

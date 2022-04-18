@@ -15,7 +15,10 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
@@ -95,6 +98,12 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Publications",
+    },
+  },
 };
 
 export default {

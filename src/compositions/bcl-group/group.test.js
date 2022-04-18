@@ -3,6 +3,7 @@ import {
   headerSimple,
   footer,
 } from "@openeuropa/bcl-base-templates/data/layout";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
   pagination,
@@ -43,11 +44,16 @@ const dataListingMember = {
   listing: listingProfiles,
 };
 
-delete baseData.banner;
 const dataListing = {
   page_title: "Groups",
   ...baseData,
   ...demoDataList,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Groups",
+    },
+  },
 };
 
 const dataLanding = {
