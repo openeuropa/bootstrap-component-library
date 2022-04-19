@@ -7,10 +7,7 @@ import {
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import {
-  headerNoForm,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
@@ -32,9 +29,9 @@ if (isChromatic()) {
 const dataListing = {
   page_title: "Search results",
   content_type: "search",
-  header: headerNoForm,
+  header: layout.headerNoForm,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,

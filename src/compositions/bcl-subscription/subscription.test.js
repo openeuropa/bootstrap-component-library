@@ -1,8 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   banner,
   sidebar,
@@ -18,9 +15,9 @@ import modalData from "@openeuropa/bcl-subscription/data/data--modal";
 const demoData = {
   content_type: "subscription",
   page_title: "Subscription",
-  header: headerSimple,
+  header: layout.headerSimple,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,

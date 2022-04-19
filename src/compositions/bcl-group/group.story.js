@@ -6,10 +6,7 @@ import {
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
@@ -27,6 +24,9 @@ import demoDataList from "@openeuropa/bcl-group/data/data--list";
 import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
 import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
 import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
+
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic()) {
   demoDataListContent.listing.items.forEach((item) => {
@@ -66,9 +66,9 @@ if (isChromatic()) {
 
 let baseData = {
   content_type: "group",
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,
@@ -110,8 +110,8 @@ const dataListing = {
 const dataLanding = {
   page_title: "Group members",
   content_type: "group",
-  header: headerSimple,
-  footer: footer,
+  header: header,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,

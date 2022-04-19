@@ -3,10 +3,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   banner,
   sidebar,
@@ -21,6 +18,9 @@ import subscriptionPageData from "@openeuropa/bcl-subscription/data/data";
 import modalData from "@openeuropa/bcl-subscription/data/data--modal";
 const chromatic = process.env.STORYBOOK_ENV;
 
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
 if (isChromatic()) {
   banner.image.classes = banner.image.classes
     ? `${banner.image.classes} chromatic-ignore`
@@ -30,9 +30,9 @@ if (isChromatic()) {
 const demoData = {
   content_type: "subscription",
   page_title: "Subscription",
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,

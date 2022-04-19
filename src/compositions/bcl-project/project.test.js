@@ -1,9 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
@@ -34,8 +31,8 @@ const detailsTemplate = "@oe-bcl/bcl-project/project.html.twig";
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,

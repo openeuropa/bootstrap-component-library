@@ -1,8 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
@@ -32,8 +29,8 @@ const renderViewCompact = (params) =>
 const data = {
   with_header: true,
   with_footer: true,
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   content_type: "users",
 };
 
