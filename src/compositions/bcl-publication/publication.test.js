@@ -6,7 +6,10 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
 import dataContent from "@openeuropa/bcl-publication/data/data";
@@ -71,6 +74,13 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Publications",
+      tag: "h1",
+    },
+  },
 };
 
 const renderListing = (params) =>

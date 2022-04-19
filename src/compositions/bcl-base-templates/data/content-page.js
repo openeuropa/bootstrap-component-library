@@ -1,6 +1,7 @@
 import banner from "@openeuropa/bcl-content-banner/data/data";
 import pageBanner from "@openeuropa/bcl-banner/data/data--image";
 import simpleBanner from "@openeuropa/bcl-content-banner/data/data--simple";
+import pageTitleBanner from "@openeuropa/bcl-content-banner/data/data--page-title";
 import fileThumbnail from "@openeuropa/bcl-file/data/data--card";
 import file from "@openeuropa/bcl-file/data/data";
 import blockquote from "@openeuropa/bcl-data-blockquote/data";
@@ -20,4 +21,5 @@ export {
   pageBanner,
   simpleBanner,
   sidebar,
+  pageTitleBanner,
 };
