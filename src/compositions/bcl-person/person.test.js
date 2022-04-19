@@ -10,6 +10,7 @@ import {
   sortSelect,
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
 import dataDetails from "@openeuropa/bcl-person/data/data--details";
@@ -39,6 +40,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: listingProfiles,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Persons",
+      tag: "h1",
+    },
+  },
 };
 
 const renderListing = (params) =>

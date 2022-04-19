@@ -12,7 +12,11 @@ import {
   sortSelect,
   listingDate,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { file, banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  file,
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   headerSimple,
   footer,
@@ -71,6 +75,13 @@ const demoListing = {
     variant: "default-1-col",
     link: false,
     title: false,
+  },
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Event",
+      tag: "h1",
+    },
   },
 };
 

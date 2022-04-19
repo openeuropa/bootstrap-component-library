@@ -12,6 +12,7 @@ import {
   sortSelect,
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
@@ -40,6 +41,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: listingProfiles,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Persons",
+      tag: "h1",
+    },
+  },
 };
 
 if (isChromatic()) {

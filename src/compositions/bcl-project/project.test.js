@@ -9,7 +9,10 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
@@ -71,6 +74,13 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Projects",
+      tag: "h1",
+    },
+  },
 };
 
 const ongoingDemoUCPKN = {

@@ -15,7 +15,10 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
@@ -26,9 +29,6 @@ import detailsPage from "@openeuropa/bcl-publication/publication.html.twig";
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
-  dataContent.gallery.listing.forEach((item) => {
-    item.attributes = new drupalAttribute().addClass("chromatic-ignore");
-  });
   banner.image.classes = "chromatic-ignore";
   dataListing.listing.items.forEach((item) => {
     if (item.image) {
@@ -95,6 +95,13 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Publications",
+      tag: "h1",
+    },
+  },
 };
 
 export default {
