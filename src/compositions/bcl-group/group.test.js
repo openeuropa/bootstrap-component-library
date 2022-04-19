@@ -52,6 +52,7 @@ const dataListing = {
     ...pageTitleBanner,
     title: {
       content: "Groups",
+      tag: "h1",
     },
   },
 };

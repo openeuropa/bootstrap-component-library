@@ -61,6 +61,7 @@ const demoListing = {
     ...pageTitleBanner,
     title: {
       content: "News",
+      tag: "h1",
     },
   },
 };

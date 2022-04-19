@@ -29,9 +29,6 @@ import detailsPage from "@openeuropa/bcl-publication/publication.html.twig";
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
-  dataContent.gallery.listing.forEach((item) => {
-    item.attributes = new drupalAttribute().addClass("chromatic-ignore");
-  });
   banner.image.classes = "chromatic-ignore";
   dataListing.listing.items.forEach((item) => {
     if (item.image) {
@@ -102,6 +99,7 @@ const demoListing = {
     ...pageTitleBanner,
     title: {
       content: "Publications",
+      tag: "h1",
     },
   },
 };

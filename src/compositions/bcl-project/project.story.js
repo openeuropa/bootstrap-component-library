@@ -36,7 +36,7 @@ const share =
   '<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>';
 
 if (isChromatic()) {
-  dataContent.gallery.listing.forEach((item) => {
+  dataContent.gallery.items.forEach((item) => {
     item.attributes = new drupalAttribute().addClass("chromatic-ignore");
   });
   banner.image.classes = "chromatic-ignore";
@@ -96,6 +96,7 @@ const demoListing = {
     ...pageTitleBanner,
     title: {
       content: "Projects",
+      tag: "h1",
     },
   },
 };

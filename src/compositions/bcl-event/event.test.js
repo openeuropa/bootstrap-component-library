@@ -59,6 +59,7 @@ const demoListing = {
     ...pageTitleBanner,
     title: {
       content: "Event",
+      tag: "h1",
     },
   },
 };

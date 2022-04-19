@@ -81,6 +81,7 @@ const demoListing = {
     ...pageTitleBanner,
     title: {
       content: "Publications",
+      tag: "h1",
     },
   },
 };

@@ -45,6 +45,7 @@ const demoListing = {
     ...pageTitleBanner,
     title: {
       content: "Persons",
+      tag: "h1",
     },
   },
 };
