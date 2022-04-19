@@ -1,6 +1,7 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import layout from "@openeuropa/bcl-base-templates/data/layout";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
   pagination,
@@ -41,11 +42,17 @@ const dataListingMember = {
   listing: listingProfiles,
 };
 
-delete baseData.banner;
 const dataListing = {
   page_title: "Groups",
   ...baseData,
   ...demoDataList,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Groups",
+      tag: "h1",
+    },
+  },
 };
 
 const dataLanding = {

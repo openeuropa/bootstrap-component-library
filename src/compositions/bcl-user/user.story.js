@@ -4,6 +4,7 @@ import isChromatic from "chromatic/isChromatic";
 
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
   pagination,
@@ -57,6 +58,13 @@ const dataListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Users",
+      tag: "h1",
+    },
+  },
 };
 
 const dataEdit = {

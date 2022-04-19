@@ -5,7 +5,11 @@ import {
   sortSelect,
   listingDate,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { file, banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  file,
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 
@@ -47,6 +51,13 @@ const demoListing = {
     variant: "default-1-col",
     link: false,
     content: "",
+  },
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Event",
+      tag: "h1",
+    },
   },
 };
 

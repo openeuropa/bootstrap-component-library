@@ -4,7 +4,10 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
@@ -38,6 +41,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   with_sidebar: true,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "News",
+      tag: "h1",
+    },
+  },
 };
 
 const template = "@oe-bcl/bcl-base-templates/content-type.html.twig";
