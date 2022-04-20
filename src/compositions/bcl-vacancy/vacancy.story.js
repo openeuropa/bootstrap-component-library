@@ -19,10 +19,12 @@ import dataContent from "@openeuropa/bcl-vacancy/data/data";
 import dataSidebarDetails from "@openeuropa/bcl-vacancy/data/data--sidebar-details";
 import detailsPage from "@openeuropa/bcl-vacancy/vacancy.html.twig";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   simpleBanner.image.classes = "chromatic-ignore";
   banner.image.classes = "chromatic-ignore";
 }
