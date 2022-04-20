@@ -5,12 +5,13 @@ import table from "@openeuropa/bcl-table/table.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data) => {
+const getArgs = () => {
   return {
     striped: false,
     hoverable: false,
     borderless: false,
     small: false,
+    table_responsive: "",
   };
 };
 
@@ -69,6 +70,17 @@ const getArgTypes = () => {
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    table_responsive: {
+      name: "table responsive",
+      type: { name: "select" },
+      options: ["all", "sm", "md", "lg", "xl", "xxl"],
+      description: "Responsive breakpoints",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
         category: "Style",
       },
     },
