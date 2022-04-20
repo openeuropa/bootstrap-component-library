@@ -26,7 +26,6 @@ const header =
 
 if (isChromatic() || chromatic) {
   simpleBanner.image.classes = "chromatic-ignore";
-  banner.image.classes = "chromatic-ignore";
 }
 
 const sidebarOpen = {
