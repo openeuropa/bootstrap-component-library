@@ -12,11 +12,12 @@ import {
   sortSelect,
   listingDate,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { file, banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+  file,
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import drupalAttribute from "drupal-attribute";
 
@@ -24,15 +25,18 @@ import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
 import event from "@openeuropa/bcl-event/event.html.twig";
 
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
 delete file.translation;
 file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
 const files = [file, file];
 
 const baseData = {
   content_type: "event",
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,
@@ -71,6 +75,13 @@ const demoListing = {
     variant: "default-1-col",
     link: false,
     title: false,
+  },
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Event",
+      tag: "h1",
+    },
   },
 };
 

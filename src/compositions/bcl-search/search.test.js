@@ -1,8 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import {
-  headerNoForm,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
@@ -17,8 +14,8 @@ const render = (params) => renderTwigFileAsNode(template, params);
 const dataListing = {
   content_type: "search",
   page_title: "Search results",
-  header: headerNoForm,
-  footer: footer,
+  header: layout.headerNoForm,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,

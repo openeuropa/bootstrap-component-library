@@ -1,15 +1,15 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
@@ -31,8 +31,8 @@ const detailsTemplate = "@oe-bcl/bcl-project/project.html.twig";
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -71,6 +71,13 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Projects",
+      tag: "h1",
+    },
+  },
 };
 
 const ongoingDemoUCPKN = {

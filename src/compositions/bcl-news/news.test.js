@@ -4,11 +4,11 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
@@ -19,8 +19,8 @@ const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>
 const baseData = {
   content_type: "news",
   page_title: "News",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -41,6 +41,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   with_sidebar: true,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "News",
+      tag: "h1",
+    },
+  },
 };
 
 const template = "@oe-bcl/bcl-base-templates/content-type.html.twig";

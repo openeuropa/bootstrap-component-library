@@ -1,15 +1,13 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
   sortSelect,
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
 import dataDetails from "@openeuropa/bcl-person/data/data--details";
@@ -20,8 +18,8 @@ const detailsTemplate = "@oe-bcl/bcl-person/person.html.twig";
 const baseData = {
   content_type: "listing",
   page_title: "People",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -39,6 +37,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: listingProfiles,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Persons",
+      tag: "h1",
+    },
+  },
 };
 
 const renderListing = (params) =>

@@ -1,3 +1,4 @@
+import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import {
@@ -6,16 +7,16 @@ import {
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
@@ -23,12 +24,11 @@ import dataContent from "@openeuropa/bcl-publication/data/data";
 import dataExtraDetails from "@openeuropa/bcl-publication/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-publication/publication.html.twig";
 
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
-  dataContent.gallery.listing.forEach((item) => {
-    item.attributes = new drupalAttribute().addClass("chromatic-ignore");
-  });
   banner.image.classes = "chromatic-ignore";
   dataListing.listing.items.forEach((item) => {
     if (item.image) {
@@ -42,8 +42,8 @@ if (isChromatic()) {
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
-  footer: footer,
+  header: header,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -95,11 +95,18 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Publications",
+      tag: "h1",
+    },
+  },
 };
 
 export default {
   title: "Features/Publication",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {

@@ -5,11 +5,12 @@ import {
   sortSelect,
   listingDate,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { file, banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+  file,
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
@@ -21,9 +22,9 @@ const files = [file, file];
 
 const baseData = {
   content_type: "event",
-  header: headerSimple,
+  header: layout.headerSimple,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,
@@ -50,6 +51,13 @@ const demoListing = {
     variant: "default-1-col",
     link: false,
     content: "",
+  },
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Event",
+      tag: "h1",
+    },
   },
 };
 

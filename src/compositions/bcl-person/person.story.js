@@ -2,27 +2,28 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
   sortSelect,
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
 import dataDetails from "@openeuropa/bcl-person/data/data--details";
 import detailsPage from "@openeuropa/bcl-person/person.html.twig";
 
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
 const baseData = {
   content_type: "listing",
   page_title: "People",
-  header: headerSimple,
-  footer: footer,
+  header: header,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -40,6 +41,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: listingProfiles,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Persons",
+      tag: "h1",
+    },
+  },
 };
 
 if (isChromatic()) {

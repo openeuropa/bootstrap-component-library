@@ -1,8 +1,7 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+
+import layout from "@openeuropa/bcl-base-templates/data/layout";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
   pagination,
@@ -18,8 +17,8 @@ import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
 
 let baseData = {
   content_type: "group",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -43,18 +42,24 @@ const dataListingMember = {
   listing: listingProfiles,
 };
 
-delete baseData.banner;
 const dataListing = {
   page_title: "Groups",
   ...baseData,
   ...demoDataList,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Groups",
+      tag: "h1",
+    },
+  },
 };
 
 const dataLanding = {
   page_title: "Group members",
   content_type: "group",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,

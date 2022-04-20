@@ -13,16 +13,16 @@ import {
   pageBanner,
   blockquote,
 } from "@openeuropa/bcl-base-templates/data/content-page";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 
 import listing from "@openeuropa/bcl-page/data/data--listing";
 import listingDefault from "@openeuropa/bcl-page/data/data--listing-default";
 import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
 import page from "@openeuropa/bcl-page/page.html.twig";
+
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic()) {
   banner.image.classes = "chromatic-ignore";
@@ -44,9 +44,9 @@ delete featuredItem.title;
 
 const baseData = {
   content_type: "page",
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-3-5"),
   },
   sidebar: sidebar,

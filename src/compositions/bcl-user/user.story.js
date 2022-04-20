@@ -3,10 +3,8 @@ import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
   filterButton,
   pagination,
@@ -24,6 +22,9 @@ import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
 
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
 if (isChromatic()) {
   demoDataViewCompact.picture.classes = "chromatic-ignore";
   demoDataView.banner.image.classes = demoDataView.banner.image.classes
@@ -39,9 +40,9 @@ if (isChromatic()) {
 const data = {
   with_header: true,
   with_footer: true,
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   content_type: "users",
@@ -57,6 +58,13 @@ const dataListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Users",
+      tag: "h1",
+    },
+  },
 };
 
 const dataEdit = {

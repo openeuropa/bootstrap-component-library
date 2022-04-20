@@ -2,14 +2,14 @@ import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-landing-page/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
+
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic()) {
   demoData.listing_section.items.forEach((item) => {
@@ -23,9 +23,9 @@ if (isChromatic()) {
 
 const dataLanding = {
   content_type: "landing-page",
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_banner: true,

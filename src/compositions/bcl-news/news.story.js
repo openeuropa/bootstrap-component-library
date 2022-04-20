@@ -7,16 +7,18 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
 const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 
@@ -32,8 +34,8 @@ if (isChromatic()) {
 const baseData = {
   content_type: "news",
   page_title: "News",
-  header: headerSimple,
-  footer: footer,
+  header: header,
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -54,6 +56,13 @@ const demoListing = {
   filter_button: filterButton,
   sort_select: sortSelect,
   with_sidebar: true,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "News",
+      tag: "h1",
+    },
+  },
 };
 
 export default {

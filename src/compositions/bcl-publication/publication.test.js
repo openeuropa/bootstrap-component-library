@@ -1,15 +1,15 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  banner,
+  pageTitleBanner,
+} from "@openeuropa/bcl-base-templates/data/content-page";
 
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
 import dataContent from "@openeuropa/bcl-publication/data/data";
@@ -22,8 +22,8 @@ const detailsTemplate = "@oe-bcl/bcl-publication/publication.html.twig";
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
-  footer: footer,
+  header: layout.headerSimple,
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -74,6 +74,13 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Publications",
+      tag: "h1",
+    },
+  },
 };
 
 const renderListing = (params) =>
