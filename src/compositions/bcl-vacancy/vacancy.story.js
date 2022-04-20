@@ -25,7 +25,7 @@ const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic() || chromatic) {
-  simpleBanner.image.classes = "chromatic-ignore";
+  pageTitleBanner.image.classes = "chromatic-ignore";
 }
 
 const sidebarOpen = {
