@@ -1,11 +1,8 @@
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
@@ -13,7 +10,7 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import {
   simpleBanner,
-  banner,
+  pageTitleBanner,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
@@ -21,6 +18,9 @@ import dataListing from "@openeuropa/bcl-vacancy/data/data--listing";
 import dataContent from "@openeuropa/bcl-vacancy/data/data";
 import dataSidebarDetails from "@openeuropa/bcl-vacancy/data/data--sidebar-details";
 import detailsPage from "@openeuropa/bcl-vacancy/vacancy.html.twig";
+
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic()) {
   simpleBanner.image.classes = "chromatic-ignore";
@@ -38,15 +38,16 @@ const sidebarClosed = {
   ...dataSidebarDetails,
   button: {
     label: "Vacancy closed",
+    disabled: true,
   },
 };
 
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
+  header: header,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_header: true,
@@ -73,7 +74,13 @@ const demoDetailsClosed = {
 const demoListing = {
   ...baseData,
   ...dataListing,
-  banner: { ...banner, image_size: "sm", background: "white" },
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Vacancy",
+      tag: "h1",
+    },
+  },
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

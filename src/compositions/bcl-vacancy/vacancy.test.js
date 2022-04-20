@@ -1,9 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import {
-  headerSimple,
-  footer,
-} from "@openeuropa/bcl-base-templates/data/layout";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
 import {
   filterButton,
@@ -12,7 +9,7 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import {
   simpleBanner,
-  banner,
+  pageTitleBanner,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
@@ -33,16 +30,16 @@ const sidebarClosed = {
   ...dataSidebarDetails,
   button: {
     label: "Vacancy closed",
-    attributes: new drupalAttribute().setAttribute("disabled", "true"),
+    disabled: true,
   },
 };
 
 const baseData = {
   content_type: "listing",
   page_title: "Projects",
-  header: headerSimple,
+  header: layout.headerSimple,
   footer: {
-    ...footer,
+    ...layout.footer,
     attributes: new drupalAttribute().addClass("mt-4"),
   },
   with_header: true,
@@ -69,7 +66,13 @@ const demoDetailsClosed = {
 const demoListing = {
   ...baseData,
   ...dataListing,
-  banner: { ...banner, image_size: "sm", background: "white" },
+  banner: {
+    ...pageTitleBanner,
+    title: {
+      content: "Vacancy",
+      tag: "h1",
+    },
+  },
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
