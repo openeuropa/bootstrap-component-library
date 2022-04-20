@@ -90,7 +90,7 @@ describe("OE - Vacancy", () => {
     return expect(renderListing(demoListing)).resolves.toMatchSnapshot();
   });
 
-  test("details (closed) renders correctly", () => {
+  test("details (opened) renders correctly", () => {
     expect.assertions(1);
     return expect(renderDetails(demoDetails)).resolves.toMatchSnapshot();
   });

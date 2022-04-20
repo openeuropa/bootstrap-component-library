@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
+import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import drupalAttribute from "drupal-attribute";
@@ -89,7 +90,7 @@ const demoListing = {
 
 export default {
   title: "Features/Vacancy",
-  decorators: [withDesign],
+  decorators: [withDesign, withCode],
   parameters: {
     layout: "fullscreen",
     controls: {

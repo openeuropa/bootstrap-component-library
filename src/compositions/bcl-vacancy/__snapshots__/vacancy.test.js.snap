@@ -672,10 +672,12 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             class="mb-4"
           >
             <button
+              aria-disabled="true"
               class="btn btn-primary btn-md"
+              disabled="true"
               type="button"
             >
-              Apply now
+              Vacancy closed
             </button>
             <h3
               class="fw-bold mb-4 mt-4"
@@ -1290,7 +1292,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Vacancy details (closed) renders correctly 2`] = `
+exports[`OE - Vacancy details (opened) renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -1962,12 +1964,10 @@ exports[`OE - Vacancy details (closed) renders correctly 2`] = `
             class="mb-4"
           >
             <button
-              aria-disabled="true"
               class="btn btn-primary btn-md"
-              disabled="true"
               type="button"
             >
-              Vacancy closed
+              Apply now
             </button>
             <h3
               class="fw-bold mb-4 mt-4"
