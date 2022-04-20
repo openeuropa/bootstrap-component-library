@@ -11,7 +11,7 @@ const getArgs = () => {
     hoverable: false,
     borderless: false,
     small: false,
-    table_responsive: "all",
+    table_responsive: "",
   };
 };
 
