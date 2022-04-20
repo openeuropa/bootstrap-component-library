@@ -1,27 +1,22 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import demoData from "@openeuropa/bcl-data-table/data.js";
-import demoResponsiveData from "@openeuropa/bcl-data-table/data--responsive.js";
 import table from "@openeuropa/bcl-table/table.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data, type) => {
-  const args = {
+const getArgs = () => {
+  return {
     striped: false,
     hoverable: false,
     borderless: false,
     small: false,
+    table_responsive: "all",
   };
-  if (type == "responsive") {
-    args.table_responsive = "all";
-  }
-
-  return args;
 };
 
-const getArgTypes = (data, type) => {
-  const argTypes = {
+const getArgTypes = () => {
+  return {
     striped: {
       type: { name: "boolean" },
       description: "Striped table",
@@ -78,9 +73,7 @@ const getArgTypes = (data, type) => {
         category: "Style",
       },
     },
-  };
-  if (type == "responsive") {
-    argTypes.table_responsive = {
+    table_responsive: {
       name: "table responsive",
       type: { name: "select" },
       options: ["all", "sm", "md", "lg", "xl", "xxl"],
@@ -90,9 +83,8 @@ const getArgTypes = (data, type) => {
         defaultValue: { summary: "" },
         category: "Style",
       },
-    };
-  }
-  return argTypes;
+    },
+  };
 };
 
 const resetAttrs = (data, args) => {
@@ -145,13 +137,3 @@ export const Default = (args) => table(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-
-export const Responsive = (args) => table(applyArgs(demoResponsiveData, args));
-
-Responsive.args = getArgs(demoResponsiveData, "responsive");
-Responsive.argTypes = getArgTypes(demoResponsiveData, "responsive");
-Responsive.parameters = {
-  viewport: {
-    defaultViewport: "tablet",
-  },
-};
