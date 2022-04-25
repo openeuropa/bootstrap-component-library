@@ -28,7 +28,7 @@ const demoData = {
   modal: modalData,
   banner: {
     ...banner,
-    ...subscriptionPageData,
+    action_bar: subscriptionPageData,
   },
   content: content,
 };

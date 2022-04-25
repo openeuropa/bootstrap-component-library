@@ -12,11 +12,11 @@ module.exports = {
       alt: "alt img",
       position: "top",
     },
-    action_button: {
-      label: "Manage profile",
-      variant: "light",
-      attributes: new drupalAttribute().addClass("mb-3"),
-    },
+    action_bar: `<div class="d-flex justify-content-end mt-2 align-items-center">
+      <div class="d-grid d-md-block ms-3">
+        <button class="mb-3 btn btn-light btn-md" type="button">Manage profile</button>
+      </div>
+    </div>`,
     content: `<div class="mb-4 mt-4">
       <span class="text-muted me-3">DG Test</span><span class="text-muted">Director</span>
     </div>
