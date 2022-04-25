@@ -4,7 +4,6 @@ module.exports = {
   banner: {
     title: {
       content: "Stefan Mayer",
-      tag: "h2",
       attributes: new drupalAttribute().addClass("fw-bold"),
     },
     image: {

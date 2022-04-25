@@ -72,7 +72,7 @@
 
 {% set _card = {
   title: title|default({})|merge({
-    tag: title.tag ?: 'h2',
+    tag: title.tag ?: 'h1',
     attributes: create_attribute().addClass(['fw-bold']),
   }),
   horizontal: true,
