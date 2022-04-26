@@ -94,14 +94,14 @@
         {% include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
       {% endif %}
       {% if _item.title is defined and _item.title is not empty %}
-        <h4 class="text-capitalize fw-bold mt-2">
+        <div class="h4 text-capitalize fw-bold mt-2">
           {{- _item.title -}}
-        </h4>
+        </div>
       {% endif %}
       {% if _item.subtitle is defined and _item.subtitle is not empty %}
-        <h5 class="fw-bold">
+        <div class="h5 fw-bold">
           {{- _item.subtitle -}}
-        </h5>
+        </div>
       {% endif %}
       {% if _item.description is defined and _item.description is not empty %}
         <p>

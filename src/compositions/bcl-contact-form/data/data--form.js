@@ -13,7 +13,7 @@ module.exports = {
     attributes: new drupalAttribute().addClass("w-auto mb-4"),
   },
   title: "Enter your message",
-  title_tag: "h3",
+  title_tag: "h2",
   helper_text: "*Please fill in all required fields.",
   antispam: `<h4 class="p-4 mt-0">Antispam</h4>`,
   items: [
