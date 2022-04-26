@@ -18,12 +18,12 @@
   {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
   <div class="row">
     <div class="col-md-6 col-lg-8 align-self-center">
-      <h4 class="mb-0">
+      <h2 class="mb-0">
         <span class="text-capitalize">
           {{- _page_title -}}
         </span>
         ({{ listing.items.length }})
-      </h4>
+      </h2>
     </div>
     {% if badges is not empty and badges is iterable %}
       <div class="col-md-12 order-md-2 mt-3">

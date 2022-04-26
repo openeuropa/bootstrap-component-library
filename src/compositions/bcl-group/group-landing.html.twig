@@ -17,7 +17,7 @@
     {% endif %}
     {% if banner.title is not empty %}
       <div class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container">
-        <h2 class="mb-0 d-inline-block fw-bold">{{ banner.title }}</h2>
+        <h1 class="mb-0 d-inline-block fw-bold">{{ banner.title }}</h1>
         {% if banner.actions is not empty and banner.actions is iterable %}
         <div class="d-grid d-md-block ms-auto">
           {% for _action in banner.actions %}

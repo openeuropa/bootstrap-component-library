@@ -34,7 +34,7 @@ module.exports = {
     with_body_scroll: true,
     title: {
       label: "Filter options",
-      heading: 4,
+      heading: 3,
       extra_classes: "mb-lg-4",
     },
     search_form: {
