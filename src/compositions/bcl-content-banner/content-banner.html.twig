@@ -24,7 +24,6 @@
 
 {% set _css_classes = [
   'bcl-content-banner',
-  'pt-lg-4-75',
 ] %}
 
 {% if _background != 'white' %}
@@ -32,10 +31,12 @@
     'pb-md-4-75',
     'pb-4',
     'pt-4',
+    'pt-md-4-75',
   ]) %}
 {% else %}
   {% set _css_classes = _css_classes|merge([
-    'pt-3'
+    'pt-4',
+    'pt-md-4-75',
   ]) %}
 {% endif %}
 

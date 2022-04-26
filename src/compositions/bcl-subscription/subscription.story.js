@@ -31,10 +31,7 @@ const demoData = {
   content_type: "subscription",
   page_title: "Subscription",
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,

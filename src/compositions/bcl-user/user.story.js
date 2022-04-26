@@ -12,7 +12,6 @@ import {
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
 import demoDataEdit from "@openeuropa/bcl-user/data/data--user-edit";
@@ -41,10 +40,7 @@ const data = {
   with_header: true,
   with_footer: true,
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   content_type: "users",
 };
 

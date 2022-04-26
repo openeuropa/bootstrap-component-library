@@ -3,7 +3,6 @@ import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-landing-page/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
@@ -24,10 +23,7 @@ if (isChromatic()) {
 const dataLanding = {
   content_type: "landing-page",
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -38,6 +34,7 @@ export default {
   title: "Features/Landing Page",
   parameters: {
     layout: "fullscreen",
+    decorators: [withCode, withDesign],
     controls: { disable: true },
     badges: ["stable"],
     design: [
