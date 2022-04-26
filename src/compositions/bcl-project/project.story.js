@@ -16,6 +16,7 @@ import {
 import {
   banner,
   pageTitleBanner,
+  share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
@@ -31,7 +32,6 @@ import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
   dataContent.gallery.items.forEach((item) => {

@@ -9,6 +9,7 @@ import featuredItem from "@openeuropa/bcl-featured-media/data/data--featured-ite
 import accordion from "@openeuropa/bcl-data-accordion/data";
 import timeline from "@openeuropa/bcl-timeline/data";
 import sidebar from "@openeuropa/bcl-inpage-navigation/data/data--simple";
+import share from "@openeuropa/bcl-links-block/data/data--share";
 
 export {
   banner,
@@ -22,4 +23,5 @@ export {
   simpleBanner,
   sidebar,
   pageTitleBanner,
+  share,
 };

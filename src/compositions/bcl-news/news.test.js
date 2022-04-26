@@ -7,14 +7,12 @@ import {
 import {
   banner,
   pageTitleBanner,
+  share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
-
-const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
-const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 
 const baseData = {
   content_type: "news",
@@ -30,7 +28,6 @@ const demoData = {
   ...baseData,
   banner: banner,
   content: content,
-  feedback: feedback,
   share: share,
 };
 

@@ -116,15 +116,15 @@
       {% block related %}
         {{ related }}
       {% endblock %}
+      {% block share %}
+        {{ share }}
+      {% endblock %}
     </div>
   </div>
 </main>
 
 {% block feedback %}
   {{ feedback }}
-{% endblock %}
-{% block share %}
-  {{ share }}
 {% endblock %}
 
 {% if _with_footer %}
