@@ -1,7 +1,7 @@
 module.exports = {
   variant: "highlight-3-col",
   link: {
-    path: "/example",
+    path: "/example.html",
     label: "Listing item block CTA",
     icon: {
       path: "/icons.svg",
@@ -9,9 +9,7 @@ module.exports = {
   },
   items: [
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: "<a href='/example.html' class='standalone'>Card title</a>",
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
@@ -24,9 +22,7 @@ module.exports = {
       },
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: "<a href='/example.html' class='standalone'>Card title</a>",
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -39,9 +35,7 @@ module.exports = {
       },
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: "<a href='/example.html' class='standalone'>Card title</a>",
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

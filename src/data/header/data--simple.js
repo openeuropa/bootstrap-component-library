@@ -104,7 +104,7 @@ module.exports = {
       items: [
         {
           label: "Home",
-          path: "/example",
+          path: "/example.html",
           active: true,
           attributes: new drupalAttribute()
             .setAttribute("aria-current", "page")
@@ -112,11 +112,11 @@ module.exports = {
         },
         {
           label: "Item 01",
-          path: "/example",
+          path: "/example.html",
         },
         {
           label: "Item 02",
-          path: "/example",
+          path: "/example.html",
         },
         {
           id: "navbarDropdownMenuLink",
@@ -272,7 +272,7 @@ module.exports = {
     links: [
       {
         label: "Home",
-        path: "/example",
+        path: "/example.html",
         attributes: new drupalAttribute().setAttribute(
           "aria-label",
           "homepage"
@@ -280,11 +280,11 @@ module.exports = {
       },
       {
         label: "European Union",
-        path: "/example",
+        path: "/example.html",
       },
       {
         label: "About the European Union",
-        path: "/example",
+        path: "/example.html",
       },
       { label: "News" },
     ],

@@ -420,9 +420,7 @@ module.exports = {
       },
       items: [
         {
-          title: {
-            content: '<a class="standalone" href="/example">Card title</a>',
-          },
+          title: "<a href='/example.html' class='standalone'>Card title</a>",
           text: {
             content:
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -449,9 +447,7 @@ module.exports = {
           ],
         },
         {
-          title: {
-            content: '<a class="standalone" href="/example">Card title</a>',
-          },
+          title: "<a href='/example.html' class='standalone'>Card title</a>",
           text: {
             content:
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -483,9 +479,7 @@ module.exports = {
           ],
         },
         {
-          title: {
-            content: '<a class="standalone" href="/example">Card title</a>',
-          },
+          title: "<a href='/example.html' class='standalone'>Card title</a>",
           text: {
             content:
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",

@@ -2,11 +2,9 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   banner: {
-    title: {
-      content: "Stefan Mayer",
-      tag: "h2",
-      attributes: new drupalAttribute().addClass("fw-bold"),
-    },
+    title: "Stefan Mayer",
+    title_tag: "h2",
+    title_attributes: new drupalAttribute().addClass("fw-bold"),
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",

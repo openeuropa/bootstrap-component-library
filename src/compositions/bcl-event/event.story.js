@@ -78,10 +78,8 @@ const demoListing = {
   },
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Event",
-      tag: "h1",
-    },
+    title: "Event",
+    title_tag: "h1",
   },
 };
 

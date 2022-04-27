@@ -71,10 +71,9 @@
 } %}
 
 {% set _card = {
-  title: title|default({})|merge({
-    tag: title.tag ?: 'h2',
-    attributes: create_attribute().addClass(['fw-bold']),
-  }),
+  title: title,
+  title_tag: title_tag ?: 'h2',
+  title_attributes: create_attribute().addClass(['fw-bold']),
   horizontal: true,
   horizontal_grid: _horizontal_classes,
   extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',

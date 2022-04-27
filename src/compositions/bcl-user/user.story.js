@@ -60,10 +60,8 @@ const dataListing = {
   sort_select: sortSelect,
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Users",
-      tag: "h1",
-    },
+    title: "Users",
+    title_tag: "h1",
   },
 };
 

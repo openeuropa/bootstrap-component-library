@@ -76,10 +76,8 @@ const demoListing = {
   sort_select: sortSelect,
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Publications",
-      tag: "h1",
-    },
+    title: "Publications",
+    title_tag: "h1",
   },
 };
 

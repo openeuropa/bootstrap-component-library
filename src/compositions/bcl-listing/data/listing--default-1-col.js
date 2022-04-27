@@ -2,7 +2,7 @@ module.exports = {
   variant: "default-1-col",
   title: "Listing item block title",
   link: {
-    path: "/example",
+    path: "/example.html",
     label: "Listing item block CTA",
     icon: {
       path: "/icons.svg",
@@ -10,9 +10,7 @@ module.exports = {
   },
   items: [
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -30,9 +28,7 @@ module.exports = {
     },
     {
       body_classes: "p-md-0 pt-sm-3",
-      title: {
-        content: '<a href="/example" class="standalone">Article title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Article title</a>',
       image: {
         path: "https://picsum.photos/160?random=8",
         alt: "alt img",
@@ -49,9 +45,7 @@ module.exports = {
                 </div>`,
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Article title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Article title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -68,9 +62,7 @@ module.exports = {
                 </div>`,
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Article title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Article title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
