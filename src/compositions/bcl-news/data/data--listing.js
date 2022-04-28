@@ -100,7 +100,6 @@ module.exports = {
         title: "News title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -128,7 +127,6 @@ module.exports = {
         title: "News title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -168,7 +166,6 @@ module.exports = {
         title: "News title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -196,7 +193,6 @@ module.exports = {
         title: "News title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -230,7 +226,6 @@ module.exports = {
         title: "News title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -258,7 +253,6 @@ module.exports = {
         title: "News title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:

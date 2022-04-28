@@ -9,8 +9,9 @@ module.exports = {
   },
   items: [
     {
-      title: {
-        content: '<a href="/example.html" class="standalone">Card title</a>',
+      title: "Card title",
+      title_link: {
+        path: "/example.html",
       },
       text: {
         content:
@@ -19,8 +20,9 @@ module.exports = {
       },
     },
     {
-      title: {
-        content: '<a href="/example.html" class="standalone">Card title</a>',
+      title: "Card title",
+      title_link: {
+        path: "/example.html",
       },
       text: {
         content:
@@ -29,9 +31,7 @@ module.exports = {
       },
     },
     {
-      title: {
-        content: "Title card",
-      },
+      title: "Title card",
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -39,8 +39,9 @@ module.exports = {
       },
     },
     {
-      title: {
-        content: '<a href="/example.html" class="standalone">Card title</a>',
+      title: "Card title",
+      title_link: {
+        path: "/example.html",
       },
       text: {
         content:

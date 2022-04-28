@@ -423,7 +423,6 @@ module.exports = {
           title: "Card title",
           title_link: {
             path: "/example.html",
-            standalone: true,
           },
           text: {
             content:
@@ -454,7 +453,6 @@ module.exports = {
           title: "Card title",
           title_link: {
             path: "/example.html",
-            standalone: true,
           },
           text: {
             content:
@@ -490,7 +488,6 @@ module.exports = {
           title: "Card title",
           title_link: {
             path: "/example.html",
-            standalone: true,
           },
           text: {
             content:

@@ -147,7 +147,6 @@ module.exports = {
         title: "LIFE IP ARTISAN",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -176,7 +175,6 @@ module.exports = {
         title: "SMILE",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -205,7 +203,6 @@ module.exports = {
         title: "Project title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -234,7 +231,6 @@ module.exports = {
         title: "LIFE IP ARTISAN",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -257,7 +253,6 @@ module.exports = {
         title: "SMILE",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -280,7 +275,6 @@ module.exports = {
         title: "Project title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:

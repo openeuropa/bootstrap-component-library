@@ -112,8 +112,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -137,8 +139,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -162,8 +166,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -187,8 +193,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -212,8 +220,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -237,8 +247,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -262,8 +274,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -287,8 +301,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -312,8 +328,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -337,8 +355,10 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",

@@ -22,7 +22,11 @@
 {% set attributes = attributes.addClass(['bcl-heading']) %}
 
 {% if _title_link is not empty and _title is not empty and _title_link.label is empty %}
-  {% set _title_link = _title_link|merge({ label: _title }) %}
+  {% set _title_link = _title_link|merge({ 
+      label: _title,
+      standalone: true,
+    }) 
+  %}
 {% endif %}
 
 {% if _title is not empty or _title_link is not empty %}

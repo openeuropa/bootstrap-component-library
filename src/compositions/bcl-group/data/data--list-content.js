@@ -122,7 +122,6 @@ module.exports = {
         title: "Article title",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           classes: "mb-2-5",
@@ -142,7 +141,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           classes: "mb-2-5",
@@ -162,7 +160,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           classes: "mb-2-5",
@@ -182,7 +179,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           classes: "mb-2-5",
@@ -202,7 +198,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           classes: "mb-2-5",
@@ -222,7 +217,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           classes: "mb-2-5",

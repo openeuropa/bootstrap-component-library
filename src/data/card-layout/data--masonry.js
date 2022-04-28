@@ -46,13 +46,13 @@ module.exports = {
       attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
-      title: "Title card 4",
+      title: "Title card 5",
       subtitle: {
-        content: "Subtitle card 4",
+        content: "Subtitle card 5",
         classes: "mb-2",
       },
       text: {
-        content: "Text card with longer text which is supported 4",
+        content: "Text card with longer text which is supported 5",
         classes: "mb-2",
       },
       wrapper_class: "col",
@@ -61,9 +61,9 @@ module.exports = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
-      title: "Title card 5",
+      title: "Title card 4",
       subtitle: {
-        content: "Subtitle card 5",
+        content: "Subtitle card 4",
         classes: "mb-2",
       },
       text: {
@@ -81,9 +81,9 @@ module.exports = {
       attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
-      title: "Title card 6",
+      title: "Title card 7",
       subtitle: {
-        content: "Subtitle card 6",
+        content: "Subtitle card 7",
         classes: "mb-2",
       },
       text: {
@@ -99,7 +99,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["mb-3", "text-center"]),
     },
     {
-      title: "Title card 7",
+      title: "Title card 6",
       text: {
         content: "Text card with longer text which is supported 6",
         classes: "mb-2",

@@ -155,8 +155,10 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Lorem ipsum dolor sit amet</a>",
+        title: "Lorem ipsum dolor sit amet",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -181,8 +183,10 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Lorem ipsum dolor sit amet</a>",
+        title: "Incididunt ut labore et dolore",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
@@ -213,8 +217,10 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Quis nostrud exercitation ullamco</a>",
+        title: "Quis nostrud exercitation ullamco",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -238,8 +244,10 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Quis nostrud exercitation ullamco</a>",
+        title: "Quis nostrud exercitation ullamco",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -270,8 +278,10 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Duis aute irure dolor in Excepteur</a>",
+        title: "Duis aute irure dolor in Excepteur",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -302,8 +312,10 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title:
-          "<a href='/example.html' class='standalone'>Excepteur sint occaecat cupidatat non</a>",
+        title: "Excepteur sint occaecat cupidatat non",
+        title_link: {
+          path: "/example.html",
+        },
         text: {
           content:
             "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

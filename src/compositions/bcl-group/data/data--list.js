@@ -103,7 +103,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -129,7 +128,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -155,7 +153,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -181,7 +178,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -207,7 +203,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
@@ -233,7 +228,6 @@ module.exports = {
         title: "Group name",
         title_link: {
           path: "/example.html",
-          standalone: true,
         },
         text: {
           content:
