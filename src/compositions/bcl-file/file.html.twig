@@ -4,6 +4,7 @@
   Parameters:
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - item_title (string) (default: '')
   - icon (icon Object) (default: {})
@@ -38,6 +39,7 @@
 {% set _icon = icon|default({}) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _item_title = item_title|default('') %}
 {% set _text = text|default('') %}
@@ -67,6 +69,7 @@
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
+    title_link: _title_link,
     attributes: _title_attributes,
   } only %}
 {% endif %}
@@ -85,9 +88,7 @@
       right_col_classes: "col-12 col-md-8",
     },
     badges: _badges,
-    title: {
-      content: _item_title,
-    },
+    title: _item_title,
     text: {
       content: _text,
       classes: "mb-2",

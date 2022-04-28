@@ -2,9 +2,7 @@ module.exports = {
   type: "group",
   items: [
     {
-      title: {
-        content: "Title card 1",
-      },
+      title: "Title card 1",
       subtitle: {
         content: "Subtitle card 1",
         classes: "mb-2",
@@ -24,9 +22,7 @@ module.exports = {
       content: "<button class='btn btn-primary'>Custom action</button>",
     },
     {
-      title: {
-        content: "Title card 2",
-      },
+      title: "Title card 2",
       subtitle: {
         content: "Subtitle card 2",
         classes: "mb-2",
@@ -47,9 +43,7 @@ module.exports = {
       content: "<p>Custom text</p>",
     },
     {
-      title: {
-        content: "Title card 3",
-      },
+      title: "Title card 3",
       subtitle: {
         content: "Subtitle card 3",
         classes: "mb-2",

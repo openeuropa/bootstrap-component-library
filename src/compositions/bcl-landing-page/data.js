@@ -62,10 +62,7 @@ module.exports = {
     },
     items: [
       {
-        title: {
-          content:
-            '<a href="/example" class="standalone">Listing item title</a>',
-        },
+        title: '<a href="/example" class="standalone">Listing item title</a>',
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique.",
@@ -78,10 +75,7 @@ module.exports = {
         },
       },
       {
-        title: {
-          content:
-            '<a href="/example" class="standalone">Listing item title</a>',
-        },
+        title: '<a href="/example" class="standalone">Listing item title</a>',
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique.",
@@ -94,10 +88,7 @@ module.exports = {
         },
       },
       {
-        title: {
-          content:
-            '<a href="/example" class="standalone">Listing item title</a>',
-        },
+        title: '<a href="/example" class="standalone">Listing item title</a>',
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique.",
@@ -139,10 +130,7 @@ module.exports = {
     },
     items: [
       {
-        title: {
-          content:
-            '<a href="/example" class="standalone">Capacity development</a>',
-        },
+        title: '<a href="/example" class="standalone">Capacity development</a>',
         text: {
           content:
             "<ul><li>UCPM Training Programme</li><li>Exercises</li><li>Exchange of experts</li><li>UCPM Prevention and preparedness projects</li></ul>",
@@ -155,10 +143,8 @@ module.exports = {
         },
       },
       {
-        title: {
-          content:
-            '<a href="/example" class="standalone">Science, Research & innovation</a>',
-        },
+        title:
+          '<a href="/example" class="standalone">Science, Research & innovation</a>',
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique.",
@@ -171,10 +157,8 @@ module.exports = {
         },
       },
       {
-        title: {
-          content:
-            '<a href="/example" class="standalone">KN Horizontal activities</a>',
-        },
+        title:
+          '<a href="/example" class="standalone">KN Horizontal activities</a>',
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique.",

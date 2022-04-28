@@ -27,8 +27,8 @@ describe("OE - Heading", () => {
 
     return expect(
       render({
-        link: {
-          path: "/example",
+        title_link: {
+          path: "/example.html",
           label: "A title created by the bcl heading template",
         },
       })
@@ -41,8 +41,8 @@ describe("OE - Heading", () => {
     return expect(
       render({
         title: "A title created by the bcl heading template",
-        link: {
-          path: "/example",
+        title_link: {
+          path: "/example.html",
         },
       })
     ).resolves.toMatchSnapshot();

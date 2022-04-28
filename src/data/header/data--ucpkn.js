@@ -137,7 +137,7 @@ module.exports = {
         },
         {
           label: "Stories",
-          path: "/example",
+          path: "/example.html",
         },
         {
           id: "navbarDropdownMenuLinkProjects",
