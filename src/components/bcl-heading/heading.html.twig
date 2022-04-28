@@ -22,11 +22,7 @@
 {% set attributes = attributes.addClass(['bcl-heading']) %}
 
 {% if _title_link is not empty and _title is not empty and _title_link.label is empty %}
-  {% set _title_link = _title_link|merge({ 
-      label: _title,
-      standalone: true,
-    }) 
-  %}
+  {% set _title_link = _title_link|merge({ label: _title }) %}
 {% endif %}
 
 {% if _title is not empty or _title_link is not empty %}
@@ -34,7 +30,7 @@
   {{- attributes -}}
 >
 {%- if _title_link is not empty -%}
-  {% include '@oe-bcl/bcl-link/link.html.twig' with _title_link only %}
+  {% include '@oe-bcl/bcl-link/link.html.twig' with _title_link|merge({ standalone: true }) only %}
 {%- else -%}
   {{- _title -}}
 {%- endif %}
