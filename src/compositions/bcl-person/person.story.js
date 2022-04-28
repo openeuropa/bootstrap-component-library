@@ -43,10 +43,8 @@ const demoListing = {
   listing: listingProfiles,
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Persons",
-      tag: "h1",
-    },
+    title: "Persons",
+    title_tag: "h1",
   },
 };
 

@@ -119,7 +119,7 @@ module.exports = {
       {
         input_type: "checkbox",
         required: true,
-        label: `I have read and agree with the <a href="#/example">data protection terms</a>`,
+        label: `I have read and agree with the <a href="/example.html">data protection terms</a>`,
         id: "exampleInputCheck1",
         wrapper_classes: "mt-4",
         invalid_feedback: "Please check and approve the data protection terms.",

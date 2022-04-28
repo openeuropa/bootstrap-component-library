@@ -2,7 +2,7 @@ module.exports = {
   variant: "default-2-col",
   title: "Listing item block title",
   link: {
-    path: "/example",
+    path: "/example.html",
     label: "Listing item block CTA",
     icon: {
       path: "/icons.svg",
@@ -10,9 +10,7 @@ module.exports = {
   },
   items: [
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -29,9 +27,7 @@ module.exports = {
           </div>`,
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -48,9 +44,7 @@ module.exports = {
           </div>`,
     },
     {
-      title: {
-        content: "Title card",
-      },
+      title: "Title card",
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -68,9 +62,7 @@ module.exports = {
           </div>`,
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -87,9 +79,7 @@ module.exports = {
           </div>`,
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -106,9 +96,7 @@ module.exports = {
           </div>`,
     },
     {
-      title: {
-        content: '<a href="/example" class="standalone">Card title</a>',
-      },
+      title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",

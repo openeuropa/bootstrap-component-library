@@ -112,9 +112,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -139,9 +139,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -166,9 +166,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -193,9 +193,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -220,9 +220,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -247,9 +247,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -274,9 +274,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -301,9 +301,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -328,9 +328,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -355,9 +355,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Publication with an image</a>",
+        title: "Publication with an image",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:

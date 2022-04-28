@@ -97,8 +97,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -123,8 +124,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -161,8 +163,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -187,8 +190,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -219,8 +223,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -245,8 +250,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:

@@ -155,9 +155,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Lorem ipsum dolor sit amet</a>",
+        title: "Lorem ipsum dolor sit amet",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -183,9 +183,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Incididunt ut labore et dolore</a>",
+        title: "Incididunt ut labore et dolore",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -217,9 +217,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Quis nostrud exercitation ullamco</a>",
+        title: "Quis nostrud exercitation ullamco",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -244,9 +244,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Quis nostrud exercitation ullamco</a>",
+        title: "Quis nostrud exercitation ullamco",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -278,9 +278,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Duis aute irure dolor in Excepteur</a>",
+        title: "Duis aute irure dolor in Excepteur",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -312,9 +312,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Excepteur sint occaecat cupidatat non</a>",
+        title: "Excepteur sint occaecat cupidatat non",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:

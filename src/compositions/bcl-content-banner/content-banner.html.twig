@@ -2,20 +2,27 @@
 
 {#
   Parameters:
-    - "background" (string) (default: 'white')
+    - background (string) (default: 'white')
       options: [ white, gray ]
-    - "title" (object)
-    - "image" (object)
-    - "image_size" (string) 
+    - title: (string) (default: '')
+    - title_tag: (string) (default: 'h5')
+    - title_link: (link object) (default: {})
+    - title_attributes (drupal attrs)
+    - image (object)
+    - image_size (string) 
       options: ['sm', 'md', 'lg']
-    - "content" (string)
-    - "badges" (array of objects of type badge)
-    - "links" (array of objects of type link)
-    - "action_button" (object of type button) (default: {})
-    - "service_buttons" (array of objects of type button) (default: [])
-    - "attributes" (drupal attrs)
+    - content (string)
+    - badges (array of objects of type badge)
+    - links (array of objects of type link)
+    - action_button (object of type button) (default: {})
+    - service_buttons (array of objects of type button) (default: [])
+    - attributes (drupal attrs)
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _background = background|default('white') %}
 {% set _action_button = action_button|default({}) %}
 {% set _service_buttons = service_buttons|default([]) %}
@@ -71,10 +78,10 @@
 } %}
 
 {% set _card = {
-  title: title|default({})|merge({
-    tag: title.tag ?: 'h2',
-    attributes: create_attribute().addClass(['fw-bold']),
-  }),
+  title: _title,
+  title_tag: _title_tag,
+  title_link: _title_link,
+  title_attributes: _title_attributes.addClass(['fw-bold']),
   horizontal: true,
   horizontal_grid: _horizontal_classes,
   extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',

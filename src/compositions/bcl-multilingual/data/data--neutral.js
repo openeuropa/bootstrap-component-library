@@ -133,7 +133,7 @@ module.exports = {
       items: [
         {
           label: "Home",
-          path: "/example",
+          path: "/example.html",
           active: true,
           attributes: new drupalAttribute().setAttribute(
             "aria-current",
@@ -142,11 +142,11 @@ module.exports = {
         },
         {
           label: "Item 01",
-          path: "/example",
+          path: "/example.html",
         },
         {
           label: "Item 02",
-          path: "/example",
+          path: "/example.html",
         },
         {
           id: "navbarDropdownMenuLink",
@@ -300,14 +300,14 @@ module.exports = {
   breadcrumbs: {
     attributes: new drupalAttribute().addClass(["mt-3"]),
     links: [
-      { label: "Home", path: "/example" },
+      { label: "Home", path: "/example.html" },
       {
         label: "European Commission",
-        path: "/example",
+        path: "/example.html",
       },
       {
         label: "About the European Commission",
-        path: "/example",
+        path: "/example.html",
       },
       { label: "News" },
     ],
