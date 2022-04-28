@@ -420,7 +420,11 @@ module.exports = {
       },
       items: [
         {
-          title: "<a href='/example.html' class='standalone'>Card title</a>",
+          title: "Card title",
+          title_link: {
+            path: "/example.html",
+            standalone: true,
+          },
           text: {
             content:
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -447,7 +451,11 @@ module.exports = {
           ],
         },
         {
-          title: "<a href='/example.html' class='standalone'>Card title</a>",
+          title: "Card title",
+          title_link: {
+            path: "/example.html",
+            standalone: true,
+          },
           text: {
             content:
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",
@@ -479,7 +487,11 @@ module.exports = {
           ],
         },
         {
-          title: "<a href='/example.html' class='standalone'>Card title</a>",
+          title: "Card title",
+          title_link: {
+            path: "/example.html",
+            standalone: true,
+          },
           text: {
             content:
               "Some quick example text to build on the card and title and make up the bulk of the cards content.",

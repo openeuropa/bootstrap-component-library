@@ -100,7 +100,11 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -122,7 +126,11 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -144,7 +152,11 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -166,7 +178,11 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -188,7 +204,11 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -210,7 +230,11 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",

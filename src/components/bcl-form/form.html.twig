@@ -3,6 +3,7 @@
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h2')
+  - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - helper_text (string) (default: '')
   - antispam (string) (default: '')
@@ -27,6 +28,7 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _helper_text = helper_text|default('') %}
 {% set _items = items|default([]) %}
@@ -41,6 +43,7 @@
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
+    title_link: _title_link,
     attributes: _title_attributes,
   } only %}
 {% endif %}

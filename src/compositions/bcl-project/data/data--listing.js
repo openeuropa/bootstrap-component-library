@@ -144,7 +144,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>LIFE IP ARTISAN</a>",
+        title: "LIFE IP ARTISAN",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -169,7 +173,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>SMILE</a>",
+        title: "SMILE",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -194,7 +202,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>Project title</a>",
+        title: "Project title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -219,7 +231,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>LIFE IP ARTISAN</a>",
+        title: "LIFE IP ARTISAN",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -238,7 +254,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>SMILE</a>",
+        title: "SMILE",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -257,7 +277,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>Project title</a>",
+        title: "Project title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
