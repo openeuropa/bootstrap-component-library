@@ -3,6 +3,8 @@
 {# Parameters:
   - title: (string) (default: "")
   - title_tag: (string) (default: "div")
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
   - description: (string) (default: "")
   - link: (link object) (default: {}): predefined structure for Link component
   - image: (string) <img> tag
@@ -14,6 +16,7 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('div') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _description = description|default('') %}
 {% set _link = link|default({}) %}
@@ -60,6 +63,7 @@
         {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: _title,
           title_tag: _title_tag,
+          title_link: _title_link,
           attributes: _title_attributes,
         } only %}
       {% endif %}

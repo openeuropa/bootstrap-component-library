@@ -97,7 +97,11 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -121,7 +125,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -157,7 +165,11 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -181,7 +193,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -211,7 +227,11 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
@@ -235,7 +255,11 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "<a href='/example.html' class='standalone'>News title</a>",
+        title: "News title",
+        title_link: {
+          path: "/example.html",
+          standalone: true,
+        },
         text: {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
