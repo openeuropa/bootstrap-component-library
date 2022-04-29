@@ -119,9 +119,9 @@ module.exports = {
     items: [
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Article title</a>",
+        title: "Article title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           classes: "mb-2-5",
@@ -138,8 +138,9 @@ module.exports = {
       },
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           classes: "mb-2-5",
@@ -156,8 +157,9 @@ module.exports = {
       },
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           classes: "mb-2-5",
@@ -174,8 +176,9 @@ module.exports = {
       },
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           classes: "mb-2-5",
@@ -192,8 +195,9 @@ module.exports = {
       },
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           classes: "mb-2-5",
@@ -210,8 +214,9 @@ module.exports = {
       },
       {
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           classes: "mb-2-5",

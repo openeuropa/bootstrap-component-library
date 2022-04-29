@@ -2,30 +2,31 @@
 
 {#
   Parameters:
-  - "title" (string) (default: '')
-  - "title_tag" (string) (default: 'h2')
-  - "variant" (string) (default: '') options:
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
+  - variant (string) (default: '') options:
     [ default, block ]
-  - "display_icons" (boolean) (default: true)
-  - "items" (array) (default: []):
-    - "icon" (associate array) (default: { size: 'm' })
-    - "subtitle" (string) (default: '')
-    - "title" (string) (default: '')
-    - "description" (string) (default:'')
-  - "grid_columns" (int) (default: 1)
-  - "responsiveness" (string) (default: 'md')
-  - "responsive_columns" (integer) (default: 3)
-  - "gutter" (int) (default: 4)
-  - "equal_height" (boolean) (default: false)
-  - "cols_extra_classes" (string) (default: '')
-  - "icon_path" (string) (default: '')
-  - "link_more" (object of type link) (default {})
+  - display_icons (boolean) (default: true)
+  - items (array) (default: []):
+    - icon (associate array) (default: { size: 'm' })
+    - subtitle (string) (default: '')
+    - title (string) (default: '')
+    - description (string) (default:'')
+  - grid_columns (int) (default: 1)
+  - responsiveness (string) (default: 'md')
+  - responsive_columns (integer) (default: 3)
+  - gutter (int) (default: 4)
+  - equal_height (boolean) (default: false)
+  - cols_extra_classes (string) (default: '')
+  - icon_path (string) (default: '')
+  - link_more (object of type link) (default {})
 #}
-
-{# Parameters #}
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute().addClass(['fw-bold']) %}
 {% set _variant = variant|default('default') %}
 {% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
@@ -72,6 +73,7 @@
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
+    title_link: _title_link,
     attributes: _title_attributes,
   } only %}
 {% endif %}

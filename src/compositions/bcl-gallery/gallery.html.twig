@@ -2,17 +2,18 @@
 
 {#
 Parameters:
-  - "id" (string) (default: '')
-  - "title" (string) (default: '')
-  - "title_tag" (string) (default: 'h2')
-  - "title_attributes" (drupal attrs)
-  - "counter" (string) (default: '')
-  - "toggle_collapsed" (string) (default: '')
-  - "toggle_expanded" (string) (default: '')
-  - "previous_label" (string) (default: '')
-  - "next_label" (string) (default: '')
-  - "max_visible_thumbnails" (int) (default: 5)
-  - "items" (array of objects) format: [
+  - id (string) (default: '')
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
+  - counter (string) (default: '')
+  - toggle_collapsed (string) (default: '')
+  - toggle_expanded (string) (default: '')
+  - previous_label (string) (default: '')
+  - next_label (string) (default: '')
+  - max_visible_thumbnails (int) (default: 5)
+  - items (array of objects) format: [
       {
         thumbnails (string) img path
         media: (string) <img> tag
@@ -23,14 +24,13 @@ Parameters:
       }
       ...
     ],
-  - "icon_path" (string) (default: '')
+  - icon_path (string) (default: '')
 #}
-
-{# Internal properties #}
 
 {% set _id = id|default('gallery-' ~ random(1000)) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _counter = counter|default('') %}
 {% set _toggle_collapsed = toggle_collapsed|default('') %}
@@ -65,6 +65,7 @@ Parameters:
           {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
             title: _title,
             title_tag: _title_tag,
+            title_link: _title_link,
             attributes: _title_attributes,
           } only %}
         {% endif %}

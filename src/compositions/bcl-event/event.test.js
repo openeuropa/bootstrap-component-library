@@ -54,27 +54,26 @@ const demoListing = {
   },
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Event",
-      tag: "h1",
-    },
+    title: "Event",
+    title_tag: "h1",
   },
 };
 
-const template = "@oe-bcl/bcl-event/event.html.twig";
+const detailsTemplate = "@oe-bcl/bcl-event/event.html.twig";
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 
-const render = (params) => renderTwigFileAsNode(template, params, true);
-const renderListing = (params) => renderTwigFileAsNode(template, params, true);
+const render = (params) => renderTwigFileAsNode(detailsTemplate, params, true);
+const renderListing = (params) =>
+  renderTwigFileAsNode(listingTemplate, params, true);
 
 describe("OE - event", () => {
-  test("Event page renders correctly", () => {
+  test("page renders correctly", () => {
     expect.assertions(1);
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
-  test("Event listing renders correctly", () => {
+  test("listing renders correctly", () => {
     expect.assertions(1);
 
     return expect(renderListing(demoListing)).resolves.toMatchSnapshot();

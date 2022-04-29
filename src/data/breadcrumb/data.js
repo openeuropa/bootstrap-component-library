@@ -1,13 +1,13 @@
 module.exports = {
   links: [
-    { label: "Home", path: "/example" },
+    { label: "Home", path: "/example.html" },
     {
       label: "European Commission",
-      path: "/example",
+      path: "/example.html",
     },
     {
       label: "About the European Commission",
-      path: "/example",
+      path: "/example.html",
     },
     { label: "News" },
   ],

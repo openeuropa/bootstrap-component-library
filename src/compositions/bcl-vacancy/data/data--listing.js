@@ -122,9 +122,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Senior Expert on Internal Models</a>",
+        title: "Senior Expert on Internal Models",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -151,9 +151,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -180,9 +180,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -209,9 +209,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -238,9 +238,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -267,9 +267,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -296,9 +296,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -325,9 +325,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -354,9 +354,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -383,9 +383,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Vacancy exemple title</a>",
+        title: "Vacancy exemple title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:

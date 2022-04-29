@@ -15,6 +15,7 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 
@@ -32,6 +33,7 @@
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
+    title_link: _title_link,
     attributes: _title_attributes,
   } only %}
 {% endif %}
@@ -43,6 +45,7 @@
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _item.title,
         title_tag: _item.title_tag|default('h3'),
+        title_link: _item.title_link|default({}),
         attributes: _item_title_attributes,
       } only %}
     {% endif %}

@@ -1,9 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: {
-    content: "Title card",
-  },
+  title: "Title card",
   subtitle: {
     content: "Subtitle card",
     classes: "mb-2",

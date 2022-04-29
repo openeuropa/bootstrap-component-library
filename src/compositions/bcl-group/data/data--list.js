@@ -100,8 +100,9 @@ module.exports = {
             rounded_pill: true,
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -124,8 +125,9 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -148,8 +150,9 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -172,8 +175,9 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -196,8 +200,9 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -220,8 +225,9 @@ module.exports = {
           },
         ],
         extra_classes_header: "bg-transparent pt-0 pb-0 border-0",
-        title: {
-          content: "<a href='/example.html' class='standalone'>Group name</a>",
+        title: "Group name",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:

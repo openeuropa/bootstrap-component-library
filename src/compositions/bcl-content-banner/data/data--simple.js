@@ -1,8 +1,6 @@
 module.exports = {
   background: "white",
-  title: {
-    content: "This is the title of this page",
-  },
+  title: "This is the title of this page",
   content: `<div class="mb-4 mt-4">
       <span class="text-muted me-3">8 hours ago</span>
      </div>
