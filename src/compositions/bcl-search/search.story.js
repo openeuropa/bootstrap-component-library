@@ -18,7 +18,9 @@ import drupalAttribute from "drupal-attribute";
 import demoData from "@openeuropa/bcl-search/data/data--search";
 import search from "@openeuropa/bcl-search/search.html.twig";
 
-if (isChromatic()) {
+const chromatic = process.env.STORYBOOK_ENV;
+
+if (isChromatic() || chromatic) {
   demoData.listing.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`

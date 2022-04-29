@@ -221,17 +221,7 @@ module.exports = {
             "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#' aria-label='read more about spaceX 1'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
           meta: [
             {
-              icon: {
-                name: "clock",
-                path: "/icons.svg",
-                size: "xs",
-                attributes: new drupalAttribute().addClass([
-                  "me-2",
-                  "align-top",
-                  "mt-1",
-                ]),
-              },
-              label: "8 hours ago",
+              label: "9 April 2022 - 20:45 CEST",
             },
           ],
         },
@@ -242,17 +232,7 @@ module.exports = {
             "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#' aria-label='read more about spaceX 2'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
           meta: [
             {
-              icon: {
-                name: "clock",
-                path: "/icons.svg",
-                size: "xs",
-                attributes: new drupalAttribute().addClass([
-                  "me-2",
-                  "align-top",
-                  "mt-1",
-                ]),
-              },
-              label: "8 hours ago",
+              label: "9 April 2022 - 20:45 CEST",
             },
           ],
         },
@@ -263,17 +243,7 @@ module.exports = {
             "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#' aria-label='read more about spaceX 3'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
           meta: [
             {
-              icon: {
-                name: "clock",
-                path: "/icons.svg",
-                size: "xs",
-                attributes: new drupalAttribute().addClass([
-                  "me-2",
-                  "align-top",
-                  "mt-1",
-                ]),
-              },
-              label: "8 hours ago",
+              label: "9 April 2022 - 20:45 CEST",
             },
           ],
         },
@@ -284,17 +254,7 @@ module.exports = {
             "<a href='/example.html' class='fw-bold'>Steve Di Marzio</a> published the article <a href='/example.html' aria-label='read more about spaceX 4'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='/example.html'>News</a>",
           meta: [
             {
-              icon: {
-                path: "/icons.svg",
-                name: "clock",
-                size: "xs",
-                attributes: new drupalAttribute().addClass([
-                  "me-2",
-                  "align-top",
-                  "mt-1",
-                ]),
-              },
-              label: "8 hours ago",
+              label: "9 April 2022 - 20:45 CEST",
             },
           ],
         },
@@ -305,17 +265,7 @@ module.exports = {
             "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='/example.html' aria-label='read more about spaceX 5'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
           meta: [
             {
-              icon: {
-                name: "clock",
-                path: "/icons.svg",
-                size: "xs",
-                attributes: new drupalAttribute().addClass([
-                  "me-2",
-                  "align-top",
-                  "mt-1",
-                ]),
-              },
-              label: "8 hours ago",
+              label: "9 April 2022 - 20:45 CEST",
             },
           ],
         },
@@ -430,7 +380,7 @@ module.exports = {
             classes: "mb-2",
           },
           content:
-            "<span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
+            "<span class='text-muted me-3 text-nowrap'>21 December 2023</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
           image: {
             path: "https://picsum.photos/seed/1002/600/400",
             alt: "alt img",
@@ -460,7 +410,7 @@ module.exports = {
             classes: "mb-2",
           },
           content:
-            "<span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
+            "<span class='text-muted me-3 text-nowrap'>21 December 2023</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
           image: {
             path: "https://picsum.photos/seed/1003/600/400",
             alt: "alt img",
@@ -495,7 +445,7 @@ module.exports = {
             classes: "mb-2",
           },
           content:
-            "<span class='text-muted me-3 text-nowrap'>8 hours ago</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
+            "<span class='text-muted me-3 text-nowrap'>21 December 2023</span><span class='text-muted me-3 text-nowrap'>1 comment</span>",
           image: {
             path: "https://picsum.photos/seed/1004/600/400",
             alt: "alt img",

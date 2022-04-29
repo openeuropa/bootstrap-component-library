@@ -171,7 +171,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -199,7 +199,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -233,7 +233,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -260,7 +260,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -294,7 +294,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -328,7 +328,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>8 hours ago</span><span class='text-muted text-nowrap'>1 comment</span>",
+          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
     ],
   },

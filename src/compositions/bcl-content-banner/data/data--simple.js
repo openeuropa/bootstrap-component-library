@@ -2,7 +2,7 @@ module.exports = {
   background: "white",
   title: "This is the title of this page",
   content: `<div class="mb-4 mt-4">
-      <span class="text-muted me-3">8 hours ago</span>
+      <span class="text-muted me-3">17 October 2019</span>
      </div>
      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.

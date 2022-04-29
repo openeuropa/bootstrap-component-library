@@ -8,7 +8,7 @@ const addons = [
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",
-  "@storybook/addon-a11y",,
+  "@storybook/addon-a11y",
   "@geometricpanda/storybook-addon-badges",
   "@storybook/addon-interactions",
 ];
@@ -46,7 +46,7 @@ const webpackFinal = (config) => {
 };
 
 module.exports = {
-  staticDirs: ['../assets/'],
+  staticDirs: ['../assets'],
   stories,
   addons,
   webpackFinal,

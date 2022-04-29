@@ -9,6 +9,7 @@
     - title_link: (link object) (default: {})
     - title_attributes (drupal attrs)
     - image (object)
+    - date (object)
     - image_size (string) 
       options: ['sm', 'md', 'lg']
     - content (string)
@@ -27,6 +28,7 @@
 {% set _action_button = action_button|default({}) %}
 {% set _service_buttons = service_buttons|default([]) %}
 {% set _image = image|default({}) %}
+{% set _date = date|default({}) %}
 {% set _image_size = image_size|default('md') %}
 
 {% set _css_classes = [
@@ -70,6 +72,10 @@
   {% if _image_size == 'sm' %}
     {% set _left_col_classes = 'col-6 col-md-4 col-lg-2 offset-3 offset-md-0' %}
   {% endif %}
+{% endif %}
+{% if _date is not empty %}
+  {% set _left_col_classes = 'col-8 col-md-3 col-lg-2 offset-4 offset-md-0' %}
+  {% set _right_col_classes = 'col-md-9 col-lg-10 col-xxl-8' %}
 {% endif %}
 
 {% set _horizontal_classes = {
