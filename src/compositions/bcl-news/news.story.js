@@ -33,7 +33,7 @@ if (isChromatic()) {
 
 const baseData = {
   content_type: "news",
-  page_title: "News",
+  title: "News",
   header: header,
   footer: layout.footer,
   with_banner: true,

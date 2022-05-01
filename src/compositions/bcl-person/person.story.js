@@ -21,7 +21,7 @@ const header =
 
 const baseData = {
   content_type: "listing",
-  page_title: "People",
+  title: "People",
   header: header,
   footer: layout.footer,
   with_header: true,

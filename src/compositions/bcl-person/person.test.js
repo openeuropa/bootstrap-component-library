@@ -17,7 +17,7 @@ const detailsTemplate = "@oe-bcl/bcl-person/person.html.twig";
 
 const baseData = {
   content_type: "listing",
-  page_title: "People",
+  title: "People",
   header: layout.headerSimple,
   footer: layout.footer,
   with_header: true,

@@ -7,11 +7,8 @@ module.exports = {
     extra_classes_close: "d-lg-none",
     extra_classes_header: "pb-2-5 p-lg-0",
     with_body_scroll: true,
-    title: {
-      label: "Filter options",
-      heading: 3,
-      extra_classes: "mb-lg-4",
-    },
+    title: "Filter options",
+    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
     search_form: {
       attributes: new drupalAttribute()
         .setAttribute("novalidate", true)

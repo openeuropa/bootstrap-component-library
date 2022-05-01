@@ -675,7 +675,7 @@ exports[`OE - event listing renders correctly 1`] = `
               class="offcanvas-header p-lg-0"
             >
               <h3
-                class="offcanvas-title mb-lg-4"
+                class="mb-lg-4 offcanvas-title fw-bold bcl-heading"
               >
                 Filter options
               </h3>
@@ -850,16 +850,9 @@ exports[`OE - event listing renders correctly 1`] = `
               class="col-md-6 col-lg-8 align-self-center"
             >
               <h2
-                class="mb-0"
+                class="mb-0 fw-bold text-capitalize bcl-heading"
               >
-                <span
-                  class="text-capitalize"
-                >
-                  Event
-                </span>
-                
-        (6)
-      
+                Event (6)
               </h2>
             </div>
             <div
@@ -1000,8 +993,8 @@ exports[`OE - event listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <p
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1009,7 +1002,7 @@ exports[`OE - event listing renders correctly 1`] = `
                           >
                             Card title
                           </a>
-                        </h5>
+                        </p>
                         <p
                           class="card-text mb-3"
                         >
@@ -1087,8 +1080,8 @@ exports[`OE - event listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <p
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1096,7 +1089,7 @@ exports[`OE - event listing renders correctly 1`] = `
                           >
                             Card title
                           </a>
-                        </h5>
+                        </p>
                         <p
                           class="card-text mb-3"
                         >
@@ -1174,11 +1167,11 @@ exports[`OE - event listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <p
+                          class="fs-5 card-title bcl-heading"
                         >
                           Title card
-                        </h5>
+                        </p>
                         <p
                           class="card-text mb-3"
                         >
@@ -1256,8 +1249,8 @@ exports[`OE - event listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <p
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1265,7 +1258,7 @@ exports[`OE - event listing renders correctly 1`] = `
                           >
                             Card title
                           </a>
-                        </h5>
+                        </p>
                         <p
                           class="card-text mb-3"
                         >
@@ -1343,8 +1336,8 @@ exports[`OE - event listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <p
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1352,7 +1345,7 @@ exports[`OE - event listing renders correctly 1`] = `
                           >
                             Card title
                           </a>
-                        </h5>
+                        </p>
                         <p
                           class="card-text mb-3"
                         >
@@ -1435,8 +1428,8 @@ exports[`OE - event listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <p
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1444,7 +1437,7 @@ exports[`OE - event listing renders correctly 1`] = `
                           >
                             Card title
                           </a>
-                        </h5>
+                        </p>
                         <p
                           class="card-text mb-3"
                         >
@@ -2533,9 +2526,11 @@ exports[`OE - event page renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <h5>
+            <h3
+              class="fw-bold bcl-heading"
+            >
               Page content
-            </h5>
+            </h3>
             <ul
               class="nav nav-pills flex-column"
             >

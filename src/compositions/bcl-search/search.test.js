@@ -13,7 +13,7 @@ const render = (params) => renderTwigFileAsNode(template, params);
 
 const dataListing = {
   content_type: "search",
-  page_title: "Search results",
+  title: "Search results",
   header: layout.headerNoForm,
   footer: layout.footer,
   with_banner: true,

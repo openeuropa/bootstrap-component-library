@@ -46,7 +46,7 @@ const sidebarClosed = {
 
 const baseData = {
   content_type: "listing",
-  page_title: "Projects",
+  title: "Projects",
   header: header,
   footer: {
     ...layout.footer,
