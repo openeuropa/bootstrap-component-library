@@ -65,10 +65,8 @@ const demoListing = {
   ...dataListing,
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Vacancy",
-      tag: "h1",
-    },
+    title: "Vacancy",
+    title_tag: "h1",
   },
   pagination: pagination,
   filter_button: filterButton,

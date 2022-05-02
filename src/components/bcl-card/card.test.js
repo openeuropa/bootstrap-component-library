@@ -62,7 +62,7 @@ describe("OE - Card", () => {
 
   test(`renders correctly with custom title attributes`, () => {
     expect.assertions(1);
-    demoData.title.attributes = new drupalAttribute()
+    demoData.title_attributes = new drupalAttribute()
       .setAttribute("test", "value")
       .setAttribute("attribute", "with a value");
 

@@ -7,9 +7,7 @@ module.exports = {
     right_col_classes: "col-8",
     gutter: "0",
   },
-  title: {
-    content: "Title card",
-  },
+  title: "Title card",
   subtitle: {
     content: "Subtitle card",
     classes: "mb-2",

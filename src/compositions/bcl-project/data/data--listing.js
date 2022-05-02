@@ -144,9 +144,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>LIFE IP ARTISAN</a>",
+        title: "LIFE IP ARTISAN",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -172,8 +172,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>SMILE</a>",
+        title: "SMILE",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -199,9 +200,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Project title</a>",
+        title: "Project title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -227,9 +228,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>LIFE IP ARTISAN</a>",
+        title: "LIFE IP ARTISAN",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -249,8 +250,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content: "<a href='/example.html' class='standalone'>SMILE</a>",
+        title: "SMILE",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:
@@ -270,9 +272,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: {
-          content:
-            "<a href='/example.html' class='standalone'>Project title</a>",
+        title: "Project title",
+        title_link: {
+          path: "/example.html",
         },
         text: {
           content:

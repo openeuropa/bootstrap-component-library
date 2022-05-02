@@ -2,28 +2,28 @@
 
 {#
 Parameters:
-  - "id": (integer) (default: random(1000))
-  - "toggle_collapsed": (string) (default: '')
-  - "toggle_expanded": (string) (default: '')
-  - "hide" (object): (default: undefined)
-    - "from": (integer) (default: items.length) Item index after which to start hiding timeline items
-    - "to": (integer) (default: items.length) Item index after which to resume displaying timeline items
+  - id: (integer) (default: random(1000))
   - title: (string) (default: "")
   - title_tag: (string) (default: "h2")
+  - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - "items" (array) (default: []):
-    - "id": (string) (default: '')
-    - "label": (string) (default: '')
-    - "title": (string) (default: '')
-    - "content": (block) (default: '')
-  - "icon_path" (string) (default: ''): file containing the svg icons
+  - toggle_collapsed: (string) (default: '')
+  - toggle_expanded: (string) (default: '')
+  - hide (object): (default: undefined)
+    - from: (integer) (default: items.length) Item index after which to start hiding timeline items
+    - to: (integer) (default: items.length) Item index after which to resume displaying timeline items
+  - items (array) (default: []):
+    - id: (string) (default: '')
+    - label: (string) (default: '')
+    - title: (string) (default: '')
+    - content: (block) (default: '')
+  - icon_path (string) (default: ''): file containing the svg icons
 #}
-
-{# Internal properties #}
 
 {% set _id = id|default(random(1000)) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
@@ -62,6 +62,7 @@ Parameters:
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
+    title_link: _title_link,
     attributes: _title_attributes,
   } only %}
 {% endif %}

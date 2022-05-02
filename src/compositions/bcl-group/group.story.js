@@ -96,10 +96,8 @@ const dataListing = {
   ...demoDataList,
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "Groups",
-      tag: "h1",
-    },
+    title: "Groups",
+    title_tag: "h1",
   },
 };
 

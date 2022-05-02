@@ -56,10 +56,8 @@ const demoListing = {
   with_sidebar: true,
   banner: {
     ...pageTitleBanner,
-    title: {
-      content: "News",
-      tag: "h1",
-    },
+    title: "News",
+    title_tag: "h1",
   },
 };
 

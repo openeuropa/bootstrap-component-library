@@ -7,9 +7,7 @@ module.exports = {
   gutters: "2",
   items: [
     {
-      title: {
-        content: "Title card 1",
-      },
+      title: "Title card 1",
       text: {
         content: "Text card with longer text which is supported 1",
         classes: "mb-2",
@@ -19,9 +17,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
-      title: {
-        content: "Title card 2",
-      },
+      title: "Title card 2",
       subtitle: {
         content: "Subtitle card 2",
         classes: "mb-2",
@@ -41,9 +37,7 @@ module.exports = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: {
-        content: "Title card 3",
-      },
+      title: "Title card 3",
       text: {
         content: "Text card with longer text which is supported 3",
         classes: "mb-2",
@@ -52,15 +46,13 @@ module.exports = {
       attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
-      title: {
-        content: "Title card 3",
-      },
+      title: "Title card 5",
       subtitle: {
-        content: "Subtitle card 3",
+        content: "Subtitle card 5",
         classes: "mb-2",
       },
       text: {
-        content: "Text card with longer text which is supported 3",
+        content: "Text card with longer text which is supported 5",
         classes: "mb-2",
       },
       wrapper_class: "col",
@@ -69,9 +61,7 @@ module.exports = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
-      title: {
-        content: "Title card 4",
-      },
+      title: "Title card 4",
       subtitle: {
         content: "Subtitle card 4",
         classes: "mb-2",
@@ -91,15 +81,13 @@ module.exports = {
       attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
-      title: {
-        content: "Title card 5",
-      },
+      title: "Title card 7",
       subtitle: {
-        content: "Subtitle card 5",
+        content: "Subtitle card 7",
         classes: "mb-2",
       },
       text: {
-        content: "Text card with longer text which is supported 5",
+        content: "Text card with longer text which is supported 6",
         classes: "mb-2",
       },
       image: {
@@ -111,9 +99,7 @@ module.exports = {
       attributes: new drupalAttribute().addClass(["mb-3", "text-center"]),
     },
     {
-      title: {
-        content: "Title card 6",
-      },
+      title: "Title card 6",
       text: {
         content: "Text card with longer text which is supported 6",
         classes: "mb-2",

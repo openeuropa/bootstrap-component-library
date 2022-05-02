@@ -2,9 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   background: "gray",
-  title: {
-    content: "This is the title of this page",
-  },
+  title: "This is the title of this page",
   badges: [
     {
       label: "Category 1",
