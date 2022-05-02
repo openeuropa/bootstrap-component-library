@@ -57,7 +57,7 @@
 
 {% block content %}
   {% if _listing is not empty %}
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing %}
+    {% include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing only %}
   {% endif %}
 {% endblock %}
 
