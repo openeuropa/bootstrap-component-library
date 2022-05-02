@@ -3,7 +3,6 @@
 exports[`OE - Offcanvas renders correctly 1`] = `
 <jest>
   <div
-    aria-labelledby="offCanvasBottomLabel"
     class="offcanvas offcanvas-bottom"
     id="offcanvasExample"
     tabindex="-1"
@@ -11,12 +10,11 @@ exports[`OE - Offcanvas renders correctly 1`] = `
     <div
       class="offcanvas-header"
     >
-      <h5
-        class="offcanvas-title"
-        id="offCanvasBottomLabel"
+      <h4
+        class="offcanvas-title fw-bold bcl-heading"
       >
         An offcanvas title
-      </h5>
+      </h4>
       <button
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
@@ -35,7 +33,6 @@ exports[`OE - Offcanvas renders correctly 1`] = `
 exports[`OE - Offcanvas renders correctly with body scroll support 1`] = `
 <jest>
   <div
-    aria-labelledby="offCanvasBottomLabel"
     class="offcanvas offcanvas-bottom"
     data-bs-scroll="true"
     id="offcanvasExample"
@@ -44,12 +41,11 @@ exports[`OE - Offcanvas renders correctly with body scroll support 1`] = `
     <div
       class="offcanvas-header"
     >
-      <h5
-        class="offcanvas-title"
-        id="offCanvasBottomLabel"
+      <h4
+        class="offcanvas-title fw-bold bcl-heading"
       >
         An offcanvas title
-      </h5>
+      </h4>
       <button
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
@@ -68,7 +64,6 @@ exports[`OE - Offcanvas renders correctly with body scroll support 1`] = `
 exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
 <jest>
   <div
-    aria-labelledby="offCanvasBottomLabel"
     class="offcanvas offcanvas-bottom"
     data-bs-backdrop="false"
     id="offcanvasExample"
@@ -77,12 +72,11 @@ exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
     <div
       class="offcanvas-header"
     >
-      <h5
-        class="offcanvas-title"
-        id="offCanvasBottomLabel"
+      <h4
+        class="offcanvas-title fw-bold bcl-heading"
       >
         An offcanvas title
-      </h5>
+      </h4>
       <button
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
@@ -101,21 +95,10 @@ exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
 exports[`OE - Offcanvas renders correctly without close button 1`] = `
 <jest>
   <div
-    aria-labelledby="offCanvasBottomLabel"
     class="offcanvas offcanvas-bottom"
     id="offcanvasExample"
     tabindex="-1"
   >
-    <div
-      class="offcanvas-header"
-    >
-      <h5
-        class="offcanvas-title"
-        id="offCanvasBottomLabel"
-      >
-        An offcanvas title
-      </h5>
-    </div>
     <div
       class="offcanvas-body"
     >

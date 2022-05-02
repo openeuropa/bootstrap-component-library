@@ -49,7 +49,7 @@ const data = {
 };
 
 const dataListing = {
-  page_title: "users",
+  title: "users",
   with_banner: true,
   with_sidebar: true,
   ...demoDataListing,

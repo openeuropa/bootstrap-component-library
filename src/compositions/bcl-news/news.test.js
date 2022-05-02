@@ -18,7 +18,6 @@ const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>
 
 const baseData = {
   content_type: "news",
-  page_title: "News",
   header: layout.headerSimple,
   footer: layout.footer,
   with_banner: true,
@@ -37,6 +36,7 @@ const demoData = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

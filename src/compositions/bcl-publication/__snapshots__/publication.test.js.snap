@@ -619,7 +619,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -640,11 +640,11 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
               <div
                 class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
               >
-                <h2
+                <h1
                   class="fw-bold card-title bcl-heading"
                 >
                   This is the title of this page
-                </h2>
+                </h1>
                 <div
                   class="mb-4 mt-4"
                 >
@@ -679,7 +679,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
         <div
           class="d-flex justify-content-end mt-2 align-items-center"
         >
@@ -725,9 +725,11 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <h5>
+            <h3
+              class="fw-bold bcl-heading"
+            >
               Page content
-            </h5>
+            </h3>
             <ul
               class="nav nav-pills flex-column"
             >
@@ -2227,7 +2229,7 @@ exports[`OE - Publication details renders correctly 1`] = `
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -2248,11 +2250,11 @@ exports[`OE - Publication details renders correctly 1`] = `
               <div
                 class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
               >
-                <h2
+                <h1
                   class="fw-bold card-title bcl-heading"
                 >
                   This is the title of this page
-                </h2>
+                </h1>
                 <div
                   class="mb-4 mt-4"
                 >
@@ -2287,7 +2289,7 @@ exports[`OE - Publication details renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
         <div
           class="d-flex justify-content-end mt-2 align-items-center"
         >
@@ -2333,9 +2335,11 @@ exports[`OE - Publication details renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <h5>
+            <h3
+              class="fw-bold bcl-heading"
+            >
               Page content
-            </h5>
+            </h3>
             <ul
               class="nav nav-pills flex-column"
             >
@@ -3844,7 +3848,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -3878,7 +3882,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
     <div
@@ -3899,11 +3903,11 @@ exports[`OE - Publication listing renders correctly 1`] = `
             <div
               class="offcanvas-header p-lg-0"
             >
-              <h4
-                class="offcanvas-title mb-lg-4"
+              <h3
+                class="mb-lg-4 offcanvas-title fw-bold bcl-heading"
               >
                 Filter options
-              </h4>
+              </h3>
               <button
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
@@ -4055,18 +4059,11 @@ exports[`OE - Publication listing renders correctly 1`] = `
             <div
               class="col-md-6 col-lg-8 align-self-center"
             >
-              <h4
-                class="mb-0"
+              <h2
+                class="mb-0 fw-bold text-capitalize bcl-heading"
               >
-                <span
-                  class="text-capitalize"
-                >
-                  Projects
-                </span>
-                
-        (10)
-      
-              </h4>
+                Results (10)
+              </h2>
             </div>
             <div
               class="col-md-12 order-md-2 mt-3"
@@ -4180,7 +4177,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4201,8 +4198,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4210,7 +4207,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4233,12 +4230,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4259,8 +4256,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4268,7 +4265,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4291,12 +4288,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4317,8 +4314,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4326,7 +4323,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4349,12 +4346,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4375,8 +4372,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4384,7 +4381,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4407,12 +4404,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4433,8 +4430,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4442,7 +4439,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4465,12 +4462,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4491,8 +4488,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4500,7 +4497,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4523,12 +4520,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4549,8 +4546,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4558,7 +4555,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4581,12 +4578,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4607,8 +4604,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4616,7 +4613,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4639,12 +4636,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4665,8 +4662,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4674,7 +4671,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4697,12 +4694,12 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -4723,8 +4720,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -4732,7 +4729,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                           >
                             Publication with an image
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -4755,7 +4752,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>

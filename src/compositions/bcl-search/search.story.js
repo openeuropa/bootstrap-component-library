@@ -27,7 +27,7 @@ if (isChromatic()) {
 }
 
 const dataListing = {
-  page_title: "Search results",
+  title: "Results",
   content_type: "search",
   header: layout.headerNoForm,
   footer: {
