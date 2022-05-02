@@ -21,7 +21,6 @@ const header =
 
 const baseData = {
   content_type: "listing",
-  title: "People",
   header: header,
   footer: layout.footer,
   with_header: true,
@@ -37,6 +36,7 @@ const demoDetails = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

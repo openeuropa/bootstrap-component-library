@@ -46,6 +46,7 @@ const demoListing = {
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
+  title: "Results",
   listing: {
     ...listingDate,
     variant: "default-1-col",

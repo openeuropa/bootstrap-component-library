@@ -36,7 +36,6 @@ const sidebarClosed = {
 
 const baseData = {
   content_type: "listing",
-  title: "Projects",
   header: layout.headerSimple,
   footer: {
     ...layout.footer,
@@ -66,6 +65,7 @@ const demoDetailsClosed = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   banner: {
     ...pageTitleBanner,
     title: "Vacancy",

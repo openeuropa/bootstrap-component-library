@@ -1,7 +1,6 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: "Event",
   sidebar: {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
