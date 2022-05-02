@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  title: "Search",
   banner: {
     search_bar: {
       submit: {
