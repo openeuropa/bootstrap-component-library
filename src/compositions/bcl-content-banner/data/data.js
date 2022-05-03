@@ -28,26 +28,8 @@ module.exports = {
     path: "https://picsum.photos/255/255?random=6",
     alt: "alt img",
   },
-  service_buttons: [
-    {
-      label: "Print",
-      outline: true,
-      attributes: new drupalAttribute().addClass("w-auto me-3"),
-      icon: {
-        path: "/icons.svg",
-        name: "printer-fill",
-        size: "s",
-      },
-    },
-    {
-      label: "Export",
-      outline: true,
-      attributes: new drupalAttribute().addClass("w-auto"),
-      icon: {
-        path: "/icons.svg",
-        name: "file-arrow-down-fill",
-        size: "s",
-      },
-    },
-  ],
+  action_bar: `<div class="d-flex justify-content-end mt-2 align-items-center">
+    <button class="w-auto me-3 btn btn-outline-primary btn-md" type="button">Print<svg class="ms-2-5 bi icon--fluid"><use xlink:href="/icons.svg#printer-fill"></use></svg></button>
+    <button class="w-auto btn btn-outline-primary btn-md" type="button">Export<svg class="ms-2-5 bi icon--fluid"><use xlink:href="/icons.svg#file-arrow-down-fill"></use></svg></button>
+  </div>`,
 };
