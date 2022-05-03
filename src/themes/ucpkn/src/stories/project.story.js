@@ -45,10 +45,7 @@ const baseData = {
   content_type: "listing",
   page_title: "Projects",
   header: layout.header_ucpkn,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-5"),
-  },
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,

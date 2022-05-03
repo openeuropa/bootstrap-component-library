@@ -38,10 +38,7 @@ const baseData = {
   content_type: "listing",
   page_title: "Projects",
   header: layout.headerSimple,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,

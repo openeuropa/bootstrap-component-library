@@ -7,7 +7,6 @@ import {
 
 import content from "@openeuropa/bcl-news/data/data--content";
 import blockData from "@openeuropa/bcl-subscription-block/data";
-import drupalAttribute from "drupal-attribute";
 
 import subscriptionPageData from "@openeuropa/bcl-subscription/data/data";
 import modalData from "@openeuropa/bcl-subscription/data/data--modal";
@@ -16,10 +15,7 @@ const demoData = {
   content_type: "subscription",
   page_title: "Subscription",
   header: layout.headerSimple,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,

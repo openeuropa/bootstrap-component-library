@@ -23,10 +23,7 @@ const files = [file, file];
 const baseData = {
   content_type: "event",
   header: layout.headerSimple,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
