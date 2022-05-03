@@ -36,10 +36,7 @@ const files = [file, file];
 const baseData = {
   content_type: "event",
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -73,6 +70,7 @@ console.log(demoData1);
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

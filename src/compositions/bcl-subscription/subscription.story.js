@@ -16,12 +16,13 @@ import drupalAttribute from "drupal-attribute";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
 import subscriptionPageData from "@openeuropa/bcl-subscription/data/data";
 import modalData from "@openeuropa/bcl-subscription/data/data--modal";
+
 const chromatic = process.env.STORYBOOK_ENV;
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   banner.image.classes = banner.image.classes
     ? `${banner.image.classes} chromatic-ignore`
     : "chromatic-ignore";
@@ -29,12 +30,9 @@ if (isChromatic()) {
 
 const demoData = {
   content_type: "subscription",
-  page_title: "Subscription",
+  title: "Subscription",
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -43,7 +41,7 @@ const demoData = {
   modal: modalData,
   banner: {
     ...banner,
-    ...subscriptionPageData,
+    action_bar: subscriptionPageData,
   },
   content: content,
 };

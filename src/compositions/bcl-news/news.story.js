@@ -10,6 +10,7 @@ import {
 import {
   banner,
   pageTitleBanner,
+  share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
@@ -19,8 +20,6 @@ import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-const feedback = `<div class="bg-lighter py-4 mt-md-4-5 mt-4 text-center">Feedback module here</div>`;
-const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 
 if (isChromatic()) {
   banner.image.classes = "chromatic-ignore";
@@ -33,7 +32,6 @@ if (isChromatic()) {
 
 const baseData = {
   content_type: "news",
-  page_title: "News",
   header: header,
   footer: layout.footer,
   with_banner: true,
@@ -45,13 +43,13 @@ const demoData = {
   ...baseData,
   banner: banner,
   content: content,
-  feedback: feedback,
   share: share,
 };
 
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

@@ -9,6 +9,7 @@ import {
 import {
   banner,
   pageTitleBanner,
+  share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
@@ -24,13 +25,11 @@ import dataListsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data--lists";
 import dataContentUCPKN from "@openeuropa/bcl-project/data/ucpkn/data";
 import dataExtraDetailsUCPKN from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
 
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 const listingTemplate = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const detailsTemplate = "@oe-bcl/bcl-project/project.html.twig";
 
 const baseData = {
   content_type: "listing",
-  page_title: "Projects",
   header: layout.headerSimple,
   footer: layout.footer,
   with_header: true,
@@ -68,6 +67,7 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

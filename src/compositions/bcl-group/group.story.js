@@ -14,7 +14,6 @@ import {
   sortSelect,
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import drupalAttribute from "drupal-attribute";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import groupListing from "@openeuropa/bcl-group/group.html.twig";
@@ -67,10 +66,7 @@ if (isChromatic()) {
 let baseData = {
   content_type: "group",
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -82,20 +78,20 @@ let baseData = {
 };
 
 const dataListingContent = {
-  page_title: "Content in the group",
+  title: "Content in the group",
   ...baseData,
   ...demoDataListContent,
 };
 
 const dataListingMember = {
-  page_title: "Group members",
+  title: "Group members",
   ...baseData,
   ...demoDataListMember,
   listing: listingProfiles,
 };
 
 const dataListing = {
-  page_title: "Groups",
+  title: "Groups",
   ...baseData,
   ...demoDataList,
   banner: {
@@ -106,7 +102,7 @@ const dataListing = {
 };
 
 const dataLanding = {
-  page_title: "Group members",
+  title: "Group members",
   content_type: "group",
   header: header,
   footer: layout.footer,

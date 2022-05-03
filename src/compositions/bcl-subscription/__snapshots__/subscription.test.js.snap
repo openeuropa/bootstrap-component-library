@@ -614,12 +614,12 @@ exports[`OE - Subscription renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="bcl-content-banner pt-lg-4-75 pb-md-4-75 pb-4 pt-4 bg-lighter"
+      class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
     >
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -640,11 +640,11 @@ exports[`OE - Subscription renders correctly 1`] = `
               <div
                 class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
               >
-                <h2
+                <h1
                   class="fw-bold card-title bcl-heading"
                 >
                   This is the title of this page
-                </h2>
+                </h1>
                 <div
                   class="mb-4 mt-4"
                 >
@@ -679,7 +679,7 @@ exports[`OE - Subscription renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
         <div
           class="d-flex justify-content-end mt-2 align-items-center"
         >
@@ -727,9 +727,11 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <h5>
+            <h3
+              class="fw-bold bcl-heading"
+            >
               Page content
-            </h5>
+            </h3>
             <ul
               class="nav nav-pills flex-column"
             >
@@ -778,12 +780,12 @@ exports[`OE - Subscription renders correctly 1`] = `
               Duis ac augue sed tortor elementum dignissim
             </li>
           </ul>
-          <h3
+          <h2
             class="fw-bold my-4"
             id="subheading"
           >
             Sub heading
-          </h3>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
           </p>
@@ -1048,7 +1050,7 @@ exports[`OE - Subscription renders correctly 1`] = `
     </div>
   </main>
   <footer
-    class="mt-4 bcl-footer bcl-footer--neutral"
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"

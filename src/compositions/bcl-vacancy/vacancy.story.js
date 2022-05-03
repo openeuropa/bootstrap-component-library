@@ -46,12 +46,8 @@ const sidebarClosed = {
 
 const baseData = {
   content_type: "listing",
-  page_title: "Projects",
   header: header,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
@@ -76,6 +72,7 @@ const demoDetailsClosed = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   banner: {
     ...pageTitleBanner,
     title: "Vacancy",

@@ -2,14 +2,19 @@
 
 {#
 Parameters:
-  - "title": (string) (default: '')
-  - "full_layout": (boolean) (default: false)
-  - "links": (array of link objects) (default: [])
-  - "content": (string) (default: '')
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h5')
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
+  - full_layout: (boolean) (default: false)
+  - links: (array of link objects) (default: [])
+  - content: (string) (default: '')
 #}
 
-{# Internal properties #}
 {% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
 {% set _content = content|default('') %}
 {% set _id = id|default('bcl-inpage-navigation-' ~ random(5)) %}
@@ -27,9 +32,12 @@ Parameters:
   <div class="col-md-3 d-none d-md-block">
 {% endif %}
     <nav {{ attributes }}>
-      {% if _title is defined and _title is not empty %}
-        <h5>{{ _title }}</h5>
-      {% endif %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: _title,
+        title_tag: _title_tag,
+        title_link: _title_link,
+        attributes: _title_attributes.addClass(['fw-bold']),
+      } only %}
       {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
         'pills': true,
         'vertical': true,

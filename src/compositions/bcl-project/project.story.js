@@ -16,6 +16,7 @@ import {
 import {
   banner,
   pageTitleBanner,
+  share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
@@ -33,7 +34,6 @@ const chromatic = process.env.STORYBOOK_ENV;
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic() || chromatic) {
   dataContent.gallery.items.forEach((item) => {
@@ -51,7 +51,6 @@ if (isChromatic() || chromatic) {
 
 const baseData = {
   content_type: "listing",
-  page_title: "Projects",
   header: header,
   footer: layout.footer,
   with_header: true,
@@ -89,6 +88,7 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

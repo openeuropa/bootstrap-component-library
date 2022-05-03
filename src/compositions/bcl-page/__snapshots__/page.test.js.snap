@@ -626,9 +626,11 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <h5>
+            <h3
+              class="fw-bold bcl-heading"
+            >
               Page content
-            </h5>
+            </h3>
             <ul
               class="nav nav-pills flex-column"
             >
@@ -688,12 +690,12 @@ exports[`OE - Page Page renders correctly 1`] = `
   sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
   
           </p>
-          <h3
+          <h2
             class="fw-bold my-4"
             id="item-1"
           >
             Section 1
-          </h3>
+          </h2>
           <div
             class="bcl-listing bcl-listing--highlight-3-col"
           >
@@ -703,7 +705,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
                 >
                   <img
@@ -714,8 +716,8 @@ exports[`OE - Page Page renders correctly 1`] = `
                   <div
                     class="card-body pt-0"
                   >
-                    <h5
-                      class="card-title bcl-heading"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
                       <a
                         class="standalone"
@@ -723,19 +725,19 @@ exports[`OE - Page Page renders correctly 1`] = `
                       >
                         Card title
                       </a>
-                    </h5>
+                    </h1>
                     <p
                       class="card-text mb-2"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
                 >
                   <img
@@ -746,8 +748,8 @@ exports[`OE - Page Page renders correctly 1`] = `
                   <div
                     class="card-body pt-0"
                   >
-                    <h5
-                      class="card-title bcl-heading"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
                       <a
                         class="standalone"
@@ -755,19 +757,19 @@ exports[`OE - Page Page renders correctly 1`] = `
                       >
                         Card title
                       </a>
-                    </h5>
+                    </h1>
                     <p
                       class="card-text mb-2"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
                 >
                   <img
@@ -778,8 +780,8 @@ exports[`OE - Page Page renders correctly 1`] = `
                   <div
                     class="card-body pt-0"
                   >
-                    <h5
-                      class="card-title bcl-heading"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
                       <a
                         class="standalone"
@@ -787,14 +789,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       >
                         Card title
                       </a>
-                    </h5>
+                    </h1>
                     <p
                       class="card-text mb-2"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
             <a
@@ -811,12 +813,12 @@ exports[`OE - Page Page renders correctly 1`] = `
               </svg>
             </a>
           </div>
-          <h3
+          <h2
             class="fw-bold my-4"
             id="item-2"
           >
             Section 2
-          </h3>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
   a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
@@ -833,12 +835,12 @@ exports[`OE - Page Page renders correctly 1`] = `
   sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
   
           </p>
-          <h3
+          <h2
             class="fw-bold my-4"
             id="item-3"
           >
             Section 3
-          </h3>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
   a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
@@ -1294,7 +1296,7 @@ exports[`OE - Page Page renders correctly 1`] = `
     </div>
   </main>
   <footer
-    class="bcl-footer bcl-footer--neutral"
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"

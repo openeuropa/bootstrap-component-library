@@ -357,10 +357,9 @@ module.exports = {
   contributions: {
     title: "Latest contributions",
     listing: {
-      attributes: new drupalAttribute().addClass("mb-4"),
       variant: "highlight-3-col",
       link: {
-        attributes: new drupalAttribute().addClass(["mb-4-5", "pt-1", "pb-2"]),
+        attributes: new drupalAttribute().addClass(["pt-1", "pb-2"]),
         path: "/example.html",
         label: "See all group contributions",
         icon: {

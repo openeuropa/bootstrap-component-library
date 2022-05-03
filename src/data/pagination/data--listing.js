@@ -2,7 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   aria_label: "Pagination aria label",
-  attributes: new drupalAttribute().addClass(["mt-4-5", "mb-5"]),
+  attributes: new drupalAttribute().addClass(["mt-4-5"]),
   alignment: "center",
   icon_path: "/icons.svg",
   first: {

@@ -3,18 +3,17 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   banner: {
     title: "Stefan Mayer",
-    title_tag: "h2",
     title_attributes: new drupalAttribute().addClass("fw-bold"),
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",
       position: "top",
     },
-    action_button: {
-      label: "Manage profile",
-      variant: "light",
-      attributes: new drupalAttribute().addClass("mb-3"),
-    },
+    action_bar: `<div class="d-flex justify-content-end mt-2 align-items-center">
+      <div class="d-grid d-md-block ms-3">
+        <button class="mb-3 btn btn-light btn-md" type="button">Manage profile</button>
+      </div>
+    </div>`,
     content: `<div class="mb-4 mt-4">
       <span class="text-muted me-3">DG Test</span><span class="text-muted">Director</span>
     </div>

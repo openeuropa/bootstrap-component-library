@@ -13,7 +13,6 @@ import {
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-search/data/data--search";
 import search from "@openeuropa/bcl-search/search.html.twig";
@@ -29,13 +28,10 @@ if (isChromatic() || chromatic) {
 }
 
 const dataListing = {
-  page_title: "Search results",
+  title: "Results",
   content_type: "search",
   header: layout.headerNoForm,
-  footer: {
-    ...layout.footer,
-    attributes: new drupalAttribute().addClass("mt-4"),
-  },
+  footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,

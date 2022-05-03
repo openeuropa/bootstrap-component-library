@@ -8,13 +8,11 @@ import formError from "@openeuropa/bcl-contact-form/data/data--form-error";
 import success from "@openeuropa/bcl-contact-form/data/data--success";
 import error from "@openeuropa/bcl-contact-form/data/data--error";
 
-const share = `<div class="bg-gray-200 py-4 text-center">Share module here</div>`;
 const baseData = {
   content_type: "contact-form",
   banner,
   header,
   footer,
-  share,
   with_banner: true,
   with_header: true,
   with_footer: true,

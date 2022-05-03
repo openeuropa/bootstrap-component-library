@@ -614,12 +614,12 @@ exports[`OE - Person details renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="bcl-content-banner pt-lg-4-75 pt-3 bg-white"
+      class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -640,11 +640,11 @@ exports[`OE - Person details renders correctly 1`] = `
               <div
                 class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
               >
-                <h2
+                <h1
                   class="fw-bold card-title bcl-heading"
                 >
                   Stefan Mayer
-                </h2>
+                </h1>
                 <div
                   class="mb-4 mt-4"
                 >
@@ -665,7 +665,7 @@ exports[`OE - Person details renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
     <div
@@ -677,11 +677,11 @@ exports[`OE - Person details renders correctly 1`] = `
         <div
           class="col-12 col-lg-10 col-xl-9 col-xxl-8"
         >
-          <h3
+          <h2
             class="fw-bold mb-4"
           >
             Social media
-          </h3>
+          </h2>
           <div
             class="mb-4-5"
           >
@@ -738,11 +738,11 @@ exports[`OE - Person details renders correctly 1`] = `
               Youtube
             </a>
           </div>
-          <h3
+          <h2
             class="fw-bold mb-4"
           >
             Additional information
-          </h3>
+          </h2>
           <div
             class="mb-4-5"
           >
@@ -760,11 +760,11 @@ exports[`OE - Person details renders correctly 1`] = `
               </li>
             </ul>
           </div>
-          <h3
+          <h2
             class="fw-bold mb-4"
           >
             Related documents
-          </h3>
+          </h2>
           <div
             class="mb-4-5"
           >
@@ -886,7 +886,7 @@ exports[`OE - Person details renders correctly 1`] = `
     </div>
   </main>
   <footer
-    class="bcl-footer bcl-footer--neutral"
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"
@@ -1704,12 +1704,12 @@ exports[`OE - Person listing renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="bcl-content-banner pt-lg-4-75 pt-3 bg-white"
+      class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -1743,7 +1743,7 @@ exports[`OE - Person listing renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
     <div
@@ -1764,11 +1764,11 @@ exports[`OE - Person listing renders correctly 1`] = `
             <div
               class="offcanvas-header p-lg-0"
             >
-              <h4
-                class="offcanvas-title mb-lg-4"
+              <h3
+                class="mb-lg-4 offcanvas-title fw-bold bcl-heading"
               >
                 Filter options
-              </h4>
+              </h3>
               <button
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
@@ -1841,18 +1841,11 @@ exports[`OE - Person listing renders correctly 1`] = `
             <div
               class="col-md-6 col-lg-8 align-self-center"
             >
-              <h4
-                class="mb-0"
+              <h2
+                class="mb-0 fw-bold text-capitalize bcl-heading"
               >
-                <span
-                  class="text-capitalize"
-                >
-                  People
-                </span>
-                
-        (6)
-      
-              </h4>
+                Results (6)
+              </h2>
             </div>
             <div
               class="col-md-6 col-lg-4 mt-3 mt-md-0"
@@ -1911,7 +1904,7 @@ exports[`OE - Person listing renders correctly 1`] = `
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -1932,8 +1925,8 @@ exports[`OE - Person listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1941,7 +1934,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                           >
                             Stefan Mayer
                           </a>
-                        </h5>
+                        </h1>
                         <span
                           class="text-muted me-4-5"
                         >
@@ -1955,12 +1948,12 @@ exports[`OE - Person listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -1981,8 +1974,8 @@ exports[`OE - Person listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1990,7 +1983,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                           >
                             Adjur Tichar
                           </a>
-                        </h5>
+                        </h1>
                         <span
                           class="text-muted me-4-5"
                         >
@@ -2004,12 +1997,12 @@ exports[`OE - Person listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2030,8 +2023,8 @@ exports[`OE - Person listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2039,7 +2032,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                           >
                             Szép Mara
                           </a>
-                        </h5>
+                        </h1>
                         <span
                           class="text-muted me-4-5"
                         >
@@ -2053,12 +2046,12 @@ exports[`OE - Person listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2079,8 +2072,8 @@ exports[`OE - Person listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2088,7 +2081,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                           >
                             Daniel Cardoso Rocha
                           </a>
-                        </h5>
+                        </h1>
                         <span
                           class="text-muted me-4-5"
                         >
@@ -2102,12 +2095,12 @@ exports[`OE - Person listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2128,8 +2121,8 @@ exports[`OE - Person listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2137,7 +2130,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                           >
                             Aurelia Panicucci
                           </a>
-                        </h5>
+                        </h1>
                         <span
                           class="text-muted me-4-5"
                         >
@@ -2151,12 +2144,12 @@ exports[`OE - Person listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2177,8 +2170,8 @@ exports[`OE - Person listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2186,7 +2179,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                           >
                             Felicyta Kowalska
                           </a>
-                        </h5>
+                        </h1>
                         <span
                           class="text-muted me-4-5"
                         >
@@ -2200,7 +2193,7 @@ exports[`OE - Person listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>
@@ -2209,7 +2202,7 @@ exports[`OE - Person listing renders correctly 1`] = `
           />
           <nav
             aria-label="Pagination aria label"
-            class="mt-4-5 mb-5"
+            class="mt-4-5"
             role="navigation"
           >
             <ul
@@ -2325,7 +2318,7 @@ exports[`OE - Person listing renders correctly 1`] = `
     </div>
   </main>
   <footer
-    class="bcl-footer bcl-footer--neutral"
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"
