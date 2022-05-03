@@ -6,7 +6,6 @@ import {
   correctPaths,
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
@@ -16,6 +15,7 @@ import {
 import {
   banner,
   pageTitleBanner,
+  share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
@@ -26,7 +26,6 @@ import detailsPage from "@openeuropa/bcl-publication/publication.html.twig";
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-const share = `<div class="bg-gray-200 py-4 mt-4"><div class="container">Share module here</div></div>`;
 
 if (isChromatic()) {
   banner.image.classes = "chromatic-ignore";
