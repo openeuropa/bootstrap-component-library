@@ -12,11 +12,15 @@ import {
   listingProfiles,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
+import drupalAttribute from "drupal-attribute";
 
 import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
 import demoDataEdit from "@openeuropa/bcl-user/data/data--user-edit";
 import demoDataView from "@openeuropa/bcl-user/data/data--user-view";
 import demoDataViewCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
+import demoData from "@openeuropa/bcl-user/data/data";
+
+import user from "@openeuropa/bcl-user/user.html.twig";
 import editUser from "@openeuropa/bcl-user/user-edit.html.twig";
 import viewUser from "@openeuropa/bcl-user/user-view.html.twig";
 import viewUserCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
@@ -36,7 +40,7 @@ if (isChromatic()) {
   });
 }
 
-const data = {
+const baseData = {
   with_header: true,
   with_footer: true,
   header: header,
@@ -44,8 +48,19 @@ const data = {
   content_type: "users",
 };
 
+const data = {
+  with_header: true,
+  with_footer: true,
+  header: header,
+  footer: {
+    ...layout.footer,
+    attributes: new drupalAttribute().addClass("mt-4"),
+  },
+  content_type: "users",
+};
+
 const dataListing = {
-  page_title: "users",
+  title: "users",
   with_banner: true,
   with_sidebar: true,
   ...demoDataListing,
@@ -73,9 +88,30 @@ const dataView = {
   ...data,
 };
 
+const dataUser = {
+  ...baseData,
+  content_type: "user",
+  ...demoData,
+};
+
+const initMultiselect = (story) => {
+  const demo = story();
+  return `
+    <script>
+      if (document.querySelector(".multi-select")) {
+        new SlimSelect({
+          select: ".multi-select",
+          selectByGroup: true,
+          placeholder: "Please select a value",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
 export default {
   title: "Features/Users",
-  decorators: [withCode, withDesign],
+  decorators: [withCode, withDesign, initMultiselect],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
@@ -90,6 +126,8 @@ export default {
     },
   },
 };
+
+export const Default = () => user(correctPaths(dataUser));
 
 export const Listing = () => listingPage(correctPaths(dataListing));
 
