@@ -13,7 +13,7 @@ import modalData from "@openeuropa/bcl-subscription/data/data--modal";
 
 const demoData = {
   content_type: "subscription",
-  page_title: "Subscription",
+  title: "Subscription",
   header: layout.headerSimple,
   footer: layout.footer,
   with_banner: true,

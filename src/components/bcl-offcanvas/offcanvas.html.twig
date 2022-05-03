@@ -1,12 +1,10 @@
 {% spaceless %}
 
 {# Parameters:
-  - title (object) (default: {}) format: {
-      label (string)
-      id (string) (default: '')
-      heading (string) (1, 2, 3, 4, 5, 6)
-      extra_classes(string) (default: '')
-    }
+  - title: (string) (default: "")
+  - title_tag: (string) (default: "h3")
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
   - placement (string) (default: '') (start, end, top, bottom)
   - id (string) (default: '')
   - body (string) (default: '')
@@ -18,7 +16,10 @@
   - extra_classes_close (string) (default: '')
 #}
 
-{% set _title = title|default({}) %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _body = body|default('') %}
 {% set _with_close = with_close ?? true %}
 {% set _with_backdrop = with_backdrop ?? true %}
@@ -70,15 +71,13 @@
   (_title.label is defined and _title.label is not empty)
 %}
   <div class="{{ _class_header }}">
-  {% if _title.label is defined and _title.label is not empty %}
-    <h{{ _title.heading|default(5) }}
-      class="{{ 'offcanvas-title' ~ (_title.extra_classes ? ' ' ~ _title.extra_classes : '') }}"
-    {% if _title.id is defined and _title.id is not empty %}
-      id="{{ _title.id }}"
-    {% endif %}
-    >
-      {{- _title.label -}}
-    </h{{ _title.heading|default(5) }}>
+  {% if _title is not empty %}
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: _title,
+      title_tag: _title_tag,
+      title_link: _title_link,
+      attributes: _title_attributes.addClass(['offcanvas-title', 'fw-bold']),
+    } only %}
   {% endif %}
   {% if _with_close %}
     {% set button_attributes = create_attribute()

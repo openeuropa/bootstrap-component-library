@@ -64,6 +64,7 @@ const demoData1 = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,

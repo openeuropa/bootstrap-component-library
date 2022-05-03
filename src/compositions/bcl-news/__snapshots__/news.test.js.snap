@@ -619,7 +619,7 @@ exports[`OE - News full page renders correctly 1`] = `
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -640,11 +640,11 @@ exports[`OE - News full page renders correctly 1`] = `
               <div
                 class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
               >
-                <h2
+                <h1
                   class="fw-bold card-title bcl-heading"
                 >
                   This is the title of this page
-                </h2>
+                </h1>
                 <div
                   class="mb-4 mt-4"
                 >
@@ -679,7 +679,7 @@ exports[`OE - News full page renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
         <div
           class="d-flex justify-content-end mt-2 align-items-center"
         >
@@ -740,12 +740,12 @@ exports[`OE - News full page renders correctly 1`] = `
               Duis ac augue sed tortor elementum dignissim
             </li>
           </ul>
-          <h3
+          <h2
             class="fw-bold my-4"
             id="subheading"
           >
             Sub heading
-          </h3>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper, a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel. Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
           </p>
@@ -1665,7 +1665,7 @@ exports[`OE - News listing renders correctly 1`] = `
       <div
         class="container"
       >
-        <div
+        <article
           class="bg-transparent border-0 card"
         >
           <div
@@ -1699,7 +1699,7 @@ exports[`OE - News listing renders correctly 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
     <div
@@ -1720,11 +1720,11 @@ exports[`OE - News listing renders correctly 1`] = `
             <div
               class="offcanvas-header p-lg-0"
             >
-              <h4
-                class="offcanvas-title mb-lg-4"
+              <h3
+                class="mb-lg-4 offcanvas-title fw-bold bcl-heading"
               >
                 Filter options
-              </h4>
+              </h3>
               <button
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
@@ -1805,18 +1805,11 @@ exports[`OE - News listing renders correctly 1`] = `
             <div
               class="col-md-6 col-lg-8 align-self-center"
             >
-              <h4
-                class="mb-0"
+              <h2
+                class="mb-0 fw-bold text-capitalize bcl-heading"
               >
-                <span
-                  class="text-capitalize"
-                >
-                  News
-                </span>
-                
-        (6)
-      
-              </h4>
+                Results (6)
+              </h2>
             </div>
             <div
               class="col-md-12 order-md-2 mt-3"
@@ -1930,7 +1923,7 @@ exports[`OE - News listing renders correctly 1`] = `
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -1951,8 +1944,8 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -1960,7 +1953,7 @@ exports[`OE - News listing renders correctly 1`] = `
                           >
                             News title
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -1988,12 +1981,12 @@ exports[`OE - News listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2014,8 +2007,8 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2023,7 +2016,7 @@ exports[`OE - News listing renders correctly 1`] = `
                           >
                             News title
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -2046,12 +2039,12 @@ exports[`OE - News listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2072,8 +2065,8 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2081,7 +2074,7 @@ exports[`OE - News listing renders correctly 1`] = `
                           >
                             News title
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -2114,12 +2107,12 @@ exports[`OE - News listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2140,8 +2133,8 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2149,7 +2142,7 @@ exports[`OE - News listing renders correctly 1`] = `
                           >
                             News title
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -2172,12 +2165,12 @@ exports[`OE - News listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2198,8 +2191,8 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2207,7 +2200,7 @@ exports[`OE - News listing renders correctly 1`] = `
                           >
                             News title
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -2235,12 +2228,12 @@ exports[`OE - News listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
               <div
                 class="col"
               >
-                <div
+                <article
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
@@ -2261,8 +2254,8 @@ exports[`OE - News listing renders correctly 1`] = `
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
                       >
-                        <h5
-                          class="card-title bcl-heading"
+                        <h1
+                          class="fs-5 card-title bcl-heading"
                         >
                           <a
                             class="standalone"
@@ -2270,7 +2263,7 @@ exports[`OE - News listing renders correctly 1`] = `
                           >
                             News title
                           </a>
-                        </h5>
+                        </h1>
                         <p
                           class="card-text mb-2-5"
                         >
@@ -2293,7 +2286,7 @@ exports[`OE - News listing renders correctly 1`] = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>

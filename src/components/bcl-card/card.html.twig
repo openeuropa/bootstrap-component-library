@@ -50,7 +50,7 @@
 #}
 
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('h5') %}
+{% set _title_tag = title_tag|default('h1') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _subtitle = subtitle|default({}) %}
@@ -117,7 +117,7 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<div
+<article
   {{ attributes }}
 >
 {% if _card_header is not empty %}
@@ -173,7 +173,9 @@
 {% endif %}
   <div class='{{ _body_classes }}'>
   {% if _title is not empty %}
-    {% set _title_attributes = _title_attributes ?: create_attribute() %}
+    {% if _title_attributes.class is empty %}
+      {% set _title_attributes = _title_attributes.addClass('fs-5') %}
+    {% endif %}
     {% set _title_attributes = _title_attributes.addClass('card-title') %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: _title,
@@ -271,6 +273,6 @@
     {{- _card_footer -}}
   </div>
 {% endif %}
-</div>
+</article>
 
 {% endspaceless %}

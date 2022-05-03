@@ -1,18 +1,14 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  page_title: "Event",
   sidebar: {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
-    title: {
-      label: "Filter options",
-      heading: 4,
-      extra_classes: "mb-lg-4",
-    },
+    title: "Filter options",
+    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
     search_form: {
       attributes: new drupalAttribute()
         .setAttribute("novalidate", true)

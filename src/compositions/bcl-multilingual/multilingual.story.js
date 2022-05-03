@@ -31,7 +31,7 @@ const openModal = (story) => {
 
 const baseData = {
   content_type: "multilingual",
-  page_title: "Demo page",
+  title: "Demo page",
   footer: layout.footer,
   with_banner: true,
   with_header: true,

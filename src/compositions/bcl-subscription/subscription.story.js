@@ -30,7 +30,7 @@ if (isChromatic() || chromatic) {
 
 const demoData = {
   content_type: "subscription",
-  page_title: "Subscription",
+  title: "Subscription",
   header: header,
   footer: layout.footer,
   with_banner: true,

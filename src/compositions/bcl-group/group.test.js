@@ -30,20 +30,20 @@ let baseData = {
 };
 
 const dataListingContent = {
-  page_title: "Content in the group",
+  title: "Content in the group",
   ...baseData,
   ...demoDataListContent,
 };
 
 const dataListingMember = {
-  page_title: "Group members",
+  title: "Group members",
   ...baseData,
   ...demoDataListMember,
   listing: listingProfiles,
 };
 
 const dataListing = {
-  page_title: "Groups",
+  title: "Groups",
   ...baseData,
   ...demoDataList,
   banner: {
@@ -54,7 +54,7 @@ const dataListing = {
 };
 
 const dataLanding = {
-  page_title: "Group members",
+  title: "Group members",
   content_type: "group",
   header: layout.headerSimple,
   footer: layout.footer,

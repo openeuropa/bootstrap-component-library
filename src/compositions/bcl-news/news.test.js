@@ -16,7 +16,6 @@ import content from "@openeuropa/bcl-news/data/data--content";
 
 const baseData = {
   content_type: "news",
-  page_title: "News",
   header: layout.headerSimple,
   footer: layout.footer,
   with_banner: true,
@@ -34,6 +33,7 @@ const demoData = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
