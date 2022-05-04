@@ -12,6 +12,24 @@ describe("OE - Content banner", () => {
 
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
+
+  test("renders correctly with a date block", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        image: {},
+        date: {
+          year: "2021",
+          month: "Jan",
+          day: "23",
+          date_time: "2021-01-23",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("with links renders correctly", () => {
     expect.assertions(1);
 

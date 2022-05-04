@@ -30,10 +30,12 @@ import dataContent from "@openeuropa/bcl-project/data/data";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
+const chromatic = process.env.STORYBOOK_ENV;
+
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
-if (isChromatic()) {
+if (isChromatic() || chromatic) {
   dataContent.gallery.items.forEach((item) => {
     item.attributes = new drupalAttribute().addClass("chromatic-ignore");
   });

@@ -6,18 +6,22 @@ import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
+import dataDate from "@openeuropa/bcl-date-block/data/data.js";
 import dataLinks from "@openeuropa/bcl-content-banner/data/data--links.js";
 import dataActionButton from "@openeuropa/bcl-content-banner/data/data--action-button";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
+const chromatic = process.env.STORYBOOK_ENV;
 const button = { ...dataActionButton.action_button };
 const links = [...dataLinks.links];
 const badges = [...dataDefault.badges];
+const image = { ...dataDefault.image };
 
 const getArgs = () => {
   return {
     background: "gray",
     image_size: "md",
+    date: false,
     badges: true,
     action_button: false,
     links: false,
@@ -52,6 +56,14 @@ const getArgTypes = () => {
         defaultValue: { summary: "[]" },
       },
     },
+    date: {
+      type: { name: "boolean" },
+      description: "Replace image with a date block",
+      table: {
+        type: { summary: "object" },
+        defaultValue: { summary: "{}" },
+      },
+    },
     badges: {
       type: { name: "boolean" },
       description: "Toggle badges",
@@ -77,6 +89,13 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
+  if (args.date) {
+    data.image = {};
+    data.date = dataDate;
+  } else {
+    data.image = image;
+    delete data.date;
+  }
   if (args.action_button) {
     data.action_button = button;
   } else {
@@ -95,7 +114,7 @@ const applyArgs = (data, args) => {
     }
   }
 
-  if (data.image && isChromatic()) {
+  if (data.image && (isChromatic() || chromatic)) {
     data.image.classes = "chromatic-ignore";
   }
 

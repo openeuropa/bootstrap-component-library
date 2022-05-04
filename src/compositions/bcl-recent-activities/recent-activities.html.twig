@@ -40,19 +40,21 @@
     {% endif %}
     {% if _activity.content is not empty and _activity.meta is not empty %}
     <div>
-      {% if _activity.content is not empty %}
+      {%- if _activity.content is not empty -%}
         <p class="mb-2">{{- _activity.content -}}</p>
-      {% endif %}
-      {% if _activity.meta is not empty and _activity.meta is iterable %}
-        {% for _meta in _activity.meta %}
+      {%- endif -%}
+      {%- if _activity.meta is not empty and _activity.meta is iterable -%}
+        {%- for _meta in _activity.meta -%}
         <p class="mb-0">
+        {%-  if _meta.icon is not empty -%}
           {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
+        {%- endif -%}
           {{- _meta.label -}}
         </p>
-        {% endfor %}
-      {% endif %}
+        {%- endfor -%}
+      {%- endif -%}
     </div>
-    {% endif %}
+    {%- endif -%}
   </div>
   {% endfor %}
 {% endif %}
