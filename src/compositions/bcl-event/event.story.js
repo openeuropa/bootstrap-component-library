@@ -65,7 +65,6 @@ const demoData1 = {
   },
   files: files,
 };
-console.log(demoData1);
 
 const demoListing = {
   ...baseData,
