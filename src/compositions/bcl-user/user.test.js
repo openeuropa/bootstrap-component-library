@@ -9,24 +9,19 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 
 import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
-import demoDataEdit from "@openeuropa/bcl-user/data/data--user-edit";
-import demoDataView from "@openeuropa/bcl-user/data/data--user-view";
-import demoDataViewCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
+import demoDataCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
+import demoData from "@openeuropa/bcl-user/data/data";
+
+const template = "@openeuropa/bcl-user/user.html.twig";
+const render = (params) => renderTwigFileAsNode(template, params);
 
 const templateList = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const renderList = (params) => renderTwigFileAsNode(templateList, params);
 
-const templateEdit = "@oe-bcl/bcl-user/user-edit.html.twig";
-const renderEdit = (params) => renderTwigFileAsNode(templateEdit, params);
+const templateCompact = "@oe-bcl/bcl-user/user-view-compact.html.twig";
+const renderCompact = (params) => renderTwigFileAsNode(templateCompact, params);
 
-const templateView = "@oe-bcl/bcl-user/user-view.html.twig";
-const renderView = (params) => renderTwigFileAsNode(templateView, params);
-
-const templateViewCompact = "@oe-bcl/bcl-user/user-view-compact.html.twig";
-const renderViewCompact = (params) =>
-  renderTwigFileAsNode(templateViewCompact, params);
-
-const data = {
+const baseData = {
   with_header: true,
   with_footer: true,
   header: layout.headerSimple,
@@ -35,11 +30,11 @@ const data = {
 };
 
 const dataListing = {
-  page_title: "users",
+  title: "users",
   with_banner: true,
   with_sidebar: true,
   ...demoDataListing,
-  ...data,
+  ...baseData,
   listing: listingProfiles,
   pagination: pagination,
   filter_button: filterButton,
@@ -51,39 +46,21 @@ const dataListing = {
   },
 };
 
-const dataEdit = {
-  content_type: "users",
-  ...demoDataEdit,
-  ...data,
-};
-
-const dataView = {
-  content_type: "users",
-  ...demoDataView,
-  ...data,
+const dataUser = {
+  ...baseData,
+  content_type: "user",
+  ...demoData,
 };
 
 describe("OE - User", () => {
-  test(`-list renders correctly`, () => {
+  test(`list renders correctly`, () => {
     expect.assertions(1);
 
     return expect(renderList(dataListing)).resolves.toMatchSnapshot();
   });
-  test(`-edit renders correctly`, () => {
+  test(`compact renders correctly`, () => {
     expect.assertions(1);
 
-    return expect(renderEdit(dataEdit)).resolves.toMatchSnapshot();
-  });
-  test(`-view renders correctly`, () => {
-    expect.assertions(1);
-
-    return expect(renderView(dataView)).resolves.toMatchSnapshot();
-  });
-  test(`-view-compact renders correctly`, () => {
-    expect.assertions(1);
-
-    return expect(
-      renderViewCompact(demoDataViewCompact)
-    ).resolves.toMatchSnapshot();
+    return expect(renderCompact(demoDataCompact)).resolves.toMatchSnapshot();
   });
 });

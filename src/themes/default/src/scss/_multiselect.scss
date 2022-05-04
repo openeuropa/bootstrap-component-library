@@ -12,7 +12,8 @@ $multiselect-spacers: (
   "disabled-spacer": calc(map-get($spacers, 2) - 1px),
   "disabled-spacer-md": calc(map-get($spacers, 1) - 1px),
   "select-spacer": calc(map-get($spacers, 2) - 2px),
-  "select-spacer-md": calc(map-get($spacers, 1) + 0.05rem),
+  "select-spacer-md": 0.075rem,
+  "select-spacer-start": 0.3rem,
   "badge-padding-x": map-get($spacers, 1),
   "badge-padding-y": map-get($spacers, 1),
   "add-margin-top": map-get($spacers, "2-5"),
@@ -55,9 +56,10 @@ select.multi-select {
     }
   }
   .ss-multi-selected {
+    border-color: $input-border-color;
     padding: map-get($multiselect-spacers, "select-spacer") 0
       map-get($multiselect-spacers, "select-spacer")
-      map-get($multiselect-spacers, "select-spacer");
+      map-get($multiselect-spacers, "select-spacer-start");
     &.ss-disabled {
       .ss-values {
         .ss-value {
@@ -66,7 +68,8 @@ select.multi-select {
       }
     }
     .ss-add {
-      margin-top: map-get($multiselect-spacers, "add-margin-top");
+      margin-top: 0;
+      align-self: center;
     }
   }
 }
@@ -112,10 +115,7 @@ select.multi-select {
     .ss-multi-selected {
       padding: map-get($multiselect-spacers, "select-spacer-md") 0
         map-get($multiselect-spacers, "select-spacer-md")
-        map-get($multiselect-spacers, "select-spacer-md");
-      .ss-add {
-        margin-top: map-get($multiselect-spacers, "add-margin-top-md");
-      }
+        map-get($multiselect-spacers, "select-spacer-start");
     }
     .ss-values {
       @include font-size(1rem);

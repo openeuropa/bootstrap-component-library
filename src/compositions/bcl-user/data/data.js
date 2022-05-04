@@ -130,6 +130,7 @@ module.exports = {
         "ms-0",
         "ms-md-2",
         "mt-md-0",
+        "mb-2",
       ]),
     },
     profile_information: {
@@ -333,48 +334,65 @@ module.exports = {
   privacy: {
     settings: {
       attributes: new drupalAttribute()
-        .addClass("mb-3")
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       submit: {
         label: "Save",
         type: "submit",
         variant: "primary",
-        wrapper: "mt-4 d-grid d-sm-block",
+        wrapper: "mt-4-5 d-grid d-sm-block",
       },
       items: [
         [
           {
-            label: "Who can consult my data",
-            wrapper_classes: "col-sm-6 col-lg-3",
-            type: "select",
-            helper_text: "Helper text",
-            helper_text_id: "helperText",
-            options: [
-              { value: 1, label: "Anonymous users" },
-              { value: 2, label: "Nobody" },
-              { label: "Authenticated users only", selected: true },
-            ],
+            input_type: "checkbox",
+            wrapper_classes: "mb-3",
+            required: true,
+            label: "Only site administrators",
+            id: "administrators",
+          },
+          {
+            input_type: "checkbox",
+            wrapper_classes: "mb-3",
+            required: true,
+            label: "Any users",
+            id: "any",
+          },
+          {
+            input_type: "checkbox",
+            wrapper_classes: "mb-3",
+            required: true,
+            label: "Authenticated users",
+            id: "authenticated",
+            checked: true,
+          },
+        ],
+        [
+          {
+            type: "fieldset",
+            legend:
+              "Select the type of users who are allowed to access your data",
+            legend_classes: "text-muted fs-6 mb-0",
           },
         ],
       ],
     },
     public_profile_content: {
       attributes: new drupalAttribute()
-        .addClass(["row", "mb-3"])
+        .addClass(["row"])
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       submit: {
         label: "Save",
         type: "submit",
         variant: "primary",
-        wrapper: "mt-4 mt-md-2 d-grid d-sm-block",
+        wrapper: "d-grid d-sm-block mt-4-5",
       },
       items: [
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Picture",
             id: "picture",
@@ -384,7 +402,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Position",
             id: "position",
@@ -394,7 +412,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "City",
             id: "city",
@@ -404,7 +422,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "First name",
             id: "firstName",
@@ -414,7 +432,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Gender",
             id: "gender",
@@ -423,7 +441,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Nationality",
             id: "nationality",
@@ -432,7 +450,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Last name",
             id: "lastName",
@@ -442,7 +460,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Working languages",
             id: "workingLanguages",
@@ -451,7 +469,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Date of birth",
             id: "dateOfBirth",
@@ -460,7 +478,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Organisation",
             id: "organisation",
@@ -470,7 +488,7 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Country",
             id: "country",
@@ -480,25 +498,22 @@ module.exports = {
         [
           {
             input_type: "checkbox",
-            classes: "mb-1 mb-md-3 col-sm-6 col-md-4",
+            classes: "mb-3",
             required: true,
             label: "Bio",
             id: "bio",
             checked: true,
           },
         ],
+        [
+          {
+            type: "fieldset",
+            legend:
+              "Select the type of users who are allowed to access your data",
+            legend_classes: "text-muted fs-6 mb-0",
+          },
+        ],
       ],
-    },
-    delete_account: {
-      attributes: new drupalAttribute()
-        .setAttribute("novalidate", true)
-        .setAttribute("onsubmit", "return false;"),
-      submit: {
-        label: "Delete my account",
-        type: "submit",
-        variant: "danger",
-        wrapper: "mt-4 d-grid d-sm-block",
-      },
     },
   },
 };

@@ -89,7 +89,7 @@
       </div>
     </div>
     <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
-      <h1 class="fw-bold my-4-75">Edit my profile</h1>
+      <h1 class="fw-bold my-4-5">Edit my profile</h1>
       <h2 class="fw-bold mb-4-5">Profile image</h2>
       <div class="row">
         <div class="offset-3 col-6 offset-lg-0 col-lg-3">
@@ -109,18 +109,14 @@
       </div>
     </div>
     <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
-      <h3 class="fw-bold pt-2 mt-4 mb-4">Privacy settings</h3>
+      <h1 class="fw-bold my-4-5">Privacy settings</h1>
+      <p>Who can consult my data</p>
       {% include '@oe-bcl/bcl-form/form.html.twig' with privacy.settings only %}
-      <h3 class="fw-bold my-4">Public profile contents</h3>
-      <p class="mb-0">Select what information should be displayed to your profile.</p>
-      <p class="mb-4">Only people who have access to your data will be able to consult these informations.</p>
-      {% include '@oe-bcl/bcl-form/form.html.twig' with privacy.public_profile_content only %}
-      <h3 class="fw-bold my-4">Delete account</h3>
-      <p class="mb-0">Account deletion is permanent and cannot be undone.</p>
-      <p>If you delete your account, all content created by you (comments, articles, ...) will be anonymized.</p>
-      {% include '@oe-bcl/bcl-form/form.html.twig' with privacy.delete_account only %}
     </div>
     <div class="tab-pane fade" id="visibility" role="tabpanel" aria-labelledby="visibility-tab">
+      <h1 class="fw-bold my-4-5">Visibility settings</h1>
+      <p class="mb-3">Select what information should be displayed to your profile.</p>
+      {% include '@oe-bcl/bcl-form/form.html.twig' with privacy.public_profile_content only %}
     </div>
   </div>
 {% endblock %}
