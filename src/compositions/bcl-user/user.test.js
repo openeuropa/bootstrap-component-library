@@ -9,7 +9,8 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 
 import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
-import demoDataCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
+import demoDataCompact from "@openeuropa/bcl-user/data/data--user-compact";
+import demoDataTerms from "@openeuropa/bcl-user/data/data--terms";
 import demoData from "@openeuropa/bcl-user/data/data";
 
 const template = "@oe-bcl/bcl-user/user.html.twig";
@@ -17,6 +18,9 @@ const render = (params) => renderTwigFileAsNode(template, params);
 
 const templateList = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const renderList = (params) => renderTwigFileAsNode(templateList, params);
+
+const templateTerms = "@oe-bcl/bcl-user/user-terms.html.twig";
+const renderTerms = (params) => renderTwigFileAsNode(templateTerms, params);
 
 const templateCompact = "@oe-bcl/bcl-user/user-compact.html.twig";
 const renderCompact = (params) => renderTwigFileAsNode(templateCompact, params);
@@ -52,6 +56,15 @@ const dataUser = {
   ...demoData,
 };
 
+const dataTerms = {
+  ...demoDataTerms,
+  ...baseData,
+  banner: {
+    title: "Terms and conditions",
+    title_tag: "h1",
+  },
+};
+
 describe("OE - User", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
@@ -62,6 +75,11 @@ describe("OE - User", () => {
     expect.assertions(1);
 
     return expect(renderList(dataListing)).resolves.toMatchSnapshot();
+  });
+  test(`terms renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(renderTerms(dataTerms)).resolves.toMatchSnapshot();
   });
   test(`compact renders correctly`, () => {
     expect.assertions(1);
