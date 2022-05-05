@@ -97,4 +97,12 @@ a {
       }
     }
   }
+  a > .badge.bg-#{$color},
+  .badge.dismissible.bg-#{$color} {
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: shade-color($value, 15%) !important;
+    }
+  }
 }
