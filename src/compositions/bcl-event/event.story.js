@@ -17,6 +17,7 @@ import {
   banner,
   pageTitleBanner,
 } from "@openeuropa/bcl-base-templates/data/content-page";
+import date from "@openeuropa/bcl-date-block/data/data";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import drupalAttribute from "drupal-attribute";
@@ -57,13 +58,18 @@ const demoData = {
 const demoData1 = {
   ...baseData,
   ...dataPage,
-  banner: banner,
+  banner: {
+    ...banner,
+    image: {},
+    date,
+  },
   files: files,
 };
 
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
@@ -116,7 +122,7 @@ FullPage.decorators = [initScrollspy];
 
 export const FullPage1 = () => event(correctPaths(demoData1));
 
-FullPage1.storyName = "Event page with image";
+FullPage1.storyName = "Event page with date";
 FullPage1.decorators = [initScrollspy];
 
 export const Listing = () => listingPage(correctPaths(demoListing));

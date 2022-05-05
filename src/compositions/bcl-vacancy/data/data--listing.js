@@ -7,11 +7,8 @@ module.exports = {
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
-    title: {
-      label: "Filter options",
-      heading: 4,
-      extra_classes: "mb-lg-4",
-    },
+    title: "Filter options",
+    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
     search_form: {
       attributes: new drupalAttribute()
         .setAttribute("novalidate", true)
@@ -132,7 +129,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -161,7 +158,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -190,7 +187,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -219,7 +216,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -248,7 +245,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -277,7 +274,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -306,7 +303,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -335,7 +332,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -364,7 +361,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
       {
         badges: [
@@ -393,7 +390,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 december 2022</span>",
+          "<span class='text-muted text-nowrap'>Opening date : 19 April 2022</span><span class='ms-4 text-muted text-nowrap'>Closing date : 21 December 2022</span>",
       },
     ],
   },

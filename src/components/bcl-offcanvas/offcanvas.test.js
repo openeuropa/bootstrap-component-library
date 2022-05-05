@@ -13,14 +13,14 @@ describe("OE - Offcanvas", () => {
 
   test(`renders correctly without title`, () => {
     expect.assertions(1);
-    const noTitle = { ...demoData, title: {} };
+    const noTitle = { ...demoData, title: "" };
 
     return expect(render(noTitle)).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly without title and close button`, () => {
     expect.assertions(1);
-    const noTitleAndCloseButton = { ...demoData, title: {}, with_close: false };
+    const noTitleAndCloseButton = { ...demoData, title: "", with_close: false };
 
     return expect(render(noTitleAndCloseButton)).resolves.toMatchSnapshot();
   });

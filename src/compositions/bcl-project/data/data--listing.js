@@ -7,11 +7,8 @@ module.exports = {
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
-    title: {
-      label: "Filter options",
-      heading: 4,
-      extra_classes: "mb-lg-4",
-    },
+    title: "Filter options",
+    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
     search_form: {
       attributes: new drupalAttribute()
         .setAttribute("novalidate", true)
@@ -160,7 +157,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing ( 2019 - 2015 )</span>",
+          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
       },
       {
         badges: [
@@ -188,7 +185,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing ( 2011 - 2023 )</span>",
+          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
       },
       {
         badges: [
@@ -216,7 +213,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Closed ( 2011 - 2013 )</span>",
+          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
       },
       {
         badges: [
@@ -238,7 +235,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing ( 2019 - 2015 )</span>",
+          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
       },
       {
         badges: [
@@ -260,7 +257,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing ( 2011 - 2023 )</span>",
+          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
       },
       {
         badges: [
@@ -282,7 +279,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Closed ( 2011 - 2013 )</span>",
+          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
       },
     ],
   },

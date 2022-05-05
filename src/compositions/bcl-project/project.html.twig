@@ -12,7 +12,7 @@
     {% endif %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: project_status_title,
-      title_tag: 'h3',
+      title_tag: 'h2',
       attributes: _project_title_attributes,
     } only %}
   {% endif %}
@@ -31,7 +31,7 @@
     {% for _paragraph in first_paragraphs %}
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _paragraph.title,
-        title_tag: 'h3',
+        title_tag: 'h2',
         attributes: create_attribute().addClass(['fw-bold', 'mb-4', 'pt-3'])
                                       .setAttribute('id', _paragraph.title_id),
       } only %}
@@ -51,7 +51,7 @@
     {% for _paragraph in second_paragraphs %}
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _paragraph.title,
-        title_tag: 'h3',
+        title_tag: 'h2',
         attributes: create_attribute().addClass(['fw-bold', 'mb-4', 'pt-3'])
                                       .setAttribute('id', _paragraph.title_id),
       } only %}
@@ -66,7 +66,7 @@
     {% endif %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: gallery.main_title,
-      title_tag: 'h3',
+      title_tag: 'h2',
       attributes: _gallery_title_attributes,
     } only %}
   {% endif %}

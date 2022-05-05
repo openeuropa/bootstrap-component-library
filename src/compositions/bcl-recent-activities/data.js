@@ -9,17 +9,7 @@ module.exports = {
         "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#' aria-label='spacex-1'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
-          icon: {
-            name: "clock",
-            size: "xs",
-            path: "/icons.svg",
-            attributes: new drupalAttribute().addClass([
-              "me-2",
-              "align-top",
-              "mt-1",
-            ]),
-          },
-          label: "8 hours ago",
+          label: "19 December 2022 12 - 09:23 CEST",
         },
       ],
     },
@@ -30,17 +20,7 @@ module.exports = {
         "<a href='/example.html' class='fw-bold'>Steve Di Marzio</a> published the article <a href='/example.html' aria-label='spacex-2'>SpaceX satellites spotted: how good is this for our health and environment?</a> in <a href='/example.html'>News</a>",
       meta: [
         {
-          icon: {
-            name: "clock",
-            size: "xs",
-            path: "/icons.svg",
-            attributes: new drupalAttribute().addClass([
-              "me-2",
-              "align-top",
-              "mt-1",
-            ]),
-          },
-          label: "8 hours ago",
+          label: "19 December 2022 - 07:32 CEST",
         },
       ],
     },
@@ -51,17 +31,7 @@ module.exports = {
         "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='/example.html' aria-label='spacex-3'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
-          icon: {
-            name: "clock",
-            size: "xs",
-            path: "/icons.svg",
-            attributes: new drupalAttribute().addClass([
-              "me-2",
-              "align-top",
-              "mt-1",
-            ]),
-          },
-          label: "8 hours ago",
+          label: "19 December 2022 - 18:23 CEST",
         },
       ],
     },

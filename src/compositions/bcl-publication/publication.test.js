@@ -21,7 +21,6 @@ const detailsTemplate = "@oe-bcl/bcl-publication/publication.html.twig";
 
 const baseData = {
   content_type: "listing",
-  page_title: "Projects",
   header: layout.headerSimple,
   footer: layout.footer,
   with_header: true,
@@ -71,6 +70,7 @@ const demoDetailsMultiple = {
 const demoListing = {
   ...baseData,
   ...dataListing,
+  title: "Results",
   pagination: pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
