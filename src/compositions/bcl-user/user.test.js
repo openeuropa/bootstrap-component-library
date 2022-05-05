@@ -12,13 +12,13 @@ import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
 import demoDataCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
 import demoData from "@openeuropa/bcl-user/data/data";
 
-const template = "@openeuropa/bcl-user/user.html.twig";
+const template = "@oe-bcl/bcl-user/user.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 
 const templateList = "@oe-bcl/bcl-base-templates/listing-page.html.twig";
 const renderList = (params) => renderTwigFileAsNode(templateList, params);
 
-const templateCompact = "@oe-bcl/bcl-user/user-view-compact.html.twig";
+const templateCompact = "@oe-bcl/bcl-user/user-compact.html.twig";
 const renderCompact = (params) => renderTwigFileAsNode(templateCompact, params);
 
 const baseData = {
@@ -53,6 +53,11 @@ const dataUser = {
 };
 
 describe("OE - User", () => {
+  test(`renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(render(dataUser)).resolves.toMatchSnapshot();
+  });
   test(`list renders correctly`, () => {
     expect.assertions(1);
 

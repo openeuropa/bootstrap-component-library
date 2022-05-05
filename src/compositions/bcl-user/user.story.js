@@ -18,7 +18,7 @@ import demoDataCompact from "@openeuropa/bcl-user/data/data--user-view-compact";
 import demoData from "@openeuropa/bcl-user/data/data";
 
 import user from "@openeuropa/bcl-user/user.html.twig";
-import userCompact from "@openeuropa/bcl-user/user-view-compact.html.twig";
+import userCompact from "@openeuropa/bcl-user/user-compact.html.twig";
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
@@ -81,13 +81,32 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
+const cancelTab = (story) => {
+  const demo = story();
+  return `
+    <script>
+      document.getElementById("cancel-btn").onclick = function () { 
+        var cancelTrigger = document.querySelector('[data-bs-target="#cancel"]')
+        var cancelTab = new bootstrap.Tab(cancelTrigger)
+      
+        cancelTab.show()
+      };
+    </script>
+  ${demo}`;
+};
+
 export default {
   title: "Features/Users",
-  decorators: [withCode, withDesign, initMultiselect],
+  decorators: [withCode, withDesign, initMultiselect, cancelTab],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1.1",
+      },
+    },
     a11y: {
       config: {
         rules: [
@@ -100,6 +119,15 @@ export default {
 };
 
 export const Default = () => user(correctPaths(dataUser));
+Default.parameters = {
+  design: [
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=963%3A21625",
+    },
+  ],
+};
 
 export const Listing = () => listingPage(correctPaths(dataListing));
 

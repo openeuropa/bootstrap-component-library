@@ -55,6 +55,19 @@ module.exports = {
           .setAttribute("role", "tab")
           .setAttribute("aria-controls", "visibility"),
       },
+      {
+        label: "",
+        path: "#cancel",
+        id: "cancel-tab",
+        target: "cancel",
+        attributes: new drupalAttribute()
+          .setAttribute("data-bs-toggle", "tab")
+          .setAttribute("autocomplete", "off")
+          .setAttribute("data-bs-target", "#cancel")
+          .setAttribute("role", "tab")
+          .setAttribute("aria-controls", "cancel")
+          .addClass("d-none"),
+      },
     ],
   },
   view: {
@@ -152,8 +165,11 @@ module.exports = {
             variant: "danger",
             attributes: new drupalAttribute().addClass([
               "d-inline-block",
-              "ms-3",
+              "ms-md-3",
+              "mt-3",
+              "mt-md-0",
             ]),
+            id: "cancel-btn",
           },
         ],
       },
@@ -326,6 +342,53 @@ module.exports = {
               { value: 9, label: "the selected option", selected: true },
             ],
             attributes: new drupalAttribute().addClass("multi-select"),
+          },
+        ],
+      ],
+    },
+  },
+  cancel: {
+    form: {
+      attributes: new drupalAttribute()
+        .setAttribute("novalidate", true)
+        .setAttribute("onsubmit", "return false;"),
+      submit: {
+        wrapper: "mt-4 d-grid d-sm-block",
+        items: [
+          {
+            label: "Save",
+            type: "submit",
+            variant: "primary",
+          },
+          {
+            label: "Cancel",
+            variant: "light",
+            attributes: new drupalAttribute().addClass([
+              "d-inline-block",
+              "ms-md-3",
+              "mt-3",
+              "mt-md-0",
+            ]),
+          },
+        ],
+      },
+      items: [
+        [
+          {
+            input_type: "radio",
+            wrapper_classes: "mb-3",
+            required: true,
+            label: "Disable the account and keep its content",
+            id: "keep",
+            attributes: new drupalAttribute().setAttribute("name", "cancel"),
+          },
+          {
+            input_type: "radio",
+            wrapper_classes: "mb-3",
+            required: true,
+            label: "Disable the account and unpublish its content",
+            id: "delete",
+            attributes: new drupalAttribute().setAttribute("name", "cancel"),
           },
         ],
       ],
