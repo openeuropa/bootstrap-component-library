@@ -51,6 +51,16 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .container {
+    .bcl-content-banner {
+      .container {
+        padding: 0;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .bcl-banner {
     overflow: hidden;
@@ -126,6 +136,12 @@
     .bcl-banner:not(.text-center):not(.shade) {
       .bcl-banner__content {
         margin-left: 0;
+      }
+    }
+    .bcl-content-banner {
+      .card {
+        margin-right: -$container-padding-x;
+        margin-left: -$container-padding-x;
       }
     }
   }

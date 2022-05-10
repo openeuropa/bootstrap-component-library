@@ -1,0 +1,11 @@
+{% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
+
+{% block content %}
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>
+  <ul class="mb-4-5">
+    <li>Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. </li>
+    <li>Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, </li>
+    <li>A fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </li>
+  </ul>
+  {% include '@oe-bcl/bcl-form/form.html.twig' with terms_form only %}
+{% endblock %}
