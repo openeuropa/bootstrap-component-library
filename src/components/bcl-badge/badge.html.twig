@@ -29,6 +29,7 @@
 
 {% if _dismissible %}
   {% set _classes = _classes|merge(['dismissible']) %}
+  {% set _url = _url|default('#') %}
 {% endif %}
 
 {% if _outline %}
@@ -39,6 +40,8 @@
 
 {% if _background in ['light', 'warning'] %}
   {% set _classes = _classes|merge(['text-dark']) %}
+{% else %}
+  {% set _classes = _classes|merge(['text-white']) %}
 {% endif %}
 
 {% if attributes is empty %}
@@ -48,11 +51,16 @@
 {% set attributes = attributes.addClass(_classes) %}
 
 {%- if _url is not empty -%}
-<a href="{{ _url }}" title="{{ _title }}">
+<a
+  href="{{ _url }}"
+  title="{{ _title }}"
+  {{ attributes }}
+>
+{%- else -%}
+<span
+  {{ attributes }}
+>
 {%- endif -%}
-  <span
-    {{ attributes }}
-  >
   {%- if _assistive_text is not empty -%}
     <span class="visually-hidden">
       {{- _assistive_text -}}
@@ -67,9 +75,10 @@
       } only %}
     </span>
   {%- endif -%}
-  </span>
 {%- if _url is not empty -%}
 </a>
+{%- else -%}
+</span>
 {%- endif -%}
 
 {% endspaceless %}

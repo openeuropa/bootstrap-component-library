@@ -316,14 +316,12 @@ export const initBadges = (story) => {
   const demo = story();
   return `
     <script>
-      var badges = document.querySelectorAll(".badge");
+      var badges = document.querySelectorAll(".badge.dismissible");
       badges.forEach(element => {
-        var close = element.getElementsByTagName('span')[0];
-        if(close) {
-          close.addEventListener('click', event => {
-            close.parentElement.remove();
-          })
-        }
+        element.addEventListener('click', event => {
+          event.preventDefault();
+          element.remove();
+        })
       });
     </script>
   ${demo}`;

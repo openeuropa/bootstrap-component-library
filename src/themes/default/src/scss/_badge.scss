@@ -70,18 +70,8 @@
   }
 }
 
-// Badges in headings and other text elements
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-  .badge {
-    font-size: 0.75em; // Default size in Bootstrap
-  }
+a.badge {
+  text-decoration: none;
 }
 
 @each $color, $value in $theme-colors {
@@ -97,7 +87,7 @@ a {
       }
     }
   }
-  a > .badge.bg-#{$color},
+  a.badge.bg-#{$color},
   .badge.dismissible.bg-#{$color} {
     &:focus,
     &:active,
