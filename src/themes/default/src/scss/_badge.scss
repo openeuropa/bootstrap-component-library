@@ -25,49 +25,6 @@
       margin: 0;
     }
   }
-  &.bg-primary {
-    .icon--close {
-      color: $primary;
-    }
-  }
-  &.bg-secondary {
-    .icon--close {
-      color: $secondary;
-    }
-  }
-  &.bg-success {
-    .icon--close {
-      color: $success;
-    }
-  }
-  &.bg-danger {
-    .icon--close {
-      color: $danger;
-    }
-  }
-  &.bg-dark {
-    .icon--close {
-      color: $dark;
-    }
-  }
-  &.bg-warning {
-    .icon--close {
-      color: $warning;
-      background: $black;
-    }
-  }
-  &.bg-info {
-    .icon--close {
-      color: $info;
-      background: $black;
-    }
-  }
-  &.bg-light {
-    .icon--close {
-      color: $light;
-      background: $black;
-    }
-  }
 }
 
 a.badge {
@@ -75,20 +32,49 @@ a.badge {
 }
 
 @each $color, $value in $theme-colors {
+  .badge.bg-#{$color} {
+    .icon--close {
+      color: $value;
+      @if $color == light or $color == warning {
+        background: $black;
+      }
+    }
+  }
   .badge-outline-#{$color} {
     border: $border-width solid $value;
     color: $value !important;
     background: transparent !important;
     .icon--close {
       background: $value;
-      color: $white;
       @if $color == light {
         color: $black;
+      } @else {
+        color: $white;
       }
     }
   }
-  a.badge.bg-#{$color},
-  .badge.dismissible.bg-#{$color} {
+  a.badge-outline-#{$color} {
+    &:focus,
+    &:active,
+    &:hover {
+      background: $value !important;
+      @if $color == light or $color == warning {
+        color: $black !important;
+      } @else {
+        color: $white !important;
+      }
+      .icon--close {
+        background: $white;
+        color: $value;
+        @if $color == light or $color == warning {
+          background: $black;
+        } @else {
+          background: $white;
+        }
+      }
+    }
+  }
+  a.badge.bg-#{$color} {
     &:focus,
     &:active,
     &:hover {
