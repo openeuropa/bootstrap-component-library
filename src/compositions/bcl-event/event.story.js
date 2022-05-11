@@ -14,7 +14,6 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import {
   file,
-  banner,
   pageTitleBanner,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import date from "@openeuropa/bcl-date-block/data/data";
@@ -44,22 +43,21 @@ const baseData = {
 };
 
 let banner_simple = {
-  ...banner,
+  ...dataPage.banner,
 };
 delete banner_simple.image;
 
 const demoData = {
   ...baseData,
   ...dataPage,
-  banner: banner_simple,
   files: files,
 };
 
-const demoData1 = {
+const demoDateData = {
   ...baseData,
   ...dataPage,
   banner: {
-    ...banner,
+    ...dataPage.banner,
     image: {},
     date,
   },
@@ -97,7 +95,7 @@ export default {
     badges: ["stable"],
     badgesConfig: {
       stable: {
-        title: "v1.1",
+        title: "v1.2",
       },
     },
     design: [
@@ -120,7 +118,7 @@ export const FullPage = () => event(correctPaths(demoData));
 FullPage.storyName = "Event page";
 FullPage.decorators = [initScrollspy];
 
-export const FullPage1 = () => event(correctPaths(demoData1));
+export const FullPage1 = () => event(correctPaths(demoDateData));
 
 FullPage1.storyName = "Event page with date";
 FullPage1.decorators = [initScrollspy];

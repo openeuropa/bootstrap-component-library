@@ -11,6 +11,7 @@ import {
   pageTitleBanner,
   share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
+import dataGallery from "@openeuropa/bcl-gallery/data/data.js";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
@@ -42,6 +43,10 @@ const demoPage = {
   ...dataContent,
   ...dataExtraDetails,
   ...dataLists,
+  gallery: {
+    title: "Gallery",
+    ...dataGallery,
+  },
   project_status_title: "Project details",
   project_status_id: "project-details",
   project_contributions: dataContributions,

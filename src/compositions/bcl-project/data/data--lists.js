@@ -93,7 +93,6 @@ module.exports = {
     title_attributes: new drupalAttribute().setAttribute("id", "contributors"),
     items: [
       {
-        title: "HIT Manufacturing sas",
         content: [
           {
             variant: "horizontal",
@@ -139,7 +138,6 @@ module.exports = {
         ],
       },
       {
-        title: "Multi-informatica principado",
         content: [
           {
             variant: "horizontal",
