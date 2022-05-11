@@ -22,6 +22,9 @@ module.exports = {
         year: "2021",
         month: "JAN",
         day: "23",
+        end_day: "24",
+        end_month: "Jun",
+        end_year: "2023",
       },
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>

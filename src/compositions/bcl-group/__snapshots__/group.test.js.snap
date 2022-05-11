@@ -624,79 +624,6 @@ exports[`OE - Group landing renders correctly 1`] = `
           class="d-none d-md-block w-100"
           src="https://picsum.photos/seed/1002/1100/255"
         />
-        <div
-          class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
-        >
-          <h1
-            class="mb-0 d-inline-block fw-bold"
-          >
-            Group Name
-          </h1>
-          <div
-            class="d-grid d-md-block ms-auto"
-          >
-            <a
-              class="d-md-inline-block me-2 p-2 d-none"
-              href="/example.html"
-            >
-              Leave group
-            </a>
-            <button
-              aria-expanded="false"
-              autocomplete="off"
-              class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-              data-bs-toggle="dropdown"
-              id="dropdown-content"
-              type="button"
-            >
-              Create content
-            </button>
-            <ul
-              aria-labelledby="dropdown-content"
-              class="dropdown-menu"
-            >
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#"
-                >
-                  I'm a link
-                </a>
-              </li>
-              <li>
-                <button
-                  class="dropdown-item"
-                  type="button"
-                >
-                  I'm a button
-                </button>
-              </li>
-              <li>
-                <hr
-                  class="dropdown-divider"
-                />
-              </li>
-              <li>
-                <button
-                  aria-disabled="true"
-                  class="dropdown-item"
-                  disabled="true"
-                  type="button"
-                >
-                  I'm a disabled button
-                </button>
-              </li>
-              <li>
-                <button
-                  class="dropdown-item active"
-                  type="button"
-                >
-                  I'm a active button
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
       <nav
         class="bcl__nav bg-gray n-mx-container nav nav-tabs"
@@ -2477,7 +2404,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                   class="dropdown-item"
                   href="#"
                 >
-                  I'm a link
+                  Create an event
                 </a>
               </li>
               <li>
@@ -2485,30 +2412,7 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                   class="dropdown-item"
                   type="button"
                 >
-                  I'm a button
-                </button>
-              </li>
-              <li>
-                <hr
-                  class="dropdown-divider"
-                />
-              </li>
-              <li>
-                <button
-                  aria-disabled="true"
-                  class="dropdown-item"
-                  disabled="true"
-                  type="button"
-                >
-                  I'm a disabled button
-                </button>
-              </li>
-              <li>
-                <button
-                  class="dropdown-item active"
-                  type="button"
-                >
-                  I'm a active button
+                  Add an article
                 </button>
               </li>
             </ul>
@@ -4246,7 +4150,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
                   class="dropdown-item"
                   href="#"
                 >
-                  I'm a link
+                  Create an event
                 </a>
               </li>
               <li>
@@ -4254,30 +4158,7 @@ exports[`OE - Group listing Member renders correctly 1`] = `
                   class="dropdown-item"
                   type="button"
                 >
-                  I'm a button
-                </button>
-              </li>
-              <li>
-                <hr
-                  class="dropdown-divider"
-                />
-              </li>
-              <li>
-                <button
-                  aria-disabled="true"
-                  class="dropdown-item"
-                  disabled="true"
-                  type="button"
-                >
-                  I'm a disabled button
-                </button>
-              </li>
-              <li>
-                <button
-                  class="dropdown-item active"
-                  type="button"
-                >
-                  I'm a active button
+                  Add an article
                 </button>
               </li>
             </ul>
@@ -4447,6 +4328,25 @@ exports[`OE - Group listing Member renders correctly 1`] = `
                     />
                   </div>
                 </fieldset>
+                <div
+                  class="mt-4"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="group-filter"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="group-filter"
+                    >
+                      Group Contacts
+                    </label>
+                  </div>
+                </div>
                 <div
                   class="mt-4 d-grid d-md-block"
                 >
@@ -6054,7 +5954,7 @@ exports[`OE - Group listing renders correctly 1`] = `
               <h2
                 class="mb-0 fw-bold text-capitalize bcl-heading"
               >
-                Groups (6)
+                Results (6)
               </h2>
             </div>
             <div

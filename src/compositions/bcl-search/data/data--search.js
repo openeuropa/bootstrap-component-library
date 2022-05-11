@@ -1,7 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  title: "Search",
+  main_title: "Search",
   banner: {
     search_bar: {
       submit: {
@@ -169,7 +169,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
+          "<span class='text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -197,7 +197,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
+          "<span class='text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -231,7 +231,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
+          "<span class='text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -258,7 +258,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
+          "<span class='text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -292,7 +292,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
+          "<span class='text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
       {
         badges: [
@@ -326,7 +326,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap me-4-5'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
+          "<span class='text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block'>Brussels, Belgium</span><span class='text-muted text-nowrap'>17 October 2019</span>",
       },
     ],
   },

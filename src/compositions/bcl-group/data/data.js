@@ -2,7 +2,7 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   banner: {
-    title: "Group Name",
+    main_title: "Group Name",
     actions: [
       {
         type: "dropdown",
@@ -21,25 +21,12 @@ module.exports = {
         },
         items: [
           {
-            label: "I'm a link",
+            label: "Create an event",
             path: "#",
           },
           {
-            label: "I'm a button",
+            label: "Add an article",
             button: true,
-          },
-          {
-            divider: true,
-          },
-          {
-            label: "I'm a disabled button",
-            button: true,
-            disabled: true,
-          },
-          {
-            label: "I'm a active button",
-            button: true,
-            active: true,
           },
         ],
       },

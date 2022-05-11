@@ -91,7 +91,7 @@ const dataListingMember = {
 };
 
 const dataListing = {
-  title: "Groups",
+  title: "Results",
   ...baseData,
   ...demoDataList,
   banner: {

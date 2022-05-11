@@ -8,7 +8,7 @@ module.exports = {
       alt: "alt img",
       class: "d-none d-md-block w-100",
     },
-    title: "Group Name",
+    main_title: "Group Name",
     actions: [
       {
         type: "link",
@@ -38,25 +38,12 @@ module.exports = {
         },
         items: [
           {
-            label: "I'm a link",
+            label: "Create an event",
             path: "#",
           },
           {
-            label: "I'm a button",
+            label: "Add an article",
             button: true,
-          },
-          {
-            divider: true,
-          },
-          {
-            label: "I'm a disabled button",
-            button: true,
-            disabled: true,
-          },
-          {
-            label: "I'm a active button",
-            button: true,
-            active: true,
           },
         ],
       },
