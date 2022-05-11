@@ -130,6 +130,11 @@ export default {
     layout: "fullscreen",
     controls: { disable: true },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1",
+      },
+    },
     design: [
       {
         name: "Mockup",
