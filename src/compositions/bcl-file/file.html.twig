@@ -53,16 +53,18 @@
 {% set _translation = translation|default({}) %}
 {% set _icon_path = icon_path|default({}) %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass(['bcl-file']) %}
+
 {% set _container_classes = 'w-100 d-md-flex' %}
 {% if _icon is not empty %}
   {% set _container_classes = _container_classes ~ ' ms-2-5' %}
   {% set _icon = _icon|merge({
     attributes: create_attribute().addClass(['mt-1', 'icon--file'])
   }) %}
-{% endif %}
-
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
 {% endif %}
 
 {% if _title is not empty %}
