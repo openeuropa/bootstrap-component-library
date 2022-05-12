@@ -135,10 +135,6 @@ module.exports = {
               },
             ],
           },
-        ],
-      },
-      {
-        content: [
           {
             variant: "horizontal",
             items: [

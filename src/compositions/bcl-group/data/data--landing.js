@@ -8,7 +8,7 @@ module.exports = {
       alt: "alt img",
       class: "d-none d-md-block w-100",
     },
-    main_title: "Group Name",
+    title: "Group Name",
     actions: [
       {
         type: "link",

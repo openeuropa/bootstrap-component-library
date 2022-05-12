@@ -624,6 +624,56 @@ exports[`OE - Group landing renders correctly 1`] = `
           class="d-none d-md-block w-100"
           src="https://picsum.photos/seed/1002/1100/255"
         />
+        <div
+          class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
+        >
+          <h1
+            class="mb-0 d-inline-block fw-bold"
+          >
+            Group Name
+          </h1>
+          <div
+            class="d-grid d-md-block ms-auto"
+          >
+            <a
+              class="d-md-inline-block me-2 p-2 d-none"
+              href="/example.html"
+            >
+              Leave group
+            </a>
+            <button
+              aria-expanded="false"
+              autocomplete="off"
+              class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="dropdown-content"
+              type="button"
+            >
+              Create content
+            </button>
+            <ul
+              aria-labelledby="dropdown-content"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                >
+                  Create an event
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                >
+                  Add an article
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <nav
         class="bcl__nav bg-gray n-mx-container nav nav-tabs"
