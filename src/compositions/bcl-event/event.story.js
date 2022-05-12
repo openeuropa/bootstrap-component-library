@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import isChromatic from "chromatic/isChromatic";
 
 import {
   initScrollspy,
@@ -24,9 +25,14 @@ import drupalAttribute from "drupal-attribute";
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
 import event from "@openeuropa/bcl-event/event.html.twig";
+const chromatic = process.env.STORYBOOK_ENV;
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
+if (isChromatic() || chromatic) {
+  dataPage.banner.image.classes = "chromatic-ignore";
+}
 
 delete file.translation;
 file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
