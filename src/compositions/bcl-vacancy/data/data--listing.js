@@ -93,7 +93,6 @@ module.exports = {
       label: "Opened",
       background: "light",
       dismissible: true,
-      url: "/example.html",
       icon_path: "/icons.svg",
       attributes: new drupalAttribute().addClass(["me-2", "mb-2"]),
     },

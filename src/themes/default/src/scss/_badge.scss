@@ -19,6 +19,8 @@
     cursor: pointer;
     background: $white;
     border-radius: 50%;
+    border: none;
+    padding: 0;
     svg {
       width: 6px;
       height: 6px;
@@ -28,6 +30,7 @@
 }
 
 @each $color, $value in $theme-colors {
+  .badge.bg-#{$color} a,
   .badge.bg-#{$color} {
     @if $color == light or $color == warning {
       color: $black;
@@ -40,6 +43,9 @@
         background: $black;
       }
     }
+  }
+  .badge-outline-#{$color} a {
+    color: $value !important;
   }
   .badge-outline-#{$color} {
     border: $border-width solid $value;
@@ -54,29 +60,26 @@
       }
     }
   }
-  a {
-    &:focus,
+  .actionable {
+    &:focus-within,
     &:active,
     &:hover {
-      .badge-outline-#{$color} {
+      &.badge-outline-#{$color} {
         background-color: tint-color($value, 90%) !important;
         border-color: shade-color($value, 15%) !important;
       }
-      .badge.bg-#{$color} {
+      &.badge.bg-#{$color} {
         background-color: shade-color($value, 15%) !important;
       }
     }
-    &:focus {
-      .badge.bg-#{$color},
-      .badge-outline-#{$color} {
-        @if $enable-shadows {
-          @include box-shadow(
-            $badge-active-box-shadow,
-            0 0 0 $badge-focus-width rgba($value, 0.5)
-          );
-        } @else {
-          box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
-        }
+    &:focus-within {
+      @if $enable-shadows {
+        @include box-shadow(
+          $badge-active-box-shadow,
+          0 0 0 $badge-focus-width rgba($value, 0.5)
+        );
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
       }
     }
   }

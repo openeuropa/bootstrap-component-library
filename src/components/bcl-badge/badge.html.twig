@@ -27,6 +27,10 @@
   {% set _classes = _classes|merge(['rounded-pill']) %}
 {% endif %}
 
+{%- if _url is not empty or _dismissible -%}
+  {% set _classes = _classes|merge(['actionable']) %}
+{% endif %}
+
 {% if _outline %}
   {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
 {% else %}
@@ -39,29 +43,29 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-{%- if _url is not empty -%}
-<a href="{{ _url }}" title="{{ _title }}" class="text-decoration-none">
-{%- endif -%}
-  <span
-    {{ attributes }}
-  >
+<span
+  {{ attributes }}
+>
+  {%- if _url is not empty -%}
+  <a href="{{ _url }}" title="{{ _title }}" class="text-decoration-none">
+  {%- endif -%}
   {%- if _assistive_text is not empty -%}
     <span class="visually-hidden">
       {{- _assistive_text -}}
     </span>
   {%- endif -%}
     {{- _label -}}
+  {%- if _url is not empty -%}
+  </a>
+  {%- endif -%}
   {%- if _dismissible -%}
-    <span class="icon--close" aria-hidden="true">
+    <button class="icon--close" aria-hidden="true">
       {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
         name: "x-lg",
         path: _icon_path,
       } only %}
-    </span>
+    </button>
   {%- endif -%}
-  </span>
-{%- if _url is not empty -%}
-</a>
-{%- endif -%}
+</span>
 
 {% endspaceless %}
