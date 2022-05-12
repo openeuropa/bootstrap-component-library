@@ -3,7 +3,7 @@
 exports[`OE - badge danger outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-danger text-white"
+    class="badge badge-outline-danger"
   >
     A simple badge!
   </span>
@@ -13,7 +13,7 @@ exports[`OE - badge danger outline renders correctly 1`] = `
 exports[`OE - badge danger renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-danger text-white"
+    class="badge bg-danger"
   >
     A simple badge!
   </span>
@@ -23,7 +23,7 @@ exports[`OE - badge danger renders correctly 1`] = `
 exports[`OE - badge dark outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-dark text-white"
+    class="badge badge-outline-dark"
   >
     A simple badge!
   </span>
@@ -33,7 +33,7 @@ exports[`OE - badge dark outline renders correctly 1`] = `
 exports[`OE - badge dark renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-dark text-white"
+    class="badge bg-dark"
   >
     A simple badge!
   </span>
@@ -43,7 +43,7 @@ exports[`OE - badge dark renders correctly 1`] = `
 exports[`OE - badge info outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-info text-white"
+    class="badge badge-outline-info"
   >
     A simple badge!
   </span>
@@ -53,7 +53,7 @@ exports[`OE - badge info outline renders correctly 1`] = `
 exports[`OE - badge info renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-info text-white"
+    class="badge bg-info"
   >
     A simple badge!
   </span>
@@ -63,7 +63,7 @@ exports[`OE - badge info renders correctly 1`] = `
 exports[`OE - badge light outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-light text-dark"
+    class="badge badge-outline-light"
   >
     A simple badge!
   </span>
@@ -73,7 +73,7 @@ exports[`OE - badge light outline renders correctly 1`] = `
 exports[`OE - badge light renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-light text-dark"
+    class="badge bg-light"
   >
     A simple badge!
   </span>
@@ -83,7 +83,7 @@ exports[`OE - badge light renders correctly 1`] = `
 exports[`OE - badge primary outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-primary text-white"
+    class="badge badge-outline-primary"
   >
     A simple badge!
   </span>
@@ -93,7 +93,7 @@ exports[`OE - badge primary outline renders correctly 1`] = `
 exports[`OE - badge primary renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-primary text-white"
+    class="badge bg-primary"
   >
     A simple badge!
   </span>
@@ -103,7 +103,7 @@ exports[`OE - badge primary renders correctly 1`] = `
 exports[`OE - badge renders correctly as a rounded pill 1`] = `
 <jest>
   <span
-    class="badge rounded-pill bg-primary text-white"
+    class="badge rounded-pill bg-primary"
   >
     A simple badge!
   </span>
@@ -112,10 +112,8 @@ exports[`OE - badge renders correctly as a rounded pill 1`] = `
 
 exports[`OE - badge renders correctly dismissible 1`] = `
 <jest>
-  <a
-    class="badge dismissible bg-primary text-white"
-    href="#"
-    title="A simple badge!"
+  <span
+    class="badge dismissible bg-primary"
   >
     A simple badge!
     <span
@@ -130,18 +128,22 @@ exports[`OE - badge renders correctly dismissible 1`] = `
         />
       </svg>
     </span>
-  </a>
+  </span>
 </jest>
 `;
 
 exports[`OE - badge renders correctly with a link 1`] = `
 <jest>
   <a
-    class="badge bg-primary text-white"
+    class="text-decoration-none"
     href="http://example.com"
     title="A simple badge!"
   >
-    A simple badge!
+    <span
+      class="badge bg-primary"
+    >
+      A simple badge!
+    </span>
   </a>
 </jest>
 `;
@@ -149,7 +151,7 @@ exports[`OE - badge renders correctly with a link 1`] = `
 exports[`OE - badge renders correctly with assistive text 1`] = `
 <jest>
   <span
-    class="badge bg-primary text-white"
+    class="badge bg-primary"
   >
     <span
       class="visually-hidden"
@@ -164,7 +166,7 @@ exports[`OE - badge renders correctly with assistive text 1`] = `
 exports[`OE - badge secondary outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-secondary text-white"
+    class="badge badge-outline-secondary"
   >
     A simple badge!
   </span>
@@ -174,7 +176,7 @@ exports[`OE - badge secondary outline renders correctly 1`] = `
 exports[`OE - badge secondary renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-secondary text-white"
+    class="badge bg-secondary"
   >
     A simple badge!
   </span>
@@ -184,7 +186,7 @@ exports[`OE - badge secondary renders correctly 1`] = `
 exports[`OE - badge success outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-success text-white"
+    class="badge badge-outline-success"
   >
     A simple badge!
   </span>
@@ -194,7 +196,7 @@ exports[`OE - badge success outline renders correctly 1`] = `
 exports[`OE - badge success renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-success text-white"
+    class="badge bg-success"
   >
     A simple badge!
   </span>
@@ -204,7 +206,7 @@ exports[`OE - badge success renders correctly 1`] = `
 exports[`OE - badge warning outline renders correctly 1`] = `
 <jest>
   <span
-    class="badge badge-outline-warning text-dark"
+    class="badge badge-outline-warning"
   >
     A simple badge!
   </span>
@@ -214,7 +216,7 @@ exports[`OE - badge warning outline renders correctly 1`] = `
 exports[`OE - badge warning renders correctly 1`] = `
 <jest>
   <span
-    class="badge bg-warning text-dark"
+    class="badge bg-warning"
   >
     A simple badge!
   </span>

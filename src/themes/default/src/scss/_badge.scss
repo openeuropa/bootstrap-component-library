@@ -27,12 +27,13 @@
   }
 }
 
-a.badge {
-  text-decoration: none;
-}
-
 @each $color, $value in $theme-colors {
   .badge.bg-#{$color} {
+    @if $color == light or $color == warning {
+      color: $black;
+    } @else {
+      color: $white;
+    }
     .icon--close {
       color: $value;
       @if $color == light or $color == warning {
@@ -53,32 +54,30 @@ a.badge {
       }
     }
   }
-  a.badge-outline-#{$color} {
+  a {
     &:focus,
     &:active,
     &:hover {
-      background: $value !important;
-      @if $color == light or $color == warning {
-        color: $black !important;
-      } @else {
-        color: $white !important;
+      .badge-outline-#{$color} {
+        background-color: tint-color($value, 90%) !important;
+        border-color: shade-color($value, 15%) !important;
       }
-      .icon--close {
-        background: $white;
-        color: $value;
-        @if $color == light or $color == warning {
-          background: $black;
-        } @else {
-          background: $white;
-        }
+      .badge.bg-#{$color} {
+        background-color: shade-color($value, 15%) !important;
       }
     }
-  }
-  a.badge.bg-#{$color} {
-    &:focus,
-    &:active,
-    &:hover {
-      background-color: shade-color($value, 15%) !important;
+    &:focus {
+      .badge.bg-#{$color},
+      .badge-outline-#{$color} {
+        @if $enable-shadows {
+          @include box-shadow(
+            $badge-active-box-shadow,
+            0 0 0 $badge-focus-width rgba($value, 0.5)
+          );
+        } @else {
+          box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
+        }
+      }
     }
   }
 }

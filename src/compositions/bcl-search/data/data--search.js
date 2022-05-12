@@ -336,11 +336,13 @@ module.exports = {
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
+      url: "/example.html",
       attributes: new drupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 01",
       background: "light",
+      url: "/example.html",
       icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
@@ -348,6 +350,7 @@ module.exports = {
     {
       label: "Item 02",
       background: "light",
+      url: "/example.html",
       icon_path: "/icons.svg",
       dismissible: true,
       attributes: new drupalAttribute().addClass(["me-2"]),
