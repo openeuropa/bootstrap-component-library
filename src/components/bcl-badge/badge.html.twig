@@ -27,10 +27,6 @@
   {% set _classes = _classes|merge(['rounded-pill']) %}
 {% endif %}
 
-{% if _dismissible %}
-  {% set _classes = _classes|merge(['dismissible']) %}
-{% endif %}
-
 {% if _outline %}
   {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
 {% else %}
