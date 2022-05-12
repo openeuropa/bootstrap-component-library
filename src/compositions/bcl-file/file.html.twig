@@ -138,7 +138,7 @@
             path: _icon_path,
           },
           attributes: create_attribute()
-                      .setAttribute('download', _download.url)
+                      .setAttribute('download', true)
                       .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0'])
         }) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
