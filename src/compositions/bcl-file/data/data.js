@@ -5,7 +5,7 @@ module.exports = {
   icon_path: "/icons.svg",
   download: {
     label: "Download",
-    url: "/example.html",
+    path: "/example.html",
   },
   icon: {
     name: "file-pdf-fill",
@@ -28,7 +28,7 @@ module.exports = {
         meta: "(16.2 MB - PDF)",
         download: {
           label: "Download",
-          url: "/example.html",
+          path: "http://www.africau.edu/images/default/sample.pdf",
         },
       },
       {
@@ -36,7 +36,7 @@ module.exports = {
         meta: "(16.2 MB - PDF)",
         download: {
           label: "Download",
-          url: "/example.html",
+          path: "/example.html",
         },
       },
       {
@@ -44,7 +44,7 @@ module.exports = {
         meta: "(16.2 MB - PDF)",
         download: {
           label: "Download",
-          url: "/example.html",
+          path: "/example.html",
         },
       },
       {
