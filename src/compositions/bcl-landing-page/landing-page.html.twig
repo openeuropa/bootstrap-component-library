@@ -11,7 +11,7 @@
 <div class="container">
   {% if featured_section is defined %}
     <div class="my-4">
-      <h2 class="mb-4 fw-bold">{{ featured_section.title }}</h2>
+      <h2 class="mb-4">{{ featured_section.title }}</h2>
       <div class="row">
         <div class="col-12 col-md-6">
           {{ featured_section.content }}
@@ -37,7 +37,7 @@
 
   {% if activity_featured is defined %}
     <div class="my-4">
-      <h2 class="mb-4 fw-bold">{{ activity_featured.title }}</h2>
+      <h2 class="mb-4">{{ activity_featured.title }}</h2>
       <div class="row">
         <div class="col-12 col-md-6">
           {{ activity_featured.content }}

@@ -7,7 +7,7 @@
 {% block content %}
   {% if authors is defined and authors is not empty %}
     <h2
-      class="fw-bold mb-2-5"
+      class="mb-2-5"
       id="{{ authors.title_id }}"
     >
       {{- authors.title -}}
@@ -25,7 +25,7 @@
 
   {% if description is defined and description is not empty %}
     <h2
-      class="fw-bold mb-4 pt-2-5"
+      class="mb-4 pt-2-5"
       id="{{ description.title_id }}"
     >
       {{- description.title -}}
@@ -44,7 +44,7 @@
   {% if social_block is not empty %}
     {% block social_block %}
       <h2
-        class="fw-bold mb-4 pt-3"
+        class="mb-4 pt-3"
         id="{{ social.title_id }}"
       >
         {{- social.title -}}

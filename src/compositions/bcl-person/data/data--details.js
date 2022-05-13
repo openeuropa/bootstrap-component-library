@@ -3,7 +3,6 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   banner: {
     title: "Stefan Mayer",
-    title_attributes: new drupalAttribute().addClass("fw-bold"),
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",

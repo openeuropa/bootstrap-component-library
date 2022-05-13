@@ -3,7 +3,7 @@
 {% block sidebar %}
   <div class="mb-4">
     {% include '@oe-bcl/bcl-button/button.html.twig' with sidebar.button only %}
-    <h3 class="fw-bold mb-4 mt-4">Event Details</h3>
+    <h3 class="mb-4 mt-4">Event Details</h3>
     <div class="mt-3-5">
       {% for list in sidebar.lists %}
         <div class="mb-3-5">
@@ -17,7 +17,7 @@
 {% block content %}
   {% if description is defined and description is not empty %}
     <h2
-      class="fw-bold mb-4"
+      class="mb-4"
       id="{{ description.title_id }}"
     >
       {{- description.title -}}
@@ -38,7 +38,7 @@
   {% if social_block is not empty %}
     {% block social_block %}
       <h2
-        class="fw-bold mb-4 pt-4"
+        class="mb-4 pt-4"
         id="{{ social.title_id }}"
       >
         {{- social.title -}}

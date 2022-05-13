@@ -27,7 +27,7 @@
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
-{% set _title_attributes = title_attributes ?: create_attribute().addClass(['fw-bold']) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _variant = variant|default('default') %}
 {% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _display_icons = display_icons ?? true %}
@@ -96,12 +96,12 @@
         {% include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
       {% endif %}
       {% if _item.title is defined and _item.title is not empty %}
-        <div class="h4 text-capitalize fw-bold mt-2">
+        <div class="h4 text-capitalize mt-2">
           {{- _item.title -}}
         </div>
       {% endif %}
       {% if _item.subtitle is defined and _item.subtitle is not empty %}
-        <div class="h5 fw-bold">
+        <div class="h5">
           {{- _item.subtitle -}}
         </div>
       {% endif %}
