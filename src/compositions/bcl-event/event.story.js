@@ -34,9 +34,11 @@ if (isChromatic() || chromatic) {
   dataPage.banner.image.classes = "chromatic-ignore";
 }
 
-delete file.translation;
-file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
-const files = [file, file];
+let simpleFile = { ...file };
+
+delete simpleFile.translation;
+simpleFile.attributes = new drupalAttribute().addClass(["mb-3-5"]);
+const files = [simpleFile, simpleFile];
 
 const baseData = {
   content_type: "event",
