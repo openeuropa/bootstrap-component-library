@@ -42,6 +42,14 @@ module.exports = {
             placeholder: "Email",
           },
         ],
+        [
+          {
+            classes: "mt-4",
+            input_type: "checkbox",
+            label: "Group Contacts",
+            id: "group-filter",
+          },
+        ],
       ],
       submit: {
         multiple: true,

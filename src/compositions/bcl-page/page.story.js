@@ -95,6 +95,11 @@ export default {
       },
     },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1",
+      },
+    },
     layout: "fullscreen",
     controls: {
       disable: true,

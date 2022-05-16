@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  {% if social_media.main_title is not empty %}
+  {# {% if social_media.main_title is not empty %}
     <h2
       class="mb-4"
     >{{- social_media.main_title -}}</h2>
@@ -16,7 +16,7 @@
       {% include '@oe-bcl/bcl-link/link.html.twig' with link only %}
     {% endfor %}
     </div>
-  {% endif %}
+  {% endif %} #}
 
   {% if information.main_title is not empty %}
     <h2

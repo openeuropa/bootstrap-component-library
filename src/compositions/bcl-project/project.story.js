@@ -6,7 +6,6 @@ import {
   correctPaths,
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
@@ -18,6 +17,7 @@ import {
   pageTitleBanner,
   share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
+import dataGallery from "@openeuropa/bcl-gallery/data/data.js";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
@@ -36,9 +36,6 @@ const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic() || chromatic) {
-  dataContent.gallery.items.forEach((item) => {
-    item.attributes = new drupalAttribute().addClass("chromatic-ignore");
-  });
   banner.image.classes = "chromatic-ignore";
   dataListing.listing.items.forEach((item) => {
     if (item.image) {
@@ -63,6 +60,10 @@ const demoPage = {
   ...dataContent,
   ...dataExtraDetails,
   ...dataLists,
+  gallery: {
+    title: "Gallery",
+    ...dataGallery,
+  },
   project_status_title: "Project details",
   project_status_id: "project-details",
   project_contributions: dataContributions,
@@ -110,7 +111,7 @@ export default {
     badges: ["stable"],
     badgesConfig: {
       stable: {
-        title: "v1.1",
+        title: "v1.2",
       },
     },
     design: [

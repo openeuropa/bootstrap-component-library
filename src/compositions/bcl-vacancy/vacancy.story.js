@@ -3,22 +3,20 @@ import isChromatic from "chromatic/isChromatic";
 import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import drupalAttribute from "drupal-attribute";
 import {
   filterButton,
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import {
-  simpleBanner,
-  pageTitleBanner,
-} from "@openeuropa/bcl-base-templates/data/content-page";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 
 import dataListing from "@openeuropa/bcl-vacancy/data/data--listing";
 import dataContent from "@openeuropa/bcl-vacancy/data/data";
 import dataSidebarDetails from "@openeuropa/bcl-vacancy/data/data--sidebar-details";
 import detailsPage from "@openeuropa/bcl-vacancy/vacancy.html.twig";
+import dataOpenBanner from "@openeuropa/bcl-vacancy/data/data--open-banner";
+import dataClosedBanner from "@openeuropa/bcl-vacancy/data/data--closed-banner";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
@@ -28,21 +26,6 @@ const header =
 if (isChromatic() || chromatic) {
   pageTitleBanner.image.classes = "chromatic-ignore";
 }
-
-const sidebarOpen = {
-  ...dataSidebarDetails,
-  button: {
-    label: "Apply now",
-  },
-};
-
-const sidebarClosed = {
-  ...dataSidebarDetails,
-  button: {
-    label: "Vacancy closed",
-    disabled: true,
-  },
-};
 
 const baseData = {
   content_type: "listing",
@@ -56,16 +39,16 @@ const baseData = {
 const demoDetails = {
   ...baseData,
   ...dataContent,
-  sidebar: sidebarOpen,
-  banner: { ...simpleBanner, background: "gray" },
+  sidebar: dataSidebarDetails,
+  banner: dataOpenBanner,
   social_block: true,
 };
 
 const demoDetailsClosed = {
   ...baseData,
   ...dataContent,
-  sidebar: sidebarClosed,
-  banner: { ...simpleBanner, background: "gray" },
+  sidebar: dataSidebarDetails,
+  banner: dataClosedBanner,
   social_block: true,
 };
 
@@ -92,11 +75,6 @@ export default {
       disable: true,
     },
     badges: ["stable"],
-    badgesConfig: {
-      stable: {
-        title: "v1.1",
-      },
-    },
     design: [
       {
         name: "Mockup",

@@ -37,6 +37,11 @@ export default {
     decorators: [withCode, withDesign],
     controls: { disable: true },
     badges: ["stable"],
+    badgesConfig: {
+      stable: {
+        title: "v1",
+      },
+    },
     design: [
       {
         name: "Mockup",

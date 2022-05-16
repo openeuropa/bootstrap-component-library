@@ -113,11 +113,6 @@ export default {
     layout: "fullscreen",
     controls: { disable: true },
     badges: ["stable"],
-    badgesConfig: {
-      stable: {
-        title: "v1.1",
-      },
-    },
     a11y: {
       config: {
         rules: [
