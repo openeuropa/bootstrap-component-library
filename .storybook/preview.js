@@ -15,7 +15,7 @@ export const parameters = {
   layout: "padded",
   badgesConfig: {
     [BADGE.STABLE]: {
-      title: 'v1',
+      title: 'v1.1',
       styles: {
         fontSize: '20',
         paddingInline: '24px',

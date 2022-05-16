@@ -36,23 +36,9 @@
   {% endif %}
 
   {% if file is not empty %}
-    <div class="pt-2">
+    <div class="pt-2 pb-4-5">
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     </div>
-  {% endif %}
-
-  {% if social_block is not empty %}
-    {% block social_block %}
-      <h2
-        class="fw-bold mb-4 pt-3"
-        id="{{ social.title_id }}"
-      >
-        {{- social.title -}}
-      </h2>
-      {{ social_buttons }}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
-      {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
-    {% endblock %}
   {% endif %}
 
 {% endblock %}

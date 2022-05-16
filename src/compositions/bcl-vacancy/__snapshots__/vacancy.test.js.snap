@@ -634,28 +634,47 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 <h1
                   class="fw-bold card-title bcl-heading"
                 >
-                  This is the title of this page
+                  Senior Expert on Internal Models
                 </h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                </p>
                 <div
-                  class="mb-4 mt-4"
+                  class="mt-2-5"
                 >
                   <span
-                    class="text-muted me-3"
+                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
                   >
-                    17 October 2019
+                    Opened
+                  </span>
+                  <span
+                    class="mb-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Type 2
                   </span>
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
-            Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
-            Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
-            Duis tristique fringilla magna, eu egestas dolor molestie non.
-                </p>
               </div>
             </div>
           </div>
         </article>
+        <div
+          class="d-grid d-md-block mt-3-5"
+        >
+          <button
+            class="btn btn-primary btn-md"
+            disabled=""
+            type="button"
+          >
+            <svg
+              class="me-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#pencil-fill"
+              />
+            </svg>
+            Apply now
+          </button>
+        </div>
       </div>
     </div>
     <div
@@ -670,18 +689,10 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           <div
             class="mb-4"
           >
-            <button
-              aria-disabled="true"
-              class="btn btn-primary btn-md"
-              disabled="true"
-              type="button"
-            >
-              Vacancy closed
-            </button>
             <h3
-              class="fw-bold mb-4 mt-4"
+              class="fw-bold mb-4"
             >
-              Event Details
+              Vacancy details
             </h3>
             <div
               class="mt-3-5"
@@ -742,9 +753,9 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
         >
           <h2
             class="fw-bold mb-4"
-            id="description"
+            id=""
           >
-            Description
+            Vacancy description
           </h2>
           <p
             class="mb-3"
@@ -754,13 +765,534 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
           </p>
           <p
             class="mb-3"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
           </p>
+          <div
+            class="pt-4"
+          >
+            <h2
+              class="fw-bold mb-4 bcl-heading"
+            >
+              File download
+            </h2>
+            <div
+              class="bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-lighter py-3 px-4 border-top"
+              >
+                <div
+                  class="text-end text-md-center"
+                >
+                  <a
+                    aria-controls="language-dropdown"
+                    aria-expanded="false"
+                    class="standalone"
+                    data-bs-toggle="collapse"
+                    href="#language-dropdown"
+                    role="button"
+                  >
+                    Other languages (3)
+                    <svg
+                      class="ms-2-5 bi icon--2xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#caret-down-fill"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="collapse"
+                  id="language-dropdown"
+                >
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title FR
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Français
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title ES
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Español
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title BG
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          български
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pt-3"
+                  >
+                    <p
+                      class="mb-2 d-inline-block me-2"
+                    >
+                      Looking for another language which is not on the list? 
+                    </p>
+                    <a
+                      href="/example.html"
+                    >
+                      Find out why.
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pt-4"
+          >
+            <div
+              class="bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-lighter py-3 px-4 border-top"
+              >
+                <div
+                  class="text-end text-md-center"
+                >
+                  <a
+                    aria-controls="language-dropdown"
+                    aria-expanded="false"
+                    class="standalone"
+                    data-bs-toggle="collapse"
+                    href="#language-dropdown"
+                    role="button"
+                  >
+                    Other languages (3)
+                    <svg
+                      class="ms-2-5 bi icon--2xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#caret-down-fill"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="collapse"
+                  id="language-dropdown"
+                >
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title FR
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Français
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title ES
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Español
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title BG
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          български
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pt-3"
+                  >
+                    <p
+                      class="mb-2 d-inline-block me-2"
+                    >
+                      Looking for another language which is not on the list? 
+                    </p>
+                    <a
+                      href="/example.html"
+                    >
+                      Find out why.
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <h2
             class="fw-bold mb-4 pt-4"
             id="share"
@@ -1925,28 +2457,46 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 <h1
                   class="fw-bold card-title bcl-heading"
                 >
-                  This is the title of this page
+                  Senior Expert on Internal Models
                 </h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                </p>
                 <div
-                  class="mb-4 mt-4"
+                  class="mt-2-5"
                 >
                   <span
-                    class="text-muted me-3"
+                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
                   >
-                    17 October 2019
+                    Opened
+                  </span>
+                  <span
+                    class="mb-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Type 2
                   </span>
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
-            Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
-            Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
-            Duis tristique fringilla magna, eu egestas dolor molestie non.
-                </p>
               </div>
             </div>
           </div>
         </article>
+        <div
+          class="d-grid d-md-block mt-3-5"
+        >
+          <button
+            class="btn btn-primary btn-md"
+            type="button"
+          >
+            <svg
+              class="me-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#pencil-fill"
+              />
+            </svg>
+            Apply now
+          </button>
+        </div>
       </div>
     </div>
     <div
@@ -1961,16 +2511,10 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           <div
             class="mb-4"
           >
-            <button
-              class="btn btn-primary btn-md"
-              type="button"
-            >
-              Apply now
-            </button>
             <h3
-              class="fw-bold mb-4 mt-4"
+              class="fw-bold mb-4"
             >
-              Event Details
+              Vacancy details
             </h3>
             <div
               class="mt-3-5"
@@ -2031,9 +2575,9 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
         >
           <h2
             class="fw-bold mb-4"
-            id="description"
+            id=""
           >
-            Description
+            Vacancy description
           </h2>
           <p
             class="mb-3"
@@ -2043,13 +2587,534 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
           </p>
           <p
             class="mb-3"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
           </p>
+          <div
+            class="pt-4"
+          >
+            <h2
+              class="fw-bold mb-4 bcl-heading"
+            >
+              File download
+            </h2>
+            <div
+              class="bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-lighter py-3 px-4 border-top"
+              >
+                <div
+                  class="text-end text-md-center"
+                >
+                  <a
+                    aria-controls="language-dropdown"
+                    aria-expanded="false"
+                    class="standalone"
+                    data-bs-toggle="collapse"
+                    href="#language-dropdown"
+                    role="button"
+                  >
+                    Other languages (3)
+                    <svg
+                      class="ms-2-5 bi icon--2xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#caret-down-fill"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="collapse"
+                  id="language-dropdown"
+                >
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title FR
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Français
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title ES
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Español
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title BG
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          български
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pt-3"
+                  >
+                    <p
+                      class="mb-2 d-inline-block me-2"
+                    >
+                      Looking for another language which is not on the list? 
+                    </p>
+                    <a
+                      href="/example.html"
+                    >
+                      Find out why.
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pt-4"
+          >
+            <div
+              class="bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-lighter py-3 px-4 border-top"
+              >
+                <div
+                  class="text-end text-md-center"
+                >
+                  <a
+                    aria-controls="language-dropdown"
+                    aria-expanded="false"
+                    class="standalone"
+                    data-bs-toggle="collapse"
+                    href="#language-dropdown"
+                    role="button"
+                  >
+                    Other languages (3)
+                    <svg
+                      class="ms-2-5 bi icon--2xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#caret-down-fill"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="collapse"
+                  id="language-dropdown"
+                >
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title FR
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Français
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title ES
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Español
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <p
+                          class="fw-bold m-0"
+                        >
+                          File title BG
+                        </p>
+                        <p
+                          class="m-0"
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                        </p>
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          български
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="#"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pt-3"
+                  >
+                    <p
+                      class="mb-2 d-inline-block me-2"
+                    >
+                      Looking for another language which is not on the list? 
+                    </p>
+                    <a
+                      href="/example.html"
+                    >
+                      Find out why.
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <h2
             class="fw-bold mb-4 pt-4"
             id="share"
@@ -3278,7 +4343,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   <legend
                     class="col-form-label"
                   >
-                    Type
+                    Status
                   </legend>
                   <div
                     class="col-sm-10"
@@ -3292,14 +4357,14 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                         <input
                           checked="true"
                           class="form-check-input"
-                          id="type-1"
+                          id="opened"
                           type="checkbox"
                         />
                         <label
                           class="form-check-label"
-                          for="type-1"
+                          for="opened"
                         >
-                          Type 1
+                          Opened
                         </label>
                       </div>
                     </div>
@@ -3312,59 +4377,82 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                         <input
                           checked="true"
                           class="form-check-input"
-                          id="type-2"
+                          id="closed"
                           type="checkbox"
                         />
                         <label
                           class="form-check-label"
-                          for="type-2"
+                          for="closed"
                         >
-                          Type 2
-                        </label>
-                      </div>
-                    </div>
-                    <div
-                      class="mb-2"
-                    >
-                      <div
-                        class="form-check"
-                      >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          id="type-3"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="type-3"
-                        >
-                          Type 3
-                        </label>
-                      </div>
-                    </div>
-                    <div
-                      class="mb-2"
-                    >
-                      <div
-                        class="form-check"
-                      >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          id="type-4"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="type-4"
-                        >
-                          Type 4
+                          Closed
                         </label>
                       </div>
                     </div>
                   </div>
                 </fieldset>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                    for="type"
+                  >
+                    Type
+                  </label>
+                  <select
+                    class="form-select"
+                    id="type"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      All
+                    </option>
+                  </select>
+                </div>
+                <label
+                  class="form-label"
+                  for="opening-date"
+                >
+                  Opening date
+                </label>
+                <input
+                  class="mb-2 form-control"
+                  id="opening-date"
+                  type="date"
+                />
+                <label
+                  class="form-label"
+                  for="closing-date"
+                >
+                  Closing date
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="closing-date"
+                  type="date"
+                />
                 <div
                   class="mt-4 d-grid gap-4 d-md-block"
                 >
@@ -3422,41 +4510,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
               <span
                 class="mb-2 me-2 badge bg-light text-dark"
               >
-                Type 1
-                <span
-                  aria-hidden="true"
-                  class="icon--close"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="mb-2 me-2 badge bg-light text-dark"
-              >
-                Type 2
-                <span
-                  aria-hidden="true"
-                  class="icon--close"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
-                </span>
-              </span>
-              <span
-                class="mb-2 me-2 badge bg-light text-dark"
-              >
-                Type 3
+                Opened
                 <span
                   aria-hidden="true"
                   class="icon--close"
@@ -3532,53 +4586,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=1"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Senior Expert on Internal Models
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 2
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3590,53 +4637,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=2"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3648,53 +4688,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=3"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3706,53 +4739,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=4"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3764,53 +4790,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=5"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3822,53 +4841,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=6"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3880,53 +4892,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=7"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3938,53 +4943,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=8"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -3996,53 +4994,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=9"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
@@ -4054,53 +5045,46 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="row"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
-                        src="https://picsum.photos/160?random=10"
-                      />
-                    </div>
-                    <div
-                      class="col-md-9 col-lg-10"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
+                      <a
+                        class="standalone"
+                        href="/example.html"
                       >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Publication with an image
-                          </a>
-                        </h1>
-                        <p
-                          class="card-text mb-2-5"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
-                        </p>
-                        <span
-                          class="text-muted text-nowrap"
-                        >
-                          17 October 2019
-                        </span>
-                        <div
-                          class="mt-2-5"
-                        >
-                          <span
-                            class="me-2 mb-2 badge rounded-pill badge-outline-primary"
-                          >
-                            Type 1
-                          </span>
-                        </div>
-                      </div>
+                        Vacancy exemple title
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text mb-2-5"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                    <span
+                      class="text-muted text-nowrap"
+                    >
+                      Opening date : 19 April 2022
+                    </span>
+                    <span
+                      class="ms-4 text-muted text-nowrap"
+                    >
+                      Closing date : 21 December 2022
+                    </span>
+                    <div
+                      class="mt-2-5"
+                    >
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Opened
+                      </span>
+                      <span
+                        class="me-2 mb-2 badge rounded-pill badge-outline-primary"
+                      >
+                        Type 1
+                      </span>
                     </div>
                   </div>
                 </article>
