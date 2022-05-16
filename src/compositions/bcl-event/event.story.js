@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import isChromatic from "chromatic/isChromatic";
 
 import {
   initScrollspy,
@@ -14,7 +15,6 @@ import {
 } from "@openeuropa/bcl-base-templates/data/listing-page";
 import {
   file,
-  banner,
   pageTitleBanner,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import date from "@openeuropa/bcl-date-block/data/data";
@@ -25,13 +25,20 @@ import drupalAttribute from "drupal-attribute";
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
 import event from "@openeuropa/bcl-event/event.html.twig";
+const chromatic = process.env.STORYBOOK_ENV;
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
-delete file.translation;
-file.attributes = new drupalAttribute().addClass(["mb-3-5"]);
-const files = [file, file];
+if (isChromatic() || chromatic) {
+  dataPage.banner.image.classes = "chromatic-ignore";
+}
+
+let simpleFile = { ...file };
+
+delete simpleFile.translation;
+simpleFile.attributes = new drupalAttribute().addClass(["mb-3-5"]);
+const files = [simpleFile, simpleFile];
 
 const baseData = {
   content_type: "event",
@@ -44,22 +51,21 @@ const baseData = {
 };
 
 let banner_simple = {
-  ...banner,
+  ...dataPage.banner,
 };
 delete banner_simple.image;
 
 const demoData = {
   ...baseData,
   ...dataPage,
-  banner: banner_simple,
   files: files,
 };
 
-const demoData1 = {
+const demoDateData = {
   ...baseData,
   ...dataPage,
   banner: {
-    ...banner,
+    ...dataPage.banner,
     image: {},
     date,
   },
@@ -97,7 +103,7 @@ export default {
     badges: ["stable"],
     badgesConfig: {
       stable: {
-        title: "v1.1",
+        title: "v1.2",
       },
     },
     design: [
@@ -120,7 +126,7 @@ export const FullPage = () => event(correctPaths(demoData));
 FullPage.storyName = "Event page";
 FullPage.decorators = [initScrollspy];
 
-export const FullPage1 = () => event(correctPaths(demoData1));
+export const FullPage1 = () => event(correctPaths(demoDateData));
 
 FullPage1.storyName = "Event page with date";
 FullPage1.decorators = [initScrollspy];
