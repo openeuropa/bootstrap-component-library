@@ -146,12 +146,12 @@ export default {
 export const Group = (args) => cardLayout(applyArgs(demoDataGroup, args));
 
 Group.args = getArgs(demoDataGroup, "group");
-Group.argTypes = getArgTypes(demoDataGroup, "group");
+Group.argTypes = getArgTypes("group");
 
 export const Grid = (args) => cardLayout(applyArgs(demoDataGrid, args));
 
 Grid.args = getArgs(demoDataGrid, "grid");
-Grid.argTypes = getArgTypes(demoDataGrid, "grid");
+Grid.argTypes = getArgTypes("grid");
 
 export const Masonry = () => cardLayout(demoDataMasonry);
 

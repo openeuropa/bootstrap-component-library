@@ -37,6 +37,10 @@
                     .addClass(_classes)
 %}
 
+{% if _static_backdrop %}
+  {% set attributes = attributes.setAttribute('data-bs-backdrop', 'static') %}
+{% endif %}
+
 <div
   {{ attributes }}
 >
@@ -45,7 +49,6 @@
   {{- _fullscreen_responsive ? ' modal-fullscreen-' ~ _fullscreen_responsive ~ '-down' -}}
   {{- _verticaly_centered ? ' modal-dialog-centered' -}}
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
-  {{- _static_backdrop ? ' data-bs-backdrop="static"' -}}
   >
     <div class="modal-content">
       {% if header is not empty %}
