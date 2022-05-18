@@ -113,10 +113,10 @@ exports[`OE - badge renders correctly as a rounded pill 1`] = `
 exports[`OE - badge renders correctly dismissible 1`] = `
 <jest>
   <span
-    class="badge actionable bg-primary"
+    class="badge bg-primary"
   >
     A simple badge!
-    <button
+    <span
       aria-hidden="true"
       class="icon--close"
     >
@@ -127,24 +127,20 @@ exports[`OE - badge renders correctly dismissible 1`] = `
           xlink:href="#x-lg"
         />
       </svg>
-    </button>
+    </span>
   </span>
 </jest>
 `;
 
 exports[`OE - badge renders correctly with a link 1`] = `
 <jest>
-  <span
-    class="badge actionable bg-primary"
+  <a
+    class="badge bg-primary"
+    href="http://example.com"
+    title="A simple badge!"
   >
-    <a
-      class="text-decoration-none"
-      href="http://example.com"
-      title="A simple badge!"
-    >
-      A simple badge!
-    </a>
-  </span>
+    A simple badge!
+  </a>
 </jest>
 `;
 
