@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.23.0 (2022-05-18)
+
+#### :rocket: New Feature
+
+* [#330](https://github.com/openeuropa/bootstrap-component-library/pull/330) feat(vacancy): Vacancy feature - OEL-1454 ([@tibi2303](https://github.com/tibi2303))
+
+#### :boom: Breaking Change
+
+* [#343](https://github.com/openeuropa/bootstrap-component-library/pull/343) feat(headings): Update heading hierarchy - OEL-1495 ([@tibi2303](https://github.com/tibi2303))
+* [#340](https://github.com/openeuropa/bootstrap-component-library/pull/340) feat(card): Changed title to heading - OEL-1496 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+
+* [#346](https://github.com/openeuropa/bootstrap-component-library/pull/346) feat(badge): Added hover/focus state - OEL-1560 ([@tibi2303](https://github.com/tibi2303))
+* [#352](https://github.com/openeuropa/bootstrap-component-library/pull/352) feat(heading): Removed font-weight bold from headings - OEL-1584 ([@tibi2303](https://github.com/tibi2303))
+* [#354](https://github.com/openeuropa/bootstrap-component-library/pull/354) feat(bugs): Multiple bugs fixed - OEL-1599 ([@tibi2303](https://github.com/tibi2303))
+* [#349](https://github.com/openeuropa/bootstrap-component-library/pull/349) feat(features): Updates on features to the latest version - OEL-1565 ([@tibi2303](https://github.com/tibi2303))
+* [#350](https://github.com/openeuropa/bootstrap-component-library/pull/350) feat(file): Adding target=_blank to download links - OEL-1570 ([@planctus](https://github.com/planctus))
+* [#345](https://github.com/openeuropa/bootstrap-component-library/pull/345) feat(user): Update to v1.1 - OEL-1538 ([@tibi2303](https://github.com/tibi2303))
+* [#341](https://github.com/openeuropa/bootstrap-component-library/pull/341) feat(dates): Aligning date format used in the library - OEL-1541 ([@planctus](https://github.com/planctus))
+* [#335](https://github.com/openeuropa/bootstrap-component-library/pull/335) feat(content-banner): Using single parameter for the action bar in content banner - OEL-1517 ([@planctus](https://github.com/planctus))
+* [#338](https://github.com/openeuropa/bootstrap-component-library/pull/338) feat(spacings): Added general spacings for content banner and footer - OEL-1507 ([@tibi2303](https://github.com/tibi2303))
+* [#332](https://github.com/openeuropa/bootstrap-component-library/pull/332) feat(table): Added responsive story for tables - OEL-1474 ([@tibi2303](https://github.com/tibi2303))
+* [#328](https://github.com/openeuropa/bootstrap-component-library/pull/328) feat(headers): Added subthemes header - OEL-1437 ([@tibi2303](https://github.com/tibi2303))
+* [#331](https://github.com/openeuropa/bootstrap-component-library/pull/331) feat(page-titles): Added titles for features - OEL-1466 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#355](https://github.com/openeuropa/bootstrap-component-library/pull/355) chore(deps): Updates 18-05-22 ([@planctus](https://github.com/planctus))
+* [#353](https://github.com/openeuropa/bootstrap-component-library/pull/353) chore(deps): Updates 16-05-22 ([@planctus](https://github.com/planctus))
+* [#351](https://github.com/openeuropa/bootstrap-component-library/pull/351) chore(deps): Updates 13-05-22 ([@planctus](https://github.com/planctus))
+* [#348](https://github.com/openeuropa/bootstrap-component-library/pull/348) chore(deps): Updates 10-05-22 ([@planctus](https://github.com/planctus))
+* [#347](https://github.com/openeuropa/bootstrap-component-library/pull/347) chore(deps): Updates 05-05-22 ([@planctus](https://github.com/planctus))
+* [#344](https://github.com/openeuropa/bootstrap-component-library/pull/344) chore(deps): Updates 03-05-22 ([@planctus](https://github.com/planctus))
+* [#339](https://github.com/openeuropa/bootstrap-component-library/pull/339) chore(semantic pr): Using github action ([@planctus](https://github.com/planctus))
+* [#337](https://github.com/openeuropa/bootstrap-component-library/pull/337) chore(deps): Updates 25-04-22 ([@planctus](https://github.com/planctus))
+* [#333](https://github.com/openeuropa/bootstrap-component-library/pull/333) chore(deps): Updates 19-04-22 ([@planctus](https://github.com/planctus))
+* [#329](https://github.com/openeuropa/bootstrap-component-library/pull/329) chore(deps): updates 13-04-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.22.0 (2022-04-12)
 
 #### :rocket: New Feature
