@@ -72,5 +72,15 @@
         background-color: shade-color($value, 15%) !important;
       }
     }
+    &:focus-within {
+      @if $enable-shadows {
+        @include box-shadow(
+          $badge-active-box-shadow,
+          0 0 0 $badge-focus-width rgba($value, 0.5)
+        );
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
+      }
+    }
   }
 }
