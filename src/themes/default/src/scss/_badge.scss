@@ -30,6 +30,9 @@
 
 a.badge {
   text-decoration: none;
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 @each $color, $value in $theme-colors {
@@ -89,18 +92,27 @@ a.badge {
         background-color: shade-color($value, 15%) !important;
       }
     }
-    &:focus {
-      @if $enable-shadows {
-        @include box-shadow(
-          $badge-active-box-shadow,
-          0 0 0 $badge-focus-width rgba($value, 0.5)
-        );
-      } @else {
-        box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
+    &.badge.bg-#{$color} {
+      &:focus {
+        @if $enable-shadows {
+          @include box-shadow(
+            $btn-box-shadow,
+            0 0 0 $btn-focus-width
+              rgba(mix(color-contrast($value), $value, 15%), 0.5)
+          );
+        } @else {
+          box-shadow: 0
+            0
+            0
+            $btn-focus-width
+            rgba(mix(color-contrast($value), $value, 15%), 0.5);
+        }
       }
     }
-    &:focus-visible {
-      outline: none;
+    &.badge-outline-#{$color} {
+      &:focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
+      }
     }
   }
 }
