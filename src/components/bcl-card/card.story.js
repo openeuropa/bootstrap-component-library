@@ -39,14 +39,14 @@ const getArgs = (data, type) => {
 const getArgTypes = (data, type) => {
   let argTypes = {
     title: {
-      type: { name: "object" },
+      type: { name: "string" },
       description: "Title of the card",
       control: {
-        type: "object",
+        type: "text",
       },
       table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
         category: "Content",
       },
     },
