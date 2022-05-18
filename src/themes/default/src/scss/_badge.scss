@@ -16,7 +16,6 @@
     font-weight: 300;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     background: $white;
     border-radius: 50%;
     border: none;
@@ -99,6 +98,9 @@ a.badge {
       } @else {
         box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
       }
+    }
+    &:focus-visible {
+      outline: none;
     }
   }
 }
