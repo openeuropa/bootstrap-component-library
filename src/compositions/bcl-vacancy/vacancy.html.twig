@@ -2,7 +2,7 @@
 
 {% block sidebar %}
   <div class="mb-4">
-    <h3 class="fw-bold mb-4">Vacancy details</h3>
+    <h3 class="mb-4">Vacancy details</h3>
     <div class="mt-3-5">
       {% for list in sidebar.lists %}
         <div class="mb-3-5">
@@ -16,7 +16,7 @@
 {% block content %}
   {% if description is defined and description is not empty %}
     <h2
-      class="fw-bold mb-4"
+      class="mb-4"
       id="{{ description.title_id }}"
     >
       {{- description.title -}}
@@ -37,7 +37,7 @@
   {% if social_block is not empty %}
     {% block social_block %}
       <h2
-        class="fw-bold mb-4 pt-4"
+        class="mb-4 pt-4"
         id="{{ social.title_id }}"
       >
         {{- social.title -}}

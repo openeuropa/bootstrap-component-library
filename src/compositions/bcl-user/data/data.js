@@ -74,7 +74,6 @@ module.exports = {
     banner: {
       title: "Stefan Mayer",
       title_tag: "h1",
-      title_attributes: new drupalAttribute().addClass("fw-bold"),
       image: {
         path: "https://picsum.photos/200/200?random=6",
         alt: "alt img",

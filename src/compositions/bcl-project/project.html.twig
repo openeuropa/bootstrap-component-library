@@ -6,7 +6,7 @@
 
 {% block content %}
   {% if project_status_title is not empty %}
-    {% set _project_title_attributes = create_attribute().addClass(['fw-bold', 'mb-4']) %}
+    {% set _project_title_attributes = create_attribute().addClass(['mb-4']) %}
     {% if project_status_id is not empty %}
       {% set _project_title_attributes = _project_title_attributes.setAttribute('id', project_status_id) %}
     {% endif %}
@@ -32,7 +32,7 @@
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _paragraph.title,
         title_tag: 'h2',
-        attributes: create_attribute().addClass(['fw-bold', 'mb-4', 'pt-3'])
+        attributes: create_attribute().addClass(['mb-4', 'pt-3'])
                                       .setAttribute('id', _paragraph.title_id),
       } only %}
       {{- _paragraph.content -}}
@@ -52,7 +52,7 @@
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _paragraph.title,
         title_tag: 'h2',
-        attributes: create_attribute().addClass(['fw-bold', 'mb-4', 'pt-3'])
+        attributes: create_attribute().addClass(['mb-4', 'pt-3'])
                                       .setAttribute('id', _paragraph.title_id),
       } only %}
       {{- _paragraph.content -}}
@@ -60,7 +60,7 @@
   {% endif %}
 
   {% if gallery.main_title is not empty %}
-    {% set _gallery_title_attributes = create_attribute().addClass(['fw-bold', 'my-4']) %}
+    {% set _gallery_title_attributes = create_attribute().addClass(['my-4']) %}
     {% if gallery.main_title_id is not empty %}
       {% set _gallery_title_attributes = _gallery_title_attributes.setAttribute('id', gallery.main_title_id) %}
     {% endif %}
