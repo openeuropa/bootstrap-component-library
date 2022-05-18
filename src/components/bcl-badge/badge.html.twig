@@ -33,22 +33,25 @@
   {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
 {% endif %}
 
-{% if _background in ['light', 'warning'] %}
-  {% set _classes = _classes|merge(['text-dark']) %}
-{% endif %}
-
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{%- if _url is not empty -%}
+  {% set attributes = attributes.setAttribute('title', _title).setAttribute('href', _url) %}
+{%- endif -%}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 {%- if _url is not empty -%}
-<a href="{{ _url }}" title="{{ _title }}">
+<a
+  {{ attributes }}
+>
+{%- else -%}
+<span
+  {{ attributes }}
+>
 {%- endif -%}
-  <span
-    {{ attributes }}
-  >
   {%- if _assistive_text is not empty -%}
     <span class="visually-hidden">
       {{- _assistive_text -}}
@@ -63,9 +66,10 @@
       } only %}
     </span>
   {%- endif -%}
-  </span>
 {%- if _url is not empty -%}
 </a>
+{%- else -%}
+</span>
 {%- endif -%}
 
 {% endspaceless %}

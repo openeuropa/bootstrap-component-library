@@ -16,84 +16,102 @@
     font-weight: 300;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     background: $white;
     border-radius: 50%;
+    border: none;
+    padding: 0;
     svg {
       width: 6px;
       height: 6px;
       margin: 0;
     }
   }
-  &.bg-primary {
-    .icon--close {
-      color: $primary;
-    }
-  }
-  &.bg-secondary {
-    .icon--close {
-      color: $secondary;
-    }
-  }
-  &.bg-success {
-    .icon--close {
-      color: $success;
-    }
-  }
-  &.bg-danger {
-    .icon--close {
-      color: $danger;
-    }
-  }
-  &.bg-dark {
-    .icon--close {
-      color: $dark;
-    }
-  }
-  &.bg-warning {
-    .icon--close {
-      color: $warning;
-      background: $black;
-    }
-  }
-  &.bg-info {
-    .icon--close {
-      color: $info;
-      background: $black;
-    }
-  }
-  &.bg-light {
-    .icon--close {
-      color: $light;
-      background: $black;
-    }
-  }
 }
 
-// Badges in headings and other text elements
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-  .badge {
-    font-size: 0.75em; // Default size in Bootstrap
+a.badge {
+  text-decoration: none;
+  &:focus-visible {
+    outline: none;
   }
 }
 
 @each $color, $value in $theme-colors {
-  .badge-outline-#{$color} {
-    border: $border-width solid $value;
+  .badge.bg-#{$color} a,
+  .badge.bg-#{$color} {
+    @if $color == light or $color == warning {
+      color: $black;
+    } @else {
+      color: $white;
+    }
+    .icon--close {
+      color: $value;
+      @if $color == light or $color == warning {
+        background: $black;
+      }
+    }
+  }
+  .badge-outline-#{$color} a {
     color: $value !important;
+  }
+  .badge-outline-#{$color} {
     background: transparent !important;
+    @if $color == light {
+      border: $border-width solid $light;
+      color: $light !important;
+    } @else {
+      border: $border-width solid $value;
+      color: $value !important;
+    }
     .icon--close {
       background: $value;
-      color: $white;
       @if $color == light {
         color: $black;
+      } @else {
+        color: $white;
+      }
+    }
+  }
+  a.badge {
+    &:focus-within,
+    &:active,
+    &:hover {
+      &.badge-outline-#{$color} {
+        @if $color == dark {
+          background-color: $light !important;
+          border-color: $black;
+        } @else if $color == light {
+          border-color: $white;
+          color: $white;
+          background: rgba($white, 0.3) !important;
+        } @else {
+          background-color: tint-color($value, 90%) !important;
+          border-color: shade-color($value, 15%) !important;
+        }
+      }
+      &.bg-#{$color} {
+        background-color: shade-color($value, 15%) !important;
+      }
+    }
+    &.badge.bg-#{$color} {
+      &:focus {
+        @if $enable-shadows {
+          @include box-shadow(
+            $btn-box-shadow,
+            0 0 0 $btn-focus-width
+              rgba(mix(color-contrast($value), $value, 15%), 0.5)
+          );
+        } @else {
+          box-shadow: 0
+            0
+            0
+            $btn-focus-width
+            rgba(mix(color-contrast($value), $value, 15%), 0.5);
+        }
+      }
+    }
+    &.badge-outline-#{$color} {
+      &:focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
       }
     }
   }
