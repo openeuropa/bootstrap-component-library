@@ -7,7 +7,7 @@ index f7d038f..39f2282 100644
  var _theming = require("@storybook/theming");
  
 -var _ActionBar = require("@storybook/components/dist/ActionBar/ActionBar");
-+var _ActionBar = require("@storybook/components/dist/esm/ActionBar/ActionBar");
++var _ActionBar = require("@storybook/components/dist/esm/index").ActionBar;
  
  var _reactSyntaxHighlighter = _interopRequireDefault(require("react-syntax-highlighter"));
  
