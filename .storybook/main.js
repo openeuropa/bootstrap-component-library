@@ -15,6 +15,15 @@ const addons = [
 ];
 
 const webpackFinal = (config) => {
+  config.module.rules.push({
+    test: /\.story\.js?$/,
+    use: [
+      {
+        loader: require.resolve("@whitespace/storybook-addon-code/loader"),
+      },
+    ],
+    enforce: "pre",
+  });
   config.module.rules.push(
     {
       test: /\.twig$/,
