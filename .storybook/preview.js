@@ -1,5 +1,8 @@
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { Buffer } from 'buffer';
+
+global.Buffer = Buffer;
 
 export const parameters = {
   a11y: {

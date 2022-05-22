@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
+
 const chromatic = process.env.STORYBOOK_ENV;
 
 let stories = ["../../**/!(test*).story.js"];
@@ -36,12 +36,6 @@ const webpackFinal = (config) => {
       environmentModulePath: path.resolve(`${__dirname}/environment.js`),
     },
   });
-
-  config.plugins.push(
-    new webpack.ProvidePlugin({
-      Buffer: ["buffer", "Buffer"],
-    })
-  );
 
   config.plugins.forEach((plugin, i) => {
     if (plugin.constructor.name === "ProgressPlugin") {

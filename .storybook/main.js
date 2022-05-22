@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 
 const stories = ["../src/*/*/*.story.js"];
 
@@ -33,11 +32,7 @@ const webpackFinal = (config) => {
       },
     }
   );
-  config.plugins.push(
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
-    })
-  );
+
   config.plugins.forEach((plugin, i) => {
     if (plugin.constructor.name === "ProgressPlugin") {
       config.plugins.splice(i, 1);
