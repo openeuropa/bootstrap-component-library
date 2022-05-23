@@ -11,7 +11,6 @@ import {
   share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
-import dataContent from "@openeuropa/bcl-publication/data/data";
 import dataExtraDetails from "@openeuropa/bcl-publication/data/data--extra-details";
 
 const header =
@@ -39,7 +38,6 @@ const baseData = {
 
 const demoDetails = {
   ...baseData,
-  ...dataContent,
   ...dataExtraDetails,
   banner: banner,
   social_block: true,
@@ -53,7 +51,6 @@ const demoDetails = {
 
 const demoDetailsMultiple = {
   ...baseData,
-  ...dataContent,
   ...dataExtraDetails,
   banner: banner,
   social_block: true,
