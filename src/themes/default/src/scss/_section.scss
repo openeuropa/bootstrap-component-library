@@ -1,0 +1,76 @@
+$ec-spacing-l: 2rem;
+$ec-spacing-xl: 2.5rem;
+$ec-spacing-3-xl: 3rem;
+
+.bcl-section {
+  margin-bottom: $ec-spacing-xl;
+  margin-top: $ec-spacing-xl;
+
+  .bcl-section__group {
+    @include clearfix;
+  }
+
+  .bcl-section__group,
+  .field-group-section_group {
+    margin-bottom: $ec-spacing-xl;
+    margin-top: $ec-spacing-xl;
+    // This is for the "more links".
+    + a {
+      margin-top: -$ec-spacing-xl;
+    }
+  }
+
+  .bcl-section__group--collapsible {
+    padding: 0 !important;
+
+    & > * {
+      padding: $ec-spacing-xl 0 !important;
+    }
+  }
+
+  .bcl-section__group:first-child,
+  .bcl-section:first-child,
+  .sidebar-field-group__main + .sidebar-field-group__main {
+    margin-top: 0;
+  }
+
+  .bcl-section__group:last-child,
+  .bcl-section:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.row + .row .bcl-section {
+  margin-top: 0;
+}
+
+.row:first-child
+  .bcl-section__group
+  > h2
+  + .bcl-section
+  > .bcl-section--navigation {
+  margin-top: -$ec-spacing-l !important;
+}
+
+// Sidebar-field-group__main floats, it would break the collapsing margins.
+.bcl-section__group.sidebar-field-group
+  + .bcl-section__group.sidebar-field-group__main {
+  margin-top: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .bcl-section {
+    margin-bottom: $ec-spacing-3-xl;
+    margin-top: $ec-spacing-3-xl;
+  }
+
+  .bcl-section__group,
+  .field-group-section_group {
+    margin-bottom: $ec-spacing-3-xl;
+    margin-top: $ec-spacing-3-xl;
+    // This is for the "more links".
+    + a {
+      margin-top: -$ec-spacing-3-xl;
+    }
+  }
+}
