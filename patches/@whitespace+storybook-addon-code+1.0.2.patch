@@ -1,5 +1,26 @@
+diff --git a/node_modules/@whitespace/storybook-addon-code/dist/Panel.js b/node_modules/@whitespace/storybook-addon-code/dist/Panel.js
+index e667e37..3efb2f3 100644
+--- a/node_modules/@whitespace/storybook-addon-code/dist/Panel.js
++++ b/node_modules/@whitespace/storybook-addon-code/dist/Panel.js
+@@ -13,7 +13,7 @@ var _theming = require("@storybook/theming");
+ 
+ var _components = require("@storybook/components");
+ 
+-var _SyntaxHighlighter = _interopRequireDefault(require("./SyntaxHighlighter"));
++var _SyntaxHighlighter = _interopRequireDefault(require("@storybook/components").SyntaxHighlighter);
+ 
+ var _githubGist = _interopRequireDefault(require("react-syntax-highlighter/dist/esm/styles/hljs/github-gist"));
+ 
+@@ -99,6 +99,7 @@ var CodePanel = function CodePanel(_ref6) {
+     })
+   }, function (_ref7) {
+     var sourceFiles = _ref7.sourceFiles;
++
+     return sourceFiles.length ? _react["default"].createElement(StyledSyntaxHighlighter, {
+       language: lang || 'plaintext',
+       showLineNumbers: "true",
 diff --git a/node_modules/@whitespace/storybook-addon-code/dist/SyntaxHighlighter.js b/node_modules/@whitespace/storybook-addon-code/dist/SyntaxHighlighter.js
-index f7d038f..39f2282 100644
+index f7d038f..f9ff32a 100644
 --- a/node_modules/@whitespace/storybook-addon-code/dist/SyntaxHighlighter.js
 +++ b/node_modules/@whitespace/storybook-addon-code/dist/SyntaxHighlighter.js
 @@ -9,7 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
@@ -7,7 +28,33 @@ index f7d038f..39f2282 100644
  var _theming = require("@storybook/theming");
  
 -var _ActionBar = require("@storybook/components/dist/ActionBar/ActionBar");
-+var _ActionBar = require("@storybook/components/dist/esm/ActionBar/ActionBar");
++var _ActionBar = require("@storybook/components/dist/esm/index").ActionBar;
  
  var _reactSyntaxHighlighter = _interopRequireDefault(require("react-syntax-highlighter"));
  
+@@ -149,7 +149,6 @@ function (_Component) {
+           format = _this$props.format,
+           className = _this$props.className,
+           rest = _objectWithoutProperties(_this$props, ["children", "language", "copyable", "bordered", "padded", "format", "className"]);
+-
+       var copied = this.state.copied;
+       return children ? _react["default"].createElement(Wrapper, {
+         bordered: bordered,
+diff --git a/node_modules/@whitespace/storybook-addon-code/dist/loader.js b/node_modules/@whitespace/storybook-addon-code/dist/loader.js
+index 768ad6f..50d5c18 100644
+--- a/node_modules/@whitespace/storybook-addon-code/dist/loader.js
++++ b/node_modules/@whitespace/storybook-addon-code/dist/loader.js
+@@ -28,11 +28,12 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
+ function getSourceFiles(ast) {
+   var sourceFiles = [];
+   var index = 0;
++  var extensions = ['twig', 'js', 'scss'];
+ 
+   _estraverse["default"].traverse(ast, {
+     fallback: 'iteration',
+     enter: function enter(node) {
+-      if (node.type === 'ImportDeclaration') {
++      if (node.type === 'ImportDeclaration' && extensions.includes(node.source.value.split('.').pop())) {
+         sourceFiles.push({
+           path: node.source.value.replace(/^.*!/, ''),
+           id: _shared.SOURCE_FILE_IMPORT_IDENTIFIER_PREFIX + index
