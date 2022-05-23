@@ -1,27 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import { file } from "@openeuropa/bcl-base-templates/data/content-page";
-
-import layout from "@openeuropa/bcl-base-templates/data/layout";
-
-import listing from "@openeuropa/bcl-page/data/data--listing";
-import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
-
-file.translation.id = "language-dropdown";
-
-const files = [file, file];
-
-const demoData = {
-  content_type: "page",
-  header: layout.headerSimple,
-  footer: layout.footer,
-  sidebar: sidebar,
-  with_banner: true,
-  with_header: true,
-  with_footer: true,
-  listing: listing,
-  with_sidebar: true,
-  files: files,
-};
+import { demoData } from "@openeuropa/bcl-page/data/data";
 
 const template = "@oe-bcl/bcl-page/page.html.twig";
 
