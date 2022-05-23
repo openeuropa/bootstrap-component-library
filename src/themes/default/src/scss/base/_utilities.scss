@@ -83,10 +83,12 @@ a {
     }
   }
 
-  &:visited {
-    color: $link-visited;
-    &:hover {
-      color: shade-color($link-visited, 20%);
+  &:not(.btn) {
+    &:visited {
+      color: $link-visited;
+      &:hover {
+        color: shade-color($link-visited, 20%);
+      }
     }
   }
 }
