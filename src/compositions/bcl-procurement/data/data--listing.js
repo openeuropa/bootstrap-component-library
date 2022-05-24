@@ -1,6 +1,16 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  banner: {
+    title: "Procurements",
+    title_tag: "h1",
+    content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.</p>`,
+    image: {
+      path: "https://picsum.photos/255/255?random=6",
+      alt: "alt img",
+    },
+    image_size: "sm",
+  },
   sidebar: {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
@@ -26,7 +36,6 @@ module.exports = {
             input_type: "checkbox",
             label: "Opened",
             wrapper_classes: "mb-2",
-            checked: true,
             id: "opened",
           },
           {
@@ -35,6 +44,13 @@ module.exports = {
             wrapper_classes: "mb-2",
             checked: true,
             id: "closed",
+          },
+          {
+            input_type: "checkbox",
+            label: "Canceled",
+            wrapper_classes: "mb-2",
+            checked: true,
+            id: "canceled",
           },
         ],
         [
@@ -90,7 +106,14 @@ module.exports = {
   },
   badges: [
     {
-      label: "Opened",
+      label: "Closed",
+      background: "light",
+      dismissible: true,
+      icon_path: "/icons.svg",
+      attributes: new drupalAttribute().addClass(["me-2", "mb-2"]),
+    },
+    {
+      label: "Canceled",
       background: "light",
       dismissible: true,
       icon_path: "/icons.svg",
@@ -105,9 +128,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Closed",
+            background: "dark",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -119,7 +141,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Senior Expert on Internal Models",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -134,9 +156,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Canceled",
+            background: "danger",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -148,7 +169,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -163,21 +184,20 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Canceled",
+            background: "danger",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
           {
-            label: "Type 1",
+            label: "Type 3",
             background: "primary",
             outline: true,
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -192,21 +212,20 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Closed",
+            background: "dark",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
           {
-            label: "Type 1",
+            label: "Type 3",
             background: "primary",
             outline: true,
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -221,9 +240,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Closed",
+            background: "dark",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -235,7 +253,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -250,9 +268,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Canceled",
+            background: "danger",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -264,7 +281,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -279,9 +296,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Canceled",
+            background: "danger",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -293,7 +309,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -308,9 +324,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Closed",
+            background: "dark",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -322,7 +337,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -337,9 +352,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Closed",
+            background: "dark",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -351,7 +365,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
@@ -366,9 +380,8 @@ module.exports = {
       {
         badges: [
           {
-            label: "Opened",
-            background: "primary",
-            outline: true,
+            label: "Canceled",
+            background: "danger",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -380,7 +393,7 @@ module.exports = {
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
         ],
-        title: "Vacancy example title",
+        title: "Procurement title example",
         title_link: {
           path: "/example.html",
         },
