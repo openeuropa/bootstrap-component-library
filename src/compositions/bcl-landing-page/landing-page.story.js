@@ -7,10 +7,15 @@ import layout from "@openeuropa/bcl-base-templates/data/layout";
 import demoData from "@openeuropa/bcl-landing-page/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 
+const chromatic = process.env.STORYBOOK_ENV;
+const drupalAttribute = require("drupal-attribute");
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
-if (isChromatic()) {
+const footer = { ...layout.footer };
+footer.attributes = footer.attributes.removeClass(["mt-4", "mt-md-4-75"]);
+
+if (isChromatic() || chromatic) {
   demoData.listing_section.items.forEach((item) => {
     item.image.classes = item.image.classes
       ? `${item.image.classes} chromatic-ignore`
@@ -22,8 +27,8 @@ if (isChromatic()) {
 
 const dataLanding = {
   content_type: "landing-page",
-  header: header,
-  footer: layout.footer,
+  header,
+  footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
