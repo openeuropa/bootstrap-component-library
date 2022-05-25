@@ -614,6 +614,104 @@ exports[`OE - Page Page renders correctly 1`] = `
   </div>
   <main>
     <div
+      class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
+    >
+      <div
+        class="container"
+      >
+        <article
+          class="bg-transparent border-0 card"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-8 col-md-4 col-lg-3 offset-2 offset-md-0"
+            >
+              <img
+                alt="alt img"
+                class="card-img-top rounded-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+            </div>
+            <div
+              class="col-md-8 col-lg-9 col-xxl-8"
+            >
+              <div
+                class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
+              >
+                <h1
+                  class="mb-0 card-title bcl-heading"
+                >
+                  This is the title of this page
+                </h1>
+                <div
+                  class="mb-4 mt-4"
+                >
+                  <span
+                    class="text-muted me-3"
+                  >
+                    17 October 2019
+                  </span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+            Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.
+            Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus.
+            Duis tristique fringilla magna, eu egestas dolor molestie non.
+                </p>
+                <div
+                  class="mt-2-5"
+                >
+                  <span
+                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 1
+                  </span>
+                  <span
+                    class="mb-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div
+          class="d-flex justify-content-end mt-2 align-items-center"
+        >
+          <button
+            class="w-auto me-3 btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Print
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-auto btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Export
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#file-arrow-down-fill"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
       class="container mt-md-4-75 mt-4"
     >
       <div
@@ -627,7 +725,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             id="bcl-inpage-navigation"
           >
             <h3
-              class="mb-4 bcl-heading"
+              class="mb-0 bcl-heading"
             >
               Page content
             </h3>
@@ -697,121 +795,102 @@ exports[`OE - Page Page renders correctly 1`] = `
             Section 1
           </h2>
           <div
-            class="bcl-listing bcl-listing--highlight-3-col"
+            class="bcl-featured-item pb-4"
           >
             <div
-              class="row row-cols-1 row-cols-md-3 g-4"
+              class="row"
             >
               <div
-                class="col"
+                class="col-12 col-md-6 order-1"
               >
-                <article
-                  class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat.
+                </p>
+                <a
+                  href="/example.html"
                 >
-                  <img
-                    alt="alt img"
-                    class="card-img-top mb-3"
-                    src="https://picsum.photos/seed/1002/600/400"
-                  />
-                  <div
-                    class="card-body pt-0"
-                  >
-                    <h1
-                      class="fs-5 card-title bcl-heading"
-                    >
-                      <a
-                        class="standalone"
-                        href="/example.html"
-                      >
-                        Card title
-                      </a>
-                    </h1>
-                    <p
-                      class="card-text mb-2"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    </p>
-                  </div>
-                </article>
+                  Read more
+                </a>
               </div>
               <div
-                class="col"
+                class="col-12 col-md-6 order-2 mt-4 mt-md-0"
               >
-                <article
-                  class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
+                <figure
+                  class="rounded overflow-hidden"
+                  src="https://www.youtube.com/embed/VFYlYeFAEH4"
                 >
-                  <img
-                    alt="alt img"
-                    class="card-img-top mb-3"
-                    src="https://picsum.photos/seed/1003/600/400"
-                  />
                   <div
-                    class="card-body pt-0"
+                    class="ratio ratio-16x9"
                   >
-                    <h1
-                      class="fs-5 card-title bcl-heading"
-                    >
-                      <a
-                        class="standalone"
-                        href="/example.html"
-                      >
-                        Card title
-                      </a>
-                    </h1>
-                    <p
-                      class="card-text mb-2"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <iframe
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen=""
+                      frameborder="0"
+                      height="197"
+                      src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      title="New digital strategy"
+                      width="350"
+                    />
                   </div>
-                </article>
-              </div>
-              <div
-                class="col"
-              >
-                <article
-                  class="listing-item--highlight border-0 bg-lighter h-100 rounded-2 card"
-                >
-                  <img
-                    alt="alt img"
-                    class="card-img-top mb-3"
-                    src="https://picsum.photos/seed/1004/600/400"
-                  />
-                  <div
-                    class="card-body pt-0"
+                  <figcaption
+                    class="bg-lighter p-3"
                   >
-                    <h1
-                      class="fs-5 card-title bcl-heading"
-                    >
-                      <a
-                        class="standalone"
-                        href="/example.html"
-                      >
-                        Card title
-                      </a>
-                    </h1>
-                    <p
-                      class="card-text mb-2"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </article>
+                    Media description text goes here.
+                  </figcaption>
+                </figure>
               </div>
             </div>
-            <a
-              class="mt-3-5 d-inline-block"
-              href="/example.html"
+          </div>
+          <div
+            class="bg-lighter text-dark text-center bcl-banner  overlay"
+          >
+            <div
+              class="bcl-banner__image"
+              style="background-image:url(https://picsum.photos/id/154/1200/800)"
+            />
+            <div
+              class="container"
             >
-              Listing item block CTA
-              <svg
-                class="ms-2-5 bi icon--xs"
+              <div
+                class="bcl-banner__content"
               >
-                <use
-                  xlink:href="/icons.svg#chevron-right"
-                />
-              </svg>
-            </a>
+                <div
+                  class="display-6 mb-3 bcl-heading"
+                >
+                  EU Budget for the future
+                </div>
+                <p
+                  class="mb-4"
+                >
+                  Innovation, economy, environment and geopolitics
+                </p>
+                <a
+                  class="btn btn-primary"
+                  href="/example.html"
+                >
+                  Subscribe
+                  <svg
+                    class="ms-2-5 bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#chevron-right"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
           <h2
             class="my-4"
@@ -827,6 +906,27 @@ exports[`OE - Page Page renders correctly 1`] = `
   sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
   
           </p>
+          <figure
+            class="text-left bg-lighter p-2 px-2-5 border-4 border-secondary border-start"
+          >
+            <blockquote
+              class="blockquote mb-2"
+            >
+              <p>
+                A well-known quote, contained in a blockquote element.
+              </p>
+            </blockquote>
+            <figcaption
+              class="blockquote-footer m-0"
+            >
+              Someone famous in    
+              <cite
+                title="Source title"
+              >
+                Source title
+              </cite>
+            </figcaption>
+          </figure>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
   a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
@@ -850,7 +950,7 @@ exports[`OE - Page Page renders correctly 1`] = `
   
           </p>
           <div
-            class="bcl-file border rounded"
+            class="mb-3 bcl-file border rounded"
           >
             <div
               class="px-3-5 py-3"
@@ -1075,7 +1175,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="bcl-file border rounded"
+            class="mb-3 bcl-file border rounded"
           >
             <div
               class="px-3-5 py-3"

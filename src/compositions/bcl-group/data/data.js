@@ -1,122 +1,104 @@
-const drupalAttribute = require("drupal-attribute");
+import isChromatic from "chromatic/isChromatic";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
+import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+  listingProfiles,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import demoDataExtra from "@openeuropa/bcl-group/data/data--extra";
+import demoDataList from "@openeuropa/bcl-group/data/data--list";
+import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
+import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
+import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
 
-module.exports = {
-  banner: {
-    main_title: "Group Name",
-    actions: [
-      {
-        type: "dropdown",
-        id: "dropdown-content",
-        remove_wrapper: true,
-        trigger: {
-          label: "Create content",
-          path: "#",
-          attributes: new drupalAttribute().addClass([
-            "d-inline-block",
-            "mt-3",
-            "mt-md-0",
-            "mb-4",
-            "mb-md-0",
-          ]),
-        },
-        items: [
-          {
-            label: "Create an event",
-            path: "#",
-          },
-          {
-            label: "Add an article",
-            button: true,
-          },
-        ],
-      },
-    ],
-    content:
-      "<h2 class='mb-0'>Group name</h2><div><a href='#'>Leave group</a><button></div>",
-    extra_classes_body: "p-3-5",
-    attributes: new drupalAttribute().addClass("border-0"),
-  },
-  navigation: {
-    nav: true,
-    tabs: true,
-    attributes: new drupalAttribute()
-      .addClass(["bcl__nav", "bg-gray", "mb-3-5", "mb-lg-5", "n-mx-container"])
-      .setAttribute("aria-label", "content-navigation"),
-    items: [
-      {
-        label: "Home",
-        path: "/example.html",
-      },
-      {
-        label: "Members",
-        path: "/example.html",
-      },
-      {
-        label: "Content",
-        path: "/example.html",
-      },
-      {
-        id: "dropdown-1",
-        link: true,
-        dropdown: true,
-        trigger: {
-          label: "Links",
-          path: "#",
-          attributes: new drupalAttribute().addClass("nav-link"),
-        },
-        items: [
-          {
-            label: "I'm a link",
-            path: "/example.html",
-          },
-          {
-            label: "I'm a button",
-            button: true,
-          },
-          {
-            divider: true,
-          },
-          {
-            label: "I'm a disabled button",
-            button: true,
-            disabled: true,
-          },
-          {
-            label: "I'm a active button",
-            button: true,
-            active: true,
-          },
-        ],
-      },
-      {
-        label: "Link",
-        path: "/example.html",
-        attributes: new drupalAttribute().setAttribute(
-          "aria-label",
-          "other-link"
-        ),
-      },
-    ],
-  },
-  badges: [
-    {
-      label: "Group name",
-      background: "light",
-      attributes: new drupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
-    },
-    {
-      label: "Restricted",
-      background: "light",
-      dismissible: true,
-      icon_path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
-    },
-    {
-      label: "Private",
-      background: "light",
-      dismissible: true,
-      icon_path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
-    },
-  ],
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
+if (isChromatic()) {
+  demoDataListContent.listing.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+  listingProfiles.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+  demoDataList.listing.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+  demoDataLanding.members.profiles.forEach((item) => {
+    item.picture.classes = item.picture.classes
+      ? `${item.picture.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+  demoDataLanding.contact.profiles.forEach((item) => {
+    item.picture.classes = item.picture.classes
+      ? `${item.picture.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+  demoDataLanding.recent.block_data.activities.forEach((item, i) => {
+    item.image = `<img class="rounded-circle chromatic-ignore me-3-5" alt='alt-img-${i}' src="https://picsum.photos/50/50?random=${i}" />`;
+  });
+  demoDataLanding.contributions.listing.items.forEach((item) => {
+    item.image.classes = item.image.classes
+      ? `${item.image.classes} chromatic-ignore`
+      : "chromatic-ignore";
+  });
+}
+
+let baseData = {
+  content_type: "group",
+  header: header,
+  footer: layout.footer,
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  with_sidebar: true,
+  ...demoDataExtra,
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
 };
+
+const dataListingContent = {
+  title: "Content in the group",
+  ...baseData,
+  ...demoDataListContent,
+};
+
+const dataListingMember = {
+  title: "Group members",
+  ...baseData,
+  ...demoDataListMember,
+  listing: listingProfiles,
+};
+
+const dataListing = {
+  title: "Results",
+  ...baseData,
+  ...demoDataList,
+  banner: {
+    ...pageTitleBanner,
+    title: "Groups",
+    title_tag: "h1",
+  },
+};
+
+const dataLanding = {
+  title: "Group members",
+  content_type: "group",
+  header: header,
+  footer: layout.footer,
+  with_banner: true,
+  with_header: true,
+  with_footer: true,
+  ...demoDataLanding,
+};
+
+export { dataLanding, dataListing, dataListingMember, dataListingContent };

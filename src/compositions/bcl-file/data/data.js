@@ -13,6 +13,7 @@ module.exports = {
   },
   translation: {
     alignment: "center",
+    id: "language-dropdown",
     label: {
       label: "Other languages (3)",
       icon_position: "after",

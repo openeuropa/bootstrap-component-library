@@ -1,65 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
-import isChromatic from "chromatic/isChromatic";
-import {
-  filterButton,
-  pagination,
-  sortSelect,
-} from "@openeuropa/bcl-base-templates/data/listing-page";
-import {
-  banner,
-  pageTitleBanner,
-  share,
-} from "@openeuropa/bcl-base-templates/data/content-page";
-import layout from "@openeuropa/bcl-base-templates/data/layout";
+
+import { demoData, demoListing } from "@openeuropa/bcl-news/data/data";
+
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
-
-import dataListing from "@openeuropa/bcl-news/data/data--listing";
-import content from "@openeuropa/bcl-news/data/data--content";
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-
-if (isChromatic()) {
-  banner.image.classes = "chromatic-ignore";
-  dataListing.listing.items.forEach((item) => {
-    item.image.classes = item.image.classes
-      ? `${item.image.classes} chromatic-ignore`
-      : "chromatic-ignore";
-  });
-}
-
-const baseData = {
-  content_type: "news",
-  header: header,
-  footer: layout.footer,
-  with_banner: true,
-  with_header: true,
-  with_footer: true,
-};
-
-const demoData = {
-  ...baseData,
-  banner: banner,
-  content: content,
-  share: share,
-};
-
-const demoListing = {
-  ...baseData,
-  ...dataListing,
-  title: "Results",
-  pagination: pagination,
-  filter_button: filterButton,
-  sort_select: sortSelect,
-  with_sidebar: true,
-  banner: {
-    ...pageTitleBanner,
-    title: "News",
-    title_tag: "h1",
-  },
-};
 
 export default {
   title: "Features/News",
@@ -85,11 +31,11 @@ export default {
   },
 };
 
-export const FullPage = () => news(correctPaths(demoData, "default"));
+export const FullPage = () => news(correctPaths(demoData));
 
 FullPage.storyName = "News page";
 
-export const Listing = () => listingPage(correctPaths(demoListing, "listing"));
+export const Listing = () => listingPage(correctPaths(demoListing));
 
 Listing.storyName = "News listing";
 Listing.decorators = [initBadges];
