@@ -79,13 +79,6 @@
 {% endif %}
 {% if _variant is not empty %}
   {% set _classes = _classes|merge(['bg-' ~ _variant]) %}
-  {% if _text_color is empty %}
-    {% if _variant == 'warning' or _variant == 'info' or _variant == 'light' %}
-      {% set _classes = _classes|merge(['text-dark']) %}
-    {% else %}
-      {% set _classes = _classes|merge(['text-white']) %}
-    {% endif %}
-  {% endif %}
 {% endif %}
 {% if _border_variant is not empty %}
   {% set _classes = _classes|merge(['border-' ~ _border_variant]) %}
