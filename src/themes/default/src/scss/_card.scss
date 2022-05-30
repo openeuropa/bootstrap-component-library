@@ -1,7 +1,9 @@
 @each $color, $value in $theme-colors {
   .card.bg-#{$color} {
+    color: color-contrast($value);
     .card-header,
     .card-footer {
+      border: none;
       background: shade-color($value, 20%);
     }
   }
