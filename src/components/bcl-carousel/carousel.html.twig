@@ -14,30 +14,32 @@
       caption_title (string) 
       interval (integer) (default: 0)
      }
-     ...
    ],
   - fade (boolean) (default: false)
   - with_controls (boolean) (default: true)
-  - previous_label (string) (default: '')
+  - prev_label (string) (default: '')
   - next_label (string) (default: '')
   - with_indicators (boolean) (default: false)
   - rounded_indicators (boolean) (default: false)
+  - disable_touch (boolean) (default: false)
+  - attributes (drupal attrs)
 #}
 
 {% set _id = id|default('') %}
-{% set _items = items|default([]) %}
-{% set _with_controls = with_controls ?? true %}
+{% set _autoinit = autoinit ?? true %}
+{% set _autoplay = autoplay ?? true %}
+{% set _dark = dark|default(false) %}
 {% set _active_item = active_item|default(1) %}
+{% set _items = items|default([]) %}
+{% set _fade = fade|default(false) %}
+{% set _with_controls = with_controls ?? true %}
 {% set _prev_label = prev_label|default('') %}
 {% set _next_label = next_label|default('') %}
 {% set _with_indicators = with_indicators|default(false) %}
 {% set _rounded_indicators = rounded_indicators|default(false) %}
-{% set _classes = ['carousel slide'] %}
-{% set _autoinit = autoinit ?? true %}
-{% set _autoplay = autoplay ?? true %}
 {% set _disable_touch = disable_touch|default(false) %}
-{% set _fade = fade|default(false) %}
-{% set _dark = dark|default(false) %}
+
+{% set _classes = ['carousel slide'] %}
 
 {% if _fade %}
   {% set _classes = _classes|merge(['carousel-fade']) %}

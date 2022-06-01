@@ -2,23 +2,23 @@
 
 {#
   Parameters:
-  - "with_wrapper" (boolean) (default: false)
-  - "wrapper_classes" (string) (default: '')
-  - "wrapper_aria_live" (string) (default: '')
-  - "with_container" (boolean) (default: false)
-  - "container_classes" (string) (default: '')
-  - "toasts" (array of objects) format: [
+  - with_wrapper (boolean) (default: false)
+  - wrapper_classes (string) (default: '')
+  - wrapper_aria_live (string) (default: '')
+  - with_container (boolean) (default: false)
+  - container_classes (string) (default: '')
+  - toasts (array of objects) format: [
     {
-      - "body" (string) (default: '')
-      - "role" (string) (default: 'alert')
-      - "with_close" (boolean) (default: true)
-      - "autohide" (boolean) (default: false)
-      - "with_body_wrapper" (boolean) (default: false)
-      - "body_wrapper_classes" (string) (default: '')
-      - "attributes" (drupal object) (default: undefined)
-    },
-    ...
+      - body (string) (default: '')
+      - role (string) (default: 'alert')
+      - with_close (boolean) (default: true)
+      - autohide (boolean) (default: false)
+      - with_body_wrapper (boolean) (default: false)
+      - body_wrapper_classes (string) (default: '')
+      - attributes (drupal object) (default: undefined)
+    }
   ]
+  - attributes (drupal attrs)
 #}
 
 {% set _toasts = toasts|default([]) %}

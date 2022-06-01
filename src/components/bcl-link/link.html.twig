@@ -4,14 +4,15 @@
   - label (string) (default: '')
   - path (string) (default: '#')
   - variant (string) (default: '')
-    - options ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
+    - options ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
   - id (string) (default: '')
   - disabled (boolean) (default: false)
-  - remove_icon_spacers (boolean) (default: false)
   - standalone (boolean) (default: false)
-  - icon (icon object) (default: {}): predefined structure for Icon component
+  - icon (icon object) (default: {})
   - icon_position (string) (default: after)
-    - options ["after", "before"]
+    - options ['after', 'before']
+  - remove_icon_spacers (boolean) (default: false)
+  - attributes (drupal attrs)
 #}
 
 {% set _label = label|default('') %}
@@ -23,6 +24,7 @@
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
 {% set _remove_icon_spacers = remove_icon_spacers|default(false) %}
+
 {% set _classes = [] %}
 
 {% if _icon is not empty %}

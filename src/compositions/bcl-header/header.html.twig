@@ -5,30 +5,32 @@
   - navbar (Navbar object) (default: {})
   - project_logo (object) (default: {})
     format: {
-        path: "",
-        alt: "",
-        classes: ""
+        path: '',
+        alt: '',
+        classes: ''
       }
-  - site_name (string) (default: "")
-  - project_link (string) (default: "")
+  - site_name (string) (default: '')
+  - project_link (string) (default: '')
   - head (Navbar object) (default: {})
   - breadcrumbs (Breadcrumbs object) (default: {})
-  - light (boolean) (default: false)
-  - modals (Array of modal objects) (default: [])
   - language_modal (object) (default: {})
+  - modals (Array of modal objects) (default: [])
+  - light (boolean) (default: false)
+  - attributes (drupal attrs)
 #}
 
 {% set _variant = variant|default('neutral') %}
 {% set _navbar = navbar|default({}) %}
 {% set _project_logo = project_logo|default({}) %}
-{% set _project_link = project_link|default('') %}
 {% set _site_name = site_name|default('') %}
-{% set _site_name_classes = 'bcl-header__site-name' %}
+{% set _project_link = project_link|default('') %}
 {% set _head = head|default({}) %}
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _language_modal = language_modal|default({}) %}
 {% set _modals = modals|default([]) %}
 {% set _light = light|default(false) %}
+
+{% set _site_name_classes = 'bcl-header__site-name' %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}

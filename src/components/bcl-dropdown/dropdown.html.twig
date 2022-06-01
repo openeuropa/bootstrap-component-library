@@ -1,7 +1,7 @@
 {% spaceless %}
 
 {# Parameters:
-  - id (string) (default: '')
+  - id (string) (default: 'dropdown-' random(1000))
   - trigger (object of Button or Link component)
   - link (boolean) (default: false)
   - direction (string) (default: '')
@@ -32,6 +32,7 @@
         - button (boolean) - set to button
       }
     ]
+  - attributes (drupal attrs)
 #}
 
 {% set _id = id|default('dropdown-' ~ random(1000)) %}
@@ -42,6 +43,7 @@
 {% set _dark = dark|default(false) %}
 {% set _remove_wrapper = remove_wrapper|default(false) %}
 {% set _items = items|default([]) %}
+
 {% set _class = 'dropdown' %}
 {% set _dropdown_classes = ['dropdown-menu'] %}
 

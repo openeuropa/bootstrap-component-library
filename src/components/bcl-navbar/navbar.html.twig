@@ -18,20 +18,23 @@
   - color_set (string) (default: 'light')
     options ['light', 'dark']
   - disable_collapse (boolean) (default: false)
+  - attributes (drupal attrs)
 
   Blocks
     - branding
     - navigation
     - right
 #}
+
 {% set _collapse_id = collapse_id|default('') %}
 {% set _background = background|default('') %}
+{% set _brand = brand|default({}) %}
 {% set _navigation = navigation|default({}) %}
 {% set _form = form|default({}) %}
 {% set _expand = expand|default('lg') %}
-{% set _brand = brand|default({}) %}
 {% set _color_set = color_set|default('light') %}
 {% set _disable_collapse = disable_collapse|default(false) %}
+
 {% set _classes = ['navbar', 'navbar-expand-' ~ _expand] %}
 {% if _background is not empty %}
   {% set _classes = _classes|merge(['bg-' ~ _background]) %}

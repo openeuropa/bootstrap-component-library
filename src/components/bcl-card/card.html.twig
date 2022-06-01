@@ -2,7 +2,7 @@
 
 {# Parameters:
   - title: (string) (default: '')
-  - title_tag: (string) (default: 'h5')
+  - title_tag: (string) (default: 'h1')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - subtitle (object) (default: {})
@@ -42,6 +42,8 @@
   - extra_classes_header (string) (default: '')
   - extra_classes_footer (string) (default: '')
   - badges (array of badge object) (default: [])
+  - links (array of link object) (default: [])
+  - attributes (drupal attrs)
 
   Blocks
     - card_date
@@ -73,6 +75,7 @@
 {% set _extra_classes_footer = extra_classes_footer|default('') %}
 {% set _badges = badges|default([]) %}
 {% set _links = links|default([]) %}
+
 {% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}

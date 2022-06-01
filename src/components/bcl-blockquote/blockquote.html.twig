@@ -5,13 +5,15 @@
   - attribution (string) (default: '')
   - cite (string) (default: '')
   - alignment (string) (default: 'left')
-    - options ["left", "center", "end"]
+    - options ['left', 'center', 'end']
+  - attributes (drupal attrs)
 #}
 
 {% set _quote = quote|default('') %}
 {% set _attribution = attribution|default('') %}
 {% set _cite = cite|default('') %}
 {% set _alignment = alignment|default('left') %}
+
 {% set _classes = [
   'text-' ~ _alignment,
   "bg-lighter",

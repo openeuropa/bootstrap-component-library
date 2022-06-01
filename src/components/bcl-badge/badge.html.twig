@@ -10,18 +10,20 @@
   - rounded_pill (boolean) (default: false)
   - outline (boolean) (default: false)
   - icon_path (string) (default: '')
+  - attributes (drupal attrs)
 #}
 
-{% set _rounded_pill = rounded_pill|default(false) %}
-{% set _outline = outline|default(false) %}
-{% set _background = background|default('primary') %}
 {% set _label = label|default('') %}
-{% set _classes = ['badge'] %}
+{% set _background = background|default('primary') %}
 {% set _url = url|default('') %}
-{% set _icon_path = icon_path|default('') %}
 {% set _title = title|default(_label) %}
 {% set _dismissible = dismissible|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
+{% set _rounded_pill = rounded_pill|default(false) %}
+{% set _outline = outline|default(false) %}
+{% set _icon_path = icon_path|default('') %}
+
+{% set _classes = ['badge'] %}
 
 {% if _rounded_pill %}
   {% set _classes = _classes|merge(['rounded-pill']) %}

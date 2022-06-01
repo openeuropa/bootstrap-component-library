@@ -3,12 +3,14 @@
 {#
 Parameters:
   - title: (string) (default: '')
-  - title_tag: (string) (default: 'h5')
+  - title_tag: (string) (default: 'h3')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - full_layout: (boolean) (default: false)
   - links: (array of link objects) (default: [])
   - content: (string) (default: '')
+  - id (string) (default: 'bcl-inpage-navigation-' random(10))
+  - full_layout: (boolean) (default: false)
+  - attributes (drupal attrs)
 #}
 
 {% set _title = title|default('') %}
@@ -17,7 +19,7 @@ Parameters:
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
 {% set _content = content|default('') %}
-{% set _id = id|default('bcl-inpage-navigation-' ~ random(5)) %}
+{% set _id = id|default('bcl-inpage-navigation-' ~ random(10)) %}
 {% set _full_layout = full_layout|default(false) %}
 
 {% if attributes is empty %}
