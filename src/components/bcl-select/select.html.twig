@@ -2,25 +2,25 @@
 
 {#
   Parameters:
-  - "id" (string) (default: '')
-  - "label" (string) (default: '')
-  - "label_extra_classes" (string) (default: '')
-  - "hidden_label" (boolean) (default: false)
-  - "helper_text" (string) (default: '')
-  - "helper_text_id" (string) (default: '')
-  - "disabled" (boolean) (default: false)
-  - "invalid" (boolean) (default: false)
-  - "valid" (boolean) (default: false)
-  - "invalid_feedback" (string) (default: '')
-  - "valid_feedback" (string) (default: '')
-  - "required" (boolean) (default: false)
-  - "multiple" (boolean) (default: false)
-  - "options": (array of objects with value and label keys) (default: [])
-  - "aria_label": (string) (default: '')
-  - "clean_class": (boolean) (default: false) - removes 'form-select' class
+  - id (string) (default: '')
+  - label (string) (default: '')
+  - label_extra_classes (string) (default: '')
+  - hidden_label (boolean) (default: false)
+  - helper_text (string) (default: '')
+  - helper_text_id (string) (default: '')
+  - disabled (boolean) (default: false)
+  - invalid (boolean) (default: false)
+  - valid (boolean) (default: false)
+  - invalid_feedback (string) (default: '')
+  - valid_feedback (string) (default: '')
+  - required (boolean) (default: false)
+  - multiple (boolean) (default: false)
+  - options: (array of objects with value and label keys) (default: [])
+  - aria_label (string) (default: '')
+  - clean_class (boolean) (default: false) - removes 'form-select' class
+  - attributes (drupal attrs)
 #}
 
-{% set _classes = ['form-select'] %}
 {% set _id = id|default('') %}
 {% set _disabled = disabled|default(false) %}
 {% set _options = options|default([]) %}
@@ -38,6 +38,7 @@
 {% set _clean_class = clean_class|default(false) %}
 {% set _hidden_label = hidden_label|default(false) %}
 
+{% set _classes = ['form-select'] %}
 {% set _label_class = 'form-label' %}
 
 {% if _clean_class %}

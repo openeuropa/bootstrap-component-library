@@ -5,7 +5,7 @@
   - label (string) (default: '')
   - variant (string) (default: 'primary')
   - size (string) (default: 'md')
-    - options ["sm", "md", "lg"]
+    - options ['sm', 'md', 'lg']
   - type (string) (default: 'button')
   - outline (boolean) (default: false)
   - disabled (boolean) (default: false)
@@ -14,12 +14,13 @@
   - id (string) (default: '')
   - icon (icon object) (default: {}): predefined structure for Icon component
   - icon_position (string) (default: after)
-    - options ["after", "before"]
+    - options ['after', 'before']
   - icon_spacing (string) (default: '')
-    - options ["sm", "md", "lg"]
-  - clean_class (boolean) (default: false)
+    - options ['sm', 'md', 'lg']
   - spinner (spinner object) (default: {})
   - show_spinner (boolean) (default: false)
+  - clean_class (boolean) (default: false)
+  - attributes (drupal attrs)
 #}
 
 {% set _label = label|default('') %}
@@ -37,6 +38,7 @@
 {% set _show_spinner = show_spinner|default(false) %}
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
+
 {% set _classes = [] %}
 {% if _clean_class == false %}
   {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}

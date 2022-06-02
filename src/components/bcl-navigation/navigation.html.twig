@@ -2,6 +2,7 @@
 {% spaceless %}
 
 {# Parameters:
+  - id (string) (default: '')
   - pills (boolean) (default: false)
   - tabs (boolean) (default: false) - If tabs is set to true, the nav should also be set to true for accessibility reasons
   - vertical (boolean) (default: false)
@@ -21,6 +22,7 @@
         - navigation (navigation Object) - set for multiple level or navigation, items inside is required
       }
     ]
+  - attributes (drupal attrs)
 #}
 
 {# Define main macro #}
@@ -28,12 +30,12 @@
 {% spaceless %}
   {% import _self as navigation %}
 
+  {% set _id = id|default('') %}
   {% set _pills = pills|default(false) %}
   {% set _tabs = tabs|default(false) %}
   {% set _vertical = vertical|default(false) %}
   {% set _full_width = full_width|default(false) %}
   {% set _alignment = alignment|default('') %}
-  {% set _id = id|default('') %}
   {% set _tabs_content = tabs_content|default(false) %}
   {% set _nav = nav|default(false) %}
   {% set _navbar = navbar|default(false) %}

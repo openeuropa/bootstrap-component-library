@@ -12,17 +12,26 @@
   - messages (block) (default: '')
   - body (block) (default: '')
   - footer (block) (default: '')
+  - attributes (drupal attrs)
+  
+  Blocks
+    - header
+    - messages
+    - body
+    - footer
 #}
+
 {% set _size =  size|default('') %}
 {% set _id = id|default('modal-' ~ random(1000)) %}
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
-{% set _header = header|default('') %}
-{% set _body = body|default('') %}
-{% set _messages = messages|default('') %}
 {% set _static_backdrop = static_backdrop|default(false) %}
 {% set _verticaly_centered = verticaly_centered|default(false) %}
 {% set _scrollable = scrollable|default(false) %}
+{% set _header = header|default('') %}
+{% set _messages = messages|default('') %}
+{% set _body = body|default('') %}
 {% set _footer = footer|default('') %}
+
 {% set _classes = ['modal fade'] %}
 
 {% if attributes is empty %}

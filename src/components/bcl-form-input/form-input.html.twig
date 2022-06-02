@@ -2,27 +2,30 @@
 
 {#
   Parameters:
-  - "id" (string) (default: '')
-  - "input_type" (string) (default: 'text')
-  - "label" (string) (default: '')
-  - "helper_text" (string) (default: '')
-  - "helper_id" (string) (default: '')
-  - "checked" (boolean) (default: false)
-  - "disabled" (boolean) (default: false)
-  - "invalid" (boolean) (default: false)
-  - "valid" (boolean) (default: false)
-  - "invalid_feedback" (string) (default: '')
-  - "valid_feedback" (string) (default: '')
-  - "required" (boolean) (default: false)
-  - "readonly" (boolean) (default: false)
-  - "floating" (boolean) (default: false)
-  - "horizontal" (boolean) (default: false)
-  - "horizontal_class" (string) (default: col-sm-10)
-  - "hidden_label" (boolean) (default: false)
-  - "switch" (boolean) (default: false)
-  - "toggle" (boolean) (default: false)
-  - "toggle_variant" (string) (default: 'primary')
-  - "remove_wrapper" (boolean) (default: false)
+  - id (string) (default: '')
+  - input_type (string) (default: 'text')
+  - label (string) (default: '')
+  - required (boolean) (default: false)
+  - checked (boolean) (default: false)
+  - hidden_label (boolean) (default: false)
+  - disabled (boolean) (default: false)
+  - readonly (boolean) (default: false)
+  - invalid (boolean) (default: false)
+  - valid (boolean) (default: false)
+  - invalid_feedback (string) (default: '')
+  - valid_feedback (string) (default: '')
+  - floating (boolean) (default: false)
+  - helper_text (string) (default: '')
+  - helper_text_id (string) (default: '')
+  - placeholder (string) (default: '')
+  - horizontal (boolean) (default: false)
+  - horizontal_class (string) (default: col-sm-10)
+  - horizontal_label_class (string) (default: col-sm-2)
+  - switch (boolean) (default: false)
+  - toggle (boolean) (default: false)
+  - toggle_variant (string) (default: 'primary')
+  - remove_wrapper (boolean) (default: false)
+  - attributes (drupal attrs)
 #}
 
 {% set _id = id|default('') %}
@@ -48,6 +51,7 @@
 {% set _toggle = toggle|default(false) %}
 {% set _toggle_variant = toggle_variant|default('primary') %}
 {% set _remove_wrapper = remove_wrapper|default(false) %}
+
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _classes = ['form-control'] %}

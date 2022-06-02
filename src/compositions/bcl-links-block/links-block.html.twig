@@ -1,23 +1,24 @@
 {% spaceless %}
 
 {# Parameters:
-  - title: (string) (default: "")
-  - title_tag: (string) (default: "h2")
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - background: (string) (default: "gray")
-    - options ["gray", "transparent"]
-  - variant: (string) (default: "vertical")
-    - options ["vertical", "horizontal"]
+  - background: (string) (default: 'gray')
+    - options ['gray', 'transparent']
+  - variant: (string) (default: 'vertical')
+    - options ['vertical', 'horizontal']
   - links (array of link objects) (default: [])
+  - attributes (drupal attrs)
 #}
 
-{% set _title = title|default("") %}
-{% set _title_tag = title_tag|default("h2") %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
-{% set _background = background|default("gray") %}
-{% set _variant = variant|default("vertical") %}
+{% set _background = background|default('gray') %}
+{% set _variant = variant|default('vertical') %}
 {% set _links = links|default([])%}
 
 {% set _title_classes = ['pb-3', 'mb-3', 'border-bottom'] %}
@@ -26,8 +27,8 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if _background == "gray" %}
-  {% set attributes = attributes.addClass(["bg-light", "px-4", "py-3", "rounded-2"]) %}
+{% if _background == 'gray' %}
+  {% set attributes = attributes.addClass(['bg-light', 'px-4', 'py-3', 'rounded-2']) %}
 {% endif %}
 
 <div
@@ -51,17 +52,17 @@
         {% endif %}
         {% set _link = _link|merge({
           clean_class: true,
-          attributes: _link.attributes.addClass(["pb-3", "d-inline-block", "standalone"])
+          attributes: _link.attributes.addClass(['pb-3', 'd-inline-block', 'standalone'])
         }) %}
-        {% set _list_item_classes = "list-unstyled" %}
-        {% if _variant == "horizontal" %}
+        {% set _list_item_classes = 'list-unstyled' %}
+        {% if _variant == 'horizontal' %}
           {% set _list_item_classes = _list_item_classes ~ ' d-inline' %}
         {% endif %}
         {% if loop.last == false %}
           {% set _list_item_classes = _list_item_classes ~ ' me-4-5' %}
         {% endif %}
         <li class="{{ _list_item_classes }}">
-          {% include "@oe-bcl/bcl-link/link.html.twig" with _link only %}
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
         </li>
       {% endfor %}
     </ul>

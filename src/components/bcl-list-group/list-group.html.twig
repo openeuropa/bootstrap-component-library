@@ -4,11 +4,11 @@
   - flush (boolean) (default: false)
   - horizontal (string) (default: '')
     - options ['none', 'horizontal', 'horizontal-sm', 'horizontal-md', 'horizontal-lg', 'horizontal-xl', 'horizontal-xxl']
+  - id (string) (default: '')
   - type (string) (default: 'unordered')
     - options ['unordered', 'ordered', 'actionable']
   - items (array of objects: list item object or Button and Link component object if type actionable)
       format: [
-      ('list item')
       {
         - html (string)
         - variant (string)
@@ -24,6 +24,7 @@
       },
       ...
     ]
+  - attributes (drupal attrs)
 #}
 
 {% set _flush = flush|default(false) %}
@@ -31,6 +32,7 @@
 {% set _id = id|default('') %}
 {% set _type = type|default('unordered') %}
 {% set _items = items|default([]) %}
+
 {% set _classes = ['list-group'] %}
 
 {% if _flush %}

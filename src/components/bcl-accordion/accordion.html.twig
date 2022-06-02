@@ -3,18 +3,17 @@
 {#
   Parameters:
   - id (int) (default: random(1000))
-  - flush (boolean) (default: false) flush variant of the accordion
+  - flush (boolean) (default: false)
   - items (array) (default: []): format: [
       {
         title: (string),
         title_tag: (string),
         content: (block),
-        stay_open (boolean) (default: false) stay open after another selected
+        stay_open (boolean) (default: false)
       },
-      ...
     ]
-  - open_item_id (int) (default: 0) index value of the item to open (starting from 1),
-    all closed by default (0)
+  - open_item_id (int) (default: 0)
+  - attributes (drupal attrs)
 #}
 
 {% set _id = id|default(random(1000)) %}

@@ -3,11 +3,12 @@
 {# Parameters:
   - vertical (boolean) (default: false)
   - size (string) (default: 'md')
-    - options ["sm", "md", "lg"]
-  - toolbar (boolean) (default: 'false')
+    - options ['sm', 'md', 'lg']
   - aria_label (string) (default: '')
+  - toolbar (boolean) (default: 'false')
   - toolbar_aria_label (string) (default: '')
-  - items (array of arrays with objects of type button or form-input (input key mandatory when the object is a form-input))
+  - items (array of arrays with objects of type button or form-input (input key mandatory when the object is a form-input)) (default: [])
+  - attributes (drupal attrs)
 #}
 
 {% set _vertical = vertical|default(false) %}

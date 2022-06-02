@@ -2,9 +2,9 @@
 
 {# Parameters:
   - size (string) (default: '')
-    - options ["sm", "lg"]
+    - options ['sm', 'lg']
   - alignment (string) (default: '')
-    - options ["end", "center"]
+    - options ['end', 'center']
   - aria_label (string) (default: '')
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
@@ -49,20 +49,21 @@
       - active (boolean)
     }
   - icon_path (string) (default: '')
-  - extra_classes (string) (default: '')
+  - attributes (drupal attrs)
 #}
 
 {% set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
 {% set _aria_label = aria_label|default('') %}
 {% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
-{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
+{% set _enable_first_last_icon = enable_first_last_icon|default(true) %}
 {% set _items = items|default([]) %}
 {% set _first = first|default({}) %}
 {% set _next = next|default({}) %}
 {% set _prev = prev|default({}) %}
 {% set _last = last|default({}) %}
 {% set _icon_path = icon_path|default({}) %}
+
 {% set _classes = 'pagination' %}
 {% if _size is not empty %}
   {% set _classes = _classes ~ ' pagination-' ~ _size %}
