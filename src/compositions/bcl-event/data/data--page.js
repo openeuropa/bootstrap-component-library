@@ -23,6 +23,17 @@ module.exports = {
       path: "https://picsum.photos/255/255?random=6",
       alt: "alt img",
     },
+    links: [
+      {
+        label: "Register now",
+        icon_position: "before",
+        icon: {
+          name: "calendar-check",
+          path: "/icons.svg",
+        },
+        attributes: new drupalAttribute().addClass(["btn", "btn-primary"]),
+      },
+    ],
   },
   sidebar: {
     attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),

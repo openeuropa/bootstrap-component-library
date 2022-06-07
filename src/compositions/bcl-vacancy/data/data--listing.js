@@ -106,8 +106,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -135,8 +134,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -164,8 +162,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -193,8 +190,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -222,8 +218,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -251,8 +246,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -280,8 +274,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -309,8 +302,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -338,8 +330,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
@@ -367,8 +358,7 @@ module.exports = {
         badges: [
           {
             label: "Opened",
-            background: "primary",
-            outline: true,
+            background: "info",
             rounded_pill: true,
             attributes: new drupalAttribute().addClass(["me-2"]),
           },
