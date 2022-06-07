@@ -3,8 +3,8 @@ module.exports = {
   title: "Senior Expert on Internal Models",
   badges: [
     {
-      label: "Opened",
-      outline: true,
+      label: "Closed",
+      background: "dark",
       rounded_pill: true,
     },
     {

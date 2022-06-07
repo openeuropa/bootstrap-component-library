@@ -134,6 +134,12 @@ module.exports = {
       {
         badges: [
           {
+            label: "Ongoing",
+            background: "info",
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
+          },
+          {
             label: "LIFE 2018",
             background: "primary",
             outline: true,
@@ -161,6 +167,12 @@ module.exports = {
       },
       {
         badges: [
+          {
+            label: "Ongoing",
+            background: "info",
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
+          },
           {
             label: "LIFE 2018",
             background: "primary",
@@ -190,6 +202,12 @@ module.exports = {
       {
         badges: [
           {
+            label: "Closed",
+            background: "dark",
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
+          },
+          {
             label: "Type",
             background: "primary",
             outline: true,
@@ -218,6 +236,12 @@ module.exports = {
       {
         badges: [
           {
+            label: "Closed",
+            background: "dark",
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
+          },
+          {
             label: "LIFE 2018",
             background: "primary",
             outline: true,
@@ -240,6 +264,12 @@ module.exports = {
       {
         badges: [
           {
+            label: "Ongoing",
+            background: "info",
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
+          },
+          {
             label: "LIFE 2018",
             background: "primary",
             outline: true,
@@ -261,6 +291,12 @@ module.exports = {
       },
       {
         badges: [
+          {
+            label: "Closed",
+            background: "dark",
+            rounded_pill: true,
+            attributes: new drupalAttribute().addClass(["me-2"]),
+          },
           {
             label: "Type",
             background: "primary",

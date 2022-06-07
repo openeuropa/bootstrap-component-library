@@ -4,7 +4,7 @@ module.exports = {
   badges: [
     {
       label: "Opened",
-      outline: true,
+      background: "info",
       rounded_pill: true,
     },
     {

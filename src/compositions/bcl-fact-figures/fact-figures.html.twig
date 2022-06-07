@@ -87,21 +87,23 @@
       {% for _item in _items %}
       <div class="{{ _cols_classes }}">
       {% if _item.icon is defined and _item.icon is not empty and _display_icons %}
+        {% set _icon_attributes = _item.icon.attributes ?: create_attribute() %}
         {% set _item = _item|merge({
           icon: _item.icon|merge({
             path: _icon_path,
             size: 'l',
+            attributes: _icon_attributes.addClass('mb-2'),
           })
         }) %}
         {% include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
       {% endif %}
       {% if _item.title is defined and _item.title is not empty %}
-        <div class="fs-3 mt-2">
+        <div class="fs-4 fw-medium">
           {{- _item.title -}}
         </div>
       {% endif %}
       {% if _item.subtitle is defined and _item.subtitle is not empty %}
-        <div class="fs-5">
+        <div class="fs-5 fw-medium">
           {{- _item.subtitle -}}
         </div>
       {% endif %}

@@ -50,6 +50,7 @@
     {% if _badge is not empty %}
       {% include '@oe-bcl/bcl-badge/badge.html.twig' with {
         label: _badge,
+        rounded_pill: true,
         background: _bg,
         attributes: create_attribute().addClass(['mb-3', 'mb-md-0']),
       } only %}
