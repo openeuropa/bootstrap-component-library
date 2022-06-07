@@ -3,7 +3,7 @@
 {# Parameters:
   - type (string) (default: 'group')
     options: ['group', 'grid', 'masonry']
-  - items (array of Card) (default: [])
+  - items (array of object type card) (default: [])
   - grid_columns (int) (default: 1)
     options: ['1', '2', '3']
   - responsiveness (string) (default: '')
@@ -14,6 +14,7 @@
     options: ['0', '1', '2', '3', '4', '5']
   - equal_height (boolean) (default: false)
   - cols_extra_classes (string) (default: '')
+  - attributes (drupal attrs)
 
   Blocks
     - card_layout_card
@@ -27,6 +28,7 @@
 {% set _gutter = gutter|default('') %}
 {% set _equal_height = equal_height|default(false) %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
+
 {% set _cols_classes = 'col' %}
 
 {% if _cols_extra_classes is not empty %}

@@ -11,6 +11,7 @@
   - bar_label (string) (default: '')
   - variant (string) (default: '')
   - message (string) (default: '')
+  - attributes (drupal attrs)
 #}
 
 {% set _progress = progress|default(0) %}
@@ -23,6 +24,7 @@
 {% set _bar_label = bar_label|default('') %}
 {% set _variant = variant|default('') %}
 {% set _message = message|default('') %}
+
 {% set _classes = 'progress-bar' %}
 {% if _striped is not empty %}
   {% set _classes = _classes ~ ' progress-bar-striped' %}

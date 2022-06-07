@@ -1,68 +1,10 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-
-import layout from "@openeuropa/bcl-base-templates/data/layout";
-import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
-  filterButton,
-  pagination,
-  sortSelect,
-  listingProfiles,
-} from "@openeuropa/bcl-base-templates/data/listing-page";
-
-import demoData from "@openeuropa/bcl-group/data/data";
-import demoDataList from "@openeuropa/bcl-group/data/data--list";
-import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
-import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
-import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
-
-let baseData = {
-  content_type: "group",
-  header: layout.headerSimple,
-  footer: layout.footer,
-  with_banner: true,
-  with_header: true,
-  with_footer: true,
-  with_sidebar: true,
-  ...demoData,
-  pagination: pagination,
-  filter_button: filterButton,
-  sort_select: sortSelect,
-};
-
-const dataListingContent = {
-  title: "Content in the group",
-  ...baseData,
-  ...demoDataListContent,
-};
-
-const dataListingMember = {
-  title: "Group members",
-  ...baseData,
-  ...demoDataListMember,
-  listing: listingProfiles,
-};
-
-const dataListing = {
-  title: "Results",
-  ...baseData,
-  ...demoDataList,
-  banner: {
-    ...pageTitleBanner,
-    title: "Groups",
-    title_tag: "h1",
-  },
-};
-
-const dataLanding = {
-  title: "Group members",
-  content_type: "group",
-  header: layout.headerSimple,
-  footer: layout.footer,
-  with_banner: true,
-  with_header: true,
-  with_footer: true,
-  ...demoDataLanding,
-};
+  dataLanding,
+  dataListing,
+  dataListingMember,
+  dataListingContent,
+} from "@openeuropa/bcl-group/data/data";
 
 const template = "@oe-bcl/bcl-group/group.html.twig";
 const templateListing = "@oe-bcl/bcl-base-templates/listing-page.html.twig";

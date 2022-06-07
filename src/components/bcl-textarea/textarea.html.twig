@@ -2,23 +2,25 @@
 
 {#
   Parameters:
-  - "id" (string) (default: '')
-  - "label" (string) (default: '')
-  - "disabled" (boolean) (default: false)
-  - "valid" (boolean) (default: false)
-  - "invalid" (boolean) (default: false)
-  - "invalid_feedback" (string) (default: '')
-  - "valid_feedback" (string) (default: '')
-  - "required" (boolean) (default: false)
-  - "readonly" (boolean) (default: false)
-  - "rows" (int) (default: 4)
-  - "helper_text" (string) (default: '')
-  - "helper_text_id" (string) (default: '')
-  - "hidden_label" (boolean) (default: false)
-  - "text" (string) (default: '')
-  - "floating" (boolean) (default: false)
-  - "horizontal" (boolean) (default: false)
-  - "horizontal_class" (string) (default: col-sm-10)
+  - id (string) (default: '')
+  - label (string) (default: '')
+  - required (boolean) (default: false)
+  - disabled (boolean) (default: false)
+  - readonly (boolean) (default: false)
+  - valid (boolean) (default: false)
+  - invalid (boolean) (default: false)
+  - invalid_feedback (string) (default: '')
+  - valid_feedback (string) (default: '')
+  - helper_text (string) (default: '')
+  - helper_text_id (string) (default: '')
+  - hidden_label (boolean) (default: false)
+  - text (string) (default: '')
+  - rows (int) (default: 4)
+  - floating (boolean) (default: false)
+  - horizontal (boolean) (default: false)
+  - horizontal_class (string) (default: col-sm-10)
+  - horizontal_label_class (string) (default: col-sm-2)
+  - attributes (drupal attrs)
 #}
 
 {% set _id = id|default('') %}
@@ -30,19 +32,20 @@
 {% set _valid = valid|default(false) %}
 {% set _invalid_feedback = invalid_feedback|default('') %}
 {% set _valid_feedback = valid_feedback|default('') %}
-{% set _floating = floating|default(false) %}
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
 {% set _hidden_label = hidden_label|default(false) %}
 {% set _text = text|default('') %}
+{% set _rows = rows|default('4') %}
+{% set _floating = floating|default(false) %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_class = horizontal_class|default('col-sm-10') %}
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
+
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _classes = ['form-control'] %}
 
-{% set _rows = rows|default('4') %}
 {% if _invalid is not empty %}
   {% set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}

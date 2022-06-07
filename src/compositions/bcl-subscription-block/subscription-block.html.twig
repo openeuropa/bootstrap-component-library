@@ -4,12 +4,12 @@
   - title: (string) (default: '')
   - content: (string) (default: '')
   - button: (button Object) (default: {})
+  - attributes (drupal attrs)
 #}
 
 {% set _title = title|default(false) %}
 {% set _content = content|default('') %}
 {% set _button = button|default({}) %}
-{% set _modal = modal|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}

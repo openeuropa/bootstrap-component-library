@@ -3,11 +3,12 @@
 {# Parameters:
   - width (int) (default: 0) - between 0-100
   - variant (string) (default: '')
-    - options : ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"]
+    - options ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
   - size (string) (default: '')
-    - options : ["xs", "lg"]
+    - options ['xs', 'lg']
   - animation (string) (default: '')
-    - options : ["glow", "wave"]
+    - options ['glow', 'wave']
+  - attributes (drupal attrs)
 #}
 
 {% set _width = width|default(0) %}

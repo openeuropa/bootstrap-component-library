@@ -7,12 +7,14 @@
   - size (string) (default: '')
     - options ['sm', 'lg']
   - assistive_text (string) (default: '')
+  - attributes (drupal attrs)
 #}
 
 {% set _type = type|default('border') %}
 {% set _variant = variant|default('') %}
 {% set _size = size|default('') %}
 {% set _assistive_text = assistive_text|default('') %}
+
 {% set _classes = ['spinner-' ~ _type] %}
 {% if _size is not empty %}
   {% set _classes = _classes|merge(['spinner-' ~ _type ~ '-' ~ _size]) %}

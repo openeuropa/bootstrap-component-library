@@ -1,16 +1,17 @@
 {% spaceless %}
 
 {# Parameters:
-  - title: (string) (default: "")
-  - title_tag: (string) (default: "h2")
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - variant: (string) (default: "horizontal") options:
-  [ default-1-col, highlight-1-col, default-2-col, default-3-col, highlight-2-col, highlight-3-col ]
+  - variant: (string) (default: 'horizontal')
+    options [ default-1-col, highlight-1-col, default-2-col, default-3-col, highlight-2-col, highlight-3-col ]
   - items: (array of objects of type card)
   - link: (object of type link)
-  - alignment: (string) (default: '') options:
-  ['start', 'end', 'center', 'baseline', 'stretch']
+  - alignment: (string) (default: '')
+    options ['start', 'end', 'center', 'baseline', 'stretch']
+  - attributes (drupal attrs)
 #}
 
 {% set _title = title|default('') %}
@@ -21,6 +22,7 @@
 {% set _variant = variant|default('default-1-col') %}
 {% set _alignment = alignment|default('') %}
 {% set _link = link|default({}) %}
+
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
 {% set _card_layout = {

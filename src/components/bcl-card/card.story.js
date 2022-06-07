@@ -196,6 +196,10 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
 
+  if (args.variant) {
+    data.badges = [];
+  }
+
   if (data.image && isChromatic()) {
     data.image.classes = "chromatic-ignore";
   }

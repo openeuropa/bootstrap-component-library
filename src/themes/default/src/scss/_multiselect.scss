@@ -10,7 +10,7 @@
 // Multiselect Spacers
 $multiselect-spacers: (
   "disabled-spacer": calc(map-get($spacers, 2) - 1px),
-  "disabled-spacer-md": calc(map-get($spacers, 1) - 1px),
+  "disabled-spacer-md": calc(map-get($spacers, 2) - 2px),
   "select-spacer": calc(map-get($spacers, 2) - 2px),
   "select-spacer-md": 0.075rem,
   "select-spacer-start": 0.3rem,
@@ -46,8 +46,27 @@ select.multi-select {
       text-align: center;
       white-space: nowrap;
       vertical-align: baseline;
+      padding-right: map-get($spacers, "3-5");
       @include border-radius($badge-border-radius);
       @include gradient-bg();
+      .ss-value-delete {
+        font-size: 0;
+        &:after {
+          background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8.5C16 12.9183 12.4183 16.5 8 16.5C3.58172 16.5 0 12.9183 0 8.5C0 4.08172 3.58172 0.5 8 0.5C12.4183 0.5 16 4.08172 16 8.5ZM5.35355 5.14645C5.15829 4.95118 4.84171 4.95118 4.64645 5.14645C4.45118 5.34171 4.45118 5.65829 4.64645 5.85355L7.29289 8.5L4.64645 11.1464C4.45118 11.3417 4.45118 11.6583 4.64645 11.8536C4.84171 12.0488 5.15829 12.0488 5.35355 11.8536L8 9.20711L10.6464 11.8536C10.8417 12.0488 11.1583 12.0488 11.3536 11.8536C11.5488 11.6583 11.5488 11.3417 11.3536 11.1464L8.70711 8.5L11.3536 5.85355C11.5488 5.65829 11.5488 5.34171 11.3536 5.14645C11.1583 4.95118 10.8417 4.95118 10.6464 5.14645L8 7.79289L5.35355 5.14645Z' fill='%23F8F9FA'/%3E%3C/svg%3E%0A");
+          background-repeat: no-repeat;
+          content: "";
+          display: inline-block;
+          height: 1rem;
+          transform: scale(0.8);
+          width: 1rem;
+          padding: 15px;
+          background-position: 50%;
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+          bottom: -2px;
+        }
+      }
     }
     .ss-disabled {
       padding-top: map-get($multiselect-spacers, "disabled-spacer");
@@ -123,7 +142,9 @@ select.multi-select {
         @include font-size($badge-font-size-desktop);
       }
       .ss-disabled {
-        padding-top: map-get($multiselect-spacers, "disabled-spacer-md");
+        padding-top: calc(
+          map-get($multiselect-spacers, "disabled-spacer-md") + 1px
+        );
         padding-bottom: map-get($multiselect-spacers, "disabled-spacer-md");
       }
     }

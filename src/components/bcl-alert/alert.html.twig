@@ -8,15 +8,17 @@
   - animated_dismiss (boolean) (default: true)
   - icon_path (string) (default: '')
   - icon_name (string) (default: '')
+  - attributes (drupal attrs)
 #}
 
 {% set _message = message|default('') %}
-{% set _variant = variant|default('primary') %}
 {% set _heading = heading|default('') %}
-{% set _icon_path = icon_path|default('') %}
+{% set _variant = variant|default('primary') %}
 {% set _dismissible = dismissible ?? true %}
 {% set _animated_dismiss = animated_dismiss ?? true %}
+{% set _icon_path = icon_path|default('') %}
 {% set _icon_name = icon_name|default('') %}
+
 {% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr'), 'd-flex', 'align-items-center'] %}
 {% set _icon_names = {
     primary: "info-circle-fill",

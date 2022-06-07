@@ -1,39 +1,9 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
-import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import layout from "@openeuropa/bcl-base-templates/data/layout";
+import { dataLanding } from "@openeuropa/bcl-landing-page/data/data";
 
-import demoData from "@openeuropa/bcl-landing-page/data.js";
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
-
-const chromatic = process.env.STORYBOOK_ENV;
-const drupalAttribute = require("drupal-attribute");
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-
-const footer = { ...layout.footer };
-footer.attributes = footer.attributes.removeClass(["mt-4", "mt-md-4-75"]);
-
-if (isChromatic() || chromatic) {
-  demoData.listing_section.items.forEach((item) => {
-    item.image.classes = item.image.classes
-      ? `${item.image.classes} chromatic-ignore`
-      : "chromatic-ignore";
-  });
-  demoData.featured_section.featured_media.embedded_media =
-    '<iframe class="chromatic-ignore" title="New digital strategy first" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>';
-}
-
-const dataLanding = {
-  content_type: "landing-page",
-  header,
-  footer,
-  with_banner: true,
-  with_header: true,
-  with_footer: true,
-  ...demoData,
-};
 
 export default {
   title: "Features/Landing Page",

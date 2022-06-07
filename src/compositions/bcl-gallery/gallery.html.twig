@@ -10,8 +10,8 @@ Parameters:
   - counter (string) (default: '')
   - toggle_collapsed (string) (default: '')
   - toggle_expanded (string) (default: '')
-  - previous_label (string) (default: '')
-  - next_label (string) (default: '')
+  - next_label (string) (default: 'Next')
+  - prev_label (string) (default: 'Previous')
   - max_visible_thumbnails (int) (default: 5)
   - items (array of objects) format: [
       {
@@ -22,9 +22,9 @@ Parameters:
         caption_classes (string)
         interval (integer) (default: 0)
       }
-      ...
-    ],
+    ]
   - icon_path (string) (default: '')
+  - attributes (drupal attrs)
 #}
 
 {% set _id = id|default('gallery-' ~ random(1000)) %}
@@ -37,8 +37,8 @@ Parameters:
 {% set _toggle_expanded = toggle_expanded|default('') %}
 {% set _next_label = next_label|default('Next') %}
 {% set _prev_label = prev_label|default('Previous') %}
-{% set _items = items|default([]) %}
 {% set _max_visible_thumbnails = max_visible_thumbnails|default(5) %}
+{% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
 
 {% set _carousel_items = [] %}

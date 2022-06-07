@@ -1,47 +1,91 @@
-module.exports = {
-  first_paragraphs: [
-    {
-      title_id: "summary",
-      title: "Summary",
-      content: `
-      <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-      </p>`,
-    },
-    {
-      title_id: "objective",
-      title: "Objective",
-      content: `
-      <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-      </p>`,
-    },
-    {
-      title_id: "impact",
-      title: "Impact",
-      content: `
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-      </p>`,
-    },
-  ],
-  second_paragraphs: [
-    {
-      title_id: "achievements",
-      title: "Achievements and Milestones",
-      content: `
-      <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
-      </p>`,
-    },
-  ],
+import isChromatic from "chromatic/isChromatic";
+import layout from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  filterButton,
+  pagination,
+  sortSelect,
+} from "@openeuropa/bcl-base-templates/data/listing-page";
+import {
+  banner,
+  pageTitleBanner,
+  share,
+} from "@openeuropa/bcl-base-templates/data/content-page";
+import dataGallery from "@openeuropa/bcl-gallery/data/data.js";
+import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
+import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
+import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";
+import dataContributions from "@openeuropa/bcl-project-status/data/data--contributions";
+import dataListing from "@openeuropa/bcl-project/data/data--listing";
+import dataLists from "@openeuropa/bcl-project/data/data--lists";
+import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
+
+const chromatic = process.env.STORYBOOK_ENV;
+
+const header =
+  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+
+if (isChromatic() || chromatic) {
+  banner.image.classes = "chromatic-ignore";
+  dataListing.listing.items.forEach((item) => {
+    if (item.image) {
+      item.image.classes = item.image.classes
+        ? `${item.image.classes} chromatic-ignore`
+        : "chromatic-ignore";
+    }
+  });
+}
+
+const baseData = {
+  content_type: "listing",
+  header: header,
+  footer: layout.footer,
+  with_header: true,
+  with_footer: true,
+  with_sidebar: true,
 };
+
+const demoPage = {
+  ...baseData,
+  ...dataExtraDetails,
+  ...dataLists,
+  gallery: {
+    title: "Gallery",
+    ...dataGallery,
+  },
+  project_status_title: "Project details",
+  project_status_id: "project-details",
+  project_contributions: dataContributions,
+  banner: banner,
+  share: share,
+};
+
+const ongoingDemo = {
+  ...demoPage,
+  project_status: dataOngoing,
+};
+
+const closedDemo = {
+  ...demoPage,
+  project_status: dataClosed,
+};
+
+const plannedDemo = {
+  ...demoPage,
+  project_status: dataPlanned,
+};
+
+const demoListing = {
+  ...baseData,
+  ...dataListing,
+  title: "Results",
+  pagination: pagination,
+  filter_button: filterButton,
+  sort_select: sortSelect,
+  banner: {
+    ...pageTitleBanner,
+    title: "Projects",
+    title_tag: "h1",
+  },
+};
+
+export { demoListing, ongoingDemo, closedDemo, plannedDemo };

@@ -10,7 +10,7 @@
   - small (boolean) (default: false)
   - alignment (string) (default: '')
     - options ['bottom', 'middle', 'top']
-  - caption (string) (default: "")
+  - caption (string) (default: '')
   - caption_top (boolean) (default: false)
   - border (string) (default: '')
     - options ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
@@ -43,6 +43,7 @@
           ]
         }
     ]
+  - attributes (drupal attrs)
 #}
 
 {% set _striped = striped|default(false) %}
@@ -58,6 +59,7 @@
 {% set _table_footer = table_footer|default({}) %}
 {% set _table_head = table_head|default({}) %}
 {% set _rows = rows|default([]) %}
+
 {% set _classes = ['table'] %}
 {% if _striped %}
   {% set _classes = _classes|merge(['table-striped']) %}
