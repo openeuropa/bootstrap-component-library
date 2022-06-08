@@ -12,5 +12,4 @@ export default {
   },
 };
 
-export const Default = () =>
-  icons_list({ icons: list, path: defaultSprite });
+export const Default = () => icons_list({ icons: list, path: defaultSprite });
