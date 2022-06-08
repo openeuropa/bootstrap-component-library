@@ -99,11 +99,16 @@
     <div class="row">
     {% if _with_sidebar %}
       <div class="{{ _col_classes.left|join(' ') }}">
+      {% if reset_container_margins is defined %}
         <div class="bcl-section">
           <div class="bcl-section__group">
+      {% endif %} 
             {% block sidebar %}{% endblock %}
+          }
+      {% if reset_container_margins is defined %}
           </div>
         </div>
+      {% endif %}
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}

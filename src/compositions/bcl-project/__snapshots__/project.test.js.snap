@@ -430,58 +430,52 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
         <div
           class="col-12 col-lg-3"
         >
-          <div
-            class="bcl-section"
+          <nav
+            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            id="bcl-inpage-navigation"
           >
-            <div
-              class="bcl-section__group"
+            <h3
+              class="mb-4 bcl-heading"
             >
-              <nav
-                class="d-none d-lg-block bcl-inpage-navigation position-sticky"
-                id="bcl-inpage-navigation"
+              Page content
+            </h3>
+            <ul
+              class="nav nav-pills flex-column"
+            >
+              <li
+                class="nav-item"
               >
-                <h3
-                  class="mb-4 bcl-heading"
+                <a
+                  class="nav-link"
+                  href="#project-details"
                 >
-                  Page content
-                </h3>
-                <ul
-                  class="nav nav-pills flex-column"
+                  Project details
+                </a>
+              </li>
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#description"
                 >
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#project-details"
-                    >
-                      Project details
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#description"
-                    >
-                      Description
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#partners"
-                    >
-                      Partner organisations
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+                  Description
+                </a>
+              </li>
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#partners"
+                >
+                  Partner organisations
+                </a>
+              </li>
+            </ul>
+          </nav>
+                    }
+            
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"
@@ -2195,216 +2189,210 @@ exports[`OE - Project listing renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            class="bcl-section"
+            class="bcl-offcanvas offcanvas-start offcanvas"
+            data-bs-scroll="true"
+            id="bcl-offcanvas"
+            tabindex="-1"
           >
             <div
-              class="bcl-section__group"
+              class="offcanvas-header p-lg-0"
             >
-              <div
-                class="bcl-offcanvas offcanvas-start offcanvas"
-                data-bs-scroll="true"
-                id="bcl-offcanvas"
-                tabindex="-1"
+              <h3
+                class="mb-lg-4 offcanvas-title bcl-heading"
+              >
+                Filter options
+              </h3>
+              <button
+                class="btn-close text-reset d-lg-none"
+                data-bs-dismiss="offcanvas"
+                type="button"
+              />
+            </div>
+            <div
+              class="offcanvas-body p-lg-0"
+            >
+              <form
+                novalidate="true"
+                onsubmit="return false;"
               >
                 <div
-                  class="offcanvas-header p-lg-0"
+                  class="mb-3"
                 >
-                  <h3
-                    class="mb-lg-4 offcanvas-title bcl-heading"
+                  <label
+                    class="form-label"
+                    for="project-type"
                   >
-                    Filter options
-                  </h3>
-                  <button
-                    class="btn-close text-reset d-lg-none"
-                    data-bs-dismiss="offcanvas"
-                    type="button"
-                  />
+                    Project type
+                  </label>
+                  <select
+                    class="form-select"
+                    id="project-type"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      All
+                    </option>
+                  </select>
                 </div>
-                <div
-                  class="offcanvas-body p-lg-0"
+                <fieldset
+                  class="mb-3"
                 >
-                  <form
-                    novalidate="true"
-                    onsubmit="return false;"
+                  <legend
+                    class="col-form-label"
+                  >
+                    Status
+                  </legend>
+                  <div
+                    class="col-sm-10"
                   >
                     <div
                       class="mb-3"
                     >
-                      <label
-                        class="form-label"
-                        for="project-type"
-                      >
-                        Project type
-                      </label>
-                      <select
-                        class="form-select"
-                        id="project-type"
-                      >
-                        <option
-                          value="1"
-                        >
-                          a select option
-                        </option>
-                        <option
-                          value="2"
-                        >
-                          another select option
-                        </option>
-                        <option
-                          value="3"
-                        >
-                          another option
-                        </option>
-                        <option
-                          value="4"
-                        >
-                          last option
-                        </option>
-                        <option
-                          selected=""
-                          value=""
-                        >
-                          All
-                        </option>
-                      </select>
-                    </div>
-                    <fieldset
-                      class="mb-3"
-                    >
-                      <legend
-                        class="col-form-label"
-                      >
-                        Status
-                      </legend>
                       <div
-                        class="col-sm-10"
+                        class="form-check"
                       >
-                        <div
-                          class="mb-3"
+                        <input
+                          checked="true"
+                          class="form-check-input"
+                          id="ongoing"
+                          type="checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="ongoing"
                         >
-                          <div
-                            class="form-check"
-                          >
-                            <input
-                              checked="true"
-                              class="form-check-input"
-                              id="ongoing"
-                              type="checkbox"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="ongoing"
-                            >
-                              Ongoing
-                            </label>
-                          </div>
-                        </div>
-                        <div
-                          class="mb-2"
-                        >
-                          <div
-                            class="form-check"
-                          >
-                            <input
-                              checked="true"
-                              class="form-check-input"
-                              id="closed"
-                              type="checkbox"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="closed"
-                            >
-                              Closed
-                            </label>
-                          </div>
-                        </div>
+                          Ongoing
+                        </label>
                       </div>
-                    </fieldset>
-                    <div
-                      class="mb-3"
-                    >
-                      <label
-                        class="form-label"
-                        for="total-budget"
-                      >
-                        Total budget
-                      </label>
-                      <select
-                        class="form-select"
-                        id="total-budget"
-                      >
-                        <option
-                          value="1"
-                        >
-                          a select option
-                        </option>
-                        <option
-                          value="2"
-                        >
-                          another select option
-                        </option>
-                        <option
-                          value="3"
-                        >
-                          another option
-                        </option>
-                        <option
-                          value="4"
-                        >
-                          last option
-                        </option>
-                        <option
-                          selected=""
-                          value=""
-                        >
-                          0-100
-                        </option>
-                      </select>
                     </div>
-                    <label
-                      class="form-label"
-                      for="start-date"
-                    >
-                      Start date
-                    </label>
-                    <input
-                      class="mb-2 form-control"
-                      id="start-date"
-                      type="date"
-                    />
-                    <label
-                      class="form-label"
-                      for="end-date"
-                    >
-                      End date
-                    </label>
-                    <input
-                      class="mb-3 form-control"
-                      id="end-date"
-                      type="date"
-                    />
                     <div
-                      class="mt-4 d-grid gap-4 d-md-block"
+                      class="mb-2"
                     >
-                      <button
-                        class="me-md-3 btn btn-primary btn-md"
-                        type="submit"
+                      <div
+                        class="form-check"
                       >
-                        Refine
-                      </button>
-                      <button
-                        class="btn btn-light btn-md"
-                        type="submit"
-                      >
-                        Clear
-                      </button>
+                        <input
+                          checked="true"
+                          class="form-check-input"
+                          id="closed"
+                          type="checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="closed"
+                        >
+                          Closed
+                        </label>
+                      </div>
                     </div>
-                  </form>
+                  </div>
+                </fieldset>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                    for="total-budget"
+                  >
+                    Total budget
+                  </label>
+                  <select
+                    class="form-select"
+                    id="total-budget"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      0-100
+                    </option>
+                  </select>
                 </div>
-              </div>
+                <label
+                  class="form-label"
+                  for="start-date"
+                >
+                  Start date
+                </label>
+                <input
+                  class="mb-2 form-control"
+                  id="start-date"
+                  type="date"
+                />
+                <label
+                  class="form-label"
+                  for="end-date"
+                >
+                  End date
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="end-date"
+                  type="date"
+                />
+                <div
+                  class="mt-4 d-grid gap-4 d-md-block"
+                >
+                  <button
+                    class="me-md-3 btn btn-primary btn-md"
+                    type="submit"
+                  >
+                    Refine
+                  </button>
+                  <button
+                    class="btn btn-light btn-md"
+                    type="submit"
+                  >
+                    Clear
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
+                    }
+            
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"
@@ -4040,6 +4028,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   </li>
                 </ul>
               </nav>
+                        }
+                
             </div>
           </div>
         </div>
@@ -6481,6 +6471,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   </li>
                 </ul>
               </nav>
+                        }
+                
             </div>
           </div>
         </div>
@@ -8922,6 +8914,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   </li>
                 </ul>
               </nav>
+                        }
+                
             </div>
           </div>
         </div>

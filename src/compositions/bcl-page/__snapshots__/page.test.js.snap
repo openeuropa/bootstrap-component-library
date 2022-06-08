@@ -720,68 +720,62 @@ exports[`OE - Page Page renders correctly 1`] = `
         <div
           class="col-12 col-lg-3"
         >
-          <div
-            class="bcl-section"
+          <nav
+            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            id="bcl-inpage-navigation"
           >
-            <div
-              class="bcl-section__group"
+            <h3
+              class="mb-0 bcl-heading"
             >
-              <nav
-                class="d-none d-lg-block bcl-inpage-navigation position-sticky"
-                id="bcl-inpage-navigation"
+              Page content
+            </h3>
+            <ul
+              class="nav nav-pills flex-column"
+            >
+              <li
+                class="nav-item"
               >
-                <h3
-                  class="mb-0 bcl-heading"
+                <a
+                  class="nav-link"
+                  href="#content"
                 >
-                  Page content
-                </h3>
-                <ul
-                  class="nav nav-pills flex-column"
+                  Content
+                </a>
+              </li>
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#item-1"
                 >
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#content"
-                    >
-                      Content
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#item-1"
-                    >
-                      Section 1
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#item-2"
-                    >
-                      Section 2
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#item-3"
-                    >
-                      Section 3
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+                  Section 1
+                </a>
+              </li>
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#item-2"
+                >
+                  Section 2
+                </a>
+              </li>
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#item-3"
+                >
+                  Section 3
+                </a>
+              </li>
+            </ul>
+          </nav>
+                    }
+            
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"

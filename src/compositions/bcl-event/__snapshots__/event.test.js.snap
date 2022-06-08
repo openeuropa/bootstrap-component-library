@@ -666,171 +666,165 @@ exports[`OE - event listing renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            class="bcl-section"
+            class="bcl-offcanvas offcanvas-start offcanvas"
+            data-bs-scroll="true"
+            id="bcl-offcanvas"
+            tabindex="-1"
           >
             <div
-              class="bcl-section__group"
+              class="offcanvas-header p-lg-0"
             >
-              <div
-                class="bcl-offcanvas offcanvas-start offcanvas"
-                data-bs-scroll="true"
-                id="bcl-offcanvas"
-                tabindex="-1"
+              <h3
+                class="mb-lg-4 offcanvas-title bcl-heading"
+              >
+                Filter options
+              </h3>
+              <button
+                class="btn-close text-reset d-lg-none"
+                data-bs-dismiss="offcanvas"
+                type="button"
+              />
+            </div>
+            <div
+              class="offcanvas-body p-lg-0"
+            >
+              <form
+                novalidate="true"
+                onsubmit="return false;"
               >
                 <div
-                  class="offcanvas-header p-lg-0"
+                  class="mb-4"
                 >
-                  <h3
-                    class="mb-lg-4 offcanvas-title bcl-heading"
+                  <label
+                    class="form-label"
+                    for="type"
                   >
-                    Filter options
-                  </h3>
-                  <button
-                    class="btn-close text-reset d-lg-none"
-                    data-bs-dismiss="offcanvas"
-                    type="button"
+                    Type
+                  </label>
+                  <select
+                    class="form-select"
+                    id="type"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      Culture
+                    </option>
+                  </select>
+                </div>
+                <div
+                  class="mb-4"
+                >
+                  <label
+                    class="form-label"
+                    for="location"
+                  >
+                    Location
+                  </label>
+                  <select
+                    class="form-select"
+                    id="location"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      Placeholder
+                    </option>
+                  </select>
+                </div>
+                <div
+                  class="mb-3"
+                >
+                  <label
+                    class="form-label"
+                    for="creation-date-from"
+                  >
+                    Start date
+                  </label>
+                  <input
+                    class="mb-4 form-control"
+                    id="creation-date-from"
+                    type="date"
                   />
                 </div>
                 <div
-                  class="offcanvas-body p-lg-0"
+                  class="mb-3"
                 >
-                  <form
-                    novalidate="true"
-                    onsubmit="return false;"
+                  <label
+                    class="form-label"
+                    for="creation-date-to"
                   >
-                    <div
-                      class="mb-4"
-                    >
-                      <label
-                        class="form-label"
-                        for="type"
-                      >
-                        Type
-                      </label>
-                      <select
-                        class="form-select"
-                        id="type"
-                      >
-                        <option
-                          value="1"
-                        >
-                          a select option
-                        </option>
-                        <option
-                          value="2"
-                        >
-                          another select option
-                        </option>
-                        <option
-                          value="3"
-                        >
-                          another option
-                        </option>
-                        <option
-                          value="4"
-                        >
-                          last option
-                        </option>
-                        <option
-                          selected=""
-                          value=""
-                        >
-                          Culture
-                        </option>
-                      </select>
-                    </div>
-                    <div
-                      class="mb-4"
-                    >
-                      <label
-                        class="form-label"
-                        for="location"
-                      >
-                        Location
-                      </label>
-                      <select
-                        class="form-select"
-                        id="location"
-                      >
-                        <option
-                          value="1"
-                        >
-                          a select option
-                        </option>
-                        <option
-                          value="2"
-                        >
-                          another select option
-                        </option>
-                        <option
-                          value="3"
-                        >
-                          another option
-                        </option>
-                        <option
-                          value="4"
-                        >
-                          last option
-                        </option>
-                        <option
-                          selected=""
-                          value=""
-                        >
-                          Placeholder
-                        </option>
-                      </select>
-                    </div>
-                    <div
-                      class="mb-3"
-                    >
-                      <label
-                        class="form-label"
-                        for="creation-date-from"
-                      >
-                        Start date
-                      </label>
-                      <input
-                        class="mb-4 form-control"
-                        id="creation-date-from"
-                        type="date"
-                      />
-                    </div>
-                    <div
-                      class="mb-3"
-                    >
-                      <label
-                        class="form-label"
-                        for="creation-date-to"
-                      >
-                        End date
-                      </label>
-                      <input
-                        class="mb-2 form-control"
-                        id="creation-date-to"
-                        type="date"
-                      />
-                    </div>
-                    <div
-                      class="mt-4 d-grid gap-4 d-md-block"
-                    >
-                      <button
-                        class="me-md-3 btn btn-primary btn-md"
-                        type="submit"
-                      >
-                        Refine
-                      </button>
-                      <button
-                        class="btn btn-light btn-md"
-                        type="submit"
-                      >
-                        Clear
-                      </button>
-                    </div>
-                  </form>
+                    End date
+                  </label>
+                  <input
+                    class="mb-2 form-control"
+                    id="creation-date-to"
+                    type="date"
+                  />
                 </div>
-              </div>
+                <div
+                  class="mt-4 d-grid gap-4 d-md-block"
+                >
+                  <button
+                    class="me-md-3 btn btn-primary btn-md"
+                    type="submit"
+                  >
+                    Refine
+                  </button>
+                  <button
+                    class="btn btn-light btn-md"
+                    type="submit"
+                  >
+                    Clear
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
+                    }
+            
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"
@@ -2512,48 +2506,42 @@ exports[`OE - event page renders correctly 1`] = `
         <div
           class="col-12 col-lg-3"
         >
-          <div
-            class="bcl-section"
+          <nav
+            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            id="bcl-inpage-navigation"
           >
-            <div
-              class="bcl-section__group"
+            <h3
+              class="mb-0 bcl-heading"
             >
-              <nav
-                class="d-none d-lg-block bcl-inpage-navigation position-sticky"
-                id="bcl-inpage-navigation"
+              Page content
+            </h3>
+            <ul
+              class="nav nav-pills flex-column"
+            >
+              <li
+                class="nav-item"
               >
-                <h3
-                  class="mb-0 bcl-heading"
+                <a
+                  class="nav-link"
+                  href="#item-1"
                 >
-                  Page content
-                </h3>
-                <ul
-                  class="nav nav-pills flex-column"
+                  Description
+                </a>
+              </li>
+              <li
+                class="nav-item"
+              >
+                <a
+                  class="nav-link"
+                  href="#item-2"
                 >
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#item-1"
-                    >
-                      Description
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="#item-2"
-                    >
-                      Related documents
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+                  Related documents
+                </a>
+              </li>
+            </ul>
+          </nav>
+                    }
+            
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"

@@ -1776,73 +1776,67 @@ exports[`OE - Person listing renders correctly 1`] = `
           class="col-12 col-lg-3"
         >
           <div
-            class="bcl-section"
+            class="bcl-offcanvas offcanvas-start offcanvas"
+            data-bs-scroll="true"
+            id="bcl-offcanvas"
+            tabindex="-1"
           >
             <div
-              class="bcl-section__group"
+              class="offcanvas-header p-lg-0"
             >
-              <div
-                class="bcl-offcanvas offcanvas-start offcanvas"
-                data-bs-scroll="true"
-                id="bcl-offcanvas"
-                tabindex="-1"
+              <h3
+                class="mb-lg-4 offcanvas-title bcl-heading"
+              >
+                Filter options
+              </h3>
+              <button
+                class="btn-close text-reset d-lg-none"
+                data-bs-dismiss="offcanvas"
+                type="button"
+              />
+            </div>
+            <div
+              class="offcanvas-body p-lg-0"
+            >
+              <form
+                novalidate="true"
+                onsubmit="return false;"
               >
                 <div
-                  class="offcanvas-header p-lg-0"
+                  class="mb-3"
                 >
-                  <h3
-                    class="mb-lg-4 offcanvas-title bcl-heading"
+                  <label
+                    class="form-label"
                   >
-                    Filter options
-                  </h3>
-                  <button
-                    class="btn-close text-reset d-lg-none"
-                    data-bs-dismiss="offcanvas"
-                    type="button"
+                    Name
+                  </label>
+                  <input
+                    class="form-control"
+                    placeholder="Placeholder"
+                    type="text"
                   />
                 </div>
                 <div
-                  class="offcanvas-body p-lg-0"
+                  class="mt-4"
                 >
-                  <form
-                    novalidate="true"
-                    onsubmit="return false;"
+                  <button
+                    class="me-2 btn btn-primary btn-md"
+                    type="submit"
                   >
-                    <div
-                      class="mb-3"
-                    >
-                      <label
-                        class="form-label"
-                      >
-                        Name
-                      </label>
-                      <input
-                        class="form-control"
-                        placeholder="Placeholder"
-                        type="text"
-                      />
-                    </div>
-                    <div
-                      class="mt-4"
-                    >
-                      <button
-                        class="me-2 btn btn-primary btn-md"
-                        type="submit"
-                      >
-                        Refine
-                      </button>
-                      <button
-                        class="btn btn-light btn-md"
-                        type="submit"
-                      >
-                        Clear
-                      </button>
-                    </div>
-                  </form>
+                    Refine
+                  </button>
+                  <button
+                    class="btn btn-light btn-md"
+                    type="submit"
+                  >
+                    Clear
+                  </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
+                    }
+            
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"
