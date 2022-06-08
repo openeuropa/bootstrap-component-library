@@ -127,7 +127,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Resources/Colors",
-  decorators: [withCode],
   parameters: {
     design: [
       {
