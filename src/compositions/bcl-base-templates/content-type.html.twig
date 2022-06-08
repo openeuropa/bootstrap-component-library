@@ -90,11 +90,20 @@
   {% endblock %}
 {% endif %}
 
-  <div class="container mt-md-4-75 mt-4">
+{% set _container_classes = 'container' %}
+{% if reset_container_margins is not defined %}
+  {% set _container_classes = _container_classes ~ ' mt-md-4-75 mt-4' %}
+{% endif %}
+
+  <div class="{{ _container_classes }}">
     <div class="row">
     {% if _with_sidebar %}
       <div class="{{ _col_classes.left|join(' ') }}">
-        {% block sidebar %}{% endblock %}
+        <div class="bcl-section">
+          <div class="bcl-section__group">
+            {% block sidebar %}{% endblock %}
+          </div>
+        </div>
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}

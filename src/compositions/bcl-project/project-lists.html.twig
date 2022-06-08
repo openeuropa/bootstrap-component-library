@@ -23,12 +23,9 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _title_classes = ['my-4-5'] %}
+{% set _title_classes = ['poc'] %}
 {% set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
-<div
-  {{ attributes }}
->
 {% if _title is not empty %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -41,7 +38,7 @@
   {% for _item in _items %}
     {% if _item.title is not empty %}
       {% set _item_title_attributes = _item.title_attributes ?: create_attribute() %}
-      {% set _item_title_attributes = _item_title_attributes.addClass(['mb-3']) %}
+      {% set _item_title_attributes = _item_title_attributes.addClass(['poc']) %}
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _item.title,
         title_tag: _item.title_tag|default('h3'),
@@ -65,6 +62,5 @@
     {% endfor %}
   {% endfor %}
 {% endif %}
-</div>
 
 {% endspaceless %}

@@ -20,6 +20,7 @@ import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 
 const chromatic = process.env.STORYBOOK_ENV;
+const drupalAttribute = require("drupal-attribute");
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
@@ -34,6 +35,8 @@ if (isChromatic() || chromatic) {
     }
   });
 }
+
+layout.footer.attributes.removeClass(["mt-4", "mt-md-4-75"]);
 
 const baseData = {
   content_type: "listing",
@@ -56,7 +59,8 @@ const demoPage = {
   project_status_id: "project-details",
   project_contributions: dataContributions,
   banner: banner,
-  share: share,
+  share: `<div class="bcl-section"><div class="bcl-section__group">${share}</div></div>`,
+  reset_container_margins: true,
 };
 
 const ongoingDemo = {
