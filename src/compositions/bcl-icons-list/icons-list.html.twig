@@ -1,0 +1,28 @@
+{% spaceless %}
+
+{# Parameters:
+  - icons: (array of object icon) (default: [])
+  - path (string) (default: '')
+#}
+
+{% set _icons = icons|default([]) %}
+{% set _path = path|default('') %}
+
+{% if _icons is not empty and _icons is iterable %}
+  <div class="text-center">
+    {% for _icon in _icons %}
+      <div class="px-3 my-5 d-inline-block">
+      {% set _icon_object = {
+        name: _icon,
+        path: _path,
+        attributes: create_attribute().addClass(['mx-auto', 'd-block', 'mb-3']),
+        size: '2xl'
+      } %}
+      {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon_object only %}
+      <p class="text-center">{{ _icon }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% endspaceless %}
