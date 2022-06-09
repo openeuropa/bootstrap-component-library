@@ -83,9 +83,17 @@ Parameters:
         {% if _item.id is defined and _item.id is not empty %}
           id="{{ _item.id }}"
         {% endif %}>
-          <h5>{{ _item.label }}</h5>
+          {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+            title: _item.label,
+            title_tag: 'p',
+            attributes: create_attribute().addClass(['fs-5', 'fw-medium', 'mb-1']),
+          } only %}
           {% if _item.title is defined and _item.title is not empty %}
-          <h6>{{ _item.title }}</h6>
+          {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+            title: _item.title,
+            title_tag: 'p',
+            attributes: create_attribute().addClass(['fs-6', 'fw-medium', 'mb-1']),
+          } only %}
           {% endif %}
           {% if _item.content is defined and _item.content is not empty %}
           <div>{{ _item.content }}</div>

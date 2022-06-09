@@ -2,7 +2,11 @@
 
 {% block sidebar %}
   <div class="mb-4">
-    <h3 class="mb-4">Procurement details</h3>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Procurement details',
+      title_tag: 'p',
+      attributes: create_attribute().addClass(['fs-4', 'fw-medium', 'mb-4']),
+    } only %}
     <div class="mt-3-5">
       {% for list in sidebar.lists %}
         <div class="mb-3-5">
