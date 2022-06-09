@@ -17,7 +17,8 @@ const header =
 
 if (isChromatic()) {
   demoDataCompact.picture.classes = "chromatic-ignore";
-  demoDataForm.view.banner.image.classes = demoDataForm.view.banner.image.classes
+  demoDataForm.view.banner.image.classes = demoDataForm.view.banner.image
+    .classes
     ? `${demoDataForm.view.banner.image.classes} chromatic-ignore`
     : "chromatic-ignore";
   listingProfiles.items.forEach((item) => {
