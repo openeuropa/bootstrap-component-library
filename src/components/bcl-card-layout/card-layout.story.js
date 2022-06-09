@@ -8,11 +8,11 @@ import demoDataMasonry from "@openeuropa/bcl-data-card-layout/data--masonry.js";
 import cardLayout from "@openeuropa/bcl-card-layout/card-layout.html.twig";
 
 const getArgs = (data, type) => {
-  let args = { type: type };
-  if (type == "grid") {
+  const args = { type };
+  if (type === "grid") {
     args.equal_height = true;
   }
-  if (type == "grid") {
+  if (type === "grid") {
     args.grid_columns = 1;
     args.responsive_colums = data.responsive_colums;
     args.responsiveness = data.responsiveness;
@@ -23,7 +23,7 @@ const getArgs = (data, type) => {
 };
 
 const getArgTypes = (type) => {
-  let argTypes = {};
+  const argTypes = {};
   argTypes.type = {
     type: { name: "select" },
     description: "Layout type of multiple cards",
@@ -34,7 +34,7 @@ const getArgTypes = (type) => {
       category: "Style",
     },
   };
-  if (type == "grid") {
+  if (type === "grid") {
     argTypes.equal_height = {
       type: { name: "boolean" },
       name: "equal height",
@@ -46,7 +46,7 @@ const getArgTypes = (type) => {
       },
     };
   }
-  if (type == "grid" || type == "masonry") {
+  if (type === "grid" || type === "masonry") {
     argTypes.grid_columns = {
       name: "grid columns",
       type: { name: "select" },

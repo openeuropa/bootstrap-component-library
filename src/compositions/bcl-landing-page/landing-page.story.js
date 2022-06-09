@@ -1,7 +1,7 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import { dataLanding } from "@openeuropa/bcl-landing-page/data/data";
+import dataLanding from "@openeuropa/bcl-landing-page/data/data";
 
 import landingPage from "@openeuropa/bcl-landing-page/landing-page.html.twig";
 

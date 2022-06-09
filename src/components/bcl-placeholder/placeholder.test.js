@@ -18,9 +18,7 @@ describe("OE - Placeholder", () => {
     test(`${size} renders correctly`, () => {
       expect.assertions(1);
 
-      return expect(
-        render({ ...demoData, size: size })
-      ).resolves.toMatchSnapshot();
+      return expect(render({ ...demoData, size })).resolves.toMatchSnapshot();
     });
   });
 
@@ -29,7 +27,7 @@ describe("OE - Placeholder", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, animation: animation })
+        render({ ...demoData, animation })
       ).resolves.toMatchSnapshot();
     });
   });
@@ -39,7 +37,7 @@ describe("OE - Placeholder", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant })
+        render({ ...demoData, variant })
       ).resolves.toMatchSnapshot();
     });
   });

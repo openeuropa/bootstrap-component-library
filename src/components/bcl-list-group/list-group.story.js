@@ -7,58 +7,54 @@ import actionableDemoData from "@openeuropa/bcl-data-list-group/data--actionable
 import orderedData from "@openeuropa/bcl-data-list-group/data--ordered";
 import listGroup from "@openeuropa/bcl-list-group/list-group.html.twig";
 
-const getArgs = () => {
-  return {
-    flush: false,
-    horizontal: "none",
-  };
-};
+const getArgs = () => ({
+  flush: false,
+  horizontal: "none",
+});
 
-const getArgTypes = () => {
-  return {
-    flush: {
-      type: { name: "boolean" },
-      description: "Remove borders",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
+const getArgTypes = () => ({
+  flush: {
+    type: { name: "boolean" },
+    description: "Remove borders",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
+    },
+  },
+  horizontal: {
+    type: { name: "select" },
+    description: "Horizontal style for each media query",
+    options: [
+      "none",
+      "horizontal",
+      "horizontal-sm",
+      "horizontal-md",
+      "horizontal-lg",
+      "horizontal-xl",
+      "horizontal-xxl",
+    ],
+    control: {
+      type: "select",
+      labels: {
+        none: "none",
+        horizontal: "horizontal",
+        "horizontal-sm": "horizontal small",
+        "horizontal-md": "horizontal medium",
+        "horizontal-lg": "horizontal large",
+        "horizontal-xl": "horizontal extra large",
+        "horizontal-xxl": "horizontal extra extra large",
       },
     },
-    horizontal: {
-      type: { name: "select" },
-      description: "Horizontal style for each media query",
-      options: [
-        "none",
-        "horizontal",
-        "horizontal-sm",
-        "horizontal-md",
-        "horizontal-lg",
-        "horizontal-xl",
-        "horizontal-xxl",
-      ],
-      control: {
-        type: "select",
-        labels: {
-          none: "none",
-          horizontal: "horizontal",
-          "horizontal-sm": "horizontal small",
-          "horizontal-md": "horizontal medium",
-          "horizontal-lg": "horizontal large",
-          "horizontal-xl": "horizontal extra large",
-          "horizontal-xxl": "horizontal extra extra large",
-        },
-      },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Style",
-      },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
-const resetAttrs = (data, args) => {
+const resetAttrs = (data) => {
   data.attributes.removeClass([
     "list-group-flush",
     `list-group-${data.horizontal}`,

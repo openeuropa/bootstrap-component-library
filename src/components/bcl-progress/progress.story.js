@@ -4,83 +4,79 @@ import demoData from "@openeuropa/bcl-data-progress/data.js";
 import progress from "@openeuropa/bcl-progress/progress.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
-const getArgs = (data) => {
-  return {
-    striped: false,
-    animated: false,
-    variant: "primary",
-    progress: data.progress,
-    label: data.label,
-    bar_label: "",
-  };
-};
+const getArgs = (data) => ({
+  striped: false,
+  animated: false,
+  variant: "primary",
+  progress: data.progress,
+  label: data.label,
+  bar_label: "",
+});
 
-const getArgTypes = (data) => {
-  return {
-    striped: {
-      type: { name: "boolean" },
-      description: "Striped bar",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+const getArgTypes = () => ({
+  striped: {
+    type: { name: "boolean" },
+    description: "Striped bar",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    animated: {
-      type: { name: "boolean" },
-      description: "Animated bar",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  animated: {
+    type: { name: "boolean" },
+    description: "Animated bar",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    variant: {
-      type: { name: "select" },
-      description: "Variant of the progress",
-      options: getVariants(false),
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Style",
-      },
+  },
+  variant: {
+    type: { name: "select" },
+    description: "Variant of the progress",
+    options: getVariants(false),
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Style",
     },
-    progress: {
-      type: { name: "number" },
-      description: "Progress of the bar",
-      table: {
-        type: { summary: "number" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-      control: {
-        type: "range",
-        min: 0,
-        max: 100,
-      },
+  },
+  progress: {
+    type: { name: "number" },
+    description: "Progress of the bar",
+    table: {
+      type: { summary: "number" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    label: {
-      type: { name: "string" },
-      name: "label",
-      description: "Text before the progress bar",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+    control: {
+      type: "range",
+      min: 0,
+      max: 100,
     },
-    bar_label: {
-      type: { name: "string" },
-      name: "bar label",
-      description: "Text inside the progress bar",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  label: {
+    type: { name: "string" },
+    name: "label",
+    description: "Text before the progress bar",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-  };
-};
+  },
+  bar_label: {
+    type: { name: "string" },
+    name: "bar label",
+    description: "Text inside the progress bar",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
+    },
+  },
+});
 
 const applyArgs = (data, args) => {
   if (args.variant === "primary") {

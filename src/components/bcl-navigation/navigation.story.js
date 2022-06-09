@@ -8,7 +8,7 @@ import demoDataCustom from "@openeuropa/bcl-data-navigation/data--custom";
 import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";
 
 const getArgs = (data, type) => {
-  let args = {
+  const args = {
     full_width: false,
     alignment: "default",
   };
@@ -21,7 +21,7 @@ const getArgs = (data, type) => {
 };
 
 const getArgTypes = (data, type) => {
-  let argTypes = {
+  const argTypes = {
     full_width: {
       name: "full width",
       type: { name: "boolean" },

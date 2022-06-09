@@ -1,4 +1,4 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
 import demoData from "@openeuropa/bcl-data-textarea/data";
 

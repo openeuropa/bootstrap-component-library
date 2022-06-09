@@ -4,53 +4,49 @@ import demoData from "@openeuropa/bcl-data-accordion/data.js";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data) => {
-  return {
-    toggle1: data.items[0].title,
-    content1: data.items[0].content,
-    flush: false,
-  };
-};
+const getArgs = (data) => ({
+  toggle1: data.items[0].title,
+  content1: data.items[0].content,
+  flush: false,
+});
 
-const getArgTypes = (data) => {
-  return {
-    toggle1: {
-      name: `toggle 1`,
-      type: { name: "string", required: true },
-      description: `Text of the first accordion toggler`,
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-      control: {
-        type: "text",
-      },
+const getArgTypes = () => ({
+  toggle1: {
+    name: `toggle 1`,
+    type: { name: "string", required: true },
+    description: `Text of the first accordion toggler`,
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    content1: {
-      name: `content 1`,
-      type: { name: "string", required: true },
-      description: "Text of the first accordion item content",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-      control: {
-        type: "text",
-      },
+    control: {
+      type: "text",
     },
-    flush: {
-      type: { name: "boolean" },
-      description: "Variant of the accordion",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-        category: "Style",
-      },
+  },
+  content1: {
+    name: `content 1`,
+    type: { name: "string", required: true },
+    description: "Text of the first accordion item content",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-  };
-};
+    control: {
+      type: "text",
+    },
+  },
+  flush: {
+    type: { name: "boolean" },
+    description: "Variant of the accordion",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: false },
+      category: "Style",
+    },
+  },
+});
 
 const resetAttrs = (data) => {
   data.attributes.removeClass("accordion-flush");
@@ -61,8 +57,8 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data);
-  data.items[0].title = args[`toggle1`];
-  data.items[0].content = args[`content1`];
+  data.items[0].title = args.toggle1;
+  data.items[0].content = args.content1;
 
   return Object.assign(data, args);
 };

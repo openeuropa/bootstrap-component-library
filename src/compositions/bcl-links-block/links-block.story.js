@@ -5,65 +5,61 @@ import demoData from "@openeuropa/bcl-links-block/data/data.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
-const getArgs = (data) => {
-  return {
-    background: data.background,
-    variant: data.variant,
-    title: data.title,
-    title_tag: "h2",
-  };
-};
+const getArgs = (data) => ({
+  background: data.background,
+  variant: data.variant,
+  title: data.title,
+  title_tag: "h2",
+});
 
-const getArgTypes = (data) => {
-  return {
-    title: {
-      type: { name: "string" },
-      description: "Title of the block",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  title: {
+    type: { name: "string" },
+    description: "Title of the block",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    title_tag: {
-      name: "title tag",
-      type: { name: "string" },
-      description: "Html tag of the title",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "h2" },
-        category: "Content",
-      },
+  },
+  title_tag: {
+    name: "title tag",
+    type: { name: "string" },
+    description: "Html tag of the title",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "h2" },
+      category: "Content",
     },
-    background: {
-      description: "Color of the background",
-      options: ["gray", "transparent"],
-      control: {
-        type: "inline-radio",
-      },
-      table: {
-        defaultValue: { summary: "gray" },
-        category: "Style",
-        type: { summary: "string" },
-      },
+  },
+  background: {
+    description: "Color of the background",
+    options: ["gray", "transparent"],
+    control: {
+      type: "inline-radio",
     },
-    variant: {
-      description: "Direction in which the links are displayed",
-      options: ["vertical", "horizontal"],
-      control: {
-        type: "inline-radio",
-      },
-      table: {
-        defaultValue: { summary: "vertical" },
-        category: "Style",
-        type: { summary: "string" },
-      },
+    table: {
+      defaultValue: { summary: "gray" },
+      category: "Style",
+      type: { summary: "string" },
     },
-  };
-};
+  },
+  variant: {
+    description: "Direction in which the links are displayed",
+    options: ["vertical", "horizontal"],
+    control: {
+      type: "inline-radio",
+    },
+    table: {
+      defaultValue: { summary: "vertical" },
+      category: "Style",
+      type: { summary: "string" },
+    },
+  },
+});
 
 const applyArgs = (data, args) => {
-  data.links.forEach(function (link) {
+  data.links.forEach((link) => {
     if ("icon" in link) {
       link.icon.path = defaultSprite;
       link.icon_position = "before";

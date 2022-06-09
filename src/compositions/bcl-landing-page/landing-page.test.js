@@ -1,6 +1,6 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 
-import { dataLanding } from "@openeuropa/bcl-landing-page/data/data";
+import dataLanding from "@openeuropa/bcl-landing-page/data/data";
 
 const template = "@oe-bcl/bcl-landing-page/landing-page.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

@@ -28,7 +28,7 @@ const getArgs = (data, type) => {
     text_color: data.text_color,
     border_variant: data.border_variant,
   };
-  if (type == "horizontal") {
+  if (type === "horizontal") {
     args.horizontal = data.horizontal;
     args.horizontal_grid = data.horizontal_grid;
   }
@@ -37,7 +37,7 @@ const getArgs = (data, type) => {
 };
 
 const getArgTypes = (data, type) => {
-  let argTypes = {
+  const argTypes = {
     title: {
       type: { name: "string" },
       description: "Title of the card",
@@ -145,7 +145,7 @@ const getArgTypes = (data, type) => {
       },
     },
   };
-  if (type == "horizontal") {
+  if (type === "horizontal") {
     argTypes.horizontal = {
       type: { name: "boolean" },
       description: "Horizontal style of card",

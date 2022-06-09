@@ -1,5 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
   banner: {
     background: "gray",
@@ -88,7 +86,6 @@ module.exports = {
           },
         ],
       },
-      icon_path: "/icons.svg",
     },
     {
       item_title: "File title",
@@ -156,7 +153,6 @@ module.exports = {
           },
         ],
       },
-      icon_path: "/icons.svg",
     },
   ],
   description: {

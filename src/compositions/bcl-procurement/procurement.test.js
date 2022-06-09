@@ -78,7 +78,7 @@ const demoListing = {
     title: "Procurement",
     title_tag: "h1",
   },
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
 };

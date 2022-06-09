@@ -5,7 +5,7 @@ import {
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import { dataListing } from "@openeuropa/bcl-search/data/data";
+import dataListing from "@openeuropa/bcl-search/data/data";
 
 import search from "@openeuropa/bcl-search/search.html.twig";
 

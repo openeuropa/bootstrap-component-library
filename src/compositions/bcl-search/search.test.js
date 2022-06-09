@@ -1,5 +1,5 @@
 import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
-import { dataListing } from "@openeuropa/bcl-search/data/data";
+import dataListing from "@openeuropa/bcl-search/data/data";
 
 const template = "@oe-bcl/bcl-search/search.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);

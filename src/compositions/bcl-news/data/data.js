@@ -30,7 +30,7 @@ const header =
 
 const baseData = {
   content_type: "news",
-  header: header,
+  header,
   footer: layout.footer,
   with_banner: true,
   with_header: true,
@@ -39,16 +39,16 @@ const baseData = {
 
 const demoData = {
   ...baseData,
-  banner: banner,
-  content: content,
-  share: share,
+  banner,
+  content,
+  share,
 };
 
 const demoListing = {
   ...baseData,
   ...dataListing,
   title: "Results",
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
   with_sidebar: true,

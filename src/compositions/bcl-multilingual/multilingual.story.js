@@ -36,9 +36,9 @@ const baseData = {
   with_banner: true,
   with_header: true,
   with_footer: true,
-  banner: banner,
-  content: content,
-  share: share,
+  banner,
+  content,
+  share,
 };
 
 const neutralData = {

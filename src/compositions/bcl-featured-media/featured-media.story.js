@@ -127,9 +127,7 @@ export default {
   chromatic: { delay: 1000 },
 };
 
-const applyArgs = (data, args) => {
-  return Object.assign(data, args);
-};
+const applyArgs = (data, args) => Object.assign(data, args);
 
 export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
 

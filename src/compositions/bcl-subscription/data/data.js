@@ -23,12 +23,12 @@ if (isChromatic() || chromatic) {
 const demoData = {
   content_type: "subscription",
   title: "Subscription",
-  header: header,
+  header,
   footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
-  sidebar: sidebar,
+  sidebar,
   subscription: blockData,
   modal: modalData,
   banner: {
@@ -39,7 +39,7 @@ const demoData = {
       <button data-bs-toggle="modal" data-bs-target="#subscribeModal" class="btn btn-outline-primary btn-md" type="button"><svg class="me-2-5 bi icon--fluid"><use xlink:href="/icons.svg#envelope-fill"></use></svg>Subscribe</button>
     </div>`,
   },
-  content: content,
+  content,
 };
 
-export { demoData };
+export default demoData;

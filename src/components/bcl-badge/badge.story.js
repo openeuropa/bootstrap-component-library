@@ -1,103 +1,98 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { initBadges } from "@openeuropa/bcl-story-utils";
+import { initBadges, getVariants } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
-import { getVariants } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data) => {
-  return {
-    label: data.label,
-    url: "",
-    title: data.label,
-    background: data.background || "primary",
-    rounded_pill: false,
-    dismissible: false,
-    outline: false,
-    assistive_text: "",
-  };
-};
+const getArgs = (data) => ({
+  label: data.label,
+  url: "",
+  title: data.label,
+  background: data.background || "primary",
+  rounded_pill: false,
+  dismissible: false,
+  outline: false,
+  assistive_text: "",
+});
 
-const getArgTypes = (data) => {
-  return {
-    label: {
-      type: { name: "string" },
-      description: "Label of the badge",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  label: {
+    type: { name: "string" },
+    description: "Label of the badge",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    url: {
-      type: { name: "string" },
-      description: "If you want the badge to be a link",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  url: {
+    type: { name: "string" },
+    description: "If you want the badge to be a link",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    dismissible: {
-      type: { name: "boolean" },
-      description: "Dismissible badge",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Content",
-      },
+  },
+  dismissible: {
+    type: { name: "boolean" },
+    description: "Dismissible badge",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Content",
     },
-    title: {
-      type: { name: "string" },
-      description: "Title attribute if it's a link",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  title: {
+    type: { name: "string" },
+    description: "Title attribute if it's a link",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    background: {
-      type: { name: "select" },
-      options: getVariants(),
-      description: "Background color of the badge",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "primary" },
-        category: "Style",
-      },
+  },
+  background: {
+    type: { name: "select" },
+    options: getVariants(),
+    description: "Background color of the badge",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "primary" },
+      category: "Style",
     },
-    rounded_pill: {
-      type: { name: "boolean" },
-      description: "Mane the badge a rounded pill",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  rounded_pill: {
+    type: { name: "boolean" },
+    description: "Mane the badge a rounded pill",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    outline: {
-      type: { name: "boolean" },
-      description: "Outline",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  outline: {
+    type: { name: "boolean" },
+    description: "Outline",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    assistive_text: {
-      name: "assistive text",
-      type: { name: "string" },
-      description: "hidden text, for accessibility",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Accessibility",
-      },
+  },
+  assistive_text: {
+    name: "assistive text",
+    type: { name: "string" },
+    description: "hidden text, for accessibility",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Accessibility",
     },
-  };
-};
+  },
+});
 
 const resetAttrs = (data) => {
   data.attributes.removeClass(`bg-${data.background}`);

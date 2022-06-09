@@ -27,10 +27,10 @@ const dataListing = {
   with_header: true,
   with_footer: true,
   with_sidebar: true,
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
   ...demoData,
 };
 
-export { dataListing };
+export default dataListing;

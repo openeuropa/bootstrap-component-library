@@ -7,6 +7,7 @@ import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3
 import demoHighlightData from "@openeuropa/bcl-listing/data/listing--highlight-1-col";
 import demoHighlight3ColData from "@openeuropa/bcl-listing/data/listing--highlight-3-col";
 import demoHighlight2ColData from "@openeuropa/bcl-listing/data/listing--highlight-2-col";
+
 const template = "@oe-bcl/bcl-listing/listing.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);

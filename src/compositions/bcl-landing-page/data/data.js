@@ -18,7 +18,7 @@ if (isChromatic()) {
 
 const dataLanding = {
   content_type: "landing-page",
-  header: header,
+  header,
   footer: layout.footer,
   with_banner: true,
   with_header: true,
@@ -26,4 +26,4 @@ const dataLanding = {
   ...demoData,
 };
 
-export { dataLanding };
+export default dataLanding;

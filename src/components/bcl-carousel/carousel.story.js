@@ -17,135 +17,131 @@ if (isChromatic()) {
   });
 }
 
-const getArgs = (data) => {
-  return {
-    items: data.items,
-    autoinit: true,
-    autoplay: true,
-    disable_touch: false,
-    rounded_indicators: false,
-    with_controls: true,
-    prev_label: data.prev_label,
-    next_label: data.next_label,
-    with_indicators: data.with_indicators,
-    fade: false,
-    dark: false,
-  };
-};
+const getArgs = (data) => ({
+  items: data.items,
+  autoinit: true,
+  autoplay: true,
+  disable_touch: false,
+  rounded_indicators: false,
+  with_controls: true,
+  prev_label: data.prev_label,
+  next_label: data.next_label,
+  with_indicators: data.with_indicators,
+  fade: false,
+  dark: false,
+});
 
-const getArgTypes = (data) => {
-  return {
-    items: {
-      type: { name: "object", required: true },
-      description: "Carousel items",
-      table: {
-        type: { summary: "array of objects" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  items: {
+    type: { name: "object", required: true },
+    description: "Carousel items",
+    table: {
+      type: { summary: "array of objects" },
+      category: "Content",
     },
-    autoinit: {
-      name: "initialize the carousel",
-      type: { name: "boolean" },
-      description:
-        "If set to false the carousel need to be instantiated via javascript.",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Behaviour",
-      },
+  },
+  autoinit: {
+    name: "initialize the carousel",
+    type: { name: "boolean" },
+    description:
+      "If set to false the carousel need to be instantiated via javascript.",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Behaviour",
     },
-    autoplay: {
-      name: "automatic sliding",
-      type: { name: "boolean" },
-      description: "If set to false the carousel won't slide automatically",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Behaviour",
-      },
+  },
+  autoplay: {
+    name: "automatic sliding",
+    type: { name: "boolean" },
+    description: "If set to false the carousel won't slide automatically",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Behaviour",
     },
-    disable_touch: {
-      name: "disable touch swiping",
-      type: { name: "boolean" },
-      description: "If set to true the swipe behaviour is disabled",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Behaviour",
-      },
+  },
+  disable_touch: {
+    name: "disable touch swiping",
+    type: { name: "boolean" },
+    description: "If set to true the swipe behaviour is disabled",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Behaviour",
     },
-    rounded_indicators: {
-      name: "rounded indicators",
-      type: { name: "boolean" },
-      description: "If set to true the indicators would be circles",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  rounded_indicators: {
+    name: "rounded indicators",
+    type: { name: "boolean" },
+    description: "If set to true the indicators would be circles",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    with_controls: {
-      name: "controls",
-      type: { name: "boolean" },
-      description: "Enable the controls (prev and next buttons)",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Content",
-      },
+  },
+  with_controls: {
+    name: "controls",
+    type: { name: "boolean" },
+    description: "Enable the controls (prev and next buttons)",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Content",
     },
-    prev_label: {
-      name: "label for the prev button",
-      type: { name: "string" },
-      description: "The label is for accessibility, it's hidden",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  prev_label: {
+    name: "label for the prev button",
+    type: { name: "string" },
+    description: "The label is for accessibility, it's hidden",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    next_label: {
-      name: "label for the next button",
-      type: { name: "string" },
-      description: "The label is for accessibility, it's hidden",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  next_label: {
+    name: "label for the next button",
+    type: { name: "string" },
+    description: "The label is for accessibility, it's hidden",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    with_indicators: {
-      name: "Indicators",
-      type: { name: "boolean" },
-      description: "Enable the slides indicators",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Content",
-      },
+  },
+  with_indicators: {
+    name: "Indicators",
+    type: { name: "boolean" },
+    description: "Enable the slides indicators",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Content",
     },
-    fade: {
-      name: "fade",
-      type: { name: "boolean" },
-      description: "Enable fading transition",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Behaviour",
-      },
+  },
+  fade: {
+    name: "fade",
+    type: { name: "boolean" },
+    description: "Enable fading transition",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Behaviour",
     },
-    dark: {
-      name: "dark",
-      type: { name: "boolean" },
-      description: "Enable dark variant",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  dark: {
+    name: "dark",
+    type: { name: "boolean" },
+    description: "Enable dark variant",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 const resetAttrs = (data, args) => {
   data.attributes.removeClass("carousel-fade");

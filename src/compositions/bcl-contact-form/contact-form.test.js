@@ -38,7 +38,6 @@ const dataSuccess = {
 const template = "@oe-bcl/bcl-contact-form/contact-form.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);
-const renderListing = (params) => renderTwigFileAsNode(template, params, true);
 
 describe("OE - Contact-form", () => {
   test("contact-form page renders correctly", () => {

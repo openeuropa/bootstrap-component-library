@@ -16,9 +16,9 @@ const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 if (isChromatic()) {
-  demoDataViewCompact.picture.classes = "chromatic-ignore";
-  demoData.view.banner.image.classes = demoData.view.banner.image.classes
-    ? `${demoData.view.banner.image.classes} chromatic-ignore`
+  demoDataCompact.picture.classes = "chromatic-ignore";
+  demoDataForm.view.banner.image.classes = demoDataForm.view.banner.image.classes
+    ? `${demoDataForm.view.banner.image.classes} chromatic-ignore`
     : "chromatic-ignore";
   listingProfiles.items.forEach((item) => {
     item.image.classes = item.image.classes
@@ -30,7 +30,7 @@ if (isChromatic()) {
 const baseData = {
   with_header: true,
   with_footer: true,
-  header: header,
+  header,
   footer: layout.footer,
   content_type: "users",
 };
@@ -42,7 +42,7 @@ const dataListing = {
   ...demoDataListing,
   ...baseData,
   listing: listingProfiles,
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
   banner: {

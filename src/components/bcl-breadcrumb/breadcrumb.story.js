@@ -4,24 +4,20 @@ import demoData from "@openeuropa/bcl-data-breadcrumb/data.js";
 import breadcrumb from "@openeuropa/bcl-breadcrumb/breadcrumb.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
-const getArgs = (data) => {
-  return {
-    links: data.links,
-  };
-};
+const getArgs = (data) => ({
+  links: data.links,
+});
 
-const getArgTypes = (data) => {
-  return {
-    links: {
-      type: { name: "object" },
-      description: "Links",
-      table: {
-        type: { summary: "object" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  links: {
+    type: { name: "object" },
+    description: "Links",
+    table: {
+      type: { summary: "object" },
+      category: "Content",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   data.icon_path = defaultSprite;

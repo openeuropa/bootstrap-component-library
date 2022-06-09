@@ -1,8 +1,4 @@
-import {
-  merge,
-  renderTwigFileAsNode,
-  getVariants,
-} from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
 import demoData from "@openeuropa/bcl-data-badge/data";
 
 const template = "@oe-bcl/bcl-badge/badge.html.twig";
@@ -46,7 +42,7 @@ describe("OE - badge", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, background: background })
+        render({ ...demoData, background })
       ).resolves.toMatchSnapshot();
     });
 
@@ -54,7 +50,7 @@ describe("OE - badge", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, background: background, outline: true })
+        render({ ...demoData, background, outline: true })
       ).resolves.toMatchSnapshot();
     });
   });
