@@ -2,8 +2,11 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import { within, userEvent } from "@storybook/testing-library";
-import { initTooltip } from "@openeuropa/bcl-story-utils";
-import { getIconControls, getVariants } from "@openeuropa/bcl-story-utils";
+import {
+  initTooltip,
+  getIconControls,
+  getVariants,
+} from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
@@ -148,10 +151,10 @@ const getArgTypes = (data, type) => {
       defaultPosition = "right";
     }
     argTypes.placement = {
-      name: type + " position",
+      name: `${type} position`,
       type: "select",
       options: ["top", "bottom", "left", "right"],
-      description: "Position for the " + type,
+      description: `Position for the ${type}`,
       table: {
         type: { summary: "attribute" },
         defaultValue: { summary: defaultPosition },
@@ -204,7 +207,7 @@ const applyArgs = (data, args) => {
     data.icon.transformation = args.transformation;
     data.icon.attributes = new drupalAttribute();
   }
-  if (args.name == "none") {
+  if (args.name === "none") {
     data.icon = null;
   }
   if (args.placement) {
@@ -275,8 +278,8 @@ Collapse.parameters = {
 if (isChromatic() || chromatic) {
   Collapse.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.click(button);
+    const but = canvas.getByRole("button");
+    await userEvent.click(but);
   };
 }
 
@@ -303,8 +306,8 @@ Popover.parameters = {
 if (isChromatic() || chromatic) {
   Popover.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.click(button);
+    const but = canvas.getByRole("button");
+    await userEvent.click(but);
   };
 }
 
@@ -326,8 +329,8 @@ Tooltip.parameters = {
 if (isChromatic() || chromatic) {
   Tooltip.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.hover(button);
+    const but = canvas.getByRole("button");
+    await userEvent.hover(but);
   };
 }
 

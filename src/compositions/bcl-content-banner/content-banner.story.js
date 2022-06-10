@@ -1,9 +1,8 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
-
 import isChromatic from "chromatic/isChromatic";
-import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import dataDate from "@openeuropa/bcl-date-block/data/data.js";
@@ -17,73 +16,69 @@ const links = [...dataLinks.links];
 const badges = [...dataDefault.badges];
 const image = { ...dataDefault.image };
 
-const getArgs = () => {
-  return {
-    background: "gray",
-    image_size: "md",
-    date: false,
-    badges: true,
-    action_button: false,
-    links: false,
-  };
-};
+const getArgs = () => ({
+  background: "gray",
+  image_size: "md",
+  date: false,
+  badges: true,
+  action_button: false,
+  links: false,
+});
 
-const getArgTypes = () => {
-  return {
-    background: {
-      type: { name: "select" },
-      options: ["white", "gray"],
-      description: "White or gray background",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "white" },
-      },
+const getArgTypes = () => ({
+  background: {
+    type: { name: "select" },
+    options: ["white", "gray"],
+    description: "White or gray background",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "white" },
     },
-    action_button: {
-      name: "action button",
-      type: { name: "boolean" },
-      description: "Toggle button",
-      table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
-      },
+  },
+  action_button: {
+    name: "action button",
+    type: { name: "boolean" },
+    description: "Toggle button",
+    table: {
+      type: { summary: "object" },
+      defaultValue: { summary: "{}" },
     },
-    links: {
-      type: { name: "boolean" },
-      description: "Toggle links",
-      table: {
-        type: { summary: "array" },
-        defaultValue: { summary: "[]" },
-      },
+  },
+  links: {
+    type: { name: "boolean" },
+    description: "Toggle links",
+    table: {
+      type: { summary: "array" },
+      defaultValue: { summary: "[]" },
     },
-    date: {
-      type: { name: "boolean" },
-      description: "Replace image with a date block",
-      table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
-      },
+  },
+  date: {
+    type: { name: "boolean" },
+    description: "Replace image with a date block",
+    table: {
+      type: { summary: "object" },
+      defaultValue: { summary: "{}" },
     },
-    badges: {
-      type: { name: "boolean" },
-      description: "Toggle badges",
-      table: {
-        type: { summary: "array" },
-        defaultValue: { summary: "[]" },
-      },
+  },
+  badges: {
+    type: { name: "boolean" },
+    description: "Toggle badges",
+    table: {
+      type: { summary: "array" },
+      defaultValue: { summary: "[]" },
     },
-    image_size: {
-      name: "image size",
-      type: { name: "select" },
-      options: ["sm", "md", "lg"],
-      description: "Size of the image",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "md" },
-      },
+  },
+  image_size: {
+    name: "image size",
+    type: { name: "select" },
+    options: ["sm", "md", "lg"],
+    description: "Size of the image",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "md" },
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
@@ -108,10 +103,8 @@ const applyArgs = (data, args) => {
   }
   if (!args.badges) {
     delete data.badges;
-  } else {
-    if (!data.badges) {
-      data.badges = badges;
-    }
+  } else if (!data.badges) {
+    data.badges = badges;
   }
 
   if (data.image && (isChromatic() || chromatic)) {

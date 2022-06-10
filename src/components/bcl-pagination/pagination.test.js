@@ -18,9 +18,7 @@ describe("OE - Pagination", () => {
     test(`${size} renders correctly`, () => {
       expect.assertions(1);
 
-      return expect(
-        render({ ...demoData, size: size })
-      ).resolves.toMatchSnapshot();
+      return expect(render({ ...demoData, size })).resolves.toMatchSnapshot();
     });
   });
 
@@ -29,7 +27,7 @@ describe("OE - Pagination", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, alignment: alignment })
+        render({ ...demoData, alignment })
       ).resolves.toMatchSnapshot();
     });
   });

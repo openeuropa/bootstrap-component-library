@@ -6,8 +6,8 @@ import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data, input_type) => {
-  let args = {
-    input_type: input_type,
+  const args = {
+    input_type,
     label: data.label || "",
     hidden_label: false,
     helper_text: data.helper_text || "",
@@ -42,41 +42,39 @@ const getArgs = (data, input_type) => {
   return args;
 };
 
-const getArgTypes = (data, type) => {
-  return {
-    input_type: {
-      name: "input type",
-      type: { name: "select" },
-      description: "Type of the text input",
-      options: [
-        "text",
-        "email",
-        "password",
-        "radio",
-        "checkbox",
-        "file",
-        "color",
-        "date",
-        "datetime-local",
-        "search",
-        "range",
-        "tel",
-        "time",
-        "url",
-        "week",
-        "number",
-        "month",
-        "hidden",
-      ],
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "text" },
-        category: "Content",
-      },
+const getArgTypes = (data, type) => ({
+  input_type: {
+    name: "input type",
+    type: { name: "select" },
+    description: "Type of the text input",
+    options: [
+      "text",
+      "email",
+      "password",
+      "radio",
+      "checkbox",
+      "file",
+      "color",
+      "date",
+      "datetime-local",
+      "search",
+      "range",
+      "tel",
+      "time",
+      "url",
+      "week",
+      "number",
+      "month",
+      "hidden",
+    ],
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "text" },
+      category: "Content",
     },
-    ...getFormControls(data, type),
-  };
-};
+  },
+  ...getFormControls(data, type),
+});
 
 const resetAttrs = (data, args) => {
   if (!args.readonly) {

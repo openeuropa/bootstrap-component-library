@@ -5,50 +5,46 @@ import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "@openeuropa/bcl-textarea/textarea.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data) => {
-  return {
-    label: data.label,
-    invalid: false,
-    valid: false,
-    required: false,
-    disabled: false,
-    helper_text: "",
-    placeholder: data.placeholder,
-    hidden_label: false,
-    floating: false,
-    readonly: false,
-    rows: 4,
-    text: "",
-    invalid_feedback: data.invalid_feedback,
-    valid_feedback: data.valid_feedback,
-  };
-};
+const getArgs = (data) => ({
+  label: data.label,
+  invalid: false,
+  valid: false,
+  required: false,
+  disabled: false,
+  helper_text: "",
+  placeholder: data.placeholder,
+  hidden_label: false,
+  floating: false,
+  readonly: false,
+  rows: 4,
+  text: "",
+  invalid_feedback: data.invalid_feedback,
+  valid_feedback: data.valid_feedback,
+});
 
-const getArgTypes = (data) => {
-  return {
-    ...getFormControls(data, "textarea"),
-    rows: {
-      type: { name: "number" },
-      description: "Number or rows",
-      table: {
-        type: { summary: "integer" },
-        min: 1,
-        step: 1,
-        defaultValue: { summary: "4" },
-        category: "Size",
-      },
+const getArgTypes = (data) => ({
+  ...getFormControls(data, "textarea"),
+  rows: {
+    type: { name: "number" },
+    description: "Number or rows",
+    table: {
+      type: { summary: "integer" },
+      min: 1,
+      step: 1,
+      defaultValue: { summary: "4" },
+      category: "Size",
     },
-    text: {
-      type: { name: "string" },
-      description: "Text filled",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  text: {
+    type: { name: "string" },
+    description: "Text filled",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-  };
-};
+  },
+});
 
 const resetAttrs = (data, args) => {
   if (!args.required) {

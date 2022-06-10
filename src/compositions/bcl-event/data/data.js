@@ -25,7 +25,7 @@ if (isChromatic() || chromatic) {
   dataPage.banner.image.classes = "chromatic-ignore";
 }
 
-let simpleFile = { ...file };
+const simpleFile = { ...file };
 
 delete simpleFile.translation;
 simpleFile.attributes = new drupalAttribute().addClass(["mb-3-5"]);
@@ -33,7 +33,7 @@ const files = [simpleFile, simpleFile];
 
 const baseData = {
   content_type: "event",
-  header: header,
+  header,
   footer: layout.footer,
   with_banner: true,
   with_header: true,
@@ -41,7 +41,7 @@ const baseData = {
   with_sidebar: true,
 };
 
-let banner_simple = {
+const banner_simple = {
   ...dataPage.banner,
 };
 delete banner_simple.image;
@@ -49,7 +49,7 @@ delete banner_simple.image;
 const demoData = {
   ...baseData,
   ...dataPage,
-  files: files,
+  files,
 };
 
 const demoDateData = {
@@ -60,14 +60,14 @@ const demoDateData = {
     image: {},
     date,
   },
-  files: files,
+  files,
 };
 
 const demoListing = {
   ...baseData,
   ...dataListing,
   title: "Results",
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
   listing: {

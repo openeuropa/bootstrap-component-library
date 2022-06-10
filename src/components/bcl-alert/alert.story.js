@@ -7,85 +7,81 @@ import { getVariants, getIconNames } from "@openeuropa/bcl-story-utils";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data) => {
-  return {
-    variant: data.variant || "primary",
-    message: data.message,
-    heading: data.heading,
-    dismissible: true,
-    animated_dismiss: true,
-    icon: true,
-  };
-};
+const getArgs = (data) => ({
+  variant: data.variant || "primary",
+  message: data.message,
+  heading: data.heading,
+  dismissible: true,
+  animated_dismiss: true,
+  icon: true,
+});
 
-const getArgTypes = (data) => {
-  return {
-    message: {
-      type: { name: "string" },
-      description: "Content of the alert",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  message: {
+    type: { name: "string" },
+    description: "Content of the alert",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    heading: {
-      type: { name: "string" },
-      description: "Heading of the alert",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  heading: {
+    type: { name: "string" },
+    description: "Heading of the alert",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    dismissible: {
-      type: { name: "boolean" },
-      description: "Enable the close button",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Content",
-      },
+  },
+  dismissible: {
+    type: { name: "boolean" },
+    description: "Enable the close button",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Content",
     },
-    variant: {
-      type: { name: "select" },
-      options: getVariants(),
-      description: "Variant of the alert",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "primary" },
-        category: "Style",
-      },
+  },
+  variant: {
+    type: { name: "select" },
+    options: getVariants(),
+    description: "Variant of the alert",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "primary" },
+      category: "Style",
     },
-    animated_dismiss: {
-      type: { name: "boolean" },
-      description: "Enable the animation on dismiss",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Style",
-      },
+  },
+  animated_dismiss: {
+    type: { name: "boolean" },
+    description: "Enable the animation on dismiss",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Style",
     },
-    icon: {
-      type: { name: "boolean" },
-      description: "Toggle icon visibility",
-      table: {
-        category: "Icon",
-      },
+  },
+  icon: {
+    type: { name: "boolean" },
+    description: "Toggle icon visibility",
+    table: {
+      category: "Icon",
     },
-    icon_name: {
-      name: "icon name",
-      type: { name: "select" },
-      options: getIconNames(),
-      description: "Icon name (optional, to set a custom icon)",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Icon",
-      },
+  },
+  icon_name: {
+    name: "icon name",
+    type: { name: "select" },
+    options: getIconNames(),
+    description: "Icon name (optional, to set a custom icon)",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Icon",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   data.attributes = new drupalAttribute();

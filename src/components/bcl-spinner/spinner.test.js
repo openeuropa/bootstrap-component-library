@@ -24,9 +24,7 @@ describe("OE - Spinner", () => {
     test(`${size} renders correctly`, () => {
       expect.assertions(1);
 
-      return expect(
-        render({ ...demoData, size: size })
-      ).resolves.toMatchSnapshot();
+      return expect(render({ ...demoData, size })).resolves.toMatchSnapshot();
     });
   });
 
@@ -35,7 +33,7 @@ describe("OE - Spinner", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size, type: "grow" })
+        render({ ...demoData, size, type: "grow" })
       ).resolves.toMatchSnapshot();
     });
   });

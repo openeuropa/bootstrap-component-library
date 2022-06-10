@@ -1,55 +1,52 @@
 import colors from "@openeuropa/bcl-colors/colors.html.twig";
-import withCode from "@openeuropa/storybook-addon-code";
 
-const getArgs = () => {
-  return {
-    main_colors: [
-      {
-        name: "primary",
-        value: getComputedStyle(document.documentElement).getPropertyValue(
-          "--bs-primary"
-        ),
-      },
-      {
-        name: "secondary",
-        value: getComputedStyle(document.documentElement).getPropertyValue(
-          "--bs-secondary"
-        ),
-      },
-      {
-        name: "success",
-        value: getComputedStyle(document.documentElement).getPropertyValue(
-          "--bs-success"
-        ),
-      },
-      {
-        name: "info",
-        value: getComputedStyle(document.documentElement).getPropertyValue(
-          "--bs-info"
-        ),
-      },
-      {
-        name: "warning",
-        value: getComputedStyle(document.documentElement).getPropertyValue(
-          "--bs-warning"
-        ),
-      },
-      {
-        name: "danger",
-        value: getComputedStyle(document.documentElement).getPropertyValue(
-          "--bs-danger"
-        ),
-      },
-    ],
-  };
-};
+const getArgs = () => ({
+  main_colors: [
+    {
+      name: "primary",
+      value: getComputedStyle(document.documentElement).getPropertyValue(
+        "--bs-primary"
+      ),
+    },
+    {
+      name: "secondary",
+      value: getComputedStyle(document.documentElement).getPropertyValue(
+        "--bs-secondary"
+      ),
+    },
+    {
+      name: "success",
+      value: getComputedStyle(document.documentElement).getPropertyValue(
+        "--bs-success"
+      ),
+    },
+    {
+      name: "info",
+      value: getComputedStyle(document.documentElement).getPropertyValue(
+        "--bs-info"
+      ),
+    },
+    {
+      name: "warning",
+      value: getComputedStyle(document.documentElement).getPropertyValue(
+        "--bs-warning"
+      ),
+    },
+    {
+      name: "danger",
+      value: getComputedStyle(document.documentElement).getPropertyValue(
+        "--bs-danger"
+      ),
+    },
+  ],
+});
 
 const percentages = [
   -90, -80, -70, -50, -25, -20, -15, 0, 5, 10, 15, 20, 25, 50,
 ];
-let dataColors = {};
+const dataColors = {};
 
-let mix = function (color_1, color_2, weight) {
+const mix = (color_1, color_2, weight) => {
   function d2h(d) {
     return d.toString(16);
   }
@@ -65,11 +62,11 @@ let mix = function (color_1, color_2, weight) {
   color_2 = color_2.replace(/#/g, "");
 
   for (let i = 0; i <= 5; i += 2) {
-    let v1 = h2d(color_1.substr(i, 2)),
-      v2 = h2d(color_2.substr(i, 2)),
-      val = d2h(Math.round(v2 + (v1 - v2) * (weight / 100.0)));
+    const v1 = h2d(color_1.substr(i, 2));
+    const v2 = h2d(color_2.substr(i, 2));
+    let val = d2h(Math.round(v2 + (v1 - v2) * (weight / 100.0)));
     while (val.length < 2) {
-      val = "0" + val;
+      val = `0${val}`;
     }
     color += val;
   }
@@ -95,17 +92,17 @@ const getArgTypes = () => {
 const applyArgs = (data, args) => {
   args.main_colors.forEach((color) => {
     if (color.value && color.name) {
-      let hexColor = color.value;
-      let name = color.name;
+      const hexColor = color.value;
+      const { name } = color;
       dataColors[name] = {
-        name: name,
+        name,
         values: [],
       };
       percentages.forEach((percentage) => {
         let mixedColor = "";
         let percentageString = percentage;
         if (percentage > 0) {
-          percentageString = "+" + percentage;
+          percentageString = `+${percentage}`;
         }
         if (percentage >= 0) {
           mixedColor = mix(hexColor, "#000000", percentage);
@@ -113,7 +110,7 @@ const applyArgs = (data, args) => {
           percentageString = percentage;
           mixedColor = mix(hexColor, "#ffffff", percentage * -1);
         }
-        let obj = {
+        const obj = {
           percentage: percentageString,
           color: mixedColor,
         };

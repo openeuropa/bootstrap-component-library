@@ -1,7 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
-
 module.exports = {
-  message: "A simple alert. check it out!",
   heading: "Thank you",
   message: `<p>Your informations were sent successfully</p><hr>
   <dl class="d-md-grid grid-3-9">

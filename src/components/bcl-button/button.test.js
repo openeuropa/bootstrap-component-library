@@ -19,7 +19,7 @@ describe("OE - Button", () => {
         render(
           {
             ...demoData,
-            variant: variant,
+            variant,
           },
           true
         )
@@ -32,7 +32,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size }, true)
+        render({ ...demoData, size }, true)
       ).resolves.toMatchSnapshot();
     });
   });
@@ -89,7 +89,7 @@ describe("OE - Button Outline", () => {
         render(
           {
             ...demoData,
-            variant: variant,
+            variant,
             outline: true,
           },
           true

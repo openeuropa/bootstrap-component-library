@@ -4,37 +4,33 @@ import demoSingle from "@openeuropa/bcl-data-toasts/data.js";
 import demoMultiple from "@openeuropa/bcl-data-toasts/data--multiple";
 import toasts from "@openeuropa/bcl-toast/toasts.html.twig";
 
-const getArgs = (data) => {
-  return {
-    with_wrapper: data.with_wrapper || false,
-    with_container: data.with_container || false,
-  };
-};
+const getArgs = (data) => ({
+  with_wrapper: data.with_wrapper || false,
+  with_container: data.with_container || false,
+});
 
-const getArgTypes = () => {
-  return {
-    with_wrapper: {
-      name: "with a wrapper",
-      type: { name: "boolean" },
-      description: "With an external wrapper",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Wrapper",
-      },
+const getArgTypes = () => ({
+  with_wrapper: {
+    name: "with a wrapper",
+    type: { name: "boolean" },
+    description: "With an external wrapper",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Wrapper",
     },
-    with_container: {
-      name: "with a container",
-      type: { name: "boolean" },
-      description: "With a container for multiple toasts",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Container",
-      },
+  },
+  with_container: {
+    name: "with a container",
+    type: { name: "boolean" },
+    description: "With a container for multiple toasts",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Container",
     },
-  };
-};
+  },
+});
 
 const initToast = (story) => {
   const demo = story();
@@ -50,9 +46,7 @@ const initToast = (story) => {
   ${demo}`;
 };
 
-const applyArgs = (data, args) => {
-  return Object.assign(data, args);
-};
+const applyArgs = (data, args) => Object.assign(data, args);
 
 // Stories
 export default {

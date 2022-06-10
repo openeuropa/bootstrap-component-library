@@ -23,49 +23,47 @@ const getArgs = (data) => {
   return args;
 };
 
-const getArgTypes = (data) => {
-  return {
-    variant: {
-      type: { name: "select" },
-      options: [data.variant],
-      description: "Variant used in the example",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "default-1-col" },
-        category: "Style",
-      },
+const getArgTypes = (data) => ({
+  variant: {
+    type: { name: "select" },
+    options: [data.variant],
+    description: "Variant used in the example",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "default-1-col" },
+      category: "Style",
     },
-    title: {
-      type: { name: "string" },
-      description: "Title of the block",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  title: {
+    type: { name: "string" },
+    description: "Title of the block",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    title_tag: {
-      name: "title tag",
-      type: { name: "string" },
-      description: "Tag of the title",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "h2" },
-        category: "Content",
-      },
+  },
+  title_tag: {
+    name: "title tag",
+    type: { name: "string" },
+    description: "Tag of the title",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "h2" },
+      category: "Content",
     },
-    alignment: {
-      type: { name: "select" },
-      description: "Alignment of the elements inside the items",
-      options: ["default", "start", "end", "center", "baseline", "stretch"],
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  alignment: {
+    type: { name: "select" },
+    description: "Alignment of the elements inside the items",
+    options: ["default", "start", "end", "center", "baseline", "stretch"],
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   if (args.alignment === "default") {

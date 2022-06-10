@@ -2,7 +2,6 @@ import { initBadges } from "@openeuropa/bcl-story-utils";
 import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import { within, userEvent } from "@storybook/testing-library";
-import drupalAttribute from "drupal-attribute";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";

@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+// eslint-disable-next-line import/no-unresolved
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 
 import headerData from "@openeuropa/bcl-data-header/data";
@@ -9,26 +10,22 @@ import headerDataEC from "@openeuropa/bcl-data-header/data--ec";
 import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral.js";
 import header from "@openeuropa/bcl-header/header.html.twig";
 
-const getArgs = (data) => {
-  return {
-    light: data.light || false,
-  };
-};
+const getArgs = (data) => ({
+  light: data.light || false,
+});
 
-const getArgTypes = () => {
-  return {
-    light: {
-      name: "light",
-      type: { name: "boolean" },
-      description: "Enable light mode for project bar",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+const getArgTypes = () => ({
+  light: {
+    name: "light",
+    type: { name: "boolean" },
+    description: "Enable light mode for project bar",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   correctPaths(data);

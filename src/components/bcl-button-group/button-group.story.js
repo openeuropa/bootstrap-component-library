@@ -7,70 +7,66 @@ import toolbarData from "@openeuropa/bcl-data-button-group/data--toolbar";
 import inputGroupData from "@openeuropa/bcl-data-button-group/data--input-group";
 import buttonGroup from "@openeuropa/bcl-button-group/button-group.html.twig";
 
-const getArgs = (data) => {
-  return {
-    aria_label: "",
-    toolbar: data.toolbar || false,
-    toolbar_aria_label: data.toolbar_aria_label || "",
-    size: "md",
-    vertical: false,
-  };
-};
+const getArgs = (data) => ({
+  aria_label: "",
+  toolbar: data.toolbar || false,
+  toolbar_aria_label: data.toolbar_aria_label || "",
+  size: "md",
+  vertical: false,
+});
 
-const getArgTypes = (data) => {
-  return {
-    toolbar: {
-      type: { name: "boolean" },
-      description:
-        "Enables support for multiple button groups in a toolbar style",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  toolbar: {
+    type: { name: "boolean" },
+    description:
+      "Enables support for multiple button groups in a toolbar style",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Content",
     },
-    aria_label: {
-      name: "label of the aria content",
-      description:
-        "Describe the label of the aria used for assistive technologies",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  aria_label: {
+    name: "label of the aria content",
+    description:
+      "Describe the label of the aria used for assistive technologies",
+    type: { name: "string" },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    toolbar_aria_label: {
-      name: "toolbar aria label",
-      description: "Toolbar wrapper aria label",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  toolbar_aria_label: {
+    name: "toolbar aria label",
+    description: "Toolbar wrapper aria label",
+    type: { name: "string" },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    size: {
-      type: { name: "select" },
-      description: "Size of the button group",
-      options: { small: "sm", medium: "md", large: "lg" },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "md" },
-        category: "Style",
-      },
+  },
+  size: {
+    type: { name: "select" },
+    description: "Size of the button group",
+    options: { small: "sm", medium: "md", large: "lg" },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "md" },
+      category: "Style",
     },
-    vertical: {
-      type: { name: "boolean" },
-      description: "Enable the vertical state",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  vertical: {
+    type: { name: "boolean" },
+    description: "Enable the vertical state",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 const resetAttrs = (data) => {
   data.attributes

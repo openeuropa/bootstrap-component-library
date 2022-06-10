@@ -139,13 +139,13 @@ const applyArgs = (data, args) => {
     data.icon.transformation = args.transformation;
     data.icon.attributes = new drupalAttribute();
   }
-  if (args.name == "none") {
+  if (args.name === "none") {
     data.icon = null;
   }
   if (args.tooltip_position) {
     data.attributes.setAttribute("data-bs-placement", args.tooltip_position);
   }
-  if (args.variant == "light") {
+  if (args.variant === "light") {
     data.attributes.addClass("bg-dark");
   }
 

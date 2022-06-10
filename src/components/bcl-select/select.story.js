@@ -6,7 +6,7 @@ import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect.js";
 import select from "@openeuropa/bcl-select/select.html.twig";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data, type) => {
+const getArgs = (data) => {
   const args = {
     label: data.label || "",
     hidden_label: data.hidden_label || false,
@@ -22,11 +22,9 @@ const getArgs = (data, type) => {
   return args;
 };
 
-const getArgTypes = (data, type) => {
-  return {
-    ...getFormControls(data, type),
-  };
-};
+const getArgTypes = (data, type) => ({
+  ...getFormControls(data, type),
+});
 
 const resetAttrs = (data, args) => {
   if (!args.disabled) {

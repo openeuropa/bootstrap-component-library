@@ -29,7 +29,7 @@ if (isChromatic()) {
 
 const baseData = {
   content_type: "listing",
-  header: header,
+  header,
   footer: layout.footer,
   with_header: true,
   with_footer: true,
@@ -39,9 +39,9 @@ const baseData = {
 const demoDetails = {
   ...baseData,
   ...dataExtraDetails,
-  banner: banner,
+  banner,
   social_block: true,
-  share: share,
+  share,
   authors: {
     title: "Authors",
     title_id: "authors",
@@ -52,9 +52,9 @@ const demoDetails = {
 const demoDetailsMultiple = {
   ...baseData,
   ...dataExtraDetails,
-  banner: banner,
+  banner,
   social_block: true,
-  share: share,
+  share,
   authors: {
     title: "Authors",
     listing: [
@@ -78,7 +78,7 @@ const demoListing = {
   ...baseData,
   ...dataListing,
   title: "Results",
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
   banner: {

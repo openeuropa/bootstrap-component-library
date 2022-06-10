@@ -7,6 +7,7 @@ import { correctPaths } from "@openeuropa/bcl-story-utils";
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data/data.js";
 import demoCardData from "@openeuropa/bcl-file/data/data--card";
+
 const chromatic = process.env.STORYBOOK_ENV;
 
 export default {

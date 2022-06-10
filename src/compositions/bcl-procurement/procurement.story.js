@@ -28,7 +28,7 @@ if (isChromatic() || chromatic) {
 
 const baseData = {
   content_type: "listing",
-  header: header,
+  header,
   footer: layout.footer,
   with_header: true,
   with_footer: true,
@@ -83,7 +83,7 @@ const demoListing = {
   ...baseData,
   ...dataListing,
   title: "Results",
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
 };

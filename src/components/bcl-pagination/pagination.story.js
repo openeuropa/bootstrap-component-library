@@ -5,14 +5,12 @@ import { correctPaths } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-pagination/data.js";
 import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
 
-const getArgs = (data) => {
-  return {
-    size: "default",
-    alignment: "default",
-    enable_prev_next_icon: false,
-    enable_first_last_icon: true,
-  };
-};
+const getArgs = () => ({
+  size: "default",
+  alignment: "default",
+  enable_prev_next_icon: false,
+  enable_first_last_icon: true,
+});
 
 const getArgTypes = (data) => {
   const argTypes = {

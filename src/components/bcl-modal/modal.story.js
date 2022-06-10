@@ -7,69 +7,65 @@ import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
-const getArgs = () => {
-  return {
-    size: "default",
-    static_backdrop: false,
-    verticaly_centered: false,
-    scrollable: false,
-  };
-};
+const getArgs = () => ({
+  size: "default",
+  static_backdrop: false,
+  verticaly_centered: false,
+  scrollable: false,
+});
 
-const getArgTypes = () => {
-  return {
-    size: {
-      name: "size",
-      type: { name: "select" },
-      description: "Modal size",
-      options: ["default", "sm", "lg", "xl", "fullscreen"],
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Style",
-      },
-      control: {
-        type: "select",
-        labels: {
-          default: "default",
-          sm: "small",
-          lg: "large",
-          xl: "extra large",
-          fullscreen: "fullscreen",
-        },
+const getArgTypes = () => ({
+  size: {
+    name: "size",
+    type: { name: "select" },
+    description: "Modal size",
+    options: ["default", "sm", "lg", "xl", "fullscreen"],
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Style",
+    },
+    control: {
+      type: "select",
+      labels: {
+        default: "default",
+        sm: "small",
+        lg: "large",
+        xl: "extra large",
+        fullscreen: "fullscreen",
       },
     },
-    static_backdrop: {
-      name: "static backdrop",
-      type: { name: "boolean" },
-      description: "Modal will not close when clicking outside it",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  static_backdrop: {
+    name: "static backdrop",
+    type: { name: "boolean" },
+    description: "Modal will not close when clicking outside it",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    verticaly_centered: {
-      name: "verticaly centered",
-      type: { name: "boolean" },
-      description: "Vertically center the modal",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  verticaly_centered: {
+    name: "verticaly centered",
+    type: { name: "boolean" },
+    description: "Vertically center the modal",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-    scrollable: {
-      type: { name: "boolean" },
-      description: "Scrolling long content in modal dialog",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+  },
+  scrollable: {
+    type: { name: "boolean" },
+    description: "Scrolling long content in modal dialog",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   if (args.size === "default") {
@@ -111,7 +107,7 @@ Default.argTypes = getArgTypes();
 if (isChromatic() || chromatic) {
   Default.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const modalButton = canvas.getByRole("button");
-    await userEvent.click(modalButton);
+    const modalBut = canvas.getByRole("button");
+    await userEvent.click(modalBut);
   };
 }
