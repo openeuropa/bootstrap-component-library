@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+
 import {
   initScrollspy,
   initBadges,
@@ -15,14 +16,29 @@ import {
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import event from "@openeuropa/bcl-event/event.html.twig";
 
+const getArgs = () => ({
+  toggleText: false,
+  toggleImage: false,
+});
+
+const getArgTypes = () => ({
+  toggleText: {
+    name: "text in the page banner",
+    type: { name: "boolean" },
+    description: "Toggle text in the page banner",
+  },
+  toggleImage: {
+    name: "image in the page banner",
+    type: { name: "boolean" },
+    description: "Toggle iamge in the page banner",
+  },
+});
+
 export default {
   title: "Features/Event",
   decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
-    controls: {
-      disable: true,
-    },
     badges: ["stable"],
     badgesConfig: {
       stable: {
@@ -44,17 +60,54 @@ export default {
   },
 };
 
+const applyArgs = (data, args) => {
+  if (args.toggleText) {
+    data.banner.content = demoData.banner.content;
+    data.banner.attributes.removeClass(["pb-4", "mb-0"]);
+  } else {
+    data.banner.content = "";
+    if (!args.toggleImage) {
+      data.banner.attributes.addClass(["pb-4", "mb-0"]);
+    }
+  }
+  if (args.toggleImage) {
+    data.banner.image_size = "sm";
+    data.banner.image = demoData.banner.image;
+    data.banner.attributes.removeClass(["pb-4", "mb-0"]);
+  } else {
+    data.banner.image = "";
+    if (!args.toggleText) {
+      data.banner.attributes.addClass(["pb-4", "mb-0"]);
+    }
+  }
+
+  return data;
+};
+
 export const FullPage = () => event(correctPaths(demoData));
 
 FullPage.storyName = "Event page";
 FullPage.decorators = [initScrollspy];
+FullPage.parameters = {
+  controls: {
+    disable: true,
+  },
+};
 
 export const FullPage1 = () => event(correctPaths(demoDateData));
 
 FullPage1.storyName = "Event page with date";
 FullPage1.decorators = [initScrollspy];
+FullPage1.parameters = {
+  controls: {
+    disable: true,
+  },
+};
 
-export const Listing = () => listingPage(correctPaths(demoListing));
+export const Listing = (args) =>
+  listingPage(applyArgs(correctPaths(demoListing), args));
 
 Listing.storyName = "Event listing";
 Listing.decorators = [initBadges];
+Listing.args = getArgs();
+Listing.argTypes = getArgTypes();
