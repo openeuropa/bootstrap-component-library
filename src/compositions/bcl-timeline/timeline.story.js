@@ -5,58 +5,54 @@ import dataDefault from "@openeuropa/bcl-timeline/data.js";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
-const getArgs = (data) => {
-  return {
-    title: "",
-    title_tag: "h2",
-    from: data.hide.from,
-    to: data.hide.to,
-  };
-};
+const getArgs = (data) => ({
+  title: "",
+  title_tag: "h2",
+  from: data.hide.from,
+  to: data.hide.to,
+});
 
-const getArgTypes = (data) => {
-  return {
-    from: {
-      type: { name: "number" },
-      name: "hide from",
-      description: "Item index after which to start hiding timeline items",
-      table: {
-        type: { summary: "number" },
-        defaultValue: { summary: "" },
-        category: "Display",
-      },
+const getArgTypes = () => ({
+  from: {
+    type: { name: "number" },
+    name: "hide from",
+    description: "Item index after which to start hiding timeline items",
+    table: {
+      type: { summary: "number" },
+      defaultValue: { summary: "" },
+      category: "Display",
     },
-    to: {
-      type: { name: "number" },
-      name: "hide to",
-      description: "Item index after which to resume displaying timeline items",
-      table: {
-        type: { summary: "number" },
-        defaultValue: { summary: "" },
-        category: "Display",
-      },
+  },
+  to: {
+    type: { name: "number" },
+    name: "hide to",
+    description: "Item index after which to resume displaying timeline items",
+    table: {
+      type: { summary: "number" },
+      defaultValue: { summary: "" },
+      category: "Display",
     },
-    title: {
-      type: { name: "string" },
-      description: "Title of the block",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  title: {
+    type: { name: "string" },
+    description: "Title of the block",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    title_tag: {
-      name: "title tag",
-      type: { name: "string" },
-      description: "Html tag of the title",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "h2" },
-        category: "Content",
-      },
+  },
+  title_tag: {
+    name: "title tag",
+    type: { name: "string" },
+    description: "Html tag of the title",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "h2" },
+      category: "Content",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   if (data.icon_path) {

@@ -88,7 +88,6 @@ module.exports = {
           },
         ],
       },
-      icon_path: "/icons.svg",
     },
     {
       item_title: "File title",
@@ -156,7 +155,6 @@ module.exports = {
           },
         ],
       },
-      icon_path: "/icons.svg",
     },
   ],
   description: {

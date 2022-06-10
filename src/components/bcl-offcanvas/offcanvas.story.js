@@ -8,69 +8,65 @@ import drupalAttribute from "drupal-attribute";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
-const getArgs = (data) => {
-  return {
-    body: data.body,
-    with_close: true,
-    placement: data.placement,
-    with_backdrop: true,
-    with_body_scroll: false,
-  };
-};
+const getArgs = (data) => ({
+  body: data.body,
+  with_close: true,
+  placement: data.placement,
+  with_backdrop: true,
+  with_body_scroll: false,
+});
 
-const getArgTypes = (data) => {
-  return {
-    body: {
-      type: { name: "string" },
-      description: "Content of the offcanvas",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  body: {
+    type: { name: "string" },
+    description: "Content of the offcanvas",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    with_close: {
-      name: "close button",
-      type: { name: "boolean" },
-      description: "Enable the close button",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Content",
-      },
+  },
+  with_close: {
+    name: "close button",
+    type: { name: "boolean" },
+    description: "Enable the close button",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Content",
     },
-    placement: {
-      type: { name: "select" },
-      description: "Position of the offcanvas",
-      options: ["bottom", "top", "start", "end"],
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Behaviour",
-      },
+  },
+  placement: {
+    type: { name: "select" },
+    description: "Position of the offcanvas",
+    options: ["bottom", "top", "start", "end"],
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Behaviour",
     },
-    with_backdrop: {
-      name: "enable backdrop",
-      type: { name: "boolean" },
-      description: "Enable backdrop",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "true" },
-        category: "Behaviour",
-      },
+  },
+  with_backdrop: {
+    name: "enable backdrop",
+    type: { name: "boolean" },
+    description: "Enable backdrop",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "true" },
+      category: "Behaviour",
     },
-    with_body_scroll: {
-      name: "enable body scrolling",
-      type: { name: "boolean" },
-      description: "Enable body scrolling",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Behaviour",
-      },
+  },
+  with_body_scroll: {
+    name: "enable body scrolling",
+    type: { name: "boolean" },
+    description: "Enable body scrolling",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Behaviour",
     },
-  };
-};
+  },
+});
 
 const initOffcanvas = (story) => {
   const demo = story();

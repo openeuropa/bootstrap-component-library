@@ -46,7 +46,7 @@ const demoPage = {
   ...dataContent,
   ...dataExtraDetails,
   ...dataLists,
-  banner: banner,
+  banner,
   project_status_title: "Project details",
   project_status_id: "project-details",
   project_contributions: dataStatusContributions,
@@ -71,7 +71,7 @@ const plannedDemo = {
 const demoListing = {
   ...baseData,
   ...dataListing,
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
 };

@@ -11,100 +11,96 @@ const title = {
   title: "Project details",
 };
 
-const getArgs = (data) => {
-  return {
-    status: data.status,
-    badge: data.badge,
-    start_date: data.start_date,
-    end_date: data.start_date,
-    progress: data.progress,
-    corporate_contribution: data.corporate_contribution,
-    chart_legend: data.chart_legend,
-  };
-};
+const getArgs = (data) => ({
+  status: data.status,
+  badge: data.badge,
+  start_date: data.start_date,
+  end_date: data.start_date,
+  progress: data.progress,
+  corporate_contribution: data.corporate_contribution,
+  chart_legend: data.chart_legend,
+});
 
-const getArgTypes = (data) => {
-  return {
-    status: {
-      type: { name: "select" },
-      options: ["ongoing", "planned", "closed"],
-      description: "Status of the project",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "planned" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  status: {
+    type: { name: "select" },
+    options: ["ongoing", "planned", "closed"],
+    description: "Status of the project",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "planned" },
+      category: "Content",
     },
-    badge: {
-      type: { name: "string", required: true },
-      description: "Label of the badge status",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  badge: {
+    type: { name: "string", required: true },
+    description: "Label of the badge status",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    start_date: {
-      type: "string",
-      description: "Project start date",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  start_date: {
+    type: "string",
+    description: "Project start date",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    end_date: {
-      type: "string",
-      description: "Project end date",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  end_date: {
+    type: "string",
+    description: "Project end date",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    progress: {
-      type: { name: "number" },
-      description: "Progress of the project",
-      table: {
-        type: { summary: "number" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-      control: {
-        type: "range",
-        min: 0,
-        max: 100,
-      },
+  },
+  progress: {
+    type: { name: "number" },
+    description: "Progress of the project",
+    table: {
+      type: { summary: "number" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    corporate_contribution: {
-      type: { name: "number" },
-      description: "Corporate contribution percentage to the project",
-      table: {
-        type: { summary: "number" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-      control: {
-        type: "range",
-        min: 0,
-        max: 100,
-        step: 5,
-      },
+    control: {
+      type: "range",
+      min: 0,
+      max: 100,
     },
-    chart_legend: {
-      type: { name: "object" },
-      description: "Legend of the corporation contribution chart",
-      control: {
-        type: "object",
-      },
-      table: {
-        type: { summary: "object" },
-        defaultValue: { summary: "{}" },
-        category: "Content",
-      },
+  },
+  corporate_contribution: {
+    type: { name: "number" },
+    description: "Corporate contribution percentage to the project",
+    table: {
+      type: { summary: "number" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-  };
-};
+    control: {
+      type: "range",
+      min: 0,
+      max: 100,
+      step: 5,
+    },
+  },
+  chart_legend: {
+    type: { name: "object" },
+    description: "Legend of the corporation contribution chart",
+    control: {
+      type: "object",
+    },
+    table: {
+      type: { summary: "object" },
+      defaultValue: { summary: "{}" },
+      category: "Content",
+    },
+  },
+});
 
 const applyArgs = (data, args) => Object.assign(data, args);
 

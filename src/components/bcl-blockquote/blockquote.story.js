@@ -4,56 +4,52 @@ import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import drupalAttribute from "drupal-attribute";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 
-const getArgs = (data) => {
-  return {
-    quote: data.quote,
-    attribution: data.attribution,
-    cite: data.cite,
-    alignment: "left",
-  };
-};
+const getArgs = (data) => ({
+  quote: data.quote,
+  attribution: data.attribution,
+  cite: data.cite,
+  alignment: "left",
+});
 
-const getArgTypes = (data) => {
-  return {
-    quote: {
-      type: { name: "string" },
-      description: "Text of blockquote",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+const getArgTypes = () => ({
+  quote: {
+    type: { name: "string" },
+    description: "Text of blockquote",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    attribution: {
-      type: { name: "string" },
-      description: "Attribution of blockquote",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  attribution: {
+    type: { name: "string" },
+    description: "Attribution of blockquote",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    cite: {
-      type: { name: "string" },
-      description: "Cite of attribution",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
+  },
+  cite: {
+    type: { name: "string" },
+    description: "Cite of attribution",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Content",
     },
-    alignment: {
-      type: { name: "select" },
-      options: { left: "left", center: "center", right: "end" },
-      description: "Text alignment",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "left" },
-        category: "Style",
-      },
+  },
+  alignment: {
+    type: { name: "select" },
+    options: { left: "left", center: "center", right: "end" },
+    description: "Text alignment",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "left" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {

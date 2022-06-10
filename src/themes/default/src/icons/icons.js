@@ -18,7 +18,7 @@ module.exports = [
   "arrows-angle-contract.svg",
   "arrows-fullscreen.svg",
 
-  //Shape arrows
+  // Shape arrows
   "arrow-up-circle-fill.svg",
   "arrow-up-circle.svg",
   "arrow-down-circle-fill.svg",
@@ -28,19 +28,19 @@ module.exports = [
   "arrow-right-circle-fill.svg",
   "arrow-right-circle.svg",
 
-  //Box arrows
+  // Box arrows
   "box-arrow-in-right.svg",
   "box-arrow-right.svg",
   "box-arrow-in-up-right.svg",
   "box-arrow-up-right.svg",
 
-  //Carrets
+  // Carrets
   "caret-up-fill.svg",
   "caret-down-fill.svg",
   "caret-left-fill.svg",
   "caret-right-fill.svg",
 
-  //Chevrons
+  // Chevrons
   "chevron-up.svg",
   "chevron-down.svg",
   "chevron-left.svg",
@@ -50,7 +50,7 @@ module.exports = [
   "chevron-double-left.svg",
   "chevron-double-right.svg",
 
-  //Alerts, warnings and signs
+  // Alerts, warnings and signs
   "check-lg.svg",
   "check2.svg",
   "exclamation-lg.svg",
@@ -76,7 +76,7 @@ module.exports = [
   "dash-circle-fill.svg",
   "filter.svg",
 
-  //Files and folders
+  // Files and folders
   "file-earmark-pdf.svg",
   "file-arrow-down-fill.svg",
   "file-pdf-fill.svg",
@@ -111,12 +111,12 @@ module.exports = [
   "folder.svg",
   "folder-fill.svg",
 
-  //UI and keyboard
+  // UI and keyboard
   "trash.svg",
   "trash-fill.svg",
   "link.svg",
 
-  //Social.svg
+  // Social.svg
   "skype.svg",
   "reddit.svg",
   "mastodon.svg",
@@ -134,7 +134,7 @@ module.exports = [
   "google.svg",
   "github.svg",
 
-  //Shapes
+  // Shapes
   "heart.svg",
   "heart-fill.svg",
   "star.svg",
@@ -149,7 +149,7 @@ module.exports = [
   "circle.svg",
   "circle-fill.svg",
 
-  //Media
+  // Media
   "volume-off.svg",
   "volume-off-fill.svg",
   "volume-mute.svg",
@@ -175,7 +175,7 @@ module.exports = [
   "record.svg",
   "record-fill.svg",
 
-  //Devices
+  // Devices
   "camera.svg",
   "camera-fill.svg",
   "printer.svg",
@@ -191,7 +191,7 @@ module.exports = [
   "phone.svg",
   "phone-fill.svg",
 
-  //Date and time
+  // Date and time
   "calendar-x.svg",
   "calendar-x-fill.svg",
   "calendar-check.svg",
@@ -205,7 +205,7 @@ module.exports = [
   "calendar.svg",
   "calendar-fill.svg",
 
-  //Communications
+  // Communications
   "chat-left-quote.svg",
   "chat-left-quote-fill.svg",
   "chat-left-text.svg",
@@ -246,14 +246,14 @@ module.exports = [
   "telephone-fill.svg",
   "translate.svg",
 
-  //Tools
+  // Tools
   "gear.svg",
   "gear-fill.svg",
   "pencil-square.svg",
   "pencil.svg",
   "pencil-fill.svg",
 
-  //Real world
+  // Real world
   "key.svg",
   "key-fill.svg",
   "paperclip.svg",
@@ -278,15 +278,15 @@ module.exports = [
   "house-fill.svg",
   "pin-fill.svg",
 
-  //Geo
+  // Geo
   "geo-alt.svg",
   "geo-alt-fill.svg",
 
-  //Graphics
+  // Graphics
   "zoom-in.svg",
   "zoom-out.svg",
 
-  //Emoji
+  // Emoji
   "emoji-neutral.svg",
   "emoji-neutral-fill.svg",
   "emoji-frown.svg",
@@ -294,13 +294,13 @@ module.exports = [
   "emoji-smile.svg",
   "emoji-smile-fill.svg",
 
-  //Hands
+  // Hands
   "hand-thumbs-down.svg",
   "hand-thumbs-down-fill.svg",
   "hand-thumbs-up.svg",
   "hand-thumbs-up-fill.svg",
 
-  //People
+  // People
   "person-square.svg",
   "person-lines-fill.svg",
   "building.svg",
@@ -317,7 +317,7 @@ module.exports = [
   "person.svg",
   "person-fill.svg",
 
-  //Security
+  // Security
   "unlock.svg",
   "unlock-fill.svg",
   "lock.svg",
@@ -329,13 +329,13 @@ module.exports = [
   "shield-check.svg",
   "shield-fill-check.svg",
 
-  //Cloud
+  // Cloud
   "cloud-arrow-up-fill.svg",
   "cloud-arrow-up.svg",
   "cloud-arrow-down-fill.svg",
   "cloud-arrow-down.svg",
 
-  //Misc
+  // Misc
   "upload.svg",
   "download.svg",
   "bookmarks.svg",

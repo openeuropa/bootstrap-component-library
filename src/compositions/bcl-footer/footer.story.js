@@ -49,6 +49,6 @@ if (isChromatic() || chromatic) {
   };
 }
 
-export const FooterEC = (args) => footer(correctPaths(footerDataEC));
+export const FooterEC = () => footer(correctPaths(footerDataEC));
 
 FooterEC.storyName = "Footer EC";

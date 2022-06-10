@@ -1,4 +1,5 @@
-import { merge, renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+
 const template = "@oe-bcl/bcl-heading/heading.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 

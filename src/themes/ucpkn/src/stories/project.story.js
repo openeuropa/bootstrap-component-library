@@ -5,6 +5,12 @@ import {
   correctPaths,
   initScrollspy,
 } from "@openeuropa/bcl-story-utils";
+import {
+  demoListing,
+  ongoingDemo,
+  closedDemo,
+  plannedDemo,
+} from "@openeuropa/bcl-project/data/ucpkn/data";
 
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 

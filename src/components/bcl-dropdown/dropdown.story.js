@@ -9,39 +9,35 @@ import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
-const getArgs = (data) => {
-  return {
-    direction: "default",
-    dark: false,
-  };
-};
+const getArgs = () => ({
+  direction: "default",
+  dark: false,
+});
 
-const getArgTypes = (data) => {
-  return {
-    direction: {
-      type: { name: "select" },
-      description: "Direction of dropdown menu",
-      options: ["default", "dropup", "dropend", "dropstart"],
-      control: {
-        type: "select",
-      },
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Style",
-      },
+const getArgTypes = () => ({
+  direction: {
+    type: { name: "select" },
+    description: "Direction of dropdown menu",
+    options: ["default", "dropup", "dropend", "dropstart"],
+    control: {
+      type: "select",
     },
-    dark: {
-      type: { name: "boolean" },
-      description: "Enables dark mode for dropdown menu",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Style",
     },
-  };
-};
+  },
+  dark: {
+    type: { name: "boolean" },
+    description: "Enables dark mode for dropdown menu",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
+    },
+  },
+});
 
 const resetAttrs = (data) => {
   data.attributes.removeClass("dropdown-menu-dark");

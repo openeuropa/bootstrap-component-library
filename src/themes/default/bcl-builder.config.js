@@ -1,7 +1,6 @@
-const iconList = require("./src/icons/icons");
-
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
+const iconList = require("./src/icons/icons");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = "../../../node_modules";

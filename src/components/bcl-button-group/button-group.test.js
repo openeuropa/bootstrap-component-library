@@ -13,7 +13,7 @@ describe("OE - Button-group", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size: size }, true)
+        render({ ...demoData, size }, true)
       ).resolves.toMatchSnapshot();
     });
   });

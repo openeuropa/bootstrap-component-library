@@ -1,7 +1,7 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
-
+import drupalAttribute from "drupal-attribute";
 import dataDefault from "@openeuropa/bcl-banner/data/data.js";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
 import dataImage from "@openeuropa/bcl-banner/data/data--image";

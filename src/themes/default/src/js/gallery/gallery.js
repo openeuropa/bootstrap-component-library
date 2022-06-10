@@ -44,15 +44,15 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 class Gallery extends BaseComponent {
   constructor(element, config) {
     super(element)
-    this._carousel = SelectorEngine.findOne(CAROUSEL_SELECTOR, this._element)
-    this._carouselPager = SelectorEngine.findOne(CAROUSEL_PAGER_SELECTOR, this._element)
-    this._carouselStartIndex = element.getAttribute('data-gallery-start')
-    this._carouselActiveItem = SelectorEngine.find(CAROUSEL_ITEM_SELECTOR, this._carousel)[this._carouselStartIndex]
-    this._carouselPager.textContent = Number(this._carouselStartIndex) + 1
-    this._modal = SelectorEngine.findOne(MODAL_SELECTOR, this._element)
-    this._config = this._getConfig(config)
-    this._addEventListeners()
-    this._carouselLazyLoad(this._carouselActiveItem)
+    this.carousel = SelectorEngine.findOne(CAROUSEL_SELECTOR, this.element)
+    this.carouselPager = SelectorEngine.findOne(CAROUSEL_PAGER_SELECTOR, this.element)
+    this.carouselStartIndex = element.getAttribute('data-gallery-start')
+    this.carouselActiveItem = SelectorEngine.find(CAROUSEL_ITEM_SELECTOR, this.carousel)[this.carouselStartIndex]
+    this.carouselPager.textContent = Number(this.carouselStartIndex) + 1
+    this.modal = SelectorEngine.findOne(MODAL_SELECTOR, this.element)
+    this.config = this.getConfig(config)
+    this.addEventListeners()
+    this.carouselLazyLoad(this.carouselActiveItem)
   }
 
   // Getters
@@ -62,18 +62,19 @@ class Gallery extends BaseComponent {
 
   // Public
   setSlide(event) {
-    const slideFrom = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this._carousel)
+    const slideFrom = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this.carousel)
     const slideTo = event.relatedTarget
-    this._carouselLazyLoad(slideTo)
-    this._carouselPager.textContent = event.to + 1
+    this.carouselLazyLoad(slideTo)
+    this.carouselPager.textContent = event.to + 1
     this.stopVideo(slideFrom)
   }
 
   stopSlide() {
-    const currentSlide = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this._carousel)
+    const currentSlide = SelectorEngine.findOne(CAROUSEL_ACTIVE_SELECTOR, this.carousel)
     this.stopVideo(currentSlide)
   }
 
+  // eslint-disable-next-line class-methods-use-this
   stopVideo(slide) {
     const iframe = SelectorEngine.findOne('iframe', slide);
     const video = SelectorEngine.findOne('video', slide);
@@ -85,7 +86,8 @@ class Gallery extends BaseComponent {
   }
 
   // Private
-  _carouselLazyLoad(slide) {
+  // eslint-disable-next-line class-methods-use-this
+  carouselLazyLoad(slide) {
     const media = SelectorEngine.findOne('[data-src]', slide);
 
     if (media && !media.src) {
@@ -93,19 +95,19 @@ class Gallery extends BaseComponent {
     }
   }
 
-  _getConfig(config) {
+  getConfig(config) {
     config = {
       ...Default,
-      ...Manipulator.getDataAttributes(this._element),
+      ...Manipulator.getDataAttributes(this.element),
       ...(typeof config === 'object' ? config : {})
     }
     typeCheckConfig(NAME, config, DefaultType)
     return config
   }
 
-  _addEventListeners() {
-    EventHandler.on(this._carousel, CAROUSEL_EVENT, event => this.setSlide(event))
-    EventHandler.on(this._modal, EVENT_MODAL_HIDE, event => this.stopSlide(event))
+  addEventListeners() {
+    EventHandler.on(this.carousel, CAROUSEL_EVENT, event => this.setSlide(event))
+    EventHandler.on(this.modal, EVENT_MODAL_HIDE, event => this.stopSlide(event))
   }
 
   // Static
@@ -118,6 +120,7 @@ class Gallery extends BaseComponent {
 
     let { _config } = data
     if (typeof config === 'object') {
+      // eslint-disable-next-line no-unused-vars
       _config = {
         ..._config,
         ...config
@@ -126,7 +129,7 @@ class Gallery extends BaseComponent {
   }
 
   static jQueryInterface(config) {
-    return this.each(function () {
+    return this.each(function jInterface() {
       const data = Gallery.getOrCreateInstance(this)
 
       if (typeof config !== 'string') {
@@ -148,7 +151,7 @@ class Gallery extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, THUMBNAIL_SELECTOR, function (event) {
+EventHandler.on(document, EVENT_CLICK_DATA_API, THUMBNAIL_SELECTOR, (event) => {
   const gallery = event.target.closest('div.bcl-gallery')
   const firstSlide = event.target.parentNode.getAttribute('data-bs-slide-to');
   gallery.dataset.galleryStart = firstSlide;

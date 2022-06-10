@@ -97,7 +97,7 @@ describe("OE - carousel", () => {
   test("renders correctly with custom intervals", () => {
     expect.assertions(1);
     const withIntervals = [];
-    demoData.items.forEach((item, i) => {
+    demoData.items.forEach((item) => {
       item.interval = 2000;
       withIntervals.push(item);
     });

@@ -52,16 +52,16 @@ if (isChromatic()) {
   });
 }
 
-let baseData = {
+const baseData = {
   content_type: "group",
-  header: header,
+  header,
   footer: layout.footer,
   with_banner: true,
   with_header: true,
   with_footer: true,
   with_sidebar: true,
   ...demoDataExtra,
-  pagination: pagination,
+  pagination,
   filter_button: filterButton,
   sort_select: sortSelect,
 };
@@ -93,7 +93,7 @@ const dataListing = {
 const dataLanding = {
   title: "Group members",
   content_type: "group",
-  header: header,
+  header,
   footer: layout.footer,
   with_banner: true,
   with_header: true,

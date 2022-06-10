@@ -40,9 +40,9 @@ delete featuredItem.title;
 
 const baseData = {
   content_type: "page",
-  header: header,
+  header,
   footer: layout.footer,
-  sidebar: sidebar,
+  sidebar,
   with_banner: true,
   with_header: true,
   with_footer: true,
@@ -52,18 +52,17 @@ const baseData = {
 const demoData = {
   ...baseData,
   featured_item: featuredItem,
-  blockquote: blockquote,
+  blockquote,
   page_banner: pageBanner,
-  banner: banner,
-  files: files,
+  banner,
+  files,
 };
 
 const demoData1 = {
   ...baseData,
   banner: simpleBanner,
-  listing: listing,
-  files: files,
-  listing: listing,
+  listing,
+  files,
   accordion: {
     ...accordion,
     attributes: new drupalAttribute().addClass(["pb-4"]),
@@ -78,7 +77,7 @@ const demoData2 = {
   },
   listing: listingDefault,
   files: filesThumbnail,
-  timeline: timeline,
+  timeline,
 };
 
 export { demoData, demoData1, demoData2 };

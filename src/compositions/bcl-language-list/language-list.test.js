@@ -35,7 +35,7 @@ describe("OE - Language", () => {
       expect.assertions(1);
 
       return expect(
-        renderModal({ ...demoDataModal, variant: variant })
+        renderModal({ ...demoDataModal, variant })
       ).resolves.toMatchSnapshot();
     });
   });

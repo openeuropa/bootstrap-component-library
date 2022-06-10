@@ -28,7 +28,7 @@ describe("OE - Link", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant: variant }, true)
+        render({ ...demoData, variant }, true)
       ).resolves.toMatchSnapshot();
     });
   });

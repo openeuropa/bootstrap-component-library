@@ -5,50 +5,46 @@ import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
-const getArgs = (data) => {
-  return {
-    color_set: "light",
-    expand: "lg",
-  };
-};
+const getArgs = () => ({
+  color_set: "light",
+  expand: "lg",
+});
 
-const getArgTypes = (data) => {
-  return {
-    color_set: {
-      name: "color set",
-      type: { name: "select" },
-      description: "Available set of color",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "light" },
-        category: "Style",
-      },
-      options: ["light", "dark"],
+const getArgTypes = () => ({
+  color_set: {
+    name: "color set",
+    type: { name: "select" },
+    description: "Available set of color",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "light" },
+      category: "Style",
     },
-    background: {
-      name: "background",
-      type: { name: "select" },
-      options: getVariants(),
-      description: "Background of navbar",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Style",
-      },
+    options: ["light", "dark"],
+  },
+  background: {
+    name: "background",
+    type: { name: "select" },
+    options: getVariants(),
+    description: "Background of navbar",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "" },
+      category: "Style",
     },
-    expand: {
-      name: "expand",
-      type: { name: "select" },
-      options: ["sm", "md", "lg"],
-      description: "Expand breakpoint of menu",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "lg" },
-        category: "Style",
-      },
+  },
+  expand: {
+    name: "expand",
+    type: { name: "select" },
+    options: ["sm", "md", "lg"],
+    description: "Expand breakpoint of menu",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "lg" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 const resetAttrs = (data) => {
   data.attributes.removeClass(`navbar-${data.color_set}`);
@@ -61,10 +57,10 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data);
-  if (args.background == "dark") {
+  if (args.background === "dark") {
     args.color_set = "dark";
   }
-  if (args.background == "light") {
+  if (args.background === "light") {
     args.color_set = "light";
   }
   return Object.assign(data, args);

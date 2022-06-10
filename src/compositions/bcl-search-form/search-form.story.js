@@ -8,25 +8,21 @@ import demoData from "@openeuropa/bcl-search-form/data/data--search.js";
 import demoDataSubmittable from "@openeuropa/bcl-search-form/data/data--search-submit";
 import searchForm from "@openeuropa/bcl-search-form/search-form.html.twig";
 
-const getArgs = (data) => {
-  return {
-    pill: data.pill || false,
-  };
-};
+const getArgs = (data) => ({
+  pill: data.pill || false,
+});
 
-const getArgTypes = () => {
-  return {
-    pill: {
-      type: { name: "boolean" },
-      description: "Display input as a pill",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-        category: "Style",
-      },
+const getArgTypes = () => ({
+  pill: {
+    type: { name: "boolean" },
+    description: "Display input as a pill",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
     },
-  };
-};
+  },
+});
 
 export default {
   title: "Compositions/Search Form",

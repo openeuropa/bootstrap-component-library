@@ -25,6 +25,7 @@ export default {
   Carousel,
   Collapse,
   Dropdown,
+  Gallery,
   Modal,
   Offcanvas,
   Popover,
