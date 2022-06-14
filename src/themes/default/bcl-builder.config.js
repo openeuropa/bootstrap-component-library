@@ -118,6 +118,11 @@ module.exports = {
       options: { up: true },
     },
     {
+      from: [path.resolve(nodeModules, "svg-country-flags/svg/*.svg")],
+      to: path.resolve(outputFolder, "icons/world-flags"),
+      options: { up: true },
+    },
+    {
       from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/ec"),
       options: { up: 6 },
