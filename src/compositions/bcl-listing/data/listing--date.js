@@ -28,7 +28,7 @@ module.exports = {
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Various time (see detail)</span>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published : 3 September 2020</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -60,7 +60,7 @@ module.exports = {
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published : 3 September 2020</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -98,7 +98,7 @@ module.exports = {
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published : 3 September 2020</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -136,7 +136,7 @@ module.exports = {
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published : 3 September 2020</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -174,7 +174,7 @@ module.exports = {
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published : 3 September 2020</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -212,7 +212,7 @@ module.exports = {
       content: `<div>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
             <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published : 3 September 2020</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
