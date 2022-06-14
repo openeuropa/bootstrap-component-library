@@ -14,13 +14,20 @@ import {
   detailsListMultiple,
 } from "@openeuropa/bcl-event/data/data--details";
 
-import date from "@openeuropa/bcl-date-block/data/data";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
 
 const chromatic = process.env.STORYBOOK_ENV;
+
+const date = {
+  day: "17",
+  month: "oct",
+  end_day: "21",
+  end_month: "oct",
+  year: "2021",
+};
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
