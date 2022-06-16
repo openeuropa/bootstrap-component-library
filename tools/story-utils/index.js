@@ -368,6 +368,8 @@ export const correctPaths = (data) => {
         data[prop] = data[prop].replaceAll("/icons.svg", iconPath);
       } else if (data[prop].includes("flags.svg")) {
         data[prop] = flagPath;
+      } else if (data[prop].includes("/example.html")) {
+        data[prop] = `/example.html#${Math.random()}`;
       }
     }
     if (data[prop] !== null && typeof data[prop] === "object") {

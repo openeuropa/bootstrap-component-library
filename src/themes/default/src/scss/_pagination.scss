@@ -6,3 +6,35 @@
     align-items: center;
   }
 }
+
+.pagination--glossary {
+  margin-bottom: 0;
+
+  .page-item {
+    margin-right: auto;
+  }
+
+  .page-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: $dark;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .active .page-link {
+    background: transparent;
+    border-color: $primary;
+    color: $dark;
+  }
+
+  .page-item:first-child .page-link {
+    border-radius: 0px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .pagination--glossary {
+    @include horizontal-slider;
+  }
+}
