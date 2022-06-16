@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
+exports[`OE - Glossary detail renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -614,38 +614,6 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="container"
-    >
-      <div
-        class="mt-lg-5 mt-2 alert alert-danger d-flex align-items-center alert-dismissible fade show text-dark"
-        role="alert"
-      >
-        <svg
-          class="flex-shrink-0 me-3 mt-1 align-self-start text-danger bi icon--s"
-        >
-          <use
-            xlink:href="/icons.svg#dash-circle-fill"
-          />
-        </svg>
-        <div
-          class="alert-content flex-grow-1"
-        >
-          <h4
-            class="alert-heading"
-          >
-            Error
-          </h4>
-          There was an error sending your informations, please verify all fields
-        </div>
-        <button
-          aria-label="Close"
-          class="btn-close"
-          data-bs-dismiss="alert"
-          type="button"
-        />
-      </div>
-    </div>
-    <div
       class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
       <div
@@ -666,12 +634,9 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
                 <h1
                   class="fs-1 card-title bcl-heading"
                 >
-                  Contact form
+                  Active substance
                 </h1>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-            a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante.
-            Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate.
-            Nunc tristique ultricies turpis, eu dictum enim ultrices vel.    
+                  The substance responsible for the activity of a medicine.    
               </div>
             </div>
           </div>
@@ -687,255 +652,504 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
         <div
           class="col-12 col-lg-10 col-xl-9 col-xxl-8"
         >
-          <h3
+          <h2
             class="mb-4 bcl-heading"
           >
-            Enter your message
-          </h3>
+            Description
+          </h2>
           <p>
-            *Please fill in all required fields.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+	volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. 
+	Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. 
+	Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero 
+	orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+	Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. 
+	Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. 
+	Duis tristique fringilla magna, eu egestas dolor molestie non.
           </p>
-          <form
-            class="needs-validation row g-3"
-            novalidate="true"
-            onsubmit="return false;"
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, 
+	a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus
+	leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero
+	orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+          </p>
+          <p>
+            Lorem ipsum dolor
+	sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
+	Sed facilisis dictum vestibulum.
+	Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, 
+	lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna,
+	eu egestas dolor molestie non. 
+          </p>
+          <h2
+            class="mb-4 bcl-heading"
+          >
+            File Downloads
+          </h2>
+          <div
+            class="pt-4"
           >
             <div
-              class="gy-4"
+              class="bcl-file border rounded"
             >
-              <label
-                class="form-label"
-                for="exampleInputText1"
-              >
-                Your name*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText1"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
               <div
-                class="invalid-feedback"
-              >
-                Please type your name.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputEmail1"
-              >
-                Your email address*
-              </label>
-              <input
-                class="form-control is-invalid"
-                id="exampleInputEmail1"
-                placeholder="Placeholder"
-                required="true"
-                type="email"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please verify your email address.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText2"
-              >
-                Subject*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText2"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please choose a subject for your message
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText3"
-              >
-                Message*
-              </label>
-              <textarea
-                class="form-control"
-                id="exampleInputText3"
-                placeholder="Placeholder"
-                required="true"
-                rows="4"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a message.
-              </div>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect1"
-              >
-                Topic*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect1"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Other topic
-                </option>
-              </select>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect2"
-              >
-                Country of residence*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect2"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Belgium
-                </option>
-              </select>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputPhone"
-              >
-                Phone*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputPhone"
-                placeholder="Placeholder"
-                required="true"
-                type="telephone"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a valid phone number.
-              </div>
-            </div>
-            <fieldset>
-              <div
-                class="border-top pt-5 mt-4-5"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="form-check"
+                  class="d-flex"
                 >
-                  <input
-                    class="form-check-input"
-                    id="exampleInputCheck1"
-                    required="true"
-                    type="checkbox"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="exampleInputCheck1"
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
                   >
-                    Send yourself a copy
-                  </label>
-                </div>
-                <div
-                  class="mt-4"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="exampleInputCheck1"
-                      required="true"
-                      type="checkbox"
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
                     />
-                    <label
-                      class="form-check-label"
-                      for="exampleInputCheck1"
-                    >
-                      I have read and agree with the 
-                      <a
-                        href="/example.html"
-                      >
-                        data protection terms
-                      </a>
-                    </label>
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
                     <div
-                      class="invalid-feedback"
+                      class="flex-grow-1"
                     >
-                      Please check and approve the data protection terms.
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
                     </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
-            </fieldset>
-            <div
-              class="mt-4 mb-2"
-            >
               <div
-                class="bg-light"
+                class="bg-lighter py-3 px-4 border-top"
               >
-                <h4
-                  class="p-4 mt-0"
+                <div
+                  class="text-end text-md-center"
                 >
-                  Antispam
-                </h4>
+                  <a
+                    aria-controls="language-dropdown"
+                    aria-expanded="false"
+                    class="standalone"
+                    data-bs-toggle="collapse"
+                    href="#language-dropdown"
+                    role="button"
+                  >
+                    Other languages (3)
+                    <svg
+                      class="ms-2-5 bi icon--2xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#caret-down-fill"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="collapse"
+                  id="language-dropdown"
+                >
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          български
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="http://www.africau.edu/images/default/sample.pdf"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Español
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="/example.html"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Français
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="/example.html"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pt-3"
+                  >
+                    <p
+                      class="mb-2"
+                    >
+                      Looking for another language which is not on the list? 
+                    </p>
+                    <a
+                      class="d-block"
+                      href="/example.html"
+                    >
+                      Find out why.
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+          <div
+            class="pt-4"
+          >
             <div
-              class="contact-form-submit"
+              class="bcl-file border rounded"
             >
-              <button
-                class="w-auto mb-4 btn btn-primary btn-md"
-                type="submit"
+              <div
+                class="px-3-5 py-3"
               >
-                Send
-              </button>
+                <div
+                  class="d-flex"
+                >
+                  <svg
+                    class="mt-1 icon--file bi icon--xl"
+                  >
+                    <use
+                      xlink:href="/icons.svg#file-pdf-fill"
+                    />
+                  </svg>
+                  <div
+                    class="w-100 d-md-flex ms-2-5"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-lighter py-3 px-4 border-top"
+              >
+                <div
+                  class="text-end text-md-center"
+                >
+                  <a
+                    aria-controls="language-dropdown"
+                    aria-expanded="false"
+                    class="standalone"
+                    data-bs-toggle="collapse"
+                    href="#language-dropdown"
+                    role="button"
+                  >
+                    Other languages (3)
+                    <svg
+                      class="ms-2-5 bi icon--2xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#caret-down-fill"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  class="collapse"
+                  id="language-dropdown"
+                >
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          български
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="http://www.africau.edu/images/default/sample.pdf"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Español
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="/example.html"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="py-3 border-bottom"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-12 col-md-9"
+                      >
+                        <small
+                          class="fw-bold m-0"
+                        >
+                          Français
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <div
+                        class="col-12 col-md-3 align-self-end text-md-end"
+                      >
+                        <a
+                          class="d-block standalone mt-1"
+                          download="true"
+                          href="/example.html"
+                          target="_blank"
+                        >
+                          Download
+                          <svg
+                            class="ms-2-5 bi icon--fluid"
+                          >
+                            <use
+                              xlink:href="/icons.svg#download"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pt-3"
+                  >
+                    <p
+                      class="mb-2"
+                    >
+                      Looking for another language which is not on the list? 
+                    </p>
+                    <a
+                      class="d-block"
+                      href="/example.html"
+                    >
+                      Find out why.
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </main>
   <footer
-    class="bcl-footer bcl-footer--neutral"
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"
@@ -1139,7 +1353,7 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Contact-form contact-form page renders correctly 1`] = `
+exports[`OE - Glossary listing renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -1773,12 +1987,14 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
                 <h1
                   class="fs-1 card-title bcl-heading"
                 >
-                  Contact form
+                  Glossary
                 </h1>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-            a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante.
-            Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate.
-            Nunc tristique ultricies turpis, eu dictum enim ultrices vel.    
+                <p>
+                  Glossary of regulatory terms gives definitions for the main regulatory terms used on this website and in XXX documents.
+                </p>
+                <p>
+                  Disclaimer: XXX has developed the definitions in this glossary to help this website's users understand regulatory terminology. Definitions may differ from those given in European Union legislation.    
+                </p>
               </div>
             </div>
           </div>
@@ -1792,1467 +2008,932 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12 col-lg-10 col-xl-9 col-xxl-8"
+          class="col-lg-4 col-md-6 col-12 mb-5"
         >
-          <h2
-            class="mb-4 bcl-heading"
-          >
-            Enter your message
-          </h2>
-          <p>
-            *Please fill in all required fields.
-          </p>
           <form
-            class="needs-validation row g-3"
-            novalidate="true"
-            onsubmit="return false;"
+            class="bcl-search-form submittable"
           >
             <div
-              class="gy-4"
+              class="bcl-search-form__group"
             >
-              <label
-                class="form-label"
-                for="exampleInputText1"
-              >
-                Your name*
-              </label>
               <input
-                class="form-control"
-                id="exampleInputText1"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
+                class="bcl-search-form__input form-control"
+                placeholder="Search term in glossary"
+                type="search"
               />
-              <div
-                class="invalid-feedback"
-              >
-                Please type your name.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputEmail1"
-              >
-                Your email address*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Placeholder"
-                required="true"
-                type="email"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please verify your email address.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText2"
-              >
-                Subject*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText2"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please choose a subject for your message
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText3"
-              >
-                Message*
-              </label>
-              <textarea
-                class="form-control"
-                id="exampleInputText3"
-                placeholder="Placeholder"
-                required="true"
-                rows="4"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a message.
-              </div>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect1"
-              >
-                Topic*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect1"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Other topic
-                </option>
-              </select>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect2"
-              >
-                Country of residence*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect2"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Belgium
-                </option>
-              </select>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputPhone"
-              >
-                Phone*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputPhone"
-                placeholder="Placeholder"
-                required="true"
-                type="telephone"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a valid phone number.
-              </div>
-            </div>
-            <fieldset>
-              <div
-                class="border-top pt-5 mt-4-5"
-              >
-                <div
-                  class="form-check"
-                >
-                  <input
-                    class="form-check-input"
-                    id="exampleInputCheck1"
-                    required="true"
-                    type="checkbox"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="exampleInputCheck1"
-                  >
-                    Send yourself a copy
-                  </label>
-                </div>
-                <div
-                  class="mt-4"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="exampleInputCheck1"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="exampleInputCheck1"
-                    >
-                      I have read and agree with the 
-                      <a
-                        href="/example.html"
-                      >
-                        data protection terms
-                      </a>
-                    </label>
-                    <div
-                      class="invalid-feedback"
-                    >
-                      Please check and approve the data protection terms.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div
-              class="mt-4 mb-2"
-            >
-              <div
-                class="bg-light"
-              >
-                <h4
-                  class="p-4 mt-0"
-                >
-                  Antispam
-                </h4>
-              </div>
-            </div>
-            <div
-              class="contact-form-submit"
-            >
               <button
-                class="w-auto mb-4 btn btn-primary btn-md"
-                type="submit"
+                class="bcl-search-form__submit btn btn-primary btn-md"
+                type="button"
               >
-                Send
+                <span
+                  class="visually-hidden"
+                >
+                  Search term in glossary
+                </span>
+                <svg
+                  class="bi icon--fluid"
+                >
+                  <use
+                    xlink:href="/icons.svg#search"
+                  />
+                </svg>
               </button>
             </div>
           </form>
         </div>
-      </div>
-    </div>
-  </main>
-  <footer
-    class="bcl-footer bcl-footer--neutral"
-  >
-    <div
-      class="container"
-    >
-      <div
-        class="pt-4 pt-lg-5 row"
-      >
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold mb-2"
-          >
-            [Project name]
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
-          </p>
-        </div>
-        <div
-          class="col-12 col-lg-4 pb-4 pb-lg-0"
-        >
-          <p
-            class="fw-bold border-bottom pb-2 mb-2"
-          >
-            Contact [project name]
-          </p>
-          <p>
-            Contact information of the DG
-          </p>
-          <p
-            class="fw-bold border-bottom pb-2 mt-3 mb-2"
-          >
-            Follow us on social media
-          </p>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#facebook"
-                />
-              </svg>
-              Facebook
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#twitter"
-                />
-              </svg>
-              Twitter
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#linkedin"
-                />
-              </svg>
-              Linkedin
-            </a>
-          </div>
-        </div>
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold border-bottom pb-2 mb-2"
-          >
-            About us
-          </p>
-          <p>
-            Information about the DG
-          </p>
-          <p
-            class="fw-bold border-bottom pb-2 mb-2"
-          >
-            Optional links
-          </p>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
-      >
-        <div
-          class="col-12 col-lg-4"
-        >
-          <p
-            class="fw-bold pb-2 mb-2"
-          >
-            More information on:
-          </p>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-          <div
-            class="mb-1"
-          >
-            <a
-              class="standalone"
-              href="#"
-            >
-              Link
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</jest>
-`;
-
-exports[`OE - Contact-form contact-form success page renders correctly 1`] = `
-<jest>
-  <header
-    class="bcl-header bcl-header--eu"
-  >
-    <!-- navbar_settings -->
-    <nav
-      aria-label="Top Navigation"
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
-    >
-      <div
-        class="container"
-      >
-        <a
-          class="navbar-brand"
-          href=""
-        >
-          <img
-            alt="desktop european union logo"
-            class="d-none d-lg-block"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
-          />
-          <img
-            alt="mobile european union logo"
-            class="d-lg-none"
-            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
-          />
-        </a>
-        <ul
-          class="nav"
-        >
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
-            >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
-                English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
-            >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
-              >
-                <use
-                  xlink:href="/icons.svg#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
-                Log in
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- project name -->
-    <!-- navbar -->
-    <nav
-      aria-label="main-navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
-    >
-      <div
-        class="container"
-      >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+        <nav
+          aria-label="aria label"
+          role="navigation"
         >
           <ul
-            class="me-auto navbar-nav"
+            class="pagination pagination--glossary"
           >
             <li
-              class="nav-item"
+              class="page-item active"
             >
               <a
                 aria-current="page"
-                aria-label="homepage"
-                class="nav-link active"
+                class="page-link"
                 href="/example.html"
               >
-                Home
+                A
               </a>
             </li>
             <li
-              class="nav-item"
+              class="page-item"
             >
               <a
-                class="nav-link"
+                class="page-link"
                 href="/example.html"
               >
-                Item 01
+                B
               </a>
             </li>
             <li
-              class="nav-item"
+              class="page-item"
             >
               <a
-                class="nav-link"
+                class="page-link"
                 href="/example.html"
               >
-                Item 02
+                C
               </a>
             </li>
             <li
-              class="nav-item dropdown"
+              class="page-item"
             >
               <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
+                class="page-link"
+                href="/example.html"
               >
-                Dropdown link
+                D
               </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
               >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+                E
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                F
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                G
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                H
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                I
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                J
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                K
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                L
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                M
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                N
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                O
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                P
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                Q
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                Q
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                R
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                S
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                T
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                U
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                V
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                W
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                X
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                Y
+              </a>
+            </li>
+            <li
+              class="page-item"
+            >
+              <a
+                class="page-link"
+                href="/example.html"
+              >
+                Z
+              </a>
             </li>
           </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+        </nav>
+        <div
+          class="col-12"
+        >
+          <div
+            class="d-md-flex justify-content-end mb-5 align-items-center border-bottom border-top border-gray-300 py-5"
           >
             <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+              class="form-label mb-0"
             >
-              Search
+              Sort by
             </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
-            <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
-              type="button"
+            <select
+              aria-label="sort-select"
+              class="mt-2 mt-md-0 mb-4 mb-md-0 mx-md-4 w-auto form-select"
             >
-              <span
-                class="visually-hidden"
+              <option
+                value="1"
               >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
+                A-Z
+              </option>
+              <option
+                value="2"
               >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!-- breadcrumbs -->
-    <div
-      class="container"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="mt-3"
-      >
-        <ol
-          class="breadcrumb"
-        >
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              aria-label="homepage"
-              href="/example.html"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              European Union
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item"
-          >
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                Z-A
+              </option>
+              <option
+                selected=""
+                value="3"
               >
-                <use
-                  xlink:href="/icons.svg#arrow-left"
-                />
-              </svg>
-              About the European Union
-            </a>
-          </li>
-          <li
-            aria-current="page"
-            class="breadcrumb-item d-none d-md-block active"
-          >
-            News
-          </li>
-        </ol>
-      </nav>
-    </div>
-  </header>
-  <div
-    aria-hidden="true"
-    aria-label="loginModalLabel"
-    class="modal fade"
-    id="loginModal"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <h5
-            class="modal-title"
-            id="loginModalLabel"
-          >
-            Log in
-          </h5>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
-          <h5>
-            Disclaimer 1
-          </h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
-          </p>
-          <h5>
-            Disclaimer 2
-          </h5>
-          <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
-          </p>
-        </div>
-        <div
-          class="modal-footer"
-        >
-          <button
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-            type="button"
-          >
-            Close
-          </button>
-          <button
-            class="btn btn-primary"
-            type="button"
-          >
-            Access EU login
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
-    id="languageModal"
-    tabindex="-1"
-  >
-    <div
-      class="modal-dialog modal-xl modal-fullscreen-md-down"
-    >
-      <div
-        class="modal-content"
-      >
-        <div
-          class="modal-header"
-        >
-          <div
-            class="d-flex align-items-center"
-          >
-            <svg
-              class="bi icon--s"
-            >
-              <use
-                xlink:href="/icons.svg#globe2"
-              />
-            </svg>
-            <h5
-              class="mb-0 ms-2"
-            >
-              Select your language
-            </h5>
-          </div>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
-        </div>
-        <div
-          class="modal-body"
-        >
-          <div
-            class="bcl-language-list bcl-language-list--neutral"
-          >
-            <div
-              class="main pt-4"
-            >
-              <div
-                class="pb-2"
+                Recent entry
+              </option>
+              <option
+                value="4"
               >
-                <div
-                  class="row"
-                >
-                  <div
-                    class="col-12 col-md"
-                  >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="bg"
-                      lang="bg"
-                    >
-                      български
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="es"
-                      lang="es"
-                    >
-                      español
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="cs"
-                      lang="cs"
-                    >
-                      čeština
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="da"
-                      lang="da"
-                    >
-                      dansk
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="de"
-                      lang="de"
-                    >
-                      Deutsch
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="et"
-                      lang="et"
-                    >
-                      eesti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="el"
-                      lang="el"
-                    >
-                      ελληνικά
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn selected justify-content-between"
-                      href="#"
-                      hreflang="en"
-                      lang="en"
-                    >
-                      English
-                      <svg
-                        class="ms-2-5 bi icon--s"
-                      >
-                        <use
-                          xlink:href="/icons.svg#check2"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fr"
-                      lang="fr"
-                    >
-                      français
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ga"
-                      lang="ga"
-                    >
-                      Gaeilge
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hr"
-                      lang="hr"
-                    >
-                      hrvatski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="it"
-                      lang="it"
-                    >
-                      italiano
-                    </a>
-                  </div>
-                  <div
-                    class="col-12 col-md"
-                  >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lv"
-                      lang="lv"
-                    >
-                      latviešu
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lt"
-                      lang="lt"
-                    >
-                      lietuvių
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hu"
-                      lang="hu"
-                    >
-                      magyar
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="mt"
-                      lang="mt"
-                    >
-                      Malti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="nl"
-                      lang="nl"
-                    >
-                      Nederlands
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pl"
-                      lang="pl"
-                    >
-                      polski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pt"
-                      lang="pt"
-                    >
-                      português
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ro"
-                      lang="ro"
-                    >
-                      română
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sk"
-                      lang="sk"
-                    >
-                      slovenčina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sl"
-                      lang="sl"
-                    >
-                      slovenščina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fi"
-                      lang="fi"
-                    >
-                      suomi
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sv"
-                      lang="sv"
-                    >
-                      svenska
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                Oldest Entry
+              </option>
+              <option
+                value="5"
+              >
+                Latest update
+              </option>
+            </select>
+            <label
+              class="form-label mb-0"
+            >
+              Items per page
+            </label>
+            <select
+              aria-label="sort-select"
+              class="mt-2 mt-md-0 mb-md-0 ms-md-4 w-auto form-select"
+            >
+              <option
+                value="10"
+              >
+                10
+              </option>
+              <option
+                selected=""
+                value="20"
+              >
+                20
+              </option>
+              <option
+                value="50"
+              >
+                50
+              </option>
+            </select>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <main>
-    <div
-      class="container"
-    >
-      <div
-        class="mt-lg-5 mt-2 alert alert-success d-flex align-items-center alert-dismissible fade show text-dark"
-        role="alert"
-      >
-        <svg
-          class="flex-shrink-0 me-3 mt-1 align-self-start text-success bi icon--s"
-        >
-          <use
-            xlink:href="/icons.svg#check-circle-fill"
-          />
-        </svg>
-        <div
-          class="alert-content flex-grow-1"
-        >
-          <h4
-            class="alert-heading"
-          >
-            Thank you
-          </h4>
-          <p>
-            Your informations were sent successfully
-          </p>
-          <hr />
-          <dl
-            class="d-md-grid grid-3-9"
-          >
-            <dt
-              class="d-flex"
-            >
-              <p
-                class="mb-0 d-inline-block"
-              >
-                The sender’s name
-              </p>
-            </dt>
-            <dd>
-              John Doe
-            </dd>
-            <dt>
-              <p
-                class="mb-0"
-              >
-                The sender’s email
-              </p>
-            </dt>
-            <dd>
-              John.doe@gmail.com
-            </dd>
-            <dt
-              class="d-flex"
-            >
-              <p
-                class="mb-0 d-inline-block"
-              >
-                Subject
-              </p>
-            </dt>
-            <dd>
-              <p
-                class="mb-0"
-              >
-                My feedback
-              </p>
-            </dd>
-            <dt>
-              Message
-            </dt>
-            <dd>
-              Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris...
-            </dd>
-            <dt>
-              Topic
-            </dt>
-            <dd>
-              Website issue
-            </dd>
-            <dt
-              class="d-flex"
-            >
-              Country of residence
-            </dt>
-            <dd>
-              France
-            </dd>
-            <dt>
-              Phone
-            </dt>
-            <dd>
-              (+33)123456789
-            </dd>
-          </dl>
-        </div>
-        <button
-          aria-label="Close"
-          class="btn-close"
-          data-bs-dismiss="alert"
-          type="button"
-        />
-      </div>
-    </div>
-    <div
-      class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
-    >
-      <div
-        class="container"
-      >
-        <article
-          class="bg-transparent border-0 card"
-        >
-          <div
-            class="row"
-          >
-            <div
-              class="col-md-8 col-lg-9 col-xxl-8"
-            >
-              <div
-                class="card-body pt-0 px-0 pb-0"
-              >
-                <h1
-                  class="fs-1 card-title bcl-heading"
-                >
-                  Contact form
-                </h1>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-            a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante.
-            Phasellus non felis laoreet, posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate.
-            Nunc tristique ultricies turpis, eu dictum enim ultrices vel.    
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <div
-      class="container mt-md-4-75 mt-4"
-    >
-      <div
-        class="row"
-      >
         <div
           class="col-12 col-lg-10 col-xl-9 col-xxl-8"
         >
           <h2
             class="mb-4 bcl-heading"
           >
-            Enter your message
+            Starting with "A" (48)
           </h2>
-          <p>
-            *Please fill in all required fields.
-          </p>
-          <form
-            class="needs-validation row g-3"
-            novalidate="true"
-            onsubmit="return false;"
+          <div
+            class="bcl-listing bcl-listing--default-1-col"
           >
             <div
-              class="gy-4"
+              class="row row-cols-1 g-4"
             >
-              <label
-                class="form-label"
-                for="exampleInputText1"
-              >
-                Your name*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText1"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
               <div
-                class="invalid-feedback"
+                class="col"
               >
-                Please type your name.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputEmail1"
-              >
-                Your email address*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Placeholder"
-                required="true"
-                type="email"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please verify your email address.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText2"
-              >
-                Subject*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText2"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please choose a subject for your message
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText3"
-              >
-                Message*
-              </label>
-              <textarea
-                class="form-control"
-                id="exampleInputText3"
-                placeholder="Placeholder"
-                required="true"
-                rows="4"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a message.
-              </div>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect1"
-              >
-                Topic*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect1"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Other topic
-                </option>
-              </select>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect2"
-              >
-                Country of residence*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect2"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Belgium
-                </option>
-              </select>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputPhone"
-              >
-                Phone*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputPhone"
-                placeholder="Placeholder"
-                required="true"
-                type="telephone"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a valid phone number.
-              </div>
-            </div>
-            <fieldset>
-              <div
-                class="border-top pt-5 mt-4-5"
-              >
-                <div
-                  class="form-check"
-                >
-                  <input
-                    class="form-check-input"
-                    id="exampleInputCheck1"
-                    required="true"
-                    type="checkbox"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="exampleInputCheck1"
-                  >
-                    Send yourself a copy
-                  </label>
-                </div>
-                <div
-                  class="mt-4"
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
                 >
                   <div
-                    class="form-check"
+                    class="card-body p-0 pb-md-0 pb-3"
                   >
-                    <input
-                      class="form-check-input"
-                      id="exampleInputCheck1"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="exampleInputCheck1"
+                    <h1
+                      class="fs-5 card-title bcl-heading"
                     >
-                      I have read and agree with the 
                       <a
+                        class="standalone"
                         href="/example.html"
                       >
-                        data protection terms
+                        Accelerated assessment
                       </a>
-                    </label>
-                    <div
-                      class="invalid-feedback"
+                    </h1>
+                    <p
+                      class="card-text"
                     >
-                      Please check and approve the data protection terms.
-                    </div>
+                      Rapid assessment of medicines in the centralised procedure that are of major interest for public health, especially ones that are therapeutic innovations. Accelerated assessment usually takes 150 evaluation days, rather than 210.
+                    </p>
                   </div>
-                </div>
+                </article>
               </div>
-            </fieldset>
-            <div
-              class="mt-4 mb-2"
-            >
               <div
-                class="bg-light"
+                class="col"
               >
-                <h4
-                  class="p-4 mt-0"
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
                 >
-                  Antispam
-                </h4>
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Access to documents
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Active substance
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Active substance master file
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Adjuvant
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Advanced therapy medicinal product
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Adverse drug reaction
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Adverse event
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Ancillary human blood derivative
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Ancillary medicinal substance
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Annual re-assessment
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Article 58 application
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        ATC code
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Ancillary medicinal substance
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col"
+              >
+                <article
+                  class="listing-item border-bottom border-md-0 border-0 card"
+                >
+                  <div
+                    class="card-body p-0 pb-md-0 pb-3"
+                  >
+                    <h1
+                      class="fs-5 card-title bcl-heading"
+                    >
+                      <a
+                        class="standalone"
+                        href="/example.html"
+                      >
+                        Ancillary medicinal substance
+                      </a>
+                    </h1>
+                    <p
+                      class="card-text"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                    </p>
+                  </div>
+                </article>
               </div>
             </div>
-            <div
-              class="contact-form-submit"
+          </div>
+          <hr
+            class="d-none d-md-block mt-4-5"
+          />
+          <nav
+            aria-label="Pagination aria label"
+            class="mt-4-5"
+            role="navigation"
+          >
+            <ul
+              class="pagination justify-content-center"
             >
-              <button
-                class="w-auto mb-4 btn btn-primary btn-md"
-                type="submit"
+              <li
+                class="page-item"
               >
-                Send
-              </button>
-            </div>
-          </form>
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  <svg
+                    class="bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#chevron-double-left"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  Previous
+                </a>
+              </li>
+              <li
+                class="page-item active"
+              >
+                <a
+                  aria-current="page"
+                  class="page-link"
+                  href="#"
+                >
+                  1
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  2
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  3
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  4
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  5
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  Next
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="#"
+                >
+                  <svg
+                    class="bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#chevron-double-right"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </main>
   <footer
-    class="bcl-footer bcl-footer--neutral"
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
   >
     <div
       class="container"

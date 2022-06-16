@@ -20,15 +20,15 @@ module.exports = {
       },
       date: {
         year: "2021",
-        month: "JAN",
-        day: "23",
-        end_day: "24",
-        end_month: "Jun",
-        end_year: "2023",
+        month: "Oct",
+        day: "17",
+        end_day: "20",
+        end_month: "Oct",
       },
       content: `<div>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Various time (see detail)</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -54,12 +54,13 @@ module.exports = {
       },
       date: {
         year: "2021",
-        month: "JAN",
-        day: "23",
+        month: "Oct",
+        day: "17",
       },
       content: `<div>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -70,7 +71,13 @@ module.exports = {
         },
         {
           rounded_pill: true,
-          label: "Technology",
+          label: "Type 2",
+          outline: true,
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Type 3",
           outline: true,
           attributes: new drupalAttribute().addClass(["me-2"]),
         },
@@ -85,12 +92,13 @@ module.exports = {
       },
       date: {
         year: "2021",
-        month: "JAN",
-        day: "23",
+        month: "Oct",
+        day: "17",
       },
       content: `<div>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -101,7 +109,13 @@ module.exports = {
         },
         {
           rounded_pill: true,
-          label: "Technology",
+          label: "Type 2",
+          outline: true,
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Type 3",
           outline: true,
           attributes: new drupalAttribute().addClass(["me-2"]),
         },
@@ -116,12 +130,13 @@ module.exports = {
       },
       date: {
         year: "2021",
-        month: "JAN",
-        day: "23",
+        month: "Oct",
+        day: "17",
       },
       content: `<div>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -132,7 +147,13 @@ module.exports = {
         },
         {
           rounded_pill: true,
-          label: "Technology",
+          label: "Type 2",
+          outline: true,
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Type 3",
           outline: true,
           attributes: new drupalAttribute().addClass(["me-2"]),
         },
@@ -147,13 +168,13 @@ module.exports = {
       },
       date: {
         year: "2021",
-        month: "JAN",
-        day: "23",
+        month: "Oct",
+        day: "17",
       },
       content: `<div>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Article</span>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -164,7 +185,13 @@ module.exports = {
         },
         {
           rounded_pill: true,
-          label: "Technology",
+          label: "Type 2",
+          outline: true,
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Type 3",
           outline: true,
           attributes: new drupalAttribute().addClass(["me-2"]),
         },
@@ -179,12 +206,13 @@ module.exports = {
       },
       date: {
         year: "2021",
-        month: "JAN",
-        day: "23",
+        month: "Oct",
+        day: "17",
       },
       content: `<div>
-            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
-            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">08.00 - 18.00 (CET)</span>
+            <span class="text-muted d-lg-inline d-block me-4 mb-2 mb-md-0">Barcelona, Spain</span>
+            <span class="d-lg-inline d-block text-muted mb-2 mb-md-0">Published: 3 September 2020</span>
           </div>`,
       badges: [
         {
@@ -195,7 +223,13 @@ module.exports = {
         },
         {
           rounded_pill: true,
-          label: "Technology",
+          label: "Type 2",
+          outline: true,
+          attributes: new drupalAttribute().addClass(["me-2"]),
+        },
+        {
+          rounded_pill: true,
+          label: "Type 3",
           outline: true,
           attributes: new drupalAttribute().addClass(["me-2"]),
         },
