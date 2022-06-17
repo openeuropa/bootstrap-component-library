@@ -70,8 +70,17 @@ a {
   &:not(.text-underline-hover),
   &:not(.standalone) {
     text-decoration-color: rgba($primary, 0.3);
+
+    &:visited:not(.btn) {
+      text-decoration-color: rgba($purple, 0.3);
+    }
+
     &:hover {
       text-decoration-color: currentColor;
+
+      &:visited:not(.btn) {
+        text-decoration-color: $purple;
+      }
     }
   }
 
@@ -80,14 +89,9 @@ a {
     text-decoration: none;
     &:hover {
       text-decoration: underline;
-    }
-  }
 
-  &:not(.btn) {
-    &:visited {
-      color: $link-visited;
-      &:hover {
-        color: shade-color($link-visited, 20%);
+      &:visited:not(.btn) {
+        text-decoration-color: $purple;
       }
     }
   }
