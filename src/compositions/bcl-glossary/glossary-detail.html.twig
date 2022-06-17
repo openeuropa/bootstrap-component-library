@@ -28,12 +28,16 @@
 	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'File Downloads',
 		title_tag: 'h2',
+		attributes: create_attribute().addClass('mt-5', 'mb-4'),
 	} only %}
-	
+
 	{% for file in files %}
-      <div class="pt-4">
-        {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-      </div>
-    {% endfor %}
+		{% if loop.last %}
+			{% set file_classes = 'mt-4' %}
+		{% endif %}
+    <div {{ file_classes ? 'class="' ~ file_classes ~ '"' }}>
+      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+    </div>
+  {% endfor %}
 
 {% endblock %}

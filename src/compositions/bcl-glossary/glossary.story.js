@@ -38,9 +38,4 @@ export default {
 };
 
 export const Listing = () => listingPage(correctPaths(demoDataListing));
-
-Listing.storyName = "listing";
-
 export const Detail = () => pageTemplate(correctPaths(demoDataDetail));
-
-Detail.storyName = "detail";
