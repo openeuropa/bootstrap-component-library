@@ -13,10 +13,9 @@ module.exports = {
     attributes: new drupalAttribute().addClass("w-auto mb-4"),
   },
   title: "Enter your message",
-  title_tag: "p",
   title_attributes: new drupalAttribute().addClass(["fs-3"]),
   helper_text: "*Please fill in all required fields.",
-  antispam: `<h4 class="p-4 mt-0">Antispam</h4>`,
+  antispam: `<h3 class="p-4 mt-0 fs-4">Antispam</h3>`,
   items: [
     [
       {

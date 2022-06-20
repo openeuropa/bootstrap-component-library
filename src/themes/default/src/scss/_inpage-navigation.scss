@@ -26,3 +26,11 @@
     }
   }
 }
+
+@include media-breakpoint-up(md) {
+  .offcanvas-title,
+  .sidebar-title {
+    font-weight: 500;
+    @include font-size($h4-font-size);
+  }
+}
