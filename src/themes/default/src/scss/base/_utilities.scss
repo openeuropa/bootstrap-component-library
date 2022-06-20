@@ -71,14 +71,14 @@ a {
   &:not(.standalone) {
     text-decoration-color: rgba($primary, 0.3);
 
-    &:visited:not(.btn) {
+    &:visited {
       text-decoration-color: rgba($purple, 0.3);
     }
 
     &:hover {
       text-decoration-color: currentColor;
 
-      &:visited:not(.btn) {
+      &:visited {
         text-decoration-color: $purple;
       }
     }
@@ -90,7 +90,7 @@ a {
     &:hover {
       text-decoration: underline;
 
-      &:visited:not(.btn) {
+      &:visited {
         text-decoration-color: $purple;
       }
     }
