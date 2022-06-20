@@ -1,22 +1,33 @@
 import isChromatic from "chromatic/isChromatic";
+import drupalAttribute from "drupal-attribute";
+
 import {
   filterButton,
   pagination,
   sortSelect,
   listingDate,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
+import { file } from "@openeuropa/bcl-base-templates/data/content-page";
+
 import {
-  file,
-  pageTitleBanner,
-} from "@openeuropa/bcl-base-templates/data/content-page";
-import date from "@openeuropa/bcl-date-block/data/data";
+  detailsListSingle,
+  detailsListMultiple,
+} from "@openeuropa/bcl-event/data/data--details";
+
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import drupalAttribute from "drupal-attribute";
 
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
 
 const chromatic = process.env.STORYBOOK_ENV;
+
+const date = {
+  day: "17",
+  month: "oct",
+  end_day: "21",
+  end_month: "oct",
+  year: "2021",
+};
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
@@ -48,6 +59,7 @@ delete banner_simple.image;
 
 const demoData = {
   ...baseData,
+  ...detailsListSingle,
   ...dataPage,
   files,
 };
@@ -55,6 +67,7 @@ const demoData = {
 const demoDateData = {
   ...baseData,
   ...dataPage,
+  ...detailsListMultiple,
   banner: {
     ...dataPage.banner,
     image: {},
@@ -77,9 +90,9 @@ const demoListing = {
     title: false,
   },
   banner: {
-    ...pageTitleBanner,
-    title: "Event",
+    title: "Events",
     title_tag: "h1",
+    attributes: new drupalAttribute(),
   },
 };
 
