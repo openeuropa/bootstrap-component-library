@@ -27,11 +27,12 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
+{% set title_attributes = _title_attributes.addClass('mb-0') %}
 
 {# Print the result #}
 {% if _full_layout %}
 <div class="row">
-  <div class="col-md-3 d-none d-md-block">
+  <div class="col-md-3 d-none d-lg-block">
 {% endif %}
     <nav {{ attributes }}>
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {

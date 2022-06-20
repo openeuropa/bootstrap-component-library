@@ -1,4 +1,5 @@
 .bcl-inpage-navigation {
+  display: none;
   top: map-get($spacers, 3); // needed for position-sticky
   background-color: $gray-100;
 
@@ -24,5 +25,11 @@
     ul {
       padding: 0 map-get($spacers, "2-5");
     }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bcl-inpage-navigation {
+    display: block;
   }
 }
