@@ -123,21 +123,18 @@ module.exports = {
       options: { up: true },
     },
     {
-      from: [path.resolve(nodeModules, "@ecl/resources-ec-logo/**/*.svg")],
+      from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/ec"),
       options: { up: 6 },
     },
     {
-      from: [path.resolve(nodeModules, "@ecl/resources-eu-logo/**/*.svg")],
+      from: [`${nodeModules}/@ecl/resources-eu-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/eu"),
       options: { up: 6 },
     },
     {
       from: [
-        path.resolve(
-          nodeModules,
-          "@openeuropa/bcl-twig-templates/templates/**/*.twig"
-        ),
+        `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/*.twig`,
       ],
       to: path.resolve(outputFolder, "templates"),
       options: { up: 7 },
