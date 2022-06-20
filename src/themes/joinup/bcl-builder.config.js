@@ -128,18 +128,26 @@ module.exports = {
       options: { up: true },
     },
     {
-      from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
+      from: [path.resolve(nodeModules, "svg-country-flags/svg/*.svg")],
+      to: path.resolve(outputFolder, "icons/world-flags"),
+      options: { up: true },
+    },
+    {
+      from: [path.resolve(nodeModules, "@ecl/resources-ec-logo/**/*.svg")],
       to: path.resolve(outputFolder, "logos/ec"),
       options: { up: 6 },
     },
     {
-      from: [`${nodeModules}/@ecl/resources-eu-logo/**/*.svg`],
+      from: [path.resolve(nodeModules, "@ecl/resources-eu-logo/**/*.svg")],
       to: path.resolve(outputFolder, "logos/eu"),
       options: { up: 6 },
     },
     {
       from: [
-        `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/*.twig`,
+        path.resolve(
+          nodeModules,
+          "@openeuropa/bcl-twig-templates/templates/**/*.twig"
+        ),
       ],
       to: path.resolve(outputFolder, "templates"),
       options: { up: 7, exclude: excludePaths },
