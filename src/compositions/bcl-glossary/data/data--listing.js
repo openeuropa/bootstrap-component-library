@@ -1,9 +1,15 @@
 import glossary from "@openeuropa/bcl-glossary/data/data--glossary";
 import { pagination } from "@openeuropa/bcl-base-templates/data/listing-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
+import {
+  sortBy,
+  itemsPerPage,
+} from "@openeuropa/bcl-glossary/data/data--select";
 import drupalAttribute from "drupal-attribute";
 
 const demoListing = {
+  sortBy,
+  itemsPerPage,
   listing: {
     variant: "default-1-col",
     remove_horizontal_spacer: true,
