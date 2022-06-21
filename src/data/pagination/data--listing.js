@@ -7,41 +7,45 @@ module.exports = {
   icon_path: "/icons.svg",
   first: {
     label: "First",
-    path: "#",
+    path: "/example.html",
+    aria_label: "First page",
   },
   prev: {
     label: "Previous",
-    path: "#",
+    path: "/example.html",
+    aria_label: "Previous page",
   },
   next: {
     label: "Next",
-    path: "#",
+    path: "/example.html",
+    aria_label: "Next page",
   },
   last: {
     label: "Last",
-    path: "#",
+    path: "/example.html",
+    aria_label: "Last page",
   },
   items: [
     {
       label: "1",
-      path: "#",
+      path: "/example.html",
       active: true,
     },
     {
       label: "2",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "3",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "4",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "5",
-      path: "#",
+      path: "/example.html",
     },
   ],
 };
