@@ -3,7 +3,7 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   id: "subscribeModal",
   header:
-    '<h5 class="modal-title">Subscribe</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
+    '<div class="modal-title fs-5 fw-medium">Subscribe</div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
   footer:
     '<div class="text-align-end">' +
     '<button class="btn btn-light" data-bs-dismiss="modal">Close</button>' +
