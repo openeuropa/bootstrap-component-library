@@ -14,8 +14,9 @@ module.exports = {
   },
   title: "Enter your message",
   title_tag: "h2",
+  title_attributes: new drupalAttribute().addClass(["mb-2-5"]),
   helper_text: "*Please fill in all required fields.",
-  antispam: `<h4 class="p-4 mt-0">Antispam</h4>`,
+  antispam: `<div class="p-4 mt-0 fs-4">Antispam</div>`,
   items: [
     [
       {
