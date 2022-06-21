@@ -67,27 +67,31 @@ $utilities: map-merge(
 a {
   text-underline-offset: 2px;
 
-  &:not(.text-underline-hover),
-  &:not(.standalone) {
+  &:not(.text-underline-hover):not(.standalone) {
     text-decoration-color: rgba($primary, 0.3);
+
+    &:visited {
+      text-decoration-color: rgba($purple, 0.3);
+    }
+
     &:hover {
       text-decoration-color: currentColor;
+
+      &:visited {
+        text-decoration-color: $purple;
+      }
     }
   }
 
   &.standalone,
   &.text-underline-hover {
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+    text-decoration-color: transparent;
 
-  &:not(.btn) {
-    &:visited {
-      color: $link-visited;
-      &:hover {
-        color: shade-color($link-visited, 20%);
+    &:hover {
+      text-decoration-color: currentColor;
+
+      &:visited {
+        text-decoration-color: $purple;
       }
     }
   }
