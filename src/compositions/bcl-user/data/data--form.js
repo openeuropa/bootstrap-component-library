@@ -178,7 +178,7 @@ module.exports = {
             type: "fieldset",
             legend: "Personal information",
             fieldset_classes: "col-12 mb-3",
-            legend_classes: "fw-bold mb-0 fs-2 mt-4-5",
+            legend_classes: "mb-0 fs-2 mt-4-5",
           },
         ],
         [
@@ -279,7 +279,7 @@ module.exports = {
             type: "fieldset",
             legend: "Professional information",
             fieldset_classes: "col-md-12 mb-3",
-            legend_classes: "fw-bold my-3 fs-2",
+            legend_classes: "my-3 fs-2",
           },
         ],
         [
