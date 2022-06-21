@@ -67,8 +67,7 @@ $utilities: map-merge(
 a {
   text-underline-offset: 2px;
 
-  &:not(.text-underline-hover),
-  &:not(.standalone) {
+  &:not(.text-underline-hover):not(.standalone) {
     text-decoration-color: rgba($primary, 0.3);
 
     &:visited {
@@ -86,9 +85,10 @@ a {
 
   &.standalone,
   &.text-underline-hover {
-    text-decoration: none;
+    text-decoration-color: transparent;
+
     &:hover {
-      text-decoration: underline;
+      text-decoration-color: currentColor;
 
       &:visited {
         text-decoration-color: $purple;
