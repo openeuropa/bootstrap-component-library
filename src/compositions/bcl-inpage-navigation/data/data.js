@@ -1,4 +1,7 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
+  attributes: new drupalAttribute().addClass("bcl-sidebar"),
   full_layout: true,
   id: "bcl-inpage-navigation",
   title: "Page content",

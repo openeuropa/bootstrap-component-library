@@ -5,14 +5,9 @@ import withCode from "@openeuropa/storybook-addon-code";
 import demoData from "@openeuropa/bcl-inpage-navigation/data/data.js";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
 
-const insideSidebar = (story) => {
-  const demo = story();
-  return `<div class="bcl-sidebar">${demo}</div>`;
-};
-
 export default {
   title: "Paragraphs/Inpage navigation",
-  decorators: [withCode, withDesign, initScrollspy, insideSidebar],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     controls: { disable: true },
     design: [
