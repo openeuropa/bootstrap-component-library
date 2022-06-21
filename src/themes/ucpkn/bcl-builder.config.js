@@ -1,7 +1,6 @@
-const iconList = require("@openeuropa/bcl-theme-default/src/icons/icons");
-
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
+const iconList = require("@openeuropa/bcl-theme-default/src/icons/icons");
 const templates = require("./src/templates/bcl-templates");
 
 const outputFolder = path.resolve(__dirname);
@@ -125,6 +124,11 @@ module.exports = {
         ),
       ],
       to: path.resolve(outputFolder, "icons"),
+      options: { up: true },
+    },
+    {
+      from: [path.resolve(nodeModules, "svg-country-flags/svg/*.svg")],
+      to: path.resolve(outputFolder, "icons/world-flags"),
       options: { up: true },
     },
     {
