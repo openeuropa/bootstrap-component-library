@@ -18,31 +18,31 @@ module.exports = {
   languages: [
     {
       label: "български",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "čeština",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "dansk",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "Deutsch",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "eesti",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "ελληνικά",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "English",
-      path: "#",
+      path: "/example.html",
       icon_position: "before",
       remove_icon_spacers: true,
       icon: {
@@ -54,67 +54,67 @@ module.exports = {
     },
     {
       label: "français",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "Gaeilge",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "hrvatski",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "italiano",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "latviešu",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "lietuvių",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "magyar",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "Malti",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "Nederlands",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "polski",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "português",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "română",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "slovenčina",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "slovenščina",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "suomi",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "svenska",
-      path: "#",
+      path: "/example.html",
     },
   ],
 };

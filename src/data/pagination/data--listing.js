@@ -7,41 +7,41 @@ module.exports = {
   icon_path: "/icons.svg",
   first: {
     label: "First",
-    path: "#",
+    path: "/example.html",
   },
   prev: {
     label: "Previous",
-    path: "#",
+    path: "/example.html",
   },
   next: {
     label: "Next",
-    path: "#",
+    path: "/example.html",
   },
   last: {
     label: "Last",
-    path: "#",
+    path: "/example.html",
   },
   items: [
     {
       label: "1",
-      path: "#",
+      path: "/example.html",
       active: true,
     },
     {
       label: "2",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "3",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "4",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "5",
-      path: "#",
+      path: "/example.html",
     },
   ],
 };
