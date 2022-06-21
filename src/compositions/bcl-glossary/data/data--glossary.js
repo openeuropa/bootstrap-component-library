@@ -111,5 +111,9 @@ module.exports = {
       label: "Z",
       path: `/example.html`,
     },
+    {
+      label: "0-9",
+      path: `/example.html`,
+    },
   ],
 };
