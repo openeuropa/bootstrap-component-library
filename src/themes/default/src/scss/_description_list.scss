@@ -1,0 +1,6 @@
+// Desktop uses grid, this is to apply the same spacing in tablet and mobile.
+@include media-breakpoint-down(md) {
+  dd + dt {
+    margin-top: map-get($gutters, "2-5");
+  }
+}
