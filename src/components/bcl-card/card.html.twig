@@ -28,8 +28,9 @@
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
     format: {
-      left_col_classes (default: 'col-4')
-      right_col_classes (default: 'col-8')
+      image_extra_classes (default: '')
+      image_size (default: 'normal') - options: ['normal', 'small']
+      content_col_classes (default: 'col-8')
       gutter (default: '')
     }
   - variant (string) (default: '')
@@ -63,8 +64,7 @@
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_grid = horizontal_grid|default({
-  left_col_classes: 'col-4',
-  right_col_classes: 'col-8'
+  content_col_classes: 'col-8'
 }) %}
 {% set _border_variant = border_variant|default('') %}
 {% set _text_color = text_color|default('') %}
@@ -107,8 +107,15 @@
 {% endif %}
 
 {% set _row_classes = 'row' %}
+{% set _image_col_classes = 'bcl-card-image' %}
 {% if _horizontal_grid.gutter is not empty %}
   {% set _row_classes = _row_classes ~ ' g-' ~ _horizontal_grid.gutter %}
+{% endif %}
+{% if _horizontal_grid.image_size == 'small' %}
+  {% set _image_col_classes = _image_col_classes ~ ' bcl-size-small' %}
+{% endif %}
+{% if _horizontal_grid.image_extra_classes is not empty %}
+  {% set _image_col_classes = _image_col_classes ~ ' ' ~ _horizontal_grid.image_extra_classes %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
@@ -145,7 +152,7 @@
   {% endif %}
 {% endif %}
 {% if _horizontal and (_image is not empty or _date is not empty)  %}
-  <div class='{{ _horizontal_grid.left_col_classes  }}'>
+  <div class='{{ _image_col_classes }}'>
 {% endif %}
   {% if _date is not empty %}
     {% block card_date %}
@@ -165,7 +172,7 @@
   <div class="card-img-overlay">
 {% endif %}
 {% if _horizontal %}
-<div class='{{ _horizontal_grid.right_col_classes }}'>
+<div class='{{ _horizontal_grid.content_col_classes }}'>
 {% endif %}
   <div class='{{ _body_classes }}'>
   {% if _title is not empty %}

@@ -59,7 +59,6 @@
       {% if not _alignment == 'center' %}
         {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
       {% endif %}
-      {% set _max_width = 'mw-listing-img' %}
       {% set _card = _card|merge({image: _card.image|merge({
         classes: _image_classes,
       })}) %}
@@ -88,8 +87,9 @@
         horizontal: true,
         extra_classes_body: 'p-0 pb-md-0 pb-3',
         horizontal_grid: {
-          left_col_classes: 'col-md-3 col-lg-2 rounded ' ~ _max_width ~ _alignment_class,
-          right_col_classes: 'col-md-9 col-lg-10' ~ _alignment_class,
+          image_size: 'small',
+          image_extra_classes: 'me-md-2 ' ~ _max_width ~ _alignment_class,
+          content_col_classes: 'col-md-9 col-lg-10' ~ _alignment_class,
         },
         attributes: _card_attributes,
       }) %}
@@ -112,8 +112,9 @@
       {% if _variant == 'default-2-col' %}
         {% set _card = _card|merge({
           horizontal_grid: {
-            left_col_classes: 'col-xl-3 col-md-5 ' ~ _max_width ~ _alignment_class,
-            right_col_classes: 'col-xl-9 col-md-7' ~ _alignment_class,
+            image_size: 'small',
+            image_extra_classes: 'me-md-2 ' ~ _max_width ~ _alignment_class,
+            content_col_classes: 'col-xl-9 col-md-7' ~ _alignment_class,
           },
         }) %}
         {% set _card_layout = _card_layout|merge({
@@ -122,8 +123,9 @@
       {% else %}
         {% set _card = _card|merge({
           horizontal_grid: {
-            left_col_classes: 'col-lg-4 col-md-6 ' ~ _max_width ~ _alignment_class,
-            right_col_classes: 'col-lg-8 col-md-6' ~ _alignment_class,
+            image_size: 'small',
+            image_extra_classes: 'me-md-2 ' ~ _max_width ~ _alignment_class,
+            content_col_classes: 'col-lg-8 col-md-6' ~ _alignment_class,
           },
         }) %}
         {% set _card_layout = _card_layout|merge({

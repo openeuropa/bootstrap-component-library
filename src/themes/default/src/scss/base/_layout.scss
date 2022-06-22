@@ -1,5 +1,44 @@
+.bcl-card-image {
+  flex-basis: $card-image-size;
+  padding: 0;
+  &.bcl-size-small {
+    flex-basis: $card-image-small-size;
+  }
+}
+.bcl-content-banner {
+  .bcl-card-image {
+    margin: 0 auto;
+  }
+}
+.bcl-listing {
+  .bcl-card-image {
+    margin-left: calc(var(--#{$variable-prefix}gutter-x) * 0.5);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .bcl-content-banner {
+    .bcl-card-image {
+      margin: 0;
+    }
+  }
+}
 @include media-breakpoint-up(lg) {
   .bcl-sidebar h2 {
     font-size: $h4-font-size;
+  }
+  .bcl-listing {
+    .bcl-card-image {
+      flex-basis: $card-image-lg-breakpoint-size;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bcl-card-image {
+    flex-basis: $card-image-size;
+    &.bcl-size-small {
+      flex-basis: $card-image-small-size;
+    }
   }
 }
