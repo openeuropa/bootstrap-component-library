@@ -8,18 +8,22 @@ module.exports = {
   first: {
     label: "First",
     path: "/example.html",
+    aria_label: "First page",
   },
   prev: {
     label: "Previous",
     path: "/example.html",
+    aria_label: "Previous page",
   },
   next: {
     label: "Next",
     path: "/example.html",
+    aria_label: "Next page",
   },
   last: {
     label: "Last",
     path: "/example.html",
+    aria_label: "Last page",
   },
   items: [
     {
