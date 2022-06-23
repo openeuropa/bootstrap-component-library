@@ -72,10 +72,6 @@ module.exports = {
       path: `/example.html`,
     },
     {
-      label: "Q",
-      path: `/example.html`,
-    },
-    {
       label: "R",
       path: `/example.html`,
     },
