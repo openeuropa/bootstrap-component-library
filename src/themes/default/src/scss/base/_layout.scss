@@ -27,13 +27,13 @@
 //   }
 // }
 
-// @include media-breakpoint-up(md) {
-//   .bcl-content-banner {
-//     .bcl-card-image {
-//       margin: 0;
-//     }
-//   }
-// }
+@include media-breakpoint-down(md) {
+  .bcl-content-banner {
+    .bcl-card-start-col {
+      margin: 0 auto;
+    }
+  }
+}
 // @include media-breakpoint-up(lg) {
 //   .bcl-sidebar h2 {
 //     font-size: $h4-font-size;
