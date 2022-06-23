@@ -59,24 +59,29 @@
 } %}
 
 {% set _body_classes = 'pt-0 px-0 pb-0' %}
-{% set _content_col_classes = 'col-md-8 col-lg-9 col-xxl-8' %}
+{% set _left_col_classes = '' %}
+{% set _right_col_classes = 'col-md-8 col-lg-9 col-xxl-8' %}
 
 {% if _image is not empty %}
-  {% set _content_col_classes = 'col-md-8 col-lg-9 col-xxl-8' %}
+  {% set _left_col_classes = 'bcl-card-start-col' %}
+  {% set _right_col_classes = 'col-md-8 col-lg-9 col-xxl-8' %}
   {% set _body_classes = 'pt-4 pt-md-0 px-0 px-md-3 pb-0' %}
   {% if _image_size == 'lg' %}
-    {% set _content_col_classes = 'col-md-8' %}
+    {% set _left_col_classes = _left_col_classes ~ ' bcl-size-large' %}
+    {% set _right_col_classes = 'col-12 col-md' %}
   {% endif %}
   {% if _image_size == 'sm' %}
-    {% set _left_col_classes = 'col-6 col-md-4 col-lg-2 offset-3 offset-md-0' %}
+    {% set _left_col_classes = _left_col_classes ~ ' bcl-size-small' %}
   {% endif %}
 {% endif %}
 {% if _date is not empty %}
-  {% set _content_col_classes = 'col-md-9 col-lg-10 col-xxl-8' %}
+  {% set _left_col_classes = 'col-8 col-md-3 col-lg-2 offset-4 offset-md-0' %}
+  {% set _right_col_classes = 'col-md-9 col-lg-10 col-xxl-8' %}
 {% endif %}
 
 {% set _horizontal_classes = {
-  content_col_classes: _content_col_classes,
+  left_col_classes: _left_col_classes,
+  right_col_classes: _right_col_classes,
 } %}
 
 {% set _card = {

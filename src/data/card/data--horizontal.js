@@ -2,10 +2,6 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   horizontal: true,
-  horizontal_grid: {
-    image_size: "small",
-    gutter: "0",
-  },
   title: "Title card",
   subtitle: {
     content: "Subtitle card",

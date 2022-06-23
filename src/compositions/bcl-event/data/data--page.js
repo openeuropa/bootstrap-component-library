@@ -23,6 +23,7 @@ module.exports = {
       path: "https://picsum.photos/255/255?random=6",
       alt: "alt img",
     },
+    image_size: "lg",
     links: [
       {
         label: "Register",
