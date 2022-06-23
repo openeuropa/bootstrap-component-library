@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   type: "grid",
@@ -46,8 +47,7 @@ module.exports = {
       card_footer: "Footer of card 2",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      content: getDummyText(2),
     },
     {
       title: "Title card 3",
@@ -56,8 +56,7 @@ module.exports = {
         classes: "mb-2",
       },
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        content: getDummyText(5),
         classes: "mb-2",
       },
       image: {
@@ -90,8 +89,7 @@ module.exports = {
       card_footer: "Footer of card 4",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      content: getDummyText(2),
     },
     {
       title: "Title card 5",

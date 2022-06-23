@@ -1,6 +1,8 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   item_title: "<a href='/example.html' class='standalone'>Article title</a>",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+  text: getDummyText(6, false),
   content:
     "<span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Brussels, Belgium</span><span class='text-muted d-block d-md-inline-block me-3 text-nowrap'>17 October 2019</span>",
   image: {
@@ -42,8 +44,7 @@ module.exports = {
     items: [
       {
         title: "File title FR",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+        description: getDummyText(6, false),
         language: "Français",
         meta: "(16.2 MB - PDF)",
         download: {
@@ -53,8 +54,7 @@ module.exports = {
       },
       {
         title: "File title ES",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+        description: getDummyText(6, false),
         language: "Español",
         meta: "(16.2 MB - PDF)",
         download: {
@@ -64,8 +64,7 @@ module.exports = {
       },
       {
         title: "File title BG",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+        description: getDummyText(4, false),
         language: "български",
         meta: "(16.2 MB - PDF)",
         download: {

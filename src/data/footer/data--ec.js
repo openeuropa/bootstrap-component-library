@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   variant: "ec",
@@ -11,8 +12,9 @@ module.exports = {
           items: [
             {
               type: "content",
-              content:
-                "<p class='fw-bold mb-2'>[Project name]</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.</p>",
+              content: `<p class='fw-bold mb-2'>[Project name]</p>${getDummyText(
+                2
+              )}`,
             },
           ],
         },
