@@ -46,6 +46,20 @@ $utilities: map-merge(
           responsive: true,
         )
       ),
+    "border-top":
+      map-merge(
+        map-get($utilities, "border-top"),
+        (
+          responsive: true,
+        )
+      ),
+    "border-bottom":
+      map-merge(
+        map-get($utilities, "border-bottom"),
+        (
+          responsive: true,
+        )
+      ),
     // Create medium font weight class
     "font-weight":
       map-merge(
@@ -121,6 +135,10 @@ svg {
 
 .bg-gray-400 {
   background-color: $gray-400;
+}
+
+.border-gray-300 {
+  border-color: $gray-300;
 }
 
 .grid-3-9 {

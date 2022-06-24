@@ -26,7 +26,7 @@
     "clean": "rimraf build assets",
     "clean:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run clean",
     "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js static/* assets/ && copyfiles -u 3 src/themes/**/fonts/* assets && copyfiles -u 3 src/themes/**/fonts/files/* assets",
-    "copy:index": "copyfiles -f static/index.html build",
+    "copy:index": "copyfiles -f static/*.html build",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",
     "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-*\" run dist",
