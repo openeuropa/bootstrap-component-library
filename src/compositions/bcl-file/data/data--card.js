@@ -44,7 +44,7 @@ module.exports = {
     items: [
       {
         title: "File title FR",
-        description: getDummyText(6, false),
+        description: getDummyText(3),
         language: "Français",
         meta: "(16.2 MB - PDF)",
         download: {
@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         title: "File title ES",
-        description: getDummyText(6, false),
+        description: getDummyText(2),
         language: "Español",
         meta: "(16.2 MB - PDF)",
         download: {
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         title: "File title BG",
-        description: getDummyText(4, false),
+        description: getDummyText(3),
         language: "български",
         meta: "(16.2 MB - PDF)",
         download: {

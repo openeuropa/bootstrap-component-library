@@ -174,7 +174,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content: getDummyText(),
+          content: getDummyText(6),
           classes: "mb-2-5",
         },
         image: {
@@ -198,7 +198,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content: getDummyText(2),
+          content: getDummyText(5),
           classes: "mb-2-5",
         },
         image: {

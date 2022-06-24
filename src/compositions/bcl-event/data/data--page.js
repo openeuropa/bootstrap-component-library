@@ -19,7 +19,8 @@ module.exports = {
       },
     ],
     content: `<div class="my-3"><span class="text-muted me-3">Published: 3 September 2020</span></div>${getDummyText(
-      5
+      5,
+      true
     )}`,
     image: {
       path: "https://picsum.photos/255/255?random=6",
