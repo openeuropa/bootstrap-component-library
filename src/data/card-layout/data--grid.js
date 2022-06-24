@@ -47,7 +47,7 @@ module.exports = {
       card_footer: "Footer of card 2",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
-      content: getDummyText(2),
+      content: getDummyText(3),
     },
     {
       title: "Title card 3",
@@ -89,7 +89,7 @@ module.exports = {
       card_footer: "Footer of card 4",
       wrapper_class: "col",
       attributes: new drupalAttribute().addClass("mb-3"),
-      content: getDummyText(2),
+      content: getDummyText(4),
     },
     {
       title: "Title card 5",

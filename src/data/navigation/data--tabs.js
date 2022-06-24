@@ -9,7 +9,7 @@ module.exports = {
     {
       label: "I'm a link",
       path: "#first",
-      content: `<p class="mt-4">This is a demo content for the First Tab.</p>${getDummyText()}`,
+      content: `<p class="mt-4">This is a demo content for the First Tab. ${getDummyText()}</p>`,
       id: "first-tab",
       target: "first",
       attributes: new drupalAttribute()
@@ -20,7 +20,7 @@ module.exports = {
     {
       label: "I'm a button",
       button: true,
-      content: `<p class="mt-4">This is a demo content for the Second Tab.</p>${getDummyText()}`,
+      content: `<p class="mt-4">This is a demo content for the Second Tab. ${getDummyText()}</p>`,
       id: "second-tab",
       target: "second",
       attributes: new drupalAttribute()
@@ -33,7 +33,7 @@ module.exports = {
       label: "I'm a disabled button",
       button: true,
       disabled: true,
-      content: `<p class="mt-4">This is a demo content for the Third Tab.</p>${getDummyText()}`,
+      content: `<p class="mt-4">This is a demo content for the Third Tab.</p>${getDummyText()}</p>`,
       id: "third-tab",
       target: "third",
       attributes: new drupalAttribute()
@@ -46,7 +46,7 @@ module.exports = {
       label: "I'm a active button",
       button: true,
       active: true,
-      content: `<p class="mt-4">This is a demo content for the Fourth Tab.</p>${getDummyText()}`,
+      content: `<p class="mt-4">This is a demo content for the Fourth Tab. ${getDummyText()}</p>`,
       id: "fourth-tab",
       target: "fourth",
       attributes: new drupalAttribute()
