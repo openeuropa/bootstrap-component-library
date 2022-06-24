@@ -7,9 +7,7 @@ Parameters:
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - links: (array of link objects) (default: [])
-  - content: (string) (default: '')
   - id (string) (default: 'bcl-inpage-navigation-' random(10))
-  - full_layout: (boolean) (default: false)
   - attributes (drupal attrs)
 #}
 
@@ -29,30 +27,18 @@ Parameters:
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
 {% set title_attributes = _title_attributes.addClass('mb-0') %}
 
-{# Print the result #}
-{% if _full_layout %}
-<div class="row">
-  <div class="col-md-3 d-none d-lg-block">
-{% endif %}
-    <nav {{ attributes }}>
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: _title,
-        title_tag: _title_tag,
-        title_link: _title_link,
-        attributes: _title_attributes.addClass('mb-0'),
-      } only %}
-      {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
-        'pills': true,
-        'vertical': true,
-        'items': _links,
-      } only %}
-    </nav>
-{% if _full_layout %}
-  </div>
-  <div class="col-md-9">
-    {{ _content }}
-  </div>
-</div>
-{% endif %}
+<nav {{ attributes }}>
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes.addClass('mb-0'),
+  } only %}
+  {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
+    'pills': true,
+    'vertical': true,
+    'items': _links,
+  } only %}
+</nav>
 
 {% endspaceless %}
