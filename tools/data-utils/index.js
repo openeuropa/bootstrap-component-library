@@ -1,6 +1,12 @@
+/**
+ * @param count {integer} How many periods to generate.
+ * @param paragraph {boolean} Wrap the generated periods in a <p></p> tag
+ * @param paragraphs {boolean} Wrap each period in a <p></p> tag
+ * @param classes {String} css classes for the paragraph(s)
+ */
 const getDummyText = (
   count = 1,
-  paragraph = true,
+  paragraph = false,
   paragraphs = false,
   classes = ""
 ) => {
@@ -9,7 +15,7 @@ const getDummyText = (
   let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ";
 
   if (classes) {
-    selector = `class="${classes}`;
+    selector = ` class="${classes}`;
   }
 
   if (paragraphs || paragraph) {
@@ -17,10 +23,13 @@ const getDummyText = (
   }
 
   if (paragraphs) {
-    lorem = p.replace("###", lorem);
+    lorem = p.replace("###", lorem.trim());
   }
 
-  let dummyText = lorem.repeat(count).replace(/(.*?\.){4}/g, "$& <br>");
+  let dummyText = lorem
+    .repeat(count)
+    .trim()
+    .replace(/(.*?\.){4}/g, "$& <br>");
 
   if (paragraph && !paragraphs) {
     dummyText = p.replace("###", dummyText);
