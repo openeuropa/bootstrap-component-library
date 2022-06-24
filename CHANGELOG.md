@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.24.0 (2022-06-24)
+
+#### :rocket: New Feature
+
+* [#380](https://github.com/openeuropa/bootstrap-component-library/pull/380) feat(glossary): Adding glossary listing and detail - OEL-1696 ([@planctus](https://github.com/planctus))
+* [#379](https://github.com/openeuropa/bootstrap-component-library/pull/379) feat(flags): Adding country flags svgs  to each theme - OEL-1699 ([@planctus](https://github.com/planctus))
+* [#371](https://github.com/openeuropa/bootstrap-component-library/pull/371) feat(icons-list): Adding a page displaying all the available icons - OEL-1684 ([@tibi2303](https://github.com/tibi2303))
+* [#358](https://github.com/openeuropa/bootstrap-component-library/pull/358) feat(procurement): Added procurement - OEL-1605 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#365](https://github.com/openeuropa/bootstrap-component-library/pull/365) feat(file): Fix download icon - OEL-1639 ([@tibi2303](https://github.com/tibi2303))
+* [#362](https://github.com/openeuropa/bootstrap-component-library/pull/362) feat(button): Fix visited btns color - OEL-1625 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+
+* [#387](https://github.com/openeuropa/bootstrap-component-library/pull/387) feat(file): Updated file card variant - OEL-1691 ([@tibi2303](https://github.com/tibi2303))
+* [#385](https://github.com/openeuropa/bootstrap-component-library/pull/385) feat(inpage): Removing full_page parameter, building example in the story file - OEL-1743 ([@planctus](https://github.com/planctus))
+* [#384](https://github.com/openeuropa/bootstrap-component-library/pull/384) chore(pagination): Fixing accessibility ([@planctus](https://github.com/planctus))
+* [#382](https://github.com/openeuropa/bootstrap-component-library/pull/382) feat(links): Visited links update - OEL-1737 ([@planctus](https://github.com/planctus))
+* [#378](https://github.com/openeuropa/bootstrap-component-library/pull/378) feat(inpage): Flat list, removing scrollspy stories - OEL-1731 ([@planctus](https://github.com/planctus))
+* [#372](https://github.com/openeuropa/bootstrap-component-library/pull/372) feat(title): Title harmonized - OEL-1685 ([@tibi2303](https://github.com/tibi2303))
+* [#375](https://github.com/openeuropa/bootstrap-component-library/pull/375) feat(events): Adding time information,  aligning with figma mockup, adding controls - OEL-1695 ([@planctus](https://github.com/planctus))
+* [#367](https://github.com/openeuropa/bootstrap-component-library/pull/367) feat(facts-figures): Title font-weight - OEL-1644 ([@tibi2303](https://github.com/tibi2303))
+* [#369](https://github.com/openeuropa/bootstrap-component-library/pull/369) feat(badges): Changes to badges - OEL-1674 ([@tibi2303](https://github.com/tibi2303))
+* [#368](https://github.com/openeuropa/bootstrap-component-library/pull/368) feat(comments): Updated comments - OEL-1671 ([@tibi2303](https://github.com/tibi2303))
+* [#364](https://github.com/openeuropa/bootstrap-component-library/pull/364) feat(improvements): Card variant footer/header and multiselect close - OEL-1640 ([@tibi2303](https://github.com/tibi2303))
+* [#361](https://github.com/openeuropa/bootstrap-component-library/pull/361) feat(features): Data alignment between tests and stories - OEL-1622 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#389](https://github.com/openeuropa/bootstrap-component-library/pull/389) chore(deps): Updating sass ([@planctus](https://github.com/planctus))
+* [#383](https://github.com/openeuropa/bootstrap-component-library/pull/383) chore(deps): Updates - 21-06-22 ([@planctus](https://github.com/planctus))
+* [#381](https://github.com/openeuropa/bootstrap-component-library/pull/381) chore(deps): Updates - 17-06-22 ([@planctus](https://github.com/planctus))
+* [#377](https://github.com/openeuropa/bootstrap-component-library/pull/377) chore(deps): Updates - 14-06-22 ([@planctus](https://github.com/planctus))
+* [#376](https://github.com/openeuropa/bootstrap-component-library/pull/376) chore(deps): Updates 13-06-22 ([@planctus](https://github.com/planctus))
+* [#374](https://github.com/openeuropa/bootstrap-component-library/pull/374) chore(deps): storybook, ecl and a few others updates ([@planctus](https://github.com/planctus))
+* [#373](https://github.com/openeuropa/bootstrap-component-library/pull/373) chore(eslint): Adding js linter, fixing files ([@planctus](https://github.com/planctus))
+* [#370](https://github.com/openeuropa/bootstrap-component-library/pull/370) chore(deps): Storybook 6.5.7 ([@planctus](https://github.com/planctus))
+* [#366](https://github.com/openeuropa/bootstrap-component-library/pull/366) chore(deps): Updates 30-05-22 ([@planctus](https://github.com/planctus))
+* [#357](https://github.com/openeuropa/bootstrap-component-library/pull/357) chore(storybook): Upgrade to 6.5.0 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.23.0 (2022-05-18)
 
 #### :rocket: New Feature
