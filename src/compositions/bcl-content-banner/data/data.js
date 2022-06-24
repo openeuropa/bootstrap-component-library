@@ -16,7 +16,8 @@ module.exports = {
     },
   ],
   content: `<div class="my-3"><span class="text-muted me-3">17 October 2019</span></div>${getDummyText(
-    5
+    5,
+    true
   )}`,
   image: {
     path: "https://picsum.photos/255/255?random=6",
