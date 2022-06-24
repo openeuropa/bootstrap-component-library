@@ -3,7 +3,7 @@ module.exports = {
   item_title: "Article title",
   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
   content:
-    "<span class='text-muted d-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Published : 3 September 2022</span>",
+    "<span class='text-muted d-inline-block me-3 mb-2 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-inline-block me-3 text-nowrap'>Published : 3 September 2022</span>",
   icon_path: "/icons.svg",
   icon: {
     name: "file-pdf-fill",
