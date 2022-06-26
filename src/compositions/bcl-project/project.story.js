@@ -43,12 +43,68 @@ export default {
 export const Listing = () => listingPage(correctPaths(demoListing));
 Listing.storyName = "Listing";
 Listing.decorators = [initBadges];
+Listing.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A227687",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A227969",
+    },
+  ],
+};
 
 export const Ongoing = () => detailsPage(correctPaths(ongoingDemo));
 Ongoing.storyName = "Project page (ongoing)";
+Ongoing.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A227763",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A228021",
+    },
+  ],
+};
 
 export const Closed = () => detailsPage(correctPaths(closedDemo));
 Closed.storyName = "Project page (closed)";
+Closed.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A227809",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A228021",
+    },
+  ],
+};
 
 export const Planned = () => detailsPage(correctPaths(plannedDemo));
 Planned.storyName = "Project page (planned)";
+Planned.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A227855",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A228021",
+    },
+  ],
+};

@@ -45,18 +45,9 @@ export default {
         title: "v1.2",
       },
     },
-    design: [
-      {
-        name: "Mockup - Event (desktop)",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5343%3A242940",
-      },
-      {
-        name: "Mockup - Event (mobile)",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5343%3A243030",
-      },
-    ],
+    controls: {
+      disable: true,
+    },
   },
 };
 
@@ -89,9 +80,18 @@ export const FullPage = () => event(correctPaths(demoData));
 FullPage.storyName = "Event page";
 FullPage.decorators = [initScrollspy];
 FullPage.parameters = {
-  controls: {
-    disable: true,
-  },
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A236492",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A236626",
+    },
+  ],
 };
 
 export const FullPage1 = () => event(correctPaths(demoDateData));
@@ -99,9 +99,18 @@ export const FullPage1 = () => event(correctPaths(demoDateData));
 FullPage1.storyName = "Event page with date";
 FullPage1.decorators = [initScrollspy];
 FullPage1.parameters = {
-  controls: {
-    disable: true,
-  },
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A236508",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A236637",
+    },
+  ],
 };
 
 export const Listing = (args) =>
@@ -111,3 +120,17 @@ Listing.storyName = "Event listing";
 Listing.decorators = [initBadges];
 Listing.args = getArgs();
 Listing.argTypes = getArgTypes();
+Listing.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A236436",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A236574",
+    },
+  ],
+};

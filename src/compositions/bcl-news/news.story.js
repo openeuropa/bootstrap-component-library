@@ -16,26 +16,42 @@ export default {
       disable: true,
     },
     badges: ["stable"],
-    design: [
-      {
-        name: "Mockup - News (desktop)",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3504%3A123262",
-      },
-      {
-        name: "Mockup - News (mobile)",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3378%3A107467",
-      },
-    ],
   },
 };
 
 export const FullPage = () => news(correctPaths(demoData));
 
 FullPage.storyName = "News page";
+FullPage.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A243152",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A243122",
+    },
+  ],
+};
 
 export const Listing = () => listingPage(correctPaths(demoListing));
 
 Listing.storyName = "News listing";
 Listing.decorators = [initBadges];
+Listing.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A242951",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A243053",
+    },
+  ],
+};

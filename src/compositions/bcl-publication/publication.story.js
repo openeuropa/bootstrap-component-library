@@ -35,9 +35,51 @@ export default {
 
 export const Listing = () => listingPage(correctPaths(demoListing));
 Listing.decorators = [initBadges];
+Listing.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A200430",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A200242",
+    },
+  ],
+};
 
 export const Details = () => detailsPage(correctPaths(demoDetails));
+Details.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A200319",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A200295",
+    },
+  ],
+};
 
 export const DetailsMultiple = () =>
   detailsPage(correctPaths(demoDetailsMultiple));
 DetailsMultiple.storyName = "Details (multiple authors)";
+Details.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A200336",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A200307",
+    },
+  ],
+};

@@ -65,9 +65,29 @@ export const Default = () => user(correctPaths(dataUser));
 Default.parameters = {
   design: [
     {
-      name: "Mockup",
+      name: "Mockup - User view",
       type: "figma",
       url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10018%3A174070",
+    },
+    {
+      name: "Mockup - User edit",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10018%3A174031",
+    },
+    {
+      name: "Mockup - User delete",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10065%3A185275",
+    },
+    {
+      name: "Mockup - User privacy",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10018%3A174003",
+    },
+    {
+      name: "Mockup - User visibility",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10038%3A178598",
     },
   ],
 };
@@ -78,9 +98,14 @@ Listing.decorators = [initBadges];
 Listing.parameters = {
   design: [
     {
-      name: "Mockup",
+      name: "Mockup - Desktop",
       type: "figma",
       url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10390%3A267732",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10390%3A267524",
     },
   ],
 };
