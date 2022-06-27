@@ -6,6 +6,7 @@
   - alignment (string) (default: '')
     - options ['end', 'center']
   - aria_label (string) (default: '')
+  - variant: (string) (default: '')
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
   - first (object)
@@ -62,11 +63,15 @@
 {% set _next = next|default({}) %}
 {% set _prev = prev|default({}) %}
 {% set _last = last|default({}) %}
+{% set _variant = variant|default('') %}
 {% set _icon_path = icon_path|default({}) %}
 
 {% set _classes = 'pagination' %}
 {% if _size is not empty %}
   {% set _classes = _classes ~ ' pagination-' ~ _size %}
+{% endif %}
+{% if _variant is not empty %}
+  {% set _classes = _classes ~ ' pagination--' ~ _variant %}
 {% endif %}
 {% if _alignment is not empty %}
   {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}

@@ -1,15 +1,16 @@
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
-  item_title: "<a href='/example.html' class='standalone'>Article title</a>",
+  variant: "card",
+  item_title: "Article title",
   text: getDummyText(6, false),
   content:
-    "<span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-block d-md-inline-block me-3 mb-3 mb-md-0 text-nowrap'>Brussels, Belgium</span><span class='text-muted d-block d-md-inline-block me-3 text-nowrap'>17 October 2019</span>",
-  image: {
-    path: "https://picsum.photos/seed/1002/600/400",
-    alt: "alt img",
-  },
+    "<span class='text-muted d-inline-block me-3 mb-2 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-inline-block me-3 text-nowrap'>Published : 3 September 2022</span>",
   icon_path: "/icons.svg",
+  icon: {
+    name: "file-pdf-fill",
+    size: "xl",
+  },
   badges: [
     {
       label: "Label",
@@ -28,7 +29,6 @@ module.exports = {
     label: "Download",
     path: "/example.html",
   },
-  variant: "card",
   translation: {
     alignment: "center",
     id: "language-dropdown",
