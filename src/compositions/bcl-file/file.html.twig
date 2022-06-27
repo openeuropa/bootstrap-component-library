@@ -8,6 +8,7 @@
   - title_attributes (drupal attrs)
   - item_title (string) (default: '')
   - icon (icon Object) (default: {})
+  - icon_inline (boolean) (deafult: true)
   - text (string) (default: '')
   - content (string) (default: '')
   - image (object) (default: {}) - format: {
@@ -38,6 +39,7 @@
 {# Internal properties #}
 
 {% set _icon = icon|default({}) %}
+{% set _icon_inline = icon_inline|default(true) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
@@ -60,7 +62,6 @@
 
 {% set attributes = attributes.addClass(['bcl-file']) %}
 
-{% set _container_classes = 'w-100 d-md-flex' %}
 {% if _icon is not empty %}
   {% set _container_classes = _container_classes ~ ' ms-2-5' %}
   {% set _icon = _icon|merge({
@@ -77,51 +78,53 @@
   } only %}
 {% endif %}
 
-{% if _variant == 'card' %}
-  {% set attributes = attributes.addClass(['border', 'rounded-bottom']) %}
-  {% set _image = _image|merge({
-    position: "top",
-    classes: "mb-3",
-    rounded: 0,
-  }) %}
-  {% include '@oe-bcl/bcl-card/card.html.twig' with {
-    horizontal: true,
-    horizontal_grid: {
-      left_col_classes: "col-12 col-md-4 order-md-2",
-      right_col_classes: "col-12 col-md-8",
-    },
-    badges: _badges,
-    title: _item_title,
-    text: {
-      content: _text,
-      classes: "mb-2",
-    },
-    content: _content,
-    image: _image,
-    extra_classes_body: "p-0",
-    attributes: create_attribute().addClass(['rounded-0', 'rounded-top', 'p-4', 'border-bottom-0'])
-  } only %}
-{% else %}
-  {% set attributes = attributes.addClass(['border', 'rounded']) %}
-{% endif %}
+{% set attributes = attributes.addClass(['border', 'rounded']) %}
+
+{% set _container_classes = 'd-md-flex flex-grow-1' %}
 
 <div
   {{ attributes }}
 >
-  <div class="px-3-5 py-3">
-    <div class="d-flex">
+  {% if _variant == 'card' %}
+    <div class="border-bottom px-3-5 py-3 d-md-flex">
+      <div class="pe-2 pb-2">
       {% if _icon is not empty %}
         {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
           path: _icon_path,
         }) only -%}
       {% endif %}
+      </div>
+      <div>
+        {% if _item_title is not empty %}
+          <p class="fw-medium mb-2 fs-5">{{ _item_title }}</p>
+        {% endif %}
+        {% if _text is not empty %}
+          <p class="mb-3">{{ _text }}</p>
+        {% endif %}
+        {% if _content is not empty %}
+          {{ _content }}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  <div class="px-3-5 py-3">
+    <div class="d-flex">
+      {% if _icon is not empty and _variant == 'default' %}
+        <div class="pe-2 pb-2">
+        {% if _icon is not empty %}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+            path: _icon_path,
+          }) only -%}
+        {% endif %}
+        </div>
+      {% endif %}
       <div class="{{ _container_classes }}">
         <div class="flex-grow-1">
           {% if _item_title is not empty and _variant == 'default' %}
-            <p class="fw-bold m-0">{{ _item_title }}</p>
+            <p class="fw-medium m-0 fs-5">{{ _item_title }}</p>
           {% endif %}
           {% if _language is not empty or _meta is not empty %}
-          <small class="fw-bold m-0">
+          <small class="fw-medium m-0">
             {%- if _language is not empty -%}
               {{- _language -}}
             {%- endif -%}

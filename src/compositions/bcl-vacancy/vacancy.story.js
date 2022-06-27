@@ -31,9 +31,51 @@ export default {
 
 export const Listing = () => listingPage(correctPaths(demoListing));
 Listing.decorators = [initBadges];
+Listing.parameters = {
+  design: [
+    {
+      name: "Mockup - Vacancy listing (desktop)",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A187317",
+    },
+    {
+      name: "Mockup - Vacancy listing (mobile)",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A187472",
+    },
+  ],
+};
 
 export const Opened = () => detailsPage(correctPaths(demoDetails));
 Opened.storyName = "Details (opened)";
+Opened.parameters = {
+  design: [
+    {
+      name: "Mockup - Vacancy Opened (desktop)",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A187357",
+    },
+    {
+      name: "Mockup - Vacancy Opened (mobile)",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A187527",
+    },
+  ],
+};
 
 export const Closed = () => detailsPage(correctPaths(demoDetailsClosed));
 Closed.storyName = "Details (closed)";
+Closed.parameters = {
+  design: [
+    {
+      name: "Mockup - Vacancy Closed (desktop)",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A187374",
+    },
+    {
+      name: "Mockup - Vacancy Closed (mobile)",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10373%3A187543",
+    },
+  ],
+};
