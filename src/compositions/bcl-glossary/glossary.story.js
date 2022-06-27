@@ -3,7 +3,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoDataListing from "@openeuropa/bcl-glossary/data/data--listing";
-import demoDataDetail from "@openeuropa/bcl-glossary/data/data--detail";
+import demoDataDetails from "@openeuropa/bcl-glossary/data/data--detail";
 
 import pageTemplate from "@openeuropa/bcl-glossary/glossary-detail.html.twig";
 import listingPage from "@openeuropa/bcl-glossary/glossary-listing.html.twig";
@@ -22,20 +22,37 @@ export default {
         title: "v1",
       },
     },
-    design: [
-      {
-        name: "Mockup - Glossary (desktop)",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=11192%3A278869",
-      },
-      {
-        name: "Mockup - Glossary (mobile)",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=11180%3A280032",
-      },
-    ],
   },
 };
 
 export const Listing = () => listingPage(correctPaths(demoDataListing));
-export const Detail = () => pageTemplate(correctPaths(demoDataDetail));
+Listing.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=11134%3A297073",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=11180%3A280032",
+    },
+  ],
+};
+
+export const Details = () => pageTemplate(correctPaths(demoDataDetails));
+Details.parameters = {
+  design: [
+    {
+      name: "Mockup - Desktop",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10977%3A245279",
+    },
+    {
+      name: "Mockup - Mobile",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=11180%3A281780",
+    },
+  ],
+};

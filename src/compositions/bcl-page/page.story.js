@@ -27,14 +27,14 @@ export default {
     },
     design: [
       {
-        name: "Mockup - Page (desktop)",
+        name: "Mockup - Desktop",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3962%3A141999",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5209%3A190784",
       },
       {
-        name: "Mockup -Page (mobile)",
+        name: "Mockup - Mobile",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=3962%3A142115",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5209%3A191866",
       },
     ],
   },
