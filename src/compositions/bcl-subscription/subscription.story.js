@@ -97,7 +97,7 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5859%3A239083",
+        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244556",
       },
     ],
   },
@@ -116,8 +116,26 @@ if (isChromatic() || chromatic) {
   };
 }
 
-export const Success = () => subscriptionPage(correctPaths(demoData));
-Success.decorators = [openModal, successState];
+export const SuccessState = () => subscriptionPage(correctPaths(demoData));
+SuccessState.decorators = [openModal, successState];
+SuccessState.parameters = {
+  design: [
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244564",
+    },
+  ],
+};
 
-export const Error = () => subscriptionPage(correctPaths(demoData));
-Error.decorators = [openModal, errorState];
+export const ErrorState = () => subscriptionPage(correctPaths(demoData));
+ErrorState.decorators = [openModal, errorState];
+ErrorState.parameters = {
+  design: [
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244562",
+    },
+  ],
+};
