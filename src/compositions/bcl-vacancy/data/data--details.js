@@ -17,7 +17,7 @@ module.exports = {
         rounded_pill: true,
       },
     ],
-    content: getDummyText(),
+    content: getDummyText(3, true),
     action_bar: `<div class="d-grid d-md-block mt-3-5"><button class="btn btn-primary btn-md" type="button"><svg class="me-2-5 bi icon--fluid"><use xlink:href="/icons.svg#pencil-fill"></use></svg>Apply now</button></div>`,
   },
   files: [

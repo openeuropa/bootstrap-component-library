@@ -16,7 +16,7 @@ module.exports = {
   },
   featured_section: {
     title: "Featured title",
-    content: getDummyText(16),
+    content: getDummyText(8),
     featured_media: {
       content: "Media description text goes here.",
       content_classes: "bg-light p-3",

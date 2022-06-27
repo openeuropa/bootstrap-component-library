@@ -25,7 +25,7 @@ module.exports = {
     {
       title_id: "description",
       title: "Description",
-      content: getDummyText(),
+      content: getDummyText(3, true),
     },
   ],
   social_modal: {

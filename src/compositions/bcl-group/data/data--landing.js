@@ -157,7 +157,7 @@ module.exports = {
         },
       },
     ],
-    content: getDummyText(3, true, false, "mt-3"),
+    content: getDummyText(6, true, false, "mt-3"),
   },
   contact: {
     title: "Contact information",

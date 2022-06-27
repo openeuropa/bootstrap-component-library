@@ -8,5 +8,5 @@ module.exports = `<p id="content">Lorem ipsum dolor sit amet, consectetur adipis
       <li>${getDummyText(1, false)}</li>
     </ul>
     <h2 class="my-4" id="subheading">Sub heading</h2>
-    ${getDummyText(4)}
-    ${getDummyText(6)}`;
+    ${getDummyText(4, true)}
+    ${getDummyText(6, true)}`;

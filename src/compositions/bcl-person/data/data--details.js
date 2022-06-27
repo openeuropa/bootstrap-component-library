@@ -4,6 +4,10 @@ const { getDummyText } = require("@openeuropa/bcl-data-utils");
 module.exports = {
   banner: {
     title: "Stefan Mayer",
+    content: `<div class="my-3">
+      <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
+    </div>
+    ${getDummyText(6, false, false, "mb-3")}`,
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",
@@ -75,14 +79,10 @@ module.exports = {
         ]),
       },
     ],
-    content: `<div class="my-3">
-      <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
-    </div>
-    ${getDummyText(6, true, false, "mb-3")}`,
   },
   information: {
     main_title: "Additional information",
-    content: `${getDummyText(6, true, false, "mb-0")}
+    content: `${getDummyText(6, false, false, "mb-0")}
       <ul>
         <li>Etiam sagittis dictum turpis, eu lacinia tellus pharetra ac</li>
         <li>Sed auctor purus at tellus cursus dignissim. Sed sit amet ligula nisl</li>

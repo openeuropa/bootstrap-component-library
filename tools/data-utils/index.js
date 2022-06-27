@@ -13,9 +13,14 @@ const getDummyText = (
   let p = "";
   let selector = "";
   let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ";
+  const ipsum = "Duis fermentum facilisis ex, ac porta massa. ";
+
+  if (count > 1) {
+    lorem = `${lorem} ${ipsum}`;
+  }
 
   if (classes) {
-    selector = ` class="${classes}`;
+    selector = ` class="${classes}"`;
   }
 
   if (paragraphs || paragraph) {
@@ -29,7 +34,8 @@ const getDummyText = (
   let dummyText = lorem
     .repeat(count)
     .trim()
-    .replace(/(.*?\.){4}/g, "$& <br>");
+    .replace(/(.*?\.){3}/g, "$& <br>")
+    .replace(/(.*?\.){9}/g, "$& <br>");
 
   if (paragraph && !paragraphs) {
     dummyText = p.replace("###", dummyText);
