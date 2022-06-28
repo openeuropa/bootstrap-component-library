@@ -59,7 +59,7 @@
   } only %}
 {% endif %}
 
-<dl
+<div
   {{ attributes }}
 >
   {% for _item in _items %}
@@ -70,23 +70,21 @@
       {% endif %}
     {% endif %}
     {% if _item.term is not empty %}
-      {% if _variant == 'horizontal' or _bordered %}
-        <div
-          {% if _item_classes is not empty %}
-            class="{{ _item_classes }}"
-          {% endif %}
-        >
-      {% endif %}
-      {% if _item.term is iterable %}
-        {% if _variant == 'horizontal' %}
-          <div>
+      <dl
+        {% if _item_classes is not empty %}
+          class="{{ _item_classes }}"
         {% endif %}
+      >
+      {% if _item.term is iterable %}
+        <dt>
         {% for _term in _item.term %}
-          <dt
-          {% if _variant == 'horizontal' and _term.icon is not empty %}
-            class="d-flex"
-          {% endif %}
-          >
+            {% if _item.term.length > 1 %}
+              <div
+              {% if _variant == 'horizontal' and _term.icon is not empty %}
+                class="d-flex"
+              {% endif %}
+              >
+            {% endif %}
             {%- if _term.icon is not empty -%}
               {% set _icon_classes = ["me-2"] %}
               {% if _variant == 'horizontal' %}
@@ -103,11 +101,11 @@
             {%- else -%}
               {{- _term.label -}}
             {%- endif -%}
-          </dt>
+            {% if _item.term.length > 1 %}
+              </div>
+            {% endif %}
         {% endfor %}
-        {% if _variant == 'horizontal' %}
-          </div>
-        {% endif %}
+        </dt>
       {% else %}
         <dt
           {% if _variant == 'horizontal' and _item.term.icon is not empty %}
@@ -173,11 +171,9 @@
           {%- block definition _item.definition -%}
         </dd>
       {% endif %}
-      {% if _variant == 'horizontal' or _bordered  %}
-        </div>
-      {% endif %}
+      </dl>
     {% endif %}
   {% endfor %}
-</dl>
+</div>
 
 {% endspaceless %}
