@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-links-block/data/data.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => ({
   background: data.background,
@@ -61,11 +61,11 @@ const getArgTypes = () => ({
 const applyArgs = (data, args) => {
   data.links.forEach((link) => {
     if ("icon" in link) {
-      link.icon.path = defaultSprite;
+      link.icon.path = "/icons.svg";
       link.icon_position = "before";
     }
   });
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {

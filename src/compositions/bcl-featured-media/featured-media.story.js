@@ -1,6 +1,7 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-featured-media/data/data";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
@@ -127,7 +128,7 @@ export default {
   chromatic: { delay: 1000 },
 };
 
-const applyArgs = (data, args) => Object.assign(data, args);
+const applyArgs = (data, args) => Object.assign(correctPaths(data), args);
 
 export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
 

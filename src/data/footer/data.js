@@ -36,6 +36,7 @@ module.exports = {
                 {
                   label: "Facebook",
                   icon_position: "before",
+                  path: "/example.html",
                   icon: {
                     path: "/icons.svg",
                     name: "facebook",
@@ -44,6 +45,7 @@ module.exports = {
                 },
                 {
                   label: "Twitter",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -53,6 +55,7 @@ module.exports = {
                 },
                 {
                   label: "Linkedin",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     name: "linkedin",
@@ -86,15 +89,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },
@@ -117,15 +124,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },

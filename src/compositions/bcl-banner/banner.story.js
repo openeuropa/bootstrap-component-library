@@ -1,12 +1,13 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
+
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
 import drupalAttribute from "drupal-attribute";
 import dataDefault from "@openeuropa/bcl-banner/data/data.js";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
 import dataImage from "@openeuropa/bcl-banner/data/data--image";
 import dataShade from "@openeuropa/bcl-banner/data/data--shade";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => {
   const args = {
@@ -110,12 +111,10 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
-  if (data.link.icon) {
-    data.link.icon.path = defaultSprite;
-  }
+
   resetAttrs(data, args);
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 const renderStory = (data, args) => {

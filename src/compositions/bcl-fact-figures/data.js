@@ -72,7 +72,7 @@ module.exports = {
     },
   ],
   link_more: {
-    path: "/example",
+    path: "/example.html",
     label: "Read more",
   },
 };

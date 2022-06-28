@@ -26,6 +26,7 @@ module.exports = {
     links: [
       {
         label: "Register",
+        path: "/example.html",
         icon_position: "before",
         icon: {
           name: "calendar-check",
