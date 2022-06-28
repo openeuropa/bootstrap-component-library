@@ -111,6 +111,16 @@ module.exports = {
       from: [
         path.resolve(
           nodeModules,
+          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg"
+        ),
+      ],
+      to: path.resolve(outputFolder, "icons"),
+      options: { up: true },
+    },
+    {
+      from: [
+        path.resolve(
+          nodeModules,
           "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg"
         ),
       ],
