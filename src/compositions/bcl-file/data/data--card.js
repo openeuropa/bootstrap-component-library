@@ -2,8 +2,8 @@ const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   variant: "card",
-  item_title: "Article title",
-  text: getDummyText(6, false),
+  item_title: "Document title",
+  text: getDummyText(1),
   content:
     "<span class='text-muted d-inline-block me-3 mb-2 mb-md-0 text-nowrap'>Article</span><span class='text-muted d-inline-block me-3 text-nowrap'>Published : 3 September 2022</span>",
   icon_path: "/icons.svg",
@@ -44,7 +44,7 @@ module.exports = {
     items: [
       {
         title: "File title FR",
-        description: getDummyText(3),
+        description: getDummyText(),
         language: "Français",
         meta: "(16.2 MB - PDF)",
         download: {
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         title: "File title BG",
-        description: getDummyText(3),
+        description: getDummyText(),
         language: "български",
         meta: "(16.2 MB - PDF)",
         download: {

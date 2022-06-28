@@ -1,4 +1,5 @@
 const path = require("path");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 const {
   TwingEnvironment,
   TwingLoaderFilesystem,
@@ -20,7 +21,17 @@ const createAttribute = new TwingFunction("create_attribute", function () {
   return new drupalAttribute();
 });
 
+const dummyText = new TwingFunction("get_dummy_text", function (
+  count,
+  paragraph,
+  paragraphs,
+  classes
+) {
+  return getDummyText(count, paragraph, paragraphs, classes);
+});
+
 const environment = new TwingEnvironment(loader, { autoescape: false });
 environment.addFunction(createAttribute);
+environment.addFunction(getDummyText);
 
 module.exports = environment;
