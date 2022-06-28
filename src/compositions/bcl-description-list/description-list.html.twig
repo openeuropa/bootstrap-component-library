@@ -2,26 +2,28 @@
 
 {#
   Parameters:
-  - title: (string) (default: "")
-  - title_tag: (string) (default: "h2")
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
+  - bordered (boolean) (default: '')
   - items (array) (default: []): format: [
       {
         term (object or array of object) -format: {
           icon: {} - icon object,
-          label: ""
+          label: ''
         }
         definition (block or array of string)
       },
       ...
     ]
   - variant (string) (default: '') 
-    - option: ["horizontal"]
+    - option: ['horizontal']
 #}
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _bordered = bordered|default(false) %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
@@ -31,8 +33,21 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% set _item_classes = '' %}
+
 {% if _variant == 'horizontal' %}
-  {% set attributes = attributes.addClass(["d-md-grid", "grid-3-9"]) %}
+  {% set _item_classes = 'd-md-grid grid-3-9 mb-2-5' %}
+  {% if _bordered %}
+    {% set _item_classes = _item_classes ~ ' pb-2-5' %}
+  {% endif %}
+{% else %}
+  {% set _item_classes = 'mb-2-5' %}
+  {% if _bordered %}
+    {% set _item_classes = _item_classes ~ ' pb-1' %}
+  {% endif %}
+{% endif %}
+{% if _bordered %}
+  {% set _item_classes = _item_classes ~ ' border-bottom' %}
 {% endif %}
 
 {% if _title is not empty %}
@@ -48,7 +63,20 @@
   {{ attributes }}
 >
   {% for _item in _items %}
+    {% if loop.last %}
+      {% set _item_classes = '' %}
+      {% if _variant == 'horizontal' %}
+        {% set _item_classes = 'd-md-grid grid-3-9 mb-2-5' %}
+      {% endif %}
+    {% endif %}
     {% if _item.term is not empty %}
+      {% if _variant == 'horizontal' or _bordered %}
+        <div
+          {% if _item_classes is not empty %}
+            class="{{ _item_classes }}"
+          {% endif %}
+        >
+      {% endif %}
       {% if _item.term is iterable %}
         {% if _variant == 'horizontal' %}
           <div>
@@ -108,7 +136,11 @@
     {% if _item.definition is not empty %}
       {% if _item.definition is iterable %}
         {% if _variant == 'horizontal' %}
-          <dd>
+          <dd
+            {% if _bordered %}
+              class="mb-0"
+            {% endif %}
+          >
         {% endif %}
         {% for _definition in _item.definition %}
           {% if _variant == 'horizontal' %}<div>{% else %}<dd>{% endif %}
@@ -133,9 +165,16 @@
           </dd>
         {% endif %}
       {% else %}
-        <dd>
+        <dd
+          {% if _bordered %}
+            class="mb-0"
+          {% endif %}
+        >
           {%- block definition _item.definition -%}
         </dd>
+      {% endif %}
+      {% if _variant == 'horizontal' or _bordered  %}
+        </div>
       {% endif %}
     {% endif %}
   {% endfor %}

@@ -2,32 +2,10 @@
 
 exports[`OE - Description List horizontal renders correctly 1`] = `
 <jest>
-  <dl
-    class="d-md-grid grid-3-9"
-  >
-    <dt
-      class="d-flex"
+  <dl>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
     >
-      <svg
-        class="me-2 mt-1 bi icon--xs"
-      >
-        <use
-          xlink:href="/icons.svg#geo-alt-fill"
-        />
-      </svg>
-      <p
-        class="mb-0 d-inline-block"
-      >
-        Only title label with icon
-      </p>
-    </dt>
-    <dd>
-      Description text goes here.
-    </dd>
-    <div>
-      <dt>
-        First title label
-      </dt>
       <dt
         class="d-flex"
       >
@@ -41,24 +19,56 @@ exports[`OE - Description List horizontal renders correctly 1`] = `
         <p
           class="mb-0 d-inline-block"
         >
-          Second title label
+          Only title label with icon
         </p>
       </dt>
+      <dd>
+        Description text goes here.
+      </dd>
     </div>
-    <dd>
-      text goes here.
-    </dd>
-    <dt>
-      Only title label
-    </dt>
-    <dd>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
+    >
       <div>
-        Description text goes here.
+        <dt>
+          First title label
+        </dt>
+        <dt
+          class="d-flex"
+        >
+          <svg
+            class="me-2 mt-1 bi icon--xs"
+          >
+            <use
+              xlink:href="/icons.svg#geo-alt-fill"
+            />
+          </svg>
+          <p
+            class="mb-0 d-inline-block"
+          >
+            Second title label
+          </p>
+        </dt>
       </div>
-      <div>
+      <dd>
         Description text goes here.
-      </div>
-    </dd>
+      </dd>
+    </div>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
+    >
+      <dt>
+        Only title label
+      </dt>
+      <dd>
+        <div>
+          Description text goes here.
+        </div>
+        <div>
+          Description text goes here.
+        </div>
+      </dd>
+    </div>
   </dl>
 </jest>
 `;
@@ -116,39 +126,85 @@ exports[`OE - Description List renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Description List with title horizontal renders correctly 1`] = `
+exports[`OE - Description List with title bordered renders correctly 1`] = `
 <jest>
   <h6
     class="mb-4 bcl-heading"
   >
     Description list test title
   </h6>
-  <dl
-    class="d-md-grid grid-3-9"
-  >
-    <dt
-      class="d-flex"
+  <dl>
+    <div
+      class="mb-2-5 pb-1 border-bottom"
     >
-      <svg
-        class="me-2 mt-1 bi icon--xs"
-      >
-        <use
-          xlink:href="/icons.svg#geo-alt-fill"
-        />
-      </svg>
-      <p
-        class="mb-0 d-inline-block"
-      >
-        Only title label with icon
-      </p>
-    </dt>
-    <dd>
-      Description text goes here.
-    </dd>
-    <div>
+      <dt>
+        <svg
+          class="me-2 bi icon--xs"
+        >
+          <use
+            xlink:href="/icons.svg#geo-alt-fill"
+          />
+        </svg>
+        <p
+          class="mb-0 d-inline-block"
+        >
+          Only title label with icon
+        </p>
+      </dt>
+      <dd>
+        Description text goes here.
+      </dd>
+    </div>
+    <div
+      class="mb-2-5 pb-1 border-bottom"
+    >
       <dt>
         First title label
       </dt>
+      <dt>
+        <svg
+          class="me-2 bi icon--xs"
+        >
+          <use
+            xlink:href="/icons.svg#geo-alt-fill"
+          />
+        </svg>
+        <p
+          class="mb-0 d-inline-block"
+        >
+          Second title label
+        </p>
+      </dt>
+      <dd>
+        Description text goes here.
+      </dd>
+    </div>
+    <div>
+      <dt>
+        Only title label
+      </dt>
+      <dd>
+        Description text goes here.
+      </dd>
+      <dd>
+        Description text goes here.
+      </dd>
+    </div>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List with title horizontal and bordered renders correctly 1`] = `
+<jest>
+  <h6
+    class="mb-4 bcl-heading"
+  >
+    Description list test title
+  </h6>
+  <dl>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5 pb-2-5 border-bottom"
+    >
       <dt
         class="d-flex"
       >
@@ -162,24 +218,140 @@ exports[`OE - Description List with title horizontal renders correctly 1`] = `
         <p
           class="mb-0 d-inline-block"
         >
-          Second title label
+          Only title label with icon
         </p>
       </dt>
+      <dd
+        class="mb-0"
+      >
+        Description text goes here.
+      </dd>
     </div>
-    <dd>
-      text goes here.
-    </dd>
-    <dt>
-      Only title label
-    </dt>
-    <dd>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5 pb-2-5 border-bottom"
+    >
       <div>
-        Description text goes here.
+        <dt>
+          First title label
+        </dt>
+        <dt
+          class="d-flex"
+        >
+          <svg
+            class="me-2 mt-1 bi icon--xs"
+          >
+            <use
+              xlink:href="/icons.svg#geo-alt-fill"
+            />
+          </svg>
+          <p
+            class="mb-0 d-inline-block"
+          >
+            Second title label
+          </p>
+        </dt>
       </div>
+      <dd
+        class="mb-0"
+      >
+        Description text goes here.
+      </dd>
+    </div>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
+    >
+      <dt>
+        Only title label
+      </dt>
+      <dd
+        class="mb-0"
+      >
+        <div>
+          Description text goes here.
+        </div>
+        <div>
+          Description text goes here.
+        </div>
+      </dd>
+    </div>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List with title horizontal renders correctly 1`] = `
+<jest>
+  <h6
+    class="mb-4 bcl-heading"
+  >
+    Description list test title
+  </h6>
+  <dl>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
+    >
+      <dt
+        class="d-flex"
+      >
+        <svg
+          class="me-2 mt-1 bi icon--xs"
+        >
+          <use
+            xlink:href="/icons.svg#geo-alt-fill"
+          />
+        </svg>
+        <p
+          class="mb-0 d-inline-block"
+        >
+          Only title label with icon
+        </p>
+      </dt>
+      <dd>
+        Description text goes here.
+      </dd>
+    </div>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
+    >
       <div>
-        Description text goes here.
+        <dt>
+          First title label
+        </dt>
+        <dt
+          class="d-flex"
+        >
+          <svg
+            class="me-2 mt-1 bi icon--xs"
+          >
+            <use
+              xlink:href="/icons.svg#geo-alt-fill"
+            />
+          </svg>
+          <p
+            class="mb-0 d-inline-block"
+          >
+            Second title label
+          </p>
+        </dt>
       </div>
-    </dd>
+      <dd>
+        Description text goes here.
+      </dd>
+    </div>
+    <div
+      class="d-md-grid grid-3-9 mb-2-5"
+    >
+      <dt>
+        Only title label
+      </dt>
+      <dd>
+        <div>
+          Description text goes here.
+        </div>
+        <div>
+          Description text goes here.
+        </div>
+      </dd>
+    </div>
   </dl>
 </jest>
 `;
