@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   main_title: "Search",
@@ -158,8 +159,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          content: getDummyText(3),
           classes: "mb-2-5",
         },
         image: {
@@ -186,8 +186,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+          content: getDummyText(2),
           classes: "mb-2-5",
         },
         image: {
@@ -281,8 +280,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          content: getDummyText(4),
           classes: "mb-2-5",
         },
         image: {
@@ -315,8 +313,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          content: getDummyText(2),
           classes: "mb-2-5",
         },
         image: {

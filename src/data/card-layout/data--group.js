@@ -1,3 +1,5 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   type: "group",
   items: [
@@ -28,8 +30,7 @@ module.exports = {
         classes: "mb-2",
       },
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        content: getDummyText(1),
         classes: "mb-2",
       },
       image: {

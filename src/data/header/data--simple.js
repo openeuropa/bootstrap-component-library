@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   variant: "eu",
@@ -149,17 +150,14 @@ module.exports = {
   modals: [
     {
       id: "loginModal",
-      header:
-        '<h5 class="modal-title" id="loginModalLabel">Log in</h5>' +
-        '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
-      body:
-        "<h5>Disclaimer 1</h5>" +
-        "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt</p>" +
-        "<h5>Disclaimer 2</h5>" +
-        "<p>Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.</p>",
-      footer:
-        '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>' +
-        '<button type="button" class="btn btn-primary">Access EU login</button>',
+      header: `<h5 class="modal-title" id="loginModalLabel">Log in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>`,
+      body: `<h5>Disclaimer 1</h5>
+        ${getDummyText(3, true)}
+        <h5>Disclaimer 2</h5>
+        ${getDummyText(3, true)}`,
+      footer: `<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Access EU login</button>`,
     },
   ],
   language_modal: {
