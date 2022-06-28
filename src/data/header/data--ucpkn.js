@@ -57,7 +57,7 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Knowledge & Capacity",
-            path: "#",
+            path: "/example.html",
             attributes: new drupalAttribute().addClass("nav-link"),
           },
           items: [
@@ -89,7 +89,7 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Science & Research",
-            path: "#",
+            path: "/example.html",
             attributes: new drupalAttribute().addClass("nav-link"),
           },
           items: [
@@ -117,7 +117,7 @@ module.exports = {
           dropdown: true,
           trigger: {
             label: "Projects",
-            path: "#",
+            path: "/example.html",
             attributes: new drupalAttribute().addClass("nav-link"),
           },
           items: [

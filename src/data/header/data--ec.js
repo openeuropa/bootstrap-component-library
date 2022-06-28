@@ -15,6 +15,7 @@ module.exports = {
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {
+      link: "/example.html",
       logos: [
         {
           src: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
@@ -27,6 +28,7 @@ module.exports = {
         {
           label: "Link",
           icon_position: "before",
+          path: "/example.html",
           icon: {
             name: "link",
             path: "/icons.svg",
@@ -36,6 +38,7 @@ module.exports = {
         {
           label: "Link",
           icon_position: "before",
+          path: "/example.html",
           icon: {
             name: "link",
             path: "/icons.svg",
@@ -44,7 +47,7 @@ module.exports = {
         },
         {
           label: "<span class='d-block d-lg-inline-block'>English</span>",
-          path: "#",
+          path: "/example.html",
           icon_position: "before",
           remove_icon_spacers: true,
           icon: {
@@ -60,7 +63,7 @@ module.exports = {
         },
         {
           label: "<span class='d-block d-lg-inline-block'>Log in</span>",
-          path: "#",
+          path: "/example.html",
           icon_position: "before",
           remove_icon_spacers: true,
           icon: {
@@ -76,7 +79,7 @@ module.exports = {
         },
         {
           label: "<span class='badge bg-danger'>5</span>",
-          path: "#",
+          path: "/example.html",
           remove_icon_spacers: true,
           icon_position: "before",
           icon: {

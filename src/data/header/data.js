@@ -14,6 +14,7 @@ module.exports = {
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {
+      link: "/example.html",
       logos: [
         {
           class: "d-none d-lg-block",
@@ -32,6 +33,7 @@ module.exports = {
         {
           label: "Link",
           icon_position: "before",
+          path: "/example.html",
           icon: {
             path: "/icons.svg",
             name: "link",
@@ -41,6 +43,7 @@ module.exports = {
         {
           label: "Link",
           icon_position: "before",
+          path: "/example.html",
           icon: {
             path: "/icons.svg",
             name: "link",
@@ -49,7 +52,7 @@ module.exports = {
         },
         {
           label: "<span class='d-block d-lg-inline-block'>English</span>",
-          path: "#",
+          path: "/example.html",
           icon_position: "before",
           remove_icon_spacers: true,
           icon: {
@@ -65,7 +68,7 @@ module.exports = {
         },
         {
           label: "<span class='d-block d-lg-inline-block'>Log in</span>",
-          path: "#",
+          path: "/example.html",
           icon_position: "before",
           remove_icon_spacers: true,
           icon: {
@@ -81,7 +84,7 @@ module.exports = {
         },
         {
           label: "<span class='badge bg-danger'>5</span>",
-          path: "#",
+          path: "/example.html",
           remove_icon_spacers: true,
           icon_position: "before",
           icon: {
