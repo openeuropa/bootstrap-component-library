@@ -1,7 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
-
 import { demoListing, demoDetails } from "@openeuropa/bcl-person/data/data";
 
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";

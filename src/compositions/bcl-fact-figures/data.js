@@ -1,3 +1,5 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   responsive_columns: 3,
   icon_path: "/icons.svg",
@@ -14,8 +16,7 @@ module.exports = {
       },
       subtitle: "Jira Tickets",
       title: "1529 JIRA Ticket",
-      description:
-        "Nunc condimentum sapien ut nibh finibus suscipit vitae at justo. Morbi quis odio faucibus, commodo tortor id, elementum libero.",
+      description: getDummyText(2),
     },
     {
       icon: {
@@ -24,7 +25,7 @@ module.exports = {
       },
       subtitle: "Feature tickets",
       title: "337 Features",
-      description: "Turpis varius congue venenatis, erat dui feugiat felis.",
+      description: getDummyText(1),
     },
     {
       icon: {
@@ -34,8 +35,7 @@ module.exports = {
       },
       subtitle: "Test tickets",
       title: "107 Tests",
-      description:
-        "Cras vestibulum efficitur mi, quis porta tellus rutrum ut. Quisque at pulvinar sem.",
+      description: getDummyText(2),
     },
     {
       icon: {
@@ -45,8 +45,7 @@ module.exports = {
       },
       subtitle: "Test variants",
       title: "5670 Variants",
-      description:
-        "Aliquam lacinia diam eu sem malesuada, in interdum ante bibendum.",
+      description: getDummyText(3),
     },
     {
       icon: {
@@ -56,8 +55,7 @@ module.exports = {
       },
       subtitle: "Jira ticket",
       title: "345 Dev Ticket",
-      description:
-        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec lectus tortor.",
+      description: getDummyText(2),
     },
     {
       icon: {
@@ -67,8 +65,7 @@ module.exports = {
       },
       subtitle: "Figma components",
       title: "43 Components",
-      description:
-        "Sed efficitur bibendum rutrum. Nunc feugiat congue augue ac consectetur.",
+      description: getDummyText(1),
     },
   ],
   link_more: {
