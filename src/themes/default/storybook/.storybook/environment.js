@@ -32,6 +32,6 @@ const dummyText = new TwingFunction("get_dummy_text", function (
 
 const environment = new TwingEnvironment(loader, { autoescape: false });
 environment.addFunction(createAttribute);
-environment.addFunction(getDummyText);
+environment.addFunction(dummyText);
 
 module.exports = environment;
