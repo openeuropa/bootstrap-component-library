@@ -1,3 +1,5 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   variant: "default-1-col",
   title: "Listing item block title",
@@ -12,8 +14,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(2),
         classes: "mb-3",
       },
       image: {
@@ -34,8 +35,7 @@ module.exports = {
         alt: "alt img",
       },
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(4),
         classes: "mb-3",
       },
       content: `<div>
@@ -47,8 +47,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Article title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(6),
         classes: "mb-3",
       },
       image: {
@@ -64,8 +63,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Article title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(3),
         classes: "mb-3",
       },
       image: {

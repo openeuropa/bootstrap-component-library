@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
@@ -55,8 +56,7 @@ module.exports = {
       items: [
         {
           title: "File title FR",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+          description: getDummyText(),
           language: "Français",
           meta: "(16.2 MB - PDF)",
           download: {
@@ -66,8 +66,7 @@ module.exports = {
         },
         {
           title: "File title ES",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+          description: getDummyText(),
           language: "Español",
           meta: "(16.2 MB - PDF)",
           download: {
@@ -77,8 +76,7 @@ module.exports = {
         },
         {
           title: "File title BG",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+          description: getDummyText,
           language: "български",
           meta: "(16.2 MB - PDF)",
           download: {
@@ -98,9 +96,9 @@ module.exports = {
     title: "Description",
     title_id: "description",
     paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.",
+      getDummyText(6, false),
+      getDummyText(4, false),
+      getDummyText(5, false),
     ],
   },
   social_modal: {
