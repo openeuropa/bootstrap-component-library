@@ -4,7 +4,7 @@ module.exports = {
       image:
         "<img class='rounded-circle me-3-5' alt='recent-image-1' src='https://picsum.photos/50/50?random=1'>",
       content:
-        "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#' aria-label='spacex-1'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
+        "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='/example.html' aria-label='spacex-1'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
       meta: [
         {
           label: "19 December 2022 12 - 09:23 CEST",
