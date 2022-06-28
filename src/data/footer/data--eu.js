@@ -27,6 +27,7 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },
@@ -41,6 +42,7 @@ module.exports = {
                 {
                   label: "Facebook",
                   icon_position: "before",
+                  path: "/example.html",
                   icon: {
                     name: "facebook",
                     size: "xs",
@@ -50,6 +52,7 @@ module.exports = {
                 {
                   label: "Twitter",
                   icon_position: "before",
+                  path: "/example.html",
                   icon: {
                     name: "twitter",
                     size: "xs",
@@ -58,6 +61,7 @@ module.exports = {
                 },
                 {
                   label: "Linkedin",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -82,15 +86,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },
@@ -124,15 +132,19 @@ module.exports = {
               links: [
                 {
                   label: "Call us 00 800 6 7 8 9 10 11",
+                  path: "/example.html",
                 },
                 {
                   label: "Use other telephone options",
+                  path: "/example.html",
                 },
                 {
                   label: "Write us via our contact form",
+                  path: "/example.html",
                 },
                 {
                   label: "Meet us at a local EU office",
+                  path: "/example.html",
                 },
               ],
             },
@@ -144,7 +156,7 @@ module.exports = {
             {
               type: "content",
               content:
-                "<p>Search for <a href='#' class='mb-2'>EU social media channels</a></p>",
+                "<p>Search for <a href='/example.html' class='mb-2'>EU social media channels</a></p>",
             },
             {
               type: "content",
@@ -156,15 +168,19 @@ module.exports = {
               links: [
                 {
                   label: "Language policy",
+                  path: "/example.html",
                 },
                 {
                   label: "Privacy policy",
+                  path: "/example.html",
                 },
                 {
                   label: "Legal notice",
+                  path: "/example.html",
                 },
                 {
                   label: "Cookies",
+                  path: "/example.html",
                 },
               ],
             },
@@ -183,54 +199,71 @@ module.exports = {
               links: [
                 {
                   label: "European Parliament",
+                  path: "/example.html",
                 },
                 {
                   label: "European Council",
+                  path: "/example.html",
                 },
                 {
                   label: "Council of the European Union",
+                  path: "/example.html",
                 },
                 {
                   label: "European Commission",
+                  path: "/example.html",
                 },
                 {
                   label: "Court of Justice of the European Union",
+                  path: "/example.html",
                 },
                 {
                   label: "European Central Bank",
+                  path: "/example.html",
                 },
                 {
                   label: "European Court of Auditors",
+                  path: "/example.html",
                 },
                 {
                   label: "European External Action Service",
+                  path: "/example.html",
                 },
                 {
                   label: "European Economic and Social Committee",
+                  path: "/example.html",
                 },
                 {
                   label: "European Committee of the Region",
+                  path: "/example.html",
                 },
                 {
                   label: "European Investment Bank",
+                  path: "/example.html",
                 },
                 {
                   label: "European Ombudsman",
+                  path: "/example.html",
                 },
                 {
                   label: "European Data Protection Supervisor",
+                  path: "/example.html",
                 },
                 {
                   label: "European Data Protection Board",
+                  path: "/example.html",
                 },
                 {
                   label: "European Personnel Selection Office",
+                  path: "/example.html",
                 },
                 {
                   label: "Publications Office of the European Union",
+                  path: "/example.html",
                 },
                 {
                   label: "Agencies",
+                  path: "/example.html",
                 },
               ],
             },

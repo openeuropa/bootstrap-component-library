@@ -38,6 +38,7 @@ module.exports = {
               links: [
                 {
                   label: "Facebook",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -47,6 +48,7 @@ module.exports = {
                 },
                 {
                   label: "Twitter",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -56,6 +58,7 @@ module.exports = {
                 },
                 {
                   label: "Linkedin",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     name: "linkedin",
@@ -88,15 +91,19 @@ module.exports = {
               type: "links",
               links: [
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
               ],
@@ -120,15 +127,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },
@@ -156,9 +167,11 @@ module.exports = {
               links: [
                 {
                   label: "European Commission",
+                  path: "/example.html",
                 },
                 {
                   label: "Follow the EC on social media",
+                  path: "/example.html",
                   icon_position: "after",
                   icon: {
                     name: "box-arrow-up-right",
@@ -169,6 +182,7 @@ module.exports = {
                 },
                 {
                   label: "Resources for partners",
+                  path: "/example.html",
                 },
               ],
             },
@@ -182,15 +196,19 @@ module.exports = {
               links: [
                 {
                   label: "Language policy",
+                  path: "/example.html",
                 },
                 {
                   label: "Cookies",
+                  path: "/example.html",
                 },
                 {
                   label: "Privacy policy",
+                  path: "/example.html",
                 },
                 {
                   label: "Legal notice",
+                  path: "/example.html",
                 },
               ],
             },
