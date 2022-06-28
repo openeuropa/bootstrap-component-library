@@ -33,7 +33,7 @@ module.exports = {
     description: "Innovation, economy, environment and geopolitics",
     link: {
       label: "Subscribe",
-      path: "/example.html.html",
+      path: "/example.html",
       icon: {
         name: "chevron-right",
         size: "fluid",
