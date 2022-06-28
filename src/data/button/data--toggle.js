@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   label: "Button with collapse",
@@ -8,6 +9,5 @@ module.exports = {
     .setAttribute("aria-expanded", "false")
     .setAttribute("aria-controls", "collapseExample")
     .setAttribute("data-bs-target", "#collapseExample"),
-  collapse_text:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  collapse_text: getDummyText(3),
 };

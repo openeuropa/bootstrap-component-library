@@ -1,3 +1,5 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   variant: "highlight-2-col",
   title: "Listing item block title",
@@ -12,8 +14,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        content: getDummyText(2),
         classes: "mb-2",
       },
       image: {
@@ -25,8 +26,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        content: getDummyText(),
         classes: "mb-2",
       },
       image: {
@@ -38,8 +38,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        content: getDummyText(3),
         classes: "mb-2",
       },
       image: {
@@ -51,8 +50,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        content: getDummyText(),
         classes: "mb-2",
       },
       image: {
@@ -76,8 +74,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        content: getDummyText(2),
         classes: "mb-2",
       },
       image: {
