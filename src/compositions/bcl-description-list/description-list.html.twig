@@ -59,6 +59,8 @@
   } only %}
 {% endif %}
 
+{% set attributes = attributes.addClass('bcl-description-list') %}
+
 <div
   {{ attributes }}
 >
@@ -78,13 +80,13 @@
       {% if _item.term is iterable %}
         <dt>
         {% for _term in _item.term %}
-            {% if _item.term.length > 1 %}
+            {%- if _item.term|length > 1 -%}
               <div
               {% if _variant == 'horizontal' and _term.icon is not empty %}
                 class="d-flex"
               {% endif %}
               >
-            {% endif %}
+            {%- endif -%}
             {%- if _term.icon is not empty -%}
               {% set _icon_classes = ["me-2"] %}
               {% if _variant == 'horizontal' %}
@@ -101,7 +103,7 @@
             {%- else -%}
               {{- _term.label -}}
             {%- endif -%}
-            {% if _item.term.length > 1 %}
+            {% if _item.term|length > 1 %}
               </div>
             {% endif %}
         {% endfor %}
