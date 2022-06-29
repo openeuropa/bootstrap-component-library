@@ -71,7 +71,7 @@ const getArgTypes = () => ({
   image_size: {
     name: "image size",
     type: { name: "select" },
-    options: ["sm", "md", "lg"],
+    options: ["md", "lg", "xl"],
     description: "Size of the image",
     table: {
       type: { summary: "string" },
