@@ -11,7 +11,7 @@
     - image (object)
     - image_size: (string)
     - date: (object)
-      options: ['sm', 'md', 'lg']
+      options: ['sm', 'md', 'lg', 'xl']
     - content: (string)
     - badges: (array of objects of type badge)
     - links: (array of objects of type link)
@@ -71,6 +71,10 @@
   {% endif %}
   {% if _image_size == 'sm' %}
     {% set _left_col_classes = _left_col_classes ~ ' bcl-size-small' %}
+  {% endif %}
+  {% if _image_size == 'xl' %}
+    {% set _left_col_classes = _left_col_classes ~ ' bcl-size-extra-large' %}
+    {% set _right_col_classes = 'col-12 col-lg-7 col-xl-8' %}
   {% endif %}
 {% endif %}
 {% if _date is not empty %}
