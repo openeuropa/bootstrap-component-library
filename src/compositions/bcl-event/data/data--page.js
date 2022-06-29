@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   banner: {
@@ -17,8 +18,10 @@ module.exports = {
         rounded_pill: true,
       },
     ],
-    content: `<div class="my-3"><span class="text-muted me-3">Published: 3 September 2020</span></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>`,
+    content: `<div class="my-3"><span class="text-muted me-3">Published: 3 September 2020</span></div>${getDummyText(
+      5,
+      true
+    )}`,
     image: {
       path: "https://picsum.photos/255/255?random=6",
       alt: "alt img",

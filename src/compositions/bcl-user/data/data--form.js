@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   landing: true,
@@ -81,8 +82,7 @@ module.exports = {
       },
       content: `<div class="mb-4 mt-4">
         <span class="text-muted me-3">DG Test</span><span class="text-muted">Director</span>
-      </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.</p>`,
+      </div>${getDummyText(5)}`,
       attributes: new drupalAttribute().addClass("negative-container"),
       image_size: "lg",
     },
@@ -251,7 +251,7 @@ module.exports = {
             label: "Bio",
             helper_text: "Helper text",
             id: "bio-description",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
+            text: getDummyText(),
           },
           {
             wrapper_classes: "mb-3",

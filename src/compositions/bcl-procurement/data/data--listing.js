@@ -1,10 +1,11 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   banner: {
     title: "Procurements",
     title_tag: "h1",
-    content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet.</p>`,
+    content: getDummyText(5),
     image: {
       path: "https://picsum.photos/255/255?random=6",
       alt: "alt img",
@@ -145,8 +146,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -173,8 +173,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(3),
           classes: "mb-2-5",
         },
         content:
@@ -201,8 +200,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(2),
           classes: "mb-2-5",
         },
         content:
@@ -229,8 +227,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(4),
           classes: "mb-2-5",
         },
         content:
@@ -257,8 +254,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(2),
           classes: "mb-2-5",
         },
         content:
@@ -285,8 +281,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(5),
           classes: "mb-2-5",
         },
         content:
@@ -313,8 +308,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -341,8 +335,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(2),
           classes: "mb-2-5",
         },
         content:
@@ -369,8 +362,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(3),
           classes: "mb-2-5",
         },
         content:
@@ -397,8 +389,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(5),
           classes: "mb-2-5",
         },
         content:

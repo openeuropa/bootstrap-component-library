@@ -1,4 +1,3 @@
-const merge = require("deepmerge");
 const twing = require("../../.storybook/environment");
 const drupalAttribute = require("drupal-attribute");
 
@@ -39,7 +38,6 @@ const getVariants = (outline, add) => {
 };
 
 module.exports = {
-  merge,
   renderTwigFileAsNode,
   getVariants,
 };

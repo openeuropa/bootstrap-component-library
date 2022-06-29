@@ -1,8 +1,13 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   banner: {
     title: "Stefan Mayer",
+    content: `<div class="my-3">
+      <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
+    </div>
+    ${getDummyText(6, false, false, "mb-3")}`,
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",
@@ -75,20 +80,14 @@ module.exports = {
         ]),
       },
     ],
-    content: `<div class="my-3">
-      <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
-    </div>
-    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>`,
   },
   information: {
     main_title: "Additional information",
-    content: `
-    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae velit facilisis, ornare sem efficitur, euismod diam. Curabitur quis odio in nisl scelerisque rhoncus nec id nulla. Mauris ultrices a augue in finibus.</p>
-    <ul>
-      <li>Etiam sagittis dictum turpis, eu lacinia tellus pharetra ac</li>
-      <li>Sed auctor purus at tellus cursus dignissim. Sed sit amet ligula nisl</li>
-    </ul>
-    `,
+    content: `${getDummyText(6, false, false, "mb-0")}
+      <ul>
+        <li>Etiam sagittis dictum turpis, eu lacinia tellus pharetra ac</li>
+        <li>Sed auctor purus at tellus cursus dignissim. Sed sit amet ligula nisl</li>
+      </ul>`,
   },
   files: {
     main_title: "Related documents",

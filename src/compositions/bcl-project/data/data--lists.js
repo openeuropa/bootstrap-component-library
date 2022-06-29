@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   status_lists: {
@@ -144,7 +145,7 @@ module.exports = {
                 },
                 definition: [
                   {
-                    label: "Lorem Ipsum Color Sit Amet",
+                    label: getDummyText(1, false),
                   },
                 ],
               },
@@ -184,7 +185,7 @@ module.exports = {
                 },
                 definition: [
                   {
-                    label: "Lorem Ipsum Color Sit Amet",
+                    label: getDummyText(1, false),
                   },
                 ],
               },
@@ -224,7 +225,7 @@ module.exports = {
                 },
                 definition: [
                   {
-                    label: "Lorem Ipsum Color Sit Amet",
+                    label: getDummyText(1, false),
                   },
                 ],
               },
