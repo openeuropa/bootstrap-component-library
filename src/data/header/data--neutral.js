@@ -13,6 +13,7 @@ module.exports = {
         },
       ],
       label: "Project name",
+      link: "/example.html",
     },
     attributes: new drupalAttribute()
       .addClass(["w-100"])
@@ -23,6 +24,7 @@ module.exports = {
         {
           label: "Link",
           icon_position: "before",
+          path: "/example.html",
           icon: {
             name: "link",
             path: "/icons.svg",
@@ -32,6 +34,7 @@ module.exports = {
         {
           label: "Link",
           icon_position: "before",
+          path: "/example.html",
           icon: {
             name: "link",
             path: "/icons.svg",
@@ -40,7 +43,7 @@ module.exports = {
         },
         {
           label: "<span class='d-block d-lg-inline-block'>English</span>",
-          path: "#",
+          path: "/example.html",
           icon_position: "before",
           remove_icon_spacers: true,
           icon: {
@@ -56,7 +59,7 @@ module.exports = {
         },
         {
           label: "<span class='d-block d-lg-inline-block'>Log in</span>",
-          path: "#",
+          path: "/example.html",
           icon_position: "before",
           remove_icon_spacers: true,
           icon: {
@@ -72,7 +75,7 @@ module.exports = {
         },
         {
           label: "<span class='badge bg-danger'>5</span>",
-          path: "#",
+          path: "/example.html",
           remove_icon_spacers: true,
           icon_position: "before",
           icon: {

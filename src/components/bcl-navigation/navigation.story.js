@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-data-navigation/data.js";
 import demoTabsData from "@openeuropa/bcl-data-navigation/data--tabs";
@@ -93,7 +94,7 @@ const applyArgs = (data, args) => {
 
   resetAttrs(data);
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {

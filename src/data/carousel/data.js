@@ -16,6 +16,7 @@ module.exports = {
               />`,
       link: {
         label: "Link",
+        path: "/example.html",
         icon_position: "before",
         icon: {
           name: "link",

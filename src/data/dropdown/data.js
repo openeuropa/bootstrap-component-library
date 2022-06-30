@@ -2,12 +2,12 @@ module.exports = {
   id: "dropdown-1",
   trigger: {
     label: "Dropdown Toggle",
-    path: "#",
+    path: "/example.html",
   },
   items: [
     {
       label: "I'm a link",
-      path: "#",
+      path: "/example.html",
     },
     {
       label: "I'm a button",
