@@ -14,7 +14,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('aria-label', 'breadcrumb').addClass('bcl-breadcrumb') %}
+{% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
 
 {% if _links is not empty %}
 <nav

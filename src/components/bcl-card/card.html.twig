@@ -78,7 +78,7 @@
 {% set _badges = badges|default([]) %}
 {% set _links = links|default([]) %}
 
-{% set _classes = ['bcl-card', 'card'] %}
+{% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
 {% endif %}

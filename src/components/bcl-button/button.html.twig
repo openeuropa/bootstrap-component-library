@@ -39,7 +39,7 @@
 {% set _spinner = spinner|default({}) %}
 {% set _clean_class = clean_class|default(false) %}
 
-{% set _classes = ['bcl-btn'] %}
+{% set _classes = [] %}
 {% if _clean_class == false %}
   {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
   {% set _classes = _classes|merge(['btn-' ~ _size|e('html_attr')]) %}

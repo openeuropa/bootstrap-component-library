@@ -3,7 +3,7 @@
 exports[`OE - Form basic renders correctly 1`] = `
 <jest>
   <form
-    class="needs-validation bcl-form"
+    class="needs-validation"
     novalidate="true"
     onsubmit="return false;"
   >
@@ -18,7 +18,7 @@ exports[`OE - Form basic renders correctly 1`] = `
       </label>
       <input
         aria-describedby="emailHelp"
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputEmail1"
         required="true"
         type="email"
@@ -50,7 +50,7 @@ exports[`OE - Form basic renders correctly 1`] = `
         Password *
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputPassword1"
         required="true"
         type="password"
@@ -73,7 +73,7 @@ exports[`OE - Form basic renders correctly 1`] = `
         class="form-check"
       >
         <input
-          class="bcl-form-check-input form-check-input"
+          class="form-check-input"
           id="exampleInputCheck1"
           required="true"
           type="checkbox"
@@ -97,7 +97,7 @@ exports[`OE - Form basic renders correctly 1`] = `
       </div>
     </div>
     <button
-      class="bcl-btn btn btn-primary btn-md"
+      class="btn btn-primary btn-md"
       type="submit"
     >
       Submit
@@ -109,7 +109,6 @@ exports[`OE - Form basic renders correctly 1`] = `
 exports[`OE - Form horizontal renders correctly 1`] = `
 <jest>
   <form
-    class="bcl-form"
     onsubmit="return false;"
   >
     <div
@@ -125,7 +124,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
         class="col-sm-10"
       >
         <input
-          class="bcl-form-control form-control"
+          class="form-control"
           id="exampleInputEmail1"
           required="true"
           type="email"
@@ -145,7 +144,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
         class="col-sm-10"
       >
         <input
-          class="bcl-form-control form-control"
+          class="form-control"
           id="exampleInputPassword1"
           required="true"
           type="password"
@@ -167,7 +166,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
           class="form-check"
         >
           <input
-            class="bcl-form-check-input form-check-input"
+            class="form-check-input"
             id="exampleInputRadios1"
             type="radio"
           />
@@ -182,7 +181,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
           class="form-check"
         >
           <input
-            class="bcl-form-check-input form-check-input"
+            class="form-check-input"
             id="exampleInputRadios2"
             type="radio"
           />
@@ -197,7 +196,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
           class="form-check"
         >
           <input
-            class="bcl-form-check-input form-check-input"
+            class="form-check-input"
             disabled="true"
             id="exampleInputRadios3"
             type="radio"
@@ -221,7 +220,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
           class="form-check"
         >
           <input
-            class="bcl-form-check-input form-check-input"
+            class="form-check-input"
             id="exampleInputCheck1"
             required="true"
             type="checkbox"
@@ -239,7 +238,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
       class="col-12"
     >
       <button
-        class="bcl-btn btn btn-primary btn-md"
+        class="btn btn-primary btn-md"
         type="submit"
       >
         Sign in
@@ -252,7 +251,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
 exports[`OE - Form inline renders correctly 1`] = `
 <jest>
   <form
-    class="row row-cols-lg-auto g-3 align-items-center bcl-form"
+    class="row row-cols-lg-auto g-3 align-items-center"
     novalidate="true"
     onsubmit="return false;"
   >
@@ -266,7 +265,7 @@ exports[`OE - Form inline renders correctly 1`] = `
         Username
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="inlineFormInputGroupUsername"
         placeholder="Username"
         required="true"
@@ -283,7 +282,7 @@ exports[`OE - Form inline renders correctly 1`] = `
         Password
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="inlineFormInputGroupPassword"
         placeholder="Password"
         required="true"
@@ -297,7 +296,7 @@ exports[`OE - Form inline renders correctly 1`] = `
         class="form-check"
       >
         <input
-          class="bcl-form-check-input form-check-input"
+          class="form-check-input"
           id="exampleInputCheck1"
           required="true"
           type="checkbox"
@@ -314,7 +313,7 @@ exports[`OE - Form inline renders correctly 1`] = `
       class="col-12"
     >
       <button
-        class="bcl-btn btn btn-primary btn-md"
+        class="btn btn-primary btn-md"
         type="submit"
       >
         Submit
@@ -327,7 +326,6 @@ exports[`OE - Form inline renders correctly 1`] = `
 exports[`OE - Form renders correctly when disabled 1`] = `
 <jest>
   <form
-    class="bcl-form"
     novalidate="true"
     onsubmit="return false;"
   >
@@ -347,7 +345,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
           Disabled input
         </label>
         <input
-          class="bcl-form-control form-control"
+          class="form-control"
           id="disabledTextInput"
           placeholder="Disabled input"
           required="true"
@@ -408,7 +406,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
           class="form-check"
         >
           <input
-            class="bcl-form-check-input form-check-input"
+            class="form-check-input"
             id="disabledFieldsetCheck"
             type="checkbox"
           />
@@ -422,7 +420,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
       </div>
     </fieldset>
     <button
-      class="bcl-btn btn btn-primary btn-md"
+      class="btn btn-primary btn-md"
       type="submit"
     >
       Submit
@@ -434,7 +432,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
 exports[`OE - Form using a grid renders correctly 1`] = `
 <jest>
   <form
-    class="row g-3 bcl-form"
+    class="row g-3"
     novalidate="true"
     onsubmit="return false;"
   >
@@ -449,7 +447,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       </label>
       <input
         aria-describedby="emailHelp"
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputEmail1"
         required="true"
         type="email"
@@ -471,7 +469,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         Password *
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputPassword1"
         required="true"
         type="password"
@@ -487,7 +485,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         Address
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputAddress1"
         type="text"
       />
@@ -502,7 +500,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         Address 2
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputAddress2"
         type="text"
       />
@@ -517,7 +515,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         City *
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputCity1"
         required="true"
         type="text"
@@ -533,7 +531,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         State *
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputState1"
         required="true"
         type="text"
@@ -549,7 +547,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         Zip *
       </label>
       <input
-        class="bcl-form-control form-control"
+        class="form-control"
         id="exampleInputZip1"
         required="true"
         type="text"
@@ -562,7 +560,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         class="form-check"
       >
         <input
-          class="bcl-form-check-input form-check-input"
+          class="form-check-input"
           id="exampleInputCheck1"
           required="true"
           type="checkbox"
@@ -579,7 +577,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       class="col-12"
     >
       <button
-        class="bcl-btn btn btn-primary btn-md"
+        class="btn btn-primary btn-md"
         type="submit"
       >
         Submit
