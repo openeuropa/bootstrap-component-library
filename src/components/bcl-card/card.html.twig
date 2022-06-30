@@ -172,7 +172,7 @@
   <div class='{{ _body_classes }}'>
   {% if _title is not empty %}
     {% if _title_attributes.class is empty %}
-      {% set _title_attributes = _title_attributes.addClass('fs-5') %}
+      {% set _title_attributes = _title_attributes.addClass('fs-4') %}
     {% endif %}
     {% set _title_attributes = _title_attributes.addClass('card-title') %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
