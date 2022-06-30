@@ -18,10 +18,10 @@ export const LargeImage = () =>
 
 LargeImage.storyName = "Large image";
 
-export const SmallImage = () =>
-  contentBanner(correctPaths({ ...demoData, image_size: "sm" }));
+export const ExtraLargeImage = () =>
+  contentBanner(correctPaths({ ...demoData, image_size: "xl" }));
 
-SmallImage.storyName = "Small image";
+ExtraLargeImage.storyName = "Extra large image";
 
 export const WithDate = () =>
   contentBanner(correctPaths({ ...demoData, image: {}, date: dataDate }));

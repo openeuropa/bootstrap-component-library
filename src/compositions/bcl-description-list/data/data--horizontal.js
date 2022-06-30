@@ -26,7 +26,7 @@ module.exports = {
           },
         },
       ],
-      definition: "text goes here.",
+      definition: "Description text goes here.",
     },
     {
       term: {

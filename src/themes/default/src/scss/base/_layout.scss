@@ -3,3 +3,40 @@
     font-size: $h4-font-size;
   }
 }
+
+.bcl-card-start-col {
+  flex-basis: $card-start-col-size;
+  padding: 0;
+  &.bcl-size-small {
+    flex-basis: $card-start-col-small-size;
+  }
+  &.bcl-size-large {
+    flex-basis: $card-start-col-large-size;
+  }
+  &.bcl-size-extra-large {
+    flex-basis: $card-start-col-extra-large-size;
+  }
+}
+
+.row {
+  .bcl-card-start-col {
+    margin-left: calc(var(--#{$variable-prefix}gutter-x) * 0.5);
+    margin-right: calc(var(--#{$variable-prefix}gutter-x) * 0.5);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bcl-content-banner {
+    .bcl-card-start-col {
+      margin: 0 auto;
+      padding: 0 calc(var(--#{$variable-prefix}gutter-x) * 0.5);
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .bcl-content-banner {
+    .bcl-card-start-col.bcl-size-extra-large {
+      margin: 0 auto;
+    }
+  }
+}

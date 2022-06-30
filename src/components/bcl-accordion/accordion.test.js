@@ -20,6 +20,14 @@ describe("OE - Accordion", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`with main title renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, title: "An accordion title" })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`with custom title tags renders correctly`, () => {
     expect.assertions(1);
 
