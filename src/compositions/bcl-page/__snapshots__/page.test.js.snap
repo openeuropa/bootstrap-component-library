@@ -8,7 +8,7 @@ exports[`OE - Page Page renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -35,13 +35,13 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="nav-item"
           >
             <a
-              class="text-center nav-link"
+              class="text-center nav-link bcl-link"
               data-bs-target="#languageModal"
               data-bs-toggle="modal"
               href="#"
             >
               <svg
-                class="me-lg-2-5 bi icon--xs"
+                class="me-lg-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#chat-left-dots-fill"
@@ -58,13 +58,13 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="nav-item"
           >
             <a
-              class="text-center nav-link"
+              class="text-center nav-link bcl-link"
               data-bs-target="#loginModal"
               data-bs-toggle="modal"
               href="#"
             >
               <svg
-                class="me-lg-2-5 bi icon--xs"
+                class="me-lg-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#person-fill"
@@ -84,7 +84,7 @@ exports[`OE - Page Page renders correctly 1`] = `
     <!-- navbar -->
     <nav
       aria-label="main-navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar bcl-navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
         class="container"
@@ -115,7 +115,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               <a
                 aria-current="page"
                 aria-label="homepage"
-                class="nav-link active"
+                class="nav-link active bcl-link"
                 href="/example.html"
               >
                 Home
@@ -125,7 +125,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 01
@@ -135,7 +135,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 02
@@ -146,7 +146,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             >
               <a
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle bcl-link"
                 data-bs-toggle="dropdown"
                 href="#"
                 id="navbarDropdownMenuLink"
@@ -160,7 +160,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               >
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Action
@@ -168,7 +168,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Another action
@@ -176,7 +176,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Something else here
@@ -186,7 +186,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             </li>
           </ul>
           <form
-            class="d-flex mt-3 mt-lg-0"
+            class="d-flex mt-3 mt-lg-0 bcl-form"
           >
             <label
               class="form-label visually-hidden"
@@ -195,14 +195,14 @@ exports[`OE - Page Page renders correctly 1`] = `
               Search
             </label>
             <input
-              class="border-start-0 rounded-0 rounded-start form-control"
+              class="border-start-0 rounded-0 rounded-start bcl-form-control form-control"
               id="inlineFormInputGroupSearch"
               placeholder="Search"
               required="true"
               type="text"
             />
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              class="border-start-0 rounded-0 rounded-end bcl-btn btn btn-light btn-md"
               type="button"
             >
               <span
@@ -211,7 +211,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 search
               </span>
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -228,7 +228,7 @@ exports[`OE - Page Page renders correctly 1`] = `
     >
       <nav
         aria-label="breadcrumb"
-        class="mt-3"
+        class="mt-3 bcl-breadcrumb"
       >
         <ol
           class="breadcrumb"
@@ -238,6 +238,7 @@ exports[`OE - Page Page renders correctly 1`] = `
           >
             <a
               aria-label="homepage"
+              class="bcl-link"
               href="/example.html"
             >
               Home
@@ -247,6 +248,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               European Union
@@ -256,10 +258,11 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="breadcrumb-item"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -281,7 +284,7 @@ exports[`OE - Page Page renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
-    class="modal fade"
+    class="bcl-modal modal fade"
     id="loginModal"
     tabindex="-1"
   >
@@ -352,7 +355,7 @@ exports[`OE - Page Page renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral bcl-modal modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -369,7 +372,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="d-flex align-items-center"
           >
             <svg
-              class="bi icon--s"
+              class="bcl-icon bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#globe2"
@@ -407,7 +410,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                     class="col-12 col-md"
                   >
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="bg"
                       lang="bg"
@@ -415,7 +418,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       български
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="es"
                       lang="es"
@@ -423,7 +426,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       español
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="cs"
                       lang="cs"
@@ -431,7 +434,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       čeština
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="da"
                       lang="da"
@@ -439,7 +442,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       dansk
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="de"
                       lang="de"
@@ -447,7 +450,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       Deutsch
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="et"
                       lang="et"
@@ -455,7 +458,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       eesti
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="el"
                       lang="el"
@@ -463,14 +466,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       ελληνικά
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      class="w-100 mb-2-5 btn selected justify-content-between bcl-link"
                       href="#"
                       hreflang="en"
                       lang="en"
                     >
                       English
                       <svg
-                        class="ms-2-5 bi icon--s"
+                        class="ms-2-5 bcl-icon bi icon--s"
                       >
                         <use
                           xlink:href="/icons.svg#check2"
@@ -478,7 +481,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       </svg>
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="fr"
                       lang="fr"
@@ -486,7 +489,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       français
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="ga"
                       lang="ga"
@@ -494,7 +497,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       Gaeilge
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="hr"
                       lang="hr"
@@ -502,7 +505,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       hrvatski
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="it"
                       lang="it"
@@ -514,7 +517,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                     class="col-12 col-md"
                   >
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="lv"
                       lang="lv"
@@ -522,7 +525,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       latviešu
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="lt"
                       lang="lt"
@@ -530,7 +533,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       lietuvių
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="hu"
                       lang="hu"
@@ -538,7 +541,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       magyar
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="mt"
                       lang="mt"
@@ -546,7 +549,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       Malti
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="nl"
                       lang="nl"
@@ -554,7 +557,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       Nederlands
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="pl"
                       lang="pl"
@@ -562,7 +565,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       polski
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="pt"
                       lang="pt"
@@ -570,7 +573,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       português
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="ro"
                       lang="ro"
@@ -578,7 +581,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       română
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="sk"
                       lang="sk"
@@ -586,7 +589,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       slovenčina
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="sl"
                       lang="sl"
@@ -594,7 +597,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       slovenščina
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="fi"
                       lang="fi"
@@ -602,7 +605,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                       suomi
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="sv"
                       lang="sv"
@@ -626,7 +629,7 @@ exports[`OE - Page Page renders correctly 1`] = `
         class="container"
       >
         <article
-          class="bg-transparent border-0 card"
+          class="bg-transparent border-0 bcl-card card"
         >
           <div
             class="row"
@@ -674,12 +677,12 @@ exports[`OE - Page Page renders correctly 1`] = `
                   class="mt-2-5"
                 >
                   <span
-                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                    class="mb-2 me-2 bcl-badge badge rounded-pill badge-outline-primary"
                   >
                     Category 1
                   </span>
                   <span
-                    class="mb-2 badge rounded-pill badge-outline-primary"
+                    class="mb-2 bcl-badge badge rounded-pill badge-outline-primary"
                   >
                     Category 2
                   </span>
@@ -745,7 +748,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 class="nav-item"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link bcl-link"
                   href="#content"
                 >
                   Content
@@ -755,7 +758,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 class="nav-item"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link bcl-link"
                   href="#item-1"
                 >
                   Section 1
@@ -765,7 +768,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 class="nav-item"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link bcl-link"
                   href="#item-2"
                 >
                   Section 2
@@ -775,7 +778,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                 class="nav-item"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link bcl-link"
                   href="#item-3"
                 >
                   Section 3
@@ -824,6 +827,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                   <br />
                 </p>
                 <a
+                  class="bcl-link"
                   href="/example.html"
                 >
                   Read more
@@ -882,12 +886,12 @@ exports[`OE - Page Page renders correctly 1`] = `
                   Innovation, economy, environment and geopolitics
                 </p>
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-primary bcl-link"
                   href="/example.html"
                 >
                   Subscribe
                   <svg
-                    class="ms-2-5 bi icon--fluid"
+                    class="ms-2-5 bcl-icon bi icon--fluid"
                   >
                     <use
                       xlink:href="/icons.svg#chevron-right"
@@ -910,7 +914,7 @@ exports[`OE - Page Page renders correctly 1`] = `
   
           </p>
           <figure
-            class="text-left bg-lighter p-2 px-2-5 border-4 border-secondary border-start"
+            class="bcl-blockquote text-left bg-lighter p-2 px-2-5 border-4 border-secondary border-start"
           >
             <blockquote
               class="blockquote mb-2"
@@ -964,7 +968,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                   class="pe-2 pb-2"
                 >
                   <svg
-                    class="mt-1 icon--file bi icon--xl"
+                    class="mt-1 icon--file bcl-icon bi icon--xl"
                   >
                     <use
                       xlink:href="/icons.svg#file-pdf-fill"
@@ -994,14 +998,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                     </small>
                   </div>
                   <a
-                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0 bcl-link"
                     download="true"
                     href="/example.html"
                     target="_blank"
                   >
                     Download
                     <svg
-                      class="ms-2-5 bi icon--fluid"
+                      class="ms-2-5 bcl-icon bi icon--fluid"
                     >
                       <use
                         xlink:href="/icons.svg#download"
@@ -1020,14 +1024,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                 <a
                   aria-controls="language-dropdown"
                   aria-expanded="false"
-                  class="standalone"
+                  class="standalone bcl-link"
                   data-bs-toggle="collapse"
                   href="#language-dropdown"
                   role="button"
                 >
                   Other languages (3)
                   <svg
-                    class="ms-2-5 bi icon--2xs"
+                    class="ms-2-5 bcl-icon bi icon--2xs"
                   >
                     <use
                       xlink:href="/icons.svg#caret-down-fill"
@@ -1063,14 +1067,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       class="col-12 col-md-3 align-self-end text-md-end"
                     >
                       <a
-                        class="d-block standalone mt-1"
+                        class="d-block standalone mt-1 bcl-link"
                         download="true"
                         href="http://www.africau.edu/images/default/sample.pdf"
                         target="_blank"
                       >
                         Download
                         <svg
-                          class="ms-2-5 bi icon--fluid"
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
                           <use
                             xlink:href="/icons.svg#download"
@@ -1104,14 +1108,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       class="col-12 col-md-3 align-self-end text-md-end"
                     >
                       <a
-                        class="d-block standalone mt-1"
+                        class="d-block standalone mt-1 bcl-link"
                         download="true"
                         href="/example.html"
                         target="_blank"
                       >
                         Download
                         <svg
-                          class="ms-2-5 bi icon--fluid"
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
                           <use
                             xlink:href="/icons.svg#download"
@@ -1145,14 +1149,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       class="col-12 col-md-3 align-self-end text-md-end"
                     >
                       <a
-                        class="d-block standalone mt-1"
+                        class="d-block standalone mt-1 bcl-link"
                         download="true"
                         href="/example.html"
                         target="_blank"
                       >
                         Download
                         <svg
-                          class="ms-2-5 bi icon--fluid"
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
                           <use
                             xlink:href="/icons.svg#download"
@@ -1193,7 +1197,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                   class="pe-2 pb-2"
                 >
                   <svg
-                    class="mt-1 icon--file bi icon--xl"
+                    class="mt-1 icon--file bcl-icon bi icon--xl"
                   >
                     <use
                       xlink:href="/icons.svg#file-pdf-fill"
@@ -1223,14 +1227,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                     </small>
                   </div>
                   <a
-                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0 bcl-link"
                     download="true"
                     href="/example.html"
                     target="_blank"
                   >
                     Download
                     <svg
-                      class="ms-2-5 bi icon--fluid"
+                      class="ms-2-5 bcl-icon bi icon--fluid"
                     >
                       <use
                         xlink:href="/icons.svg#download"
@@ -1249,14 +1253,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                 <a
                   aria-controls="language-dropdown"
                   aria-expanded="false"
-                  class="standalone"
+                  class="standalone bcl-link"
                   data-bs-toggle="collapse"
                   href="#language-dropdown"
                   role="button"
                 >
                   Other languages (3)
                   <svg
-                    class="ms-2-5 bi icon--2xs"
+                    class="ms-2-5 bcl-icon bi icon--2xs"
                   >
                     <use
                       xlink:href="/icons.svg#caret-down-fill"
@@ -1292,14 +1296,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       class="col-12 col-md-3 align-self-end text-md-end"
                     >
                       <a
-                        class="d-block standalone mt-1"
+                        class="d-block standalone mt-1 bcl-link"
                         download="true"
                         href="http://www.africau.edu/images/default/sample.pdf"
                         target="_blank"
                       >
                         Download
                         <svg
-                          class="ms-2-5 bi icon--fluid"
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
                           <use
                             xlink:href="/icons.svg#download"
@@ -1333,14 +1337,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       class="col-12 col-md-3 align-self-end text-md-end"
                     >
                       <a
-                        class="d-block standalone mt-1"
+                        class="d-block standalone mt-1 bcl-link"
                         download="true"
                         href="/example.html"
                         target="_blank"
                       >
                         Download
                         <svg
-                          class="ms-2-5 bi icon--fluid"
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
                           <use
                             xlink:href="/icons.svg#download"
@@ -1374,14 +1378,14 @@ exports[`OE - Page Page renders correctly 1`] = `
                       class="col-12 col-md-3 align-self-end text-md-end"
                     >
                       <a
-                        class="d-block standalone mt-1"
+                        class="d-block standalone mt-1 bcl-link"
                         download="true"
                         href="/example.html"
                         target="_blank"
                       >
                         Download
                         <svg
-                          class="ms-2-5 bi icon--fluid"
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
                           <use
                             xlink:href="/icons.svg#download"
@@ -1456,11 +1460,11 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -1473,11 +1477,11 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -1490,11 +1494,11 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -1524,7 +1528,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1534,7 +1538,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1544,7 +1548,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1554,7 +1558,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1577,7 +1581,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1587,7 +1591,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1597,7 +1601,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1607,7 +1611,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link

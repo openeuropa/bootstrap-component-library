@@ -29,7 +29,7 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _variant = variant|default('default') %}
-{% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
+{% set _classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _display_icons = display_icons ?? true %}
 {% set _items = items|default([]) %}
 {% set _grid_columns = grid_columns|default(1) %}
@@ -66,7 +66,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_css_classes) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 <div {{ attributes }}>
 {% if _title is not empty %}

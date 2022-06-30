@@ -15,12 +15,13 @@
 {% set _alignment = alignment|default('left') %}
 
 {% set _classes = [
+  'bcl-blockquote',
   'text-' ~ _alignment,
-  "bg-lighter",
-  "p-2",
-  "px-2-5",
-  "border-4",
-  "border-secondary"
+  'bg-lighter',
+  'p-2',
+  'px-2-5',
+  'border-4',
+  'border-secondary'
 ] %}
 
 {% if _alignment == "center" %}

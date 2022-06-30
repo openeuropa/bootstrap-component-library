@@ -11,11 +11,13 @@
 {% set _content = content|default('') %}
 {% set _button = button|default({}) %}
 
+{% set _classes = ['bcl-subscription-block', 'bg-light', 'px-4', 'py-3', 'rounded-2'] %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bg-light', 'px-4-5', 'pt-4', 'pb-4-5']) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 <div
   {{ attributes }}

@@ -31,13 +31,15 @@
 
 {% set _cols_classes = 'col' %}
 
+{% set _classes = ['bcl-card'] %}
+
 {% if _cols_extra_classes is not empty %}
   {% set _cols_classes = _cols_classes ~ ' ' ~ _cols_extra_classes %}
 {% endif %}
 {% if _type == 'group' %}
-  {% set _classes = ['card-group'] %}
+  {% set _classes = _classes|merge(['card-group']) %}
 {% elseif type == 'grid' or type == 'masonry' %}
-  {% set _classes = ['row', 'row-cols-' ~ _grid_columns] %}
+  {% set _classes = _classes|merge(['row', 'row-cols-' ~ _grid_columns]) %}
   {% if _responsive_columns is not empty %}
     {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns]) %}
   {% endif %}

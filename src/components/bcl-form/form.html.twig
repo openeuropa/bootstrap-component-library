@@ -33,6 +33,8 @@
 {% set _antispam = antispam|default('') %}
 {% set _submit = submit|default({}) %}
 
+{% set _classes = ['bcl-form'] %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
@@ -49,6 +51,8 @@
 {% if _helper_text is not empty %}
   <p>{{ _helper_text }}</p>
 {% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 <form
   {{ attributes }}

@@ -33,7 +33,7 @@
 {% set _type = type|default('unordered') %}
 {% set _items = items|default([]) %}
 
-{% set _classes = ['list-group'] %}
+{% set _classes = ['bcl-list-group', 'list-group'] %}
 
 {% if _flush %}
   {% set _classes = _classes|merge(['list-group-flush']) %}

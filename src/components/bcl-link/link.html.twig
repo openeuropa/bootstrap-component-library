@@ -25,7 +25,7 @@
 {% set _icon_position = icon_position|default('after') %}
 {% set _remove_icon_spacers = remove_icon_spacers|default(false) %}
 
-{% set _classes = [] %}
+{% set _classes = ['bcl-link'] %}
 
 {% if _icon is not empty %}
   {% if _label is not empty and not _remove_icon_spacers %}

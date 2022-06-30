@@ -4,6 +4,7 @@ exports[`OE - Breadcrumb renders correctly 1`] = `
 <jest>
   <nav
     aria-label="breadcrumb"
+    class="bcl-breadcrumb"
   >
     <ol
       class="breadcrumb"
@@ -12,6 +13,7 @@ exports[`OE - Breadcrumb renders correctly 1`] = `
         class="breadcrumb-item d-none d-md-block"
       >
         <a
+          class="bcl-link"
           href="/example.html"
         >
           Home
@@ -21,6 +23,7 @@ exports[`OE - Breadcrumb renders correctly 1`] = `
         class="breadcrumb-item d-none d-md-block"
       >
         <a
+          class="bcl-link"
           href="/example.html"
         >
           European Commission
@@ -30,10 +33,11 @@ exports[`OE - Breadcrumb renders correctly 1`] = `
         class="breadcrumb-item"
       >
         <a
+          class="bcl-link"
           href="/example.html"
         >
           <svg
-            class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+            class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
           >
             <use
               xlink:href="/icons.svg#arrow-left"

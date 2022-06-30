@@ -54,13 +54,13 @@
 
 {% set _label_block = false %}
 {% set _label_class = 'form-label' %}
-{% set _classes = ['form-control'] %}
+{% set _classes = ['bcl-form-control', 'form-control'] %}
 
 {% if input_type == 'range' %}
-  {% set _classes = ['form-range'] %}
+  {% set _classes = ['bcl-form-range', 'form-range'] %}
 {% endif %}
 {% if _input_type == 'checkbox' or _input_type == 'radio' %}
-  {% set _classes = ['form-check-input'] %}
+  {% set _classes = ['bcl-form-check-input', 'form-check-input'] %}
   {% set _label_class = 'form-check-label' %}
 {% endif %}
 {% if _invalid is not empty %}

@@ -8,7 +8,7 @@ exports[`OE - Subscription renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -35,13 +35,13 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="nav-item"
           >
             <a
-              class="text-center nav-link"
+              class="text-center nav-link bcl-link"
               data-bs-target="#languageModal"
               data-bs-toggle="modal"
               href="#"
             >
               <svg
-                class="me-lg-2-5 bi icon--xs"
+                class="me-lg-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#chat-left-dots-fill"
@@ -58,13 +58,13 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="nav-item"
           >
             <a
-              class="text-center nav-link"
+              class="text-center nav-link bcl-link"
               data-bs-target="#loginModal"
               data-bs-toggle="modal"
               href="#"
             >
               <svg
-                class="me-lg-2-5 bi icon--xs"
+                class="me-lg-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#person-fill"
@@ -84,7 +84,7 @@ exports[`OE - Subscription renders correctly 1`] = `
     <!-- navbar -->
     <nav
       aria-label="main-navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar bcl-navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
         class="container"
@@ -115,7 +115,7 @@ exports[`OE - Subscription renders correctly 1`] = `
               <a
                 aria-current="page"
                 aria-label="homepage"
-                class="nav-link active"
+                class="nav-link active bcl-link"
                 href="/example.html"
               >
                 Home
@@ -125,7 +125,7 @@ exports[`OE - Subscription renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 01
@@ -135,7 +135,7 @@ exports[`OE - Subscription renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 02
@@ -146,7 +146,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             >
               <a
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle bcl-link"
                 data-bs-toggle="dropdown"
                 href="#"
                 id="navbarDropdownMenuLink"
@@ -160,7 +160,7 @@ exports[`OE - Subscription renders correctly 1`] = `
               >
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Action
@@ -168,7 +168,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Another action
@@ -176,7 +176,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Something else here
@@ -186,7 +186,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             </li>
           </ul>
           <form
-            class="d-flex mt-3 mt-lg-0"
+            class="d-flex mt-3 mt-lg-0 bcl-form"
           >
             <label
               class="form-label visually-hidden"
@@ -195,14 +195,14 @@ exports[`OE - Subscription renders correctly 1`] = `
               Search
             </label>
             <input
-              class="border-start-0 rounded-0 rounded-start form-control"
+              class="border-start-0 rounded-0 rounded-start bcl-form-control form-control"
               id="inlineFormInputGroupSearch"
               placeholder="Search"
               required="true"
               type="text"
             />
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              class="border-start-0 rounded-0 rounded-end bcl-btn btn btn-light btn-md"
               type="button"
             >
               <span
@@ -211,7 +211,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 search
               </span>
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -228,7 +228,7 @@ exports[`OE - Subscription renders correctly 1`] = `
     >
       <nav
         aria-label="breadcrumb"
-        class="mt-3"
+        class="mt-3 bcl-breadcrumb"
       >
         <ol
           class="breadcrumb"
@@ -238,6 +238,7 @@ exports[`OE - Subscription renders correctly 1`] = `
           >
             <a
               aria-label="homepage"
+              class="bcl-link"
               href="/example.html"
             >
               Home
@@ -247,6 +248,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               European Union
@@ -256,10 +258,11 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="breadcrumb-item"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -281,7 +284,7 @@ exports[`OE - Subscription renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
-    class="modal fade"
+    class="bcl-modal modal fade"
     id="loginModal"
     tabindex="-1"
   >
@@ -352,7 +355,7 @@ exports[`OE - Subscription renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--neutral bcl-modal modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -369,7 +372,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="d-flex align-items-center"
           >
             <svg
-              class="bi icon--s"
+              class="bcl-icon bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#globe2"
@@ -407,7 +410,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                     class="col-12 col-md"
                   >
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="bg"
                       lang="bg"
@@ -415,7 +418,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       български
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="es"
                       lang="es"
@@ -423,7 +426,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       español
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="cs"
                       lang="cs"
@@ -431,7 +434,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       čeština
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="da"
                       lang="da"
@@ -439,7 +442,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       dansk
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="de"
                       lang="de"
@@ -447,7 +450,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       Deutsch
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="et"
                       lang="et"
@@ -455,7 +458,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       eesti
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="el"
                       lang="el"
@@ -463,14 +466,14 @@ exports[`OE - Subscription renders correctly 1`] = `
                       ελληνικά
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn selected justify-content-between"
+                      class="w-100 mb-2-5 btn selected justify-content-between bcl-link"
                       href="#"
                       hreflang="en"
                       lang="en"
                     >
                       English
                       <svg
-                        class="ms-2-5 bi icon--s"
+                        class="ms-2-5 bcl-icon bi icon--s"
                       >
                         <use
                           xlink:href="/icons.svg#check2"
@@ -478,7 +481,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       </svg>
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="fr"
                       lang="fr"
@@ -486,7 +489,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       français
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="ga"
                       lang="ga"
@@ -494,7 +497,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       Gaeilge
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="hr"
                       lang="hr"
@@ -502,7 +505,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       hrvatski
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="it"
                       lang="it"
@@ -514,7 +517,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                     class="col-12 col-md"
                   >
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="lv"
                       lang="lv"
@@ -522,7 +525,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       latviešu
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="lt"
                       lang="lt"
@@ -530,7 +533,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       lietuvių
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="hu"
                       lang="hu"
@@ -538,7 +541,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       magyar
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="mt"
                       lang="mt"
@@ -546,7 +549,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       Malti
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="nl"
                       lang="nl"
@@ -554,7 +557,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       Nederlands
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="pl"
                       lang="pl"
@@ -562,7 +565,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       polski
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="pt"
                       lang="pt"
@@ -570,7 +573,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       português
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="ro"
                       lang="ro"
@@ -578,7 +581,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       română
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="sk"
                       lang="sk"
@@ -586,7 +589,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       slovenčina
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="sl"
                       lang="sl"
@@ -594,7 +597,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       slovenščina
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="fi"
                       lang="fi"
@@ -602,7 +605,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       suomi
                     </a>
                     <a
-                      class="w-100 mb-2-5 btn justify-content-start"
+                      class="w-100 mb-2-5 btn justify-content-start bcl-link"
                       href="#"
                       hreflang="sv"
                       lang="sv"
@@ -626,7 +629,7 @@ exports[`OE - Subscription renders correctly 1`] = `
         class="container"
       >
         <article
-          class="bg-transparent border-0 card"
+          class="bg-transparent border-0 bcl-card card"
         >
           <div
             class="row"
@@ -674,12 +677,12 @@ exports[`OE - Subscription renders correctly 1`] = `
                   class="mt-2-5"
                 >
                   <span
-                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                    class="mb-2 me-2 bcl-badge badge rounded-pill badge-outline-primary"
                   >
                     Category 1
                   </span>
                   <span
-                    class="mb-2 badge rounded-pill badge-outline-primary"
+                    class="mb-2 bcl-badge badge rounded-pill badge-outline-primary"
                   >
                     Category 2
                   </span>
@@ -747,7 +750,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 class="nav-item"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link bcl-link"
                   href="#content"
                 >
                   Content
@@ -757,7 +760,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 class="nav-item"
               >
                 <a
-                  class="nav-link"
+                  class="nav-link bcl-link"
                   href="#subheading"
                 >
                   Subheading
@@ -813,7 +816,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             <br />
           </p>
           <div
-            class="bg-light px-4-5 pt-4 pb-4-5"
+            class="bcl-subscription-block bg-light px-4 py-3 rounded-2"
           >
             <div
               class="fs-2 fw-normal"
@@ -829,14 +832,14 @@ exports[`OE - Subscription renders correctly 1`] = `
               class="pb-2"
             >
               <button
-                class="btn btn-secondary btn-lg"
+                class="bcl-btn btn btn-secondary btn-lg"
                 data-bs-target="#subscribeModal"
                 data-bs-toggle="modal"
                 type="button"
               >
                 Subscribe
                 <svg
-                  class="ms-2-5 bi icon--fluid"
+                  class="ms-2-5 bcl-icon bi icon--fluid"
                 >
                   <use
                     xlink:href="/icons.svg#chevron-right"
@@ -848,7 +851,7 @@ exports[`OE - Subscription renders correctly 1`] = `
           <div
             aria-hidden="true"
             aria-label="subscribeModalLabel"
-            class="modal fade"
+            class="bcl-modal modal fade"
             id="subscribeModal"
             tabindex="-1"
           >
@@ -874,11 +877,11 @@ exports[`OE - Subscription renders correctly 1`] = `
                   />
                 </div>
                 <div
-                  class="success-alert d-none mb-0 alert alert-success d-flex align-items-center fade show text-dark"
+                  class="success-alert d-none mb-0 bcl-alert alert alert-success d-flex align-items-center fade show text-dark"
                   role="alert"
                 >
                   <svg
-                    class="flex-shrink-0 me-3 mt-1 align-self-start text-success bi icon--s"
+                    class="flex-shrink-0 me-3 mt-1 align-self-start text-success bcl-icon bi icon--s"
                   >
                     <use
                       xlink:href="/icons.svg#check-circle-fill"
@@ -896,11 +899,11 @@ exports[`OE - Subscription renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="error-alert d-none mb-0 alert alert-danger d-flex align-items-center fade show text-dark"
+                  class="error-alert d-none mb-0 bcl-alert alert alert-danger d-flex align-items-center fade show text-dark"
                   role="alert"
                 >
                   <svg
-                    class="flex-shrink-0 me-3 mt-1 align-self-start text-danger bi icon--s"
+                    class="flex-shrink-0 me-3 mt-1 align-self-start text-danger bcl-icon bi icon--s"
                   >
                     <use
                       xlink:href="/icons.svg#dash-circle-fill"
@@ -929,7 +932,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                   class="modal-body"
                 >
                   <form
-                    class="needs-validation"
+                    class="needs-validation bcl-form"
                     novalidate="true"
                     onsubmit="return false;"
                   >
@@ -951,7 +954,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                         E-mail
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         placeholder="Type in your e-mail address"
                         required="true"
                         type="email"
@@ -1018,7 +1021,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                         class="form-check"
                       >
                         <input
-                          class="form-check-input"
+                          class="bcl-form-check-input form-check-input"
                           id="exampleInputCheck1"
                           required="true"
                           type="checkbox"
@@ -1112,11 +1115,11 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -1129,11 +1132,11 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -1146,11 +1149,11 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -1180,7 +1183,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1190,7 +1193,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1200,7 +1203,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1210,7 +1213,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1233,7 +1236,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1243,7 +1246,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1253,7 +1256,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
@@ -1263,7 +1266,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="#"
             >
               Link
