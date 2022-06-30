@@ -28,9 +28,10 @@
   - horizontal (boolean) (default: false)
   - horizontal_grid (object) (default: {})
     format: {
-      left_col_classes (default: 'col-4')
-      right_col_classes (default: 'col-8')
+      left_col_classes (default: 'bcl-card-start-col')
+      right_col_classes (default: 'col')
       gutter (default: '')
+      gutter (default: '') - options: ['small', 'large']
     }
   - variant (string) (default: '')
   - border_variant (string) (default: '')
@@ -63,8 +64,9 @@
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal|default(false) %}
 {% set _horizontal_grid = horizontal_grid|default({
-  left_col_classes: 'col-4',
-  right_col_classes: 'col-8'
+  left_col_classes: 'bcl-card-start-col',
+  right_col_classes: 'col',
+  left_col_size: '',
 }) %}
 {% set _border_variant = border_variant|default('') %}
 {% set _text_color = text_color|default('') %}
