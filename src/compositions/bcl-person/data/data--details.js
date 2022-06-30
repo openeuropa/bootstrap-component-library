@@ -13,6 +13,7 @@ module.exports = {
       alt: "alt img",
       position: "top",
     },
+    image_size: "lg",
     links: [
       {
         label: "Linkedin",

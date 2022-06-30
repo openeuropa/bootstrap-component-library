@@ -84,6 +84,7 @@ module.exports = {
         <span class="text-muted me-3">DG Test</span><span class="text-muted">Director</span>
       </div>${getDummyText(5)}`,
       attributes: new drupalAttribute().addClass("negative-container"),
+      image_size: "lg",
     },
   },
   edit: {
