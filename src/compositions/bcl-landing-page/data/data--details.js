@@ -54,7 +54,7 @@ module.exports = {
     title: "Listing item block title",
     title_tag: "h2",
     link: {
-      path: "/example",
+      path: "/example.html",
       label: "Listing item block CTA",
       icon: {
         path: "/icons.svg",
@@ -62,7 +62,8 @@ module.exports = {
     },
     items: [
       {
-        title: '<a href="/example" class="standalone">Listing item title</a>',
+        title:
+          '<a href="/example.html" class="standalone">Listing item title</a>',
         text: {
           content: getDummyText(2),
           classes: "mb-2",
@@ -74,7 +75,8 @@ module.exports = {
         },
       },
       {
-        title: '<a href="/example" class="standalone">Listing item title</a>',
+        title:
+          '<a href="/example.html" class="standalone">Listing item title</a>',
         text: {
           content: getDummyText(3),
           classes: "mb-2",
@@ -86,7 +88,8 @@ module.exports = {
         },
       },
       {
-        title: '<a href="/example" class="standalone">Listing item title</a>',
+        title:
+          '<a href="/example.html" class="standalone">Listing item title</a>',
         text: {
           content: getDummyText(),
           classes: "mb-2",
@@ -118,7 +121,7 @@ module.exports = {
     title: "What are those activities",
     title_tag: "h2",
     link: {
-      path: "/example",
+      path: "/example.html",
       label: "Listing item block CTA",
       icon: {
         path: "/icons.svg",
@@ -126,7 +129,8 @@ module.exports = {
     },
     items: [
       {
-        title: '<a href="/example" class="standalone">Capacity development</a>',
+        title:
+          '<a href="/example.html" class="standalone">Capacity development</a>',
         text: {
           content:
             "<ul><li>UCPM Training Programme</li><li>Exercises</li><li>Exchange of experts</li><li>UCPM Prevention and preparedness projects</li></ul>",
@@ -140,7 +144,7 @@ module.exports = {
       },
       {
         title:
-          '<a href="/example" class="standalone">Science, Research & innovation</a>',
+          '<a href="/example.html" class="standalone">Science, Research & innovation</a>',
         text: {
           content: getDummyText(),
           classes: "mb-2",
@@ -153,7 +157,7 @@ module.exports = {
       },
       {
         title:
-          '<a href="/example" class="standalone">KN Horizontal activities</a>',
+          '<a href="/example.html" class="standalone">KN Horizontal activities</a>',
         text: {
           content: getDummyText(2),
           classes: "mb-2",

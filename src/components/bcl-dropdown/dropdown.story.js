@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
@@ -54,7 +55,7 @@ const applyArgs = (data, args) => {
 
   resetAttrs(data);
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 const paddingBody = (story) => {

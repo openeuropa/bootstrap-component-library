@@ -6,8 +6,8 @@ import {
   initTooltip,
   getIconControls,
   getVariants,
+  correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-button/data.js";
@@ -203,7 +203,7 @@ const applyArgs = (data, args) => {
     data.icon = {};
     data.icon.name = args.name;
     data.icon.size = args.icon_size;
-    data.icon.path = defaultSprite;
+    data.icon.path = "/icons.svg";
     data.icon.transformation = args.transformation;
     data.icon.attributes = new drupalAttribute();
   }
@@ -214,7 +214,7 @@ const applyArgs = (data, args) => {
     data.attributes.setAttribute("data-bs-placement", args.placement);
   }
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 const initPopover = (story) => {

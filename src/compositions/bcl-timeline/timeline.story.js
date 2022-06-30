@@ -1,9 +1,9 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import dataDefault from "@openeuropa/bcl-timeline/data.js";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => ({
   title: "",
@@ -55,13 +55,10 @@ const getArgTypes = () => ({
 });
 
 const applyArgs = (data, args) => {
-  if (data.icon_path) {
-    data.icon_path = defaultSprite;
-  }
   data.hide.from = args.from;
   data.hide.to = args.to;
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {

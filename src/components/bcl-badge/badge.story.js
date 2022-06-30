@@ -1,9 +1,12 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { initBadges, getVariants } from "@openeuropa/bcl-story-utils";
+import {
+  initBadges,
+  getVariants,
+  correctPaths,
+} from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => ({
@@ -104,8 +107,8 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   resetAttrs(data);
-  data.icon_path = defaultSprite;
-  return Object.assign(data, args);
+
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {
