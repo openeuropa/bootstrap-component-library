@@ -6,13 +6,28 @@ import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--hori
 import descriptionList from "@openeuropa/bcl-description-list/description-list.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
+const getArgs = () => ({
+  bordered: false,
+});
+
+const getArgTypes = () => ({
+  bordered: {
+    type: { name: "boolean" },
+    description: "Border between description items",
+    table: {
+      type: { summary: "boolean" },
+      defaultValue: { summary: "false" },
+      category: "Style",
+    },
+  },
+});
+
+const applyArgs = (data, args) => Object.assign(data, args);
+
 export default {
   title: "Paragraphs/Description List",
   decorators: [withCode, withDesign],
   parameters: {
-    controls: {
-      disable: true,
-    },
     design: [
       {
         name: "Mockup",
@@ -23,9 +38,14 @@ export default {
   },
 };
 
-export const Default = () => descriptionList(correctPaths(demoData));
+export const Default = (args) =>
+  descriptionList(applyArgs(correctPaths(demoData), args));
+Default.args = getArgs(demoData);
+Default.argTypes = getArgTypes(demoData);
 
-export const Horizontal = () =>
-  descriptionList(correctPaths(demoDataHorizontal));
+export const Horizontal = (args) =>
+  descriptionList(applyArgs(correctPaths(demoDataHorizontal), args));
 
 Horizontal.storyName = "Horizontal Description List";
+Horizontal.args = getArgs(demoDataHorizontal);
+Horizontal.argTypes = getArgTypes(demoDataHorizontal);

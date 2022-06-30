@@ -30,11 +30,35 @@ describe("OE - Description List with title", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`bordered renders correctly`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        title: "Description list test title",
+        title_tag: "h6",
+        bordered: true,
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`horizontal renders correctly`, () => {
     expect.assertions(1);
     return expect(
       render({
         ...demoDataHorizontal,
+        title: "Description list test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`horizontal and bordered renders correctly`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDataHorizontal,
+        bordered: true,
         title: "Description list test title",
         title_tag: "h6",
       })

@@ -2,6 +2,10 @@
 
 {#
   Parameters:
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes: (drupal attrs)
   - id (int) (default: random(1000))
   - flush (boolean) (default: false)
   - items (array) (default: []): format: [
@@ -16,6 +20,10 @@
   - attributes (drupal attrs)
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _id = id|default(random(1000)) %}
 {% set _flush = flush|default(false) %}
 {% set _items = items|default([]) %}
@@ -35,6 +43,15 @@
 <div
   {{ attributes }}
 >
+{%- if _title is not empty -%}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes,
+  } only %}
+{%- endif -%}
+
 {% for _item in _items %}
   {% set _open_item = _open_item_id == loop.index %}
   {% set _button_classes = ['accordion-button'] %}
