@@ -13,13 +13,14 @@
   - infos (array of strings) (default: [])
 #}
 
-{% set _picture_classes = "rounded-pill" %}
+{% set _picture_classes = 'rounded-pill' %}
+{% set _classes = ['bcl-user-compact', 'd-flex', 'mb-3'] %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(["d-flex", "mb-3"]) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if picture is not empty and picture.classes is not empty %}
   {% set _picture_classes = _picture_classes ~ ' ' ~ picture.classes %}

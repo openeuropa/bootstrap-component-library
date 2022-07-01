@@ -56,11 +56,13 @@
 {% set _translation = translation|default({}) %}
 {% set _icon_path = icon_path|default({}) %}
 
+{% set _classes = ['bcl-file'] %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bcl-file']) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _icon is not empty %}
   {% set _container_classes = _container_classes ~ ' ms-2-5' %}

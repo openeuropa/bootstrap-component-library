@@ -29,6 +29,8 @@
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('') %}
 
+{% set _classes = ['bcl-description-list'] %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
@@ -59,7 +61,7 @@
   } only %}
 {% endif %}
 
-{% set attributes = attributes.addClass('bcl-description-list') %}
+{% set attributes = attributes.addClass(_classes) %}
 
 <div
   {{ attributes }}
