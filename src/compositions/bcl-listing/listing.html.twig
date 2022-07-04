@@ -11,6 +11,8 @@
   - link: (object of type link)
   - alignment: (string) (default: '')
     options ['start', 'end', 'center', 'baseline', 'stretch']
+  - image_size: (string) (default: '')
+    options ['small', 'large', 'extra-large']
   - attributes (drupal attrs)
 #}
 
@@ -21,6 +23,7 @@
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('default-1-col') %}
 {% set _alignment = alignment|default('') %}
+{% set _image_size = image_size|default('') %}
 {% set _link = link|default({}) %}
 
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
@@ -53,8 +56,11 @@
   {% for _card in _items %}
     {% set  _alignment_class = '' %}
     {% set _image_classes = _card.image.classes ?: '' %}
-    {% set _start_col_classes = 'bcl-card-start-col bcl-size-small mb-3 mb-lg-0' %}
+    {% set _start_col_classes = 'bcl-card-start-col mb-3 mb-lg-0' %}
     {% set _end_col_classes = 'col-12 col-md' %}
+    {% if _image_size is not empty %}
+      {% set _start_col_classes = _start_col_classes ~ ' bcl-size-' ~ _image_size %}
+    {% endif %}
     {% if 'd-none' in _image_classes %}
       {% set _start_col_classes = _start_col_classes ~ ' d-none d-md-block' %}
     {% endif %}

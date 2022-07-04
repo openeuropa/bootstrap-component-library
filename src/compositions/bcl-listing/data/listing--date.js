@@ -4,6 +4,7 @@ const { getDummyText } = require("@openeuropa/bcl-data-utils");
 module.exports = {
   variant: "default-2-col",
   title: "Listing item block title",
+  image_size: "small",
   link: {
     path: "/example.html",
     label: "Listing item block CTA",
