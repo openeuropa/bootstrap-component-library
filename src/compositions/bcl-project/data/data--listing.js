@@ -163,7 +163,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -196,7 +196,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -229,7 +229,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -256,7 +256,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -283,7 +283,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -310,7 +310,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
     ],
   },
