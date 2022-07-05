@@ -67,11 +67,8 @@
   {{ attributes }}
 >
   {% for _item in _items %}
-  {% if loop.last %}
+  {% if loop.last and _variant != 'horizontal' %}
     {% set _item_classes = '' %}
-    {% if _variant == 'horizontal' %}
-      {% set _item_classes = 'd-md-grid grid-3-9 mb-2-5' %}
-    {% endif %}
   {% endif %}
   {% if _item.term is not empty %}
   <dl
