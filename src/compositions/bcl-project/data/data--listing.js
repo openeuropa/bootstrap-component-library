@@ -17,6 +17,15 @@ module.exports = {
       items: [
         [
           {
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
+        [
+          {
             classes: "mb-3",
             label: "Project type",
             type: "select",
@@ -48,7 +57,6 @@ module.exports = {
           {
             input_type: "checkbox",
             label: "Closed",
-            wrapper_classes: "mb-2",
             checked: true,
             id: "closed",
           },
@@ -81,7 +89,7 @@ module.exports = {
             label: "End date",
             id: "end-date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new drupalAttribute().addClass("mb-4-5"),
           },
         ],
       ],

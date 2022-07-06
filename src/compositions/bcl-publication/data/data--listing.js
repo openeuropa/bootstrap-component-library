@@ -17,10 +17,19 @@ module.exports = {
       items: [
         [
           {
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
+        [
+          {
             type: "fieldset",
             classes: "col-sm-10",
             legend: "Type",
-            fieldset_classes: "mb-2",
+            fieldset_classes: "mb-4-5",
             legend_classes: "col-form-label",
           },
           {
@@ -47,7 +56,6 @@ module.exports = {
           {
             input_type: "checkbox",
             label: "Type 4",
-            wrapper_classes: "mb-2",
             checked: true,
             id: "type-4",
           },

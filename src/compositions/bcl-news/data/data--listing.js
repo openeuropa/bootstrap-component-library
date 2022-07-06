@@ -17,6 +17,15 @@ module.exports = {
       items: [
         [
           {
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
+        [
+          {
             label: "Creation date (from)",
             id: "creation-date-from",
             input_type: "date",
@@ -28,7 +37,7 @@ module.exports = {
             label: "Creation date (to)",
             id: "creation-date-to",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new drupalAttribute().addClass("mb-4-5"),
           },
         ],
       ],
