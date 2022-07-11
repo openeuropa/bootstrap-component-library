@@ -684,8 +684,20 @@ exports[`OE - event listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
+                <label
+                  class="form-label"
+                  for="keyword"
+                >
+                  Keyword
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="keyword"
+                  placeholder="Type a keyword"
+                  type="text"
+                />
                 <div
-                  class="mb-4"
+                  class="mb-3"
                 >
                   <label
                     class="form-label"
@@ -726,7 +738,7 @@ exports[`OE - event listing renders correctly 1`] = `
                   </select>
                 </div>
                 <div
-                  class="mb-4"
+                  class="mb-3"
                 >
                   <label
                     class="form-label"
@@ -776,7 +788,7 @@ exports[`OE - event listing renders correctly 1`] = `
                     Start date
                   </label>
                   <input
-                    class="mb-4 form-control"
+                    class="mb-2 form-control"
                     id="creation-date-from"
                     type="date"
                   />
@@ -791,7 +803,7 @@ exports[`OE - event listing renders correctly 1`] = `
                     End date
                   </label>
                   <input
-                    class="mb-2 form-control"
+                    class="mb-4-5 form-control"
                     id="creation-date-to"
                     type="date"
                   />

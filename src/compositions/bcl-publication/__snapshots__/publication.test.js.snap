@@ -3513,8 +3513,20 @@ exports[`OE - Publication listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
+                <label
+                  class="form-label"
+                  for="keyword"
+                >
+                  Keyword
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="keyword"
+                  placeholder="Type a keyword"
+                  type="text"
+                />
                 <fieldset
-                  class="mb-2"
+                  class="mb-4-5"
                 >
                   <legend
                     class="col-form-label"
@@ -3585,24 +3597,20 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mb-2"
+                      class="form-check"
                     >
-                      <div
-                        class="form-check"
+                      <input
+                        checked="true"
+                        class="form-check-input"
+                        id="type-4"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="type-4"
                       >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          id="type-4"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="type-4"
-                        >
-                          Type 4
-                        </label>
-                      </div>
+                        Type 4
+                      </label>
                     </div>
                   </div>
                 </fieldset>

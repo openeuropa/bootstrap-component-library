@@ -4453,8 +4453,20 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
+                <label
+                  class="form-label"
+                  for="keyword"
+                >
+                  Keyword
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="keyword"
+                  placeholder="Type a keyword"
+                  type="text"
+                />
                 <fieldset
-                  class="mb-2"
+                  class="mb-3"
                 >
                   <legend
                     class="col-form-label"
@@ -4485,24 +4497,20 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mb-2"
+                      class="form-check"
                     >
-                      <div
-                        class="form-check"
+                      <input
+                        checked="true"
+                        class="form-check-input"
+                        id="closed"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="closed"
                       >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          id="closed"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="closed"
-                        >
-                          Closed
-                        </label>
-                      </div>
+                        Closed
+                      </label>
                     </div>
                   </div>
                 </fieldset>
@@ -4554,7 +4562,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   Opening date
                 </label>
                 <input
-                  class="mb-2 form-control"
+                  class="mb-3 form-control"
                   id="opening-date"
                   type="date"
                 />
@@ -4565,7 +4573,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   Closing date
                 </label>
                 <input
-                  class="mb-3 form-control"
+                  class="mb-4-5 form-control"
                   id="closing-date"
                   type="date"
                 />
