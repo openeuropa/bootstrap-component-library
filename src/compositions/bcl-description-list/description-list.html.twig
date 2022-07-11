@@ -38,17 +38,20 @@
 {% set _item_classes = '' %}
 
 {% if _variant == 'horizontal' %}
-  {% set _item_classes = 'd-md-grid grid-3-9 mb-3' %}
+  {% set _item_classes = 'd-md-grid grid-3-9' %}
   {% if _bordered %}
-    {% set _item_classes = _item_classes ~ ' pb-2-5' %}
+    {% set _item_classes = _item_classes ~ ' mb-2-5 pb-2-5' %}
+  {% else %}
+    {% set _item_classes = _item_classes ~ ' mb-3' %}
   {% endif %}
 {% else %}
-  {% set _item_classes = 'mb-4' %}
+  {% set _item_classes = 'mb-3' %}
   {% if _bordered %}
     {% set _item_classes = 'mb-2-5' %}
     {% set _item_classes = _item_classes ~ ' pb-1' %}
   {% endif %}
 {% endif %}
+
 {% if _bordered %}
   {% set _item_classes = _item_classes ~ ' border-bottom' %}
 {% endif %}
