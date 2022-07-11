@@ -1,6 +1,7 @@
 module.exports = {
   variant: "default-1-col",
   remove_horizontal_spacer: true,
+  image_size: "small",
   items: [
     {
       extra_classes_header: "bg-transparent pt-0 pb-0 border-0",

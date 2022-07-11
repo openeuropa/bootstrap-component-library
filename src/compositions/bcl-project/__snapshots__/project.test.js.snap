@@ -2265,6 +2265,18 @@ exports[`OE - Project listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
+                <label
+                  class="form-label"
+                  for="keyword"
+                >
+                  Keyword
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="keyword"
+                  placeholder="Type a keyword"
+                  type="text"
+                />
                 <div
                   class="mb-3"
                 >
@@ -2338,24 +2350,20 @@ exports[`OE - Project listing renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mb-2"
+                      class="form-check"
                     >
-                      <div
-                        class="form-check"
+                      <input
+                        checked="true"
+                        class="form-check-input"
+                        id="closed"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="closed"
                       >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          id="closed"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="closed"
-                        >
-                          Closed
-                        </label>
-                      </div>
+                        Closed
+                      </label>
                     </div>
                   </div>
                 </fieldset>
@@ -2418,7 +2426,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                   End date
                 </label>
                 <input
-                  class="mb-3 form-control"
+                  class="mb-4-5 form-control"
                   id="end-date"
                   type="date"
                 />
@@ -2592,7 +2600,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="bcl-card-start-col bcl-size-small mb-3 mb-lg-0 d-none d-md-block"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
@@ -2626,12 +2634,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                         <span
                           class="text-muted text-nowrap"
                         >
-                          Ongoing 
-                          <span
-                            class="ms-4-75"
-                          >
-                            December 2020 - 19 December 2027
-                          </span>
+                          December 2020 - 19 December 2027
                         </span>
                         <div
                           class="mt-2-5"
@@ -2662,7 +2665,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="bcl-card-start-col bcl-size-small mb-3 mb-lg-0 d-none d-md-block"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
@@ -2697,12 +2700,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                         <span
                           class="text-muted text-nowrap"
                         >
-                          Ongoing 
-                          <span
-                            class="ms-4-75"
-                          >
-                            December 2020 - 19 December 2027
-                          </span>
+                          December 2020 - 19 December 2027
                         </span>
                         <div
                           class="mt-2-5"
@@ -2733,7 +2731,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="bcl-card-start-col bcl-size-small mb-3 mb-lg-0 d-none d-md-block"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
@@ -2765,12 +2763,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                         <span
                           class="text-muted text-nowrap"
                         >
-                          Ongoing 
-                          <span
-                            class="ms-4-75"
-                          >
-                            December 2020 - 19 December 2027
-                          </span>
+                          December 2020 - 19 December 2027
                         </span>
                         <div
                           class="mt-2-5"
@@ -2825,12 +2818,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     <span
                       class="text-muted text-nowrap"
                     >
-                      Ongoing 
-                      <span
-                        class="ms-4-75"
-                      >
-                        December 2020 - 19 December 2027
-                      </span>
+                      December 2020 - 19 December 2027
                     </span>
                     <div
                       class="mt-2-5"
@@ -2876,12 +2864,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     <span
                       class="text-muted text-nowrap"
                     >
-                      Ongoing 
-                      <span
-                        class="ms-4-75"
-                      >
-                        December 2020 - 19 December 2027
-                      </span>
+                      December 2020 - 19 December 2027
                     </span>
                     <div
                       class="mt-2-5"
@@ -2927,12 +2910,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     <span
                       class="text-muted text-nowrap"
                     >
-                      Ongoing 
-                      <span
-                        class="ms-4-75"
-                      >
-                        December 2020 - 19 December 2027
-                      </span>
+                      December 2020 - 19 December 2027
                     </span>
                     <div
                       class="mt-2-5"
