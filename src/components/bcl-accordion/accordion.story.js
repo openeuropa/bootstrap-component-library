@@ -1,16 +1,20 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { getTitleControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-accordion/data.js";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => ({
+  title: "",
+  title_tag: "h2",
   toggle1: data.items[0].title,
   content1: data.items[0].content,
   flush: false,
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   toggle1: {
     name: `toggle 1`,
     type: { name: "string", required: true },

@@ -1,5 +1,5 @@
 import { LoremIpsum } from "lorem-ipsum";
-import { initScrollspy } from "@openeuropa/bcl-story-utils";
+import { initScrollspy, getTitleControls } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
@@ -9,6 +9,15 @@ import heading from "@openeuropa/bcl-heading/heading.html.twig";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
 
 const lorem = new LoremIpsum();
+
+const getArgs = (data) => ({
+  title: data.title,
+  title_tag: "h2",
+});
+
+const getArgTypes = () => getTitleControls();
+
+const applyArgs = (data, args) => Object.assign(data, args);
 
 const withContent = (story) => {
   const demo = story();
@@ -48,7 +57,6 @@ export default {
   title: "Paragraphs/Inpage navigation",
   decorators: [withCode, withDesign, initScrollspy, withContent],
   parameters: {
-    controls: { disable: true },
     design: [
       {
         name: "Mockup",
@@ -64,4 +72,7 @@ export default {
   },
 };
 
-export const Default = () => inpage(demoData);
+export const Default = (args) => inpage(applyArgs(demoData, args));
+
+Default.args = getArgs(demoData);
+Default.argTypes = getArgTypes();

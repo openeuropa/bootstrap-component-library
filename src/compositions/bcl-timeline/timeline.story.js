@@ -1,6 +1,6 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import dataDefault from "@openeuropa/bcl-timeline/data.js";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
@@ -13,6 +13,7 @@ const getArgs = (data) => ({
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   from: {
     type: { name: "number" },
     name: "hide from",
@@ -31,25 +32,6 @@ const getArgTypes = () => ({
       type: { summary: "number" },
       defaultValue: { summary: "" },
       category: "Display",
-    },
-  },
-  title: {
-    type: { name: "string" },
-    description: "Title of the block",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "" },
-      category: "Content",
-    },
-  },
-  title_tag: {
-    name: "title tag",
-    type: { name: "string" },
-    description: "Html tag of the title",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "h2" },
-      category: "Content",
     },
   },
 });
