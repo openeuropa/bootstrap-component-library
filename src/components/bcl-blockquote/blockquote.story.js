@@ -1,10 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { getTitleControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import drupalAttribute from "drupal-attribute";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 
 const getArgs = (data) => ({
+  title: "",
+  title_tag: "h2",
   quote: data.quote,
   attribution: data.attribution,
   cite: data.cite,
@@ -12,6 +15,7 @@ const getArgs = (data) => ({
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   quote: {
     type: { name: "string" },
     description: "Text of blockquote",

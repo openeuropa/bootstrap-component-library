@@ -5,7 +5,6 @@ module.exports = {
   icon_path: "/icons.svg",
   equal_height: true,
   display_icons: true,
-  title: "Fact and figures block",
   title_tag: "h2",
   items: [
     {

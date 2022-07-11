@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
 
@@ -18,6 +18,8 @@ if (isChromatic()) {
 }
 
 const getArgs = (data) => ({
+  title: "",
+  title_tag: "h2",
   items: data.items,
   autoinit: true,
   autoplay: true,
@@ -32,6 +34,7 @@ const getArgs = (data) => ({
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   items: {
     type: { name: "object", required: true },
     description: "Carousel items",

@@ -1,7 +1,7 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-featured-media/data/data";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
@@ -17,6 +17,8 @@ if (isChromatic()) {
 
 const getArgs = (data, type) => {
   const args = {
+    title: data.title || "",
+    title_tag: "h2",
     content: data.content || "",
     content_classes: data.content_classes || "",
   };
@@ -25,8 +27,6 @@ const getArgs = (data, type) => {
   }
   if (type === "text") {
     args.alignment = "right";
-    args.title = data.title;
-    args.title_tag = "h2";
   }
 
   return args;
@@ -34,6 +34,7 @@ const getArgs = (data, type) => {
 
 const getArgTypes = (data, type) => {
   const argTypes = {
+    ...getTitleControls(),
     content: {
       description: "Content under featured media",
       type: { name: "string" },

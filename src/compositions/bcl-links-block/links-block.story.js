@@ -1,37 +1,19 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-links-block/data/data.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 const getArgs = (data) => ({
-  background: data.background,
-  variant: data.variant,
   title: data.title,
   title_tag: "h2",
+  background: data.background,
+  variant: data.variant,
 });
 
 const getArgTypes = () => ({
-  title: {
-    type: { name: "string" },
-    description: "Title of the block",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "" },
-      category: "Content",
-    },
-  },
-  title_tag: {
-    name: "title tag",
-    type: { name: "string" },
-    description: "Html tag of the title",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "h2" },
-      category: "Content",
-    },
-  },
+  ...getTitleControls(),
   background: {
     description: "Color of the background",
     options: ["gray", "transparent"],

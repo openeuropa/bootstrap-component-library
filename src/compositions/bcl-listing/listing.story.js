@@ -1,7 +1,7 @@
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
 import demoDateData from "@openeuropa/bcl-listing/data/listing--date";
@@ -15,15 +15,17 @@ import listing from "@openeuropa/bcl-listing/listing.html.twig";
 
 const getArgs = (data) => {
   const args = {
-    variant: data.variant,
     title: data.title || "",
     title_tag: "h2",
+    variant: data.variant,
     alignment: "default",
   };
+
   return args;
 };
 
 const getArgTypes = (data) => ({
+  ...getTitleControls(),
   variant: {
     type: { name: "select" },
     options: [data.variant],
@@ -32,25 +34,6 @@ const getArgTypes = (data) => ({
       type: { summary: "string" },
       defaultValue: { summary: "default-1-col" },
       category: "Style",
-    },
-  },
-  title: {
-    type: { name: "string" },
-    description: "Title of the block",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "" },
-      category: "Content",
-    },
-  },
-  title_tag: {
-    name: "title tag",
-    type: { name: "string" },
-    description: "Tag of the title",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "h2" },
-      category: "Content",
     },
   },
   alignment: {

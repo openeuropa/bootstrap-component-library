@@ -2,8 +2,10 @@
 
 {# Parameters:
   - with_text (boolean) (default: false)
-  - title: (string) (default: '')
-  - title_tag: (string) (default: 'h2')
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes: (drupal attrs)
   - image: (string) (default: "")
   - poster_image: (string) (default: "")
   - content: (string) (default: "")
@@ -34,6 +36,8 @@
 
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _with_text = with_text|default(false) %}
 {% set _wrapper_classes = 'bcl-featured-item' %}
 {% set _description = description|default('') %}
@@ -57,18 +61,23 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% if _with_text %}
+  {% set _title_attributes = _title_attributes.addClass(['fw-bold', 'mb-4']) %}
+{% endif %}
+
 {% set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
+
+{%- if _title is not empty -%}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes,
+  } only %}
+{%- endif -%}
 
 {% if _with_text %}
 <div class="{{ _wrapper_classes }}">
-
-{% if _title is not empty %}
-  {% set _title_classes = 'fw-bold mb-4' %}
-  <{{ _title_tag }} class="{{ _title_classes }}">
-    {{- _title -}}
-  </{{ _title_tag }}>
-{% endif %}
-
   <div class="row">
     <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
       {{- _description|default('') -}}

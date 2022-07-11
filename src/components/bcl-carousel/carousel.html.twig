@@ -1,7 +1,10 @@
 {% spaceless %}
 
 {# Parameters:
-  - id (string) (default: '')
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes: (drupal attrs)
   - autoplay (boolean) (default: true)
   - autoinit (boolean) (default: true)
   - dark (boolean) (default: false)
@@ -25,6 +28,10 @@
   - attributes (drupal attrs)
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _id = id|default('') %}
 {% set _autoinit = autoinit ?? true %}
 {% set _autoplay = autoplay ?? true %}
@@ -73,6 +80,15 @@
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
+
+{%- if _title is not empty -%}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes,
+  } only %}
+{%- endif -%}
 
 <div
   {{ attributes }}
