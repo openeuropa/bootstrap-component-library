@@ -26,6 +26,15 @@ module.exports = {
       items: [
         [
           {
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
+        [
+          {
             type: "fieldset",
             classes: "col-sm-10",
             legend: "Status",
@@ -73,7 +82,7 @@ module.exports = {
             label: "Opening date",
             id: "opening-date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
         ],
         [
@@ -81,7 +90,7 @@ module.exports = {
             label: "Closing date",
             id: "closing-date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new drupalAttribute().addClass("mb-4-5"),
           },
         ],
       ],

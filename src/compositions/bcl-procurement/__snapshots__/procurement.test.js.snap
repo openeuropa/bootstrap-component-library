@@ -3844,6 +3844,18 @@ exports[`OE - Procurement listing renders correctly 1`] = `
                 novalidate="true"
                 onsubmit="return false;"
               >
+                <label
+                  class="form-label"
+                  for="keyword"
+                >
+                  Keyword
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="keyword"
+                  placeholder="Type a keyword"
+                  type="text"
+                />
                 <fieldset
                   class="mb-2"
                 >
@@ -3964,7 +3976,7 @@ exports[`OE - Procurement listing renders correctly 1`] = `
                   Opening date
                 </label>
                 <input
-                  class="mb-2 form-control"
+                  class="mb-3 form-control"
                   id="opening-date"
                   type="date"
                 />
@@ -3975,7 +3987,7 @@ exports[`OE - Procurement listing renders correctly 1`] = `
                   Closing date
                 </label>
                 <input
-                  class="mb-3 form-control"
+                  class="mb-4-5 form-control"
                   id="closing-date"
                   type="date"
                 />
