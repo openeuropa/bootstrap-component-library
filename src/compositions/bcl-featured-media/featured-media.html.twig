@@ -67,6 +67,11 @@
 
 {% set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
 
+{% if _with_text %}
+<div class="{{ _wrapper_classes }}">
+  <div class="row">
+{% endif %}
+
 {%- if _title is not empty -%}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -77,8 +82,6 @@
 {%- endif -%}
 
 {% if _with_text %}
-<div class="{{ _wrapper_classes }}">
-  <div class="row">
     <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
       {{- _description|default('') -}}
 

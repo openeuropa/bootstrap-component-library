@@ -8,7 +8,6 @@ import drupalAttribute from "drupal-attribute";
 const getArgs = (data) => ({
   title: "",
   title_tag: "h2",
-  title_link: "",
   toggle1: data.items[0].title,
   content1: data.items[0].content,
   flush: false,
