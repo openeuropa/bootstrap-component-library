@@ -7,6 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 #### :nail_care: Enhancement
 
+* [#406](https://github.com/openeuropa/bootstrap-component-library/pull/406) feat(paragraphs): Adding controls for optional title ([@planctus](https://github.com/planctus)))
 * [#401](https://github.com/openeuropa/bootstrap-component-library/pull/401) feat(description-lists): Spacing reviewed - OEL-1812 ([@tibi2303](https://github.com/tibi2303))
 * [#403](https://github.com/openeuropa/bootstrap-component-library/pull/403) feat(data): Added new filter in sidebar of listings - OEL-1819 ([@tibi2303](https://github.com/tibi2303))
 * [#400](https://github.com/openeuropa/bootstrap-component-library/pull/400) feat(listing): Listing image size parameter and cleanup - OEL-1810 ([@tibi2303](https://github.com/tibi2303))
