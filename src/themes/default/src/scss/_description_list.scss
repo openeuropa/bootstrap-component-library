@@ -1,3 +1,15 @@
+dd {
+  margin-bottom: 0;
+
+  > div + div {
+    margin-top: map-get($spacers, 2);
+  }
+}
+
+dd + dd {
+  margin-top: map-get($spacers, 2);
+}
+
 // Desktop uses grid, this is to apply the same spacing in tablet and mobile.
 @include media-breakpoint-down(md) {
   dd + dt {
