@@ -4,13 +4,16 @@ import { withDesign } from "storybook-addon-designs";
 import demoData from "@openeuropa/bcl-description-list/data/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--horizontal";
 import descriptionList from "@openeuropa/bcl-description-list/description-list.html.twig";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 const getArgs = () => ({
+  title: "",
+  title_tag: "h2",
   bordered: false,
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   bordered: {
     type: { name: "boolean" },
     description: "Border between description items",

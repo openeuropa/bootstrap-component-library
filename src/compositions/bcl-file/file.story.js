@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { userEvent, within } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data/data.js";
@@ -10,15 +10,27 @@ import demoCardData from "@openeuropa/bcl-file/data/data--card";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
+const getArgs = () => ({
+  title: "",
+  title_tag: "h2",
+});
+
+const getArgTypes = () => ({
+  ...getTitleControls(),
+});
+
+const applyArgs = (data, args) => {
+  correctPaths(data);
+
+  return Object.assign(data, args);
+};
+
 export default {
   title: "Paragraphs/File",
   decorators: [withCode, withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",
-    },
-    controls: {
-      disable: true,
     },
     design: [
       {
@@ -30,9 +42,15 @@ export default {
   },
 };
 
-export const Default = () => file(correctPaths(demoData));
+export const Default = (args) => file(applyArgs(demoData, args));
 
-export const Card = () => file(correctPaths(demoCardData));
+Default.args = getArgs();
+Default.argTypes = getArgTypes();
+
+export const Card = (args) => file(applyArgs(demoCardData, args));
+
+Card.args = getArgs();
+Card.argTypes = getArgTypes();
 
 if (isChromatic() || chromatic) {
   Card.play = async ({ canvasElement }) => {
