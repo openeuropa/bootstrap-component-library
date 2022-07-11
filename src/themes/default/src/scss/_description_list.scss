@@ -1,5 +1,9 @@
 dd {
   margin-bottom: 0;
+
+  > div + div {
+    margin-top: map-get($spacers, 2);
+  }
 }
 
 dd + dd {
