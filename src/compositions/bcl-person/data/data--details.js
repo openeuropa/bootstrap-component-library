@@ -7,7 +7,7 @@ module.exports = {
     content: `<div class="my-3">
       <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
     </div>
-    ${getDummyText(6, false, false, "mb-3")}`,
+    ${getDummyText(6, true, false, "mb-3")}`,
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",
