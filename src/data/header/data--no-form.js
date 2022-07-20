@@ -63,6 +63,7 @@ module.exports = {
             .addClass("text-center"),
         },
       ],
+      attributes: new drupalAttribute().addClass("py-1"),
     },
   },
   navbar: {
