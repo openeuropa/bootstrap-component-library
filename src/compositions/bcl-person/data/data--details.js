@@ -7,7 +7,7 @@ module.exports = {
     content: `<div class="my-3">
       <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
     </div>
-    ${getDummyText(6, false, false, "mb-3")}`,
+    ${getDummyText(6, true, false, "mb-3")}`,
     image: {
       path: "https://picsum.photos/200/200?random=6",
       alt: "alt img",
@@ -105,10 +105,13 @@ module.exports = {
           name: "file-pdf-fill",
           size: "xl",
         },
-        attributes: new drupalAttribute().addClass(["mb-3"]),
+        attributes: new drupalAttribute().addClass(["mb-4-5"]),
       },
       {
-        item_title: "File title",
+        title: "Drupal articles",
+        title_tag: "h3",
+        title_attributes: new drupalAttribute().addClass(["mb-3"]),
+        item_title: "Drupal article 1",
         language: "English",
         meta: "(16.2 MB - PDF)",
         icon_path: "/icons.svg",
@@ -121,6 +124,20 @@ module.exports = {
           size: "xl",
         },
         attributes: new drupalAttribute().addClass(["mb-3"]),
+      },
+      {
+        item_title: "Drupal article 2",
+        language: "English",
+        meta: "(16.2 MB - DOC)",
+        icon_path: "/icons.svg",
+        download: {
+          label: "Download",
+          url: "/example.html",
+        },
+        icon: {
+          name: "file-text-fill",
+          size: "xl",
+        },
       },
     ],
   },

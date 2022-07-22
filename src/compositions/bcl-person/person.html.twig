@@ -18,14 +18,12 @@
 
   {% if files.main_title is not empty %}
     <h2
-      class="mb-4"
+      class="mb-3-5"
     >{{- files.main_title -}}</h2>
   {% endif %}
   {% if files.listing is defined and files.listing is not empty %}
-    <div class="mb-4-5">
     {% for file in files.listing %}
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     {% endfor %}
-    </div>
   {% endif %}
 {% endblock %}
