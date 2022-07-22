@@ -39,7 +39,7 @@
 {# Internal properties #}
 
 {% set _icon = icon|default({}) %}
-{% set _icon_inline = icon_inline|default(true) %}
+{% set _icon_inline = icon_inline ?? true %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
