@@ -2,11 +2,11 @@ module.exports = {
   links: [
     { label: "Home", path: "/example.html" },
     {
-      label: "European Commission",
+      label: "European Union",
       path: "/example.html",
     },
     {
-      label: "About the European Commission",
+      label: "About the European Union",
       path: "/example.html",
     },
     { label: "News" },
