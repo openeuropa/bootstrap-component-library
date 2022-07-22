@@ -65,6 +65,7 @@ exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
 <jest>
   <div
     class="offcanvas offcanvas-bottom"
+    data-bs-backdrop="false"
     id="offcanvasExample"
     tabindex="-1"
   >
@@ -106,11 +107,6 @@ exports[`OE - Offcanvas renders correctly without close button 1`] = `
       >
         An offcanvas title
       </h4>
-      <button
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        type="button"
-      />
     </div>
     <div
       class="offcanvas-body"
@@ -153,15 +149,6 @@ exports[`OE - Offcanvas renders correctly without title and close button 1`] = `
     id="offcanvasExample"
     tabindex="-1"
   >
-    <div
-      class="offcanvas-header"
-    >
-      <button
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        type="button"
-      />
-    </div>
     <div
       class="offcanvas-body"
     >
