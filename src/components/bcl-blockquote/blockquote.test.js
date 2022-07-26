@@ -32,4 +32,12 @@ describe("OE - Blockquote", () => {
       render({ ...demoData, alignment: "center" })
     ).resolves.toMatchSnapshot();
   });
+
+  test(`renders correctly with text aligned right`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, alignment: "right" })
+    ).resolves.toMatchSnapshot();
+  });
 });

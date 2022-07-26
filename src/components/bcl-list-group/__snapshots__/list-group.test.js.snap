@@ -208,3 +208,120 @@ exports[`OE - List group renders correctly with actionable items 1`] = `
   </div>
 </jest>
 `;
+
+exports[`OE - List group renders correctly with flush style 1`] = `
+<jest>
+  <ul
+    class="list-group list-group-flush"
+  >
+    <li
+      class="list-group-item list-group-item-danger"
+    >
+      Label 1
+    </li>
+    <li
+      class="list-group-item list-group-item-secondary"
+    >
+      Label 2
+    </li>
+    <li
+      class="list-group-item list-group-item-primary"
+    >
+      Label 3
+    </li>
+    <li
+      class="list-group-item list-group-item-info"
+    >
+      Label 4
+    </li>
+    <li
+      class="list-group-item"
+    >
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="example-form-input-1"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="example-form-input-1"
+        >
+          Example form input
+        </label>
+      </div>
+    </li>
+    <li
+      class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center"
+    >
+      Label 5
+      <span
+        class="ms-2 badge rounded-pill bg-primary"
+      >
+        10
+      </span>
+    </li>
+  </ul>
+</jest>
+`;
+
+exports[`OE - List group renders correctly with id 1`] = `
+<jest>
+  <ul
+    class="list-group"
+    id="list-group-id"
+  >
+    <li
+      class="list-group-item list-group-item-danger"
+    >
+      Label 1
+    </li>
+    <li
+      class="list-group-item list-group-item-secondary"
+    >
+      Label 2
+    </li>
+    <li
+      class="list-group-item list-group-item-primary"
+    >
+      Label 3
+    </li>
+    <li
+      class="list-group-item list-group-item-info"
+    >
+      Label 4
+    </li>
+    <li
+      class="list-group-item"
+    >
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="example-form-input-1"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="example-form-input-1"
+        >
+          Example form input
+        </label>
+      </div>
+    </li>
+    <li
+      class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center"
+    >
+      Label 5
+      <span
+        class="ms-2 badge rounded-pill bg-primary"
+      >
+        10
+      </span>
+    </li>
+  </ul>
+</jest>
+`;

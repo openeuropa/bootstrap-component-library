@@ -278,3 +278,38 @@ exports[`OE - Button-group vertical renders correctly 1`] = `
   </div>
 </jest>
 `;
+
+exports[`OE - Button-group with aria label renders correctly 1`] = `
+<jest>
+  <div
+    aria-label="changed aria label"
+    class="btn-group btn-group-md"
+    role="group"
+  >
+    <button
+      class="btn btn-danger btn-md"
+      type="button"
+    >
+      I am a button
+    </button>
+    <button
+      class="btn btn-primary btn-md"
+      type="button"
+    >
+      I am a button
+    </button>
+    <button
+      class="btn btn-outline-dark btn-md"
+      type="button"
+    >
+      I am a button
+    </button>
+    <button
+      class="btn btn-warning btn-md"
+      type="button"
+    >
+      I am a button
+    </button>
+  </div>
+</jest>
+`;

@@ -35,6 +35,14 @@ describe("OE - Progress", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with hidden label`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, hidden_label: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly with message`, () => {
     expect.assertions(1);
 

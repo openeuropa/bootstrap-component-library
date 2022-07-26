@@ -319,3 +319,305 @@ exports[`OE - navbar light renders correctly 1`] = `
   </nav>
 </jest>
 `;
+
+exports[`OE - navbar renders correctly with disable collapse 1`] = `
+<jest>
+  <nav
+    class="navbar navbar-expand-lg navbar-light"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/example.html"
+      >
+        <div
+          class="h5 ms-4-5 d-none d-lg-inline-block"
+        >
+          Navbar
+        </div>
+      </a>
+      <ul
+        class="me-auto navbar-nav"
+      >
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link"
+            href="#first"
+          >
+            I'm a link
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            I'm a link 2
+          </a>
+        </li>
+        <li
+          class="nav-item"
+        >
+          <a
+            class="nav-link"
+            href="/example.html"
+          >
+            I'm a link 3
+          </a>
+        </li>
+        <li
+          class="nav-item dropdown"
+        >
+          <a
+            aria-expanded="false"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            id="dropdown-1"
+            role="button"
+          >
+            Dropdown Toggle
+          </a>
+          <ul
+            aria-labelledby="dropdown-1"
+            class="dropdown-menu"
+          >
+            <li>
+              <a
+                class="dropdown-item"
+                href="/example.html"
+              >
+                I'm a link
+              </a>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+              >
+                I'm a button
+              </button>
+            </li>
+            <li>
+              <hr
+                class="dropdown-divider"
+              />
+            </li>
+            <li>
+              <button
+                aria-disabled="true"
+                class="dropdown-item"
+                disabled="true"
+                type="button"
+              >
+                I'm a disabled button
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item active"
+                type="button"
+              >
+                I'm a active button
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form
+        class="d-flex"
+      >
+        <label
+          class="form-label visually-hidden"
+          for="inlineFormInputGroupSearch"
+        >
+          Search
+        </label>
+        <input
+          class="form-control"
+          id="inlineFormInputGroupSearch"
+          placeholder="Search"
+          required="true"
+          type="text"
+        />
+        <div
+          class="ms-2"
+        >
+          <button
+            class="btn btn-light btn-md"
+            type="Search"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+  </nav>
+</jest>
+`;
+
+exports[`OE - navbar renders correctly with expand small 1`] = `
+<jest>
+  <nav
+    class="navbar navbar-expand-sm navbar-light"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/example.html"
+      >
+        <div
+          class="h5 ms-4-5 d-none d-lg-inline-block"
+        >
+          Navbar
+        </div>
+      </a>
+      <button
+        aria-controls="navbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-bs-target="#navbar"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        id="navbar"
+      >
+        <ul
+          class="me-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="#first"
+            >
+              I'm a link
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              I'm a link 2
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              I'm a link 3
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              id="dropdown-1"
+              role="button"
+            >
+              Dropdown Toggle
+            </a>
+            <ul
+              aria-labelledby="dropdown-1"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  I'm a link
+                </a>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                >
+                  I'm a button
+                </button>
+              </li>
+              <li>
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
+                  class="dropdown-item"
+                  disabled="true"
+                  type="button"
+                >
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form
+          class="d-flex"
+        >
+          <label
+            class="form-label visually-hidden"
+            for="inlineFormInputGroupSearch"
+          >
+            Search
+          </label>
+          <input
+            class="form-control"
+            id="inlineFormInputGroupSearch"
+            placeholder="Search"
+            required="true"
+            type="text"
+          />
+          <div
+            class="ms-2"
+          >
+            <button
+              class="btn btn-light btn-md"
+              type="Search"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+</jest>
+`;

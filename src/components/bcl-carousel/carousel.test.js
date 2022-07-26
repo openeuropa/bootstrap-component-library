@@ -82,6 +82,22 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with title", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        title: "Carousel Title",
+        title_tag: "h1",
+        title_link: {
+          path: "/example.html",
+          label: "A title created by the bcl heading template",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with fade and dark variant", () => {
     expect.assertions(1);
 

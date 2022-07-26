@@ -14,4 +14,20 @@ describe("OE - navbar", () => {
       ).resolves.toMatchSnapshot();
     });
   });
+
+  test(`renders correctly with expand small`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, expand: "sm" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with disable collapse`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, disable_collapse: true })
+    ).resolves.toMatchSnapshot();
+  });
 });

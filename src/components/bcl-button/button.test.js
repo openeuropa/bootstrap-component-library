@@ -37,6 +37,14 @@ describe("OE - Button", () => {
     });
   });
 
+  test("with text not wrapping renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, text_nowrap: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("with toggle renders correctly", () => {
     expect.assertions(1);
 
