@@ -811,12 +811,17 @@ exports[`OE - File renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - File renders correctly with title 1`] = `
+exports[`OE - File renders correctly with title and link 1`] = `
 <jest>
   <h6
     class="mb-4 bcl-heading"
   >
-    File test title
+    <a
+      class="standalone"
+      href="/example.html"
+    >
+      File test title
+    </a>
   </h6>
   <div
     class="bcl-file border rounded"

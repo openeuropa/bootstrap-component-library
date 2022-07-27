@@ -11,10 +11,18 @@ describe("OE - Timeline", () => {
     return expect(render(dataDefault)).resolves.toMatchSnapshot();
   });
 
-  test("default renders correctly with title", () => {
+  test("default renders correctly with title and link", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataDefault, title: "Timeline test title", title_tag: "h6" })
+      render({
+        ...dataDefault,
+        title: "Timeline test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+          label: "Link label",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 });

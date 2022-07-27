@@ -16,10 +16,17 @@ describe("OE - File", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
-  test(`renders correctly with title`, () => {
+  test(`renders correctly with title and link`, () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoData, title: "File test title", title_tag: "h6" })
+      render({
+        ...demoData,
+        title: "File test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 });

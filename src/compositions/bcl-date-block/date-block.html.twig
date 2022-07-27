@@ -2,7 +2,6 @@
 
 {#
   Parameters:
-    - "variant" (string) (default: '')
     - "day" (integer) (default: '')
     - "month" (string) (default: '')
     - "date_time" (string) (default: '')
@@ -19,7 +18,6 @@
 {% set _end_day = end_day|default('') %}
 {% set _end_month = end_month|default('') %}
 {% set _end_year = end_year|default('') %}
-{% set _variant = variant|default('') %}
 {% set _css_classes = [
   'bcl-date-block',
   'bg-date',

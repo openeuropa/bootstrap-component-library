@@ -1397,7 +1397,7 @@ exports[`OE - Listing horizontal renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Listing horizontal renders correctly with title 1`] = `
+exports[`OE - Listing horizontal renders correctly with title and link 1`] = `
 <jest>
   <div
     class="bcl-listing bcl-listing--default-1-col"
@@ -1405,7 +1405,12 @@ exports[`OE - Listing horizontal renders correctly with title 1`] = `
     <h6
       class="mb-4 bcl-heading"
     >
-      Listing test title
+      <a
+        class="standalone"
+        href="/example.html"
+      >
+        Link label
+      </a>
     </h6>
     <div
       class="row row-cols-1 g-4"
