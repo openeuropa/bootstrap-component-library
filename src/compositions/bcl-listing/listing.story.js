@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
-import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
+import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col";
 import demoDateData from "@openeuropa/bcl-listing/data/listing--date";
 import demoDefault2ColData from "@openeuropa/bcl-listing/data/listing--default-2-col";
 import demoDefault3ColData from "@openeuropa/bcl-listing/data/listing--default-3-col";

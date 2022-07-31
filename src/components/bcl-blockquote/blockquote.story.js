@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { getTitleControls } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-data-blockquote/data.js";
+import demoData from "@openeuropa/bcl-data-blockquote/data";
 import drupalAttribute from "drupal-attribute";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 

@@ -5,7 +5,7 @@ import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
 
-import demoData from "@openeuropa/bcl-data-dropdown/data.js";
+import demoData from "@openeuropa/bcl-data-dropdown/data";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;

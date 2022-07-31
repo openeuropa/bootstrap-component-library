@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
-import demoData from "@openeuropa/bcl-data-modal/data.js";
+import demoData from "@openeuropa/bcl-data-modal/data";
 import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;

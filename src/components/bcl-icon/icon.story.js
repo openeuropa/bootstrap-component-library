@@ -5,7 +5,7 @@ import {
   getIconNames,
   getIconControls,
 } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-data-icon/data.js";
+import demoData from "@openeuropa/bcl-data-icon/data";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import flagsSprite from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
 import icon from "@openeuropa/bcl-icon/icon.html.twig";

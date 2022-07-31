@@ -3,7 +3,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-data-navigation/data.js";
+import demoData from "@openeuropa/bcl-data-navigation/data";
 import demoTabsData from "@openeuropa/bcl-data-navigation/data--tabs";
 import demoDataCustom from "@openeuropa/bcl-data-navigation/data--custom";
 import navigation from "@openeuropa/bcl-navigation/navigation.html.twig";

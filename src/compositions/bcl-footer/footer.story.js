@@ -6,7 +6,7 @@ import { userEvent, within } from "@storybook/testing-library";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
-import footerData from "@openeuropa/bcl-data-footer/data.js";
+import footerData from "@openeuropa/bcl-data-footer/data";
 import footerDataEU from "@openeuropa/bcl-data-footer/data--eu";
 import footerDataEC from "@openeuropa/bcl-data-footer/data--ec";
 

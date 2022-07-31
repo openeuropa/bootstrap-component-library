@@ -5,7 +5,7 @@ import {
   getVariants,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-data-badge/data.js";
+import demoData from "@openeuropa/bcl-data-badge/data";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
 import drupalAttribute from "drupal-attribute";
 

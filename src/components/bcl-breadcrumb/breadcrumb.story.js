@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import withCode from "@openeuropa/storybook-addon-code";
-import demoData from "@openeuropa/bcl-data-breadcrumb/data.js";
+import demoData from "@openeuropa/bcl-data-breadcrumb/data";
 import breadcrumb from "@openeuropa/bcl-breadcrumb/breadcrumb.html.twig";
 
 const getArgs = (data) => ({

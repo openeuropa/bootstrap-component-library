@@ -2,7 +2,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
-import dataDefault from "@openeuropa/bcl-timeline/data.js";
+import dataDefault from "@openeuropa/bcl-timeline/data";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
 
 const getArgs = (data) => ({

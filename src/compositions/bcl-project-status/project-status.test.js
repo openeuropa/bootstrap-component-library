@@ -2,7 +2,7 @@ import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
 import demoOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import demoPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import demoClosed from "@openeuropa/bcl-project-status/data/data--closed";
-import demoContribs from "@openeuropa/bcl-project-status/data/data--contributions.js";
+import demoContribs from "@openeuropa/bcl-project-status/data/data--contributions";
 
 describe("OE - Project status", () => {
   const template = "@oe-bcl/bcl-project-status/project-status.html.twig";

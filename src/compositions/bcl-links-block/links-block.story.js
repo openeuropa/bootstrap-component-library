@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-links-block/data/data.js";
+import demoData from "@openeuropa/bcl-links-block/data/data";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 const getArgs = (data) => ({

@@ -6,7 +6,7 @@ import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-featured-media/data/data";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
 import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
-import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item.js";
+import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 
 if (isChromatic()) {

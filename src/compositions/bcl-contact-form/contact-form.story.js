@@ -6,7 +6,7 @@ import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import banner from "@openeuropa/bcl-contact-form/data/data--banner";
 
-import form from "@openeuropa/bcl-contact-form/data/data--form.js";
+import form from "@openeuropa/bcl-contact-form/data/data--form";
 import formError from "@openeuropa/bcl-contact-form/data/data--form-error";
 import success from "@openeuropa/bcl-contact-form/data/data--success";
 import error from "@openeuropa/bcl-contact-form/data/data--error";

@@ -1,8 +1,8 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-data-select/data.js";
-import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect.js";
+import demoData from "@openeuropa/bcl-data-select/data";
+import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect";
 import select from "@openeuropa/bcl-select/select.html.twig";
 import drupalAttribute from "drupal-attribute";
 

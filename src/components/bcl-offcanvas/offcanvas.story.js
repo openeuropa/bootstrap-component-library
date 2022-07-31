@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
-import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
+import demoData from "@openeuropa/bcl-data-offcanvas/data";
 import offCanvas from "@openeuropa/bcl-offcanvas/offcanvas.html.twig";
 import drupalAttribute from "drupal-attribute";
 
