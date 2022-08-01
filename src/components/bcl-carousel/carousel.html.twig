@@ -6,7 +6,6 @@
   - title_link: (link object) (default: {})
   - title_attributes: (drupal attrs)
   - autoplay (boolean) (default: true)
-  - autoinit (boolean) (default: true)
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
   - items (array of objects) format: [
@@ -33,7 +32,6 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _id = id|default('') %}
-{% set _autoinit = autoinit ?? true %}
 {% set _autoplay = autoplay ?? true %}
 {% set _dark = dark|default(false) %}
 {% set _active_item = active_item|default(1) %}
@@ -63,7 +61,7 @@
   {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
-{% if _autoinit %}
+{% if _autoplay %}
   {% set attributes = attributes.setAttribute('data-bs-ride', 'carousel') %}
 {% endif %}
 
@@ -73,10 +71,6 @@
 
 {% if _rounded_indicators %}
   {% set attributes = attributes.addClass('rounded-indicators') %}
-{% endif %}
-
-{% if not _autoplay %}
-  {% set attributes = attributes.setAttribute('data-bs-interval', 'false') %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}

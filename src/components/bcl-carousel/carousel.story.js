@@ -21,7 +21,6 @@ const getArgs = (data) => ({
   title: "",
   title_tag: "h2",
   items: data.items,
-  autoinit: true,
   autoplay: true,
   disable_touch: false,
   rounded_indicators: false,
@@ -41,17 +40,6 @@ const getArgTypes = () => ({
     table: {
       type: { summary: "array of objects" },
       category: "Content",
-    },
-  },
-  autoinit: {
-    name: "initialize the carousel",
-    type: { name: "boolean" },
-    description:
-      "If set to false the carousel need to be instantiated via javascript.",
-    table: {
-      type: { summary: "boolean" },
-      defaultValue: { summary: "true" },
-      category: "Behaviour",
     },
   },
   autoplay: {
