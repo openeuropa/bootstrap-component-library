@@ -4,7 +4,7 @@ import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
-import dataDefault from "@openeuropa/bcl-content-banner/data/data";
+import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import dataDate from "@openeuropa/bcl-date-block/data/data";
 import dataLinks from "@openeuropa/bcl-content-banner/data/data--links";
 import dataActionButton from "@openeuropa/bcl-content-banner/data/data--action-button";

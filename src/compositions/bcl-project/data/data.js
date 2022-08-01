@@ -10,7 +10,7 @@ import {
   pageTitleBanner,
   share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
-import dataGallery from "@openeuropa/bcl-gallery/data/data.js";
+import dataGallery from "@openeuropa/bcl-gallery/data/data";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import dataPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import dataClosed from "@openeuropa/bcl-project-status/data/data--closed";

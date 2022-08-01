@@ -5,11 +5,10 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin, typeCheckConfig } from '@openeuropa/bcl-bootstrap/js/src/util/index'
+import { defineJQueryPlugin } from '@openeuropa/bcl-bootstrap/js/src/util/index'
 import EventHandler from '@openeuropa/bcl-bootstrap/js/src/dom/event-handler'
 import BaseComponent from '@openeuropa/bcl-bootstrap/js/src/base-component'
 import SelectorEngine from '@openeuropa/bcl-bootstrap/js/src/dom/selector-engine'
-import Manipulator from '@openeuropa/bcl-bootstrap/js/src/dom/manipulator'
 
 /**
  * ------------------------------------------------------------------------
@@ -18,7 +17,6 @@ import Manipulator from '@openeuropa/bcl-bootstrap/js/src/dom/manipulator'
  */
 
 const Default = {}
-const DefaultType = {}
 
 const NAME = 'gallery'
 const DATA_KEY = 'bs.gallery'
@@ -43,14 +41,13 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
 class Gallery extends BaseComponent {
   constructor(element, config) {
-    super(element)
+    super(element, config)
     this.carousel = SelectorEngine.findOne(CAROUSEL_SELECTOR, this.element)
     this.carouselPager = SelectorEngine.findOne(CAROUSEL_PAGER_SELECTOR, this.element)
     this.carouselStartIndex = element.getAttribute('data-gallery-start')
     this.carouselActiveItem = SelectorEngine.find(CAROUSEL_ITEM_SELECTOR, this.carousel)[this.carouselStartIndex]
     this.carouselPager.textContent = Number(this.carouselStartIndex) + 1
     this.modal = SelectorEngine.findOne(MODAL_SELECTOR, this.element)
-    this.config = this.getConfig(config)
     this.addEventListeners()
     this.carouselLazyLoad(this.carouselActiveItem)
   }
@@ -95,16 +92,6 @@ class Gallery extends BaseComponent {
     }
   }
 
-  getConfig(config) {
-    config = {
-      ...Default,
-      ...Manipulator.getDataAttributes(this.element),
-      ...(typeof config === 'object' ? config : {})
-    }
-    typeCheckConfig(NAME, config, DefaultType)
-    return config
-  }
-
   addEventListeners() {
     EventHandler.on(this.carousel, CAROUSEL_EVENT, event => this.setSlide(event))
     EventHandler.on(this.modal, EVENT_MODAL_HIDE, event => this.stopSlide(event))
@@ -113,19 +100,6 @@ class Gallery extends BaseComponent {
   // Static
   static get Default() {
     return Default
-  }
-
-  static galleryInterface(element, config) {
-    const data = Gallery.getOrCreateInstance(element, config)
-
-    let { _config } = data
-    if (typeof config === 'object') {
-      // eslint-disable-next-line no-unused-vars
-      _config = {
-        ..._config,
-        ...config
-      }
-    }
   }
 
   static jQueryInterface(config) {
@@ -156,7 +130,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, THUMBNAIL_SELECTOR, (event) => {
   const firstSlide = event.target.parentNode.getAttribute('data-bs-slide-to');
   gallery.dataset.galleryStart = firstSlide;
 
-  Gallery.galleryInterface(gallery, Gallery.getInstance(gallery))
+  Gallery.getOrCreateInstance(gallery);
 })
 
 /**
