@@ -61,7 +61,6 @@ module.exports = {
             .setAttribute("data-bs-target", "#loginModal"),
         },
       ],
-      attributes: new drupalAttribute().addClass("py-1"),
     },
   },
   navbar,
