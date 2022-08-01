@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
-import socialMediaData from "@openeuropa/bcl-links-block/data/data--social-media";
+import socialMediaData from "@openeuropa/bcl-links-block/data/data--social-media.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 const getArgs = (data) => ({

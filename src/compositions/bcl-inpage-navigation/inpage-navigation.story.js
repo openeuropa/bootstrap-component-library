@@ -4,7 +4,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 
-import demoData from "@openeuropa/bcl-inpage-navigation/data/data";
+import demoData from "@openeuropa/bcl-inpage-navigation/data/data.js";
 import heading from "@openeuropa/bcl-heading/heading.html.twig";
 import inpage from "@openeuropa/bcl-inpage-navigation/inpage-navigation.html.twig";
 

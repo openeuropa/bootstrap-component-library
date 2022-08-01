@@ -1,12 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-
 import isChromatic from "chromatic/isChromatic";
 import { userEvent, within } from "@storybook/testing-library";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
-import footerData from "@openeuropa/bcl-data-footer/data";
+import footerData from "@openeuropa/bcl-data-footer/data.js";
 import footerDataEU from "@openeuropa/bcl-data-footer/data--eu";
 import footerDataEC from "@openeuropa/bcl-data-footer/data--ec";
 

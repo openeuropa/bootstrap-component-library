@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-featured-media/data/data";
+import demoData from "@openeuropa/bcl-featured-media/data/data.js";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
 import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
 import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";

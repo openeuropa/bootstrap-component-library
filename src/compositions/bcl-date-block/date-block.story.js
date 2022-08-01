@@ -1,7 +1,8 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
-import demoData from "@openeuropa/bcl-date-block/data/data";
+import demoData from "@openeuropa/bcl-date-block/data/data.js";
 
 const getArgs = (data) => ({
   day: data.day,
