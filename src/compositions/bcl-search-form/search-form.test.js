@@ -25,4 +25,19 @@ describe("OE - Search Form", () => {
       render({ ...demoData, pill: true })
     ).resolves.toMatchSnapshot();
   });
+
+  test(`with icon renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        icon: {
+          name: "mouse",
+          transformation: "rotate-90",
+          path: "/icons.svg",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
 });

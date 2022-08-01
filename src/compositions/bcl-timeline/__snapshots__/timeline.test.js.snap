@@ -520,12 +520,17 @@ exports[`OE - Timeline default renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Timeline default renders correctly with title 1`] = `
+exports[`OE - Timeline default renders correctly with title and link 1`] = `
 <jest>
   <h6
     class="mb-4 bcl-heading"
   >
-    Timeline test title
+    <a
+      class="standalone"
+      href="/example.html"
+    >
+      Link label
+    </a>
   </h6>
   <ol
     class="bcl-timeline"

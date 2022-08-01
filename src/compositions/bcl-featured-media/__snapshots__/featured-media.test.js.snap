@@ -234,6 +234,40 @@ exports[`OE - Featured media renders correctly with image and with title 1`] = `
 </jest>
 `;
 
+exports[`OE - Featured media renders correctly with ratio 1`] = `
+<jest>
+  <figure
+    class="rounded overflow-hidden"
+  >
+    <video
+      class="w-100 d-block"
+      controls=""
+      poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    >
+      <source
+        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+        type="video/mp4"
+      />
+      <source
+        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+        type="video/webm"
+      />
+      <track
+        kind="captions"
+        label="English"
+        src="example.vtt"
+        srclang=""
+      />
+    </video>
+    <figcaption
+      class="bg-lighter p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
+</jest>
+`;
+
 exports[`OE - Featured media renders correctly with video 1`] = `
 <jest>
   <figure
