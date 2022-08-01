@@ -1,6 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-
 import isChromatic from "chromatic/isChromatic";
 import { userEvent, within } from "@storybook/testing-library";
 import { correctPaths } from "@openeuropa/bcl-story-utils";

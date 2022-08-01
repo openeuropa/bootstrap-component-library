@@ -35,14 +35,6 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly when not initialized", () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, autoinit: false })
-    ).resolves.toMatchSnapshot();
-  });
-
   test("renders correctly without autoplay", () => {
     expect.assertions(1);
 

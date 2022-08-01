@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
+
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "@openeuropa/bcl-textarea/textarea.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data) => ({
   label: data.label,
