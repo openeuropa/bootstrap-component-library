@@ -37,4 +37,12 @@ describe("OE - Button-group", () => {
 
     return expect(render(toolbarData)).resolves.toMatchSnapshot();
   });
+
+  test(`with aria label renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, aria_label: "changed aria label" }, true)
+    ).resolves.toMatchSnapshot();
+  });
 });

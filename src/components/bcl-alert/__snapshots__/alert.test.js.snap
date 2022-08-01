@@ -190,6 +190,44 @@ exports[`OE - Alert primary renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Alert renders correctly with icon changed 1`] = `
+<jest>
+  <div
+    class="alert alert-primary d-flex align-items-center alert-dismissible fade show text-dark"
+    role="alert"
+  >
+    <svg
+      class="flex-shrink-0 me-3 mt-1 align-self-start text-primary bi icon--s"
+    >
+      <use
+        xlink:href="/icons.svg#clock"
+      />
+    </svg>
+    <div
+      class="alert-content flex-grow-1"
+    >
+      <div
+        class="alert-heading h4"
+      >
+        Hey there!
+      </div>
+      This is an alert — 
+      <strong>
+        check it out!
+      </strong>
+      <hr />
+      Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+    </div>
+    <button
+      aria-label="Close"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      type="button"
+    />
+  </div>
+</jest>
+`;
+
 exports[`OE - Alert renders correctly without animation for the close button 1`] = `
 <jest>
   <div

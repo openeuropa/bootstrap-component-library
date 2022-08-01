@@ -24,7 +24,15 @@ describe("OE - Accordion", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, title: "An accordion title" })
+      render({
+        ...demoData,
+        title: "An accordion title",
+        title_tag: "h4",
+        title_link: {
+          path: "/example.html",
+          label: "A title created by the bcl heading template",
+        },
+      })
     ).resolves.toMatchSnapshot();
   });
 

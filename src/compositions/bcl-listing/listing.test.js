@@ -55,13 +55,17 @@ describe("OE - Listing", () => {
     return expect(render(demoDateData)).resolves.toMatchSnapshot();
   });
 
-  test("horizontal renders correctly with title", () => {
+  test("horizontal renders correctly with title and link", () => {
     expect.assertions(1);
     return expect(
       render({
         ...demoDefaultData,
         title: "Listing test title",
         title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+          label: "Link label",
+        },
       })
     ).resolves.toMatchSnapshot();
   });

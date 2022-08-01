@@ -37,4 +37,27 @@ describe("OE - Content banner", () => {
       render({ ...demoData, ...demoLinksData })
     ).resolves.toMatchSnapshot();
   });
+
+  test("with white background renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, background: "white" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with title and link", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        title: "Page banner test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
 });

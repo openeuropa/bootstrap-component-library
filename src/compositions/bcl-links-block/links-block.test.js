@@ -32,7 +32,7 @@ describe("OE - Links block", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with horizontal and with title", () => {
+  test("renders correctly with horizontal and with title and link", () => {
     expect.assertions(1);
     return expect(
       render({
@@ -40,11 +40,14 @@ describe("OE - Links block", () => {
         direction: "horizontal",
         title: "Links block test title",
         title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
       })
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with transparent background and with title", () => {
+  test("renders correctly with transparent background and with title and link", () => {
     expect.assertions(1);
     return expect(
       render({
@@ -52,6 +55,9 @@ describe("OE - Links block", () => {
         variant: "transparent",
         title: "Links block test title",
         title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
       })
     ).resolves.toMatchSnapshot();
   });

@@ -12,6 +12,22 @@ describe("OE - modal", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly small", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, size: "sm" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with fullscreen breakpoint", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, fullscreen_responsive: "sm" })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with static backdrop", () => {
     expect.assertions(1);
 

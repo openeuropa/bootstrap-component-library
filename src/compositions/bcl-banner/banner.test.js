@@ -51,6 +51,20 @@ describe("OE - Page banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("default renders correctly with title and link", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        title: "Page banner test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("image text-block renders correctly with title", () => {
     expect.assertions(1);
     return expect(
@@ -62,6 +76,26 @@ describe("OE - Page banner", () => {
     expect.assertions(1);
     return expect(
       render({ ...dataShade, title: "Page banner test title", title_tag: "h6" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly with content classes", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        content_classes: "new-content-class",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly full width", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        full_width: true,
+      })
     ).resolves.toMatchSnapshot();
   });
 });
@@ -115,6 +149,21 @@ describe("OE - Hero banner", () => {
         hero: true,
         title: "Hero banner test title",
         title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly with title and link", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        hero: true,
+        title: "Hero banner test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
       })
     ).resolves.toMatchSnapshot();
   });

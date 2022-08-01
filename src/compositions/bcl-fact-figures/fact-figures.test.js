@@ -59,4 +59,18 @@ describe("OE - Fact and figures", () => {
       render({ ...demoData, variant: "block", title_tag: "h6" })
     ).resolves.toMatchSnapshot();
   });
+
+  test(`renders correctly with hidden icons`, () => {
+    expect.assertions(1);
+    return expect(
+      render({ ...demoData, display_icons: false })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with extra class on columns`, () => {
+    expect.assertions(1);
+    return expect(
+      render({ ...demoData, cols_extra_classes: "new-column-class" })
+    ).resolves.toMatchSnapshot();
+  });
 });

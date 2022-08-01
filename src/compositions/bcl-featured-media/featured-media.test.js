@@ -72,4 +72,14 @@ describe("OE - Featured media", () => {
       })
     ).resolves.toMatchSnapshot();
   });
+
+  test("renders correctly with ratio", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDataVideo,
+        ratio: "21x9",
+      })
+    ).resolves.toMatchSnapshot();
+  });
 });

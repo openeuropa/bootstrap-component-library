@@ -45,4 +45,28 @@ describe("OE - Offcanvas", () => {
 
     return expect(render(withoutBackdrop)).resolves.toMatchSnapshot();
   });
+
+  test(`renders correctly with extra class on close button`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, extra_classes_close: "close-button-extra-class" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with extra class on header`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, extra_classes_header: "header-extra-class" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with extra class on body`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, extra_classes_body: "body-extra-class" })
+    ).resolves.toMatchSnapshot();
+  });
 });

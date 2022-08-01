@@ -31,4 +31,12 @@ describe("OE - Pagination", () => {
       ).resolves.toMatchSnapshot();
     });
   });
+
+  test(`renders correctly as glossary`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, variant: "glossary" })
+    ).resolves.toMatchSnapshot();
+  });
 });

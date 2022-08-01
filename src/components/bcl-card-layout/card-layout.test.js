@@ -17,6 +17,13 @@ describe("OE - Card", () => {
 
     return expect(render(demoDataGrid)).resolves.toMatchSnapshot();
   });
+  test(`group renders correctly with extra col classes`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoDataGroup, cols_extra_classes: "col-class" })
+    ).resolves.toMatchSnapshot();
+  });
   test(`grid renders correctly with 2 per row`, () => {
     expect.assertions(1);
 
