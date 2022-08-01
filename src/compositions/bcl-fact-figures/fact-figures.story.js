@@ -1,6 +1,5 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
-
 import drupalAttribute from "drupal-attribute";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
