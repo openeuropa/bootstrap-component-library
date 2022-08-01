@@ -137,9 +137,6 @@ const getArgTypes = () => ({
 const resetAttrs = (data, args) => {
   data.attributes.removeClass("carousel-fade");
   data.attributes.removeClass("carousel-dark");
-  if (!args.autoinit) {
-    data.attributes.removeAttribute("data-bs-ride");
-  }
   if (!args.disable_touch) {
     data.attributes.removeAttribute("data-bs-touch");
   }
