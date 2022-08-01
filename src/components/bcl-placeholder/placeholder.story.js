@@ -1,7 +1,8 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import demoData from "@openeuropa/bcl-data-placeholder/data";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+
+import demoData from "@openeuropa/bcl-data-placeholder/data.js";
 import placeholder from "@openeuropa/bcl-placeholder/placeholder.html.twig";
 
 const getArgs = (data) => ({

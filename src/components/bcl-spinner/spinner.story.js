@@ -1,8 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import demoData from "@openeuropa/bcl-data-spinner/data";
-import spinner from "@openeuropa/bcl-spinner/spinner.html.twig";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+
+import demoData from "@openeuropa/bcl-data-spinner/data.js";
+import spinner from "@openeuropa/bcl-spinner/spinner.html.twig";
 
 const getArgs = (data) => ({
   size: data.size || "",

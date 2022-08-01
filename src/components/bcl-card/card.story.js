@@ -4,7 +4,7 @@ import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
 
-import demoData from "@openeuropa/bcl-data-card/data";
+import demoData from "@openeuropa/bcl-data-card/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/data--horizontal";
 import card from "@openeuropa/bcl-card/card.html.twig";
 

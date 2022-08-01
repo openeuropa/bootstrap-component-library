@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-data-form-input/data";
-import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-data-form-input/data.js";
+import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
 
 const getArgs = (data, input_type) => {
   const args = {

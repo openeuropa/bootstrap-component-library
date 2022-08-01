@@ -4,7 +4,7 @@ import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
 
-import demoData from "@openeuropa/bcl-data-carousel/data";
+import demoData from "@openeuropa/bcl-data-carousel/data.js";
 import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
 
 if (isChromatic()) {

@@ -10,7 +10,7 @@ import {
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
-import demoData from "@openeuropa/bcl-data-link/data";
+import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
 import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 import link from "@openeuropa/bcl-link/link.html.twig";
