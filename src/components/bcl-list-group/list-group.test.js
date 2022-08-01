@@ -14,14 +14,6 @@ describe("OE - List group", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
-  test(`renders correctly numbered`, () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...orderedData, type: "ordered" })
-    ).resolves.toMatchSnapshot();
-  });
-
   test(`renders correctly horizontal`, () => {
     expect.assertions(1);
 
@@ -30,11 +22,31 @@ describe("OE - List group", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test(`renders correctly with actionable items`, () => {
+  test(`renders correctly with flush style`, () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...actionableData, type: "actionable" })
+      render({ ...demoData, flush: true })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with id`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, id: "list-group-id" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly numbered`, () => {
+    expect.assertions(1);
+
+    return expect(render(orderedData)).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with actionable items`, () => {
+    expect.assertions(1);
+
+    return expect(render(actionableData)).resolves.toMatchSnapshot();
   });
 });

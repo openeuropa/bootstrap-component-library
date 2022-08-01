@@ -37,6 +37,14 @@ describe("OE - badge", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with title", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, url: "http://example.com", title: "new title" })
+    ).resolves.toMatchSnapshot();
+  });
+
   backgrounds.forEach((background) => {
     test(`${background} renders correctly`, () => {
       expect.assertions(1);

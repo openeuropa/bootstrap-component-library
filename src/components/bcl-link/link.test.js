@@ -23,6 +23,22 @@ describe("OE - Link", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`with id renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, id: "link-id" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`disabled renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, disabled: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   variants.forEach((variant) => {
     test(`${variant} renders correctly`, () => {
       expect.assertions(1);
@@ -45,7 +61,7 @@ describe("OE - Link", () => {
     return expect(render(tooltipDemoData)).resolves.toMatchSnapshot();
   });
 
-  test("with icon renders correctly", () => {
+  test("with icon renders and without icon spacers correctly", () => {
     expect.assertions(1);
 
     return expect(
@@ -57,6 +73,7 @@ describe("OE - Link", () => {
             transformation: "rotate-90",
             path: "/icons.svg",
           },
+          remove_icon_spacers: true,
         },
         true
       )

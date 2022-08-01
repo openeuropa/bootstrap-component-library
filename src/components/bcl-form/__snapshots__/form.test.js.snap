@@ -429,6 +429,122 @@ exports[`OE - Form renders correctly when disabled 1`] = `
 </jest>
 `;
 
+exports[`OE - Form renders correctly with title 1`] = `
+<jest>
+  <h1
+    class="mb-4 bcl-heading"
+  >
+    <a
+      class="standalone"
+      href="/example.html"
+    >
+      A title created by the bcl heading template
+    </a>
+  </h1>
+  <form
+    class="needs-validation"
+    novalidate="true"
+    onsubmit="return false;"
+  >
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="exampleInputEmail1"
+      >
+        Email address *
+      </label>
+      <input
+        aria-describedby="emailHelp"
+        class="form-control"
+        id="exampleInputEmail1"
+        required="true"
+        type="email"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide an email.
+      </div>
+      <div
+        class="valid-feedback"
+      >
+        Valid feedback regarding email.
+      </div>
+      <div
+        class="form-text"
+        id="emailHelp"
+      >
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="exampleInputPassword1"
+      >
+        Password *
+      </label>
+      <input
+        class="form-control"
+        id="exampleInputPassword1"
+        required="true"
+        type="password"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please provide a password.
+      </div>
+      <div
+        class="valid-feedback"
+      >
+        Valid feedback regarding password.
+      </div>
+    </div>
+    <div
+      class="mb-3"
+    >
+      <div
+        class="form-check"
+      >
+        <input
+          class="form-check-input"
+          id="exampleInputCheck1"
+          required="true"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="exampleInputCheck1"
+        >
+          Check me out *
+        </label>
+        <div
+          class="invalid-feedback"
+        >
+          Please check the required checkbox.
+        </div>
+        <div
+          class="valid-feedback"
+        >
+          Valid feedback regarding check.
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary btn-md"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</jest>
+`;
+
 exports[`OE - Form using a grid renders correctly 1`] = `
 <jest>
   <form

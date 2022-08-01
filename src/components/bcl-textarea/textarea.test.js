@@ -40,7 +40,11 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, invalid: true })
+      render({
+        ...demoData,
+        invalid: true,
+        invalid_feedback: "New invalid feedback",
+      })
     ).resolves.toMatchSnapshot();
   });
 
@@ -48,7 +52,7 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, valid: true })
+      render({ ...demoData, valid: true, valid_feedback: "New valid feedback" })
     ).resolves.toMatchSnapshot();
   });
 

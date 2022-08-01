@@ -28,6 +28,17 @@ describe("OE - Alert", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with icon changed`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        icon_name: "clock",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   variants.forEach((variant) => {
     test(`${variant} renders correctly`, () => {
       expect.assertions(1);

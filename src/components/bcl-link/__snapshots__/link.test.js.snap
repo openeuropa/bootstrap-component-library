@@ -36,6 +36,19 @@ exports[`OE - Link dark renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Link disabled renders correctly 1`] = `
+<jest>
+  <a
+    aria-disabled="true"
+    class="disabled"
+    href="/example.html"
+    tabindex="-1"
+  >
+    A simple link!
+  </a>
+</jest>
+`;
+
 exports[`OE - Link info renders correctly 1`] = `
 <jest>
   <a
@@ -112,19 +125,30 @@ exports[`OE - Link warning renders correctly 1`] = `
 </jest>
 `;
 
-exports[`OE - Link with icon renders correctly 1`] = `
+exports[`OE - Link with icon renders and without icon spacers correctly 1`] = `
 <jest>
   <a
     href="/example.html"
   >
     A simple link!
     <svg
-      class="ms-2-5 bi icon--s icon--rotate-90"
+      class="bi icon--s icon--rotate-90"
     >
       <use
         xlink:href="/icons.svg#mouse"
       />
     </svg>
+  </a>
+</jest>
+`;
+
+exports[`OE - Link with id renders correctly 1`] = `
+<jest>
+  <a
+    href="/example.html"
+    id="link-id"
+  >
+    A simple link!
   </a>
 </jest>
 `;

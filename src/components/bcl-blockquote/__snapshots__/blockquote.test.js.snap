@@ -88,3 +88,29 @@ exports[`OE - Blockquote renders correctly with text aligned center 1`] = `
   </figure>
 </jest>
 `;
+
+exports[`OE - Blockquote renders correctly with text aligned right 1`] = `
+<jest>
+  <figure
+    class="text-right bg-lighter p-2 px-2-5 border-4 border-secondary border-start"
+  >
+    <blockquote
+      class="blockquote mb-2"
+    >
+      <p>
+        A well-known quote, contained in a blockquote element.
+      </p>
+    </blockquote>
+    <figcaption
+      class="blockquote-footer m-0"
+    >
+      Someone famous in    
+      <cite
+        title="Source title"
+      >
+        Source title
+      </cite>
+    </figcaption>
+  </figure>
+</jest>
+`;

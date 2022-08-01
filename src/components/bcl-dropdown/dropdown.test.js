@@ -34,6 +34,14 @@ describe("OE - dropdown", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly without wrapper", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, remove_wrapper: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with alignment end", () => {
     expect.assertions(1);
 
