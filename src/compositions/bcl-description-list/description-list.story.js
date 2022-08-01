@@ -1,10 +1,10 @@
 import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-description-list/data/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--horizontal";
 import descriptionList from "@openeuropa/bcl-description-list/description-list.html.twig";
-import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 const getArgs = () => ({
   title: "",

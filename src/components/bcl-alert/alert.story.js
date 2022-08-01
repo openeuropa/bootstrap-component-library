@@ -1,14 +1,14 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-
-import demoData from "@openeuropa/bcl-data-alert/data.js";
-import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import {
   getVariants,
   getIconNames,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-data-alert/data.js";
+import alert from "@openeuropa/bcl-alert/alert.html.twig";
 
 const getArgs = (data) => ({
   variant: data.variant || "primary",
