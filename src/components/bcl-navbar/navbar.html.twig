@@ -78,17 +78,17 @@
 
   {% if not _disable_collapse %}
     <button
-      class='navbar-toggler'
-      type='button'
-      data-bs-toggle='collapse'
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
       data-bs-target='#{{ _collapse_id }}'
       aria-controls='{{ _collapse_id }}'
-      aria-expanded='false'
-      aria-label='Toggle navigation'
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-      <span class='navbar-toggler-icon'></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class='collapse navbar-collapse' id='{{ _collapse_id }}'>
+    <div class="collapse navbar-collapse" id='{{ _collapse_id }}'>
   {% endif %}
   {% block navigation %}
     {% if _navigation is not empty %}

@@ -1,5 +1,5 @@
 module.exports = {
-  variant: "eu",
+  variant: "ec",
   logo: {
     path: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
     alt: "logo",
