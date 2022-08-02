@@ -1,9 +1,16 @@
-import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+  getVariants,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import demoData from "@openeuropa/bcl-data-alert/data";
 
 const template = "@oe-bcl/bcl-alert/alert.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
 const variants = getVariants();
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Alert", () => {
   test(`renders correctly without close button`, () => {
@@ -50,5 +57,11 @@ describe("OE - Alert", () => {
         })
       ).resolves.toMatchSnapshot();
     });
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData))
+    ).toHaveNoViolations();
   });
 });
