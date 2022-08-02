@@ -3,9 +3,10 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
+    responsiveness: "lg",
     with_body_scroll: true,
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),

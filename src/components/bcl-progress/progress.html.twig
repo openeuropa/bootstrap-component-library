@@ -33,10 +33,7 @@
   {% set _classes = _classes ~ ' progress-bar-animated' %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes ~ ' bg-' ~ _variant %}
-{% endif %}
-{% if _variant == 'light' %}
-  {% set _classes = _classes ~ ' text-dark' %}
+  {% set _classes = _classes ~ ' text-bg-' ~ _variant %}
 {% endif %}
 
 {% if attributes is empty %}

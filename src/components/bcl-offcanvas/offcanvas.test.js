@@ -11,6 +11,14 @@ describe("OE - Offcanvas", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with responsive behaviour`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, responsiveness: "lg" })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly without title`, () => {
     expect.assertions(1);
     const noTitle = { ...demoData, title: "" };
