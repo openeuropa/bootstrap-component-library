@@ -1,7 +1,11 @@
 {% extends "@oe-bcl/bcl-offcanvas/offcanvas.html.twig" %}
 
 {% set responsiveness = 'lg' %}
-{% set extra_classes_header = extra_classes_header ~ ' d-lg-block' %}
+{% if extra_classes_header is empty %}
+  {% set extra_classes_header = 'd-lg-block' %}
+{% else %}
+  {% set extra_classes_header = extra_classes_header ~ ' d-lg-block' %}
+{% endif %}
 
 {% block body %}
   {% if search_form.attributes is empty %}
