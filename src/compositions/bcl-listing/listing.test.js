@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoDateData from "@openeuropa/bcl-listing/data/listing--date";
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col";
@@ -12,10 +16,18 @@ const template = "@oe-bcl/bcl-listing/listing.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params, true);
 
+expect.extend(toHaveNoViolations);
+
 describe("OE - Listing", () => {
   test("horizontal renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoDefaultData)).resolves.toMatchSnapshot();
+  });
+
+  test(`horizontal passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoDefaultData, true))
+    ).toHaveNoViolations();
   });
 
   test("alignment classes render correctly", () => {
@@ -35,9 +47,21 @@ describe("OE - Listing", () => {
     return expect(render(demoDefault3ColData)).resolves.toMatchSnapshot();
   });
 
+  test(`default passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoDefault3ColData, true))
+    ).toHaveNoViolations();
+  });
+
   test("with highlight listing item renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoHighlightData)).resolves.toMatchSnapshot();
+  });
+
+  test(`highlight passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoHighlightData, true))
+    ).toHaveNoViolations();
   });
 
   test("with highlight listing item in 2 columns renders correctly", () => {

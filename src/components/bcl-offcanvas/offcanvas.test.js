@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-offcanvas/data";
 
 const template = "@oe-bcl/bcl-offcanvas/offcanvas.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Offcanvas", () => {
   test(`renders correctly`, () => {
@@ -68,5 +75,11 @@ describe("OE - Offcanvas", () => {
     return expect(
       render({ ...demoData, extra_classes_body: "body-extra-class" })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

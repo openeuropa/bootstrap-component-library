@@ -7,6 +7,7 @@ module.exports = {
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "pb-2-5 p-lg-0",
+    close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),

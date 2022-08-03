@@ -1,10 +1,16 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-content-banner/data/data";
 import demoLinksData from "@openeuropa/bcl-content-banner/data/data--links";
 
 const template = "@oe-bcl/bcl-content-banner/content-banner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Content banner", () => {
   test("renders correctly", () => {
@@ -59,5 +65,11 @@ describe("OE - Content banner", () => {
         },
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoLinksData, true))
+    ).toHaveNoViolations();
   });
 });
