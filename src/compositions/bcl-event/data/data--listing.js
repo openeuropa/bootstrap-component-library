@@ -7,7 +7,6 @@ module.exports = {
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
-    responsiveness: "lg",
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),
     search_form: {

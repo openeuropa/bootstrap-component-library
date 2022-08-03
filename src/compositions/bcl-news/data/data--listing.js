@@ -6,7 +6,6 @@ module.exports = {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
-    responsiveness: "lg",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
     title: "Filter options",
