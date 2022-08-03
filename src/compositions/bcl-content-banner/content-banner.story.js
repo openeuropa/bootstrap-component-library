@@ -7,11 +7,9 @@ import drupalAttribute from "drupal-attribute";
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import dataDate from "@openeuropa/bcl-date-block/data/data";
 import dataLinks from "@openeuropa/bcl-content-banner/data/data--links";
-import dataActionButton from "@openeuropa/bcl-content-banner/data/data--action-button";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;
-const button = { ...dataActionButton.action_button };
 const links = [...dataLinks.links];
 const badges = [...dataDefault.badges];
 const image = { ...dataDefault.image };
@@ -21,7 +19,6 @@ const getArgs = () => ({
   image_size: "md",
   date: false,
   badges: true,
-  action_button: false,
   links: false,
 });
 
@@ -33,15 +30,6 @@ const getArgTypes = () => ({
     table: {
       type: { summary: "string" },
       defaultValue: { summary: "white" },
-    },
-  },
-  action_button: {
-    name: "action button",
-    type: { name: "boolean" },
-    description: "Toggle button",
-    table: {
-      type: { summary: "object" },
-      defaultValue: { summary: "{}" },
     },
   },
   links: {
@@ -90,11 +78,6 @@ const applyArgs = (data, args) => {
   } else {
     data.image = image;
     delete data.date;
-  }
-  if (args.action_button) {
-    data.action_button = button;
-  } else {
-    delete data.action_button;
   }
   if (args.links) {
     data.links = links;
