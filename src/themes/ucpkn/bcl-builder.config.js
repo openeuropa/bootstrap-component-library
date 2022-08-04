@@ -139,12 +139,12 @@ module.exports = {
     {
       from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/ec"),
-      options: { up: 6 },
+      options: { up: 7 },
     },
     {
       from: [`${nodeModules}/@ecl/resources-eu-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/eu"),
-      options: { up: 6 },
+      options: { up: 7 },
     },
     {
       from: [
