@@ -67,6 +67,10 @@
 
 {% set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
 
+{% if _image is not empty %}
+  {% set attributes = attributes.addClass(["bcl-featured-image", "d-inline-flex", "flex-wrap"]) %}
+{% endif %}
+
 {% if _with_text %}
 <div class="{{ _wrapper_classes }}">
   <div class="row">
