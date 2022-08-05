@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import dataDefault from "@openeuropa/bcl-gallery/data/data";
 
 const template = "@oe-bcl/bcl-gallery/gallery.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Gallery", () => {
   test("default renders correctly", () => {
@@ -30,5 +37,11 @@ describe("OE - Gallery", () => {
         },
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+    ).toHaveNoViolations();
   });
 });

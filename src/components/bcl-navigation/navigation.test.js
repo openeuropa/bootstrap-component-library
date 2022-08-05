@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-data-navigation/data";
 import demoTabsData from "@openeuropa/bcl-data-navigation/data--tabs";
@@ -6,6 +10,8 @@ import demoCustom from "@openeuropa/bcl-data-navigation/data--custom";
 
 const template = "@oe-bcl/bcl-navigation/navigation.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - navigation", () => {
   test("renders correctly", () => {
@@ -63,5 +69,11 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(render(demoCustom)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData))
+    ).toHaveNoViolations();
   });
 });

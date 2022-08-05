@@ -1,4 +1,9 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import banner from "@openeuropa/bcl-contact-form/data/data--banner";
@@ -7,6 +12,8 @@ import form from "@openeuropa/bcl-contact-form/data/data--form";
 import formError from "@openeuropa/bcl-contact-form/data/data--form-error";
 import success from "@openeuropa/bcl-contact-form/data/data--success";
 import error from "@openeuropa/bcl-contact-form/data/data--error";
+
+expect.extend(toHaveNoViolations);
 
 const baseData = {
   content_type: "contact-form",
@@ -56,5 +63,11 @@ describe("OE - Contact-form", () => {
     expect.assertions(1);
 
     return expect(render(dataSuccess)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataDefault))
+    ).toHaveNoViolations();
   });
 });

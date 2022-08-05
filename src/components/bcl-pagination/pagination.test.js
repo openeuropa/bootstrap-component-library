@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-data-pagination/data";
 
@@ -6,6 +10,8 @@ const template = "@oe-bcl/bcl-pagination/pagination.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const sizes = ["sm", "lg"];
 const alignments = ["end", "center"];
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Pagination", () => {
   test(`renders correctly`, () => {
@@ -38,5 +44,11 @@ describe("OE - Pagination", () => {
     return expect(
       render({ ...demoData, variant: "glossary" })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData))
+    ).toHaveNoViolations();
   });
 });

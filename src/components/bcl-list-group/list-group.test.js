@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-data-list-group/data";
 import actionableData from "@openeuropa/bcl-data-list-group/data--actionable";
@@ -6,6 +10,8 @@ import orderedData from "@openeuropa/bcl-data-list-group/data--ordered";
 
 const template = "@oe-bcl/bcl-list-group/list-group.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - List group", () => {
   test(`renders correctly`, () => {
@@ -48,5 +54,11 @@ describe("OE - List group", () => {
     expect.assertions(1);
 
     return expect(render(actionableData)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

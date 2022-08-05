@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import dataDefault from "@openeuropa/bcl-banner/data/data";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
@@ -7,6 +11,8 @@ import dataShade from "@openeuropa/bcl-banner/data/data--shade";
 
 const template = "@oe-bcl/bcl-banner/banner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Page banner", () => {
   test("default renders correctly", () => {
@@ -97,6 +103,12 @@ describe("OE - Page banner", () => {
         full_width: true,
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+    ).toHaveNoViolations();
   });
 });
 
@@ -190,5 +202,13 @@ describe("OE - Hero banner", () => {
         title_tag: "h6",
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(
+        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true)
+      )
+    ).toHaveNoViolations();
   });
 });

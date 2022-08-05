@@ -16,6 +16,17 @@ const renderTwigFileAsNode = (file, options, reset) =>
     }
   });
 
+const renderTwigFileAsHtml = (file, options, main) => {
+  let html = twing.render(file, options);
+  if (main) {
+    const landmark = document.createElement("main");
+    landmark.innerHTML = html.trim();
+    html = landmark;
+  }
+
+  return html;
+};
+
 const getVariants = (outline, add) => {
   let variants = [
     "primary",
@@ -39,5 +50,6 @@ const getVariants = (outline, add) => {
 
 module.exports = {
   renderTwigFileAsNode,
+  renderTwigFileAsHtml,
   getVariants,
 };
