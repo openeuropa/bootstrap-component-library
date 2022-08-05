@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-carousel/data";
 
 const template = "@oe-bcl/bcl-carousel/carousel.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - carousel", () => {
   test("renders correctly", () => {
@@ -113,5 +120,11 @@ describe("OE - carousel", () => {
     return expect(
       render({ ...demoData, items: withIntervals })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-navbar/data";
 
 const template = "@oe-bcl/bcl-navbar/navbar.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - navbar", () => {
   ["light", "dark"].forEach((color_set) => {
@@ -29,5 +36,11 @@ describe("OE - navbar", () => {
     return expect(
       render({ ...demoData, disable_collapse: true })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData))
+    ).toHaveNoViolations();
   });
 });

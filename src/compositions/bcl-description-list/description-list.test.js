@@ -1,10 +1,17 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-description-list/data/data";
 import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--horizontal";
 
 const template = "@oe-bcl/bcl-description-list/description-list.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Description List", () => {
   test(`renders correctly`, () => {
@@ -15,6 +22,18 @@ describe("OE - Description List", () => {
   test(`horizontal renders correctly`, () => {
     expect.assertions(1);
     return expect(render(demoDataHorizontal)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
+  });
+
+  test(`horizontal passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoDataHorizontal, true))
+    ).toHaveNoViolations();
   });
 });
 

@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-progress/data";
 
 const template = "@oe-bcl/bcl-progress/progress.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Progress", () => {
   test(`renders correctly`, () => {
@@ -60,5 +67,11 @@ describe("OE - Progress", () => {
     return expect(
       render({ ...demoData, bar_label: "Loading..." })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

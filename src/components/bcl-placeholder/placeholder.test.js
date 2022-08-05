@@ -1,4 +1,10 @@
-import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  getVariants,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-placeholder/data";
 
 const template = "@oe-bcl/bcl-placeholder/placeholder.html.twig";
@@ -6,6 +12,8 @@ const render = (params) => renderTwigFileAsNode(template, params);
 const variants = getVariants(false, ["link"]);
 const sizes = ["lg", "xs", "sm"];
 const animations = ["glow", "wave"];
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Placeholder", () => {
   test("renders correctly", () => {
@@ -40,5 +48,11 @@ describe("OE - Placeholder", () => {
         render({ ...demoData, variant })
       ).resolves.toMatchSnapshot();
     });
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData))
+    ).toHaveNoViolations();
   });
 });
