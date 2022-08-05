@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-table/data";
 
 const template = "@oe-bcl/bcl-table/table.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Table", () => {
   test(`renders correctly`, () => {
@@ -73,5 +80,11 @@ describe("OE - Table", () => {
     return expect(
       render({ ...demoData, caption_top: true })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

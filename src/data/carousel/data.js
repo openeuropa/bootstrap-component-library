@@ -38,13 +38,14 @@ module.exports = {
       image: `<img
                 src="https://picsum.photos/800/400?random=3"
                 class="d-block w-100"
+                alt="Third slide"
               />`,
     },
     {
       classes: "item_extra_class",
       image: `<img
                 src="https://picsum.photos/800/400?random=4"
-                alt="First slide"
+                alt="Fourth slide"
                 class="d-block w-100"
               />`,
       link: {

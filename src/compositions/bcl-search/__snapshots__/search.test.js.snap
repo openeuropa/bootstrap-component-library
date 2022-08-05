@@ -727,13 +727,13 @@ exports[`OE - Search renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="bcl-offcanvas offcanvas-start offcanvas"
+            class="offcanvas-start offcanvas-lg"
             data-bs-scroll="true"
             id="bcl-offcanvas"
             tabindex="-1"
           >
             <div
-              class="offcanvas-header p-lg-0"
+              class="offcanvas-header p-lg-0 d-lg-block"
             >
               <h2
                 class="mb-lg-4 offcanvas-title bcl-heading"
@@ -741,6 +741,7 @@ exports[`OE - Search renders correctly 1`] = `
                 Filter options
               </h2>
               <button
+                aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
                 type="button"
@@ -750,6 +751,7 @@ exports[`OE - Search renders correctly 1`] = `
               class="offcanvas-body p-lg-0"
             >
               <form
+                class="w-100"
                 novalidate="true"
                 onsubmit="return false;"
               >

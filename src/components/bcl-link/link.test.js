@@ -1,4 +1,9 @@
-import { renderTwigFileAsNode, getVariants } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  getVariants,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-data-link/data";
 import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
@@ -7,6 +12,8 @@ import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 const template = "@oe-bcl/bcl-link/link.html.twig";
 const render = (params, reset) => renderTwigFileAsNode(template, params, reset);
 const variants = getVariants();
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Link", () => {
   test(`renders correctly`, () => {
@@ -78,5 +85,11 @@ describe("OE - Link", () => {
         true
       )
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

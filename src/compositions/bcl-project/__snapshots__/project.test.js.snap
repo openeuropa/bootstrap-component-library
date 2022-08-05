@@ -544,7 +544,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="25"
-                    class="progress-bar bg-info"
+                    class="progress-bar text-bg-info"
                     role="progressbar"
                     style="width: 25%"
                   />
@@ -2340,13 +2340,13 @@ exports[`OE - Project listing renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="bcl-offcanvas offcanvas-start offcanvas"
+            class="offcanvas-start offcanvas-lg"
             data-bs-scroll="true"
             id="bcl-offcanvas"
             tabindex="-1"
           >
             <div
-              class="offcanvas-header p-lg-0"
+              class="offcanvas-header p-lg-0 d-lg-block"
             >
               <h2
                 class="mb-lg-4 offcanvas-title bcl-heading"
@@ -2354,6 +2354,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                 Filter options
               </h2>
               <button
+                aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
                 type="button"
@@ -2363,6 +2364,7 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="offcanvas-body p-lg-0"
             >
               <form
+                class="w-100"
                 novalidate="true"
                 onsubmit="return false;"
               >
@@ -4344,7 +4346,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="100"
-                    class="progress-bar bg-dark"
+                    class="progress-bar text-bg-dark"
                     role="progressbar"
                     style="width: 100%"
                   />
@@ -4976,9 +4978,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             First slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5009,9 +5013,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5053,9 +5059,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5086,9 +5094,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5157,9 +5167,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5190,9 +5202,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5223,9 +5237,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5256,9 +5272,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5289,9 +5307,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Last slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5432,9 +5452,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 First slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the first slide.
                               </p>
@@ -5450,9 +5472,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -5476,9 +5500,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -5523,9 +5549,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -5541,9 +5569,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -5559,9 +5589,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -5577,9 +5609,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -5595,9 +5629,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Last slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -6920,7 +6956,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="25"
-                    class="progress-bar bg-info"
+                    class="progress-bar text-bg-info"
                     role="progressbar"
                     style="width: 25%"
                   />
@@ -7552,9 +7588,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             First slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -7585,9 +7623,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -7629,9 +7669,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -7662,9 +7704,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -7733,9 +7777,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -7766,9 +7812,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -7799,9 +7847,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -7832,9 +7882,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -7865,9 +7917,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Last slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -8008,9 +8062,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 First slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the first slide.
                               </p>
@@ -8026,9 +8082,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -8052,9 +8110,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -8099,9 +8159,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -8117,9 +8179,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -8135,9 +8199,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -8153,9 +8219,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -8171,9 +8239,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Last slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -9496,7 +9566,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="progress-bar bg-secondary"
+                    class="progress-bar text-bg-secondary"
                     role="progressbar"
                     style="width: 0%"
                   />
@@ -10128,9 +10198,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             First slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -10161,9 +10233,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -10205,9 +10279,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -10238,9 +10314,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <h5>
+                          <p
+                            class="fs-5"
+                          >
                             Slide label
-                          </h5>
+                          </p>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -10309,9 +10387,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -10342,9 +10422,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -10375,9 +10457,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -10408,9 +10492,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -10441,9 +10527,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <h5>
+                            <p
+                              class="fs-5"
+                            >
                               Last slide label
-                            </h5>
+                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -10584,9 +10672,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 First slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the first slide.
                               </p>
@@ -10602,9 +10692,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -10628,9 +10720,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -10675,9 +10769,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -10693,9 +10789,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -10711,9 +10809,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -10729,9 +10829,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -10747,9 +10849,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <h5>
+                              <p
+                                class="fs-5"
+                              >
                                 Last slide label
-                              </h5>
+                              </p>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
