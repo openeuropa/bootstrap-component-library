@@ -70,7 +70,7 @@
 {% if _image is not empty %}
   {% set attributes = attributes.addClass(["d-inline-flex", "flex-wrap"]) %}
   {% if _content_classes is not empty %}
-    {% set _content_classes = _content_classes ~ ' flex-1 w-figcaption' %}
+    {% set _content_classes = _content_classes ~ ' flex-1 w-min-content' %}
   {% endif %}
 {% endif %}
 
