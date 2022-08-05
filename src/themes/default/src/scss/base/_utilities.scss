@@ -14,6 +14,33 @@ $utilities: map-merge(
             ),
         )
       ),
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                figcaption: min-content,
+              )
+            ),
+        )
+      ),
+    "flex":
+      map-merge(
+        map-get($utilities, "flex"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "flex"), "values"),
+              (
+                1: 1,
+                featured-image: 1 0 100%,
+              )
+            ),
+        )
+      ),
     // Extend rounded-top utility.
     "max-width":
       map-merge(
