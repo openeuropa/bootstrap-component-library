@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
@@ -99,7 +98,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Navigation",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

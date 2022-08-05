@@ -1,10 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
-import demoData from "@openeuropa/bcl-subscription/data/data";
 
+import demoData from "@openeuropa/bcl-subscription/data/data";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;
@@ -88,7 +87,7 @@ const errorState = (story) => {
 
 export default {
   title: "Features/Subscription",
-  decorators: [withCode, withDesign, initScrollspy],
+  decorators: [withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

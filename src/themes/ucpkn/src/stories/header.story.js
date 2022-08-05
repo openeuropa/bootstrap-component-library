@@ -1,4 +1,3 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import headerData from "@openeuropa/bcl-data-header/data--ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
@@ -11,7 +10,7 @@ headerData.project_logo.path = ucpknLogo;
 
 export default {
   title: "Compositions/Header",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     controls: { disable: true },
     layout: "fullscreen",

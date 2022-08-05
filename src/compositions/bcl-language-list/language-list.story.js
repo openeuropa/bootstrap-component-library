@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-language-list/data/data--neutral";
@@ -9,7 +8,7 @@ import language from "@openeuropa/bcl-language-list/language-list.html.twig";
 
 export default {
   title: "Compositions/Language List",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
+
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   banner,
@@ -58,7 +58,7 @@ const EUData = {
 
 export default {
   title: "Features/Multilingual",
-  decorators: [withCode, withDesign, openModal],
+  decorators: [withDesign, openModal],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

@@ -1,6 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 // eslint-disable-next-line import/no-unresolved
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
@@ -58,7 +56,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Header",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     design: [

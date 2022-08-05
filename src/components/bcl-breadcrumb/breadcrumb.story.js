@@ -1,6 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import withCode from "@openeuropa/storybook-addon-code";
 
 import demoData from "@openeuropa/bcl-data-breadcrumb/data.js";
 import breadcrumb from "@openeuropa/bcl-breadcrumb/breadcrumb.html.twig";
@@ -24,7 +23,7 @@ const applyArgs = (data, args) => Object.assign(correctPaths(data), args);
 
 export default {
   title: "Components/Breadcrumb",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

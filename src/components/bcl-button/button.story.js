@@ -1,5 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
+
 import isChromatic from "chromatic/isChromatic";
 import { within, userEvent } from "@storybook/testing-library";
 import {
@@ -233,7 +233,7 @@ const initPopover = (story) => {
 
 export default {
   title: "Components/Button",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
 };
 
 export const Default = (args) => button(applyArgs(demoData, args));

@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 
@@ -85,7 +84,7 @@ const modalButton = (story) => {
 // Stories
 export default {
   title: "Components/Modal",
-  decorators: [withCode, withDesign, modalButton],
+  decorators: [withDesign, modalButton],
   parameters: {
     design: [
       {

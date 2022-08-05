@@ -1,6 +1,5 @@
 import isChromatic from "chromatic/isChromatic";
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
@@ -66,7 +65,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Listings",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

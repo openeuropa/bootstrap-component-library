@@ -1,15 +1,13 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 
 import { demoData, demoListing } from "@openeuropa/bcl-news/data/data";
-
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import news from "@openeuropa/bcl-base-templates/content-type.html.twig";
 
 export default {
   title: "Features/News",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

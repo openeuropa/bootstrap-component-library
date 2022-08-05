@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { userEvent, within } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
@@ -27,7 +26,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/File",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",

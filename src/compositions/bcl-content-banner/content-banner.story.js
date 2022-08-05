@@ -1,4 +1,3 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
@@ -103,7 +102,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Content banner",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     design: [

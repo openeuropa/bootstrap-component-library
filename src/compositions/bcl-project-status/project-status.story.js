@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing.js";
 import dataContribs from "@openeuropa/bcl-project-status/data/data--contributions";
@@ -106,7 +105,7 @@ const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
   title: "Compositions/Project status",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

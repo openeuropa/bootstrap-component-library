@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import { demoListing, demoDetails } from "@openeuropa/bcl-person/data/data";
 
@@ -8,7 +7,7 @@ import detailsPage from "@openeuropa/bcl-person/person.html.twig";
 
 export default {
   title: "Features/Person",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

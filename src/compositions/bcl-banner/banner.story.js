@@ -1,4 +1,3 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
@@ -112,7 +111,7 @@ const renderStory = (data, args) => {
 
 export default {
   title: "Paragraphs/Banner",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

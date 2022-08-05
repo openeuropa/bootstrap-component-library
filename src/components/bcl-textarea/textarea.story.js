@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
@@ -79,7 +78,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Forms/Textarea",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

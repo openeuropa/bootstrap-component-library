@@ -6,12 +6,12 @@ let stories = ["../../**/!(test*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
+  "@whitespace/storybook-addon-html",
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",
   "@storybook/addon-a11y",
   "@geometricpanda/storybook-addon-badges",
-  "@openeuropa/storybook-addon-code",
 ];
 
 if (chromatic) {

@@ -1,12 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-
 import {
   initScrollspy,
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-
 import {
   demoData,
   demoDateData,
@@ -36,7 +33,7 @@ const getArgTypes = () => ({
 
 export default {
   title: "Features/Event",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     badges: ["stable"],

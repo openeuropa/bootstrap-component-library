@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
@@ -7,7 +6,7 @@ import footerData from "@openeuropa/bcl-data-footer/data.js";
 
 export default {
   title: "Compositions/Footer",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     layout: "fullscreen",
     design: [

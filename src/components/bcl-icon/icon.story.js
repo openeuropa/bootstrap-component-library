@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import {
   getFlagNames,
   getIconNames,
@@ -45,7 +44,7 @@ const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
   title: "Components/Icon",
-  decorators: [withCode, withDesign],
+  decorators: [withDesign],
   parameters: {
     design: [
       {

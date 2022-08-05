@@ -4,7 +4,7 @@ import {
   initListings,
 } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
+
 import {
   dataLanding,
   dataListing,
@@ -19,7 +19,7 @@ import groupLanding from "@openeuropa/bcl-group/group-landing.html.twig";
 
 export default {
   title: "Features/Group",
-  decorators: [withCode, withDesign, initBadges, initListings],
+  decorators: [withDesign, initBadges, initListings],
   parameters: {
     layout: "fullscreen",
     a11y: {

@@ -1,5 +1,4 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
@@ -65,7 +64,7 @@ const paddingBody = (story) => {
 
 export default {
   title: "Components/Dropdown",
-  decorators: [withCode, withDesign, paddingBody],
+  decorators: [withDesign, paddingBody],
   parameters: {
     design: [
       {

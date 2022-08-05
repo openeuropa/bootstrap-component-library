@@ -1,11 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-
 import { correctPaths } from "@openeuropa/bcl-story-utils";
+
 import header from "@openeuropa/bcl-data-header/data--simple";
 import footer from "@openeuropa/bcl-data-footer/data";
 import banner from "@openeuropa/bcl-contact-form/data/data--banner";
-
 import form from "@openeuropa/bcl-contact-form/data/data--form.js";
 import formError from "@openeuropa/bcl-contact-form/data/data--form-error";
 import success from "@openeuropa/bcl-contact-form/data/data--success";
@@ -56,7 +54,7 @@ const clientValidation = (story) => {
 
 export default {
   title: "Paragraphs/Contact",
-  decorators: [withCode, withDesign, clientValidation],
+  decorators: [withDesign, clientValidation],
   parameters: {
     layout: "fullscreen",
     controls: {
