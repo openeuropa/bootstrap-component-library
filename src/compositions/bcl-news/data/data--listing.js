@@ -4,7 +4,7 @@ const { getDummyText } = require("@openeuropa/bcl-data-utils");
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     close_aria_label: "Close button",

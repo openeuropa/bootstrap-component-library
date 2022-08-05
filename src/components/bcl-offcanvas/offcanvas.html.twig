@@ -15,6 +15,8 @@
   - extra_classes_body (string) (default: '')
   - extra_classes_header (string) (default: '')
   - extra_classes_close (string) (default: '')
+  - responsiveness (string) (default: '')
+    options: ['sm', 'md', 'lg', 'xl', 'xxl']
   - attributes (drupal attrs)
 #}
 
@@ -32,8 +34,14 @@
 {% set _extra_classes_body = extra_classes_body|default('') %}
 {% set _extra_classes_header = extra_classes_header|default('') %}
 {% set _extra_classes_close = extra_classes_close|default('') %}
+{% set _responsiveness = responsiveness|default('') %}
 
-{% set _classes = ['offcanvas'] %}
+{% if _responsiveness is not empty %}
+ {% set _classes = ['offcanvas-' ~ _responsiveness] %}
+{% else %}
+ {% set _classes = ['offcanvas'] %}
+{% endif %}
+
 {% set _class_body = 'offcanvas-body' ~ (_extra_classes_body ? ' ' ~ _extra_classes_body : '') %}
 {% set _class_header = 'offcanvas-header' ~ (_extra_classes_header ? ' ' ~ _extra_classes_header : '') %}
 

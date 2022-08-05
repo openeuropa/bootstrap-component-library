@@ -20,15 +20,6 @@ module.exports = {
       html: "Ordered Label",
     },
     {
-      required: false,
-      label: "Example form input",
-      readonly: false,
-      id: "example-form-input-1",
-      input: true,
-      input_type: "radio",
-      remove_wrapper: true,
-    },
-    {
       variant: "warning",
       html: '<div class="ms-2 me-auto">Cras justo odio</div>',
       extra_classes: "d-flex justify-content-between align-items-center",

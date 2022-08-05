@@ -156,6 +156,37 @@ exports[`OE - Offcanvas renders correctly with extra class on header 1`] = `
 </jest>
 `;
 
+exports[`OE - Offcanvas renders correctly with responsive behaviour 1`] = `
+<jest>
+  <div
+    class="offcanvas-lg offcanvas-bottom"
+    id="offcanvasExample"
+    tabindex="-1"
+  >
+    <div
+      class="offcanvas-header"
+    >
+      <h4
+        class="offcanvas-title bcl-heading"
+      >
+        An offcanvas title
+      </h4>
+      <button
+        aria-label="Close button for the offcanvas"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        type="button"
+      />
+    </div>
+    <div
+      class="offcanvas-body"
+    >
+      An interesting content for this offcanvas
+    </div>
+  </div>
+</jest>
+`;
+
 exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
 <jest>
   <div

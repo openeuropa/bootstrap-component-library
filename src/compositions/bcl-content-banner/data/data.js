@@ -28,4 +28,8 @@ module.exports = {
       <button class="w-auto me-3 btn btn-outline-primary btn-md" type="button">Print<svg class="ms-2-5 bi icon--fluid"><use xlink:href="/icons.svg#printer-fill"></use></svg></button>
       <button class="w-auto btn btn-outline-primary btn-md" type="button">Export<svg class="ms-2-5 bi icon--fluid"><use xlink:href="/icons.svg#file-arrow-down-fill"></use></svg></button>
     </div>`,
+  action_button: {
+    label: "Action button",
+    variant: "secondary",
+  },
 };

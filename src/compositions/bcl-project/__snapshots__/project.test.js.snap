@@ -544,7 +544,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="25"
-                    class="progress-bar bg-info"
+                    class="progress-bar text-bg-info"
                     role="progressbar"
                     style="width: 25%"
                   />
@@ -2340,13 +2340,13 @@ exports[`OE - Project listing renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="bcl-offcanvas offcanvas-start offcanvas"
+            class="offcanvas-start offcanvas-lg"
             data-bs-scroll="true"
             id="bcl-offcanvas"
             tabindex="-1"
           >
             <div
-              class="offcanvas-header p-lg-0"
+              class="offcanvas-header p-lg-0 d-lg-block"
             >
               <h2
                 class="mb-lg-4 offcanvas-title bcl-heading"
@@ -2364,6 +2364,7 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="offcanvas-body p-lg-0"
             >
               <form
+                class="w-100"
                 novalidate="true"
                 onsubmit="return false;"
               >
@@ -4345,7 +4346,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="100"
-                    class="progress-bar bg-dark"
+                    class="progress-bar text-bg-dark"
                     role="progressbar"
                     style="width: 100%"
                   />
@@ -6955,7 +6956,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="25"
-                    class="progress-bar bg-info"
+                    class="progress-bar text-bg-info"
                     role="progressbar"
                     style="width: 25%"
                   />
@@ -9565,7 +9566,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                     aria-valuemax="100"
                     aria-valuemin="0"
                     aria-valuenow="0"
-                    class="progress-bar bg-secondary"
+                    class="progress-bar text-bg-secondary"
                     role="progressbar"
                     style="width: 0%"
                   />
