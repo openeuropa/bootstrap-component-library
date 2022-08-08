@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import { demoListing, demoDetails } from "@openeuropa/bcl-person/data/data";
 
@@ -11,6 +15,8 @@ const renderListing = (params) =>
 const renderDetails = (params) =>
   renderTwigFileAsNode(detailsTemplate, params, true);
 
+expect.extend(toHaveNoViolations);
+
 describe("OE - Person", () => {
   test("listing renders correctly", () => {
     expect.assertions(1);
@@ -20,5 +26,17 @@ describe("OE - Person", () => {
   test("details renders correctly", () => {
     expect.assertions(1);
     return expect(renderDetails(demoDetails)).resolves.toMatchSnapshot();
+  });
+
+  test(`listing passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+    ).toHaveNoViolations();
+  });
+
+  test(`details passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(detailsTemplate, demoDetails))
+    ).toHaveNoViolations();
   });
 });

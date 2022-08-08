@@ -37,7 +37,7 @@ module.exports = {
       },
       translation: {
         alignment: "center",
-        id: "language-dropdown",
+        id: "language-dropdown-first",
         label: {
           label: "Other languages (3)",
           icon_position: "after",
@@ -101,7 +101,7 @@ module.exports = {
       },
       translation: {
         alignment: "center",
-        id: "language-dropdown",
+        id: "language-dropdown-second",
         label: {
           label: "Other languages (3)",
           icon_position: "after",

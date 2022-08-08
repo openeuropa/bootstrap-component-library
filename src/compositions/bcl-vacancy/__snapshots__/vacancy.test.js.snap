@@ -93,6 +93,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -992,11 +993,11 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-first"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-first"
                     role="button"
                   >
                     Other languages (3)
@@ -1011,7 +1012,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-first"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -1254,11 +1255,11 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-second"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-second"
                     role="button"
                   >
                     Other languages (3)
@@ -1273,7 +1274,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-second"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -2071,6 +2072,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -2969,11 +2971,11 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-first"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-first"
                     role="button"
                   >
                     Other languages (3)
@@ -2988,7 +2990,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-first"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -3231,11 +3233,11 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-second"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-second"
                     role="button"
                   >
                     Other languages (3)
@@ -3250,7 +3252,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-second"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -4048,6 +4050,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -4744,7 +4747,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                 Filter options
               </h2>
               <button
-                aria-label=""
+                aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
                 type="button"

@@ -93,6 +93,7 @@ exports[`OE - Page Page renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -1066,8 +1067,13 @@ exports[`OE - Page Page renders correctly 1`] = `
             <br />
              Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
           </p>
+          <h2
+            class="mb-4 bcl-heading"
+          >
+            File download
+          </h2>
           <div
-            class="mb-3 bcl-file border rounded"
+            class="bcl-file border rounded"
           >
             <div
               class="px-3-5 py-3"
@@ -1111,7 +1117,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                   <a
                     class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
                     download="true"
-                    href="/example.html"
+                    href="#"
                     target="_blank"
                   >
                     Download
@@ -1133,11 +1139,11 @@ exports[`OE - Page Page renders correctly 1`] = `
                 class="text-end text-md-center"
               >
                 <a
-                  aria-controls="language-dropdown"
+                  aria-controls="language-dropdown-first"
                   aria-expanded="false"
                   class="standalone"
                   data-bs-toggle="collapse"
-                  href="#language-dropdown"
+                  href="#language-dropdown-first"
                   role="button"
                 >
                   Other languages (3)
@@ -1152,7 +1158,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               </div>
               <div
                 class="collapse"
-                id="language-dropdown"
+                id="language-dropdown-first"
               >
                 <div
                   class="py-3 border-bottom"
@@ -1163,88 +1169,16 @@ exports[`OE - Page Page renders correctly 1`] = `
                     <div
                       class="col-12 col-md-9"
                     >
-                      <small
+                      <p
                         class="fw-bold m-0"
                       >
-                        български
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block standalone mt-1"
-                        download="true"
-                        href="http://www.africau.edu/images/default/sample.pdf"
-                        target="_blank"
+                        File title FR
+                      </p>
+                      <p
+                        class="m-0"
                       >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        Español
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block standalone mt-1"
-                        download="true"
-                        href="/example.html"
-                        target="_blank"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
                       <small
                         class="fw-bold m-0"
                       >
@@ -1262,7 +1196,109 @@ exports[`OE - Page Page renders correctly 1`] = `
                       <a
                         class="d-block standalone mt-1"
                         download="true"
-                        href="/example.html"
+                        href="#"
+                        target="_blank"
+                      >
+                        Download
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#download"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="py-3 border-bottom"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md-9"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title ES
+                      </p>
+                      <p
+                        class="m-0"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        Español
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <div
+                      class="col-12 col-md-3 align-self-end text-md-end"
+                    >
+                      <a
+                        class="d-block standalone mt-1"
+                        download="true"
+                        href="#"
+                        target="_blank"
+                      >
+                        Download
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#download"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="py-3 border-bottom"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md-9"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title BG
+                      </p>
+                      <p
+                        class="m-0"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        български
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <div
+                      class="col-12 col-md-3 align-self-end text-md-end"
+                    >
+                      <a
+                        class="d-block standalone mt-1"
+                        download="true"
+                        href="#"
                         target="_blank"
                       >
                         Download
@@ -1281,12 +1317,11 @@ exports[`OE - Page Page renders correctly 1`] = `
                   class="pt-3"
                 >
                   <p
-                    class="mb-2"
+                    class="mb-2 d-inline-block me-2"
                   >
                     Looking for another language which is not on the list? 
                   </p>
                   <a
-                    class="d-block"
                     href="/example.html"
                   >
                     Find out why.
@@ -1296,7 +1331,7 @@ exports[`OE - Page Page renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="mb-3 bcl-file border rounded"
+            class="bcl-file border rounded"
           >
             <div
               class="px-3-5 py-3"
@@ -1340,7 +1375,7 @@ exports[`OE - Page Page renders correctly 1`] = `
                   <a
                     class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
                     download="true"
-                    href="/example.html"
+                    href="#"
                     target="_blank"
                   >
                     Download
@@ -1362,11 +1397,11 @@ exports[`OE - Page Page renders correctly 1`] = `
                 class="text-end text-md-center"
               >
                 <a
-                  aria-controls="language-dropdown"
+                  aria-controls="language-dropdown-second"
                   aria-expanded="false"
                   class="standalone"
                   data-bs-toggle="collapse"
-                  href="#language-dropdown"
+                  href="#language-dropdown-second"
                   role="button"
                 >
                   Other languages (3)
@@ -1381,7 +1416,7 @@ exports[`OE - Page Page renders correctly 1`] = `
               </div>
               <div
                 class="collapse"
-                id="language-dropdown"
+                id="language-dropdown-second"
               >
                 <div
                   class="py-3 border-bottom"
@@ -1392,88 +1427,16 @@ exports[`OE - Page Page renders correctly 1`] = `
                     <div
                       class="col-12 col-md-9"
                     >
-                      <small
+                      <p
                         class="fw-bold m-0"
                       >
-                        български
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block standalone mt-1"
-                        download="true"
-                        href="http://www.africau.edu/images/default/sample.pdf"
-                        target="_blank"
+                        File title FR
+                      </p>
+                      <p
+                        class="m-0"
                       >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
-                      <small
-                        class="fw-bold m-0"
-                      >
-                        Español
-                        <span
-                          class="fw-normal"
-                        >
-                           (16.2 MB - PDF)
-                        </span>
-                      </small>
-                    </div>
-                    <div
-                      class="col-12 col-md-3 align-self-end text-md-end"
-                    >
-                      <a
-                        class="d-block standalone mt-1"
-                        download="true"
-                        href="/example.html"
-                        target="_blank"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="py-3 border-bottom"
-                >
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-12 col-md-9"
-                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
                       <small
                         class="fw-bold m-0"
                       >
@@ -1491,7 +1454,109 @@ exports[`OE - Page Page renders correctly 1`] = `
                       <a
                         class="d-block standalone mt-1"
                         download="true"
-                        href="/example.html"
+                        href="#"
+                        target="_blank"
+                      >
+                        Download
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#download"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="py-3 border-bottom"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md-9"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title ES
+                      </p>
+                      <p
+                        class="m-0"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        Español
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <div
+                      class="col-12 col-md-3 align-self-end text-md-end"
+                    >
+                      <a
+                        class="d-block standalone mt-1"
+                        download="true"
+                        href="#"
+                        target="_blank"
+                      >
+                        Download
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#download"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="py-3 border-bottom"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md-9"
+                    >
+                      <p
+                        class="fw-bold m-0"
+                      >
+                        File title BG
+                      </p>
+                      <p
+                        class="m-0"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                      <small
+                        class="fw-bold m-0"
+                      >
+                        български
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <div
+                      class="col-12 col-md-3 align-self-end text-md-end"
+                    >
+                      <a
+                        class="d-block standalone mt-1"
+                        download="true"
+                        href="#"
                         target="_blank"
                       >
                         Download
@@ -1510,12 +1575,11 @@ exports[`OE - Page Page renders correctly 1`] = `
                   class="pt-3"
                 >
                   <p
-                    class="mb-2"
+                    class="mb-2 d-inline-block me-2"
                   >
                     Looking for another language which is not on the list? 
                   </p>
                   <a
-                    class="d-block"
                     href="/example.html"
                   >
                     Find out why.
