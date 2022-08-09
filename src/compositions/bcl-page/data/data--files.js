@@ -1,8 +1,8 @@
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
+const drupalAttribute = require("drupal-attribute");
 
 module.exports = [
   {
-    title: "File download",
     item_title: "File title",
     language: "English",
     meta: "(16.2 MB - PDF)",
@@ -65,6 +65,7 @@ module.exports = [
         },
       ],
     },
+    attributes: new drupalAttribute().addClass("mb-3"),
   },
   {
     item_title: "File title",
@@ -129,5 +130,6 @@ module.exports = [
         },
       ],
     },
+    attributes: new drupalAttribute().addClass("mb-3"),
   },
 ];
