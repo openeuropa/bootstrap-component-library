@@ -75,7 +75,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/dropdowns/",
+        url: "https://getbootstrap.com/docs/5.2/components/dropdowns/",
       },
     ],
   },

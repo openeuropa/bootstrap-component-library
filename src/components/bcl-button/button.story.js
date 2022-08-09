@@ -250,7 +250,7 @@ Default.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/components/buttons/",
+      url: "https://getbootstrap.com/docs/5.2/components/buttons/",
     },
   ],
 };
@@ -271,7 +271,7 @@ Collapse.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/components/collapse/",
+      url: "https://getbootstrap.com/docs/5.2/components/collapse/",
     },
   ],
 };
@@ -299,7 +299,7 @@ Popover.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/components/popovers/",
+      url: "https://getbootstrap.com/docs/5.2/components/popovers/",
     },
   ],
 };
@@ -322,7 +322,7 @@ Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
+    url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
   },
 };
 
@@ -350,7 +350,7 @@ Spinner.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/components/spinners/",
+      url: "https://getbootstrap.com/docs/5.2/components/spinners/",
     },
   ],
 };
