@@ -1,9 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import demoData from "@openeuropa/bcl-fact-figures/data";
 
 const template = "@oe-bcl/bcl-fact-figures/fact-figures.html.twig";
 
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Fact and figures", () => {
   test(`renders correctly in 3 columns`, () => {
@@ -72,5 +78,11 @@ describe("OE - Fact and figures", () => {
     return expect(
       render({ ...demoData, cols_extra_classes: "new-column-class" })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

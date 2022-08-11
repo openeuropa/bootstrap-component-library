@@ -68,7 +68,9 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    attributes: new drupalAttribute().addClass("bcl-header__navbar"),
+    attributes: new drupalAttribute()
+      .addClass("bcl-header__navbar")
+      .setAttribute("aria-label", "Main Navigation"),
     navigation: {
       navbar: true,
       attributes: new drupalAttribute().addClass("me-auto"),
