@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.26.0 (2022-08-11)
+
+#### :rocket: New Feature
+
+* [#423](https://github.com/openeuropa/bootstrap-component-library/pull/423) feat(heading): Adding stories for heading(s) - OEL-1929 ([@planctus](https://github.com/planctus))
+
+#### :boom: Breaking Change
+
+* [#418](https://github.com/openeuropa/bootstrap-component-library/pull/418) feat(bootstrap-5.2): Aligning components - OEL-1916 ([@tibi2303](https://github.com/tibi2303))
+
+#### :bug: Bug Fix
+
+* [#426](https://github.com/openeuropa/bootstrap-component-library/pull/426) feat(content-banner): Fix container for banner inside tab panel - OEL-1935 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+
+* [#424](https://github.com/openeuropa/bootstrap-component-library/pull/424) feat(axe-tests): Added accessiblity tests - OEL-1923 ([@tibi2303](https://github.com/tibi2303))
+* [#420](https://github.com/openeuropa/bootstrap-component-library/pull/420) feat(featured-image): Improvement on width image - OEL-1920 ([@tibi2303](https://github.com/tibi2303))
+* [#408](https://github.com/openeuropa/bootstrap-component-library/pull/408) feat(header): collapsible top navbar, data refactoring - OEL-1847 ([@planctus](https://github.com/planctus))
+* [#414](https://github.com/openeuropa/bootstrap-component-library/pull/414) feat(tests): Added missing tests for compositions - OEL-1901 ([@tibi2303](https://github.com/tibi2303))
+* [#413](https://github.com/openeuropa/bootstrap-component-library/pull/413) feat(tests): Added missing tests for components - OEL-1889 ([@tibi2303](https://github.com/tibi2303))
+* [#416](https://github.com/openeuropa/bootstrap-component-library/pull/416) feat(cleanup): Removed extension from import of js files - OEL-1907 ([@tibi2303](https://github.com/tibi2303))
+* [#407](https://github.com/openeuropa/bootstrap-component-library/pull/407) feat(person): Adding file sub-section in details page - OEL-1848 ([@planctus](https://github.com/planctus))
+* [#410](https://github.com/openeuropa/bootstrap-component-library/pull/410) feat(z-index): Lowering values not to conflict with webtools, fixing templates - OEL-1767 ([@planctus](https://github.com/planctus))
+* [#409](https://github.com/openeuropa/bootstrap-component-library/pull/409) fix(language-switcher): Changing approach to fix layout when the number of items is too low - OEL-1849 ([@planctus](https://github.com/planctus))
+
+#### :memo: Documentation
+
+* [#425](https://github.com/openeuropa/bootstrap-component-library/pull/425) chore: Updating links to bs documentation ([@planctus](https://github.com/planctus))
+
+#### :house: Internal
+* [#422](https://github.com/openeuropa/bootstrap-component-library/pull/422) chore(deps): Updates 08-08-22 ([@planctus](https://github.com/planctus))
+* [#421](https://github.com/openeuropa/bootstrap-component-library/pull/421) chore(deps): Updates 05-08-22 ([@planctus](https://github.com/planctus))
+* [#419](https://github.com/openeuropa/bootstrap-component-library/pull/419) chore(tests): Adding accessibility tests through jest-axe ([@planctus](https://github.com/planctus))
+* [#417](https://github.com/openeuropa/bootstrap-component-library/pull/417) chore(bootstrap): Upgrading to 5.2 + other updates ([@planctus](https://github.com/planctus))
+* [#411](https://github.com/openeuropa/bootstrap-component-library/pull/411) chore(deps): Updates - 18-07-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
+
 ## 0.25.0 (2022-06-24)
 
 #### :nail_care: Enhancement
