@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import {
   demoDetails,
   demoDetailsMultiple,
@@ -13,6 +17,8 @@ const renderListing = (params) =>
 
 const renderDetails = (params) =>
   renderTwigFileAsNode(detailsTemplate, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Publication", () => {
   test("listing renders correctly", () => {
@@ -30,5 +36,17 @@ describe("OE - Publication", () => {
     return expect(
       renderDetails(demoDetailsMultiple)
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`listing passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+    ).toHaveNoViolations();
+  });
+
+  test(`details passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(detailsTemplate, demoDetails))
+    ).toHaveNoViolations();
   });
 });
