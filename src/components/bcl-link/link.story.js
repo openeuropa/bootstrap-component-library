@@ -179,7 +179,7 @@ Collapse.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.1/components/collapse/",
+    url: "https://getbootstrap.com/docs/5.2/components/collapse/",
   },
 };
 if (isChromatic() || chromatic) {
@@ -199,7 +199,7 @@ Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
+    url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
   },
 };
 if (isChromatic() || chromatic) {

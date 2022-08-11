@@ -124,7 +124,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/badge/",
+        url: "https://getbootstrap.com/docs/5.2/components/badge/",
       },
     ],
   },
