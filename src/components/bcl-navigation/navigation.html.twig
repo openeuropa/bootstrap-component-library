@@ -114,7 +114,7 @@
             role="tab"
           {% endif %}
         >
-        {% elseif _tabs %}
+        {% elseif _tabs and _item.dropdown is not defined %}
           {% set _item = _item|merge({
             attributes: _item.attributes.setAttribute("role", "tab"),
             }) 

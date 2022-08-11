@@ -3,7 +3,9 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   color_set: "dark",
   collapse_id: "navbarNavDropdown",
-  attributes: new drupalAttribute().addClass("bcl-header__navbar"),
+  attributes: new drupalAttribute()
+    .addClass("bcl-header__navbar")
+    .setAttribute("aria-label", "Main Navigation"),
   form: {
     attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
     submit: {

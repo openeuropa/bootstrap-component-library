@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import {
   dataLanding,
   dataListing,
@@ -14,11 +18,19 @@ const render = (params) => renderTwigFileAsNode(template, params);
 const renderListing = (params) => renderTwigFileAsNode(templateListing, params);
 const renderLanding = (params) => renderTwigFileAsNode(templateLanding, params);
 
+expect.extend(toHaveNoViolations);
+
 describe("OE - Group listing", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);
 
     return expect(renderListing(dataListing)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(templateListing, dataListing))
+    ).toHaveNoViolations();
   });
 });
 
@@ -36,6 +48,12 @@ describe("OE - Group listing Member", () => {
 
     return expect(render(dataListingMember)).resolves.toMatchSnapshot();
   });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataListingMember))
+    ).toHaveNoViolations();
+  });
 });
 
 describe("OE - Group landing", () => {
@@ -43,5 +61,11 @@ describe("OE - Group landing", () => {
     expect.assertions(1);
 
     return expect(renderLanding(dataLanding)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(templateLanding, dataLanding))
+    ).toHaveNoViolations();
   });
 });

@@ -1,8 +1,14 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import dataDefault from "@openeuropa/bcl-inpage-navigation/data/data";
 
 const template = "@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Inpage navigation", () => {
   test("default renders correctly", () => {
@@ -24,5 +30,11 @@ describe("OE - Inpage navigation", () => {
         },
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataDefault))
+    ).toHaveNoViolations();
   });
 });

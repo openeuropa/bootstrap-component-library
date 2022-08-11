@@ -5,7 +5,7 @@ module.exports = {
   landing: true,
   navigation: {
     tabs: true,
-    tabs_content: true,
+    nav: true,
     items: [
       {
         label: "View",
@@ -66,6 +66,7 @@ module.exports = {
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#cancel")
           .setAttribute("role", "tab")
+          .setAttribute("title", "cancel-tab")
           .setAttribute("aria-controls", "cancel")
           .addClass("d-none"),
       },

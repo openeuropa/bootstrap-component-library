@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-featured-media/data/data";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
@@ -7,6 +11,8 @@ import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured
 
 const template = "@oe-bcl/bcl-featured-media/featured-media.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Featured media", () => {
   test("renders correctly with iframe", () => {
@@ -81,5 +87,11 @@ describe("OE - Featured media", () => {
         ratio: "21x9",
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

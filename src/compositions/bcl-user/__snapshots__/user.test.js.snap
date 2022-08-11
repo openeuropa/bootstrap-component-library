@@ -135,6 +135,7 @@ exports[`OE - User list renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -1736,6 +1737,7 @@ exports[`OE - User renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -2372,97 +2374,70 @@ exports[`OE - User renders correctly 1`] = `
         <div
           class="col-12"
         >
-          <ul
+          <nav
             class="nav nav-tabs"
             role="tablist"
           >
-            <li
-              class="nav-item"
+            <a
+              aria-controls="view"
+              autocomplete="off"
+              class="nav-link active"
+              data-bs-target="#view"
+              data-bs-toggle="tab"
+              href="#view"
+              id="view-tab"
               role="tab"
             >
-              <a
-                aria-controls="view"
-                autocomplete="off"
-                class="nav-link active"
-                data-bs-target="#view"
-                data-bs-toggle="tab"
-                href="#view"
-                id="view-tab"
-                role="tab"
-              >
-                View
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              View
+            </a>
+            <a
+              aria-controls="edit"
+              autocomplete="off"
+              class="nav-link"
+              data-bs-target="#edit"
+              data-bs-toggle="tab"
+              href="#edit"
+              id="edit-tab"
               role="tab"
             >
-              <a
-                aria-controls="edit"
-                autocomplete="off"
-                class="nav-link"
-                data-bs-target="#edit"
-                data-bs-toggle="tab"
-                href="#edit"
-                id="edit-tab"
-                role="tab"
-              >
-                Edit
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Edit
+            </a>
+            <a
+              aria-controls="privacy"
+              autocomplete="off"
+              class="nav-link"
+              data-bs-target="#privacy"
+              data-bs-toggle="tab"
+              href="#privacy"
+              id="privacy-tab"
               role="tab"
             >
-              <a
-                aria-controls="privacy"
-                autocomplete="off"
-                class="nav-link"
-                data-bs-target="#privacy"
-                data-bs-toggle="tab"
-                href="#privacy"
-                id="privacy-tab"
-                role="tab"
-              >
-                Privacy settings
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Privacy settings
+            </a>
+            <a
+              aria-controls="visibility"
+              autocomplete="off"
+              class="nav-link"
+              data-bs-target="#visibility"
+              data-bs-toggle="tab"
+              href="#visibility"
+              id="visibility-tab"
               role="tab"
             >
-              <a
-                aria-controls="visibility"
-                autocomplete="off"
-                class="nav-link"
-                data-bs-target="#visibility"
-                data-bs-toggle="tab"
-                href="#visibility"
-                id="visibility-tab"
-                role="tab"
-              >
-                Visibility settings
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Visibility settings
+            </a>
+            <a
+              aria-controls="cancel"
+              autocomplete="off"
+              class="d-none nav-link"
+              data-bs-target="#cancel"
+              data-bs-toggle="tab"
+              href="#cancel"
+              id="cancel-tab"
               role="tab"
-            >
-              <a
-                aria-controls="cancel"
-                autocomplete="off"
-                class="d-none nav-link"
-                data-bs-target="#cancel"
-                data-bs-toggle="tab"
-                href="#cancel"
-                id="cancel-tab"
-                role="tab"
-              />
-            </li>
-          </ul>
-          <div
-            class="tab-content"
-          />
+              title="cancel-tab"
+            />
+          </nav>
           <div
             class="tab-content"
           >
@@ -3932,6 +3907,7 @@ exports[`OE - User terms renders correctly 1`] = `
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
