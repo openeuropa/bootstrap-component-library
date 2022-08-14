@@ -112,24 +112,31 @@
 
   <div class="container mt-md-4-75 mt-4">
     {% block content_row %}{% endblock %}
-    <div class="row">
-      {% if _with_sidebar %}
+    {% if _with_sidebar %}
+      <div class="row">
         <div class="{{ _col_classes.left|join(' ') }}">
           {% block sidebar %}{% endblock %}
         </div>
         <div class="{{ _col_classes.right|join(' ') }}">
           {{ _content_rendered }}
         </div>
-      {% elseif _landing %}
-        <div class="col-12">
-          {{ _content_rendered }}
-        </div>
-      {% else %}
+      </div>
+    {% elseif _landing %}
+      {# No wrappers needed. #}
+      {{ _content_rendered }}
+    {% else %}
+      {#
+      Constrain the content width.
+      Use 'd-block' to neutralize the 'display: flex' from 'row' class.
+      This allows margins from content elements to collapse with margins
+      from other elements above or below.
+      #}
+      <div class="row d-block">
         <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
           {{ _content_rendered }}
         </div>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
   </div>
 </main>
 
