@@ -52,32 +52,6 @@
   {% endblock %}
 {% endset %}
 
-{% if _with_sidebar %}
-  {% set _col_classes = {
-    left: [
-      'col-12',
-      'bcl-sidebar',
-    ],
-    right: [
-      'col-12',
-    ],
-  } %}
-
-  {% if _sidebar_size == 'normal' %}
-    {% set _col_classes = _col_classes|merge({
-      left: _col_classes.left|merge(['col-lg-3']),
-      right: _col_classes.right|merge(['col-lg-9', 'col-xxl-8']),
-    }) %}
-  {% endif %}
-
-  {% if _sidebar_size == 'large' %}
-    {% set _col_classes = _col_classes|merge({
-      left: _col_classes.left|merge(['col-lg-4']),
-      right: _col_classes.right|merge(['col-lg-8']),
-    }) %}
-  {% endif %}
-{% endif %}
-
 {% if _content_type is not empty %}
   {% set _classes = _classes|merge(['bcl-' ~ _content_type]) %}
 {% endif %}
@@ -113,13 +87,15 @@
   <div class="container mt-md-4-75 mt-4">
     {% block content_row %}{% endblock %}
     {% if _with_sidebar %}
+      {% set _sidebar_rendered %}{% block sidebar %}{% endblock %}{% endset %}
       <div class="row">
-        <div class="{{ _col_classes.left|join(' ') }}">
-          {% block sidebar %}{% endblock %}
-        </div>
-        <div class="{{ _col_classes.right|join(' ') }}">
-          {{ _content_rendered }}
-        </div>
+        {% if _sidebar_size == 'large' %}
+          <div class="bcl-sidebar col-12 col-lg-4">{{ _sidebar_rendered }}</div>
+          <div class="col-12 col-lg-8">{{ _content_rendered }}</div>
+        {% else %}
+          <div class="bcl-sidebar col-12 col-lg-3">{{ _sidebar_rendered }}</div>
+          <div class="col-12 col-lg-9 col-xxl-8">{{ _content_rendered }}</div>
+        {% endif %}
       </div>
     {% elseif _landing %}
       {# No wrappers needed. #}
