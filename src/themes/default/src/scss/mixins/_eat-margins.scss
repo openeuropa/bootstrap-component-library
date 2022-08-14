@@ -1,0 +1,32 @@
+
+// Local helper mixin. Don't use elsewhere.
+@mixin eat-margins-pseudo-element($appetite) {
+  content: '';
+  height: 0;
+  display: flex;
+  visibility: hidden;
+  margin-top: -$appetite;
+  margin-bottom: $appetite;
+}
+
+// Neutralizes bottom margin of last child element.
+@mixin eat-margin-top($appetite: 200px) {
+  &::before {
+    @include eat-margins-pseudo-element($appetite);
+  }
+}
+
+// Neutralizes the top margin of first child element.
+@mixin eat-margin-bottom($appetite: 200px) {
+  &::after {
+    @include eat-margins-pseudo-element(-$appetite);
+  }
+}
+
+// Neutralizes margins of child elements:
+// - top margin of first element or its first children.
+// - bottom margin of last element or its last children.
+@mixin eat-margins($appetite_top: 200px, $appetite_bottom: $appetite_top) {
+  @include eat-margin-top($appetite_top);
+  @include eat-margin-bottom($appetite_bottom);
+}

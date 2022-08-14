@@ -1,0 +1,23 @@
+// Utility classes to absorb/neutralize vertical margins of child elements.
+// This allows to fully control vertical space using padding, without additional
+// space caused by margins of e.g. <h2> or <p> elements inside the container.
+// This is more reliably than anything with :first-child or :last-child, because
+// it considers only visible block-level elements.
+
+// Neutralizes top margin of first child, and bottom margin of last child.
+.eat-margins,
+.children-eat-margins > * {
+  @include eat-margins();
+}
+
+// Neutralizes top margin of the first block-level child element.
+.eat-margin-top,
+.children-eat-margin-top > * {
+  @include eat-margin-top();
+}
+
+// Neutralizes bottom margin of the last block-level child element.
+.eat-margin-bottom,
+.children-eat-margin-bottom > * {
+  @include eat-margin-bottom();
+}

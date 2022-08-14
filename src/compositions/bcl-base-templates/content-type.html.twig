@@ -88,7 +88,7 @@
     {% block content_row %}{% endblock %}
     {% if _with_sidebar %}
       {% set _sidebar_rendered %}{% block sidebar %}{% endblock %}{% endset %}
-      <div class="row">
+      <div class="row gy-5 children-eat-margins">
         {% if _sidebar_size == 'large' %}
           <aside class="bcl-sidebar col-lg-4">{{ _sidebar_rendered }}</aside>
           <div class="col-lg-8">{{ _content_rendered }}</div>
