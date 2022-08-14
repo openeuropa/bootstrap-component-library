@@ -64,7 +64,7 @@
   {% include '@oe-bcl/bcl-header/header.html.twig' with header only %}
 {% endif %}
 
-<main {{ attributes }}>
+<main {{ attributes.addClass('mb-5') }}>
   {% if messages is defined and messages is not empty %}
     {% block messages_area %}
       <div class="container">
