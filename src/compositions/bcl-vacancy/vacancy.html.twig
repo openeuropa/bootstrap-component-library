@@ -19,36 +19,44 @@
 
 {% block content %}
   {% if description is defined and description is not empty %}
-    <h2
-      class="mb-4"
-      id="{{ description.title_id }}"
-    >
-      {{- description.title -}}
-    </h2>
-    {% for paragraph in description.paragraphs %}
-      <p>{{- paragraph -}}</p>
-    {% endfor %}
+    {% set _description_rendered %}
+      {% for paragraph in description.paragraphs %}
+        <p>{{- paragraph -}}</p>
+      {% endfor %}
+    {% endset %}
+    {% include '@oe-bcl/bcl-section/section.html.twig' with {
+      title: description.title,
+      id: description.title_id,
+      content: _description_rendered,
+    } only %}
   {% endif %}
 
   {% if files is not empty %}
-    {% for file in files %}
-      <div class="pt-4">
-        {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-      </div>
-    {% endfor %}
+    {% set _files_rendered %}
+      {% for file in files %}
+        <div class="mb-4">
+          {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+        </div>
+      {% endfor %}
+    {% endset %}
+    {% include '@oe-bcl/bcl-section/section.html.twig' with {
+      title: files_title,
+      content: _files_rendered,
+    } only %}
   {% endif %}
 
   {% if social_block is not empty %}
     {% block social_block %}
-      <h2
-        class="mb-4 pt-4"
-        id="{{ social.title_id }}"
-      >
-        {{- social.title -}}
-      </h2>
-      {{ social_buttons }}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
-      {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
+      {% set _social_rendered %}
+        {{ social_buttons }}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
+        {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
+      {% endset %}
+      {% include '@oe-bcl/bcl-section/section.html.twig' with {
+        title: social.title,
+        id: social.title_id,
+        content: _social_rendered,
+      } only %}
     {% endblock %}
   {% endif %}
 {% endblock %}
