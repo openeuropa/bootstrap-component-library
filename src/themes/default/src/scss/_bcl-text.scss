@@ -1,0 +1,32 @@
+/**
+ * Wrapper for rich text styles.
+ *
+ * Bootstrap 5 follows a single-direction strategy for vertical margins.
+ * Elements only have a margin-bottom, never a margin-top.
+ * See https://getbootstrap.com/docs/5.0/content/reboot/#approach.
+ * Also https://csswizardry.com/2012/06/single-direction-margin-declarations/.
+ *
+ * Unfortunately, with this approach we cannot have extra vertical space above
+ * e.g. h2 tags, to set a distance to previous content, if the margin-bottom of
+ * that previous content is not sufficient. We want to add margin-top to at
+ * least some headings.
+ *
+ * In headings defined in templates, this can be achieved with 'mt-*' utility
+ * classes.
+ *
+ * In rich text, the margin-top will be added to all h* headings, based on a
+ * '.bcl-text' wrapper. This is also what Bootstrap itself does in its doc
+ * pages: Inspect the h2 headings in the doc page linked above!
+ *
+ * No special exception for :first-child is added, this will be compensated with
+ * the 'eat-margin-*' classes instead.
+ */
+.bcl-text h1,
+.bcl-text h2,
+.bcl-text h3,
+.bcl-text h4,
+.bcl-text h5,
+.bcl-text h6 {
+  /* Use em units to scale with the font size. */
+  margin-top: 1em;
+}
