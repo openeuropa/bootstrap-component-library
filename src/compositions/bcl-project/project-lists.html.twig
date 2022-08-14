@@ -26,45 +26,42 @@
 {% set _title_classes = ['my-4-5'] %}
 {% set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
-<div
-  {{ attributes }}
->
-{% if _title is not empty %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: _title,
-    title_tag: _title_tag,
-    title_link: _title_link,
-    attributes: _title_attributes,
-  } only %}
-{% endif %}
-{% if _items is defined and _items is not empty %}
-  {% for _item in _items %}
-    {% if _item.title is not empty %}
-      {% set _item_title_attributes = _item.title_attributes ?: create_attribute() %}
-      {% set _item_title_attributes = _item_title_attributes.addClass(['mb-3']) %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: _item.title,
-        title_tag: _item.title_tag|default('h3'),
-        title_link: _item.title_link|default({}),
-        attributes: _item_title_attributes,
-      } only %}
-    {% endif %}
-    {% for _list in _item.content %}
-      {% if _list.attributes is empty %}
-        {% set _list = _list|merge({
-          attributes: create_attribute()
-        }) %}
+<div {{ attributes }}>
+  {% if _title is not empty %}
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: _title,
+      title_tag: _title_tag,
+      title_link: _title_link,
+      attributes: _title_attributes,
+    } only %}
+  {% endif %}
+  {% if _items is defined and _items is not empty %}
+    {% for _item in _items %}
+      {% if _item.title is not empty %}
+        {% set _item_title_attributes = _item.title_attributes ?: create_attribute() %}
+        {% set _item_title_attributes = _item_title_attributes.addClass(['mb-3']) %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: _item.title,
+          title_tag: _item.title_tag|default('h3'),
+          title_link: _item.title_link|default({}),
+          attributes: _item_title_attributes,
+        } only %}
       {% endif %}
-      {% if not loop.last %}
-        {% set _list = _list|merge({
+      {% for _list in _item.content %}
+        {% if _list.attributes is empty %}
+          {% set _list = _list|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
+        {% if not loop.last %}
+          {% set _list = _list|merge({
             attributes: _list.attributes.addClass(['border-bottom', 'mb-3'])
-          })
-        %}
-      {% endif %}
-      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _list only %}
+          }) %}
+        {% endif %}
+        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _list only %}
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-{% endif %}
+  {% endif %}
 </div>
 
 {% endspaceless %}
