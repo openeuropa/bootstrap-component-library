@@ -1,0 +1,41 @@
+{% spaceless %}
+
+  {# Parameters:
+  - title (string) (default: '')
+  - content (string)
+  - id (string) (default: '')
+  #}
+
+  {% set _title = title|default('') %}
+  {% set _content = content %}
+  {% set _id = id|default('') %}
+
+  {% if attributes is empty %}
+    {% set attributes = create_attribute() %}
+  {%  endif %}
+
+  {% if attributes.class is empty %}
+    {% set attributes = attributes.addClass(['mb-5']) %}
+  {% endif %}
+
+  {% if _id is not empty %}
+    {# Put the id directly on the <section> instead of the title, should work fine. #}
+    {% set attributes = attributes.setAttribute('id', _id) %}
+  {% endif %}
+
+  {% set _content_rendered %}{{ _content }}{% endset %}
+
+  {% if _content_rendered|trim is not empty %}
+    <section{{ attributes }}>
+      {% if _title is not empty %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: _title,
+          title_tag: 'h2',
+          attributes: create_attribute().addClass(['mb-4'])
+        } only %}
+      {% endif %}
+      {{ _content_rendered }}
+    </section>
+  {% endif %}
+
+{% endspaceless %}
