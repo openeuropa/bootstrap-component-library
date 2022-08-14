@@ -111,9 +111,7 @@
   {% endif %}
 
   <div class="container mt-md-4-75 mt-4">
-    {% block content_row %}
-      {{ content_row }}
-    {% endblock %}
+    {% block content_row %}{% endblock %}
     <div class="row">
       {% if _with_sidebar %}
         <div class="{{ _col_classes.left|join(' ') }}">
