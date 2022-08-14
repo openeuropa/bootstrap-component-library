@@ -1,4 +1,3 @@
-const drupalAttribute = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -91,7 +90,7 @@ module.exports = {
   },
   content_lists: {
     title: "Contributors",
-    title_attributes: new drupalAttribute().setAttribute("id", "contributors"),
+    id: "contributors",
     items: [
       {
         content: [

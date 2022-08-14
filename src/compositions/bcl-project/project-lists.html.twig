@@ -14,6 +14,7 @@
 #}
 
 {% set _title = title|default('') %}
+{% set _id = id|default(null) %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -26,15 +27,7 @@
 {% set _title_classes = ['my-4-5'] %}
 {% set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
-<div {{ attributes }}>
-  {% if _title is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: _title,
-      title_tag: _title_tag,
-      title_link: _title_link,
-      attributes: _title_attributes,
-    } only %}
-  {% endif %}
+{% set _rendered_content %}
   {% if _items is defined and _items is not empty %}
     {% for _item in _items %}
       {% if _item.title is not empty %}
@@ -62,6 +55,12 @@
       {% endfor %}
     {% endfor %}
   {% endif %}
-</div>
+{% endset %}
+
+{% include '@oe-bcl/bcl-section/section.html.twig' with {
+  title: _title,
+  id: _id,
+  content: _rendered_content,
+} only %}
 
 {% endspaceless %}
