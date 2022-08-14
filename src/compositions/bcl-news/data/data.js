@@ -13,6 +13,7 @@ import isChromatic from "chromatic/isChromatic";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
+import content2 from "@openeuropa/bcl-news/data/data--content2";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
@@ -44,6 +45,13 @@ const demoData = {
   share,
 };
 
+const demoData2 = {
+  ...baseData,
+  banner,
+  content: content2,
+  share,
+};
+
 const demoListing = {
   ...baseData,
   ...dataListing,
@@ -59,4 +67,4 @@ const demoListing = {
   },
 };
 
-export { demoData, demoListing };
+export { demoData, demoData2, demoListing };
