@@ -720,7 +720,9 @@ exports[`OE - event listing renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
@@ -754,10 +756,10 @@ exports[`OE - event listing renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <div
             class="offcanvas-start offcanvas-lg"
@@ -931,9 +933,9 @@ exports[`OE - event listing renders correctly 1`] = `
               </form>
             </div>
           </div>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
           <button
             aria-controls="bcl-offcanvas"
@@ -2703,7 +2705,9 @@ exports[`OE - event page renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
     >
@@ -2800,10 +2804,10 @@ exports[`OE - event page renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <nav
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
@@ -2839,220 +2843,232 @@ exports[`OE - event page renders correctly 1`] = `
               </li>
             </ul>
           </nav>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
-          <div
-            class="mt-3 mb-4 bcl-description-list"
+          <section
+            class="mb-5"
           >
-            <dl
-              class="d-md-grid grid-3-9 mb-3"
+            <div
+              class="mt-3 mb-4 bcl-description-list"
             >
-              <dt
-                class="d-flex"
+              <dl
+                class="d-md-grid grid-3-9 mb-3"
               >
-                <svg
-                  class="me-2 mt-1 bi icon--xs"
+                <dt
+                  class="d-flex"
                 >
-                  <use
-                    xlink:href="/icons.svg#calendar-fill"
-                  />
-                </svg>
-                <p
-                  class="mb-0 d-inline-block"
-                >
-                  Date
-                </p>
-              </dt>
-              <dd>
-                17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
-              </dd>
-            </dl>
-            <dl
-              class="d-md-grid grid-3-9 mb-3"
-            >
-              <dt
-                class="d-flex"
-              >
-                <svg
-                  class="me-2 mt-1 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#geo-alt-fill"
-                  />
-                </svg>
-                <p
-                  class="mb-0 d-inline-block"
-                >
-                  Location
-                </p>
-              </dt>
-              <dd>
-                <div>
                   <svg
-                    class="me-2 bi icon--fluid"
+                    class="me-2 mt-1 bi icon--xs"
                   >
                     <use
-                      xlink:href="/flags.svg#spain"
+                      xlink:href="/icons.svg#calendar-fill"
                     />
                   </svg>
                   <p
                     class="mb-0 d-inline-block"
                   >
-                    Barcelona, Spain
+                    Date
                   </p>
-                </div>
-              </dd>
-            </dl>
-          </div>
-          <h2
-            class="my-4"
-            id="item-1"
-          >
-            Description
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet.
-  
-          </p>
-          <h2
-            class="my-4"
-            id="item-2"
-          >
-            Related documents
-          </h2>
-          <div
-            class="mb-3-5 bcl-file border rounded"
-          >
-            <div
-              class="px-3-5 py-3"
-            >
-              <div
-                class="d-flex"
+                </dt>
+                <dd>
+                  17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
+                </dd>
+              </dl>
+              <dl
+                class="d-md-grid grid-3-9 mb-3"
               >
-                <div
-                  class="pe-2 pb-2"
+                <dt
+                  class="d-flex"
                 >
                   <svg
-                    class="mt-1 icon--file bi icon--xl"
+                    class="me-2 mt-1 bi icon--xs"
                   >
                     <use
-                      xlink:href="/icons.svg#file-pdf-fill"
+                      xlink:href="/icons.svg#geo-alt-fill"
                     />
                   </svg>
-                </div>
-                <div
-                  class="d-md-flex flex-grow-1"
-                >
-                  <div
-                    class="flex-grow-1"
+                  <p
+                    class="mb-0 d-inline-block"
                   >
-                    <p
-                      class="fw-medium m-0 fs-5"
-                    >
-                      File title
-                    </p>
-                    <small
-                      class="fw-medium m-0"
-                    >
-                      English
-                      <span
-                        class="fw-normal"
-                      >
-                         (16.2 MB - PDF)
-                      </span>
-                    </small>
-                  </div>
-                  <a
-                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                    download="true"
-                    href="/example.html"
-                    target="_blank"
-                  >
-                    Download
+                    Location
+                  </p>
+                </dt>
+                <dd>
+                  <div>
                     <svg
-                      class="ms-2-5 bi icon--fluid"
+                      class="me-2 bi icon--fluid"
                     >
                       <use
-                        xlink:href="/icons.svg#download"
+                        xlink:href="/flags.svg#spain"
                       />
                     </svg>
-                  </a>
+                    <p
+                      class="mb-0 d-inline-block"
+                    >
+                      Barcelona, Spain
+                    </p>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <section
+            class="mb-5"
+          >
+            <h2
+              class="my-4"
+              id="item-1"
+            >
+              Description
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+    a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
+    posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
+    Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
+    sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+    
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+    a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet.
+    
+            </p>
+          </section>
+          <section
+            class="mb-5"
+          >
+            <h2
+              class="my-4"
+              id="item-2"
+            >
+              Related documents
+            </h2>
+            <div
+              class="mb-3-5 bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <div
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
+                    >
+                      <use
+                        xlink:href="/icons.svg#file-pdf-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="mb-3-5 bcl-file border rounded"
-          >
             <div
-              class="px-3-5 py-3"
+              class="mb-3-5 bcl-file border rounded"
             >
               <div
-                class="d-flex"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="pe-2 pb-2"
-                >
-                  <svg
-                    class="mt-1 icon--file bi icon--xl"
-                  >
-                    <use
-                      xlink:href="/icons.svg#file-pdf-fill"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="d-md-flex flex-grow-1"
+                  class="d-flex"
                 >
                   <div
-                    class="flex-grow-1"
+                    class="pe-2 pb-2"
                   >
-                    <p
-                      class="fw-medium m-0 fs-5"
-                    >
-                      File title
-                    </p>
-                    <small
-                      class="fw-medium m-0"
-                    >
-                      English
-                      <span
-                        class="fw-normal"
-                      >
-                         (16.2 MB - PDF)
-                      </span>
-                    </small>
-                  </div>
-                  <a
-                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                    download="true"
-                    href="/example.html"
-                    target="_blank"
-                  >
-                    Download
                     <svg
-                      class="ms-2-5 bi icon--fluid"
+                      class="mt-1 icon--file bi icon--xl"
                     >
                       <use
-                        xlink:href="/icons.svg#download"
+                        xlink:href="/icons.svg#file-pdf-fill"
                       />
                     </svg>
-                  </a>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>

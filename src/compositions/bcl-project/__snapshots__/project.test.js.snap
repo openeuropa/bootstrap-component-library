@@ -322,7 +322,9 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
     </nav>
     <!-- breadcrumbs -->
   </header>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
     >
@@ -428,10 +430,10 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <nav
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
@@ -477,232 +479,243 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               </li>
             </ul>
           </nav>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
-          <h2
-            class="mb-4 bcl-heading"
+          <section
+            class="mb-5"
             id="project-details"
           >
-            Project details
-          </h2>
-          <div
-            class="bcl-project-status border-bottom pb-4 mb-4"
-          >
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Project details
+            </h2>
             <div
-              class="row"
+              class="bcl-project-status border-bottom pb-4 mb-4"
             >
               <div
-                class="col-12 col-md-3"
-              >
-                <p
-                  class="fw-bold"
-                >
-                  Status
-                </p>
-                <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-info"
-                >
-                  Ongoing
-                </span>
-              </div>
-              <div
-                class="col-12 col-md-9"
+                class="row"
               >
                 <div
-                  class="d-flex justify-content-between"
+                  class="col-12 col-md-3"
                 >
                   <p
                     class="fw-bold"
                   >
-                    Start
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2020
-                    </span>
+                    Status
                   </p>
-                  <p
-                    class="fw-bold text-end"
+                  <span
+                    class="mb-3 mb-md-0 badge rounded-pill bg-info"
                   >
-                    End
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2026
-                    </span>
-                  </p>
+                    Ongoing
+                  </span>
                 </div>
                 <div
-                  class="progress"
+                  class="col-12 col-md-9"
                 >
                   <div
-                    aria-label="25"
-                    aria-valuemax="100"
-                    aria-valuemin="0"
-                    aria-valuenow="25"
-                    class="progress-bar text-bg-info"
-                    role="progressbar"
-                    style="width: 25%"
-                  />
+                    class="d-flex justify-content-between"
+                  >
+                    <p
+                      class="fw-bold"
+                    >
+                      Start
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2020
+                      </span>
+                    </p>
+                    <p
+                      class="fw-bold text-end"
+                    >
+                      End
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2026
+                      </span>
+                    </p>
+                  </div>
+                  <div
+                    class="progress"
+                  >
+                    <div
+                      aria-label="25"
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      aria-valuenow="25"
+                      class="progress-bar text-bg-info"
+                      role="progressbar"
+                      style="width: 25%"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="bcl-project-contributions border-bottom pb-4 mb-4"
-          >
             <div
-              class="row"
+              class="bcl-project-contributions border-bottom pb-4 mb-4"
             >
               <div
-                class="bcl-project-contributions-chart col-5 col-md-3"
+                class="row"
               >
                 <div
-                  class="circular-progress"
-                  data-percentage="70"
+                  class="bcl-project-contributions-chart col-5 col-md-3"
                 >
-                  <span
-                    class="circular-progress-left"
+                  <div
+                    class="circular-progress"
+                    data-percentage="70"
                   >
                     <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                  <span
-                    class="circular-progress-right"
-                  >
+                      class="circular-progress-left"
+                    >
+                      <span
+                        class="circular-progress-bar"
+                      />
+                    </span>
                     <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
+                      class="circular-progress-right"
+                    >
+                      <span
+                        class="circular-progress-bar"
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
-              >
                 <div
-                  class="mb-0 bcl-description-list"
+                  class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
                 >
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
+                  <div
+                    class="mb-0 bcl-description-list"
                   >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                        />
-                        Total budget
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 16.314.672,00
-                    </dd>
-                  </dl>
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                        />
-                        EC contribution
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 9.994.672,00
-                    </dd>
-                  </dl>
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                          />
+                          Total budget
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 16.314.672,00
+                      </dd>
+                    </dl>
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                          />
+                          EC contribution
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 9.994.672,00
+                      </dd>
+                    </dl>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div
-              class="bcl-description-list"
+            <section
+              class="mb-5"
             >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
+              <div
+                class="bcl-description-list"
               >
-                <dt>
-                  EU contribution amount
-                </dt>
-                <dd>
-                  <div>
-                    290 366,97 Euro 
-                    <a
-                      href="/example.html"
-                    >
-                      (contribution details)
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Funding source
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      External link
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    EU contribution amount
+                  </dt>
+                  <dd>
+                    <div>
+                      290 366,97 Euro 
+                      <a
+                        href="/example.html"
                       >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Contact
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      mail.to@address.eu
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+                        (contribution details)
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Funding source
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        External link
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Contact
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        mail.to@address.eu
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </section>
+          </section>
+          <section
+            class="mb-5"
             id="description"
           >
-            Description
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <br />
-              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-            <br />
-          </p>
-          <div>
             <h2
-              class="my-4-5 bcl-heading"
-              id="partners"
+              class="mb-4 bcl-heading"
+            >
+              Description
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              <br />
+                Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+              <br />
+            </p>
+          </section>
+          <section
+            class="mb-5"
+          >
+            <h2
+              class="mb-4 bcl-heading"
             >
               Partner organisations
             </h2>
@@ -1038,7 +1051,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
+          </section>
           <div
             class="d-none d-lg-inline-block"
           >
@@ -2285,7 +2298,9 @@ exports[`OE - Project listing renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
@@ -2335,10 +2350,10 @@ exports[`OE - Project listing renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <div
             class="offcanvas-start offcanvas-lg"
@@ -2553,9 +2568,9 @@ exports[`OE - Project listing renders correctly 1`] = `
               </form>
             </div>
           </div>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
           <button
             aria-controls="bcl-offcanvas"
@@ -4086,7 +4101,9 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
     >
@@ -4192,10 +4209,10 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <nav
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
@@ -4281,313 +4298,335 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               </li>
             </ul>
           </nav>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
-          <h2
-            class="mb-4 bcl-heading"
+          <section
+            class="mb-5"
             id="project-details"
           >
-            Project details
-          </h2>
-          <div
-            class="bcl-project-status border-bottom pb-4 mb-4"
-          >
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Project details
+            </h2>
             <div
-              class="row"
+              class="bcl-project-status border-bottom pb-4 mb-4"
             >
               <div
-                class="col-12 col-md-3"
-              >
-                <p
-                  class="fw-bold"
-                >
-                  Status
-                </p>
-                <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-dark"
-                >
-                  Closed
-                </span>
-              </div>
-              <div
-                class="col-12 col-md-9"
+                class="row"
               >
                 <div
-                  class="d-flex justify-content-between"
+                  class="col-12 col-md-3"
                 >
                   <p
                     class="fw-bold"
                   >
-                    Start
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2007
-                    </span>
+                    Status
                   </p>
-                  <p
-                    class="fw-bold text-end"
+                  <span
+                    class="mb-3 mb-md-0 badge rounded-pill bg-dark"
                   >
-                    End
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2017
-                    </span>
-                  </p>
+                    Closed
+                  </span>
                 </div>
                 <div
-                  class="progress"
+                  class="col-12 col-md-9"
                 >
                   <div
-                    aria-label="100"
-                    aria-valuemax="100"
-                    aria-valuemin="0"
-                    aria-valuenow="100"
-                    class="progress-bar text-bg-dark"
-                    role="progressbar"
-                    style="width: 100%"
-                  />
+                    class="d-flex justify-content-between"
+                  >
+                    <p
+                      class="fw-bold"
+                    >
+                      Start
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2007
+                      </span>
+                    </p>
+                    <p
+                      class="fw-bold text-end"
+                    >
+                      End
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2017
+                      </span>
+                    </p>
+                  </div>
+                  <div
+                    class="progress"
+                  >
+                    <div
+                      aria-label="100"
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      aria-valuenow="100"
+                      class="progress-bar text-bg-dark"
+                      role="progressbar"
+                      style="width: 100%"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="bcl-project-contributions border-bottom pb-4 mb-4"
-          >
             <div
-              class="row"
+              class="bcl-project-contributions border-bottom pb-4 mb-4"
             >
               <div
-                class="bcl-project-contributions-chart col-5 col-md-3"
+                class="row"
               >
                 <div
-                  class="circular-progress"
-                  data-percentage="70"
+                  class="bcl-project-contributions-chart col-5 col-md-3"
                 >
-                  <span
-                    class="circular-progress-left"
+                  <div
+                    class="circular-progress"
+                    data-percentage="70"
                   >
                     <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                  <span
-                    class="circular-progress-right"
-                  >
-                    <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                </div>
-              </div>
-              <div
-                class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
-              >
-                <div
-                  class="mb-0 bcl-description-list"
-                >
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                        />
-                        Total budget
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 16.314.672,00
-                    </dd>
-                  </dl>
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                        />
-                        EC contribution
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 9.994.672,00
-                    </dd>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="border-bottom mb-3 bcl-description-list"
-            >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Website
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
+                      class="circular-progress-left"
                     >
-                      www.website-address.eu
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Funding Programme
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      www.funding-prog.eu
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Project ID
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      345984678
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-            <div
-              class="bcl-description-list"
-            >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  <p
-                    class="mb-0 d-inline-block"
-                  >
-                    Coordinator
-                  </p>
-                </dt>
-                <dd>
-                  <div>
-                    <svg
-                      class="me-2 bi icon--fluid"
-                    >
-                      <use
-                        xlink:href="/flags.svg#bulgaria"
+                      <span
+                        class="circular-progress-bar"
                       />
-                    </svg>
+                    </span>
+                    <span
+                      class="circular-progress-right"
+                    >
+                      <span
+                        class="circular-progress-bar"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
+                >
+                  <div
+                    class="mb-0 bcl-description-list"
+                  >
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                          />
+                          Total budget
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 16.314.672,00
+                      </dd>
+                    </dl>
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                          />
+                          EC contribution
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 9.994.672,00
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section
+              class="mb-5"
+            >
+              <div
+                class="border-bottom mb-3 bcl-description-list"
+              >
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Website
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        www.website-address.eu
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Funding Programme
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        www.funding-prog.eu
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Project ID
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        345984678
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div
+                class="bcl-description-list"
+              >
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
                     <p
                       class="mb-0 d-inline-block"
                     >
-                      Bulgaria
+                      Coordinator
                     </p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+                  </dt>
+                  <dd>
+                    <div>
+                      <svg
+                        class="me-2 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <p
+                        class="mb-0 d-inline-block"
+                      >
+                        Bulgaria
+                      </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </section>
+          </section>
+          <section
+            class="mb-5"
             id="summary"
           >
-            Summary
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Summary
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-          <br />
-            Duis fermentum facilisis ex, ac porta massa.      
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+    
+          </section>
+          <section
+            class="mb-5"
             id="objective"
           >
-            Objective
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Objective
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa.      
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+    
+          </section>
+          <section
+            class="mb-5"
             id="impact"
           >
-            Impact
-          </h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-          <div>
             <h2
-              class="my-4-5 bcl-heading"
+              class="mb-4 bcl-heading"
+            >
+              Impact
+            </h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </section>
+          <section
+            class="mb-5"
+          >
+            <h2
+              class="mb-4 bcl-heading"
             >
               Lead contributor
             </h2>
@@ -4656,11 +4695,13 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
-          <div>
+          </section>
+          <section
+            class="mb-5"
+            id="contributors"
+          >
             <h2
-              class="my-4-5 bcl-heading"
-              id="contributors"
+              class="mb-4 bcl-heading"
             >
               Contributors
             </h2>
@@ -4918,25 +4959,29 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+          </section>
+          <section
+            class="mb-5"
             id="achievements"
           >
-            Achievements and Milestones
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Achievements and Milestones
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-          <div
-            class="mt-3 mb-4-5"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </section>
+          <section
+            class="mb-5"
           >
             <div
               class="bcl-gallery"
@@ -5680,7 +5725,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <h2
             class="mb-3"
           >
@@ -6697,7 +6742,9 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
     >
@@ -6803,10 +6850,10 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <nav
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
@@ -6892,313 +6939,335 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               </li>
             </ul>
           </nav>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
-          <h2
-            class="mb-4 bcl-heading"
+          <section
+            class="mb-5"
             id="project-details"
           >
-            Project details
-          </h2>
-          <div
-            class="bcl-project-status border-bottom pb-4 mb-4"
-          >
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Project details
+            </h2>
             <div
-              class="row"
+              class="bcl-project-status border-bottom pb-4 mb-4"
             >
               <div
-                class="col-12 col-md-3"
-              >
-                <p
-                  class="fw-bold"
-                >
-                  Status
-                </p>
-                <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-info"
-                >
-                  Ongoing
-                </span>
-              </div>
-              <div
-                class="col-12 col-md-9"
+                class="row"
               >
                 <div
-                  class="d-flex justify-content-between"
+                  class="col-12 col-md-3"
                 >
                   <p
                     class="fw-bold"
                   >
-                    Start
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2020
-                    </span>
+                    Status
                   </p>
-                  <p
-                    class="fw-bold text-end"
+                  <span
+                    class="mb-3 mb-md-0 badge rounded-pill bg-info"
                   >
-                    End
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2026
-                    </span>
-                  </p>
+                    Ongoing
+                  </span>
                 </div>
                 <div
-                  class="progress"
+                  class="col-12 col-md-9"
                 >
                   <div
-                    aria-label="25"
-                    aria-valuemax="100"
-                    aria-valuemin="0"
-                    aria-valuenow="25"
-                    class="progress-bar text-bg-info"
-                    role="progressbar"
-                    style="width: 25%"
-                  />
+                    class="d-flex justify-content-between"
+                  >
+                    <p
+                      class="fw-bold"
+                    >
+                      Start
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2020
+                      </span>
+                    </p>
+                    <p
+                      class="fw-bold text-end"
+                    >
+                      End
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2026
+                      </span>
+                    </p>
+                  </div>
+                  <div
+                    class="progress"
+                  >
+                    <div
+                      aria-label="25"
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      aria-valuenow="25"
+                      class="progress-bar text-bg-info"
+                      role="progressbar"
+                      style="width: 25%"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="bcl-project-contributions border-bottom pb-4 mb-4"
-          >
             <div
-              class="row"
+              class="bcl-project-contributions border-bottom pb-4 mb-4"
             >
               <div
-                class="bcl-project-contributions-chart col-5 col-md-3"
+                class="row"
               >
                 <div
-                  class="circular-progress"
-                  data-percentage="70"
+                  class="bcl-project-contributions-chart col-5 col-md-3"
                 >
-                  <span
-                    class="circular-progress-left"
+                  <div
+                    class="circular-progress"
+                    data-percentage="70"
                   >
                     <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                  <span
-                    class="circular-progress-right"
-                  >
-                    <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                </div>
-              </div>
-              <div
-                class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
-              >
-                <div
-                  class="mb-0 bcl-description-list"
-                >
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                        />
-                        Total budget
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 16.314.672,00
-                    </dd>
-                  </dl>
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                        />
-                        EC contribution
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 9.994.672,00
-                    </dd>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="border-bottom mb-3 bcl-description-list"
-            >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Website
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
+                      class="circular-progress-left"
                     >
-                      www.website-address.eu
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Funding Programme
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      www.funding-prog.eu
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Project ID
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      345984678
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-            <div
-              class="bcl-description-list"
-            >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  <p
-                    class="mb-0 d-inline-block"
-                  >
-                    Coordinator
-                  </p>
-                </dt>
-                <dd>
-                  <div>
-                    <svg
-                      class="me-2 bi icon--fluid"
-                    >
-                      <use
-                        xlink:href="/flags.svg#bulgaria"
+                      <span
+                        class="circular-progress-bar"
                       />
-                    </svg>
+                    </span>
+                    <span
+                      class="circular-progress-right"
+                    >
+                      <span
+                        class="circular-progress-bar"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
+                >
+                  <div
+                    class="mb-0 bcl-description-list"
+                  >
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                          />
+                          Total budget
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 16.314.672,00
+                      </dd>
+                    </dl>
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                          />
+                          EC contribution
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 9.994.672,00
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section
+              class="mb-5"
+            >
+              <div
+                class="border-bottom mb-3 bcl-description-list"
+              >
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Website
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        www.website-address.eu
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Funding Programme
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        www.funding-prog.eu
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Project ID
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        345984678
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div
+                class="bcl-description-list"
+              >
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
                     <p
                       class="mb-0 d-inline-block"
                     >
-                      Bulgaria
+                      Coordinator
                     </p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+                  </dt>
+                  <dd>
+                    <div>
+                      <svg
+                        class="me-2 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <p
+                        class="mb-0 d-inline-block"
+                      >
+                        Bulgaria
+                      </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </section>
+          </section>
+          <section
+            class="mb-5"
             id="summary"
           >
-            Summary
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Summary
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-          <br />
-            Duis fermentum facilisis ex, ac porta massa.      
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+    
+          </section>
+          <section
+            class="mb-5"
             id="objective"
           >
-            Objective
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Objective
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa.      
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+    
+          </section>
+          <section
+            class="mb-5"
             id="impact"
           >
-            Impact
-          </h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-          <div>
             <h2
-              class="my-4-5 bcl-heading"
+              class="mb-4 bcl-heading"
+            >
+              Impact
+            </h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </section>
+          <section
+            class="mb-5"
+          >
+            <h2
+              class="mb-4 bcl-heading"
             >
               Lead contributor
             </h2>
@@ -7267,11 +7336,13 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
-          <div>
+          </section>
+          <section
+            class="mb-5"
+            id="contributors"
+          >
             <h2
-              class="my-4-5 bcl-heading"
-              id="contributors"
+              class="mb-4 bcl-heading"
             >
               Contributors
             </h2>
@@ -7529,25 +7600,29 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+          </section>
+          <section
+            class="mb-5"
             id="achievements"
           >
-            Achievements and Milestones
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Achievements and Milestones
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-          <div
-            class="mt-3 mb-4-5"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </section>
+          <section
+            class="mb-5"
           >
             <div
               class="bcl-gallery"
@@ -8291,7 +8366,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <h2
             class="mb-3"
           >
@@ -9308,7 +9383,9 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
     >
@@ -9414,10 +9491,10 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <nav
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
@@ -9503,313 +9580,335 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               </li>
             </ul>
           </nav>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
-          <h2
-            class="mb-4 bcl-heading"
+          <section
+            class="mb-5"
             id="project-details"
           >
-            Project details
-          </h2>
-          <div
-            class="bcl-project-status border-bottom pb-4 mb-4"
-          >
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Project details
+            </h2>
             <div
-              class="row"
+              class="bcl-project-status border-bottom pb-4 mb-4"
             >
               <div
-                class="col-12 col-md-3"
-              >
-                <p
-                  class="fw-bold"
-                >
-                  Status
-                </p>
-                <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-secondary"
-                >
-                  Not started
-                </span>
-              </div>
-              <div
-                class="col-12 col-md-9"
+                class="row"
               >
                 <div
-                  class="d-flex justify-content-between"
+                  class="col-12 col-md-3"
                 >
                   <p
                     class="fw-bold"
                   >
-                    Start
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2025
-                    </span>
+                    Status
                   </p>
-                  <p
-                    class="fw-bold text-end"
+                  <span
+                    class="mb-3 mb-md-0 badge rounded-pill bg-secondary"
                   >
-                    End
-                    <br />
-                    <span
-                      class="fw-normal"
-                    >
-                      19 December 2027
-                    </span>
-                  </p>
+                    Not started
+                  </span>
                 </div>
                 <div
-                  class="progress"
+                  class="col-12 col-md-9"
                 >
                   <div
-                    aria-label="0"
-                    aria-valuemax="100"
-                    aria-valuemin="0"
-                    aria-valuenow="0"
-                    class="progress-bar text-bg-secondary"
-                    role="progressbar"
-                    style="width: 0%"
-                  />
+                    class="d-flex justify-content-between"
+                  >
+                    <p
+                      class="fw-bold"
+                    >
+                      Start
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2025
+                      </span>
+                    </p>
+                    <p
+                      class="fw-bold text-end"
+                    >
+                      End
+                      <br />
+                      <span
+                        class="fw-normal"
+                      >
+                        19 December 2027
+                      </span>
+                    </p>
+                  </div>
+                  <div
+                    class="progress"
+                  >
+                    <div
+                      aria-label="0"
+                      aria-valuemax="100"
+                      aria-valuemin="0"
+                      aria-valuenow="0"
+                      class="progress-bar text-bg-secondary"
+                      role="progressbar"
+                      style="width: 0%"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="bcl-project-contributions border-bottom pb-4 mb-4"
-          >
             <div
-              class="row"
+              class="bcl-project-contributions border-bottom pb-4 mb-4"
             >
               <div
-                class="bcl-project-contributions-chart col-5 col-md-3"
+                class="row"
               >
                 <div
-                  class="circular-progress"
-                  data-percentage="70"
+                  class="bcl-project-contributions-chart col-5 col-md-3"
                 >
-                  <span
-                    class="circular-progress-left"
+                  <div
+                    class="circular-progress"
+                    data-percentage="70"
                   >
                     <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                  <span
-                    class="circular-progress-right"
-                  >
-                    <span
-                      class="circular-progress-bar"
-                    />
-                  </span>
-                </div>
-              </div>
-              <div
-                class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
-              >
-                <div
-                  class="mb-0 bcl-description-list"
-                >
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                        />
-                        Total budget
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 16.314.672,00
-                    </dd>
-                  </dl>
-                  <dl
-                    class="d-md-grid grid-3-9 mb-3"
-                  >
-                    <dt>
-                      <div
-                        class="d-flex align-items-center"
-                      >
-                        <span
-                          class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                        />
-                        EC contribution
-                      </div>
-                    </dt>
-                    <dd>
-                      EUR 9.994.672,00
-                    </dd>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="border-bottom mb-3 bcl-description-list"
-            >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Website
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
+                      class="circular-progress-left"
                     >
-                      www.website-address.eu
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Funding Programme
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      www.funding-prog.eu
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  Project ID
-                </dt>
-                <dd>
-                  <div>
-                    <a
-                      href="/example.html"
-                    >
-                      345984678
-                      <svg
-                        class="ms-2-5 bi icon--fluid"
-                      >
-                        <use
-                          xlink:href="/icons.svg#box-arrow-up-right"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-            <div
-              class="bcl-description-list"
-            >
-              <dl
-                class="d-md-grid grid-3-9 mb-3"
-              >
-                <dt>
-                  <p
-                    class="mb-0 d-inline-block"
-                  >
-                    Coordinator
-                  </p>
-                </dt>
-                <dd>
-                  <div>
-                    <svg
-                      class="me-2 bi icon--fluid"
-                    >
-                      <use
-                        xlink:href="/flags.svg#bulgaria"
+                      <span
+                        class="circular-progress-bar"
                       />
-                    </svg>
+                    </span>
+                    <span
+                      class="circular-progress-right"
+                    >
+                      <span
+                        class="circular-progress-bar"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="bcl-project-contributions-legend col-7 col-md-9 align-self-center"
+                >
+                  <div
+                    class="mb-0 bcl-description-list"
+                  >
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                          />
+                          Total budget
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 16.314.672,00
+                      </dd>
+                    </dl>
+                    <dl
+                      class="d-md-grid grid-3-9 mb-3"
+                    >
+                      <dt>
+                        <div
+                          class="d-flex align-items-center"
+                        >
+                          <span
+                            class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                          />
+                          EC contribution
+                        </div>
+                      </dt>
+                      <dd>
+                        EUR 9.994.672,00
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section
+              class="mb-5"
+            >
+              <div
+                class="border-bottom mb-3 bcl-description-list"
+              >
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Website
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        www.website-address.eu
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Funding Programme
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        www.funding-prog.eu
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
+                    Project ID
+                  </dt>
+                  <dd>
+                    <div>
+                      <a
+                        href="/example.html"
+                      >
+                        345984678
+                        <svg
+                          class="ms-2-5 bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div
+                class="bcl-description-list"
+              >
+                <dl
+                  class="d-md-grid grid-3-9 mb-3"
+                >
+                  <dt>
                     <p
                       class="mb-0 d-inline-block"
                     >
-                      Bulgaria
+                      Coordinator
                     </p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+                  </dt>
+                  <dd>
+                    <div>
+                      <svg
+                        class="me-2 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <p
+                        class="mb-0 d-inline-block"
+                      >
+                        Bulgaria
+                      </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </section>
+          </section>
+          <section
+            class="mb-5"
             id="summary"
           >
-            Summary
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Summary
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-          <br />
-            Duis fermentum facilisis ex, ac porta massa.      
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+    
+          </section>
+          <section
+            class="mb-5"
             id="objective"
           >
-            Objective
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Objective
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa.      
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+    
+          </section>
+          <section
+            class="mb-5"
             id="impact"
           >
-            Impact
-          </h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-          <div>
             <h2
-              class="my-4-5 bcl-heading"
+              class="mb-4 bcl-heading"
+            >
+              Impact
+            </h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </section>
+          <section
+            class="mb-5"
+          >
+            <h2
+              class="mb-4 bcl-heading"
             >
               Lead contributor
             </h2>
@@ -9878,11 +9977,13 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
-          <div>
+          </section>
+          <section
+            class="mb-5"
+            id="contributors"
+          >
             <h2
-              class="my-4-5 bcl-heading"
-              id="contributors"
+              class="mb-4 bcl-heading"
             >
               Contributors
             </h2>
@@ -10140,25 +10241,29 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 </dd>
               </dl>
             </div>
-          </div>
-          <h2
-            class="mb-4 pt-3 bcl-heading"
+          </section>
+          <section
+            class="mb-5"
             id="achievements"
           >
-            Achievements and Milestones
-          </h2>
-          <p>
-            
+            <h2
+              class="mb-4 bcl-heading"
+            >
+              Achievements and Milestones
+            </h2>
+            <p>
+              
         This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
       
-          </p>
-          
+            </p>
+            
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          <br />
-            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-          <br />
-          <div
-            class="mt-3 mb-4-5"
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </section>
+          <section
+            class="mb-5"
           >
             <div
               class="bcl-gallery"
@@ -10902,7 +11007,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <h2
             class="mb-3"
           >

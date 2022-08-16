@@ -720,7 +720,9 @@ exports[`OE - Person details renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
@@ -867,7 +869,7 @@ exports[`OE - Person details renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row d-block"
       >
         <div
           class="col-12 col-lg-10 col-xl-9 col-xxl-8"
@@ -2022,7 +2024,9 @@ exports[`OE - Person listing renders correctly 1`] = `
       </div>
     </div>
   </div>
-  <main>
+  <main
+    class="mb-5"
+  >
     <div
       class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
     >
@@ -2072,10 +2076,10 @@ exports[`OE - Person listing renders correctly 1`] = `
       class="container mt-md-4-75 mt-4"
     >
       <div
-        class="row"
+        class="row gy-5 children-eat-margins"
       >
-        <div
-          class="col-12 bcl-sidebar col-lg-3"
+        <aside
+          class="bcl-sidebar col-lg-3"
         >
           <div
             class="offcanvas-start offcanvas-lg"
@@ -2139,9 +2143,9 @@ exports[`OE - Person listing renders correctly 1`] = `
               </form>
             </div>
           </div>
-        </div>
+        </aside>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
           <button
             aria-controls="bcl-offcanvas"
