@@ -49,7 +49,9 @@
   {% if _infos is not empty %}
     <div class="d-flex flex-wrap">
     {% for _info in _infos %}
+      {% if _info is not empty %}
       <span class="text-muted text-nowrap{{ loop.last ? '' :' me-4-5'}}">{{ _info }}</span>
+      {% endif %}
     {% endfor %}
     </div>
   {% endif %}
