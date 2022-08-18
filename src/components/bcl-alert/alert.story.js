@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import {
   getVariants,
   getIconNames,
@@ -97,7 +98,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Alert",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

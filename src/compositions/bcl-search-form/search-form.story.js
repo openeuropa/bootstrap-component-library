@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
@@ -24,7 +25,7 @@ const getArgTypes = () => ({
 
 export default {
   title: "Compositions/Search Form",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     chromatic: {
       viewports: [414, 834],

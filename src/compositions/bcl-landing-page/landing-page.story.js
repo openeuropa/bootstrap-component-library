@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import dataLanding from "@openeuropa/bcl-landing-page/data/data";
@@ -8,7 +9,7 @@ export default {
   title: "Features/Landing Page",
   parameters: {
     layout: "fullscreen",
-    decorators: [withDesign],
+    decorators: [withCode, withDesign],
     controls: { disable: true },
     badges: ["stable"],
     badgesConfig: {

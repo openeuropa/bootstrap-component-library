@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { within, userEvent } from "@storybook/testing-library";
@@ -8,7 +9,7 @@ import languageSwitcher from "@openeuropa/bcl-language-switcher/language-switche
 
 export default {
   title: "Compositions/Language Switcher",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     badges: ["stable"],
     layout: "padded",
