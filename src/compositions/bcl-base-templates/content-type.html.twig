@@ -6,6 +6,7 @@
   - with_footer (boolean) (default: false)
   - with_banner (boolean) (default: false)
   - with_sidebar (boolean) (default: false)
+  - reset_container_margins (boolean) (default: false)
   - sidebar_size (string) (default: 'normal')
     options: ['normal', 'large']
   - landing (boolean) (default: false)
@@ -29,10 +30,17 @@
 {% set _with_footer = footer|default(false) %}
 {% set _with_banner = banner|default(false) %}
 {% set _with_sidebar = sidebar|default(false) %}
+{% set _reset_container_margins = reset_container_margins|default(false) %}
 {% set _sidebar_size = sidebar_size|default('normal') %}
 {% set _landing = landing|default(false) %}
 {% set _content_type = content_type|default('') %}
 {% set _classes = ['bcl-node-type'] %}
+
+{% set _container_classes = 'container' %}
+{% if not _reset_container_margins %}
+  {% set _container_classes = _container_classes ~ ' mt-md-4-75 mt-4' %}
+{% endif %}
+
 
 {% if _with_sidebar %}
   {% set _col_classes = {
@@ -92,14 +100,21 @@
   {% endblock %}
 {% endif %}
 
-  <div class="container mt-md-4-75 mt-4">
+  <div class="{{ _container_classes }}">
     <div class="row">
       {% block content_row %}
         {{ content_row }}
       {% endblock %}
     {% if _with_sidebar %}
       <div class="{{ _col_classes.left|join(' ') }}">
-        {% block sidebar %}{% endblock %}
+        
+      {% if _reset_container_margins %}
+        <div class="bcl-section">
+      {% endif %} 
+          {% block sidebar %}{% endblock %}
+      {% if _reset_container_margins %}
+        </div>
+      {% endif %}
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}

@@ -57,6 +57,7 @@ const demoPage = {
   project_contributions: dataContributions,
   banner,
   share,
+  reset_container_margins: true,
 };
 
 const ongoingDemo = {

@@ -44,7 +44,8 @@ module.exports = {
       title: "Summary",
       content: `
       <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa.
       </p>
       ${getDummyText(5)}`,
     },
@@ -53,7 +54,8 @@ module.exports = {
       title: "Objective",
       content: `
       <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa.
       </p>
       ${getDummyText(2)}`,
     },
@@ -69,7 +71,8 @@ module.exports = {
       title: "Achievements and Milestones",
       content: `
       <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa.
       </p>
       ${getDummyText(3)}`,
     },
