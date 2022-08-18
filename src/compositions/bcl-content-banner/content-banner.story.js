@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
@@ -102,7 +103,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Content banner",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     design: [

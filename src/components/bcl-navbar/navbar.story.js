@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants, correctPaths } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
@@ -69,7 +70,7 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Navbar",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

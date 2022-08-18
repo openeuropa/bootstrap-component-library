@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-links-block/data/data.js";
@@ -51,7 +52,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Links block",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",
