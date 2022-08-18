@@ -42,22 +42,12 @@ module.exports = {
     {
       title_id: "summary",
       title: "Summary",
-      content: `
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa.
-      </p>
-      ${getDummyText(5)}`,
+      content: getDummyText(6),
     },
     {
       title_id: "objective",
       title: "Objective",
-      content: `
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa.
-      </p>
-      ${getDummyText(2)}`,
+      content: getDummyText(6),
     },
     {
       title_id: "impact",
@@ -69,12 +59,7 @@ module.exports = {
     {
       title_id: "achievements",
       title: "Achievements and Milestones",
-      content: `
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum facilisis ex, ac porta massa.
-      </p>
-      ${getDummyText(3)}`,
+      content: getDummyText(6),
     },
   ],
 };

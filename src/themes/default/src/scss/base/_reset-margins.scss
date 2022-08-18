@@ -1,0 +1,31 @@
+// Local helper mixin. Don't use elsewhere.
+@mixin reset-margins-pseudo-element($margin) {
+  content: "";
+  height: 0;
+  display: flex;
+  visibility: hidden;
+  margin-top: -$margin;
+  margin-bottom: $margin;
+}
+
+// Neutralizes bottom margin of last child element.
+@mixin reset-margin-top($margin: 200px) {
+  &::before {
+    @include reset-margins-pseudo-element($margin);
+  }
+}
+
+// Neutralizes the top margin of first child element.
+@mixin reset-margin-bottom($margin: 200px) {
+  &::after {
+    @include reset-margins-pseudo-element(-$margin);
+  }
+}
+
+// Neutralizes margins of child elements:
+// - top margin of first element or its first children.
+// - bottom margin of last element or its last children.
+@mixin reset-margins($margin_top: 200px, $margin_bottom: $margin_top) {
+  @include reset-margin-top($margin_top);
+  @include reset-margin-bottom($margin_bottom);
+}
