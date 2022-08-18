@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
@@ -115,7 +116,7 @@ const adjustWidth = (story) => {
 
 export default {
   title: "Paragraphs/Featured media",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

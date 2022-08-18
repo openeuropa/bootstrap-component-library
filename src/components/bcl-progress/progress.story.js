@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-data-progress/data.js";
@@ -88,7 +89,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Progress",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

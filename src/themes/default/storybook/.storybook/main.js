@@ -6,7 +6,7 @@ let stories = ["../../**/!(test*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
-  "@whitespace/storybook-addon-html",
+  "@openeuropa/storybook-addon-code",
   "@storybook/addon-controls",
   "storybook-addon-designs",
   "@storybook/addon-viewport",
