@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
@@ -13,7 +14,7 @@ if (isChromatic()) {
 
 export default {
   title: "Compositions/Recent Activities",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     controls: { disable: true },
     design: [

@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import {
   initBadges,
   correctPaths,
@@ -15,7 +16,7 @@ import detailsPage from "@openeuropa/bcl-publication/publication.html.twig";
 
 export default {
   title: "Features/Publication",
-  decorators: [withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {
