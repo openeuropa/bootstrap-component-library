@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-list-group/data.js";
@@ -76,7 +77,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/List Group",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     design: [
       {

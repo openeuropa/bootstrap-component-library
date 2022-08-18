@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
 import { userEvent, within } from "@storybook/testing-library";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
@@ -12,7 +13,7 @@ const chromatic = process.env.STORYBOOK_ENV;
 
 export default {
   title: "Compositions/Footer",
-  decorators: [withDesign],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     design: [
