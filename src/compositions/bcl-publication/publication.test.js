@@ -37,7 +37,7 @@ describe("OE - Publication", () => {
       renderDetails(demoDetailsMultiple)
     ).resolves.toMatchSnapshot();
   });
-
+  jest.setTimeout(10000);
   test(`listing passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
