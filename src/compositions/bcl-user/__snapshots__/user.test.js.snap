@@ -809,7 +809,7 @@ exports[`OE - User list renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -818,79 +818,83 @@ exports[`OE - User list renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="offcanvas-start offcanvas-lg"
-            data-bs-scroll="true"
-            id="bcl-offcanvas"
-            tabindex="-1"
+            class="bcl-section"
           >
             <div
-              class="offcanvas-header p-lg-0 d-lg-block"
+              class="offcanvas-start offcanvas-lg"
+              data-bs-scroll="true"
+              id="bcl-offcanvas"
+              tabindex="-1"
             >
-              <h2
-                class="mb-lg-4 offcanvas-title bcl-heading"
+              <div
+                class="offcanvas-header p-lg-0 d-lg-block"
               >
-                Filter options
-              </h2>
-              <button
-                aria-label="Close button"
-                class="btn-close text-reset d-lg-none"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              />
-            </div>
-            <div
-              class="offcanvas-body p-lg-0"
-            >
-              <form
-                class="w-100"
-                novalidate="true"
-                onsubmit="return false;"
+                <h2
+                  class="mb-lg-4 offcanvas-title bcl-heading"
+                >
+                  Filter options
+                </h2>
+                <button
+                  aria-label="Close button"
+                  class="btn-close text-reset d-lg-none"
+                  data-bs-dismiss="offcanvas"
+                  type="button"
+                />
+              </div>
+              <div
+                class="offcanvas-body p-lg-0"
               >
-                <div
-                  class="mb-3"
+                <form
+                  class="w-100"
+                  novalidate="true"
+                  onsubmit="return false;"
                 >
-                  <label
-                    class="form-label"
+                  <div
+                    class="mb-3"
                   >
-                    Name
-                  </label>
-                  <input
-                    class="form-control"
-                    placeholder="Placeholder"
-                    type="text"
-                  />
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
+                    <label
+                      class="form-label"
+                    >
+                      Name
+                    </label>
+                    <input
+                      class="form-control"
+                      placeholder="Placeholder"
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    class="mb-3"
                   >
-                    Organisation
-                  </label>
-                  <input
-                    class="form-control"
-                    placeholder="Placeholder"
-                    type="text"
-                  />
-                </div>
-                <div
-                  class="mt-4"
-                >
-                  <button
-                    class="me-2 btn btn-primary btn-md"
-                    type="submit"
+                    <label
+                      class="form-label"
+                    >
+                      Organisation
+                    </label>
+                    <input
+                      class="form-control"
+                      placeholder="Placeholder"
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    class="mt-4"
                   >
-                    Refine
-                  </button>
-                  <button
-                    class="btn btn-light btn-md"
-                    type="submit"
-                  >
-                    Clear
-                  </button>
-                </div>
-              </form>
+                    <button
+                      class="me-2 btn btn-primary btn-md"
+                      type="submit"
+                    >
+                      Refine
+                    </button>
+                    <button
+                      class="btn btn-light btn-md"
+                      type="submit"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -2366,7 +2370,7 @@ exports[`OE - User renders correctly 1`] = `
   </div>
   <main>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -4565,7 +4569,7 @@ exports[`OE - User terms renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -4573,61 +4577,63 @@ exports[`OE - User terms renders correctly 1`] = `
         <div
           class="col-12 col-lg-10 col-xl-9 col-xxl-8"
         >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <br />
-              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-            <br />
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
-          </p>
-          <ul
-            class="mb-4-5"
+          <div
+            class="bcl-section"
           >
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </li>
-          </ul>
-          <form
-            novalidate="true"
-            onsubmit="return false;"
-          >
-            <div
-              class="mb-3"
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              <br />
+                Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+              <br />
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
+            </p>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+            </ul>
+            <form
+              novalidate="true"
+              onsubmit="return false;"
             >
               <div
-                class="form-check"
+                class="mb-3"
               >
-                <input
-                  class="form-check-input"
-                  id="terms"
-                  required="true"
-                  type="checkbox"
-                />
-                <label
-                  class="form-check-label"
-                  for="terms"
+                <div
+                  class="form-check"
                 >
-                  Accept terms and conditions of use
-                </label>
+                  <input
+                    class="form-check-input"
+                    id="terms"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="terms"
+                  >
+                    Accept terms and conditions of use
+                  </label>
+                </div>
               </div>
-            </div>
-            <div
-              class="mt-4-5 d-grid d-sm-block"
-            >
-              <button
-                class="btn btn-primary btn-md"
-                type="submit"
+              <div
+                class="mt-4-5 d-grid d-sm-block"
               >
-                Save
-              </button>
-            </div>
-          </form>
+                <button
+                  class="btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

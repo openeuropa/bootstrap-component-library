@@ -85,6 +85,7 @@ module.exports = {
           },
         ],
       },
+      attributes: new drupalAttribute().addClass("mb-3"),
     },
     {
       item_title: "File title",

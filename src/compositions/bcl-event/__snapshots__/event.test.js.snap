@@ -751,7 +751,7 @@ exports[`OE - event listing renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -760,175 +760,179 @@ exports[`OE - event listing renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="offcanvas-start offcanvas-lg"
-            data-bs-scroll="true"
-            id="bcl-offcanvas"
-            tabindex="-1"
+            class="bcl-section"
           >
             <div
-              class="offcanvas-header p-lg-0 d-lg-block"
+              class="offcanvas-start offcanvas-lg"
+              data-bs-scroll="true"
+              id="bcl-offcanvas"
+              tabindex="-1"
             >
-              <h2
-                class="mb-lg-4 offcanvas-title bcl-heading"
+              <div
+                class="offcanvas-header p-lg-0 d-lg-block"
               >
-                Filter options
-              </h2>
-              <button
-                aria-label="Close button"
-                class="btn-close text-reset d-lg-none"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              />
-            </div>
-            <div
-              class="offcanvas-body p-lg-0"
-            >
-              <form
-                class="w-100"
-                novalidate="true"
-                onsubmit="return false;"
-              >
-                <label
-                  class="form-label"
-                  for="keyword"
+                <h2
+                  class="mb-lg-4 offcanvas-title bcl-heading"
                 >
-                  Keyword
-                </label>
-                <input
-                  class="mb-3 form-control"
-                  id="keyword"
-                  placeholder="Type a keyword"
-                  type="text"
+                  Filter options
+                </h2>
+                <button
+                  aria-label="Close button"
+                  class="btn-close text-reset d-lg-none"
+                  data-bs-dismiss="offcanvas"
+                  type="button"
                 />
-                <div
-                  class="mb-3"
+              </div>
+              <div
+                class="offcanvas-body p-lg-0"
+              >
+                <form
+                  class="w-100"
+                  novalidate="true"
+                  onsubmit="return false;"
                 >
                   <label
                     class="form-label"
-                    for="type"
+                    for="keyword"
                   >
-                    Type
-                  </label>
-                  <select
-                    class="form-select"
-                    id="type"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                    <option
-                      selected=""
-                      value=""
-                    >
-                      Culture
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                    for="location"
-                  >
-                    Location
-                  </label>
-                  <select
-                    class="form-select"
-                    id="location"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                    <option
-                      selected=""
-                      value=""
-                    >
-                      Placeholder
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                    for="creation-date-from"
-                  >
-                    Start date
+                    Keyword
                   </label>
                   <input
-                    class="mb-2 form-control"
-                    id="creation-date-from"
-                    type="date"
+                    class="mb-3 form-control"
+                    id="keyword"
+                    placeholder="Type a keyword"
+                    type="text"
                   />
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                    for="creation-date-to"
+                  <div
+                    class="mb-3"
                   >
-                    End date
-                  </label>
-                  <input
-                    class="mb-4-5 form-control"
-                    id="creation-date-to"
-                    type="date"
-                  />
-                </div>
-                <div
-                  class="mt-4 d-grid gap-4 d-md-block"
-                >
-                  <button
-                    class="me-md-3 btn btn-primary btn-md"
-                    type="submit"
+                    <label
+                      class="form-label"
+                      for="type"
+                    >
+                      Type
+                    </label>
+                    <select
+                      class="form-select"
+                      id="type"
+                    >
+                      <option
+                        value="1"
+                      >
+                        a select option
+                      </option>
+                      <option
+                        value="2"
+                      >
+                        another select option
+                      </option>
+                      <option
+                        value="3"
+                      >
+                        another option
+                      </option>
+                      <option
+                        value="4"
+                      >
+                        last option
+                      </option>
+                      <option
+                        selected=""
+                        value=""
+                      >
+                        Culture
+                      </option>
+                    </select>
+                  </div>
+                  <div
+                    class="mb-3"
                   >
-                    Refine
-                  </button>
-                  <button
-                    class="btn btn-light btn-md"
-                    type="submit"
+                    <label
+                      class="form-label"
+                      for="location"
+                    >
+                      Location
+                    </label>
+                    <select
+                      class="form-select"
+                      id="location"
+                    >
+                      <option
+                        value="1"
+                      >
+                        a select option
+                      </option>
+                      <option
+                        value="2"
+                      >
+                        another select option
+                      </option>
+                      <option
+                        value="3"
+                      >
+                        another option
+                      </option>
+                      <option
+                        value="4"
+                      >
+                        last option
+                      </option>
+                      <option
+                        selected=""
+                        value=""
+                      >
+                        Placeholder
+                      </option>
+                    </select>
+                  </div>
+                  <div
+                    class="mb-3"
                   >
-                    Clear
-                  </button>
-                </div>
-              </form>
+                    <label
+                      class="form-label"
+                      for="creation-date-from"
+                    >
+                      Start date
+                    </label>
+                    <input
+                      class="mb-2 form-control"
+                      id="creation-date-from"
+                      type="date"
+                    />
+                  </div>
+                  <div
+                    class="mb-3"
+                  >
+                    <label
+                      class="form-label"
+                      for="creation-date-to"
+                    >
+                      End date
+                    </label>
+                    <input
+                      class="mb-4-5 form-control"
+                      id="creation-date-to"
+                      type="date"
+                    />
+                  </div>
+                  <div
+                    class="mt-4 d-grid gap-4 d-md-block"
+                  >
+                    <button
+                      class="me-md-3 btn btn-primary btn-md"
+                      type="submit"
+                    >
+                      Refine
+                    </button>
+                    <button
+                      class="btn btn-light btn-md"
+                      type="submit"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -2797,7 +2801,7 @@ exports[`OE - event page renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -2805,250 +2809,256 @@ exports[`OE - event page renders correctly 1`] = `
         <div
           class="col-12 bcl-sidebar col-lg-3"
         >
-          <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
-            id="bcl-inpage-navigation"
+          <div
+            class="bcl-section"
           >
-            <h2
-              class="mb-0 bcl-heading"
+            <nav
+              class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+              id="bcl-inpage-navigation"
             >
-              Page content
-            </h2>
-            <ul
-              class="nav nav-pills flex-column"
-            >
-              <li
-                class="nav-item"
+              <h2
+                class="mb-0 bcl-heading"
               >
-                <a
-                  class="nav-link"
-                  href="#item-1"
-                >
-                  Description
-                </a>
-              </li>
-              <li
-                class="nav-item"
+                Page content
+              </h2>
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#item-2"
+                <li
+                  class="nav-item"
                 >
-                  Related documents
-                </a>
-              </li>
-            </ul>
-          </nav>
+                  <a
+                    class="nav-link"
+                    href="#item-1"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    href="#item-2"
+                  >
+                    Related documents
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div
           class="col-12 col-lg-9 col-xxl-8"
         >
           <div
-            class="mt-3 mb-4 bcl-description-list"
+            class="bcl-section"
           >
-            <dl
-              class="d-md-grid grid-3-9 mb-3"
+            <div
+              class="mt-3 mb-4 bcl-description-list"
             >
-              <dt
-                class="d-flex"
+              <dl
+                class="d-md-grid grid-3-9 mb-3"
               >
-                <svg
-                  class="me-2 mt-1 bi icon--xs"
+                <dt
+                  class="d-flex"
                 >
-                  <use
-                    xlink:href="/icons.svg#calendar-fill"
-                  />
-                </svg>
-                <p
-                  class="mb-0 d-inline-block"
-                >
-                  Date
-                </p>
-              </dt>
-              <dd>
-                17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
-              </dd>
-            </dl>
-            <dl
-              class="d-md-grid grid-3-9 mb-3"
-            >
-              <dt
-                class="d-flex"
-              >
-                <svg
-                  class="me-2 mt-1 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#geo-alt-fill"
-                  />
-                </svg>
-                <p
-                  class="mb-0 d-inline-block"
-                >
-                  Location
-                </p>
-              </dt>
-              <dd>
-                <div>
                   <svg
-                    class="me-2 bi icon--fluid"
+                    class="me-2 mt-1 bi icon--xs"
                   >
                     <use
-                      xlink:href="/flags.svg#spain"
+                      xlink:href="/icons.svg#calendar-fill"
                     />
                   </svg>
                   <p
                     class="mb-0 d-inline-block"
                   >
-                    Barcelona, Spain
+                    Date
                   </p>
-                </div>
-              </dd>
-            </dl>
-          </div>
-          <h2
-            class="my-4"
-            id="item-1"
-          >
-            Description
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet.
-  
-          </p>
-          <h2
-            class="my-4"
-            id="item-2"
-          >
-            Related documents
-          </h2>
-          <div
-            class="mb-3-5 bcl-file border rounded"
-          >
-            <div
-              class="px-3-5 py-3"
-            >
-              <div
-                class="d-flex"
+                </dt>
+                <dd>
+                  17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
+                </dd>
+              </dl>
+              <dl
+                class="d-md-grid grid-3-9 mb-3"
               >
-                <div
-                  class="pe-2 pb-2"
+                <dt
+                  class="d-flex"
                 >
                   <svg
-                    class="mt-1 icon--file bi icon--xl"
+                    class="me-2 mt-1 bi icon--xs"
                   >
                     <use
-                      xlink:href="/icons.svg#file-pdf-fill"
+                      xlink:href="/icons.svg#geo-alt-fill"
                     />
                   </svg>
-                </div>
-                <div
-                  class="d-md-flex flex-grow-1"
-                >
-                  <div
-                    class="flex-grow-1"
+                  <p
+                    class="mb-0 d-inline-block"
                   >
-                    <p
-                      class="fw-medium m-0 fs-5"
-                    >
-                      File title
-                    </p>
-                    <small
-                      class="fw-medium m-0"
-                    >
-                      English
-                      <span
-                        class="fw-normal"
-                      >
-                         (16.2 MB - PDF)
-                      </span>
-                    </small>
-                  </div>
-                  <a
-                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                    download="true"
-                    href="/example.html"
-                    target="_blank"
-                  >
-                    Download
+                    Location
+                  </p>
+                </dt>
+                <dd>
+                  <div>
                     <svg
-                      class="ms-2-5 bi icon--fluid"
+                      class="me-2 bi icon--fluid"
                     >
                       <use
-                        xlink:href="/icons.svg#download"
+                        xlink:href="/flags.svg#spain"
                       />
                     </svg>
-                  </a>
+                    <p
+                      class="mb-0 d-inline-block"
+                    >
+                      Barcelona, Spain
+                    </p>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <h2
+              id="item-1"
+            >
+              Description
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+    a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
+    posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
+    Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
+    sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+    
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+    a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet.
+    
+            </p>
+            <h2
+              id="item-2"
+            >
+              Related documents
+            </h2>
+            <div
+              class="mb-3-5 bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <div
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
+                    >
+                      <use
+                        xlink:href="/icons.svg#file-pdf-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="mb-3-5 bcl-file border rounded"
-          >
             <div
-              class="px-3-5 py-3"
+              class="mb-3-5 bcl-file border rounded"
             >
               <div
-                class="d-flex"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="pe-2 pb-2"
-                >
-                  <svg
-                    class="mt-1 icon--file bi icon--xl"
-                  >
-                    <use
-                      xlink:href="/icons.svg#file-pdf-fill"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="d-md-flex flex-grow-1"
+                  class="d-flex"
                 >
                   <div
-                    class="flex-grow-1"
+                    class="pe-2 pb-2"
                   >
-                    <p
-                      class="fw-medium m-0 fs-5"
-                    >
-                      File title
-                    </p>
-                    <small
-                      class="fw-medium m-0"
-                    >
-                      English
-                      <span
-                        class="fw-normal"
-                      >
-                         (16.2 MB - PDF)
-                      </span>
-                    </small>
-                  </div>
-                  <a
-                    class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                    download="true"
-                    href="/example.html"
-                    target="_blank"
-                  >
-                    Download
                     <svg
-                      class="ms-2-5 bi icon--fluid"
+                      class="mt-1 icon--file bi icon--xl"
                     >
                       <use
-                        xlink:href="/icons.svg#download"
+                        xlink:href="/icons.svg#file-pdf-fill"
                       />
                     </svg>
-                  </a>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -5,41 +5,60 @@
 {% endblock %}
 
 {% block content %}
-  <p id="content">{{ get_dummy_text(6) }}
-  </p>
-  <h2 id="item-1" class="my-4">Section 1</h2>
-  {% if featured_item %}
-    {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
-  {% endif %}
+  <div class="bcl-section">
+    <p id="content">
+      {{ get_dummy_text(6) }}
+    </p>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Section 1',
+      title_tag: 'h2',
+      attributes: create_attribute().setAttribute('id', 'item-1'),
+    } only %}
+    {% if featured_item %}
+      {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
+    {% endif %}
 
-  {% if page_banner %}
-    {% include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
-  {% endif %}
+    {% if page_banner %}
+      {% include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
+    {% endif %}
 
-  {% if listing %}
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
-  {% endif %}
+    {% if listing %}
+      {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
+    {% endif %}
+  </div>
 
-  <h2 id="item-2" class="my-4">Section 2</h2>
+  <div class="bcl-section">
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Section 2',
+      title_tag: 'h2',
+      attributes: create_attribute().setAttribute('id', 'item-2'),
+    } only %}
 
-  {{ get_dummy_text(6, true) }}
+    {{ get_dummy_text(6, true) }}
 
-  {% if blockquote %}
-    {% include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
-  {% endif %}
-  {% if accordion %}
-    {% include '@oe-bcl/bcl-accordion/accordion.html.twig' with accordion only %}
-  {% endif %}
-  {% if timeline %}
-    {% include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
-  {% endif %}
+    {% if blockquote %}
+      {% include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
+    {% endif %}
+    {% if accordion %}
+      {% include '@oe-bcl/bcl-accordion/accordion.html.twig' with accordion only %}
+    {% endif %}
+    {% if timeline %}
+      {% include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
+    {% endif %}
 
-  {{ get_dummy_text(8, true) }}
+    {{ get_dummy_text(8, true) }}
+  </div>
 
-  <h2 id="item-3" class="my-4">Section 3</h2>
+  <div class="bcl-section">
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Section 3',
+      title_tag: 'h2',
+      attributes: create_attribute().setAttribute('id', 'item-3'),
+    } only %}
 
-  {{ get_dummy_text(4, true) }}
+    {{ get_dummy_text(4, true) }}
 
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+  </div>
 {% endblock %}

@@ -74,28 +74,41 @@
 
 {% block content %}
   {% if recent is not empty and members is not empty %}
-  <div class="row mt-3">
-    <div class="col-md-8">
-      <h2 class="mb-4 pb-2">{{ recent.title }}</h2>
-      {% include '@oe-bcl/bcl-recent-activities/recent-activities.html.twig' with recent.block_data only %}
-    </div>
-    <div class="col-md-4">
-      <h2 class="mt-4 mt-md-0 mb-4 pb-2">{{ members.title}}</h2>
-      {% if members.profiles is not empty and members.profiles is iterable %}
-        {% for _profile in members.profiles %}
-          {% include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
-        {% endfor %}
-      {% endif %}
-      {% if members.more_link is not empty %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with members.more_link only %}
-      {% endif %}
+  <div class="bcl-section">
+    <div class="row">
+      <div class="col-md-8">
+        {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: recent.title,
+          title_tag: 'h2',
+        } only %}
+        {% include '@oe-bcl/bcl-recent-activities/recent-activities.html.twig' with recent.block_data only %}
+      </div>
+      <div class="col-md-4">
+        {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: members.title,
+          title_tag: 'h2',
+        } only %}
+        {% if members.profiles is not empty and members.profiles is iterable %}
+          {% for _profile in members.profiles %}
+            {% include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
+          {% endfor %}
+        {% endif %}
+        {% if members.more_link is not empty %}
+          {% include '@oe-bcl/bcl-link/link.html.twig' with members.more_link only %}
+        {% endif %}
+      </div>
     </div>
   </div>
   {% endif %}
   {% if contributions is not empty %}
-    <h2 class="my-4 pt-3 pb-2">{{ contributions.title}}</h2>
-    {% if contributions.listing is not empty %}
-      {% include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}
-    {% endif %}
+    <div class="bcl-section">
+      {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: contributions.title,
+        title_tag: 'h2',
+      } only %}
+      {% if contributions.listing is not empty %}
+        {% include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}
+      {% endif %}
+    </div>
   {% endif %}
 {% endblock %}

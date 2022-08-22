@@ -864,7 +864,7 @@ exports[`OE - Person details renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -2069,7 +2069,7 @@ exports[`OE - Person listing renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -2078,65 +2078,69 @@ exports[`OE - Person listing renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="offcanvas-start offcanvas-lg"
-            data-bs-scroll="true"
-            id="bcl-offcanvas"
-            tabindex="-1"
+            class="bcl-section"
           >
             <div
-              class="offcanvas-header p-lg-0 d-lg-block"
+              class="offcanvas-start offcanvas-lg"
+              data-bs-scroll="true"
+              id="bcl-offcanvas"
+              tabindex="-1"
             >
-              <h2
-                class="mb-lg-4 offcanvas-title bcl-heading"
+              <div
+                class="offcanvas-header p-lg-0 d-lg-block"
               >
-                Filter options
-              </h2>
-              <button
-                aria-label="Close button"
-                class="btn-close text-reset d-lg-none"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              />
-            </div>
-            <div
-              class="offcanvas-body p-lg-0"
-            >
-              <form
-                class="w-100"
-                novalidate="true"
-                onsubmit="return false;"
+                <h2
+                  class="mb-lg-4 offcanvas-title bcl-heading"
+                >
+                  Filter options
+                </h2>
+                <button
+                  aria-label="Close button"
+                  class="btn-close text-reset d-lg-none"
+                  data-bs-dismiss="offcanvas"
+                  type="button"
+                />
+              </div>
+              <div
+                class="offcanvas-body p-lg-0"
               >
-                <div
-                  class="mb-3"
+                <form
+                  class="w-100"
+                  novalidate="true"
+                  onsubmit="return false;"
                 >
-                  <label
-                    class="form-label"
+                  <div
+                    class="mb-3"
                   >
-                    Name
-                  </label>
-                  <input
-                    class="form-control"
-                    placeholder="Placeholder"
-                    type="text"
-                  />
-                </div>
-                <div
-                  class="mt-4"
-                >
-                  <button
-                    class="me-2 btn btn-primary btn-md"
-                    type="submit"
+                    <label
+                      class="form-label"
+                    >
+                      Name
+                    </label>
+                    <input
+                      class="form-control"
+                      placeholder="Placeholder"
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    class="mt-4"
                   >
-                    Refine
-                  </button>
-                  <button
-                    class="btn btn-light btn-md"
-                    type="submit"
-                  >
-                    Clear
-                  </button>
-                </div>
-              </form>
+                    <button
+                      class="me-2 btn btn-primary btn-md"
+                      type="submit"
+                    >
+                      Refine
+                    </button>
+                    <button
+                      class="btn btn-light btn-md"
+                      type="submit"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

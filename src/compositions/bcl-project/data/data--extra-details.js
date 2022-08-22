@@ -42,20 +42,12 @@ module.exports = {
     {
       title_id: "summary",
       title: "Summary",
-      content: `
-      <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-      ${getDummyText(5)}`,
+      content: getDummyText(6),
     },
     {
       title_id: "objective",
       title: "Objective",
-      content: `
-      <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-      ${getDummyText(2)}`,
+      content: getDummyText(6),
     },
     {
       title_id: "impact",
@@ -67,11 +59,7 @@ module.exports = {
     {
       title_id: "achievements",
       title: "Achievements and Milestones",
-      content: `
-      <p>
-        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-      </p>
-      ${getDummyText(3)}`,
+      content: getDummyText(6),
     },
   ],
 };

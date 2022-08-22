@@ -719,7 +719,7 @@ exports[`OE - Search renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="container mt-md-4-75 mt-4"
+      class="container"
     >
       <div
         class="row"
@@ -728,212 +728,216 @@ exports[`OE - Search renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="offcanvas-start offcanvas-lg"
-            data-bs-scroll="true"
-            id="bcl-offcanvas"
-            tabindex="-1"
+            class="bcl-section"
           >
             <div
-              class="offcanvas-header p-lg-0 d-lg-block"
+              class="offcanvas-start offcanvas-lg"
+              data-bs-scroll="true"
+              id="bcl-offcanvas"
+              tabindex="-1"
             >
-              <h2
-                class="mb-lg-4 offcanvas-title bcl-heading"
+              <div
+                class="offcanvas-header p-lg-0 d-lg-block"
               >
-                Filter options
-              </h2>
-              <button
-                aria-label="Close button"
-                class="btn-close text-reset d-lg-none"
-                data-bs-dismiss="offcanvas"
-                type="button"
-              />
-            </div>
-            <div
-              class="offcanvas-body p-lg-0"
-            >
-              <form
-                class="w-100"
-                novalidate="true"
-                onsubmit="return false;"
+                <h2
+                  class="mb-lg-4 offcanvas-title bcl-heading"
+                >
+                  Filter options
+                </h2>
+                <button
+                  aria-label="Close button"
+                  class="btn-close text-reset d-lg-none"
+                  data-bs-dismiss="offcanvas"
+                  type="button"
+                />
+              </div>
+              <div
+                class="offcanvas-body p-lg-0"
               >
-                <div
-                  class="mb-3"
+                <form
+                  class="w-100"
+                  novalidate="true"
+                  onsubmit="return false;"
                 >
-                  <label
-                    class="form-label"
-                    for="content-types"
-                  >
-                    Content types
-                  </label>
-                  <select
-                    class="form-select"
-                    id="content-types"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                    <option
-                      selected=""
-                      value=""
-                    >
-                      the selected option
-                    </option>
-                  </select>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                    for="filter-select-a"
-                  >
-                    Filter A
-                  </label>
-                  <select
-                    class="multi-select"
-                    id="filter-select-a"
-                    multiple="true"
-                  >
-                    <option
-                      value="1"
-                    >
-                      a select option
-                    </option>
-                    <option
-                      value="2"
-                    >
-                      another select option
-                    </option>
-                    <option
-                      value="3"
-                    >
-                      another option
-                    </option>
-                    <option
-                      value="4"
-                    >
-                      last option
-                    </option>
-                    <option
-                      selected=""
-                      value=""
-                    >
-                      the selected option
-                    </option>
-                  </select>
-                </div>
-                <fieldset
-                  class="mb-3"
-                >
-                  <legend
-                    class="col-form-label"
-                  >
-                    Filter B
-                  </legend>
                   <div
-                    class="col-sm-10"
+                    class="mb-3"
                   >
-                    <div
-                      class="mb-3"
+                    <label
+                      class="form-label"
+                      for="content-types"
                     >
+                      Content types
+                    </label>
+                    <select
+                      class="form-select"
+                      id="content-types"
+                    >
+                      <option
+                        value="1"
+                      >
+                        a select option
+                      </option>
+                      <option
+                        value="2"
+                      >
+                        another select option
+                      </option>
+                      <option
+                        value="3"
+                      >
+                        another option
+                      </option>
+                      <option
+                        value="4"
+                      >
+                        last option
+                      </option>
+                      <option
+                        selected=""
+                        value=""
+                      >
+                        the selected option
+                      </option>
+                    </select>
+                  </div>
+                  <div
+                    class="mb-3"
+                  >
+                    <label
+                      class="form-label"
+                      for="filter-select-a"
+                    >
+                      Filter A
+                    </label>
+                    <select
+                      class="multi-select"
+                      id="filter-select-a"
+                      multiple="true"
+                    >
+                      <option
+                        value="1"
+                      >
+                        a select option
+                      </option>
+                      <option
+                        value="2"
+                      >
+                        another select option
+                      </option>
+                      <option
+                        value="3"
+                      >
+                        another option
+                      </option>
+                      <option
+                        value="4"
+                      >
+                        last option
+                      </option>
+                      <option
+                        selected=""
+                        value=""
+                      >
+                        the selected option
+                      </option>
+                    </select>
+                  </div>
+                  <fieldset
+                    class="mb-3"
+                  >
+                    <legend
+                      class="col-form-label"
+                    >
+                      Filter B
+                    </legend>
+                    <div
+                      class="col-sm-10"
+                    >
+                      <div
+                        class="mb-3"
+                      >
+                        <div
+                          class="form-check"
+                        >
+                          <input
+                            checked="true"
+                            class="form-check-input"
+                            id="checked-input"
+                            type="checkbox"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="checked-input"
+                          >
+                            Checked checkbox
+                          </label>
+                        </div>
+                      </div>
                       <div
                         class="form-check"
                       >
                         <input
-                          checked="true"
                           class="form-check-input"
-                          id="checked-input"
+                          id="default-input"
                           type="checkbox"
                         />
                         <label
                           class="form-check-label"
-                          for="checked-input"
+                          for="default-input"
                         >
-                          Checked checkbox
+                          Default checkbox
                         </label>
                       </div>
                     </div>
-                    <div
-                      class="form-check"
+                  </fieldset>
+                  <div
+                    class="mb-3"
+                  >
+                    <label
+                      class="form-label"
+                      for="creation-date-from"
                     >
-                      <input
-                        class="form-check-input"
-                        id="default-input"
-                        type="checkbox"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="default-input"
-                      >
-                        Default checkbox
-                      </label>
-                    </div>
+                      Creation date (from)
+                    </label>
+                    <input
+                      class="mb-2 form-control"
+                      id="creation-date-from"
+                      type="date"
+                    />
                   </div>
-                </fieldset>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                    for="creation-date-from"
+                  <div
+                    class="mb-3"
                   >
-                    Creation date (from)
-                  </label>
-                  <input
-                    class="mb-2 form-control"
-                    id="creation-date-from"
-                    type="date"
-                  />
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <label
-                    class="form-label"
-                    for="creation-date-to"
+                    <label
+                      class="form-label"
+                      for="creation-date-to"
+                    >
+                      Creation date (to)
+                    </label>
+                    <input
+                      class="mb-2 form-control"
+                      id="creation-date-to"
+                      type="date"
+                    />
+                  </div>
+                  <div
+                    class="mt-4 d-grid gap-4 d-md-block"
                   >
-                    Creation date (to)
-                  </label>
-                  <input
-                    class="mb-2 form-control"
-                    id="creation-date-to"
-                    type="date"
-                  />
-                </div>
-                <div
-                  class="mt-4 d-grid gap-4 d-md-block"
-                >
-                  <button
-                    class="me-md-3 btn btn-primary btn-md"
-                    type="submit"
-                  >
-                    Refine
-                  </button>
-                  <button
-                    class="btn btn-light btn-md"
-                    type="submit"
-                  >
-                    Clear
-                  </button>
-                </div>
-              </form>
+                    <button
+                      class="me-md-3 btn btn-primary btn-md"
+                      type="submit"
+                    >
+                      Refine
+                    </button>
+                    <button
+                      class="btn btn-light btn-md"
+                      type="submit"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
