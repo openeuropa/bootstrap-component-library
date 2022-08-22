@@ -15,10 +15,6 @@
   {% set attributes = create_attribute() %}
 {%  endif %}
 
-{% if attributes.class is empty %}
-  {% set attributes = attributes.addClass(['mb-4']) %}
-{% endif %}
-
 {% set attributes = attributes.addClass(['bcl-heading']) %}
 
 {% if _title_link is not empty and _title is not empty and _title_link.label is empty %}

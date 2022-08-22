@@ -444,7 +444,7 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -551,7 +551,7 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -664,7 +664,7 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -692,7 +692,7 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -797,197 +797,181 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12 col-lg-10 col-xl-9 col-xxl-8"
+          class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <h2
-            class="mb-2-5 bcl-heading"
+          <div
+            class="bcl-section"
           >
-            Enter your message
-          </h2>
-          <p>
-            *Please fill in all required fields.
-          </p>
-          <form
-            class="needs-validation row g-3"
-            novalidate="true"
-            onsubmit="return false;"
-          >
-            <div
-              class="gy-4"
+            <h2
+              class="mb-2-5 bcl-heading"
             >
-              <label
-                class="form-label"
-                for="exampleInputText1"
-              >
-                Your name*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText1"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
+              Enter your message
+            </h2>
+            <p>
+              *Please fill in all required fields.
+            </p>
+            <form
+              class="needs-validation row g-3"
+              novalidate="true"
+              onsubmit="return false;"
+            >
               <div
-                class="invalid-feedback"
+                class="gy-4"
               >
-                Please type your name.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputEmail1"
-              >
-                Your email address*
-              </label>
-              <input
-                class="form-control is-invalid"
-                id="exampleInputEmail1"
-                placeholder="Placeholder"
-                required="true"
-                type="email"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please verify your email address.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText2"
-              >
-                Subject*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText2"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please choose a subject for your message
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText3"
-              >
-                Message*
-              </label>
-              <textarea
-                class="form-control"
-                id="exampleInputText3"
-                placeholder="Placeholder"
-                required="true"
-                rows="4"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a message.
-              </div>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect1"
-              >
-                Topic*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect1"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
+                <label
+                  class="form-label"
+                  for="exampleInputText1"
                 >
-                  Other topic
-                </option>
-              </select>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect2"
-              >
-                Country of residence*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect2"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Belgium
-                </option>
-              </select>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputPhone"
-              >
-                Phone*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputPhone"
-                placeholder="Placeholder"
-                required="true"
-                type="telephone"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a valid phone number.
-              </div>
-            </div>
-            <fieldset>
-              <div
-                class="border-top pt-5 mt-4-5"
-              >
+                  Your name*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputText1"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="text"
+                />
                 <div
-                  class="form-check"
+                  class="invalid-feedback"
                 >
-                  <input
-                    class="form-check-input"
-                    id="exampleInputCheck1"
-                    required="true"
-                    type="checkbox"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="exampleInputCheck1"
-                  >
-                    Send yourself a copy
-                  </label>
+                  Please type your name.
                 </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputEmail1"
+                >
+                  Your email address*
+                </label>
+                <input
+                  class="form-control is-invalid"
+                  id="exampleInputEmail1"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="email"
+                />
                 <div
-                  class="mt-4"
+                  class="invalid-feedback"
+                >
+                  Please verify your email address.
+                </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputText2"
+                >
+                  Subject*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputText2"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="text"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please choose a subject for your message
+                </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputText3"
+                >
+                  Message*
+                </label>
+                <textarea
+                  class="form-control"
+                  id="exampleInputText3"
+                  placeholder="Placeholder"
+                  required="true"
+                  rows="4"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please provide a message.
+                </div>
+              </div>
+              <div
+                class="col-lg-6 gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputSelect1"
+                >
+                  Topic*
+                </label>
+                <select
+                  class="form-select"
+                  id="exampleInputSelect1"
+                  required="true"
+                >
+                  <option
+                    selected=""
+                    value="1"
+                  >
+                    Other topic
+                  </option>
+                </select>
+              </div>
+              <div
+                class="col-lg-6 gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputSelect2"
+                >
+                  Country of residence*
+                </label>
+                <select
+                  class="form-select"
+                  id="exampleInputSelect2"
+                  required="true"
+                >
+                  <option
+                    selected=""
+                    value="1"
+                  >
+                    Belgium
+                  </option>
+                </select>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputPhone"
+                >
+                  Phone*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputPhone"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="telephone"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please provide a valid phone number.
+                </div>
+              </div>
+              <fieldset>
+                <div
+                  class="border-top pt-5 mt-4-5"
                 >
                   <div
                     class="form-check"
@@ -1002,46 +986,66 @@ exports[`OE - Contact-form contact-form error page renders correctly 1`] = `
                       class="form-check-label"
                       for="exampleInputCheck1"
                     >
-                      I have read and agree with the 
-                      <a
-                        href="/example.html"
-                      >
-                        data protection terms
-                      </a>
+                      Send yourself a copy
                     </label>
+                  </div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="invalid-feedback"
+                      class="form-check"
                     >
-                      Please check and approve the data protection terms.
+                      <input
+                        class="form-check-input"
+                        id="exampleInputCheck1"
+                        required="true"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="exampleInputCheck1"
+                      >
+                        I have read and agree with the 
+                        <a
+                          href="/example.html"
+                        >
+                          data protection terms
+                        </a>
+                      </label>
+                      <div
+                        class="invalid-feedback"
+                      >
+                        Please check and approve the data protection terms.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </fieldset>
-            <div
-              class="mt-4 mb-2"
-            >
+              </fieldset>
               <div
-                class="bg-light"
+                class="mt-4 mb-2"
               >
                 <div
-                  class="p-4 mt-0 fs-4"
+                  class="bg-light"
                 >
-                  Antispam
+                  <div
+                    class="p-4 mt-0 fs-4"
+                  >
+                    Antispam
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="contact-form-submit"
-            >
-              <button
-                class="w-auto mb-4 btn btn-primary btn-md"
-                type="submit"
+              <div
+                class="contact-form-submit"
               >
-                Send
-              </button>
-            </div>
-          </form>
+                <button
+                  class="w-auto mb-4 btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1697,7 +1701,7 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -1804,7 +1808,7 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -1917,7 +1921,7 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -1945,7 +1949,7 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -2018,251 +2022,255 @@ exports[`OE - Contact-form contact-form page renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12 col-lg-10 col-xl-9 col-xxl-8"
+          class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <h2
-            class="mb-2-5 bcl-heading"
+          <div
+            class="bcl-section"
           >
-            Enter your message
-          </h2>
-          <p>
-            *Please fill in all required fields.
-          </p>
-          <form
-            class="needs-validation row g-3"
-            novalidate="true"
-            onsubmit="return false;"
-          >
-            <div
-              class="gy-4"
+            <h2
+              class="mb-2-5 bcl-heading"
             >
-              <label
-                class="form-label"
-                for="exampleInputText1"
-              >
-                Your name*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText1"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
+              Enter your message
+            </h2>
+            <p>
+              *Please fill in all required fields.
+            </p>
+            <form
+              class="needs-validation row g-3"
+              novalidate="true"
+              onsubmit="return false;"
+            >
               <div
-                class="invalid-feedback"
+                class="gy-4"
               >
-                Please type your name.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputEmail1"
-              >
-                Your email address*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Placeholder"
-                required="true"
-                type="email"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please verify your email address.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText2"
-              >
-                Subject*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText2"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please choose a subject for your message
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText3"
-              >
-                Message*
-              </label>
-              <textarea
-                class="form-control"
-                id="exampleInputText3"
-                placeholder="Placeholder"
-                required="true"
-                rows="4"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a message.
-              </div>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect1"
-              >
-                Topic*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect1"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
+                <label
+                  class="form-label"
+                  for="exampleInputText1"
                 >
-                  Other topic
-                </option>
-              </select>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect2"
-              >
-                Country of residence*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect2"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Belgium
-                </option>
-              </select>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputPhone"
-              >
-                Phone*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputPhone"
-                placeholder="Placeholder"
-                required="true"
-                type="telephone"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a valid phone number.
-              </div>
-            </div>
-            <fieldset>
-              <div
-                class="border-top pt-5 mt-4-5"
-              >
+                  Your name*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputText1"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="text"
+                />
                 <div
-                  class="form-check"
+                  class="invalid-feedback"
                 >
-                  <input
-                    class="form-check-input"
-                    id="exampleInputCheck1"
-                    required="true"
-                    type="checkbox"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="exampleInputCheck1"
-                  >
-                    Send yourself a copy
-                  </label>
+                  Please type your name.
                 </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputEmail1"
+                >
+                  Your email address*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="email"
+                />
                 <div
-                  class="mt-4"
+                  class="invalid-feedback"
+                >
+                  Please verify your email address.
+                </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputText2"
+                >
+                  Subject*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputText2"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="text"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please choose a subject for your message
+                </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputText3"
+                >
+                  Message*
+                </label>
+                <textarea
+                  class="form-control"
+                  id="exampleInputText3"
+                  placeholder="Placeholder"
+                  required="true"
+                  rows="4"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please provide a message.
+                </div>
+              </div>
+              <div
+                class="col-lg-6 gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputSelect1"
+                >
+                  Topic*
+                </label>
+                <select
+                  class="form-select"
+                  id="exampleInputSelect1"
+                  required="true"
+                >
+                  <option
+                    selected=""
+                    value="1"
+                  >
+                    Other topic
+                  </option>
+                </select>
+              </div>
+              <div
+                class="col-lg-6 gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputSelect2"
+                >
+                  Country of residence*
+                </label>
+                <select
+                  class="form-select"
+                  id="exampleInputSelect2"
+                  required="true"
+                >
+                  <option
+                    selected=""
+                    value="1"
+                  >
+                    Belgium
+                  </option>
+                </select>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputPhone"
+                >
+                  Phone*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputPhone"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="telephone"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please provide a valid phone number.
+                </div>
+              </div>
+              <fieldset>
+                <div
+                  class="border-top pt-5 mt-4-5"
                 >
                   <div
                     class="form-check"
                   >
                     <input
                       class="form-check-input"
-                      id="exampleInputCheck2"
+                      id="exampleInputCheck1"
                       required="true"
                       type="checkbox"
                     />
                     <label
                       class="form-check-label"
-                      for="exampleInputCheck2"
+                      for="exampleInputCheck1"
                     >
-                      I have read and agree with the 
-                      <a
-                        href="/example.html"
-                      >
-                        data protection terms
-                      </a>
+                      Send yourself a copy
                     </label>
+                  </div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="invalid-feedback"
+                      class="form-check"
                     >
-                      Please check and approve the data protection terms.
+                      <input
+                        class="form-check-input"
+                        id="exampleInputCheck2"
+                        required="true"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="exampleInputCheck2"
+                      >
+                        I have read and agree with the 
+                        <a
+                          href="/example.html"
+                        >
+                          data protection terms
+                        </a>
+                      </label>
+                      <div
+                        class="invalid-feedback"
+                      >
+                        Please check and approve the data protection terms.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </fieldset>
-            <div
-              class="mt-4 mb-2"
-            >
+              </fieldset>
               <div
-                class="bg-light"
+                class="mt-4 mb-2"
               >
                 <div
-                  class="p-4 mt-0 fs-4"
+                  class="bg-light"
                 >
-                  Antispam
+                  <div
+                    class="p-4 mt-0 fs-4"
+                  >
+                    Antispam
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="contact-form-submit"
-            >
-              <button
-                class="w-auto mb-4 btn btn-primary btn-md"
-                type="submit"
+              <div
+                class="contact-form-submit"
               >
-                Send
-              </button>
-            </div>
-          </form>
+                <button
+                  class="w-auto mb-4 btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -2918,7 +2926,7 @@ exports[`OE - Contact-form contact-form success page renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -3025,7 +3033,7 @@ exports[`OE - Contact-form contact-form success page renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -3138,7 +3146,7 @@ exports[`OE - Contact-form contact-form success page renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -3166,7 +3174,7 @@ exports[`OE - Contact-form contact-form success page renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -3342,251 +3350,255 @@ exports[`OE - Contact-form contact-form success page renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12 col-lg-10 col-xl-9 col-xxl-8"
+          class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <h2
-            class="mb-2-5 bcl-heading"
+          <div
+            class="bcl-section"
           >
-            Enter your message
-          </h2>
-          <p>
-            *Please fill in all required fields.
-          </p>
-          <form
-            class="needs-validation row g-3"
-            novalidate="true"
-            onsubmit="return false;"
-          >
-            <div
-              class="gy-4"
+            <h2
+              class="mb-2-5 bcl-heading"
             >
-              <label
-                class="form-label"
-                for="exampleInputText1"
-              >
-                Your name*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText1"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
+              Enter your message
+            </h2>
+            <p>
+              *Please fill in all required fields.
+            </p>
+            <form
+              class="needs-validation row g-3"
+              novalidate="true"
+              onsubmit="return false;"
+            >
               <div
-                class="invalid-feedback"
+                class="gy-4"
               >
-                Please type your name.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputEmail1"
-              >
-                Your email address*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Placeholder"
-                required="true"
-                type="email"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please verify your email address.
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText2"
-              >
-                Subject*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputText2"
-                placeholder="Placeholder"
-                required="true"
-                type="text"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please choose a subject for your message
-              </div>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputText3"
-              >
-                Message*
-              </label>
-              <textarea
-                class="form-control"
-                id="exampleInputText3"
-                placeholder="Placeholder"
-                required="true"
-                rows="4"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a message.
-              </div>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect1"
-              >
-                Topic*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect1"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
+                <label
+                  class="form-label"
+                  for="exampleInputText1"
                 >
-                  Other topic
-                </option>
-              </select>
-            </div>
-            <div
-              class="col-lg-6 gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputSelect2"
-              >
-                Country of residence*
-              </label>
-              <select
-                class="form-select"
-                id="exampleInputSelect2"
-                required="true"
-              >
-                <option
-                  selected=""
-                  value="1"
-                >
-                  Belgium
-                </option>
-              </select>
-            </div>
-            <div
-              class="gy-4"
-            >
-              <label
-                class="form-label"
-                for="exampleInputPhone"
-              >
-                Phone*
-              </label>
-              <input
-                class="form-control"
-                id="exampleInputPhone"
-                placeholder="Placeholder"
-                required="true"
-                type="telephone"
-              />
-              <div
-                class="invalid-feedback"
-              >
-                Please provide a valid phone number.
-              </div>
-            </div>
-            <fieldset>
-              <div
-                class="border-top pt-5 mt-4-5"
-              >
+                  Your name*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputText1"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="text"
+                />
                 <div
-                  class="form-check"
+                  class="invalid-feedback"
                 >
-                  <input
-                    class="form-check-input"
-                    id="exampleInputCheck1"
-                    required="true"
-                    type="checkbox"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="exampleInputCheck1"
-                  >
-                    Send yourself a copy
-                  </label>
+                  Please type your name.
                 </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputEmail1"
+                >
+                  Your email address*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="email"
+                />
                 <div
-                  class="mt-4"
+                  class="invalid-feedback"
+                >
+                  Please verify your email address.
+                </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputText2"
+                >
+                  Subject*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputText2"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="text"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please choose a subject for your message
+                </div>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputText3"
+                >
+                  Message*
+                </label>
+                <textarea
+                  class="form-control"
+                  id="exampleInputText3"
+                  placeholder="Placeholder"
+                  required="true"
+                  rows="4"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please provide a message.
+                </div>
+              </div>
+              <div
+                class="col-lg-6 gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputSelect1"
+                >
+                  Topic*
+                </label>
+                <select
+                  class="form-select"
+                  id="exampleInputSelect1"
+                  required="true"
+                >
+                  <option
+                    selected=""
+                    value="1"
+                  >
+                    Other topic
+                  </option>
+                </select>
+              </div>
+              <div
+                class="col-lg-6 gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputSelect2"
+                >
+                  Country of residence*
+                </label>
+                <select
+                  class="form-select"
+                  id="exampleInputSelect2"
+                  required="true"
+                >
+                  <option
+                    selected=""
+                    value="1"
+                  >
+                    Belgium
+                  </option>
+                </select>
+              </div>
+              <div
+                class="gy-4"
+              >
+                <label
+                  class="form-label"
+                  for="exampleInputPhone"
+                >
+                  Phone*
+                </label>
+                <input
+                  class="form-control"
+                  id="exampleInputPhone"
+                  placeholder="Placeholder"
+                  required="true"
+                  type="telephone"
+                />
+                <div
+                  class="invalid-feedback"
+                >
+                  Please provide a valid phone number.
+                </div>
+              </div>
+              <fieldset>
+                <div
+                  class="border-top pt-5 mt-4-5"
                 >
                   <div
                     class="form-check"
                   >
                     <input
                       class="form-check-input"
-                      id="exampleInputCheck2"
+                      id="exampleInputCheck1"
                       required="true"
                       type="checkbox"
                     />
                     <label
                       class="form-check-label"
-                      for="exampleInputCheck2"
+                      for="exampleInputCheck1"
                     >
-                      I have read and agree with the 
-                      <a
-                        href="/example.html"
-                      >
-                        data protection terms
-                      </a>
+                      Send yourself a copy
                     </label>
+                  </div>
+                  <div
+                    class="mt-4"
+                  >
                     <div
-                      class="invalid-feedback"
+                      class="form-check"
                     >
-                      Please check and approve the data protection terms.
+                      <input
+                        class="form-check-input"
+                        id="exampleInputCheck2"
+                        required="true"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="exampleInputCheck2"
+                      >
+                        I have read and agree with the 
+                        <a
+                          href="/example.html"
+                        >
+                          data protection terms
+                        </a>
+                      </label>
+                      <div
+                        class="invalid-feedback"
+                      >
+                        Please check and approve the data protection terms.
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </fieldset>
-            <div
-              class="mt-4 mb-2"
-            >
+              </fieldset>
               <div
-                class="bg-light"
+                class="mt-4 mb-2"
               >
                 <div
-                  class="p-4 mt-0 fs-4"
+                  class="bg-light"
                 >
-                  Antispam
+                  <div
+                    class="p-4 mt-0 fs-4"
+                  >
+                    Antispam
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="contact-form-submit"
-            >
-              <button
-                class="w-auto mb-4 btn btn-primary btn-md"
-                type="submit"
+              <div
+                class="contact-form-submit"
               >
-                Send
-              </button>
-            </div>
-          </form>
+                <button
+                  class="w-auto mb-4 btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

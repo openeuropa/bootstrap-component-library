@@ -50,7 +50,7 @@
 {% set _ratio = ratio|default('16x9') %}
 {% set _sources = sources|default([]) %}
 {% set _tracks = tracks|default([]) %}
-{% set _col_classes = 'col-12 col-md-6' %}
+{% set _col_classes = 'col-md-6' %}
 {% set _read_more = read_more|default({}) %}
 
 {% if wrapper_classes is defined and wrapper_classes is not empty %}
@@ -62,7 +62,7 @@
 {% endif %}
 
 {% if _with_text %}
-  {% set _title_attributes = _title_attributes.addClass(['fw-bold', 'mb-4']) %}
+  {% set _title_attributes = _title_attributes.addClass(['mb-4', 'fw-bold']) %}
 {% endif %}
 
 {% set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
@@ -76,8 +76,8 @@
   {% endif %}
 {% endif %}
 
-{% if _with_text %}
 <div class="{{ _wrapper_classes }}">
+{% if _with_text %}
   <div class="row">
 {% endif %}
 
@@ -147,7 +147,7 @@
 {% if _with_text %}
     </div>
   </div>
-</div>
 {% endif %}
+</div>
 
 {% endspaceless %}

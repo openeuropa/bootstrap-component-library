@@ -6,20 +6,20 @@
 
 {% block content %}
   {% if information.main_title is not empty %}
-    <h2
-      class="mb-4"
-    >{{- information.main_title -}}</h2>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: information.main_title,
+      title_tag: 'h2',
+    } only %}
   {% endif %}
   {% if information.content is not empty %}
-    <div class="mb-4-5">
-      {{- information.content -}}
-    </div>
+    {{- information.content -}}
   {% endif %} 
 
   {% if files.main_title is not empty %}
-    <h2
-      class="mb-3-5"
-    >{{- files.main_title -}}</h2>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: files.main_title,
+      title_tag: 'h2',
+    } only %}
   {% endif %}
   {% if files.listing is defined and files.listing is not empty %}
     {% for file in files.listing %}

@@ -14,7 +14,6 @@
 
 {% block content %}
   {% if description is defined and description is not empty %}
-  <div class="bcl-section">
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: description.title,
       title_tag: 'h2',
@@ -22,15 +21,12 @@
     {% for paragraph in description.paragraphs %}
       <p>{{- paragraph -}}</p>
     {% endfor %}
-  </div>
   {% endif %}
 
   {% if files is not empty %}
-    <div class="bcl-section">
-      {% for file in files %}
-        {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-      {% endfor %}
-    </div>
+    {% for file in files %}
+      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+    {% endfor %}
   {% endif %}
 
   {% if social_block is not empty %}

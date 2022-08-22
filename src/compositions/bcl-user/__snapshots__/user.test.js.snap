@@ -486,7 +486,7 @@ exports[`OE - User list renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -593,7 +593,7 @@ exports[`OE - User list renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -706,7 +706,7 @@ exports[`OE - User list renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -734,7 +734,7 @@ exports[`OE - User list renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -815,7 +815,7 @@ exports[`OE - User list renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12 bcl-sidebar col-lg-3"
+          class="bcl-sidebar col-lg-3"
         >
           <div
             class="bcl-section"
@@ -899,544 +899,548 @@ exports[`OE - User list renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="col-12 col-lg-9 col-xxl-8"
+          class="col-lg-9 col-xxl-8"
         >
-          <button
-            aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-4 btn btn-light btn-lg"
-            data-bs-target="#bcl-offcanvas"
-            data-bs-toggle="offcanvas"
-            type="button"
-          >
-            <svg
-              class="me-2 me-2-5 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#filter"
-              />
-            </svg>
-            Filter options
-          </button>
           <div
-            class="row"
+            class="bcl-section"
           >
-            <div
-              class="col-md-6 col-lg-8 align-self-center"
+            <button
+              aria-controls="bcl-offcanvas"
+              class="d-lg-none w-100 mb-4 btn btn-light btn-lg"
+              data-bs-target="#bcl-offcanvas"
+              data-bs-toggle="offcanvas"
+              type="button"
             >
-              <h2
-                class="mb-0 text-capitalize bcl-heading"
+              <svg
+                class="me-2 me-2-5 bi icon--fluid"
               >
-                users (6)
-              </h2>
-            </div>
+                <use
+                  xlink:href="/icons.svg#filter"
+                />
+              </svg>
+              Filter options
+            </button>
             <div
-              class="col-md-12 order-md-2 mt-3"
+              class="row"
             >
-              <span
-                class="mb-2 me-2 badge bg-light"
+              <div
+                class="col-md-6 col-lg-8 align-self-center"
               >
-                Name
+                <h2
+                  class="mb-0 text-capitalize bcl-heading"
+                >
+                  users (6)
+                </h2>
+              </div>
+              <div
+                class="col-md-12 order-md-2 mt-3"
+              >
                 <span
-                  aria-hidden="true"
-                  class="icon--close"
+                  class="mb-2 me-2 badge bg-light"
                 >
-                  <svg
-                    class="bi icon--s"
+                  Name
+                  <span
+                    aria-hidden="true"
+                    class="icon--close"
                   >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#x-lg"
+                      />
+                    </svg>
+                  </span>
                 </span>
-              </span>
-              <span
-                class="mb-2 me-2 badge bg-light"
-              >
-                Organisation
                 <span
-                  aria-hidden="true"
-                  class="icon--close"
+                  class="mb-2 me-2 badge bg-light"
                 >
-                  <svg
-                    class="bi icon--s"
+                  Organisation
+                  <span
+                    aria-hidden="true"
+                    class="icon--close"
                   >
-                    <use
-                      xlink:href="/icons.svg#x-lg"
-                    />
-                  </svg>
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#x-lg"
+                      />
+                    </svg>
+                  </span>
                 </span>
-              </span>
+              </div>
+              <div
+                class="col-md-6 col-lg-4 mt-3 mt-md-0"
+              >
+                <div
+                  class="float-md-end d-md-flex align-items-center mb-4 mb-md-0"
+                >
+                  <label
+                    class="form-label mb-0"
+                  >
+                    Sort by
+                  </label>
+                  <select
+                    aria-label="sort-select"
+                    class="ms-md-2 form-select"
+                  >
+                    <option
+                      value="1"
+                    >
+                      a select option
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      another select option
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      another option
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      last option
+                    </option>
+                    <option
+                      selected=""
+                      value=""
+                    >
+                      A-Z
+                    </option>
+                  </select>
+                </div>
+              </div>
             </div>
+            <hr
+              class="d-none d-md-block mb-4-75"
+            />
             <div
-              class="col-md-6 col-lg-4 mt-3 mt-md-0"
+              class="bcl-listing bcl-listing--default-1-col"
             >
               <div
-                class="float-md-end d-md-flex align-items-center mb-4 mb-md-0"
+                class="row row-cols-1 g-4"
               >
-                <label
-                  class="form-label mb-0"
+                <div
+                  class="col"
                 >
-                  Sort by
-                </label>
-                <select
-                  aria-label="sort-select"
-                  class="ms-md-2 form-select"
+                  <article
+                    class="listing-item border-bottom border-md-0 border-0 card"
+                  >
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                      >
+                        <img
+                          alt="alt img"
+                          class="card-img-top rounded-1"
+                          src="https://picsum.photos/160?random=1"
+                        />
+                      </div>
+                      <div
+                        class="col-md"
+                      >
+                        <div
+                          class="card-body p-0 pb-md-0 pb-3"
+                        >
+                          <h1
+                            class="fs-5 card-title bcl-heading"
+                          >
+                            <a
+                              class="standalone"
+                              href="/example.html"
+                            >
+                              Stefan Mayer
+                            </a>
+                          </h1>
+                          <span
+                            class="text-muted me-4-5"
+                          >
+                            Organisation
+                          </span>
+                          <span
+                            class="text-muted me-2"
+                          >
+                            Position
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div
+                  class="col"
                 >
-                  <option
-                    value="1"
+                  <article
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
-                    a select option
-                  </option>
-                  <option
-                    value="2"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                      >
+                        <img
+                          alt="alt img"
+                          class="card-img-top rounded-1"
+                          src="https://picsum.photos/160?random=2"
+                        />
+                      </div>
+                      <div
+                        class="col-md"
+                      >
+                        <div
+                          class="card-body p-0 pb-md-0 pb-3"
+                        >
+                          <h1
+                            class="fs-5 card-title bcl-heading"
+                          >
+                            <a
+                              class="standalone"
+                              href="/example.html"
+                            >
+                              Adjur Tichar
+                            </a>
+                          </h1>
+                          <span
+                            class="text-muted me-4-5"
+                          >
+                            Organisation
+                          </span>
+                          <span
+                            class="text-muted me-2"
+                          >
+                            Position
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div
+                  class="col"
+                >
+                  <article
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
-                    another select option
-                  </option>
-                  <option
-                    value="3"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                      >
+                        <img
+                          alt="alt img"
+                          class="card-img-top rounded-1"
+                          src="https://picsum.photos/160?random=3"
+                        />
+                      </div>
+                      <div
+                        class="col-md"
+                      >
+                        <div
+                          class="card-body p-0 pb-md-0 pb-3"
+                        >
+                          <h1
+                            class="fs-5 card-title bcl-heading"
+                          >
+                            <a
+                              class="standalone"
+                              href="/example.html"
+                            >
+                              Szép Mara
+                            </a>
+                          </h1>
+                          <span
+                            class="text-muted me-4-5"
+                          >
+                            Organisation
+                          </span>
+                          <span
+                            class="text-muted me-2"
+                          >
+                            Position
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div
+                  class="col"
+                >
+                  <article
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
-                    another option
-                  </option>
-                  <option
-                    value="4"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                      >
+                        <img
+                          alt="alt img"
+                          class="card-img-top rounded-1"
+                          src="https://picsum.photos/160?random=4"
+                        />
+                      </div>
+                      <div
+                        class="col-md"
+                      >
+                        <div
+                          class="card-body p-0 pb-md-0 pb-3"
+                        >
+                          <h1
+                            class="fs-5 card-title bcl-heading"
+                          >
+                            <a
+                              class="standalone"
+                              href="/example.html"
+                            >
+                              Daniel Cardoso Rocha
+                            </a>
+                          </h1>
+                          <span
+                            class="text-muted me-4-5"
+                          >
+                            Organisation
+                          </span>
+                          <span
+                            class="text-muted me-2"
+                          >
+                            Position
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div
+                  class="col"
+                >
+                  <article
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
-                    last option
-                  </option>
-                  <option
-                    selected=""
-                    value=""
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                      >
+                        <img
+                          alt="alt img"
+                          class="card-img-top rounded-1"
+                          src="https://picsum.photos/160?random=5"
+                        />
+                      </div>
+                      <div
+                        class="col-md"
+                      >
+                        <div
+                          class="card-body p-0 pb-md-0 pb-3"
+                        >
+                          <h1
+                            class="fs-5 card-title bcl-heading"
+                          >
+                            <a
+                              class="standalone"
+                              href="/example.html"
+                            >
+                              Aurelia Panicucci
+                            </a>
+                          </h1>
+                          <span
+                            class="text-muted me-4-5"
+                          >
+                            Organisation
+                          </span>
+                          <span
+                            class="text-muted me-2"
+                          >
+                            Position
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div
+                  class="col"
+                >
+                  <article
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
-                    A-Z
-                  </option>
-                </select>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                      >
+                        <img
+                          alt="alt img"
+                          class="card-img-top rounded-1"
+                          src="https://picsum.photos/160?random=6"
+                        />
+                      </div>
+                      <div
+                        class="col-md"
+                      >
+                        <div
+                          class="card-body p-0 pb-md-0 pb-3"
+                        >
+                          <h1
+                            class="fs-5 card-title bcl-heading"
+                          >
+                            <a
+                              class="standalone"
+                              href="/example.html"
+                            >
+                              Felicyta Kowalska
+                            </a>
+                          </h1>
+                          <span
+                            class="text-muted me-4-5"
+                          >
+                            Organisation
+                          </span>
+                          <span
+                            class="text-muted me-2"
+                          >
+                            Position
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
-          </div>
-          <hr
-            class="d-none d-md-block mb-4-75"
-          />
-          <div
-            class="bcl-listing bcl-listing--default-1-col"
-          >
-            <div
-              class="row row-cols-1 g-4"
+            <hr
+              class="d-none d-md-block mt-4-5"
+            />
+            <nav
+              aria-label="Pagination aria label"
+              class="mt-4-5"
+              role="navigation"
             >
-              <div
-                class="col"
+              <ul
+                class="pagination justify-content-center"
               >
-                <article
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                <li
+                  class="page-item"
                 >
-                  <div
-                    class="row"
+                  <a
+                    aria-label="First page"
+                    class="page-link"
+                    href="/example.html"
                   >
-                    <div
-                      class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                    <svg
+                      class="bi icon--fluid"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1"
-                        src="https://picsum.photos/160?random=1"
+                      <use
+                        xlink:href="/icons.svg#chevron-double-left"
                       />
-                    </div>
-                    <div
-                      class="col-12 col-md"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Stefan Mayer
-                          </a>
-                        </h1>
-                        <span
-                          class="text-muted me-4-5"
-                        >
-                          Organisation
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Position
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div
-                class="col"
-              >
-                <article
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                    </svg>
+                  </a>
+                </li>
+                <li
+                  class="page-item"
                 >
-                  <div
-                    class="row"
+                  <a
+                    aria-label="Previous page"
+                    class="page-link"
+                    href="/example.html"
                   >
-                    <div
-                      class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1"
-                        src="https://picsum.photos/160?random=2"
-                      />
-                    </div>
-                    <div
-                      class="col-12 col-md"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Adjur Tichar
-                          </a>
-                        </h1>
-                        <span
-                          class="text-muted me-4-5"
-                        >
-                          Organisation
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Position
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div
-                class="col"
-              >
-                <article
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                    Previous
+                  </a>
+                </li>
+                <li
+                  class="page-item active"
                 >
-                  <div
-                    class="row"
+                  <a
+                    aria-current="page"
+                    class="page-link"
+                    href="/example.html"
                   >
-                    <div
-                      class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1"
-                        src="https://picsum.photos/160?random=3"
-                      />
-                    </div>
-                    <div
-                      class="col-12 col-md"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Szép Mara
-                          </a>
-                        </h1>
-                        <span
-                          class="text-muted me-4-5"
-                        >
-                          Organisation
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Position
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div
-                class="col"
-              >
-                <article
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                    1
+                  </a>
+                </li>
+                <li
+                  class="page-item"
                 >
-                  <div
-                    class="row"
+                  <a
+                    class="page-link"
+                    href="/example.html"
                   >
-                    <div
-                      class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1"
-                        src="https://picsum.photos/160?random=4"
-                      />
-                    </div>
-                    <div
-                      class="col-12 col-md"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Daniel Cardoso Rocha
-                          </a>
-                        </h1>
-                        <span
-                          class="text-muted me-4-5"
-                        >
-                          Organisation
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Position
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div
-                class="col"
-              >
-                <article
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                    2
+                  </a>
+                </li>
+                <li
+                  class="page-item"
                 >
-                  <div
-                    class="row"
+                  <a
+                    class="page-link"
+                    href="/example.html"
                   >
-                    <div
-                      class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
-                    >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1"
-                        src="https://picsum.photos/160?random=5"
-                      />
-                    </div>
-                    <div
-                      class="col-12 col-md"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Aurelia Panicucci
-                          </a>
-                        </h1>
-                        <span
-                          class="text-muted me-4-5"
-                        >
-                          Organisation
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Position
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div
-                class="col"
-              >
-                <article
-                  class="listing-item border-bottom border-md-0 border-0 card"
+                    3
+                  </a>
+                </li>
+                <li
+                  class="page-item"
                 >
-                  <div
-                    class="row"
+                  <a
+                    class="page-link"
+                    href="/example.html"
                   >
-                    <div
-                      class="bcl-card-start-col mb-3 mb-lg-0 bcl-size-small"
+                    4
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="/example.html"
+                  >
+                    5
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    aria-label="Next page"
+                    class="page-link"
+                    href="/example.html"
+                  >
+                    Next
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    aria-label="Last page"
+                    class="page-link"
+                    href="/example.html"
+                  >
+                    <svg
+                      class="bi icon--fluid"
                     >
-                      <img
-                        alt="alt img"
-                        class="card-img-top rounded-1"
-                        src="https://picsum.photos/160?random=6"
+                      <use
+                        xlink:href="/icons.svg#chevron-double-right"
                       />
-                    </div>
-                    <div
-                      class="col-12 col-md"
-                    >
-                      <div
-                        class="card-body p-0 pb-md-0 pb-3"
-                      >
-                        <h1
-                          class="fs-5 card-title bcl-heading"
-                        >
-                          <a
-                            class="standalone"
-                            href="/example.html"
-                          >
-                            Felicyta Kowalska
-                          </a>
-                        </h1>
-                        <span
-                          class="text-muted me-4-5"
-                        >
-                          Organisation
-                        </span>
-                        <span
-                          class="text-muted me-2"
-                        >
-                          Position
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <hr
-            class="d-none d-md-block mt-4-5"
-          />
-          <nav
-            aria-label="Pagination aria label"
-            class="mt-4-5"
-            role="navigation"
-          >
-            <ul
-              class="pagination justify-content-center"
-            >
-              <li
-                class="page-item"
-              >
-                <a
-                  aria-label="First page"
-                  class="page-link"
-                  href="/example.html"
-                >
-                  <svg
-                    class="bi icon--fluid"
-                  >
-                    <use
-                      xlink:href="/icons.svg#chevron-double-left"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  aria-label="Previous page"
-                  class="page-link"
-                  href="/example.html"
-                >
-                  Previous
-                </a>
-              </li>
-              <li
-                class="page-item active"
-              >
-                <a
-                  aria-current="page"
-                  class="page-link"
-                  href="/example.html"
-                >
-                  1
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="/example.html"
-                >
-                  2
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="/example.html"
-                >
-                  3
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="/example.html"
-                >
-                  4
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="/example.html"
-                >
-                  5
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  aria-label="Next page"
-                  class="page-link"
-                  href="/example.html"
-                >
-                  Next
-                </a>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  aria-label="Last page"
-                  class="page-link"
-                  href="/example.html"
-                >
-                  <svg
-                    class="bi icon--fluid"
-                  >
-                    <use
-                      xlink:href="/icons.svg#chevron-double-right"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </div>
@@ -2092,7 +2096,7 @@ exports[`OE - User renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -2199,7 +2203,7 @@ exports[`OE - User renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -2312,7 +2316,7 @@ exports[`OE - User renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -2340,7 +2344,7 @@ exports[`OE - User renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -2376,7 +2380,7 @@ exports[`OE - User renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12"
+          class="bcl-section"
         >
           <nav
             class="nav nav-tabs"
@@ -2473,7 +2477,7 @@ exports[`OE - User renders correctly 1`] = `
                         />
                       </div>
                       <div
-                        class="col-12 col-md-7 col-lg-8 col-xl-9 col-xxl-8"
+                        class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
                       >
                         <div
                           class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
@@ -2523,13 +2527,13 @@ exports[`OE - User renders correctly 1`] = `
                   class="row"
                 >
                   <div
-                    class="col-12 col-md-6"
+                    class="col-md-6"
                   >
                     <div
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2538,7 +2542,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           Male
@@ -2549,7 +2553,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2558,7 +2562,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           German
@@ -2569,7 +2573,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2578,7 +2582,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           22/01/1972
@@ -2587,13 +2591,13 @@ exports[`OE - User renders correctly 1`] = `
                     </div>
                   </div>
                   <div
-                    class="col-12 col-md-6"
+                    class="col-md-6"
                   >
                     <div
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2602,7 +2606,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           Germany
@@ -2613,7 +2617,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2622,7 +2626,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           Düsseldorf
@@ -2644,13 +2648,13 @@ exports[`OE - User renders correctly 1`] = `
                   class="row"
                 >
                   <div
-                    class="col-12 col-md-6"
+                    class="col-md-6"
                   >
                     <div
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2659,7 +2663,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           DG Test
@@ -2670,7 +2674,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2679,7 +2683,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           Director
@@ -2688,13 +2692,13 @@ exports[`OE - User renders correctly 1`] = `
                     </div>
                   </div>
                   <div
-                    class="col-12 col-md-6"
+                    class="col-md-6"
                   >
                     <div
                       class="row"
                     >
                       <div
-                        class="col-12 col-md-4"
+                        class="col-md-4"
                       >
                         <p
                           class="mb-0"
@@ -2703,7 +2707,7 @@ exports[`OE - User renders correctly 1`] = `
                         </p>
                       </div>
                       <div
-                        class="col-12 col-md-8"
+                        class="col-md-8"
                       >
                         <p>
                           English, German
@@ -2743,7 +2747,7 @@ exports[`OE - User renders correctly 1`] = `
                   />
                 </div>
                 <div
-                  class="col-12 col-md align-self-center"
+                  class="col-md align-self-center"
                 >
                   <div
                     class="mt-3 text-center text-md-start"
@@ -2775,16 +2779,14 @@ exports[`OE - User renders correctly 1`] = `
               <div
                 class="row"
               >
-                <div
-                  class="col-12"
-                >
+                <div>
                   <form
                     class="row"
                     novalidate="true"
                     onsubmit="return false;"
                   >
                     <fieldset
-                      class="col-12 mb-3"
+                      class="mb-3"
                     >
                       <legend
                         class="mb-0 fs-2 mt-4-5"
@@ -2793,7 +2795,7 @@ exports[`OE - User renders correctly 1`] = `
                       </legend>
                     </fieldset>
                     <fieldset
-                      class="col-12 col-lg-6"
+                      class="col-lg-6"
                     >
                       <div
                         class="mb-3"
@@ -2915,7 +2917,7 @@ exports[`OE - User renders correctly 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="col-12 col-lg-6"
+                      class="col-lg-6"
                     >
                       <div
                         class="mb-3"
@@ -4262,7 +4264,7 @@ exports[`OE - User terms renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -4369,7 +4371,7 @@ exports[`OE - User terms renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -4482,7 +4484,7 @@ exports[`OE - User terms renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -4510,7 +4512,7 @@ exports[`OE - User terms renders correctly 1`] = `
                       </a>
                     </div>
                     <div
-                      class="col-12 col-md"
+                      class="col-md"
                     >
                       <a
                         class="w-100 mb-2-5 btn justify-content-start"
@@ -4575,7 +4577,7 @@ exports[`OE - User terms renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-12 col-lg-10 col-xl-9 col-xxl-8"
+          class="col-lg-10 col-xl-9 col-xxl-8"
         >
           <div
             class="bcl-section"

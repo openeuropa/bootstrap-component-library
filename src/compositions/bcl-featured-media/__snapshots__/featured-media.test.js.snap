@@ -9,12 +9,12 @@ exports[`OE - Featured media featured item renders correctly 1`] = `
       class="row"
     >
       <h2
-        class="fw-bold mb-4 bcl-heading"
+        class="mb-4 fw-bold bcl-heading"
       >
         A title for a featured item
       </h2>
       <div
-        class="col-12 col-md-6 order-1"
+        class="col-md-6 order-1"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -34,7 +34,7 @@ exports[`OE - Featured media featured item renders correctly 1`] = `
         </a>
       </div>
       <div
-        class="col-12 col-md-6 order-2 mt-4 mt-md-0"
+        class="col-md-6 order-2 mt-4 mt-md-0"
       >
         <figure
           class="rounded overflow-hidden"
@@ -74,12 +74,12 @@ exports[`OE - Featured media featured item renders correctly with title 1`] = `
       class="row"
     >
       <h6
-        class="fw-bold mb-4 bcl-heading"
+        class="mb-4 fw-bold bcl-heading"
       >
         Featured media test title
       </h6>
       <div
-        class="col-12 col-md-6 order-1"
+        class="col-md-6 order-1"
       >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -99,7 +99,7 @@ exports[`OE - Featured media featured item renders correctly with title 1`] = `
         </a>
       </div>
       <div
-        class="col-12 col-md-6 order-2 mt-4 mt-md-0"
+        class="col-md-6 order-2 mt-4 mt-md-0"
       >
         <figure
           class="rounded overflow-hidden"
@@ -132,211 +132,239 @@ exports[`OE - Featured media featured item renders correctly with title 1`] = `
 
 exports[`OE - Featured media renders correctly with iframe 1`] = `
 <jest>
-  <figure
-    class="rounded overflow-hidden"
-    src="https://www.youtube.com/embed/VFYlYeFAEH4"
+  <div
+    class="bcl-featured-item"
   >
-    <div
-      class="ratio ratio-16x9"
+    <figure
+      class="rounded overflow-hidden"
+      src="https://www.youtube.com/embed/VFYlYeFAEH4"
     >
-      <iframe
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen=""
-        frameborder="0"
-        height="197"
-        src="https://www.youtube.com/embed/fgi-GSCB6ho"
-        title="New digital strategy"
-        width="350"
-      />
-    </div>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      <div
+        class="ratio ratio-16x9"
+      >
+        <iframe
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""
+          frameborder="0"
+          height="197"
+          src="https://www.youtube.com/embed/fgi-GSCB6ho"
+          title="New digital strategy"
+          width="350"
+        />
+      </div>
+      <figcaption
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 
 exports[`OE - Featured media renders correctly with iframe and with title 1`] = `
 <jest>
-  <h6
-    class="mb-4 bcl-heading"
+  <div
+    class="bcl-featured-item"
   >
-    Featured media test title
-  </h6>
-  <figure
-    class="rounded overflow-hidden"
-    src="https://www.youtube.com/embed/VFYlYeFAEH4"
-  >
-    <div
-      class="ratio ratio-16x9"
+    <h6
+      class="bcl-heading"
     >
-      <iframe
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen=""
-        frameborder="0"
-        height="197"
-        src="https://www.youtube.com/embed/fgi-GSCB6ho"
-        title="New digital strategy"
-        width="350"
-      />
-    </div>
-    <figcaption
-      class="bg-lighter p-3"
+      Featured media test title
+    </h6>
+    <figure
+      class="rounded overflow-hidden"
+      src="https://www.youtube.com/embed/VFYlYeFAEH4"
     >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      <div
+        class="ratio ratio-16x9"
+      >
+        <iframe
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""
+          frameborder="0"
+          height="197"
+          src="https://www.youtube.com/embed/fgi-GSCB6ho"
+          title="New digital strategy"
+          width="350"
+        />
+      </div>
+      <figcaption
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 
 exports[`OE - Featured media renders correctly with image 1`] = `
 <jest>
-  <figure
-    class="rounded overflow-hidden d-inline-flex flex-wrap"
+  <div
+    class="bcl-featured-item"
   >
-    <img
-      alt="random image"
-      class="img-fluid flex-end-100"
-      src="https://picsum.photos/1000/400?random=1"
-    />
-    <figcaption
-      class="bg-lighter p-3 flex-1 w-min-content"
+    <figure
+      class="rounded overflow-hidden d-inline-flex flex-wrap"
     >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      <img
+        alt="random image"
+        class="img-fluid flex-end-100"
+        src="https://picsum.photos/1000/400?random=1"
+      />
+      <figcaption
+        class="bg-lighter p-3 flex-1 w-min-content"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 
 exports[`OE - Featured media renders correctly with image and with title 1`] = `
 <jest>
-  <h6
-    class="mb-4 bcl-heading"
+  <div
+    class="bcl-featured-item"
   >
-    Featured media test title
-  </h6>
-  <figure
-    class="rounded overflow-hidden d-inline-flex flex-wrap"
-  >
-    <img
-      alt="random image"
-      class="img-fluid flex-end-100"
-      src="https://picsum.photos/1000/400?random=1"
-    />
-    <figcaption
-      class="bg-lighter p-3 flex-1 w-min-content"
+    <h6
+      class="bcl-heading"
     >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      Featured media test title
+    </h6>
+    <figure
+      class="rounded overflow-hidden d-inline-flex flex-wrap"
+    >
+      <img
+        alt="random image"
+        class="img-fluid flex-end-100"
+        src="https://picsum.photos/1000/400?random=1"
+      />
+      <figcaption
+        class="bg-lighter p-3 flex-1 w-min-content"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 
 exports[`OE - Featured media renders correctly with ratio 1`] = `
 <jest>
-  <figure
-    class="rounded overflow-hidden"
+  <div
+    class="bcl-featured-item"
   >
-    <video
-      class="w-100 d-block"
-      controls=""
-      poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    <figure
+      class="rounded overflow-hidden"
     >
-      <source
-        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-        type="video/mp4"
-      />
-      <source
-        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-        type="video/webm"
-      />
-      <track
-        kind="captions"
-        label="English"
-        src="example.vtt"
-        srclang=""
-      />
-    </video>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      <video
+        class="w-100 d-block"
+        controls=""
+        poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+      >
+        <source
+          src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+          type="video/webm"
+        />
+        <track
+          kind="captions"
+          label="English"
+          src="example.vtt"
+          srclang=""
+        />
+      </video>
+      <figcaption
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 
 exports[`OE - Featured media renders correctly with video 1`] = `
 <jest>
-  <figure
-    class="rounded overflow-hidden"
+  <div
+    class="bcl-featured-item"
   >
-    <video
-      class="w-100 d-block"
-      controls=""
-      poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    <figure
+      class="rounded overflow-hidden"
     >
-      <source
-        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-        type="video/mp4"
-      />
-      <source
-        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-        type="video/webm"
-      />
-      <track
-        kind="captions"
-        label="English"
-        src="example.vtt"
-        srclang=""
-      />
-    </video>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      <video
+        class="w-100 d-block"
+        controls=""
+        poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+      >
+        <source
+          src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+          type="video/webm"
+        />
+        <track
+          kind="captions"
+          label="English"
+          src="example.vtt"
+          srclang=""
+        />
+      </video>
+      <figcaption
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 
 exports[`OE - Featured media renders correctly with video and with title 1`] = `
 <jest>
-  <h6
-    class="mb-4 bcl-heading"
+  <div
+    class="bcl-featured-item"
   >
-    Featured media test title
-  </h6>
-  <figure
-    class="rounded overflow-hidden"
-  >
-    <video
-      class="w-100 d-block"
-      controls=""
-      poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+    <h6
+      class="bcl-heading"
     >
-      <source
-        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-        type="video/mp4"
-      />
-      <source
-        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-        type="video/webm"
-      />
-      <track
-        kind="captions"
-        label="English"
-        src="example.vtt"
-        srclang=""
-      />
-    </video>
-    <figcaption
-      class="bg-lighter p-3"
+      Featured media test title
+    </h6>
+    <figure
+      class="rounded overflow-hidden"
     >
-      Media description text goes here.
-    </figcaption>
-  </figure>
+      <video
+        class="w-100 d-block"
+        controls=""
+        poster="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
+      >
+        <source
+          src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+          type="video/webm"
+        />
+        <track
+          kind="captions"
+          label="English"
+          src="example.vtt"
+          srclang=""
+        />
+      </video>
+      <figcaption
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;

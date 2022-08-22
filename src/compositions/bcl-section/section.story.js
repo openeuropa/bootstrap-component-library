@@ -1,7 +1,7 @@
 import section from "@openeuropa/bcl-section/section.html";
 
 export default {
-  title: "Component/Section",
+  title: "Components/Section",
   parameters: {
     controls: { disable: true },
   },

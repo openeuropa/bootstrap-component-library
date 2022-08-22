@@ -43,11 +43,7 @@ module.exports = {
     },
     image: "https://picsum.photos/id/154/1200/800",
     shade: true,
-    attributes: new drupalAttribute().addClass([
-      "bg-light",
-      "text-center",
-      "mb-4-5",
-    ]),
+    attributes: new drupalAttribute().addClass(["bg-light", "text-center"]),
   },
   listing_section: {
     variant: "highlight-3-col",

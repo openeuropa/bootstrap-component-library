@@ -40,7 +40,7 @@ module.exports = {
     nav: true,
     tabs: true,
     attributes: new drupalAttribute()
-      .addClass(["bcl__nav", "bg-gray", "mb-3-5", "mb-lg-5", "n-mx-container"])
+      .addClass(["bcl__nav", "bg-gray", "n-mx-container"])
       .setAttribute("aria-label", "content-navigation"),
     items: [
       {

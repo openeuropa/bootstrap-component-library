@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-  <div class="bcl-section">
     <p id="content">
       {{ get_dummy_text(6) }}
     </p>
@@ -25,9 +24,7 @@
     {% if listing %}
       {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
     {% endif %}
-  </div>
 
-  <div class="bcl-section">
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Section 2',
       title_tag: 'h2',
@@ -47,9 +44,7 @@
     {% endif %}
 
     {{ get_dummy_text(8, true) }}
-  </div>
 
-  <div class="bcl-section">
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Section 3',
       title_tag: 'h2',
@@ -60,5 +55,4 @@
 
     {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
     {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
-  </div>
 {% endblock %}

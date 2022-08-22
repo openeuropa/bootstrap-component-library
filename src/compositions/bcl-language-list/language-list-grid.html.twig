@@ -29,7 +29,7 @@
   {% if _columns is not empty and _columns is iterable %}
   <div class="row">
     {% for _column in _columns %}
-      <div class="col-12 col-md">
+      <div class="col-md">
       {% for _item in _column %}
         {% if _item.attributes is empty %}
           {% set _item = _item|merge({

@@ -2,13 +2,36 @@ $bcl-spacing-m: 1.5rem;
 $bcl-spacing-l: 2rem;
 $bcl-spacing-xl: 3rem;
 
+.bcl-accordion,
+.bcl-description-list,
+.bcl-file,
+.bcl-carousel,
+.bcl-blockquote,
+.bcl-gallery,
+.bcl-facts-figures,
+.bcl-featured-item,
+.bcl-listing {
+  .bcl-heading {
+    margin-bottom: $bcl-spacing-m;
+  }
+}
+
 .bcl-section {
   @include clearfix;
-
   margin-bottom: $bcl-spacing-l;
-  margin-top: $bcl-spacing-l;
 
+  > h1,
   > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > .h1,
+  > .h2,
+  > .h3,
+  > .h4,
+  > .h5,
+  > .h6,
   > .bcl-heading {
     margin-bottom: $bcl-spacing-m;
     margin-top: $bcl-spacing-m;
@@ -27,11 +50,37 @@ $bcl-spacing-xl: 3rem;
   > *:last-child {
     margin-bottom: 0;
   }
+
+  &:first-child {
+    margin-top: $bcl-spacing-l;
+  }
+
+  > .bcl-listing,
+  > .bcl-banner {
+    margin-top: $bcl-spacing-m;
+    margin-bottom: $bcl-spacing-m;
+  }
 }
 
 @include media-breakpoint-down(md) {
+  .bcl-accordion,
+  .bcl-description-list,
+  .bcl-file,
+  .bcl-carousel,
+  .bcl-blockquote,
+  .bcl-gallery,
+  .bcl-featured-item,
+  .bcl-facts-figures,
+  .bcl-listing {
+    .bcl-heading {
+      margin-bottom: $bcl-spacing-xl;
+    }
+  }
   .bcl-section {
     margin-bottom: $bcl-spacing-xl;
-    margin-top: $bcl-spacing-xl;
+
+    &:first-child {
+      margin-top: $bcl-spacing-xl;
+    }
   }
 }

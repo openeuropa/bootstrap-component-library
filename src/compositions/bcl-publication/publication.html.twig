@@ -6,7 +6,6 @@
 
 {% block content %}
   {% if authors is defined and authors is not empty %}
-  <div class="bcl-section">
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: authors.title,
       title_tag: 'h2',
@@ -21,26 +20,21 @@
       {% endfor %}
       </ul>
     {% endif %}
-  </div>
   {% endif %}
 
   {% if description is defined and description is not empty %}
-    <div class="bcl-section">
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: description.title,
-        title_tag: 'h2',
-        attributes: create_attribute().setAttribute('id', description.title_id),
-      } only %}
-      {% for paragraph in description.paragraphs %}
-        <p>{{- paragraph -}}</p>
-      {% endfor %}
-    </div>
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: description.title,
+      title_tag: 'h2',
+      attributes: create_attribute().setAttribute('id', description.title_id),
+    } only %}
+    {% for paragraph in description.paragraphs %}
+      <p>{{- paragraph -}}</p>
+    {% endfor %}
   {% endif %}
 
   {% if file is not empty %}
-    <div class="bcl-section">
-      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-    </div>
+    {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
   {% endif %}
 
 {% endblock %}

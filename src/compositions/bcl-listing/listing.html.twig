@@ -57,7 +57,7 @@
     {% set  _alignment_class = '' %}
     {% set _image_classes = _card.image.classes ?: '' %}
     {% set _start_col_classes = 'bcl-card-start-col mb-3 mb-lg-0' %}
-    {% set _end_col_classes = 'col-12 col-md' %}
+    {% set _end_col_classes = 'col-md' %}
     {% if _image_size is not empty %}
       {% set _start_col_classes = _start_col_classes ~ ' bcl-size-' ~ _image_size %}
     {% endif %}

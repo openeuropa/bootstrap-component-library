@@ -8,7 +8,7 @@
 {% set _colors = colors|default([]) %}
 <div class="row">
 {% for _color in _colors %}
-  <div class="col-12 col-md-6 col-lg-4 mb-4">
+  <div class="col-md-6 col-lg-4 mb-4">
   {% for _value in _color.values %}
     {% if _value.percentage %}
       <span class="text-capitalize">{{ _color.name }}</span> {{ _value.percentage}} 

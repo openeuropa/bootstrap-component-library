@@ -178,14 +178,14 @@ module.exports = {
           {
             type: "fieldset",
             legend: "Personal information",
-            fieldset_classes: "col-12 mb-3",
+            fieldset_classes: "mb-3",
             legend_classes: "mb-0 fs-2 mt-4-5",
           },
         ],
         [
           {
             type: "fieldset",
-            fieldset_classes: "col-12 col-lg-6",
+            fieldset_classes: "col-lg-6",
           },
           {
             wrapper_classes: "mb-3",
@@ -242,7 +242,7 @@ module.exports = {
         [
           {
             type: "fieldset",
-            fieldset_classes: "col-12 col-lg-6",
+            fieldset_classes: "col-lg-6",
           },
           {
             wrapper_classes: "mb-3",

@@ -1,13 +1,11 @@
 {% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
 
 {% block content %}
-  <div class="bcl-section">
-    {{ get_dummy_text(4, true) }}
-    <ul>
-      <li>{{ get_dummy_text() }}</li>
-      <li>{{ get_dummy_text() }}</li>
-      <li>{{ get_dummy_text() }}</li>
-    </ul>
-    {% include '@oe-bcl/bcl-form/form.html.twig' with terms_form only %}
-  </div>
+  {{ get_dummy_text(4, true) }}
+  <ul>
+    <li>{{ get_dummy_text() }}</li>
+    <li>{{ get_dummy_text() }}</li>
+    <li>{{ get_dummy_text() }}</li>
+  </ul>
+  {% include '@oe-bcl/bcl-form/form.html.twig' with terms_form only %}
 {% endblock %}
