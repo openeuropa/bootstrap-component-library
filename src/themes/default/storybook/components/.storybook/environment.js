@@ -7,7 +7,7 @@ const {
 } = require("twing");
 const drupalAttribute = require("drupal-attribute");
 
-const projAbsPath = path.resolve(__dirname, "../../templates");
+const projAbsPath = path.resolve(__dirname, "../../../templates");
 const loader = new TwingLoaderFilesystem(projAbsPath);
 
 // In storybook we get this returned as an instance of

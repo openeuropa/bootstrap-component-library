@@ -2,7 +2,7 @@ import registerAddonCode from "@whitespace/storybook-addon-code/register";
 import { addons } from "@storybook/addons";
 import browserUpdate from "browser-update";
 import { create } from "@storybook/theming";
-import { version } from "../../../../../lerna.json";
+import { version } from "../../../../../../lerna.json";
 import project from "../.project.js";
 
 addons.setConfig({

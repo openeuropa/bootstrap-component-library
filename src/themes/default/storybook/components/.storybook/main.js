@@ -2,7 +2,7 @@ const path = require("path");
 
 const chromatic = process.env.STORYBOOK_ENV;
 
-let stories = ["../../**/!(test*).story.js"];
+let stories = ["../bcl-stories/!(test*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
@@ -15,7 +15,7 @@ const addons = [
 ];
 
 if (chromatic) {
-  stories = ["../../**/*.story.js"];
+  stories = ["../bcl-stories/*.story.js"];
   addons.push("@storybook/addon-interactions");
 }
 
@@ -50,7 +50,7 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
-  staticDirs: ["../../../../../assets/"],
+  staticDirs: ["../../../../../../assets/"],
   stories,
   addons,
   webpackFinal,
