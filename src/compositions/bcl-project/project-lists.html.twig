@@ -19,6 +19,13 @@
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+<div
+  {{ attributes }}
+>
 {% if _title is not empty %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -55,5 +62,6 @@
     {% endfor %}
   {% endfor %}
 {% endif %}
+</div>
 
 {% endspaceless %}

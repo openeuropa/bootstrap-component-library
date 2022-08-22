@@ -45,31 +45,29 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<div class="bcl-blockquote">
-  {%- if _title is not empty -%}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: _title,
-      title_tag: _title_tag,
-      title_link: _title_link,
-      attributes: _title_attributes,
-    } only %}
-  {%- endif -%}
+{%- if _title is not empty -%}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes.addClass('mb-4'),
+  } only %}
+{%- endif -%}
 
-  <figure
-    {{ attributes }}
-  >
-    <blockquote class="blockquote mb-2">
-      <p>{{- _quote -}}</p>
-    </blockquote>
-  {% if _attribution is not empty %}
-    <figcaption class="blockquote-footer m-0">
-      {{- _attribution -}}
-    {% if _cite is not empty %}
-      <cite title="{{ _cite }}">{{- _cite -}}</cite>
-    {% endif %}
-    </figcaption>
+<figure
+  {{ attributes }}
+>
+  <blockquote class="blockquote mb-2">
+    <p>{{- _quote -}}</p>
+  </blockquote>
+{% if _attribution is not empty %}
+  <figcaption class="blockquote-footer m-0">
+    {{- _attribution -}}
+  {% if _cite is not empty %}
+    <cite title="{{ _cite }}">{{- _cite -}}</cite>
   {% endif %}
-  </figure>
-</div>
+  </figcaption>
+{% endif %}
+</figure>
 
 {% endspaceless %}

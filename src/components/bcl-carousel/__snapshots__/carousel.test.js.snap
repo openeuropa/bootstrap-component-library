@@ -3,168 +3,164 @@
 exports[`OE - carousel renders correctly 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -172,169 +168,165 @@ exports[`OE - carousel renders correctly 1`] = `
 exports[`OE - carousel renders correctly when touch swipe is disabled 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-touch="false"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-touch="false"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -342,172 +334,168 @@ exports[`OE - carousel renders correctly when touch swipe is disabled 1`] = `
 exports[`OE - carousel renders correctly with custom intervals 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
+        data-bs-interval="2000"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
+        data-bs-interval="2000"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
-          data-bs-interval="2000"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-          data-bs-interval="2000"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-          data-bs-interval="2000"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-          data-bs-interval="2000"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -515,168 +503,164 @@ exports[`OE - carousel renders correctly with custom intervals 1`] = `
 exports[`OE - carousel renders correctly with dark variant 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide carousel-dark"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide carousel-dark"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -684,168 +668,164 @@ exports[`OE - carousel renders correctly with dark variant 1`] = `
 exports[`OE - carousel renders correctly with fade and dark variant 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide carousel-fade carousel-dark"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide carousel-fade carousel-dark"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -853,168 +833,164 @@ exports[`OE - carousel renders correctly with fade and dark variant 1`] = `
 exports[`OE - carousel renders correctly with fade transition 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -1022,168 +998,164 @@ exports[`OE - carousel renders correctly with fade transition 1`] = `
 exports[`OE - carousel renders correctly with rounded indicators 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="rounded-indicators carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="rounded-indicators carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -1191,347 +1163,339 @@ exports[`OE - carousel renders correctly with rounded indicators 1`] = `
 exports[`OE - carousel renders correctly with specific slide 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-label="Slide 1"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-current="true"
+        aria-label="Slide 2"
+        class="active"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item"
       >
-        <button
-          aria-label="Slide 1"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-current="true"
-          aria-label="Slide 2"
-          class="active"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item active"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item active"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
 
 exports[`OE - carousel renders correctly with title 1`] = `
 <jest>
-  <div
-    class="bcl-carousel"
+  <h1
+    class="bcl-heading"
   >
-    <h1
-      class="bcl-heading"
+    <a
+      class="standalone"
+      href="/example.html"
     >
-      <a
-        class="standalone"
-        href="/example.html"
-      >
-        A title created by the bcl heading template
-      </a>
-    </h1>
+      A title created by the bcl heading template
+    </a>
+  </h1>
+  <div
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
+  >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -1539,167 +1503,163 @@ exports[`OE - carousel renders correctly with title 1`] = `
 exports[`OE - carousel renders correctly without autoplay 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
-          >
-            <p
-              class="fs-5"
-            >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption"
         >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
-        />
-        <span
-          class="visually-hidden"
-        >
-          Next
-        </span>
-      </button>
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;
@@ -1707,133 +1667,129 @@ exports[`OE - carousel renders correctly without autoplay 1`] = `
 exports[`OE - carousel renders correctly without controls 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
     >
       <div
-        class="carousel-indicators d-none d-md-flex"
+        class="carousel-item active"
       >
-        <button
-          aria-current="true"
-          aria-label="Slide 1"
-          class="active"
-          data-bs-slide-to="0"
-          data-bs-target="#carouselExample"
-          type="button"
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
         />
-        <button
-          aria-label="Slide 2"
-          data-bs-slide-to="1"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 3"
-          data-bs-slide-to="2"
-          data-bs-target="#carouselExample"
-          type="button"
-        />
-        <button
-          aria-label="Slide 4"
-          data-bs-slide-to="3"
-          data-bs-target="#carouselExample"
-          type="button"
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
       </div>
       <div
-        class="carousel-inner"
+        class="carousel-item"
       >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption d-none d-md-block"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
         </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
+        />
         <div
-          class="carousel-item"
+          class="carousel-caption"
         >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
+          <a
+            href="#"
           >
-            <p
-              class="fs-5"
+            <svg
+              class="me-2-5 bi icon--s"
             >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
         </div>
       </div>
     </div>
@@ -1844,138 +1800,134 @@ exports[`OE - carousel renders correctly without controls 1`] = `
 exports[`OE - carousel renders correctly without indicators 1`] = `
 <jest>
   <div
-    class="bcl-carousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
   >
     <div
-      class="carousel slide"
-      data-bs-ride="carousel"
-      id="carouselExample"
+      class="carousel-inner"
     >
       <div
-        class="carousel-inner"
+        class="carousel-item active"
       >
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
+        />
         <div
-          class="carousel-item active"
+          class="carousel-caption"
         >
-          <img
-            alt="First slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=1"
-          />
-          <div
-            class="carousel-caption"
+          <p
+            class="fs-5"
           >
-            <p
-              class="fs-5"
-            >
-              First slide label
-            </p>
-            <p>
-              Some representative placeholder content for the first slide.
-            </p>
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Second slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=2"
-          />
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Third slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=3"
-          />
-          <div
-            class="carousel-caption d-none d-md-block"
+            First slide label
+          </p>
+          <p>
+            Some representative placeholder content for the first slide.
+          </p>
+          <a
+            href="/example.html"
           >
-            <p
-              class="fs-5"
+            <svg
+              class="me-2-5 bi icon--s"
             >
-              Third slide label
-            </p>
-            <p>
-              Some representative placeholder content for the third slide.&lt;                            
-            </p>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-        >
-          <img
-            alt="Fourth slide"
-            class="d-block w-100"
-            src="https://picsum.photos/800/400?random=4"
-          />
-          <div
-            class="carousel-caption"
-          >
-            <a
-              href="#"
-            >
-              <svg
-                class="me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#link"
-                />
-              </svg>
-              Link
-            </a>
-          </div>
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        data-bs-slide="prev"
-        data-bs-target="#carouselExample"
-        type="button"
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-prev-icon"
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
         />
-        <span
-          class="visually-hidden"
-        >
-          Previous
-        </span>
-      </button>
-      <button
-        class="carousel-control-next"
-        data-bs-slide="next"
-        data-bs-target="#carouselExample"
-        type="button"
+      </div>
+      <div
+        class="carousel-item"
       >
-        <span
-          aria-hidden="true"
-          class="carousel-control-next-icon"
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
         />
-        <span
-          class="visually-hidden"
+        <div
+          class="carousel-caption d-none d-md-block"
         >
-          Next
-        </span>
-      </button>
+          <p
+            class="fs-5"
+          >
+            Third slide label
+          </p>
+          <p>
+            Some representative placeholder content for the third slide.&lt;                      
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+      >
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <a
+            href="#"
+          >
+            <svg
+              class="me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#link"
+              />
+            </svg>
+            Link
+          </a>
+        </div>
+      </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
   </div>
 </jest>
 `;

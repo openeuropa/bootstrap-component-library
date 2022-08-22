@@ -95,9 +95,9 @@
       {% endblock %}
     {% if _with_sidebar %}
       <div class="{{ _col_classes.left|join(' ') }}">
-        <div class="bcl-section">
+        <section class="bcl-section">
           {% block sidebar %}{% endblock %}
-        </div>
+        </section>
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}
@@ -105,23 +105,29 @@
       <div class="col-lg-10 col-xl-9 col-xxl-8">
       {% endif %}
     {% endif %}
-      <div class="bcl-section">
+      <section class="bcl-section">
         {% block content_top %}
           {{ content_top }}
         {% endblock %}
+      </section>
+      <section class="bcl-section">
         {% block content %}
           {{ content }}
         {% endblock %}
+      </section>
+      <section class="bcl-section">
         {% block content_bottom %}
           {{ content_bottom }}
         {% endblock %}
+      </section>
+      <section class="bcl-section">
         {% block related %}
           {{ related }}
         {% endblock %}
         {% block share %}
           {{ share }}
         {% endblock %}
-      </div>
+      </section>
       {% if _with_sidebar and not _landing %}
       </div>
       {% endif %}

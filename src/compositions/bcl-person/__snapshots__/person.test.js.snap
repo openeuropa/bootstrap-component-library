@@ -872,7 +872,10 @@ exports[`OE - Person details renders correctly 1`] = `
         <div
           class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <div
+          <section
+            class="bcl-section"
+          />
+          <section
             class="bcl-section"
           >
             <h2
@@ -903,206 +906,200 @@ exports[`OE - Person details renders correctly 1`] = `
               Related documents
             </h2>
             <div
-              class="mb-4-5 bcl-file"
+              class="mb-4-5 bcl-file border rounded"
             >
               <div
-                class="border rounded"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="px-3-5 py-3"
+                  class="d-flex"
                 >
                   <div
-                    class="d-flex"
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
+                    >
+                      <use
+                        xlink:href="/icons.svg#file-pdf-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
                   >
                     <div
-                      class="pe-2 pb-2"
+                      class="flex-grow-1"
                     >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
                       <svg
-                        class="mt-1 icon--file bi icon--xl"
+                        class="ms-2-5 bi icon--fluid"
                       >
                         <use
-                          xlink:href="/icons.svg#file-pdf-fill"
+                          xlink:href="/icons.svg#download"
                         />
                       </svg>
-                    </div>
-                    <div
-                      class="d-md-flex flex-grow-1"
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3
+              class="mb-3 mb-4 bcl-heading"
+            >
+              Drupal articles
+            </h3>
+            <div
+              class="mb-3 bcl-file border rounded"
+            >
+              <div
+                class="px-3-5 py-3"
+              >
+                <div
+                  class="d-flex"
+                >
+                  <div
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
                     >
-                      <div
-                        class="flex-grow-1"
+                      <use
+                        xlink:href="/icons.svg#file-pdf-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
+                  >
+                    <div
+                      class="flex-grow-1"
+                    >
+                      <p
+                        class="fw-medium m-0 fs-5"
                       >
-                        <p
-                          class="fw-medium m-0 fs-5"
-                        >
-                          File title
-                        </p>
-                        <small
-                          class="fw-medium m-0"
-                        >
-                          English
-                          <span
-                            class="fw-normal"
-                          >
-                             (16.2 MB - PDF)
-                          </span>
-                        </small>
-                      </div>
-                      <a
-                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                        download="true"
-                        href="#"
-                        target="_blank"
+                        Drupal article 1
+                      </p>
+                      <small
+                        class="fw-medium m-0"
                       >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
+                        English
+                        <span
+                          class="fw-normal"
                         >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
                     </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
+                      <svg
+                        class="ms-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#download"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="mb-3 bcl-file"
+              class="bcl-file border rounded"
             >
-              <h3
-                class="mb-3 bcl-heading"
-              >
-                Drupal articles
-              </h3>
               <div
-                class="border rounded"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="px-3-5 py-3"
+                  class="d-flex"
                 >
                   <div
-                    class="d-flex"
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
+                    >
+                      <use
+                        xlink:href="/icons.svg#file-text-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
                   >
                     <div
-                      class="pe-2 pb-2"
+                      class="flex-grow-1"
                     >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        Drupal article 2
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - DOC)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="#"
+                      target="_blank"
+                    >
+                      Download
                       <svg
-                        class="mt-1 icon--file bi icon--xl"
+                        class="ms-2-5 bi icon--fluid"
                       >
                         <use
-                          xlink:href="/icons.svg#file-pdf-fill"
+                          xlink:href="/icons.svg#download"
                         />
                       </svg>
-                    </div>
-                    <div
-                      class="d-md-flex flex-grow-1"
-                    >
-                      <div
-                        class="flex-grow-1"
-                      >
-                        <p
-                          class="fw-medium m-0 fs-5"
-                        >
-                          Drupal article 1
-                        </p>
-                        <small
-                          class="fw-medium m-0"
-                        >
-                          English
-                          <span
-                            class="fw-normal"
-                          >
-                             (16.2 MB - PDF)
-                          </span>
-                        </small>
-                      </div>
-                      <a
-                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                        download="true"
-                        href="#"
-                        target="_blank"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div
-              class="bcl-file"
-            >
-              <div
-                class="border rounded"
-              >
-                <div
-                  class="px-3-5 py-3"
-                >
-                  <div
-                    class="d-flex"
-                  >
-                    <div
-                      class="pe-2 pb-2"
-                    >
-                      <svg
-                        class="mt-1 icon--file bi icon--xl"
-                      >
-                        <use
-                          xlink:href="/icons.svg#file-text-fill"
-                        />
-                      </svg>
-                    </div>
-                    <div
-                      class="d-md-flex flex-grow-1"
-                    >
-                      <div
-                        class="flex-grow-1"
-                      >
-                        <p
-                          class="fw-medium m-0 fs-5"
-                        >
-                          Drupal article 2
-                        </p>
-                        <small
-                          class="fw-medium m-0"
-                        >
-                          English
-                          <span
-                            class="fw-normal"
-                          >
-                             (16.2 MB - DOC)
-                          </span>
-                        </small>
-                      </div>
-                      <a
-                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                        download="true"
-                        href="#"
-                        target="_blank"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
+          <section
+            class="bcl-section"
+          />
+          <section
+            class="bcl-section"
+          />
         </div>
       </div>
     </div>
@@ -2089,7 +2086,7 @@ exports[`OE - Person listing renders correctly 1`] = `
         <div
           class="bcl-sidebar col-lg-3"
         >
-          <div
+          <section
             class="bcl-section"
           >
             <div
@@ -2154,12 +2151,12 @@ exports[`OE - Person listing renders correctly 1`] = `
                 </form>
               </div>
             </div>
-          </div>
+          </section>
         </div>
         <div
           class="col-lg-9 col-xxl-8"
         >
-          <div
+          <section
             class="bcl-section"
           >
             <button
@@ -2238,6 +2235,10 @@ exports[`OE - Person listing renders correctly 1`] = `
             <hr
               class="d-none d-md-block mb-4-75"
             />
+          </section>
+          <section
+            class="bcl-section"
+          >
             <div
               class="bcl-listing bcl-listing--default-1-col"
             >
@@ -2540,6 +2541,10 @@ exports[`OE - Person listing renders correctly 1`] = `
                 </div>
               </div>
             </div>
+          </section>
+          <section
+            class="bcl-section"
+          >
             <hr
               class="d-none d-md-block mt-4-5"
             />
@@ -2660,7 +2665,10 @@ exports[`OE - Person listing renders correctly 1`] = `
                 </li>
               </ul>
             </nav>
-          </div>
+          </section>
+          <section
+            class="bcl-section"
+          />
         </div>
       </div>
     </div>

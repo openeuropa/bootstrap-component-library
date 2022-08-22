@@ -57,19 +57,20 @@
   {% set _item_classes = _item_classes ~ ' border-bottom' %}
 {% endif %}
 
+{% if _title is not empty %}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes.addClass('mb-4'),
+  } only %}
+{% endif %}
+
 {% set attributes = attributes.addClass(_classes) %}
 
 <div
   {{ attributes }}
 >
-  {% if _title is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: _title,
-      title_tag: _title_tag,
-      title_link: _title_link,
-      attributes: _title_attributes,
-    } only %}
-  {% endif %}
   {% for _item in _items %}
   {% if loop.last and _variant != 'horizontal' %}
     {% set _item_classes = '' %}

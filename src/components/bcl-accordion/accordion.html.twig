@@ -5,7 +5,7 @@
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
   - title_link: (link object) (default: {})
-  - title_attributes: (drupal attrs)
+  - title_attributes: (drupal attrs) (default: classes: "mb-4")
   - id (int) (default: random(1000))
   - flush (boolean) (default: false)
   - items (array) (default: []): format: [
@@ -28,7 +28,7 @@
 {% set _flush = flush|default(false) %}
 {% set _items = items|default([]) %}
 {% set _open_item_id = open_item_id|default(0) %}
-{% set _classes = ['bcl-accordion', 'accordion'] %}
+{% set _classes = ['accordion'] %}
 {% if _flush %}
   {% set _classes = _classes|merge(['accordion-flush']) %}
 {% endif %}
@@ -48,7 +48,7 @@
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
-    attributes: _title_attributes,
+    attributes: _title_attributes.addClass('mb-4'),
   } only %}
 {%- endif -%}
 

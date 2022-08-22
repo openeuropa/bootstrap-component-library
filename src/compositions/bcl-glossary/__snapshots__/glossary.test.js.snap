@@ -760,7 +760,10 @@ exports[`OE - Glossary detail renders correctly 1`] = `
         <div
           class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <div
+          <section
+            class="bcl-section"
+          />
+          <section
             class="bcl-section"
           >
             <h2
@@ -799,43 +802,106 @@ exports[`OE - Glossary detail renders correctly 1`] = `
             </h2>
             <div>
               <div
-                class="bcl-file"
+                class="bcl-file border rounded"
               >
                 <div
-                  class="border rounded"
+                  class="px-3-5 py-3"
                 >
                   <div
-                    class="px-3-5 py-3"
+                    class="d-flex"
                   >
                     <div
-                      class="d-flex"
+                      class="pe-2 pb-2"
+                    >
+                      <svg
+                        class="mt-1 icon--file bi icon--xl"
+                      >
+                        <use
+                          xlink:href="/icons.svg#file-pdf-fill"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="d-md-flex flex-grow-1"
                     >
                       <div
-                        class="pe-2 pb-2"
+                        class="flex-grow-1"
                       >
+                        <p
+                          class="fw-medium m-0 fs-5"
+                        >
+                          File title
+                        </p>
+                        <small
+                          class="fw-medium m-0"
+                        >
+                          English
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <a
+                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                        download="true"
+                        href="/example.html"
+                        target="_blank"
+                      >
+                        Download
                         <svg
-                          class="mt-1 icon--file bi icon--xl"
+                          class="ms-2-5 bi icon--fluid"
                         >
                           <use
-                            xlink:href="/icons.svg#file-pdf-fill"
+                            xlink:href="/icons.svg#download"
                           />
                         </svg>
-                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-lighter py-3 px-4 border-top"
+                >
+                  <div
+                    class="text-end text-md-center"
+                  >
+                    <a
+                      aria-controls="language-dropdown"
+                      aria-expanded="false"
+                      class="standalone"
+                      data-bs-toggle="collapse"
+                      href="#language-dropdown"
+                      role="button"
+                    >
+                      Other languages (3)
+                      <svg
+                        class="ms-2-5 bi icon--2xs"
+                      >
+                        <use
+                          xlink:href="/icons.svg#caret-down-fill"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div
+                    class="collapse"
+                    id="language-dropdown"
+                  >
+                    <div
+                      class="py-3 border-bottom"
+                    >
                       <div
-                        class="d-md-flex flex-grow-1"
+                        class="row"
                       >
                         <div
-                          class="flex-grow-1"
+                          class="col-12 col-md-9"
                         >
-                          <p
-                            class="fw-medium m-0 fs-5"
-                          >
-                            File title
-                          </p>
                           <small
-                            class="fw-medium m-0"
+                            class="fw-bold m-0"
                           >
-                            English
+                            български
                             <span
                               class="fw-normal"
                             >
@@ -843,190 +909,123 @@ exports[`OE - Glossary detail renders correctly 1`] = `
                             </span>
                           </small>
                         </div>
-                        <a
-                          class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                          download="true"
-                          href="/example.html"
-                          target="_blank"
+                        <div
+                          class="col-12 col-md-3 align-self-end text-md-end"
                         >
-                          Download
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
+                          <a
+                            class="d-block standalone mt-1"
+                            download="true"
+                            href="http://www.africau.edu/images/default/sample.pdf"
+                            target="_blank"
                           >
-                            <use
-                              xlink:href="/icons.svg#download"
-                            />
-                          </svg>
-                        </a>
+                            Download
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#download"
+                              />
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="bg-lighter py-3 px-4 border-top"
-                  >
                     <div
-                      class="text-end text-md-center"
+                      class="py-3 border-bottom"
                     >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col-12 col-md-9"
+                        >
+                          <small
+                            class="fw-bold m-0"
+                          >
+                            Español
+                            <span
+                              class="fw-normal"
+                            >
+                               (16.2 MB - PDF)
+                            </span>
+                          </small>
+                        </div>
+                        <div
+                          class="col-12 col-md-3 align-self-end text-md-end"
+                        >
+                          <a
+                            class="d-block standalone mt-1"
+                            download="true"
+                            href="/example.html"
+                            target="_blank"
+                          >
+                            Download
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#download"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="py-3 border-bottom"
+                    >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col-12 col-md-9"
+                        >
+                          <small
+                            class="fw-bold m-0"
+                          >
+                            Français
+                            <span
+                              class="fw-normal"
+                            >
+                               (16.2 MB - PDF)
+                            </span>
+                          </small>
+                        </div>
+                        <div
+                          class="col-12 col-md-3 align-self-end text-md-end"
+                        >
+                          <a
+                            class="d-block standalone mt-1"
+                            download="true"
+                            href="/example.html"
+                            target="_blank"
+                          >
+                            Download
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#download"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pt-3"
+                    >
+                      <p
+                        class="mb-2"
+                      >
+                        Looking for another language which is not on the list? 
+                      </p>
                       <a
-                        aria-controls="language-dropdown"
-                        aria-expanded="false"
-                        class="standalone"
-                        data-bs-toggle="collapse"
-                        href="#language-dropdown"
-                        role="button"
+                        class="d-block"
+                        href="/example.html"
                       >
-                        Other languages (3)
-                        <svg
-                          class="ms-2-5 bi icon--2xs"
-                        >
-                          <use
-                            xlink:href="/icons.svg#caret-down-fill"
-                          />
-                        </svg>
+                        Find out why.
                       </a>
-                    </div>
-                    <div
-                      class="collapse"
-                      id="language-dropdown"
-                    >
-                      <div
-                        class="py-3 border-bottom"
-                      >
-                        <div
-                          class="row"
-                        >
-                          <div
-                            class="col-md-9"
-                          >
-                            <small
-                              class="fw-bold m-0"
-                            >
-                              български
-                              <span
-                                class="fw-normal"
-                              >
-                                 (16.2 MB - PDF)
-                              </span>
-                            </small>
-                          </div>
-                          <div
-                            class="col-md-3 align-self-end text-md-end"
-                          >
-                            <a
-                              class="d-block standalone mt-1"
-                              download="true"
-                              href="http://www.africau.edu/images/default/sample.pdf"
-                              target="_blank"
-                            >
-                              Download
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#download"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="py-3 border-bottom"
-                      >
-                        <div
-                          class="row"
-                        >
-                          <div
-                            class="col-md-9"
-                          >
-                            <small
-                              class="fw-bold m-0"
-                            >
-                              Español
-                              <span
-                                class="fw-normal"
-                              >
-                                 (16.2 MB - PDF)
-                              </span>
-                            </small>
-                          </div>
-                          <div
-                            class="col-md-3 align-self-end text-md-end"
-                          >
-                            <a
-                              class="d-block standalone mt-1"
-                              download="true"
-                              href="/example.html"
-                              target="_blank"
-                            >
-                              Download
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#download"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="py-3 border-bottom"
-                      >
-                        <div
-                          class="row"
-                        >
-                          <div
-                            class="col-md-9"
-                          >
-                            <small
-                              class="fw-bold m-0"
-                            >
-                              Français
-                              <span
-                                class="fw-normal"
-                              >
-                                 (16.2 MB - PDF)
-                              </span>
-                            </small>
-                          </div>
-                          <div
-                            class="col-md-3 align-self-end text-md-end"
-                          >
-                            <a
-                              class="d-block standalone mt-1"
-                              download="true"
-                              href="/example.html"
-                              target="_blank"
-                            >
-                              Download
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#download"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="pt-3"
-                      >
-                        <p
-                          class="mb-2"
-                        >
-                          Looking for another language which is not on the list? 
-                        </p>
-                        <a
-                          class="d-block"
-                          href="/example.html"
-                        >
-                          Find out why.
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -1036,43 +1035,106 @@ exports[`OE - Glossary detail renders correctly 1`] = `
               class="mt-4"
             >
               <div
-                class="bcl-file"
+                class="bcl-file border rounded"
               >
                 <div
-                  class="border rounded"
+                  class="px-3-5 py-3"
                 >
                   <div
-                    class="px-3-5 py-3"
+                    class="d-flex"
                   >
                     <div
-                      class="d-flex"
+                      class="pe-2 pb-2"
+                    >
+                      <svg
+                        class="mt-1 icon--file bi icon--xl"
+                      >
+                        <use
+                          xlink:href="/icons.svg#file-pdf-fill"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="d-md-flex flex-grow-1"
                     >
                       <div
-                        class="pe-2 pb-2"
+                        class="flex-grow-1"
                       >
+                        <p
+                          class="fw-medium m-0 fs-5"
+                        >
+                          File title
+                        </p>
+                        <small
+                          class="fw-medium m-0"
+                        >
+                          English
+                          <span
+                            class="fw-normal"
+                          >
+                             (16.2 MB - PDF)
+                          </span>
+                        </small>
+                      </div>
+                      <a
+                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                        download="true"
+                        href="/example.html"
+                        target="_blank"
+                      >
+                        Download
                         <svg
-                          class="mt-1 icon--file bi icon--xl"
+                          class="ms-2-5 bi icon--fluid"
                         >
                           <use
-                            xlink:href="/icons.svg#file-pdf-fill"
+                            xlink:href="/icons.svg#download"
                           />
                         </svg>
-                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-lighter py-3 px-4 border-top"
+                >
+                  <div
+                    class="text-end text-md-center"
+                  >
+                    <a
+                      aria-controls="language-dropdown-1"
+                      aria-expanded="false"
+                      class="standalone"
+                      data-bs-toggle="collapse"
+                      href="#language-dropdown-1"
+                      role="button"
+                    >
+                      Other languages (3)
+                      <svg
+                        class="ms-2-5 bi icon--2xs"
+                      >
+                        <use
+                          xlink:href="/icons.svg#caret-down-fill"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div
+                    class="collapse"
+                    id="language-dropdown-1"
+                  >
+                    <div
+                      class="py-3 border-bottom"
+                    >
                       <div
-                        class="d-md-flex flex-grow-1"
+                        class="row"
                       >
                         <div
-                          class="flex-grow-1"
+                          class="col-12 col-md-9"
                         >
-                          <p
-                            class="fw-medium m-0 fs-5"
-                          >
-                            File title
-                          </p>
                           <small
-                            class="fw-medium m-0"
+                            class="fw-bold m-0"
                           >
-                            English
+                            български
                             <span
                               class="fw-normal"
                             >
@@ -1080,196 +1142,135 @@ exports[`OE - Glossary detail renders correctly 1`] = `
                             </span>
                           </small>
                         </div>
-                        <a
-                          class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                          download="true"
-                          href="/example.html"
-                          target="_blank"
+                        <div
+                          class="col-12 col-md-3 align-self-end text-md-end"
                         >
-                          Download
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
+                          <a
+                            class="d-block standalone mt-1"
+                            download="true"
+                            href="http://www.africau.edu/images/default/sample.pdf"
+                            target="_blank"
                           >
-                            <use
-                              xlink:href="/icons.svg#download"
-                            />
-                          </svg>
-                        </a>
+                            Download
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#download"
+                              />
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="bg-lighter py-3 px-4 border-top"
-                  >
                     <div
-                      class="text-end text-md-center"
+                      class="py-3 border-bottom"
                     >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col-12 col-md-9"
+                        >
+                          <small
+                            class="fw-bold m-0"
+                          >
+                            Español
+                            <span
+                              class="fw-normal"
+                            >
+                               (16.2 MB - PDF)
+                            </span>
+                          </small>
+                        </div>
+                        <div
+                          class="col-12 col-md-3 align-self-end text-md-end"
+                        >
+                          <a
+                            class="d-block standalone mt-1"
+                            download="true"
+                            href="/example.html"
+                            target="_blank"
+                          >
+                            Download
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#download"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="py-3 border-bottom"
+                    >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="col-12 col-md-9"
+                        >
+                          <small
+                            class="fw-bold m-0"
+                          >
+                            Français
+                            <span
+                              class="fw-normal"
+                            >
+                               (16.2 MB - PDF)
+                            </span>
+                          </small>
+                        </div>
+                        <div
+                          class="col-12 col-md-3 align-self-end text-md-end"
+                        >
+                          <a
+                            class="d-block standalone mt-1"
+                            download="true"
+                            href="/example.html"
+                            target="_blank"
+                          >
+                            Download
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#download"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pt-3"
+                    >
+                      <p
+                        class="mb-2"
+                      >
+                        Looking for another language which is not on the list? 
+                      </p>
                       <a
-                        aria-controls="language-dropdown-1"
-                        aria-expanded="false"
-                        class="standalone"
-                        data-bs-toggle="collapse"
-                        href="#language-dropdown-1"
-                        role="button"
+                        class="d-block"
+                        href="/example.html"
                       >
-                        Other languages (3)
-                        <svg
-                          class="ms-2-5 bi icon--2xs"
-                        >
-                          <use
-                            xlink:href="/icons.svg#caret-down-fill"
-                          />
-                        </svg>
+                        Find out why.
                       </a>
-                    </div>
-                    <div
-                      class="collapse"
-                      id="language-dropdown-1"
-                    >
-                      <div
-                        class="py-3 border-bottom"
-                      >
-                        <div
-                          class="row"
-                        >
-                          <div
-                            class="col-md-9"
-                          >
-                            <small
-                              class="fw-bold m-0"
-                            >
-                              български
-                              <span
-                                class="fw-normal"
-                              >
-                                 (16.2 MB - PDF)
-                              </span>
-                            </small>
-                          </div>
-                          <div
-                            class="col-md-3 align-self-end text-md-end"
-                          >
-                            <a
-                              class="d-block standalone mt-1"
-                              download="true"
-                              href="http://www.africau.edu/images/default/sample.pdf"
-                              target="_blank"
-                            >
-                              Download
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#download"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="py-3 border-bottom"
-                      >
-                        <div
-                          class="row"
-                        >
-                          <div
-                            class="col-md-9"
-                          >
-                            <small
-                              class="fw-bold m-0"
-                            >
-                              Español
-                              <span
-                                class="fw-normal"
-                              >
-                                 (16.2 MB - PDF)
-                              </span>
-                            </small>
-                          </div>
-                          <div
-                            class="col-md-3 align-self-end text-md-end"
-                          >
-                            <a
-                              class="d-block standalone mt-1"
-                              download="true"
-                              href="/example.html"
-                              target="_blank"
-                            >
-                              Download
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#download"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="py-3 border-bottom"
-                      >
-                        <div
-                          class="row"
-                        >
-                          <div
-                            class="col-md-9"
-                          >
-                            <small
-                              class="fw-bold m-0"
-                            >
-                              Français
-                              <span
-                                class="fw-normal"
-                              >
-                                 (16.2 MB - PDF)
-                              </span>
-                            </small>
-                          </div>
-                          <div
-                            class="col-md-3 align-self-end text-md-end"
-                          >
-                            <a
-                              class="d-block standalone mt-1"
-                              download="true"
-                              href="/example.html"
-                              target="_blank"
-                            >
-                              Download
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#download"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="pt-3"
-                      >
-                        <p
-                          class="mb-2"
-                        >
-                          Looking for another language which is not on the list? 
-                        </p>
-                        <a
-                          class="d-block"
-                          href="/example.html"
-                        >
-                          Find out why.
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+          <section
+            class="bcl-section"
+          />
+          <section
+            class="bcl-section"
+          />
         </div>
       </div>
     </div>
@@ -2626,7 +2627,7 @@ exports[`OE - Glossary listing renders correctly 1`] = `
         <div
           class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <div
+          <section
             class="bcl-section"
           >
             <h2
@@ -2634,6 +2635,10 @@ exports[`OE - Glossary listing renders correctly 1`] = `
             >
               Starting with "A" (48)
             </h2>
+          </section>
+          <section
+            class="bcl-section"
+          >
             <div
               class="bcl-listing bcl-listing--default-1-col"
             >
@@ -3047,6 +3052,10 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                 </div>
               </div>
             </div>
+          </section>
+          <section
+            class="bcl-section"
+          >
             <hr
               class="d-none d-md-block mt-4-5"
             />
@@ -3167,7 +3176,10 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                 </li>
               </ul>
             </nav>
-          </div>
+          </section>
+          <section
+            class="bcl-section"
+          />
         </div>
       </div>
     </div>

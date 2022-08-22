@@ -1,17 +1,15 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
 
 {% block sidebar %}
-  <div class="bcl-section">
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: 'Vacancy details',
-      title_tag: 'h2',
-    } only %}
-    {% for list in sidebar.lists %}
-      <div class="mb-3-5">
-        {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
-      </div>
-    {% endfor %}
-  </div>
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: 'Vacancy details',
+    title_tag: 'h2',
+  } only %}
+  {% for list in sidebar.lists %}
+    <div class="mb-3-5">
+      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
+    </div>
+  {% endfor %}
 {% endblock %}
 
 {% block content %}

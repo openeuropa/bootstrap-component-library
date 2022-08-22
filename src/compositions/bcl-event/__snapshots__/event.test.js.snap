@@ -759,7 +759,7 @@ exports[`OE - event listing renders correctly 1`] = `
         <div
           class="bcl-sidebar col-lg-3"
         >
-          <div
+          <section
             class="bcl-section"
           >
             <div
@@ -934,12 +934,12 @@ exports[`OE - event listing renders correctly 1`] = `
                 </form>
               </div>
             </div>
-          </div>
+          </section>
         </div>
         <div
           class="col-lg-9 col-xxl-8"
         >
-          <div
+          <section
             class="bcl-section"
           >
             <button
@@ -1056,6 +1056,10 @@ exports[`OE - event listing renders correctly 1`] = `
             <hr
               class="d-none d-md-block mb-4-75"
             />
+          </section>
+          <section
+            class="bcl-section"
+          >
             <div
               class="bcl-listing bcl-listing--default-1-col"
             >
@@ -1659,6 +1663,10 @@ exports[`OE - event listing renders correctly 1`] = `
                 </div>
               </div>
             </div>
+          </section>
+          <section
+            class="bcl-section"
+          >
             <hr
               class="d-none d-md-block mt-4-5"
             />
@@ -1779,7 +1787,10 @@ exports[`OE - event listing renders correctly 1`] = `
                 </li>
               </ul>
             </nav>
-          </div>
+          </section>
+          <section
+            class="bcl-section"
+          />
         </div>
       </div>
     </div>
@@ -2813,7 +2824,7 @@ exports[`OE - event page renders correctly 1`] = `
         <div
           class="bcl-sidebar col-lg-3"
         >
-          <div
+          <section
             class="bcl-section"
           >
             <nav
@@ -2850,12 +2861,15 @@ exports[`OE - event page renders correctly 1`] = `
                 </li>
               </ul>
             </nav>
-          </div>
+          </section>
         </div>
         <div
           class="col-lg-9 col-xxl-8"
         >
-          <div
+          <section
+            class="bcl-section"
+          />
+          <section
             class="bcl-section"
           >
             <div
@@ -2947,136 +2961,134 @@ exports[`OE - event page renders correctly 1`] = `
               Related documents
             </h2>
             <div
-              class="mb-3-5 bcl-file"
+              class="mb-3-5 bcl-file border rounded"
             >
               <div
-                class="border rounded"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="px-3-5 py-3"
+                  class="d-flex"
                 >
                   <div
-                    class="d-flex"
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
+                    >
+                      <use
+                        xlink:href="/icons.svg#file-pdf-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
                   >
                     <div
-                      class="pe-2 pb-2"
+                      class="flex-grow-1"
                     >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
                       <svg
-                        class="mt-1 icon--file bi icon--xl"
+                        class="ms-2-5 bi icon--fluid"
                       >
                         <use
-                          xlink:href="/icons.svg#file-pdf-fill"
+                          xlink:href="/icons.svg#download"
                         />
                       </svg>
-                    </div>
-                    <div
-                      class="d-md-flex flex-grow-1"
-                    >
-                      <div
-                        class="flex-grow-1"
-                      >
-                        <p
-                          class="fw-medium m-0 fs-5"
-                        >
-                          File title
-                        </p>
-                        <small
-                          class="fw-medium m-0"
-                        >
-                          English
-                          <span
-                            class="fw-normal"
-                          >
-                             (16.2 MB - PDF)
-                          </span>
-                        </small>
-                      </div>
-                      <a
-                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                        download="true"
-                        href="/example.html"
-                        target="_blank"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="mb-3-5 bcl-file"
+              class="mb-3-5 bcl-file border rounded"
             >
               <div
-                class="border rounded"
+                class="px-3-5 py-3"
               >
                 <div
-                  class="px-3-5 py-3"
+                  class="d-flex"
                 >
                   <div
-                    class="d-flex"
+                    class="pe-2 pb-2"
+                  >
+                    <svg
+                      class="mt-1 icon--file bi icon--xl"
+                    >
+                      <use
+                        xlink:href="/icons.svg#file-pdf-fill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="d-md-flex flex-grow-1"
                   >
                     <div
-                      class="pe-2 pb-2"
+                      class="flex-grow-1"
                     >
+                      <p
+                        class="fw-medium m-0 fs-5"
+                      >
+                        File title
+                      </p>
+                      <small
+                        class="fw-medium m-0"
+                      >
+                        English
+                        <span
+                          class="fw-normal"
+                        >
+                           (16.2 MB - PDF)
+                        </span>
+                      </small>
+                    </div>
+                    <a
+                      class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
+                      download="true"
+                      href="/example.html"
+                      target="_blank"
+                    >
+                      Download
                       <svg
-                        class="mt-1 icon--file bi icon--xl"
+                        class="ms-2-5 bi icon--fluid"
                       >
                         <use
-                          xlink:href="/icons.svg#file-pdf-fill"
+                          xlink:href="/icons.svg#download"
                         />
                       </svg>
-                    </div>
-                    <div
-                      class="d-md-flex flex-grow-1"
-                    >
-                      <div
-                        class="flex-grow-1"
-                      >
-                        <p
-                          class="fw-medium m-0 fs-5"
-                        >
-                          File title
-                        </p>
-                        <small
-                          class="fw-medium m-0"
-                        >
-                          English
-                          <span
-                            class="fw-normal"
-                          >
-                             (16.2 MB - PDF)
-                          </span>
-                        </small>
-                      </div>
-                      <a
-                        class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                        download="true"
-                        href="/example.html"
-                        target="_blank"
-                      >
-                        Download
-                        <svg
-                          class="ms-2-5 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/icons.svg#download"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+          <section
+            class="bcl-section"
+          />
+          <section
+            class="bcl-section"
+          />
         </div>
       </div>
     </div>

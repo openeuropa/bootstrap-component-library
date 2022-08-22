@@ -2,20 +2,6 @@ $bcl-spacing-m: 1.5rem;
 $bcl-spacing-l: 2rem;
 $bcl-spacing-xl: 3rem;
 
-.bcl-accordion,
-.bcl-description-list,
-.bcl-file,
-.bcl-carousel,
-.bcl-blockquote,
-.bcl-gallery,
-.bcl-facts-figures,
-.bcl-featured-item,
-.bcl-listing {
-  > .bcl-heading {
-    margin-bottom: $bcl-spacing-m;
-  }
-}
-
 .bcl-section {
   @include clearfix;
   margin-bottom: $bcl-spacing-l;
@@ -63,19 +49,6 @@ $bcl-spacing-xl: 3rem;
 }
 
 @include media-breakpoint-down(md) {
-  .bcl-accordion,
-  .bcl-description-list,
-  .bcl-file,
-  .bcl-carousel,
-  .bcl-blockquote,
-  .bcl-gallery,
-  .bcl-featured-item,
-  .bcl-facts-figures,
-  .bcl-listing {
-    > .bcl-heading {
-      margin-bottom: $bcl-spacing-xl;
-    }
-  }
   .bcl-section {
     margin-bottom: $bcl-spacing-xl;
 
