@@ -3,7 +3,8 @@ import layout from "@openeuropa/bcl-base-templates/data/layout";
 import dataFile from "@openeuropa/bcl-file/data/data";
 
 const file1 = JSON.parse(JSON.stringify(dataFile));
-file1.translation.id = "language-dropdown-1";
+dataFile.attributes = new drupalAttribute().addClass("mb-4");
+dataFile.translation.id = "language-dropdown-1";
 const files = [dataFile, file1];
 
 const demoDataDetail = {
