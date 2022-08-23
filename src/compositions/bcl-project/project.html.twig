@@ -5,79 +5,91 @@
 {% endblock %}
 
 {% block content %}
-  {% if project_status_title is not empty %}
-    {% set _project_title_attributes = create_attribute() %}
-    {% if project_status_id is not empty %}
-      {% set _project_title_attributes = _project_title_attributes.setAttribute('id', project_status_id) %}
+  <div class="bcl-section">
+    {% if project_status_title is not empty %}
+      {% set _project_title_attributes = create_attribute() %}
+      {% if project_status_id is not empty %}
+        {% set _project_title_attributes = _project_title_attributes.setAttribute('id', project_status_id) %}
+      {% endif %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: project_status_title,
+        attributes: _project_title_attributes,
+      } only %}
     {% endif %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: project_status_title,
-      title_tag: 'h2',
-      attributes: _project_title_attributes,
-    } only %}
-  {% endif %}
-  {% if project_status is not empty %}
-    {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
-  {% endif %}
-  {% if project_contributions is not empty %}
-    {% include '@oe-bcl/bcl-project-status/project-contributions.html.twig' with project_contributions %}
-  {% endif %}
+    {% if project_status is not empty %}
+      {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
+    {% endif %}
+    {% if project_contributions is not empty %}
+      {% include '@oe-bcl/bcl-project-status/project-contributions.html.twig' with project_contributions %}
+    {% endif %}
+  </div>
   
   {% if status_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
+    </div>
   {% endif %}
 
   {% if first_paragraphs is defined and first_paragraphs is not empty %}
+    <div class="bcl-section">
     {% for _paragraph in first_paragraphs %}
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _paragraph.title,
-        title_tag: 'h2',
         attributes: create_attribute().setAttribute('id', _paragraph.title_id),
       } only %}
       {{- _paragraph.content -}}
     {% endfor %}
+    </div>
   {% endif %}
 
   {% if featured_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with featured_lists only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-project/project-lists.html.twig' with featured_lists only %}
+    </div>
   {% endif %}
 
   {% if content_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with content_lists only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-project/project-lists.html.twig' with content_lists only %}
+    </div>
   {% endif %}
 
   {% if second_paragraphs is defined and second_paragraphs is not empty %}
-    {% for _paragraph in second_paragraphs %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: _paragraph.title,
-        title_tag: 'h2',
-        attributes: create_attribute().setAttribute('id', _paragraph.title_id),
-      } only %}
-      {{- _paragraph.content -}}
-    {% endfor %}
+    <div class="bcl-section">
+      {% for _paragraph in second_paragraphs %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: _paragraph.title,
+          attributes: create_attribute().setAttribute('id', _paragraph.title_id),
+        } only %}
+        {{- _paragraph.content -}}
+      {% endfor %}
+    </div>
   {% endif %}
 
   {% if gallery is not empty %}
-    {% if gallery.main_title is not empty %}
-      {% set _gallery_title_attributes = create_attribute().addClass(['my-4']) %}
-      {% if gallery.main_title_id is not empty %}
-        {% set _gallery_title_attributes = _gallery_title_attributes.setAttribute('id', gallery.main_title_id) %}
+    <div class="bcl-section">
+      {% if gallery.main_title is not empty %}
+        {% set _gallery_title_attributes = create_attribute().addClass(['my-4']) %}
+        {% if gallery.main_title_id is not empty %}
+          {% set _gallery_title_attributes = _gallery_title_attributes.setAttribute('id', gallery.main_title_id) %}
+        {% endif %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: gallery.main_title,
+          attributes: _gallery_title_attributes,
+        } only %}
       {% endif %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: gallery.main_title,
-        title_tag: 'h2',
-        attributes: _gallery_title_attributes,
-      } only %}
-    {% endif %}
-    {% include '@oe-bcl/bcl-gallery/gallery.html.twig' with gallery only %}
+      {% include '@oe-bcl/bcl-gallery/gallery.html.twig' with gallery only %}
+    </div>
   {% endif %}
 
   {% if social_block is not empty %}
-    {% block social_block %}
-      {{ social_buttons }}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
-      {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
-    {% endblock %}
+    <div class="bcl-section">
+      {% block social_block %}
+        {{ social_buttons }}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
+        {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
+      {% endblock %}
+    </div>
   {% endif %}
 
 {% endblock %}

@@ -1,3 +1,4 @@
+$bcl-spacing-s: 1rem;
 $bcl-spacing-m: 1.5rem;
 $bcl-spacing-l: 2rem;
 $bcl-spacing-xl: 3rem;
@@ -6,21 +7,31 @@ $bcl-spacing-xl: 3rem;
   @include clearfix;
   margin-bottom: $bcl-spacing-l;
 
-  > h1,
-  > h2,
-  > h3,
-  > h4,
-  > h5,
-  > h6,
-  > .h1,
-  > .h2,
-  > .h3,
-  > .h4,
-  > .h5,
-  > .h6,
-  > .bcl-heading {
+  h1,
+  h2,
+  h3,
+  h4,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .bcl-heading {
     margin-bottom: $bcl-spacing-m;
     margin-top: $bcl-spacing-m;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h5,
+  h6,
+  .h5,
+  .h6 {
+    margin-bottom: $bcl-spacing-s;
+    margin-top: $bcl-spacing-s;
     &:first-child {
       margin-top: 0;
     }

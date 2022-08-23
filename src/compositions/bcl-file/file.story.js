@@ -3,6 +3,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import { userEvent, within } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data/data.js";
@@ -21,6 +22,7 @@ const getArgTypes = () => ({
 
 const applyArgs = (data, args) => {
   correctPaths(data);
+  data.title_attributes = new drupalAttribute().addClass("mb-4");
 
   return Object.assign(data, args);
 };

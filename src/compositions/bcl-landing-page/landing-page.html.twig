@@ -9,45 +9,53 @@
 {% block content %}
 
   {% if featured_section is defined %}
-    {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: featured_section.title,
-      title_tag: 'h2',
-    } only %}
-    <div class="row">
-      <div class="col-md-6">
-        {{ featured_section.content }}
-      </div>
-      <div class="col-md-6">
-        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_section.featured_media only %}
+    <div class="bcl-section">
+      {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: featured_section.title,
+      } only %}
+      <div class="row">
+        <div class="col-md-6">
+          {{ featured_section.content }}
+        </div>
+        <div class="col-md-6">
+          {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_section.featured_media only %}
+        </div>
       </div>
     </div>
   {% endif %}
 
   {% if listing_section is defined %}
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing_section only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing_section only %}
+    </div>
   {% endif %}
 
   {% if inpage_banner is defined %}
-    {% include '@oe-bcl/bcl-banner/banner.html.twig' with inpage_banner only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-banner/banner.html.twig' with inpage_banner only %}
+    </div>
   {% endif %}
 
   {% if activity_featured is defined %}
-    {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: activity_featured.title,
-      title_tag: 'h2',
-    } only %}
-    <div class="row">
-      <div class="col-md-6">
-        {{ activity_featured.content }}
-      </div>
-      <div class="col-md-6">
-        {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with activity_featured.featured_media only %}
+    <div class="bcl-section">
+      {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: activity_featured.title,
+      } only %}
+      <div class="row">
+        <div class="col-md-6">
+          {{ activity_featured.content }}
+        </div>
+        <div class="col-md-6">
+          {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with activity_featured.featured_media only %}
+        </div>
       </div>
     </div>
   {% endif %}
 
   {% if activity_listing is defined %}
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with activity_listing only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-listing/listing.html.twig' with activity_listing only %}
+    </div>
   {% endif %}
 
 {% endblock %}

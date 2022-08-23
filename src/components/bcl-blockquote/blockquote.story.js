@@ -61,6 +61,7 @@ const applyArgs = (data, args) => {
     data.attributes = new drupalAttribute();
   }
   data.attributes.removeClass(`text-${data.alignment}`);
+  data.title_attributes = new drupalAttribute().addClass("mb-4");
 
   return Object.assign(data, args);
 };

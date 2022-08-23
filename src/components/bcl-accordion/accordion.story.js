@@ -64,6 +64,7 @@ const applyArgs = (data, args) => {
   resetAttrs(data);
   data.items[0].title = args.toggle1;
   data.items[0].content = args.content1;
+  data.title_attributes = new drupalAttribute().addClass("mb-4");
 
   return Object.assign(data, args);
 };

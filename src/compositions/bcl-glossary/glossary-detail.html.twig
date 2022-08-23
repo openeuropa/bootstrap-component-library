@@ -3,7 +3,6 @@
 {% block  content %}
 	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'Description',
-		title_tag: 'h2',
 	} only %}
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -27,7 +26,6 @@
 
 	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'File Downloads',
-		title_tag: 'h2',
 	} only %}
 
 	{% for file in files %}

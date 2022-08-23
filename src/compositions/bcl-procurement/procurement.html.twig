@@ -3,7 +3,6 @@
 {% block sidebar %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: 'Procurement details',
-    title_tag: 'h2',
   } only %}
   {% for list in sidebar.lists %}
     <div class="mb-3-5">
@@ -14,31 +13,34 @@
 
 {% block content %}
   {% if description is defined and description is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: description.title,
-      title_tag: 'h2',
-    } only %}
-    {% for paragraph in description.paragraphs %}
-      <p>{{- paragraph -}}</p>
-    {% endfor %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: description.title,
+      } only %}
+      {% for paragraph in description.paragraphs %}
+        <p>{{- paragraph -}}</p>
+      {% endfor %}
+    </div>
   {% endif %}
 
   {% if files is not empty %}
-    {% for file in files %}
-      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-    {% endfor %}
+    <div class="bcl-section">
+      {% for file in files %}
+        {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+      {% endfor %}
+    </div>
   {% endif %}
 
   {% if social_block is not empty %}
-    {% block social_block %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: social.title,
-        title_tag: 'h2',
-        attributes: create_attribute().setAttribute('id', description.title_id),
-      } only %}
-      {{ social_buttons }}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
-      {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
-    {% endblock %}
+    <div class="bcl-section">
+      {% block social_block %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: social.title,
+        } only %}
+        {{ social_buttons }}
+        {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
+        {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
+      {% endblock %}
+    </div>
   {% endif %}
 {% endblock %}

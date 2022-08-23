@@ -901,7 +901,7 @@ exports[`OE - User list renders correctly 1`] = `
         <div
           class="col-lg-9 col-xxl-8"
         >
-          <section
+          <div
             class="bcl-section"
           >
             <button
@@ -1018,8 +1018,8 @@ exports[`OE - User list renders correctly 1`] = `
             <hr
               class="d-none d-md-block mb-4-75"
             />
-          </section>
-          <section
+          </div>
+          <div
             class="bcl-section"
           >
             <div
@@ -1324,8 +1324,8 @@ exports[`OE - User list renders correctly 1`] = `
                 </div>
               </div>
             </div>
-          </section>
-          <section
+          </div>
+          <div
             class="bcl-section"
           >
             <hr
@@ -1448,10 +1448,7 @@ exports[`OE - User list renders correctly 1`] = `
                 </li>
               </ul>
             </nav>
-          </section>
-          <section
-            class="bcl-section"
-          />
+          </div>
         </div>
       </div>
     </div>
@@ -2390,1246 +2387,1233 @@ exports[`OE - User renders correctly 1`] = `
       <div
         class="row"
       >
-        <section
-          class="bcl-section"
-        />
-        <section
-          class="bcl-section"
+        <nav
+          class="nav nav-tabs"
+          role="tablist"
         >
-          <nav
-            class="nav nav-tabs"
-            role="tablist"
+          <a
+            aria-controls="view"
+            autocomplete="off"
+            class="nav-link active"
+            data-bs-target="#view"
+            data-bs-toggle="tab"
+            href="#view"
+            id="view-tab"
+            role="tab"
           >
-            <a
-              aria-controls="view"
-              autocomplete="off"
-              class="nav-link active"
-              data-bs-target="#view"
-              data-bs-toggle="tab"
-              href="#view"
-              id="view-tab"
-              role="tab"
-            >
-              View
-            </a>
-            <a
-              aria-controls="edit"
-              autocomplete="off"
-              class="nav-link"
-              data-bs-target="#edit"
-              data-bs-toggle="tab"
-              href="#edit"
-              id="edit-tab"
-              role="tab"
-            >
-              Edit
-            </a>
-            <a
-              aria-controls="privacy"
-              autocomplete="off"
-              class="nav-link"
-              data-bs-target="#privacy"
-              data-bs-toggle="tab"
-              href="#privacy"
-              id="privacy-tab"
-              role="tab"
-            >
-              Privacy settings
-            </a>
-            <a
-              aria-controls="visibility"
-              autocomplete="off"
-              class="nav-link"
-              data-bs-target="#visibility"
-              data-bs-toggle="tab"
-              href="#visibility"
-              id="visibility-tab"
-              role="tab"
-            >
-              Visibility settings
-            </a>
-            <a
-              aria-controls="cancel"
-              autocomplete="off"
-              class="d-none nav-link"
-              data-bs-target="#cancel"
-              data-bs-toggle="tab"
-              href="#cancel"
-              id="cancel-tab"
-              role="tab"
-              title="cancel-tab"
-            />
-          </nav>
+            View
+          </a>
+          <a
+            aria-controls="edit"
+            autocomplete="off"
+            class="nav-link"
+            data-bs-target="#edit"
+            data-bs-toggle="tab"
+            href="#edit"
+            id="edit-tab"
+            role="tab"
+          >
+            Edit
+          </a>
+          <a
+            aria-controls="privacy"
+            autocomplete="off"
+            class="nav-link"
+            data-bs-target="#privacy"
+            data-bs-toggle="tab"
+            href="#privacy"
+            id="privacy-tab"
+            role="tab"
+          >
+            Privacy settings
+          </a>
+          <a
+            aria-controls="visibility"
+            autocomplete="off"
+            class="nav-link"
+            data-bs-target="#visibility"
+            data-bs-toggle="tab"
+            href="#visibility"
+            id="visibility-tab"
+            role="tab"
+          >
+            Visibility settings
+          </a>
+          <a
+            aria-controls="cancel"
+            autocomplete="off"
+            class="d-none nav-link"
+            data-bs-target="#cancel"
+            data-bs-toggle="tab"
+            href="#cancel"
+            id="cancel-tab"
+            role="tab"
+            title="cancel-tab"
+          />
+        </nav>
+        <div
+          class="tab-content"
+        >
           <div
-            class="tab-content"
+            aria-labelledby="view-tab"
+            class="tab-pane fade show active"
+            id="view"
+            role="tabpanel"
           >
             <div
-              aria-labelledby="view-tab"
-              class="tab-pane fade show active"
-              id="view"
-              role="tabpanel"
+              class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
             >
               <div
-                class="bcl-content-banner pt-4 pt-md-4-75 bg-white"
+                class="container"
               >
-                <div
-                  class="container"
+                <article
+                  class="bg-transparent border-0 card"
                 >
-                  <article
-                    class="bg-transparent border-0 card"
+                  <div
+                    class="row"
                   >
                     <div
-                      class="row"
+                      class="bcl-card-start-col bcl-size-large"
+                    >
+                      <img
+                        alt="alt img"
+                        class="card-img-top rounded-1"
+                        src="https://picsum.photos/200/200?random=6"
+                      />
+                    </div>
+                    <div
+                      class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
                     >
                       <div
-                        class="bcl-card-start-col bcl-size-large"
+                        class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
                       >
-                        <img
-                          alt="alt img"
-                          class="card-img-top rounded-1"
-                          src="https://picsum.photos/200/200?random=6"
-                        />
-                      </div>
-                      <div
-                        class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
-                      >
+                        <h1
+                          class="fs-1 card-title bcl-heading"
+                        >
+                          Stefan Mayer
+                        </h1>
                         <div
-                          class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
+                          class="mb-4 mt-4"
                         >
-                          <h1
-                            class="fs-1 card-title bcl-heading"
+                          <span
+                            class="text-muted me-3"
                           >
-                            Stefan Mayer
-                          </h1>
-                          <div
-                            class="mb-4 mt-4"
+                            DG Test
+                          </span>
+                          <span
+                            class="text-muted"
                           >
-                            <span
-                              class="text-muted me-3"
-                            >
-                              DG Test
-                            </span>
-                            <span
-                              class="text-muted"
-                            >
-                              Director
-                            </span>
-                          </div>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                          <br />
-                            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
-                          <br />
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                          <br />
-                          <br />
-                            Duis fermentum facilisis ex, ac porta massa.    
+                            Director
+                          </span>
                         </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-              <div
-                class="mt-3 mt-md-4-75 pt-4-75 mb-3"
-              >
-                <h2
-                  class="mb-4 bcl-heading"
-                >
-                  Personal information
-                </h2>
-                <div
-                  class="row"
-                >
-                  <div
-                    class="col-md-6"
-                  >
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Gender:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          Male
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Nationality:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          German
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Date of birth:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          22/01/1972
-                        </p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        <br />
+                          Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                        <br />
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        <br />
+                        <br />
+                          Duis fermentum facilisis ex, ac porta massa.    
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="col-md-6"
-                  >
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Country:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          Germany
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          City:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          Düsseldorf
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="my-3"
-              >
-                <h2
-                  class="mb-4 bcl-heading"
-                >
-                  Professional information
-                </h2>
-                <div
-                  class="row"
-                >
-                  <div
-                    class="col-md-6"
-                  >
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Organisation:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          DG Test
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Position:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          Director
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-md-6"
-                  >
-                    <div
-                      class="row"
-                    >
-                      <div
-                        class="col-md-4"
-                      >
-                        <p
-                          class="mb-0"
-                        >
-                          Working languages:
-                        </p>
-                      </div>
-                      <div
-                        class="col-md-8"
-                      >
-                        <p>
-                          English, German
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </article>
               </div>
             </div>
             <div
-              aria-labelledby="edit-tab"
-              class="tab-pane fade"
-              id="edit"
-              role="tabpanel"
+              class="mt-3 mt-md-4-75 pt-4-75 mb-3"
             >
-              <h1
-                class="my-4-5"
-              >
-                Edit my profile
-              </h1>
               <h2
-                class="mb-4-5"
+                class="mb-4 bcl-heading"
               >
-                Profile image
+                Personal information
               </h2>
               <div
                 class="row"
               >
                 <div
-                  class="bcl-card-start-col bcl-size-large mx-auto ms-md-2-5"
-                >
-                  <img
-                    alt="profile-image"
-                    class="img-fluid"
-                    src="https://picsum.photos/seed/1002/400/400"
-                  />
-                </div>
-                <div
-                  class="col-md align-self-center"
+                  class="col-md-6"
                 >
                   <div
-                    class="mt-3 text-center text-md-start"
+                    class="row"
                   >
-                    <label
-                      class="form-label btn btn-link"
-                      for="image-profile"
-                    >
-                      My_picture.jpg (3.52 Mb)
-                    </label>
-                    <input
-                      class="d-none form-control btn-check"
-                      id="image-profile"
-                      type="file"
-                    />
                     <div
-                      class="d-md-inline-block"
+                      class="col-md-4"
                     >
-                      <button
-                        class="mt-2 ms-0 ms-md-2 mt-md-0 mb-2 btn btn-danger btn-md"
-                        type="button"
+                      <p
+                        class="mb-0"
                       >
-                        Remove
-                      </button>
+                        Gender:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        Male
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-4"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        Nationality:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        German
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-4"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        Date of birth:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        22/01/1972
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-4"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        Country:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        Germany
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-4"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        City:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        Düsseldorf
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="my-3"
+            >
+              <h2
+                class="mb-4 bcl-heading"
+              >
+                Professional information
+              </h2>
               <div
                 class="row"
               >
-                <div>
-                  <form
+                <div
+                  class="col-md-6"
+                >
+                  <div
                     class="row"
-                    novalidate="true"
-                    onsubmit="return false;"
                   >
-                    <fieldset
-                      class="mb-3"
-                    >
-                      <legend
-                        class="mb-0 fs-2 mt-4-5"
-                      >
-                        Personal information
-                      </legend>
-                    </fieldset>
-                    <fieldset
-                      class="col-lg-6"
-                    >
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="first-name"
-                        >
-                          First name
-                        </label>
-                        <input
-                          class="form-control"
-                          id="first-name"
-                          required="true"
-                          type="text"
-                          value="Stefan"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="last-name"
-                        >
-                          Last name
-                        </label>
-                        <input
-                          class="form-control"
-                          id="last-name"
-                          required="true"
-                          type="text"
-                          value="Mayer"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                        >
-                          Gender
-                        </label>
-                        <select
-                          aria-label="gender-select"
-                          class="form-select"
-                          required="true"
-                        >
-                          <option
-                            value="2"
-                          >
-                            Male
-                          </option>
-                          <option
-                            value="3"
-                          >
-                            Female
-                          </option>
-                        </select>
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="nationality-input"
-                        >
-                          Nationality
-                        </label>
-                        <input
-                          class="form-control"
-                          id="nationality-input"
-                          required="true"
-                          type="text"
-                          value="German"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="birth-date"
-                        >
-                          Birth date
-                        </label>
-                        <input
-                          class="form-control"
-                          id="birth-date"
-                          required="true"
-                          type="date"
-                          value="1972-01-22"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset
-                      class="col-lg-6"
-                    >
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="bio-description"
-                        >
-                          Bio
-                        </label>
-                        <textarea
-                          class="form-control"
-                          id="bio-description"
-                          required="true"
-                          rows="4"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </textarea>
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="country-input"
-                        >
-                          Country
-                        </label>
-                        <input
-                          class="form-control"
-                          id="country-input"
-                          required="true"
-                          type="text"
-                          value="Germany"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="city-input"
-                        >
-                          City
-                        </label>
-                        <input
-                          class="form-control"
-                          id="city-input"
-                          required="true"
-                          type="text"
-                          value="Düsseldorf"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset
-                      class="col-md-12 mb-3"
-                    >
-                      <legend
-                        class="my-3 fs-2"
-                      >
-                        Professional information
-                      </legend>
-                    </fieldset>
-                    <fieldset
-                      class="col-md-6"
-                    >
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="organisation-input"
-                        >
-                          Organisation
-                        </label>
-                        <input
-                          class="form-control"
-                          id="organisation-input"
-                          required="true"
-                          type="text"
-                          value="DG digit"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                      <div
-                        class="mb-3"
-                      >
-                        <label
-                          class="form-label"
-                          for="position-input"
-                        >
-                          Position
-                        </label>
-                        <input
-                          class="form-control"
-                          id="position-input"
-                          required="true"
-                          type="text"
-                          value="Officer"
-                        />
-                        <div
-                          class="form-text"
-                        >
-                          Helper text
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset
-                      class="col-md-6"
-                    >
-                      <label
-                        class="form-label"
-                        for="multiselect-1"
-                      >
-                        Working languages
-                      </label>
-                      <select
-                        class="multi-select"
-                        id="multiselect-1"
-                        multiple="true"
-                        required="true"
-                      >
-                        <optgroup
-                          label="Group 1"
-                        >
-                          <option
-                            value="1"
-                          >
-                            Option group 1
-                          </option>
-                          <option
-                            value="2"
-                          >
-                            Option group 2
-                          </option>
-                          <option
-                            value="3"
-                          >
-                            Option group 3
-                          </option>
-                        </optgroup>
-                        <option
-                          value="5"
-                        >
-                          a select option
-                        </option>
-                        <option
-                          value="6"
-                        >
-                          another select option
-                        </option>
-                        <option
-                          value="7"
-                        >
-                          another option
-                        </option>
-                        <option
-                          value="8"
-                        >
-                          last option
-                        </option>
-                        <option
-                          selected=""
-                          value="9"
-                        >
-                          the selected option
-                        </option>
-                      </select>
-                      <div
-                        class="invalid-feedback"
-                      >
-                        Invalid feedback example
-                      </div>
-                      <div
-                        class="valid-feedback"
-                      >
-                        Valid feedback example
-                      </div>
-                      <div
-                        class="form-text"
-                      >
-                        Helper text for the select element
-                      </div>
-                    </fieldset>
                     <div
-                      class="mt-4 d-grid d-sm-block"
+                      class="col-md-4"
                     >
-                      <button
-                        class="d-inline-block btn btn-primary btn-md"
-                        type="submit"
+                      <p
+                        class="mb-0"
                       >
-                        Save
-                      </button>
-                      <button
-                        class="d-inline-block ms-md-3 mt-3 mt-md-0 btn btn-danger btn-md"
-                        id="cancel-btn"
-                        type="button"
-                      >
-                        Cancel account
-                      </button>
+                        Organisation:
+                      </p>
                     </div>
-                  </form>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        DG Test
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-4"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        Position:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        Director
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-4"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        Working languages:
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-8"
+                    >
+                      <p>
+                        English, German
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="edit-tab"
+            class="tab-pane fade"
+            id="edit"
+            role="tabpanel"
+          >
+            <h1
+              class="my-4-5"
+            >
+              Edit my profile
+            </h1>
+            <h2
+              class="mb-4-5"
+            >
+              Profile image
+            </h2>
+            <div
+              class="row"
+            >
+              <div
+                class="bcl-card-start-col bcl-size-large mx-auto ms-md-2-5"
+              >
+                <img
+                  alt="profile-image"
+                  class="img-fluid"
+                  src="https://picsum.photos/seed/1002/400/400"
+                />
+              </div>
+              <div
+                class="col-md align-self-center"
+              >
+                <div
+                  class="mt-3 text-center text-md-start"
+                >
+                  <label
+                    class="form-label btn btn-link"
+                    for="image-profile"
+                  >
+                    My_picture.jpg (3.52 Mb)
+                  </label>
+                  <input
+                    class="d-none form-control btn-check"
+                    id="image-profile"
+                    type="file"
+                  />
+                  <div
+                    class="d-md-inline-block"
+                  >
+                    <button
+                      class="mt-2 ms-0 ms-md-2 mt-md-0 mb-2 btn btn-danger btn-md"
+                      type="button"
+                    >
+                      Remove
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div
-              aria-labelledby="privacy-tab"
-              class="tab-pane fade"
-              id="privacy"
-              role="tabpanel"
+              class="row"
             >
-              <h1
-                class="my-4-5"
-              >
-                Privacy settings
-              </h1>
-              <p>
-                Who can consult my data
-              </p>
-              <form
-                novalidate="true"
-                onsubmit="return false;"
-              >
-                <div
-                  class="mb-3"
+              <div>
+                <form
+                  class="row"
+                  novalidate="true"
+                  onsubmit="return false;"
                 >
-                  <div
-                    class="form-check"
+                  <fieldset
+                    class="mb-3"
                   >
-                    <input
-                      class="form-check-input"
-                      id="administrators"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="administrators"
+                    <legend
+                      class="mb-0 fs-2 mt-4-5"
                     >
-                      Only site administrators
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
+                      Personal information
+                    </legend>
+                  </fieldset>
+                  <fieldset
+                    class="col-lg-6"
                   >
-                    <input
-                      class="form-check-input"
-                      id="any"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="any"
+                    <div
+                      class="mb-3"
                     >
-                      Any users
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="authenticated"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="authenticated"
+                      <label
+                        class="form-label"
+                        for="first-name"
+                      >
+                        First name
+                      </label>
+                      <input
+                        class="form-control"
+                        id="first-name"
+                        required="true"
+                        type="text"
+                        value="Stefan"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
                     >
-                      Authenticated users
-                    </label>
-                  </div>
-                </div>
-                <fieldset>
-                  <legend
-                    class="text-muted fs-6 mb-0"
-                  >
-                    Select the type of users who are allowed to access your data
-                  </legend>
-                </fieldset>
-                <div
-                  class="mt-4-5 d-grid d-sm-block"
-                >
-                  <button
-                    class="btn btn-primary btn-md"
-                    type="submit"
-                  >
-                    Save
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div
-              aria-labelledby="visibility-tab"
-              class="tab-pane fade"
-              id="visibility"
-              role="tabpanel"
-            >
-              <h1
-                class="my-4-5"
-              >
-                Visibility settings
-              </h1>
-              <p
-                class="mb-3"
-              >
-                Select what information should be displayed to your profile.
-              </p>
-              <form
-                class="row"
-                novalidate="true"
-                onsubmit="return false;"
-              >
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="picture"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="picture"
+                      <label
+                        class="form-label"
+                        for="last-name"
+                      >
+                        Last name
+                      </label>
+                      <input
+                        class="form-control"
+                        id="last-name"
+                        required="true"
+                        type="text"
+                        value="Mayer"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
                     >
-                      Picture
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="position"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="position"
+                      <label
+                        class="form-label"
+                      >
+                        Gender
+                      </label>
+                      <select
+                        aria-label="gender-select"
+                        class="form-select"
+                        required="true"
+                      >
+                        <option
+                          value="2"
+                        >
+                          Male
+                        </option>
+                        <option
+                          value="3"
+                        >
+                          Female
+                        </option>
+                      </select>
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
                     >
-                      Position
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="city"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="city"
+                      <label
+                        class="form-label"
+                        for="nationality-input"
+                      >
+                        Nationality
+                      </label>
+                      <input
+                        class="form-control"
+                        id="nationality-input"
+                        required="true"
+                        type="text"
+                        value="German"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
                     >
-                      City
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
+                      <label
+                        class="form-label"
+                        for="birth-date"
+                      >
+                        Birth date
+                      </label>
+                      <input
+                        class="form-control"
+                        id="birth-date"
+                        required="true"
+                        type="date"
+                        value="1972-01-22"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset
+                    class="col-lg-6"
                   >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="firstName"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="firstName"
+                    <div
+                      class="mb-3"
                     >
-                      First name
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="gender"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="gender"
+                      <label
+                        class="form-label"
+                        for="bio-description"
+                      >
+                        Bio
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="bio-description"
+                        required="true"
+                        rows="4"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </textarea>
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
                     >
-                      Gender
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="nationality"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="nationality"
+                      <label
+                        class="form-label"
+                        for="country-input"
+                      >
+                        Country
+                      </label>
+                      <input
+                        class="form-control"
+                        id="country-input"
+                        required="true"
+                        type="text"
+                        value="Germany"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
                     >
-                      Nationality
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
+                      <label
+                        class="form-label"
+                        for="city-input"
+                      >
+                        City
+                      </label>
+                      <input
+                        class="form-control"
+                        id="city-input"
+                        required="true"
+                        type="text"
+                        value="Düsseldorf"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset
+                    class="col-md-12 mb-3"
                   >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="lastName"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="lastName"
+                    <legend
+                      class="my-3 fs-2"
                     >
-                      Last name
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
+                      Professional information
+                    </legend>
+                  </fieldset>
+                  <fieldset
+                    class="col-md-6"
                   >
-                    <input
-                      class="form-check-input"
-                      id="workingLanguages"
-                      required="true"
-                      type="checkbox"
-                    />
+                    <div
+                      class="mb-3"
+                    >
+                      <label
+                        class="form-label"
+                        for="organisation-input"
+                      >
+                        Organisation
+                      </label>
+                      <input
+                        class="form-control"
+                        id="organisation-input"
+                        required="true"
+                        type="text"
+                        value="DG digit"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                    <div
+                      class="mb-3"
+                    >
+                      <label
+                        class="form-label"
+                        for="position-input"
+                      >
+                        Position
+                      </label>
+                      <input
+                        class="form-control"
+                        id="position-input"
+                        required="true"
+                        type="text"
+                        value="Officer"
+                      />
+                      <div
+                        class="form-text"
+                      >
+                        Helper text
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset
+                    class="col-md-6"
+                  >
                     <label
-                      class="form-check-label"
-                      for="workingLanguages"
+                      class="form-label"
+                      for="multiselect-1"
                     >
                       Working languages
                     </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="dateOfBirth"
+                    <select
+                      class="multi-select"
+                      id="multiselect-1"
+                      multiple="true"
                       required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="dateOfBirth"
                     >
-                      Date of birth
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
+                      <optgroup
+                        label="Group 1"
+                      >
+                        <option
+                          value="1"
+                        >
+                          Option group 1
+                        </option>
+                        <option
+                          value="2"
+                        >
+                          Option group 2
+                        </option>
+                        <option
+                          value="3"
+                        >
+                          Option group 3
+                        </option>
+                      </optgroup>
+                      <option
+                        value="5"
+                      >
+                        a select option
+                      </option>
+                      <option
+                        value="6"
+                      >
+                        another select option
+                      </option>
+                      <option
+                        value="7"
+                      >
+                        another option
+                      </option>
+                      <option
+                        value="8"
+                      >
+                        last option
+                      </option>
+                      <option
+                        selected=""
+                        value="9"
+                      >
+                        the selected option
+                      </option>
+                    </select>
+                    <div
+                      class="invalid-feedback"
+                    >
+                      Invalid feedback example
+                    </div>
+                    <div
+                      class="valid-feedback"
+                    >
+                      Valid feedback example
+                    </div>
+                    <div
+                      class="form-text"
+                    >
+                      Helper text for the select element
+                    </div>
+                  </fieldset>
                   <div
-                    class="form-check"
+                    class="mt-4 d-grid d-sm-block"
                   >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="organisation"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="organisation"
+                    <button
+                      class="d-inline-block btn btn-primary btn-md"
+                      type="submit"
                     >
-                      Organisation
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="country"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="country"
+                      Save
+                    </button>
+                    <button
+                      class="d-inline-block ms-md-3 mt-3 mt-md-0 btn btn-danger btn-md"
+                      id="cancel-btn"
+                      type="button"
                     >
-                      Country
-                    </label>
+                      Cancel account
+                    </button>
                   </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      checked="true"
-                      class="form-check-input"
-                      id="bio"
-                      required="true"
-                      type="checkbox"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="bio"
-                    >
-                      Bio
-                    </label>
-                  </div>
-                </div>
-                <fieldset>
-                  <legend
-                    class="text-muted fs-6 mb-0"
-                  >
-                    Select the type of users who are allowed to access your data
-                  </legend>
-                </fieldset>
-                <div
-                  class="d-grid d-sm-block mt-4-5"
-                >
-                  <button
-                    class="btn btn-primary btn-md"
-                    type="submit"
-                  >
-                    Save
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div
-              aria-labelledby="cancel-tab"
-              class="tab-pane fade"
-              id="cancel"
-              role="tabpanel"
-            >
-              <h1
-                class="my-4-5"
-              >
-                Are you sure you want to cancel your account?
-              </h1>
-              <p
-                class="mb-3"
-              >
-                When cancelling your account
-              </p>
-              <form
-                novalidate="true"
-                onsubmit="return false;"
-              >
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="keep"
-                      name="cancel"
-                      required="true"
-                      type="radio"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="keep"
-                    >
-                      Disable the account and keep its content
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mb-3"
-                >
-                  <div
-                    class="form-check"
-                  >
-                    <input
-                      class="form-check-input"
-                      id="delete"
-                      name="cancel"
-                      required="true"
-                      type="radio"
-                    />
-                    <label
-                      class="form-check-label"
-                      for="delete"
-                    >
-                      Disable the account and unpublish its content
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="mt-4 d-grid d-sm-block"
-                >
-                  <button
-                    class="btn btn-primary btn-md"
-                    type="submit"
-                  >
-                    Save
-                  </button>
-                  <button
-                    class="d-inline-block ms-md-3 mt-3 mt-md-0 btn btn-light btn-md"
-                    type="button"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
-        </section>
-        <section
-          class="bcl-section"
-        />
-        <section
-          class="bcl-section"
-        />
+          <div
+            aria-labelledby="privacy-tab"
+            class="tab-pane fade"
+            id="privacy"
+            role="tabpanel"
+          >
+            <h1
+              class="my-4-5"
+            >
+              Privacy settings
+            </h1>
+            <p>
+              Who can consult my data
+            </p>
+            <form
+              novalidate="true"
+              onsubmit="return false;"
+            >
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="administrators"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="administrators"
+                  >
+                    Only site administrators
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="any"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="any"
+                  >
+                    Any users
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="authenticated"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="authenticated"
+                  >
+                    Authenticated users
+                  </label>
+                </div>
+              </div>
+              <fieldset>
+                <legend
+                  class="text-muted fs-6 mb-0"
+                >
+                  Select the type of users who are allowed to access your data
+                </legend>
+              </fieldset>
+              <div
+                class="mt-4-5 d-grid d-sm-block"
+              >
+                <button
+                  class="btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            aria-labelledby="visibility-tab"
+            class="tab-pane fade"
+            id="visibility"
+            role="tabpanel"
+          >
+            <h1
+              class="my-4-5"
+            >
+              Visibility settings
+            </h1>
+            <p
+              class="mb-3"
+            >
+              Select what information should be displayed to your profile.
+            </p>
+            <form
+              class="row"
+              novalidate="true"
+              onsubmit="return false;"
+            >
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="picture"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="picture"
+                  >
+                    Picture
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="position"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="position"
+                  >
+                    Position
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="city"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="city"
+                  >
+                    City
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="firstName"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="firstName"
+                  >
+                    First name
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="gender"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="gender"
+                  >
+                    Gender
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="nationality"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="nationality"
+                  >
+                    Nationality
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="lastName"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="lastName"
+                  >
+                    Last name
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="workingLanguages"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="workingLanguages"
+                  >
+                    Working languages
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="dateOfBirth"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="dateOfBirth"
+                  >
+                    Date of birth
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="organisation"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="organisation"
+                  >
+                    Organisation
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="country"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="country"
+                  >
+                    Country
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    checked="true"
+                    class="form-check-input"
+                    id="bio"
+                    required="true"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="bio"
+                  >
+                    Bio
+                  </label>
+                </div>
+              </div>
+              <fieldset>
+                <legend
+                  class="text-muted fs-6 mb-0"
+                >
+                  Select the type of users who are allowed to access your data
+                </legend>
+              </fieldset>
+              <div
+                class="d-grid d-sm-block mt-4-5"
+              >
+                <button
+                  class="btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            aria-labelledby="cancel-tab"
+            class="tab-pane fade"
+            id="cancel"
+            role="tabpanel"
+          >
+            <h1
+              class="my-4-5"
+            >
+              Are you sure you want to cancel your account?
+            </h1>
+            <p
+              class="mb-3"
+            >
+              When cancelling your account
+            </p>
+            <form
+              novalidate="true"
+              onsubmit="return false;"
+            >
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="keep"
+                    name="cancel"
+                    required="true"
+                    type="radio"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="keep"
+                  >
+                    Disable the account and keep its content
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mb-3"
+              >
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="delete"
+                    name="cancel"
+                    required="true"
+                    type="radio"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="delete"
+                  >
+                    Disable the account and unpublish its content
+                  </label>
+                </div>
+              </div>
+              <div
+                class="mt-4 d-grid d-sm-block"
+              >
+                <button
+                  class="btn btn-primary btn-md"
+                  type="submit"
+                >
+                  Save
+                </button>
+                <button
+                  class="d-inline-block ms-md-3 mt-3 mt-md-0 btn btn-light btn-md"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -4599,10 +4583,7 @@ exports[`OE - User terms renders correctly 1`] = `
         <div
           class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <section
-            class="bcl-section"
-          />
-          <section
+          <div
             class="bcl-section"
           >
             <p>
@@ -4658,13 +4639,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 </button>
               </div>
             </form>
-          </section>
-          <section
-            class="bcl-section"
-          />
-          <section
-            class="bcl-section"
-          />
+          </div>
         </div>
       </div>
     </div>

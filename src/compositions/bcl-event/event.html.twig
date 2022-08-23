@@ -5,26 +5,28 @@
 {% endblock %}
 
 {% block content %}
-  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: 'Description',
-    title_tag: 'h2',
-    attributes: create_attribute().setAttribute('id', 'item-1'),
-  } only %}
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  </p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet.
-  </p>
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: 'Related documents',
-    title_tag: 'h2',
-    attributes: create_attribute().setAttribute('id', 'item-2'),
-  } only %}
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+  <div class="bcl-section">
+    {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Description',
+      attributes: create_attribute().setAttribute('id', 'item-1'),
+    } only %}
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+    a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
+    posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
+    Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
+    sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
+    a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet.
+    </p>
+  </div>
+  <div class="bcl-section">
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Related documents',
+      attributes: create_attribute().setAttribute('id', 'item-2'),
+    } only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+  </div>
 {% endblock %}

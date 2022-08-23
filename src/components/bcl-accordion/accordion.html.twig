@@ -5,7 +5,7 @@
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
   - title_link: (link object) (default: {})
-  - title_attributes: (drupal attrs) (default: classes: "mb-4")
+  - title_attributes: (drupal attrs)
   - id (int) (default: random(1000))
   - flush (boolean) (default: false)
   - items (array) (default: []): format: [
@@ -48,7 +48,7 @@
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
-    attributes: _title_attributes.addClass('mb-4'),
+    attributes: _title_attributes,
   } only %}
 {%- endif -%}
 

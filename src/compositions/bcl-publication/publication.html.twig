@@ -6,35 +6,39 @@
 
 {% block content %}
   {% if authors is defined and authors is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: authors.title,
-      title_tag: 'h2',
-      attributes: create_attribute().setAttribute('id', authors.title_id),
-    } only %}
-    {% if authors.listing|length > 5 %}
-      <p class="fs-5">{{ authors.listing|join('  •  ') }}</p>
-    {% else %}
-      <ul class="ps-4">
-      {% for author in authors.listing %}
-        <li class="ps-2 fs-5">{{- author -}}</li>
-      {% endfor %}
-      </ul>
-    {% endif %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: authors.title,
+        attributes: create_attribute().setAttribute('id', authors.title_id),
+      } only %}
+      {% if authors.listing|length > 5 %}
+        <p class="fs-5">{{ authors.listing|join('  •  ') }}</p>
+      {% else %}
+        <ul class="ps-4">
+        {% for author in authors.listing %}
+          <li class="ps-2 fs-5">{{- author -}}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
   {% endif %}
 
   {% if description is defined and description is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: description.title,
-      title_tag: 'h2',
-      attributes: create_attribute().setAttribute('id', description.title_id),
-    } only %}
-    {% for paragraph in description.paragraphs %}
-      <p>{{- paragraph -}}</p>
-    {% endfor %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: description.title,
+        attributes: create_attribute().setAttribute('id', description.title_id),
+      } only %}
+      {% for paragraph in description.paragraphs %}
+        <p>{{- paragraph -}}</p>
+      {% endfor %}
+    </div>
   {% endif %}
 
   {% if file is not empty %}
-    {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+    <div class="bcl-section">
+      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+    </div>
   {% endif %}
 
 {% endblock %}

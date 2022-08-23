@@ -1,7 +1,8 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
-import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
+import getTitleControls from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-featured-media/data/data.js";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
@@ -129,7 +130,11 @@ export default {
   chromatic: { delay: 1000 },
 };
 
-const applyArgs = (data, args) => Object.assign(correctPaths(data), args);
+const applyArgs = (data, args) => {
+  data.title_attributes = new drupalAttribute().addClass("mb-4");
+
+  return Object.assign(data, args);
+};
 
 export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
 

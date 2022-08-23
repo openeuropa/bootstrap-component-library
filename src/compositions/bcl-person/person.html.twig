@@ -5,25 +5,31 @@
 {% endblock %}
 
 {% block content %}
-  {% if information.main_title is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: information.main_title,
-      title_tag: 'h2',
-    } only %}
-  {% endif %}
-  {% if information.content is not empty %}
-    {{- information.content -}}
+  {% if information is defined %}
+    <div class="bcl-section">
+    {% if information.main_title is not empty %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: information.main_title,
+      } only %}
+    {% endif %}
+    {% if information.content is not empty %}
+      {{- information.content -}}
+    {% endif %}
+    </div>
   {% endif %} 
 
-  {% if files.main_title is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: files.main_title,
-      title_tag: 'h2',
-    } only %}
-  {% endif %}
-  {% if files.listing is defined and files.listing is not empty %}
-    {% for file in files.listing %}
-      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-    {% endfor %}
-  {% endif %}
+  {% if files is defined %}
+    <div class="bcl-section">
+      {% if files.main_title is not empty %}
+        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+          title: files.main_title,
+        } only %}
+      {% endif %}
+      {% if files.listing is defined and files.listing is not empty %}
+        {% for file in files.listing %}
+          {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endif %} 
 {% endblock %}

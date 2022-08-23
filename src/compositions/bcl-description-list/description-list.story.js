@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-description-list/data/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--horizontal";
@@ -25,7 +26,11 @@ const getArgTypes = () => ({
   },
 });
 
-const applyArgs = (data, args) => Object.assign(data, args);
+const applyArgs = (data, args) => {
+  data.title_attributes = new drupalAttribute().addClass("mb-4");
+
+  return Object.assign(data, args);
+};
 
 export default {
   title: "Paragraphs/Description List",
