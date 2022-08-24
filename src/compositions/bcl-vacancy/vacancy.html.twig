@@ -13,26 +13,26 @@
 
 {% block content %}
   {% if description is defined and description is not empty %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: description.title,
       } only %}
       {% for paragraph in description.paragraphs %}
         <p class="mb-3">{{- paragraph -}}</p>
       {% endfor %}
-    </div>
+    </section>
   {% endif %}
 
   {% if files is not empty %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% for file in files %}
         {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
       {% endfor %}
-    </div>
+    </section>
   {% endif %}
 
   {% if social_block is not empty %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% block social_block %}
         {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: social.title,
@@ -42,6 +42,6 @@
         {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
         {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
       {% endblock %}
-    </div>
+    </section>
   {% endif %}
 {% endblock %}

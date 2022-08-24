@@ -6,7 +6,7 @@
 
 {% block content %}
   {% if information is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
     {% if information.main_title is not empty %}
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: information.main_title,
@@ -15,11 +15,11 @@
     {% if information.content is not empty %}
       {{- information.content -}}
     {% endif %}
-    </div>
+    </section>
   {% endif %} 
 
   {% if files is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% if files.main_title is not empty %}
         {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: files.main_title,
@@ -30,6 +30,6 @@
           {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
         {% endfor %}
       {% endif %}
-    </div>
+    </section>
   {% endif %} 
 {% endblock %}

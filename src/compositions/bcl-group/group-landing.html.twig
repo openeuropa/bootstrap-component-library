@@ -74,7 +74,7 @@
 
 {% block content %}
   {% if recent is not empty and members is not empty %}
-  <div class="bcl-section">
+  <section class="bcl-section">
     <div class="row">
       <div class="col-md-8">
         {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
@@ -96,16 +96,16 @@
         {% endif %}
       </div>
     </div>
-  </div>
+  </section>
   {% endif %}
   {% if contributions is not empty %}
-  <div class="bcl-section">
+  <section class="bcl-section">
     {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: contributions.title,
     } only %}
     {% if contributions.listing is not empty %}
       {% include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}
     {% endif %}
-  </div>
+  </section>
   {% endif %}
 {% endblock %}

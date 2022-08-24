@@ -23,10 +23,10 @@
 {% set _title_attributes = _title_attributes ?: create_attribute() %}
 
 {% block content_top %}
-  <div class="bcl-section">
-  {% if filter_button %}
-    {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
-  {% endif %}
+  <section class="bcl-section">
+    {% if filter_button %}
+      {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
+    {% endif %}
     <div class="row">
       <div class="col-md-6 col-lg-8 align-self-center">
         {% if _title is not empty %}
@@ -56,23 +56,23 @@
       </div>
     </div>
     <hr class="d-none d-md-block mb-4-75"/>
-  </div>
+  </section>
 {% endblock %}
 
 {% block content %}
   {% if _listing is not empty %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing only %}
-    </div>
+    </section>
   {% endif %}
 {% endblock %}
 
 {% block content_bottom %}
   {% if _pagination is not empty %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       <hr class="d-none d-md-block mt-4-5">
       {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with _pagination only %}
-    </div>
+    </section>
   {% endif %}
 {% endblock %}
 

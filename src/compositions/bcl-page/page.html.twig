@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block content %}
-  <div class="bcl-section">
+  <section class="bcl-section">
     <p id="content">
       {{ get_dummy_text(6) }}
     </p>
-  </div>
-  <div class="bcl-section">
+  </section>
+  <section class="bcl-section">
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Section 1',
       attributes: create_attribute().setAttribute('id', 'item-1'),
@@ -18,57 +18,57 @@
     {% if featured_item %}
       {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
     {% endif %}
-  </div>
-    {% if page_banner %}
-      <div class="bcl-section">
-        {% include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
-      </div>
-    {% endif %}
+  </section>
+  {% if page_banner %}
+    <section class="bcl-section">
+      {% include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
+    </section>
+  {% endif %}
 
-    {% if listing %}
-      <div class="bcl-section">
-        {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
-      </div>
-    {% endif %}
+  {% if listing %}
+    <section class="bcl-section">
+      {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
+    </section>
+  {% endif %}
 
-    <div class="bcl-section">
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: 'Section 2',
-        attributes: create_attribute().setAttribute('id', 'item-2'),
-      } only %}
+  <section class="bcl-section">
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Section 2',
+      attributes: create_attribute().setAttribute('id', 'item-2'),
+    } only %}
 
-      {{ get_dummy_text(6, true) }}
-    </div>
+    {{ get_dummy_text(6, true) }}
+  </section>
 
-    {% if blockquote %}
-      <div class="bcl-section">
-        {% include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
-      </div>
-    {% endif %}
-    {% if accordion %}
-      <div class="bcl-section">
-        {% include '@oe-bcl/bcl-accordion/accordion.html.twig' with accordion only %}
-      </div>
-    {% endif %}
-    {% if timeline %}
-      <div class="bcl-section">
-        {% include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
-      </div>
-    {% endif %}
+  {% if blockquote %}
+    <section class="bcl-section">
+      {% include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
+    </section>
+  {% endif %}
+  {% if accordion %}
+    <section class="bcl-section">
+      {% include '@oe-bcl/bcl-accordion/accordion.html.twig' with accordion only %}
+    </section>
+  {% endif %}
+  {% if timeline %}
+    <section class="bcl-section">
+      {% include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
+    </section>
+  {% endif %}
 
-    <div class="bcl-section">
-      {{ get_dummy_text(8, true) }}
+  <section class="bcl-section">
+    {{ get_dummy_text(8, true) }}
 
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-        title: 'Section 3',
-        attributes: create_attribute().setAttribute('id', 'item-3'),
-      } only %}
+    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      title: 'Section 3',
+      attributes: create_attribute().setAttribute('id', 'item-3'),
+    } only %}
 
-      {{ get_dummy_text(4, true) }}
-    </div>
+    {{ get_dummy_text(4, true) }}
+  </section>
 
-    <div class="bcl-section">
-      {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
-      {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
-    </div>
+  <section class="bcl-section">
+    {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+  </section>
 {% endblock %}

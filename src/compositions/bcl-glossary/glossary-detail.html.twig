@@ -1,7 +1,7 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
 
 {% block  content %}
-	<div class="bcl-section">
+	<section class="bcl-section">
 		{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 			title: 'Description',
 		} only %}
@@ -9,9 +9,9 @@
 		<p>{{ get_dummy_text(6) }}</p>
 		<p>{{ get_dummy_text(3) }}</p>
 		<p>{{ get_dummy_text(5) }}</p>
-	</div>
+	</section>
 
-	<div class="bcl-section">
+	<section class="bcl-section">
 	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'File Downloads',
 	} only %}
@@ -19,6 +19,6 @@
 	{% for file in files %}
 		{% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
 	{% endfor %}
-	</div>
+	</section>
 
 {% endblock %}

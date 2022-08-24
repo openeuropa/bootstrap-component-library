@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <div class="bcl-section">
+  <section class="bcl-section">
     {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Description',
@@ -13,13 +13,13 @@
     } only %}
     <p>{{ get_dummy_text(6) }}</p>
     <p>{{ get_dummy_text(2) }}</p>
-  </div>
-  <div class="bcl-section">
+  </section>
+  <section class="bcl-section">
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Related documents',
       attributes: create_attribute().setAttribute('id', 'item-2'),
     } only %}
     {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
     {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
-  </div>
+  </section>
 {% endblock %}

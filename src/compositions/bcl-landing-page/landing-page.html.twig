@@ -11,7 +11,7 @@
 {% block content %}
 
   {% if featured_section is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: featured_section.title,
       } only %}
@@ -23,23 +23,23 @@
           {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_section.featured_media only %}
         </div>
       </div>
-    </div>
+    </section>
   {% endif %}
 
   {% if listing_section is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing_section only %}
-    </div>
+    </section>
   {% endif %}
 
   {% if inpage_banner is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include '@oe-bcl/bcl-banner/banner.html.twig' with inpage_banner only %}
-    </div>
+    </section>
   {% endif %}
 
   {% if activity_featured is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: activity_featured.title,
       } only %}
@@ -51,13 +51,13 @@
           {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with activity_featured.featured_media only %}
         </div>
       </div>
-    </div>
+    </section>
   {% endif %}
 
   {% if activity_listing is defined %}
-    <div class="bcl-section">
+    <section class="bcl-section">
       {% include '@oe-bcl/bcl-listing/listing.html.twig' with activity_listing only %}
-    </div>
+    </section>
   {% endif %}
 
 {% endblock %}
