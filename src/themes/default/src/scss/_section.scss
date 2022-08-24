@@ -4,7 +4,6 @@ $bcl-spacing-l: 2rem;
 
 .bcl-section {
   @include clearfix;
-  margin-bottom: $bcl-spacing-l;
 
   h1,
   h2,
@@ -38,12 +37,14 @@ $bcl-spacing-l: 2rem;
   }
 
   > *:last-child {
-    margin-bottom: 0;
+    margin-bottom: $bcl-spacing-l;
   }
 }
 
 @include media-breakpoint-down(md) {
   .bcl-section {
-    margin-bottom: $bcl-spacing-s;
+    > *:last-child {
+      margin-bottom: $bcl-spacing-s;
+    }
   }
 }
