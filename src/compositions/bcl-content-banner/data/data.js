@@ -15,7 +15,7 @@ module.exports = {
       rounded_pill: true,
     },
   ],
-  content: `<div class="my-3"><span class="text-muted me-3">17 October 2019</span></div>${getDummyText(
+  content: `<div class="mb-3"><span class="text-muted me-3">17 October 2019</span></div>${getDummyText(
     5,
     true
   )}`,

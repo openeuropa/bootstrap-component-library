@@ -4,7 +4,7 @@ const { getDummyText } = require("@openeuropa/bcl-data-utils");
 module.exports = {
   banner: {
     title: "Stefan Mayer",
-    content: `<div class="my-3">
+    content: `<div class="mb-3">
       <span class="text-muted me-3">DG TEST</span><span class="text-muted me-3">Director</span><span class="text-muted">Germany</span>
     </div>
     ${getDummyText(6, true, false, "mb-3")}`,

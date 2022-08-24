@@ -69,7 +69,7 @@
   {% if gallery is not empty %}
     <section class="bcl-section">
       {% if gallery.main_title is not empty %}
-        {% set _gallery_title_attributes = create_attribute().addClass(['my-4']) %}
+        {% set _gallery_title_attributes = create_attribute() %}
         {% if gallery.main_title_id is not empty %}
           {% set _gallery_title_attributes = _gallery_title_attributes.setAttribute('id', gallery.main_title_id) %}
         {% endif %}
