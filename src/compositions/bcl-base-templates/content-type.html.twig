@@ -84,7 +84,11 @@
 
 {% if _with_banner %}
   {% block banner %}
-    {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
+    {% if banner is not empty %}
+      <section class="bcl-section">
+        {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
+      </section>
+    {% endif %}
   {% endblock %}
 {% endif %}
 
