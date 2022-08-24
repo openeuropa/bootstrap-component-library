@@ -35,7 +35,7 @@
 {% set _color_set = color_set|default('light') %}
 {% set _disable_collapse = disable_collapse|default(false) %}
 
-{% set _classes = ['navbar', 'navbar-expand-' ~ _expand] %}
+{% set _classes = ['bcl-navbar', 'navbar', 'navbar-expand-' ~ _expand] %}
 {% if _background is not empty %}
   {% set _classes = _classes|merge(['bg-' ~ _background]) %}
 {% endif %}

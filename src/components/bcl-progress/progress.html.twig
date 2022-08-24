@@ -40,7 +40,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['progress']) %}
+{% set attributes = attributes.addClass(['bcl-progress', 'progress']) %}
 
 {% if _bar_label is empty %} 
   {% set _bar_label = _progress ~ '%' %}

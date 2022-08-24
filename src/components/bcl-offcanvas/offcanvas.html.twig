@@ -37,9 +37,9 @@
 {% set _responsiveness = responsiveness|default('') %}
 
 {% if _responsiveness is not empty %}
- {% set _classes = ['offcanvas-' ~ _responsiveness] %}
+ {% set _classes = ['bcl-offcanvas', 'offcanvas-' ~ _responsiveness] %}
 {% else %}
- {% set _classes = ['offcanvas'] %}
+ {% set _classes = ['bcl-offcanvas', 'offcanvas'] %}
 {% endif %}
 
 {% set _class_body = 'offcanvas-body' ~ (_extra_classes_body ? ' ' ~ _extra_classes_body : '') %}

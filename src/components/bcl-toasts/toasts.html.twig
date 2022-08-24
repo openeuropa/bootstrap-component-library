@@ -56,7 +56,7 @@
 {# toasts #}
 {% if _toasts is not empty %}
   {% for _toast in _toasts %}
-    {% set _classes = ['toast'] %}
+    {% set _classes = ['bcl-toast', 'toast'] %}
     {% set _body = _toast.body|default('') %}
     {% set _role = _toast.role|default('') %}
     {% set _with_close = _toast.with_close ?? true %}

@@ -60,7 +60,7 @@
 {% set _table_head = table_head|default({}) %}
 {% set _rows = rows|default([]) %}
 
-{% set _classes = ['table'] %}
+{% set _classes = ['bcl-table', 'table'] %}
 {% if _striped %}
   {% set _classes = _classes|merge(['table-striped']) %}
 {% endif %}

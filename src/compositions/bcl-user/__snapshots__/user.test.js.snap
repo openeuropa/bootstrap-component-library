@@ -50,7 +50,7 @@ exports[`OE - User list renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar bcl-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -88,19 +88,19 @@ exports[`OE - User list renders correctly 1`] = `
           id="topNavbarDropdown"
         >
           <ul
-            class="nav"
+            class="bcl-nav nav"
           >
             <li
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 data-bs-target="#languageModal"
                 data-bs-toggle="modal"
                 href="/example.html"
               >
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -113,13 +113,13 @@ exports[`OE - User list renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 data-bs-target="#loginModal"
                 data-bs-toggle="modal"
                 href="/example.html"
               >
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -136,7 +136,7 @@ exports[`OE - User list renders correctly 1`] = `
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar bcl-navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
         class="container"
@@ -159,14 +159,14 @@ exports[`OE - User list renders correctly 1`] = `
           id="navbarNavDropdown"
         >
           <ul
-            class="me-auto navbar-nav"
+            class="me-auto bcl-navbar navbar-nav"
           >
             <li
               class="nav-item"
             >
               <a
                 aria-current="page"
-                class="nav-link active"
+                class="nav-link active bcl-link"
                 href="/example.html"
               >
                 Home
@@ -176,7 +176,7 @@ exports[`OE - User list renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 01
@@ -186,7 +186,7 @@ exports[`OE - User list renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 02
@@ -197,7 +197,7 @@ exports[`OE - User list renders correctly 1`] = `
             >
               <a
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle bcl-link"
                 data-bs-toggle="dropdown"
                 href="#"
                 id="navbarDropdownMenuLink"
@@ -211,7 +211,7 @@ exports[`OE - User list renders correctly 1`] = `
               >
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Action
@@ -219,7 +219,7 @@ exports[`OE - User list renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Another action
@@ -227,7 +227,7 @@ exports[`OE - User list renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Something else here
@@ -235,7 +235,7 @@ exports[`OE - User list renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Very long label with custom text and custom link as an example
@@ -245,7 +245,7 @@ exports[`OE - User list renders correctly 1`] = `
             </li>
           </ul>
           <form
-            class="d-flex mt-3 mt-lg-0"
+            class="d-flex mt-3 mt-lg-0 bcl-form"
           >
             <label
               class="form-label visually-hidden"
@@ -254,14 +254,14 @@ exports[`OE - User list renders correctly 1`] = `
               Search
             </label>
             <input
-              class="border-start-0 rounded-0 rounded-start form-control"
+              class="border-start-0 rounded-0 rounded-start bcl-form-control form-control"
               id="inlineFormInputGroupSearch"
               placeholder="Search"
               required="true"
               type="text"
             />
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              class="border-start-0 rounded-0 rounded-end bcl-btn btn btn-light btn-md"
               type="button"
             >
               <span
@@ -270,7 +270,7 @@ exports[`OE - User list renders correctly 1`] = `
                 search
               </span>
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -287,7 +287,7 @@ exports[`OE - User list renders correctly 1`] = `
     >
       <nav
         aria-label="breadcrumb"
-        class="mt-3"
+        class="mt-3 bcl-breadcrumb"
       >
         <ol
           class="breadcrumb"
@@ -296,6 +296,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               Home
@@ -305,6 +306,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               European Union
@@ -314,10 +316,11 @@ exports[`OE - User list renders correctly 1`] = `
             class="breadcrumb-item"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -339,7 +342,7 @@ exports[`OE - User list renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
-    class="modal fade"
+    class="bcl-modal modal fade"
     id="loginModal"
     tabindex="-1"
   >
@@ -410,7 +413,7 @@ exports[`OE - User list renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu bcl-modal modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -439,7 +442,7 @@ exports[`OE - User list renders correctly 1`] = `
                     class="d-flex align-items-center"
                   >
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -489,7 +492,7 @@ exports[`OE - User list renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#bg"
                         hreflang="bg"
                         lang="bg"
@@ -497,7 +500,7 @@ exports[`OE - User list renders correctly 1`] = `
                         български
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#es"
                         hreflang="es"
                         lang="es"
@@ -505,7 +508,7 @@ exports[`OE - User list renders correctly 1`] = `
                         español
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#cs"
                         hreflang="cs"
                         lang="cs"
@@ -513,7 +516,7 @@ exports[`OE - User list renders correctly 1`] = `
                         čeština
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#da"
                         hreflang="da"
                         lang="da"
@@ -521,7 +524,7 @@ exports[`OE - User list renders correctly 1`] = `
                         dansk
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#de"
                         hreflang="de"
                         lang="de"
@@ -529,7 +532,7 @@ exports[`OE - User list renders correctly 1`] = `
                         Deutsch
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#et"
                         hreflang="et"
                         lang="et"
@@ -537,7 +540,7 @@ exports[`OE - User list renders correctly 1`] = `
                         eesti
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#el"
                         hreflang="el"
                         lang="el"
@@ -545,14 +548,14 @@ exports[`OE - User list renders correctly 1`] = `
                         ελληνικά
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        class="w-100 mb-2-5 btn selected justify-content-between bcl-link"
                         href="/example.html#en"
                         hreflang="en"
                         lang="en"
                       >
                         English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -560,7 +563,7 @@ exports[`OE - User list renders correctly 1`] = `
                         </svg>
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#fr"
                         hreflang="fr"
                         lang="fr"
@@ -568,7 +571,7 @@ exports[`OE - User list renders correctly 1`] = `
                         français
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ga"
                         hreflang="ga"
                         lang="ga"
@@ -576,7 +579,7 @@ exports[`OE - User list renders correctly 1`] = `
                         Gaeilge
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#hr"
                         hreflang="hr"
                         lang="hr"
@@ -584,7 +587,7 @@ exports[`OE - User list renders correctly 1`] = `
                         hrvatski
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#it"
                         hreflang="it"
                         lang="it"
@@ -596,7 +599,7 @@ exports[`OE - User list renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#lv"
                         hreflang="lv"
                         lang="lv"
@@ -604,7 +607,7 @@ exports[`OE - User list renders correctly 1`] = `
                         latviešu
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#lt"
                         hreflang="lt"
                         lang="lt"
@@ -612,7 +615,7 @@ exports[`OE - User list renders correctly 1`] = `
                         lietuvių
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#hu"
                         hreflang="hu"
                         lang="hu"
@@ -620,7 +623,7 @@ exports[`OE - User list renders correctly 1`] = `
                         magyar
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#mt"
                         hreflang="mt"
                         lang="mt"
@@ -628,7 +631,7 @@ exports[`OE - User list renders correctly 1`] = `
                         Malti
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#nl"
                         hreflang="nl"
                         lang="nl"
@@ -636,7 +639,7 @@ exports[`OE - User list renders correctly 1`] = `
                         Nederlands
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#pl"
                         hreflang="pl"
                         lang="pl"
@@ -644,7 +647,7 @@ exports[`OE - User list renders correctly 1`] = `
                         polski
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#pt"
                         hreflang="pt"
                         lang="pt"
@@ -652,7 +655,7 @@ exports[`OE - User list renders correctly 1`] = `
                         português
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ro"
                         hreflang="ro"
                         lang="ro"
@@ -660,7 +663,7 @@ exports[`OE - User list renders correctly 1`] = `
                         română
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sk"
                         hreflang="sk"
                         lang="sk"
@@ -668,7 +671,7 @@ exports[`OE - User list renders correctly 1`] = `
                         slovenčina
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sl"
                         hreflang="sl"
                         lang="sl"
@@ -676,7 +679,7 @@ exports[`OE - User list renders correctly 1`] = `
                         slovenščina
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#fi"
                         hreflang="fi"
                         lang="fi"
@@ -684,7 +687,7 @@ exports[`OE - User list renders correctly 1`] = `
                         suomi
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sv"
                         hreflang="sv"
                         lang="sv"
@@ -709,7 +712,7 @@ exports[`OE - User list renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#zh"
                         hreflang="zh"
                         lang="zh"
@@ -717,7 +720,7 @@ exports[`OE - User list renders correctly 1`] = `
                         中文
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#tr"
                         hreflang="tr"
                         lang="tr"
@@ -725,7 +728,7 @@ exports[`OE - User list renders correctly 1`] = `
                         Türk
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ru"
                         hreflang="ru"
                         lang="ru"
@@ -737,7 +740,7 @@ exports[`OE - User list renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ca"
                         hreflang="ca"
                         lang="ca"
@@ -745,7 +748,7 @@ exports[`OE - User list renders correctly 1`] = `
                         Català
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="#"
                         hreflang="ar"
                         lang="ar"
@@ -773,7 +776,7 @@ exports[`OE - User list renders correctly 1`] = `
           class="container"
         >
           <article
-            class="bg-transparent border-0 card"
+            class="bg-transparent border-0 bcl-card card"
           >
             <div
               class="row"
@@ -825,7 +828,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="bcl-section"
           >
             <div
-              class="offcanvas-start offcanvas-lg"
+              class="offcanvas-start bcl-offcanvas offcanvas-lg"
               data-bs-scroll="true"
               id="bcl-offcanvas"
               tabindex="-1"
@@ -840,7 +843,7 @@ exports[`OE - User list renders correctly 1`] = `
                 </h2>
                 <button
                   aria-label="Close button"
-                  class="btn-close text-reset d-lg-none"
+                  class="btn-close text-reset d-lg-none bcl-btn"
                   data-bs-dismiss="offcanvas"
                   type="button"
                 />
@@ -849,7 +852,7 @@ exports[`OE - User list renders correctly 1`] = `
                 class="offcanvas-body p-lg-0"
               >
                 <form
-                  class="w-100"
+                  class="w-100 bcl-form"
                   novalidate="true"
                   onsubmit="return false;"
                 >
@@ -862,7 +865,7 @@ exports[`OE - User list renders correctly 1`] = `
                       Name
                     </label>
                     <input
-                      class="form-control"
+                      class="bcl-form-control form-control"
                       placeholder="Placeholder"
                       type="text"
                     />
@@ -876,7 +879,7 @@ exports[`OE - User list renders correctly 1`] = `
                       Organisation
                     </label>
                     <input
-                      class="form-control"
+                      class="bcl-form-control form-control"
                       placeholder="Placeholder"
                       type="text"
                     />
@@ -885,13 +888,13 @@ exports[`OE - User list renders correctly 1`] = `
                     class="mt-4"
                   >
                     <button
-                      class="me-2 btn btn-primary btn-md"
+                      class="me-2 bcl-btn btn btn-primary btn-md"
                       type="submit"
                     >
                       Refine
                     </button>
                     <button
-                      class="btn btn-light btn-md"
+                      class="bcl-btn btn btn-light btn-md"
                       type="submit"
                     >
                       Clear
@@ -910,13 +913,13 @@ exports[`OE - User list renders correctly 1`] = `
           >
             <button
               aria-controls="bcl-offcanvas"
-              class="d-lg-none w-100 mb-4 btn btn-light btn-lg"
+              class="d-lg-none w-100 mb-4 bcl-btn btn btn-light btn-lg"
               data-bs-target="#bcl-offcanvas"
               data-bs-toggle="offcanvas"
               type="button"
             >
               <svg
-                class="me-2 me-2-5 bi icon--fluid"
+                class="me-2 me-2-5 bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#filter"
@@ -940,7 +943,7 @@ exports[`OE - User list renders correctly 1`] = `
                 class="col-md-12 order-md-2 mt-3"
               >
                 <span
-                  class="mb-2 me-2 badge bg-light"
+                  class="mb-2 me-2 bcl-badge badge bg-light"
                 >
                   Name
                   <span
@@ -948,7 +951,7 @@ exports[`OE - User list renders correctly 1`] = `
                     class="icon--close"
                   >
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#x-lg"
@@ -957,7 +960,7 @@ exports[`OE - User list renders correctly 1`] = `
                   </span>
                 </span>
                 <span
-                  class="mb-2 me-2 badge bg-light"
+                  class="mb-2 me-2 bcl-badge badge bg-light"
                 >
                   Organisation
                   <span
@@ -965,7 +968,7 @@ exports[`OE - User list renders correctly 1`] = `
                     class="icon--close"
                   >
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#x-lg"
@@ -987,7 +990,7 @@ exports[`OE - User list renders correctly 1`] = `
                   </label>
                   <select
                     aria-label="sort-select"
-                    class="ms-md-2 form-select"
+                    class="ms-md-2 bcl-form-select form-select"
                   >
                     <option
                       value="1"
@@ -1036,7 +1039,7 @@ exports[`OE - User list renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 card"
+                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
                   >
                     <div
                       class="row"
@@ -1085,7 +1088,7 @@ exports[`OE - User list renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 card"
+                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
                   >
                     <div
                       class="row"
@@ -1134,7 +1137,7 @@ exports[`OE - User list renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 card"
+                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
                   >
                     <div
                       class="row"
@@ -1183,7 +1186,7 @@ exports[`OE - User list renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 card"
+                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
                   >
                     <div
                       class="row"
@@ -1232,7 +1235,7 @@ exports[`OE - User list renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 card"
+                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
                   >
                     <div
                       class="row"
@@ -1281,7 +1284,7 @@ exports[`OE - User list renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 card"
+                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
                   >
                     <div
                       class="row"
@@ -1341,7 +1344,7 @@ exports[`OE - User list renders correctly 1`] = `
               role="navigation"
             >
               <ul
-                class="pagination justify-content-center"
+                class="bcl-pagination pagination justify-content-center"
               >
                 <li
                   class="page-item"
@@ -1352,7 +1355,7 @@ exports[`OE - User list renders correctly 1`] = `
                     href="/example.html"
                   >
                     <svg
-                      class="bi icon--fluid"
+                      class="bcl-icon bi icon--fluid"
                     >
                       <use
                         xlink:href="/icons.svg#chevron-double-left"
@@ -1442,7 +1445,7 @@ exports[`OE - User list renders correctly 1`] = `
                     href="/example.html"
                   >
                     <svg
-                      class="bi icon--fluid"
+                      class="bcl-icon bi icon--fluid"
                     >
                       <use
                         xlink:href="/icons.svg#chevron-double-right"
@@ -1500,11 +1503,11 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -1517,11 +1520,11 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -1534,11 +1537,11 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -1568,7 +1571,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1578,7 +1581,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1588,7 +1591,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1598,7 +1601,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1621,7 +1624,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1631,7 +1634,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1641,7 +1644,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1651,7 +1654,7 @@ exports[`OE - User list renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -1672,7 +1675,7 @@ exports[`OE - User renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar bcl-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -1710,19 +1713,19 @@ exports[`OE - User renders correctly 1`] = `
           id="topNavbarDropdown"
         >
           <ul
-            class="nav"
+            class="bcl-nav nav"
           >
             <li
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 data-bs-target="#languageModal"
                 data-bs-toggle="modal"
                 href="/example.html"
               >
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -1735,13 +1738,13 @@ exports[`OE - User renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 data-bs-target="#loginModal"
                 data-bs-toggle="modal"
                 href="/example.html"
               >
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -1758,7 +1761,7 @@ exports[`OE - User renders correctly 1`] = `
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar bcl-navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
         class="container"
@@ -1781,14 +1784,14 @@ exports[`OE - User renders correctly 1`] = `
           id="navbarNavDropdown"
         >
           <ul
-            class="me-auto navbar-nav"
+            class="me-auto bcl-navbar navbar-nav"
           >
             <li
               class="nav-item"
             >
               <a
                 aria-current="page"
-                class="nav-link active"
+                class="nav-link active bcl-link"
                 href="/example.html"
               >
                 Home
@@ -1798,7 +1801,7 @@ exports[`OE - User renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 01
@@ -1808,7 +1811,7 @@ exports[`OE - User renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 02
@@ -1819,7 +1822,7 @@ exports[`OE - User renders correctly 1`] = `
             >
               <a
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle bcl-link"
                 data-bs-toggle="dropdown"
                 href="#"
                 id="navbarDropdownMenuLink"
@@ -1833,7 +1836,7 @@ exports[`OE - User renders correctly 1`] = `
               >
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Action
@@ -1841,7 +1844,7 @@ exports[`OE - User renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Another action
@@ -1849,7 +1852,7 @@ exports[`OE - User renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Something else here
@@ -1857,7 +1860,7 @@ exports[`OE - User renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Very long label with custom text and custom link as an example
@@ -1867,7 +1870,7 @@ exports[`OE - User renders correctly 1`] = `
             </li>
           </ul>
           <form
-            class="d-flex mt-3 mt-lg-0"
+            class="d-flex mt-3 mt-lg-0 bcl-form"
           >
             <label
               class="form-label visually-hidden"
@@ -1876,14 +1879,14 @@ exports[`OE - User renders correctly 1`] = `
               Search
             </label>
             <input
-              class="border-start-0 rounded-0 rounded-start form-control"
+              class="border-start-0 rounded-0 rounded-start bcl-form-control form-control"
               id="inlineFormInputGroupSearch"
               placeholder="Search"
               required="true"
               type="text"
             />
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              class="border-start-0 rounded-0 rounded-end bcl-btn btn btn-light btn-md"
               type="button"
             >
               <span
@@ -1892,7 +1895,7 @@ exports[`OE - User renders correctly 1`] = `
                 search
               </span>
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -1909,7 +1912,7 @@ exports[`OE - User renders correctly 1`] = `
     >
       <nav
         aria-label="breadcrumb"
-        class="mt-3"
+        class="mt-3 bcl-breadcrumb"
       >
         <ol
           class="breadcrumb"
@@ -1918,6 +1921,7 @@ exports[`OE - User renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               Home
@@ -1927,6 +1931,7 @@ exports[`OE - User renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               European Union
@@ -1936,10 +1941,11 @@ exports[`OE - User renders correctly 1`] = `
             class="breadcrumb-item"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -1961,7 +1967,7 @@ exports[`OE - User renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
-    class="modal fade"
+    class="bcl-modal modal fade"
     id="loginModal"
     tabindex="-1"
   >
@@ -2032,7 +2038,7 @@ exports[`OE - User renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu bcl-modal modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -2061,7 +2067,7 @@ exports[`OE - User renders correctly 1`] = `
                     class="d-flex align-items-center"
                   >
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -2111,7 +2117,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#bg"
                         hreflang="bg"
                         lang="bg"
@@ -2119,7 +2125,7 @@ exports[`OE - User renders correctly 1`] = `
                         български
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#es"
                         hreflang="es"
                         lang="es"
@@ -2127,7 +2133,7 @@ exports[`OE - User renders correctly 1`] = `
                         español
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#cs"
                         hreflang="cs"
                         lang="cs"
@@ -2135,7 +2141,7 @@ exports[`OE - User renders correctly 1`] = `
                         čeština
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#da"
                         hreflang="da"
                         lang="da"
@@ -2143,7 +2149,7 @@ exports[`OE - User renders correctly 1`] = `
                         dansk
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#de"
                         hreflang="de"
                         lang="de"
@@ -2151,7 +2157,7 @@ exports[`OE - User renders correctly 1`] = `
                         Deutsch
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#et"
                         hreflang="et"
                         lang="et"
@@ -2159,7 +2165,7 @@ exports[`OE - User renders correctly 1`] = `
                         eesti
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#el"
                         hreflang="el"
                         lang="el"
@@ -2167,14 +2173,14 @@ exports[`OE - User renders correctly 1`] = `
                         ελληνικά
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        class="w-100 mb-2-5 btn selected justify-content-between bcl-link"
                         href="/example.html#en"
                         hreflang="en"
                         lang="en"
                       >
                         English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -2182,7 +2188,7 @@ exports[`OE - User renders correctly 1`] = `
                         </svg>
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#fr"
                         hreflang="fr"
                         lang="fr"
@@ -2190,7 +2196,7 @@ exports[`OE - User renders correctly 1`] = `
                         français
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ga"
                         hreflang="ga"
                         lang="ga"
@@ -2198,7 +2204,7 @@ exports[`OE - User renders correctly 1`] = `
                         Gaeilge
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#hr"
                         hreflang="hr"
                         lang="hr"
@@ -2206,7 +2212,7 @@ exports[`OE - User renders correctly 1`] = `
                         hrvatski
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#it"
                         hreflang="it"
                         lang="it"
@@ -2218,7 +2224,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#lv"
                         hreflang="lv"
                         lang="lv"
@@ -2226,7 +2232,7 @@ exports[`OE - User renders correctly 1`] = `
                         latviešu
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#lt"
                         hreflang="lt"
                         lang="lt"
@@ -2234,7 +2240,7 @@ exports[`OE - User renders correctly 1`] = `
                         lietuvių
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#hu"
                         hreflang="hu"
                         lang="hu"
@@ -2242,7 +2248,7 @@ exports[`OE - User renders correctly 1`] = `
                         magyar
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#mt"
                         hreflang="mt"
                         lang="mt"
@@ -2250,7 +2256,7 @@ exports[`OE - User renders correctly 1`] = `
                         Malti
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#nl"
                         hreflang="nl"
                         lang="nl"
@@ -2258,7 +2264,7 @@ exports[`OE - User renders correctly 1`] = `
                         Nederlands
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#pl"
                         hreflang="pl"
                         lang="pl"
@@ -2266,7 +2272,7 @@ exports[`OE - User renders correctly 1`] = `
                         polski
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#pt"
                         hreflang="pt"
                         lang="pt"
@@ -2274,7 +2280,7 @@ exports[`OE - User renders correctly 1`] = `
                         português
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ro"
                         hreflang="ro"
                         lang="ro"
@@ -2282,7 +2288,7 @@ exports[`OE - User renders correctly 1`] = `
                         română
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sk"
                         hreflang="sk"
                         lang="sk"
@@ -2290,7 +2296,7 @@ exports[`OE - User renders correctly 1`] = `
                         slovenčina
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sl"
                         hreflang="sl"
                         lang="sl"
@@ -2298,7 +2304,7 @@ exports[`OE - User renders correctly 1`] = `
                         slovenščina
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#fi"
                         hreflang="fi"
                         lang="fi"
@@ -2306,7 +2312,7 @@ exports[`OE - User renders correctly 1`] = `
                         suomi
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sv"
                         hreflang="sv"
                         lang="sv"
@@ -2331,7 +2337,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#zh"
                         hreflang="zh"
                         lang="zh"
@@ -2339,7 +2345,7 @@ exports[`OE - User renders correctly 1`] = `
                         中文
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#tr"
                         hreflang="tr"
                         lang="tr"
@@ -2347,7 +2353,7 @@ exports[`OE - User renders correctly 1`] = `
                         Türk
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ru"
                         hreflang="ru"
                         lang="ru"
@@ -2359,7 +2365,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ca"
                         hreflang="ca"
                         lang="ca"
@@ -2367,7 +2373,7 @@ exports[`OE - User renders correctly 1`] = `
                         Català
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="#"
                         hreflang="ar"
                         lang="ar"
@@ -2392,13 +2398,13 @@ exports[`OE - User renders correctly 1`] = `
         class="row"
       >
         <nav
-          class="nav nav-tabs"
+          class="bcl-nav nav nav-tabs"
           role="tablist"
         >
           <a
             aria-controls="view"
             autocomplete="off"
-            class="nav-link active"
+            class="nav-link active bcl-link"
             data-bs-target="#view"
             data-bs-toggle="tab"
             href="#view"
@@ -2410,7 +2416,7 @@ exports[`OE - User renders correctly 1`] = `
           <a
             aria-controls="edit"
             autocomplete="off"
-            class="nav-link"
+            class="nav-link bcl-link"
             data-bs-target="#edit"
             data-bs-toggle="tab"
             href="#edit"
@@ -2422,7 +2428,7 @@ exports[`OE - User renders correctly 1`] = `
           <a
             aria-controls="privacy"
             autocomplete="off"
-            class="nav-link"
+            class="nav-link bcl-link"
             data-bs-target="#privacy"
             data-bs-toggle="tab"
             href="#privacy"
@@ -2434,7 +2440,7 @@ exports[`OE - User renders correctly 1`] = `
           <a
             aria-controls="visibility"
             autocomplete="off"
-            class="nav-link"
+            class="nav-link bcl-link"
             data-bs-target="#visibility"
             data-bs-toggle="tab"
             href="#visibility"
@@ -2446,7 +2452,7 @@ exports[`OE - User renders correctly 1`] = `
           <a
             aria-controls="cancel"
             autocomplete="off"
-            class="d-none nav-link"
+            class="d-none nav-link bcl-link"
             data-bs-target="#cancel"
             data-bs-toggle="tab"
             href="#cancel"
@@ -2471,7 +2477,7 @@ exports[`OE - User renders correctly 1`] = `
                 class="container"
               >
                 <article
-                  class="bg-transparent border-0 card"
+                  class="bg-transparent border-0 bcl-card card"
                 >
                   <div
                     class="row"
@@ -2768,7 +2774,7 @@ exports[`OE - User renders correctly 1`] = `
                     My_picture.jpg (3.52 Mb)
                   </label>
                   <input
-                    class="d-none form-control btn-check"
+                    class="d-none bcl-form-control form-control btn-check"
                     id="image-profile"
                     type="file"
                   />
@@ -2776,7 +2782,7 @@ exports[`OE - User renders correctly 1`] = `
                     class="d-md-inline-block"
                   >
                     <button
-                      class="mt-2 ms-0 ms-md-2 mt-md-0 mb-2 btn btn-danger btn-md"
+                      class="mt-2 ms-0 ms-md-2 mt-md-0 mb-2 bcl-btn btn btn-danger btn-md"
                       type="button"
                     >
                       Remove
@@ -2790,7 +2796,7 @@ exports[`OE - User renders correctly 1`] = `
             >
               <div>
                 <form
-                  class="row"
+                  class="row bcl-form"
                   novalidate="true"
                   onsubmit="return false;"
                 >
@@ -2816,7 +2822,7 @@ exports[`OE - User renders correctly 1`] = `
                         First name
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="first-name"
                         required="true"
                         type="text"
@@ -2838,7 +2844,7 @@ exports[`OE - User renders correctly 1`] = `
                         Last name
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="last-name"
                         required="true"
                         type="text"
@@ -2860,7 +2866,7 @@ exports[`OE - User renders correctly 1`] = `
                       </label>
                       <select
                         aria-label="gender-select"
-                        class="form-select"
+                        class="bcl-form-select form-select"
                         required="true"
                       >
                         <option
@@ -2890,7 +2896,7 @@ exports[`OE - User renders correctly 1`] = `
                         Nationality
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="nationality-input"
                         required="true"
                         type="text"
@@ -2912,7 +2918,7 @@ exports[`OE - User renders correctly 1`] = `
                         Birth date
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="birth-date"
                         required="true"
                         type="date"
@@ -2938,7 +2944,7 @@ exports[`OE - User renders correctly 1`] = `
                         Bio
                       </label>
                       <textarea
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="bio-description"
                         required="true"
                         rows="4"
@@ -2961,7 +2967,7 @@ exports[`OE - User renders correctly 1`] = `
                         Country
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="country-input"
                         required="true"
                         type="text"
@@ -2983,7 +2989,7 @@ exports[`OE - User renders correctly 1`] = `
                         City
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="city-input"
                         required="true"
                         type="text"
@@ -3018,7 +3024,7 @@ exports[`OE - User renders correctly 1`] = `
                         Organisation
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="organisation-input"
                         required="true"
                         type="text"
@@ -3040,7 +3046,7 @@ exports[`OE - User renders correctly 1`] = `
                         Position
                       </label>
                       <input
-                        class="form-control"
+                        class="bcl-form-control form-control"
                         id="position-input"
                         required="true"
                         type="text"
@@ -3134,13 +3140,13 @@ exports[`OE - User renders correctly 1`] = `
                     class="mt-4 d-grid d-sm-block"
                   >
                     <button
-                      class="d-inline-block btn btn-primary btn-md"
+                      class="d-inline-block bcl-btn btn btn-primary btn-md"
                       type="submit"
                     >
                       Save
                     </button>
                     <button
-                      class="d-inline-block ms-md-3 mt-3 mt-md-0 btn btn-danger btn-md"
+                      class="d-inline-block ms-md-3 mt-3 mt-md-0 bcl-btn btn btn-danger btn-md"
                       id="cancel-btn"
                       type="button"
                     >
@@ -3166,6 +3172,7 @@ exports[`OE - User renders correctly 1`] = `
               Who can consult my data
             </p>
             <form
+              class="bcl-form"
               novalidate="true"
               onsubmit="return false;"
             >
@@ -3241,7 +3248,7 @@ exports[`OE - User renders correctly 1`] = `
                 class="mt-4-5 d-grid d-sm-block"
               >
                 <button
-                  class="btn btn-primary btn-md"
+                  class="bcl-btn btn btn-primary btn-md"
                   type="submit"
                 >
                   Save
@@ -3266,7 +3273,7 @@ exports[`OE - User renders correctly 1`] = `
               Select what information should be displayed to your profile.
             </p>
             <form
-              class="row"
+              class="row bcl-form"
               novalidate="true"
               onsubmit="return false;"
             >
@@ -3529,7 +3536,7 @@ exports[`OE - User renders correctly 1`] = `
                 class="d-grid d-sm-block mt-4-5"
               >
                 <button
-                  class="btn btn-primary btn-md"
+                  class="bcl-btn btn btn-primary btn-md"
                   type="submit"
                 >
                   Save
@@ -3554,6 +3561,7 @@ exports[`OE - User renders correctly 1`] = `
               When cancelling your account
             </p>
             <form
+              class="bcl-form"
               novalidate="true"
               onsubmit="return false;"
             >
@@ -3603,13 +3611,13 @@ exports[`OE - User renders correctly 1`] = `
                 class="mt-4 d-grid d-sm-block"
               >
                 <button
-                  class="btn btn-primary btn-md"
+                  class="bcl-btn btn btn-primary btn-md"
                   type="submit"
                 >
                   Save
                 </button>
                 <button
-                  class="d-inline-block ms-md-3 mt-3 mt-md-0 btn btn-light btn-md"
+                  class="d-inline-block ms-md-3 mt-3 mt-md-0 bcl-btn btn btn-light btn-md"
                   type="button"
                 >
                   Cancel
@@ -3664,11 +3672,11 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -3681,11 +3689,11 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -3698,11 +3706,11 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -3732,7 +3740,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3742,7 +3750,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3752,7 +3760,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3762,7 +3770,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3785,7 +3793,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3795,7 +3803,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3805,7 +3813,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3815,7 +3823,7 @@ exports[`OE - User renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -3836,7 +3844,7 @@ exports[`OE - User terms renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar bcl-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -3874,19 +3882,19 @@ exports[`OE - User terms renders correctly 1`] = `
           id="topNavbarDropdown"
         >
           <ul
-            class="nav"
+            class="bcl-nav nav"
           >
             <li
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 data-bs-target="#languageModal"
                 data-bs-toggle="modal"
                 href="/example.html"
               >
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -3899,13 +3907,13 @@ exports[`OE - User terms renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 data-bs-target="#loginModal"
                 data-bs-toggle="modal"
                 href="/example.html"
               >
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -3922,7 +3930,7 @@ exports[`OE - User terms renders correctly 1`] = `
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar bcl-navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
         class="container"
@@ -3945,14 +3953,14 @@ exports[`OE - User terms renders correctly 1`] = `
           id="navbarNavDropdown"
         >
           <ul
-            class="me-auto navbar-nav"
+            class="me-auto bcl-navbar navbar-nav"
           >
             <li
               class="nav-item"
             >
               <a
                 aria-current="page"
-                class="nav-link active"
+                class="nav-link active bcl-link"
                 href="/example.html"
               >
                 Home
@@ -3962,7 +3970,7 @@ exports[`OE - User terms renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 01
@@ -3972,7 +3980,7 @@ exports[`OE - User terms renders correctly 1`] = `
               class="nav-item"
             >
               <a
-                class="nav-link"
+                class="nav-link bcl-link"
                 href="/example.html"
               >
                 Item 02
@@ -3983,7 +3991,7 @@ exports[`OE - User terms renders correctly 1`] = `
             >
               <a
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle bcl-link"
                 data-bs-toggle="dropdown"
                 href="#"
                 id="navbarDropdownMenuLink"
@@ -3997,7 +4005,7 @@ exports[`OE - User terms renders correctly 1`] = `
               >
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Action
@@ -4005,7 +4013,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Another action
@@ -4013,7 +4021,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Something else here
@@ -4021,7 +4029,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item bcl-link"
                     href="/example.html"
                   >
                     Very long label with custom text and custom link as an example
@@ -4031,7 +4039,7 @@ exports[`OE - User terms renders correctly 1`] = `
             </li>
           </ul>
           <form
-            class="d-flex mt-3 mt-lg-0"
+            class="d-flex mt-3 mt-lg-0 bcl-form"
           >
             <label
               class="form-label visually-hidden"
@@ -4040,14 +4048,14 @@ exports[`OE - User terms renders correctly 1`] = `
               Search
             </label>
             <input
-              class="border-start-0 rounded-0 rounded-start form-control"
+              class="border-start-0 rounded-0 rounded-start bcl-form-control form-control"
               id="inlineFormInputGroupSearch"
               placeholder="Search"
               required="true"
               type="text"
             />
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              class="border-start-0 rounded-0 rounded-end bcl-btn btn btn-light btn-md"
               type="button"
             >
               <span
@@ -4056,7 +4064,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 search
               </span>
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -4073,7 +4081,7 @@ exports[`OE - User terms renders correctly 1`] = `
     >
       <nav
         aria-label="breadcrumb"
-        class="mt-3"
+        class="mt-3 bcl-breadcrumb"
       >
         <ol
           class="breadcrumb"
@@ -4082,6 +4090,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               Home
@@ -4091,6 +4100,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               European Union
@@ -4100,10 +4110,11 @@ exports[`OE - User terms renders correctly 1`] = `
             class="breadcrumb-item"
           >
             <a
+              class="bcl-link"
               href="/example.html"
             >
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -4125,7 +4136,7 @@ exports[`OE - User terms renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
-    class="modal fade"
+    class="bcl-modal modal fade"
     id="loginModal"
     tabindex="-1"
   >
@@ -4196,7 +4207,7 @@ exports[`OE - User terms renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu bcl-modal modal fade"
     id="languageModal"
     tabindex="-1"
   >
@@ -4225,7 +4236,7 @@ exports[`OE - User terms renders correctly 1`] = `
                     class="d-flex align-items-center"
                   >
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -4275,7 +4286,7 @@ exports[`OE - User terms renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#bg"
                         hreflang="bg"
                         lang="bg"
@@ -4283,7 +4294,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         български
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#es"
                         hreflang="es"
                         lang="es"
@@ -4291,7 +4302,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         español
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#cs"
                         hreflang="cs"
                         lang="cs"
@@ -4299,7 +4310,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         čeština
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#da"
                         hreflang="da"
                         lang="da"
@@ -4307,7 +4318,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         dansk
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#de"
                         hreflang="de"
                         lang="de"
@@ -4315,7 +4326,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         Deutsch
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#et"
                         hreflang="et"
                         lang="et"
@@ -4323,7 +4334,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         eesti
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#el"
                         hreflang="el"
                         lang="el"
@@ -4331,14 +4342,14 @@ exports[`OE - User terms renders correctly 1`] = `
                         ελληνικά
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        class="w-100 mb-2-5 btn selected justify-content-between bcl-link"
                         href="/example.html#en"
                         hreflang="en"
                         lang="en"
                       >
                         English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -4346,7 +4357,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         </svg>
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#fr"
                         hreflang="fr"
                         lang="fr"
@@ -4354,7 +4365,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         français
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ga"
                         hreflang="ga"
                         lang="ga"
@@ -4362,7 +4373,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         Gaeilge
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#hr"
                         hreflang="hr"
                         lang="hr"
@@ -4370,7 +4381,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         hrvatski
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#it"
                         hreflang="it"
                         lang="it"
@@ -4382,7 +4393,7 @@ exports[`OE - User terms renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#lv"
                         hreflang="lv"
                         lang="lv"
@@ -4390,7 +4401,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         latviešu
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#lt"
                         hreflang="lt"
                         lang="lt"
@@ -4398,7 +4409,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         lietuvių
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#hu"
                         hreflang="hu"
                         lang="hu"
@@ -4406,7 +4417,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         magyar
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#mt"
                         hreflang="mt"
                         lang="mt"
@@ -4414,7 +4425,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         Malti
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#nl"
                         hreflang="nl"
                         lang="nl"
@@ -4422,7 +4433,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         Nederlands
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#pl"
                         hreflang="pl"
                         lang="pl"
@@ -4430,7 +4441,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         polski
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#pt"
                         hreflang="pt"
                         lang="pt"
@@ -4438,7 +4449,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         português
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ro"
                         hreflang="ro"
                         lang="ro"
@@ -4446,7 +4457,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         română
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sk"
                         hreflang="sk"
                         lang="sk"
@@ -4454,7 +4465,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         slovenčina
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sl"
                         hreflang="sl"
                         lang="sl"
@@ -4462,7 +4473,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         slovenščina
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#fi"
                         hreflang="fi"
                         lang="fi"
@@ -4470,7 +4481,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         suomi
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#sv"
                         hreflang="sv"
                         lang="sv"
@@ -4495,7 +4506,7 @@ exports[`OE - User terms renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#zh"
                         hreflang="zh"
                         lang="zh"
@@ -4503,7 +4514,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         中文
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#tr"
                         hreflang="tr"
                         lang="tr"
@@ -4511,7 +4522,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         Türk
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ru"
                         hreflang="ru"
                         lang="ru"
@@ -4523,7 +4534,7 @@ exports[`OE - User terms renders correctly 1`] = `
                       class="col-md"
                     >
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="/example.html#ca"
                         hreflang="ca"
                         lang="ca"
@@ -4531,7 +4542,7 @@ exports[`OE - User terms renders correctly 1`] = `
                         Català
                       </a>
                       <a
-                        class="w-100 mb-2-5 btn justify-content-start"
+                        class="w-100 mb-2-5 btn justify-content-start bcl-link"
                         href="#"
                         hreflang="ar"
                         lang="ar"
@@ -4559,7 +4570,7 @@ exports[`OE - User terms renders correctly 1`] = `
           class="container"
         >
           <article
-            class="bg-transparent border-0 card"
+            class="bg-transparent border-0 bcl-card card"
           >
             <div
               class="row"
@@ -4613,6 +4624,7 @@ exports[`OE - User terms renders correctly 1`] = `
               </li>
             </ul>
             <form
+              class="bcl-form"
               novalidate="true"
               onsubmit="return false;"
             >
@@ -4640,7 +4652,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 class="mt-4-5 d-grid d-sm-block"
               >
                 <button
-                  class="btn btn-primary btn-md"
+                  class="bcl-btn btn btn-primary btn-md"
                   type="submit"
                 >
                   Save
@@ -4695,11 +4707,11 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -4712,11 +4724,11 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -4729,11 +4741,11 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -4763,7 +4775,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4773,7 +4785,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4783,7 +4795,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4793,7 +4805,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4816,7 +4828,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4826,7 +4838,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4836,7 +4848,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link
@@ -4846,7 +4858,7 @@ exports[`OE - User terms renders correctly 1`] = `
             class="mb-1"
           >
             <a
-              class="standalone"
+              class="standalone bcl-link"
               href="/example.html"
             >
               Link

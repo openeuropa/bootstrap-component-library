@@ -61,7 +61,6 @@ const demoData1 = {
   files,
   accordion: {
     ...accordion,
-    attributes: new drupalAttribute().addClass(["pb-4"]),
   },
 };
 

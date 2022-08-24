@@ -28,7 +28,7 @@
 {% set _flush = flush|default(false) %}
 {% set _items = items|default([]) %}
 {% set _open_item_id = open_item_id|default(0) %}
-{% set _classes = ['accordion'] %}
+{% set _classes = ['bcl-accordion', 'accordion'] %}
 {% if _flush %}
   {% set _classes = _classes|merge(['accordion-flush']) %}
 {% endif %}
@@ -39,10 +39,6 @@
 
 {% set attributes = attributes.addClass(_classes).setAttribute('id', 'accordion-' ~ _id) %}
 
-{% if _items is not empty %}
-<div
-  {{ attributes }}
->
 {%- if _title is not empty -%}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -51,6 +47,11 @@
     attributes: _title_attributes,
   } only %}
 {%- endif -%}
+
+{% if _items is not empty %}
+<div
+  {{ attributes }}
+>
 
 {% for _item in _items %}
   {% set _open_item = _open_item_id == loop.index %}

@@ -42,9 +42,9 @@
   {% set _items = items|default([]) %}
 
   {% if _navbar %}
-    {% set _classes = ['navbar-nav'] %}
+    {% set _classes = ['bcl-navbar', 'navbar-nav'] %}
   {% else %}
-    {% set _classes = ['nav'] %}
+    {% set _classes = ['bcl-nav', 'nav'] %}
   {% endif %}
   {% if _pills %}
     {% set _classes = _classes|merge(['nav-pills']) %}

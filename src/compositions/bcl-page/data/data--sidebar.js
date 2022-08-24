@@ -2,7 +2,6 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
-  title_attributes: new drupalAttribute().addClass("mb-0"),
   title: "Page content",
   id: "bcl-inpage-navigation",
   links: [

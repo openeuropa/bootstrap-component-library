@@ -76,11 +76,6 @@
   {% endif %}
 {% endif %}
 
-{% if _with_text %}
-<div class="{{ _wrapper_classes }}">
-  <div class="row">
-{% endif %}
-
 {%- if _title is not empty -%}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -89,6 +84,11 @@
     attributes: _title_attributes,
   } only %}
 {%- endif -%}
+
+{% if _with_text %}
+<div class="{{ _wrapper_classes }}">
+  <div class="row">
+{% endif %}
 
 {% if _with_text %}
     <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">

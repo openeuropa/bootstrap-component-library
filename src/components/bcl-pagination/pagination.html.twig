@@ -66,7 +66,7 @@
 {% set _variant = variant|default('') %}
 {% set _icon_path = icon_path|default({}) %}
 
-{% set _classes = 'pagination' %}
+{% set _classes = 'bcl-pagination pagination' %}
 {% if _size is not empty %}
   {% set _classes = _classes ~ ' pagination-' ~ _size %}
 {% endif %}

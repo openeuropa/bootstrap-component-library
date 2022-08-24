@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
 
 import dataDefault from "@openeuropa/bcl-gallery/data/data.js";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
@@ -16,6 +17,7 @@ const getArgTypes = () => ({
 
 const applyArgs = (data, args) => {
   correctPaths(data);
+  data.title_attributes = new drupalAttribute().addClass("mb-4");
 
   return Object.assign(data, args);
 };

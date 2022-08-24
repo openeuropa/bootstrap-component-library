@@ -68,7 +68,6 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<div {{ attributes }}>
 {% if _title is not empty %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -77,6 +76,8 @@
     attributes: _title_attributes,
   } only %}
 {% endif %}
+
+<div {{ attributes }}>
   <div
   {% if _wrapper_classes is not empty %}
     class="{{ _wrapper_classes|join(' ') }}"

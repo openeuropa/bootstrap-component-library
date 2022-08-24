@@ -15,7 +15,7 @@
 {% set _size = size|default('') %}
 {% set _assistive_text = assistive_text|default('') %}
 
-{% set _classes = ['spinner-' ~ _type] %}
+{% set _classes = ['bcl-spinner', 'spinner-' ~ _type] %}
 {% if _size is not empty %}
   {% set _classes = _classes|merge(['spinner-' ~ _type ~ '-' ~ _size]) %}
 {% endif %}
