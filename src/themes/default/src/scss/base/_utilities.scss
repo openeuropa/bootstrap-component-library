@@ -180,19 +180,19 @@ svg {
 // it considers only visible block-level elements.
 
 // Neutralizes top margin of first child, and bottom margin of last child.
-.reset-margins,
-.children-reset-margins > * {
+.bcl-reset-margins,
+.bcl-children-reset-margins > * {
   @include reset-margins();
 }
 
 // Neutralizes top margin of the first block-level child element.
-.reset-margin-top,
-.children-reset-margin-top > * {
+.bcl-reset-margin-top,
+.bcl-children-reset-margin-top > * {
   @include reset-margin-top();
 }
 
 // Neutralizes bottom margin of the last block-level child element.
-.reset-margin-bottom,
-.children-reset-margin-bottom > * {
+.bcl-reset-margin-bottom,
+.bcl-children-reset-margin-bottom > * {
   @include reset-margin-bottom();
 }
