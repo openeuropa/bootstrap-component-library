@@ -2647,43 +2647,105 @@ exports[`OE - Group listing Content renders correctly 1`] = `
     </div>
   </div>
   <main>
-    <div
-      class="container mt-4 mt-md-5"
+    <section
+      class="bcl-section"
     >
       <div
-        class="col-xxl-11"
+        class="container mt-4 mt-md-5"
       >
         <div
-          class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
+          class="col-xxl-11"
         >
-          <h1
-            class="mb-0 d-inline-block"
-          >
-            Group Name
-          </h1>
           <div
-            class="d-grid d-md-block ms-auto"
+            class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
           >
-            <button
-              aria-expanded="false"
-              autocomplete="off"
-              class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-              data-bs-toggle="dropdown"
-              id="dropdown-content"
-              type="button"
+            <h1
+              class="mb-0 d-inline-block"
             >
-              Create content
-            </button>
+              Group Name
+            </h1>
+            <div
+              class="d-grid d-md-block ms-auto"
+            >
+              <button
+                aria-expanded="false"
+                autocomplete="off"
+                class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
+                data-bs-toggle="dropdown"
+                id="dropdown-content"
+                type="button"
+              >
+                Create content
+              </button>
+              <ul
+                aria-labelledby="dropdown-content"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                  >
+                    Create an event
+                  </a>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item"
+                    type="button"
+                  >
+                    Add an article
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav
+            aria-label="content-navigation"
+            class="bcl__nav bg-gray n-mx-container nav nav-tabs"
+            role="tablist"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Home
+            </a>
+            <a
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Members
+            </a>
+            <a
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Content
+            </a>
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              id="dropdown-1"
+              role="button"
+            >
+              Links
+            </a>
             <ul
-              aria-labelledby="dropdown-content"
+              aria-labelledby="dropdown-1"
               class="dropdown-menu"
             >
               <li>
                 <a
                   class="dropdown-item"
-                  href="#"
+                  href="/example.html"
                 >
-                  Create an event
+                  I'm a link
                 </a>
               </li>
               <li>
@@ -2691,103 +2753,45 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                   class="dropdown-item"
                   type="button"
                 >
-                  Add an article
+                  I'm a button
+                </button>
+              </li>
+              <li>
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
+                  class="dropdown-item"
+                  disabled="true"
+                  type="button"
+                >
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
                 </button>
               </li>
             </ul>
-          </div>
+            <a
+              aria-label="other-link"
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Link
+            </a>
+          </nav>
         </div>
-        <nav
-          aria-label="content-navigation"
-          class="bcl__nav bg-gray n-mx-container nav nav-tabs"
-          role="tablist"
-        >
-          <a
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Home
-          </a>
-          <a
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Members
-          </a>
-          <a
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Content
-          </a>
-          <a
-            aria-expanded="false"
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            href="#"
-            id="dropdown-1"
-            role="button"
-          >
-            Links
-          </a>
-          <ul
-            aria-labelledby="dropdown-1"
-            class="dropdown-menu"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                href="/example.html"
-              >
-                I'm a link
-              </a>
-            </li>
-            <li>
-              <button
-                class="dropdown-item"
-                type="button"
-              >
-                I'm a button
-              </button>
-            </li>
-            <li>
-              <hr
-                class="dropdown-divider"
-              />
-            </li>
-            <li>
-              <button
-                aria-disabled="true"
-                class="dropdown-item"
-                disabled="true"
-                type="button"
-              >
-                I'm a disabled button
-              </button>
-            </li>
-            <li>
-              <button
-                class="dropdown-item active"
-                type="button"
-              >
-                I'm a active button
-              </button>
-            </li>
-          </ul>
-          <a
-            aria-label="other-link"
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Link
-          </a>
-        </nav>
       </div>
-    </div>
+    </section>
     <div
       class="container"
     >
@@ -4546,43 +4550,105 @@ exports[`OE - Group listing Member renders correctly 1`] = `
     </div>
   </div>
   <main>
-    <div
-      class="container mt-4 mt-md-5"
+    <section
+      class="bcl-section"
     >
       <div
-        class="col-xxl-11"
+        class="container mt-4 mt-md-5"
       >
         <div
-          class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
+          class="col-xxl-11"
         >
-          <h1
-            class="mb-0 d-inline-block"
-          >
-            Group Name
-          </h1>
           <div
-            class="d-grid d-md-block ms-auto"
+            class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container"
           >
-            <button
-              aria-expanded="false"
-              autocomplete="off"
-              class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
-              data-bs-toggle="dropdown"
-              id="dropdown-content"
-              type="button"
+            <h1
+              class="mb-0 d-inline-block"
             >
-              Create content
-            </button>
+              Group Name
+            </h1>
+            <div
+              class="d-grid d-md-block ms-auto"
+            >
+              <button
+                aria-expanded="false"
+                autocomplete="off"
+                class="d-inline-block mt-3 mt-md-0 mb-4 mb-md-0 dropdown-toggle btn btn-primary btn-md"
+                data-bs-toggle="dropdown"
+                id="dropdown-content"
+                type="button"
+              >
+                Create content
+              </button>
+              <ul
+                aria-labelledby="dropdown-content"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                  >
+                    Create an event
+                  </a>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item"
+                    type="button"
+                  >
+                    Add an article
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav
+            aria-label="content-navigation"
+            class="bcl__nav bg-gray n-mx-container nav nav-tabs"
+            role="tablist"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Home
+            </a>
+            <a
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Members
+            </a>
+            <a
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Content
+            </a>
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              id="dropdown-1"
+              role="button"
+            >
+              Links
+            </a>
             <ul
-              aria-labelledby="dropdown-content"
+              aria-labelledby="dropdown-1"
               class="dropdown-menu"
             >
               <li>
                 <a
                   class="dropdown-item"
-                  href="#"
+                  href="/example.html"
                 >
-                  Create an event
+                  I'm a link
                 </a>
               </li>
               <li>
@@ -4590,103 +4656,45 @@ exports[`OE - Group listing Member renders correctly 1`] = `
                   class="dropdown-item"
                   type="button"
                 >
-                  Add an article
+                  I'm a button
+                </button>
+              </li>
+              <li>
+                <hr
+                  class="dropdown-divider"
+                />
+              </li>
+              <li>
+                <button
+                  aria-disabled="true"
+                  class="dropdown-item"
+                  disabled="true"
+                  type="button"
+                >
+                  I'm a disabled button
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item active"
+                  type="button"
+                >
+                  I'm a active button
                 </button>
               </li>
             </ul>
-          </div>
+            <a
+              aria-label="other-link"
+              class="nav-link"
+              href="/example.html"
+              role="tab"
+            >
+              Link
+            </a>
+          </nav>
         </div>
-        <nav
-          aria-label="content-navigation"
-          class="bcl__nav bg-gray n-mx-container nav nav-tabs"
-          role="tablist"
-        >
-          <a
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Home
-          </a>
-          <a
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Members
-          </a>
-          <a
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Content
-          </a>
-          <a
-            aria-expanded="false"
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            href="#"
-            id="dropdown-1"
-            role="button"
-          >
-            Links
-          </a>
-          <ul
-            aria-labelledby="dropdown-1"
-            class="dropdown-menu"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                href="/example.html"
-              >
-                I'm a link
-              </a>
-            </li>
-            <li>
-              <button
-                class="dropdown-item"
-                type="button"
-              >
-                I'm a button
-              </button>
-            </li>
-            <li>
-              <hr
-                class="dropdown-divider"
-              />
-            </li>
-            <li>
-              <button
-                aria-disabled="true"
-                class="dropdown-item"
-                disabled="true"
-                type="button"
-              >
-                I'm a disabled button
-              </button>
-            </li>
-            <li>
-              <button
-                class="dropdown-item active"
-                type="button"
-              >
-                I'm a active button
-              </button>
-            </li>
-          </ul>
-          <a
-            aria-label="other-link"
-            class="nav-link"
-            href="/example.html"
-            role="tab"
-          >
-            Link
-          </a>
-        </nav>
       </div>
-    </div>
+    </section>
     <div
       class="container"
     >

@@ -2,7 +2,9 @@
 
 {% block banner %}
   {% if banner is defined %}
-    {% include '@oe-bcl/bcl-banner/banner.html.twig' with banner only %}
+    <section class="bcl-section">
+      {% include '@oe-bcl/bcl-banner/banner.html.twig' with banner only %}
+    </section>
   {% endif %}
 {% endblock %}
 
