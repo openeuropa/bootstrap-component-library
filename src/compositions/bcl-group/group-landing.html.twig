@@ -2,8 +2,8 @@
 
 {% block banner %}
 <div class="container">
+  <section class="bcl-section">
   {% if banner is not empty %}
-  <div class="mt-4 mt-md-5">
     {% if banner.image is not empty %}
       <img
         src="{{ banner.image.path }}"
@@ -33,15 +33,15 @@
         {% endif %}
       </div>
     {% endif %}
-  </div>
   {% endif %}
   {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
+  </section>
   {% if banner_description is not empty and contact is not empty %}
-  {% include '@oe-bcl/bcl-link/link.html.twig' with banner_description.collapse_trigger only %}
-  <div class="collapse d-md-block" id="banner-description">
-    <div class="row mt-md-4 mb-md-5 pb-md-5">
-      <div class="col-md-8">
-        <div class="ps-md-3">
+  <section class="bcl-section">
+    {% include '@oe-bcl/bcl-link/link.html.twig' with banner_description.collapse_trigger only %}
+    <div class="collapse d-md-block" id="banner-description">
+      <div class="row">
+        <div class="col-md-8">
           {% if banner_description.metas is not empty and banner_description.metas is iterable %}
           <div class="d-block">
             {% for _meta in banner_description.metas %}
@@ -54,20 +54,20 @@
           {% endif %}
           {{ banner_description.content }}
         </div>
-      </div>
-      <div class="col-md-4">
-        <h2 class="mb-3 pb-2">{{ contact.title }}</h2>
-        {% if contact.profiles is not empty and contact.profiles is iterable %}
-          {% for _profile in contact.profiles %}
-            {% include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
-          {% endfor %}
-        {% endif %}
-        {% if contact.more_link is not empty %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with contact.more_link only %}
-        {% endif %}
+        <div class="col-md-4">
+          <h2 class="mb-3 pb-2">{{ contact.title }}</h2>
+          {% if contact.profiles is not empty and contact.profiles is iterable %}
+            {% for _profile in contact.profiles %}
+              {% include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
+            {% endfor %}
+          {% endif %}
+          {% if contact.more_link is not empty %}
+            {% include '@oe-bcl/bcl-link/link.html.twig' with contact.more_link only %}
+          {% endif %}
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   {% endif %}
 </div>
 {% endblock %}

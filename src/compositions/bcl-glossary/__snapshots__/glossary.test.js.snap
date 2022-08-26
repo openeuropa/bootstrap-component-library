@@ -734,7 +734,7 @@ exports[`OE - Glossary detail renders correctly 1`] = `
           class="container"
         >
           <article
-            class="bg-transparent border-0 bcl-card card"
+            class="bg-transparent border-0 card"
           >
             <div
               class="row"
@@ -746,7 +746,7 @@ exports[`OE - Glossary detail renders correctly 1`] = `
                   class="card-body pt-0 px-0 pb-0"
                 >
                   <h1
-                    class="fs-1 card-title bcl-heading"
+                    class="fs-1 card-title bcl-preserve bcl-heading"
                   >
                     Active substance
                   </h1>
@@ -2215,7 +2215,7 @@ exports[`OE - Glossary listing renders correctly 1`] = `
           class="container"
         >
           <article
-            class="bg-transparent border-0 bcl-card card"
+            class="bg-transparent border-0 card"
           >
             <div
               class="row"
@@ -2227,7 +2227,7 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="card-body pt-0 px-0 pb-0"
                 >
                   <h1
-                    class="fs-1 card-title bcl-heading"
+                    class="fs-1 card-title bcl-preserve bcl-heading"
                   >
                     Glossary
                   </h1>
@@ -2250,394 +2250,402 @@ exports[`OE - Glossary listing renders correctly 1`] = `
       <div
         class="row"
       >
-        <div
-          class="col-lg-4 col-md-6 mb-5"
+        <section
+          class="bcl-section"
         >
-          <form
-            class="bcl-search-form submittable"
+          <div
+            class="col-lg-4 col-md-6 mb-5"
           >
-            <div
-              class="bcl-search-form__group"
+            <form
+              class="bcl-search-form submittable"
             >
-              <input
-                class="bcl-search-form__input bcl-form-control form-control"
-                placeholder="Search term in glossary"
-                type="search"
-              />
-              <button
-                class="bcl-search-form__submit bcl-btn btn btn-primary btn-md"
-                type="button"
+              <div
+                class="bcl-search-form__group"
               >
-                <span
-                  class="visually-hidden"
+                <input
+                  class="bcl-search-form__input bcl-form-control form-control"
+                  placeholder="Search term in glossary"
+                  type="search"
+                />
+                <button
+                  class="bcl-search-form__submit bcl-btn btn btn-primary btn-md"
+                  type="button"
                 >
-                  Search term in glossary
-                </span>
-                <svg
-                  class="bcl-icon bi icon--fluid"
+                  <span
+                    class="visually-hidden"
+                  >
+                    Search term in glossary
+                  </span>
+                  <svg
+                    class="bcl-icon bi icon--fluid"
+                  >
+                    <use
+                      xlink:href="/icons.svg#search"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <nav
+            aria-label="aria label"
+            role="navigation"
+          >
+            <ul
+              class="bcl-pagination pagination pagination--glossary"
+            >
+              <li
+                class="page-item active"
+              >
+                <a
+                  aria-current="page"
+                  class="page-link"
+                  href="/example.html"
                 >
-                  <use
-                    xlink:href="/icons.svg#search"
-                  />
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
-        <nav
-          aria-label="aria label"
-          role="navigation"
-        >
-          <ul
-            class="bcl-pagination pagination pagination--glossary"
+                  A
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  B
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  C
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  D
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  E
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  F
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  G
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  H
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  I
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  J
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  K
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  L
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  M
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  N
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  O
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  P
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  Q
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  R
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  S
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  T
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  U
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  V
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  W
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  X
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  Y
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  Z
+                </a>
+              </li>
+              <li
+                class="page-item"
+              >
+                <a
+                  class="page-link"
+                  href="/example.html"
+                >
+                  0-9
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="d-md-flex justify-content-end mb-md-5 align-items-center border-bottom-md border-top-md border-gray-300 py-5"
           >
-            <li
-              class="page-item active"
+            <label
+              class="form-label mb-0"
             >
-              <a
-                aria-current="page"
-                class="page-link"
-                href="/example.html"
+              Sort by
+            </label>
+            <select
+              aria-label="sort-select"
+              class="mt-2 mt-md-0 mb-4 mb-md-0 mx-md-4 w-auto bcl-form-select form-select"
+            >
+              <option
+                value="1"
               >
-                A
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
+                A-Z
+              </option>
+              <option
+                value="2"
               >
-                B
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
+                Z-A
+              </option>
+              <option
+                selected=""
+                value="3"
               >
-                C
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
+                Recent entry
+              </option>
+              <option
+                value="4"
               >
-                D
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
+                Oldest Entry
+              </option>
+              <option
+                value="5"
               >
-                E
-              </a>
-            </li>
-            <li
-              class="page-item"
+                Latest update
+              </option>
+            </select>
+            <label
+              class="form-label mb-0"
             >
-              <a
-                class="page-link"
-                href="/example.html"
+              Items per page
+            </label>
+            <select
+              aria-label="sort-select"
+              class="mt-2 mt-md-0 mb-md-0 ms-md-4 w-auto bcl-form-select form-select"
+            >
+              <option
+                value="10"
               >
-                F
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
+                10
+              </option>
+              <option
+                selected=""
+                value="20"
               >
-                G
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
+                20
+              </option>
+              <option
+                value="50"
               >
-                H
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                I
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                J
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                K
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                L
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                M
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                N
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                O
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                P
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                Q
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                R
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                S
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                T
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                U
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                V
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                W
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                X
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                Y
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                Z
-              </a>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="/example.html"
-              >
-                0-9
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div
-          class="d-md-flex justify-content-end mb-md-5 align-items-center border-bottom-md border-top-md border-gray-300 py-5"
-        >
-          <label
-            class="form-label mb-0"
-          >
-            Sort by
-          </label>
-          <select
-            aria-label="sort-select"
-            class="mt-2 mt-md-0 mb-4 mb-md-0 mx-md-4 w-auto bcl-form-select form-select"
-          >
-            <option
-              value="1"
-            >
-              A-Z
-            </option>
-            <option
-              value="2"
-            >
-              Z-A
-            </option>
-            <option
-              selected=""
-              value="3"
-            >
-              Recent entry
-            </option>
-            <option
-              value="4"
-            >
-              Oldest Entry
-            </option>
-            <option
-              value="5"
-            >
-              Latest update
-            </option>
-          </select>
-          <label
-            class="form-label mb-0"
-          >
-            Items per page
-          </label>
-          <select
-            aria-label="sort-select"
-            class="mt-2 mt-md-0 mb-md-0 ms-md-4 w-auto bcl-form-select form-select"
-          >
-            <option
-              value="10"
-            >
-              10
-            </option>
-            <option
-              selected=""
-              value="20"
-            >
-              20
-            </option>
-            <option
-              value="50"
-            >
-              50
-            </option>
-          </select>
-        </div>
+                50
+              </option>
+            </select>
+          </div>
+        </section>
         <div
           class="col-lg-10 col-xl-9 col-xxl-8"
         >
-          <h2
-            class="bcl-heading"
+          <section
+            class="bcl-section"
           >
-            Starting with "A" (48)
-          </h2>
+            <h2
+              class="bcl-heading"
+            >
+              Starting with "A" (48)
+            </h2>
+          </section>
           <section
             class="bcl-section"
           >
@@ -2651,13 +2659,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2678,13 +2686,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2705,13 +2713,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2732,13 +2740,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2759,13 +2767,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2786,13 +2794,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2813,13 +2821,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2840,13 +2848,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2867,13 +2875,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2894,13 +2902,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2921,13 +2929,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2948,13 +2956,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -2975,13 +2983,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -3002,13 +3010,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"
@@ -3029,13 +3037,13 @@ exports[`OE - Glossary listing renders correctly 1`] = `
                   class="col"
                 >
                   <article
-                    class="listing-item border-bottom border-md-0 border-0 bcl-card card"
+                    class="listing-item border-bottom border-md-0 border-0 card"
                   >
                     <div
                       class="card-body p-0 pb-md-0 pb-3"
                     >
                       <h1
-                        class="fs-5 card-title bcl-heading"
+                        class="fs-5 card-title bcl-preserve bcl-heading"
                       >
                         <a
                           class="bcl-link standalone"

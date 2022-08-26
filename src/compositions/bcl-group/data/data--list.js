@@ -108,7 +108,7 @@ module.exports = {
           classes: "mb-2-5",
         },
         image: {
-          path: "https://picsum.photos/160?random=1",
+          path: "https://picsum.photos/160",
           alt: "alt img",
           position: "top",
           classes: "d-none d-md-block",

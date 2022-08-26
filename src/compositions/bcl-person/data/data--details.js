@@ -110,7 +110,6 @@ module.exports = {
       {
         title: "Drupal articles",
         title_tag: "h3",
-        title_attributes: new drupalAttribute().addClass(["mb-3"]),
         item_title: "Drupal article 1",
         language: "English",
         meta: "(16.2 MB - PDF)",

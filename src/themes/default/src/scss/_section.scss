@@ -3,33 +3,32 @@ $bcl-spacing-m: 2rem;
 
 .bcl-section {
   @include clearfix;
-  *[class*=" bcl-"],
-  *[class^="bcl-"] {
-    h1,
-    h2,
-    h3,
-    h4,
-    .h1,
-    .h2,
-    .h3,
-    .h4,
-    .bcl-heading {
-      margin-bottom: $bcl-spacing-m;
-      margin-top: $bcl-spacing-m;
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
+  h1:not(.bcl-preserve),
+  h2:not(.bcl-preserve),
+  h3:not(.bcl-preserve),
+  h4:not(.bcl-preserve),
+  .h1:not(.bcl-preserve),
+  .h2:not(.bcl-preserve),
+  .h3:not(.bcl-preserve),
+  .h4:not(.bcl-preserve),
+  .bcl-heading:not(.bcl-preserve) {
+    margin-bottom: $bcl-spacing-m;
+    margin-top: $bcl-spacing-m;
 
-    h5,
-    h6,
-    .h5,
-    .h6 {
-      margin-bottom: $bcl-spacing-s;
-      margin-top: $bcl-spacing-s;
-      &:first-of-type {
-        margin-top: 0;
-      }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h5:not(.bcl-preserve),
+  h6:not(.bcl-preserve),
+  .h5:not(.bcl-preserve),
+  .h6:not(.bcl-preserve) {
+    margin-bottom: $bcl-spacing-s;
+    margin-top: $bcl-spacing-s;
+
+    &:first-child {
+      margin-top: 0;
     }
   }
 

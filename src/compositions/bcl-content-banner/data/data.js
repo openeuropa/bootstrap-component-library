@@ -20,7 +20,7 @@ module.exports = {
     true
   )}`,
   image: {
-    path: "https://picsum.photos/255/255?random=6",
+    path: "https://picsum.photos/255/255",
     alt: "alt img",
   },
   image_size: "lg",

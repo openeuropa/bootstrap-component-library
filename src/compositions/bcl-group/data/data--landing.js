@@ -214,7 +214,7 @@ module.exports = {
         },
         {
           image:
-            "<img class='rounded-circle me-3-5' alt='alt-img-2' src='https://picsum.photos/50/50?random=2'>",
+            "<img class='rounded-circle me-3-5' alt='alt-img-2' src='https://picsum.photos/50/50'>",
           content:
             "<a href='/example.html' class='fw-bold'>Adjur Tichar</a> commented on the article <a href='#' aria-label='read more about spaceX 2'>SpaceX satellites spotted: how good is this for our health and environment?</a>",
           meta: [

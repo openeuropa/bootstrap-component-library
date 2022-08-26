@@ -78,7 +78,7 @@
 {% set _badges = badges|default([]) %}
 {% set _links = links|default([]) %}
 
-{% set _classes = ['bcl-card', 'card'] %}
+{% set _classes = ['card'] %}
 {% if _text_color is not empty %}
   {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
 {% endif %}
@@ -174,7 +174,7 @@
     {% if _title_attributes.class is empty %}
       {% set _title_attributes = _title_attributes.addClass('fs-4') %}
     {% endif %}
-    {% set _title_attributes = _title_attributes.addClass('card-title') %}
+    {% set _title_attributes = _title_attributes.addClass('card-title bcl-preserve') %}
     {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: _title,
       title_tag: _title_tag,

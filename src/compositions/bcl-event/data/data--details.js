@@ -2,7 +2,6 @@ const drupalAttribute = require("drupal-attribute");
 
 const detailsListMultiple = {
   details_list: {
-    attributes: new drupalAttribute().addClass(["mt-3", "mb-4"]),
     variant: "horizontal",
     items: [
       {

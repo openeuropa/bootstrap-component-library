@@ -34,7 +34,7 @@
 
 {% set _title_classes = ['display-6'] %}
 {% if _description is not empty or _link is not empty %}
-  {% set _title_classes = _title_classes|merge(['mb-3']) %}
+  {% set _title_classes = _title_classes|merge(['mb-3 bcl-preserve']) %}
 {% endif %}
 
 {% set _title_attributes = _title_attributes.addClass(_title_classes) %}

@@ -41,24 +41,24 @@ module.exports = {
     {
       title_id: "summary",
       title: "Summary",
-      content: getDummyText(6),
+      content: getDummyText(6, true),
     },
     {
       title_id: "objective",
       title: "Objective",
-      content: getDummyText(6),
+      content: getDummyText(6, true),
     },
     {
       title_id: "impact",
       title: "Impact",
-      content: getDummyText(6),
+      content: getDummyText(6, true),
     },
   ],
   second_paragraphs: [
     {
       title_id: "achievements",
       title: "Achievements and Milestones",
-      content: getDummyText(6),
+      content: getDummyText(6, true),
     },
   ],
 };

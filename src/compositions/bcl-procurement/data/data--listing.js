@@ -7,7 +7,7 @@ module.exports = {
     title_tag: "h1",
     content: getDummyText(5),
     image: {
-      path: "https://picsum.photos/255/255?random=6",
+      path: "https://picsum.photos/255/255",
       alt: "alt img",
     },
   },
