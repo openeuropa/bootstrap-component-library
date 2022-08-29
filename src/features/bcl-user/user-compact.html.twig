@@ -13,6 +13,9 @@
   - infos (array of strings) (default: [])
 #}
 
+{% set _infos = infos|default([]) %}
+{% set _name = name|default({}) %}
+{% set _picture = picture|default({}) %}
 {% set _picture_classes = 'rounded-pill' %}
 {% set _classes = ['bcl-user-compact', 'd-flex', 'mb-3'] %}
 
@@ -22,8 +25,8 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-{% if picture is not empty and picture.classes is not empty %}
-  {% set _picture_classes = _picture_classes ~ ' ' ~ picture.classes %}
+{% if _picture is not empty and _picture.classes is not empty %}
+  {% set _picture_classes = _picture_classes ~ ' ' ~ _picture.classes %}
 {% endif %}
 
 <div
@@ -32,21 +35,26 @@
   <div class="flex-shrink-0">
     <img
       class="{{ _picture_classes }}"
-      src="{{ picture.path }}"
-      alt="{{ picture.alt }}"
+      src="{{ _picture.path }}"
+      alt="{{ _picture.alt }}"
     >
   </div>
   <div class="flex-grow-1 ms-3">
-    {% if name.link is not empty %}
-      <a href="{{ name.link }}" class="fs-5 standalone mb-0">{{ name.text }}</a>
-    {% else %}
-      <p class="fs-5 mb-0 text-primary">{{ name.text }}</p>
-    {% endif %}
+  {% if _name.link is not empty %}
+    <a href="{{ _name.link }}" class="fs-5 standalone mb-0">{{ _name.text }}</a>
+  {% else %}
+    <p class="fs-5 mb-0 text-primary">{{ _name.text }}</p>
+  {% endif %}
+
+  {% if _infos is not empty %}
     <div class="d-flex flex-wrap">
-      {% for info in infos %}
-        <span class="text-muted text-nowrap{{ loop.last ? '' :' me-4-5'}}">{{ info }}</span>
-      {% endfor %}
+    {% for _info in _infos %}
+      {% if _info is not empty %}
+      <span class="text-muted text-nowrap{{ loop.last ? '' :' me-4-5'}}">{{ _info }}</span>
+      {% endif %}
+    {% endfor %}
     </div>
+  {% endif %}
   </div>
 </div>
 
