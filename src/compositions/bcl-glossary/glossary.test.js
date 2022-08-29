@@ -13,7 +13,7 @@ const render = (params) => renderTwigFileAsNode(pageTemplate, params);
 const renderListing = (params) => renderTwigFileAsNode(listingPage, params);
 
 expect.extend(toHaveNoViolations);
-
+jest.setTimeout(10000);
 describe("OE - Glossary listing", () => {
   test(`renders correctly`, () => {
     expect.assertions(1);

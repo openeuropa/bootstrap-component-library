@@ -52,12 +52,6 @@ describe("OE - User", () => {
     ).toHaveNoViolations();
   });
 
-  test(`details passes the accessibility tests`, async () => {
-    expect(
-      await axe(renderTwigFileAsHtml(template, dataUser))
-    ).toHaveNoViolations();
-  });
-
   test(`terms passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(templateTerms, dataTerms))
@@ -67,6 +61,13 @@ describe("OE - User", () => {
   test(`compact passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(templateCompact, demoDataCompact, true))
+    ).toHaveNoViolations();
+  });
+
+  jest.setTimeout(10000);
+  test(`details passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataUser))
     ).toHaveNoViolations();
   });
 });
