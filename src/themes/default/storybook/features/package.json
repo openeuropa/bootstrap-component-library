@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@openeuropa/bcl-storybook-default-features",
+  "name": "@openeuropa/bcl-storybook-features",
   "author": "European Commission",
   "license": "EUPL-1.2",
   "version": "0.26.0",
@@ -11,8 +11,8 @@
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
     "start": "start-storybook -p 9001 -c .storybook",
-    "dist": "build-storybook -c .storybook -o ../../../../build/default",
-    "dist-chromatic": "STORYBOOK_ENV=chromatic build-storybook -c .storybook -o ../../../../build/default"
+    "dist": "build-storybook -c .storybook -o ../../../../../build/features",
+    "dist-chromatic": "STORYBOOK_ENV=chromatic build-storybook -c .storybook -o ../../../../../build/features"
   },
   "devDependencies": {
     "@babel/core": "7.18.10",

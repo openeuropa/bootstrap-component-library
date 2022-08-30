@@ -9,9 +9,11 @@ const ports = {
   default: "5001",
   joinup: "5002",
   ucpkn: "5003",
+  features: "5004",
 };
 
-const theme = instance === "dev" ? "default" : instance;
+const theme =
+  instance === "dev" || instance === "features" ? "default" : instance;
 const port = ports[instance];
 
 const handlers = [

@@ -11,8 +11,8 @@
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
     "start": "start-storybook -p 9001 -c .storybook",
-    "dist": "build-storybook -c .storybook -o ../../../../build/default",
-    "dist-chromatic": "STORYBOOK_ENV=chromatic build-storybook -c .storybook -o ../../../../build/default"
+    "dist": "build-storybook -c .storybook -o ../../../../../build/default",
+    "dist-chromatic": "STORYBOOK_ENV=chromatic build-storybook -c .storybook -o ../../../../../build/default"
   },
   "devDependencies": {
     "@babel/core": "7.18.13",
