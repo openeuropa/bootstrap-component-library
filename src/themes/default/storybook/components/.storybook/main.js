@@ -5,6 +5,7 @@ const chromatic = process.env.STORYBOOK_ENV;
 let stories = ["../bcl-stories/!(test*).story.js"];
 
 const addons = [
+  "@openeuropa/storybook-addon-bcl-navigation",
   "@storybook/addon-docs",
   "@openeuropa/storybook-addon-code",
   "@storybook/addon-controls",
