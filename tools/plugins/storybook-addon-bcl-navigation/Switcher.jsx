@@ -18,6 +18,8 @@ function Switcher() {
         style={{ borderRadius: 0, fontWeight: "bold" }}
       >
         {isDefault ? (
+          <span>BCL</span>
+        ) : (
           <a
             style={{
               color: "#999999",
@@ -28,8 +30,6 @@ function Switcher() {
           >
             <span>BCL</span>
           </a>
-        ) : (
-          <span>BCL</span>
         )}
       </IconButton>
       <IconButton
@@ -39,6 +39,8 @@ function Switcher() {
         style={{ borderRadius: 0, fontWeight: "bold" }}
       >
         {isFeatures ? (
+          <span>Features</span>
+        ) : (
           <a
             style={{
               color: "#999999",
@@ -49,8 +51,6 @@ function Switcher() {
           >
             <span>Features</span>
           </a>
-        ) : (
-          <span>Features</span>
         )}
       </IconButton>
       <Separator />
@@ -61,6 +61,8 @@ function Switcher() {
         style={{ borderRadius: 0, fontWeight: "bold" }}
       >
         {isJoinup ? (
+          <span>Joinup</span>
+        ) : (
           <a
             style={{
               color: "#999999",
@@ -71,8 +73,6 @@ function Switcher() {
           >
             <span>Joinup</span>
           </a>
-        ) : (
-          <span>Joinup</span>
         )}
       </IconButton>
       <IconButton
@@ -82,6 +82,8 @@ function Switcher() {
         style={{ borderRadius: 0, fontWeight: "bold" }}
       >
         {isUcpkn ? (
+          <span>Ucpkn</span>
+        ) : (
           <a
             style={{
               color: "#999999",
@@ -92,8 +94,6 @@ function Switcher() {
           >
             <span>Ucpkn</span>
           </a>
-        ) : (
-          <span>Ucpkn</span>
         )}
       </IconButton>
     </>
