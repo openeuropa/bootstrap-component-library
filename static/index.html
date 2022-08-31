@@ -77,19 +77,21 @@
         <div class="collapse navbar-collapse" id="bdNavbar">
           <ul class="navbar-nav d-block d-md-flex flex-row flex-grow-1 flex-wrap bd-navbar-nav pt-2 py-md-0">
             <li class="nav-item d-block d-md-flex">
-              <a class="nav-link p-2 active" aria-current="true" href="/">Home</a>
+              <a class="nav-link"  href="/default">BCL Library</a>
             </li>
             <li class="nav-item d-block d-md-flex">
-              <a class="nav-link p-2"  href="/default">BCL components</a>
+              <a class="nav-link"  href="/features">BCL Features</a>
             </li>
-            <li class="nav-item d-block d-md-flex">
-              <a class="nav-link p-2"  href="/features">BCL features</a>
-            </li>
-            <li class="nav-item d-block ms-auto d-md-flex">
-              <a class="nav-link p-2" href="/joinup">Joinup</a>
-            </li>
-            <li class="nav-item d-block d-md-flex">
-              <a class="nav-link p-2" href="/ucpkn">Ucpkn</a>
+            <li class="dropdown ms-auto">
+              <button class="dropdown-toggle btn bg-white" aria-expanded="false" data-bs-toggle="dropdown" id="dropdown-1" autocomplete="off" type="button">Projects</button>
+              <ul aria-labelledby="dropdown-1" class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/joinup">Joinup</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/ucpkn">Ucpkn</a>
+                </li>
+              </ul>
             </li>
           </ul>
           <hr class="d-md-none text-white-50" />
