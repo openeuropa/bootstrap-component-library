@@ -277,6 +277,8 @@ module.exports = [
   "house.svg",
   "house-fill.svg",
   "pin-fill.svg",
+  "mortarboard.svg",
+  "mortarboard-fill.svg",
 
   // Geo
   "geo-alt.svg",
