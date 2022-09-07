@@ -88,7 +88,7 @@
   {{ attributes }}
 >
   {% if _variant == 'card' %}
-    <div class="border-bottom px-3-5 py-3">
+    <div class="border-bottom px-3-5 py-3 d-md-flex">
       <div class="pe-2 pb-2">
       {% if _icon is not empty %}
         {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
@@ -110,7 +110,7 @@
     </div>
   {% endif %}
   <div class="px-3-5 py-3">
-    <div class="d-flex">
+    <div class="d-md-flex">
       {% if _icon is not empty and _variant == 'default' %}
         <div class="pe-2 pb-2">
         {% if _icon is not empty %}
