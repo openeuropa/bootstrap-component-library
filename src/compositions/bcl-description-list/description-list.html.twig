@@ -6,7 +6,7 @@
   - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - bordered (boolean) (default: '')
+  - bordered (boolean) (default: false)
   - col_size (int) (default: '')
     options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   - items (array) (default: []): format: [
@@ -39,6 +39,12 @@
 {% set _item_classes = 'mb-3' %}
 {% set _col_classes = 'col' %}
 
+{% if _variant != 'horizontal' %}
+  {% set _container_tag = 'dl' %}
+{% else %}
+  {% set _container_tag = 'div' %}
+{% endif %}
+
 {% if _bordered %}
   {% set _item_classes = 'border-bottom pb-2-5 mb-2-5' %}
 {% endif %}
@@ -58,66 +64,56 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<div
+<{{ _container_tag }}
   {{ attributes }}
 >
-  {% if _variant != 'horizontal' %}
-  <dl>
-  {% endif %}
   {% for _item in _items %}
-    {% if loop.last %}
-      {% set _item_classes = '' %}
-    {% endif %}
-    <div
+  {% if loop.last %}
+    {% set _item_classes = '' %}
+  {% endif %}
+  <div
     {% if _item_classes is not empty %}
       class="{{ _item_classes }}"
     {% endif %}
-    >
+  >
     {% if _variant == 'horizontal' %}
     <dl class="row mb-0">
     {% endif %}
-    {% if _item.term is not empty %}
-      {% if _variant == 'horizontal' %}
-        <div class="{{ _col_classes }}">
+      {% if _item.term is not empty %}
+        {% if _variant == 'horizontal' %}
+          <div class="{{ _col_classes }}">
+        {% endif %}
+        {% if _item.term is iterable %}
+          {% for _term in _item.term %}
+            {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _term only -%}
+          {% endfor %}
+        {% else %}
+            {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _item.term only -%}
+        {% endif %}
+        {% if _variant == 'horizontal' %}
+          </div>
+        {% endif %}
       {% endif %}
-
-      {% if _item.term is iterable %}
-        {% for _term in _item.term %}
-          {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _term only -%}
-        {% endfor %}
-      {% else %}
-          {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _item.term only -%}
+      {% if _item.definition is not empty %}
+        {% if _variant == 'horizontal' %}
+          <div class="col">
+        {% endif %}
+        {% if _item.definition is iterable %}
+          {% for _definition in _item.definition %}
+            {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _definition only -%}
+          {% endfor %}
+        {% else %}
+          {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _item.definition only -%}
+        {% endif %}
+        {% if _variant == 'horizontal' %}
+          </div>
+        {% endif %}
       {% endif %}
-
-      {% if _variant == 'horizontal' %}
-        </div>
-      {% endif %}
-    {% endif %}
-    {% if _item.definition is not empty %}
-      {% if _variant == 'horizontal' %}
-        <div class="col">
-      {% endif %}
-
-      {% if _item.definition is iterable %}
-        {% for _definition in _item.definition %}
-          {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _definition only -%}
-        {% endfor %}
-      {% else %}
-        {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _item.definition only -%}
-      {% endif %}
-
-      {% if _variant == 'horizontal' %}
-        </div>
-      {% endif %}
-    {% endif %}
-    </div>
     {% if _variant == 'horizontal' %}
     </dl>
     {% endif %}
+  </div>
   {% endfor %}
-  {% if _variant != 'horizontal' %}
-  </dl>
-  {% endif %}
-</div>
+</{{ _container_tag }}>
 
 {% endapply %}
