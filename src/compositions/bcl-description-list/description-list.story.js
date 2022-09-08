@@ -23,6 +23,16 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
+  col_size: {
+    name: "col size",
+    type: { name: "select" },
+    options: [4, 8],
+    description: "Size of the column in horizontal variant",
+    table: {
+      type: { summary: "int" },
+      category: "Style",
+    },
+  },
 });
 
 const applyArgs = (data, args) => Object.assign(data, args);
@@ -31,6 +41,9 @@ export default {
   title: "Paragraphs/Description List",
   decorators: [withCode, withDesign],
   parameters: {
+    viewport: {
+      defaultViewport: "tablet",
+    },
     design: [
       {
         name: "Mockup",
@@ -49,6 +62,6 @@ Default.argTypes = getArgTypes(demoData);
 export const Horizontal = (args) =>
   descriptionList(applyArgs(correctPaths(demoDataHorizontal), args));
 
-Horizontal.storyName = "Horizontal Description List";
+Horizontal.storyName = "Horizontal";
 Horizontal.args = getArgs(demoDataHorizontal);
 Horizontal.argTypes = getArgTypes(demoDataHorizontal);

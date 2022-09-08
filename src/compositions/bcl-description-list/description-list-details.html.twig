@@ -1,0 +1,40 @@
+{% apply spaceless %}
+
+{#
+  Parameters:
+  - button: (button object) (default: {})
+  - link: (link object) (default: {})
+  - icon: (icon object) (default: {})
+  - label: (string) (default: '')
+
+  BLOCKS:
+  - definition
+#}
+
+{% set _button = button|default({}) %}
+{% set _link = link|default({}) %}
+{% set _icon = icon|default({}) %}
+{% set _label = label|default('') %}
+
+
+<dd>
+{%- block definition -%}
+  {%- if _button is not empty -%}
+    {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+  {%- elseif _link is not empty %}
+    {% include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
+  {%- else -%}
+    {%- if _icon is not empty -%}
+      {%- set _icon_classes = ["me-2"] -%}
+      {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+        attributes: create_attribute().addClass(_icon_classes)
+      }) only -%}
+      <p class="mb-0 d-inline-block">{{ _label }}</p>
+    {%- else -%}
+      {{- _label -}}
+    {%- endif -%}
+  {%- endif -%}
+{% endblock %}
+</dd>
+
+{% endapply %}

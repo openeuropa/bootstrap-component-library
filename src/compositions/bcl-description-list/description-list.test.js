@@ -72,6 +72,18 @@ describe("OE - Description List with title", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`horizontal with different col size renders correctly`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDataHorizontal,
+        col_size: 7,
+        title: "Description list test title",
+        title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`horizontal and bordered renders correctly`, () => {
     expect.assertions(1);
     return expect(

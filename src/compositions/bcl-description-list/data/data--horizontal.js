@@ -10,7 +10,9 @@ module.exports = {
           path: "/icons.svg",
         },
       },
-      definition: "Description text goes here.",
+      definition: {
+        label: "Description text goes here.",
+      },
     },
     {
       term: [
@@ -26,7 +28,9 @@ module.exports = {
           },
         },
       ],
-      definition: "Description text goes here.",
+      definition: {
+        label: "Description text goes here.",
+      },
     },
     {
       term: {

@@ -1,0 +1,32 @@
+{% apply spaceless %}
+
+{#
+  Parameters:
+  - icon: (icon object) (default: {})
+  - color: (string) (default: '')
+  - label: (string) (default: '')
+#}
+
+{% set _icon = icon|default({}) %}
+{% set _color = color|default('') %}
+{% set _label = label|default('') %}
+
+<dt>
+  <div class="d-flex">
+  {%- if _icon is not empty -%}
+    {% set _icon_classes = ["me-2", "align-self-center"] %}
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+      attributes: create_attribute().addClass(_icon_classes)
+    }) only %}
+    <p class="mb-0 d-inline-block">{{ _label }}</p>
+  {%- elseif _color is not empty -%}
+    <div class="d-flex align-items-center">
+      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>{{- _label -}}
+    </div>
+  {%- else -%}
+    {{- _label -}}
+  {%- endif -%}
+  </div>
+</dt>
+
+{% endapply %}

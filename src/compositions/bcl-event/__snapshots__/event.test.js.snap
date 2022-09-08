@@ -2846,51 +2846,71 @@ exports[`OE - event page renders correctly 1`] = `
           <div
             class="mt-3 mb-4 bcl-description-list"
           >
-            <dl>
-              <div
-                class="d-md-grid grid-3-9 mb-3"
+            <div
+              class="mb-3"
+            >
+              <dl
+                class="row mb-0"
               >
-                <dt
-                  class="d-flex"
+                <div
+                  class="col"
                 >
-                  <svg
-                    class="me-2 mt-1 bi icon--xs"
-                  >
-                    <use
-                      xlink:href="/icons.svg#calendar-fill"
-                    />
-                  </svg>
-                  <p
-                    class="mb-0 d-inline-block"
-                  >
-                    Date
-                  </p>
-                </dt>
-                <dd>
-                  17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
-                </dd>
-              </div>
-              <div
-                class="d-md-grid grid-3-9 mb-3"
+                  <dt>
+                    <div
+                      class="d-flex"
+                    >
+                      <svg
+                        class="me-2 align-self-center bi icon--xs"
+                      >
+                        <use
+                          xlink:href="/icons.svg#calendar-fill"
+                        />
+                      </svg>
+                      <p
+                        class="mb-0 d-inline-block"
+                      >
+                        Date
+                      </p>
+                    </div>
+                  </dt>
+                </div>
+                <div
+                  class="col"
+                >
+                  <dd />
+                </div>
+              </dl>
+            </div>
+            <div>
+              <dl
+                class="row mb-0"
               >
-                <dt
-                  class="d-flex"
+                <div
+                  class="col"
                 >
-                  <svg
-                    class="me-2 mt-1 bi icon--xs"
-                  >
-                    <use
-                      xlink:href="/icons.svg#geo-alt-fill"
-                    />
-                  </svg>
-                  <p
-                    class="mb-0 d-inline-block"
-                  >
-                    Location
-                  </p>
-                </dt>
-                <dd>
-                  <div>
+                  <dt>
+                    <div
+                      class="d-flex"
+                    >
+                      <svg
+                        class="me-2 align-self-center bi icon--xs"
+                      >
+                        <use
+                          xlink:href="/icons.svg#geo-alt-fill"
+                        />
+                      </svg>
+                      <p
+                        class="mb-0 d-inline-block"
+                      >
+                        Location
+                      </p>
+                    </div>
+                  </dt>
+                </div>
+                <div
+                  class="col"
+                >
+                  <dd>
                     <svg
                       class="me-2 bi icon--fluid"
                     >
@@ -2903,10 +2923,10 @@ exports[`OE - event page renders correctly 1`] = `
                     >
                       Barcelona, Spain
                     </p>
-                  </div>
-                </dd>
-              </div>
-            </dl>
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
           <h2
             class="my-4"
