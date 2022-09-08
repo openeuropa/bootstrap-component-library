@@ -60,7 +60,9 @@ const detailsListSingle = {
             path: "/icons.svg",
           },
         },
-        definition: "17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)",
+        definition: {
+          label: "17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)",
+        },
       },
       {
         term: {
