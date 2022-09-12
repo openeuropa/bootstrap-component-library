@@ -10,6 +10,7 @@ const getArgs = () => ({
   title: "",
   title_tag: "h2",
   bordered: false,
+  col_classes: "col-12 col-md-4",
 });
 
 const getArgTypes = () => ({
@@ -23,11 +24,10 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
-  col_size: {
-    name: "col size",
-    type: { name: "select" },
-    options: [4, 8],
-    description: "Size of the column in horizontal variant",
+  col_classes: {
+    name: "col classes",
+    type: { name: "string" },
+    description: "Column classes in horizontal variant",
     table: {
       type: { summary: "int" },
       category: "Style",

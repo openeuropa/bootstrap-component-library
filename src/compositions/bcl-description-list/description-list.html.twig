@@ -7,8 +7,7 @@
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - bordered (boolean) (default: false)
-  - col_size (int) (default: '')
-    options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  - col_classes (string) (default: '')
   - items (array) (default: []): format: [
       {
         term (object or array of descriptionListTitle object)
@@ -27,17 +26,14 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
-{% set _col_size = col_size|default('') %}
+{% set _col_classes = col_classes|default('') %}
 {% set _variant = variant|default('') %}
-
-{% set _classes = ['bcl-description-list'] %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
 {% set _item_classes = 'mb-3' %}
-{% set _col_classes = 'col' %}
 
 {% if _variant != 'horizontal' %}
   {% set _container_tag = 'dl' %}
@@ -49,10 +45,6 @@
   {% set _item_classes = 'border-bottom pb-2-5 mb-2-5' %}
 {% endif %}
 
-{% if _col_size is not empty %}
-  {% set _col_classes = _col_classes ~ '-' ~ _col_size %}
-{% endif %}
-
 {% if _title is not empty %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -62,7 +54,7 @@
   } only %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{% set attributes = attributes.addClass(['bcl-description-list']) %}
 
 <{{ _container_tag }}
   {{ attributes }}
