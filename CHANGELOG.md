@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.27.0 (2022-08-31)
+
+#### :bug: Bug Fix
+
+* [#432](https://github.com/openeuropa/bootstrap-component-library/pull/432) fix(user): Adding condition, using local variables in user compact - OEL-1945 ([@planctus](https://github.com/planctus))
+
+#### :nail_care: Enhancement
+
+* [#442](https://github.com/openeuropa/bootstrap-component-library/pull/442) feat(description-list): Adapting markup - OEL-1986 ([@planctus](https://github.com/planctus))
+* [#440](https://github.com/openeuropa/bootstrap-component-library/pull/440) feat(icons): Adding mortarboard icons - OEL-1977 ([@planctus](https://github.com/planctus))
+* [#439](https://github.com/openeuropa/bootstrap-component-library/pull/439) chore(twig): Replacing spaceless tag with filter ([@planctus](https://github.com/planctus))
+
+#### :house: Internal
+
+* [#441](https://github.com/openeuropa/bootstrap-component-library/pull/441) chore(deps):  Updates 29-08-22 ([@planctus](https://github.com/planctus))
+* [#438](https://github.com/openeuropa/bootstrap-component-library/pull/438) chore(deps): Updates 22-08-22 ([@planctus](https://github.com/planctus))
+* [#437](https://github.com/openeuropa/bootstrap-component-library/pull/437) chore(deps): Updates 19-08-22 ([@planctus](https://github.com/planctus))
+* [#435](https://github.com/openeuropa/bootstrap-component-library/pull/435) chore: Storybook 6.5.10 ([@planctus](https://github.com/planctus))
+* [#433](https://github.com/openeuropa/bootstrap-component-library/pull/433) chore(deps): Updates 17-08-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 1
+
+- [@planctus](https://github.com/planctus)
+
 ## 0.26.0 (2022-08-11)
 
 #### :rocket: New Feature

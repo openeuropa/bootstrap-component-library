@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
   Parameters:
@@ -110,7 +110,7 @@
     </div>
   {% endif %}
   <div class="px-3-5 py-3">
-    <div class="d-flex">
+    <div class="d-md-flex">
       {% if _icon is not empty and _variant == 'default' %}
         <div class="pe-2 pb-2">
         {% if _icon is not empty %}
@@ -221,4 +221,4 @@
   {% endif %}
 </div>
 
-{% endspaceless %}
+{% endapply %}
