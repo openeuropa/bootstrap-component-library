@@ -21,15 +21,17 @@
   - attributes (drupal attrs)
 #}
 
-{% set _toasts = toasts|default([]) %}
 {% set _with_wrapper = with_wrapper|default(false) %}
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _wrapper_aria_live = wrapper_aria_live|default('') %}
 {% set _with_container = with_container|default(false) %}
-{% set _container_classes = 'toast-container' %}
+{% set _container_classes = container_classes|default('') %}
+{% set _toasts = toasts|default([]) %}
 
-{% if container_classes %}
-  {% set _container_classes = _container_classes ~ ' ' ~ container_classes %}
+{% set _classes = 'toast-container' %}
+
+{% if _container_classes is not empty %}
+  {% set _classes = _classes ~ ' ' ~ container_classes %}
 {% endif %}
 
 {% if attributes is empty %}
@@ -51,7 +53,7 @@
 {% endif %}
 {# container #}
 {% if _with_container %}
-  <div class="{{ _container_classes }}">
+  <div class="{{ _classes }}">
 {% endif %}
 {# toasts #}
 {% if _toasts is not empty %}
