@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#441](https://github.com/openeuropa/bootstrap-component-library/pull/441) chore(deps):  Updates 29-08-22 ([@planctus](https://github.com/planctus))
 * [#438](https://github.com/openeuropa/bootstrap-component-library/pull/438) chore(deps): Updates 22-08-22 ([@planctus](https://github.com/planctus))
 * [#437](https://github.com/openeuropa/bootstrap-component-library/pull/437) chore(deps): Updates 19-08-22 ([@planctus](https://github.com/planctus))
-* [#435](https://github.com/openeuropa/bootstrap-component-library/pull/435) chore: Storybook 6.5.10 ([@planctus](https://github.com/planctus))
+* [#435](https://github.com/openeuropa/bootstrap-component-library/pull/435) chore: Storybook 6.5.11 ([@planctus](https://github.com/planctus))
 * [#433](https://github.com/openeuropa/bootstrap-component-library/pull/433) chore(deps): Updates 17-08-22 ([@planctus](https://github.com/planctus))
 
 #### Committers: 1
