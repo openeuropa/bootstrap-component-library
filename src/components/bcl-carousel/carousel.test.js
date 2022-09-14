@@ -122,6 +122,18 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with caption title and no caption", () => {
+    expect.assertions(1);
+
+    demoData.items.forEach((item) => {
+      item.caption = "";
+      item.caption_title = "This is the title of the caption";
+      item.link = "";
+    });
+
+    return expect(render(demoData)).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(template, demoData, true))
