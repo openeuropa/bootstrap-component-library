@@ -95,14 +95,14 @@
 {%- endif -%}
 
 {% if _with_text %}
-    <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
-      {{- _description|default('') -}}
+  <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
+    {{- _description|default('') -}}
 
-      {% if _read_more is not empty %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with _read_more only %}
-      {% endif %}
-    </div>
-    <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '2 mt-4 mt-md-0' : '1' }}">
+    {% if _read_more is not empty %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _read_more only %}
+    {% endif %}
+  </div>
+  <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '2 mt-4 mt-md-0' : '1' }}">
 {% endif %}
 
 <figure
