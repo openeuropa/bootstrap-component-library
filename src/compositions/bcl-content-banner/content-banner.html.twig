@@ -2,12 +2,12 @@
 
 {#
   Parameters:
-    - background: (string) (default: 'white')
-      options: [ white, gray ]
     - title: (string) (default: '')
     - title_tag: (string) (default: 'h5')
     - title_link: (link object) (default: {})
     - title_attributes: (drupal attrs)
+    - background: (string) (default: 'white')
+      options: [ white, gray ]
     - image (object)
     - image_size: (string)
     - date: (object)
@@ -26,28 +26,28 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _background = background|default('white') %}
-{% set _action_bar = action_bar|default('') %}
 {% set _image = image|default({}) %}
-{% set _date = date|default({}) %}
 {% set _image_size = image_size|default('md') %}
+{% set _action_bar = action_bar|default('') %}
+{% set _date = date|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _css_classes = [
+{% set _classes = [
   'bcl-content-banner',
 ] %}
 
 {% if _background != 'white' %}
-  {% set _css_classes = _css_classes|merge([
+  {% set _classes = _classes|merge([
     'pb-md-4-75',
     'pb-4',
     'pt-4',
     'pt-md-4-75',
   ]) %}
 {% else %}
-  {% set _css_classes = _css_classes|merge([
+  {% set _classes = _classes|merge([
     'pt-4',
     'pt-md-4-75',
   ]) %}
@@ -99,8 +99,8 @@
   attributes: create_attribute().addClass(['bg-transparent', 'border-0']),
 } %}
 
-{% set _css_classes = _css_classes|merge([_modifiers[_background]]) %}
-{% set attributes = attributes.addClass(_css_classes) %}
+{% set _classes = _classes|merge([_modifiers[_background]]) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _button is not empty %}
   {% set _card =  _card|merge({

@@ -38,13 +38,13 @@
 
 {# Internal properties #}
 
-{% set _icon = icon|default({}) %}
-{% set _icon_inline = icon_inline ?? true %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _item_title = item_title|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _icon_inline = icon_inline ?? true %}
 {% set _text = text|default('') %}
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
