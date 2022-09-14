@@ -77,7 +77,7 @@ describe("OE - Description List with title", () => {
     return expect(
       render({
         ...demoDataHorizontal,
-        col_classes: "col-12 col-md-4",
+        horizontal_size: "8-4",
         title: "Description list test title",
         title_tag: "h6",
       })

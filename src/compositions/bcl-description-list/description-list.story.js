@@ -10,7 +10,7 @@ const getArgs = () => ({
   title: "",
   title_tag: "h2",
   bordered: false,
-  col_classes: "col-12 col-md-4",
+  horizontal_size: "6-6",
 });
 
 const getArgTypes = () => ({
@@ -24,12 +24,14 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
-  col_classes: {
-    name: "col classes",
-    type: { name: "string" },
-    description: "Column classes in horizontal variant",
+  horizontal_size: {
+    name: "horizontal size",
+    type: { name: "select" },
+    options: ["4-8", "6-6", "8-4"],
+    description: "Horizontal column size",
     table: {
-      type: { summary: "int" },
+      type: { summary: "string" },
+      defaultValue: { summary: "default" },
       category: "Style",
     },
   },
