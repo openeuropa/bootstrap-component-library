@@ -60,14 +60,14 @@
 
 {% set _body_classes = 'pt-0 px-0 pb-0' %}
 {% set _left_col_classes = '' %}
-{% set _right_col_classes = 'col-md-8 col-lg-9 col-xxl-8' %}
+{% set _right_col_classes = 'col-lg-10 col-xl-9 col-xxl-8' %}
 
 {% if _image is not empty %}
   {% set _left_col_classes = 'bcl-card-start-col' %}
-  {% set _body_classes = 'pt-4 pt-md-0 px-0 px-md-3 pb-0' %}
+  {% set _body_classes = 'pt-4 pt-lg-0 px-0 px-lg-3 pb-0' %}
   {% if _image_size == 'lg' %}
     {% set _left_col_classes = _left_col_classes ~ ' bcl-size-large' %}
-    {% set _right_col_classes = 'col-12 col-md-7 col-lg-8 col-xl-9 col-xxl-8' %}
+    {% set _right_col_classes = 'col-12 col-lg-8 col-xl-9 col-xxl-8' %}
   {% endif %}
   {% if _image_size == 'sm' %}
     {% set _left_col_classes = _left_col_classes ~ ' bcl-size-small' %}
