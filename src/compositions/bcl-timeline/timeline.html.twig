@@ -80,20 +80,22 @@ Parameters:
       {# Display the show more button if required. #}
       {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
         <li class="bcl-timeline__item--toggle">
-          {% include '@oe-bcl/bcl-button/button.html.twig' with {
-            attributes: create_attribute()
-                        .setAttribute('aria-expanded', 'false')
-                        .setAttribute('data-bs-toggle', 'collapse')
-                        .setAttribute('data-bs-target', '.collapse-' ~ _id),
-            variant: 'light',
-            label: '<span class="label-collapsed">' ~ _toggle_collapsed ~ '</span><span class="label-expanded">' ~ _toggle_expanded ~ '</span>',
-            icon: {
+          <button
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target=".collapse-{{ _id }}"
+            class="btn btn-light btn-md"
+            type="button"
+          >
+            <span class="label-collapsed">{{ _toggle_collapsed }}</span>
+            <span class="label-expanded">{{ _toggle_expanded }}</span>
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
               name: 'chevron-down',
               size: 'fluid',
               path: _icon_path,
               attributes: create_attribute().addClass('ms-2-5'),
-            }
-          } only %}
+            } only %}
+          </button>
         </li>
       {% endif %}
     {% endfor %}
