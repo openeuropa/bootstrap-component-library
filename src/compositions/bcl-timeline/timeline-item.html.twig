@@ -1,0 +1,33 @@
+{% apply spaceless %}
+
+{# Parameters:
+  - id (string) (default: '')
+  - label (string) (default: '')
+  - title (string) (default: '')
+  - content (string) (default: '')
+  - extra_class (string) (default: '')
+#}
+
+{% set _id = id|default('') %}
+{% set _label = label|default('') %}
+{% set _title = title|default('') %}
+{% set _content = content|default('') %}
+{% set _extra_class = extra_class|default('') %}
+
+<li
+  {% if extra_class is not empty %}
+    class="{{ extra_class }}"
+  {% endif %}
+  {% if _id is not empty %}
+    id="{{ _id }}"
+  {% endif %}>
+  <p class="fs-5 mb-1 fw-medium">{{ _label }}</p>
+  {% if _title is not empty %}
+  <p class="fs-6 mb-1 fw-medium">{{ _title }}</p>
+  {% endif %}
+  {% if _content is not empty %}
+  <div>{{ _content }}</div>
+  {% endif %}
+</li>
+
+{% endapply %}

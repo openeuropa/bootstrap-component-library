@@ -34,8 +34,6 @@ Parameters:
 {% set _hide_to = hide.to|default(items|length) %}
 {% set _icon_path = icon_path|default('') %}
 
-{% set _toggler = false %}
-
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
@@ -76,41 +74,26 @@ Parameters:
     {% for _item in _items %}
       {# Decide on per item if it should display. #}
       {% set extra_class = (loop.index > _display_amount and loop.revindex > _bottom_amount) ? "collapse collapse-#{_id}" %}
-      <li
-        {% if extra_class is not empty %}
-          class="{{ extra_class }}"
-        {% endif %}
-        {% if _item.id is defined and _item.id is not empty %}
-          id="{{ _item.id }}"
-        {% endif %}>
-          <p class="fs-5 mb-1 fw-medium">{{ _item.label }}</p>
-          {% if _item.title is defined and _item.title is not empty %}
-          <p class="fs-6 mb-1 fw-medium">{{ _item.title }}</p>
-          {% endif %}
-          {% if _item.content is defined and _item.content is not empty %}
-          <div>{{ _item.content }}</div>
-          {% endif %}
-      </li>
+      {% include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item|merge({
+        extra_class: extra_class,
+      }) only %}
       {# Display the show more button if required. #}
       {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
-        {% set _toggler = true %}
         <li class="bcl-timeline__item--toggle">
-          <button
-            aria-expanded="false"
-            data-bs-toggle="collapse"
-            data-bs-target=".collapse-{{ _id }}"
-            class="btn btn-light btn-md"
-            type="button"
-          >
-            <span class="label-collapsed">{{ _toggle_collapsed }}</span>
-            <span class="label-expanded">{{ _toggle_expanded }}</span>
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+          {% include '@oe-bcl/bcl-button/button.html.twig' with {
+            attributes: create_attribute()
+                        .setAttribute('aria-expanded', 'false')
+                        .setAttribute('data-bs-toggle', 'collapse')
+                        .setAttribute('data-bs-target', '.collapse-' ~ _id),
+            variant: 'light',
+            label: '<span class="label-collapsed">' ~ _toggle_collapsed ~ '</span><span class="label-expanded">' ~ _toggle_expanded ~ '</span>',
+            icon: {
               name: 'chevron-down',
               size: 'fluid',
               path: _icon_path,
               attributes: create_attribute().addClass('ms-2-5'),
-            } only %}
-          </button>
+            }
+          } only %}
         </li>
       {% endif %}
     {% endfor %}
