@@ -7,18 +7,26 @@
   }
 }
 
-.pagination--glossary {
-  margin-bottom: 0;
+.bcl-glossary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid $gray-300;
+  width: 100%;
+  transform: translateY(-50%);
+}
 
-  .page-item {
-    margin-right: auto;
-  }
+.pagination--glossary {
+  flex-wrap: wrap;
+  margin-bottom: 0;
 
   .page-link {
     border: none;
     border-bottom: 2px solid transparent;
     color: $dark;
     font-weight: $font-weight-bold;
+    padding: map-get($spacers, 3);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -26,7 +34,9 @@
   .active .page-link {
     background: transparent;
     border-color: $primary;
+    border-width: 2px;
     color: $dark;
+    padding-bottom: calc(map-get($spacers, 3) - 1px);
   }
 
   .page-item:first-child .page-link {
