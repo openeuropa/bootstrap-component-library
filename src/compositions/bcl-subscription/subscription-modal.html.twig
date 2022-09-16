@@ -1,3 +1,5 @@
+{% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
+
 {# Parameters:
   - form: (form object) (default: {})
   - success_alert: (alert object) (default: {})
@@ -11,8 +13,6 @@
 {% set _form = form|default({}) %}
 {% set _success_alert = success_alert|default({}) %}
 {% set _error_alert = error_alert|default({}) %}
-
-{% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
 
 {% block body %}
   {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}

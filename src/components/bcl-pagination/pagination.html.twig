@@ -56,14 +56,14 @@
 {% set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
 {% set _aria_label = aria_label|default('') %}
+{% set _variant = variant|default('') %}
 {% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
 {% set _enable_first_last_icon = enable_first_last_icon ?? true %}
-{% set _items = items|default([]) %}
 {% set _first = first|default({}) %}
-{% set _next = next|default({}) %}
 {% set _prev = prev|default({}) %}
+{% set _next = next|default({}) %}
 {% set _last = last|default({}) %}
-{% set _variant = variant|default('') %}
+{% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default({}) %}
 
 {% set _classes = 'pagination' %}
