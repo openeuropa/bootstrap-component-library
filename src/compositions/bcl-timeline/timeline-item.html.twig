@@ -14,13 +14,20 @@
 {% set _content = content|default('') %}
 {% set _extra_class = extra_class|default('') %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _extra_class is not empty %}
+  {% set attributes = attributes.addClass(_extra_class) %}
+{% endif %}
+
+{% if _id is not empty %}
+  {% set attributes = attributes.setAttribute('id', _id) %}
+{% endif %}
+
 <li
-  {% if extra_class is not empty %}
-    class="{{ extra_class }}"
-  {% endif %}
-  {% if _id is not empty %}
-    id="{{ _id }}"
-  {% endif %}>
+  {{ attributes }}>
   <p class="fs-5 mb-1 fw-medium">{{ _label }}</p>
   {% if _title is not empty %}
   <p class="fs-6 mb-1 fw-medium">{{ _title }}</p>
