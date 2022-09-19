@@ -3,6 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
+import drupalAttribute from "drupal-attribute";
 
 import dataDefault from "@openeuropa/bcl-timeline/data";
 
@@ -28,6 +29,49 @@ describe("OE - Timeline", () => {
           path: "/example.html",
           label: "Link label",
         },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        hide: {
+          from: 2,
+          to: 3,
+        },
+        items: [
+          {
+            label: "13 September 2017",
+            title: "Item title",
+            content:
+              '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
+            attributes: new drupalAttribute().addClass("new-class"),
+          },
+          {
+            label: "13 September 2017",
+            title: "Item title",
+            content:
+              '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
+            attributes: new drupalAttribute().addClass("new-class"),
+          },
+          {
+            label: "13 September 2017",
+            title: "Item title",
+            content:
+              '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
+            attributes: new drupalAttribute().addClass("new-class"),
+          },
+          {
+            label: "13 September 2017",
+            title: "Item title",
+            content:
+              '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
+            attributes: new drupalAttribute().addClass("new-class"),
+          },
+        ],
       })
     ).resolves.toMatchSnapshot();
   });

@@ -17,8 +17,11 @@ Parameters:
       content: (block) (default: '')
     }
   ]
-  - hide_from (integer) (default: items.length) Item index after which to start hiding timeline items
-  - hide_to (integer) (default: items.length) Item index after which to resume displaying timeline items
+  - hide: (object)
+    format: {
+      from (integer) (default: items.length) Item index after which to start hiding timeline items
+      to (integer) (default: items.length) Item index after which to resume displaying timeline items
+    }
   - icon_path (string) (default: ''): file containing the svg icons
 #}
 
