@@ -137,9 +137,9 @@ module.exports = {
       options: { up: true },
     },
     {
-      from: [path.resolve(nodeModules, "svg-country-flags/svg/*.svg")],
+      from: [`${nodeModules}/flag-icons/flags/**/*.svg`],
       to: path.resolve(outputFolder, "icons/world-flags"),
-      options: { up: true },
+      options: { up: 6 },
     },
     {
       from: [path.resolve(outputFolder, "src/logo/*")],
