@@ -5,21 +5,15 @@
   - label (string) (default: '')
   - title (string) (default: '')
   - content (string) (default: '')
-  - extra_class (string) (default: '')
 #}
 
 {% set _id = id|default('') %}
 {% set _label = label|default('') %}
 {% set _title = title|default('') %}
 {% set _content = content|default('') %}
-{% set _extra_class = extra_class|default('') %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
-{% endif %}
-
-{% if _extra_class is not empty %}
-  {% set attributes = attributes.addClass(_extra_class) %}
 {% endif %}
 
 {% if _id is not empty %}

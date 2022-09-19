@@ -73,10 +73,12 @@ Parameters:
   {% if _items is not empty %}
     {% for _item in _items %}
       {# Decide on per item if it should display. #}
-      {% set extra_class = (loop.index > _display_amount and loop.revindex > _bottom_amount) ? "collapse collapse-#{_id}" %}
-      {% include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item|merge({
-        extra_class: extra_class,
-      }) only %}
+      {% if loop.index > _display_amount and loop.revindex > _bottom_amount %}
+        {% set _item = _item|merge({
+          attributes: create_attribute().addClass('collapse',  'collapse-' ~ _id)
+        }) %}
+      {% endif %}
+      {% include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item only %}
       {# Display the show more button if required. #}
       {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
         <li class="bcl-timeline__item--toggle">
