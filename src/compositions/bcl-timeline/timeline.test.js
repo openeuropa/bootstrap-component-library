@@ -33,7 +33,7 @@ describe("OE - Timeline", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("default renders correctly", () => {
+  test("default renders correctly with new classes on items", () => {
     expect.assertions(1);
     return expect(
       render({
