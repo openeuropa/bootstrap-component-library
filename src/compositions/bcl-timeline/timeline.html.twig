@@ -73,9 +73,14 @@ Parameters:
   {% if _items is not empty %}
     {% for _item in _items %}
       {# Decide on per item if it should display. #}
+      {% if _item.attributes is empty %}
+        {% set _item = _item|merge({
+          attributes: create_attribute()
+        }) %}
+      {% endif %}
       {% if loop.index > _display_amount and loop.revindex > _bottom_amount %}
         {% set _item = _item|merge({
-          attributes: create_attribute().addClass('collapse',  'collapse-' ~ _id)
+          attributes: _item.attributes.addClass('collapse',  'collapse-' ~ _id)
         }) %}
       {% endif %}
       {% include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item only %}
