@@ -331,6 +331,159 @@ exports[`OE - carousel renders correctly when touch swipe is disabled 1`] = `
 </jest>
 `;
 
+exports[`OE - carousel renders correctly with caption title and no caption 1`] = `
+<jest>
+  <div
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
+  >
+    <div
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
+    >
+      <div
+        class="carousel-item active"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
+  </div>
+</jest>
+`;
+
 exports[`OE - carousel renders correctly with custom intervals 1`] = `
 <jest>
   <div

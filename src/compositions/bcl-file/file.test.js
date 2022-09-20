@@ -3,6 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
+import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-file/data/data";
 import demoCardData from "@openeuropa/bcl-file/data/data--card";
@@ -31,6 +32,32 @@ describe("OE - File", () => {
         title_tag: "h6",
         title_link: {
           path: "/example.html",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with new class on translation`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        translation: {
+          attributes: new drupalAttribute().addClass("new-class"),
+          id: "language-dropdown",
+          label: {
+            label: "Other languages (3)",
+          },
+          items: [
+            {
+              language: "български",
+              meta: "(16.2 MB - PDF)",
+              download: {
+                label: "Download",
+                path: "http://www.africau.edu/images/default/sample.pdf",
+              },
+            },
+          ],
         },
       })
     ).resolves.toMatchSnapshot();

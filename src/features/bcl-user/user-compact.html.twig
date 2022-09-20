@@ -1,21 +1,24 @@
 {% apply spaceless %}
 
 {# Parameters:
-  - picture (object) format: {
-    - "path" (string) (default: '')
-    - "alt" (string) (default: '')
-    - "classes": (string) (default: '')
-  }
-  - name (object) format: {
-    - "text" (string) (default: '')
-    - "link" (string) (default: '')
-  }
+  - picture (object) (default: {})
+    format: {
+    - path (string) (default: '')
+    - alt (string) (default: '')
+    - classes (string) (default: '')
+    }
+  - name (object) (default: {})
+    format: {
+    - text (string) (default: '')
+    - link (string) (default: '')
+    }
   - infos (array of strings) (default: [])
 #}
 
-{% set _infos = infos|default([]) %}
-{% set _name = name|default({}) %}
 {% set _picture = picture|default({}) %}
+{% set _name = name|default({}) %}
+{% set _infos = infos|default([]) %}
+
 {% set _picture_classes = 'rounded-pill' %}
 {% set _classes = ['bcl-user-compact', 'd-flex', 'mb-3'] %}
 

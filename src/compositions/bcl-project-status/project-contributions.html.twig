@@ -2,7 +2,7 @@
 
 {# Parameters:
   - corporate_contributions (string) (default: '') // value every 5 percent
-  - legend (boolean or object (default: false)
+  - legend (description list object) (default: false)
   - chart (boolean) (default: false)
 
   Blocks - 
@@ -11,7 +11,7 @@
 #}
 
 {% set _corporate_contributions = corporate_contributions|default('') %}
-{% set _legend = legend|default(false) %}
+{% set _legend = legend|default({}) %}
 {% set _chart = chart|default(false) %}
 
 {% if attributes is empty %}
