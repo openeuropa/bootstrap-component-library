@@ -25,18 +25,11 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .bcl-content-banner {
     .bcl-card-start-col {
       margin: 0 auto;
       padding: 0 calc(var(--#{$variable-prefix}gutter-x) * 0.5);
-    }
-  }
-}
-@include media-breakpoint-down(lg) {
-  .bcl-content-banner {
-    .bcl-card-start-col.bcl-size-extra-large {
-      margin: 0 auto;
     }
   }
 }

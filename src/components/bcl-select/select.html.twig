@@ -22,21 +22,21 @@
 #}
 
 {% set _id = id|default('') %}
+{% set _label = label|default('') %}
+{% set _label_extra_classes = label_extra_classes|default('') %}
+{% set _hidden_label = hidden_label|default(false) %}
+{% set _helper_text = helper_text|default('') %}
+{% set _helper_text_id = helper_text_id|default('') %}
 {% set _disabled = disabled|default(false) %}
-{% set _options = options|default([]) %}
-{% set _aria_label = aria_label|default('') %}
-{% set _required = required|default(false) %}
-{% set _multiple = multiple|default(false) %}
 {% set _invalid = invalid|default(false) %}
 {% set _valid = valid|default(false) %}
 {% set _invalid_feedback = invalid_feedback|default('') %}
 {% set _valid_feedback = valid_feedback|default('') %}
-{% set _helper_text = helper_text|default('') %}
-{% set _helper_text_id = helper_text_id|default('') %}
-{% set _label = label|default('') %}
-{% set _label_extra_classes = label_extra_classes|default('') %}
+{% set _required = required|default(false) %}
+{% set _multiple = multiple|default(false) %}
+{% set _options = options|default([]) %}
+{% set _aria_label = aria_label|default('') %}
 {% set _clean_class = clean_class|default(false) %}
-{% set _hidden_label = hidden_label|default(false) %}
 
 {% set _classes = ['bcl-form-select', 'form-select'] %}
 {% set _label_class = 'form-label' %}

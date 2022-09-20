@@ -2,12 +2,12 @@
 
 {#
   Parameters:
-    - background: (string) (default: 'white')
-      options: [ white, gray ]
     - title: (string) (default: '')
     - title_tag: (string) (default: 'h5')
     - title_link: (link object) (default: {})
     - title_attributes: (drupal attrs)
+    - background: (string) (default: 'white')
+      options: [ white, gray ]
     - image (object)
     - image_size: (string)
     - date: (object)
@@ -26,28 +26,28 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _background = background|default('white') %}
-{% set _action_bar = action_bar|default('') %}
 {% set _image = image|default({}) %}
-{% set _date = date|default({}) %}
 {% set _image_size = image_size|default('md') %}
+{% set _action_bar = action_bar|default('') %}
+{% set _date = date|default({}) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _css_classes = [
+{% set _classes = [
   'bcl-content-banner',
 ] %}
 
 {% if _background != 'white' %}
-  {% set _css_classes = _css_classes|merge([
+  {% set _classes = _classes|merge([
     'pb-md-4-75',
     'pb-4',
     'pt-4',
     'pt-md-4-75',
   ]) %}
 {% else %}
-  {% set _css_classes = _css_classes|merge([
+  {% set _classes = _classes|merge([
     'pt-4',
     'pt-md-4-75',
   ]) %}
@@ -59,14 +59,14 @@
 } %}
 
 {% set _body_classes = 'pt-0 px-0 pb-0' %}
-{% set _left_col_classes = '' %}
-{% set _right_col_classes = 'col-md-8 col-lg-9 col-xxl-8' %}
+{% set _right_col_classes = 'col-md col-lg-9 col-xxl-8' %}
 
 {% if _image is not empty %}
   {% set _left_col_classes = 'bcl-card-start-col' %}
-  {% set _body_classes = 'pt-4 pt-md-0 px-0 px-md-3 pb-0' %}
+  {% set _body_classes = 'pt-4 pt-md-0 px-0 px-md-1-5 pb-0' %}
   {% if _image_size == 'lg' %}
     {% set _left_col_classes = _left_col_classes ~ ' bcl-size-large' %}
+<<<<<<< HEAD
     {% set _right_col_classes = 'col-md-7 col-lg-8 col-xl-9 col-xxl-8' %}
   {% endif %}
   {% if _image_size == 'sm' %}
@@ -75,11 +75,22 @@
   {% if _image_size == 'xl' %}
     {% set _left_col_classes = _left_col_classes ~ ' bcl-size-extra-large' %}
     {% set _right_col_classes = 'col-lg-7 col-xl-8' %}
+=======
+    {% set _right_col_classes = 'col-md col-xl-9 col-xxl-8' %}
+  {% endif %}
+  {% if _image_size == 'xl' %}
+    {% set _left_col_classes = _left_col_classes ~ ' bcl-size-extra-large' %}
+    {% set _body_classes = 'pt-4 pt-lg-0 px-0 px-lg-1-5 pb-0' %}
+    {% set _right_col_classes = 'col-lg' %}
+>>>>>>> 72a590a814eb193c247246f7b8a52246de4b8760
   {% endif %}
 {% endif %}
 {% if _date is not empty %}
   {% set _left_col_classes = 'bcl-card-start-col' %}
   {% set _right_col_classes = 'col-md col-xxl-9' %}
+{% endif %}
+{% if _image is empty and _date is empty %}
+  {% set _right_col_classes = 'col-lg-10 col-xl-9 col-xxl-8' %}
 {% endif %}
 
 {% set _horizontal_classes = {
@@ -99,8 +110,8 @@
   attributes: create_attribute().addClass(['bg-transparent', 'border-0']),
 } %}
 
-{% set _css_classes = _css_classes|merge([_modifiers[_background]]) %}
-{% set attributes = attributes.addClass(_css_classes) %}
+{% set _classes = _classes|merge([_modifiers[_background]]) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _button is not empty %}
   {% set _card =  _card|merge({

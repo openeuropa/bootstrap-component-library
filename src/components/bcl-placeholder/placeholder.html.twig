@@ -15,7 +15,12 @@
 {% set _variant = variant|default('') %}
 {% set _size = size|default('') %}
 {% set _animation = animation|default('') %}
+<<<<<<< HEAD
 {% set _classes = ['bcl-placeholder', 'placeholder'] %}
+=======
+
+{% set _classes = ['placeholder'] %}
+>>>>>>> 72a590a814eb193c247246f7b8a52246de4b8760
 
 {% if _size is not empty %}
   {% set _classes = _classes|merge(['placeholder-' ~ _size]) %}

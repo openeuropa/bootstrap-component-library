@@ -1,11 +1,13 @@
 {% apply spaceless %}
 
 {# Parameters:
-  - with_text (boolean) (default: false)
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes: (drupal attrs)
+  - with_text (boolean) (default: false)
+  - alignment: (string) (default: "right")
+    - options ['left', 'right']
   - image: (string) (default: "")
   - poster_image: (string) (default: "")
   - content: (string) (default: "")
@@ -39,22 +41,29 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _with_text = with_text|default(false) %}
-{% set _wrapper_classes = 'bcl-featured-item' %}
-{% set _description = description|default('') %}
-{% set _embedded_media = embedded_media|default('') %}
+{% set _alignment = alignment|default('right') %}
 {% set _image = image|default('') %}
 {% set _poster_image = poster_image|default('') %}
 {% set _content = content|default('') %}
-{% set _alignment = alignment|default('right') %}
+{% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _content_classes = content_classes|default('') %}
+{% set _read_more = read_more|default({}) %}
+{% set _description = description|default('') %}
 {% set _ratio = ratio|default('16x9') %}
 {% set _sources = sources|default([]) %}
 {% set _tracks = tracks|default([]) %}
+<<<<<<< HEAD
 {% set _col_classes = 'col-md-6' %}
 {% set _read_more = read_more|default({}) %}
+=======
+{% set _embedded_media = embedded_media|default('') %}
 
-{% if wrapper_classes is defined and wrapper_classes is not empty %}
-  {% set _wrapper_classes = _wrapper_classes ~ ' ' ~ wrapper_classes %}
+{% set _classes = 'bcl-featured-item' %}
+{% set _col_classes = 'col-12 col-md-6' %}
+>>>>>>> 72a590a814eb193c247246f7b8a52246de4b8760
+
+{% if _wrapper_classes is not empty %}
+  {% set _classes = _classes ~ ' ' ~ wrapper_classes %}
 {% endif %}
 
 {% if attributes is empty %}
@@ -76,6 +85,14 @@
   {% endif %}
 {% endif %}
 
+<<<<<<< HEAD
+=======
+{% if _with_text %}
+<div class="{{ _classes }}">
+  <div class="row">
+{% endif %}
+
+>>>>>>> 72a590a814eb193c247246f7b8a52246de4b8760
 {%- if _title is not empty -%}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
@@ -86,6 +103,7 @@
 {%- endif -%}
 
 {% if _with_text %}
+<<<<<<< HEAD
 <div class="{{ _wrapper_classes }}">
   <div class="row">
 {% endif %}
@@ -93,12 +111,16 @@
 {% if _with_text %}
     <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
       {{- _description|default('') -}}
+=======
+  <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
+    {{- _description|default('') -}}
+>>>>>>> 72a590a814eb193c247246f7b8a52246de4b8760
 
-      {% if _read_more is not empty %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with _read_more only %}
-      {% endif %}
-    </div>
-    <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '2 mt-4 mt-md-0' : '1' }}">
+    {% if _read_more is not empty %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _read_more only %}
+    {% endif %}
+  </div>
+  <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '2 mt-4 mt-md-0' : '1' }}">
 {% endif %}
 
 <figure

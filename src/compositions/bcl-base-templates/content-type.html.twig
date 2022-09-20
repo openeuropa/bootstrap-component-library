@@ -105,7 +105,9 @@
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}
-      {% if not _landing %}
+      {% if _landing %}
+      <div class="col-12">
+      {% else %}
       <div class="col-lg-10 col-xl-9 col-xxl-8">
       {% endif %}
     {% endif %}

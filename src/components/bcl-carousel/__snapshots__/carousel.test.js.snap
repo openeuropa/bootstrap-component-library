@@ -66,8 +66,17 @@ exports[`OE - carousel renders correctly 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -122,8 +131,17 @@ exports[`OE - carousel renders correctly 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -237,8 +255,17 @@ exports[`OE - carousel renders correctly when touch swipe is disabled 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -293,8 +320,17 @@ exports[`OE - carousel renders correctly when touch swipe is disabled 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -302,6 +338,162 @@ exports[`OE - carousel renders correctly when touch swipe is disabled 1`] = `
             </svg>
             Link
           </a>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-prev-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      class="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExample"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="carousel-control-next-icon"
+      />
+      <span
+        class="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
+  </div>
+</jest>
+`;
+
+exports[`OE - carousel renders correctly with caption title and no caption 1`] = `
+<jest>
+  <div
+    class="bcl-carousel carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExample"
+  >
+    <div
+      class="carousel-indicators d-none d-md-flex"
+    >
+      <button
+        aria-current="true"
+        aria-label="Slide 1"
+        class="active bcl-btn"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 2"
+        class="bcl-btn"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 3"
+        class="bcl-btn"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+      <button
+        aria-label="Slide 4"
+        class="bcl-btn"
+        data-bs-slide-to="3"
+        data-bs-target="#carouselExample"
+        type="button"
+      />
+    </div>
+    <div
+      class="carousel-inner"
+    >
+      <div
+        class="carousel-item active"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="First slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=1"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Second slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=2"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Third slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=3"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel-item"
+        data-bs-interval="2000"
+      >
+        <img
+          alt="Fourth slide"
+          class="d-block w-100"
+          src="https://picsum.photos/800/400?random=4"
+        />
+        <div
+          class="carousel-caption"
+        >
+          <p
+            class="fs-5"
+          >
+            This is the title of the caption
+          </p>
         </div>
       </div>
     </div>
@@ -408,8 +600,17 @@ exports[`OE - carousel renders correctly with custom intervals 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -467,8 +668,17 @@ exports[`OE - carousel renders correctly with custom intervals 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -581,8 +791,17 @@ exports[`OE - carousel renders correctly with dark variant 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -637,8 +856,17 @@ exports[`OE - carousel renders correctly with dark variant 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -751,8 +979,17 @@ exports[`OE - carousel renders correctly with fade and dark variant 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -807,8 +1044,17 @@ exports[`OE - carousel renders correctly with fade and dark variant 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -921,8 +1167,17 @@ exports[`OE - carousel renders correctly with fade transition 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -977,8 +1232,17 @@ exports[`OE - carousel renders correctly with fade transition 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1091,8 +1355,17 @@ exports[`OE - carousel renders correctly with rounded indicators 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1147,8 +1420,17 @@ exports[`OE - carousel renders correctly with rounded indicators 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1261,8 +1543,17 @@ exports[`OE - carousel renders correctly with specific slide 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1317,8 +1608,17 @@ exports[`OE - carousel renders correctly with specific slide 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1441,8 +1741,17 @@ exports[`OE - carousel renders correctly with title 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1497,8 +1806,17 @@ exports[`OE - carousel renders correctly with title 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1610,8 +1928,17 @@ exports[`OE - carousel renders correctly without autoplay 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1666,8 +1993,17 @@ exports[`OE - carousel renders correctly without autoplay 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1780,8 +2116,17 @@ exports[`OE - carousel renders correctly without controls 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1836,8 +2181,17 @@ exports[`OE - carousel renders correctly without controls 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1885,8 +2239,17 @@ exports[`OE - carousel renders correctly without indicators 1`] = `
             class="bcl-link"
             href="/example.html"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
@@ -1941,8 +2304,17 @@ exports[`OE - carousel renders correctly without indicators 1`] = `
             class="bcl-link"
             href="#"
           >
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+=======
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
+
+
+
+
+
             <svg
-              class="me-2-5 bcl-icon bi icon--s"
+              class="me-2-5 bi icon--s"
             >
               <use
                 xlink:href="/icons.svg#link"
