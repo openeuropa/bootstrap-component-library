@@ -88,32 +88,13 @@ Parameters:
               <ul class="bcl-gallery__grid">
             {% endif %}
                 <li>
-                  <a href="#" data-bs-target="#{{ _carousel_id }}" data-bs-slide-to="{{ loop.index - 1 }}" class="bcl-gallery__item d-block w-100 img-fluid">
-                    <div class="bcl-gallery__item-overlay" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-                    {% if '<iframe' in _item.media or '<video' in _item.media %}
-                      <span class="bcl-gallery__item-play-icon">
-                      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-                        name: 'play-fill',
-                        size: 's',
-                        path: _icon_path,
-                      } only %}
-                      </span>
-                    {% endif %}
-                    {% if _item.caption is not empty or item.caption_title is not empty %}
-                      <div class="bcl-gallery__item-caption">
-                      {% if _item.caption_title is not empty %}
-                        <p class="fs-5">{{ _item.caption_title }}</p>
-                      {% endif %}
-                      {% if _item.caption is not empty %}
-                        <div class="bcl-gallery__item-description">
-                          {{ _item.caption }}
-                        </div>
-                      {% endif %}
-                      </div>
-                    {% endif %}
-                    </div>
-                    {{ _item.thumbnail }}
-                  </a>
+                  {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+                    item: _item,
+                    carousel_id: _carousel_id,
+                    modal_id: _modal_id,
+                    icon_path: _icon_path,
+                    loop: loop,
+                  } only %}
                 </li>
             {% if loop.index % 5 == 0 or loop.last %}
               </ul>
@@ -162,44 +143,15 @@ Parameters:
         {% endif %}
       {% endfor %}
     {% endif %}
-
-    <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
-      <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header border-0 justify-content-between">
-            {% if _title is not empty %}
-              <div class="modal-title">
-                <h3 class="d-none d-sm-block">{{- _title -}}</h3>
-              </div>
-            {% endif %}
-            <div class="carousel-pager">
-              <span>1</span> / {{ _items|length }}
-            </div>
-            <div class="modal-close">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-          </div>
-          
-          <div class="modal-body d-flex align-items-center justify-content-center">
-            {% for _item in _items %}
-              {% set _carousel_items = _carousel_items|merge([_item|merge({
-                caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
-                image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
-              })]) %}
-            {% endfor %}
-            {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
-              id: _carousel_id,
-              with_controls: true,
-              with_indicators: false,
-              prev_label: _prev_label,
-              next_label: _next_label,
-              autoplay: false,
-              items: _carousel_items,
-            } only %}
-          </div>
-        </div>
-      </div>
-    </div>
+    {% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
+      id: _modal_id,
+      carousel_id: _carousel_id,
+      next_label: _next_label,
+      prev_label: _prev_label,
+      title: _title,
+      items: _items,
+      icon_path: _icon_path
+    } only %}
   </div>
   
 {% endif %}
