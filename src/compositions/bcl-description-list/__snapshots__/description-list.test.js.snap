@@ -86,21 +86,10 @@ exports[`OE - Description List horizontal renders correctly 1`] = `
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with 
-            <em>
-              inline icon
-            </em>
           </div>
         </div>
       </dt>
@@ -214,18 +203,10 @@ exports[`OE - Description List renders correctly 1`] = `
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with inline icon
           </div>
         </div>
       </dt>
@@ -344,18 +325,10 @@ exports[`OE - Description List with title bordered renders correctly 1`] = `
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with inline icon
           </div>
         </div>
       </dt>
@@ -474,21 +447,10 @@ exports[`OE - Description List with title horizontal and bordered renders correc
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with 
-            <em>
-              inline icon
-            </em>
           </div>
         </div>
       </dt>
@@ -607,21 +569,10 @@ exports[`OE - Description List with title horizontal renders correctly 1`] = `
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with 
-            <em>
-              inline icon
-            </em>
           </div>
         </div>
       </dt>
@@ -740,21 +691,10 @@ exports[`OE - Description List with title horizontal with different col size ren
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with 
-            <em>
-              inline icon
-            </em>
           </div>
         </div>
       </dt>
@@ -873,18 +813,10 @@ exports[`OE - Description List with title renders correctly 1`] = `
           class="d-flex"
         >
           <div>
-            <svg
-              class="me-2 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
             Only title 
             <strong>
               label
             </strong>
-             with inline icon
           </div>
         </div>
       </dt>
@@ -904,6 +836,51 @@ exports[`OE - Description List with title renders correctly 1`] = `
         <div
           class="mb-0 d-inline-block"
         >
+          Description text goes here.
+        </div>
+      </dd>
+    </div>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List with title with inline icon renders correctly 1`] = `
+<jest>
+  <dl
+    class="bcl-description-list"
+  >
+    <div
+      class="mb-3"
+    >
+      <dt>
+        <div
+          class="d-flex"
+        >
+          <div>
+            <svg
+              class="me-2 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+            Only title 
+            <strong>
+              label
+            </strong>
+             with inline icon
+          </div>
+        </div>
+      </dt>
+      <dd>
+        <div>
+          <svg
+            class="me-2 bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#printer-fill"
+            />
+          </svg>
           Description text goes here.
         </div>
       </dd>

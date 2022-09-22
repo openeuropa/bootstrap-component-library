@@ -32,7 +32,7 @@ module.exports = {
       definition: "Description text goes here.",
     },
     {
-      term: '<svg class="me-2 bi icon--fluid"><use xlink:href="/icons.svg#printer-fill"></use></svg>Only title <strong>label</strong> with inline icon',
+      term: "Only title <strong>label</strong>",
       definition: [
         {
           label: "Description text goes here.",

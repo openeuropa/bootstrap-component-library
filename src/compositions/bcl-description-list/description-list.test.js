@@ -95,4 +95,19 @@ describe("OE - Description List with title", () => {
       })
     ).resolves.toMatchSnapshot();
   });
+
+  test(`with inline icon renders correctly`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        items: [
+          {
+            term: '<svg class="me-2 bi icon--fluid"><use xlink:href="/icons.svg#printer-fill"></use></svg>Only title <strong>label</strong> with inline icon',
+            definition:
+              '<svg class="me-2 bi icon--fluid"><use xlink:href="/icons.svg#printer-fill"></use></svg>Description text goes here.',
+          },
+        ],
+      })
+    ).resolves.toMatchSnapshot();
+  });
 });
