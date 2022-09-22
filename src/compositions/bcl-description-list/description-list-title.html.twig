@@ -20,16 +20,12 @@
     {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
       attributes: _icon_attributes,
     }) only %}
-    <div class="mb-0 d-inline-block">
-      {{- _label -}}
-    </div>
   {%- elseif _color is not empty -%}
-    <div class="d-flex align-items-center">
-      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>{{- _label -}}
+    <div class="align-self-center">
+      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>
     </div>
-  {%- else -%}
-    <div>{{- _label -}}</div>
   {%- endif -%}
+    <div>{{- _label -}}</div>
   </div>
 </dt>
 

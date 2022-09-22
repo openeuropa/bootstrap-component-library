@@ -60,6 +60,7 @@ export const Default = (args) =>
   descriptionList(applyArgs(correctPaths(demoData), args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
+Default.argTypes.horizontal_size.table = { disable: true };
 
 export const Horizontal = (args) =>
   descriptionList(applyArgs(correctPaths(demoDataHorizontal), args));
