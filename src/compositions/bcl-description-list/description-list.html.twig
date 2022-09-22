@@ -11,8 +11,8 @@
     options: ['3-9', '4-8', '6-6', '8-4', '9-3']
   - items (array) (default: []): format: [
       {
-        term (object or array of descriptionListTitle object)
-        definition (object or array of descriptionListDetails object)
+        term (string or array of descriptionListTitle object)
+        definition (string or array of descriptionListDetails object)
       },
       ...
     ]
@@ -34,14 +34,17 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _item_classes = 'mb-3' %}
+{% set _item_classes = ['mb-3'] %}
 
 {% if _bordered %}
-  {% set _item_classes = 'border-bottom pb-2-5 mb-2-5' %}
+  {% set _item_classes = ['border-bottom', 'pb-2-5', 'mb-2-5'] %}
 {% endif %}
 
 {% if _variant == 'horizontal' %}
-  {% set _item_classes = _item_classes ~ ' list-grid' ~ ' grid-' ~ _horizontal_size %}
+  {% set _item_classes = _item_classes|merge([
+    'list-grid',
+    'grid-' ~ _horizontal_size
+  ]) %}
 {% endif %}
 
 {% if _title is not empty %}
@@ -60,9 +63,7 @@
 >
   {% for _item in _items %}
   <div
-    {% if _item_classes is not empty %}
-      class="{{ _item_classes }}"
-    {% endif %}
+    {{ create_attribute().addClass(_item_classes) }}
   >
   {% if _item.term is not empty %}
     {% if _item.term is iterable %}
@@ -70,7 +71,9 @@
         {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _term only -%}
       {% endfor %}
     {% else %}
-        {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _item.term only -%}
+      {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with {
+        label: _item.term
+      } only -%}
     {% endif %}
   {% endif %}
   {% if _item.definition is not empty %}
@@ -79,7 +82,9 @@
         {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _definition only -%}
       {% endfor %}
     {% else %}
-      {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _item.definition only -%}
+      {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with {
+        label: _item.definition
+      } only -%}
     {% endif %}
   {% endif %}
   </div>

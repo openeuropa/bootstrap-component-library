@@ -27,7 +27,7 @@ const getArgTypes = () => ({
   horizontal_size: {
     name: "horizontal size",
     type: { name: "select" },
-    options: ["4-8", "6-6", "8-4"],
+    options: ["2-10", "4-8", "6-6", "8-4"],
     description: "Horizontal column size",
     table: {
       type: { summary: "string" },

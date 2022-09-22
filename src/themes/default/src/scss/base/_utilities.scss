@@ -171,6 +171,7 @@ svg {
 .list-grid {
   display: grid;
   grid-auto-flow: column;
+  column-gap: map-get($spacers, 3);
 }
 
 .list-grid dt {
@@ -179,6 +180,10 @@ svg {
 
 .list-grid dd {
   grid-column: 2/2;
+}
+
+.grid-2-10 {
+  grid-template-columns: 20% 80%;
 }
 
 .grid-3-9 {
@@ -199,4 +204,8 @@ svg {
 
 .grid-9-3 {
   grid-auto-columns: 75% 25%;
+}
+
+.grid-10-2 {
+  grid-auto-columns: 80% 20%;
 }

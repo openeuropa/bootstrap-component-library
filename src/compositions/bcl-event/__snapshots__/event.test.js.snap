@@ -2854,21 +2854,23 @@ exports[`OE - event page renders correctly 1`] = `
                   class="d-flex"
                 >
                   <svg
-                    class="me-2 align-self-center bi icon--xs"
+                    class="me-2 align-self-center flex-shrink-0 bi icon--xs"
                   >
                     <use
                       xlink:href="/icons.svg#calendar-fill"
                     />
                   </svg>
-                  <p
+                  <div
                     class="mb-0 d-inline-block"
                   >
                     Date
-                  </p>
+                  </div>
                 </div>
               </dt>
               <dd>
-                17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
+                <div>
+                  17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
+                </div>
               </dd>
             </div>
             <div
@@ -2879,32 +2881,32 @@ exports[`OE - event page renders correctly 1`] = `
                   class="d-flex"
                 >
                   <svg
-                    class="me-2 align-self-center bi icon--xs"
+                    class="me-2 align-self-center flex-shrink-0 bi icon--xs"
                   >
                     <use
                       xlink:href="/icons.svg#geo-alt-fill"
                     />
                   </svg>
-                  <p
+                  <div
                     class="mb-0 d-inline-block"
                   >
                     Location
-                  </p>
+                  </div>
                 </div>
               </dt>
               <dd>
                 <svg
-                  class="me-2 bi icon--fluid"
+                  class="me-2 align-self-center flex-shrink-0 bi icon--fluid"
                 >
                   <use
                     xlink:href="/flags.svg#spain"
                   />
                 </svg>
-                <p
+                <div
                   class="mb-0 d-inline-block"
                 >
                   Barcelona, Spain
-                </p>
+                </div>
               </dd>
             </div>
           </dl>
