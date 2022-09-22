@@ -4,6 +4,9 @@
 Parameters:
   - id (string) (default: '')
   - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
   - items (array of objects) format: [
       {
         thumbnails (string) img path
@@ -23,6 +26,9 @@ Parameters:
 
 {% set _id = id|default('') %}
 {% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 {% set _carousel_id = carousel_id|default('') %}
 {% set _next_label = next_label|default('Next') %}
@@ -51,14 +57,29 @@ Parameters:
       <div class="modal-header border-0 justify-content-between">
         {% if _title is not empty %}
           <div class="modal-title">
-            <h3 class="d-none d-sm-block">{{- _title -}}</h3>
+            {% if _title is not empty %}
+              {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+                title: _title,
+                title_tag: _title_tag,
+                title_link: _title_link,
+                attributes: _title_attributes.addClass(['d-sm-block', 'd-none']),
+              } only %}
+            {% endif %}
           </div>
         {% endif %}
         <div class="carousel-pager">
           <span>1</span> / {{ _items|length -}}
         </div>
         <div class="modal-close">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          {% set button_attributes = create_attribute()
+                                    .addClass('btn-close')
+                                    .setAttribute('aria-label', 'Close')
+                                    .setAttribute('data-bs-dismiss', 'modal')
+          %}
+          {% include '@oe-bcl/bcl-button/button.html.twig' with {
+            clean_class: true,
+            attributes: button_attributes
+          } only %}
         </div>
       </div>
       <div class="modal-body d-flex align-items-center justify-content-center">
