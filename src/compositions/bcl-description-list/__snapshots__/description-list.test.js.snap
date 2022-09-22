@@ -888,3 +888,87 @@ exports[`OE - Description List with title with inline icon renders correctly 1`]
   </dl>
 </jest>
 `;
+
+exports[`OE - Description List with title with new classes on definition icon renders correctly 1`] = `
+<jest>
+  <dl
+    class="bcl-description-list"
+  >
+    <div
+      class="mb-3"
+    >
+      <dt>
+        <div
+          class="d-flex"
+        >
+          <div>
+            Term title
+          </div>
+        </div>
+      </dt>
+      <dd>
+        <svg
+          class="new-class me-2 align-self-center flex-shrink-0 bi icon--xs"
+        >
+          <use
+            xlink:href="/icons.svg#geo-alt-fill"
+          />
+        </svg>
+        <div
+          class="mb-0 d-inline-block"
+        >
+          <p
+            class="mb-0"
+          >
+            Only title label with 
+            <em>
+              icon
+            </em>
+          </p>
+        </div>
+      </dd>
+    </div>
+  </dl>
+</jest>
+`;
+
+exports[`OE - Description List with title with new classes on term icon renders correctly 1`] = `
+<jest>
+  <dl
+    class="bcl-description-list"
+  >
+    <div
+      class="mb-3"
+    >
+      <dt>
+        <div
+          class="d-flex"
+        >
+          <svg
+            class="new-class me-2 align-self-center flex-shrink-0 bi icon--xs"
+          >
+            <use
+              xlink:href="/icons.svg#geo-alt-fill"
+            />
+          </svg>
+          <div>
+            <p
+              class="mb-0"
+            >
+              Only title label with 
+              <em>
+                icon
+              </em>
+            </p>
+          </div>
+        </div>
+      </dt>
+      <dd>
+        <div>
+          Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
+        </div>
+      </dd>
+    </div>
+  </dl>
+</jest>
+`;
