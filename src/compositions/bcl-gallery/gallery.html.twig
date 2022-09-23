@@ -40,10 +40,9 @@ Parameters:
 {% set _max_visible_thumbnails = max_visible_thumbnails|default(5) %}
 {% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
-
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
 {% set _modal_id = "modal" ~ _id|capitalize %}
-{% set _collpase_id = "collapse" ~ _id|capitalize %}
+{% set _collapsed_id = "collapse" ~ _id|capitalize %}
 {% set _max_visible_thumbnails = _max_visible_thumbnails + 1 %}
 
 {% if attributes is empty %}
@@ -54,7 +53,6 @@ Parameters:
 
 {# Print the result #}
 
-{% if _items is not empty and _items is iterable %}
   <div {{ attributes }}>
       <div class="d-sm-flex flex-sm-row align-items-sm-center">
         <div class="flex-sm-grow-1">
@@ -73,42 +71,42 @@ Parameters:
           {%- endif -%}
         </div>
       </div>
-
+    {% if _items is not empty and _items is iterable %}
       {% for _item in _items %}
         {% if loop.first %}
           <div class="bcl-gallery__thumbnails">
         {% endif %}
-          {% if loop.index == _max_visible_thumbnails %}
-            <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collpase_id }}">
-          {% endif %}
-            {% if loop.index % _max_visible_thumbnails == 0 or loop.first %}
-              <ul class="bcl-gallery__grid">
-            {% endif %}
-              <li>
-                {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
-                  item: _item,
-                  carousel_id: _carousel_id,
-                  modal_id: _modal_id,
-                  icon_path: _icon_path,
-                  loop: loop,
-                } only %}
-              </li>
-            {% if loop.index % 5 == 0 or loop.last %}
-              </ul>
-            {% endif %}  
-          {% if loop.last %}
-            </div>
-          {% endif %}
+        {% if loop.index == _max_visible_thumbnails %}
+          <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapsed_id }}">
+        {% endif %}
+        {% if loop.index % _max_visible_thumbnails == 0 or loop.first %}
+          <ul class="bcl-gallery__grid">
+        {% endif %}
+          <li>
+            {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+              item: _item,
+              carousel_id: _carousel_id,
+              modal_id: _modal_id,
+              icon_path: _icon_path,
+              loop: loop,
+            } only %}
+          </li>
+        {% if loop.index % 5 == 0 or loop.last %}
+          </ul>
+        {% endif %}  
+        {% if loop.last %}
+          </div>
+        {% endif %}
         {% if loop.index > _max_visible_thumbnails and loop.last %}
           </div>
           <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
             <a 
               class="bcl-gallery__collapse standalone d-none d-sm-inline-block" 
-              aria-controls="{{ _collpase_id }}" 
+              aria-controls="{{ _collapsed_id }}" 
               data-bs-toggle="collapse" 
               aria-expanded="false" 
               role="button" 
-              href="#{{ _collpase_id }}"
+              href="#{{ _collapsed_id }}"
             >
               <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
               <span class="label-expanded">{{ _toggle_expanded }}</span>
@@ -139,6 +137,7 @@ Parameters:
           </div>
         {% endif %}
       {% endfor %}
+    {% endif %}
     {% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
       id: _modal_id,
       carousel_id: _carousel_id,
@@ -149,7 +148,5 @@ Parameters:
       icon_path: _icon_path
     } only %}
   </div>
-  
-{% endif %}
 
 {% endapply %}
