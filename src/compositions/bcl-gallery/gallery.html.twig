@@ -142,15 +142,15 @@ Parameters:
     {% endif %}
   {% endfor %}
 {% endif %}
-  {% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
-    id: _modal_id,
-    carousel_id: _carousel_id,
-    next_label: _next_label,
-    prev_label: _prev_label,
-    title: _title,
-    items: _items,
-    icon_path: _icon_path
-  } only %}
+{% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
+  id: _modal_id,
+  carousel_id: _carousel_id,
+  next_label: _next_label,
+  prev_label: _prev_label,
+  title: _title,
+  items: _items,
+  icon_path: _icon_path
+} only %}
 </div>
 
 {% endapply %}
