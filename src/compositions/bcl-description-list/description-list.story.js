@@ -29,7 +29,7 @@ const getArgTypes = () => ({
     type: { name: "string" },
     description: "Classes of the column in horizontal variant",
     table: {
-      defaultValue: { summary: "col-6" },
+      defaultValue: { summary: "col-3" },
       type: { summary: "int" },
       category: "Style",
     },
