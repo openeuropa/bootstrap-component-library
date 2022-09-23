@@ -54,18 +54,18 @@ Parameters:
   <div class="modal-dialog modal-dialog-centered modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header border-0 justify-content-between">
-        {% if _title is not empty %}
-          <div class="modal-title">
-            {% if _title is not empty %}
-              {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-                title: _title,
-                title_tag: _title_tag,
-                title_link: _title_link,
-                attributes: _title_attributes.addClass(['d-sm-block', 'd-none']),
-              } only %}
-            {% endif %}
-          </div>
-        {% endif %}
+      {% if _title is not empty %}
+        <div class="modal-title">
+          {% if _title is not empty %}
+            {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+              title: _title,
+              title_tag: _title_tag,
+              title_link: _title_link,
+              attributes: _title_attributes.addClass(['d-sm-block', 'd-none']),
+            } only %}
+          {% endif %}
+        </div>
+      {% endif %}
         <div class="carousel-pager">
           <span>1</span> / {{ _items|length -}}
         </div>
