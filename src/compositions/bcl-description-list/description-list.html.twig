@@ -7,8 +7,7 @@
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - bordered (boolean) (default: false)
-  - horizontal_size (string) (default: '3-9')
-    options: ['3-9', '4-8', '6-6', '8-4', '9-3']
+  - col_classes (string) (default: 'col-3')
   - items (array) (default: []): format: [
       {
         term (string or array of descriptionListTitle object)
@@ -27,7 +26,7 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
-{% set _horizontal_size = horizontal_size|default('3-9') %}
+{% set _col_classes = col_classes|default('col-3') %}
 {% set _variant = variant|default('') %}
 
 {% if attributes is empty %}
@@ -41,10 +40,7 @@
 {% endif %}
 
 {% if _variant == 'horizontal' %}
-  {% set _item_classes = _item_classes|merge([
-    'list-grid',
-    'grid-' ~ _horizontal_size
-  ]) %}
+  {% set _item_classes = _item_classes|merge(['row']) %}
 {% endif %}
 
 {% if _title is not empty %}
@@ -58,14 +54,29 @@
 
 {% set attributes = attributes.addClass(['bcl-description-list']) %}
 
+{% if _variant != 'horizontal' %}
 <dl
   {{ attributes }}
 >
+{% else %}
+<div
+  {{ attributes }}
+>
+{% endif %}
   {% for _item in _items %}
+  {% if _variant == 'horizontal' %}
+  <dl
+    {{ create_attribute().addClass(_item_classes) }}
+  >
+  {% else %}
   <div
     {{ create_attribute().addClass(_item_classes) }}
   >
+  {% endif %}
   {% if _item.term is not empty %}
+    {% if _variant == 'horizontal' %}
+    <div class="{{ _col_classes }}">
+    {% endif %}
     {% if _item.term is iterable %}
       {% for _term in _item.term %}
         {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _term only -%}
@@ -75,8 +86,14 @@
         label: _item.term
       } only -%}
     {% endif %}
+    {% if _variant == 'horizontal' %}
+    </div>
+    {% endif %}
   {% endif %}
   {% if _item.definition is not empty %}
+    {% if _variant == 'horizontal' %}
+    <div class="col">
+    {% endif %}
     {% if _item.definition is iterable %}
       {% for _definition in _item.definition %}
         {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _definition only -%}
@@ -86,9 +103,20 @@
         label: _item.definition
       } only -%}
     {% endif %}
+    {% if _variant == 'horizontal' %}
+    </div>
+    {% endif %}
   {% endif %}
+  {% if _variant == 'horizontal' %}
+  </dl>
+  {% else %}
   </div>
+  {% endif %}
   {% endfor %}
+{% if _variant != 'horizontal' %}
 </dl>
+{% else %}
+</div>
+{% endif %}
 
 {% endapply %}

@@ -10,7 +10,7 @@ const getArgs = () => ({
   title: "",
   title_tag: "h2",
   bordered: false,
-  horizontal_size: "6-6",
+  col_classes: "col-3",
 });
 
 const getArgTypes = () => ({
@@ -24,14 +24,13 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
-  horizontal_size: {
-    name: "horizontal size",
-    type: { name: "select" },
-    options: ["2-10", "4-8", "6-6", "8-4"],
-    description: "Horizontal column size",
+  col_classes: {
+    name: "col classes",
+    type: { name: "string" },
+    description: "Classes of the column in horizontal variant",
     table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "default" },
+      defaultValue: { summary: "col-6" },
+      type: { summary: "int" },
       category: "Style",
     },
   },
@@ -60,7 +59,7 @@ export const Default = (args) =>
   descriptionList(applyArgs(correctPaths(demoData), args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-Default.argTypes.horizontal_size.table = { disable: true };
+Default.argTypes.col_classes.table = { disable: true };
 
 export const Horizontal = (args) =>
   descriptionList(applyArgs(correctPaths(demoDataHorizontal), args));

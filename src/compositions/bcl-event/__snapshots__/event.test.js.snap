@@ -2843,69 +2843,85 @@ exports[`OE - event page renders correctly 1`] = `
         <div
           class="col-12 col-lg-9 col-xxl-8"
         >
-          <dl
+          <div
             class="mt-3 mb-4 bcl-description-list"
           >
-            <div
-              class="mb-3 list-grid grid-3-9"
+            <dl
+              class="mb-3 row"
             >
-              <dt>
-                <div
-                  class="d-flex"
-                >
+              <div
+                class="col-3"
+              >
+                <dt>
+                  <div
+                    class="d-flex"
+                  >
+                    <svg
+                      class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#calendar-fill"
+                      />
+                    </svg>
+                    <div>
+                      Date
+                    </div>
+                  </div>
+                </dt>
+              </div>
+              <div
+                class="col"
+              >
+                <dd>
+                  <div>
+                    17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
+                  </div>
+                </dd>
+              </div>
+            </dl>
+            <dl
+              class="mb-3 row"
+            >
+              <div
+                class="col-3"
+              >
+                <dt>
+                  <div
+                    class="d-flex"
+                  >
+                    <svg
+                      class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+                    >
+                      <use
+                        xlink:href="/icons.svg#geo-alt-fill"
+                      />
+                    </svg>
+                    <div>
+                      Location
+                    </div>
+                  </div>
+                </dt>
+              </div>
+              <div
+                class="col"
+              >
+                <dd>
                   <svg
-                    class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+                    class="me-2 align-self-center flex-shrink-0 bi icon--fluid"
                   >
                     <use
-                      xlink:href="/icons.svg#calendar-fill"
+                      xlink:href="/flags.svg#spain"
                     />
                   </svg>
-                  <div>
-                    Date
-                  </div>
-                </div>
-              </dt>
-              <dd>
-                <div>
-                  17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)
-                </div>
-              </dd>
-            </div>
-            <div
-              class="mb-3 list-grid grid-3-9"
-            >
-              <dt>
-                <div
-                  class="d-flex"
-                >
-                  <svg
-                    class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+                  <div
+                    class="mb-0 d-inline-block"
                   >
-                    <use
-                      xlink:href="/icons.svg#geo-alt-fill"
-                    />
-                  </svg>
-                  <div>
-                    Location
+                    Barcelona, Spain
                   </div>
-                </div>
-              </dt>
-              <dd>
-                <svg
-                  class="me-2 align-self-center flex-shrink-0 bi icon--fluid"
-                >
-                  <use
-                    xlink:href="/flags.svg#spain"
-                  />
-                </svg>
-                <div
-                  class="mb-0 d-inline-block"
-                >
-                  Barcelona, Spain
-                </div>
-              </dd>
-            </div>
-          </dl>
+                </dd>
+              </div>
+            </dl>
+          </div>
           <h2
             class="my-4"
             id="item-1"

@@ -168,44 +168,6 @@ svg {
   border-color: $gray-300;
 }
 
-.list-grid {
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: map-get($spacers, 3);
-}
-
-.list-grid dt {
-  grid-column: 1/2;
-}
-
-.list-grid dd {
-  grid-column: 2/2;
-}
-
-.grid-2-10 {
-  grid-template-columns: 20% 80%;
-}
-
 .grid-3-9 {
   grid-template-columns: 25% 75%;
-}
-
-.grid-4-8 {
-  grid-auto-columns: 1fr 2fr;
-}
-
-.grid-6-6 {
-  grid-auto-columns: 1fr;
-}
-
-.grid-8-4 {
-  grid-auto-columns: 2fr 1fr;
-}
-
-.grid-9-3 {
-  grid-auto-columns: 75% 25%;
-}
-
-.grid-10-2 {
-  grid-auto-columns: 80% 20%;
 }

@@ -2,64 +2,126 @@
 
 exports[`OE - Description List horizontal renders correctly 1`] = `
 <jest>
-  <dl
+  <div
     class="bcl-description-list"
   >
-    <div
-      class="mb-3 list-grid grid-3-9"
+    <dl
+      class="mb-3 row"
     >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <svg
-            class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-          >
-            <use
-              xlink:href="/icons.svg#geo-alt-fill"
-            />
-          </svg>
-          <div>
-            <p
-              class="mb-0"
-            >
-              Only title label with 
-              <em>
-                icon
-              </em>
-            </p>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="mb-3 list-grid grid-3-9"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
+      <div
+        class="col-3"
+      >
+        <dt>
           <div
-            class="align-self-center"
+            class="d-flex"
           >
-            <span
-              class="p-2 me-2 d-inline-block rounded-1 bg-success"
-            />
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              <p
+                class="mb-0"
+              >
+                Only title label with 
+                <em>
+                  icon
+                </em>
+              </p>
+            </div>
           </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
           <div>
-            First title label
+            Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
           </div>
-        </div>
-      </dt>
-      <dt>
-        <div
-          class="d-flex"
-        >
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="mb-3 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div
+              class="align-self-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-success"
+              />
+            </div>
+            <div>
+              First title label
+            </div>
+          </div>
+        </dt>
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              Second title label
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="mb-3 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div>
+              Only title 
+              <strong>
+                label
+              </strong>
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+        <dd>
           <svg
             class="me-2 align-self-center flex-shrink-0 bi icon--xs"
           >
@@ -67,53 +129,15 @@ exports[`OE - Description List horizontal renders correctly 1`] = `
               xlink:href="/icons.svg#geo-alt-fill"
             />
           </svg>
-          <div>
-            Second title label
+          <div
+            class="mb-0 d-inline-block"
+          >
+            Description text goes here.
           </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="mb-3 list-grid grid-3-9"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <div>
-            Only title 
-            <strong>
-              label
-            </strong>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-      <dd>
-        <svg
-          class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-        >
-          <use
-            xlink:href="/icons.svg#geo-alt-fill"
-          />
-        </svg>
-        <div
-          class="mb-0 d-inline-block"
-        >
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-  </dl>
+        </dd>
+      </div>
+    </dl>
+  </div>
 </jest>
 `;
 
@@ -363,64 +387,126 @@ exports[`OE - Description List with title horizontal and bordered renders correc
   >
     Description list test title
   </h6>
-  <dl
+  <div
     class="bcl-description-list"
   >
-    <div
-      class="border-bottom pb-2-5 mb-2-5 list-grid grid-3-9"
+    <dl
+      class="border-bottom pb-2-5 mb-2-5 row"
     >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <svg
-            class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-          >
-            <use
-              xlink:href="/icons.svg#geo-alt-fill"
-            />
-          </svg>
-          <div>
-            <p
-              class="mb-0"
-            >
-              Only title label with 
-              <em>
-                icon
-              </em>
-            </p>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="border-bottom pb-2-5 mb-2-5 list-grid grid-3-9"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
+      <div
+        class="col-3"
+      >
+        <dt>
           <div
-            class="align-self-center"
+            class="d-flex"
           >
-            <span
-              class="p-2 me-2 d-inline-block rounded-1 bg-success"
-            />
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              <p
+                class="mb-0"
+              >
+                Only title label with 
+                <em>
+                  icon
+                </em>
+              </p>
+            </div>
           </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
           <div>
-            First title label
+            Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
           </div>
-        </div>
-      </dt>
-      <dt>
-        <div
-          class="d-flex"
-        >
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="border-bottom pb-2-5 mb-2-5 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div
+              class="align-self-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-success"
+              />
+            </div>
+            <div>
+              First title label
+            </div>
+          </div>
+        </dt>
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              Second title label
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="border-bottom pb-2-5 mb-2-5 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div>
+              Only title 
+              <strong>
+                label
+              </strong>
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+        <dd>
           <svg
             class="me-2 align-self-center flex-shrink-0 bi icon--xs"
           >
@@ -428,53 +514,15 @@ exports[`OE - Description List with title horizontal and bordered renders correc
               xlink:href="/icons.svg#geo-alt-fill"
             />
           </svg>
-          <div>
-            Second title label
+          <div
+            class="mb-0 d-inline-block"
+          >
+            Description text goes here.
           </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="border-bottom pb-2-5 mb-2-5 list-grid grid-3-9"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <div>
-            Only title 
-            <strong>
-              label
-            </strong>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-      <dd>
-        <svg
-          class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-        >
-          <use
-            xlink:href="/icons.svg#geo-alt-fill"
-          />
-        </svg>
-        <div
-          class="mb-0 d-inline-block"
-        >
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-  </dl>
+        </dd>
+      </div>
+    </dl>
+  </div>
 </jest>
 `;
 
@@ -485,64 +533,126 @@ exports[`OE - Description List with title horizontal renders correctly 1`] = `
   >
     Description list test title
   </h6>
-  <dl
+  <div
     class="bcl-description-list"
   >
-    <div
-      class="mb-3 list-grid grid-3-9"
+    <dl
+      class="mb-3 row"
     >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <svg
-            class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-          >
-            <use
-              xlink:href="/icons.svg#geo-alt-fill"
-            />
-          </svg>
-          <div>
-            <p
-              class="mb-0"
-            >
-              Only title label with 
-              <em>
-                icon
-              </em>
-            </p>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="mb-3 list-grid grid-3-9"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
+      <div
+        class="col-3"
+      >
+        <dt>
           <div
-            class="align-self-center"
+            class="d-flex"
           >
-            <span
-              class="p-2 me-2 d-inline-block rounded-1 bg-success"
-            />
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              <p
+                class="mb-0"
+              >
+                Only title label with 
+                <em>
+                  icon
+                </em>
+              </p>
+            </div>
           </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
           <div>
-            First title label
+            Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
           </div>
-        </div>
-      </dt>
-      <dt>
-        <div
-          class="d-flex"
-        >
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="mb-3 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div
+              class="align-self-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-success"
+              />
+            </div>
+            <div>
+              First title label
+            </div>
+          </div>
+        </dt>
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              Second title label
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="mb-3 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div>
+              Only title 
+              <strong>
+                label
+              </strong>
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+        <dd>
           <svg
             class="me-2 align-self-center flex-shrink-0 bi icon--xs"
           >
@@ -550,53 +660,15 @@ exports[`OE - Description List with title horizontal renders correctly 1`] = `
               xlink:href="/icons.svg#geo-alt-fill"
             />
           </svg>
-          <div>
-            Second title label
+          <div
+            class="mb-0 d-inline-block"
+          >
+            Description text goes here.
           </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="mb-3 list-grid grid-3-9"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <div>
-            Only title 
-            <strong>
-              label
-            </strong>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-      <dd>
-        <svg
-          class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-        >
-          <use
-            xlink:href="/icons.svg#geo-alt-fill"
-          />
-        </svg>
-        <div
-          class="mb-0 d-inline-block"
-        >
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-  </dl>
+        </dd>
+      </div>
+    </dl>
+  </div>
 </jest>
 `;
 
@@ -607,64 +679,126 @@ exports[`OE - Description List with title horizontal with different col size ren
   >
     Description list test title
   </h6>
-  <dl
+  <div
     class="bcl-description-list"
   >
-    <div
-      class="mb-3 list-grid grid-8-4"
+    <dl
+      class="mb-3 row"
     >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <svg
-            class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-          >
-            <use
-              xlink:href="/icons.svg#geo-alt-fill"
-            />
-          </svg>
-          <div>
-            <p
-              class="mb-0"
-            >
-              Only title label with 
-              <em>
-                icon
-              </em>
-            </p>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="mb-3 list-grid grid-8-4"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
+      <div
+        class="col-3"
+      >
+        <dt>
           <div
-            class="align-self-center"
+            class="d-flex"
           >
-            <span
-              class="p-2 me-2 d-inline-block rounded-1 bg-success"
-            />
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              <p
+                class="mb-0"
+              >
+                Only title label with 
+                <em>
+                  icon
+                </em>
+              </p>
+            </div>
           </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
           <div>
-            First title label
+            Long Description text goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim, quam at sollicitudin volutpat, ipsum arcu maximus massa, quis egestas diam tellus vitae nulla.
           </div>
-        </div>
-      </dt>
-      <dt>
-        <div
-          class="d-flex"
-        >
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="mb-3 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div
+              class="align-self-center"
+            >
+              <span
+                class="p-2 me-2 d-inline-block rounded-1 bg-success"
+              />
+            </div>
+            <div>
+              First title label
+            </div>
+          </div>
+        </dt>
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <svg
+              class="me-2 align-self-center flex-shrink-0 bi icon--xs"
+            >
+              <use
+                xlink:href="/icons.svg#geo-alt-fill"
+              />
+            </svg>
+            <div>
+              Second title label
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+      </div>
+    </dl>
+    <dl
+      class="mb-3 row"
+    >
+      <div
+        class="col-3"
+      >
+        <dt>
+          <div
+            class="d-flex"
+          >
+            <div>
+              Only title 
+              <strong>
+                label
+              </strong>
+            </div>
+          </div>
+        </dt>
+      </div>
+      <div
+        class="col"
+      >
+        <dd>
+          <div>
+            Description text goes here.
+          </div>
+        </dd>
+        <dd>
           <svg
             class="me-2 align-self-center flex-shrink-0 bi icon--xs"
           >
@@ -672,53 +806,15 @@ exports[`OE - Description List with title horizontal with different col size ren
               xlink:href="/icons.svg#geo-alt-fill"
             />
           </svg>
-          <div>
-            Second title label
+          <div
+            class="mb-0 d-inline-block"
+          >
+            Description text goes here.
           </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-    <div
-      class="mb-3 list-grid grid-8-4"
-    >
-      <dt>
-        <div
-          class="d-flex"
-        >
-          <div>
-            Only title 
-            <strong>
-              label
-            </strong>
-          </div>
-        </div>
-      </dt>
-      <dd>
-        <div>
-          Description text goes here.
-        </div>
-      </dd>
-      <dd>
-        <svg
-          class="me-2 align-self-center flex-shrink-0 bi icon--xs"
-        >
-          <use
-            xlink:href="/icons.svg#geo-alt-fill"
-          />
-        </svg>
-        <div
-          class="mb-0 d-inline-block"
-        >
-          Description text goes here.
-        </div>
-      </dd>
-    </div>
-  </dl>
+        </dd>
+      </div>
+    </dl>
+  </div>
 </jest>
 `;
 
