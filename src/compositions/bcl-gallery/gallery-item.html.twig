@@ -28,9 +28,9 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(['bcl-gallery__item', 'd-block', 'w-100', 'img-fluid'])
-                              .setAttribute('href', '#')
                               .setAttribute('data-bs-target', '#' ~ _carousel_id)
                               .setAttribute('data-bs-slide-to', loop.index - 1)
+                              .setAttribute('role', 'button')
 %}
 
 <a 

@@ -55,10 +55,8 @@ Parameters:
 
 {# Print the result #}
 
-{% if _items is not empty %}
-
+{% if _items is not empty and _items is iterable %}
   <div {{ attributes }}>
-    {% if _items is iterable %}
       <div class="d-sm-flex flex-sm-row align-items-sm-center">
         <div class="flex-sm-grow-1">
         {% if _title is not empty %}
@@ -87,15 +85,15 @@ Parameters:
             {% if loop.index % _max_visible_thumbnails == 0 or loop.first %}
               <ul class="bcl-gallery__grid">
             {% endif %}
-                <li>
-                  {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
-                    item: _item,
-                    carousel_id: _carousel_id,
-                    modal_id: _modal_id,
-                    icon_path: _icon_path,
-                    loop: loop,
-                  } only %}
-                </li>
+              <li>
+                {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+                  item: _item,
+                  carousel_id: _carousel_id,
+                  modal_id: _modal_id,
+                  icon_path: _icon_path,
+                  loop: loop,
+                } only %}
+              </li>
             {% if loop.index % 5 == 0 or loop.last %}
               </ul>
             {% endif %}  
@@ -142,7 +140,6 @@ Parameters:
           </div>
         {% endif %}
       {% endfor %}
-    {% endif %}
     {% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
       id: _modal_id,
       carousel_id: _carousel_id,
