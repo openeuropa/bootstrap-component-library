@@ -42,7 +42,7 @@ Parameters:
 {% set _icon_path = icon_path|default('') %}
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
 {% set _modal_id = "modal" ~ _id|capitalize %}
-{% set _collapsed_id = "collapse" ~ _id|capitalize %}
+{% set _collapse_id = "collapse" ~ _id|capitalize %}
 {% set _max_visible_thumbnails = _max_visible_thumbnails + 1 %}
 
 {% if attributes is empty %}
@@ -77,7 +77,7 @@ Parameters:
         <div class="bcl-gallery__thumbnails">
       {% endif %}
       {% if loop.index == _max_visible_thumbnails %}
-        <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapsed_id }}">
+        <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapse_id }}">
       {% endif %}
       {% if loop.index % _max_visible_thumbnails == 0 or loop.first %}
         <ul class="bcl-gallery__grid">
@@ -102,11 +102,11 @@ Parameters:
         <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
           <a 
             class="bcl-gallery__collapse standalone d-none d-sm-inline-block" 
-            aria-controls="{{ _collapsed_id }}" 
+            aria-controls="{{ _collapse_id }}" 
             data-bs-toggle="collapse" 
             aria-expanded="false" 
             role="button" 
-            href="#{{ _collapsed_id }}"
+            href="#{{ _collapse_id }}"
           >
             <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
             <span class="label-expanded">{{ _toggle_expanded }}</span>
