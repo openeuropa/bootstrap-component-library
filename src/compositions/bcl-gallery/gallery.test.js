@@ -17,7 +17,7 @@ describe("OE - Gallery", () => {
     return expect(render(dataDefault)).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with title and link", () => {
+  test("renders correctly with new counter", () => {
     expect.assertions(1);
     return expect(
       render({ ...dataDefault, counter: 4 })
