@@ -6,11 +6,8 @@ Parameters:
   - label (string) (default: '')
   - disabled (boolean) (default: false)
   - active (boolean) (default: false)
-  - enable_prev_next_icon (boolean) (default: false)
-  - enable_first_last_icon (boolean) (default: false)
   - aria_label (string) (default: '')
   - icon (Icon component) (default: {})
-  - icon_path (Icon component) (default: {})
   - attributes (drupal attrs)
 #}
 
@@ -18,8 +15,6 @@ Parameters:
 {% set _label = label|default('') %}
 {% set _disabled = disabled|default(false) %}
 {% set _active = active|default(false) %}
-{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
-{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
 {% set _aria_label = aria_label|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _classes = ['page-link'] %}
