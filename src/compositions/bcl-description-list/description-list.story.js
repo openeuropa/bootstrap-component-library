@@ -10,7 +10,7 @@ const getArgs = () => ({
   title: "",
   title_tag: "h2",
   bordered: false,
-  col_classes: "col-12 col-md-3",
+  col_classes: "col-md-3",
 });
 
 const getArgTypes = () => ({
