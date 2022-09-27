@@ -1,0 +1,71 @@
+{% apply spaceless %}
+
+{#
+Parameters:
+  - path (string) (default: '')
+  - label (string) (default: '')
+  - disabled (boolean) (default: false)
+  - active (boolean) (default: false)
+  - enable_prev_next_icon (boolean) (default: false)
+  - enable_first_last_icon (boolean) (default: false)
+  - aria_label (string) (default: '')
+  - icon (Icon component) (default: {})
+  - icon_path (Icon component) (default: {})
+  - attributes (drupal attrs)
+#}
+
+{% set _path = path|default('') %}
+{% set _label = label|default('') %}
+{% set _disabled = disabled|default(false) %}
+{% set _active = active|default(false) %}
+{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
+{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
+{% set _aria_label = aria_label|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _classes = ['page-link'] %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _disabled %}
+  {% set attributes = attributes.setAttribute('tabindex', '-1')
+                                .setAttribute('aria-disabled', true) 
+  %}
+{% endif %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', _aria_label ) %}
+{% endif %}
+
+{% if _path is not empty %}
+  {% set attributes = attributes.setAttribute('href', _path ) %}
+{% endif %}
+
+{% if _active %}
+  {% set attributes = attributes.setAttribute('aria-current', 'page' ) %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes)%}
+
+{%- if _path is not empty -%}
+<a
+  {{ attributes }}
+>
+{%- else -%}
+<div
+  {{ attributes }}
+>
+{%- endif -%}
+  {%- if _icon is not empty -%}
+    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+  {%- else -%}
+    {{- _label -}}
+  {%- endif -%}
+{%- if _path is not empty -%}
+</a>
+{%- else -%}
+</div>
+{%- endif -%}
+
+{% endapply %}

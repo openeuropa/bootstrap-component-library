@@ -3,6 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
+import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-pagination/data";
 
@@ -36,6 +37,24 @@ describe("OE - Pagination", () => {
         render({ ...demoData, alignment })
       ).resolves.toMatchSnapshot();
     });
+  });
+
+  test(`renders correctly with new attributes on items`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        items: [
+          {
+            label: "1",
+            path: "/example.html",
+            attributes: new drupalAttribute()
+              .addClass("new-class")
+              .setAttribute("new-attributes", "1"),
+          },
+        ],
+      })
+    ).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly as glossary`, () => {

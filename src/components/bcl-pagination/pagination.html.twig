@@ -100,35 +100,28 @@
       {% set _first_class = _first_class ~ ' disabled' %}
     {% endif %}
     <li class="{{ _first_class }}">
-      <a
-        class="page-link"
-        href="{{ _first.path }}"
-        {% if _first.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _first.aria_label -%}
-        aria-label="{{ _first.aria_label }}"
-        {%- endif -%}
-      >
       {%- if _enable_first_last_icon -%}
         {%- if _first.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _first.icon only -%}
+          {% set _first = _first|merge({
+            icon: first.icon
+          }) %}
         {%- else -%}
           {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-double-left",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
+            {% set _first = _first|merge({
+              icon: {
+                name: "chevron-double-left",
+                size: "fluid",
+                path: _icon_path,
+              }
+            }) %}
           {%- else -%}
-            <span aria-hidden="true">&laquo;</span>
+            {% set _first = _first|merge({
+              label: '<span aria-hidden="true">&laquo;</span>'
+            }) %}
           {%- endif -%}
         {%- endif -%}
-      {%- else -%}
-        {{- _first.label -}}
       {%- endif -%}
-      </a>
+      {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _first only -%}
     </li>
   {% endif %}
   {% if _prev is not empty %}
@@ -137,35 +130,28 @@
       {% set _prev_class = _prev_class ~ ' disabled' %}
     {% endif %}
     <li class="{{ _prev_class }}">
-      <a
-        class="page-link"
-        href="{{ _prev.path }}"
-        {% if _prev.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _prev.aria_label -%}
-        aria-label="{{ _prev.aria_label }}"
-        {%- endif -%}
-      >
-      {%- if _enable_prev_next_icon -%}
-        {%- if _prev.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _prev.icon only -%}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    {%- if _enable_prev_next_icon -%}
+      {%- if _prev.icon is not empty -%}
+        {% set _prev = _first|merge({
+          icon: first.icon
+        }) %}
+      {%- else -%}
+        {%- if _icon_path is not empty -%}
+          {% set _prev = _prev|merge({
+            icon: {
               name: "chevron-left",
               size: "fluid",
               path: _icon_path,
-            } only %}
-          {%- else -%}
-            <span aria-hidden="true">&lsaquo;</span>
-          {%- endif -%}
+            }
+          }) %}
+        {%- else -%}
+          {% set _prev = _prev|merge({
+            label: '<span aria-hidden="true">&lsaquo;</span>'
+          }) %}
         {%- endif -%}
-      {%- else -%}
-        {{- _prev.label -}}
       {%- endif -%}
-      </a>
+    {%- endif -%}
+    {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _prev only -%}
     </li>
   {% endif %}
   {% if _items is not empty and _items is iterable %}
@@ -178,19 +164,7 @@
       {% set _item_class = _item_class ~ ' active' %}
     {% endif %}
     <li class="{{ _item_class }}">
-      <a
-        class="page-link"
-        href="{{ _item.path }}"
-        {% if _item.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {% if _item.active %}
-        aria-current="page"
-        {% endif %}
-      >
-        {{- _item.label -}}
-      </a>
+      {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
     </li>
     {% endfor %}
   {% endif %}
@@ -200,35 +174,28 @@
       {% set _next_class = _next_class ~ ' disabled' %}
     {% endif %}
     <li class="{{ _next_class }}">
-      <a
-        class="page-link"
-        href="{{ _next.path }}"
-        {% if _next.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _next.aria_label -%}
-        aria-label="{{ _next.aria_label }}"
-        {%- endif -%}
-      >
       {%- if _enable_prev_next_icon -%}
         {%- if _next.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _next.icon only -%}
+          {% set _next = _first|merge({
+            icon: first.icon
+          }) %}
         {%- else -%}
           {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-right",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
+            {% set _next = _next|merge({
+              icon: {
+                name: "chevron-right",
+                size: "fluid",
+                path: _icon_path,
+              }
+            }) %}
           {%- else -%}
-            <span aria-hidden="true">&rsaquo;</span>
+            {% set _next = _next|merge({
+              label: '<span aria-hidden="true">&rsaquo;</span>'
+            }) %}
           {%- endif -%}
         {%- endif -%}
-      {%- else -%}
-        {{- _next.label -}}
       {%- endif -%}
-      </a>
+    {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _next only -%}
     </li>
   {% endif %}
   {% if _last is not empty %}
@@ -237,35 +204,28 @@
       {% set _last_class = _last_class ~ ' disabled' %}
     {% endif %}
     <li class="{{ _last_class }}">
-      <a
-        class="page-link"
-        href="{{ _last.path }}"
-        {% if _last.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _last.aria_label -%}
-        aria-label="{{ _last.aria_label }}"
-        {%- endif -%}
-      >
       {%- if _enable_first_last_icon -%}
         {%- if _last.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _last.icon only -%}
+          {% set _last = _first|merge({
+            icon: first.icon
+          }) %}
         {%- else -%}
           {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-double-right",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
+            {% set _last = _last|merge({
+              icon: {
+                name: "chevron-double-right",
+                size: "fluid",
+                path: _icon_path,
+              }
+            }) %}
           {%- else -%}
-            <span aria-hidden="true">&raquo;</span>
+            {% set _last = _last|merge({
+              label: '<span aria-hidden="true">&raquo;</span>'
+            }) %}
           {%- endif -%}
         {%- endif -%}
-      {%- else -%}
-        {{- _last.label -}}
-        {%- endif -%}
-      </a>
+      {%- endif -%}
+      {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _last only -%}
     </li>
   {% endif %}
   </ul>
