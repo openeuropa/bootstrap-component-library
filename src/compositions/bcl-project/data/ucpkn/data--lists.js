@@ -10,20 +10,12 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: "EU contribution amount",
-                },
-                definition: [
-                  {
-                    label:
-                      "290 366,97 Euro <a href='/example.html'>(contribution details)</a>",
-                  },
-                ],
+                term: "EU contribution amount",
+                definition:
+                  "290 366,97 Euro <a href='/example.html'>(contribution details)</a>",
               },
               {
-                term: {
-                  label: "Funding source",
-                },
+                term: "Funding source",
                 definition: [
                   {
                     link: {
@@ -39,9 +31,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: "Contact",
-                },
+                term: "Contact",
                 definition: [
                   {
                     link: {
@@ -67,9 +57,7 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Name</p>',
                 definition: [
                   {
                     link: {
@@ -81,9 +69,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -96,24 +82,12 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Role</p>',
-                },
-                definition: [
-                  {
-                    label: "Beneficiary",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Role</p>',
+                definition: "Beneficiary",
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">EU Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 16.314.672,00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">EU Contribution</p>',
+                definition: "EUR 16.314.672,00",
               },
             ],
           },
@@ -121,9 +95,7 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Name</p>',
                 definition: [
                   {
                     link: {
@@ -134,9 +106,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -149,24 +119,12 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Role</p>',
-                },
-                definition: [
-                  {
-                    label: "Beneficiary",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Role</p>',
+                definition: "Beneficiary",
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">EU Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 16.314.672,00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">EU Contribution</p>',
+                definition: "EUR 16.314.672,00",
               },
             ],
           },
@@ -174,9 +132,7 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Name</p>',
                 definition: [
                   {
                     link: {
@@ -187,9 +143,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -202,24 +156,12 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Role</p>',
-                },
-                definition: [
-                  {
-                    label: "Beneficiary",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Role</p>',
+                definition: "Beneficiary",
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">EU Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 16.314.672,00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">EU Contribution</p>',
+                definition: "EUR 16.314.672,00",
               },
             ],
           },
@@ -227,9 +169,7 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Name</p>',
                 definition: [
                   {
                     link: {
@@ -240,9 +180,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -255,24 +193,12 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Role</p>',
-                },
-                definition: [
-                  {
-                    label: "Beneficiary",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Role</p>',
+                definition: "Beneficiary",
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">EU Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 16.314.672,00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">EU Contribution</p>',
+                definition: "EUR 16.314.672,00",
               },
             ],
           },

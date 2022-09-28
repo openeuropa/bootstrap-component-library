@@ -10,6 +10,7 @@ const getArgs = () => ({
   title: "",
   title_tag: "h2",
   bordered: false,
+  col_classes: "col-md-3",
 });
 
 const getArgTypes = () => ({
@@ -23,6 +24,16 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
+  col_classes: {
+    name: "col classes",
+    type: { name: "string" },
+    description: "Classes of the column in horizontal variant",
+    table: {
+      defaultValue: { summary: "col-3" },
+      type: { summary: "int" },
+      category: "Style",
+    },
+  },
 });
 
 const applyArgs = (data, args) => Object.assign(data, args);
@@ -31,6 +42,9 @@ export default {
   title: "Paragraphs/Description List",
   decorators: [withCode, withDesign],
   parameters: {
+    viewport: {
+      defaultViewport: "tablet",
+    },
     design: [
       {
         name: "Mockup",
@@ -45,10 +59,11 @@ export const Default = (args) =>
   descriptionList(applyArgs(correctPaths(demoData), args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
+Default.argTypes.col_classes.table = { disable: true };
 
 export const Horizontal = (args) =>
   descriptionList(applyArgs(correctPaths(demoDataHorizontal), args));
 
-Horizontal.storyName = "Horizontal Description List";
+Horizontal.storyName = "Horizontal";
 Horizontal.args = getArgs(demoDataHorizontal);
 Horizontal.argTypes = getArgTypes(demoDataHorizontal);

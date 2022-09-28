@@ -6,14 +6,16 @@ const detailsListMultiple = {
     variant: "horizontal",
     items: [
       {
-        term: {
-          label: "Date",
-          icon: {
-            name: "calendar-fill",
-            size: "xs",
-            path: "/icons.svg",
+        term: [
+          {
+            label: "Date",
+            icon: {
+              name: "calendar-fill",
+              size: "xs",
+              path: "/icons.svg",
+            },
           },
-        },
+        ],
         definition: [
           { label: "17 October 2021, 10.00 - 12.00 (CET)" },
           { label: "18 October 2021, 08.00 - 17.00 (CET)" },
@@ -23,14 +25,16 @@ const detailsListMultiple = {
         ],
       },
       {
-        term: {
-          label: "Location",
-          icon: {
-            name: "geo-alt-fill",
-            size: "xs",
-            path: "/icons.svg",
+        term: [
+          {
+            label: "Location",
+            icon: {
+              name: "geo-alt-fill",
+              size: "xs",
+              path: "/icons.svg",
+            },
           },
-        },
+        ],
         definition: [
           {
             icon: {
@@ -52,25 +56,29 @@ const detailsListSingle = {
     variant: "horizontal",
     items: [
       {
-        term: {
-          label: "Date",
-          icon: {
-            name: "calendar-fill",
-            size: "xs",
-            path: "/icons.svg",
+        term: [
+          {
+            label: "Date",
+            icon: {
+              name: "calendar-fill",
+              size: "xs",
+              path: "/icons.svg",
+            },
           },
-        },
+        ],
         definition: "17 October 2021, 08.00 - 20 October 2021, 16.30 (CET)",
       },
       {
-        term: {
-          label: "Location",
-          icon: {
-            name: "geo-alt-fill",
-            size: "xs",
-            path: "/icons.svg",
+        term: [
+          {
+            label: "Location",
+            icon: {
+              name: "geo-alt-fill",
+              size: "xs",
+              path: "/icons.svg",
+            },
           },
-        },
+        ],
         definition: [
           {
             icon: {
