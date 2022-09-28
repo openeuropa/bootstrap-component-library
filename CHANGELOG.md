@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.28.0 (2022-09-28)
+
+#### :bug: Bug Fix
+* [#451](https://github.com/openeuropa/bootstrap-component-library/pull/451) fix(carousel): Fixing condition for caption rendering - OEL-1985 ([@planctus](https://github.com/planctus))
+
+#### :nail_care: Enhancement
+* [#463](https://github.com/openeuropa/bootstrap-component-library/pull/463) feat(glossary): Iteration on the component styles - OEL-2007 ([@planctus](https://github.com/planctus))
+* [#447](https://github.com/openeuropa/bootstrap-component-library/pull/447) feat(description-list): Description List refactor - OEL-2014 ([@tibi2303](https://github.com/tibi2303))
+* [#460](https://github.com/openeuropa/bootstrap-component-library/pull/460) feat(gallery): Template splitting item and modal - OEL-2049 ([@tibi2303](https://github.com/tibi2303))
+* [#459](https://github.com/openeuropa/bootstrap-component-library/pull/459) feat(file): Template for translation - OEL-2043 ([@tibi2303](https://github.com/tibi2303))
+* [#455](https://github.com/openeuropa/bootstrap-component-library/pull/455) feat(content-banner): Redone column classes on content-banner - OEL-2038 ([@tibi2303](https://github.com/tibi2303))
+* [#458](https://github.com/openeuropa/bootstrap-component-library/pull/458) feat(timeline): Refactored timeline - OEL-2041 ([@tibi2303](https://github.com/tibi2303))
+* [#456](https://github.com/openeuropa/bootstrap-component-library/pull/456) feat(world-flags): Providing svg sources from flag-icons package - OEL-1991 ([@planctus](https://github.com/planctus))
+* [#450](https://github.com/openeuropa/bootstrap-component-library/pull/450) feat(documentation): Updated parameters documentation - OEL-2022 ([@tibi2303](https://github.com/tibi2303))
+* [#446](https://github.com/openeuropa/bootstrap-component-library/pull/446) feat(file): Title new line on file card component - OEL-2013 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#461](https://github.com/openeuropa/bootstrap-component-library/pull/461) chore(deps): Updates 23-09-22 ([@planctus](https://github.com/planctus))
+
+* [#457](https://github.com/openeuropa/bootstrap-component-library/pull/457) chore(deps): updates, audit fix ([@planctus](https://github.com/planctus))
+* [#452](https://github.com/openeuropa/bootstrap-component-library/pull/452) chore(deps): Storybook 6.5.12 ([@planctus](https://github.com/planctus))
+* [#449](https://github.com/openeuropa/bootstrap-component-library/pull/449) chore(deps): Storybook 6.5.11 ([@planctus](https://github.com/planctus))
+* [#448](https://github.com/openeuropa/bootstrap-component-library/pull/448) chore(deps): Updates 12-09-22 ([@planctus](https://github.com/planctus))
+* [#445](https://github.com/openeuropa/bootstrap-component-library/pull/445) chore(deps): Updates 02-09-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.27.0 (2022-08-31)
 
 #### :bug: Bug Fix
