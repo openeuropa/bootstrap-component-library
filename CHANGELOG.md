@@ -6,9 +6,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.28.0 (2022-09-28)
 
 #### :bug: Bug Fix
+
 * [#451](https://github.com/openeuropa/bootstrap-component-library/pull/451) fix(carousel): Fixing condition for caption rendering - OEL-1985 ([@planctus](https://github.com/planctus))
 
 #### :nail_care: Enhancement
+
 * [#463](https://github.com/openeuropa/bootstrap-component-library/pull/463) feat(glossary): Iteration on the component styles - OEL-2007 ([@planctus](https://github.com/planctus))
 * [#447](https://github.com/openeuropa/bootstrap-component-library/pull/447) feat(description-list): Description List refactor - OEL-2014 ([@tibi2303](https://github.com/tibi2303))
 * [#460](https://github.com/openeuropa/bootstrap-component-library/pull/460) feat(gallery): Template splitting item and modal - OEL-2049 ([@tibi2303](https://github.com/tibi2303))
@@ -20,8 +22,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#446](https://github.com/openeuropa/bootstrap-component-library/pull/446) feat(file): Title new line on file card component - OEL-2013 ([@tibi2303](https://github.com/tibi2303))
 
 #### :house: Internal
-* [#461](https://github.com/openeuropa/bootstrap-component-library/pull/461) chore(deps): Updates 23-09-22 ([@planctus](https://github.com/planctus))
 
+* [#461](https://github.com/openeuropa/bootstrap-component-library/pull/461) chore(deps): Updates 23-09-22 ([@planctus](https://github.com/planctus))
 * [#457](https://github.com/openeuropa/bootstrap-component-library/pull/457) chore(deps): updates, audit fix ([@planctus](https://github.com/planctus))
 * [#452](https://github.com/openeuropa/bootstrap-component-library/pull/452) chore(deps): Storybook 6.5.12 ([@planctus](https://github.com/planctus))
 * [#449](https://github.com/openeuropa/bootstrap-component-library/pull/449) chore(deps): Storybook 6.5.11 ([@planctus](https://github.com/planctus))
