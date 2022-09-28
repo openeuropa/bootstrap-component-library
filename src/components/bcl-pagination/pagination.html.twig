@@ -64,7 +64,7 @@
 {% set _next = next|default({}) %}
 {% set _last = last|default({}) %}
 {% set _items = items|default([]) %}
-{% set _icon_path = icon_path|default({}) %}
+{% set _icon_path = icon_path|default('') %}
 
 {% set _classes = 'pagination' %}
 {% if _size is not empty %}
