@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.28.1 (2022-09-28)
+
+#### :nail_care: Enhancement
+
+* [#468](https://github.com/openeuropa/bootstrap-component-library/pull/468) fix(pagination): Fixing the way the bcl-glossary class is added - OEL-2064 ([@planctus](https://github.com/planctus))
+
+#### Committers: 1
+
+- [@planctus](https://github.com/planctus)
+
 ## 0.28.0 (2022-09-28)
 
 #### :bug: Bug Fix
