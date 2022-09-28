@@ -5,7 +5,6 @@ import {
   sortBy,
   itemsPerPage,
 } from "@openeuropa/bcl-glossary/data/data--select";
-import drupalAttribute from "drupal-attribute";
 
 const demoListing = {
   sortBy,
@@ -178,22 +177,6 @@ const demoDataListing = {
            <p>Disclaimer: XXX has developed the definitions in this glossary to help this website's users understand regulatory terminology. Definitions may differ from those given in European Union legislation.`,
   },
   ...demoListing,
-  search: {
-    submit: {
-      attributes: new drupalAttribute().addClass(["bcl-search-form__submit"]),
-      assistive_text: "Search term in glossary",
-      icon: {
-        name: "search",
-        size: "xs",
-        path: "/icons.svg",
-      },
-    },
-    input: {
-      placeholder: "Search term in glossary",
-      attributes: new drupalAttribute().addClass(["bcl-search-form__input"]),
-      input_type: "search",
-    },
-  },
   glossary,
   pagination,
 };
