@@ -108,7 +108,43 @@ module.exports = {
       path: `/example.html`,
     },
     {
-      label: "0-9",
+      label: "0",
+      path: `/example.html`,
+    },
+    {
+      label: "1",
+      path: `/example.html`,
+    },
+    {
+      label: "2",
+      path: `/example.html`,
+    },
+    {
+      label: "3",
+      path: `/example.html`,
+    },
+    {
+      label: "4",
+      path: `/example.html`,
+    },
+    {
+      label: "5",
+      path: `/example.html`,
+    },
+    {
+      label: "6",
+      path: `/example.html`,
+    },
+    {
+      label: "7",
+      path: `/example.html`,
+    },
+    {
+      label: "8",
+      path: `/example.html`,
+    },
+    {
+      label: "9",
       path: `/example.html`,
     },
   ],
