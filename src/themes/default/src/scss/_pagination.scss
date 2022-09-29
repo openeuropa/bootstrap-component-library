@@ -8,17 +8,15 @@
 }
 
 .pagination--glossary {
+  flex-wrap: wrap;
   margin-bottom: 0;
-
-  .page-item {
-    margin-right: auto;
-  }
 
   .page-link {
     border: none;
     border-bottom: 2px solid transparent;
     color: $dark;
     font-weight: $font-weight-bold;
+    padding: map-get($spacers, 3);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -26,7 +24,9 @@
   .active .page-link {
     background: transparent;
     border-color: $primary;
+    border-width: 2px;
     color: $dark;
+    padding-bottom: calc(map-get($spacers, 3) - 1px);
   }
 
   .page-item:first-child .page-link {

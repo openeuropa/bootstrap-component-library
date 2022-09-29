@@ -10,9 +10,7 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: "Website",
-                },
+                term: "Website",
                 definition: [
                   {
                     link: {
@@ -28,9 +26,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: "Funding Programme",
-                },
+                term: "Funding Programme",
                 definition: [
                   {
                     link: {
@@ -46,9 +42,7 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: "Project ID",
-                },
+                term: "Project ID",
                 definition: [
                   {
                     link: {
@@ -69,9 +63,7 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Coordinator</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Coordinator</p>',
                 definition: [
                   {
                     icon: {
@@ -99,20 +91,12 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
-                definition: [
-                  {
-                    label:
-                      "Commissariat à l’Energie Atomique <br>et aux Energies Alternatives",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Name</p>',
+                definition:
+                  "Commissariat à l’Energie Atomique <br>et aux Energies Alternatives",
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -125,14 +109,8 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 297.700.00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Contribution</p>',
+                definition: "EUR 297.700.00",
               },
             ],
           },
@@ -140,19 +118,11 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
-                definition: [
-                  {
-                    label: getDummyText(1, false),
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Name</p>',
+                definition: getDummyText(1, false),
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -165,14 +135,8 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 297.700.00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Contribution</p>',
+                definition: "EUR 297.700.00",
               },
             ],
           },
@@ -180,19 +144,11 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
-                definition: [
-                  {
-                    label: getDummyText(1, false),
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Name</p>',
+                definition: getDummyText(1, false),
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -205,14 +161,8 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 297.700.00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Contribution</p>',
+                definition: "EUR 297.700.00",
               },
             ],
           },
@@ -220,19 +170,11 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
-                definition: [
-                  {
-                    label: getDummyText(1, false),
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Name</p>',
+                definition: getDummyText(1, false),
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -245,14 +187,8 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 297.700.00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Contribution</p>',
+                definition: "EUR 297.700.00",
               },
             ],
           },
@@ -269,20 +205,12 @@ module.exports = {
             variant: "horizontal",
             items: [
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Name</p>',
-                },
-                definition: [
-                  {
-                    label:
-                      "Commissariat à l’Energie Atomique <br>et aux Energies Alternatives",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Name</p>',
+                definition:
+                  "Commissariat à l’Energie Atomique <br>et aux Energies Alternatives",
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Country</p>',
-                },
+                term: '<p class="mb-0 d-inline-block">Country</p>',
                 definition: [
                   {
                     icon: {
@@ -295,14 +223,8 @@ module.exports = {
                 ],
               },
               {
-                term: {
-                  label: '<p class="mb-0 d-inline-block">Contribution</p>',
-                },
-                definition: [
-                  {
-                    label: "EUR 297.700.00",
-                  },
-                ],
+                term: '<p class="mb-0 d-inline-block">Contribution</p>',
+                definition: "EUR 297.700.00",
               },
             ],
           },

@@ -6,14 +6,12 @@
   - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - bordered (boolean) (default: '')
+  - bordered (boolean) (default: false)
+  - col_classes (string) (default: 'col-3')
   - items (array) (default: []): format: [
       {
-        term (object or array of object) -format: {
-          icon: {} - icon object,
-          label: ''
-        }
-        definition (block or array of string)
+        term (string or array of descriptionListTitle object)
+        definition (string or array of descriptionListDetails object)
       },
       ...
     ]
@@ -28,33 +26,21 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
+{% set _col_classes = col_classes|default('col-md-3') %}
 {% set _variant = variant|default('') %}
-
-{% set _classes = ['bcl-description-list'] %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _item_classes = '' %}
-
-{% if _variant == 'horizontal' %}
-  {% set _item_classes = 'd-md-grid grid-3-9' %}
-  {% if _bordered %}
-    {% set _item_classes = _item_classes ~ ' mb-2-5 pb-2-5' %}
-  {% else %}
-    {% set _item_classes = _item_classes ~ ' mb-3' %}
-  {% endif %}
-{% else %}
-  {% set _item_classes = 'mb-3' %}
-  {% if _bordered %}
-    {% set _item_classes = 'mb-2-5' %}
-    {% set _item_classes = _item_classes ~ ' pb-2-5' %}
-  {% endif %}
-{% endif %}
+{% set _item_classes = ['mb-3'] %}
 
 {% if _bordered %}
-  {% set _item_classes = _item_classes ~ ' border-bottom' %}
+  {% set _item_classes = ['border-bottom', 'pb-2-5', 'mb-2-5'] %}
+{% endif %}
+
+{% if _variant == 'horizontal' %}
+  {% set _item_classes = _item_classes|merge(['row']) %}
 {% endif %}
 
 {% if _title is not empty %}
@@ -66,122 +52,71 @@
   } only %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{% set attributes = attributes.addClass(['bcl-description-list']) %}
 
+{% if _variant != 'horizontal' %}
+<dl
+  {{ attributes }}
+>
+{% else %}
 <div
   {{ attributes }}
 >
-  <dl>
+{% endif %}
   {% for _item in _items %}
-  {% if loop.last and _variant != 'horizontal' %}
-    {% set _item_classes = '' %}
+  {% if _variant == 'horizontal' %}
+  <dl
+    {{ create_attribute().addClass(_item_classes) }}
+  >
+  {% else %}
+  <div
+    {{ create_attribute().addClass(_item_classes) }}
+  >
   {% endif %}
   {% if _item.term is not empty %}
-    <div
-    {% if _item_classes is not empty %}
-      class="{{ _item_classes }}"
+    {% if _variant == 'horizontal' %}
+    <div class="{{ _col_classes }}">
     {% endif %}
-    >
-      {% if _item.term is iterable %}
-      <dt>
+    {% if _item.term is iterable %}
       {% for _term in _item.term %}
-        {%- if _item.term|length > 1 -%}
-        <div
-        {% if _variant == 'horizontal' and _term.icon is not empty %}
-          class="d-flex"
-        {% endif %}
-        >
-        {%- endif -%}
-        {%- if _term.icon is not empty -%}
-          {% set _icon_classes = ["me-2"] %}
-          {% if _variant == 'horizontal' %}
-            {% set _icon_classes = _icon_classes|merge(["mt-1"]) %}
-          {% endif %}
-          {% include '@oe-bcl/bcl-icon/icon.html.twig' with _term.icon|merge({
-            attributes: create_attribute().addClass(_icon_classes)
-          }) only %}
-          <p class="mb-0 d-inline-block">{{ _term.label }}</p>
-        {%- elseif _term.color is not empty -%}
-          <div class="d-flex align-items-center">
-            <span class="p-2 me-2 d-inline-block rounded-1 {{ _term.color }}"></span>{{- _term.label -}}
-          </div>
-        {%- else -%}
-          {{- _term.label -}}
-        {%- endif -%}
-        {% if _item.term|length > 1 %}
-        </div>
-        {% endif %}
+        {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _term only -%}
       {% endfor %}
-      </dt>
-      {% else %}
-      <dt
-        {% if _variant == 'horizontal' and _item.term.icon is not empty %}
-          class="d-flex"
-        {% endif %}
-      >
-      {%- if _item.term.icon is not empty -%}
-        {% set _icon_classes = ["me-2"] %}
-        {% if _variant == 'horizontal' %}
-          {% set _icon_classes = _icon_classes|merge(["mt-1"]) %}
-        {% endif %}
-        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.term.icon|merge({
-          attributes: create_attribute().addClass(_icon_classes)
-        }) only -%}
-        <p class="mb-0 d-inline-block">{{ _item.term.label }}</p>
-      {%- elseif _item.term.color is not empty -%}
-        <div class="d-flex align-items-center">
-          <span class="p-2 me-2 d-inline-block rounded-1 {{ _item.term.color }}"></span>{{- _item.term.label -}}
-        </div>
-      {%- else -%}
-        {{- _item.term.label -}}
-      {%- endif -%}
-      </dt>
-      {% endif %}
+    {% else %}
+      {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with {
+        label: _item.term
+      } only -%}
     {% endif %}
-    {% if _item.definition is not empty %}
-      {% if _item.definition is iterable %}
-        {% if _variant == 'horizontal' %}
-        <dd
-          {% if _bordered %}
-            class="mb-0"
-          {% endif %}
-        >
-        {% endif %}
-        {% for _definition in _item.definition %}
-          {% if _variant == 'horizontal' %}<div>{% else %}<dd>{% endif %}
-            {%- if _definition.button is defined -%}
-              {% include '@oe-bcl/bcl-button/button.html.twig' with _definition.button only %}
-            {%- elseif _definition.link is defined %}
-              {% include '@oe-bcl/bcl-link/link.html.twig' with _definition.link only -%}
-            {%- else -%}
-              {%- if _definition.icon is defined -%}
-                {%- set _icon_classes = ["me-2"] -%}
-                {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _definition.icon|merge({
-                  attributes: create_attribute().addClass(_icon_classes)
-                }) only -%}
-                <p class="mb-0 d-inline-block">{{ _definition.label }}</p>
-              {%- else -%}
-                {{- _definition.label -}}
-              {%- endif -%}
-            {%- endif -%}
-          {% if _variant == 'horizontal' %}</div>{% else %}</dd>{% endif %}
-        {% endfor %}
-        {% if _variant == 'horizontal' %}
-        </dd>
-        {% endif %}
-      {% else %}
-      <dd
-        {% if _bordered %}
-          class="mb-0"
-        {% endif %}
-      >
-        {%- block definition _item.definition -%}
-      </dd>
-      {% endif %}
+    {% if _variant == 'horizontal' %}
     </div>
+    {% endif %}
+  {% endif %}
+  {% if _item.definition is not empty %}
+    {% if _variant == 'horizontal' %}
+    <div class="col">
+    {% endif %}
+    {% if _item.definition is iterable %}
+      {% for _definition in _item.definition %}
+        {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _definition only -%}
+      {% endfor %}
+    {% else %}
+      {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with {
+        label: _item.definition
+      } only -%}
+    {% endif %}
+    {% if _variant == 'horizontal' %}
+    </div>
+    {% endif %}
+  {% endif %}
+  {% if _variant == 'horizontal' %}
+  </dl>
+  {% else %}
+  </div>
   {% endif %}
   {% endfor %}
-  </dl>
+{% if _variant != 'horizontal' %}
+</dl>
+{% else %}
 </div>
+{% endif %}
 
 {% endapply %}
