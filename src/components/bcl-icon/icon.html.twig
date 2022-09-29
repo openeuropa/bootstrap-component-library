@@ -14,12 +14,7 @@
 {% set _path = path|default('') %}
 {% set _size = size|default('s') %}
 {% set _transformation = transformation|default('') %}
-<<<<<<< HEAD
 {% set _classes = ['bcl-icon', 'bi', 'icon--' ~ _size] %}
-=======
-
-{% set _classes = ['bi', 'icon--' ~ _size] %}
->>>>>>> 72a590a814eb193c247246f7b8a52246de4b8760
 
 {% if _transformation is not empty %}
   {% set _classes = _classes|merge(['icon--' ~ _transformation]) %}

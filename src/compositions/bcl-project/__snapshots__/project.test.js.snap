@@ -308,17 +308,8 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               >
                 search
               </span>
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -335,13 +326,6 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
     <section
       class="bcl-section"
     >
-      &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-            
-
-
-
-
-
       <div
         class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
       >
@@ -364,7 +348,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
+                class="col-md col-xl-9 col-xxl-8"
               >
                 <div
                   class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
@@ -614,39 +598,69 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                   <div
                     class="mb-0 bcl-description-list"
                   >
-                    <dl>
+                    <dl
+                      class="mb-3 row"
+                    >
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                            />
-                            Total budget
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                              />
+                            </div>
+                            <div>
+                              Total budget
+                            </div>
                           </div>
                         </dt>
-                        <dd>
-                          EUR 16.314.672,00
-                        </dd>
                       </div>
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col"
+                      >
+                        <dd>
+                          <div>
+                            EUR 16.314.672,00
+                          </div>
+                        </dd>
+                      </div>
+                    </dl>
+                    <dl
+                      class="mb-3 row"
+                    >
+                      <div
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                            />
-                            EC contribution
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                              />
+                            </div>
+                            <div>
+                              EC contribution
+                            </div>
                           </div>
                         </dt>
+                      </div>
+                      <div
+                        class="col"
+                      >
                         <dd>
-                          EUR 9.994.672,00
+                          <div>
+                            EUR 9.994.672,00
+                          </div>
                         </dd>
                       </div>
                     </dl>
@@ -662,13 +676,25 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      EU contribution amount
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          EU contribution amount
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         290 366,97 Euro 
@@ -680,53 +706,69 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Funding source
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          External link&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Funding source
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        External link
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
                   >
                     <dt>
-                      Contact
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          mail.to@address.eu
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Contact
+                        </div>
                       </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        mail.to@address.eu
+                      </a>
                     </dd>
                   </div>
                 </dl>
@@ -762,90 +804,131 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        Commissariat à l’Energie Atomique et aux Energies Alternatives
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Name
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          Commissariat à l’Energie Atomique et aux Energies Alternatives
-                        </a>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Role
+                          </p>
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      <p
-                        class="mb-0 d-inline-block"
-                      >
-                        Role
-                      </p>
-                    </dt>
                     <dd>
                       <div>
                         Beneficiary
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        EU Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            EU Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 16.314.672,00
@@ -857,90 +940,131 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Name
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </a>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Role
+                          </p>
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      <p
-                        class="mb-0 d-inline-block"
-                      >
-                        Role
-                      </p>
-                    </dt>
                     <dd>
                       <div>
                         Beneficiary
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        EU Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            EU Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 16.314.672,00
@@ -952,90 +1076,131 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#belgium"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Name
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </a>
+                        Belgium
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#belgium"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Belgium
-                        </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Role
+                          </p>
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      <p
-                        class="mb-0 d-inline-block"
-                      >
-                        Role
-                      </p>
-                    </dt>
                     <dd>
                       <div>
                         Beneficiary
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        EU Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            EU Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 16.314.672,00
@@ -1047,90 +1212,131 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#denmark"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Name
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </a>
+                        Denmark
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#denmark"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Denmark
-                        </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Role
+                          </p>
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      <p
-                        class="mb-0 d-inline-block"
-                      >
-                        Role
-                      </p>
-                    </dt>
                     <dd>
                       <div>
                         Beneficiary
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        EU Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            EU Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 16.314.672,00
@@ -1510,17 +1716,8 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -1536,17 +1733,8 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -1562,17 +1750,8 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -1755,17 +1934,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -1783,17 +1953,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -1943,17 +2104,8 @@ exports[`OE - Project listing renders correctly 1`] = `
               >
                 search
               </span>
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -2002,17 +2154,8 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -2133,17 +2276,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                   <div
                     class="d-flex align-items-center"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -2254,17 +2388,9 @@ exports[`OE - Project listing renders correctly 1`] = `
                         hreflang="en"
                         lang="en"
                       >
-                        English&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
+                        English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -2764,17 +2890,8 @@ exports[`OE - Project listing renders correctly 1`] = `
               data-bs-toggle="offcanvas"
               type="button"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2 me-2-5 bi icon--fluid"
+                class="me-2 me-2-5 bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#filter"
@@ -2805,17 +2922,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                     aria-hidden="true"
                     class="icon--close"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#x-lg"
@@ -2831,17 +2939,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                     aria-hidden="true"
                     class="icon--close"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#x-lg"
@@ -2857,17 +2956,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                     aria-hidden="true"
                     class="icon--close"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#x-lg"
@@ -3298,17 +3388,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                     class="page-link"
                     href="/example.html"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--fluid"
+                      class="bcl-icon bi icon--fluid"
                     >
                       <use
                         xlink:href="/icons.svg#chevron-double-left"
@@ -3397,17 +3478,8 @@ exports[`OE - Project listing renders correctly 1`] = `
                     class="page-link"
                     href="/example.html"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--fluid"
+                      class="bcl-icon bi icon--fluid"
                     >
                       <use
                         xlink:href="/icons.svg#chevron-double-right"
@@ -3468,17 +3540,8 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -3494,17 +3557,8 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -3520,17 +3574,8 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -3713,17 +3758,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -3741,17 +3777,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -3901,17 +3928,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               >
                 search
               </span>
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -3960,17 +3978,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               class="bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -4091,17 +4100,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   <div
                     class="d-flex align-items-center"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -4212,17 +4212,9 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         hreflang="en"
                         lang="en"
                       >
-                        English&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
+                        English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -4436,13 +4428,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
     <section
       class="bcl-section"
     >
-      &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-            
-
-
-
-
-
       <div
         class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
       >
@@ -4465,7 +4450,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
+                class="col-md col-xl-9 col-xxl-8"
               >
                 <div
                   class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
@@ -4755,39 +4740,69 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   <div
                     class="mb-0 bcl-description-list"
                   >
-                    <dl>
+                    <dl
+                      class="mb-3 row"
+                    >
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                            />
-                            Total budget
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                              />
+                            </div>
+                            <div>
+                              Total budget
+                            </div>
                           </div>
                         </dt>
-                        <dd>
-                          EUR 16.314.672,00
-                        </dd>
                       </div>
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col"
+                      >
+                        <dd>
+                          <div>
+                            EUR 16.314.672,00
+                          </div>
+                        </dd>
+                      </div>
+                    </dl>
+                    <dl
+                      class="mb-3 row"
+                    >
+                      <div
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                            />
-                            EC contribution
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                              />
+                            </div>
+                            <div>
+                              EC contribution
+                            </div>
                           </div>
                         </dt>
+                      </div>
+                      <div
+                        class="col"
+                      >
                         <dd>
-                          EUR 9.994.672,00
+                          <div>
+                            EUR 9.994.672,00
+                          </div>
                         </dd>
                       </div>
                     </dl>
@@ -4803,101 +4818,111 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Website
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          www.website-address.eu&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Website
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      Funding Programme
-                    </dt>
                     <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        www.website-address.eu
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
-                          www.funding-prog.eu&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
-                      </div>
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Project ID
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          345984678&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Funding Programme
+                        </div>
                       </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        www.funding-prog.eu
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Project ID
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        345984678
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
                     </dd>
                   </div>
                 </dl>
@@ -4905,40 +4930,41 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Coordinator
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Coordinator
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
@@ -5013,17 +5039,29 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Commissariat à l’Energie Atomique 
@@ -5032,52 +5070,69 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -5101,17 +5156,29 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Commissariat à l’Energie Atomique 
@@ -5120,52 +5187,69 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -5177,69 +5261,98 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -5251,69 +5364,98 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#belgium"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#belgium"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Belgium
-                        </p>
+                        Belgium
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -5325,69 +5467,98 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#denmark"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#denmark"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Denmark
-                        </p>
+                        Denmark
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -5454,7 +5625,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="0"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5489,7 +5659,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="1"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5524,7 +5693,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="2"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5534,17 +5702,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <span
                           class="bcl-gallery__item-play-icon"
                         >
-                          &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                           <svg
-                            class="bi icon--s"
+                            class="bcl-icon bi icon--s"
                           >
                             <use
                               xlink:href="/icons.svg#play-fill"
@@ -5579,7 +5738,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="3"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5614,7 +5772,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="4"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5624,17 +5781,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <span
                           class="bcl-gallery__item-play-icon"
                         >
-                          &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                           <svg
-                            class="bi icon--s"
+                            class="bcl-icon bi icon--s"
                           >
                             <use
                               xlink:href="/icons.svg#play-fill"
@@ -5661,7 +5809,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="5"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5696,7 +5843,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="6"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5731,7 +5877,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="7"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5746,13 +5891,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             >
                               Slide label
                             </p>
-                            <div
-                              class="bcl-gallery__item-description"
-                            >
-                              <p>
-                                Some representative placeholder content for the slide.
-                              </p>
-                            </div>
                           </div>
                         </div>
                         <img
@@ -5766,7 +5904,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="8"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5776,11 +5913,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
-                              class="fs-5"
-                            >
-                              Slide label
-                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5801,7 +5933,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="9"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5855,17 +5986,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   >
                     view less
                   </span>
-                  &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                   <svg
-                    class="ms-2-5 bi icon--2xs"
+                    class="ms-2-5 bcl-icon bi icon--2xs"
                   >
                     <use
                       xlink:href="/icons.svg#caret-down-fill"
@@ -5888,17 +6010,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                     >
                       view the full gallery (10)
                     </span>
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                     <svg
-                      class="ms-2-5 bi icon--2xs"
+                      class="ms-2-5 bcl-icon bi icon--2xs"
                     >
                       <use
                         xlink:href="/icons.svg#caret-down-fill"
@@ -5929,7 +6042,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="modal-title"
                       >
                         <h3
-                          class="d-none d-sm-block"
+                          class="d-sm-block d-none bcl-heading"
                         >
                           Media gallery title
                         </h3>
@@ -5941,14 +6054,13 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           1
                         </span>
                          / 10
-            
                       </div>
                       <div
                         class="modal-close"
                       >
                         <button
                           aria-label="Close"
-                          class="btn-close"
+                          class="btn-close bcl-btn"
                           data-bs-dismiss="modal"
                           type="button"
                         />
@@ -6118,15 +6230,12 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                               data-src="https://picsum.photos/id/1043/800/400"
                             />
                             <div
-                              class="carousel-caption d-none d-md-block"
+                              class="carousel-caption"
                             >
                               <p
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
-                              <p>
-                                Some representative placeholder content for the slide.
                               </p>
                             </div>
                           </div>
@@ -6140,11 +6249,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
-                                class="fs-5"
-                              >
-                                Slide label
-                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -6260,17 +6364,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -6286,17 +6381,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -6312,17 +6398,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -6505,17 +6582,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -6533,17 +6601,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -6693,17 +6752,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               >
                 search
               </span>
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -6752,17 +6802,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               class="bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -6883,17 +6924,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   <div
                     class="d-flex align-items-center"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -7004,17 +7036,9 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         hreflang="en"
                         lang="en"
                       >
-                        English&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
+                        English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -7228,13 +7252,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
     <section
       class="bcl-section"
     >
-      &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-            
-
-
-
-
-
       <div
         class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
       >
@@ -7257,7 +7274,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
+                class="col-md col-xl-9 col-xxl-8"
               >
                 <div
                   class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
@@ -7547,39 +7564,69 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   <div
                     class="mb-0 bcl-description-list"
                   >
-                    <dl>
+                    <dl
+                      class="mb-3 row"
+                    >
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                            />
-                            Total budget
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                              />
+                            </div>
+                            <div>
+                              Total budget
+                            </div>
                           </div>
                         </dt>
-                        <dd>
-                          EUR 16.314.672,00
-                        </dd>
                       </div>
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col"
+                      >
+                        <dd>
+                          <div>
+                            EUR 16.314.672,00
+                          </div>
+                        </dd>
+                      </div>
+                    </dl>
+                    <dl
+                      class="mb-3 row"
+                    >
+                      <div
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                            />
-                            EC contribution
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                              />
+                            </div>
+                            <div>
+                              EC contribution
+                            </div>
                           </div>
                         </dt>
+                      </div>
+                      <div
+                        class="col"
+                      >
                         <dd>
-                          EUR 9.994.672,00
+                          <div>
+                            EUR 9.994.672,00
+                          </div>
                         </dd>
                       </div>
                     </dl>
@@ -7595,101 +7642,111 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Website
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          www.website-address.eu&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Website
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      Funding Programme
-                    </dt>
                     <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        www.website-address.eu
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
-                          www.funding-prog.eu&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
-                      </div>
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Project ID
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          345984678&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Funding Programme
+                        </div>
                       </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        www.funding-prog.eu
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Project ID
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        345984678
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
                     </dd>
                   </div>
                 </dl>
@@ -7697,40 +7754,41 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Coordinator
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Coordinator
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
@@ -7805,17 +7863,29 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Commissariat à l’Energie Atomique 
@@ -7824,52 +7894,69 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -7893,17 +7980,29 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Commissariat à l’Energie Atomique 
@@ -7912,52 +8011,69 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -7969,69 +8085,98 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -8043,69 +8188,98 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#belgium"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#belgium"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Belgium
-                        </p>
+                        Belgium
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -8117,69 +8291,98 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#denmark"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#denmark"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Denmark
-                        </p>
+                        Denmark
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -8246,7 +8449,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="0"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8281,7 +8483,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="1"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8316,7 +8517,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="2"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8326,17 +8526,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <span
                           class="bcl-gallery__item-play-icon"
                         >
-                          &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                           <svg
-                            class="bi icon--s"
+                            class="bcl-icon bi icon--s"
                           >
                             <use
                               xlink:href="/icons.svg#play-fill"
@@ -8371,7 +8562,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="3"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8406,7 +8596,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="4"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8416,17 +8605,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <span
                           class="bcl-gallery__item-play-icon"
                         >
-                          &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                           <svg
-                            class="bi icon--s"
+                            class="bcl-icon bi icon--s"
                           >
                             <use
                               xlink:href="/icons.svg#play-fill"
@@ -8453,7 +8633,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="5"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8488,7 +8667,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="6"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8523,7 +8701,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="7"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8538,13 +8715,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             >
                               Slide label
                             </p>
-                            <div
-                              class="bcl-gallery__item-description"
-                            >
-                              <p>
-                                Some representative placeholder content for the slide.
-                              </p>
-                            </div>
                           </div>
                         </div>
                         <img
@@ -8558,7 +8728,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="8"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8568,11 +8737,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
-                              class="fs-5"
-                            >
-                              Slide label
-                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -8593,7 +8757,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="9"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8647,17 +8810,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   >
                     view less
                   </span>
-                  &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                   <svg
-                    class="ms-2-5 bi icon--2xs"
+                    class="ms-2-5 bcl-icon bi icon--2xs"
                   >
                     <use
                       xlink:href="/icons.svg#caret-down-fill"
@@ -8680,17 +8834,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                     >
                       view the full gallery (10)
                     </span>
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                     <svg
-                      class="ms-2-5 bi icon--2xs"
+                      class="ms-2-5 bcl-icon bi icon--2xs"
                     >
                       <use
                         xlink:href="/icons.svg#caret-down-fill"
@@ -8721,7 +8866,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="modal-title"
                       >
                         <h3
-                          class="d-none d-sm-block"
+                          class="d-sm-block d-none bcl-heading"
                         >
                           Media gallery title
                         </h3>
@@ -8733,14 +8878,13 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           1
                         </span>
                          / 10
-            
                       </div>
                       <div
                         class="modal-close"
                       >
                         <button
                           aria-label="Close"
-                          class="btn-close"
+                          class="btn-close bcl-btn"
                           data-bs-dismiss="modal"
                           type="button"
                         />
@@ -8910,15 +9054,12 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                               data-src="https://picsum.photos/id/1043/800/400"
                             />
                             <div
-                              class="carousel-caption d-none d-md-block"
+                              class="carousel-caption"
                             >
                               <p
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
-                              <p>
-                                Some representative placeholder content for the slide.
                               </p>
                             </div>
                           </div>
@@ -8932,11 +9073,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
-                                class="fs-5"
-                              >
-                                Slide label
-                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -9052,17 +9188,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -9078,17 +9205,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -9104,17 +9222,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"
@@ -9297,17 +9406,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#chat-left-dots-fill"
@@ -9325,17 +9425,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 data-bs-toggle="modal"
                 href="/example.html"
               >
-                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                 <svg
-                  class="me-2-5 bi icon--xs"
+                  class="me-2-5 bcl-icon bi icon--xs"
                 >
                   <use
                     xlink:href="/icons.svg#person-fill"
@@ -9485,17 +9576,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               >
                 search
               </span>
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
               <svg
-                class="bi icon--fluid"
+                class="bcl-icon bi icon--fluid"
               >
                 <use
                   xlink:href="/icons.svg#search"
@@ -9544,17 +9626,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               class="bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+                class="d-md-none ms-0 me-2 me-2-5 bcl-icon bi icon--s"
               >
                 <use
                   xlink:href="/icons.svg#arrow-left"
@@ -9675,17 +9748,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   <div
                     class="d-flex align-items-center"
                   >
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                     <svg
-                      class="bi icon--s"
+                      class="bcl-icon bi icon--s"
                     >
                       <use
                         xlink:href="/icons.svg#globe2"
@@ -9796,17 +9860,9 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         hreflang="en"
                         lang="en"
                       >
-                        English&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
+                        English
                         <svg
-                          class="ms-2-5 bi icon--s"
+                          class="ms-2-5 bcl-icon bi icon--s"
                         >
                           <use
                             xlink:href="/icons.svg#check2"
@@ -10020,13 +10076,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
     <section
       class="bcl-section"
     >
-      &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-            
-
-
-
-
-
       <div
         class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
       >
@@ -10049,7 +10098,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                 />
               </div>
               <div
-                class="col-md-7 col-lg-8 col-xl-9 col-xxl-8"
+                class="col-md col-xl-9 col-xxl-8"
               >
                 <div
                   class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
@@ -10339,39 +10388,69 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   <div
                     class="mb-0 bcl-description-list"
                   >
-                    <dl>
+                    <dl
+                      class="mb-3 row"
+                    >
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
-                            />
-                            Total budget
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-gray-400"
+                              />
+                            </div>
+                            <div>
+                              Total budget
+                            </div>
                           </div>
                         </dt>
-                        <dd>
-                          EUR 16.314.672,00
-                        </dd>
                       </div>
                       <div
-                        class="d-md-grid grid-3-9 mb-3"
+                        class="col"
+                      >
+                        <dd>
+                          <div>
+                            EUR 16.314.672,00
+                          </div>
+                        </dd>
+                      </div>
+                    </dl>
+                    <dl
+                      class="mb-3 row"
+                    >
+                      <div
+                        class="col-md-3"
                       >
                         <dt>
                           <div
-                            class="d-flex align-items-center"
+                            class="d-flex"
                           >
-                            <span
-                              class="p-2 me-2 d-inline-block rounded-1 bg-primary"
-                            />
-                            EC contribution
+                            <div
+                              class="align-self-center"
+                            >
+                              <span
+                                class="p-2 me-2 d-inline-block rounded-1 bg-primary"
+                              />
+                            </div>
+                            <div>
+                              EC contribution
+                            </div>
                           </div>
                         </dt>
+                      </div>
+                      <div
+                        class="col"
+                      >
                         <dd>
-                          EUR 9.994.672,00
+                          <div>
+                            EUR 9.994.672,00
+                          </div>
                         </dd>
                       </div>
                     </dl>
@@ -10387,101 +10466,111 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Website
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          www.website-address.eu&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Website
+                        </div>
                       </div>
-                    </dd>
+                    </dt>
                   </div>
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col"
                   >
-                    <dt>
-                      Funding Programme
-                    </dt>
                     <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        www.website-address.eu
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
                         >
-                          www.funding-prog.eu&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
-                      </div>
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      Project ID
-                    </dt>
-                    <dd>
-                      <div>
-                        <a
-                          class="bcl-link"
-                          href="/example.html"
-                        >
-                          345984678&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                          <svg
-                            class="ms-2-5 bi icon--fluid"
-                          >
-                            <use
-                              xlink:href="/icons.svg#box-arrow-up-right"
-                            />
-                          </svg>
-                        </a>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Funding Programme
+                        </div>
                       </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        www.funding-prog.eu
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
+                  <div
+                    class="col-md-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Project ID
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <a
+                        class="bcl-link"
+                        href="/example.html"
+                      >
+                        345984678
+                        <svg
+                          class="ms-2-5 bcl-icon bi icon--fluid"
+                        >
+                          <use
+                            xlink:href="/icons.svg#box-arrow-up-right"
+                          />
+                        </svg>
+                      </a>
                     </dd>
                   </div>
                 </dl>
@@ -10489,40 +10578,41 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Coordinator
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Coordinator
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
@@ -10597,17 +10687,29 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Commissariat à l’Energie Atomique 
@@ -10616,52 +10718,69 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -10685,17 +10804,29 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Commissariat à l’Energie Atomique 
@@ -10704,52 +10835,69 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#france"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#france"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          France
-                        </p>
+                        France
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -10761,69 +10909,98 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#bulgaria"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#bulgaria"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Bulgaria
-                        </p>
+                        Bulgaria
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -10835,69 +11012,98 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="border-bottom mb-3 bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#belgium"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#belgium"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Belgium
-                        </p>
+                        Belgium
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -10909,69 +11115,98 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 class="bcl-description-list"
               >
-                <dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Name
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Name
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Country
+                          </p>
+                        </div>
+                      </div>
+                    </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <dd>
+                      <svg
+                        class="me-2 align-self-center flex-shrink-0 bcl-icon bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/flags.svg#denmark"
+                        />
+                      </svg>
+                      <div
                         class="mb-0 d-inline-block"
                       >
-                        Country
-                      </p>
-                    </dt>
-                    <dd>
-                      <div>
-                        &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
-                        <svg
-                          class="me-2 bi icon--fluid"
-                        >
-                          <use
-                            xlink:href="/flags.svg#denmark"
-                          />
-                        </svg>
-                        <p
-                          class="mb-0 d-inline-block"
-                        >
-                          Denmark
-                        </p>
+                        Denmark
                       </div>
                     </dd>
                   </div>
+                </dl>
+                <dl
+                  class="mb-3 row"
+                >
                   <div
-                    class="d-md-grid grid-3-9 mb-3"
+                    class="col-md-3"
                   >
                     <dt>
-                      <p
-                        class="mb-0 d-inline-block"
+                      <div
+                        class="d-flex"
                       >
-                        Contribution
-                      </p>
+                        <div>
+                          <p
+                            class="mb-0 d-inline-block"
+                          >
+                            Contribution
+                          </p>
+                        </div>
+                      </div>
                     </dt>
+                  </div>
+                  <div
+                    class="col"
+                  >
                     <dd>
                       <div>
                         EUR 297.700.00
@@ -11038,7 +11273,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="0"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11073,7 +11307,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="1"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11108,7 +11341,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="2"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11118,17 +11350,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <span
                           class="bcl-gallery__item-play-icon"
                         >
-                          &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                           <svg
-                            class="bi icon--s"
+                            class="bcl-icon bi icon--s"
                           >
                             <use
                               xlink:href="/icons.svg#play-fill"
@@ -11163,7 +11386,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="3"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11198,7 +11420,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="4"
                       data-bs-target="#carouselGalleryExample"
-                      href="#"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11208,17 +11429,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <span
                           class="bcl-gallery__item-play-icon"
                         >
-                          &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-  
-
-
                           <svg
-                            class="bi icon--s"
+                            class="bcl-icon bi icon--s"
                           >
                             <use
                               xlink:href="/icons.svg#play-fill"
@@ -11245,7 +11457,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="5"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11280,7 +11491,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="6"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11315,7 +11525,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="7"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11330,13 +11539,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             >
                               Slide label
                             </p>
-                            <div
-                              class="bcl-gallery__item-description"
-                            >
-                              <p>
-                                Some representative placeholder content for the slide.
-                              </p>
-                            </div>
                           </div>
                         </div>
                         <img
@@ -11350,7 +11552,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="8"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11360,11 +11561,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
-                              class="fs-5"
-                            >
-                              Slide label
-                            </p>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -11385,7 +11581,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="9"
                         data-bs-target="#carouselGalleryExample"
-                        href="#"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11439,17 +11634,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   >
                     view less
                   </span>
-                  &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                   <svg
-                    class="ms-2-5 bi icon--2xs"
+                    class="ms-2-5 bcl-icon bi icon--2xs"
                   >
                     <use
                       xlink:href="/icons.svg#caret-down-fill"
@@ -11472,17 +11658,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                     >
                       view the full gallery (10)
                     </span>
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
                     <svg
-                      class="ms-2-5 bi icon--2xs"
+                      class="ms-2-5 bcl-icon bi icon--2xs"
                     >
                       <use
                         xlink:href="/icons.svg#caret-down-fill"
@@ -11513,7 +11690,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="modal-title"
                       >
                         <h3
-                          class="d-none d-sm-block"
+                          class="d-sm-block d-none bcl-heading"
                         >
                           Media gallery title
                         </h3>
@@ -11525,14 +11702,13 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           1
                         </span>
                          / 10
-            
                       </div>
                       <div
                         class="modal-close"
                       >
                         <button
                           aria-label="Close"
-                          class="btn-close"
+                          class="btn-close bcl-btn"
                           data-bs-dismiss="modal"
                           type="button"
                         />
@@ -11702,15 +11878,12 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                               data-src="https://picsum.photos/id/1043/800/400"
                             />
                             <div
-                              class="carousel-caption d-none d-md-block"
+                              class="carousel-caption"
                             >
                               <p
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
-                              <p>
-                                Some representative placeholder content for the slide.
                               </p>
                             </div>
                           </div>
@@ -11724,11 +11897,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
-                                class="fs-5"
-                              >
-                                Slide label
-                              </p>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -11844,17 +12012,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#facebook"
@@ -11870,17 +12029,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#twitter"
@@ -11896,17 +12046,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               class="standalone bcl-link"
               href="/example.html"
             >
-              &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-=======
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 72a590a814eb193c247246f7b8a52246de4b8760
-
-
-
-
-
               <svg
-                class="me-2-5 bi icon--xs"
+                class="me-2-5 bcl-icon bi icon--xs"
               >
                 <use
                   xlink:href="/icons.svg#linkedin"

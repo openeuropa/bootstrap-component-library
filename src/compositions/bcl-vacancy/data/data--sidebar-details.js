@@ -3,56 +3,32 @@ module.exports = {
     {
       items: [
         {
-          term: {
-            label: "Opening date",
-          },
-          definition: [
-            {
-              label: "19 April 2022",
-            },
-          ],
+          term: "Opening date",
+          definition: "19 April 2022",
         },
       ],
     },
     {
       items: [
         {
-          term: {
-            label: "Closing date",
-          },
-          definition: [
-            {
-              label: "21 December 2022",
-            },
-          ],
+          term: "Closing date",
+          definition: "21 December 2022",
         },
       ],
     },
     {
       items: [
         {
-          term: {
-            label: "Grade",
-          },
-          definition: [
-            {
-              label: "Grade name",
-            },
-          ],
+          term: "Grade",
+          definition: "Grade name",
         },
       ],
     },
     {
       items: [
         {
-          term: {
-            label: "Ref. number",
-          },
-          definition: [
-            {
-              label: "394857746532840",
-            },
-          ],
+          term: "Ref. number",
+          definition: "394857746532840",
         },
       ],
     },

@@ -83,6 +83,10 @@
 
 {% set attributes = attributes.setAttribute('role', 'navigation') %}
 
+{% if _variant == 'glossary' %}
+  {% set attributes = attributes.addClass(['bcl-glossary']) %}
+{% endif %}
+
 {% if _aria_label is not empty %}
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}

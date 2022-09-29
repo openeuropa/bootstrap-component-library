@@ -63,7 +63,6 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
-
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1018/400/400" 
                   />`,
@@ -74,7 +73,6 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
-
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1026/400/400" 
                   />`,
@@ -83,9 +81,7 @@ module.exports = {
               />`,
     },
     {
-      caption: "<p>Some representative placeholder content for the slide.</p>",
       caption_title: "Slide label",
-
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1043/400/400" 
                   />`,
@@ -95,8 +91,6 @@ module.exports = {
     },
     {
       caption: `<p>Some representative placeholder content for the slide.</p>`,
-      caption_title: "Slide label",
-
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1050/400/400" 
                   />`,
@@ -107,7 +101,6 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the last slide.</p>`,
       caption_title: "Last slide label",
-
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1071/400/400" 
                   />`,

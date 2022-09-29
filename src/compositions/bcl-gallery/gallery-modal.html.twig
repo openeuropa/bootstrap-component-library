@@ -1,0 +1,105 @@
+{% apply spaceless %}
+
+{#
+Parameters:
+  - id (string) (default: '')
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
+  - items (array of objects) format: [
+      {
+        thumbnails (string) img path
+        media: (string) <img> tag
+        caption (string)
+        caption_title (string)
+        caption_classes (string)
+        interval (integer) (default: 0)
+      }
+    ]
+  - carousel_id (string) (default: '')
+  - next_label (string) (default: '')
+  - prev_label (string) (default: '')
+  - icon_path (string) (default: '')
+  - attributes (drupal attrs)
+#}
+
+{% set _id = id|default('') %}
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h3') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
+{% set _items = items|default([]) %}
+{% set _carousel_id = carousel_id|default('') %}
+{% set _next_label = next_label|default('Next') %}
+{% set _prev_label = prev_label|default('Previous') %}
+{% set _icon_path = icon_path|default('') %}
+{% set _carousel_items = [] %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set attributes = attributes.addClass('modal')
+                              .setAttribute('id', _id)
+                              .setAttribute('tabindex', '-1')
+                              .setAttribute('aria-labelledby', _id)
+                              .setAttribute('aria-hidden', 'true')
+                              .setAttribute('data-bs-backdrop', 'false')
+%}
+
+<div
+  {{ attributes }}
+>
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header border-0 justify-content-between">
+      {% if _title is not empty %}
+        <div class="modal-title">
+          {% if _title is not empty %}
+            {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+              title: _title,
+              title_tag: _title_tag,
+              title_link: _title_link,
+              attributes: _title_attributes.addClass(['d-sm-block', 'd-none']),
+            } only %}
+          {% endif %}
+        </div>
+      {% endif %}
+        <div class="carousel-pager">
+          <span>1</span> / {{ _items|length -}}
+        </div>
+        <div class="modal-close">
+          {% set button_attributes = create_attribute()
+                                    .addClass('btn-close')
+                                    .setAttribute('aria-label', 'Close')
+                                    .setAttribute('data-bs-dismiss', 'modal')
+          %}
+          {% include '@oe-bcl/bcl-button/button.html.twig' with {
+            clean_class: true,
+            attributes: button_attributes
+          } only %}
+        </div>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center">
+        {% for _item in _items %}
+          {% set _carousel_items = _carousel_items|merge([_item|merge({
+            caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
+            image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
+          })]) %}
+        {% endfor %}
+        {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
+          id: _carousel_id,
+          with_controls: true,
+          with_indicators: false,
+          prev_label: _prev_label,
+          next_label: _next_label,
+          autoplay: false,
+          items: _carousel_items,
+        } only %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endapply %}
