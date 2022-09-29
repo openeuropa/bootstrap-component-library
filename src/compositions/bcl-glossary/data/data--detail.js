@@ -3,9 +3,13 @@ import layout from "@openeuropa/bcl-base-templates/data/layout";
 import dataFile from "@openeuropa/bcl-file/data/data";
 
 const file1 = JSON.parse(JSON.stringify(dataFile));
-dataFile.attributes = new drupalAttribute().addClass("mb-4");
-dataFile.translation.id = "language-dropdown-1";
-const files = [dataFile, file1];
+const file2 = JSON.parse(JSON.stringify(dataFile));
+file1.translation.id = "file-translation-1";
+file2.translation.id = "file-translation-2";
+const files = [
+  { ...file1, attributes: new drupalAttribute().addClass("mb-4") },
+  file2,
+];
 
 const demoDataDetail = {
   footer: layout.footer,

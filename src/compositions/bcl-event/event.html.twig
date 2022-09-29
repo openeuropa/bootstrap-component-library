@@ -21,7 +21,9 @@
       title: 'Related documents',
       attributes: create_attribute().setAttribute('id', 'item-2'),
     } only %}
-    {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
-    {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with file|merge({
+      attributes: create_attribute().addClass('mb-3')
+    }) only %}
+    {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
   </section>
 {% endblock %}

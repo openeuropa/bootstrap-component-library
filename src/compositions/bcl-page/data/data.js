@@ -28,7 +28,7 @@ if (isChromatic()) {
 
 const filesThumbnail = [
   { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
-  { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
+  { ...fileThumbnail },
 ];
 
 delete banner.service_buttons;
