@@ -7,7 +7,7 @@ import drupalAttribute from "drupal-attribute";
 
 const footer = {
   ...footerData,
-  attributes: new drupalAttribute().addClass(["mt-md-4-75", "mt-4"]),
+  attributes: new drupalAttribute().addClass(["mt-md-2"]),
 };
 
 export default {
