@@ -57,6 +57,14 @@ describe("OE - Pagination", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("without icon path renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, icon_path: "", _enable_prev_next_icon: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly as glossary`, () => {
     expect.assertions(1);
 

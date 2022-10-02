@@ -7,6 +7,8 @@ Parameters:
   - disabled (boolean) (default: false)
   - active (boolean) (default: false)
   - aria_label (string) (default: '')
+  - character_label (string) (default: '')
+    ['double-arrow-left', 'arrow-left', 'arrow-right', 'double-arrow-right']
   - icon (Icon component) (default: {})
   - attributes (drupal attrs)
 #}
@@ -16,8 +18,10 @@ Parameters:
 {% set _disabled = disabled|default(false) %}
 {% set _active = active|default(false) %}
 {% set _aria_label = aria_label|default('') %}
+{% set _character_label = character_label|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _classes = ['page-link'] %}
+{% set _character = '' %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -27,6 +31,18 @@ Parameters:
   {% set attributes = attributes.setAttribute('tabindex', '-1')
                                 .setAttribute('aria-disabled', true) 
   %}
+{% endif %}
+
+{% set _tag = _path ? "a" : "div" %}
+
+{% if _character_label == 'double-arrow-left' %}
+  {% set _character = "&laquo;" %}
+{% elseif _character_label == 'arrow-left' %}
+  {% set _character = "&lsaquo;" %}
+{% elseif _character_label == 'arrow-right' %}
+  {% set _character = "&rsaquo;" %}
+{% elseif _character_label == 'double-arrow-right' %}
+  {% set _character = "&raquo;" %}
 {% endif %}
 
 {% if _aria_label is not empty %}
@@ -43,24 +59,16 @@ Parameters:
 
 {% set attributes = attributes.addClass(_classes)%}
 
-{%- if _path is not empty -%}
-<a
+<{{ _tag }}
   {{ attributes }}
 >
+{%- if _icon is not empty -%}
+  {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
+{%- elseif _character is not empty  -%}
+  <span aria-hidden="true">{{ _character|raw }}</span>
 {%- else -%}
-<div
-  {{ attributes }}
->
+  {{- _label -}}
 {%- endif -%}
-  {%- if _icon is not empty -%}
-    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
-  {%- else -%}
-    {{- _label -}}
-  {%- endif -%}
-{%- if _path is not empty -%}
-</a>
-{%- else -%}
-</div>
-{%- endif -%}
+</{{ _tag }}>
 
 {% endapply %}

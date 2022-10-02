@@ -60,6 +60,17 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    icon_path: {
+      name: "custom icon path",
+      type: { name: "boolean" },
+      description:
+        "Path to custom icons sprite, if not provided prev, next, first, last icons are unicode",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Style",
+      },
+    },
   };
   if (data.last && data.first) {
     argTypes.enable_first_last_icon = {
@@ -86,7 +97,13 @@ const applyArgs = (data, args) => {
     args.alignment = "";
   }
 
-  return Object.assign(data, args);
+  if (args.icon_path) {
+    args.icon_path = "/icons.svg";
+  } else {
+    args.icon_path = "";
+  }
+
+  return Object.assign(data, correctPaths(args));
 };
 
 export default {
@@ -110,6 +127,5 @@ export default {
 
 export const Default = (args) =>
   pagination(applyArgs(correctPaths(demoData), args));
-
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);

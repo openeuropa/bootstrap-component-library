@@ -120,7 +120,7 @@
             }) %}
           {%- else -%}
             {% set _first = _first|merge({
-              label: '<span aria-hidden="true">&laquo;</span>'
+              character_label: 'double-arrow-left'
             }) %}
           {%- endif -%}
         {%- endif -%}
@@ -150,7 +150,7 @@
           }) %}
         {%- else -%}
           {% set _prev = _prev|merge({
-            label: '<span aria-hidden="true">&lsaquo;</span>'
+            character_label: 'arrow-left'
           }) %}
         {%- endif -%}
       {%- endif -%}
@@ -194,7 +194,7 @@
             }) %}
           {%- else -%}
             {% set _next = _next|merge({
-              label: '<span aria-hidden="true">&rsaquo;</span>'
+              character_label: 'arrow-right'
             }) %}
           {%- endif -%}
         {%- endif -%}
@@ -224,7 +224,7 @@
             }) %}
           {%- else -%}
             {% set _last = _last|merge({
-              label: '<span aria-hidden="true">&raquo;</span>'
+              character_label: 'double-arrow-right'
             }) %}
           {%- endif -%}
         {%- endif -%}

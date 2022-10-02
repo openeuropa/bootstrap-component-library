@@ -816,3 +816,131 @@ exports[`OE - Pagination sm renders correctly 1`] = `
   </nav>
 </jest>
 `;
+
+exports[`OE - Pagination without icon path renders correctly 1`] = `
+<jest>
+  <nav
+    aria-label="Test aria label"
+    role="navigation"
+  >
+    <ul
+      class="pagination"
+    >
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="First page"
+          class="page-link"
+          href="/example.html"
+        >
+          <span
+            aria-hidden="true"
+          >
+            «
+          </span>
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="Previous page"
+          class="page-link"
+          href="/example.html"
+        >
+          Previous
+        </a>
+      </li>
+      <li
+        class="page-item disabled"
+      >
+        <a
+          aria-disabled="true"
+          class="page-link"
+          href="/example.html"
+          tabindex="-1"
+        >
+          1
+        </a>
+      </li>
+      <li
+        class="page-item active"
+      >
+        <a
+          aria-current="page"
+          class="page-link"
+          href="/example.html"
+        >
+          2
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="/example.html"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <div
+          class="page-link"
+        >
+          ...
+        </div>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="/example.html"
+        >
+          9
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="/example.html"
+        >
+          10
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="Next page"
+          class="page-link"
+          href="/example.html"
+        >
+          Next
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="Last page"
+          class="page-link"
+          href="/example.html"
+        >
+          <span
+            aria-hidden="true"
+          >
+            »
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</jest>
+`;
