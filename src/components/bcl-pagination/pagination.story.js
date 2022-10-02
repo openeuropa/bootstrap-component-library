@@ -64,7 +64,7 @@ const getArgTypes = (data) => {
       name: "custom icon path",
       type: { name: "boolean" },
       description:
-        "Path to custom icons sprite, if not provided prev, next, first, last icons are unicode",
+        "Path to custom icons sprite, if not provided prev, next, first, last icons have predefined unicode icons",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
