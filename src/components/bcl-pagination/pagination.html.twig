@@ -9,7 +9,7 @@
   - variant: (string) (default: '')
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
-  - first (object)
+  - first (pagination Item object)
     format: {
       - path (string) (default: '')
       - label (string) (default: '')
@@ -19,7 +19,7 @@
       - icon (Icon component) (default: {})
       - attributes (drupal attrs)
     }
-  - prev (object)
+  - prev (pagination Item object)
     format: {
       - path (string) (default: '')
       - label (string) (default: '')
@@ -39,7 +39,7 @@
       - icon (Icon component) (default: {})
       - attributes (drupal attrs)
     }
-  - last (object)
+  - last (pagination Item object)
     format: {
       - path (string) (default: '')
       - label (string) (default: '')
@@ -49,7 +49,7 @@
       - icon (Icon component) (default: {})
       - attributes (drupal attrs)
     }
-  - items (array of objects)
+  - items (array of pagination Item objects)
     format: [
     {
       - path (string) (default: '')
