@@ -36,16 +36,5 @@ module.exports = {
       label: "3",
       path: "/example.html",
     },
-    {
-      label: "...",
-    },
-    {
-      label: "9",
-      path: "/example.html",
-    },
-    {
-      label: "10",
-      path: "/example.html",
-    },
   ],
 };
