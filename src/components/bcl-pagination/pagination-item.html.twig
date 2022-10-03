@@ -7,10 +7,10 @@ Parameters:
   - disabled (boolean) (default: false)
   - active (boolean) (default: false)
   - aria_label (string) (default: '')
-  - character_label (string) (default: '')
-    ['double-arrow-left', 'arrow-left', 'arrow-right', 'double-arrow-right']
   - icon (Icon component) (default: {})
   - attributes (drupal attrs)
+  - position (string) (default: '')
+    ['first', 'prev', 'next', 'last']
 #}
 
 {% set _path = path|default('') %}
@@ -18,8 +18,8 @@ Parameters:
 {% set _disabled = disabled|default(false) %}
 {% set _active = active|default(false) %}
 {% set _aria_label = aria_label|default('') %}
-{% set _character_label = character_label|default('') %}
 {% set _icon = icon|default({}) %}
+{% set _position = position|default('') %}
 {% set _classes = ['page-link'] %}
 {% set _character = '' %}
 
@@ -35,14 +35,15 @@ Parameters:
 
 {% set _tag = _path ? "a" : "div" %}
 
-{% if _character_label == 'double-arrow-left' %}
-  {% set _character = "&laquo;" %}
-{% elseif _character_label == 'arrow-left' %}
-  {% set _character = "&lsaquo;" %}
-{% elseif _character_label == 'arrow-right' %}
-  {% set _character = "&rsaquo;" %}
-{% elseif _character_label == 'double-arrow-right' %}
-  {% set _character = "&raquo;" %}
+{% set _icon_html = '' %}
+{% if _position == 'first' %}
+  {% set _icon_html = '&laquo;' %}
+{% elseif _position == 'prev' %}
+  {% set _icon_html = '&lsaquo;' %}
+{% elseif _position == 'next' %}
+  {% set _icon_html = '&rsaquo;' %}
+{% elseif _position == 'last' %}
+  {% set _icon_html = '&raquo;' %}
 {% endif %}
 
 {% if _aria_label is not empty %}
@@ -64,8 +65,8 @@ Parameters:
 >
 {%- if _icon is not empty -%}
   {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
-{%- elseif _character is not empty  -%}
-  <span aria-hidden="true">{{ _character|raw }}</span>
+{%- elseif _icon_html is not empty  -%}
+  <span aria-hidden="true">{{ _icon_html|raw }}</span>
 {%- else -%}
   {{- _label -}}
 {%- endif -%}

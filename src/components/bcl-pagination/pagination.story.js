@@ -10,6 +10,7 @@ const getArgs = () => ({
   alignment: "default",
   enable_prev_next_icon: false,
   enable_first_last_icon: true,
+  icon_path: false,
 });
 
 const getArgTypes = (data) => {

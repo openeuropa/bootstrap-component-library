@@ -141,7 +141,7 @@
             }) %}
           {%- else -%}
             {% set _first = _first|merge({
-              character_label: 'double-arrow-left'
+              position: 'first'
             }) %}
           {%- endif -%}
         {%- endif -%}
@@ -157,8 +157,8 @@
     <li class="{{ _prev_class }}">
     {%- if _enable_prev_next_icon -%}
       {%- if _prev.icon is not empty -%}
-        {% set _prev = _first|merge({
-          icon: first.icon
+        {% set _prev = _prev|merge({
+          icon: _prev.icon
         }) %}
       {%- else -%}
         {%- if _icon_path is not empty -%}
@@ -171,7 +171,7 @@
           }) %}
         {%- else -%}
           {% set _prev = _prev|merge({
-            character_label: 'arrow-left'
+            position: 'prev'
           }) %}
         {%- endif -%}
       {%- endif -%}
@@ -201,8 +201,8 @@
     <li class="{{ _next_class }}">
       {%- if _enable_prev_next_icon -%}
         {%- if _next.icon is not empty -%}
-          {% set _next = _first|merge({
-            icon: first.icon
+          {% set _next = _next|merge({
+            icon: _next.icon
           }) %}
         {%- else -%}
           {%- if _icon_path is not empty -%}
@@ -215,7 +215,7 @@
             }) %}
           {%- else -%}
             {% set _next = _next|merge({
-              character_label: 'arrow-right'
+              position: 'next'
             }) %}
           {%- endif -%}
         {%- endif -%}
@@ -231,8 +231,8 @@
     <li class="{{ _last_class }}">
       {%- if _enable_first_last_icon -%}
         {%- if _last.icon is not empty -%}
-          {% set _last = _first|merge({
-            icon: first.icon
+          {% set _last = _last|merge({
+            icon: _last.icon
           }) %}
         {%- else -%}
           {%- if _icon_path is not empty -%}
@@ -245,7 +245,7 @@
             }) %}
           {%- else -%}
             {% set _last = _last|merge({
-              character_label: 'double-arrow-right'
+              position: 'last'
             }) %}
           {%- endif -%}
         {%- endif -%}
