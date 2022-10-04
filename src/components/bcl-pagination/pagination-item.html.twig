@@ -33,8 +33,6 @@ Parameters:
   %}
 {% endif %}
 
-{% set _tag = _path ? "a" : "div" %}
-
 {% set _icon_html = '' %}
 {% if _position == 'first' %}
   {% set _icon_html = '&laquo;' %}
@@ -60,7 +58,7 @@ Parameters:
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<{{ _tag }}
+<a
   {{ attributes }}
 >
 {%- if _icon is not empty -%}
@@ -70,6 +68,6 @@ Parameters:
 {%- else -%}
   {{- _label -}}
 {%- endif -%}
-</{{ _tag }}>
+</a>
 
 {% endapply %}
