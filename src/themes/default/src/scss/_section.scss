@@ -37,14 +37,6 @@ $bcl-spacing-m: 2rem;
   }
 
   > *:last-child {
-    margin-bottom: $bcl-spacing-m;
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .bcl-section {
-    > *:last-child {
-      margin-bottom: $bcl-spacing-m;
-    }
+    margin-bottom: $bcl-spacing-m !important;
   }
 }

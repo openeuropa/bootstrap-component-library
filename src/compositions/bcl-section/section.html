@@ -1,32 +1,58 @@
-<div class="bg-dark text-white p-4 text-center">
-  This is a random element preceding the bcl-section component, the margin below
-  is given by the bcl-section
-</div>
+<h2 class="mb-5">Spacing between bcl-section and other block</h2>
 
-<section class="bcl-section bg-light">
-  <p class="text-center fw-bold bg-danger p-5">
-    Child element inside of bcl-section
-  </p>
-</section>
-
-<section class="bcl-section bg-light">
-  <p class="text-center text-white fw-bold bg-warning p-5">
-    First Child element of bcl-section
-  </p>
-  <p class="text-center text-white fw-bold bg-success p-5">
-    Inner child element of bcl-section
-  </p>
-  <p class="text-center text-white fw-bold bg-primary p-5">
-    Last child element of bcl-section
-  </p>
-</section>
 <section class="bcl-section">
-  <p class="text-center text-white fw-bold bg-danger p-5">
-    Single child element of bcl-section
-  </p>
+  <h4 class="bcl-heading">First Title element of bcl-section</h4>
+  <p class="text-center fw-bold bg-gray-200 p-5">Element of bcl-section</p>
 </section>
 
 <div class="bg-dark text-white p-4 text-center">
   This is a random element following the bcl-section component, the upper margin
   is given by the bcl-section
+</div>
+
+<h2 class="mt-5 pt-4 border-top mb-5">
+  Spacing between elements inside bcl-section
+</h2>
+
+<section class="bcl-section">
+  <h4 class="bcl-heading">First Title element of bcl-section</h4>
+  <p class="text-center fw-bold bg-gray-200 p-5">
+    <strong
+      >The spacing between blocks are set by the title that have .bcl-heading
+      class</strong
+    >
+  </p>
+  <h4 class="bcl-heading bcl-preserve">
+    Second Title element of bcl-section using .bcl-preserve class to keep the
+    normal spacing
+  </h4>
+  <p class="text-center text-white fw-bold bg-success p-5">
+    <strong
+      >The .bcl-preserve can be added on any heading to remove the spacing added
+      by .bcl-section class</strong
+    >
+  </p>
+  <h4 class="bcl-heading">Last Title element of bcl-section</h4>
+  <p class="text-center text-white fw-bold bg-primary p-5">
+    Last child element of bcl-section
+  </p>
+  <a
+    aria-controls="collapseExample"
+    aria-expanded="true"
+    data-bs-toggle="collapse"
+    role="button"
+    class="bcl-link text-center d-block"
+    href="#collapseExample"
+    >Link with dropdown</a
+  >
+  <div class="mt-3 collapse" id="collapseExample">
+    <div class="card card-body mx-auto" style="width: 300px">
+      This is the last child of bcl-section that should have the margin-bottom.
+      The margin is only visible when the element is also visible.
+    </div>
+  </div>
+</section>
+
+<div class="bg-dark text-white p-4 text-center">
+  This is a random element following the bcl-section component
 </div>
