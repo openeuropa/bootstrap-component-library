@@ -26,6 +26,10 @@ Parameters:
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% if _icon is defined and _icon is not empty %}
+  {% set _label = '' %}
+{% endif %}
+
 {% if _disabled %}
   {% set attributes = attributes.setAttribute('tabindex', '-1')
                                 .setAttribute('aria-disabled', true) 
@@ -57,16 +61,17 @@ Parameters:
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<a
-  {{ attributes }}
->
-{%- if _icon is not empty -%}
-  {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
-{%- elseif _icon_html is not empty  -%}
-  <span aria-hidden="true">{{ _icon_html|raw }}</span>
-{%- else -%}
-  {{- _label -}}
-{%- endif -%}
-</a>
+{% if _icon_html is not empty %}
+  {% set _label %}
+    <span aria-hidden="true">{{ _icon_html|raw }}</span>
+  {% endset %}
+{% endif %}
+
+{%- include '@oe-bcl/bcl-link/link.html.twig' with {
+  label: _label,
+  path: _path,
+  icon: _icon,
+  attributes: attributes,
+} only -%}
 
 {% endapply %}
