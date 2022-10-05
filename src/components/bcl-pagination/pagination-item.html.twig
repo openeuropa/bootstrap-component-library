@@ -7,7 +7,9 @@ Parameters:
   - disabled (boolean) (default: false)
   - active (boolean) (default: false)
   - aria_label (string) (default: '')
-  - icon (Icon component) (default: {})
+  - enable_prev_next_icon (boolean) (default: false)
+  - enable_first_last_icon (boolean) (default: true)
+  - icon_path (string) (default: '')
   - attributes (drupal attrs)
   - position (string) (default: '')
     ['first', 'prev', 'next', 'last']
@@ -18,16 +20,15 @@ Parameters:
 {% set _disabled = disabled|default(false) %}
 {% set _active = active|default(false) %}
 {% set _aria_label = aria_label|default('') %}
-{% set _icon = icon|default({}) %}
+{% set _position = position|default('') %}
+{% set _enable_prev_next_icon = enable_prev_next_icon %}
+{% set _enable_first_last_icon = enable_first_last_icon %}
+{% set _icon_path = icon_path %}
 {% set _position = position|default('') %}
 {% set _classes = ['page-link'] %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
-{% endif %}
-
-{% if _icon is defined and _icon is not empty %}
-  {% set _label = '' %}
 {% endif %}
 
 {% if _disabled %}
@@ -36,15 +37,54 @@ Parameters:
   %}
 {% endif %}
 
-{% set _icon_html = '' %}
-{% if _position == 'first' %}
-  {% set _icon_html = '&laquo;' %}
-{% elseif _position == 'prev' %}
-  {% set _icon_html = '&lsaquo;' %}
-{% elseif _position == 'next' %}
-  {% set _icon_html = '&rsaquo;' %}
-{% elseif _position == 'last' %}
-  {% set _icon_html = '&raquo;' %}
+{% if _position == 'first' and _enable_first_last_icon %}
+  {% if _icon_path is not empty %}
+    {% set _icon = {
+        name: "chevron-double-left",
+        size: "fluid",
+        path: _icon_path,
+      }
+    %}
+  {% else %}
+    {% set _icon_html = '&laquo;' %}
+  {% endif %}
+{% elseif _position == 'prev' and _enable_prev_next_icon %}
+  {% if _icon_path is not empty %}
+    {% set _icon = {
+        name: "chevron-left",
+        size: "fluid",
+        path: _icon_path,
+      }
+    %}
+  {% else %}
+    {% set _icon_html = '&lsaquo;' %}
+  {% endif %}
+{% elseif _position == 'next'  and _enable_prev_next_icon %}
+  {% if _icon_path is not empty %}
+    {% set _icon = {
+        name: "chevron-right",
+        size: "fluid",
+        path: _icon_path,
+      }
+    %}
+  {% else %}
+    {% set _icon_html = '&rsaquo;' %}
+  {% endif %}
+{% elseif _position == 'last' and _enable_first_last_icon %}
+  {% if _icon_path is not empty %}
+    {% set _icon = {
+        name: "chevron-double-right",
+        size: "fluid",
+        path: _icon_path,
+      }
+    %}
+  {% else %}
+    {% set _icon_html = '&raquo;' %}
+  {% endif %}
+{% endif %}
+
+{% if _icon is defined and _icon is not empty %}
+  {% set _label = '' %}
 {% endif %}
 
 {% if _aria_label is not empty %}
@@ -61,7 +101,7 @@ Parameters:
 
 {% set attributes = attributes.addClass(_classes) %}
 
-{% if _icon_html is not empty %}
+{% if _icon_html is defined and _icon_html is not empty %}
   {% set _label %}
     <span aria-hidden="true">{{ _icon_html|raw }}</span>
   {% endset %}

@@ -52,6 +52,30 @@
   {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
 {% endif %}
 
+{% set _internal_items = [] %}
+
+{% if _first is defined and _first is not empty %}
+  {% set _first = _first|merge({position: 'first'}) %}
+  {% set _internal_items = _internal_items|merge([_first]) %}
+{% endif %}
+
+{% if _prev is defined and _prev is not empty %}
+  {% set _prev = prev|merge({position: 'prev'}) %}
+  {% set _internal_items = _internal_items|merge([_prev]) %}
+{% endif %}
+
+{% set _internal_items = _internal_items|merge(_items) %}
+
+{% if _next is defined and _next is not empty %}
+  {% set _next = _next|merge({position: 'next'}) %}
+  {% set _internal_items = _internal_items|merge([_next]) %}
+{% endif %}
+
+{% if _last is defined and _last is not empty %}
+  {% set _last = _last|merge({position: 'last'}) %}
+  {% set _internal_items = _internal_items|merge([_last]) %}
+{% endif %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
@@ -73,68 +97,8 @@
   {{ attributes }}
 >
   <ul class="{{ _classes }}">
-  {% if _first is not empty %}
-    {% set _first_class = 'page-item' %}
-    {% if _first.disabled %}
-      {% set _first_class = _first_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _first_class }}">
-      {%- if _enable_first_last_icon -%}
-        {%- if _first.icon is not empty -%}
-          {% set _first = _first|merge({
-            icon: first.icon
-          }) %}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% set _first = _first|merge({
-              icon: {
-                name: "chevron-double-left",
-                size: "fluid",
-                path: _icon_path,
-              }
-            }) %}
-          {%- else -%}
-            {% set _first = _first|merge({
-              position: 'first'
-            }) %}
-          {%- endif -%}
-        {%- endif -%}
-      {%- endif -%}
-      {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _first only -%}
-    </li>
-  {% endif %}
-  {% if _prev is not empty %}
-    {% set _prev_class = 'page-item' %}
-    {% if _prev.disabled %}
-      {% set _prev_class = _prev_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _prev_class }}">
-    {%- if _enable_prev_next_icon -%}
-      {%- if _prev.icon is not empty -%}
-        {% set _prev = _prev|merge({
-          icon: _prev.icon
-        }) %}
-      {%- else -%}
-        {%- if _icon_path is not empty -%}
-          {% set _prev = _prev|merge({
-            icon: {
-              name: "chevron-left",
-              size: "fluid",
-              path: _icon_path,
-            }
-          }) %}
-        {%- else -%}
-          {% set _prev = _prev|merge({
-            position: 'prev'
-          }) %}
-        {%- endif -%}
-      {%- endif -%}
-    {%- endif -%}
-    {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _prev only -%}
-    </li>
-  {% endif %}
-  {% if _items is not empty and _items is iterable %}
-    {% for _item in _items %}
+  {% if _internal_items is not empty and _internal_items is iterable %}
+    {% for _item in _internal_items %}
     {% set _item_class = 'page-item' %}
     {% if _item.disabled %}
       {% set _item_class = _item_class ~ ' disabled' %}
@@ -143,69 +107,13 @@
       {% set _item_class = _item_class ~ ' active' %}
     {% endif %}
     <li class="{{ _item_class }}">
-      {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
+      {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
+        enable_prev_next_icon: _enable_prev_next_icon,
+        enable_first_last_icon: _enable_first_last_icon,
+        icon_path: _icon_path,
+      }) only %}
     </li>
     {% endfor %}
-  {% endif %}
-  {% if _next is not empty %}
-    {% set _next_class = 'page-item' %}
-    {% if _next.disabled %}
-      {% set _next_class = _next_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _next_class }}">
-      {%- if _enable_prev_next_icon -%}
-        {%- if _next.icon is not empty -%}
-          {% set _next = _next|merge({
-            icon: _next.icon
-          }) %}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% set _next = _next|merge({
-              icon: {
-                name: "chevron-right",
-                size: "fluid",
-                path: _icon_path,
-              }
-            }) %}
-          {%- else -%}
-            {% set _next = _next|merge({
-              position: 'next'
-            }) %}
-          {%- endif -%}
-        {%- endif -%}
-      {%- endif -%}
-    {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _next only -%}
-    </li>
-  {% endif %}
-  {% if _last is not empty %}
-    {% set _last_class = 'page-item' %}
-    {% if _last.disabled %}
-      {% set _last_class = _last_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _last_class }}">
-      {%- if _enable_first_last_icon -%}
-        {%- if _last.icon is not empty -%}
-          {% set _last = _last|merge({
-            icon: _last.icon
-          }) %}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% set _last = _last|merge({
-              icon: {
-                name: "chevron-double-right",
-                size: "fluid",
-                path: _icon_path,
-              }
-            }) %}
-          {%- else -%}
-            {% set _last = _last|merge({
-              position: 'last'
-            }) %}
-          {%- endif -%}
-        {%- endif -%}
-      {%- endif -%}
-      {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _last only -%}
-    </li>
   {% endif %}
   </ul>
 </nav>
