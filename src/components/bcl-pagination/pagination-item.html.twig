@@ -39,8 +39,7 @@ Parameters:
   %}
 {% endif %}
 
-{% if _icon is empty %}
-  {% set _icon_name = "" %}
+{% if _icon is empty and _position is not empty %}
   {% if _enable_first_last_icon %}
     {% if _position == 'first' %}
       {% set _icon_name = 'chevron-double-left' %}
@@ -64,7 +63,10 @@ Parameters:
     size: "fluid",
     path: _icon_path
   } %}
-{% elseif _icon.path is empty and _icon_path is not empty %}
+  {% if _icon.name is not empty %}
+    {% set _label = '' %}
+  {% endif %}
+{% elseif _icon is not empty and _icon.path is empty and _icon_path is not empty %}
   {% set _icon = _icon|merge({
     path: _icon_path
   }) %}
@@ -83,10 +85,6 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
-
-{% if _icon.name is not empty %}
-  {% set _label = '' %}
-{% endif %}
 
 {% if _icon_html is not empty and _icon_path is empty %}
   {% set _label %}
