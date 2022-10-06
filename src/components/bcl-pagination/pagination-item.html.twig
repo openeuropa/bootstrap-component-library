@@ -58,13 +58,13 @@ Parameters:
       {% set _icon_html = '&rsaquo;' %}
     {% endif %}
   {% endif %}
-  {% set _icon = {
-    name: _icon_name,
-    size: "fluid",
-    path: _icon_path
-  } %}
-  {% if _icon.name is not empty %}
+  {% if _icon_name is not empty %}
     {% set _label = '' %}
+    {% set _icon = {
+      name: _icon_name,
+      size: "fluid",
+      path: _icon_path
+    } %}
   {% endif %}
 {% elseif _icon is not empty and _icon.path is empty and _icon_path is not empty %}
   {% set _icon = _icon|merge({
