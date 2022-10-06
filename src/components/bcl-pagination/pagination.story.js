@@ -2,7 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-data-pagination/data.js";
+import demoData from "@openeuropa/bcl-data-pagination/data";
 import pagination from "@openeuropa/bcl-pagination/pagination.html.twig";
 
 const getArgs = () => ({
@@ -62,10 +62,10 @@ const getArgTypes = (data) => {
       },
     },
     icon_path: {
-      name: "custom icon path",
+      name: "path to bcl sprite file (icon_path)",
       type: { name: "boolean" },
       description:
-        "Path to custom icons sprite, if not provided prev, next, first, last icons have predefined unicode icons",
+        "items like prev, next, first, last will be rendered as icons instead of html entities, it is also possible to pass icon objects along those items to use custom icons.",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
@@ -96,6 +96,21 @@ const applyArgs = (data, args) => {
 
   if (args.alignment === "default") {
     args.alignment = "";
+  }
+
+  if (args.enable_prev_next_icon) {
+    data.prev.label = "";
+    data.next.label = "";
+  } else {
+    data.prev.label = "Previous";
+    data.next.label = "Next";
+  }
+  if (args.enable_first_last_icon) {
+    data.first.label = "";
+    data.last.label = "";
+  } else {
+    data.first.label = "First";
+    data.last.label = "Last";
   }
 
   if (args.icon_path) {
