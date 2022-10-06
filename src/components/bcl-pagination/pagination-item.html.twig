@@ -58,13 +58,20 @@ Parameters:
       {% set _icon_html = '&rsaquo;' %}
     {% endif %}
   {% endif %}
-  {% if _icon_name is not empty %}
+  {% if _icon_path is not empty and _icon_name is not empty %}
     {% set _label = '' %}
     {% set _icon = {
       name: _icon_name,
       size: "fluid",
       path: _icon_path
     } %}
+  {% else %}
+    {% if _icon_html is not empty %}
+      {% set _label %}
+        <span aria-hidden="true">{{ _icon_html|raw }}</span>
+      {% endset %}
+      {% set _icon = {} %}
+    {% endif %}
   {% endif %}
 {% elseif _icon is not empty and _icon.path is empty and _icon_path is not empty %}
   {% set _icon = _icon|merge({
@@ -85,13 +92,6 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}
-
-{% if _icon_html is not empty and _icon_path is empty %}
-  {% set _label %}
-    <span aria-hidden="true">{{ _icon_html|raw }}</span>
-  {% endset %}
-  {% set _icon = {} %}
-{% endif %}
 
 {%- include '@oe-bcl/bcl-link/link.html.twig' with {
   label: _label,
