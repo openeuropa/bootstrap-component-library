@@ -88,24 +88,24 @@
   {{ attributes }}
 >
   <ul class="{{ _classes }}">
-  {% if _internal_items is not empty and _internal_items is iterable %}
-    {% for _item in _internal_items %}
-      {% set _item_class = 'page-item' %}
-      {% if _item.disabled %}
-        {% set _item_class = _item_class ~ ' disabled' %}
-      {% endif %}
-      {% if _item.active %}
-        {% set _item_class = _item_class ~ ' active' %}
-      {% endif %}
-      <li class="{{ _item_class }}">
-        {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
-          enable_prev_next_icon: _enable_prev_next_icon,
-          enable_first_last_icon: _enable_first_last_icon,
-          icon_path: _icon_path,
-        }) only %}
-      </li>
-    {% endfor %}
-  {% endif %}
+{% if _internal_items is not empty and _internal_items is iterable %}
+  {% for _item in _internal_items %}
+    {% set _item_class = 'page-item' %}
+    {% if _item.disabled %}
+      {% set _item_class = _item_class ~ ' disabled' %}
+    {% endif %}
+    {% if _item.active %}
+      {% set _item_class = _item_class ~ ' active' %}
+    {% endif %}
+    <li class="{{ _item_class }}">
+      {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
+        enable_prev_next_icon: _enable_prev_next_icon,
+        enable_first_last_icon: _enable_first_last_icon,
+        icon_path: _icon_path,
+      }) only %}
+    </li>
+  {% endfor %}
+{% endif %}
   </ul>
 </nav>
 
