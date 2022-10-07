@@ -55,24 +55,24 @@
 {% set _internal_items = [] %}
 
 {% if _first is defined and _first is not empty %}
-  {% set _first = _first|merge({position: 'first'}) %}
+  {% set _first = _first|merge({ position: 'first' }) %}
   {% set _internal_items = _internal_items|merge([_first]) %}
 {% endif %}
 
 {% if _prev is defined and _prev is not empty %}
-  {% set _prev = prev|merge({position: 'prev'}) %}
+  {% set _prev = prev|merge({ position: 'prev' }) %}
   {% set _internal_items = _internal_items|merge([_prev]) %}
 {% endif %}
 
 {% set _internal_items = _internal_items|merge(_items) %}
 
 {% if _next is defined and _next is not empty %}
-  {% set _next = _next|merge({position: 'next'}) %}
+  {% set _next = _next|merge({ position: 'next' }) %}
   {% set _internal_items = _internal_items|merge([_next]) %}
 {% endif %}
 
 {% if _last is defined and _last is not empty %}
-  {% set _last = _last|merge({position: 'last'}) %}
+  {% set _last = _last|merge({ position: 'last' }) %}
   {% set _internal_items = _internal_items|merge([_last]) %}
 {% endif %}
 
