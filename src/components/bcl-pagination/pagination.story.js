@@ -129,5 +129,5 @@ export default {
 
 export const Default = (args) =>
   pagination(applyArgs(correctPaths(demoData), args));
-Default.args = getArgs(demoData);
+Default.args = getArgs();
 Default.argTypes = getArgTypes(demoData);

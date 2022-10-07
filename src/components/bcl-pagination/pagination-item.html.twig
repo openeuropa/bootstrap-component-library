@@ -7,13 +7,15 @@ Parameters:
   - disabled (boolean) (default: false)
   - active (boolean) (default: false)
   - aria_label (string) (default: '')
+  - icon (icon object) (default: {})
+  - attributes (drupal attrs)
+
+  Internal Parameters
+  - icon_path (string) (default: '')
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
-  - icon (icon object) (default: {})
-  - icon_path (string) (default: '')
   - position (string) (default: '')
     ['first', 'prev', 'next', 'last']
-  - attributes (drupal attrs)
 #}
 
 {% set _path = path|default('') %}
@@ -22,10 +24,10 @@ Parameters:
 {% set _active = active|default(false) %}
 {% set _aria_label = aria_label|default('') %}
 {% set _position = position|default('') %}
-{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
-{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
 {% set _icon = icon|default({}) %}
 {% set _icon_path = icon_path|default('') %}
+{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
+{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
 {% set _position = position|default('') %}
 {% set _classes = ['page-link'] %}
 

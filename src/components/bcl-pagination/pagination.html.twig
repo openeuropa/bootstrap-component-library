@@ -5,7 +5,6 @@
     - options ['sm', 'lg']
   - alignment (string) (default: '')
     - options ['end', 'center']
-  - aria_label (string) (default: '')
   - variant: (string) (default: '')
     - options: ['glossary']
   - enable_prev_next_icon (boolean) (default: false)
@@ -31,7 +30,6 @@
 
 {% set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
-{% set _aria_label = aria_label|default('') %}
 {% set _variant = variant|default('') %}
 {% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
 {% set _enable_first_last_icon = enable_first_last_icon ?? true %}
@@ -43,24 +41,24 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _internal_items = [] %}
 
-{% if _first is defined and _first is not empty %}
+{% if _first is not empty %}
   {% set _first = _first|merge({ position: 'first' }) %}
   {% set _internal_items = _internal_items|merge([_first]) %}
 {% endif %}
 
-{% if _prev is defined and _prev is not empty %}
+{% if _prev is not empty %}
   {% set _prev = prev|merge({ position: 'prev' }) %}
   {% set _internal_items = _internal_items|merge([_prev]) %}
 {% endif %}
 
 {% set _internal_items = _internal_items|merge(_items) %}
 
-{% if _next is defined and _next is not empty %}
+{% if _next is not empty %}
   {% set _next = _next|merge({ position: 'next' }) %}
   {% set _internal_items = _internal_items|merge([_next]) %}
 {% endif %}
 
-{% if _last is defined and _last is not empty %}
+{% if _last is not empty %}
   {% set _last = _last|merge({ position: 'last' }) %}
   {% set _internal_items = _internal_items|merge([_last]) %}
 {% endif %}
@@ -84,10 +82,6 @@
 
 {% if _variant == 'glossary' %}
   {% set attributes = attributes.addClass(['bcl-glossary']) %}
-{% endif %}
-
-{% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 
 <nav
