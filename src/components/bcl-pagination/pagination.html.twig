@@ -9,11 +9,11 @@
   - variant: (string) (default: '')
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
-  - first (pagination Item object)
-  - prev (pagination Item object)
-  - next (pagination Item object)
-  - last (pagination Item object)
-  - items (array of pagination Item objects)
+  - first (pagination Item object) (default: {})
+  - prev (pagination Item object) (default: {})
+  - next (pagination Item object) (default: {})
+  - last (pagination Item object) (default: {})
+  - items (array of pagination Item objects) (default: [])
     format: [
     {
       - path (string) (default: '')
@@ -64,6 +64,10 @@
   {% set _internal_items = _internal_items|merge([_last]) %}
 {% endif %}
 
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
 {% set _classes = 'pagination' %}
 {% if _size is not empty %}
   {% set _classes = _classes ~ ' pagination-' ~ _size %}
@@ -75,10 +79,6 @@
   {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{% endif %}
-
 {% set attributes = attributes.setAttribute('role', 'navigation') %}
 
 {% if _variant == 'glossary' %}
@@ -87,9 +87,6 @@
 
 {% if _aria_label is not empty %}
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
-{% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
 {% endif %}
 
 <nav
