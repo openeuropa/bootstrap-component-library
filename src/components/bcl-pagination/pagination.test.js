@@ -65,6 +65,23 @@ describe("OE - Pagination", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("with custom icon for next renders for correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        next: {
+          path: "/example.html",
+          icon: {
+            name: "chevron-top",
+            size: "fluid",
+          },
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly as glossary`, () => {
     expect.assertions(1);
 
