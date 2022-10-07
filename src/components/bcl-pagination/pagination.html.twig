@@ -67,15 +67,15 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set _classes = 'pagination' %}
+{% set _classes = ['pagination'] %}
 {% if _size is not empty %}
-  {% set _classes = _classes ~ ' pagination-' ~ _size %}
+  {% set _classes = _classes|merge(['pagination-' ~ _size]) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes ~ ' pagination--' ~ _variant %}
+  {% set _classes = _classes|merge(['pagination--' ~ _variant]) %}
 {% endif %}
 {% if _alignment is not empty %}
-  {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
+  {% set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
 {% endif %}
 
 {% set attributes = attributes.setAttribute('role', 'navigation') %}
@@ -87,17 +87,17 @@
 <nav
   {{ attributes }}
 >
-  <ul class="{{ _classes }}">
+  <ul class="{{ _classes|join(' ') }}">
 {% if _internal_items is not empty and _internal_items is iterable %}
   {% for _item in _internal_items %}
-    {% set _item_class = 'page-item' %}
+    {% set _item_class = ['page-item'] %}
     {% if _item.disabled %}
-      {% set _item_class = _item_class ~ ' disabled' %}
+      {% set _item_class = _item_class|merge(['disabled']) %}
     {% endif %}
     {% if _item.active %}
-      {% set _item_class = _item_class ~ ' active' %}
+      {% set _item_class = _item_class|merge(['active']) %}
     {% endif %}
-    <li class="{{ _item_class }}">
+    <li class="{{ _item_class|join(' ') }}">
       {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
         enable_prev_next_icon: _enable_prev_next_icon,
         enable_first_last_icon: _enable_first_last_icon,
