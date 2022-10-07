@@ -64,8 +64,9 @@ const getArgTypes = (data) => {
     icon_path: {
       name: "path to bcl sprite file (icon_path)",
       type: { name: "boolean" },
-      description: `items like prev, next, first, last will be rendered as icons instead of html entities,
-        it is also possible to pass icon objects along those items to use custom icons.`,
+      description: `items like prev, next, first, last
+        will be rendered as icons instead of html entities, it is also
+        possible to pass icon objects along those items to use custom icons.`,
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
