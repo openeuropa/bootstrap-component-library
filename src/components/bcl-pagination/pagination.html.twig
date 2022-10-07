@@ -40,18 +40,6 @@
 {% set _last = last|default({}) %}
 {% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
-
-{% set _classes = 'pagination' %}
-{% if _size is not empty %}
-  {% set _classes = _classes ~ ' pagination-' ~ _size %}
-{% endif %}
-{% if _variant is not empty %}
-  {% set _classes = _classes ~ ' pagination--' ~ _variant %}
-{% endif %}
-{% if _alignment is not empty %}
-  {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
-{% endif %}
-
 {% set _internal_items = [] %}
 
 {% if _first is defined and _first is not empty %}
@@ -74,6 +62,17 @@
 {% if _last is defined and _last is not empty %}
   {% set _last = _last|merge({ position: 'last' }) %}
   {% set _internal_items = _internal_items|merge([_last]) %}
+{% endif %}
+
+{% set _classes = 'pagination' %}
+{% if _size is not empty %}
+  {% set _classes = _classes ~ ' pagination-' ~ _size %}
+{% endif %}
+{% if _variant is not empty %}
+  {% set _classes = _classes ~ ' pagination--' ~ _variant %}
+{% endif %}
+{% if _alignment is not empty %}
+  {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
 {% endif %}
 
 {% if attributes is empty %}
