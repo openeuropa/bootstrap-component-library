@@ -33,12 +33,6 @@ Parameters:
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if _disabled %}
-  {% set attributes = attributes.setAttribute('tabindex', '-1')
-                                .setAttribute('aria-disabled', true) 
-  %}
-{% endif %}
-
 {% if _icon is empty and _position is not empty %}
   {% if _enable_first_last_icon %}
     {% if _position == 'first' %}
@@ -83,10 +77,6 @@ Parameters:
   {% set attributes = attributes.setAttribute('aria-label', _aria_label ) %}
 {% endif %}
 
-{% if _path is not empty %}
-  {% set attributes = attributes.setAttribute('href', _path ) %}
-{% endif %}
-
 {% if _active %}
   {% set attributes = attributes.setAttribute('aria-current', 'page' ) %}
 {% endif %}
@@ -96,6 +86,7 @@ Parameters:
 {%- include '@oe-bcl/bcl-link/link.html.twig' with {
   label: _label,
   path: _path,
+  disabled: _disabled,
   icon: _icon.name ? _icon : {},
   attributes: attributes,
 } only -%}
