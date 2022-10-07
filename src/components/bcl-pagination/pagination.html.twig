@@ -7,6 +7,7 @@
     - options ['end', 'center']
   - variant: (string) (default: '')
     - options: ['glossary']
+  - aria_label (string) (default: '') - deprecated, use attributes
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
   - first (pagination Item object) (default: {})
@@ -20,7 +21,7 @@
       - label (string) (default: '')
       - disabled (boolean) (default: false)
       - active (boolean) (default: false)
-      - aria_label (string) (default: '')
+      - aria_label (string) (default: '') - deprecated, use attributes
       - icon (Icon component) (default: {})
       - attributes (drupal attrs)
     }
@@ -31,6 +32,7 @@
 {% set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
 {% set _variant = variant|default('') %}
+{% set _aria_label = aria_label|default('') %}
 {% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
 {% set _enable_first_last_icon = enable_first_last_icon ?? true %}
 {% set _first = first|default({}) %}
@@ -82,6 +84,10 @@
 
 {% if _variant == 'glossary' %}
   {% set attributes = attributes.addClass(['bcl-glossary']) %}
+{% endif %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 
 <nav
