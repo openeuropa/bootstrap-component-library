@@ -31,22 +31,22 @@ const withContent = (story) => {
           title: "Heading 1",
           attributes: new drupalAttribute().setAttribute("id", "item-1"),
         })}
-        <p>${lorem.generateParagraphs(4)}</p>
+        <p>${lorem.generateParagraphs(8)}</p>
         ${heading({
           title: "Heading 2 with a long title going on several lines",
           attributes: new drupalAttribute().setAttribute("id", "item-2"),
         })}
-        <p>${lorem.generateParagraphs(3)}</p>
+        <p>${lorem.generateParagraphs(10)}</p>
         ${heading({
           title: "Heading 3",
           attributes: new drupalAttribute().setAttribute("id", "item-3"),
         })}
-        <p>${lorem.generateParagraphs(5)}</p>
+        <p>${lorem.generateParagraphs(9)}</p>
         ${heading({
           title: "Heading 4",
           attributes: new drupalAttribute().setAttribute("id", "item-4"),
         })}
-        <p>${lorem.generateParagraphs(3)}</p>
+        <p>${lorem.generateParagraphs(8)}</p>
       </div>
     </div>`;
 

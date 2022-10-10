@@ -324,16 +324,17 @@ export const initScrollspy = (story) => {
   const demo = story();
   return `
     <script>
+      var rootEl = document.getElementById("root");
       var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
       if (element && typeof bootstrap !== "undefined") {
-        document.body.setAttribute("data-bs-spy", "scroll");
-        document.body.setAttribute("data-bs-target", "#" + element.id + "");
-        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
+        rootEl.setAttribute("data-bs-spy", "scroll");
+        rootEl.setAttribute("data-bs-target", "#" + element.id + "");
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(rootEl);
         if (scrollspyBody) {
           scrollspyBody.dispose();
         }
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-          target: "#" + element.id + "",
+        var scrollSpy = new bootstrap.ScrollSpy(rootEl, {
+          target: "#" + element.id,
         });
       }
     </script>
