@@ -335,6 +335,7 @@ export const initScrollspy = (story) => {
         }
         var scrollSpy = new bootstrap.ScrollSpy(wrapper, {
           target: "#" + element.id,
+          threshold: [0, 0.25, 0.5, 0.75, 1],
         });
       }
     </script>
