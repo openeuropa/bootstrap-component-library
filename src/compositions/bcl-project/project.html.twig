@@ -19,11 +19,10 @@
     {% if project_contributions is not empty %}
       {% include '@oe-bcl/bcl-project-status/project-contributions.html.twig' with project_contributions %}
     {% endif %}
+    {% if status_lists is not empty %}
+      {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
+    {% endif %}
   </div>
-  {% endif %}
-
-  {% if status_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
   {% endif %}
 
   {% if first_paragraphs is defined and first_paragraphs is not empty %}
