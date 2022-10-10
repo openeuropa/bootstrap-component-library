@@ -43,7 +43,6 @@ const baseData = {
   with_header: true,
   with_footer: true,
   with_sidebar: true,
-  attributes: new drupalAttribute().addClass("bcl-scrollspy-wrapper"),
 };
 
 const demoData = {

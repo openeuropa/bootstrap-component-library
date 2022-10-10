@@ -1,6 +1,5 @@
 import isChromatic from "chromatic/isChromatic";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import drupalAttribute from "drupal-attribute";
 import {
   filterButton,
   pagination,
@@ -58,7 +57,6 @@ const demoPage = {
   project_contributions: dataContributions,
   banner,
   share,
-  attributes: new drupalAttribute().addClass("bcl-scrollspy-wrapper"),
 };
 
 const ongoingDemo = {

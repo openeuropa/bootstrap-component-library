@@ -324,7 +324,7 @@ export const initScrollspy = (story) => {
   const demo = story();
   return `
     <script>
-      var wrapper = document.querySelector(".bcl-scrollspy-wrapper");
+      var wrapper = document.querySelector(".bcl-content-area");
       var element = document.getElementById("bcl-inpage-navigation");
       if (element && typeof bootstrap !== "undefined") {
         wrapper.setAttribute("data-bs-spy", "scroll");

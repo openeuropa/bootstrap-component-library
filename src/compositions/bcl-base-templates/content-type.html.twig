@@ -68,6 +68,8 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% set attributes = attributes.addClass(['bcl-content-area']) %}
+
 {% if _with_header %}
   {% include '@oe-bcl/bcl-header/header.html.twig' with header only %}
 {% endif %}

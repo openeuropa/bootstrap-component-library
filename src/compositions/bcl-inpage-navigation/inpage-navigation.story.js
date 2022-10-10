@@ -23,7 +23,7 @@ const withContent = (story) => {
   const demo = story();
 
   const layout = `
-  <div class="bcl-scrollspy-wrapper">
+  <div class="bcl-content-area">
     <div class="row">
       <div class="bcl-sidebar col-md-3 d-none d-lg-block">
         ${demo}
