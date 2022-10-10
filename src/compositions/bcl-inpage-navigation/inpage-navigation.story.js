@@ -22,7 +22,9 @@ const applyArgs = (data, args) => Object.assign(data, args);
 const withContent = (story) => {
   const demo = story();
 
-  const layout = `<div class="row">
+  const layout = `
+  <div class="bcl-scrollspy-wrapper">
+    <div class="row">
       <div class="bcl-sidebar col-md-3 d-none d-lg-block">
         ${demo}
       </div>
@@ -48,7 +50,8 @@ const withContent = (story) => {
         })}
         <p>${lorem.generateParagraphs(8)}</p>
       </div>
-    </div>`;
+    </div>
+  </div>`;
 
   return layout;
 };

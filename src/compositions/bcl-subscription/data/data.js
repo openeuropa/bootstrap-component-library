@@ -4,6 +4,7 @@ import {
   sidebar,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import isChromatic from "chromatic/isChromatic";
+import drupalAttribute from "drupal-attribute";
 
 import content from "@openeuropa/bcl-news/data/data--content";
 import blockData from "@openeuropa/bcl-subscription-block/data";
@@ -40,6 +41,7 @@ const demoData = {
     </div>`,
   },
   content,
+  attributes: new drupalAttribute().addClass("bcl-scrollspy-wrapper"),
 };
 
 export default demoData;
