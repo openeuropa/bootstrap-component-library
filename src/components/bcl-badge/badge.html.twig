@@ -22,7 +22,6 @@
 {% set _rounded_pill = rounded_pill|default(false) %}
 {% set _outline = outline|default(false) %}
 {% set _icon_path = icon_path|default('') %}
-
 {% set _classes = ['badge'] %}
 
 {% if _rounded_pill %}
@@ -30,9 +29,9 @@
 {% endif %}
 
 {% if _outline %}
-  {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
+  {% set _classes = _classes|merge(['badge-outline-' ~ _background]) %}
 {% else %}
-  {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
+  {% set _classes = _classes|merge(['bg-' ~ _background]) %}
 {% endif %}
 
 {% if attributes is empty %}
@@ -40,37 +39,39 @@
 {% endif %}
 
 {%- if _url is not empty -%}
-  {% set attributes = attributes.setAttribute('title', _title).setAttribute('href', _url) %}
+  {% set attributes = attributes.setAttribute('title', _title) %}
 {%- endif -%}
 
 {% set attributes = attributes.addClass(_classes) %}
 
+{% set _label %}
+  {%- if _assistive_text is not empty -%}
+  <span class="visually-hidden">
+    {{- _assistive_text -}}
+  </span>
+  {%- endif -%}
+  {{- _label -}}
+  {%- if _dismissible -%}
+  <span class="icon--close" aria-hidden="true">
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+      name: "x-lg",
+      path: _icon_path,
+    } only %}
+  </span>
+  {%- endif -%}
+{% endset %}
+
 {%- if _url is not empty -%}
-<a
-  {{ attributes }}
->
+  {% include '@oe-bcl/bcl-link/link.html.twig' with {
+    label: _label,
+    path: _url,
+    attributes: attributes,
+  } only %}
 {%- else -%}
 <span
   {{ attributes }}
 >
-{%- endif -%}
-  {%- if _assistive_text is not empty -%}
-    <span class="visually-hidden">
-      {{- _assistive_text -}}
-    </span>
-  {%- endif -%}
-    {{- _label -}}
-  {%- if _dismissible -%}
-    <span class="icon--close" aria-hidden="true">
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-        name: "x-lg",
-        path: _icon_path,
-      } only %}
-    </span>
-  {%- endif -%}
-{%- if _url is not empty -%}
-</a>
-{%- else -%}
+  {{- _label -}}
 </span>
 {%- endif -%}
 
