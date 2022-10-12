@@ -335,7 +335,18 @@ export const initScrollspy = (story) => {
         }
         var scrollSpy = new bootstrap.ScrollSpy(wrapper, {
           target: "#" + element.id,
+          threshold: [0, 0.25, 0.5, 0.75, 1],
         });
+      }
+    </script>
+  ${demo}`;
+};
+
+export const scrollspyTitles = (story) => {
+  const demo = story();
+  return `
+    <script>
+      if (element && typeof bootstrap !== "undefined") {
         const scrollspyEl = document.querySelector('[data-bs-spy="scroll"]')
         let prevElement;
         scrollspyEl.addEventListener('activate.bs.scrollspy', (event) => {
