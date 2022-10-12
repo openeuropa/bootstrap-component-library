@@ -126,7 +126,7 @@ Blocks.args = getArgs(demoData);
 Blocks.argTypes = getArgTypes();
 
 export const Titles = (args) => inpage(applyArgs(demoData, args));
-Titles.storyName = "Titles with id";
+Titles.storyName = "Titles with id (with js fix)";
 Titles.decorators = [withTitlesIDContent, scrollspyTitles];
 Titles.args = getArgs(demoData);
 Titles.argTypes = getArgTypes();
