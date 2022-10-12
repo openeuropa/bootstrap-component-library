@@ -335,8 +335,16 @@ export const initScrollspy = (story) => {
         }
         var scrollSpy = new bootstrap.ScrollSpy(wrapper, {
           target: "#" + element.id,
-          threshold: [0, 0.25, 0.5, 0.75, 1],
         });
+        const scrollspyEl = document.querySelector('[data-bs-spy="scroll"]')
+        let prevElement;
+        scrollspyEl.addEventListener('activate.bs.scrollspy', (event) => {
+          if(prevElement) {
+            prevElement.classList.remove('bcl-active');
+          }
+          prevElement = event.relatedTarget;
+          event.relatedTarget.classList.add('bcl-active');
+        })
       }
     </script>
   ${demo}`;

@@ -26,6 +26,12 @@
       padding: 0 map-get($spacers, "2-5");
     }
   }
+  .nav-pills {
+    .bcl-active {
+      color: $nav-pills-link-active-color;
+      @include gradient-bg($nav-pills-link-active-bg);
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
