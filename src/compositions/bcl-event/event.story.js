@@ -4,6 +4,7 @@ import {
   initScrollspy,
   initBadges,
   correctPaths,
+  scrollspyTitles,
 } from "@openeuropa/bcl-story-utils";
 import {
   demoData,
@@ -76,7 +77,7 @@ const applyArgs = (data, args) => {
 export const FullPage = () => event(correctPaths(demoData));
 
 FullPage.storyName = "Event page";
-FullPage.decorators = [initScrollspy];
+FullPage.decorators = [initScrollspy, scrollspyTitles];
 FullPage.parameters = {
   design: [
     {
@@ -95,7 +96,7 @@ FullPage.parameters = {
 export const FullPage1 = () => event(correctPaths(demoDateData));
 
 FullPage1.storyName = "Event page with date";
-FullPage1.decorators = [initScrollspy];
+FullPage1.decorators = [initScrollspy, scrollspyTitles];
 FullPage1.parameters = {
   design: [
     {

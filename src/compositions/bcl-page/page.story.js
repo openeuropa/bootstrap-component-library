@@ -1,4 +1,8 @@
-import { initScrollspy, correctPaths } from "@openeuropa/bcl-story-utils";
+import {
+  initScrollspy,
+  correctPaths,
+  scrollspyTitles,
+} from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 
@@ -7,7 +11,7 @@ import page from "@openeuropa/bcl-page/page.html.twig";
 
 export default {
   title: "Features/Page",
-  decorators: [withCode, withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy, scrollspyTitles],
   parameters: {
     a11y: {
       config: {
