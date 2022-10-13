@@ -41,17 +41,8 @@ module.exports = (entry, dest, options) => {
       transform: [
         {
           svgo: {
-            plugins: [
-              {
-                name: "preset-default",
-                params: {
-                  overrides: {
-                    multipass: true,
-                    plugins: plugins,
-                  },
-                },
-              },
-            ],
+            multipass: true,
+            plugins: defaultPlugins,
           },
         },
       ],
