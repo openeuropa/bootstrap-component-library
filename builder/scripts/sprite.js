@@ -42,7 +42,7 @@ module.exports = (entry, dest, options) => {
         {
           svgo: {
             multipass: true,
-            plugins: plugins,
+            plugins: defaultPlugins,
           },
         },
       ],
