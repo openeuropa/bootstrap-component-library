@@ -60,14 +60,12 @@
   {% set attributes = attributes.setAttribute('aria-current', 'page' ) %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
-
 {%- include '@oe-bcl/bcl-link/link.html.twig' with {
   label: _label,
   path: _path,
   disabled: _disabled,
   icon: _icon,
-  attributes: attributes,
+  attributes: attributes.addClass(_classes),
 } only -%}
 
 {% endapply %}
