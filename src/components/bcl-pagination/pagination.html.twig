@@ -43,27 +43,39 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _internal_items = [] %}
 
-{% if _first is not empty %}
-  {% set _first = _first|merge({ position: 'first' }) %}
-  {% set _internal_items = _internal_items|merge([_first]) %}
+{% if _enable_first_last_icon %}
+  {% if _first is not empty %}
+    {% set _first = _first|merge({
+      icon_html: "&laquo;",
+      icon_name: "chevron-double-left",
+    }) %}
+  {% endif %}
+  {% if _last is not empty %}
+    {% set _last = _last|merge({
+      icon_html: '&raquo;',
+      icon_name: "chevron-double-right",
+    }) %}
+  {% endif %}
 {% endif %}
 
-{% if _prev is not empty %}
-  {% set _prev = prev|merge({ position: 'prev' }) %}
-  {% set _internal_items = _internal_items|merge([_prev]) %}
+{% if _enable_prev_next_icon %}
+  {% if _prev is not empty %}
+    {% set _prev = _prev|merge({
+      icon_html: "&lsaquo;",
+      icon_name: "chevron-left",
+    }) %}
+  {% endif %}
+  {% if _next is not empty %}
+    {% set _next = _next|merge({
+      icon_html: "&rsaquo;",
+      icon_name: "chevron-right",
+    }) %}
+  {% endif %}
 {% endif %}
 
+{% set _internal_items = _internal_items|merge([_first, _prev]) %}
 {% set _internal_items = _internal_items|merge(_items) %}
-
-{% if _next is not empty %}
-  {% set _next = _next|merge({ position: 'next' }) %}
-  {% set _internal_items = _internal_items|merge([_next]) %}
-{% endif %}
-
-{% if _last is not empty %}
-  {% set _last = _last|merge({ position: 'last' }) %}
-  {% set _internal_items = _internal_items|merge([_last]) %}
-{% endif %}
+{% set _internal_items = _internal_items|merge([_next, _last]) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -96,20 +108,20 @@
   <ul class="{{ _classes|join(' ') }}">
 {% if _internal_items is not empty and _internal_items is iterable %}
   {% for _item in _internal_items %}
-    {% set _item_class = ['page-item'] %}
-    {% if _item.disabled %}
-      {% set _item_class = _item_class|merge(['disabled']) %}
+    {% if _item is not empty %}
+      {% set _item_class = ['page-item'] %}
+      {% if _item.disabled %}
+        {% set _item_class = _item_class|merge(['disabled']) %}
+      {% endif %}
+      {% if _item.active %}
+        {% set _item_class = _item_class|merge(['active']) %}
+      {% endif %}
+      <li class="{{ _item_class|join(' ') }}">
+        {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
+          icon_path: _icon_path,
+        }) only %}
+      </li>
     {% endif %}
-    {% if _item.active %}
-      {% set _item_class = _item_class|merge(['active']) %}
-    {% endif %}
-    <li class="{{ _item_class|join(' ') }}">
-      {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
-        enable_prev_next_icon: _enable_prev_next_icon,
-        enable_first_last_icon: _enable_first_last_icon,
-        icon_path: _icon_path,
-      }) only %}
-    </li>
   {% endfor %}
 {% endif %}
   </ul>

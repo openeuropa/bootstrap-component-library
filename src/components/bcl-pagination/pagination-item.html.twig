@@ -1,7 +1,6 @@
 {% apply spaceless %}
 
-{#
-Parameters:
+{# Parameters:
   - path (string) (default: '')
   - label (string) (default: '')
   - disabled (boolean) (default: false)
@@ -11,11 +10,8 @@ Parameters:
   - attributes (drupal attrs)
 
   Internal Parameters
-  - icon_path (string) (default: '')
-  - enable_prev_next_icon (boolean) (default: false)
-  - enable_first_last_icon (boolean) (default: true)
-  - position (string) (default: '')
-    ['first', 'prev', 'next', 'last']
+  - icon_name (string) (default: '')
+  - icon_html (string) (default: '')
 #}
 
 {% set _path = path|default('') %}
@@ -23,56 +19,37 @@ Parameters:
 {% set _disabled = disabled|default(false) %}
 {% set _active = active|default(false) %}
 {% set _aria_label = aria_label|default('') %}
-{% set _position = position|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_path = icon_path|default('') %}
-{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
-{% set _enable_first_last_icon = enable_first_last_icon ?? true %}
-{% set _position = position|default('') %}
+{% set _icon_name = icon_name|default('') %}
+{% set _icon_html = icon_html|default('') %}
 {% set _classes = ['page-link'] %}
+
+{% if _icon_path is not empty and _icon is empty %}
+  {% if _icon_name is not empty %}
+    {% set _icon = _icon|merge({
+      name: _icon_name,
+      path: _icon_path,
+      size: "fluid"
+    }) %}
+    {% set _label = "" %}
+  {% endif %}
+{% else %}
+  {% if _icon_html is not empty %}
+    {% set _label %}
+      <span aria-hidden="true">{{ _icon_html }}</span>
+    {% endset %}
+  {% endif %}
+{% endif %}
+
+{% if _icon is not empty %}
+  {% set _icon = _icon|merge({
+    path: _icon_path,
+  }) %}
+{% endif %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
-{% endif %}
-
-{% if _icon is empty and _position is not empty %}
-  {% if _enable_first_last_icon %}
-    {% if _position == 'first' %}
-      {% set _icon_name = 'chevron-double-left' %}
-      {% set _icon_html = '&laquo;' %}
-    {% elseif _position == 'last' %}
-      {% set _icon_name = 'chevron-double-right' %}
-      {% set _icon_html = '&raquo;' %}
-    {% endif %}
-  {% endif %}
-  {% if _enable_prev_next_icon %}
-    {% if _position == 'prev' %}
-      {% set _icon_name = 'chevron-left' %}
-      {% set _icon_html = '&lsaquo;' %}
-    {% elseif _position == 'next' %}
-      {% set _icon_name = 'chevron-right' %}
-      {% set _icon_html = '&rsaquo;' %}
-    {% endif %}
-  {% endif %}
-  {% if _icon_path is not empty and _icon_name is not empty %}
-    {% set _label = '' %}
-    {% set _icon = {
-      name: _icon_name,
-      size: "fluid",
-      path: _icon_path
-    } %}
-  {% else %}
-    {% if _icon_html is not empty %}
-      {% set _label %}
-        <span aria-hidden="true">{{ _icon_html|raw }}</span>
-      {% endset %}
-      {% set _icon = {} %}
-    {% endif %}
-  {% endif %}
-{% elseif _icon is not empty and _icon.path is empty and _icon_path is not empty %}
-  {% set _icon = _icon|merge({
-    path: _icon_path
-  }) %}
 {% endif %}
 
 {% if _aria_label is not empty %}
@@ -89,7 +66,7 @@ Parameters:
   label: _label,
   path: _path,
   disabled: _disabled,
-  icon: _icon.name ? _icon : {},
+  icon: _icon,
   attributes: attributes,
 } only -%}
 

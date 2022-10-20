@@ -81,7 +81,7 @@ const getArgTypes = (data) => {
       description: "Enable icon for first and last",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
+        defaultValue: { summary: "true" },
         category: "Style",
       },
     };
