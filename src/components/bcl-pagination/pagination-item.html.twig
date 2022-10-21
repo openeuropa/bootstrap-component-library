@@ -8,16 +8,12 @@
   - aria_label (string) (default: '') - deprecated, use attributes
   - icon (icon object) (default: {})
   - attributes (drupal attrs)
-
-  Internal Parameters
-  - icon_name (string) (default: '')
-  - icon_html (string) (default: '')
 #}
 
 {% set _path = path|default('') %}
 {% set _label = label|default('') %}
-{% set _disabled = disabled|default(false) %}
-{% set _active = active|default(false) %}
+{% set _disabled = disabled ?? false %}
+{% set _active = active ?? false %}
 {% set _aria_label = aria_label|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_path = icon_path|default('') %}
