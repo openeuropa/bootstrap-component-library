@@ -4,12 +4,10 @@
 Parameters:
   - item (object) (default: '')
     format: {
-      thumbnails (string) img path
+      thumbnail (string) img path
       media: (string) <img> tag
       caption (string)
       caption_title (string)
-      caption_classes (string)
-      interval (integer) (default: 0)
     }
   - carousel_id (string) (default: '')
   - modal_id (string) (default: '')
@@ -28,7 +26,7 @@ Parameters:
 
 {% set attributes = attributes.addClass(['bcl-gallery__item', 'd-block', 'w-100', 'img-fluid'])
                               .setAttribute('data-bs-target', '#' ~ _carousel_id)
-                              .setAttribute('data-bs-slide-to', loop.index - 1)
+                              .setAttribute('data-bs-slide-to', loop_counter - 1)
 %}
 
 <a 
@@ -51,13 +49,13 @@ Parameters:
     {% endif %}
     {% if _item.caption is not empty %}
       <div class="bcl-gallery__item-description">
-        {{ _item.caption }}
+        {{ _item.caption|raw }}
       </div>
     {% endif %}
     </div>
   {% endif %}
   </div>
-  {{ _item.thumbnail }}
+  {{ _item.thumbnail|raw }}
 </a>
 
 {% endapply %}

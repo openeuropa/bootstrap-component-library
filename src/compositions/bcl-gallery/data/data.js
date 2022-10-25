@@ -108,5 +108,37 @@ module.exports = {
                 src="https://picsum.photos/id/1071/800/400" 
               />`,
     },
+    {
+      caption: `<p>Some representative placeholder content for the last slide.</p>`,
+      caption_title: "Last slide label",
+      thumbnail: `<img alt="slide" 
+                    src="https://picsum.photos/id/1073/400/400" 
+                  />`,
+      media: `<img alt="First slide" 
+                src="https://picsum.photos/id/1071/800/400" 
+              />`,
+    },
+    {
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
+      thumbnail: `<img alt="slide" 
+                    src="https://picsum.photos/id/1012/400/400" 
+                  />`,
+      media: `<iframe 
+                src="https://www.youtube.com/embed/fgi-GSCB6ho" 
+                frameborder="0"
+              ></iframe>`,
+    },
+    {
+      thumbnail: `<img alt="slide" 
+                    src="https://picsum.photos/id/1081/400/400" 
+                  />`,
+      media: `<video poster="https://picsum.photos/id/1081/800/400" controls="controls">
+                <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
+                <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm" type="video/webm">
+                <track src="/captions/bunny-en.vtt" kind="captions" srclang="en" label="English">
+                <track src="/captions/bunny-fr.vtt" kind="captions" srclang="fr" label="français">
+              </video>`,
+    },
   ],
 };

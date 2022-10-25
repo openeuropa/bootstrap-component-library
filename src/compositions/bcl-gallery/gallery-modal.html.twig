@@ -9,12 +9,10 @@ Parameters:
   - title_attributes (drupal attrs)
   - items (array of objects) format: [
       {
-        thumbnails (string) img path
+        thumbnail (string) img path
         media: (string) <img> tag
         caption (string)
         caption_title (string)
-        caption_classes (string)
-        interval (integer) (default: 0)
       }
     ]
   - carousel_id (string) (default: '')
@@ -84,6 +82,7 @@ Parameters:
       <div class="modal-body d-flex align-items-center justify-content-center">
         {% for _item in _items %}
           {% set _carousel_items = _carousel_items|merge([_item|merge({
+            caption_title: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption_title,
             caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
             image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
           })]) %}
