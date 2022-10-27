@@ -1,5 +1,5 @@
 {% import _self as navigation %}
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - id (string) (default: '')
@@ -27,7 +27,7 @@
 
 {# Define main macro #}
 {% macro render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) %}
-{% spaceless %}
+{% apply spaceless %}
   {% import _self as navigation %}
 
   {% set _id = id|default('') %}
@@ -114,7 +114,7 @@
             role="tab"
           {% endif %}
         >
-        {% elseif _tabs %}
+        {% elseif _tabs and _item.dropdown is not defined %}
           {% set _item = _item|merge({
             attributes: _item.attributes.setAttribute("role", "tab"),
             }) 
@@ -171,9 +171,9 @@
     {%- endblock -%}
   </div>
   {% endif %}
-{% endspaceless %}
+{% endapply %}
 {% endmacro %}
 
 {{ navigation.render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) }}
 
-{% endspaceless %}
+{% endapply %}

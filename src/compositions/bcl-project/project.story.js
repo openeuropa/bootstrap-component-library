@@ -13,7 +13,6 @@ import {
 } from "@openeuropa/bcl-project/data/data";
 
 import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
-
 import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
 export default {

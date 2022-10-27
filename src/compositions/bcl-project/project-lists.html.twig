@@ -1,9 +1,12 @@
-{% spaceless %}
+{% apply spaceless %}
 
 
 {#
   Parameters:
-  - title (heading object) (default: {})
+  - title: (string) (default: '')
+  - title_tag: (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes (drupal attrs)
   - items (array) (default: [])
     {
       title: (heading object),
@@ -57,7 +60,7 @@
       {% endif %}
       {% if not loop.last %}
         {% set _list = _list|merge({
-            attributes: _list.attributes.addClass(['border-bottom', 'pb-3'])
+            attributes: _list.attributes.addClass(['border-bottom', 'mb-3'])
           })
         %}
       {% endif %}
@@ -67,4 +70,4 @@
 {% endif %}
 </div>
 
-{% endspaceless %}
+{% endapply %}

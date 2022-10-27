@@ -1,10 +1,14 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import demoData from "@openeuropa/bcl-data-blockquote/data.js";
+import { getTitleControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
+
+import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 
 const getArgs = (data) => ({
+  title: "",
+  title_tag: "h2",
   quote: data.quote,
   attribution: data.attribution,
   cite: data.cite,
@@ -12,6 +16,7 @@ const getArgs = (data) => ({
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   quote: {
     type: { name: "string" },
     description: "Text of blockquote",
@@ -78,7 +83,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/content/typography/#blockquotes",
+        url: "https://getbootstrap.com/docs/5.2/content/typography/#blockquotes",
       },
     ],
   },

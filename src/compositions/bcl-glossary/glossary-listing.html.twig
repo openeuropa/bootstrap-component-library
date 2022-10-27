@@ -1,12 +1,9 @@
 {% extends '@oe-bcl/bcl-base-templates/listing-page.html.twig' %}
 
 {% block content_row %}
-	<div class="col-lg-4 col-md-6 col-12 mb-5">
-  	{% include '@oe-bcl/bcl-search-form/search-form.html.twig' with search only %}
-  </div>
 		{% include '@oe-bcl/bcl-pagination/pagination.html.twig' with glossary only %}
 	<div class="col-12">
-	  <div class="d-md-flex justify-content-end mb-md-5 align-items-center border-bottom-md border-top-md border-gray-300 py-5">
+	  <div class="d-md-flex justify-content-end mb-md-4-75 align-items-center border-bottom-md border-top-md border-gray-300 py-3">
 	    {% include '@oe-bcl/bcl-select/select.html.twig' with sortBy only %}
 	    {% include '@oe-bcl/bcl-select/select.html.twig' with itemsPerPage only %}
 	  </div>

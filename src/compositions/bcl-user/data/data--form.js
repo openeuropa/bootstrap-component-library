@@ -1,10 +1,11 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   landing: true,
   navigation: {
     tabs: true,
-    tabs_content: true,
+    nav: true,
     items: [
       {
         label: "View",
@@ -65,6 +66,7 @@ module.exports = {
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#cancel")
           .setAttribute("role", "tab")
+          .setAttribute("title", "cancel-tab")
           .setAttribute("aria-controls", "cancel")
           .addClass("d-none"),
       },
@@ -81,9 +83,8 @@ module.exports = {
       },
       content: `<div class="mb-4 mt-4">
         <span class="text-muted me-3">DG Test</span><span class="text-muted">Director</span>
-      </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.</p>`,
-      attributes: new drupalAttribute().addClass("negative-container"),
+      </div>${getDummyText(5)}`,
+      image_size: "lg",
     },
   },
   edit: {
@@ -250,7 +251,7 @@ module.exports = {
             label: "Bio",
             helper_text: "Helper text",
             id: "bio-description",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
+            text: getDummyText(),
           },
           {
             wrapper_classes: "mb-3",

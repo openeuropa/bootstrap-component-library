@@ -1,5 +1,6 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
 import demoData from "@openeuropa/bcl-date-block/data/data.js";
 

@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 import isChromatic from "chromatic/isChromatic";
 
@@ -18,8 +18,9 @@ if (isChromatic()) {
 }
 
 const getArgs = (data) => ({
+  title: "",
+  title_tag: "h2",
   items: data.items,
-  autoinit: true,
   autoplay: true,
   disable_touch: false,
   rounded_indicators: false,
@@ -32,23 +33,13 @@ const getArgs = (data) => ({
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   items: {
     type: { name: "object", required: true },
     description: "Carousel items",
     table: {
       type: { summary: "array of objects" },
       category: "Content",
-    },
-  },
-  autoinit: {
-    name: "initialize the carousel",
-    type: { name: "boolean" },
-    description:
-      "If set to false the carousel need to be instantiated via javascript.",
-    table: {
-      type: { summary: "boolean" },
-      defaultValue: { summary: "true" },
-      category: "Behaviour",
     },
   },
   autoplay: {
@@ -146,9 +137,6 @@ const getArgTypes = () => ({
 const resetAttrs = (data, args) => {
   data.attributes.removeClass("carousel-fade");
   data.attributes.removeClass("carousel-dark");
-  if (!args.autoinit) {
-    data.attributes.removeAttribute("data-bs-ride");
-  }
   if (!args.disable_touch) {
     data.attributes.removeAttribute("data-bs-touch");
   }
@@ -183,7 +171,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/carousel/",
+        url: "https://getbootstrap.com/docs/5.2/components/carousel/",
       },
     ],
   },

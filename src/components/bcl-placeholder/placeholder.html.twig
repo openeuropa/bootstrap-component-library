@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - width (int) (default: 0) - between 0-100
@@ -15,6 +15,7 @@
 {% set _variant = variant|default('') %}
 {% set _size = size|default('') %}
 {% set _animation = animation|default('') %}
+
 {% set _classes = ['placeholder'] %}
 
 {% if _size is not empty %}
@@ -41,4 +42,4 @@
   </p>
 {% endif %}
 
-{% endspaceless %}
+{% endapply %}

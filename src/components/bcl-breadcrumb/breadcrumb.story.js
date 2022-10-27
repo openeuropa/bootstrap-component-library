@@ -1,8 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
+
 import demoData from "@openeuropa/bcl-data-breadcrumb/data.js";
 import breadcrumb from "@openeuropa/bcl-breadcrumb/breadcrumb.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => ({
   links: data.links,
@@ -19,10 +20,7 @@ const getArgTypes = () => ({
   },
 });
 
-const applyArgs = (data, args) => {
-  data.icon_path = defaultSprite;
-  return Object.assign(data, args);
-};
+const applyArgs = (data, args) => Object.assign(correctPaths(data), args);
 
 export default {
   title: "Components/Breadcrumb",
@@ -37,7 +35,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/breadcrumb/",
+        url: "https://getbootstrap.com/docs/5.2/components/breadcrumb/",
       },
     ],
   },

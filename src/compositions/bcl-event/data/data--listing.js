@@ -3,9 +3,10 @@ const drupalAttribute = require("drupal-attribute");
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
+    close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),
@@ -16,7 +17,16 @@ module.exports = {
       items: [
         [
           {
-            classes: "mb-4",
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
+        [
+          {
+            classes: "mb-3",
             label: "Type",
             type: "select",
             id: "type",
@@ -31,7 +41,7 @@ module.exports = {
         ],
         [
           {
-            classes: "mb-4",
+            classes: "mb-3",
             label: "Location",
             type: "select",
             id: "location",
@@ -48,7 +58,7 @@ module.exports = {
           {
             label: "Start date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-4"),
+            attributes: new drupalAttribute().addClass("mb-2"),
             id: "creation-date-from",
             wrapper_classes: "mb-3",
           },
@@ -58,7 +68,7 @@ module.exports = {
             input_type: "date",
             label: "End date",
             wrapper_classes: "mb-3",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new drupalAttribute().addClass("mb-4-5"),
             id: "creation-date-to",
           },
         ],

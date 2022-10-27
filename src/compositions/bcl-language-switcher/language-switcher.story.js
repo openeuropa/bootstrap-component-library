@@ -1,9 +1,9 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
-
+import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 import isChromatic from "chromatic/isChromatic";
 import { within, userEvent } from "@storybook/testing-library";
+
 import demoData from "@openeuropa/bcl-language-switcher/data.js";
 import languageSwitcher from "@openeuropa/bcl-language-switcher/language-switcher.html.twig";
 

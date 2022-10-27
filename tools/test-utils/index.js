@@ -1,4 +1,3 @@
-const merge = require("deepmerge");
 const twing = require("../../.storybook/environment");
 const drupalAttribute = require("drupal-attribute");
 
@@ -16,6 +15,17 @@ const renderTwigFileAsNode = (file, options, reset) =>
       reject(error);
     }
   });
+
+const renderTwigFileAsHtml = (file, options, main) => {
+  let html = twing.render(file, options);
+  if (main) {
+    const landmark = document.createElement("main");
+    landmark.innerHTML = html.trim();
+    html = landmark;
+  }
+
+  return html;
+};
 
 const getVariants = (outline, add) => {
   let variants = [
@@ -39,7 +49,7 @@ const getVariants = (outline, add) => {
 };
 
 module.exports = {
-  merge,
   renderTwigFileAsNode,
+  renderTwigFileAsHtml,
   getVariants,
 };

@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
   Parameters:
@@ -6,7 +6,7 @@
   - title_tag (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - variant (string) (default: '') options:
+  - variant (string) (default: 'default') options:
     [ default, block ]
   - display_icons (boolean) (default: true)
   - items (array) (default: []):
@@ -29,7 +29,6 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _variant = variant|default('default') %}
-{% set _css_classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _display_icons = display_icons ?? true %}
 {% set _items = items|default([]) %}
 {% set _grid_columns = grid_columns|default(1) %}
@@ -38,9 +37,11 @@
 {% set _gutter = gutter|default(4) %}
 {% set _equal_height = equal_height|default(false) %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
-{% set _cols_classes = 'col' %}
 {% set _icon_path = icon_path|default('') %}
 {% set _link_more = link_more|default({}) %}
+
+{% set _cols_classes = 'col' %}
+{% set _classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _wrapper_classes = [] %}
 
 {% set _grid_classes = [
@@ -60,13 +61,13 @@
   {% set _grid_classes = _grid_classes|merge(['mt-3']) %}
 {% endif %}
 {% if _equal_height %}
-  {% set  _cols_classes =  _cols_classes ~ ' h-100' %}
+  {% set _cols_classes = _cols_classes ~ ' h-100' %}
 {% endif %}
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_css_classes) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 <div {{ attributes }}>
 {% if _title is not empty %}
@@ -124,4 +125,4 @@
   </div>
 </div>
 
-{% endspaceless %}
+{% endapply %}

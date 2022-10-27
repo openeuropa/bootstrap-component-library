@@ -1,3 +1,5 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   rows: [
     {
@@ -8,8 +10,10 @@ module.exports = {
           items: [
             {
               type: "content",
-              content:
-                "<p class='fw-bold mb-2'>[Project name]</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.</p>",
+              content: `<p class='fw-bold mb-2'>[Project name]</p>${getDummyText(
+                2,
+                true
+              )}`,
             },
           ],
         },
@@ -36,6 +40,7 @@ module.exports = {
                 {
                   label: "Facebook",
                   icon_position: "before",
+                  path: "/example.html",
                   icon: {
                     path: "/icons.svg",
                     name: "facebook",
@@ -44,6 +49,7 @@ module.exports = {
                 },
                 {
                   label: "Twitter",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -53,6 +59,7 @@ module.exports = {
                 },
                 {
                   label: "Linkedin",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     name: "linkedin",
@@ -86,15 +93,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },
@@ -117,15 +128,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },

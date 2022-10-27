@@ -1,6 +1,5 @@
 import {
   banner,
-  file,
   fileThumbnail,
   featuredItem,
   accordion,
@@ -14,6 +13,7 @@ import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
 
 import listing from "@openeuropa/bcl-page/data/data--listing";
+import files from "@openeuropa/bcl-page/data/data--files";
 import listingDefault from "@openeuropa/bcl-page/data/data--listing-default";
 import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
 
@@ -26,10 +26,6 @@ if (isChromatic()) {
     '<iframe class="chromatic-ignore" title="New digital strategy" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>';
 }
 
-const files = [
-  { ...file, attributes: new drupalAttribute().addClass(["mb-3"]) },
-  { ...file, attributes: new drupalAttribute().addClass(["mb-3"]) },
-];
 const filesThumbnail = [
   { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
   { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },

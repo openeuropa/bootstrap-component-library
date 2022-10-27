@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { getVariants, correctPaths } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
+
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
-import { getVariants } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
 
 const getArgs = () => ({
   color_set: "light",
@@ -63,7 +64,7 @@ const applyArgs = (data, args) => {
   if (args.background === "light") {
     args.color_set = "light";
   }
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 // Stories
@@ -80,7 +81,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/navbar/",
+        url: "https://getbootstrap.com/docs/5.2/components/navbar/",
       },
     ],
   },

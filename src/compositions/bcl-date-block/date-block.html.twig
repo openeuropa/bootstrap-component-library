@@ -1,26 +1,25 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
   Parameters:
-    - "variant" (string) (default: '')
-    - "day" (integer) (default: '')
-    - "month" (string) (default: '')
-    - "date_time" (string) (default: '')
-    - "year" (integer) (default: '')
-    - "end_day" (integer) (default: '')
-    - "end_month" (string) (default: '')
-    - "end_year" (integer) (default: '')
+    - day (integer) (default: '')
+    - month (string) (default: '')
+    - date_time (string) (default: '')
+    - year (integer) (default: '')
+    - end_day (integer) (default: '')
+    - end_month (string) (default: '')
+    - end_year (integer) (default: '')
 #}
 
-{% set _month = month|default('') %}
 {% set _day = day|default('') %}
-{% set _year = year|default('') %}
+{% set _month = month|default('') %}
 {% set _date_time = date_time|default('') %}
+{% set _year = year|default('') %}
 {% set _end_day = end_day|default('') %}
 {% set _end_month = end_month|default('') %}
 {% set _end_year = end_year|default('') %}
-{% set _variant = variant|default('') %}
-{% set _css_classes = [
+
+{% set _classes = [
   'bcl-date-block',
   'bg-date',
   'rounded',
@@ -36,7 +35,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_css_classes) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _date_time is not empty %}
   {% set attributes = attributes.setAttribute('datetime', _date_time) %}
@@ -62,4 +61,4 @@
   </span>
 </time>
 
-{% endspaceless %}
+{% endapply %}

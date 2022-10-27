@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import dataDefault from "@openeuropa/bcl-banner/data/data";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
@@ -7,6 +11,8 @@ import dataShade from "@openeuropa/bcl-banner/data/data--shade";
 
 const template = "@oe-bcl/bcl-banner/banner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Page banner", () => {
   test("default renders correctly", () => {
@@ -51,6 +57,20 @@ describe("OE - Page banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("default renders correctly with title and link", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        title: "Page banner test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("image text-block renders correctly with title", () => {
     expect.assertions(1);
     return expect(
@@ -63,6 +83,32 @@ describe("OE - Page banner", () => {
     return expect(
       render({ ...dataShade, title: "Page banner test title", title_tag: "h6" })
     ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly with content classes", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        content_classes: "new-content-class",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly full width", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        full_width: true,
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+    ).toHaveNoViolations();
   });
 });
 
@@ -119,6 +165,21 @@ describe("OE - Hero banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("default renders correctly with title and link", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...dataDefault,
+        hero: true,
+        title: "Hero banner test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("image text-block renders correctly with title", () => {
     expect.assertions(1);
     return expect(
@@ -141,5 +202,13 @@ describe("OE - Hero banner", () => {
         title_tag: "h6",
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(
+        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true)
+      )
+    ).toHaveNoViolations();
   });
 });

@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import {
   demoListing,
   ongoingDemo,
@@ -15,6 +19,8 @@ const renderListing = (params) =>
 
 const renderDetails = (params) =>
   renderTwigFileAsNode(detailsTemplate, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Project", () => {
   test("listing renders correctly", () => {
@@ -40,5 +46,17 @@ describe("OE - Project", () => {
   test("UCPKN page (ongoing) renders correctly", () => {
     expect.assertions(1);
     return expect(renderDetails(ongoingDemoUCPKN)).resolves.toMatchSnapshot();
+  });
+
+  test(`listing passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+    ).toHaveNoViolations();
+  });
+  jest.setTimeout(10000);
+  test(`details passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(detailsTemplate, ongoingDemo))
+    ).toHaveNoViolations();
   });
 });

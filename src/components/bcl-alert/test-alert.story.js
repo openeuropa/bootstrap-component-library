@@ -1,16 +1,18 @@
+import { correctPaths } from "@openeuropa/bcl-story-utils";
+
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
+
+const data = correctPaths(demoData);
 
 export default {
   title: "Components/Alert",
 };
 
-export const WithoutIcon = () => alert({ ...demoData, icon_path: "" });
+export const WithoutIcon = () => alert({ ...data, icon_path: "" });
 
 WithoutIcon.storyName = "Without icon";
 
-export const WithoutHeading = () =>
-  alert({ ...demoData, icon_path: defaultSprite, heading: "" });
+export const WithoutHeading = () => alert({ ...data, heading: "" });
 
 WithoutHeading.storyName = "Without heading";

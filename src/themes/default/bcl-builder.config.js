@@ -111,6 +111,16 @@ module.exports = {
       from: [
         path.resolve(
           nodeModules,
+          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg"
+        ),
+      ],
+      to: path.resolve(outputFolder, "icons"),
+      options: { up: true },
+    },
+    {
+      from: [
+        path.resolve(
+          nodeModules,
           "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg"
         ),
       ],
@@ -118,19 +128,19 @@ module.exports = {
       options: { up: true },
     },
     {
-      from: [path.resolve(nodeModules, "svg-country-flags/svg/*.svg")],
+      from: [`${nodeModules}/flag-icons/flags/**/*.svg`],
       to: path.resolve(outputFolder, "icons/world-flags"),
-      options: { up: true },
+      options: { up: 6 },
     },
     {
       from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/ec"),
-      options: { up: 6 },
+      options: { up: 7 },
     },
     {
       from: [`${nodeModules}/@ecl/resources-eu-logo/**/*.svg`],
       to: path.resolve(outputFolder, "logos/eu"),
-      options: { up: 6 },
+      options: { up: 7 },
     },
     {
       from: [

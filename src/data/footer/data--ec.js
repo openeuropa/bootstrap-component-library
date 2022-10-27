@@ -1,4 +1,5 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   variant: "ec",
@@ -11,8 +12,10 @@ module.exports = {
           items: [
             {
               type: "content",
-              content:
-                "<p class='fw-bold mb-2'>[Project name]</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.</p>",
+              content: `<p class='fw-bold mb-2'>[Project name]</p>${getDummyText(
+                2,
+                true
+              )}`,
             },
           ],
         },
@@ -38,6 +41,7 @@ module.exports = {
               links: [
                 {
                   label: "Facebook",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -47,6 +51,7 @@ module.exports = {
                 },
                 {
                   label: "Twitter",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     path: "/icons.svg",
@@ -56,6 +61,7 @@ module.exports = {
                 },
                 {
                   label: "Linkedin",
+                  path: "/example.html",
                   icon_position: "before",
                   icon: {
                     name: "linkedin",
@@ -88,15 +94,19 @@ module.exports = {
               type: "links",
               links: [
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
                 {
+                  path: "/example.html",
                   label: "Link",
                 },
               ],
@@ -120,15 +130,19 @@ module.exports = {
               links: [
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
                 {
                   label: "Link",
+                  path: "/example.html",
                 },
               ],
             },
@@ -156,9 +170,11 @@ module.exports = {
               links: [
                 {
                   label: "European Commission",
+                  path: "/example.html",
                 },
                 {
                   label: "Follow the EC on social media",
+                  path: "/example.html",
                   icon_position: "after",
                   icon: {
                     name: "box-arrow-up-right",
@@ -169,6 +185,7 @@ module.exports = {
                 },
                 {
                   label: "Resources for partners",
+                  path: "/example.html",
                 },
               ],
             },
@@ -182,15 +199,19 @@ module.exports = {
               links: [
                 {
                   label: "Language policy",
+                  path: "/example.html",
                 },
                 {
                   label: "Cookies",
+                  path: "/example.html",
                 },
                 {
                   label: "Privacy policy",
+                  path: "/example.html",
                 },
                 {
                   label: "Legal notice",
+                  path: "/example.html",
                 },
               ],
             },

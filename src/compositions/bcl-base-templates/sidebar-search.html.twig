@@ -1,7 +1,20 @@
 {% extends "@oe-bcl/bcl-offcanvas/offcanvas.html.twig" %}
 
+{% set responsiveness = 'lg' %}
+{% if extra_classes_header is empty %}
+  {% set extra_classes_header = 'd-lg-block' %}
+{% else %}
+  {% set extra_classes_header = extra_classes_header ~ ' d-lg-block' %}
+{% endif %}
+
 {% block body %}
+  {% if search_form.attributes is empty %}
+    {% set attributes = search_form.create_attribute() %}
+  {% endif %}
+
   <div class="offcanvas-body p-lg-0">
-    {% include '@oe-bcl/bcl-form/form.html.twig' with search_form only %}
+    {% include '@oe-bcl/bcl-form/form.html.twig' with search_form|merge({
+      attributes: search_form.attributes.addClass('w-100')
+    }) only %}
   </div>
 {% endblock %}

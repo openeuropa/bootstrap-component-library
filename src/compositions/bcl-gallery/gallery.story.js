@@ -1,9 +1,24 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import dataDefault from "@openeuropa/bcl-gallery/data/data.js";
 import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
-import { correctPaths } from "@openeuropa/bcl-story-utils";
+
+const getArgs = (data) => ({
+  title: data.title,
+  title_tag: "h2",
+});
+
+const getArgTypes = () => ({
+  ...getTitleControls(),
+});
+
+const applyArgs = (data, args) => {
+  correctPaths(data);
+
+  return Object.assign(data, args);
+};
 
 export default {
   title: "Paragraphs/Gallery",
@@ -19,5 +34,8 @@ export default {
   },
 };
 
-export const Default = () => gallery(correctPaths(dataDefault));
+export const Default = (args) => gallery(applyArgs(dataDefault, args));
+
 Default.storyName = "Default";
+Default.args = getArgs(dataDefault);
+Default.argTypes = getArgTypes();

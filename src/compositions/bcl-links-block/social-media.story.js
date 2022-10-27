@@ -1,38 +1,19 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import socialMediaData from "@openeuropa/bcl-links-block/data/data--social-media.js";
 import linksBlock from "@openeuropa/bcl-links-block/links-block.html.twig";
 
 const getArgs = (data) => ({
-  background: data.background,
-  variant: data.variant,
   title: data.title,
   title_tag: "h2",
+  background: data.background,
+  variant: data.variant,
 });
 
 const getArgTypes = () => ({
-  title: {
-    type: { name: "string" },
-    description: "Title of the block",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "" },
-      category: "Content",
-    },
-  },
-  title_tag: {
-    name: "title tag",
-    type: { name: "string" },
-    description: "Html tag of the title",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "h2" },
-      category: "Content",
-    },
-  },
+  ...getTitleControls(),
   background: {
     description: "Color of the background",
     options: ["gray", "transparent"],
@@ -62,11 +43,11 @@ const getArgTypes = () => ({
 const applyArgs = (data, args) => {
   data.links.forEach((link) => {
     if ("icon" in link) {
-      link.icon.path = defaultSprite;
       link.icon_position = "before";
     }
   });
-  return Object.assign(data, args);
+
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {

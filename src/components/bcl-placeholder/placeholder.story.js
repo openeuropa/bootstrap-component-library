@@ -1,7 +1,8 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import demoData from "@openeuropa/bcl-data-placeholder/data.js";
 import { getVariants } from "@openeuropa/bcl-story-utils";
+
+import demoData from "@openeuropa/bcl-data-placeholder/data.js";
 import placeholder from "@openeuropa/bcl-placeholder/placeholder.html.twig";
 
 const getArgs = (data) => ({
@@ -68,7 +69,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/placeholders/",
+        url: "https://getbootstrap.com/docs/5.2/components/placeholders/",
       },
     ],
   },

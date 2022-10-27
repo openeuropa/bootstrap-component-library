@@ -3,7 +3,6 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 
 import { demoData, demoData1, demoData2 } from "@openeuropa/bcl-page/data/data";
-
 import page from "@openeuropa/bcl-page/page.html.twig";
 
 export default {

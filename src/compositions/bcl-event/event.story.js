@@ -1,12 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-
 import {
   initScrollspy,
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-
 import {
   demoData,
   demoDateData,

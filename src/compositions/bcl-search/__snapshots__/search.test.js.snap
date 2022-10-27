@@ -7,14 +7,14 @@ exports[`OE - Search renders correctly 1`] = `
   >
     <!-- navbar_settings -->
     <nav
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
       >
         <a
           class="navbar-brand"
-          href=""
+          href="/example.html"
         >
           <img
             alt="desktop european union logo"
@@ -27,61 +27,72 @@ exports[`OE - Search renders correctly 1`] = `
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
         </a>
-        <ul
-          class="nav"
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
         >
-          <li
-            class="nav-item"
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
           >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="text-center nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
                 English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
+              </a>
+            </li>
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="text-center nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
                 Log in
-              </span>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -145,7 +156,7 @@ exports[`OE - Search renders correctly 1`] = `
                 aria-expanded="false"
                 class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
+                href="/example.html"
                 id="navbarDropdownMenuLink"
                 role="button"
               >
@@ -276,13 +287,19 @@ exports[`OE - Search renders correctly 1`] = `
             Disclaimer 1
           </h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
           <h5>
             Disclaimer 2
           </h5>
           <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
         </div>
         <div
@@ -356,6 +373,11 @@ exports[`OE - Search renders correctly 1`] = `
               <div
                 class="pb-2"
               >
+                <h5
+                  class="mb-4"
+                >
+                  EU official languages
+                </h5>
                 <div
                   class="row"
                 >
@@ -364,7 +386,7 @@ exports[`OE - Search renders correctly 1`] = `
                   >
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#bg"
                       hreflang="bg"
                       lang="bg"
                     >
@@ -372,7 +394,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#es"
                       hreflang="es"
                       lang="es"
                     >
@@ -380,7 +402,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#cs"
                       hreflang="cs"
                       lang="cs"
                     >
@@ -388,7 +410,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#da"
                       hreflang="da"
                       lang="da"
                     >
@@ -396,7 +418,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#de"
                       hreflang="de"
                       lang="de"
                     >
@@ -404,7 +426,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#et"
                       hreflang="et"
                       lang="et"
                     >
@@ -412,7 +434,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#el"
                       hreflang="el"
                       lang="el"
                     >
@@ -420,7 +442,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn selected justify-content-between"
-                      href="#"
+                      href="/example.html#en"
                       hreflang="en"
                       lang="en"
                     >
@@ -435,7 +457,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#fr"
                       hreflang="fr"
                       lang="fr"
                     >
@@ -443,7 +465,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#ga"
                       hreflang="ga"
                       lang="ga"
                     >
@@ -451,7 +473,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#hr"
                       hreflang="hr"
                       lang="hr"
                     >
@@ -459,7 +481,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#it"
                       hreflang="it"
                       lang="it"
                     >
@@ -471,7 +493,7 @@ exports[`OE - Search renders correctly 1`] = `
                   >
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#lv"
                       hreflang="lv"
                       lang="lv"
                     >
@@ -479,7 +501,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#lt"
                       hreflang="lt"
                       lang="lt"
                     >
@@ -487,7 +509,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#hu"
                       hreflang="hu"
                       lang="hu"
                     >
@@ -495,7 +517,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#mt"
                       hreflang="mt"
                       lang="mt"
                     >
@@ -503,7 +525,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#nl"
                       hreflang="nl"
                       lang="nl"
                     >
@@ -511,7 +533,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#pl"
                       hreflang="pl"
                       lang="pl"
                     >
@@ -519,7 +541,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#pt"
                       hreflang="pt"
                       lang="pt"
                     >
@@ -527,7 +549,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#ro"
                       hreflang="ro"
                       lang="ro"
                     >
@@ -535,7 +557,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#sk"
                       hreflang="sk"
                       lang="sk"
                     >
@@ -543,7 +565,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#sl"
                       hreflang="sl"
                       lang="sl"
                     >
@@ -551,7 +573,7 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#fi"
                       hreflang="fi"
                       lang="fi"
                     >
@@ -559,11 +581,72 @@ exports[`OE - Search renders correctly 1`] = `
                     </a>
                     <a
                       class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
+                      href="/example.html#sv"
                       hreflang="sv"
                       lang="sv"
                     >
                       svenska
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="pb-2"
+              >
+                <h5
+                  class="mb-4"
+                >
+                  Other languages
+                </h5>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="/example.html#zh"
+                      hreflang="zh"
+                      lang="zh"
+                    >
+                      中文
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="/example.html#tr"
+                      hreflang="tr"
+                      lang="tr"
+                    >
+                      Türk
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="/example.html#ru"
+                      hreflang="ru"
+                      lang="ru"
+                    >
+                      pусский
+                    </a>
+                  </div>
+                  <div
+                    class="col-12 col-md"
+                  >
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="/example.html#ca"
+                      hreflang="ca"
+                      lang="ca"
+                    >
+                      Català
+                    </a>
+                    <a
+                      class="w-100 mb-2-5 btn justify-content-start"
+                      href="#"
+                      hreflang="ar"
+                      lang="ar"
+                    >
+                      عَرَبِيّ
                     </a>
                   </div>
                 </div>
@@ -645,13 +728,13 @@ exports[`OE - Search renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="bcl-offcanvas offcanvas-start offcanvas"
+            class="offcanvas-start offcanvas-lg"
             data-bs-scroll="true"
             id="bcl-offcanvas"
             tabindex="-1"
           >
             <div
-              class="offcanvas-header p-lg-0"
+              class="offcanvas-header p-lg-0 d-lg-block"
             >
               <h2
                 class="mb-lg-4 offcanvas-title bcl-heading"
@@ -659,6 +742,7 @@ exports[`OE - Search renders correctly 1`] = `
                 Filter options
               </h2>
               <button
+                aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
                 type="button"
@@ -668,6 +752,7 @@ exports[`OE - Search renders correctly 1`] = `
               class="offcanvas-body p-lg-0"
             >
               <form
+                class="w-100"
                 novalidate="true"
                 onsubmit="return false;"
               >
@@ -1002,16 +1087,16 @@ exports[`OE - Search renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 d-none d-md-block"
                         src="https://picsum.photos/160?random=1"
                       />
                     </div>
                     <div
-                      class="col-md-9 col-lg-10"
+                      class="col-12 col-md"
                     >
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
@@ -1029,7 +1114,10 @@ exports[`OE - Search renders correctly 1`] = `
                         <p
                           class="card-text mb-2-5"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                          <br />
+                            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                          <br />
                         </p>
                         <span
                           class="text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block"
@@ -1070,16 +1158,16 @@ exports[`OE - Search renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 d-none d-md-block"
                         src="https://picsum.photos/160?random=2"
                       />
                     </div>
                     <div
-                      class="col-md-9 col-lg-10"
+                      class="col-12 col-md"
                     >
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
@@ -1097,7 +1185,9 @@ exports[`OE - Search renders correctly 1`] = `
                         <p
                           class="card-text mb-2-5"
                         >
-                          Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                          <br />
+                            Duis fermentum facilisis ex, ac porta massa.
                         </p>
                         <span
                           class="text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block"
@@ -1133,16 +1223,16 @@ exports[`OE - Search renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 d-none d-md-block"
                         src="https://picsum.photos/160?random=3"
                       />
                     </div>
                     <div
-                      class="col-md-9 col-lg-10"
+                      class="col-12 col-md"
                     >
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
@@ -1201,16 +1291,16 @@ exports[`OE - Search renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 d-none d-md-block"
                         src="https://picsum.photos/160?random=4"
                       />
                     </div>
                     <div
-                      class="col-md-9 col-lg-10"
+                      class="col-12 col-md"
                     >
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
@@ -1264,16 +1354,16 @@ exports[`OE - Search renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 d-none d-md-block"
                         src="https://picsum.photos/160?random=5"
                       />
                     </div>
                     <div
-                      class="col-md-9 col-lg-10"
+                      class="col-12 col-md"
                     >
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
@@ -1291,7 +1381,11 @@ exports[`OE - Search renders correctly 1`] = `
                         <p
                           class="card-text mb-2-5"
                         >
-                          Duis aute irure dolor in Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                          <br />
+                            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                          <br />
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
                         </p>
                         <span
                           class="text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block"
@@ -1332,16 +1426,16 @@ exports[`OE - Search renders correctly 1`] = `
                     class="row"
                   >
                     <div
-                      class="col-md-3 col-lg-2 rounded mw-listing-img"
+                      class="bcl-card-start-col mb-3 mb-lg-0 d-none d-md-block"
                     >
                       <img
                         alt="alt img"
-                        class="card-img-top rounded-1 d-none d-md-block mb-3"
+                        class="card-img-top rounded-1 d-none d-md-block"
                         src="https://picsum.photos/160?random=6"
                       />
                     </div>
                     <div
-                      class="col-md-9 col-lg-10"
+                      class="col-12 col-md"
                     >
                       <div
                         class="card-body p-0 pb-md-0 pb-3"
@@ -1359,7 +1453,9 @@ exports[`OE - Search renders correctly 1`] = `
                         <p
                           class="card-text mb-2-5"
                         >
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                          <br />
+                            Duis fermentum facilisis ex, ac porta massa.
                         </p>
                         <span
                           class="text-muted text-nowrap me-4-5 mb-3 mb-md-0 d-block d-md-inline-block"
@@ -1534,7 +1630,9 @@ exports[`OE - Search renders correctly 1`] = `
             [Project name]
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
           </p>
         </div>
         <div
@@ -1558,7 +1656,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -1575,7 +1673,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -1592,7 +1690,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -1626,7 +1724,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1636,7 +1734,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1646,7 +1744,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1656,7 +1754,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1679,7 +1777,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1689,7 +1787,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1699,7 +1797,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1709,7 +1807,7 @@ exports[`OE - Search renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>

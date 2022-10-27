@@ -1,7 +1,13 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 const template = "@oe-bcl/bcl-heading/heading.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Heading", () => {
   test(`renders correctly`, () => {
@@ -47,5 +53,22 @@ describe("OE - Heading", () => {
         },
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(
+        renderTwigFileAsHtml(
+          template,
+          {
+            title: "A title created by the bcl heading template",
+            title_link: {
+              path: "/example.html",
+            },
+          },
+          true
+        )
+      )
+    ).toHaveNoViolations();
   });
 });

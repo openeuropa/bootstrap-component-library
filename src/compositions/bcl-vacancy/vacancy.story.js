@@ -12,7 +12,7 @@ import detailsPage from "@openeuropa/bcl-vacancy/vacancy.html.twig";
 
 export default {
   title: "Features/Vacancy",
-  decorators: [withDesign, withCode],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

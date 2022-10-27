@@ -60,6 +60,36 @@ exports[`OE - Search Form renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Search Form with icon renders correctly 1`] = `
+<jest>
+  <form
+    class="bcl-search-form"
+  >
+    <div
+      class="bcl-search-form__group"
+    >
+      <svg
+        class="bi icon--s icon--rotate-90"
+      >
+        <use
+          xlink:href="/icons.svg#mouse"
+        />
+      </svg>
+      <label
+        class="form-label"
+      >
+        Search bar label
+      </label>
+      <input
+        class="bcl-search-form__input ps-5 form-control"
+        placeholder="Search"
+        type="search"
+      />
+    </div>
+  </form>
+</jest>
+`;
+
 exports[`OE - Search Form with submit renders correctly 1`] = `
 <jest>
   <form

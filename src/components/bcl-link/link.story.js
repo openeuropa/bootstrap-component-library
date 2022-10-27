@@ -6,8 +6,8 @@ import {
   getIconControls,
   getVariants,
   initTooltip,
+  correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-link/data.js";
@@ -135,7 +135,7 @@ const applyArgs = (data, args) => {
     data.icon = {};
     data.icon.name = args.name;
     data.icon.size = args.icon_size;
-    data.icon.path = defaultSprite;
+    data.icon.path = "/icons.svg";
     data.icon.transformation = args.transformation;
     data.icon.attributes = new drupalAttribute();
   }
@@ -149,7 +149,7 @@ const applyArgs = (data, args) => {
     data.attributes.addClass("bg-dark");
   }
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {
@@ -180,7 +180,7 @@ Collapse.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.1/components/collapse/",
+    url: "https://getbootstrap.com/docs/5.2/components/collapse/",
   },
 };
 if (isChromatic() || chromatic) {
@@ -200,7 +200,7 @@ Tooltip.parameters = {
   design: {
     name: "Bootstrap docs",
     type: "iframe",
-    url: "https://getbootstrap.com/docs/5.1/components/tooltips/",
+    url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
   },
 };
 if (isChromatic() || chromatic) {

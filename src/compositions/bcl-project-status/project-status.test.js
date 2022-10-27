@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
 import demoPlanned from "@openeuropa/bcl-project-status/data/data--planned";
 import demoClosed from "@openeuropa/bcl-project-status/data/data--closed";
-import demoContribs from "@openeuropa/bcl-project-status/data/data--contributions.js";
+import demoContribs from "@openeuropa/bcl-project-status/data/data--contributions";
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Project status", () => {
   const template = "@oe-bcl/bcl-project-status/project-status.html.twig";
@@ -25,6 +32,12 @@ describe("OE - Project status", () => {
 
     return expect(render(demoClosed)).resolves.toMatchSnapshot();
   });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoOngoing, true))
+    ).toHaveNoViolations();
+  });
 });
 
 describe("OE - Project contributions", () => {
@@ -43,5 +56,11 @@ describe("OE - Project contributions", () => {
     return expect(
       render({ ...demoContribs, chart: {} })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoContribs, true))
+    ).toHaveNoViolations();
   });
 });

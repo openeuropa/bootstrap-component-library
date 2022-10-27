@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
 Parameters:
@@ -17,8 +17,11 @@ Parameters:
       content: (block) (default: '')
     }
   ]
-  - hide_from (integer) (default: items.length) Item index after which to start hiding timeline items
-  - hide_to (integer) (default: items.length) Item index after which to resume displaying timeline items
+  - hide: (object)
+    format: {
+      from (integer) (default: items.length) Item index after which to start hiding timeline items
+      to (integer) (default: items.length) Item index after which to resume displaying timeline items
+    }
   - icon_path (string) (default: ''): file containing the svg icons
 #}
 
@@ -33,8 +36,6 @@ Parameters:
 {% set _hide_from = hide.from|default(items|length) %}
 {% set _hide_to = hide.to|default(items|length) %}
 {% set _icon_path = icon_path|default('') %}
-
-{% set _toggler = false %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -75,25 +76,19 @@ Parameters:
   {% if _items is not empty %}
     {% for _item in _items %}
       {# Decide on per item if it should display. #}
-      {% set extra_class = (loop.index > _display_amount and loop.revindex > _bottom_amount) ? "collapse collapse-#{_id}" %}
-      <li
-        {% if extra_class is not empty %}
-          class="{{ extra_class }}"
-        {% endif %}
-        {% if _item.id is defined and _item.id is not empty %}
-          id="{{ _item.id }}"
-        {% endif %}>
-          <p class="fs-5 mb-1 fw-medium">{{ _item.label }}</p>
-          {% if _item.title is defined and _item.title is not empty %}
-          <p class="fs-6 mb-1 fw-medium">{{ _item.title }}</p>
-          {% endif %}
-          {% if _item.content is defined and _item.content is not empty %}
-          <div>{{ _item.content }}</div>
-          {% endif %}
-      </li>
+      {% if _item.attributes is empty %}
+        {% set _item = _item|merge({
+          attributes: create_attribute()
+        }) %}
+      {% endif %}
+      {% if loop.index > _display_amount and loop.revindex > _bottom_amount %}
+        {% set _item = _item|merge({
+          attributes: _item.attributes.addClass('collapse',  'collapse-' ~ _id)
+        }) %}
+      {% endif %}
+      {% include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item only %}
       {# Display the show more button if required. #}
       {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
-        {% set _toggler = true %}
         <li class="bcl-timeline__item--toggle">
           <button
             aria-expanded="false"
@@ -117,4 +112,4 @@ Parameters:
   {% endif %}
 </ol>
 
-{% endspaceless %}
+{% endapply %}

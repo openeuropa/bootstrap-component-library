@@ -16,11 +16,11 @@ module.exports = {
       },
       {
         label: "I'm a link 2",
-        path: "#first",
+        path: "/example.html",
       },
       {
         label: "I'm a link 3",
-        path: "#first",
+        path: "/example.html",
       },
       {
         id: "dropdown-1",

@@ -1,25 +1,37 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
+    close_aria_label: "Close button",
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),
     search_form: {
       attributes: new drupalAttribute()
+        .addClass("w-100")
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       items: [
         [
           {
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
+        [
+          {
             type: "fieldset",
             classes: "col-sm-10",
             legend: "Status",
-            fieldset_classes: "mb-2",
+            fieldset_classes: "mb-3",
             legend_classes: "col-form-label",
           },
           {
@@ -32,7 +44,6 @@ module.exports = {
           {
             input_type: "checkbox",
             label: "Closed",
-            wrapper_classes: "mb-2",
             checked: true,
             id: "closed",
           },
@@ -57,7 +68,7 @@ module.exports = {
             label: "Opening date",
             id: "opening-date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new drupalAttribute().addClass("mb-3"),
           },
         ],
         [
@@ -65,7 +76,7 @@ module.exports = {
             label: "Closing date",
             id: "closing-date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new drupalAttribute().addClass("mb-4-5"),
           },
         ],
       ],
@@ -123,8 +134,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -151,8 +161,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -179,8 +188,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -207,8 +215,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -235,8 +242,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -263,8 +269,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -291,8 +296,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -319,8 +323,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -347,8 +350,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
@@ -375,8 +377,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:

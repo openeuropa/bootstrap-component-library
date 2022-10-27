@@ -2,7 +2,7 @@
   "name": "@openeuropa/bcl-theme-default",
   "author": "European Commission",
   "license": "EUPL-1.2",
-  "version": "0.24.0",
+  "version": "0.28.1",
   "description": "OE - BCL theme default",
   "scripts": {
     "align-templates": "lerna --scope \"@openeuropa/bcl-twig-templates\" run prepublish",
@@ -18,18 +18,18 @@
     "update:templates": "run-s align-templates build:copy"
   },
   "devDependencies": {
-    "@ecl/resources-ec-logo": "3.3.2",
-    "@ecl/resources-eu-logo": "3.3.2",
-    "@ecl/resources-flag-icons": "3.3.2",
-    "@openeuropa/bcl-bootstrap": "^0.24.0",
-    "@openeuropa/bcl-builder": "^0.24.0",
-    "@openeuropa/bcl-twig-templates": "^0.24.0",
+    "@ecl/resources-ec-logo": "3.4.2",
+    "@ecl/resources-eu-logo": "3.4.2",
+    "@ecl/resources-flag-icons": "3.4.2",
+    "@openeuropa/bcl-bootstrap": "^0.28.1",
+    "@openeuropa/bcl-builder": "^0.28.1",
+    "@openeuropa/bcl-twig-templates": "^0.28.1",
     "copyfiles": "2.4.1",
     "cross-env": "7.0.3",
+    "flag-icons": "6.6.6",
     "glob": "8.0.3",
     "npm-run-all": "4.1.5",
-    "slim-select": "1.27.1",
-    "svg-country-flags": "1.2.10"
+    "slim-select": "1.27.1"
   },
   "publishConfig": {
     "access": "public"

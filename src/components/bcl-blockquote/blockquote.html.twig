@@ -1,6 +1,10 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes: (drupal attrs)
   - quote (string) (default: '')
   - attribution (string) (default: '')
   - cite (string) (default: '')
@@ -9,6 +13,10 @@
   - attributes (drupal attrs)
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _quote = quote|default('') %}
 {% set _attribution = attribution|default('') %}
 {% set _cite = cite|default('') %}
@@ -37,6 +45,15 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
+{%- if _title is not empty -%}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes,
+  } only %}
+{%- endif -%}
+
 <figure
   {{ attributes }}
 >
@@ -53,4 +70,4 @@
 {% endif %}
 </figure>
 
-{% endspaceless %}
+{% endapply %}

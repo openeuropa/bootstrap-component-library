@@ -1,9 +1,9 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import dataDefault from "@openeuropa/bcl-timeline/data.js";
 import timeline from "@openeuropa/bcl-timeline/timeline.html.twig";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => ({
   title: "",
@@ -13,6 +13,7 @@ const getArgs = (data) => ({
 });
 
 const getArgTypes = () => ({
+  ...getTitleControls(),
   from: {
     type: { name: "number" },
     name: "hide from",
@@ -33,35 +34,13 @@ const getArgTypes = () => ({
       category: "Display",
     },
   },
-  title: {
-    type: { name: "string" },
-    description: "Title of the block",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "" },
-      category: "Content",
-    },
-  },
-  title_tag: {
-    name: "title tag",
-    type: { name: "string" },
-    description: "Html tag of the title",
-    table: {
-      type: { summary: "string" },
-      defaultValue: { summary: "h2" },
-      category: "Content",
-    },
-  },
 });
 
 const applyArgs = (data, args) => {
-  if (data.icon_path) {
-    data.icon_path = defaultSprite;
-  }
   data.hide.from = args.from;
   data.hide.to = args.to;
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {

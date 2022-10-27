@@ -1,8 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-carousel/data";
 
 const template = "@oe-bcl/bcl-carousel/carousel.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - carousel", () => {
   test("renders correctly", () => {
@@ -32,14 +39,6 @@ describe("OE - carousel", () => {
 
     return expect(
       render({ ...demoData, with_indicators: false })
-    ).resolves.toMatchSnapshot();
-  });
-
-  test("renders correctly when not initialized", () => {
-    expect.assertions(1);
-
-    return expect(
-      render({ ...demoData, autoinit: false })
     ).resolves.toMatchSnapshot();
   });
 
@@ -82,6 +81,22 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with title", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        title: "Carousel Title",
+        title_tag: "h1",
+        title_link: {
+          path: "/example.html",
+          label: "A title created by the bcl heading template",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with fade and dark variant", () => {
     expect.assertions(1);
 
@@ -105,5 +120,23 @@ describe("OE - carousel", () => {
     return expect(
       render({ ...demoData, items: withIntervals })
     ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with caption title and no caption", () => {
+    expect.assertions(1);
+
+    demoData.items.forEach((item) => {
+      item.caption = "";
+      item.caption_title = "This is the title of the caption";
+      item.link = "";
+    });
+
+    return expect(render(demoData)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

@@ -5,11 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
+  <p id="content">{{ get_dummy_text(6) }}
   </p>
   <h2 id="item-1" class="my-4">Section 1</h2>
   {% if featured_item %}
@@ -26,12 +22,7 @@
 
   <h2 id="item-2" class="my-4">Section 2</h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  </p>
+  {{ get_dummy_text(6, true) }}
 
   {% if blockquote %}
     {% include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
@@ -43,21 +34,11 @@
     {% include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
   {% endif %}
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  </p>
+  {{ get_dummy_text(8, true) }}
 
   <h2 id="item-3" class="my-4">Section 3</h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
-  a euismod dolor lacinia. Nam facilisis ipsum et sollicitudin imperdiet. Curabitur a efficitur ante. Phasellus non felis laoreet,
-  posuere ante ut, rhoncus tortor. Proin sed erat vel nisl luctus vulputate. Nunc tristique ultricies turpis, eu dictum enim ultrices vel.
-  Sed posuere at leo sit amet placerat. Sed dapibus viverra urna ac pretium. Praesent et laoreet erat, eget volutpat metus. Duis ac augue
-  sed tortor elementum dignissim in sit amet velit. Nullam nec viverra mi.
-  </p>
+  {{ get_dummy_text(4, true) }}
 
   {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
   {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}

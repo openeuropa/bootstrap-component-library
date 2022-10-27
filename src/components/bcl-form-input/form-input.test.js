@@ -1,9 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-data-form-input/data";
 
 const template = "@oe-bcl/bcl-form-input/form-input.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Form Input", () => {
   test("renders correctly", () => {
@@ -12,6 +18,12 @@ describe("OE - Form Input", () => {
     return expect(
       render({ ...demoData, placeholder: "Text here" })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 
   test("renders correctly when required", () => {

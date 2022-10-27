@@ -1,11 +1,13 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
-    extra_classes_header: "pb-2-5 p-lg-0",
+    extra_classes_header: "p-lg-0",
+    close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),
@@ -102,8 +104,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(3),
           classes: "mb-2-5",
         },
         image: {
@@ -127,9 +128,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
-          classes: "mb-2-5",
+          content: getDummyText(2),
         },
         image: {
           path: "https://picsum.photos/160?random=2",
@@ -152,8 +151,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(5),
           classes: "mb-2-5",
         },
         image: {
@@ -177,8 +175,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(6),
           classes: "mb-2-5",
         },
         image: {
@@ -202,8 +199,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(5),
           classes: "mb-2-5",
         },
         image: {
@@ -227,8 +223,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(4),
           classes: "mb-2-5",
         },
         image: {

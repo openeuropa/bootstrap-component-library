@@ -8,14 +8,14 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
       >
         <a
           class="navbar-brand"
-          href=""
+          href="/example.html"
         >
           <img
             alt="desktop european union logo"
@@ -28,62 +28,72 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
         </a>
-        <ul
-          class="nav"
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
         >
-          <li
-            class="nav-item"
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
           >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
                 English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
+              </a>
+            </li>
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
                 Log in
-              </span>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
-      aria-label="main-navigation"
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -114,7 +124,6 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             >
               <a
                 aria-current="page"
-                aria-label="homepage"
                 class="nav-link active"
                 href="/example.html"
               >
@@ -182,6 +191,14 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                     Something else here
                   </a>
                 </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -237,7 +254,6 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
-              aria-label="homepage"
               href="/example.html"
             >
               Home
@@ -314,13 +330,19 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             Disclaimer 1
           </h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
           <h5>
             Disclaimer 2
           </h5>
           <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
         </div>
         <div
@@ -346,12 +368,12 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-xl modal-fullscreen-md-down"
+      class="modal-dialog modal-fullscreen"
     >
       <div
         class="modal-content"
@@ -360,249 +382,335 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           class="modal-header"
         >
           <div
-            class="d-flex align-items-center"
+            class="container"
           >
-            <svg
-              class="bi icon--s"
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
             >
-              <use
-                xlink:href="/icons.svg#globe2"
-              />
-            </svg>
-            <h5
-              class="mb-0 ms-2"
-            >
-              Select your language
-            </h5>
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
         </div>
         <div
           class="modal-body"
         >
           <div
-            class="bcl-language-list bcl-language-list--neutral"
+            class="bcl-language-list bcl-language-list--eu"
           >
             <div
               class="main pt-4"
             >
               <div
-                class="pb-2"
+                class="container"
               >
                 <div
-                  class="row"
+                  class="pb-2"
                 >
-                  <div
-                    class="col-12 col-md"
+                  <h5
+                    class="mb-4"
                   >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="bg"
-                      lang="bg"
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
                     >
-                      български
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="es"
-                      lang="es"
-                    >
-                      español
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="cs"
-                      lang="cs"
-                    >
-                      čeština
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="da"
-                      lang="da"
-                    >
-                      dansk
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="de"
-                      lang="de"
-                    >
-                      Deutsch
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="et"
-                      lang="et"
-                    >
-                      eesti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="el"
-                      lang="el"
-                    >
-                      ελληνικά
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn selected justify-content-between"
-                      href="#"
-                      hreflang="en"
-                      lang="en"
-                    >
-                      English
-                      <svg
-                        class="ms-2-5 bi icon--s"
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
                       >
-                        <use
-                          xlink:href="/icons.svg#check2"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fr"
-                      lang="fr"
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
                     >
-                      français
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ga"
-                      lang="ga"
-                    >
-                      Gaeilge
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hr"
-                      lang="hr"
-                    >
-                      hrvatski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="it"
-                      lang="it"
-                    >
-                      italiano
-                    </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
                   </div>
-                  <div
-                    class="col-12 col-md"
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
                   >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lv"
-                      lang="lv"
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
                     >
-                      latviešu
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lt"
-                      lang="lt"
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
                     >
-                      lietuvių
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hu"
-                      lang="hu"
-                    >
-                      magyar
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="mt"
-                      lang="mt"
-                    >
-                      Malti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="nl"
-                      lang="nl"
-                    >
-                      Nederlands
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pl"
-                      lang="pl"
-                    >
-                      polski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pt"
-                      lang="pt"
-                    >
-                      português
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ro"
-                      lang="ro"
-                    >
-                      română
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sk"
-                      lang="sk"
-                    >
-                      slovenčina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sl"
-                      lang="sl"
-                    >
-                      slovenščina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fi"
-                      lang="fi"
-                    >
-                      suomi
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sv"
-                      lang="sv"
-                    >
-                      svenska
-                    </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -626,7 +734,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-md-8 col-lg-9 col-xxl-8"
+              class="col-lg-10 col-xl-9 col-xxl-8"
             >
               <div
                 class="card-body pt-0 px-0 pb-0"
@@ -637,7 +745,10 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                   Senior Expert on Internal Models
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
                 </p>
                 <div
                   class="mt-2-5"
@@ -700,49 +811,105 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Opening date
-                  </dt>
-                  <dd>
-                    19 April 2022
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Opening date
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        19 April 2022
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Closing date
-                  </dt>
-                  <dd>
-                    21 December 2022
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Closing date
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        21 December 2022
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Grade
-                  </dt>
-                  <dd>
-                    Grade name
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Grade
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        Grade name
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Ref. number
-                  </dt>
-                  <dd>
-                    394857746532840
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Ref. number
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        394857746532840
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
             </div>
@@ -760,17 +927,36 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
           </p>
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
           </p>
           <div
             class="pt-4"
@@ -787,7 +973,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 class="px-3-5 py-3"
               >
                 <div
-                  class="d-flex"
+                  class="d-md-flex"
                 >
                   <div
                     class="pe-2 pb-2"
@@ -847,11 +1033,11 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-first"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-first"
                     role="button"
                   >
                     Other languages (3)
@@ -866,7 +1052,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-first"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -885,7 +1071,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -936,7 +1122,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -987,7 +1173,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -1049,7 +1235,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 class="px-3-5 py-3"
               >
                 <div
-                  class="d-flex"
+                  class="d-md-flex"
                 >
                   <div
                     class="pe-2 pb-2"
@@ -1109,11 +1295,11 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-second"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-second"
                     role="button"
                   >
                     Other languages (3)
@@ -1128,7 +1314,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-second"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -1147,7 +1333,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -1198,7 +1384,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -1249,7 +1435,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -1644,7 +1830,9 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
             [Project name]
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
           </p>
         </div>
         <div
@@ -1668,7 +1856,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -1685,7 +1873,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -1702,7 +1890,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -1736,7 +1924,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1746,7 +1934,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1756,7 +1944,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1766,7 +1954,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1789,7 +1977,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1799,7 +1987,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1809,7 +1997,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1819,7 +2007,7 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -1839,14 +2027,14 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
       >
         <a
           class="navbar-brand"
-          href=""
+          href="/example.html"
         >
           <img
             alt="desktop european union logo"
@@ -1859,62 +2047,72 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
         </a>
-        <ul
-          class="nav"
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
         >
-          <li
-            class="nav-item"
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
           >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
                 English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
+              </a>
+            </li>
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
                 Log in
-              </span>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
-      aria-label="main-navigation"
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -1945,7 +2143,6 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
             >
               <a
                 aria-current="page"
-                aria-label="homepage"
                 class="nav-link active"
                 href="/example.html"
               >
@@ -2013,6 +2210,14 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                     Something else here
                   </a>
                 </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -2068,7 +2273,6 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
-              aria-label="homepage"
               href="/example.html"
             >
               Home
@@ -2145,13 +2349,19 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
             Disclaimer 1
           </h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
           <h5>
             Disclaimer 2
           </h5>
           <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
         </div>
         <div
@@ -2177,12 +2387,12 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-xl modal-fullscreen-md-down"
+      class="modal-dialog modal-fullscreen"
     >
       <div
         class="modal-content"
@@ -2191,249 +2401,335 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           class="modal-header"
         >
           <div
-            class="d-flex align-items-center"
+            class="container"
           >
-            <svg
-              class="bi icon--s"
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
             >
-              <use
-                xlink:href="/icons.svg#globe2"
-              />
-            </svg>
-            <h5
-              class="mb-0 ms-2"
-            >
-              Select your language
-            </h5>
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
         </div>
         <div
           class="modal-body"
         >
           <div
-            class="bcl-language-list bcl-language-list--neutral"
+            class="bcl-language-list bcl-language-list--eu"
           >
             <div
               class="main pt-4"
             >
               <div
-                class="pb-2"
+                class="container"
               >
                 <div
-                  class="row"
+                  class="pb-2"
                 >
-                  <div
-                    class="col-12 col-md"
+                  <h5
+                    class="mb-4"
                   >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="bg"
-                      lang="bg"
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
                     >
-                      български
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="es"
-                      lang="es"
-                    >
-                      español
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="cs"
-                      lang="cs"
-                    >
-                      čeština
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="da"
-                      lang="da"
-                    >
-                      dansk
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="de"
-                      lang="de"
-                    >
-                      Deutsch
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="et"
-                      lang="et"
-                    >
-                      eesti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="el"
-                      lang="el"
-                    >
-                      ελληνικά
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn selected justify-content-between"
-                      href="#"
-                      hreflang="en"
-                      lang="en"
-                    >
-                      English
-                      <svg
-                        class="ms-2-5 bi icon--s"
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
                       >
-                        <use
-                          xlink:href="/icons.svg#check2"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fr"
-                      lang="fr"
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
                     >
-                      français
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ga"
-                      lang="ga"
-                    >
-                      Gaeilge
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hr"
-                      lang="hr"
-                    >
-                      hrvatski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="it"
-                      lang="it"
-                    >
-                      italiano
-                    </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
                   </div>
-                  <div
-                    class="col-12 col-md"
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
                   >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lv"
-                      lang="lv"
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
                     >
-                      latviešu
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lt"
-                      lang="lt"
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
                     >
-                      lietuvių
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hu"
-                      lang="hu"
-                    >
-                      magyar
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="mt"
-                      lang="mt"
-                    >
-                      Malti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="nl"
-                      lang="nl"
-                    >
-                      Nederlands
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pl"
-                      lang="pl"
-                    >
-                      polski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pt"
-                      lang="pt"
-                    >
-                      português
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ro"
-                      lang="ro"
-                    >
-                      română
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sk"
-                      lang="sk"
-                    >
-                      slovenčina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sl"
-                      lang="sl"
-                    >
-                      slovenščina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fi"
-                      lang="fi"
-                    >
-                      suomi
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sv"
-                      lang="sv"
-                    >
-                      svenska
-                    </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2457,7 +2753,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-md-8 col-lg-9 col-xxl-8"
+              class="col-lg-10 col-xl-9 col-xxl-8"
             >
               <div
                 class="card-body pt-0 px-0 pb-0"
@@ -2468,7 +2764,10 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                   Senior Expert on Internal Models
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
                 </p>
                 <div
                   class="mt-2-5"
@@ -2530,49 +2829,105 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Opening date
-                  </dt>
-                  <dd>
-                    19 April 2022
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Opening date
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        19 April 2022
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Closing date
-                  </dt>
-                  <dd>
-                    21 December 2022
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Closing date
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        21 December 2022
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Grade
-                  </dt>
-                  <dd>
-                    Grade name
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Grade
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        Grade name
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
               <div
                 class="mb-3-5"
               >
-                <dl>
-                  <dt>
-                    Ref. number
-                  </dt>
-                  <dd>
-                    394857746532840
-                  </dd>
+                <dl
+                  class="bcl-description-list"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <dt>
+                      <div
+                        class="d-flex"
+                      >
+                        <div>
+                          Ref. number
+                        </div>
+                      </div>
+                    </dt>
+                    <dd>
+                      <div>
+                        394857746532840
+                      </div>
+                    </dd>
+                  </div>
                 </dl>
               </div>
             </div>
@@ -2590,17 +2945,36 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
           </p>
           <p
             class="mb-3"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
           </p>
           <div
             class="pt-4"
@@ -2617,7 +2991,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 class="px-3-5 py-3"
               >
                 <div
-                  class="d-flex"
+                  class="d-md-flex"
                 >
                   <div
                     class="pe-2 pb-2"
@@ -2677,11 +3051,11 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-first"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-first"
                     role="button"
                   >
                     Other languages (3)
@@ -2696,7 +3070,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-first"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -2715,7 +3089,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -2766,7 +3140,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -2817,7 +3191,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -2879,7 +3253,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 class="px-3-5 py-3"
               >
                 <div
-                  class="d-flex"
+                  class="d-md-flex"
                 >
                   <div
                     class="pe-2 pb-2"
@@ -2939,11 +3313,11 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                   class="text-end text-md-center"
                 >
                   <a
-                    aria-controls="language-dropdown"
+                    aria-controls="language-dropdown-second"
                     aria-expanded="false"
                     class="standalone"
                     data-bs-toggle="collapse"
-                    href="#language-dropdown"
+                    href="#language-dropdown-second"
                     role="button"
                   >
                     Other languages (3)
@@ -2958,7 +3332,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                 </div>
                 <div
                   class="collapse"
-                  id="language-dropdown"
+                  id="language-dropdown-second"
                 >
                   <div
                     class="py-3 border-bottom"
@@ -2977,7 +3351,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -3028,7 +3402,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -3079,7 +3453,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                         <p
                           class="m-0"
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <small
                           class="fw-bold m-0"
@@ -3474,7 +3848,9 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
             [Project name]
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
           </p>
         </div>
         <div
@@ -3498,7 +3874,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -3515,7 +3891,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -3532,7 +3908,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -3566,7 +3942,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3576,7 +3952,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3586,7 +3962,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3596,7 +3972,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3619,7 +3995,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3629,7 +4005,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3639,7 +4015,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3649,7 +4025,7 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -3669,14 +4045,14 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
     <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
       >
         <a
           class="navbar-brand"
-          href=""
+          href="/example.html"
         >
           <img
             alt="desktop european union logo"
@@ -3689,62 +4065,72 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
         </a>
-        <ul
-          class="nav"
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
         >
-          <li
-            class="nav-item"
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
           >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#languageModal"
-              data-bs-toggle="modal"
-              href="#"
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#chat-left-dots-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
                 English
-              </span>
-            </a>
-          </li>
-          <li
-            class="nav-item"
-          >
-            <a
-              class="text-center nav-link"
-              data-bs-target="#loginModal"
-              data-bs-toggle="modal"
-              href="#"
+              </a>
+            </li>
+            <li
+              class="nav-item"
             >
-              <svg
-                class="me-lg-2-5 bi icon--xs"
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
               >
-                <use
-                  xlink:href="/icons.svg#person-fill"
-                />
-              </svg>
-              <span
-                class="d-block d-lg-inline-block"
-              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
                 Log in
-              </span>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
-      aria-label="main-navigation"
+      aria-label="Main Navigation"
       class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
     >
       <div
@@ -3775,7 +4161,6 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
             >
               <a
                 aria-current="page"
-                aria-label="homepage"
                 class="nav-link active"
                 href="/example.html"
               >
@@ -3843,6 +4228,14 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     Something else here
                   </a>
                 </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -3898,7 +4291,6 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
             class="breadcrumb-item d-none d-md-block"
           >
             <a
-              aria-label="homepage"
               href="/example.html"
             >
               Home
@@ -3975,13 +4367,19 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
             Disclaimer 1
           </h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan eget orci eu aliquet. Suspendisse potenti. Integer volutpat, nisl et placerat tincidunt
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
           <h5>
             Disclaimer 2
           </h5>
           <p>
-            Duis bibendum tristique lobortis. Nam luctus nisi sit amet turpis faucibus, ut dapibus elit sollicitudin. Phasellus a massa magna. Nullam ac imperdiet leo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
           </p>
         </div>
         <div
@@ -4007,12 +4405,12 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
   <div
     aria-hidden="true"
     aria-label="languageModalLabel"
-    class="bcl-language-list-modal bcl-language-list-modal--neutral modal fade"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
     id="languageModal"
     tabindex="-1"
   >
     <div
-      class="modal-dialog modal-xl modal-fullscreen-md-down"
+      class="modal-dialog modal-fullscreen"
     >
       <div
         class="modal-content"
@@ -4021,249 +4419,335 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           class="modal-header"
         >
           <div
-            class="d-flex align-items-center"
+            class="container"
           >
-            <svg
-              class="bi icon--s"
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
             >
-              <use
-                xlink:href="/icons.svg#globe2"
-              />
-            </svg>
-            <h5
-              class="mb-0 ms-2"
-            >
-              Select your language
-            </h5>
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            type="button"
-          />
         </div>
         <div
           class="modal-body"
         >
           <div
-            class="bcl-language-list bcl-language-list--neutral"
+            class="bcl-language-list bcl-language-list--eu"
           >
             <div
               class="main pt-4"
             >
               <div
-                class="pb-2"
+                class="container"
               >
                 <div
-                  class="row"
+                  class="pb-2"
                 >
-                  <div
-                    class="col-12 col-md"
+                  <h5
+                    class="mb-4"
                   >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="bg"
-                      lang="bg"
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
                     >
-                      български
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="es"
-                      lang="es"
-                    >
-                      español
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="cs"
-                      lang="cs"
-                    >
-                      čeština
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="da"
-                      lang="da"
-                    >
-                      dansk
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="de"
-                      lang="de"
-                    >
-                      Deutsch
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="et"
-                      lang="et"
-                    >
-                      eesti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="el"
-                      lang="el"
-                    >
-                      ελληνικά
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn selected justify-content-between"
-                      href="#"
-                      hreflang="en"
-                      lang="en"
-                    >
-                      English
-                      <svg
-                        class="ms-2-5 bi icon--s"
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
                       >
-                        <use
-                          xlink:href="/icons.svg#check2"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fr"
-                      lang="fr"
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
                     >
-                      français
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ga"
-                      lang="ga"
-                    >
-                      Gaeilge
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hr"
-                      lang="hr"
-                    >
-                      hrvatski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="it"
-                      lang="it"
-                    >
-                      italiano
-                    </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
                   </div>
-                  <div
-                    class="col-12 col-md"
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
                   >
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lv"
-                      lang="lv"
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
                     >
-                      latviešu
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="lt"
-                      lang="lt"
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
                     >
-                      lietuvių
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="hu"
-                      lang="hu"
-                    >
-                      magyar
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="mt"
-                      lang="mt"
-                    >
-                      Malti
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="nl"
-                      lang="nl"
-                    >
-                      Nederlands
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pl"
-                      lang="pl"
-                    >
-                      polski
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="pt"
-                      lang="pt"
-                    >
-                      português
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="ro"
-                      lang="ro"
-                    >
-                      română
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sk"
-                      lang="sk"
-                    >
-                      slovenčina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sl"
-                      lang="sl"
-                    >
-                      slovenščina
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="fi"
-                      lang="fi"
-                    >
-                      suomi
-                    </a>
-                    <a
-                      class="w-100 mb-2-5 btn justify-content-start"
-                      href="#"
-                      hreflang="sv"
-                      lang="sv"
-                    >
-                      svenska
-                    </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4287,7 +4771,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
             class="row"
           >
             <div
-              class="col-6 col-md-4 col-lg-2 offset-3 offset-md-0"
+              class="bcl-card-start-col"
             >
               <img
                 alt="alt img"
@@ -4296,10 +4780,10 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
               />
             </div>
             <div
-              class="col-md-8 col-lg-9 col-xxl-8"
+              class="col-md col-lg-9 col-xxl-8"
             >
               <div
-                class="card-body pt-4 pt-md-0 px-0 px-md-3 pb-0"
+                class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
               >
                 <h1
                   class="fs-1 card-title bcl-heading"
@@ -4307,9 +4791,11 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   Vacancy
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec.
-     Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus,
-     lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
                 </p>
               </div>
             </div>
@@ -4327,13 +4813,13 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
-            class="bcl-offcanvas offcanvas-start offcanvas"
+            class="offcanvas-start offcanvas-lg"
             data-bs-scroll="true"
             id="bcl-offcanvas"
             tabindex="-1"
           >
             <div
-              class="offcanvas-header p-lg-0"
+              class="offcanvas-header p-lg-0 d-lg-block"
             >
               <h2
                 class="mb-lg-4 offcanvas-title bcl-heading"
@@ -4341,6 +4827,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                 Filter options
               </h2>
               <button
+                aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
                 type="button"
@@ -4350,11 +4837,24 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
               class="offcanvas-body p-lg-0"
             >
               <form
+                class="w-100"
                 novalidate="true"
                 onsubmit="return false;"
               >
+                <label
+                  class="form-label"
+                  for="keyword"
+                >
+                  Keyword
+                </label>
+                <input
+                  class="mb-3 form-control"
+                  id="keyword"
+                  placeholder="Type a keyword"
+                  type="text"
+                />
                 <fieldset
-                  class="mb-2"
+                  class="mb-3"
                 >
                   <legend
                     class="col-form-label"
@@ -4385,24 +4885,20 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="mb-2"
+                      class="form-check"
                     >
-                      <div
-                        class="form-check"
+                      <input
+                        checked="true"
+                        class="form-check-input"
+                        id="closed"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="closed"
                       >
-                        <input
-                          checked="true"
-                          class="form-check-input"
-                          id="closed"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="closed"
-                        >
-                          Closed
-                        </label>
-                      </div>
+                        Closed
+                      </label>
                     </div>
                   </div>
                 </fieldset>
@@ -4454,7 +4950,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   Opening date
                 </label>
                 <input
-                  class="mb-2 form-control"
+                  class="mb-3 form-control"
                   id="opening-date"
                   type="date"
                 />
@@ -4465,7 +4961,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   Closing date
                 </label>
                 <input
-                  class="mb-3 form-control"
+                  class="mb-4-5 form-control"
                   id="closing-date"
                   type="date"
                 />
@@ -4617,7 +5113,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4668,7 +5164,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4719,7 +5215,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4770,7 +5266,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4821,7 +5317,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4872,7 +5368,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4923,7 +5419,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -4974,7 +5470,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -5025,7 +5521,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -5076,7 +5572,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                     <p
                       class="card-text mb-2-5"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <span
                       class="text-muted text-nowrap"
@@ -5249,7 +5745,9 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
             [Project name]
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in sagittis dolor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
           </p>
         </div>
         <div
@@ -5273,7 +5771,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -5290,7 +5788,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -5307,7 +5805,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               <svg
                 class="me-2-5 bi icon--xs"
@@ -5341,7 +5839,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5351,7 +5849,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5361,7 +5859,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5371,7 +5869,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5394,7 +5892,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5404,7 +5902,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5414,7 +5912,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>
@@ -5424,7 +5922,7 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
           >
             <a
               class="standalone"
-              href="#"
+              href="/example.html"
             >
               Link
             </a>

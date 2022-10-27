@@ -12,7 +12,7 @@ import detailsPage from "@openeuropa/bcl-procurement/procurement.html.twig";
 
 export default {
   title: "Features/Procurement",
-  decorators: [withDesign, withCode],
+  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

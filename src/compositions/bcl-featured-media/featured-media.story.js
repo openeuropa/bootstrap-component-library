@@ -1,11 +1,12 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
 import isChromatic from "chromatic/isChromatic";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-featured-media/data/data";
+import demoData from "@openeuropa/bcl-featured-media/data/data.js";
 import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
 import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
-import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item.js";
+import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
 
 if (isChromatic()) {
@@ -16,6 +17,8 @@ if (isChromatic()) {
 
 const getArgs = (data, type) => {
   const args = {
+    title: data.title || "",
+    title_tag: "h2",
     content: data.content || "",
     content_classes: data.content_classes || "",
   };
@@ -24,8 +27,6 @@ const getArgs = (data, type) => {
   }
   if (type === "text") {
     args.alignment = "right";
-    args.title = data.title;
-    args.title_tag = "h2";
   }
 
   return args;
@@ -33,6 +34,7 @@ const getArgs = (data, type) => {
 
 const getArgTypes = (data, type) => {
   const argTypes = {
+    ...getTitleControls(),
     content: {
       description: "Content under featured media",
       type: { name: "string" },
@@ -127,7 +129,7 @@ export default {
   chromatic: { delay: 1000 },
 };
 
-const applyArgs = (data, args) => Object.assign(data, args);
+const applyArgs = (data, args) => Object.assign(correctPaths(data), args);
 
 export const Iframe = (args) => featuredMedia(applyArgs(demoData, args));
 

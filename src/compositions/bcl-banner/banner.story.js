@@ -1,21 +1,22 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
+import withCode from "@openeuropa/storybook-addon-code";
+import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
+
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
 import drupalAttribute from "drupal-attribute";
 import dataDefault from "@openeuropa/bcl-banner/data/data.js";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
 import dataImage from "@openeuropa/bcl-banner/data/data--image";
 import dataShade from "@openeuropa/bcl-banner/data/data--shade";
-import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
 
 const getArgs = (data) => {
   const args = {
     title: data.title,
+    title_tag: "div",
     description: data.description,
     centered: true,
     hero: false,
     full_width: false,
-    title_tag: "div",
   };
   if (data.image) {
     args.image = data.image || "";
@@ -26,25 +27,7 @@ const getArgs = (data) => {
 
 const getArgTypes = (data) => {
   const argTypes = {
-    title: {
-      type: { name: "string", required: true },
-      description: "Ttile of the banner",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
-    title_tag: {
-      name: "title tag",
-      type: { name: "string", required: false },
-      description: "Html tag of the title",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "div" },
-        category: "Content",
-      },
-    },
+    ...getTitleControls(),
     description: {
       type: "string",
       description: "Sub-heading of the banner",
@@ -110,12 +93,10 @@ const applyArgs = (data, args) => {
   if (!data.attributes) {
     data.attributes = new drupalAttribute();
   }
-  if (data.link.icon) {
-    data.link.icon.path = defaultSprite;
-  }
+
   resetAttrs(data, args);
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 const renderStory = (data, args) => {

@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - name (string) (default: '')
@@ -14,6 +14,7 @@
 {% set _path = path|default('') %}
 {% set _size = size|default('s') %}
 {% set _transformation = transformation|default('') %}
+
 {% set _classes = ['bi', 'icon--' ~ _size] %}
 
 {% if _transformation is not empty %}
@@ -32,4 +33,4 @@
   <use xlink:href="{{ _path ~ "#" ~ _name }}"/>
 </svg>
 
-{% endspaceless %}
+{% endapply %}

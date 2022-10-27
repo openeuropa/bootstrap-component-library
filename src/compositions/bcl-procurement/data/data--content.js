@@ -1,3 +1,5 @@
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
+
 module.exports = {
   banner: {
     background: "gray",
@@ -14,8 +16,7 @@ module.exports = {
         rounded_pill: true,
       },
     ],
-    content:
-      "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. </p>",
+    content: getDummyText(5),
     action_bar: `<div class="d-grid d-md-block mt-3-5"><button class="btn btn-primary btn-md" type="button"><svg class="me-2-5 bi icon--fluid"><use xlink:href="/icons.svg#pencil-fill"></use></svg>Apply now</button></div>`,
   },
   files: [
@@ -35,7 +36,7 @@ module.exports = {
       },
       translation: {
         alignment: "center",
-        id: "language-dropdown",
+        id: "language-dropdown-first",
         label: {
           label: "Other languages (3)",
           icon_position: "after",
@@ -48,8 +49,7 @@ module.exports = {
         items: [
           {
             title: "File title FR",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+            description: getDummyText(),
             language: "Français",
             meta: "(16.2 MB - PDF)",
             download: {
@@ -59,8 +59,7 @@ module.exports = {
           },
           {
             title: "File title ES",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+            description: getDummyText(),
             language: "Español",
             meta: "(16.2 MB - PDF)",
             download: {
@@ -70,8 +69,7 @@ module.exports = {
           },
           {
             title: "File title BG",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+            description: getDummyText(),
             language: "български",
             meta: "(16.2 MB - PDF)",
             download: {
@@ -102,7 +100,7 @@ module.exports = {
       },
       translation: {
         alignment: "center",
-        id: "language-dropdown",
+        id: "language-dropdown-second",
         label: {
           label: "Other languages (3)",
           icon_position: "after",
@@ -115,8 +113,7 @@ module.exports = {
         items: [
           {
             title: "File title FR",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+            description: getDummyText(),
             language: "Français",
             meta: "(16.2 MB - PDF)",
             download: {
@@ -126,8 +123,7 @@ module.exports = {
           },
           {
             title: "File title ES",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+            description: getDummyText(),
             language: "Español",
             meta: "(16.2 MB - PDF)",
             download: {
@@ -137,8 +133,7 @@ module.exports = {
           },
           {
             title: "File title BG",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est.",
+            description: getDummyText(),
             language: "български",
             meta: "(16.2 MB - PDF)",
             download: {
@@ -157,10 +152,6 @@ module.exports = {
   ],
   description: {
     title: "Procurement description",
-    paragraphs: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non. ",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat ultricies massa, a dapibus libero porta nec. Sed facilisis dictum vestibulum. Fusce commodo hendrerit diam, pretium tempus leo varius sit amet. Etiam interdum, orci at sagittis luctus, lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna, eu egestas dolor molestie non.",
-    ],
+    paragraphs: [getDummyText(8), getDummyText(8), getDummyText(8)],
   },
 };

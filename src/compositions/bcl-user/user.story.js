@@ -1,7 +1,7 @@
-import withCode from "@openeuropa/storybook-addon-code";
 import { withDesign } from "storybook-addon-designs";
-
+import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
+
 import {
   dataListing,
   dataUser,

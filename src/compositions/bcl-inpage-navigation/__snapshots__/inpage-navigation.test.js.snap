@@ -58,3 +58,67 @@ exports[`OE - Inpage navigation default renders correctly 1`] = `
   </nav>
 </jest>
 `;
+
+exports[`OE - Inpage navigation renders correctly with title and link 1`] = `
+<jest>
+  <nav
+    class="bcl-inpage-navigation position-sticky"
+    id="bcl-inpage-navigation"
+  >
+    <h6
+      class="mb-0 bcl-heading"
+    >
+      <a
+        class="standalone"
+        href="/example.html"
+      >
+        Link label
+      </a>
+    </h6>
+    <ul
+      class="nav nav-pills flex-column"
+    >
+      <li
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#item-1"
+        >
+          Heading 1
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#item-2"
+        >
+          Heading 2 with a long title going on several lines
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#item-3"
+        >
+          Heading 3
+        </a>
+      </li>
+      <li
+        class="nav-item"
+      >
+        <a
+          class="nav-link"
+          href="#item-4"
+        >
+          Heading 4
+        </a>
+      </li>
+    </ul>
+  </nav>
+</jest>
+`;

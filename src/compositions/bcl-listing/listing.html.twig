@@ -1,16 +1,18 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - variant: (string) (default: 'horizontal')
+  - variant: (string) (default: 'default-1-col')
     options [ default-1-col, highlight-1-col, default-2-col, default-3-col, highlight-2-col, highlight-3-col ]
   - items: (array of objects of type card)
   - link: (object of type link)
   - alignment: (string) (default: '')
     options ['start', 'end', 'center', 'baseline', 'stretch']
+  - image_size: (string) (default: '')
+    options ['small', 'large', 'extra-large']
   - attributes (drupal attrs)
 #}
 
@@ -20,8 +22,9 @@
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _items = items|default([]) %}
 {% set _variant = variant|default('default-1-col') %}
-{% set _alignment = alignment|default('') %}
 {% set _link = link|default({}) %}
+{% set _alignment = alignment|default('') %}
+{% set _image_size = image_size|default('') %}
 
 {% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
@@ -52,19 +55,14 @@
 {% if _items is not empty %}
   {% for _card in _items %}
     {% set  _alignment_class = '' %}
-    {% set _max_width = '' %}
-    {% set _image = {} %}
-    {% if _card.image is not empty %}
-      {% set _image_classes = _card.image.classes ?: '' %}
-      {% if not _alignment == 'center' %}
-        {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
-      {% endif %}
-      {% set _max_width = 'mw-listing-img' %}
-      {% set _card = _card|merge({image: _card.image|merge({
-        classes: _image_classes,
-      })}) %}
-    {% elseif _card.date is not empty %}
-      {% set _max_width = 'mw-col-date mb-3' %}
+    {% set _image_classes = _card.image.classes ?: '' %}
+    {% set _start_col_classes = 'bcl-card-start-col mb-3 mb-lg-0' %}
+    {% set _end_col_classes = 'col-12 col-md' %}
+    {% if _image_size is not empty %}
+      {% set _start_col_classes = _start_col_classes ~ ' bcl-size-' ~ _image_size %}
+    {% endif %}
+    {% if 'd-none' in _image_classes %}
+      {% set _start_col_classes = _start_col_classes ~ ' d-none d-md-block' %}
     {% endif %}
     {% if _alignment is not empty %}
       {% set _alignment_class = ' align-self-' ~ _alignment %}
@@ -76,7 +74,7 @@
       title_attributes: _card_title_attributes.addClass(['fs-5'])
     }) %}
 
-    {% if _variant == 'default-1-col' %}
+    {% if _variant == 'default-1-col' or _variant == 'default-2-col' or _variant == 'default-3-col'  %}
       {% set _card_classes = [
         'listing-item',
         'border-bottom',
@@ -87,45 +85,18 @@
       {% set _card = _card|merge({
         horizontal: true,
         extra_classes_body: 'p-0 pb-md-0 pb-3',
+        attributes: _card_attributes,
         horizontal_grid: {
-          left_col_classes: 'col-md-3 col-lg-2 rounded ' ~ _max_width ~ _alignment_class,
-          right_col_classes: 'col-md-9 col-lg-10' ~ _alignment_class,
-        },
-        attributes: _card_attributes,
+          left_col_classes: _start_col_classes ~ _alignment_class,
+          right_col_classes: _end_col_classes ~ _alignment_class,
+        }
       }) %}
-    {% endif %}
-
-    {% if _variant == 'default-2-col' or _variant == 'default-3-col' %}
-      {% set _card_classes = [
-        'listing-item',
-        'border-bottom',
-        'border-md-0',
-        'border-0',
-      ] %}
-      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
-      {% set _card = _card|merge({
-        extra_classes_body: 'p-0 pb-md-0 pb-3',
-        horizontal: true,
-        attributes: _card_attributes,
-      }) %}
-
+    
       {% if _variant == 'default-2-col' %}
-        {% set _card = _card|merge({
-          horizontal_grid: {
-            left_col_classes: 'col-xl-3 col-md-5 ' ~ _max_width ~ _alignment_class,
-            right_col_classes: 'col-xl-9 col-md-7' ~ _alignment_class,
-          },
-        }) %}
         {% set _card_layout = _card_layout|merge({
           responsive_columns: 2,
         }) %}
-      {% else %}
-        {% set _card = _card|merge({
-          horizontal_grid: {
-            left_col_classes: 'col-lg-4 col-md-6 ' ~ _max_width ~ _alignment_class,
-            right_col_classes: 'col-lg-8 col-md-6' ~ _alignment_class,
-          },
-        }) %}
+      {% elseif _variant == 'default-3-col' %}
         {% set _card_layout = _card_layout|merge({
           attributes: _card_layout.attributes.addClass(['row-cols-md-2']),
           responsive_columns: 3,
@@ -150,9 +121,19 @@
           extra_classes_body: "pt-0",
         }) %}
       {% endif %}
-     {% set _card_layout = _card_layout|merge({
-       cols_extra_classes: 'mt-4-5',
-     }) %}
+      {% set _card_layout = _card_layout|merge({
+        cols_extra_classes: 'mt-4-5',
+      }) %}
+      {% if _card.image is not empty %}
+        {% set _image_classes = _card.image.classes ?: '' %}
+        {% if not _alignment == 'center' %}
+          {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
+        {% endif %}
+        {% set _card = _card|merge({image: _card.image|merge({
+          classes: _image_classes,
+        })}) %}
+      {% endif %}
+
     {% endif %}
 
     {% if _variant == 'highlight-2-col' or variant == 'highlight-3-col' %}
@@ -172,6 +153,15 @@
         {% set _card = _card|merge({
           extra_classes_body: 'pt-0',
         }) %}
+      {% endif %}
+      {% if _card.image is not empty %}
+        {% set _image_classes = _card.image.classes ?: '' %}
+        {% if not _alignment == 'center' %}
+          {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
+        {% endif %}
+        {% set _card = _card|merge({image: _card.image|merge({
+          classes: _image_classes,
+        })}) %}
       {% endif %}
       {% set _card_layout = _card_layout|merge({ gutter: '4' }) %}
       {% if variant == 'highlight-2-col' %}
@@ -206,4 +196,4 @@
 {% endif %}
 </div>
 
-{% endspaceless %}
+{% endapply %}

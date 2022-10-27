@@ -1,9 +1,16 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-accordion/data";
 import demoCustomTags from "@openeuropa/bcl-data-accordion/data--custom-tags";
 
 const template = "@oe-bcl/bcl-accordion/accordion.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Accordion", () => {
   test(`renders correctly`, () => {
@@ -20,9 +27,31 @@ describe("OE - Accordion", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`with main title renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        title: "An accordion title",
+        title_tag: "h4",
+        title_link: {
+          path: "/example.html",
+          label: "A title created by the bcl heading template",
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`with custom title tags renders correctly`, () => {
     expect.assertions(1);
 
     return expect(render(demoCustomTags)).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoCustomTags))
+    ).toHaveNoViolations();
   });
 });

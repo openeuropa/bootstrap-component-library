@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - title: (string) (default: '')
@@ -29,8 +29,8 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _helper_text = helper_text|default('') %}
-{% set _items = items|default([]) %}
 {% set _antispam = antispam|default('') %}
+{% set _items = items|default([]) %}
 {% set _submit = submit|default({}) %}
 
 {% if attributes is empty %}
@@ -147,4 +147,4 @@
 {% endif %}
 </form>
 
-{% endspaceless %}
+{% endapply %}

@@ -1,11 +1,12 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
-    extra_classes_header: "pb-2-5 p-lg-0",
+    extra_classes_header: "p-lg-0",
     with_body_scroll: true,
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),
@@ -122,8 +123,7 @@ module.exports = {
         },
         text: {
           classes: "mb-2-5",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(4),
         },
         content:
           "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
@@ -141,8 +141,7 @@ module.exports = {
         },
         text: {
           classes: "mb-2-5",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(4),
         },
         content:
           "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
@@ -160,8 +159,7 @@ module.exports = {
         },
         text: {
           classes: "mb-2-5",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(3),
         },
         content:
           "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
@@ -179,8 +177,7 @@ module.exports = {
         },
         text: {
           classes: "mb-2-5",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(4),
         },
         content:
           "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
@@ -198,8 +195,7 @@ module.exports = {
         },
         text: {
           classes: "mb-2-5",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(5),
         },
         content:
           "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",
@@ -217,8 +213,7 @@ module.exports = {
         },
         text: {
           classes: "mb-2-5",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
         },
         content:
           "<span class='text-muted me-4'>Brussels, Belgium</span><span class='text-muted me-4'>17 October 2019</span>",

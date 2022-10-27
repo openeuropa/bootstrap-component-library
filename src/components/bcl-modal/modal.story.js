@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
+
 import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "@openeuropa/bcl-modal/modal.html.twig";
 
@@ -95,7 +96,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/modal/",
+        url: "https://getbootstrap.com/docs/5.2/components/modal/",
       },
     ],
   },

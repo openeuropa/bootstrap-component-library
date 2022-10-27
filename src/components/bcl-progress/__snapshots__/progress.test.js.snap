@@ -50,6 +50,29 @@ exports[`OE - Progress renders correctly with bar label 1`] = `
 </jest>
 `;
 
+exports[`OE - Progress renders correctly with hidden label 1`] = `
+<jest>
+  <label
+    class="progress-bar-label"
+  >
+    This is the label of progress bar
+  </label>
+  <div
+    class="progress"
+  >
+    <div
+      aria-label="25"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="25"
+      class="progress-bar"
+      role="progressbar"
+      style="width: 25%"
+    />
+  </div>
+</jest>
+`;
+
 exports[`OE - Progress renders correctly with message 1`] = `
 <jest>
   <label
@@ -145,7 +168,7 @@ exports[`OE - Progress renders correctly with variant danger 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="25"
-      class="progress-bar bg-danger"
+      class="progress-bar text-bg-danger"
       role="progressbar"
       style="width: 25%"
     >

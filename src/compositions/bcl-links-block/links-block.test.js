@@ -1,9 +1,15 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoData from "@openeuropa/bcl-links-block/data/data";
 
 const template = "@oe-bcl/bcl-links-block/links-block.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Links block", () => {
   test("renders correctly", () => {
@@ -32,7 +38,7 @@ describe("OE - Links block", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with horizontal and with title", () => {
+  test("renders correctly with horizontal and with title and link", () => {
     expect.assertions(1);
     return expect(
       render({
@@ -40,11 +46,14 @@ describe("OE - Links block", () => {
         direction: "horizontal",
         title: "Links block test title",
         title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
       })
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with transparent background and with title", () => {
+  test("renders correctly with transparent background and with title and link", () => {
     expect.assertions(1);
     return expect(
       render({
@@ -52,7 +61,16 @@ describe("OE - Links block", () => {
         variant: "transparent",
         title: "Links block test title",
         title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
       })
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData, true))
+    ).toHaveNoViolations();
   });
 });

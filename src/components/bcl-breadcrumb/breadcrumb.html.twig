@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - links (array of objects of type link) (default: [])
@@ -6,9 +6,10 @@
   - attributes (drupal attrs)
 #}
 
-{% set _classes = 'breadcrumb' %}
 {% set _links = links|default([]) %}
 {% set _icon_path = icon_path|default('') %}
+
+{% set _classes = 'breadcrumb' %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -58,4 +59,4 @@
 </nav>
 {% endif %}
 
-{% endspaceless %}
+{% endapply %}

@@ -124,7 +124,7 @@ exports[`OE - badge renders correctly dismissible 1`] = `
         class="bi icon--s"
       >
         <use
-          xlink:href="#x-lg"
+          xlink:href="/icons.svg#x-lg"
         />
       </svg>
     </span>
@@ -156,6 +156,18 @@ exports[`OE - badge renders correctly with assistive text 1`] = `
     </span>
     A simple badge!
   </span>
+</jest>
+`;
+
+exports[`OE - badge renders correctly with title 1`] = `
+<jest>
+  <a
+    class="badge bg-primary"
+    href="http://example.com"
+    title="new title"
+  >
+    A simple badge!
+  </a>
 </jest>
 `;
 

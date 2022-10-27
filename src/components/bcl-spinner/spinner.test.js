@@ -1,9 +1,16 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
+
 import demoData from "@openeuropa/bcl-data-spinner/data";
 
 const template = "@oe-bcl/bcl-spinner/spinner.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
 const sizes = ["sm", "lg"];
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - Spinner", () => {
   test(`renders correctly`, () => {
@@ -36,5 +43,11 @@ describe("OE - Spinner", () => {
         render({ ...demoData, size, type: "grow" })
       ).resolves.toMatchSnapshot();
     });
+  });
+
+  test(`passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, demoData))
+    ).toHaveNoViolations();
   });
 });

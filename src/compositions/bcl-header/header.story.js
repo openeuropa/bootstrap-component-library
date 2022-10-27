@@ -1,6 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 // eslint-disable-next-line import/no-unresolved
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
@@ -8,13 +7,25 @@ import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data--ec";
 import headerDataNeutral from "@openeuropa/bcl-data-header/data--neutral.js";
+import loggedIn from "@openeuropa/bcl-data-header/data--loggedIn.js";
 import header from "@openeuropa/bcl-header/header.html.twig";
 
+const logIn = { ...headerData.head.navigation.items[3] };
+
 const getArgs = (data) => ({
+  loggedIn: false,
   light: data.light || false,
 });
 
 const getArgTypes = () => ({
+  loggedIn: {
+    name: "logged in",
+    type: { name: "boolean" },
+    description: "Logged in user",
+    table: {
+      category: "Content",
+    },
+  },
   light: {
     name: "light",
     type: { name: "boolean" },
@@ -28,9 +39,20 @@ const getArgTypes = () => ({
 });
 
 const applyArgs = (data, args) => {
-  correctPaths(data);
+  if (args.loggedIn) {
+    if (data.head.navigation.items.length < 5) {
+      data.head.navigation.items.splice(-1);
+      data.head.navigation.items = [].concat(
+        data.head.navigation.items,
+        loggedIn
+      );
+    }
+  } else if (data.head.navigation.items.length > 4) {
+    data.head.navigation.items.splice(-2);
+    data.head.navigation.items.push(logIn);
+  }
 
-  return Object.assign(data, args);
+  return Object.assign(correctPaths(data), args);
 };
 
 export default {

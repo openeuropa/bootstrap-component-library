@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
   Parameters:
@@ -7,8 +7,8 @@
   - required (boolean) (default: false)
   - disabled (boolean) (default: false)
   - readonly (boolean) (default: false)
-  - valid (boolean) (default: false)
   - invalid (boolean) (default: false)
+  - valid (boolean) (default: false)
   - invalid_feedback (string) (default: '')
   - valid_feedback (string) (default: '')
   - helper_text (string) (default: '')
@@ -146,4 +146,4 @@
 {% if _floating or _horizontal %}
 </div>
 {% endif %}
-{% endspaceless %}
+{% endapply %}

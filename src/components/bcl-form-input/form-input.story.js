@@ -1,9 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
+import drupalAttribute from "drupal-attribute";
+
 import demoData from "@openeuropa/bcl-data-form-input/data.js";
 import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
-import drupalAttribute from "drupal-attribute";
 
 const getArgs = (data, input_type) => {
   const args = {
@@ -123,7 +124,7 @@ FormInput.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/forms/form-control/",
+      url: "https://getbootstrap.com/docs/5.2/forms/form-control/",
     },
   ],
 };
@@ -144,7 +145,7 @@ Checkbox.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/forms/checks-radios/",
+      url: "https://getbootstrap.com/docs/5.2/forms/checks-radios/",
     },
   ],
 };
@@ -165,7 +166,7 @@ Switch.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/forms/checks-radios/#switches",
+      url: "https://getbootstrap.com/docs/5.2/forms/checks-radios/#switches",
     },
   ],
 };
@@ -186,7 +187,7 @@ Radio.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/forms/checks-radios/",
+      url: "https://getbootstrap.com/docs/5.2/forms/checks-radios/",
     },
   ],
 };
@@ -207,7 +208,7 @@ File.parameters = {
     {
       name: "Bootstrap docs",
       type: "iframe",
-      url: "https://getbootstrap.com/docs/5.1/forms/form-control/#file-input",
+      url: "https://getbootstrap.com/docs/5.2/forms/form-control/#file-input",
     },
   ],
   chromatic: { disableSnapshot: true },

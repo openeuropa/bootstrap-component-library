@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
+
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   banner,
@@ -9,9 +10,9 @@ import { correctPaths } from "@openeuropa/bcl-story-utils";
 import content from "@openeuropa/bcl-news/data/data--content";
 import contentType from "@openeuropa/bcl-base-templates/content-type.html.twig";
 
-import MultilingualDataEU from "@openeuropa/bcl-multilingual/data/data--eu";
-import MultilingualDataEC from "@openeuropa/bcl-multilingual/data/data--ec";
-import MultilingualDataNeutral from "@openeuropa/bcl-multilingual/data/data--neutral";
+import MultilingualDataEU from "@openeuropa/bcl-data-header/data";
+import MultilingualDataEC from "@openeuropa/bcl-data-header/data--ec";
+import MultilingualDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
 
 const openModal = (story) => {
   const demo = story();

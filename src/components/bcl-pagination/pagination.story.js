@@ -10,6 +10,7 @@ const getArgs = () => ({
   alignment: "default",
   enable_prev_next_icon: false,
   enable_first_last_icon: true,
+  icon_path: false,
 });
 
 const getArgTypes = (data) => {
@@ -60,6 +61,18 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    icon_path: {
+      name: "path to bcl sprite file (icon_path)",
+      type: { name: "boolean" },
+      description: `items like prev, next, first, last
+        will be rendered as icons instead of html entities, it is also
+        possible to pass icon objects along those items to use custom icons.`,
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Style",
+      },
+    },
   };
   if (data.last && data.first) {
     argTypes.enable_first_last_icon = {
@@ -68,7 +81,7 @@ const getArgTypes = (data) => {
       description: "Enable icon for first and last",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
+        defaultValue: { summary: "true" },
         category: "Style",
       },
     };
@@ -86,7 +99,13 @@ const applyArgs = (data, args) => {
     args.alignment = "";
   }
 
-  return Object.assign(data, args);
+  if (args.icon_path) {
+    args.icon_path = "/icons.svg";
+  } else {
+    args.icon_path = "";
+  }
+
+  return Object.assign(data, correctPaths(args));
 };
 
 export default {
@@ -102,7 +121,7 @@ export default {
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.1/components/pagination/",
+        url: "https://getbootstrap.com/docs/5.2/components/pagination/",
       },
     ],
   },
@@ -110,6 +129,5 @@ export default {
 
 export const Default = (args) =>
   pagination(applyArgs(correctPaths(demoData), args));
-
-Default.args = getArgs(demoData);
+Default.args = getArgs();
 Default.argTypes = getArgTypes(demoData);

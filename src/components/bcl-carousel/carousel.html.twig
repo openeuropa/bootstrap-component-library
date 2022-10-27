@@ -1,9 +1,12 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
+  - title (string) (default: '')
+  - title_tag (string) (default: 'h2')
+  - title_link: (link object) (default: {})
+  - title_attributes: (drupal attrs)
   - id (string) (default: '')
   - autoplay (boolean) (default: true)
-  - autoinit (boolean) (default: true)
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
   - items (array of objects) format: [
@@ -25,8 +28,11 @@
   - attributes (drupal attrs)
 #}
 
+{% set _title = title|default('') %}
+{% set _title_tag = title_tag|default('h2') %}
+{% set _title_link = title_link|default({}) %}
+{% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _id = id|default('') %}
-{% set _autoinit = autoinit ?? true %}
 {% set _autoplay = autoplay ?? true %}
 {% set _dark = dark|default(false) %}
 {% set _active_item = active_item|default(1) %}
@@ -39,7 +45,7 @@
 {% set _rounded_indicators = rounded_indicators|default(false) %}
 {% set _disable_touch = disable_touch|default(false) %}
 
-{% set _classes = ['carousel slide'] %}
+{% set _classes = ['carousel', 'slide'] %}
 
 {% if _fade %}
   {% set _classes = _classes|merge(['carousel-fade']) %}
@@ -56,7 +62,7 @@
   {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
-{% if _autoinit %}
+{% if _autoplay %}
   {% set attributes = attributes.setAttribute('data-bs-ride', 'carousel') %}
 {% endif %}
 
@@ -68,11 +74,16 @@
   {% set attributes = attributes.addClass('rounded-indicators') %}
 {% endif %}
 
-{% if not _autoplay %}
-  {% set attributes = attributes.setAttribute('data-bs-interval', 'false') %}
-{% endif %}
-
 {% set attributes = attributes.addClass(_classes) %}
+
+{%- if _title is not empty -%}
+  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    title: _title,
+    title_tag: _title_tag,
+    title_link: _title_link,
+    attributes: _title_attributes,
+  } only %}
+{%- endif -%}
 
 <div
   {{ attributes }}
@@ -111,7 +122,10 @@
     {% if _item.image is defined and _item.image is not empty %}
       {{ _item.image }}
     {% endif %}
-    {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) %}
+    {% if (_item.caption is defined and _item.caption is not empty) or 
+          (_item.link is defined and _item.link is not empty) or 
+          (_item.caption_title is defined and _item.caption_title is not empty)
+    %}
       {% set _caption_classes = 'carousel-caption' %}
       {% if _item.caption is not empty and _item.link is empty %}
         {% set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
@@ -124,7 +138,7 @@
             <div class="{{ _item.caption_classes }}">
           {% endif %}
           {% if _item.caption_title is not empty %}
-            <h5>{{ _item.caption_title }}</h5>
+            <p class="fs-5">{{ _item.caption_title }}</p>
           {% endif %}
             {{- _item.caption -}}
           {% if _item.caption_classes is defined and _item.caption_classes is not empty %}
@@ -166,4 +180,4 @@
 {% endif %}
 </div>
 
-{% endspaceless %}
+{% endapply %}

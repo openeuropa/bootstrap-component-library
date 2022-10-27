@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
   Parameters:
@@ -21,11 +21,12 @@
   - attributes (drupal attrs)
 #}
 
-{% set _toasts = toasts|default([]) %}
 {% set _with_wrapper = with_wrapper|default(false) %}
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _wrapper_aria_live = wrapper_aria_live|default('') %}
 {% set _with_container = with_container|default(false) %}
+{% set _toasts = toasts|default([]) %}
+
 {% set _container_classes = 'toast-container' %}
 
 {% if container_classes %}
@@ -119,4 +120,4 @@
 </div>
 {% endif %}
 
-{% endspaceless %}
+{% endapply %}

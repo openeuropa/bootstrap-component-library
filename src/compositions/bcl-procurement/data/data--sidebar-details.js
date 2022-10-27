@@ -3,9 +3,7 @@ module.exports = {
     {
       items: [
         {
-          term: {
-            label: "Opening date",
-          },
+          term: "Opening date",
           definition: [
             {
               label: "19 April 2022",
@@ -17,9 +15,7 @@ module.exports = {
     {
       items: [
         {
-          term: {
-            label: "Closing date",
-          },
+          term: "Closing date",
           definition: [
             {
               label: "21 December 2022",
@@ -31,9 +27,7 @@ module.exports = {
     {
       items: [
         {
-          term: {
-            label: "Grade",
-          },
+          term: "Grade",
           definition: [
             {
               label: "Grade name",
@@ -45,9 +39,7 @@ module.exports = {
     {
       items: [
         {
-          term: {
-            label: "Ref. number",
-          },
+          term: "Ref. number",
           definition: [
             {
               label: "394857746532840",

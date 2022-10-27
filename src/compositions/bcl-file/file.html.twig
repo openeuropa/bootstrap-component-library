@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {#
   Parameters:
@@ -38,13 +38,13 @@
 
 {# Internal properties #}
 
-{% set _icon = icon|default({}) %}
-{% set _icon_inline = icon_inline|default(true) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _item_title = item_title|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _icon_inline = icon_inline ?? true %}
 {% set _text = text|default('') %}
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
@@ -54,13 +54,15 @@
 {% set _variant = variant|default('default') %}
 {% set _download = download|default({}) %}
 {% set _translation = translation|default({}) %}
-{% set _icon_path = icon_path|default({}) %}
+{% set _icon_path = icon_path|default('') %}
+
+{% set _classes = ['bcl-file'] %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bcl-file']) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _icon is not empty %}
   {% set _container_classes = _container_classes ~ ' ms-2-5' %}
@@ -108,7 +110,7 @@
     </div>
   {% endif %}
   <div class="px-3-5 py-3">
-    <div class="d-flex">
+    <div class="d-md-flex">
       {% if _icon is not empty and _variant == 'default' %}
         <div class="pe-2 pb-2">
         {% if _icon is not empty %}
@@ -153,70 +155,10 @@
     </div>
   </div>
   {% if _translation is not empty %}
-  <div class="bg-lighter py-3 px-4 border-top">
-    {% set _id = _translation.id|default('language-dropdown' ~ random(1000)) %}
-    <div class="text-end text-md-center">
-      {% include '@oe-bcl/bcl-link/link.html.twig' with _translation.label|merge({
-        path: '#' ~ _id,
-        attributes: create_attribute()
-                    .addClass(['standalone'])
-                    .setAttribute('aria-controls', _id)
-                    .setAttribute('data-bs-toggle', 'collapse')
-                    .setAttribute('aria-expanded', 'false')
-                    .setAttribute('role', 'button'),
-      }) only %}
-    </div>
-    {% if _translation.items is not empty and _translation.items is iterable %}
-    <div class="collapse" id="{{ _id }}">
-      {% for _item in _translation.items %}
-        {% set _item_classes = loop.last ? 'pt-3' : 'py-3 border-bottom' %}
-        <div class="{{ _item_classes }}">
-        {% if _item.type == 'content' %}
-          {{ _item.content }}
-        {% else %}
-          <div class="row">
-            <div class="col-12 col-md-9">
-              {% if _item.title is not empty %}
-                <p class="fw-bold m-0">{{ _item.title }}</p>
-              {% endif %}
-              {% if _item.description is not empty %}
-                <p class="m-0">{{ _item.description }}</p>
-              {% endif %}
-              {% if _item.language is not empty or _item.meta is not empty %}
-              <small class="fw-bold m-0">
-                {%- if _item.language is not empty -%}
-                  {{- _item.language -}}
-                {%- endif -%}
-                {%- if _item.meta is not empty -%}
-                  <span class="fw-normal">
-                    {{- ' ' ~ _item.meta -}}
-                  </span>
-                {%- endif -%}
-              </small>
-              {% endif %}
-            </div>
-            <div class="col-12 col-md-3 align-self-end text-md-end">
-            {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
-              icon_position: "after",
-              icon: {
-                name: "download",
-                size: "fluid",
-                path: _icon_path,
-              },
-              attributes: create_attribute()
-                          .setAttribute('download', true)
-                          .setAttribute('target', '_blank')
-                          .addClass(['d-block', 'standalone', 'mt-1'])
-            }) only %}
-            </div>
-          </div>
-        {% endif %}
-        </div>
-      {% endfor %}
-    </div>
-    {% endif %}
-  </div>
+    {% include '@oe-bcl/bcl-file/file-translations.html.twig' with _translation|merge({
+      icon_path: _icon_path
+    }) only %}
   {% endif %}
 </div>
 
-{% endspaceless %}
+{% endapply %}

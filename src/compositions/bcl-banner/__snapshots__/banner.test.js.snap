@@ -3,7 +3,7 @@
 exports[`OE - Hero banner default renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  hero"
+    class="bg-lighter text-dark text-center bcl-banner  full-width hero"
   >
     <div
       class="container"
@@ -43,7 +43,7 @@ exports[`OE - Hero banner default renders correctly 1`] = `
 exports[`OE - Hero banner default renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  hero"
+    class="bg-lighter text-dark text-center bcl-banner  full-width hero"
   >
     <div
       class="container"
@@ -55,6 +55,51 @@ exports[`OE - Hero banner default renders correctly with title 1`] = `
           class="display-6 mb-3 bcl-heading"
         >
           Hero banner test title
+        </h6>
+        <p
+          class="mb-4"
+        >
+          Innovation, economy, environment and geopolitics
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/example.html"
+        >
+          Subscribe
+          <svg
+            class="ms-2-5 bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Hero banner default renders correctly with title and link 1`] = `
+<jest>
+  <div
+    class="bg-lighter text-dark text-center bcl-banner  full-width hero"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="bcl-banner__content"
+      >
+        <h6
+          class="display-6 mb-3 bcl-heading"
+        >
+          <a
+            class="standalone"
+            href="/example.html"
+          >
+            Hero banner test title
+          </a>
         </h6>
         <p
           class="mb-4"
@@ -376,6 +421,86 @@ exports[`OE - Page banner default renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Page banner default renders correctly full width 1`] = `
+<jest>
+  <div
+    class="bg-lighter text-dark text-center bcl-banner  full-width"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="bcl-banner__content"
+      >
+        <div
+          class="display-6 mb-3 bcl-heading"
+        >
+          EU Budget for the future
+        </div>
+        <p
+          class="mb-4"
+        >
+          Innovation, economy, environment and geopolitics
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/example.html"
+        >
+          Subscribe
+          <svg
+            class="ms-2-5 bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Page banner default renders correctly with content classes 1`] = `
+<jest>
+  <div
+    class="bg-lighter text-dark text-center bcl-banner "
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="bcl-banner__content new-content-class"
+      >
+        <div
+          class="display-6 mb-3 bcl-heading"
+        >
+          EU Budget for the future
+        </div>
+        <p
+          class="mb-4"
+        >
+          Innovation, economy, environment and geopolitics
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/example.html"
+        >
+          Subscribe
+          <svg
+            class="ms-2-5 bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
 exports[`OE - Page banner default renders correctly with title 1`] = `
 <jest>
   <div
@@ -391,6 +516,51 @@ exports[`OE - Page banner default renders correctly with title 1`] = `
           class="display-6 mb-3 bcl-heading"
         >
           Page banner test title
+        </h6>
+        <p
+          class="mb-4"
+        >
+          Innovation, economy, environment and geopolitics
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/example.html"
+        >
+          Subscribe
+          <svg
+            class="ms-2-5 bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Page banner default renders correctly with title and link 1`] = `
+<jest>
+  <div
+    class="bg-lighter text-dark text-center bcl-banner "
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="bcl-banner__content"
+      >
+        <h6
+          class="display-6 mb-3 bcl-heading"
+        >
+          <a
+            class="standalone"
+            href="/example.html"
+          >
+            Page banner test title
+          </a>
         </h6>
         <p
           class="mb-4"

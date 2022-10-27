@@ -1,8 +1,10 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   variant: "default-2-col",
   title: "Listing item block title",
+  image_size: "small",
   link: {
     path: "/example.html",
     label: "Listing item block CTA",
@@ -14,8 +16,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(3),
         classes: "mb-3",
       },
       date: {
@@ -48,8 +49,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(2),
         classes: "mb-3",
       },
       date: {
@@ -86,8 +86,7 @@ module.exports = {
     {
       title: "Title card",
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(3),
         classes: "mb-3",
       },
       date: {
@@ -124,8 +123,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(4),
         classes: "mb-3",
       },
       date: {
@@ -162,8 +160,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(5),
         classes: "mb-3",
       },
       date: {
@@ -200,8 +197,7 @@ module.exports = {
     {
       title: '<a href="/example.html" class="standalone">Card title</a>',
       text: {
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+        content: getDummyText(3),
         classes: "mb-3",
       },
       date: {

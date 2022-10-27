@@ -2,6 +2,34 @@ import iconPath from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg"
 import flagPath from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
 import flagList from "@ecl/resources-flag-icons/dist/lists/flag.json";
 
+export const getTitleControls = () => {
+  const titleControls = {
+    title: {
+      name: "title",
+      type: { name: "string" },
+      description: "Title of the paragraph",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Title",
+      },
+    },
+    title_tag: {
+      type: { name: "select" },
+      options: ["h1", "h2", "h3", "h4", "h5", "h6", "div"],
+      name: "tag for the title",
+      description: "Html tag of the title",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "h2" },
+        category: "Title",
+      },
+    },
+  };
+
+  return titleControls;
+};
+
 export const getFormControls = (data, type) => {
   const argTypes = {
     label: {
@@ -368,7 +396,10 @@ export const correctPaths = (data) => {
         data[prop] = data[prop].replaceAll("/icons.svg", iconPath);
       } else if (data[prop].includes("flags.svg")) {
         data[prop] = flagPath;
-      } else if (data[prop].includes("/example.html")) {
+      } else if (
+        data[prop].includes("/example.html") &&
+        !data[prop].includes("/example.html#")
+      ) {
         data[prop] = data[prop].replace(
           "/example.html",
           `/example.html#${Math.random().toString(36).slice(2, 7)}`

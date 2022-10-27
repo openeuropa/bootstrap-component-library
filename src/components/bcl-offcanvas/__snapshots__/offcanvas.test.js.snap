@@ -16,6 +16,7 @@ exports[`OE - Offcanvas renders correctly 1`] = `
         An offcanvas title
       </h4>
       <button
+        aria-label="Close button for the offcanvas"
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
         type="button"
@@ -47,6 +48,131 @@ exports[`OE - Offcanvas renders correctly with body scroll support 1`] = `
         An offcanvas title
       </h4>
       <button
+        aria-label="Close button for the offcanvas"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        type="button"
+      />
+    </div>
+    <div
+      class="offcanvas-body"
+    >
+      An interesting content for this offcanvas
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Offcanvas renders correctly with extra class on body 1`] = `
+<jest>
+  <div
+    class="offcanvas offcanvas-bottom"
+    id="offcanvasExample"
+    tabindex="-1"
+  >
+    <div
+      class="offcanvas-header"
+    >
+      <h4
+        class="offcanvas-title bcl-heading"
+      >
+        An offcanvas title
+      </h4>
+      <button
+        aria-label="Close button for the offcanvas"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        type="button"
+      />
+    </div>
+    <div
+      class="offcanvas-body body-extra-class"
+    >
+      An interesting content for this offcanvas
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Offcanvas renders correctly with extra class on close button 1`] = `
+<jest>
+  <div
+    class="offcanvas offcanvas-bottom"
+    id="offcanvasExample"
+    tabindex="-1"
+  >
+    <div
+      class="offcanvas-header"
+    >
+      <h4
+        class="offcanvas-title bcl-heading"
+      >
+        An offcanvas title
+      </h4>
+      <button
+        aria-label="Close button for the offcanvas"
+        class="btn-close text-reset close-button-extra-class"
+        data-bs-dismiss="offcanvas"
+        type="button"
+      />
+    </div>
+    <div
+      class="offcanvas-body"
+    >
+      An interesting content for this offcanvas
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Offcanvas renders correctly with extra class on header 1`] = `
+<jest>
+  <div
+    class="offcanvas offcanvas-bottom"
+    id="offcanvasExample"
+    tabindex="-1"
+  >
+    <div
+      class="offcanvas-header header-extra-class"
+    >
+      <h4
+        class="offcanvas-title bcl-heading"
+      >
+        An offcanvas title
+      </h4>
+      <button
+        aria-label="Close button for the offcanvas"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        type="button"
+      />
+    </div>
+    <div
+      class="offcanvas-body"
+    >
+      An interesting content for this offcanvas
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Offcanvas renders correctly with responsive behaviour 1`] = `
+<jest>
+  <div
+    class="offcanvas-lg offcanvas-bottom"
+    id="offcanvasExample"
+    tabindex="-1"
+  >
+    <div
+      class="offcanvas-header"
+    >
+      <h4
+        class="offcanvas-title bcl-heading"
+      >
+        An offcanvas title
+      </h4>
+      <button
+        aria-label="Close button for the offcanvas"
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
         type="button"
@@ -65,6 +191,7 @@ exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
 <jest>
   <div
     class="offcanvas offcanvas-bottom"
+    data-bs-backdrop="false"
     id="offcanvasExample"
     tabindex="-1"
   >
@@ -77,6 +204,7 @@ exports[`OE - Offcanvas renders correctly without backdrop 1`] = `
         An offcanvas title
       </h4>
       <button
+        aria-label="Close button for the offcanvas"
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
         type="button"
@@ -106,11 +234,6 @@ exports[`OE - Offcanvas renders correctly without close button 1`] = `
       >
         An offcanvas title
       </h4>
-      <button
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        type="button"
-      />
     </div>
     <div
       class="offcanvas-body"
@@ -132,6 +255,7 @@ exports[`OE - Offcanvas renders correctly without title 1`] = `
       class="offcanvas-header"
     >
       <button
+        aria-label="Close button for the offcanvas"
         class="btn-close text-reset"
         data-bs-dismiss="offcanvas"
         type="button"
@@ -153,15 +277,6 @@ exports[`OE - Offcanvas renders correctly without title and close button 1`] = `
     id="offcanvasExample"
     tabindex="-1"
   >
-    <div
-      class="offcanvas-header"
-    >
-      <button
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        type="button"
-      />
-    </div>
     <div
       class="offcanvas-body"
     >

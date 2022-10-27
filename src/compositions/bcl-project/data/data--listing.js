@@ -1,11 +1,13 @@
 const drupalAttribute = require("drupal-attribute");
+const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
+    attributes: new drupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
+    close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
     title_attributes: new drupalAttribute().addClass("mb-lg-4"),
@@ -14,6 +16,15 @@ module.exports = {
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       items: [
+        [
+          {
+            label: "Keyword",
+            id: "keyword",
+            input_type: "text",
+            placeholder: "Type a keyword",
+            attributes: new drupalAttribute().addClass("mb-3"),
+          },
+        ],
         [
           {
             classes: "mb-3",
@@ -47,7 +58,6 @@ module.exports = {
           {
             input_type: "checkbox",
             label: "Closed",
-            wrapper_classes: "mb-2",
             checked: true,
             id: "closed",
           },
@@ -80,7 +90,7 @@ module.exports = {
             label: "End date",
             id: "end-date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new drupalAttribute().addClass("mb-4-5"),
           },
         ],
       ],
@@ -152,8 +162,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(2),
           classes: "mb-2-5",
         },
         image: {
@@ -163,7 +172,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -186,8 +195,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(3),
           classes: "mb-2-5",
         },
         image: {
@@ -197,7 +205,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -220,8 +228,7 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         image: {
@@ -231,7 +238,7 @@ module.exports = {
           classes: "d-none d-md-block",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -254,12 +261,11 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(5),
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -282,12 +288,11 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
       {
         badges: [
@@ -310,12 +315,11 @@ module.exports = {
           path: "/example.html",
         },
         text: {
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut ex tristique, dignissim sem ac, bibendum est. Sed vehicula lorem non nunc tincidunt hendrerit. Nunc tristique ante et fringilla fermentum.",
+          content: getDummyText(),
           classes: "mb-2-5",
         },
         content:
-          "<span class='text-muted text-nowrap'>Ongoing <span class='ms-4-75'>December 2020 - 19 December 2027</span></span>",
+          "<span class='text-muted text-nowrap'>December 2020 - 19 December 2027</span>",
       },
     ],
   },

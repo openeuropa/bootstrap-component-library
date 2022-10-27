@@ -1,4 +1,8 @@
-import { renderTwigFileAsNode } from "@openeuropa/bcl-test-utils";
+import {
+  renderTwigFileAsNode,
+  renderTwigFileAsHtml,
+} from "@openeuropa/bcl-test-utils";
+import { axe, toHaveNoViolations } from "jest-axe";
 import {
   dataListing,
   dataUser,
@@ -17,6 +21,8 @@ const renderTerms = (params) => renderTwigFileAsNode(templateTerms, params);
 
 const templateCompact = "@oe-bcl/bcl-user/user-compact.html.twig";
 const renderCompact = (params) => renderTwigFileAsNode(templateCompact, params);
+
+expect.extend(toHaveNoViolations);
 
 describe("OE - User", () => {
   test(`renders correctly`, () => {
@@ -38,5 +44,30 @@ describe("OE - User", () => {
     expect.assertions(1);
 
     return expect(renderCompact(demoDataCompact)).resolves.toMatchSnapshot();
+  });
+
+  test(`listing passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(templateList, dataListing))
+    ).toHaveNoViolations();
+  });
+
+  test(`terms passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(templateTerms, dataTerms))
+    ).toHaveNoViolations();
+  });
+
+  test(`compact passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(templateCompact, demoDataCompact, true))
+    ).toHaveNoViolations();
+  });
+
+  jest.setTimeout(10000);
+  test(`details passes the accessibility tests`, async () => {
+    expect(
+      await axe(renderTwigFileAsHtml(template, dataUser))
+    ).toHaveNoViolations();
   });
 });

@@ -1,10 +1,10 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - id (string) (default: collapse-{random number 0-1000}) - collapse custom id - optional
   - message (alert object) (default: {})
   - expandable (button object) (default: [])
-  - language (array of link object) (default: [])
+  - languages (array of link object) (default: [])
 #}
 
 {% set _id = id|default('collapse-' ~ random(1000)) %}
@@ -30,15 +30,21 @@
 
 <div class="collapse mt-3" id="{{ _id }}">
   <div
-    class="d-md-grid"
-    style="grid-auto-flow: column; grid-template-rows: repeat(4, 1fr)"
+    class="d-grid"
+    style="grid-auto-flow: row;  grid-template-columns: repeat(auto-fit, minmax(4rem, 8rem))"
   >
     {% for language in languages %}
       {% include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
-        attributes: create_attribute().addClass(["btn", "btn-link", "d-block", "ps-0", "text-start"])
+        attributes: create_attribute().addClass(
+          [ "btn",
+            "btn-link",
+            "d-block",
+            "ps-0",
+            "text-start"
+          ])
       }) only %}
     {% endfor %}
   </div>
 </div>
 
-{% endspaceless %}
+{% endapply %}

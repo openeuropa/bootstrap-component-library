@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 
 {# Parameters:
   - title: (string) (default: '')
@@ -21,6 +21,8 @@
 {% set _variant = variant|default('vertical') %}
 {% set _links = links|default([])%}
 
+{% set _classes = ['bcl-links-block'] %}
+
 {% set _title_classes = ['pb-3', 'mb-3', 'border-bottom'] %}
 
 {% if attributes is empty %}
@@ -30,6 +32,8 @@
 {% if _background == 'gray' %}
   {% set attributes = attributes.addClass(['bg-light', 'px-4', 'py-3', 'rounded-2']) %}
 {% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
 
 <div
   {{ attributes }}
@@ -69,4 +73,4 @@
   {% endif %}
 </div>
 
-{% endspaceless %}
+{% endapply %}
