@@ -19,6 +19,7 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _icon_name = icon_name|default('') %}
 {% set _icon_html = icon_html|default('') %}
+{% set _link = link ?? true %}
 {% set _classes = ['page-link'] %}
 
 {% if _icon_path is not empty and _icon is empty %}
@@ -56,12 +57,22 @@
   {% set attributes = attributes.setAttribute('aria-current', 'page' ) %}
 {% endif %}
 
-{%- include '@oe-bcl/bcl-link/link.html.twig' with {
-  label: _label,
-  path: _path,
-  disabled: _disabled,
-  icon: _icon,
-  attributes: attributes.addClass(_classes),
-} only -%}
+{% set attributes = attributes.addClass(_classes) %}
+
+{% if _link %}
+  {%- include '@oe-bcl/bcl-link/link.html.twig' with {
+    label: _label,
+    path: _path,
+    disabled: _disabled,
+    icon: _icon,
+    attributes: attributes,
+  } only -%}
+{% else %}
+  <span
+    {{ attributes }}
+  >
+  {{ _label }}
+  </span>
+{% endif %}
 
 {% endapply %}

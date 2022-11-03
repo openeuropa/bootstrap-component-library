@@ -10,6 +10,8 @@
   - aria_label (string) (default: '') - deprecated, use attributes
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
+  - ellipsis_before (boolean) (default: false)
+  - ellipsis_after (boolean) (default: false)
   - first (pagination Item object) (default: {})
   - prev (pagination Item object) (default: {})
   - next (pagination Item object) (default: {})
@@ -35,6 +37,8 @@
 {% set _aria_label = aria_label|default('') %}
 {% set _enable_prev_next_icon = enable_prev_next_icon ?? false %}
 {% set _enable_first_last_icon = enable_first_last_icon ?? true %}
+{% set _ellipsis_before = ellipsis_before ?? false %}
+{% set _ellipsis_after = ellipsis_after ?? false %}
 {% set _first = first|default({}) %}
 {% set _prev = prev|default({}) %}
 {% set _next = next|default({}) %}
@@ -73,8 +77,27 @@
   {% endif %}
 {% endif %}
 
+
 {% set _internal_items = _internal_items|merge([_first, _prev]) %}
+
+{% if _ellipsis_before %}
+  {% set _ellipsis_before_item = {
+    icon_html: "&hellip;",
+    link: false,
+  } %}
+  {% set _internal_items = _internal_items|merge([_ellipsis_before_item]) %}
+{% endif %}
+
 {% set _internal_items = _internal_items|merge(_items) %}
+
+{% if _ellipsis_after %}
+  {% set _ellipsis_after_item = {
+    icon_html: "&hellip;",
+    link: false,
+  } %}
+  {% set _internal_items = _internal_items|merge([_ellipsis_after_item]) %}
+{% endif %}
+
 {% set _internal_items = _internal_items|merge([_next, _last]) %}
 
 {% if attributes is empty %}
