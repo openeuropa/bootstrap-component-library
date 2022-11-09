@@ -3,6 +3,7 @@ import {
   initScrollspy,
   getTitleControls,
   scrollspyTitles,
+  initScrollspyLegacy,
 } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
@@ -103,7 +104,7 @@ const withBlocksIDContent = (story) => {
 
 export default {
   title: "Paragraphs/Inpage navigation",
-  decorators: [withCode, withDesign, initScrollspy, scrollspyTitles],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     design: [
       {
@@ -119,14 +120,21 @@ export default {
     ],
   },
 };
+
+export const Default = (args) => inpage(applyArgs(demoData, args));
+Default.storyName = "Legacy";
+Default.decorators = [initScrollspyLegacy, withTitlesIDContent];
+Default.args = getArgs(demoData);
+Default.argTypes = getArgTypes();
+
 export const Blocks = (args) => inpage(applyArgs(demoData, args));
-Blocks.storyName = "Blocks with id";
-Blocks.decorators = [withBlocksIDContent];
+Blocks.storyName = "V2 with default blocks with id";
+Blocks.decorators = [initScrollspy, withBlocksIDContent];
 Blocks.args = getArgs(demoData);
 Blocks.argTypes = getArgTypes();
 
 export const Titles = (args) => inpage(applyArgs(demoData, args));
-Titles.storyName = "Titles with id (with js fix)";
-Titles.decorators = [withTitlesIDContent, scrollspyTitles];
+Titles.storyName = "V2 having titles with id (including js fix)";
+Titles.decorators = [initScrollspy, withTitlesIDContent, scrollspyTitles];
 Titles.args = getArgs(demoData);
 Titles.argTypes = getArgTypes();

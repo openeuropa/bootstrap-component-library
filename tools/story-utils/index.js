@@ -333,9 +333,30 @@ export const initScrollspy = (story) => {
         if (scrollspyBody) {
           scrollspyBody.dispose();
         }
-        var scrollSpy = new bootstrap.ScrollSpy(wrapper, {
+        var scrollSpy = new bootstrap.ScrollSpyV2(wrapper, {
           target: "#" + element.id,
           threshold: [0, 0.25, 0.5, 0.75, 1],
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
+export const initScrollspyLegacy = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
+      if (element && typeof bootstrap !== "undefined") {
+        document.body.setAttribute("data-bs-spy", "scroll");
+        document.body.setAttribute("data-bs-target", "#" + element.id + "");
+        var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
+        debugger
+        if (scrollspyBody) {
+          scrollspyBody.dispose();
+        }
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+          target: "#" + element.id + "",
         });
       }
     </script>

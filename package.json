@@ -43,7 +43,7 @@
     "lint:js": "eslint src --ext .js",
     "lint:prettier": "prettier --check \"(src|storybook|tools|builder)/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "jest": "jest",
-    "patch": "patch-package",
+    "patch": "patch-package && cd bootstrap && patch-package",
     "patch-build": "scripts/patch-build.js",
     "postinstall": "run-s patch pre-publish copy:assets",
     "prepare": "husky install",
