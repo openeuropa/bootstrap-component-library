@@ -1,10 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import {
-  initScrollspy,
+  initScrollspyLegacy,
   initBadges,
   correctPaths,
-  scrollspyTitles,
 } from "@openeuropa/bcl-story-utils";
 import {
   demoData,
@@ -77,7 +76,7 @@ const applyArgs = (data, args) => {
 export const FullPage = () => event(correctPaths(demoData));
 
 FullPage.storyName = "Event page";
-FullPage.decorators = [initScrollspy, scrollspyTitles];
+FullPage.decorators = [initScrollspyLegacy];
 FullPage.parameters = {
   design: [
     {
@@ -96,7 +95,7 @@ FullPage.parameters = {
 export const FullPage1 = () => event(correctPaths(demoDateData));
 
 FullPage1.storyName = "Event page with date";
-FullPage1.decorators = [initScrollspy, scrollspyTitles];
+FullPage1.decorators = [initScrollspyLegacy];
 FullPage1.parameters = {
   design: [
     {

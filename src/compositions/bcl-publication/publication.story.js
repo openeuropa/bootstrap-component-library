@@ -3,8 +3,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import {
   initBadges,
   correctPaths,
-  initScrollspy,
-  scrollspyTitles,
+  initScrollspyLegacy,
 } from "@openeuropa/bcl-story-utils";
 import {
   demoDetails,
@@ -17,7 +16,7 @@ import detailsPage from "@openeuropa/bcl-publication/publication.html.twig";
 
 export default {
   title: "Features/Publication",
-  decorators: [withCode, withDesign, initScrollspy, scrollspyTitles],
+  decorators: [withCode, withDesign, initScrollspyLegacy],
   parameters: {
     layout: "fullscreen",
     controls: {
