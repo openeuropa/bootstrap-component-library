@@ -4,7 +4,6 @@ import {
   initBadges,
   correctPaths,
   initScrollspy,
-  scrollspyTitles,
 } from "@openeuropa/bcl-story-utils";
 import {
   demoListing,
@@ -19,7 +18,7 @@ import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
 export default {
   title: "Features/Project",
-  decorators: [withCode, withDesign, initScrollspy, scrollspyTitles],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {

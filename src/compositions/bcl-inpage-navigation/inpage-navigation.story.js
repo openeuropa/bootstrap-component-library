@@ -1,10 +1,5 @@
 import { LoremIpsum } from "lorem-ipsum";
-import {
-  initScrollspy,
-  getTitleControls,
-  scrollspyTitles,
-  initScrollspyLegacy,
-} from "@openeuropa/bcl-story-utils";
+import { initScrollspy, getTitleControls } from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
@@ -61,47 +56,6 @@ const withTitlesIDContent = (story) => {
   return layout;
 };
 
-const withBlocksIDContent = (story) => {
-  const demo = story();
-
-  const layout = `
-  <div class="bcl-content-area">
-    <div class="row">
-      <div class="bcl-sidebar col-md-3 d-none d-lg-block">
-        ${demo}
-      </div>
-      <div class="col-md-9">
-        <div id="item-1">
-          ${heading({
-            title: "Heading 1",
-          })}
-          <p>${lorem.generateParagraphs(8)}</p>
-        </div>
-        <div id="item-2">
-          ${heading({
-            title: "Heading 2 with a long title going on several lines",
-          })}
-          <p>${lorem.generateParagraphs(10)}</p>
-        </div>
-        <div id="item-3">
-          ${heading({
-            title: "Heading 3",
-          })}
-          <p>${lorem.generateParagraphs(9)}</p>
-        </div>
-        <div id="item-4">
-          ${heading({
-            title: "Heading 4",
-          })}
-          <p>${lorem.generateParagraphs(8)}</p>
-        </div>
-      </div>
-    </div>
-  </div>`;
-
-  return layout;
-};
-
 export default {
   title: "Paragraphs/Inpage navigation",
   decorators: [withCode, withDesign, initScrollspy],
@@ -122,19 +76,6 @@ export default {
 };
 
 export const Default = (args) => inpage(applyArgs(demoData, args));
-Default.storyName = "Legacy";
-Default.decorators = [initScrollspyLegacy, withTitlesIDContent];
+Default.decorators = [initScrollspy, withTitlesIDContent];
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes();
-
-export const Blocks = (args) => inpage(applyArgs(demoData, args));
-Blocks.storyName = "V2 with default blocks with id";
-Blocks.decorators = [initScrollspy, withBlocksIDContent];
-Blocks.args = getArgs(demoData);
-Blocks.argTypes = getArgTypes();
-
-export const Titles = (args) => inpage(applyArgs(demoData, args));
-Titles.storyName = "V2 having titles with id (including js fix)";
-Titles.decorators = [initScrollspy, withTitlesIDContent, scrollspyTitles];
-Titles.args = getArgs(demoData);
-Titles.argTypes = getArgTypes();

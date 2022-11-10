@@ -324,59 +324,17 @@ export const initScrollspy = (story) => {
   const demo = story();
   return `
     <script>
-      var wrapper = document.querySelector(".bcl-content-area");
-      var element = document.getElementById("bcl-inpage-navigation");
-      if (element && typeof bootstrap !== "undefined") {
-        wrapper.setAttribute("data-bs-spy", "scroll");
-        wrapper.setAttribute("data-bs-target", "#" + element.id + "");
-        var scrollspyBody = bootstrap.ScrollSpy.getInstance(wrapper);
-        if (scrollspyBody) {
-          scrollspyBody.dispose();
-        }
-        var scrollSpy = new bootstrap.ScrollSpyV2(wrapper, {
-          target: "#" + element.id,
-          threshold: [0, 0.25, 0.5, 0.75, 1],
-        });
-      }
-    </script>
-  ${demo}`;
-};
-
-export const initScrollspyLegacy = (story) => {
-  const demo = story();
-  return `
-    <script>
       var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
       if (element && typeof bootstrap !== "undefined") {
         document.body.setAttribute("data-bs-spy", "scroll");
         document.body.setAttribute("data-bs-target", "#" + element.id + "");
         var scrollspyBody = bootstrap.ScrollSpy.getInstance(document.body);
-        debugger
         if (scrollspyBody) {
           scrollspyBody.dispose();
         }
         var scrollSpy = new bootstrap.ScrollSpy(document.body, {
           target: "#" + element.id + "",
         });
-      }
-    </script>
-  ${demo}`;
-};
-
-export const scrollspyTitles = (story) => {
-  const demo = story();
-  return `
-    <script>
-      if (element && typeof bootstrap !== "undefined") {
-        const scrollspyEl = document.querySelector('[data-bs-spy="scroll"]')
-        let prevElement;
-        scrollspyEl.addEventListener('activate.bs.scrollspy', (event) => {
-          if(prevElement) {
-            prevElement.classList.remove('bcl-active');
-          }
-          prevElement = event.relatedTarget;
-          event.relatedTarget.classList.add('bcl-active');
-        })
       }
     </script>
   ${demo}`;

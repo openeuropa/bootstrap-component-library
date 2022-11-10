@@ -3,7 +3,7 @@ import withCode from "@openeuropa/storybook-addon-code";
 import {
   initBadges,
   correctPaths,
-  initScrollspyLegacy,
+  initScrollspy,
 } from "@openeuropa/bcl-story-utils";
 import {
   demoListing,
@@ -17,7 +17,7 @@ import detailsPage from "@openeuropa/bcl-project/project.html.twig";
 
 export default {
   title: "Features/Project",
-  decorators: [withCode, withDesign, initScrollspyLegacy],
+  decorators: [withCode, withDesign, initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: {
