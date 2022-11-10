@@ -58,7 +58,7 @@ const withTitlesIDContent = (story) => {
 
 export default {
   title: "Paragraphs/Inpage navigation",
-  decorators: [withCode, withDesign, initScrollspy],
+  decorators: [withCode, withDesign, initScrollspy, withTitlesIDContent],
   parameters: {
     design: [
       {
@@ -76,6 +76,5 @@ export default {
 };
 
 export const Default = (args) => inpage(applyArgs(demoData, args));
-Default.decorators = [initScrollspy, withTitlesIDContent];
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes();
