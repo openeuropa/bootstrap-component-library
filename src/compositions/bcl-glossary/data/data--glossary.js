@@ -1,5 +1,6 @@
+const drupalAttribute = require("drupal-attribute");
+
 module.exports = {
-  aria_label: "aria label",
   variant: "glossary",
   items: [
     {
@@ -148,4 +149,5 @@ module.exports = {
       path: `/example.html`,
     },
   ],
+  attributes: new drupalAttribute().setAttribute("aria-label", "aria label"),
 };
