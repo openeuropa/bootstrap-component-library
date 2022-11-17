@@ -19,7 +19,6 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _icon_name = icon_name|default('') %}
 {% set _icon_html = icon_html|default('') %}
-{% set _link = link ?? true %}
 {% set _classes = ['page-link'] %}
 
 {% if _icon_path is not empty and _icon is empty %}
@@ -59,7 +58,7 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-{% if _link %}
+{% if _path %}
   {%- include '@oe-bcl/bcl-link/link.html.twig' with {
     label: _label,
     path: _path,
@@ -68,11 +67,7 @@
     attributes: attributes,
   } only -%}
 {% else %}
-  <span
-    {{ attributes }}
-  >
-  {{ _label }}
-  </span>
+  <div {{ attributes }}>{{ _label }}</div>
 {% endif %}
 
 {% endapply %}

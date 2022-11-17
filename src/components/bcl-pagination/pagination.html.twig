@@ -83,7 +83,7 @@
 {% if _ellipsis_before %}
   {% set _ellipsis_before_item = {
     icon_html: "&hellip;",
-    link: false,
+    icon_path: "",
   } %}
   {% set _internal_items = _internal_items|merge([_ellipsis_before_item]) %}
 {% endif %}
@@ -93,7 +93,7 @@
 {% if _ellipsis_after %}
   {% set _ellipsis_after_item = {
     icon_html: "&hellip;",
-    link: false,
+    icon_path: "",
   } %}
   {% set _internal_items = _internal_items|merge([_ellipsis_after_item]) %}
 {% endif %}
@@ -140,9 +140,12 @@
         {% set _item_class = _item_class|merge(['active']) %}
       {% endif %}
       <li class="{{ _item_class|join(' ') }}">
-        {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item|merge({
-          icon_path: _icon_path,
-        }) only %}
+        {% if _item.icon_path is not defined %}
+          {% set _item = _item|merge({
+            icon_path: _icon_path,
+          }) %}
+        {% endif %}
+        {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
       </li>
     {% endif %}
   {% endfor %}
