@@ -19,37 +19,35 @@ const getArgTypes = () => getTitleControls();
 
 const applyArgs = (data, args) => Object.assign(data, args);
 
-const withTitlesIDContent = (story) => {
+const withContent = (story) => {
   const demo = story();
 
   const layout = `
-  <div class="bcl-content-area">
-    <div class="row">
-      <div class="bcl-sidebar col-md-3 d-none d-lg-block">
-        ${demo}
-      </div>
-      <div class="col-md-9">
-        ${heading({
-          title: "Heading 1",
-          attributes: new drupalAttribute().setAttribute("id", "item-1"),
-        })}
-        <p>${lorem.generateParagraphs(8)}</p>
-        ${heading({
-          title: "Heading 2 with a long title going on several lines",
-          attributes: new drupalAttribute().setAttribute("id", "item-2"),
-        })}
-        <p>${lorem.generateParagraphs(10)}</p>
-        ${heading({
-          title: "Heading 3",
-          attributes: new drupalAttribute().setAttribute("id", "item-3"),
-        })}
-        <p>${lorem.generateParagraphs(9)}</p>
-        ${heading({
-          title: "Heading 4",
-          attributes: new drupalAttribute().setAttribute("id", "item-4"),
-        })}
-        <p>${lorem.generateParagraphs(8)}</p>
-      </div>
+  <div class="row">
+    <div class="bcl-sidebar col-md-3 d-none d-lg-block">
+      ${demo}
+    </div>
+    <div class="col-md-9">
+      ${heading({
+        title: "Heading 1",
+        attributes: new drupalAttribute().setAttribute("id", "item-1"),
+      })}
+      <p>${lorem.generateParagraphs(8)}</p>
+      ${heading({
+        title: "Heading 2 with a long title going on several lines",
+        attributes: new drupalAttribute().setAttribute("id", "item-2"),
+      })}
+      <p>${lorem.generateParagraphs(10)}</p>
+      ${heading({
+        title: "Heading 3",
+        attributes: new drupalAttribute().setAttribute("id", "item-3"),
+      })}
+      <p>${lorem.generateParagraphs(9)}</p>
+      ${heading({
+        title: "Heading 4",
+        attributes: new drupalAttribute().setAttribute("id", "item-4"),
+      })}
+      <p>${lorem.generateParagraphs(8)}</p>
     </div>
   </div>`;
 
@@ -58,7 +56,7 @@ const withTitlesIDContent = (story) => {
 
 export default {
   title: "Paragraphs/Inpage navigation",
-  decorators: [withCode, withDesign, initScrollspy, withTitlesIDContent],
+  decorators: [withCode, withDesign, initScrollspy, withContent],
   parameters: {
     design: [
       {
