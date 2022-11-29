@@ -5,26 +5,22 @@
 {% endblock %}
 
 {% block content %}
-  {% if project_status_title is not empty %}
-    {% set _project_title_attributes = create_attribute().addClass(['mb-4']) %}
-    {% if project_status_id is not empty %}
-      {% set _project_title_attributes = _project_title_attributes.setAttribute('id', project_status_id) %}
-    {% endif %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: project_status_title,
-      title_tag: 'h2',
-      attributes: _project_title_attributes,
-    } only %}
-  {% endif %}
   {% if project_status is not empty %}
+    {% if project_status_title is not empty %}
+      {% set _project_title_attributes = create_attribute().addClass(['mb-4']) %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: project_status_title,
+        title_tag: 'h2',
+        attributes: create_attribute().setAttribute('id', project_status_id),
+      } only %}
+    {% endif %}
     {% include '@oe-bcl/bcl-project-status/project-status.html.twig' with project_status %}
-  {% endif %}
-  {% if project_contributions is not empty %}
-    {% include '@oe-bcl/bcl-project-status/project-contributions.html.twig' with project_contributions %}
-  {% endif %}
-
-  {% if status_lists is not empty %}
-    {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
+    {% if project_contributions is not empty %}
+      {% include '@oe-bcl/bcl-project-status/project-contributions.html.twig' with project_contributions %}
+    {% endif %}
+    {% if status_lists is not empty %}
+      {% include '@oe-bcl/bcl-project/project-lists.html.twig' with status_lists only %}
+    {% endif %}
   {% endif %}
 
   {% if first_paragraphs is defined and first_paragraphs is not empty %}
@@ -59,17 +55,6 @@
     {% endfor %}
   {% endif %}
 
-  {% if gallery.main_title is not empty %}
-    {% set _gallery_title_attributes = create_attribute().addClass(['my-4']) %}
-    {% if gallery.main_title_id is not empty %}
-      {% set _gallery_title_attributes = _gallery_title_attributes.setAttribute('id', gallery.main_title_id) %}
-    {% endif %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: gallery.main_title,
-      title_tag: 'h2',
-      attributes: _gallery_title_attributes,
-    } only %}
-  {% endif %}
   {% if gallery is not empty %}
   <div class="mt-3 mb-4-5">
     {% include '@oe-bcl/bcl-gallery/gallery.html.twig' with gallery only %}
