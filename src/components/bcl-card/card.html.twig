@@ -42,7 +42,7 @@
   - extra_classes_body (string) (default: '')
   - extra_classes_header (string) (default: '')
   - extra_classes_footer (string) (default: '')
-  - badges (array of badge object) (default: [])
+  - badges (badge[]) (default: [])
   - links (array of link object) (default: [])
   - attributes (drupal attrs)
 
@@ -62,7 +62,7 @@
 {% set _image = image|default({}) %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
-{% set _horizontal = horizontal|default(false) %}
+{% set _horizontal = horizontal ?? false %}
 {% set _horizontal_grid = horizontal_grid|default({
   left_col_classes: 'bcl-card-start-col',
   right_col_classes: 'col',

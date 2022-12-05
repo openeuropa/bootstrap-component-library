@@ -17,10 +17,10 @@
 {% set _background = background|default('primary') %}
 {% set _url = url|default('') %}
 {% set _title = title|default(_label) %}
-{% set _dismissible = dismissible|default(false) %}
+{% set _dismissible = dismissible ?? false %}
 {% set _assistive_text = assistive_text|default('') %}
-{% set _rounded_pill = rounded_pill|default(false) %}
-{% set _outline = outline|default(false) %}
+{% set _rounded_pill = rounded_pill ?? false %}
+{% set _outline = outline ?? false %}
 {% set _icon_path = icon_path|default('') %}
 
 {% set _classes = ['badge'] %}

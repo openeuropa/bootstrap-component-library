@@ -22,9 +22,9 @@
 {% set _description = description|default('') %}
 {% set _link = link|default({}) %}
 {% set _image = image|default('') %}
-{% set _shade = shade|default(false) %}
-{% set _hero = hero|default(false) %}
-{% set _full_width = full_width|default(false) %}
+{% set _shade = shade ?? false %}
+{% set _hero = hero ?? false %}
+{% set _full_width = full_width ?? false %}
 {% set _content_classes = content_classes|default('') %}
 
 {% set _content_class = 'bcl-banner__content' %}

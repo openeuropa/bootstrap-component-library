@@ -17,13 +17,13 @@
   - description (string) (default: '')
   - ratio: (string) (default: '16x9')
     - options ['1x1', '4x3', '16x9', '21x9']
-  - sources: (array of sources) (default: []) format: [
+  - sources: (object[]) (default: []) format: [
     {
       type: '',
       src: ''
     }
   ]
-  - tracks: (array of tracks) (default: []) format: [
+  - tracks: (object[]) (default: []) format: [
     {
       kind: '',
       label: '',
@@ -40,7 +40,7 @@
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
-{% set _with_text = with_text|default(false) %}
+{% set _with_text = with_text ?? false %}
 {% set _alignment = alignment|default('right') %}
 {% set _image = image|default('') %}
 {% set _poster_image = poster_image|default('') %}

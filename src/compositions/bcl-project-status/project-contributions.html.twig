@@ -12,7 +12,7 @@
 
 {% set _corporate_contributions = corporate_contributions|default('') %}
 {% set _legend = legend|default({}) %}
-{% set _chart = chart|default(false) %}
+{% set _chart = chart ?? false %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}

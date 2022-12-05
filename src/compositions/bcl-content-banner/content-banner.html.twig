@@ -11,7 +11,25 @@
     - image (object) (default: {})
     - image_size: (string) (default: 'md')
       options: ['md', 'lg', 'xl']
-    - date: (object) (default: {})
+    - date: (date block object) (default: {})
+
+    Card inheritance
+      - badges (badge[]) (default: [])
+      - links (link[]) (default: [])
+      - content (string) (default: '')
+      - subtitle (object) (default: {})
+        format: {
+          content: '',
+          tag: '',
+          classes: ''
+        }
+      - text (object) (default: {})
+        format: {
+          content: '',
+          tag: '',
+          classes: ''
+        }
+
     - attributes: (drupal attrs)
 
   Blocks
