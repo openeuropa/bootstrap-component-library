@@ -80,9 +80,11 @@
 
 {% set _internal_items = _internal_items|merge([_first, _prev]) %}
 
+{% set _ellipsis_markup %} &hellip; {% endset %}
+
 {% if _ellipsis_before %}
   {% set _ellipsis_before_item = {
-    icon_html: "&hellip;",
+    icon_html: _ellipsis_markup,
     icon_path: "",
   } %}
   {% set _internal_items = _internal_items|merge([_ellipsis_before_item]) %}
@@ -92,7 +94,7 @@
 
 {% if _ellipsis_after %}
   {% set _ellipsis_after_item = {
-    icon_html: "&hellip;",
+    icon_html: _ellipsis_markup,
     icon_path: "",
   } %}
   {% set _internal_items = _internal_items|merge([_ellipsis_after_item]) %}
