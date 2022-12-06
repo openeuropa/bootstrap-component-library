@@ -33,7 +33,7 @@
 {% else %}
   {% if _icon_html is not empty %}
     {% set _label %}
-      <span aria-hidden="true">{{ _icon_html }}</span>
+      <span aria-hidden="true">{{ _icon_html|raw }}</span>
     {% endset %}
   {% endif %}
 {% endif %}
