@@ -22,17 +22,17 @@
 {% set _rounded_pill = rounded_pill|default(false) %}
 {% set _outline = outline|default(false) %}
 {% set _icon_path = icon_path|default('') %}
+
 {% set _classes = ['badge'] %}
-{% set _icon_classes = ['icon--close', 'text-' ~ _background] %}
 
 {% if _rounded_pill %}
   {% set _classes = _classes|merge(['rounded-pill']) %}
 {% endif %}
 
 {% if _outline %}
-  {% set _classes = _classes|merge(['badge-outline-' ~ _background]) %}
+  {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
 {% else %}
-  {% set _classes = _classes|merge(['text-bg-' ~ _background]) %}
+  {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
 {% endif %}
 
 {% if attributes is empty %}
@@ -53,7 +53,7 @@
   {%- endif -%}
   {{- _label -}}
   {%- if _dismissible -%}
-  <span class="{{ _icon_classes|join(' ') }}" aria-hidden="true">
+  <span class="icon--close {{ 'text-' ~ _background }}" aria-hidden="true">
     {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: "x-lg",
       path: _icon_path,
