@@ -8,6 +8,7 @@ Parameters:
       media: (string) <img> tag
       caption (string)
       caption_title (string)
+      is_playable (boolean)
     }
   - carousel_id (string) (default: '')
   - modal_id (string) (default: '')
@@ -33,7 +34,7 @@ Parameters:
   {{ attributes }}
 >
   <div class="bcl-gallery__item-overlay" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-  {% if '<iframe' in _item.media or '<video' in _item.media %}
+  {% if _item.is_playable %}
     <span class="bcl-gallery__item-play-icon">
     {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: 'play-fill',

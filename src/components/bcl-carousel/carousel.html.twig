@@ -122,10 +122,7 @@
     {% if _item.image is defined and _item.image is not empty %}
       {{ _item.image|raw }}
     {% endif %}
-    {% if (_item.caption is defined and _item.caption is not empty) or 
-          (_item.link is defined and _item.link is not empty) or 
-          (_item.caption_title is defined and _item.caption_title is not empty)
-    %}
+    {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
       {% set _caption_classes = 'carousel-caption' %}
       {% if _item.caption is not empty and _item.link is empty %}
         {% set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}

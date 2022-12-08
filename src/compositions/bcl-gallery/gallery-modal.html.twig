@@ -80,6 +80,7 @@ Parameters:
         </div>
       </div>
       <div class="modal-body d-flex align-items-center justify-content-center">
+      {% block carousel %}
         {% for _item in _items %}
           {% set _carousel_items = _carousel_items|merge([_item|merge({
             caption_title: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption_title,
@@ -96,6 +97,7 @@ Parameters:
           autoplay: false,
           items: _carousel_items,
         } only %}
+      {% endblock %}
       </div>
     </div>
   </div>

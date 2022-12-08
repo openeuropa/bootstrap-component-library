@@ -23,6 +23,9 @@ Parameters:
     ]
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
+
+  Blocks:
+    carousel
 #}
 
 {% set _id = id|default('gallery-' ~ random(1000)) %}
@@ -50,6 +53,7 @@ Parameters:
 
 {% set attributes = attributes.addClass('bcl-gallery') %}
 
+{% if _items is not empty and _items is iterable %}
 <div
   {{ attributes }}
 >
@@ -72,7 +76,6 @@ Parameters:
   {%- endif -%}
   </div>
 {% endif %}
-{% if _items is not empty and _items is iterable %}
   <div class="bcl-gallery__thumbnails">
     <ul class="bcl-gallery__grid">
     {% for _item in _items|slice(0, _max_visible_thumbnails - 1) %}
@@ -154,7 +157,8 @@ Parameters:
   prev_label: _prev_label,
   title: _title,
   items: _items,
-  icon_path: _icon_path
+  icon_path: _icon_path,
+  carousel: carousel,
 } only %}
 </div>
 

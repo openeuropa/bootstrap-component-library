@@ -31,6 +31,7 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
+      is_playable: true,
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1012/400/400" 
                   />`,
@@ -50,6 +51,7 @@ module.exports = {
               />`,
     },
     {
+      is_playable: true,
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1081/400/400" 
                   />`,
@@ -112,13 +114,14 @@ module.exports = {
       caption: `<p>Some representative placeholder content for the last slide.</p>`,
       caption_title: "Last slide label",
       thumbnail: `<img alt="slide" 
-                    src="https://picsum.photos/id/1073/400/400" 
+                    src="https://picsum.photos/id/1077/400/400" 
                   />`,
       media: `<img alt="First slide" 
-                src="https://picsum.photos/id/1071/800/400" 
+                src="https://picsum.photos/id/1077/800/400" 
               />`,
     },
     {
+      is_playable: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
       thumbnail: `<img alt="slide" 
@@ -130,6 +133,7 @@ module.exports = {
               ></iframe>`,
     },
     {
+      is_playable: true,
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1081/400/400" 
                   />`,
