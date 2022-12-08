@@ -58,10 +58,36 @@ const initMultiselect = (story) => {
   return `
     <script>
       if (document.querySelector(".multi-select")) {
-        new SlimSelect({
+        function setAccesibilty(el, selectedVal) {
+          el.setAttribute('tabindex', '0')
+          el.addEventListener("keyup", function(event) {
+              event.preventDefault();
+              if (event.keyCode === 13) {
+                document.querySelector("[data-id='" + selectedVal.id + "']").remove();
+                let values = select.getSelected();
+                var newValues = values.filter(value => value != selectedVal.value);
+                select.setSelected(newValues);
+              }
+          });
+        }
+        var select = new SlimSelect({
           select: ".multi-select",
           selectByGroup: true,
           placeholder: "Please select a value",
+          events: {
+            afterChange: (values) => {
+              if(values.length) {
+                let lastVal = values[values.length - 1]
+                let el = document.querySelector("[data-id='" + lastVal.id + "'] .ss-value-delete");
+                setAccesibilty(el, lastVal)
+              }
+            }
+          }
+        });
+        const selectedValues = select.store.data.filter(value => value.selected);
+        selectedValues.forEach(selectedVal => {
+          let el = document.querySelector("[data-id='" + selectedVal.id + "'] .ss-value-delete");
+          setAccesibilty(el, selectedVal)
         });
       }
     </script>
