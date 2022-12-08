@@ -39,6 +39,14 @@ describe("OE - Pagination", () => {
     });
   });
 
+  test(`with ellipsises renders correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, ellipsis_after: true, ellipsis_before: true })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly with new attributes on items`, () => {
     expect.assertions(1);
 

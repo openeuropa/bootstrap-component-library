@@ -751,6 +751,135 @@ exports[`OE - Pagination with custom icon for next renders for correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Pagination with ellipsises renders correctly 1`] = `
+<jest>
+  <nav
+    aria-label="Test aria label"
+    role="navigation"
+  >
+    <ul
+      class="pagination"
+    >
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="First page"
+          class="page-link"
+          href="/example.html"
+        >
+          <svg
+            class="bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-double-left"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="Previous page"
+          class="page-link"
+          href="/example.html"
+        >
+          Previous
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <div
+          class="page-link"
+        >
+          <span
+            aria-hidden="true"
+          >
+             … 
+          </span>
+        </div>
+      </li>
+      <li
+        class="page-item disabled"
+      >
+        <a
+          aria-disabled="true"
+          class="page-link disabled"
+          href="/example.html"
+          tabindex="-1"
+        >
+          1
+        </a>
+      </li>
+      <li
+        class="page-item active"
+      >
+        <a
+          aria-current="page"
+          class="page-link"
+          href="/example.html"
+        >
+          2
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="/example.html"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <div
+          class="page-link"
+        >
+          <span
+            aria-hidden="true"
+          >
+             … 
+          </span>
+        </div>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="Next page"
+          class="page-link"
+          href="/example.html"
+        >
+          Next
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          aria-label="Last page"
+          class="page-link"
+          href="/example.html"
+        >
+          <svg
+            class="bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-double-right"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</jest>
+`;
+
 exports[`OE - Pagination without icon path renders correctly 1`] = `
 <jest>
   <nav

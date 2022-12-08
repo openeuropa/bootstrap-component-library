@@ -10,6 +10,8 @@ const getArgs = () => ({
   alignment: "default",
   enable_prev_next_icon: false,
   enable_first_last_icon: true,
+  ellipsis_before: false,
+  ellipsis_after: false,
   icon_path: false,
 });
 
@@ -55,6 +57,26 @@ const getArgTypes = (data) => {
       name: "enable previous and next icons",
       type: { name: "boolean" },
       description: "Enable icon for previous and next",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    ellipsis_before: {
+      name: "enable ellipsis before",
+      type: { name: "boolean" },
+      description: "Enable ellipsis icon before elements",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    ellipsis_after: {
+      name: "enable ellipsis after",
+      type: { name: "boolean" },
+      description: "Enable ellipsis icon after elements",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: "false" },
