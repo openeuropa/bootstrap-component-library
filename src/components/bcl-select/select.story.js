@@ -65,7 +65,7 @@ const initMultiselect = (story) => {
               if (event.keyCode === 13) {
                 document.querySelector("[data-id='" + selectedVal.id + "']").remove();
                 let values = select.getSelected();
-                var newValues = values.filter(value => value != selectedVal.value);
+                let newValues = values.filter(value => value != selectedVal.value);
                 select.setSelected(newValues);
               }
           });
