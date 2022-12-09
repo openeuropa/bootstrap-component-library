@@ -70,7 +70,7 @@ const initMultiselect = (story) => {
               }
           });
         }
-        var select = new SlimSelect({
+        let select = new SlimSelect({
           select: ".multi-select",
           selectByGroup: true,
           placeholder: "Please select a value",
