@@ -45,6 +45,7 @@ Parameters:
 {% set _modal_id = "modal" ~ _id|capitalize %}
 {% set _collapse_id = "collapse" ~ _id|capitalize %}
 {% set _max_visible_thumbnails = _max_visible_thumbnails + 1 %}
+{% set _carousel_items = [] %}
 {% set _loop_counter = 0 %}
 
 {% if attributes is empty %}
@@ -57,7 +58,7 @@ Parameters:
 <div
   {{ attributes }}
 >
-{% if _title is not empty or _counter is not empty %}
+  {% if _title is not empty or _counter is not empty %}
   <div class="d-sm-flex flex-sm-row align-items-sm-center">
   {% if _title is not empty %}
     <div class="flex-sm-grow-1">
@@ -75,7 +76,7 @@ Parameters:
     </div>
   {%- endif -%}
   </div>
-{% endif %}
+  {% endif %}
   <div class="bcl-gallery__thumbnails">
     <ul class="bcl-gallery__grid">
     {% for _item in _items|slice(0, _max_visible_thumbnails - 1) %}
@@ -149,17 +150,60 @@ Parameters:
       </div>
     {% endif %}
   </div>
-{% endif %}
-{% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
-  id: _modal_id,
-  carousel_id: _carousel_id,
-  next_label: _next_label,
-  prev_label: _prev_label,
-  title: _title,
-  items: _items,
-  icon_path: _icon_path,
-  carousel: carousel,
-} only %}
+  <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header border-0 justify-content-between">
+        {% if _title is not empty %}
+          <div class="modal-title">
+            {% if _title is not empty %}
+              {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+                title: _title,
+                title_tag: 'h3',
+                attributes: create_attribute().addClass(['d-sm-block', 'd-none']),
+              } only %}
+            {% endif %}
+          </div>
+        {% endif %}
+          <div class="carousel-pager">
+            <span>1</span> / {{ _items|length -}}
+          </div>
+          <div class="modal-close">
+            {% set button_attributes = create_attribute()
+                                      .addClass('btn-close')
+                                      .setAttribute('aria-label', 'Close')
+                                      .setAttribute('data-bs-dismiss', 'modal')
+            %}
+            {% include '@oe-bcl/bcl-button/button.html.twig' with {
+              clean_class: true,
+              attributes: button_attributes
+            } only %}
+          </div>
+        </div>
+        <div class="modal-body d-flex align-items-center justify-content-center">
+        {% block carousel %}
+          {% for _item in _items %}
+            {% set _carousel_items = _carousel_items|merge([_item|merge({
+              caption_title: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption_title,
+              caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
+              image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
+            })]) %}
+          {% endfor %}
+          {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
+            id: _carousel_id,
+            with_controls: true,
+            with_indicators: false,
+            prev_label: _prev_label,
+            next_label: _next_label,
+            autoplay: false,
+            items: _carousel_items,
+          } only %}
+        {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+{% endif %}
 
 {% endapply %}
