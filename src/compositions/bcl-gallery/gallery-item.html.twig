@@ -50,13 +50,13 @@ Parameters:
     {% endif %}
     {% if _item.caption is not empty %}
       <div class="bcl-gallery__item-description">
-        {{ _item.caption|raw }}
+        {{ _item.caption }}
       </div>
     {% endif %}
     </div>
   {% endif %}
   </div>
-  {{ _item.thumbnail|raw }}
+  {{ _item.thumbnail }}
 </a>
 
 {% endapply %}

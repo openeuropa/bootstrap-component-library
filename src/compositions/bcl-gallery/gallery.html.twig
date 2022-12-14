@@ -111,43 +111,43 @@ Parameters:
         {% endfor %}
         </ul>
       </div>
-    {% endif %}
-    <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
-      <a
-        class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
-        aria-controls="{{ _collapse_id }}"
-        data-bs-toggle="collapse"
-        aria-expanded="false"
-        role="button"
-        href="#{{ _collapse_id }}"
-      >
-        <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
-        <span class="label-expanded">{{ _toggle_expanded }}</span>
-        {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-          name: 'caret-down-fill',
-          size: '2xs',
-          path: _icon_path,
-          attributes: create_attribute().addClass('ms-2-5'),
-        } only %}
-      </a>
-      <a
-        class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
-        data-bs-target="#{{ _carousel_id }}"
-        data-bs-slide-to="{{ _max_visible_thumbnails - 1 }}"
-        role="button"
-        href="#"
-      >
-        <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+      <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
+        <a
+          class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
+          aria-controls="{{ _collapse_id }}"
+          data-bs-toggle="collapse"
+          aria-expanded="false"
+          role="button"
+          href="#{{ _collapse_id }}"
+        >
           <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
+          <span class="label-expanded">{{ _toggle_expanded }}</span>
           {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
             name: 'caret-down-fill',
             size: '2xs',
             path: _icon_path,
             attributes: create_attribute().addClass('ms-2-5'),
           } only %}
-        <span>
-      </a>
-    </div>
+        </a>
+        <a
+          class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
+          data-bs-target="#{{ _carousel_id }}"
+          data-bs-slide-to="{{ _max_visible_thumbnails - 1 }}"
+          role="button"
+          href="#"
+        >
+          <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+            <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: 'caret-down-fill',
+              size: '2xs',
+              path: _icon_path,
+              attributes: create_attribute().addClass('ms-2-5'),
+            } only %}
+          <span>
+        </a>
+      </div>
+    {% endif %}
   </div>
 {% endif %}
 {% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
