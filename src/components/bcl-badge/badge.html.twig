@@ -30,9 +30,9 @@
 {% endif %}
 
 {% if _outline %}
-  {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
+  {% set _classes = _classes|merge(['badge-outline-' ~ _background]) %}
 {% else %}
-  {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
+  {% set _classes = _classes|merge(['text-bg-' ~ _background]) %}
 {% endif %}
 
 {% if attributes is empty %}

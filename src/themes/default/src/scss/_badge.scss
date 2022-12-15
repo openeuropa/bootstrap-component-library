@@ -36,16 +36,10 @@ a.badge {
 }
 
 @each $color, $value in $theme-colors {
-  .badge.bg-#{$color} a,
-  .badge.bg-#{$color} {
-    @if $color == light or $color == warning {
-      color: $black;
-    } @else {
-      color: $white;
-    }
-    .icon--close {
-      color: $value;
-      @if $color == light or $color == warning {
+  @if $color == light or $color == warning {
+    .badge.text-bg-#{$color} a,
+    .badge.text-bg-#{$color} {
+      .icon--close {
         background: $black;
       }
     }
@@ -88,11 +82,11 @@ a.badge {
           border-color: shade-color($value, 15%) !important;
         }
       }
-      &.bg-#{$color} {
+      &.text-bg-#{$color} {
         background-color: shade-color($value, 15%) !important;
       }
     }
-    &.badge.bg-#{$color} {
+    &.text-bg-#{$color} {
       &:focus {
         @if $enable-shadows {
           @include box-shadow(
