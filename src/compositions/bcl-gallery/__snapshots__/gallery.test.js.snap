@@ -20,7 +20,7 @@ exports[`OE - Gallery default renders correctly 1`] = `
       <div
         class="mb-3 mb-sm-0 fw-bold"
       >
-        (13) medias
+        (10) medias
       </div>
     </div>
     <div
@@ -372,139 +372,52 @@ exports[`OE - Gallery default renders correctly 1`] = `
             </a>
           </li>
         </ul>
-        <ul
-          class="bcl-gallery__grid"
-        >
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="10"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <div
-                  class="bcl-gallery__item-caption"
-                >
-                  <p
-                    class="fs-5"
-                  >
-                    Last slide label
-                  </p>
-                  <div
-                    class="bcl-gallery__item-description"
-                  >
-                    <p>
-                      Some representative placeholder content for the last slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1077/400/400"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="11"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <span
-                  class="bcl-gallery__item-play-icon"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#play-fill"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="bcl-gallery__item-caption"
-                >
-                  <p
-                    class="fs-5"
-                  >
-                    Slide label
-                  </p>
-                  <div
-                    class="bcl-gallery__item-description"
-                  >
-                    <p>
-                      Some representative placeholder content for the slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1012/400/400"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="12"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <span
-                  class="bcl-gallery__item-play-icon"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#play-fill"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1081/400/400"
-              />
-            </a>
-          </li>
-        </ul>
       </div>
-      <div
-        class="bg-lighter py-3 px-4 mt-2 rounded text-center"
+    </div>
+    <div
+      class="bg-lighter py-3 px-4 mt-2 rounded text-center"
+    >
+      <a
+        aria-controls="collapseGalleryExample"
+        aria-expanded="false"
+        class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
+        data-bs-toggle="collapse"
+        href="#collapseGalleryExample"
+        role="button"
       >
-        <a
-          aria-controls="collapseGalleryExample"
-          aria-expanded="false"
-          class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
-          data-bs-toggle="collapse"
-          href="#collapseGalleryExample"
-          role="button"
+        <span
+          class="label-collapsed"
+        >
+          view the full gallery (10)
+        </span>
+        <span
+          class="label-expanded"
+        >
+          view less
+        </span>
+        <svg
+          class="ms-2-5 bi icon--2xs"
+        >
+          <use
+            xlink:href="/icons.svg#caret-down-fill"
+          />
+        </svg>
+      </a>
+      <a
+        class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
+        data-bs-slide-to="5"
+        data-bs-target="#carouselGalleryExample"
+        href="#"
+        role="button"
+      >
+        <span
+          data-bs-target="#modalGalleryExample"
+          data-bs-toggle="modal"
         >
           <span
             class="label-collapsed"
           >
-            view the full gallery (13)
-          </span>
-          <span
-            class="label-expanded"
-          >
-            view less
+            view the full gallery (10)
           </span>
           <svg
             class="ms-2-5 bi icon--2xs"
@@ -513,34 +426,9 @@ exports[`OE - Gallery default renders correctly 1`] = `
               xlink:href="/icons.svg#caret-down-fill"
             />
           </svg>
-        </a>
-        <a
-          class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
-          data-bs-slide-to="5"
-          data-bs-target="#carouselGalleryExample"
-          href="#"
-          role="button"
-        >
-          <span
-            data-bs-target="#modalGalleryExample"
-            data-bs-toggle="modal"
-          >
-            <span
-              class="label-collapsed"
-            >
-              view the full gallery (13)
-            </span>
-            <svg
-              class="ms-2-5 bi icon--2xs"
-            >
-              <use
-                xlink:href="/icons.svg#caret-down-fill"
-              />
-            </svg>
-            <span />
-          </span>
-        </a>
-      </div>
+          <span />
+        </span>
+      </a>
     </div>
     <div
       aria-hidden="true"
@@ -574,7 +462,7 @@ exports[`OE - Gallery default renders correctly 1`] = `
               <span>
                 1
               </span>
-               / 13
+               / 10
             </div>
             <div
               class="modal-close"
@@ -644,6 +532,15 @@ exports[`OE - Gallery default renders correctly 1`] = `
                     data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
                     frameborder="0"
                   />
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                  </div>
                 </div>
                 <div
                   class="carousel-item"
@@ -785,352 +682,6 @@ exports[`OE - Gallery default renders correctly 1`] = `
                       Some representative placeholder content for the last slide.
                     </p>
                   </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1077/800/400"
-                  />
-                  <div
-                    class="carousel-caption d-none d-md-block"
-                  >
-                    <p
-                      class="fs-5"
-                    >
-                      Last slide label
-                    </p>
-                    <p>
-                      Some representative placeholder content for the last slide.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
-                  >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                data-bs-slide="prev"
-                data-bs-target="#carouselGalleryExample"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="carousel-control-prev-icon"
-                />
-                <span
-                  class="visually-hidden"
-                >
-                  Previous
-                </span>
-              </button>
-              <button
-                class="carousel-control-next"
-                data-bs-slide="next"
-                data-bs-target="#carouselGalleryExample"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="carousel-control-next-icon"
-                />
-                <span
-                  class="visually-hidden"
-                >
-                  Next
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</jest>
-`;
-
-exports[`OE - Gallery renders correctly with less than 5 items 1`] = `
-<jest>
-  <div
-    class="bcl-gallery"
-  >
-    <div
-      class="d-sm-flex flex-sm-row align-items-sm-center"
-    >
-      <div
-        class="flex-sm-grow-1"
-      >
-        <h2
-          class="mb-4 bcl-heading"
-        >
-          Media gallery title
-        </h2>
-      </div>
-      <div
-        class="mb-3 mb-sm-0 fw-bold"
-      >
-        (3) medias
-      </div>
-    </div>
-    <div
-      class="bcl-gallery__thumbnails"
-    >
-      <ul
-        class="bcl-gallery__grid"
-      >
-        <li>
-          <a
-            class="bcl-gallery__item d-block w-100 img-fluid"
-            data-bs-slide-to="0"
-            data-bs-target="#carouselGalleryExample"
-          >
-            <div
-              class="bcl-gallery__item-overlay"
-              data-bs-target="#modalGalleryExample"
-              data-bs-toggle="modal"
-            >
-              <div
-                class="bcl-gallery__item-caption"
-              >
-                <p
-                  class="fs-5"
-                >
-                  First slide label
-                </p>
-                <div
-                  class="bcl-gallery__item-description"
-                >
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <img
-              alt="First slide"
-              src="https://picsum.photos/id/1005/400/400"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            class="bcl-gallery__item d-block w-100 img-fluid"
-            data-bs-slide-to="1"
-            data-bs-target="#carouselGalleryExample"
-          >
-            <div
-              class="bcl-gallery__item-overlay"
-              data-bs-target="#modalGalleryExample"
-              data-bs-toggle="modal"
-            >
-              <div
-                class="bcl-gallery__item-caption"
-              >
-                <p
-                  class="fs-5"
-                >
-                  Slide label
-                </p>
-                <div
-                  class="bcl-gallery__item-description"
-                >
-                  <p>
-                    Some representative placeholder content for the slide.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <img
-              alt="slide"
-              src="https://picsum.photos/id/101/400/400"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            class="bcl-gallery__item d-block w-100 img-fluid"
-            data-bs-slide-to="2"
-            data-bs-target="#carouselGalleryExample"
-          >
-            <div
-              class="bcl-gallery__item-overlay"
-              data-bs-target="#modalGalleryExample"
-              data-bs-toggle="modal"
-            >
-              <span
-                class="bcl-gallery__item-play-icon"
-              >
-                <svg
-                  class="bi icon--s"
-                >
-                  <use
-                    xlink:href="/icons.svg#play-fill"
-                  />
-                </svg>
-              </span>
-              <div
-                class="bcl-gallery__item-caption"
-              >
-                <p
-                  class="fs-5"
-                >
-                  Slide label
-                </p>
-                <div
-                  class="bcl-gallery__item-description"
-                >
-                  <p>
-                    Some representative placeholder content for the slide.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <img
-              alt="slide"
-              src="https://picsum.photos/id/1012/400/400"
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      aria-hidden="true"
-      aria-labelledby="modalGalleryExample"
-      class="modal"
-      data-bs-backdrop="false"
-      id="modalGalleryExample"
-      tabindex="-1"
-    >
-      <div
-        class="modal-dialog modal-dialog-centered modal-fullscreen"
-      >
-        <div
-          class="modal-content"
-        >
-          <div
-            class="modal-header border-0 justify-content-between"
-          >
-            <div
-              class="modal-title"
-            >
-              <h3
-                class="d-sm-block d-none bcl-heading"
-              >
-                Media gallery title
-              </h3>
-            </div>
-            <div
-              class="carousel-pager"
-            >
-              <span>
-                1
-              </span>
-               / 3
-            </div>
-            <div
-              class="modal-close"
-            >
-              <button
-                aria-label="Close"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                type="button"
-              />
-            </div>
-          </div>
-          <div
-            class="modal-body d-flex align-items-center justify-content-center"
-          >
-            <div
-              class="carousel slide"
-              id="carouselGalleryExample"
-            >
-              <div
-                class="carousel-inner"
-              >
-                <div
-                  class="carousel-item active"
-                >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1005/800/400"
-                  />
-                  <div
-                    class="carousel-caption d-none d-md-block"
-                  >
-                    <p
-                      class="fs-5"
-                    >
-                      First slide label
-                    </p>
-                    <p>
-                      Some representative placeholder content for the first slide.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/101/800/400"
-                  />
-                  <div
-                    class="carousel-caption d-none d-md-block"
-                  >
-                    <p
-                      class="fs-5"
-                    >
-                      Slide label
-                    </p>
-                    <p>
-                      Some representative placeholder content for the slide.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
                 </div>
               </div>
               <button
@@ -1544,139 +1095,52 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
             </a>
           </li>
         </ul>
-        <ul
-          class="bcl-gallery__grid"
-        >
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="10"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <div
-                  class="bcl-gallery__item-caption"
-                >
-                  <p
-                    class="fs-5"
-                  >
-                    Last slide label
-                  </p>
-                  <div
-                    class="bcl-gallery__item-description"
-                  >
-                    <p>
-                      Some representative placeholder content for the last slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1077/400/400"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="11"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <span
-                  class="bcl-gallery__item-play-icon"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#play-fill"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="bcl-gallery__item-caption"
-                >
-                  <p
-                    class="fs-5"
-                  >
-                    Slide label
-                  </p>
-                  <div
-                    class="bcl-gallery__item-description"
-                  >
-                    <p>
-                      Some representative placeholder content for the slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1012/400/400"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="12"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <span
-                  class="bcl-gallery__item-play-icon"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#play-fill"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1081/400/400"
-              />
-            </a>
-          </li>
-        </ul>
       </div>
-      <div
-        class="bg-lighter py-3 px-4 mt-2 rounded text-center"
+    </div>
+    <div
+      class="bg-lighter py-3 px-4 mt-2 rounded text-center"
+    >
+      <a
+        aria-controls="collapseGalleryExample"
+        aria-expanded="false"
+        class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
+        data-bs-toggle="collapse"
+        href="#collapseGalleryExample"
+        role="button"
       >
-        <a
-          aria-controls="collapseGalleryExample"
-          aria-expanded="false"
-          class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
-          data-bs-toggle="collapse"
-          href="#collapseGalleryExample"
-          role="button"
+        <span
+          class="label-collapsed"
+        >
+          view the full gallery (10)
+        </span>
+        <span
+          class="label-expanded"
+        >
+          view less
+        </span>
+        <svg
+          class="ms-2-5 bi icon--2xs"
+        >
+          <use
+            xlink:href="/icons.svg#caret-down-fill"
+          />
+        </svg>
+      </a>
+      <a
+        class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
+        data-bs-slide-to="5"
+        data-bs-target="#carouselGalleryExample"
+        href="#"
+        role="button"
+      >
+        <span
+          data-bs-target="#modalGalleryExample"
+          data-bs-toggle="modal"
         >
           <span
             class="label-collapsed"
           >
-            view the full gallery (13)
-          </span>
-          <span
-            class="label-expanded"
-          >
-            view less
+            view the full gallery (10)
           </span>
           <svg
             class="ms-2-5 bi icon--2xs"
@@ -1685,34 +1149,9 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
               xlink:href="/icons.svg#caret-down-fill"
             />
           </svg>
-        </a>
-        <a
-          class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
-          data-bs-slide-to="5"
-          data-bs-target="#carouselGalleryExample"
-          href="#"
-          role="button"
-        >
-          <span
-            data-bs-target="#modalGalleryExample"
-            data-bs-toggle="modal"
-          >
-            <span
-              class="label-collapsed"
-            >
-              view the full gallery (13)
-            </span>
-            <svg
-              class="ms-2-5 bi icon--2xs"
-            >
-              <use
-                xlink:href="/icons.svg#caret-down-fill"
-              />
-            </svg>
-            <span />
-          </span>
-        </a>
-      </div>
+          <span />
+        </span>
+      </a>
     </div>
     <div
       aria-hidden="true"
@@ -1746,7 +1185,7 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
               <span>
                 1
               </span>
-               / 13
+               / 10
             </div>
             <div
               class="modal-close"
@@ -1816,6 +1255,15 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                     data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
                     frameborder="0"
                   />
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                  </div>
                 </div>
                 <div
                   class="carousel-item"
@@ -1958,63 +1406,6 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                     </p>
                   </div>
                 </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1077/800/400"
-                  />
-                  <div
-                    class="carousel-caption d-none d-md-block"
-                  >
-                    <p
-                      class="fs-5"
-                    >
-                      Last slide label
-                    </p>
-                    <p>
-                      Some representative placeholder content for the last slide.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
-                  >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
-                </div>
               </div>
               <button
                 class="carousel-control-prev"
@@ -2082,7 +1473,7 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
       <div
         class="mb-3 mb-sm-0 fw-bold"
       >
-        (13) medias
+        (10) medias
       </div>
     </div>
     <div
@@ -2434,139 +1825,52 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
             </a>
           </li>
         </ul>
-        <ul
-          class="bcl-gallery__grid"
-        >
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="10"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <div
-                  class="bcl-gallery__item-caption"
-                >
-                  <p
-                    class="fs-5"
-                  >
-                    Last slide label
-                  </p>
-                  <div
-                    class="bcl-gallery__item-description"
-                  >
-                    <p>
-                      Some representative placeholder content for the last slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1077/400/400"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="11"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <span
-                  class="bcl-gallery__item-play-icon"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#play-fill"
-                    />
-                  </svg>
-                </span>
-                <div
-                  class="bcl-gallery__item-caption"
-                >
-                  <p
-                    class="fs-5"
-                  >
-                    Slide label
-                  </p>
-                  <div
-                    class="bcl-gallery__item-description"
-                  >
-                    <p>
-                      Some representative placeholder content for the slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1012/400/400"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              class="bcl-gallery__item d-block w-100 img-fluid"
-              data-bs-slide-to="12"
-              data-bs-target="#carouselGalleryExample"
-            >
-              <div
-                class="bcl-gallery__item-overlay"
-                data-bs-target="#modalGalleryExample"
-                data-bs-toggle="modal"
-              >
-                <span
-                  class="bcl-gallery__item-play-icon"
-                >
-                  <svg
-                    class="bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#play-fill"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <img
-                alt="slide"
-                src="https://picsum.photos/id/1081/400/400"
-              />
-            </a>
-          </li>
-        </ul>
       </div>
-      <div
-        class="bg-lighter py-3 px-4 mt-2 rounded text-center"
+    </div>
+    <div
+      class="bg-lighter py-3 px-4 mt-2 rounded text-center"
+    >
+      <a
+        aria-controls="collapseGalleryExample"
+        aria-expanded="false"
+        class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
+        data-bs-toggle="collapse"
+        href="#collapseGalleryExample"
+        role="button"
       >
-        <a
-          aria-controls="collapseGalleryExample"
-          aria-expanded="false"
-          class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
-          data-bs-toggle="collapse"
-          href="#collapseGalleryExample"
-          role="button"
+        <span
+          class="label-collapsed"
+        >
+          view the full gallery (10)
+        </span>
+        <span
+          class="label-expanded"
+        >
+          view less
+        </span>
+        <svg
+          class="ms-2-5 bi icon--2xs"
+        >
+          <use
+            xlink:href="/icons.svg#caret-down-fill"
+          />
+        </svg>
+      </a>
+      <a
+        class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
+        data-bs-slide-to="5"
+        data-bs-target="#carouselGalleryExample"
+        href="#"
+        role="button"
+      >
+        <span
+          data-bs-target="#modalGalleryExample"
+          data-bs-toggle="modal"
         >
           <span
             class="label-collapsed"
           >
-            view the full gallery (13)
-          </span>
-          <span
-            class="label-expanded"
-          >
-            view less
+            view the full gallery (10)
           </span>
           <svg
             class="ms-2-5 bi icon--2xs"
@@ -2575,34 +1879,9 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
               xlink:href="/icons.svg#caret-down-fill"
             />
           </svg>
-        </a>
-        <a
-          class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
-          data-bs-slide-to="5"
-          data-bs-target="#carouselGalleryExample"
-          href="#"
-          role="button"
-        >
-          <span
-            data-bs-target="#modalGalleryExample"
-            data-bs-toggle="modal"
-          >
-            <span
-              class="label-collapsed"
-            >
-              view the full gallery (13)
-            </span>
-            <svg
-              class="ms-2-5 bi icon--2xs"
-            >
-              <use
-                xlink:href="/icons.svg#caret-down-fill"
-              />
-            </svg>
-            <span />
-          </span>
-        </a>
-      </div>
+          <span />
+        </span>
+      </a>
     </div>
     <div
       aria-hidden="true"
@@ -2636,7 +1915,7 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
               <span>
                 1
               </span>
-               / 13
+               / 10
             </div>
             <div
               class="modal-close"
@@ -2706,6 +1985,15 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                     data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
                     frameborder="0"
                   />
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                  </div>
                 </div>
                 <div
                   class="carousel-item"
@@ -2847,63 +2135,6 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                       Some representative placeholder content for the last slide.
                     </p>
                   </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1077/800/400"
-                  />
-                  <div
-                    class="carousel-caption d-none d-md-block"
-                  >
-                    <p
-                      class="fs-5"
-                    >
-                      Last slide label
-                    </p>
-                    <p>
-                      Some representative placeholder content for the last slide.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
-                  >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
                 </div>
               </div>
               <button
