@@ -33,7 +33,7 @@
 {% else %}
   {% if _icon_html is not empty %}
     {% set _label %}
-      <span aria-hidden="true">{{ _icon_html }}</span>
+      <span aria-hidden="true">{{- _icon_html -}}</span>
     {% endset %}
   {% endif %}
 {% endif %}
@@ -56,12 +56,18 @@
   {% set attributes = attributes.setAttribute('aria-current', 'page' ) %}
 {% endif %}
 
-{%- include '@oe-bcl/bcl-link/link.html.twig' with {
-  label: _label,
-  path: _path,
-  disabled: _disabled,
-  icon: _icon,
-  attributes: attributes.addClass(_classes),
-} only -%}
+{% set attributes = attributes.addClass(_classes) %}
+
+{% if _path %}
+  {%- include '@oe-bcl/bcl-link/link.html.twig' with {
+    label: _label,
+    path: _path,
+    disabled: _disabled,
+    icon: _icon,
+    attributes: attributes,
+  } only -%}
+{% else %}
+  <div {{ attributes }}>{{- _label -}}</div>
+{% endif %}
 
 {% endapply %}
