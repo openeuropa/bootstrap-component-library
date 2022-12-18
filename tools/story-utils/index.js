@@ -357,6 +357,24 @@ export const initBadges = (story) => {
   ${demo}`;
 };
 
+export const initListings = (story) => {
+  const demo = story();
+  return `
+    <script>
+      var multiselects = document.querySelectorAll(".multi-select");
+      if (multiselects) {
+        multiselects.forEach(element => {
+          new SlimSelect({
+            select: element,
+            selectByGroup: true,
+            placeholder: "Please select a value",
+          });
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
 export const initTooltip = (story) => {
   const demo = story();
   return `

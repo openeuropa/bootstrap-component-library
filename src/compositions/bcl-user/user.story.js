@@ -1,6 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
+import {
+  correctPaths,
+  initBadges,
+  initListings,
+} from "@openeuropa/bcl-story-utils";
 
 import {
   dataListing,
@@ -30,7 +34,7 @@ const cancelTab = (story) => {
 
 export default {
   title: "Features/Users",
-  decorators: [withCode, withDesign, cancelTab],
+  decorators: [withCode, withDesign, cancelTab, initListings],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
