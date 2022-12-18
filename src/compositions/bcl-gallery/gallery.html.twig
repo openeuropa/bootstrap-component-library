@@ -15,16 +15,17 @@ Parameters:
   - max_visible_thumbnails (int) (default: 5)
   - items (array of objects) format: [
       {
-        thumbnails (string) img path
+        thumbnail (string) img path
         media: (string) <img> tag
         caption (string)
         caption_title (string)
-        caption_classes (string)
-        interval (integer) (default: 0)
       }
     ]
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
+
+  Blocks:
+    carousel
 #}
 
 {% set _id = id|default('gallery-' ~ random(1000)) %}
@@ -44,6 +45,8 @@ Parameters:
 {% set _modal_id = "modal" ~ _id|capitalize %}
 {% set _collapse_id = "collapse" ~ _id|capitalize %}
 {% set _max_visible_thumbnails = _max_visible_thumbnails + 1 %}
+{% set _carousel_items = [] %}
+{% set _loop_counter = 0 %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -51,10 +54,11 @@ Parameters:
 
 {% set attributes = attributes.addClass('bcl-gallery') %}
 
+{% if _items is not empty and _items is iterable %}
 <div
   {{ attributes }}
 >
-{% if _title is not empty or _counter is not empty %}
+  {% if _title is not empty or _counter is not empty %}
   <div class="d-sm-flex flex-sm-row align-items-sm-center">
   {% if _title is not empty %}
     <div class="flex-sm-grow-1">
@@ -72,83 +76,134 @@ Parameters:
     </div>
   {%- endif -%}
   </div>
-{% endif %}
-{% if _items is not empty and _items is iterable %}
-{% for _item in _items %}
-  {% if loop.first %}
+  {% endif %}
   <div class="bcl-gallery__thumbnails">
-  {% endif %}
-  {% if loop.index == _max_visible_thumbnails %}
-    <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapse_id }}">
-  {% endif %}
-    {% if loop.index % _max_visible_thumbnails == 0 or loop.first %}
-      <ul class="bcl-gallery__grid">
-    {% endif %}
-        <li>
-        {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
-          item: _item,
-          carousel_id: _carousel_id,
-          modal_id: _modal_id,
-          icon_path: _icon_path,
-          loop: loop,
-        } only %}
-        </li>
-    {% if loop.index % 5 == 0 or loop.last %}
-      </ul>
-    {% endif %}  
-  {% if loop.last %}
-    </div>
-  {% endif %}
-  {% if loop.index > _max_visible_thumbnails and loop.last %}
-  </div>
-  <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
-    <a
-      class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
-      aria-controls="{{ _collapse_id }}"
-      data-bs-toggle="collapse"
-      aria-expanded="false"
-      role="button"
-      href="#{{ _collapse_id }}"
-    >
-      <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
-      <span class="label-expanded">{{ _toggle_expanded }}</span>
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-        name: 'caret-down-fill',
-        size: '2xs',
-        path: _icon_path,
-        attributes: create_attribute().addClass('ms-2-5'),
+    <ul class="bcl-gallery__grid">
+    {% for _item in _items|slice(0, _max_visible_thumbnails - 1) %}
+      {% set _loop_counter = _loop_counter + 1 %}
+      <li>
+      {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+        item: _item,
+        carousel_id: _carousel_id,
+        modal_id: _modal_id,
+        icon_path: _icon_path,
+        loop_counter: _loop_counter,
       } only %}
-    </a>
-    <a
-      class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
-      data-bs-target="#{{ _carousel_id }}"
-      data-bs-slide-to="{{ _max_visible_thumbnails - 1 }}"
-      role="button"
-      href="#"
-    >
-      <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-        <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
-        {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-          name: 'caret-down-fill',
-          size: '2xs',
-          path: _icon_path,
-          attributes: create_attribute().addClass('ms-2-5'),
-        } only %}
-      <span>
-    </a>
+      </li>
+    {% endfor %}
+    </ul>
+    {% if _items|length > _max_visible_thumbnails %}
+      <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapse_id }}">
+        <ul class="bcl-gallery__grid">
+        {% for _item in _items|slice(_max_visible_thumbnails - 1, _items|length) %}
+          {% set _loop_counter = _loop_counter + 1 %}
+          <li>
+          {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+            item: _item,
+            carousel_id: _carousel_id,
+            modal_id: _modal_id,
+            icon_path: _icon_path,
+            loop_counter: _loop_counter,
+          } only %}
+          </li>
+          {% if loop.index % 5 == 0 and not loop.last %}
+            </ul><ul class="bcl-gallery__grid">
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
+        <a
+          class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
+          aria-controls="{{ _collapse_id }}"
+          data-bs-toggle="collapse"
+          aria-expanded="false"
+          role="button"
+          href="#{{ _collapse_id }}"
+        >
+          <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
+          <span class="label-expanded">{{ _toggle_expanded }}</span>
+          {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+            name: 'caret-down-fill',
+            size: '2xs',
+            path: _icon_path,
+            attributes: create_attribute().addClass('ms-2-5'),
+          } only %}
+        </a>
+        <a
+          class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
+          data-bs-target="#{{ _carousel_id }}"
+          data-bs-slide-to="{{ _max_visible_thumbnails - 1 }}"
+          role="button"
+          href="#"
+        >
+          <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+            <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
+            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+              name: 'caret-down-fill',
+              size: '2xs',
+              path: _icon_path,
+              attributes: create_attribute().addClass('ms-2-5'),
+            } only %}
+          <span>
+        </a>
+      </div>
+    {% endif %}
   </div>
-  {% endif %}
-{% endfor %}
-{% endif %}
-{% include '@oe-bcl/bcl-gallery/gallery-modal.html.twig' with {
-  id: _modal_id,
-  carousel_id: _carousel_id,
-  next_label: _next_label,
-  prev_label: _prev_label,
-  title: _title,
-  items: _items,
-  icon_path: _icon_path
-} only %}
+  <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header border-0 justify-content-between">
+        {% if _title is not empty %}
+          <div class="modal-title">
+            {% if _title is not empty %}
+              {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+                title: _title,
+                title_tag: 'h3',
+                attributes: create_attribute().addClass(['d-sm-block', 'd-none']),
+              } only %}
+            {% endif %}
+          </div>
+        {% endif %}
+          <div class="carousel-pager">
+            <span>1</span> / {{ _items|length -}}
+          </div>
+          <div class="modal-close">
+            {% set button_attributes = create_attribute()
+                                      .addClass('btn-close')
+                                      .setAttribute('aria-label', 'Close')
+                                      .setAttribute('data-bs-dismiss', 'modal')
+            %}
+            {% include '@oe-bcl/bcl-button/button.html.twig' with {
+              clean_class: true,
+              attributes: button_attributes
+            } only %}
+          </div>
+        </div>
+        <div class="modal-body d-flex align-items-center justify-content-center">
+        {% block carousel %}
+          {% for _item in _items %}
+            {% set _carousel_items = _carousel_items|merge([_item|merge({
+              caption_title: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption_title,
+              caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
+              image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
+            })]) %}
+          {% endfor %}
+          {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
+            id: _carousel_id,
+            with_controls: true,
+            with_indicators: false,
+            prev_label: _prev_label,
+            next_label: _next_label,
+            autoplay: false,
+            items: _carousel_items,
+          } only %}
+        {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+{% endif %}
 
 {% endapply %}
