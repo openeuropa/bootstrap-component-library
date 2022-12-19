@@ -33,11 +33,11 @@ const cancelTab = (story) => {
   const demo = story();
   return `
     <script>
-      document.getElementById("cancel-btn").onclick = function () { 
-        var cancelTrigger = document.querySelector('[data-bs-target="#cancel"]')
-        var cancelTab = new bootstrap.Tab(cancelTrigger)
+      document.getElementById("cancel-btn").onclick = function () {
+        var cancelTrigger = document.querySelector('[data-bs-target="#cancel"]');
+        var cancelTab = new bootstrap.Tab(cancelTrigger);
       
-        cancelTab.show()
+        cancelTab.show();
       };
     </script>
   ${demo}`;
