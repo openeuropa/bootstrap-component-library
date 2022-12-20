@@ -12,32 +12,32 @@ const chromatic = process.env.STORYBOOK_ENV;
 const clientValidation = (story) => {
   const demo = story();
   return `<script>
-  var backdrop = document.getElementsByClassName('modal-backdrop')[0];
-  if (typeof(backdrop) != 'undefined' && backdrop != null) {
-    backdrop.remove();
-    document.body.removeAttribute("style")
-  }
-
-  var submit = document.querySelector('.form-submit');
-  var successAlert = document.querySelector('.success-alert');
-  var errorAlert = document.querySelector('.error-alert');
-  var form = document.querySelector('.needs-validation');
-
-  submit.addEventListener('click', function () {
-    successAlert.classList.add("d-none")
-    errorAlert.classList.add("d-none")
-    if (!form.checkValidity()) {
-      event.preventDefault()
-      event.stopPropagation()
-      errorAlert.classList.remove("d-none")
-    } else {
-      successAlert.classList.remove("d-none")
-      form.closest('.modal-body').remove();
-      submit.classList.add('d-none')
+    var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+    if (typeof backdrop != "undefined" && backdrop != null) {
+      backdrop.remove();
+      document.body.removeAttribute("style");
     }
     
-    form.classList.add('was-validated')
-  });
+    var submit = document.querySelector(".form-submit");
+    var successAlert = document.querySelector(".success-alert");
+    var errorAlert = document.querySelector(".error-alert");
+    var form = document.querySelector(".needs-validation");
+    
+    submit.addEventListener("click", function () {
+      successAlert.classList.add("d-none");
+      errorAlert.classList.add("d-none");
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        errorAlert.classList.remove("d-none");
+      } else {
+        successAlert.classList.remove("d-none");
+        form.closest(".modal-body").remove();
+        submit.classList.add("d-none");
+      }
+    
+      form.classList.add("was-validated");
+    });
   </script>${demo}`;
 };
 
@@ -46,12 +46,14 @@ const openModal = (story) => {
   return `
     ${demo}
     <script>
-      var backdrop = document.getElementsByClassName('modal-backdrop')[0];
-      if (typeof(backdrop) != 'undefined' && backdrop != null) {
-        backdrop.remove()
+      var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+      if (typeof backdrop != "undefined" && backdrop != null) {
+        backdrop.remove();
       }
-      var subscribeModal = new bootstrap.Modal(document.getElementById('subscribeModal'))
-      subscribeModal.show()
+      var subscribeModal = new bootstrap.Modal(
+        document.getElementById("subscribeModal")
+      );
+      subscribeModal.show();
     </script>
     `;
 };
@@ -61,13 +63,13 @@ const successState = (story) => {
   return `
     ${demo}
     <script>
-      var submit = document.querySelector('.form-submit');
-      var successAlert = document.querySelector('.success-alert');
-      var form = document.querySelector('.needs-validation');
-
-      successAlert.classList.remove("d-none")
-      form.closest('.modal-body').remove();
-      submit.classList.add('d-none')
+      var submit = document.querySelector(".form-submit");
+      var successAlert = document.querySelector(".success-alert");
+      var form = document.querySelector(".needs-validation");
+      
+      successAlert.classList.remove("d-none");
+      form.closest(".modal-body").remove();
+      submit.classList.add("d-none");
     </script>
     `;
 };
@@ -77,11 +79,11 @@ const errorState = (story) => {
   return `
     ${demo}
     <script>
-      var errorAlert = document.querySelector('.error-alert');
-      var form = document.querySelector('.needs-validation');
-    
-      errorAlert.classList.remove("d-none")
-      form.classList.add('was-validated')
+      var errorAlert = document.querySelector(".error-alert");
+      var form = document.querySelector(".needs-validation");
+      
+      errorAlert.classList.remove("d-none");
+      form.classList.add("was-validated");
     </script>
     `;
 };
