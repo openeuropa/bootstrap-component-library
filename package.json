@@ -25,7 +25,7 @@
     "changelog": "lerna-changelog",
     "clean": "rimraf build assets",
     "clean:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run clean",
-    "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js static/* assets/ && copyfiles -u 3 src/themes/**/fonts/* assets && copyfiles -u 3 src/themes/**/fonts/files/* assets",
+    "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js src/themes/default/src/js/tooltip/tooltip.js static/* assets/ && copyfiles -u 3 src/themes/**/fonts/* assets && copyfiles -u 3 src/themes/**/fonts/files/* assets",
     "copy:index": "copyfiles -f static/*.html static/*.ico build",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",

@@ -73,11 +73,7 @@ const getArgTypes = (data, type) => {
     type: {
       type: { name: "select" },
       description: "Type of the button",
-      options: {
-        Button: "button",
-        Submit: "submit",
-        Reset: "reset",
-      },
+      options: ["button", "submit", "reset"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "button" },
@@ -117,7 +113,7 @@ const getArgTypes = (data, type) => {
     size: {
       type: { name: "select" },
       description: "Size of the button",
-      options: { small: "sm", medium: "md", large: "lg" },
+      options: ["sm", "md", "lg"],
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "md" },
