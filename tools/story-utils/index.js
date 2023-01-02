@@ -324,7 +324,9 @@ export const initScrollspy = (story) => {
   const demo = story();
   return `
     <script>
-      var element = document.getElementById("bcl-inpage-navigation") || document.getElementById("scrollspy");
+      var element =
+        document.getElementById("bcl-inpage-navigation") ||
+        document.getElementById("scrollspy");
       if (element && typeof bootstrap !== "undefined") {
         document.body.setAttribute("data-bs-spy", "scroll");
         document.body.setAttribute("data-bs-target", "#" + element.id + "");
@@ -345,12 +347,12 @@ export const initBadges = (story) => {
   return `
     <script>
       var badges = document.querySelectorAll(".badge");
-      badges.forEach(element => {
-        var close = element.getElementsByTagName('button')[0];
-        if(close) {
-          close.addEventListener('click', event => {
+      badges.forEach((element) => {
+        var close = element.getElementsByTagName("button")[0];
+        if (close) {
+          close.addEventListener("click", (event) => {
             close.parentElement.remove();
-          })
+          });
         }
       });
     </script>
@@ -363,7 +365,7 @@ export const initListings = (story) => {
     <script>
       var multiselects = document.querySelectorAll(".multi-select");
       if (multiselects) {
-        multiselects.forEach(element => {
+        multiselects.forEach((element) => {
           new SlimSelect({
             select: element,
             selectByGroup: true,
