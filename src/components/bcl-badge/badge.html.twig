@@ -16,7 +16,7 @@
 {% set _label = label|default('') %}
 {% set _background = background|default('primary') %}
 {% set _url = url|default('') %}
-{% set _title = title|default(_label) %}
+{% set _title = title|default('') %}
 {% set _dismissible = dismissible|default(false) %}
 {% set _assistive_text = assistive_text|default('') %}
 {% set _rounded_pill = rounded_pill|default(false) %}
@@ -38,7 +38,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{%- if _url is not empty -%}
+{%- if _title is not empty -%}
   {% set attributes = attributes.setAttribute('title', _title) %}
 {%- endif -%}
 
