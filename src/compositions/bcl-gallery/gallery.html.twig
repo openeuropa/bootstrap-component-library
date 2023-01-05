@@ -44,9 +44,7 @@ Parameters:
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
 {% set _modal_id = "modal" ~ _id|capitalize %}
 {% set _collapse_id = "collapse" ~ _id|capitalize %}
-{% set _max_visible_thumbnails = _max_visible_thumbnails + 1 %}
 {% set _carousel_items = [] %}
-{% set _loop_counter = 0 %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -78,40 +76,28 @@ Parameters:
   </div>
   {% endif %}
   <div class="bcl-gallery__thumbnails">
-    <ul class="bcl-gallery__grid">
-    {% for _item in _items|slice(0, _max_visible_thumbnails - 1) %}
-      {% set _loop_counter = _loop_counter + 1 %}
-      <li>
-      {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
-        item: _item,
-        carousel_id: _carousel_id,
-        modal_id: _modal_id,
-        icon_path: _icon_path,
-        loop_counter: _loop_counter,
-      } only %}
-      </li>
-    {% endfor %}
-    </ul>
-    {% if _items|length > _max_visible_thumbnails %}
+  {% for _batch in _items|batch(_max_visible_thumbnails) %}
+    {% if loop.index0 == 1 %}
       <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapse_id }}">
-        <ul class="bcl-gallery__grid">
-        {% for _item in _items|slice(_max_visible_thumbnails - 1, _items|length) %}
-          {% set _loop_counter = _loop_counter + 1 %}
+    {% endif %}
+      <ul class="bcl-gallery__grid">
+        {% for _item in _batch %}
           <li>
           {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
             item: _item,
             carousel_id: _carousel_id,
             modal_id: _modal_id,
             icon_path: _icon_path,
-            loop_counter: _loop_counter,
+            carousel_anchor: loop.index0 + (_max_visible_thumbnails * loop.parent.loop.index0),
           } only %}
           </li>
-          {% if loop.index % 5 == 0 and not loop.last %}
-            </ul><ul class="bcl-gallery__grid">
-          {% endif %}
         {% endfor %}
-        </ul>
+      </ul>
+    {% if loop.last and loop.index0 >= 1 %}
       </div>
+    {% endif %}
+  {% endfor %}
+    {% if _items|length > _max_visible_thumbnails %}
       <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
         <a
           class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
