@@ -4,15 +4,15 @@
 Parameters:
   - item (object) (default: '')
     format: {
-      thumbnails (string) img path
+      thumbnail (string) img path
       media: (string) <img> tag
       caption (string)
       caption_title (string)
-      caption_classes (string)
-      interval (integer) (default: 0)
+      is_playable (boolean)
     }
   - carousel_id (string) (default: '')
   - modal_id (string) (default: '')
+  - carousel_anchor (string) (default: '')
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
 #}
@@ -21,6 +21,7 @@ Parameters:
 {% set _carousel_id = carousel_id|default('') %}
 {% set _modal_id = modal_id|default('') %}
 {% set _icon_path = icon_path|default('') %}
+{% set _carousel_anchor = carousel_anchor|default('') %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -28,14 +29,14 @@ Parameters:
 
 {% set attributes = attributes.addClass(['bcl-gallery__item', 'd-block', 'w-100', 'img-fluid'])
                               .setAttribute('data-bs-target', '#' ~ _carousel_id)
-                              .setAttribute('data-bs-slide-to', loop.index - 1)
+                              .setAttribute('data-bs-slide-to', _carousel_anchor)
 %}
 
 <a 
   {{ attributes }}
 >
   <div class="bcl-gallery__item-overlay" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-  {% if '<iframe' in _item.media or '<video' in _item.media %}
+  {% if _item.is_playable %}
     <span class="bcl-gallery__item-play-icon">
     {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: 'play-fill',
