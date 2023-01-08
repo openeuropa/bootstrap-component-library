@@ -44,11 +44,19 @@ describe("OE - badge", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with title", () => {
+  test("renders correctly with title as link", () => {
     expect.assertions(1);
 
     return expect(
       render({ ...demoData, url: "http://example.com", title: "new title" })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with dismissible as link", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, url: "http://example.com", dismissible: true })
     ).resolves.toMatchSnapshot();
   });
 
