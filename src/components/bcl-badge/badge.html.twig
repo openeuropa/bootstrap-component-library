@@ -4,7 +4,7 @@
   - label (string) (default: '')
   - background: (string) (default: 'primary')
   - url (string) (default: '')
-  - title (string) (default: label)
+  - title (string) (default: '')
   - dismissible (boolean) (default: false)
   - assistive_text (string) (default: '')
   - rounded_pill (boolean) (default: false)
@@ -16,13 +16,12 @@
 {% set _label = label|default('') %}
 {% set _background = background|default('primary') %}
 {% set _url = url|default('') %}
-{% set _title = title|default(_label) %}
+{% set _title = title|default('') %}
 {% set _dismissible = dismissible ?? false %}
 {% set _assistive_text = assistive_text|default('') %}
-{% set _rounded_pill = rounded_pill ?? false %}
-{% set _outline = outline ?? false %}
+{% set _rounded_pill = rounded_pill|default(false) %}
+{% set _outline = outline|default(false) %}
 {% set _icon_path = icon_path|default('') %}
-
 {% set _classes = ['badge'] %}
 
 {% if _rounded_pill %}
@@ -30,47 +29,49 @@
 {% endif %}
 
 {% if _outline %}
-  {% set _classes = _classes|merge([ 'badge-outline-' ~ _background]) %}
+  {% set _classes = _classes|merge(['badge-outline-' ~ _background]) %}
 {% else %}
-  {% set _classes = _classes|merge([ 'bg-' ~ _background]) %}
+  {% set _classes = _classes|merge(['bg-' ~ _background]) %}
 {% endif %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{%- if _url is not empty -%}
-  {% set attributes = attributes.setAttribute('title', _title).setAttribute('href', _url) %}
+{%- if _title is not empty -%}
+  {% set attributes = attributes.setAttribute('title', _title) %}
 {%- endif -%}
 
 {% set attributes = attributes.addClass(_classes) %}
 
+{% set _label %}
+  {%- if _assistive_text is not empty -%}
+  <span class="visually-hidden">
+    {{- _assistive_text -}}
+  </span>
+  {%- endif -%}
+  {{- _label -}}
+  {%- if _dismissible -%}
+  <span class="icon--close" aria-hidden="true">
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+      name: "x-lg",
+      path: _icon_path,
+    } only %}
+  </span>
+  {%- endif -%}
+{% endset %}
+
 {%- if _url is not empty -%}
-<a
-  {{ attributes }}
->
+  {% include '@oe-bcl/bcl-link/link.html.twig' with {
+    label: _label,
+    path: _url,
+    attributes: attributes,
+  } only %}
 {%- else -%}
 <span
   {{ attributes }}
 >
-{%- endif -%}
-  {%- if _assistive_text is not empty -%}
-    <span class="visually-hidden">
-      {{- _assistive_text -}}
-    </span>
-  {%- endif -%}
-    {{- _label -}}
-  {%- if _dismissible -%}
-    <span class="icon--close" aria-hidden="true">
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-        name: "x-lg",
-        path: _icon_path,
-      } only %}
-    </span>
-  {%- endif -%}
-{%- if _url is not empty -%}
-</a>
-{%- else -%}
+  {{- _label -}}
 </span>
 {%- endif -%}
 
