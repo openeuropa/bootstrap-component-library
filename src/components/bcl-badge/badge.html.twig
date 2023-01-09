@@ -4,7 +4,7 @@
   - label (string) (default: '')
   - background: (string) (default: 'primary')
   - url (string) (default: '')
-  - title (string) (default: label)
+  - title (string) (default: '')
   - dismissible (boolean) (default: false)
   - assistive_text (string) (default: '')
   - rounded_pill (boolean) (default: false)
@@ -17,7 +17,7 @@
 {% set _background = background|default('primary') %}
 {% set _url = url|default('') %}
 {% set _title = title|default('') %}
-{% set _dismissible = dismissible|default(false) %}
+{% set _dismissible = dismissible ?? false %}
 {% set _assistive_text = assistive_text|default('') %}
 {% set _rounded_pill = rounded_pill|default(false) %}
 {% set _outline = outline|default(false) %}

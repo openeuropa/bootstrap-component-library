@@ -3,7 +3,7 @@
 {# Parameters:
   - type (string) (default: 'group')
     options: ['group', 'grid', 'masonry']
-  - items (array of object type card) (default: [])
+  - items (card[]) (default: [])
   - grid_columns (int) (default: 1)
     options: ['1', '2', '3']
   - responsiveness (string) (default: '')
@@ -26,7 +26,7 @@
 {% set _responsiveness = responsiveness|default('md') %}
 {% set _responsive_columns = responsive_columns|default('') %}
 {% set _gutter = gutter|default('') %}
-{% set _equal_height = equal_height|default(false) %}
+{% set _equal_height = equal_height ?? false %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
 
 {% set _cols_classes = 'col' %}

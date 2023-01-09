@@ -9,7 +9,7 @@
   - autoplay (boolean) (default: true)
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
-  - items (array of objects) format: [
+  - items (object[]) format: [
      {
       image: (string) <img> tag
       caption (string)
@@ -34,16 +34,16 @@
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _id = id|default('') %}
 {% set _autoplay = autoplay ?? true %}
-{% set _dark = dark|default(false) %}
+{% set _dark = dark ?? false %}
 {% set _active_item = active_item|default(1) %}
 {% set _items = items|default([]) %}
-{% set _fade = fade|default(false) %}
+{% set _fade = fade ?? false %}
 {% set _with_controls = with_controls ?? true %}
 {% set _prev_label = prev_label|default('') %}
 {% set _next_label = next_label|default('') %}
-{% set _with_indicators = with_indicators|default(false) %}
-{% set _rounded_indicators = rounded_indicators|default(false) %}
-{% set _disable_touch = disable_touch|default(false) %}
+{% set _with_indicators = with_indicators ?? false %}
+{% set _rounded_indicators = rounded_indicators ?? false %}
+{% set _disable_touch = disable_touch ?? false %}
 
 {% set _classes = ['carousel', 'slide'] %}
 

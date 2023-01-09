@@ -2,7 +2,7 @@
 
 {#
 Parameters:
-  - id (string) (default: '')
+  - id (string) (default: gallery-random(1000))
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
   - title_link: (link object) (default: {})
@@ -13,7 +13,7 @@ Parameters:
   - next_label (string) (default: 'Next')
   - prev_label (string) (default: 'Previous')
   - max_visible_thumbnails (int) (default: 5)
-  - items (array of objects) format: [
+  - items (object[]) format: [
       {
         thumbnail (string) img path
         media: (string) <img> tag
