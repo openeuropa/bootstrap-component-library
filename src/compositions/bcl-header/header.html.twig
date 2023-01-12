@@ -2,6 +2,7 @@
 
 {# Parameters:
   - variant (string) (default: 'neutral')
+    - options: ['ec', 'eu', 'neutral']
   - navbar (Navbar object) (default: {})
   - project_logo (object) (default: {})
     format: {
@@ -14,8 +15,8 @@
   - head (Navbar object) (default: {})
   - breadcrumbs (Breadcrumbs object) (default: {})
   - language_modal (object) (default: {})
-  - modals (Array of modal objects) (default: [])
   - light (boolean) (default: false)
+  - modals (modal[]) (default: [])
   - attributes (drupal attrs)
 #}
 
@@ -27,7 +28,7 @@
 {% set _head = head|default({}) %}
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _language_modal = language_modal|default({}) %}
-{% set _light = light|default(false) %}
+{% set _light = light ?? false %}
 {% set _modals = modals|default([]) %}
 
 {% set _site_name_classes = 'bcl-header__site-name' %}

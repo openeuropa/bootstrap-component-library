@@ -6,8 +6,8 @@
   - title_tag (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
-  - variant (string) (default: 'default') options:
-    [ default, block ]
+  - variant (string) (default: 'default')
+      options:  default, block ]
   - display_icons (boolean) (default: true)
   - items (array) (default: []):
     - icon (associate array) (default: { size: 'm' })
@@ -35,7 +35,7 @@
 {% set _responsiveness = responsiveness|default('md') %}
 {% set _responsive_columns = responsive_columns|default(3) %}
 {% set _gutter = gutter|default(4) %}
-{% set _equal_height = equal_height|default(false) %}
+{% set _equal_height = equal_height ?? false %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
 {% set _icon_path = icon_path|default('') %}
 {% set _link_more = link_more|default({}) %}

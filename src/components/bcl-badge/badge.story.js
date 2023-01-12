@@ -33,7 +33,7 @@ const getArgTypes = () => ({
   },
   url: {
     type: { name: "string" },
-    description: "If you want the badge to be a link",
+    description: "URL of the badge",
     table: {
       type: { summary: "string" },
       defaultValue: { summary: "" },
@@ -51,7 +51,7 @@ const getArgTypes = () => ({
   },
   title: {
     type: { name: "string" },
-    description: "Title attribute if it's a link",
+    description: "Title attribute if URL is present",
     table: {
       type: { summary: "string" },
       defaultValue: { summary: "" },
@@ -70,7 +70,7 @@ const getArgTypes = () => ({
   },
   rounded_pill: {
     type: { name: "boolean" },
-    description: "Mane the badge a rounded pill",
+    description: "Make the badge a rounded pill",
     table: {
       type: { summary: "boolean" },
       defaultValue: { summary: "false" },
@@ -89,7 +89,7 @@ const getArgTypes = () => ({
   assistive_text: {
     name: "assistive text",
     type: { name: "string" },
-    description: "hidden text, for accessibility",
+    description: "Assistive hidden text, for accessibility",
     table: {
       type: { summary: "string" },
       defaultValue: { summary: "" },

@@ -15,21 +15,21 @@
   - border (string) (default: '')
     - options ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
   - borderless (boolean) (default: false)
-  - table_footer (array of objects) (default: {})
+  - table_footer (object[]) (default: {})
     format: [
       {
         - col_span
         - content
       }
     ]
-  - table_head (array of objects) (default: {})
+  - table_head (object[]) (default: {})
     format: [
       {
         - col_span
         - content
       }
     ]
-  - rows (array of objects) (default: [])
+  - rows (object[]) (default: [])
       format: [
         {
           - active
@@ -46,16 +46,16 @@
   - attributes (drupal attrs)
 #}
 
-{% set _striped = striped|default(false) %}
-{% set _hoverable = hoverable|default(false) %}
+{% set _striped = striped ?? false %}
+{% set _hoverable = hoverable ?? false %}
 {% set _table_responsive = table_responsive|default('') %}
 {% set _variant = variant|default('') %}
-{% set _small = small|default(false) %}
+{% set _small = small ?? false %}
 {% set _alignment = alignment|default('') %}
 {% set _caption = caption|default('') %}
-{% set _caption_top = caption_top|default(false) %}
+{% set _caption_top = caption_top ?? false %}
 {% set _border = border|default('') %}
-{% set _borderless = borderless|default(false) %}
+{% set _borderless = borderless ?? false %}
 {% set _table_footer = table_footer|default({}) %}
 {% set _table_head = table_head|default({}) %}
 {% set _rows = rows|default([]) %}

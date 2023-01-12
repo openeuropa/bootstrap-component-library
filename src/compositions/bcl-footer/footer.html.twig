@@ -2,7 +2,8 @@
 
 {# Parameters:
   - variant (string) (default: 'neutral')
-  - rows (default: []) - Array of predefined objects - format: 
+    - options: ['eu', 'ec', 'neutral']
+  - rows (object[]) (default: []) - format: 
   [
     {
       extra_classes: ""
@@ -13,7 +14,7 @@
             {
               type: "links" or "content" or "image",
               -- for type "links" --
-                links: Array of links object,
+                links: (link[]),
 
               -- for type "image" --
                 path: "",
