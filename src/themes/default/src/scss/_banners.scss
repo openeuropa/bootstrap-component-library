@@ -3,6 +3,12 @@
 .bcl-banner {
   position: relative;
 
+  &.fixed-height {
+    .bcl-banner__image {
+      height: 150px;
+    }
+  }
+
   p {
     font-size: 1.125rem;
     font-weight: 500;
@@ -117,7 +123,7 @@
     z-index: 1;
     display: inline-block;
     padding: map-get($spacers, "4-5");
-    margin: 2.75rem auto;
+    margin: 2rem auto;
     border-radius: 4px;
     min-width: 540px;
   }
@@ -155,25 +161,31 @@
     }
   }
 }
-
-// Banners ratio
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   .bcl-banner {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    &.fixed-height {
+      height: 330px;
+      .bcl-banner__image {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bcl-banner {
     min-height: 300px;
 
-    .container {
-      position: absolute;
-    }
-
-    &::before {
-      display: block;
-      width: 100%;
-      padding-top: 20%;
-      content: "";
+    &:not(.fixed-height) {
+      &::before {
+        display: block;
+        width: 1px;
+        padding-top: 20%;
+        content: "";
+      }
     }
 
     &.hero {
