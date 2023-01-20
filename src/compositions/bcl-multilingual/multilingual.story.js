@@ -19,13 +19,15 @@ const openModal = (story) => {
   return `
     ${demo}
     <script>
-      var backdrop = document.getElementsByClassName('modal-backdrop')[0];
-      if (typeof(backdrop) != 'undefined' && backdrop != null) {
-        backdrop.remove()
-        document.body.removeAttribute("style")
+      var backdrop = document.getElementsByClassName("modal-backdrop")[0];
+      if (typeof backdrop != "undefined" && backdrop != null) {
+        backdrop.remove();
+        document.body.removeAttribute("style");
       }
-      var languageModal = new bootstrap.Modal(document.getElementById('languageModal'))
-      languageModal.show()
+      var languageModal = new bootstrap.Modal(
+        document.getElementById("languageModal")
+      );
+      languageModal.show();
     </script>
     `;
 };

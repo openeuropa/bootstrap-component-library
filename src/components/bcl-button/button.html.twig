@@ -12,7 +12,7 @@
   - text_nowrap (boolean) (default: false)
   - assistive_text (string) (default: '')
   - id (string) (default: '')
-  - icon (icon object) (default: {}): predefined structure for Icon component
+  - icon (icon object) (default: {})
   - icon_position (string) (default: after)
     - options ['after', 'before']
   - icon_spacing (string) (default: '')
@@ -27,17 +27,17 @@
 {% set _variant = variant|default('primary') %}
 {% set _size = size|default('md') %}
 {% set _type = type|default('button') %}
-{% set _outline = outline|default(false) %}
-{% set _disabled = disabled|default(false) %}
-{% set _text_nowrap = text_nowrap|default(false) %}
+{% set _outline = outline ?? false %}
+{% set _disabled = disabled ?? false %}
+{% set _text_nowrap = text_nowrap ?? false %}
 {% set _assistive_text = assistive_text|default('') %}
 {% set _id = id|default('') %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
 {% set _icon_spacing = icon_spacing|default('') %}
 {% set _spinner = spinner|default({}) %}
-{% set _show_spinner = show_spinner|default(false) %}
-{% set _clean_class = clean_class|default(false) %}
+{% set _show_spinner = show_spinner ?? false %}
+{% set _clean_class = clean_class ?? false %}
 
 {% set _classes = [] %}
 {% if _clean_class == false %}
