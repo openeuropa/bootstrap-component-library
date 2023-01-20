@@ -1,8 +1,8 @@
 {% apply spaceless %}
 
 {# Parameters:
-  - id (string) (default: 'dropdown-' random(1000))
-  - trigger (object of Button or Link component)
+  - id (string) (default: dropdown-random(1000))
+  - trigger (link or button)
   - link (boolean) (default: false)
   - direction (string) (default: '')
     - options ['dropup', 'dropend', 'dropstart']
@@ -23,10 +23,10 @@
     ]
   - dark (boolean) (default: false)
   - remove_wrapper (boolean) (default: false)
-  - items (array of objects)
+  - items (object[])
     format: [
       {
-        - Link or Button object component
+        - link or button object
         - active (boolean)
         - divider (bolean) - show divider
         - button (boolean) - set to button
@@ -37,11 +37,11 @@
 
 {% set _id = id|default('dropdown-' ~ random(1000)) %}
 {% set _trigger = trigger|default({}) %}
-{% set _link = link|default(false) %}
+{% set _link = link ?? false %}
 {% set _direction = direction|default('') %}
 {% set _alignment = alignment|default('') %}
-{% set _dark = dark|default(false) %}
-{% set _remove_wrapper = remove_wrapper|default(false) %}
+{% set _dark = dark ?? false %}
+{% set _remove_wrapper = remove_wrapper ?? false %}
 {% set _items = items|default([]) %}
 
 {% set _class = 'dropdown' %}

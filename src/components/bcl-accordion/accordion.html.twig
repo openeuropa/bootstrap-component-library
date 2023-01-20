@@ -25,7 +25,7 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _id = id|default(random(1000)) %}
-{% set _flush = flush|default(false) %}
+{% set _flush = flush ?? false %}
 {% set _items = items|default([]) %}
 {% set _open_item_id = open_item_id|default(0) %}
 {% set _classes = ['accordion'] %}

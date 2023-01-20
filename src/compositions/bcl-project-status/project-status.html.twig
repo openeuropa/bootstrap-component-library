@@ -1,24 +1,23 @@
 {% apply spaceless %}
 
 {# Parameters:
+  - label (string) (default: '')
   - status (string) (default: 'planned')
+  - badge (string) (default: '')
   - start_date (string) (default: '')
   - start_label (string) (default: '')
   - end_date (string) (default: '')
   - end_label (string) (default: '')
-  - label (string) (default: '')
-  - badge (string) (default: ''),
   - progress (string) (default: '')
   - attributes (drupal attrs)
 #}
 
 {% set _label = label|default('') %}
 {% set _status = status|default('planned') %}
-{% set _charts = charts|default('') %}
 {% set _badge = badge|default('') %}
 {% set _start_date = start_date|default('') %}
-{% set _end_date = end_date|default('') %}
 {% set _start_label = start_label|default('') %}
+{% set _end_date = end_date|default('') %}
 {% set _end_label = end_label|default('') %}
 {% set _progress = progress|default('') %}
 

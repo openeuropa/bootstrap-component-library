@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.0 (2023-01-10)
+
+#### :nail_care: Enhancement
+
+* [#472](https://github.com/openeuropa/bootstrap-component-library/pull/472) feat(documentation): Updated documentation - OEL-2078 ([@tibi2303](https://github.com/tibi2303))
+* [#475](https://github.com/openeuropa/bootstrap-component-library/pull/475) feat(badges): Link inclusion - OEL-2066 ([@tibi2303](https://github.com/tibi2303))
+* [#497](https://github.com/openeuropa/bootstrap-component-library/pull/497) feat(gallery): Raw filter used and fixed more items - OEL-2093  ([@tibi2303](https://github.com/tibi2303))
+* [#481](https://github.com/openeuropa/bootstrap-component-library/pull/481) feat(pagination): Added ellipsis support - OEL-1523 ([@tibi2303](https://github.com/tibi2303))
+* [#474](https://github.com/openeuropa/bootstrap-component-library/pull/474) fix(inpage-navigation): Fixing js initialisation in storybook - OEL-2080 ([@tibi2303](https://github.com/tibi2303))
+* [#462](https://github.com/openeuropa/bootstrap-component-library/pull/462) feat(pagination): Refactored pagination - OEL-2061 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+
+* [#491](https://github.com/openeuropa/bootstrap-component-library/pull/491) chore(deps): Update 06-12-2022 ([@tibi2303](https://github.com/tibi2303))
+* [#489](https://github.com/openeuropa/bootstrap-component-library/pull/489) chore(deps): Update 17-11-2022 ([@tibi2303](https://github.com/tibi2303))
+* [#485](https://github.com/openeuropa/bootstrap-component-library/pull/485) chore(deps): Updates 16-11-2022 ([@tibi2303](https://github.com/tibi2303))
+* [#476](https://github.com/openeuropa/bootstrap-component-library/pull/476) chore(deps): Updates - 12-10-22 ([@planctus](https://github.com/planctus))
+* [#471](https://github.com/openeuropa/bootstrap-component-library/pull/471) chore(deps): Updates 29-09-22 ([@planctus](https://github.com/planctus))
+
+#### Committers: 2
+
+- [@planctus](https://github.com/planctus)
+- [@tibi2303](https://github.com/tibi2303)
+
 ## 0.28.1 (2022-09-28)
 
 #### :nail_care: Enhancement
