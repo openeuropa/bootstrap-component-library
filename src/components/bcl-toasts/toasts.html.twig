@@ -7,7 +7,7 @@
   - wrapper_aria_live (string) (default: '')
   - with_container (boolean) (default: false)
   - container_classes (string) (default: '')
-  - toasts (array of objects) format: [
+  - toasts (object[]) format: [
     {
       - body (string) (default: '')
       - role (string) (default: 'alert')
@@ -21,10 +21,10 @@
   - attributes (drupal attrs)
 #}
 
-{% set _with_wrapper = with_wrapper|default(false) %}
+{% set _with_wrapper = with_wrapper ?? false %}
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _wrapper_aria_live = wrapper_aria_live|default('') %}
-{% set _with_container = with_container|default(false) %}
+{% set _with_container = with_container ?? false %}
 {% set _toasts = toasts|default([]) %}
 
 {% set _container_classes = 'toast-container' %}
@@ -63,7 +63,7 @@
     {% set _with_close = _toast.with_close ?? true %}
     {% set _aria_live = _toast.aria_live|default('') %}
     {% set _autohide = _toast.autohide ?? true %}
-    {% set _with_body_wrapper = _toast.with_body_wrapper|default(false) %}
+    {% set _with_body_wrapper = _toast.with_body_wrapper ?? false %}
     {% set _body_wrapper_classes = _toast.body_wrapper_classes|default('') %}
     {% set _toast_attributes = _toast.attributes ?: create_attribute() %}
     {% set _toast_attributes =  _toast_attributes.addClass(_classes).setAttribute('aria-atomic', 'true') %}

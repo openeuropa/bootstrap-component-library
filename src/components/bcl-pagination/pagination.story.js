@@ -10,6 +10,9 @@ const getArgs = () => ({
   alignment: "default",
   enable_prev_next_icon: false,
   enable_first_last_icon: true,
+  ellipsis_before: false,
+  ellipsis_after: false,
+  icon_path: false,
 });
 
 const getArgTypes = (data) => {
@@ -60,6 +63,38 @@ const getArgTypes = (data) => {
         category: "Style",
       },
     },
+    ellipsis_before: {
+      name: "enable ellipsis before",
+      type: { name: "boolean" },
+      description: "Enable ellipsis icon before elements",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    ellipsis_after: {
+      name: "enable ellipsis after",
+      type: { name: "boolean" },
+      description: "Enable ellipsis icon after elements",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+        category: "Style",
+      },
+    },
+    icon_path: {
+      name: "path to bcl sprite file (icon_path)",
+      type: { name: "boolean" },
+      description: `items like prev, next, first, last
+        will be rendered as icons instead of html entities, it is also
+        possible to pass icon objects along those items to use custom icons.`,
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Style",
+      },
+    },
   };
   if (data.last && data.first) {
     argTypes.enable_first_last_icon = {
@@ -68,7 +103,7 @@ const getArgTypes = (data) => {
       description: "Enable icon for first and last",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
+        defaultValue: { summary: "true" },
         category: "Style",
       },
     };
@@ -86,7 +121,13 @@ const applyArgs = (data, args) => {
     args.alignment = "";
   }
 
-  return Object.assign(data, args);
+  if (args.icon_path) {
+    args.icon_path = "/icons.svg";
+  } else {
+    args.icon_path = "";
+  }
+
+  return Object.assign(data, correctPaths(args));
 };
 
 export default {
@@ -110,6 +151,5 @@ export default {
 
 export const Default = (args) =>
   pagination(applyArgs(correctPaths(demoData), args));
-
-Default.args = getArgs(demoData);
+Default.args = getArgs();
 Default.argTypes = getArgTypes(demoData);

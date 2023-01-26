@@ -9,7 +9,7 @@
   ]
 #}
 
-{% set _pill = pill|default(false) %}
+{% set _pill = pill ?? false %}
 {% set _icon = icon|default({}) %}
 {% set _submit = submit|default({}) %}
 {% set _input = input|default({}) %}

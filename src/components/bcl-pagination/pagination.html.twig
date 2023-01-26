@@ -5,49 +5,27 @@
     - options ['sm', 'lg']
   - alignment (string) (default: '')
     - options ['end', 'center']
-  - aria_label (string) (default: '')
   - variant: (string) (default: '')
+    - options: ['glossary']
+  - aria_label (string) (default: '') - deprecated, use attributes
   - enable_prev_next_icon (boolean) (default: false)
   - enable_first_last_icon (boolean) (default: true)
-  - first (object)
-    format: {
-      - path (string)
-      - label (string)
-      - disabled (boolean)
-      - aria_label (string)
-      - icon (Icon component)
-    }
-  - prev (object)
-    format: {
-      - path (string)
-      - label (string)
-      - disabled (boolean)
-      - aria_label (string)
-      - icon (Icon component)
-    }
-  - next (object)
-    format: {
-      - path (string)
-      - label (string)
-      - disabled (boolean)
-      - aria_label (string)
-      - icon (Icon component)
-    }
-  - last (object)
-    format: {
-      - path (string)
-      - label (string)
-      - disabled (boolean)
-      - aria_label (string)
-      - icon (Icon component)
-    }
-  - items (array of objects)
+  - ellipsis_before (boolean) (default: false)
+  - ellipsis_after (boolean) (default: false)
+  - first (pagination Item object) (default: {})
+  - prev (pagination Item object) (default: {})
+  - next (pagination Item object) (default: {})
+  - last (pagination Item object) (default: {})
+  - items (pagination item[]) (default: [])
     format: [
     {
-      - path (string)
-      - label (string)
-      - disabled (boolean)
-      - active (boolean)
+      - path (string) (default: '')
+      - label (string) (default: '')
+      - disabled (boolean) (default: false)
+      - active (boolean) (default: false)
+      - aria_label (string) (default: '') - deprecated, use attributes
+      - icon (Icon component) (default: {})
+      - attributes (drupal attrs)
     }
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
@@ -55,30 +33,88 @@
 
 {% set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
-{% set _aria_label = aria_label|default('') %}
 {% set _variant = variant|default('') %}
-{% set _enable_prev_next_icon = enable_prev_next_icon|default(false) %}
+{% set _aria_label = aria_label|default('') %}
+{% set _enable_prev_next_icon = enable_prev_next_icon ?? false %}
 {% set _enable_first_last_icon = enable_first_last_icon ?? true %}
+{% set _ellipsis_before = ellipsis_before ?? false %}
+{% set _ellipsis_after = ellipsis_after ?? false %}
 {% set _first = first|default({}) %}
 {% set _prev = prev|default({}) %}
 {% set _next = next|default({}) %}
 {% set _last = last|default({}) %}
 {% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
+{% set _internal_items = [] %}
 
-{% set _classes = 'pagination' %}
-{% if _size is not empty %}
-  {% set _classes = _classes ~ ' pagination-' ~ _size %}
+{% if _enable_first_last_icon %}
+  {% if _first is not empty %}
+    {% set _first = _first|merge({
+      icon_html: "&laquo;",
+      icon_name: "chevron-double-left",
+    }) %}
+  {% endif %}
+  {% if _last is not empty %}
+    {% set _last = _last|merge({
+      icon_html: '&raquo;',
+      icon_name: "chevron-double-right",
+    }) %}
+  {% endif %}
 {% endif %}
-{% if _variant is not empty %}
-  {% set _classes = _classes ~ ' pagination--' ~ _variant %}
+
+{% if _enable_prev_next_icon %}
+  {% if _prev is not empty %}
+    {% set _prev = _prev|merge({
+      icon_html: "&lsaquo;",
+      icon_name: "chevron-left",
+    }) %}
+  {% endif %}
+  {% if _next is not empty %}
+    {% set _next = _next|merge({
+      icon_html: "&rsaquo;",
+      icon_name: "chevron-right",
+    }) %}
+  {% endif %}
 {% endif %}
-{% if _alignment is not empty %}
-  {% set _classes = _classes ~ ' justify-content-' ~ _alignment %}
+
+
+{% set _internal_items = _internal_items|merge([_first, _prev]) %}
+
+{% set _ellipsis_markup %} &hellip; {% endset %}
+
+{% if _ellipsis_before %}
+  {% set _ellipsis_before_item = {
+    icon_html: _ellipsis_markup,
+    icon_path: "",
+  } %}
+  {% set _internal_items = _internal_items|merge([_ellipsis_before_item]) %}
 {% endif %}
+
+{% set _internal_items = _internal_items|merge(_items) %}
+
+{% if _ellipsis_after %}
+  {% set _ellipsis_after_item = {
+    icon_html: _ellipsis_markup,
+    icon_path: "",
+  } %}
+  {% set _internal_items = _internal_items|merge([_ellipsis_after_item]) %}
+{% endif %}
+
+{% set _internal_items = _internal_items|merge([_next, _last]) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
+{% endif %}
+
+{% set _classes = ['pagination'] %}
+{% if _size is not empty %}
+  {% set _classes = _classes|merge(['pagination-' ~ _size]) %}
+{% endif %}
+{% if _variant is not empty %}
+  {% set _classes = _classes|merge(['pagination--' ~ _variant]) %}
+{% endif %}
+{% if _alignment is not empty %}
+  {% set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
 {% endif %}
 
 {% set attributes = attributes.setAttribute('role', 'navigation') %}
@@ -90,188 +126,32 @@
 {% if _aria_label is not empty %}
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
-{% if _extra_classes is not empty %}
-  {% set _class = _class ~ ' ' ~ _extra_classes %}
-{% endif %}
 
 <nav
   {{ attributes }}
 >
-  <ul class="{{ _classes }}">
-  {% if _first is not empty %}
-    {% set _first_class = 'page-item' %}
-    {% if _first.disabled %}
-      {% set _first_class = _first_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _first_class }}">
-      <a
-        class="page-link"
-        href="{{ _first.path }}"
-        {% if _first.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
+  <ul class="{{ _classes|join(' ') }}">
+{% if _internal_items is not empty and _internal_items is iterable %}
+  {% for _item in _internal_items %}
+    {% if _item is not empty %}
+      {% set _item_class = ['page-item'] %}
+      {% if _item.disabled %}
+        {% set _item_class = _item_class|merge(['disabled']) %}
+      {% endif %}
+      {% if _item.active %}
+        {% set _item_class = _item_class|merge(['active']) %}
+      {% endif %}
+      <li class="{{ _item_class|join(' ') }}">
+        {% if _item.icon_path is not defined %}
+          {% set _item = _item|merge({
+            icon_path: _icon_path,
+          }) %}
         {% endif %}
-        {%- if _first.aria_label -%}
-        aria-label="{{ _first.aria_label }}"
-        {%- endif -%}
-      >
-      {%- if _enable_first_last_icon -%}
-        {%- if _first.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _first.icon only -%}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-double-left",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
-          {%- else -%}
-            <span aria-hidden="true">&laquo;</span>
-          {%- endif -%}
-        {%- endif -%}
-      {%- else -%}
-        {{- _first.label -}}
-      {%- endif -%}
-      </a>
-    </li>
-  {% endif %}
-  {% if _prev is not empty %}
-    {% set _prev_class = 'page-item' %}
-    {% if _prev.disabled %}
-      {% set _prev_class = _prev_class ~ ' disabled' %}
+        {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
+      </li>
     {% endif %}
-    <li class="{{ _prev_class }}">
-      <a
-        class="page-link"
-        href="{{ _prev.path }}"
-        {% if _prev.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _prev.aria_label -%}
-        aria-label="{{ _prev.aria_label }}"
-        {%- endif -%}
-      >
-      {%- if _enable_prev_next_icon -%}
-        {%- if _prev.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _prev.icon only -%}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-left",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
-          {%- else -%}
-            <span aria-hidden="true">&lsaquo;</span>
-          {%- endif -%}
-        {%- endif -%}
-      {%- else -%}
-        {{- _prev.label -}}
-      {%- endif -%}
-      </a>
-    </li>
-  {% endif %}
-  {% if _items is not empty and _items is iterable %}
-    {% for _item in _items %}
-    {% set _item_class = 'page-item' %}
-    {% if _item.disabled %}
-      {% set _item_class = _item_class ~ ' disabled' %}
-    {% endif %}
-    {% if _item.active %}
-      {% set _item_class = _item_class ~ ' active' %}
-    {% endif %}
-    <li class="{{ _item_class }}">
-      <a
-        class="page-link"
-        href="{{ _item.path }}"
-        {% if _item.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {% if _item.active %}
-        aria-current="page"
-        {% endif %}
-      >
-        {{- _item.label -}}
-      </a>
-    </li>
-    {% endfor %}
-  {% endif %}
-  {% if _next is not empty %}
-    {% set _next_class = 'page-item' %}
-    {% if _next.disabled %}
-      {% set _next_class = _next_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _next_class }}">
-      <a
-        class="page-link"
-        href="{{ _next.path }}"
-        {% if _next.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _next.aria_label -%}
-        aria-label="{{ _next.aria_label }}"
-        {%- endif -%}
-      >
-      {%- if _enable_prev_next_icon -%}
-        {%- if _next.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _next.icon only -%}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-right",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
-          {%- else -%}
-            <span aria-hidden="true">&rsaquo;</span>
-          {%- endif -%}
-        {%- endif -%}
-      {%- else -%}
-        {{- _next.label -}}
-      {%- endif -%}
-      </a>
-    </li>
-  {% endif %}
-  {% if _last is not empty %}
-    {% set _last_class = 'page-item' %}
-    {% if _last.disabled %}
-      {% set _last_class = _last_class ~ ' disabled' %}
-    {% endif %}
-    <li class="{{ _last_class }}">
-      <a
-        class="page-link"
-        href="{{ _last.path }}"
-        {% if _last.disabled %}
-        tabindex="-1"
-        aria-disabled="true"
-        {% endif %}
-        {%- if _last.aria_label -%}
-        aria-label="{{ _last.aria_label }}"
-        {%- endif -%}
-      >
-      {%- if _enable_first_last_icon -%}
-        {%- if _last.icon is not empty -%}
-          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _last.icon only -%}
-        {%- else -%}
-          {%- if _icon_path is not empty -%}
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
-              name: "chevron-double-right",
-              size: "fluid",
-              path: _icon_path,
-            } only %}
-          {%- else -%}
-            <span aria-hidden="true">&raquo;</span>
-          {%- endif -%}
-        {%- endif -%}
-      {%- else -%}
-        {{- _last.label -}}
-        {%- endif -%}
-      </a>
-    </li>
-  {% endif %}
+  {% endfor %}
+{% endif %}
   </ul>
 </nav>
 

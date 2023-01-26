@@ -25,20 +25,20 @@
 
 {% set _id = id|default('') %}
 {% set _label = label|default('') %}
-{% set _required = required|default(false) %}
-{% set _disabled = disabled|default(false) %}
-{% set _readonly = readonly|default(false) %}
-{% set _invalid = invalid|default(false) %}
-{% set _valid = valid|default(false) %}
+{% set _required = required ?? false %}
+{% set _disabled = disabled ?? false %}
+{% set _readonly = readonly ?? false %}
+{% set _invalid = invalid ?? false %}
+{% set _valid = valid ?? false %}
 {% set _invalid_feedback = invalid_feedback|default('') %}
 {% set _valid_feedback = valid_feedback|default('') %}
 {% set _helper_text = helper_text|default('') %}
 {% set _helper_text_id = helper_text_id|default('') %}
-{% set _hidden_label = hidden_label|default(false) %}
+{% set _hidden_label = hidden_label ?? false %}
 {% set _text = text|default('') %}
 {% set _rows = rows|default('4') %}
-{% set _floating = floating|default(false) %}
-{% set _horizontal = horizontal|default(false) %}
+{% set _floating = floating ?? false %}
+{% set _horizontal = horizontal ?? false %}
 {% set _horizontal_class = horizontal_class|default('col-sm-10') %}
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
 

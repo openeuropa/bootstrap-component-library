@@ -26,8 +26,8 @@
   - close_label (string) (default: '')
 #}
 
-{% set _overlay = overlay|default(false) %}
-{% set _inside_container = inside_container|default(false) %}
+{% set _overlay = overlay ?? false %}
+{% set _inside_container = inside_container ?? false %}
 {% set _variant = variant|default('neutral') %}
 {% set _title = title|default('') %}
 {% set _logo = logo|default({}) %}

@@ -32,15 +32,19 @@ export default {
 const clientValidation = (story) => {
   const demo = story();
   return `<script>
-  var form = document.querySelector('.needs-validation');
-  form.addEventListener('submit', function (event) {
-    if (!form.checkValidity()) {
-      event.preventDefault()
-      event.stopPropagation()
-    }
-
-    form.classList.add('was-validated')
-  }, false)
+    var form = document.querySelector(".needs-validation");
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+    
+        form.classList.add("was-validated");
+      },
+      false
+    );
   </script>${demo}`;
 };
 

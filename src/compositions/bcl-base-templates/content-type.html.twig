@@ -25,12 +25,12 @@
   - messages_area
 #}
 
-{% set _with_header = header|default(false) %}
-{% set _with_footer = footer|default(false) %}
-{% set _with_banner = banner|default(false) %}
-{% set _with_sidebar = sidebar|default(false) %}
+{% set _with_header = header ?? false %}
+{% set _with_footer = footer ?? false %}
+{% set _with_banner = banner ?? false %}
+{% set _with_sidebar = sidebar ?? false %}
 {% set _sidebar_size = sidebar_size|default('normal') %}
-{% set _landing = landing|default(false) %}
+{% set _landing = landing ?? false %}
 {% set _content_type = content_type|default('') %}
 {% set _classes = ['bcl-node-type'] %}
 

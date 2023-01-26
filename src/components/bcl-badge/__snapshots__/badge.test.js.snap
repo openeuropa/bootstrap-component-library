@@ -137,7 +137,6 @@ exports[`OE - badge renders correctly with a link 1`] = `
   <a
     class="badge bg-primary"
     href="http://example.com"
-    title="A simple badge!"
   >
     A simple badge!
   </a>
@@ -159,7 +158,30 @@ exports[`OE - badge renders correctly with assistive text 1`] = `
 </jest>
 `;
 
-exports[`OE - badge renders correctly with title 1`] = `
+exports[`OE - badge renders correctly with dismissible as link 1`] = `
+<jest>
+  <a
+    class="badge bg-primary"
+    href="http://example.com"
+  >
+    A simple badge!
+    <span
+      aria-hidden="true"
+      class="icon--close"
+    >
+      <svg
+        class="bi icon--xs"
+      >
+        <use
+          xlink:href="/icons.svg#x-circle-fill"
+        />
+      </svg>
+    </span>
+  </a>
+</jest>
+`;
+
+exports[`OE - badge renders correctly with title as link 1`] = `
 <jest>
   <a
     class="badge bg-primary"

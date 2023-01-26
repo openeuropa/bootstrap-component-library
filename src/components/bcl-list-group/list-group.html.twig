@@ -7,12 +7,12 @@
   - id (string) (default: '')
   - type (string) (default: 'unordered')
     - options ['unordered', 'ordered', 'actionable']
-  - items (array of objects: list item object or Button and Link component object if type actionable)
+  - items (badge or link or button [])
       format: [
       {
         - html (string)
         - variant (string)
-        - badge (predefined object Badge component)
+        ...badge
       }
       {
         ...Link
@@ -27,7 +27,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _flush = flush|default(false) %}
+{% set _flush = flush ?? false %}
 {% set _horizontal = horizontal|default('') %}
 {% set _id = id|default('') %}
 {% set _type = type|default('unordered') %}
