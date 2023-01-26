@@ -12,14 +12,14 @@
   - tabs_content (boolean) (default: false)
   - nav (boolean) (default: false)
   - navbar (boolean) (default: false)
-  - items (array of objects)
+  - items (object[])
     format: [
       {
-        - Link or Button object component
+        - link or button
         - active (boolean)
         - button (boolean) - set to button
         - content (string) - content for tab
-        - navigation (navigation Object) - set for multiple level or navigation, items inside is required
+        - navigation (navigation Object)
       }
     ]
   - attributes (drupal attrs)
@@ -31,14 +31,14 @@
   {% import _self as navigation %}
 
   {% set _id = id|default('') %}
-  {% set _pills = pills|default(false) %}
-  {% set _tabs = tabs|default(false) %}
-  {% set _vertical = vertical|default(false) %}
-  {% set _full_width = full_width|default(false) %}
+  {% set _pills = pills ?? false %}
+  {% set _tabs = tabs ?? false %}
+  {% set _vertical = vertical ?? false %}
+  {% set _full_width = full_width ?? false %}
   {% set _alignment = alignment|default('') %}
-  {% set _tabs_content = tabs_content|default(false) %}
-  {% set _nav = nav|default(false) %}
-  {% set _navbar = navbar|default(false) %}
+  {% set _tabs_content = tabs_content ?? false %}
+  {% set _nav = nav ?? false %}
+  {% set _navbar = navbar ?? false %}
   {% set _items = items|default([]) %}
 
   {% if _navbar %}

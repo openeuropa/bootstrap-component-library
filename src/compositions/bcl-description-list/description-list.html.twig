@@ -10,8 +10,8 @@
   - col_classes (string) (default: 'col-3')
   - items (array) (default: []): format: [
       {
-        term (string or array of descriptionListTitle object)
-        definition (string or array of descriptionListDetails object)
+        term (string or description list title [])
+        definition (string or description list details [])
       },
       ...
     ]
@@ -22,11 +22,10 @@
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
-{% set _bordered = bordered|default(false) %}
-{% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
-{% set _items = items|default([]) %}
+{% set _bordered = bordered ?? false %}
 {% set _col_classes = col_classes|default('col-md-3') %}
+{% set _items = items|default([]) %}
 {% set _variant = variant|default('') %}
 
 {% if attributes is empty %}

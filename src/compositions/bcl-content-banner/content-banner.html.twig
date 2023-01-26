@@ -3,18 +3,33 @@
 {#
   Parameters:
     - title: (string) (default: '')
-    - title_tag: (string) (default: 'h5')
+    - title_tag: (string) (default: 'h1')
     - title_link: (link object) (default: {})
     - title_attributes: (drupal attrs)
     - background: (string) (default: 'white')
       options: [ white, gray ]
-    - image (object)
-    - image_size: (string)
-    - date: (object)
-      options: ['sm', 'md', 'lg', 'xl']
-    - content: (string)
-    - badges: (array of objects of type badge)
-    - links: (array of objects of type link)
+    - image (object) (default: {})
+    - image_size: (string) (default: 'md')
+      options: ['md', 'lg', 'xl']
+    - date: (date block object) (default: {})
+
+    Card inheritance
+      - badges (badge[]) (default: [])
+      - links (link[]) (default: [])
+      - content (string) (default: '')
+      - subtitle (object) (default: {})
+        format: {
+          content: '',
+          tag: '',
+          classes: ''
+        }
+      - text (object) (default: {})
+        format: {
+          content: '',
+          tag: '',
+          classes: ''
+        }
+
     - attributes: (drupal attrs)
 
   Blocks

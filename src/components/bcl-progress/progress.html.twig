@@ -17,9 +17,9 @@
 {% set _progress = progress|default(0) %}
 {% set _min = min|default(0) %}
 {% set _max = max|default(100) %}
-{% set _striped = striped|default(false) %}
-{% set _animated = animated|default(false) %}
-{% set _hidden_label = hidden_label|default(false) %}
+{% set _striped = striped ?? false %}
+{% set _animated = animated ?? false %}
+{% set _hidden_label = hidden_label ?? false %}
 {% set _label = label|default('') %}
 {% set _bar_label = bar_label|default('') %}
 {% set _variant = variant|default('') %}

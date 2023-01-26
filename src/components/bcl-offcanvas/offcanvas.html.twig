@@ -2,7 +2,7 @@
 
 {# Parameters:
   - title: (string) (default: '')
-  - title_tag: (string) (default: 'h3')
+  - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - placement (string) (default: '') (start, end, top, bottom)
@@ -27,7 +27,7 @@
 {% set _placement = placement|default('') %}
 {% set _id = id|default('') %}
 {% set _body = body|default('') %}
-{% set _with_body_scroll = with_body_scroll|default(false) %}
+{% set _with_body_scroll = with_body_scroll ?? false %}
 {% set _with_backdrop = with_backdrop ?? true %}
 {% set _with_close = with_close ?? true %}
 {% set _close_aria_label = close_aria_label|default('') %}
