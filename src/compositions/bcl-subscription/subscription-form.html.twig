@@ -1,0 +1,14 @@
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+
+{% block content %}
+  {% if form is not empty %}
+    {% include '@oe-bcl/bcl-form/form.html.twig' with form only %}
+  {% endif %}
+  {% if table is defined %}
+    <p class="mt-5">Your content subscription to specific page</p>
+    {% include '@oe-bcl/bcl-table/table.html.twig' with table only %}
+  {% endif %}
+  {% if submit is defined %}
+    {% include '@oe-bcl/bcl-button/button.html.twig' with submit only %}
+  {% endif %}
+{% endblock %}

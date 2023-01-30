@@ -1,6 +1,4393 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OE - Subscription renders correctly 1`] = `
+exports[`OE - Subscription email confirmation renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header bcl-header--eu"
+  >
+    <!-- navbar_settings -->
+    <nav
+      aria-label="Top Navigation"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href="/example.html"
+        >
+          <img
+            alt="desktop european union logo"
+            class="d-none d-lg-block"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+          <img
+            alt="mobile european union logo"
+            class="d-lg-none"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
+          />
+        </a>
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
+                English
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
+                Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- project name -->
+    <!-- navbar -->
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example.html"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              type="button"
+            >
+              <span
+                class="visually-hidden"
+              >
+                search
+              </span>
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              European Union
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example.html"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Union
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-label="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-label="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+            >
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--eu"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="mt-lg-5 mt-2 alert alert-warning d-flex align-items-center alert-dismissible fade show text-dark"
+        role="alert"
+      >
+        <svg
+          class="flex-shrink-0 me-3 mt-1 align-self-start text-warning bi icon--s"
+        >
+          <use
+            xlink:href="/icons.svg#exclamation-triangle-fill"
+          />
+        </svg>
+        <div
+          class="alert-content flex-grow-1"
+        >
+          <div
+            class="alert-heading h4"
+          >
+            A confirmation email has been sent to your email address. 
+          </div>
+          <p
+            class="mb-3"
+          >
+            To confirm your subscription, please click on the confirmation link sent to your e-mail address.
+          </p>
+          <p>
+            It is possible to unsubscribe from the list at any time by clicking on the unsubscribe me link included in the email.
+          </p>
+        </div>
+        <button
+          aria-label="Close"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
+    >
+      <div
+        class="container"
+      >
+        <article
+          class="bg-transparent border-0 card"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="bcl-card-start-col bcl-size-large"
+            >
+              <img
+                alt="alt img"
+                class="card-img-top rounded-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+            </div>
+            <div
+              class="col-md col-xl-9 col-xxl-8"
+            >
+              <div
+                class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
+              >
+                <h1
+                  class="fs-1 card-title bcl-heading"
+                >
+                  This is the title of this page
+                </h1>
+                <div
+                  class="my-3"
+                >
+                  <span
+                    class="text-muted me-3"
+                  >
+                    17 October 2019
+                  </span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa.
+                </p>
+                <div
+                  class="mt-2-5"
+                >
+                  <span
+                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 1
+                  </span>
+                  <span
+                    class="mb-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div
+          class="d-flex justify-content-end mt-2 align-items-center"
+        >
+          <button
+            class="w-auto me-3 btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Print
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-auto btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Export
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#file-arrow-down-fill"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mt-md-4-75 mt-4"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-10 col-xl-9 col-xxl-8"
+        />
+      </div>
+    </div>
+  </main>
+  <footer
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="pt-4 pt-lg-5 row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold mb-2"
+          >
+            [Project name]
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+          </p>
+        </div>
+        <div
+          class="col-12 col-lg-4 pb-4 pb-lg-0"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Contact [project name]
+          </p>
+          <p>
+            Contact information of the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mt-3 mb-2"
+          >
+            Follow us on social media
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#facebook"
+                />
+              </svg>
+              Facebook
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#twitter"
+                />
+              </svg>
+              Twitter
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#linkedin"
+                />
+              </svg>
+              Linkedin
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            About us
+          </p>
+          <p>
+            Information about the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Optional links
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold pb-2 mb-2"
+          >
+            More information on:
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</jest>
+`;
+
+exports[`OE - Subscription email confirmed renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header bcl-header--eu"
+  >
+    <!-- navbar_settings -->
+    <nav
+      aria-label="Top Navigation"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href="/example.html"
+        >
+          <img
+            alt="desktop european union logo"
+            class="d-none d-lg-block"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+          <img
+            alt="mobile european union logo"
+            class="d-lg-none"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
+          />
+        </a>
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
+                English
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
+                Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- project name -->
+    <!-- navbar -->
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example.html"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              type="button"
+            >
+              <span
+                class="visually-hidden"
+              >
+                search
+              </span>
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              European Union
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example.html"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Union
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-label="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-label="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+            >
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--eu"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div
+      class="container"
+    >
+      <div
+        class="mt-lg-5 mt-2 alert alert-success d-flex align-items-center alert-dismissible fade show text-dark"
+        role="alert"
+      >
+        <svg
+          class="flex-shrink-0 me-3 mt-1 align-self-start text-success bi icon--s"
+        >
+          <use
+            xlink:href="/icons.svg#check-circle-fill"
+          />
+        </svg>
+        <div
+          class="alert-content flex-grow-1"
+        >
+          <div
+            class="alert-heading h4"
+          >
+            Your email has been confirmed!
+          </div>
+        </div>
+        <button
+          aria-label="Close"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          type="button"
+        />
+      </div>
+    </div>
+    <div
+      class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
+    >
+      <div
+        class="container"
+      >
+        <article
+          class="bg-transparent border-0 card"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="bcl-card-start-col bcl-size-large"
+            >
+              <img
+                alt="alt img"
+                class="card-img-top rounded-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+            </div>
+            <div
+              class="col-md col-xl-9 col-xxl-8"
+            >
+              <div
+                class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
+              >
+                <h1
+                  class="fs-1 card-title bcl-heading"
+                >
+                  This is the title of this page
+                </h1>
+                <div
+                  class="my-3"
+                >
+                  <span
+                    class="text-muted me-3"
+                  >
+                    17 October 2019
+                  </span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa.
+                </p>
+                <div
+                  class="mt-2-5"
+                >
+                  <span
+                    class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 1
+                  </span>
+                  <span
+                    class="mb-2 badge rounded-pill badge-outline-primary"
+                  >
+                    Category 2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div
+          class="d-flex justify-content-end mt-2 align-items-center"
+        >
+          <button
+            class="w-auto me-3 btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Print
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+          </button>
+          <button
+            class="w-auto btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Export
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#file-arrow-down-fill"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mt-md-4-75 mt-4"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-10 col-xl-9 col-xxl-8"
+        />
+      </div>
+    </div>
+  </main>
+  <footer
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="pt-4 pt-lg-5 row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold mb-2"
+          >
+            [Project name]
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+          </p>
+        </div>
+        <div
+          class="col-12 col-lg-4 pb-4 pb-lg-0"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Contact [project name]
+          </p>
+          <p>
+            Contact information of the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mt-3 mb-2"
+          >
+            Follow us on social media
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#facebook"
+                />
+              </svg>
+              Facebook
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#twitter"
+                />
+              </svg>
+              Twitter
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#linkedin"
+                />
+              </svg>
+              Linkedin
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            About us
+          </p>
+          <p>
+            Information about the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Optional links
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold pb-2 mb-2"
+          >
+            More information on:
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</jest>
+`;
+
+exports[`OE - Subscription email form renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header bcl-header--eu"
+  >
+    <!-- navbar_settings -->
+    <nav
+      aria-label="Top Navigation"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href="/example.html"
+        >
+          <img
+            alt="desktop european union logo"
+            class="d-none d-lg-block"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+          <img
+            alt="mobile european union logo"
+            class="d-lg-none"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
+          />
+        </a>
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
+                English
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
+                Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- project name -->
+    <!-- navbar -->
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example.html"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              type="button"
+            >
+              <span
+                class="visually-hidden"
+              >
+                search
+              </span>
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              European Union
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example.html"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Union
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-label="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-label="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+            >
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--eu"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div
+      class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
+    >
+      <div
+        class="container"
+      >
+        <article
+          class="bg-transparent border-0 card"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-lg-10 col-xl-9 col-xxl-8"
+            >
+              <div
+                class="card-body pt-0 px-0 pb-0"
+              >
+                <h1
+                  class="fs-1 card-title bcl-heading"
+                >
+                  Manage your subscriptions
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div
+      class="container mt-md-4-75 mt-4"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-10 col-xl-9 col-xxl-8"
+        >
+          <form
+            class="needs-validation"
+          >
+            <div
+              class="mb-4-5"
+            >
+              <label
+                class="form-label"
+              >
+                Your email
+              </label>
+              <input
+                class="form-control"
+                placeholder="Type in your e-mail address"
+                required="true"
+                type="email"
+              />
+              <div
+                class="invalid-feedback"
+              >
+                Please enter a valid e-mail address
+              </div>
+            </div>
+            <div
+              class="col-12"
+            >
+              <button
+                class="btn btn-primary btn-md"
+                type="submit"
+              >
+                Enter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="pt-4 pt-lg-5 row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold mb-2"
+          >
+            [Project name]
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+          </p>
+        </div>
+        <div
+          class="col-12 col-lg-4 pb-4 pb-lg-0"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Contact [project name]
+          </p>
+          <p>
+            Contact information of the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mt-3 mb-2"
+          >
+            Follow us on social media
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#facebook"
+                />
+              </svg>
+              Facebook
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#twitter"
+                />
+              </svg>
+              Twitter
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#linkedin"
+                />
+              </svg>
+              Linkedin
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            About us
+          </p>
+          <p>
+            Information about the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Optional links
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold pb-2 mb-2"
+          >
+            More information on:
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</jest>
+`;
+
+exports[`OE - Subscription manage form renders correctly 1`] = `
+<jest>
+  <header
+    class="bcl-header bcl-header--eu"
+  >
+    <!-- navbar_settings -->
+    <nav
+      aria-label="Top Navigation"
+      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+    >
+      <div
+        class="container"
+      >
+        <a
+          class="navbar-brand"
+          href="/example.html"
+        >
+          <img
+            alt="desktop european union logo"
+            class="d-none d-lg-block"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/standard-version/positive/logo-eu--en.svg"
+          />
+          <img
+            alt="mobile european union logo"
+            class="d-lg-none"
+            src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
+          />
+        </a>
+        <button
+          aria-controls="topNavbarDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#topNavbarDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="topNavbarDropdown"
+        >
+          <ul
+            class="nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#languageModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#chat-left-dots-fill"
+                  />
+                </svg>
+                English
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                data-bs-target="#loginModal"
+                data-bs-toggle="modal"
+                href="/example.html"
+              >
+                <svg
+                  class="me-2-5 bi icon--xs"
+                >
+                  <use
+                    xlink:href="/icons.svg#person-fill"
+                  />
+                </svg>
+                Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- project name -->
+    <!-- navbar -->
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    >
+      <div
+        class="container"
+      >
+        <button
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNavDropdown"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="me-auto navbar-nav"
+          >
+            <li
+              class="nav-item"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/example.html"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 01
+              </a>
+            </li>
+            <li
+              class="nav-item"
+            >
+              <a
+                class="nav-link"
+                href="/example.html"
+              >
+                Item 02
+              </a>
+            </li>
+            <li
+              class="nav-item dropdown"
+            >
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+              >
+                Dropdown link
+              </a>
+              <ul
+                aria-labelledby="navbarDropdownMenuLink"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Something else here
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/example.html"
+                  >
+                    Very long label with custom text and custom link as an example
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form
+            class="d-flex mt-3 mt-lg-0"
+          >
+            <label
+              class="form-label visually-hidden"
+              for="inlineFormInputGroupSearch"
+            >
+              Search
+            </label>
+            <input
+              class="border-start-0 rounded-0 rounded-start form-control"
+              id="inlineFormInputGroupSearch"
+              placeholder="Search"
+              required="true"
+              type="text"
+            />
+            <button
+              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              type="button"
+            >
+              <span
+                class="visually-hidden"
+              >
+                search
+              </span>
+              <svg
+                class="bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#search"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- breadcrumbs -->
+    <div
+      class="container"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="mt-3"
+      >
+        <ol
+          class="breadcrumb"
+        >
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item d-none d-md-block"
+          >
+            <a
+              href="/example.html"
+            >
+              European Union
+            </a>
+          </li>
+          <li
+            class="breadcrumb-item"
+          >
+            <a
+              href="/example.html"
+            >
+              <svg
+                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#arrow-left"
+                />
+              </svg>
+              About the European Union
+            </a>
+          </li>
+          <li
+            aria-current="page"
+            class="breadcrumb-item d-none d-md-block active"
+          >
+            News
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div
+    aria-hidden="true"
+    aria-label="loginModalLabel"
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h5
+            class="modal-title"
+            id="loginModalLabel"
+          >
+            Log in
+          </h5>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          <h5>
+            Disclaimer 1
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+          <h5>
+            Disclaimer 2
+          </h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+            <br />
+          </p>
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Close
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+          >
+            Access EU login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-hidden="true"
+    aria-label="languageModalLabel"
+    class="bcl-language-list-modal bcl-language-list-modal--eu modal fade"
+    id="languageModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog modal-fullscreen"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5"
+            >
+              <div
+                class="py-3-5 px-3 px-sm-0 px-md-3"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <div
+                    class="d-flex align-items-center"
+                  >
+                    <svg
+                      class="bi icon--s"
+                    >
+                      <use
+                        xlink:href="/icons.svg#globe2"
+                      />
+                    </svg>
+                    <h5
+                      class="mb-0 ms-2"
+                    >
+                      Select your language
+                    </h5>
+                  </div>
+                  <button
+                    aria-label="Close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div
+            class="bcl-language-list bcl-language-list--eu"
+          >
+            <div
+              class="main pt-4"
+            >
+              <div
+                class="container"
+              >
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    EU official languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#bg"
+                        hreflang="bg"
+                        lang="bg"
+                      >
+                        български
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#es"
+                        hreflang="es"
+                        lang="es"
+                      >
+                        español
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#cs"
+                        hreflang="cs"
+                        lang="cs"
+                      >
+                        čeština
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#da"
+                        hreflang="da"
+                        lang="da"
+                      >
+                        dansk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#de"
+                        hreflang="de"
+                        lang="de"
+                      >
+                        Deutsch
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#et"
+                        hreflang="et"
+                        lang="et"
+                      >
+                        eesti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#el"
+                        hreflang="el"
+                        lang="el"
+                      >
+                        ελληνικά
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn selected justify-content-between"
+                        href="/example.html#en"
+                        hreflang="en"
+                        lang="en"
+                      >
+                        English
+                        <svg
+                          class="ms-2-5 bi icon--s"
+                        >
+                          <use
+                            xlink:href="/icons.svg#check2"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fr"
+                        hreflang="fr"
+                        lang="fr"
+                      >
+                        français
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ga"
+                        hreflang="ga"
+                        lang="ga"
+                      >
+                        Gaeilge
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hr"
+                        hreflang="hr"
+                        lang="hr"
+                      >
+                        hrvatski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#it"
+                        hreflang="it"
+                        lang="it"
+                      >
+                        italiano
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lv"
+                        hreflang="lv"
+                        lang="lv"
+                      >
+                        latviešu
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#lt"
+                        hreflang="lt"
+                        lang="lt"
+                      >
+                        lietuvių
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#hu"
+                        hreflang="hu"
+                        lang="hu"
+                      >
+                        magyar
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#mt"
+                        hreflang="mt"
+                        lang="mt"
+                      >
+                        Malti
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#nl"
+                        hreflang="nl"
+                        lang="nl"
+                      >
+                        Nederlands
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pl"
+                        hreflang="pl"
+                        lang="pl"
+                      >
+                        polski
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#pt"
+                        hreflang="pt"
+                        lang="pt"
+                      >
+                        português
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ro"
+                        hreflang="ro"
+                        lang="ro"
+                      >
+                        română
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sk"
+                        hreflang="sk"
+                        lang="sk"
+                      >
+                        slovenčina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sl"
+                        hreflang="sl"
+                        lang="sl"
+                      >
+                        slovenščina
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#fi"
+                        hreflang="fi"
+                        lang="fi"
+                      >
+                        suomi
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#sv"
+                        hreflang="sv"
+                        lang="sv"
+                      >
+                        svenska
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="pb-2"
+                >
+                  <h5
+                    class="mb-4"
+                  >
+                    Other languages
+                  </h5>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#zh"
+                        hreflang="zh"
+                        lang="zh"
+                      >
+                        中文
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#tr"
+                        hreflang="tr"
+                        lang="tr"
+                      >
+                        Türk
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ru"
+                        hreflang="ru"
+                        lang="ru"
+                      >
+                        pусский
+                      </a>
+                    </div>
+                    <div
+                      class="col-12 col-md"
+                    >
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="/example.html#ca"
+                        hreflang="ca"
+                        lang="ca"
+                      >
+                        Català
+                      </a>
+                      <a
+                        class="w-100 mb-2-5 btn justify-content-start"
+                        href="#"
+                        hreflang="ar"
+                        lang="ar"
+                      >
+                        عَرَبِيّ
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div
+      class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
+    >
+      <div
+        class="container"
+      >
+        <article
+          class="bg-transparent border-0 card"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-lg-10 col-xl-9 col-xxl-8"
+            >
+              <div
+                class="card-body pt-0 px-0 pb-0"
+              >
+                <h1
+                  class="fs-1 card-title bcl-heading"
+                >
+                  Manage your subscriptions
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  <br />
+                    Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                  <br />
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div
+      class="container mt-md-4-75 mt-4"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-10 col-xl-9 col-xxl-8"
+        >
+          <form
+            class="needs-validation"
+          >
+            <fieldset>
+              <legend
+                class="col-form-label"
+              >
+                Your content subscription
+              </legend>
+              <div
+                class="col-sm-10"
+              >
+                <div
+                  class="mb-3"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="exampleInputRadios1"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="exampleInputRadios1"
+                    >
+                      First check
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-3"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="exampleInputRadios2"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="exampleInputRadios2"
+                    >
+                      Second check
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="mb-5"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      id="exampleInputRadios3"
+                      type="checkbox"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="exampleInputRadios3"
+                    >
+                      Third check
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div
+              class="mb-3"
+            >
+              <label
+                class="form-label"
+              >
+                Choose the language(s) of your choice
+              </label>
+              <select
+                class="multi-select form-select"
+                multiple="true"
+              >
+                <option
+                  value="1"
+                >
+                  a select option
+                </option>
+                <option
+                  value="2"
+                >
+                  another select option
+                </option>
+                <option
+                  value="3"
+                >
+                  another option
+                </option>
+                <option
+                  value="4"
+                >
+                  last option
+                </option>
+              </select>
+            </div>
+          </form>
+          <p
+            class="mt-5"
+          >
+            Your content subscription to specific page
+          </p>
+          <table
+            class="table align-middle"
+          >
+            <thead>
+              <tr
+                class="table-light"
+              >
+                <td>
+                  <input
+                    type="checkbox"
+                  />
+                </td>
+                <td>
+                  TITLE
+                  <svg
+                    class="ms-2-5 bi icon--fluid text-muted"
+                  >
+                    <use
+                      xlink:href="/icons.svg#caret-down-fill"
+                    />
+                  </svg>
+                </td>
+                <td>
+                  OPERATIONS
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                  />
+                </td>
+                <td>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </td>
+                <td>
+                  <button
+                    class="btn btn-danger"
+                    type="button"
+                  >
+                    <svg
+                      class="me-2-5 bi icon--fluid"
+                    >
+                      <use
+                        xlink:href="/icons.svg#trash-fill"
+                      />
+                    </svg>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                  />
+                </td>
+                <td>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </td>
+                <td>
+                  <button
+                    class="btn btn-danger"
+                    type="button"
+                  >
+                    <svg
+                      class="me-2-5 bi icon--fluid"
+                    >
+                      <use
+                        xlink:href="/icons.svg#trash-fill"
+                      />
+                    </svg>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                  />
+                </td>
+                <td>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </td>
+                <td>
+                  <button
+                    class="btn btn-danger"
+                    type="button"
+                  >
+                    <svg
+                      class="me-2-5 bi icon--fluid"
+                    >
+                      <use
+                        xlink:href="/icons.svg#trash-fill"
+                      />
+                    </svg>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                  />
+                </td>
+                <td>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </td>
+                <td>
+                  <button
+                    class="btn btn-danger"
+                    type="button"
+                  >
+                    <svg
+                      class="me-2-5 bi icon--fluid"
+                    >
+                      <use
+                        xlink:href="/icons.svg#trash-fill"
+                      />
+                    </svg>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button
+            class="mt-5 btn btn-primary btn-md"
+            type="submit"
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="mt-md-4-75 mt-4 bcl-footer bcl-footer--neutral"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="pt-4 pt-lg-5 row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold mb-2"
+          >
+            [Project name]
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br />
+              Duis fermentum facilisis ex, ac porta massa.
+          </p>
+        </div>
+        <div
+          class="col-12 col-lg-4 pb-4 pb-lg-0"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Contact [project name]
+          </p>
+          <p>
+            Contact information of the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mt-3 mb-2"
+          >
+            Follow us on social media
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#facebook"
+                />
+              </svg>
+              Facebook
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#twitter"
+                />
+              </svg>
+              Twitter
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              <svg
+                class="me-2-5 bi icon--xs"
+              >
+                <use
+                  xlink:href="/icons.svg#linkedin"
+                />
+              </svg>
+              Linkedin
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            About us
+          </p>
+          <p>
+            Information about the DG
+          </p>
+          <p
+            class="fw-bold border-bottom pb-2 mb-2"
+          >
+            Optional links
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pb-4 pb-lg-5 mt-4 mt-lg-5 bcl-footer__bordered-row row"
+      >
+        <div
+          class="col-12 col-lg-4"
+        >
+          <p
+            class="fw-bold pb-2 mb-2"
+          >
+            More information on:
+          </p>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+          <div
+            class="mb-1"
+          >
+            <a
+              class="standalone"
+              href="/example.html"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</jest>
+`;
+
+exports[`OE - Subscription modal renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
@@ -955,7 +5342,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             tabindex="-1"
           >
             <div
-              class="modal-dialog"
+              class="modal-dialog modal-lg"
             >
               <div
                 class="modal-content"
@@ -966,7 +5353,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                   <div
                     class="modal-title fs-5 fw-medium"
                   >
-                    Subscribe
+                    Subscribe to [the title of the page/content]
                   </div>
                   <button
                     aria-label="Close"
@@ -976,191 +5363,129 @@ exports[`OE - Subscription renders correctly 1`] = `
                   />
                 </div>
                 <div
-                  class="success-alert d-none mb-0 alert alert-success d-flex align-items-center fade show text-dark"
-                  role="alert"
-                >
-                  <svg
-                    class="flex-shrink-0 me-3 mt-1 align-self-start text-success bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#check-circle-fill"
-                    />
-                  </svg>
-                  <div
-                    class="alert-content flex-grow-1"
-                  >
-                    <div
-                      class="alert-heading h4"
-                    >
-                      Thank you!
-                    </div>
-                    Your subscription has been successfully registered. You can now close this dialog.
-                  </div>
-                </div>
-                <div
-                  class="error-alert d-none mb-0 alert alert-danger d-flex align-items-center fade show text-dark"
-                  role="alert"
-                >
-                  <svg
-                    class="flex-shrink-0 me-3 mt-1 align-self-start text-danger bi icon--s"
-                  >
-                    <use
-                      xlink:href="/icons.svg#dash-circle-fill"
-                    />
-                  </svg>
-                  <div
-                    class="alert-content flex-grow-1"
-                  >
-                    <div
-                      class="alert-heading h4"
-                    >
-                      Sorry!
-                    </div>
-                    There was an error!
-                    <hr
-                      class="d-none d-md-block"
-                    />
-                    <p
-                      class="d-none d-md-block mb-0"
-                    >
-                      Please verify your e-mail address and agree with the privacy statement.
-                    </p>
-                  </div>
-                </div>
-                <div
                   class="modal-body"
                 >
-                  <form
-                    class="needs-validation"
-                    novalidate="true"
-                    onsubmit="return false;"
+                  <p>
+                    By subscribing to the updates of [the title of the page/content], you will be notified whenever changes are made.
+                  </p>
+                  <div
+                    class="row"
                   >
-                    <fieldset>
-                      <legend
-                        class="h6 fw-normal mb-0"
-                      >
-                        <p>
-                          Please enter your information & preference to receive the wished information in your mailbox. Your email will not be shared with anyone.
-                        </p>
-                      </legend>
-                    </fieldset>
                     <div
-                      class="mb-3"
+                      class="col-lg-7"
                     >
-                      <label
-                        class="form-label"
+                      <form
+                        class="needs-validation"
+                        novalidate="true"
+                        onsubmit="return false;"
                       >
-                        E-mail
-                      </label>
-                      <input
-                        class="form-control"
-                        placeholder="Type in your e-mail address"
-                        required="true"
-                        type="email"
-                      />
-                      <div
-                        class="invalid-feedback"
-                      >
-                        Please enter a valid e-mail address
-                      </div>
-                    </div>
-                    <div
-                      class="mb-3"
-                    >
-                      <label
-                        class="form-label"
-                        for="language-select"
-                      >
-                        Languages
-                      </label>
-                      <select
-                        class="form-select"
-                        id="language-select"
-                        required="true"
-                      >
-                        <option
-                          disabled=""
-                          hidden=""
-                          selected=""
-                          value=""
-                        >
-                          Please select a language
-                        </option>
-                        <option
-                          value="1"
-                        >
-                          a select option
-                        </option>
-                        <option
-                          value="2"
-                        >
-                          another select option
-                        </option>
-                        <option
-                          value="3"
-                        >
-                          another option
-                        </option>
-                        <option
-                          value="4"
-                        >
-                          last option
-                        </option>
-                      </select>
-                      <div
-                        class="invalid-feedback"
-                      >
-                        Please select a language
-                      </div>
-                    </div>
-                    <div
-                      class="mb-3"
-                    >
-                      <div
-                        class="form-check"
-                      >
-                        <input
-                          class="form-check-input"
-                          id="exampleInputCheck1"
-                          required="true"
-                          type="checkbox"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="exampleInputCheck1"
-                        >
-                          By checking this box, I confirm that I want to register for this service, and I agree with the 
-                          <a
-                            href="/example.html"
-                          >
-                            privacy statement
-                          </a>
-                        </label>
                         <div
-                          class="invalid-feedback"
+                          class="mb-3"
                         >
-                          Please check the required checkbox.
+                          <label
+                            class="form-label"
+                          >
+                            Your email
+                          </label>
+                          <input
+                            class="form-control"
+                            placeholder="Placeholder"
+                            required="true"
+                            type="email"
+                          />
                         </div>
-                      </div>
+                        <div
+                          class="mb-3"
+                        >
+                          <label
+                            class="form-label"
+                            for="language-select"
+                          >
+                            Languages
+                          </label>
+                          <select
+                            class="form-select"
+                            id="language-select"
+                            required="true"
+                          >
+                            <option
+                              selected=""
+                              value="1"
+                            >
+                              Daily
+                            </option>
+                            <option
+                              value="2"
+                            >
+                              another select option
+                            </option>
+                            <option
+                              value="3"
+                            >
+                              another option
+                            </option>
+                            <option
+                              value="4"
+                            >
+                              last option
+                            </option>
+                          </select>
+                          <div
+                            class="invalid-feedback"
+                          >
+                            Notification frequency
+                          </div>
+                        </div>
+                        <div
+                          class="mb-3"
+                        >
+                          <div
+                            class="form-check"
+                          >
+                            <input
+                              class="form-check-input"
+                              id="exampleInputCheck1"
+                              required="true"
+                              type="checkbox"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="exampleInputCheck1"
+                            >
+                              I have read and agree with the 
+                              <a
+                                href="/example.html"
+                              >
+                                data protection terms
+                              </a>
+                            </label>
+                            <div
+                              class="invalid-feedback"
+                            >
+                              Please check the required checkbox.
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                     </div>
-                  </form>
+                  </div>
                 </div>
                 <div
                   class="modal-footer"
                 >
+                  <button
+                    class="btn btn-light"
+                    data-bs-dismiss="modal"
+                  >
+                    No, thanks
+                  </button>
                   <div
                     class="text-align-end"
                   >
                     <button
-                      class="btn btn-light"
-                      data-bs-dismiss="modal"
+                      class="btn btn-primary form-submit"
                     >
-                      Close
-                    </button>
-                    <button
-                      class="btn btn-primary form-submit ms-4"
-                    >
-                      Subscribe now
+                      Subscribe me
                     </button>
                   </div>
                 </div>

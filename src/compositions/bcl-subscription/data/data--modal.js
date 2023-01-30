@@ -2,12 +2,13 @@ const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
   id: "subscribeModal",
+  size: "lg",
   header:
-    '<div class="modal-title fs-5 fw-medium">Subscribe</div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
+    '<div class="modal-title fs-5 fw-medium">Subscribe to [the title of the page/content]</div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
   footer:
+    '<button class="btn btn-light" data-bs-dismiss="modal">No, thanks</button>' +
     '<div class="text-align-end">' +
-    '<button class="btn btn-light" data-bs-dismiss="modal">Close</button>' +
-    '<button class="btn btn-primary form-submit ms-4">Subscribe now</button>' +
+    '<button class="btn btn-primary form-submit">Subscribe me</button>' +
     "</div>",
   form: {
     attributes: new drupalAttribute()
@@ -17,20 +18,11 @@ module.exports = {
     items: [
       [
         {
-          legend_classes: "h6 fw-normal mb-0",
-          type: "fieldset",
-          legend:
-            "<p>Please enter your information & preference to receive the wished information in your mailbox. Your email will not be shared with anyone.</p>",
-        },
-      ],
-      [
-        {
           classes: "mb-3",
           input_type: "email",
           required: true,
-          label: "E-mail",
-          invalid_feedback: "Please enter a valid e-mail address",
-          placeholder: "Type in your e-mail address",
+          label: "Your email",
+          placeholder: "Placeholder",
         },
       ],
       [
@@ -39,17 +31,10 @@ module.exports = {
           type: "select",
           label: "Languages",
           required: true,
-          invalid_feedback: "Please select a language",
+          invalid_feedback: "Notification frequency",
           id: "language-select",
           options: [
-            {
-              label: "Please select a language",
-              selected: true,
-              disabled: true,
-              value: "",
-              hidden: true,
-            },
-            { value: 1, label: "a select option" },
+            { value: 1, label: "Daily", selected: true },
             { value: 2, label: "another select option" },
             { value: 3, label: "another option" },
             { value: 4, label: "last option" },
@@ -62,37 +47,11 @@ module.exports = {
           classes: "mb-3",
           required: true,
           label:
-            "By checking this box, I confirm that I want to register for this service, and I agree with the <a href='/example.html'>privacy statement</a>",
+            "I have read and agree with the <a href='/example.html'>data protection terms</a>",
           id: "exampleInputCheck1",
           invalid_feedback: "Please check the required checkbox.",
         },
       ],
     ],
-  },
-  success_alert: {
-    message:
-      "Your subscription has been successfully registered. You can now close this dialog.",
-    heading: "Thank you!",
-    icon_path: "/icons.svg",
-    variant: "success",
-    attributes: new drupalAttribute().addClass([
-      "success-alert",
-      "d-none",
-      "mb-0",
-    ]),
-    dismissible: false,
-  },
-  error_alert: {
-    message:
-      "There was an error!<hr class='d-none d-md-block' /><p class='d-none d-md-block mb-0'>Please verify your e-mail address and agree with the privacy statement.</p>",
-    heading: "Sorry!",
-    icon_path: "/icons.svg",
-    variant: "danger",
-    dismissible: false,
-    attributes: new drupalAttribute().addClass([
-      "error-alert",
-      "d-none",
-      "mb-0",
-    ]),
   },
 };

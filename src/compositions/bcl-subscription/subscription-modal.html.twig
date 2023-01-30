@@ -11,14 +11,12 @@
 #}
 
 {% set _form = form|default({}) %}
-{% set _success_alert = success_alert|default({}) %}
-{% set _error_alert = error_alert|default({}) %}
 
 {% block body %}
-  {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
-{% endblock %}
-
-{% block messages %}
-  {% include '@oe-bcl/bcl-alert/alert.html.twig' with _success_alert only %}
-  {% include '@oe-bcl/bcl-alert/alert.html.twig' with _error_alert only %}
+  <p>By subscribing to the updates of [the title of the page/content], you will be notified whenever changes are made.</p>
+  <div class="row">
+    <div class="col-lg-7">
+      {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
+    </div>
+  </div>
 {% endblock %}

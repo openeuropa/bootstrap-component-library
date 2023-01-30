@@ -2,10 +2,21 @@ import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import { within, userEvent } from "@storybook/testing-library";
 import isChromatic from "chromatic/isChromatic";
-import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
+import {
+  correctPaths,
+  initScrollspy,
+  initListings,
+} from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-subscription/data/data";
+import {
+  demoData,
+  demoDataEmailForm,
+  demoDataEmailConfirmationForm,
+  demoDataEmailConfirmedForm,
+  demoDataManageForm,
+} from "@openeuropa/bcl-subscription/data/data";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
+import subscriptionForm from "@openeuropa/bcl-subscription/subscription-form.html.twig";
 
 const chromatic = process.env.STORYBOOK_ENV;
 
@@ -41,53 +52,6 @@ const clientValidation = (story) => {
   </script>${demo}`;
 };
 
-const openModal = (story) => {
-  const demo = story();
-  return `
-    ${demo}
-    <script>
-      var backdrop = document.getElementsByClassName("modal-backdrop")[0];
-      if (typeof backdrop != "undefined" && backdrop != null) {
-        backdrop.remove();
-      }
-      var subscribeModal = new bootstrap.Modal(
-        document.getElementById("subscribeModal")
-      );
-      subscribeModal.show();
-    </script>
-    `;
-};
-
-const successState = (story) => {
-  const demo = story();
-  return `
-    ${demo}
-    <script>
-      var submit = document.querySelector(".form-submit");
-      var successAlert = document.querySelector(".success-alert");
-      var form = document.querySelector(".needs-validation");
-      
-      successAlert.classList.remove("d-none");
-      form.closest(".modal-body").remove();
-      submit.classList.add("d-none");
-    </script>
-    `;
-};
-
-const errorState = (story) => {
-  const demo = story();
-  return `
-    ${demo}
-    <script>
-      var errorAlert = document.querySelector(".error-alert");
-      var form = document.querySelector(".needs-validation");
-      
-      errorAlert.classList.remove("d-none");
-      form.classList.add("was-validated");
-    </script>
-    `;
-};
-
 export default {
   title: "Features/Subscription",
   decorators: [withCode, withDesign, initScrollspy],
@@ -105,11 +69,11 @@ export default {
   },
 };
 
-export const Default = () => subscriptionPage(correctPaths(demoData));
-Default.decorators = [clientValidation];
+export const ModalOpened = () => subscriptionPage(correctPaths(demoData));
+ModalOpened.decorators = [clientValidation];
 
 if (isChromatic() || chromatic) {
-  Default.play = async ({ canvasElement }) => {
+  ModalOpened.play = async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const button = canvas.getAllByText("Subscribe", {
       selector: "button",
@@ -118,26 +82,51 @@ if (isChromatic() || chromatic) {
   };
 }
 
-export const SuccessState = () => subscriptionPage(correctPaths(demoData));
-SuccessState.decorators = [openModal, successState];
-SuccessState.parameters = {
+export const EmailForm = () =>
+  subscriptionForm(correctPaths(demoDataEmailForm));
+EmailForm.parameters = {
   design: [
     {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244564",
+      url: "https://www.figma.com/file/G8nR0RrtGWypLbdv9VXElT/BCL-Features---03?node-id=16828%3A142290&t=9asTp1JeDni0qsE4-0",
     },
   ],
 };
 
-export const ErrorState = () => subscriptionPage(correctPaths(demoData));
-ErrorState.decorators = [openModal, errorState];
-ErrorState.parameters = {
+export const EmailConfirmation = () =>
+  subscriptionForm(correctPaths(demoDataEmailConfirmationForm));
+EmailConfirmation.parameters = {
   design: [
     {
       name: "Mockup",
       type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244562",
+      url: "https://www.figma.com/file/G8nR0RrtGWypLbdv9VXElT/BCL-Features---03?node-id=16828%3A142290&t=9asTp1JeDni0qsE4-0",
+    },
+  ],
+};
+
+export const EmailConfirmed = () =>
+  subscriptionForm(correctPaths(demoDataEmailConfirmedForm));
+EmailConfirmed.parameters = {
+  design: [
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/G8nR0RrtGWypLbdv9VXElT/BCL-Features---03?node-id=16828%3A142290&t=9asTp1JeDni0qsE4-0",
+    },
+  ],
+};
+
+export const ManageForm = () =>
+  subscriptionForm(correctPaths(demoDataManageForm));
+ManageForm.decorators = [initListings];
+ManageForm.parameters = {
+  design: [
+    {
+      name: "Mockup",
+      type: "figma",
+      url: "https://www.figma.com/file/G8nR0RrtGWypLbdv9VXElT/BCL-Features---03?node-id=16828%3A142290&t=9asTp1JeDni0qsE4-0",
     },
   ],
 };
