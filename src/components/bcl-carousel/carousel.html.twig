@@ -14,7 +14,8 @@
       image: (string) <img> tag
       caption (string)
       caption_classes (string)
-      caption_title (string) 
+      caption_title (string)
+      caption_visible_mobile (boolean)
       interval (integer) (default: 0)
      }
    ],
@@ -124,7 +125,7 @@
     {% endif %}
     {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
       {% set _caption_classes = 'carousel-caption' %}
-      {% if _item.caption is not empty and _item.link is empty %}
+      {% if _item.caption is not empty and _item.link is empty and not _item.caption_visible_mobile %}
         {% set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
       {% endif %}
       <div
