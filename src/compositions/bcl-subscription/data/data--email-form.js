@@ -16,7 +16,6 @@ module.exports = {
           input_type: "email",
           required: true,
           label: "Your email",
-          invalid_feedback: "Please enter a valid e-mail address",
           placeholder: "Type in your e-mail address",
         },
       ],

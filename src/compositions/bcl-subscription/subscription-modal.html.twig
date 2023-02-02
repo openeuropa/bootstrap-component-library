@@ -13,10 +13,6 @@
 {% set _form = form|default({}) %}
 
 {% block body %}
-  <p>By subscribing to the updates of [the title of the page/content], you will be notified whenever changes are made.</p>
-  <div class="row">
-    <div class="col-lg-7">
-      {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
-    </div>
-  </div>
+  <p class="mb-4">By subscribing to the updates of [the title of the page/content], you will be notified whenever changes are made.</p>
+  {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
 {% endblock %}

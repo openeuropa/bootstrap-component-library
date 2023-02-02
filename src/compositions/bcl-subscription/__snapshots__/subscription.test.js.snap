@@ -2935,11 +2935,6 @@ exports[`OE - Subscription email form renders correctly 1`] = `
                 required="true"
                 type="email"
               />
-              <div
-                class="invalid-feedback"
-              >
-                Please enter a valid e-mail address
-              </div>
             </div>
             <div
               class="col-12"
@@ -3927,11 +3922,68 @@ exports[`OE - Subscription manage form renders correctly 1`] = `
         class="row"
       >
         <div
-          class="col-lg-10 col-xl-9 col-xxl-8"
+          class="col-12"
         >
           <form
             class="needs-validation"
           >
+            <div
+              class="mb-4 col-lg-4"
+            >
+              <label
+                class="form-label"
+              >
+                Your email
+              </label>
+              <input
+                class="form-control"
+                placeholder="Placeholder"
+                required="true"
+                type="email"
+              />
+            </div>
+            <div
+              class="mb-4 col-lg-4"
+            >
+              <label
+                class="form-label"
+                for="language-select"
+              >
+                Languages
+              </label>
+              <select
+                class="form-select"
+                id="language-select"
+                required="true"
+              >
+                <option
+                  selected=""
+                  value="1"
+                >
+                  Daily
+                </option>
+                <option
+                  value="2"
+                >
+                  another select option
+                </option>
+                <option
+                  value="3"
+                >
+                  another option
+                </option>
+                <option
+                  value="4"
+                >
+                  last option
+                </option>
+              </select>
+              <div
+                class="invalid-feedback"
+              >
+                Notification frequency
+              </div>
+            </div>
             <fieldset>
               <legend
                 class="col-form-label"
@@ -3980,7 +4032,7 @@ exports[`OE - Subscription manage form renders correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="mb-5"
+                  class="mb-4"
                 >
                   <div
                     class="form-check"
@@ -4000,44 +4052,8 @@ exports[`OE - Subscription manage form renders correctly 1`] = `
                 </div>
               </div>
             </fieldset>
-            <div
-              class="mb-3"
-            >
-              <label
-                class="form-label"
-              >
-                Choose the language(s) of your choice
-              </label>
-              <select
-                class="multi-select form-select"
-                multiple="true"
-              >
-                <option
-                  value="1"
-                >
-                  a select option
-                </option>
-                <option
-                  value="2"
-                >
-                  another select option
-                </option>
-                <option
-                  value="3"
-                >
-                  another option
-                </option>
-                <option
-                  value="4"
-                >
-                  last option
-                </option>
-              </select>
-            </div>
           </form>
-          <p
-            class="mt-5"
-          >
+          <p>
             Your content subscription to specific page
           </p>
           <table
@@ -4054,13 +4070,6 @@ exports[`OE - Subscription manage form renders correctly 1`] = `
                 </td>
                 <td>
                   TITLE
-                  <svg
-                    class="ms-2-5 bi icon--fluid text-muted"
-                  >
-                    <use
-                      xlink:href="/icons.svg#caret-down-fill"
-                    />
-                  </svg>
                 </td>
                 <td>
                   OPERATIONS
@@ -4171,7 +4180,7 @@ exports[`OE - Subscription manage form renders correctly 1`] = `
             </tbody>
           </table>
           <button
-            class="mt-5 btn btn-primary btn-md"
+            class="mt-4 btn btn-primary btn-md"
             type="submit"
           >
             Save changes
@@ -5365,110 +5374,62 @@ exports[`OE - Subscription modal renders correctly 1`] = `
                 <div
                   class="modal-body"
                 >
-                  <p>
+                  <p
+                    class="mb-4"
+                  >
                     By subscribing to the updates of [the title of the page/content], you will be notified whenever changes are made.
                   </p>
-                  <div
-                    class="row"
+                  <form
+                    class="needs-validation"
+                    novalidate="true"
+                    onsubmit="return false;"
                   >
                     <div
-                      class="col-lg-7"
+                      class="mb-4"
                     >
-                      <form
-                        class="needs-validation"
-                        novalidate="true"
-                        onsubmit="return false;"
+                      <label
+                        class="form-label"
                       >
-                        <div
-                          class="mb-3"
-                        >
-                          <label
-                            class="form-label"
-                          >
-                            Your email
-                          </label>
-                          <input
-                            class="form-control"
-                            placeholder="Placeholder"
-                            required="true"
-                            type="email"
-                          />
-                        </div>
-                        <div
-                          class="mb-3"
-                        >
-                          <label
-                            class="form-label"
-                            for="language-select"
-                          >
-                            Languages
-                          </label>
-                          <select
-                            class="form-select"
-                            id="language-select"
-                            required="true"
-                          >
-                            <option
-                              selected=""
-                              value="1"
-                            >
-                              Daily
-                            </option>
-                            <option
-                              value="2"
-                            >
-                              another select option
-                            </option>
-                            <option
-                              value="3"
-                            >
-                              another option
-                            </option>
-                            <option
-                              value="4"
-                            >
-                              last option
-                            </option>
-                          </select>
-                          <div
-                            class="invalid-feedback"
-                          >
-                            Notification frequency
-                          </div>
-                        </div>
-                        <div
-                          class="mb-3"
-                        >
-                          <div
-                            class="form-check"
-                          >
-                            <input
-                              class="form-check-input"
-                              id="exampleInputCheck1"
-                              required="true"
-                              type="checkbox"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="exampleInputCheck1"
-                            >
-                              I have read and agree with the 
-                              <a
-                                href="/example.html"
-                              >
-                                data protection terms
-                              </a>
-                            </label>
-                            <div
-                              class="invalid-feedback"
-                            >
-                              Please check the required checkbox.
-                            </div>
-                          </div>
-                        </div>
-                      </form>
+                        Your email
+                      </label>
+                      <input
+                        class="form-control"
+                        placeholder="Enter your email address"
+                        required="true"
+                        type="email"
+                      />
                     </div>
-                  </div>
+                    <div
+                      class="mb-3"
+                    >
+                      <div
+                        class="form-check"
+                      >
+                        <input
+                          class="form-check-input"
+                          id="exampleInputCheck1"
+                          required="true"
+                          type="checkbox"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="exampleInputCheck1"
+                        >
+                          I have read and agree with the 
+                          <a
+                            href="/example.html"
+                          >
+                            data protection terms
+                          </a>
+                        </label>
+                        <div
+                          class="invalid-feedback"
+                        >
+                          Please check the required checkbox.
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div
                   class="modal-footer"

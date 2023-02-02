@@ -18,27 +18,11 @@ module.exports = {
     items: [
       [
         {
-          classes: "mb-3",
+          classes: "mb-4",
           input_type: "email",
           required: true,
           label: "Your email",
-          placeholder: "Placeholder",
-        },
-      ],
-      [
-        {
-          classes: "mb-3",
-          type: "select",
-          label: "Languages",
-          required: true,
-          invalid_feedback: "Notification frequency",
-          id: "language-select",
-          options: [
-            { value: 1, label: "Daily", selected: true },
-            { value: 2, label: "another select option" },
-            { value: 3, label: "another option" },
-            { value: 4, label: "last option" },
-          ],
+          placeholder: "Enter your email address",
         },
       ],
       [

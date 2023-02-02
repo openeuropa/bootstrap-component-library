@@ -108,6 +108,7 @@ const demoDataManageForm = {
   with_banner: true,
   with_header: true,
   with_footer: true,
+  landing: true,
   banner: {
     title: "Manage your subscriptions",
     background: "gray",
