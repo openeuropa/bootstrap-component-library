@@ -134,12 +134,6 @@ module.exports = [
   "google.svg",
   "github.svg",
 
-  // Custom Social Icons - OEL-2240
-  "flickr.svg",
-  "pinterest.svg",
-  "storify.svg",
-  "yammer.svg",
-
   // Shapes
   "heart.svg",
   "heart-fill.svg",
