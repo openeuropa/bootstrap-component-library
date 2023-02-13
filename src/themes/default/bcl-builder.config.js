@@ -103,6 +103,11 @@ module.exports = {
   ],
   copy: [
     {
+      from: path.resolve(__dirname, "/icons/custom-icons/*.svg"),
+      to: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons/"),
+      options: { up: true },
+    },
+    {
       from: [path.resolve(nodeModules, "slim-select/dist/slimselect.min.js")],
       to: path.resolve(outputFolder, "js"),
       options: { up: true },
@@ -115,11 +120,6 @@ module.exports = {
         ),
       ],
       to: path.resolve(outputFolder, "icons"),
-      options: { up: true },
-    },
-    {
-      from: [path.resolve(__dirname, "/icons/custom-icons/*.svg")],
-      to: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons/"),
       options: { up: true },
     },
     {
