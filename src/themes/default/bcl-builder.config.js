@@ -95,17 +95,13 @@ module.exports = {
   ],
   sprite: [
     {
-      entry: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+      entry: [
+        path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+        path.resolve(__dirname, "src/icons/custom-icons"),
+      ],
       dest: path.resolve(outputFolder, "icons/"),
       options: {
-        list: iconList,
-      },
-    },
-    {
-      entry: path.resolve(__dirname, "src/icons/custom-icons"),
-      dest: path.resolve(outputFolder, "icons/"),
-      options: {
-        list: customIconList,
+        list: [iconList, customIconList],
       },
     },
   ],
