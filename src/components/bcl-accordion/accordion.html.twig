@@ -28,7 +28,7 @@
 {% set _id = id|default(random(1000)) %}
 {% set _flush = flush ?? false %}
 {% set _items = items|default([]) %}
-{% set _open_item_id = open_item_id|default(0) %}
+{% set _open_item_id = open_item_id|default((_items|length == 1) ? 1 : 0) %}
 {% set _classes = ['accordion'] %}
 {% if _flush %}
   {% set _classes = _classes|merge(['accordion-flush']) %}
