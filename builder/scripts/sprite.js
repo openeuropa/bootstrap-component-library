@@ -21,7 +21,7 @@
  */
 
 const fs = require("fs");
-const glob = require("glob");
+const { globSync } = require("glob");
 const mkdirp = require("mkdirp");
 const path = require("path");
 const defaultPlugins = require("../conf/svgoDefaultPlugins");
@@ -31,7 +31,7 @@ module.exports = (entry, dest, options) => {
   const outputFile = options.file
     ? `${dest}/${options.file}`
     : `${dest}/bcl-default-icons.svg`;
-  const files = options.list || glob.sync("*.svg", { cwd: entry });
+  const files = options.list || globSync("*.svg", { cwd: entry });
 
   const plugins = options.transformPlugins || defaultPlugins;
 
