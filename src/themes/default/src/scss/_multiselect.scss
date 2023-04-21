@@ -33,7 +33,11 @@ select.multi-select {
 
 .ss-main.multi-select {
   padding: 0;
-
+  &.form-select.is-invalid,
+  &.form-select.is-valid {
+    background: none;
+    padding: 0;
+  }
   .ss-values {
     @include font-size($h4-font-size);
     .ss-value {
