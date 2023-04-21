@@ -105,7 +105,7 @@ select.multi-select {
     background-repeat: no-repeat;
     background-position: right map-get($multiselect-spacers, "icon-position-x")
       center;
-    background-size: 1rem 1rem;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
   }
 }
 .ss-main.multi-select.is-invalid,
