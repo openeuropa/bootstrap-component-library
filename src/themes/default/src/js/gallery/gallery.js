@@ -42,12 +42,12 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 class Gallery extends BaseComponent {
   constructor(element, config) {
     super(element, config)
-    this.carousel = SelectorEngine.findOne(CAROUSEL_SELECTOR, this.element)
-    this.carouselPager = SelectorEngine.findOne(CAROUSEL_PAGER_SELECTOR, this.element)
+    this.carousel = SelectorEngine.findOne(CAROUSEL_SELECTOR, element)
+    this.carouselPager = SelectorEngine.findOne(CAROUSEL_PAGER_SELECTOR, element)
     this.carouselStartIndex = element.getAttribute('data-gallery-start')
     this.carouselActiveItem = SelectorEngine.find(CAROUSEL_ITEM_SELECTOR, this.carousel)[this.carouselStartIndex]
     this.carouselPager.textContent = Number(this.carouselStartIndex) + 1
-    this.modal = SelectorEngine.findOne(MODAL_SELECTOR, this.element)
+    this.modal = SelectorEngine.findOne(MODAL_SELECTOR, element)
     this.addEventListeners()
     this.carouselLazyLoad(this.carouselActiveItem)
   }
