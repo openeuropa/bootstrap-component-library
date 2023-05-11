@@ -163,7 +163,7 @@
     // avoid overlapping medias and make play button of the video accessible
     top: 50%;
     height: 20%;
-    transform: translateY(-75%);
+    transform: translateY(-50%);
   }
 
   iframe,
@@ -184,9 +184,6 @@
     height: 100%;
     justify-content: center;
     display: flex;
-    &:only-child {
-      padding-bottom: 94px;
-    }
   }
 
   .modal {
@@ -200,7 +197,6 @@
     img {
       object-fit: contain;
       display: inline-block;
-      height: 100%;
       width: 100%;
     }
   }

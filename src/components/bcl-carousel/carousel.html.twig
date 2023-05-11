@@ -15,7 +15,7 @@
       caption (string)
       caption_classes (string)
       caption_title (string)
-      caption_visible_mobile (boolean)
+      show_caption_mobile (boolean)
       interval (integer) (default: 0)
      }
    ],
@@ -27,6 +27,9 @@
   - rounded_indicators (boolean) (default: false)
   - disable_touch (boolean) (default: false)
   - attributes (drupal attrs)
+
+  Internal properties
+  - show_caption_mobile (boolean) (default: false) - internal
 #}
 
 {% set _title = title|default('') %}
@@ -45,6 +48,7 @@
 {% set _with_indicators = with_indicators ?? false %}
 {% set _rounded_indicators = rounded_indicators ?? false %}
 {% set _disable_touch = disable_touch ?? false %}
+{% set _show_caption_mobile = show_caption_mobile ?? false %}
 
 {% set _classes = ['carousel', 'slide'] %}
 
@@ -127,7 +131,7 @@
     {% endif %}
     {% if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
       {% set _caption_classes = 'carousel-caption' %}
-      {% if _item.caption is not empty and _item.link is empty and not _item.caption_visible_mobile %}
+      {% if _item.caption is not empty and _item.link is empty and not _show_caption_mobile %}
         {% set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
       {% endif %}
       <div

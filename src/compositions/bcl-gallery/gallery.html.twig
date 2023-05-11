@@ -44,6 +44,7 @@ Parameters:
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
 {% set _modal_id = "modal" ~ _id|capitalize %}
 {% set _collapse_id = "collapse" ~ _id|capitalize %}
+{% set _show_caption_mobile = show_caption_mobile ?? false %}
 {% set _carousel_items = [] %}
 
 {% if attributes is empty %}
@@ -170,7 +171,7 @@ Parameters:
         {% block carousel %}
           {% for _item in _items %}
             {% set _carousel_items = _carousel_items|merge([_item|merge({
-              image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
+              image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({' src=': ' data-src='}) : _item.media,
             })]) %}
           {% endfor %}
           {% include '@oe-bcl/bcl-carousel/carousel.html.twig' with {
@@ -179,6 +180,7 @@ Parameters:
             with_indicators: false,
             prev_label: _prev_label,
             next_label: _next_label,
+            show_caption_mobile: _show_caption_mobile,
             autoplay: false,
             items: _carousel_items,
           } only %}

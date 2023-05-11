@@ -7,6 +7,7 @@ module.exports = {
   prev_label: "Previous",
   next_label: "Next",
   icon_path: "/icons.svg",
+  show_caption_mobile: true,
   items: [
     {
       caption: `<p>Some representative placeholder content for the first slide.</p>`,
@@ -17,7 +18,6 @@ module.exports = {
       media: `<img alt="First slide" 
                 src="https://picsum.photos/id/1005/800/400" 
               />`,
-      caption_visible_mobile: true,
     },
     {
       caption: `<p>Some representative placeholder content for the slide.</p>`,
@@ -28,10 +28,8 @@ module.exports = {
       media: `<img alt="slide" 
                 src="https://picsum.photos/id/101/800/400" 
               />`,
-      caption_visible_mobile: true,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
       is_playable: true,
@@ -44,7 +42,6 @@ module.exports = {
               ></iframe>`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
       thumbnail: `<img alt="Slide" 
@@ -55,7 +52,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
       is_playable: true,
@@ -70,7 +66,6 @@ module.exports = {
               </video>`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
       thumbnail: `<img alt="slide" 
@@ -81,7 +76,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
       thumbnail: `<img alt="slide" 
@@ -92,7 +86,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       caption_title: "Slide label",
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1043/400/400" 
@@ -102,7 +95,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1050/400/400" 
@@ -112,7 +104,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the last slide.</p>`,
       caption_title: "Last slide label",
       thumbnail: `<img alt="slide" 
@@ -123,7 +114,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       caption: `<p>Some representative placeholder content for the last slide.</p>`,
       caption_title: "Last slide label",
       thumbnail: `<img alt="slide" 
@@ -134,7 +124,6 @@ module.exports = {
               />`,
     },
     {
-      caption_visible_mobile: true,
       is_playable: true,
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
@@ -147,7 +136,6 @@ module.exports = {
               ></iframe>`,
     },
     {
-      caption_visible_mobile: true,
       is_playable: true,
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1081/400/400" 
