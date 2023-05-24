@@ -146,10 +146,12 @@
             path: _icon_path,
           },
           attributes: create_attribute()
-                      .setAttribute('download', true)
                       .setAttribute('target', '_blank')
                       .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'])
         }) %}
+        {% if _download.path|split('.')|last|upper != 'PDF' %}
+          _downloadattributes.setAttribute('download', true)
+        {%- endif -%}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
       </div>
     </div>
