@@ -3,10 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.1.0 (2023-07-07)
+
+#### :bug: Bug Fix
+* [#526](https://github.com/openeuropa/bootstrap-component-library/pull/526) feat(multiselect): Fixed valid/invalid icon for form-select on multiple. - OEL-2292 ([@tibi2303](https://github.com/tibi2303))
+* [#521](https://github.com/openeuropa/bootstrap-component-library/pull/521) feat(inpage): Fixed inpage navigation for ucpkn and joinup - OEL-2265 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#534](https://github.com/openeuropa/bootstrap-component-library/pull/534) feat(prefix-styles): Added prefix config for styles. - OEL-2373 ([@tibi2303](https://github.com/tibi2303))
+* [#523](https://github.com/openeuropa/bootstrap-component-library/pull/523) feat(offcanvas): Fixed offcanvas close button - OEL-2277 ([@tibi2303](https://github.com/tibi2303))
+* [#512](https://github.com/openeuropa/bootstrap-component-library/pull/512) feat(icons): Added custom icons - OEL-2240 ([@tibi2303](https://github.com/tibi2303))
+* [#478](https://github.com/openeuropa/bootstrap-component-library/pull/478) feat(landing): Added deprecated filter for story files - OEL-2090 ([@tibi2303](https://github.com/tibi2303))
+* [#480](https://github.com/openeuropa/bootstrap-component-library/pull/480) feat(badges): Changed close icon on badge - OEL-2098 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Péter Keszthelyi ([@kp77](https://github.com/kp77))
+
 ## 1.0.0 (2023-01-10)
 
 #### :nail_care: Enhancement
-
 * [#472](https://github.com/openeuropa/bootstrap-component-library/pull/472) feat(documentation): Updated documentation - OEL-2078 ([@tibi2303](https://github.com/tibi2303))
 * [#475](https://github.com/openeuropa/bootstrap-component-library/pull/475) feat(badges): Link inclusion - OEL-2066 ([@tibi2303](https://github.com/tibi2303))
 * [#497](https://github.com/openeuropa/bootstrap-component-library/pull/497) feat(gallery): Raw filter used and fixed more items - OEL-2093  ([@tibi2303](https://github.com/tibi2303))
@@ -15,7 +31,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#462](https://github.com/openeuropa/bootstrap-component-library/pull/462) feat(pagination): Refactored pagination - OEL-2061 ([@tibi2303](https://github.com/tibi2303))
 
 #### :house: Internal
-
 * [#491](https://github.com/openeuropa/bootstrap-component-library/pull/491) chore(deps): Update 06-12-2022 ([@tibi2303](https://github.com/tibi2303))
 * [#489](https://github.com/openeuropa/bootstrap-component-library/pull/489) chore(deps): Update 17-11-2022 ([@tibi2303](https://github.com/tibi2303))
 * [#485](https://github.com/openeuropa/bootstrap-component-library/pull/485) chore(deps): Updates 16-11-2022 ([@tibi2303](https://github.com/tibi2303))
@@ -23,7 +38,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#471](https://github.com/openeuropa/bootstrap-component-library/pull/471) chore(deps): Updates 29-09-22 ([@planctus](https://github.com/planctus))
 
 #### Committers: 2
-
 - [@planctus](https://github.com/planctus)
 - [@tibi2303](https://github.com/tibi2303)
 
