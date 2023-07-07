@@ -23,7 +23,7 @@
  */
 
 const path = require("path");
-const glob = require("glob");
+const { globSync } = require("glob");
 const { rename } = require("fs");
 
 module.exports = (from, to, options) => {
@@ -32,15 +32,15 @@ module.exports = (from, to, options) => {
 
     if (options.glob) {
       if (options.search) {
-        files = glob.sync(path.join(from, options.glob, options.search));
+        files = globSync(path.join(from, options.glob, options.search));
       } else {
-        files = glob.sync(path.join(from, options.glob));
+        files = globSync(path.join(from, options.glob));
       }
     } else {
       if (options.search) {
-        files = glob.sync(path.join(from, options.search));
+        files = globSync(path.join(from, options.search));
       } else {
-        files = glob.sync(from);
+        files = globSync(from);
       }
     }
 
