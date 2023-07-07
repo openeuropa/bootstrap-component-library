@@ -85,6 +85,16 @@ module.exports = {
     },
     {
       entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),
+      dest: path.resolve(outputFolder, "css/oe-bcl-ckeditor5.min.css"),
+      options: {
+        prefix: ".ck-content",
+        includePaths,
+        sourceMap: "file",
+        minify: true,
+      },
+    },
+    {
+      entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),
       dest: path.resolve(outputFolder, "css/oe-bcl-default.min.css"),
       options: {
         includePaths,
