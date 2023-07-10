@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.1.1 (2023-10-10)
+
+#### :bug: Bug Fix
+* [#539](https://github.com/openeuropa/bootstrap-component-library/pull/539) chore(deps): fixed deps for builder.([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.1.0 (2023-07-07)
 
 #### :bug: Bug Fix
