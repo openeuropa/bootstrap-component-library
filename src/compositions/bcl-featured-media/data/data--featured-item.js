@@ -4,6 +4,7 @@ const { getDummyText } = require("@openeuropa/bcl-data-utils");
 module.exports = {
   with_text: true,
   wrapper_classes: "pb-4",
+  description_title: "",
   description: getDummyText(6, true),
   read_more: {
     path: "/example.html",

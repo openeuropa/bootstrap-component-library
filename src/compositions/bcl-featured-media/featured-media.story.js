@@ -21,6 +21,7 @@ const getArgs = (data, type) => {
     title_tag: "h2",
     content: data.content || "",
     content_classes: data.content_classes || "",
+    description_title: data.description_title || "",
   };
   if (type === "iframe") {
     args.ratio = data.ratio || "16x9";
@@ -52,6 +53,16 @@ const getArgTypes = (data, type) => {
         type: { summary: "string" },
         defaultValue: { summary: "" },
         category: "Style",
+      },
+    },
+    description_title: {
+      name: "description title",
+      type: { name: "string" },
+      description: "Title of description text",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
       },
     },
   };
