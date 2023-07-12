@@ -65,10 +65,6 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% if _with_text %}
-  {% set _title_attributes = _title_attributes.addClass(['fw-bold', 'mb-4']) %}
-{% endif %}
-
 {% set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
 
 {% if _image is not empty %}
