@@ -47,8 +47,9 @@ const webpackFinal = (config) => {
 };
 
 module.exports = {
-  core: {
-    builder: "webpack5",
+  framework: {
+    name: "@storybook/html-webpack5",
+    options: {},
   },
   staticDirs: ["../../../../../assets/"],
   stories,

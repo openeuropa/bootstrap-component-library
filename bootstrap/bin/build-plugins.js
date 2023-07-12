@@ -58,7 +58,7 @@ const build = async plugin => {
       }
 
       const usedPlugin = resolvedPlugins.find(plugin => {
-        return plugin.src.includes(source.replace(pattern, ''))
+        return plugin.src.includes(source.replace(pattern, '').slice(0, -3))
       })
 
       if (!usedPlugin) {

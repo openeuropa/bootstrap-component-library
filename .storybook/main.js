@@ -16,11 +16,7 @@ const addons = [
 const webpackFinal = (config) => {
   config.module.rules.push({
     test: /\.story\.js?$/,
-    use: [
-      {
-        loader: require.resolve("@whitespace/storybook-addon-code/loader"),
-      },
-    ],
+    loader: require.resolve("@whitespace/storybook-addon-code/loader"),
     enforce: "pre",
   });
   config.module.rules.push(
@@ -43,8 +39,9 @@ const webpackFinal = (config) => {
 };
 
 module.exports = {
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: "@storybook/html-webpack5",
+    options: {}
   },
   staticDirs: ['../assets'],
   stories,

@@ -1,4 +1,5 @@
-import addons, { makeDecorator } from "@storybook/addons";
+import { addons } from "@storybook/addons";
+import { makeDecorator } from "@storybook/preview-api";
 import { ADD_CODE } from "./constants";
 
 const withCode = makeDecorator({
