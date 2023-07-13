@@ -1,9 +1,9 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import {
-  initListings,
-  initBadges,
   correctPaths,
+  initBadges,
+  initListings,
 } from "@openeuropa/bcl-story-utils";
 import dataListing from "@openeuropa/bcl-search/data/data";
 
@@ -11,7 +11,7 @@ import search from "@openeuropa/bcl-search/search.html.twig";
 
 export default {
   title: "Features/Search",
-  decorators: [withCode, withDesign, initListings, initBadges],
+  decorators: [withCode, withDesign, initBadges, initListings],
   parameters: {
     a11y: {
       config: {
