@@ -22,6 +22,11 @@ $multiselect-spacers: (
 
 .multi-select {
   padding: 0;
+  &.form-select.is-invalid,
+  &.form-select.is-valid {
+    background: none;
+    padding: 0;
+  }
   &.ss-content {
     .ss-list {
       .ss-option {

@@ -1,7 +1,7 @@
 /**
  * Generate svg sprites.
  *
- * @param {string} entry - Path to a folder or file.
+ * @param {string} entry - array of paths to a folder or file.
  * @param {string} dest - Output folder path
  * @param {object} options - Object
  *
@@ -9,7 +9,10 @@
  *
  * sprite: [
  *   {
- *     entry: path.resolve(nodeModules, "bootstrap-icons/icons/"),
+ *     entry: [
+ *       path.resolve(nodeModules, "bootstrap-icons/icons/"),
+ *       path.resolve(__dirname, "src/icons/custom-icons")
+ *     ],
  *     dest: path.resolve(outputFolder, "icons/"),
  *     options: {
  *       file: "bcl-default-icons.svg",
@@ -21,17 +24,20 @@
  */
 
 const fs = require("fs");
-const glob = require("glob");
+const { globSync } = require("glob");
 const mkdirp = require("mkdirp");
 const path = require("path");
 const defaultPlugins = require("../conf/svgoDefaultPlugins");
 const SVGSpriter = require("svg-sprite");
 
 module.exports = (entry, dest, options) => {
+  const iconList = Array.isArray(options.list)
+    ? options.list.flat(1)
+    : options.list;
   const outputFile = options.file
     ? `${dest}/${options.file}`
     : `${dest}/bcl-default-icons.svg`;
-  const files = options.list || glob.sync("*.svg", { cwd: entry });
+  const files = iconList || globSync("*.svg", { cwd: entry });
 
   const plugins = options.transformPlugins || defaultPlugins;
 
@@ -60,7 +66,15 @@ module.exports = (entry, dest, options) => {
   });
 
   files.forEach((file) => {
-    const filePath = path.resolve(entry, file);
+    let filePath;
+    if (Array.isArray(entry)) {
+      filePath = path.resolve(entry[0], file);
+      if (!fs.existsSync(filePath)) {
+        filePath = path.resolve(entry[1], file);
+      }
+    } else {
+      filePath = path.resolve(entry, file);
+    }
     spriter.add(
       filePath,
       file,

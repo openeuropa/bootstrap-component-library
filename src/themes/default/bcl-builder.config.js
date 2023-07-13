@@ -1,6 +1,7 @@
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
 const iconList = require("./src/icons/icons");
+const customIconList = require("./src/icons/custom-icons");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = "../../../node_modules";
@@ -84,6 +85,16 @@ module.exports = {
     },
     {
       entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),
+      dest: path.resolve(outputFolder, "css/oe-bcl-ckeditor5.min.css"),
+      options: {
+        prefix: ".ck-content",
+        includePaths,
+        sourceMap: "file",
+        minify: true,
+      },
+    },
+    {
+      entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),
       dest: path.resolve(outputFolder, "css/oe-bcl-default.min.css"),
       options: {
         includePaths,
@@ -94,10 +105,13 @@ module.exports = {
   ],
   sprite: [
     {
-      entry: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+      entry: [
+        path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+        path.resolve(__dirname, "src/icons/custom-icons"),
+      ],
       dest: path.resolve(outputFolder, "icons/"),
       options: {
-        list: iconList,
+        list: [iconList, customIconList],
       },
     },
   ],
