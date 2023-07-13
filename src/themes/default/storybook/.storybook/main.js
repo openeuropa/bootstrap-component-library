@@ -2,7 +2,7 @@ const path = require("path");
 
 const chromatic = process.env.STORYBOOK_ENV;
 
-let stories = ["../../**/!(test*|deprecated*).story.js"];
+let stories = ["../bcl-stories/!(test*|deprecated*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
