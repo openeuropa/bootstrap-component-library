@@ -13,7 +13,7 @@ if (typeof SlimSelect !== 'undefined') {
       });
     }
     document.querySelectorAll('select').forEach((element) => {
-      if(element.slim && element.slim.settings.isMultiple) {
+      if(element.slim && element.slim.store.selectType === 'multiple') {
         const selectedValues = element.slim.store.data.filter(value => value.selected);
         selectedValues.forEach(selectedVal => {
           const deleteEl = document.querySelector(`[data-id='${selectedVal.id}'] .ss-value-delete`);
