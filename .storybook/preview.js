@@ -6,14 +6,18 @@ global.Buffer = Buffer;
 
 export const parameters = {
   a11y: {
-    element: "#root",
+    element: "#storybook-root",
     config: {},
     options: {
       checks: { "color-contrast": { options: { noScroll: true } } },
       restoreScroll: true,
     },
     manual: false,
+  },  
+  docs: {
+    canvas: { sourceState: 'shown' },
   },
+  viewMode: 'story',
   controls: { expanded: true },
   layout: "padded",
   badgesConfig: {

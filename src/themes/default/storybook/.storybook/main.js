@@ -2,7 +2,7 @@ const path = require("path");
 
 const chromatic = process.env.STORYBOOK_ENV;
 
-let stories = ["../../**/!(test*|deprecated*).story.js"];
+let stories = ["../bcl-stories/!(test*|deprecated*).story.js"];
 
 const addons = [
   "@storybook/addon-docs",
@@ -46,9 +46,10 @@ const webpackFinal = (config) => {
   return config;
 };
 
-module.exports = {
+const config = {
+  framework: "@storybook/html-webpack5",
   core: {
-    builder: "webpack5",
+    builder: "@storybook/builder-webpack5",
   },
   staticDirs: ["../../../../../assets/"],
   stories,
@@ -57,4 +58,9 @@ module.exports = {
   features: {
     postcss: false,
   },
+  docs: {
+    autodocs: true,
+  },
 };
+
+export default config;

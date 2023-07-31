@@ -7,7 +7,7 @@ global.Buffer = Buffer;
 export const parameters = {
   chromatic: { viewports: [1200] },
   a11y: {
-    element: "#root",
+    element: "#storybook-root",
     config: {
       rules: [
         {
