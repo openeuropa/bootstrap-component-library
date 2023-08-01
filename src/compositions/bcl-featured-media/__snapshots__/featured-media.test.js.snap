@@ -210,6 +210,29 @@ exports[`OE - Featured media renders correctly with image 1`] = `
 </jest>
 `;
 
+exports[`OE - Featured media renders correctly with image and forced wrapper 1`] = `
+<jest>
+  <div
+    class="bcl-featured-item"
+  >
+    <figure
+      class="rounded overflow-hidden d-inline-flex flex-wrap"
+    >
+      <img
+        alt="random image"
+        class="img-fluid flex-end-100"
+        src="https://picsum.photos/1000/400?random=1"
+      />
+      <figcaption
+        class="bg-lighter p-3 flex-1 w-min-content"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
+</jest>
+`;
+
 exports[`OE - Featured media renders correctly with image and with title 1`] = `
 <jest>
   <h6
