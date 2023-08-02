@@ -21,13 +21,13 @@ const getArgs = (data, type) => {
     title_tag: "h2",
     content: data.content || "",
     content_classes: data.content_classes || "",
-    description_title: data.description_title || "",
   };
   if (type === "iframe") {
     args.ratio = data.ratio || "16x9";
   }
   if (type === "text") {
     args.alignment = "right";
+    args.description_title = data.description_title || "";
   }
 
   return args;
@@ -55,16 +55,6 @@ const getArgTypes = (data, type) => {
         category: "Style",
       },
     },
-    description_title: {
-      name: "description title",
-      type: { name: "string" },
-      description: "Title of description text",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "" },
-        category: "Content",
-      },
-    },
   };
 
   if (type === "iframe") {
@@ -87,7 +77,7 @@ const getArgTypes = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
-        category: "Content",
+        category: "Title",
       },
     };
     argTypes.title_tag = {
@@ -97,7 +87,17 @@ const getArgTypes = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "h2" },
-        category: "Content",
+        category: "Title",
+      },
+    };
+    argTypes.description_title = {
+      name: "description title",
+      type: { name: "string" },
+      description: "Title of description text",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Title",
       },
     };
     argTypes.alignment = {
