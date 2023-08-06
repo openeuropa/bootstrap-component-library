@@ -12,6 +12,7 @@
   - poster_image: (string) (default: '')
   - content: (string) (default: '')
   - wrapper_classes: (default: '')
+  - force_wrapper (boolean) (default: false) - always render wrapper element
   - content_classes: (string) (default: '')
   - read_more (object) (default: {})
   - description (string) (default: '')
@@ -40,6 +41,7 @@
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
+{% set _force_wrapper = force_wrapper ?? false %}
 {% set _with_text = with_text ?? false %}
 {% set _alignment = alignment|default('right') %}
 {% set _image = image|default('') %}
@@ -76,8 +78,10 @@
   {% endif %}
 {% endif %}
 
-{% if _with_text %}
+{% if _with_text or _force_wrapper %}
 <div class="{{ _classes }}">
+{% endif %}
+{% if _with_text %}
   <div class="row">
 {% endif %}
 
@@ -147,6 +151,8 @@
 {% if _with_text %}
     </div>
   </div>
+{% endif %}
+{% if _with_text or _force_wrapper %}
 </div>
 {% endif %}
 
