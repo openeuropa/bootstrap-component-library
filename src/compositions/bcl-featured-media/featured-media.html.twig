@@ -15,6 +15,9 @@
   - force_wrapper (boolean) (default: false) - always render wrapper element
   - content_classes: (string) (default: '')
   - read_more (object) (default: {})
+  - description_title (string) (default: '')
+  - description_title_tag (string) (default: 'h3')
+  - description_title_attributes (drupal attrs)
   - description (string) (default: '')
   - ratio: (string) (default: '16x9')
     - options ['1x1', '4x3', '16x9', '21x9']
@@ -50,6 +53,9 @@
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _content_classes = content_classes|default('') %}
 {% set _read_more = read_more|default({}) %}
+{% set _description_title = description_title|default('') %}
+{% set _description_title_tag = description_title_tag|default('h3') %}
+{% set _description_title_attributes = description_title_attributes ?: create_attribute() %}
 {% set _description = description|default('') %}
 {% set _ratio = ratio|default('16x9') %}
 {% set _sources = sources|default([]) %}
@@ -96,6 +102,13 @@
 
 {% if _with_text %}
   <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '1' : '2' }}">
+    {%- if _description_title is not empty -%}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: _description_title,
+        title_tag: _description_title_tag,
+        attributes: _description_title_attributes,
+      } only %}
+    {%- endif -%}
     {{- _description|default('') -}}
 
     {% if _read_more is not empty %}

@@ -89,6 +89,17 @@ describe("OE - Featured media", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("featured item renders correctly with description title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoFeaturedItem,
+        description_title: "Featured media test description title",
+        description_title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with ratio", () => {
     expect.assertions(1);
     return expect(
