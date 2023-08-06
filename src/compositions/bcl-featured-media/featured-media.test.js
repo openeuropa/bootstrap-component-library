@@ -30,6 +30,16 @@ describe("OE - Featured media", () => {
     return expect(render(demoDataImage)).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with image and forced wrapper", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDataImage,
+        force_wrapper: true,
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("featured item renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoFeaturedItem)).resolves.toMatchSnapshot();
