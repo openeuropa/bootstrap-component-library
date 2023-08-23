@@ -30,6 +30,16 @@ describe("OE - Featured media", () => {
     return expect(render(demoDataImage)).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with image and forced wrapper", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoDataImage,
+        force_wrapper: true,
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("featured item renders correctly", () => {
     expect.assertions(1);
     return expect(render(demoFeaturedItem)).resolves.toMatchSnapshot();
@@ -75,6 +85,17 @@ describe("OE - Featured media", () => {
         ...demoFeaturedItem,
         title: "Featured media test title",
         title_tag: "h6",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("featured item renders correctly with description title", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoFeaturedItem,
+        description_title: "Featured media test description title",
+        description_title_tag: "h6",
       })
     ).resolves.toMatchSnapshot();
   });

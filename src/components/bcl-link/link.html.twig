@@ -78,11 +78,11 @@
   {{ attributes }}
 >
   {%- if _icon_position == 'before' and _icon_markup is defined -%}
-    {{ _icon_markup|raw }}
+    {{ _icon_markup }}
   {%- endif -%}
   {{- _label -}}
   {%- if _icon_position == 'after' and _icon_markup is defined -%}
-    {{ _icon_markup|raw }}
+    {{ _icon_markup }}
   {%- endif -%}
 </a>
 

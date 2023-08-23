@@ -92,6 +92,7 @@
     {% set button_attributes = create_attribute()
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
+                              .setAttribute('data-bs-target', '#' ~ _id)
                               .setAttribute('aria-label', _close_aria_label)
     %}
     {% if _extra_classes_close is not empty %}
