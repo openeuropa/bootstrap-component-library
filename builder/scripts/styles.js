@@ -24,6 +24,7 @@ const path = require("path");
 const fs = require("fs");
 const postcss = require("postcss");
 const cssnano = require("cssnano");
+const prefixer = require("postcss-prefix-selector");
 const autoprefixer = require("autoprefixer");
 
 const getPlugins = (options) => {
@@ -63,6 +64,25 @@ const buildStyles = (entry, dest, options) => {
   });
 
   postcss(plugins)
+    .use(
+      prefixer({
+        prefix: options.prefix ? options.prefix : "",
+
+        transform: function (
+          prefix,
+          selector,
+          prefixedSelector,
+          filePath,
+          rule
+        ) {
+          if (prefix) {
+            return prefixedSelector;
+          } else {
+            return selector;
+          }
+        },
+      })
+    )
     .process(sassResult.css, {
       map:
         postcssSourceMap === "file"
