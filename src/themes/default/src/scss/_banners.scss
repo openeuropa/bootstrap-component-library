@@ -28,6 +28,31 @@
   }
 }
 
+.container {
+  .bcl-content-banner {
+    > .container {
+      > .card {
+        margin: 0;
+        z-index: 2;
+      }
+    }
+    &.bg-lighter {
+      position: relative;
+      &:after {
+        background: $lighter;
+        content: "";
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
 .bcl-banner__content {
   padding: map-get($spacers, "4-75") map-get($spacers, "4-5");
   border-color: $banner-content-border-color;
