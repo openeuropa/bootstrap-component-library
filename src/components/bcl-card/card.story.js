@@ -186,7 +186,7 @@ const getArgTypes = (data, type) => {
 };
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass(`bg-${data.variant}`);
+  data.attributes.removeClass(`text-bg-${data.variant}`);
   data.attributes.removeClass("text-dark").removeClass("text-white");
   data.attributes.removeClass(`border-${data.border_variant}`);
 };
