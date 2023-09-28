@@ -29,7 +29,20 @@ export const parameters = {
   controls: { expanded: true },
   layout: "padded",
   badgesConfig: {
-    [BADGE.STABLE]: {
+    archived: {
+      title: "Archived",
+      styles: {
+        fontSize: "20",
+        paddingInline: "24px",
+        backgroundColor: "#6C757D",
+        borderColor: "#DCDCDC",
+        color: "#F5F5F5",
+        textTransform: "capitalize",
+        borderWidth: "2px",
+        paddingBlock: "5px",
+      },
+    },
+    stable: {
       title: "v1",
       styles: {
         fontSize: "20",
@@ -83,4 +96,5 @@ export const parameters = {
       order: ["Components", "Compositions", "Paragraphs", "Features"],
     },
   },
+  badges: ["archived"],
 };

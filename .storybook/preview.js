@@ -17,18 +17,31 @@ export const parameters = {
   controls: { expanded: true },
   layout: "padded",
   badgesConfig: {
-    [BADGE.STABLE]: {
-      title: 'v1.1',
+    archived: {
+      title: 'Archived',
       styles: {
         fontSize: '20',
         paddingInline: '24px',
-        backgroundColor: '#1EA7FD',
+        backgroundColor: '#6C757D',
         borderColor: '#DCDCDC',
         color: '#F5F5F5',
-        textTransform: 'lowercase',
+        textTransform: 'capitalize',
         borderWidth: '2px',
         paddingBlock: '5px',
       }
+    },
+    stable: {
+      title: "v1",
+      styles: {
+        fontSize: "20",
+        paddingInline: "24px",
+        backgroundColor: "#1EA7FD",
+        borderColor: "#DCDCDC",
+        color: "#F5F5F5",
+        textTransform: "lowercase",
+        borderWidth: "2px",
+        paddingBlock: "5px",
+      },
     },
   },
   viewport: {
@@ -76,4 +89,5 @@ export const parameters = {
       ],
     },
   },
+  badges: ['archived'],
 };

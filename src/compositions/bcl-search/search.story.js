@@ -21,7 +21,7 @@ export default {
         ],
       },
     },
-    badges: ["stable"],
+    badges: ["archived", "stable"],
     layout: "fullscreen",
     controls: { disable: true },
     design: [

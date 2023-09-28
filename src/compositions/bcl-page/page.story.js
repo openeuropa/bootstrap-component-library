@@ -14,7 +14,7 @@ export default {
         rules: [{ id: "frame-tested", enabled: false }],
       },
     },
-    badges: ["stable"],
+    badges: ["archived", "stable"],
     badgesConfig: {
       stable: {
         title: "v1",

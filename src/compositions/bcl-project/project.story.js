@@ -23,7 +23,7 @@ export default {
     controls: {
       disable: true,
     },
-    badges: ["stable"],
+    badges: ["archived", "stable"],
     badgesConfig: {
       stable: {
         title: "v1.2",
