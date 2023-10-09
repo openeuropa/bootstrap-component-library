@@ -11,7 +11,7 @@ const chromatic = process.env.STORYBOOK_ENV;
 const getArgs = () => ({
   size: "default",
   static_backdrop: false,
-  verticaly_centered: false,
+  vertically_centered: false,
   scrollable: false,
 });
 
@@ -47,8 +47,8 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
-  verticaly_centered: {
-    name: "verticaly centered",
+  vertically_centered: {
+    name: "vertically centered",
     type: { name: "boolean" },
     description: "Vertically center the modal",
     table: {
