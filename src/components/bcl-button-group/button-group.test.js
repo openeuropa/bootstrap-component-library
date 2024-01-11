@@ -20,7 +20,7 @@ describe("OE - Button-group", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size }, true)
+        render({ ...demoData, size }, true),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -29,7 +29,7 @@ describe("OE - Button-group", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, vertical: true }, true)
+      render({ ...demoData, vertical: true }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -49,13 +49,13 @@ describe("OE - Button-group", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, aria_label: "changed aria label" }, true)
+      render({ ...demoData, aria_label: "changed aria label" }, true),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

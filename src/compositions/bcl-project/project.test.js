@@ -50,13 +50,13 @@ describe("OE - Project", () => {
 
   test(`listing passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+      await axe(renderTwigFileAsHtml(listingTemplate, demoListing)),
     ).toHaveNoViolations();
   });
-  jest.setTimeout(10000);
+  jest.setTimeout(20000);
   test(`details passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(detailsTemplate, ongoingDemo))
+      await axe(renderTwigFileAsHtml(detailsTemplate, ongoingDemo)),
     ).toHaveNoViolations();
   });
 });

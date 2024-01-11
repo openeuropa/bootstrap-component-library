@@ -33,7 +33,7 @@ describe("OE - File", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -59,13 +59,13 @@ describe("OE - File", () => {
             },
           ],
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });
@@ -83,13 +83,13 @@ describe("OE - File Card", () => {
         ...demoCardData,
         title: "File card test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCardData, true))
+      await axe(renderTwigFileAsHtml(template, demoCardData, true)),
     ).toHaveNoViolations();
   });
 });

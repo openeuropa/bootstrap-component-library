@@ -20,21 +20,21 @@ describe("OE - Links block", () => {
   test("renders correctly with horizontal", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoData, direction: "horizontal" })
+      render({ ...demoData, direction: "horizontal" }),
     ).resolves.toMatchSnapshot();
   });
 
   test("renders correctly with transparent background", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoData, variant: "transparent" })
+      render({ ...demoData, variant: "transparent" }),
     ).resolves.toMatchSnapshot();
   });
 
   test("renders correctly with title", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoData, title: "Links block test title", title_tag: "h6" })
+      render({ ...demoData, title: "Links block test title", title_tag: "h6" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -49,7 +49,7 @@ describe("OE - Links block", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -64,13 +64,13 @@ describe("OE - Links block", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

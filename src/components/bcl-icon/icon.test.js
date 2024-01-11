@@ -25,7 +25,7 @@ describe("OE - Icon", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, icon_size: size })
+        render({ ...demoData, icon_size: size }),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -35,14 +35,14 @@ describe("OE - Icon", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, icon_transformation: transformation })
+        render({ ...demoData, icon_transformation: transformation }),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

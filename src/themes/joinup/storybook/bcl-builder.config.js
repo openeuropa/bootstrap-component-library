@@ -8,7 +8,7 @@ const excludePaths = [];
 if (stories.length) {
   stories.forEach((story) => {
     excludePaths.push(
-      `../../../{components,compositions}/**/${story}.story.js`
+      `../../../{components,compositions}/**/${story}.story.js`,
     );
   });
 }
@@ -24,7 +24,7 @@ module.exports = {
       from: [
         path.resolve(
           nodeModules,
-          "@openeuropa/bcl-storybook-default/.storybook/*.js"
+          "@openeuropa/bcl-storybook-default/.storybook/*.js",
         ),
       ],
       to: path.resolve(outputFolder, ".storybook"),

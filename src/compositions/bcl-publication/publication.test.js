@@ -34,19 +34,19 @@ describe("OE - Publication", () => {
   test("details (multiple authors) renders correctly", () => {
     expect.assertions(1);
     return expect(
-      renderDetails(demoDetailsMultiple)
+      renderDetails(demoDetailsMultiple),
     ).resolves.toMatchSnapshot();
   });
   jest.setTimeout(10000);
   test(`listing passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+      await axe(renderTwigFileAsHtml(listingTemplate, demoListing)),
     ).toHaveNoViolations();
   });
 
   test(`details passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(detailsTemplate, demoDetails))
+      await axe(renderTwigFileAsHtml(detailsTemplate, demoDetails)),
     ).toHaveNoViolations();
   });
 });

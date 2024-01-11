@@ -23,7 +23,7 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, required: true })
+      render({ ...demoData, required: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -31,7 +31,7 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, disabled: true })
+      render({ ...demoData, disabled: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -39,7 +39,7 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, readonly: true })
+      render({ ...demoData, readonly: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -51,7 +51,7 @@ describe("OE - select", () => {
         ...demoData,
         invalid: true,
         invalid_feedback: "New invalid feedback",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -59,7 +59,11 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, valid: true, valid_feedback: "New valid feedback" })
+      render({
+        ...demoData,
+        valid: true,
+        valid_feedback: "New valid feedback",
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -67,7 +71,7 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, multiple: true })
+      render({ ...demoData, multiple: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -75,7 +79,7 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, label: "A select label" })
+      render({ ...demoData, label: "A select label" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -83,7 +87,7 @@ describe("OE - select", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, label: "A select label", hidden_label: true })
+      render({ ...demoData, label: "A select label", hidden_label: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -95,13 +99,13 @@ describe("OE - select", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
   test(`multiple passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoMultiData, true))
+      await axe(renderTwigFileAsHtml(template, demoMultiData, true)),
     ).toHaveNoViolations();
   });
 });

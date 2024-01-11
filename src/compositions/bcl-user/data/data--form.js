@@ -235,7 +235,7 @@ module.exports = {
             helper_text: "Helper text",
             attributes: new drupalAttribute().setAttribute(
               "value",
-              "1972-01-22"
+              "1972-01-22",
             ),
           },
         ],
@@ -271,7 +271,7 @@ module.exports = {
             helper_text: "Helper text",
             attributes: new drupalAttribute().setAttribute(
               "value",
-              "Düsseldorf"
+              "Düsseldorf",
             ),
           },
         ],

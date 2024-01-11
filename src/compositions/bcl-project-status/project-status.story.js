@@ -120,7 +120,7 @@ export default {
 
 export const Default = (args) =>
   `${bclTitle(title)} ${projectStatus(
-    applyArgs(dataOngoing, args)
+    applyArgs(dataOngoing, args),
   )} ${projectStatusContribs(applyArgs(dataContribs, args))}`;
 
 Default.args = getArgs(dataOngoing);

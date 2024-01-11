@@ -26,14 +26,14 @@ describe("OE - Listing", () => {
 
   test(`horizontal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDefaultData, true))
+      await axe(renderTwigFileAsHtml(template, demoDefaultData, true)),
     ).toHaveNoViolations();
   });
 
   test("alignment classes render correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoDefaultData, alignment: "start" })
+      render({ ...demoDefaultData, alignment: "start" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -49,7 +49,7 @@ describe("OE - Listing", () => {
 
   test(`default passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDefault3ColData, true))
+      await axe(renderTwigFileAsHtml(template, demoDefault3ColData, true)),
     ).toHaveNoViolations();
   });
 
@@ -60,7 +60,7 @@ describe("OE - Listing", () => {
 
   test(`highlight passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoHighlightData, true))
+      await axe(renderTwigFileAsHtml(template, demoHighlightData, true)),
     ).toHaveNoViolations();
   });
 
@@ -90,7 +90,7 @@ describe("OE - Listing", () => {
           path: "/example.html",
           label: "Link label",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -101,7 +101,7 @@ describe("OE - Listing", () => {
         ...demoDefault2ColData,
         title: "Listing test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -112,7 +112,7 @@ describe("OE - Listing", () => {
         ...demoDefault3ColData,
         title: "Listing test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -123,7 +123,7 @@ describe("OE - Listing", () => {
         ...demoHighlightData,
         title: "Listing test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -134,7 +134,7 @@ describe("OE - Listing", () => {
         ...demoHighlight2ColData,
         title: "Listing test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -145,14 +145,14 @@ describe("OE - Listing", () => {
         ...demoHighlight3ColData,
         title: "Listing test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test("renders correctly with date and with title", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoDateData, title: "Listing test title", title_tag: "h6" })
+      render({ ...demoDateData, title: "Listing test title", title_tag: "h6" }),
     ).resolves.toMatchSnapshot();
   });
 });

@@ -29,8 +29,8 @@ describe("OE - Button", () => {
             ...demoData,
             variant,
           },
-          true
-        )
+          true,
+        ),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -40,7 +40,7 @@ describe("OE - Button", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size }, true)
+        render({ ...demoData, size }, true),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -49,7 +49,7 @@ describe("OE - Button", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, text_nowrap: true })
+      render({ ...demoData, text_nowrap: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -78,8 +78,8 @@ describe("OE - Button", () => {
             path: "/icons.svg",
           },
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -97,7 +97,7 @@ describe("OE - Button", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });
@@ -114,15 +114,15 @@ describe("OE - Button Outline", () => {
             variant,
             outline: true,
           },
-          true
-        )
+          true,
+        ),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

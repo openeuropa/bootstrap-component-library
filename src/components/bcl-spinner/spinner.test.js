@@ -23,7 +23,7 @@ describe("OE - Spinner", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, type: "grow" })
+      render({ ...demoData, type: "grow" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -40,14 +40,14 @@ describe("OE - Spinner", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, size, type: "grow" })
+        render({ ...demoData, size, type: "grow" }),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

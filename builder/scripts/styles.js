@@ -73,7 +73,7 @@ const buildStyles = (entry, dest, options) => {
           selector,
           prefixedSelector,
           filePath,
-          rule
+          rule,
         ) {
           if (prefix) {
             return prefixedSelector;
@@ -81,7 +81,7 @@ const buildStyles = (entry, dest, options) => {
             return selector;
           }
         },
-      })
+      }),
     )
     .process(sassResult.css, {
       map:

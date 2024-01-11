@@ -35,7 +35,7 @@ describe("OE - Project status", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoOngoing, true))
+      await axe(renderTwigFileAsHtml(template, demoOngoing, true)),
     ).toHaveNoViolations();
   });
 });
@@ -54,13 +54,13 @@ describe("OE - Project contributions", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoContribs, chart: {} })
+      render({ ...demoContribs, chart: {} }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoContribs, true))
+      await axe(renderTwigFileAsHtml(template, demoContribs, true)),
     ).toHaveNoViolations();
   });
 });

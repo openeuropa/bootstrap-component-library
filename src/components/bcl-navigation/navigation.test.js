@@ -23,7 +23,7 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, pills: true })
+      render({ ...demoData, pills: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -31,7 +31,7 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, vertical: true })
+      render({ ...demoData, vertical: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -39,7 +39,7 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, full_width: true })
+      render({ ...demoData, full_width: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -47,7 +47,7 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, nav: false })
+      render({ ...demoData, nav: false }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -55,7 +55,7 @@ describe("OE - navigation", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, alignment: "justify-content-end" })
+      render({ ...demoData, alignment: "justify-content-end" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -73,7 +73,7 @@ describe("OE - navigation", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

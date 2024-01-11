@@ -25,7 +25,7 @@ const dummyText = new TwingFunction("get_dummy_text", function (
   count,
   paragraph,
   paragraphs,
-  classes
+  classes,
 ) {
   return getDummyText(count, paragraph, paragraphs, classes);
 });

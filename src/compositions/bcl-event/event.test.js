@@ -29,13 +29,13 @@ describe("OE - event", () => {
   jest.setTimeout(10000);
   test(`listing passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+      await axe(renderTwigFileAsHtml(listingTemplate, demoListing)),
     ).toHaveNoViolations();
   });
 
   test(`details passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(detailsTemplate, demoData))
+      await axe(renderTwigFileAsHtml(detailsTemplate, demoData)),
     ).toHaveNoViolations();
   });
 });

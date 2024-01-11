@@ -42,7 +42,7 @@ describe("OE - Page banner", () => {
         ...dataDefault,
         title: "Page banner test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -53,7 +53,7 @@ describe("OE - Page banner", () => {
         ...dataPrimary,
         title: "Page banner test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -67,21 +67,29 @@ describe("OE - Page banner", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test("image text-block renders correctly with title", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataImage, title: "Page banner test title", title_tag: "h6" })
+      render({
+        ...dataImage,
+        title: "Page banner test title",
+        title_tag: "h6",
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test("image shade renders correctly with title", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataShade, title: "Page banner test title", title_tag: "h6" })
+      render({
+        ...dataShade,
+        title: "Page banner test title",
+        title_tag: "h6",
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -91,7 +99,7 @@ describe("OE - Page banner", () => {
       render({
         ...dataDefault,
         content_classes: "new-content-class",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -101,13 +109,13 @@ describe("OE - Page banner", () => {
       render({
         ...dataDefault,
         full_width: true,
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+      await axe(renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
   });
 });
@@ -116,28 +124,28 @@ describe("OE - Hero banner", () => {
   test("default renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataDefault, hero: true })
+      render({ ...dataDefault, hero: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test("primary renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataPrimary, hero: true })
+      render({ ...dataPrimary, hero: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test("image text-block renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataImage, hero: true })
+      render({ ...dataImage, hero: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test("image shade renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataShade, hero: true })
+      render({ ...dataShade, hero: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -149,7 +157,7 @@ describe("OE - Hero banner", () => {
         hero: true,
         title: "Hero banner test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -161,7 +169,7 @@ describe("OE - Hero banner", () => {
         hero: true,
         title: "Hero banner test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -176,7 +184,7 @@ describe("OE - Hero banner", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -188,7 +196,7 @@ describe("OE - Hero banner", () => {
         hero: true,
         title: "Hero banner test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -200,15 +208,15 @@ describe("OE - Hero banner", () => {
         hero: true,
         title: "Hero banner test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(
-        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true)
-      )
+        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true),
+      ),
     ).toHaveNoViolations();
   });
 });

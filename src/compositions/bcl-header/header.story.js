@@ -44,7 +44,7 @@ const applyArgs = (data, args) => {
       data.head.navigation.items.splice(-1);
       data.head.navigation.items = [].concat(
         data.head.navigation.items,
-        loggedIn
+        loggedIn,
       );
     }
   } else if (data.head.navigation.items.length > 4) {

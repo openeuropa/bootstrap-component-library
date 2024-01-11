@@ -29,7 +29,7 @@ describe("OE - Timeline", () => {
           path: "/example.html",
           label: "Link label",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -72,13 +72,13 @@ describe("OE - Timeline", () => {
             attributes: new drupalAttribute().addClass("new-class"),
           },
         ],
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+      await axe(renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
   });
 });

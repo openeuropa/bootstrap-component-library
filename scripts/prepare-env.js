@@ -9,7 +9,7 @@ const root = path.resolve(__dirname, "../");
 
 if (!themes.includes(theme)) {
   console.log(
-    `It appears that you are setting up an environment for a theme that doesn't exist`
+    `It appears that you are setting up an environment for a theme that doesn't exist`,
   );
 }
 
@@ -39,7 +39,7 @@ if (issue) {
   const pushBranch = spawn(
     "git",
     ["push", "--set-upstream", `origin ${issue}-#${theme}#`],
-    { stdio: "inherit", cwd: root, shell: true }
+    { stdio: "inherit", cwd: root, shell: true },
   );
   pushBranch.on("error", (err) => console.log(err.message));
   pushBranch.on("exit", () => {
@@ -47,6 +47,6 @@ if (issue) {
   });
 } else {
   console.error(
-    "To prepare your env you need to specifiy a theme and a jira issue"
+    "To prepare your env you need to specifiy a theme and a jira issue",
   );
 }

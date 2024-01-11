@@ -13,7 +13,7 @@ module.exports = {
     path: "/example.html",
     attributes: new drupalAttribute().setAttribute(
       "aria-label",
-      "Previous page"
+      "Previous page",
     ),
   },
   next: {

@@ -22,7 +22,7 @@ describe("OE - modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, size: "sm" })
+      render({ ...demoData, size: "sm" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -30,7 +30,7 @@ describe("OE - modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, fullscreen_responsive: "sm" })
+      render({ ...demoData, fullscreen_responsive: "sm" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, static_backdrop: true })
+      render({ ...demoData, static_backdrop: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, verticaly_centered: true })
+      render({ ...demoData, verticaly_centered: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,13 +54,13 @@ describe("OE - modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, scrollable: true })
+      render({ ...demoData, scrollable: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

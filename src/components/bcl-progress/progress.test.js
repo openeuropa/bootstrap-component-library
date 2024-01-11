@@ -22,7 +22,7 @@ describe("OE - Progress", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, striped: true })
+      render({ ...demoData, striped: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -30,7 +30,7 @@ describe("OE - Progress", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, striped: true, animated: true })
+      render({ ...demoData, striped: true, animated: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - Progress", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "danger" })
+      render({ ...demoData, variant: "danger" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - Progress", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, hidden_label: true })
+      render({ ...demoData, hidden_label: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -57,7 +57,7 @@ describe("OE - Progress", () => {
       render({
         ...demoData,
         message: "This is a demo message under the progress bar.",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -65,13 +65,13 @@ describe("OE - Progress", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, bar_label: "Loading..." })
+      render({ ...demoData, bar_label: "Loading..." }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });
