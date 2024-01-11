@@ -93,7 +93,7 @@ module.exports = {
         path: "/example.html",
         attributes: new drupalAttribute().setAttribute(
           "aria-label",
-          "other-link"
+          "other-link",
         ),
       },
     ],

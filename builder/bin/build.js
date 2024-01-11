@@ -20,7 +20,7 @@ program
   .usage("bcl-builder [command] [option]")
   .option(
     "-c, --config [config_file]",
-    "config file (default: bcl-builder.config.js)"
+    "config file (default: bcl-builder.config.js)",
   );
 
 program
@@ -43,7 +43,7 @@ program
   .action(() => {
     const config = loadConfig(program.config);
     config.scripts.forEach((conf) =>
-      buildScript(conf.entry, conf.dest, conf.options)
+      buildScript(conf.entry, conf.dest, conf.options),
     );
   });
 
@@ -53,7 +53,7 @@ program
   .action(() => {
     const config = loadConfig(program.config);
     config.styles.forEach((conf) =>
-      buildStyles(conf.entry, conf.dest, conf.options)
+      buildStyles(conf.entry, conf.dest, conf.options),
     );
   });
 
@@ -63,7 +63,7 @@ program
   .action(() => {
     const config = loadConfig(program.config);
     config.sprite.forEach((conf) =>
-      makeSprite(conf.entry || "**", conf.dest, conf.options)
+      makeSprite(conf.entry || "**", conf.dest, conf.options),
     );
   });
 
@@ -73,7 +73,7 @@ program
   .action(() => {
     const config = loadConfig(program.config);
     config.copy.forEach((conf) =>
-      copyFiles(conf.from || "**", conf.to, conf.options)
+      copyFiles(conf.from || "**", conf.to, conf.options),
     );
   });
 

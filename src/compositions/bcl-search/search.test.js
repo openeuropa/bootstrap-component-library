@@ -20,7 +20,7 @@ describe("OE - Search", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataListing))
+      await axe(renderTwigFileAsHtml(template, dataListing)),
     ).toHaveNoViolations();
   });
 });
