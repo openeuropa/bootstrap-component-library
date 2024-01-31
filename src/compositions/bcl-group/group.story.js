@@ -28,7 +28,7 @@ export default {
         rules: [{ id: "aria-input-field-name", enabled: false }],
       },
     },
-    badges: ["stable"],
+    badges: ["archived", "stable"],
     controls: {
       disable: true,
     },

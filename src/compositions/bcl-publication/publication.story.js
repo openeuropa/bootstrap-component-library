@@ -22,7 +22,7 @@ export default {
     controls: {
       disable: true,
     },
-    badges: ["stable"],
+    badges: ["archived", "stable"],
     design: [
       {
         name: "Mockup",

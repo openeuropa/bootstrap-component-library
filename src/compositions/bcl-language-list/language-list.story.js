@@ -20,7 +20,7 @@ export default {
         url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5568%3A231237",
       },
     ],
-    badges: ["stable"],
+    badges: ["archived", "stable"],
   },
 };
 

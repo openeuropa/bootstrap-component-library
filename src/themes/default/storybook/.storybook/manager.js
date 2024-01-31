@@ -15,7 +15,7 @@ addons.setConfig({
   isToolshown: true,
   theme: create({
     base: "light",
-    brandTitle: `OE-BCL ${project} v${version}`,
+    brandTitle: `OE-BCL ${project} v${version} - Archived`,
     brandUrl: "https://github.com/openeuropa/bootstrap-component-library",
     brandImage: undefined,
   }),

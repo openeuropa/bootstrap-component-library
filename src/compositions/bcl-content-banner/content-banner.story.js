@@ -113,7 +113,7 @@ export default {
         url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=9664%3A107055",
       },
     ],
-    badges: ["stable"],
+    badges: ["archived", "stable"],
   },
 };
 

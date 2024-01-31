@@ -37,7 +37,7 @@ export default {
   decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
-    badges: ["stable"],
+    badges: ["archived", "stable"],
     badgesConfig: {
       stable: {
         title: "v1.2",
