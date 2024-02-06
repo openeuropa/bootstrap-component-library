@@ -1,34 +1,18 @@
-/**
- * Generate svg sprites.
- *
- * @param {string} entry - array of paths to a folder or file.
- * @param {string} dest - Output folder path
- * @param {object} options - Object
- *
- * Example config object: {
- *
- * sprite: [
- *   {
- *     entry: [
- *       path.resolve(nodeModules, "bootstrap-icons/icons/"),
- *       path.resolve(__dirname, "src/icons/custom-icons")
- *     ],
- *     dest: path.resolve(outputFolder, "icons/"),
- *     options: {
- *       file: "bcl-default-icons.svg",
- *       list: myList,
- *       transformPlugins: (array of svgo plugins objects)
- *     },
- *   },
- * ],
- */
-
 const fs = require("fs");
 const { globSync } = require("glob");
 const mkdirp = require("mkdirp");
 const path = require("path");
 const defaultPlugins = require("../conf/svgoDefaultPlugins");
 const SVGSpriter = require("svg-sprite");
+
+let svgMarkup;
+
+const addSvgMarkup = (filePath) => {
+  const fileContents = fs.readFileSync(filePath, { encoding: "utf-8" });
+  svgMarkup = svgMarkup += "</svg>"; // Closing svg tag.
+  const updatedContents = fileContents.replace("</svg>", svgMarkup);
+  fs.writeFileSync(filePath, updatedContents);
+};
 
 module.exports = (entry, dest, options) => {
   const iconList = Array.isArray(options.list)
@@ -64,7 +48,7 @@ module.exports = (entry, dest, options) => {
       },
     },
   });
-
+  let svgYPosition = 0;
   files.forEach((file) => {
     let filePath;
     if (Array.isArray(entry)) {
@@ -75,6 +59,10 @@ module.exports = (entry, dest, options) => {
     } else {
       filePath = path.resolve(entry, file);
     }
+    const id = path.basename(file, path.extname(file)); // Extracting file name without extension as id
+    svgMarkup =
+      svgMarkup += `<view id="${id}-view" viewBox="0 ${svgYPosition} 16 16"/><use xlink:href="#${id}" width="16" height="16" x="0" y="${svgYPosition}" id="${id}-use"/>`;
+    svgYPosition = svgYPosition + 16;
     spriter.add(
       filePath,
       file,
@@ -90,6 +78,8 @@ module.exports = (entry, dest, options) => {
           result[mode][resource].path,
           result[mode][resource].contents
         );
+        const outputPath = result[mode][resource].path;
+        addSvgMarkup(outputPath);
       });
     });
   });
