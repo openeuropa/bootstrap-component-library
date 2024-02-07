@@ -17,6 +17,7 @@ const getArgs = (data) => {
     centered: true,
     hero: false,
     full_width: false,
+    fixed_height: false,
   };
   if (data.image) {
     args.image = data.image || "";
@@ -66,6 +67,16 @@ const getArgTypes = (data) => {
         category: "Display",
       },
     },
+    fixed_height: {
+      name: "fixed-height",
+      type: "boolean",
+      description: "Disable aspect ratio and keep a fixed height",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+        category: "Display",
+      },
+    },
   };
   if (data.image) {
     argTypes.image = {
@@ -83,7 +94,12 @@ const getArgTypes = (data) => {
 };
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass(["text-center", "hero", "full-width"]);
+  data.attributes.removeClass([
+    "text-center",
+    "hero",
+    "full-width",
+    "fixed-height",
+  ]);
   if (args.centered) {
     data.attributes.addClass("text-center");
   }
