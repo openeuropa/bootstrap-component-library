@@ -65,6 +65,76 @@ exports[`OE - Featured media featured item renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Featured media featured item renders correctly with description title 1`] = `
+<jest>
+  <div
+    class="bcl-featured-item pb-4"
+  >
+    <div
+      class="row"
+    >
+      <h2
+        class="mb-4 bcl-heading"
+      >
+        A title for a featured item
+      </h2>
+      <div
+        class="col-12 col-md-6 order-1"
+      >
+        <h6
+          class="mb-4 bcl-heading"
+        >
+          Featured media test description title
+        </h6>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          <br />
+            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+          <br />
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          <br />
+          <br />
+            Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+          <br />
+        </p>
+        <a
+          href="/example.html"
+        >
+          Read more
+        </a>
+      </div>
+      <div
+        class="col-12 col-md-6 order-2 mt-4 mt-md-0"
+      >
+        <figure
+          class="rounded overflow-hidden"
+          src="https://www.youtube.com/embed/VFYlYeFAEH4"
+        >
+          <div
+            class="ratio ratio-16x9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              frameborder="0"
+              height="197"
+              src="https://www.youtube.com/embed/fgi-GSCB6ho"
+              title="New digital strategy"
+              width="350"
+            />
+          </div>
+          <figcaption
+            class="bg-lighter p-3"
+          >
+            Media description text goes here.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
 exports[`OE - Featured media featured item renders correctly with title 1`] = `
 <jest>
   <div
@@ -207,6 +277,29 @@ exports[`OE - Featured media renders correctly with image 1`] = `
       Media description text goes here.
     </figcaption>
   </figure>
+</jest>
+`;
+
+exports[`OE - Featured media renders correctly with image and forced wrapper 1`] = `
+<jest>
+  <div
+    class="bcl-featured-item"
+  >
+    <figure
+      class="rounded overflow-hidden d-inline-flex flex-wrap"
+    >
+      <img
+        alt="random image"
+        class="img-fluid flex-end-100"
+        src="https://picsum.photos/1000/400?random=1"
+      />
+      <figcaption
+        class="bg-lighter p-3 flex-1 w-min-content"
+      >
+        Media description text goes here.
+      </figcaption>
+    </figure>
+  </div>
 </jest>
 `;
 

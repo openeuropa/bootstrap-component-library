@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.2.0 (2023-08-24)
+
+#### :bug: Bug Fix
+* [#526](https://github.com/openeuropa/bootstrap-component-library/pull/526) feat(multiselect): Fixed valid/invalid icon for form-select on multiple. - OEL-2292 ([@tibi2303](https://github.com/tibi2303))
+* [#521](https://github.com/openeuropa/bootstrap-component-library/pull/521) feat(inpage): Fixed inpage navigation for ucpkn and joinup - OEL-2265 ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#495](https://github.com/openeuropa/bootstrap-component-library/pull/495) feat(background): Changed background and text color classes - OEL-2146 ([@tibi2303](https://github.com/tibi2303))
+* [#524](https://github.com/openeuropa/bootstrap-component-library/pull/524) feat(content-banner): Fix card margin inside content-banner. - OEL-2288 ([@tibi2303](https://github.com/tibi2303))
+* [#508](https://github.com/openeuropa/bootstrap-component-library/pull/508) feat(improvements): Integrated patch for bcl 1.0.0 - OEL-2230 ([@tibi2303](https://github.com/tibi2303))
+* [#534](https://github.com/openeuropa/bootstrap-component-library/pull/534) feat(prefix-styles): Added prefix config for styles. - OEL-2373 ([@tibi2303](https://github.com/tibi2303))
+* [#523](https://github.com/openeuropa/bootstrap-component-library/pull/523) feat(offcanvas): Fixed offcanvas close button - OEL-2277 ([@tibi2303](https://github.com/tibi2303))
+* [#512](https://github.com/openeuropa/bootstrap-component-library/pull/512) feat(icons): Added custom icons - OEL-2240 ([@tibi2303](https://github.com/tibi2303))
+* [#478](https://github.com/openeuropa/bootstrap-component-library/pull/478) feat(landing): Added deprecated filter for story files - OEL-2090 ([@tibi2303](https://github.com/tibi2303))
+* [#480](https://github.com/openeuropa/bootstrap-component-library/pull/480) feat(badges): Changed close icon on badge - OEL-2098 ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#548](https://github.com/openeuropa/bootstrap-component-library/pull/548) feat(node): Updated node to 18 and dependencies. - OEL-2422 ([@tibi2303](https://github.com/tibi2303))
+* [#549](https://github.com/openeuropa/bootstrap-component-library/pull/549) feat(chore): Updated flag-icons to 6.9.2. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Péter Keszthelyi ([@kp77](https://github.com/kp77))
+
 ## v1.1.1 (2023-10-10)
 
 #### :bug: Bug Fix
