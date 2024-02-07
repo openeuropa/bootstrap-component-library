@@ -47,8 +47,8 @@ select.multi-select {
       font-weight: $badge-font-weight;
       line-height: 1;
       color: $badge-color;
-      text-align: center;
-      white-space: nowrap;
+      text-align: left;
+      white-space: normal;
       vertical-align: baseline;
       padding-right: map-get($spacers, "3-5");
       @include border-radius($badge-border-radius);
@@ -61,14 +61,14 @@ select.multi-select {
           content: "";
           display: inline-block;
           height: 1rem;
-          transform: scale(0.8);
+          transform: scale(0.8) translateY(50%);
           width: 1rem;
           padding: 15px;
           background-position: 50%;
           border-radius: 50%;
           position: absolute;
           right: 0;
-          bottom: -2px;
+          bottom: calc(50% - 3px);
         }
       }
     }
