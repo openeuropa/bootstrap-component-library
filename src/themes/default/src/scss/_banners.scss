@@ -37,6 +37,14 @@
       padding: map-get($spacers, 5) map-get($spacers, "4-5");
     }
   }
+
+  @each $color_name, $color_value in $theme-colors {
+    .btn-#{$color_name} {
+      $text_color: color-contrast($color_value);
+      --bcl-btn-color: #{$text_color};
+      --#{$prefix}btn-color: var(--bcl-btn-color);
+    }
+  }
 }
 
 .container {
