@@ -21,7 +21,7 @@
 
 const sass = require("sass");
 const path = require("path");
-const yamlImporter = require("node-sass-yaml-importer");
+const yamlImporter = require("./extensions/yamlImporter");
 const fs = require("fs");
 const postcss = require("postcss");
 const cssnano = require("cssnano");
