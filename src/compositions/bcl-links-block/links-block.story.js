@@ -54,6 +54,7 @@ export default {
   title: "Paragraphs/Links block",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     viewport: {
       defaultViewport: "tablet",
     },

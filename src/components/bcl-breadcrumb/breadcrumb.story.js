@@ -26,6 +26,7 @@ export default {
   title: "Components/Breadcrumb",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

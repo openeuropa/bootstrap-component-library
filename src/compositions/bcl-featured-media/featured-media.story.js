@@ -129,6 +129,7 @@ export default {
   title: "Paragraphs/Featured media",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

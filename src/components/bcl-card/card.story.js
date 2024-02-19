@@ -220,6 +220,7 @@ export default {
   title: "Components/Card",
   decorators: [withCode, withDesign, withBodyPadding],
   parameters: {
+    badges: ["deprecated"],
     chromatic: { viewports: [1200] },
     design: [
       {

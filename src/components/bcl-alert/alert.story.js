@@ -100,6 +100,7 @@ export default {
   title: "Components/Alert",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

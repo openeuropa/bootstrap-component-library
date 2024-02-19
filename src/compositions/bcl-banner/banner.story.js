@@ -130,6 +130,7 @@ export default {
   title: "Paragraphs/Banner",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

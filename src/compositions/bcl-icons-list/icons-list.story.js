@@ -9,6 +9,7 @@ iconsList = iconsList.map((icon) => icon.substring(0, icon.length - 4));
 export default {
   title: "Resources/Icons",
   parameters: {
+    badges: ["deprecated"],
     layout: "fullscreen",
     controls: { disable: true },
   },

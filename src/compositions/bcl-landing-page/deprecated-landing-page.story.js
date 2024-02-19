@@ -11,7 +11,7 @@ export default {
     layout: "fullscreen",
     decorators: [withCode, withDesign],
     controls: { disable: true },
-    badges: ["stable"],
+    badges: ["stable", "deprecated"],
     badgesConfig: {
       stable: {
         title: "v1",
