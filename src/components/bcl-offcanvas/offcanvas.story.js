@@ -114,6 +114,7 @@ export default {
   title: "Components/Offcanvas",
   decorators: [withCode, withDesign, initOffcanvas],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

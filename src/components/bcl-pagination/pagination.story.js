@@ -134,6 +134,7 @@ export default {
   title: "Components/Pagination",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

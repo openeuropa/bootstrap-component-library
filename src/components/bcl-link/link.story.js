@@ -156,6 +156,7 @@ export default {
   title: "Components/Link",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

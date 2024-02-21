@@ -8,6 +8,9 @@ const chromatic = process.env.STORYBOOK_ENV;
 
 export default {
   title: "Paragraphs/Gallery",
+  parameters: {
+    badges: ["deprecated"],
+  },
 };
 
 export const Modal = () => gallery(correctPaths(dataDefault));
