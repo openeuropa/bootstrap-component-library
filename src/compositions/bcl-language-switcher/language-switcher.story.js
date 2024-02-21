@@ -11,7 +11,7 @@ export default {
   title: "Compositions/Language Switcher",
   decorators: [withCode, withDesign],
   parameters: {
-    badges: ["stable"],
+    badges: ["stable", "deprecated"],
     layout: "padded",
     controls: { disable: true },
     design: [

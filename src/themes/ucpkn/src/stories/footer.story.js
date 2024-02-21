@@ -9,6 +9,7 @@ export default {
   title: "Compositions/Footer",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     layout: "fullscreen",
     design: [
       {

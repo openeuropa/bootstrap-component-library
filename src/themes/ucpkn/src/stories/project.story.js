@@ -24,7 +24,7 @@ export default {
     controls: {
       disable: true,
     },
-    badges: ["stable"],
+    badges: ["stable", "deprecated"],
     design: [
       {
         name: "Mockup",

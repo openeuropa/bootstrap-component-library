@@ -7,6 +7,9 @@ const data = correctPaths(demoData);
 
 export default {
   title: "Components/Alert",
+  parameters: {
+    badges: ["deprecated"],
+  },
 };
 
 export const WithoutIcon = () => alert({ ...data, icon_path: "" });

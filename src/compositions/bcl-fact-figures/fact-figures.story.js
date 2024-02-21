@@ -89,6 +89,7 @@ export default {
   title: "Paragraphs/Fact and Figures",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

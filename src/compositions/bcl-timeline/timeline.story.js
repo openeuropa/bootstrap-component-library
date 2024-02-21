@@ -47,6 +47,7 @@ export default {
   title: "Paragraphs/Timeline",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

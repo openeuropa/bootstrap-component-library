@@ -16,8 +16,10 @@ export default {
   title: "Components/Forms/Form",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     controls: { disable: true },
     parameters: {
+      badges: ["deprecated"],
       design: [
         {
           name: "Bootstrap docs",

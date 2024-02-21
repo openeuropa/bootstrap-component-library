@@ -1,2 +1,2 @@
-const project = "Bootstrap component library";
+const project = "OEL component library";
 export default project;
