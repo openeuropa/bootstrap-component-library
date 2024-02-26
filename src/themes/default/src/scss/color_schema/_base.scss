@@ -1,0 +1,12 @@
+// Color schema - base
+
+@each $schema_name, $schema_array in $colors-schemas {
+  .#{$schema_name} {
+    @if $color == "primary" {
+      color: color-contrast($value)
+        if($enable-important-utilities, !important, null);
+      background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1))
+        if($enable-important-utilities, !important, null);
+    }
+  }
+}

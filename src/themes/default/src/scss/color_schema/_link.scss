@@ -1,0 +1,21 @@
+// Color schema - links
+
+@each $schema_name, $schema_array in $colors-schemas {
+  .#{$schema_name} {
+    // Links
+    .link-#{$color} {
+      color: $value !important; // stylelint-disable-line declaration-no-important
+
+      @if $link-shade-percentage != 0 {
+        &:hover,
+        &:focus {
+          color: if(
+            color-contrast($value) == $color-contrast-light,
+            shade-color($value, $link-shade-percentage),
+            tint-color($value, $link-shade-percentage)
+          ) !important; // stylelint-disable-line declaration-no-important
+        }
+      }
+    }
+  }
+}
