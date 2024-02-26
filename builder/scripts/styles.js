@@ -21,7 +21,6 @@
 
 const sass = require("sass");
 const path = require("path");
-const yamlImporter = require("./yamlImporter");
 const fs = require("fs");
 const postcss = require("postcss");
 const cssnano = require("cssnano");
@@ -58,7 +57,6 @@ const buildStyles = (entry, dest, options) => {
     sourceMap: options.sourceMap !== false,
     sourceMapContents: options.sourceMap === true,
     sourceMapEmbed: options.sourceMap === true,
-    importer: [yamlImporter],
     includePaths: [
       path.resolve(process.cwd(), "node_modules"),
       ...(options.includePaths || []),
