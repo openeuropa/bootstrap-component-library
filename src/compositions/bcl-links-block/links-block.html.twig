@@ -35,18 +35,18 @@
 
 {% set attributes = attributes.addClass(_classes) %}
 
-<div
-  {{ attributes }}
->
-  {% if _title is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-      title: _title,
-      title_tag: _title_tag,
-      title_link: _title_link,
-      attributes: _title_attributes.addClass(_title_classes),
-    } only %}
-  {% endif %}
-  {% if _links is not empty and _links is iterable %}
+{% if _links is not empty and _links is iterable %}
+  <div
+    {{ attributes }}
+  >
+    {% if _title is not empty %}
+      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+        title: _title,
+        title_tag: _title_tag,
+        title_link: _title_link,
+        attributes: _title_attributes.addClass(_title_classes),
+      } only %}
+    {% endif %}
     <ul class="ps-0 mb-0">
       {% for _link in _links %}
         {% if _link.attributes is empty %}
@@ -70,7 +70,7 @@
         </li>
       {% endfor %}
     </ul>
-  {% endif %}
-</div>
+  </div>
+{% endif %}
 
 {% endapply %}
