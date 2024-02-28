@@ -1,0 +1,45 @@
+// Configuration
+@import "@openeuropa/bcl-bootstrap/scss/functions";
+@import "@openeuropa/bcl-bootstrap/scss/variables";
+@import "@openeuropa/bcl-bootstrap/scss/maps";
+@import "@openeuropa/bcl-bootstrap/scss/mixins";
+
+$colors-schemas: (
+  "pixy-pink": (
+    "primary": #09303f,
+    "secondary": #ff0000,
+    "danger": #ff8800,
+    "success": #80ff00,
+    "text": #fb00ff,
+    "background": #de8f19,
+    "link": #000dff,
+  ),
+) !default;
+
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/variables";
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/background";
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/text";
+
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/alert";
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/buttons";
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/list_group";
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/utilities";
+
+@each $schema-name, $schema-array in $colors-schemas {
+  .#{$schema-name} {
+    @each $color, $value in $schema_array {
+      @include generate-variables($color, $value);
+
+      @if $color == "text" {
+        @include generate-text($color, $value);
+      } @else if $color == "background" {
+        @include generate-background($color, $value);
+      } @else {
+        @include generate-alerts($color, $value);
+        @include generate-buttons($color, $value);
+        @include generate-list-group($color, $value);
+        @include generate-utilities($color, $value);
+      }
+    }
+  }
+}

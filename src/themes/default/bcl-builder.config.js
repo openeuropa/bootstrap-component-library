@@ -74,6 +74,17 @@ module.exports = {
       },
     },
   ],
+  colorSchema: [
+    {
+      entry: path.resolve(outputFolder, "src/scss/color-schema.scss"),
+      dest: path.resolve(outputFolder, "css/color-schema.min.css"),
+      options: {
+        includePaths,
+        minify: true,
+        sourceMap: "file",
+      },
+    },
+  ],
   styles: [
     {
       entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),

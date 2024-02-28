@@ -5,6 +5,7 @@ const program = require("commander");
 const buildScript = require("../scripts/scripts");
 const browserslist = require("browserslist");
 const { buildStyles } = require("../scripts/styles");
+const { buildColorSchema } = require("../scripts/colorSchema");
 const rename = require("../scripts/rename");
 const copyFiles = require("../scripts/copy");
 const makeSprite = require("../scripts/sprite");
@@ -54,6 +55,16 @@ program
     const config = loadConfig(program.config);
     config.styles.forEach((conf) =>
       buildStyles(conf.entry, conf.dest, conf.options)
+    );
+  });
+
+program
+  .command("color-schema")
+  .description("compile Color schema SCSS to CSS")
+  .action(() => {
+    const config = loadConfig(program.config);
+    config.colorSchema.forEach((conf) =>
+      buildColorSchema(conf.entry, conf.dest, conf.options)
     );
   });
 

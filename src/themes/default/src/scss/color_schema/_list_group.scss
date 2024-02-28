@@ -1,18 +1,15 @@
-// Color schema - links
+// Color schema - List Group
 
-@each $schema_name, $schema_array in $colors-schemas {
-  .#{$schema_name} {
-    // List group
-    $lg-v-bg: shift-color($value, $list-group-item-bg-scale);
-    $lg-v-color: shift-color($value, $list-group-item-color-scale);
-    @if (contrast-ratio($lg-v-bg, $lg-v-color) < $min-contrast-ratio) {
-      $lg-v-color: mix(
-        $value,
-        color-contrast($lg-v-bg),
-        abs($list-group-item-color-scale)
-      );
-    }
-
-    @include list-group-item-variant($color, $lg-v-bg, $lg-v-color);
+@mixin generate-list-group($color, $value) {
+  // List group
+  $lg-v-bg: shift-color($value, $list-group-item-bg-scale);
+  $lg-v-color: shift-color($value, $list-group-item-color-scale);
+  @if (contrast-ratio($lg-v-bg, $lg-v-color) < $min-contrast-ratio) {
+    $lg-v-color: mix(
+      $value,
+      color-contrast($lg-v-bg),
+      abs($list-group-item-color-scale)
+    );
   }
+  @include list-group-item-variant($color, $lg-v-bg, $lg-v-color);
 }

@@ -1,0 +1,26 @@
+// Color schema - Text
+
+@mixin generate-text($color, $value) {
+  &.text-color-default {
+    // Accordion
+    --#{$prefix}accordion-btn-color: #{$value};
+    --#{$prefix}accordion-active-color: #{$value};
+    --#{$prefix}accordion-color: #{$value};
+
+    color: $value !important;
+
+    .bcl-header__navbar {
+      .navbar-nav {
+        .nav-link {
+          color: $value;
+        }
+      }
+    }
+    &.bcl-footer--neutral {
+      p,
+      a {
+        color: $value;
+      }
+    }
+  }
+}
