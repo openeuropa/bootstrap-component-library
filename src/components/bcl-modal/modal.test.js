@@ -42,11 +42,11 @@ describe("OE - modal", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test("renders correctly with verticaly centered modal", () => {
+  test("renders correctly with vertically centered modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, verticaly_centered: true })
+      render({ ...demoData, vertically_centered: true })
     ).resolves.toMatchSnapshot();
   });
 
