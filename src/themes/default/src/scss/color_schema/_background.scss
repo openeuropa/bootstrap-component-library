@@ -12,7 +12,8 @@
       --#{$prefix}card-bg: transparent;
     }
 
-    &:not(header) {
+    &:not(header),
+    &:not(.accordion) {
       background: $value !important;
     }
     .bcl-header__navbar {
