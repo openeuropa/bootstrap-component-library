@@ -5,14 +5,15 @@ module.exports = {
   title: "This is the title of this page",
   badges: [
     {
-      label: "Category 1",
+      label: "Primary Category 1",
       outline: true,
       rounded_pill: true,
     },
     {
-      label: "Category 2",
+      label: "Secondary Category 2",
       outline: true,
       rounded_pill: true,
+      background: "secondary",
     },
   ],
   content: `<div class="my-3"><span class="text-muted me-3">17 October 2019</span></div><a href='#'>Test link</a>${getDummyText(
