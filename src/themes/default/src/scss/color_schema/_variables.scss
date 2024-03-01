@@ -6,11 +6,4 @@
   @each $color, $value in $theme-colors-rgb {
     --#{$prefix}#{$color}-rgb: #{$value};
   }
-
-  // Links
-  @if $color == "primary" {
-    $link-hover-color: shift-color($value, $link-shade-percentage);
-    --bs-link-color: #{$value};
-    --bs-link-hover-color: #{$link-hover-color};
-  }
 }

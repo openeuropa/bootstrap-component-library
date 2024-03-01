@@ -17,9 +17,12 @@ import dataTimeline from "@openeuropa/bcl-timeline/data.js";
 import dataListing from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
 import dataFile from "@openeuropa/bcl-file/data/data.js";
 
+import dataContentBanner from "@openeuropa/bcl-color-schema/data/content-banner/data.js";
+
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
+import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 import card from "@openeuropa/bcl-card/card.html.twig";
 import table from "@openeuropa/bcl-table/table.html.twig";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
@@ -74,6 +77,12 @@ const renderAlertStory = (data, args) => {
 
 const renderBannerStory = (data, args) => {
   const story = banner(applyArgs(data, args));
+
+  return story;
+};
+
+const renderContentBannerStory = (data, args) => {
+  const story = contentBanner(applyArgs(data, args));
 
   return story;
 };
@@ -154,6 +163,10 @@ Alert.storyName = "Alert";
 
 export const Accordion = (args) => renderAccordionStory(dataAccordion, args);
 Accordion.storyName = "Accordion";
+
+export const ContentBanner = (args) =>
+  renderContentBannerStory(dataContentBanner, args);
+ContentBanner.storyName = "Content Banner";
 
 export const Banner = (args) => renderBannerStory(dataBanner, args);
 Banner.storyName = "Banner";

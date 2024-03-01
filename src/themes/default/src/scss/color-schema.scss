@@ -12,13 +12,14 @@ $colors-schemas: (
     "success": #80ff00,
     "text": #fb00ff,
     "background": #de8f19,
-    "link": #000dff,
+    "link": #4efff9,
   ),
 ) !default;
 
 @import "@openeuropa/bcl-theme-default/src/scss/color_schema/variables";
 @import "@openeuropa/bcl-theme-default/src/scss/color_schema/background";
 @import "@openeuropa/bcl-theme-default/src/scss/color_schema/text";
+@import "@openeuropa/bcl-theme-default/src/scss/color_schema/link";
 
 @import "@openeuropa/bcl-theme-default/src/scss/color_schema/alert";
 @import "@openeuropa/bcl-theme-default/src/scss/color_schema/buttons";
@@ -32,6 +33,8 @@ $colors-schemas: (
 
       @if $color == "text" {
         @include generate-text($color, $value);
+      } @else if $color == "link" {
+        @include generate-link($color, $value);
       } @else if $color == "background" {
         @include generate-background($color, $value);
       } @else {
