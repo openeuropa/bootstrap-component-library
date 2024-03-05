@@ -74,10 +74,10 @@ module.exports = {
       },
     },
   ],
-  colorSchema: [
+  colorScheme: [
     {
-      entry: path.resolve(outputFolder, "src/scss/color-schema.scss"),
-      dest: path.resolve(outputFolder, "css/color-schema.min.css"),
+      entry: path.resolve(outputFolder, "src/scss/color-scheme.scss"),
+      dest: path.resolve(outputFolder, "css/color-scheme.min.css"),
       options: {
         includePaths,
         minify: true,

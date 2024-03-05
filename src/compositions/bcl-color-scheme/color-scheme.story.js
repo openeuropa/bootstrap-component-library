@@ -17,7 +17,7 @@ import dataTimeline from "@openeuropa/bcl-timeline/data.js";
 import dataListing from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
 import dataFile from "@openeuropa/bcl-file/data/data.js";
 
-import dataContentBanner from "@openeuropa/bcl-color-schema/data/content-banner/data.js";
+import dataContentBanner from "@openeuropa/bcl-color-scheme/data/content-banner/data.js";
 
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
@@ -154,7 +154,7 @@ const renderFileStory = (data, args) => {
 };
 
 export default {
-  title: "Resources/Color schema",
+  title: "Resources/Color scheme",
   decorators: [withCode, withDesign],
 };
 

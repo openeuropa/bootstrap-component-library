@@ -7,7 +7,7 @@
  *
  * Example config object: {
  *
- *  color-schema: [
+ *  color-scheme: [
  *   {
  *     entry: [path.resolve(nodeModules, "myfile.js")],
  *     dest: path.resolve(outputFolder, "js"),
@@ -39,7 +39,7 @@ const getPlugins = (options) => {
   return plugins;
 };
 
-const buildColorSchema = (entry, dest, options) => {
+const buildColorScheme = (entry, dest, options) => {
   const plugins = getPlugins(options);
 
   let postcssSourceMap = false;
@@ -103,5 +103,5 @@ const buildColorSchema = (entry, dest, options) => {
 
 module.exports = {
   getPlugins,
-  buildColorSchema,
+  buildColorScheme,
 };

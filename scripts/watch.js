@@ -33,7 +33,7 @@ const handlers = [
       {
         on: "change",
         name: "scss change",
-        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:color-schema`,
+        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:color-scheme`,
         message: "New styles ready",
         reload: "*.css",
       },

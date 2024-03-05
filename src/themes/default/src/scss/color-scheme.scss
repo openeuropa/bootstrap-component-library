@@ -4,7 +4,7 @@
 @import "@openeuropa/bcl-bootstrap/scss/maps";
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
 
-$colors-schemas: (
+$colors-schemes: (
   "pixy-pink": (
     "primary": #4eac00,
     "secondary": #fbff00,
@@ -16,19 +16,19 @@ $colors-schemas: (
   ),
 ) !default;
 
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/variables";
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/background";
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/text";
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/link";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/variables";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/background";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/text";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/link";
 
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/alert";
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/buttons";
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/list_group";
-@import "@openeuropa/bcl-theme-default/src/scss/color_schema/utilities";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/alert";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/buttons";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/list_group";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/utilities";
 
-@each $schema-name, $schema-array in $colors-schemas {
-  .#{$schema-name} {
-    @each $color, $value in $schema_array {
+@each $scheme-name, $scheme-array in $colors-schemes {
+  .#{$scheme-name} {
+    @each $color, $value in $scheme_array {
       @include generate-variables($color, $value);
 
       @if $color == "text" {
