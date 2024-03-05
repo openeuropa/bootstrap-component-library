@@ -49,8 +49,30 @@ const buildColorScheme = (entry, dest, options) => {
     postcssSourceMap = options.sourceMap; // as a file
   }
 
+  // Read contents of the entry file and the base color scheme SCSS file
+  const entryVariables = fs.readFileSync(entry, "utf8");
+  const imports = fs.readFileSync(
+    path.resolve(
+      ...(options.includePaths || []),
+      "@openeuropa/bcl-theme-default/src/scss/color-scheme.scss"
+    ),
+    "utf8"
+  );
+  const generator = fs.readFileSync(
+    path.resolve(
+      ...(options.includePaths || []),
+      "@openeuropa/bcl-theme-default/src/scss/color_scheme/generator.scss"
+    ),
+    "utf8"
+  );
+
+  // Concatenate the contents
+  const scssContent = imports + "\n" + entryVariables + "\n" + generator;
+
+  console.log(scssContent);
+
   const sassResult = sass.renderSync({
-    file: entry,
+    data: scssContent,
     outFile: dest,
     noErrorCss: true,
     outputStyle: "expanded",

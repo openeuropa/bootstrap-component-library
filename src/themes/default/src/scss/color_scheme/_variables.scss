@@ -1,9 +1,0 @@
-@mixin generate-variables($color, $value) {
-  @each $color, $value in $theme-colors {
-    --#{$prefix}#{$color}: #{$value};
-  }
-
-  @each $color, $value in $theme-colors-rgb {
-    --#{$prefix}#{$color}-rgb: #{$value};
-  }
-}
