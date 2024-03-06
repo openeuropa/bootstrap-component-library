@@ -47,6 +47,7 @@ export default {
   title: "Components/Heading(s)",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Bootstrap docs",

@@ -53,6 +53,7 @@ export default {
   title: "Components/Toasts",
   decorators: [withCode, withDesign, initToast],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

@@ -24,6 +24,7 @@ export default {
   title: "Paragraphs/Gallery",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

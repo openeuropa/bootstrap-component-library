@@ -11,7 +11,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
-    badges: ["stable"],
+    badges: ["stable", "deprecated"],
     design: [
       {
         name: "Mockup",

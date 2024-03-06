@@ -91,6 +91,7 @@ export default {
   title: "Components/Progress",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

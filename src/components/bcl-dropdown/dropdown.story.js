@@ -67,6 +67,7 @@ export default {
   title: "Components/Dropdown",
   decorators: [withCode, withDesign, paddingBody],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

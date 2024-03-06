@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.2.1 (2024-02-21)
+
+#### :nail_care: Enhancement
+* [#578](https://github.com/openeuropa/bootstrap-component-library/pull/578) feat(renaming): Renaming and added deprecated badge. ([@tibi2303](https://github.com/tibi2303))
+* [#505](https://github.com/openeuropa/bootstrap-component-library/pull/505) feat(banner): Fixed height variant on banners - OEL-2164 ([@tibi2303](https://github.com/tibi2303))
+* [#572](https://github.com/openeuropa/bootstrap-component-library/pull/572) feat(multiselect): Fixed multiselect overflow. - OEL-2784 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.2.0 (2023-08-24)
 
 #### :bug: Bug Fix
