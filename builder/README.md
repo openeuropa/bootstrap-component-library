@@ -117,5 +117,3 @@ const scssContent = imports + "\n" + entryVariables + "\n" + generator;
 - Generator: The call of the mixins used.
 
 ---
-
-I've structured it with clearer headings, syntax highlighting for code blocks, and hyperlinked the Bootstrap theme colors for easy reference. Let me know if you need further adjustments!
