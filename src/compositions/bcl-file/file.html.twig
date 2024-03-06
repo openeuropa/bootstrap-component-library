@@ -138,6 +138,11 @@
           </small>
           {% endif %}
         </div>
+        {% if _download.attributes is empty %}
+          {% set _download = _download|merge({
+            attributes: create_attribute()
+          }) %}
+        {% endif %}
         {% set _download = _download|merge({
           icon_position: "after",
           icon: {
@@ -145,7 +150,7 @@
             size: "fluid",
             path: _icon_path,
           },
-          attributes: create_attribute()
+          attributes: _download.attributes
                       .setAttribute('download', true)
                       .setAttribute('target', '_blank')
                       .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'])
