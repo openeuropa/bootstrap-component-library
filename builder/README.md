@@ -50,12 +50,24 @@ Certainly! Here's an improved version of the markdown with better formatting and
 ```javascript
 color-scheme: [
   {
-    entry (string - source file of color-schema),
-    dest (string - destination of css file),
+    entry (ex: ../path/to/your-colour-scheme.scss),
+    dest (ex: ../path/to/compiled.css),
     options (object) [plugins for postcss]
     https://github.com/postcss/postcss/blob/main/docs/plugins.md {
       minify (includes css nano for minification)
     }
+  },
+],
+
+ * Example config object: {
+ color-scheme: [
+  {
+    entry: [path.resolve(nodeModules, "color-scheme.scss")],
+    dest: path.resolve(outputFolder, "css"),
+    options: {
+      includePaths,
+      sourceMap: "file",
+    },
   },
 ],
 ```
@@ -88,10 +100,6 @@ We've also added some new variables that overwrite and make use of extra classes
 - `.text-color-default`: Text color is changed based on the 'text' variable, overriding all text colors inside a component.
 - `.bg-default`: Background color is changed based on the 'background' variable. It adds a background for the component but does not override if it already has a `bg` class (e.g., `bg-primary`).
 
-The 'link' variable changes the color of all the links inside the schema.
-
-All of these are possible through a namespace class `.{$color-schema-name}`. For example, a banner which uses the color schema will have class `'bcl-banner pixy-pink'`.
-
 ### Files Inside the Theme Default
 
 - `scss/color_scheme/alert`: Mixin that changes the colors of alerts
@@ -102,18 +110,8 @@ All of these are possible through a namespace class `.{$color-schema-name}`. For
 - `scss/color_scheme/list_group`: Mixin that changes the colors of list groups
 - `scss/color_scheme/text`: Mixin that adds the `text-color-default` class
 - `scss/color_scheme/utilities`: Mixin that changes the utilities: `bg-{color}` (e.g., `bg-primary`), `text-bg-{color}` (e.g., `text-bg-primary`), and `link-{color}` (e.g., `link-primary`)
-- `scss/color_scheme/generator`: This includes all the mentioned mixins and calls them. It also adds the CSS variables on the color schema class.
+- `scss/color_scheme/generator`: This includes all the mentioned mixins and calls them. It also adds the CSS variables on the color scheme class.
 
 - `scss/color-scheme.scss`: This is the starting imports needed.
-
-The color-scheme script makes use of these files like this:
-
-```javascript
-const scssContent = imports + "\n" + entryVariables + "\n" + generator;
-```
-
-- Imports: The necessary imports from Bootstrap and also the mixins.
-- EntryVariables: The Color schema added by the user (source file).
-- Generator: The call of the mixins used.
 
 ---
