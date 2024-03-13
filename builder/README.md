@@ -51,7 +51,7 @@ color-scheme: [
     entry (ex: ../path/to/your-colour-scheme.scss),
     dest (ex: ../path/to/compiled.css),
     options (object) [plugins for postcss]
-    https://github.com/postcss/postcss/blob/main/docs/plugins.md {
+    [Plugins](https://github.com/postcss/postcss/blob/main/docs/plugins.md) {
       minify (includes css nano for minification)
     }
   },
