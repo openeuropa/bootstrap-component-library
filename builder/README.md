@@ -41,8 +41,6 @@ commands which all supports multiple operations as items in an array.
 
 `sprite: [ { entry: (string), dest: (string), options: (object) { file: (string) (defaut: bcl-icons.svg), list: (array of file names) (optional), }, }, ],`
 
-Certainly! Here's an improved version of the markdown with better formatting and clarity:
-
 ---
 
 #### Color Scheme
