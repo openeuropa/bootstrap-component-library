@@ -50,8 +50,7 @@ color-scheme: [
   {
     entry (ex: ../path/to/your-colour-scheme.scss),
     dest (ex: ../path/to/compiled.css),
-    options (object) [plugins for postcss]
-    [Plugins](https://github.com/postcss/postcss/blob/main/docs/plugins.md) {
+    options (object with plugins for postcss) {
       minify (includes css nano for minification)
     }
   },
@@ -85,6 +84,9 @@ $colors-schemes: (
   ),
 );
 ```
+
+You can find multiple plugins here:
+[Postcss Plugins](https://github.com/postcss/postcss/blob/main/docs/plugins.md)
 
 The color-scheme enables the possibility to theme the colors used in BCL. It overrides the variables `$theme-colors` used by Bootstrap ([Bootstrap Theme Colors](https://getbootstrap.com/docs/5.0/customize/color/#theme-colors)).
 
