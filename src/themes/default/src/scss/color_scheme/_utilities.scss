@@ -1,0 +1,34 @@
+// Color scheme - utilities
+
+@mixin generate-utilities($color, $value) {
+  $color-rgb: to-rgb($value);
+  .text-bg-#{$color} {
+    color: color-contrast($value)
+      if($enable-important-utilities, !important, null);
+    background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1))
+      if($enable-important-utilities, !important, null);
+  }
+
+  .bg-#{$color} {
+    --bs-bg-opacity: 1;
+    background-color: rgba(
+      var(--bs-#{$color}-rgb),
+      var(--bs-bg-opacity)
+    ) !important;
+  }
+
+  .link-#{$color} {
+    color: $value !important; // stylelint-disable-line declaration-no-important
+
+    @if $link-shade-percentage != 0 {
+      &:hover,
+      &:focus {
+        color: if(
+          color-contrast($value) == $color-contrast-light,
+          shade-color($value, $link-shade-percentage),
+          tint-color($value, $link-shade-percentage)
+        ) !important; // stylelint-disable-line declaration-no-important
+      }
+    }
+  }
+}
