@@ -1,0 +1,6 @@
+@mixin generate-link($color, $value) {
+  // Links
+  $link-hover-color: shift-color($value, $link-shade-percentage);
+  --bs-link-color: #{$value};
+  --bs-link-hover-color: #{$link-hover-color};
+}

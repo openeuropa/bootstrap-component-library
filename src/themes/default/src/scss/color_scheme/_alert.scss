@@ -1,0 +1,18 @@
+// Color scheme - Alert
+
+@mixin generate-alerts($color, $value) {
+  $alert-background: shift-color($value, $alert-bg-scale);
+  $alert-border: shift-color($value, $alert-border-scale);
+  $alert-color: shift-color($value, $alert-color-scale);
+
+  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+    $alert-color: mix(
+      $value,
+      color-contrast($alert-background),
+      abs($alert-color-scale)
+    );
+  }
+  .alert-#{$color} {
+    @include alert-variant($alert-background, $alert-border, $alert-color);
+  }
+}
