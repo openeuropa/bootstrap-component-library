@@ -20,7 +20,19 @@
   - language (string) (default: '')
   - variant (string) (default: 'default')
     - options: ['default', 'card']
-  - download (link Object) (default: {})
+  - download (link Object) (default: {}) format: {
+    attributes : {
+      class: [
+        'html_class1',
+        'html_class2',
+      ],
+      download: false,
+      icon: {
+        name: 'eye',
+        size: 'fluid',
+      },
+    }
+  }
   - translation (file translation Object) (default: {}) format: {
     id: '',
     label: {}, - link Object
@@ -138,18 +150,22 @@
           </small>
           {% endif %}
         </div>
-        {% set _download = _download|merge({
+        {% set _download = {
           icon_position: "after",
           icon: {
             name: "download",
             size: "fluid",
             path: _icon_path,
           },
-          attributes: create_attribute()
-                      .setAttribute('download', true)
-                      .setAttribute('target', '_blank')
-                      .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'])
-        }) %}
+          attributes: create_attribute({
+            'download' : true,
+            'target' : '_blank',
+          }|merge(_download.attributes|without('class')))
+          .addClass([
+            'standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0',
+            ]|merge(_download.attributes.class|default([]))
+          )
+        }|merge(_download|without('attributes')) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
       </div>
     </div>
