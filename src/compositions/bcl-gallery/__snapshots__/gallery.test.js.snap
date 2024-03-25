@@ -198,6 +198,22 @@ exports[`OE - Gallery default renders correctly 1`] = `
                   />
                 </svg>
               </span>
+              <div
+                class="bcl-gallery__item-caption"
+              >
+                <p
+                  class="fs-5"
+                >
+                  Slide label
+                </p>
+                <div
+                  class="bcl-gallery__item-description"
+                >
+                  <p>
+                    Some representative placeholder content for the slide.
+                  </p>
+                </div>
+              </div>
             </div>
             <img
               alt="slide"
@@ -600,12 +616,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item active"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1005/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1005/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -620,12 +640,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/101/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/101/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -640,20 +664,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/1015/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -668,41 +688,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
-                  >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1018/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/1015/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -717,12 +712,37 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1026/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                        type="video/webm"
+                      />
+                      <track
+                        kind="captions"
+                        label="English"
+                        src="/captions/bunny-en.vtt"
+                        srclang="en"
+                      />
+                      <track
+                        kind="captions"
+                        label="français"
+                        src="/captions/bunny-fr.vtt"
+                        srclang="fr"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -737,10 +757,62 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1043/800/400"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1018/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item"
+                >
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1026/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item"
+                >
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1043/800/400"
+                    />
+                  </div>
                   <div
                     class="carousel-caption"
                   >
@@ -754,12 +826,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1050/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1050/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <p>
                       Some representative placeholder content for the slide.
@@ -769,12 +845,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1071/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1071/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -789,12 +869,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1077/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1077/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -809,39 +893,59 @@ exports[`OE - Gallery default renders correctly 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
                 </div>
                 <div
                   class="carousel-item"
                 >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
+                  <div
+                    class="bcl-carousel-media"
                   >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                        type="video/webm"
+                      />
+                      <track
+                        kind="captions"
+                        label="English"
+                        src="/captions/bunny-en.vtt"
+                        srclang="en"
+                      />
+                      <track
+                        kind="captions"
+                        label="français"
+                        src="/captions/bunny-fr.vtt"
+                        srclang="fr"
+                      />
+                    </video>
+                  </div>
                 </div>
               </div>
               <button
@@ -1087,12 +1191,16 @@ exports[`OE - Gallery renders correctly with less than 5 items 1`] = `
                 <div
                   class="carousel-item active"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1005/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1005/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1107,12 +1215,16 @@ exports[`OE - Gallery renders correctly with less than 5 items 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/101/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/101/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1127,10 +1239,26 @@ exports[`OE - Gallery renders correctly with less than 5 items 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
                 </div>
               </div>
               <button
@@ -1370,6 +1498,22 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                   />
                 </svg>
               </span>
+              <div
+                class="bcl-gallery__item-caption"
+              >
+                <p
+                  class="fs-5"
+                >
+                  Slide label
+                </p>
+                <div
+                  class="bcl-gallery__item-description"
+                >
+                  <p>
+                    Some representative placeholder content for the slide.
+                  </p>
+                </div>
+              </div>
             </div>
             <img
               alt="slide"
@@ -1772,12 +1916,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item active"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1005/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1005/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1792,12 +1940,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/101/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/101/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1812,20 +1964,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/1015/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1840,41 +1988,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
-                  >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1018/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/1015/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1889,12 +2012,37 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1026/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                        type="video/webm"
+                      />
+                      <track
+                        kind="captions"
+                        label="English"
+                        src="/captions/bunny-en.vtt"
+                        srclang="en"
+                      />
+                      <track
+                        kind="captions"
+                        label="français"
+                        src="/captions/bunny-fr.vtt"
+                        srclang="fr"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1909,10 +2057,62 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1043/800/400"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1018/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item"
+                >
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1026/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item"
+                >
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1043/800/400"
+                    />
+                  </div>
                   <div
                     class="carousel-caption"
                   >
@@ -1926,12 +2126,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1050/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1050/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <p>
                       Some representative placeholder content for the slide.
@@ -1941,12 +2145,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1071/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1071/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1961,12 +2169,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1077/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1077/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -1981,39 +2193,59 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
                 </div>
                 <div
                   class="carousel-item"
                 >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
+                  <div
+                    class="bcl-carousel-media"
                   >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                        type="video/webm"
+                      />
+                      <track
+                        kind="captions"
+                        label="English"
+                        src="/captions/bunny-en.vtt"
+                        srclang="en"
+                      />
+                      <track
+                        kind="captions"
+                        label="français"
+                        src="/captions/bunny-fr.vtt"
+                        srclang="fr"
+                      />
+                    </video>
+                  </div>
                 </div>
               </div>
               <button
@@ -2260,6 +2492,22 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                   />
                 </svg>
               </span>
+              <div
+                class="bcl-gallery__item-caption"
+              >
+                <p
+                  class="fs-5"
+                >
+                  Slide label
+                </p>
+                <div
+                  class="bcl-gallery__item-description"
+                >
+                  <p>
+                    Some representative placeholder content for the slide.
+                  </p>
+                </div>
+              </div>
             </div>
             <img
               alt="slide"
@@ -2662,12 +2910,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item active"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1005/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1005/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2682,12 +2934,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/101/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/101/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2702,20 +2958,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="slide"
-                    data-src="https://picsum.photos/id/1015/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2730,41 +2982,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
-                  >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
-                </div>
-                <div
-                  class="carousel-item"
-                >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1018/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="slide"
+                      data-src="https://picsum.photos/id/1015/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2779,12 +3006,37 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1026/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                        type="video/webm"
+                      />
+                      <track
+                        kind="captions"
+                        label="English"
+                        src="/captions/bunny-en.vtt"
+                        srclang="en"
+                      />
+                      <track
+                        kind="captions"
+                        label="français"
+                        src="/captions/bunny-fr.vtt"
+                        srclang="fr"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2799,10 +3051,62 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="Slide"
-                    data-src="https://picsum.photos/id/1043/800/400"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1018/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item"
+                >
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1026/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="carousel-item"
+                >
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="Slide"
+                      data-src="https://picsum.photos/id/1043/800/400"
+                    />
+                  </div>
                   <div
                     class="carousel-caption"
                   >
@@ -2816,12 +3120,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1050/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1050/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <p>
                       Some representative placeholder content for the slide.
@@ -2831,12 +3139,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1071/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1071/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2851,12 +3163,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <img
-                    alt="First slide"
-                    data-src="https://picsum.photos/id/1077/800/400"
-                  />
                   <div
-                    class="carousel-caption d-none d-md-block"
+                    class="bcl-carousel-media"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1077/800/400"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
                   >
                     <div
                       class="fs-5"
@@ -2871,39 +3187,59 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                 <div
                   class="carousel-item"
                 >
-                  <iframe
-                    data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
-                    frameborder="0"
-                  />
+                  <div
+                    class="bcl-carousel-media"
+                  >
+                    <iframe
+                      data-src="https://www.youtube.com/embed/fgi-GSCB6ho"
+                      frameborder="0"
+                    />
+                  </div>
+                  <div
+                    class="carousel-caption"
+                  >
+                    <p
+                      class="fs-5"
+                    >
+                      Slide label
+                    </p>
+                    <p>
+                      Some representative placeholder content for the slide.
+                    </p>
+                  </div>
                 </div>
                 <div
                   class="carousel-item"
                 >
-                  <video
-                    controls="controls"
-                    poster="https://picsum.photos/id/1081/800/400"
+                  <div
+                    class="bcl-carousel-media"
                   >
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
-                      type="video/webm"
-                    />
-                    <track
-                      kind="captions"
-                      label="English"
-                      src="/captions/bunny-en.vtt"
-                      srclang="en"
-                    />
-                    <track
-                      kind="captions"
-                      label="français"
-                      src="/captions/bunny-fr.vtt"
-                      srclang="fr"
-                    />
-                  </video>
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.webm"
+                        type="video/webm"
+                      />
+                      <track
+                        kind="captions"
+                        label="English"
+                        src="/captions/bunny-en.vtt"
+                        srclang="en"
+                      />
+                      <track
+                        kind="captions"
+                        label="français"
+                        src="/captions/bunny-fr.vtt"
+                        srclang="fr"
+                      />
+                    </video>
+                  </div>
                 </div>
               </div>
               <button
