@@ -83,13 +83,15 @@ Parameters:
       <ul class="bcl-gallery__grid">
         {% for _item in _batch %}
           <li>
-          {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
-            item: _item,
-            carousel_id: _carousel_id,
-            modal_id: _modal_id,
-            icon_path: _icon_path,
-            carousel_anchor: loop.index0 + (_max_visible_thumbnails * loop.parent.loop.index0),
-          } only %}
+            {% block gallery_item %}
+              {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+                item: _item,
+                carousel_id: _carousel_id,
+                modal_id: _modal_id,
+                icon_path: _icon_path,
+                carousel_anchor: loop.index0 + (_max_visible_thumbnails * loop.parent.loop.index0),
+              } only %}
+            {% endblock %}
           </li>
         {% endfor %}
       </ul>
