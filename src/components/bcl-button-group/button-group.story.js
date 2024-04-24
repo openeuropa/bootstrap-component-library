@@ -86,6 +86,7 @@ export default {
   title: "Components/Button Group",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

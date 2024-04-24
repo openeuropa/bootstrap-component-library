@@ -241,6 +241,7 @@ export const Default = (args) => button(applyArgs(demoData, args));
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -262,6 +263,7 @@ Collapse.args = getArgs(toggleDemoData, "collapse");
 Collapse.argTypes = getArgTypes(toggleDemoData, "collapse");
 Collapse.decorators = [withCollapse];
 Collapse.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -290,6 +292,7 @@ Popover.args = getArgs(popoverDemoData, "popover");
 Popover.argTypes = getArgTypes(popoverDemoData, "popover");
 Popover.decorators = [initPopover];
 Popover.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Wireframe",
@@ -318,6 +321,7 @@ Tooltip.args = getArgs(tooltipDemoData, "tooltip");
 Tooltip.argTypes = getArgTypes(tooltipDemoData, "tooltip");
 Tooltip.decorators = [initTooltip];
 Tooltip.parameters = {
+  badges: ["deprecated"],
   chromatic: { delay: 1000 },
   design: {
     name: "Bootstrap docs",
@@ -340,6 +344,7 @@ Spinner.storyName = "Spinner";
 Spinner.args = getArgs(spinnerDemoData);
 Spinner.argTypes = getArgTypes(spinnerDemoData);
 Spinner.parameters = {
+  badges: ["deprecated"],
   chromatic: { pauseAnimationAtEnd: true },
   design: [
     {

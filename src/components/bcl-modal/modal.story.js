@@ -87,6 +87,7 @@ export default {
   title: "Components/Modal",
   decorators: [withCode, withDesign, modalButton],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

@@ -29,6 +29,7 @@ export default {
   title: "Paragraphs/File",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     viewport: {
       defaultViewport: "tablet",
     },

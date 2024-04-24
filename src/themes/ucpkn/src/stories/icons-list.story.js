@@ -9,6 +9,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
+    badges: ["deprecated"],
   },
 };
 

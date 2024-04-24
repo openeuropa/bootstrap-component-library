@@ -30,6 +30,19 @@ export const parameters = {
         paddingBlock: '5px',
       }
     },
+    [BADGE.DEPRECATED]: {
+      title: 'DEPRECATED',
+      styles: {
+        fontSize: '20',
+        paddingInline: '24px',
+        backgroundColor: '#ff0000',
+        borderColor: '#DCDCDC',
+        color: '#FFFFFF',
+        textTransform: 'lowercase',
+        borderWidth: '2px',
+        paddingBlock: '5px',
+      }
+    },
   },
   viewport: {
     defaultViewport: "responsive",

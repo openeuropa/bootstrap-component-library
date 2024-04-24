@@ -69,6 +69,7 @@ export default {
   title: "Paragraphs/Blockquote",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Wireframe",

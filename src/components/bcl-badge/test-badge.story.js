@@ -12,6 +12,9 @@ const data = correctPaths(demoData);
 export default {
   title: "Components/Badge",
   decorators: [initBadges],
+  parameters: {
+    badges: ["deprecated"],
+  },
 };
 
 export const Dismissible = () => badge({ ...data, dismissible: true });

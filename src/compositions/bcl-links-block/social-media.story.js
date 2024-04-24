@@ -57,6 +57,7 @@ export default {
     viewport: {
       defaultViewport: "tablet",
     },
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

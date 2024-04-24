@@ -108,6 +108,7 @@ export default {
   title: "Compositions/Project status",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

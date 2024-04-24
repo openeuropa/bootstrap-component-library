@@ -49,7 +49,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
-    badges: ["stable"],
+    badges: ["stable", "deprecated"],
     a11y: {
       config: {
         rules: [

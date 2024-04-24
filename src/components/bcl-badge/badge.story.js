@@ -116,6 +116,7 @@ export default {
   title: "Components/Badge",
   decorators: [withCode, withDesign, initBadges],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",
