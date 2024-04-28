@@ -46,21 +46,11 @@ commands which all supports multiple operations as items in an array.
 #### Color Scheme
 
 ```javascript
-color-scheme: [
-  {
-    entry (ex: ../path/to/your-colour-scheme.scss),
-    dest (ex: ../path/to/compiled.css),
-    options (object with plugins for postcss) {
-      minify (includes css nano for minification)
-    }
-  },
-],
-
  * Example config object: {
- color-scheme: [
+ colorScheme: [
   {
-    entry: [path.resolve(nodeModules, "color-scheme.scss")],
-    dest: path.resolve(outputFolder, "css"),
+    entry: path.resolve(nodeModules, "color-scheme.scss"),
+    dest: path.resolve(outputFolder, "assets/css/color_scheme.min.css"),
     options: {
       includePaths,
       sourceMap: "file",
@@ -69,7 +59,8 @@ color-scheme: [
 ],
 ```
 
-Example SCSS color-scheme:
+This following example is the entry of the colorScheme. The scss file should look like this. It also support multiple color schemes.
+Example SCSS file of color-scheme.scss:
 
 ```scss
 $colors-schemes: (
@@ -90,28 +81,68 @@ You can find multiple plugins here:
 
 The color-scheme enables the possibility to theme the colors used in BCL. It overrides the variables `$theme-colors` used by Bootstrap ([Bootstrap Theme Colors](https://getbootstrap.com/docs/5.0/customize/color/#theme-colors)).
 
-### Prerequisites
-
-- BCL-Builder version >= 1.2.1
-- BCL-Theme-Default >= 1.2.1
-
 We've also added some new variables that overwrite and make use of extra classes:
 
 - `.text-color-default`: Text color is changed based on the 'text' variable, overriding all text colors inside a component.
 - `.bg-default`: Background color is changed based on the 'background' variable. It adds a background for the component but does not override if it already has a `bg` class (e.g., `bg-primary`).
 
-### Files Inside the Theme Default
+### Prerequisites
 
-- `scss/color_scheme/alert`: Mixin that changes the colors of alerts
-- `scss/color_scheme/background`: Mixin that adds the `bg-default` class
-- `scss/color_scheme/badge`: Mixin that changes the colors of badges
-- `scss/color_scheme/buttons`: Mixin that changes the colors of buttons
-- `scss/color_scheme/link`: Mixin that changes the color of links
-- `scss/color_scheme/list_group`: Mixin that changes the colors of list groups
-- `scss/color_scheme/text`: Mixin that adds the `text-color-default` class
-- `scss/color_scheme/utilities`: Mixin that changes the utilities: `bg-{color}` (e.g., `bg-primary`), `text-bg-{color}` (e.g., `text-bg-primary`), and `link-{color}` (e.g., `link-primary`)
-- `scss/color_scheme/generator`: This includes all the mentioned mixins and calls them. It also adds the CSS variables on the color scheme class.
+- BCL-Builder version >= 1.2.1
+- BCL-Bootstrap version >= 1.2.1
+- BCL-Theme-Default >= 1.2.1
 
-- `scss/color-scheme.scss`: This is the starting imports needed.
+### Setup Color Schema
+
+Step 1:
+Depending on your package manager:
+
+Yarn:
+
+- yarn add @openeuropa/bcl-builder --save
+- yarn add @openeuropa/bcl-bootstrap --save
+- yarn add @openeuropa/bcl-theme-default --save
+
+NPM:
+
+- npm install @openeuropa/bcl-builder --save
+- npm install @openeuropa/bcl-bootstrap --save
+- npm install @openeuropa/bcl-theme-default --save
+
+Step 2:
+Add the following bcl-builder.config.js file:
+
+```javascript
+  colorScheme: [
+    {
+      entry: path.resolve(outputFolder, "path to the color-scheme scss file"),
+      dest: path.resolve(outputFolder, "compiled "),
+      options: {
+        includePaths,
+        minify: true,
+        sourceMap: "file",
+      },
+    },
+  ],
+```
+
+Step 3:
+Add in your package.json the following command:
+
+```javascript
+  "build:color-scheme": "bcl-builder color-scheme",
+```
+
+Note: We are using ([npm-run-all package](https://www.npmjs.com/package/npm-run-all)) in BCL in order for all scripts for bcl-builder to be run at once:
+Example:
+
+```javascript
+    "build": "npm-run-all build:*",
+    "build:styles": "bcl-builder styles",
+    "build:color-scheme": "bcl-builder color-scheme",
+    "build:scripts": "bcl-builder scripts",
+    "build:copy": "bcl-builder copy",
+    "build:sprite": "bcl-builder sprite",
+```
 
 ---
