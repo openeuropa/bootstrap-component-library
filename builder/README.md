@@ -49,7 +49,7 @@ commands which all supports multiple operations as items in an array.
  * Example config object: {
  colorScheme: [
   {
-    entry: path.resolve(nodeModules, "color-scheme.scss"),
+    entry: path.resolve(outputFolder, "color-scheme.scss"),
     dest: path.resolve(outputFolder, "assets/css/color_scheme.min.css"),
     options: {
       includePaths,
