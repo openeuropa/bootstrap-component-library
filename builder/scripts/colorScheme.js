@@ -69,8 +69,6 @@ const buildColorScheme = (entry, dest, options) => {
   // Concatenate the contents
   const scssContent = imports + "\n" + entryVariables + "\n" + generator;
 
-  console.log(scssContent);
-
   const sassResult = sass.renderSync({
     data: scssContent,
     outFile: dest,
