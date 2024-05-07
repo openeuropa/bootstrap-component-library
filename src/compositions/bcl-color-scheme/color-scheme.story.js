@@ -18,10 +18,14 @@ import dataListing from "@openeuropa/bcl-listing/data/listing--default-1-col.js"
 import dataFile from "@openeuropa/bcl-file/data/data.js";
 
 import dataContentBanner from "@openeuropa/bcl-color-scheme/data/content-banner/data.js";
+import dataCarousel from "@openeuropa/bcl-color-scheme/data/carousel/data.js";
+import dataGallery from "@openeuropa/bcl-color-scheme/data/gallery/data.js";
 
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
+import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
+import gallery from "@openeuropa/bcl-gallery/gallery.html.twig";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 import card from "@openeuropa/bcl-card/card.html.twig";
 import table from "@openeuropa/bcl-table/table.html.twig";
@@ -83,6 +87,18 @@ const renderBannerStory = (data, args) => {
 
 const renderContentBannerStory = (data, args) => {
   const story = contentBanner(applyArgs(data, args));
+
+  return story;
+};
+
+const renderCarouselStory = (data, args) => {
+  const story = carousel(applyArgs(data, args));
+
+  return story;
+};
+
+const renderGalleryStory = (data, args) => {
+  const story = gallery(applyArgs(data, args));
 
   return story;
 };
@@ -173,6 +189,12 @@ Banner.storyName = "Banner";
 
 export const Card = (args) => renderCardStory(dataCard, args);
 Card.storyName = "Card";
+
+export const Carousel = (args) => renderCarouselStory(dataCarousel, args);
+Carousel.storyName = "Carousel";
+
+export const Gallery = (args) => renderGalleryStory(dataGallery, args);
+Gallery.storyName = "Gallery";
 
 export const Table = (args) => renderTableStory(dataTable, args);
 Table.storyName = "Table";
