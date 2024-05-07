@@ -7,7 +7,7 @@ module.exports = {
   items: [
     {
       classes: "item_extra_class",
-      caption: `<p>Some representative placeholder content for the first slide.</p>`,
+      caption: `<p>Some representative placeholder content for the first slide.</p><span class="my-2 badge rounded-pill badge-outline-secondary">I'm a badge</span><div class="d-block my-2"><button class="btn btn-primary">Test button</button></div>`,
       caption_title: "First slide label",
       image: `<img
                 src="https://picsum.photos/800/400?random=1"

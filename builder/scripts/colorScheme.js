@@ -9,8 +9,8 @@
  *
  *  color-scheme: [
  *   {
- *     entry: [path.resolve(nodeModules, "myfile.js")],
- *     dest: path.resolve(outputFolder, "js"),
+ *     entry: path.resolve("resources/sass/color-scheme-variables.scss"),
+ *     dest: path.resolve(outputFolder, "assets/css/color_scheme.min.css"),
  *     options: {
  *       includePaths,
  *       sourceMap: "file",
