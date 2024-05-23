@@ -159,6 +159,7 @@ export default {
   title: "Paragraphs/Carousel",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     viewport: {
       defaultViewport: "tablet",
     },

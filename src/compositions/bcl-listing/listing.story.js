@@ -68,6 +68,7 @@ export default {
   title: "Paragraphs/Listings",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

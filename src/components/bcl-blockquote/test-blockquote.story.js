@@ -4,6 +4,7 @@ import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
 export default {
   title: "Paragraphs/Blockquote",
   parameters: {
+    badges: ["deprecated"],
     controls: { disable: true },
   },
 };

@@ -101,6 +101,7 @@ export default {
   title: "Components/Navigation",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

@@ -42,6 +42,7 @@ export default {
   title: "Paragraphs/Description List",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     viewport: {
       defaultViewport: "tablet",
     },
