@@ -1,3 +1,28 @@
+/**
+ * Generate svg sprites.
+ *
+ * @param {string} entry - array of paths to a folder or file.
+ * @param {string} dest - Output folder path
+ * @param {object} options - Object
+ *
+ * Example config object: {
+ *
+ * sprite: [
+ *   {
+ *     entry: [
+ *       path.resolve(nodeModules, "bootstrap-icons/icons/"),
+ *       path.resolve(__dirname, "src/icons/custom-icons")
+ *     ],
+ *     dest: path.resolve(outputFolder, "icons/"),
+ *     options: {
+ *       file: "bcl-default-icons.svg",
+ *       list: myList,
+ *       transformPlugins: (array of svgo plugins objects)
+ *     },
+ *   },
+ * ],
+ */
+
 const fs = require("fs");
 const { globSync } = require("glob");
 const mkdirp = require("mkdirp");

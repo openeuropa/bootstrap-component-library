@@ -1,0 +1,81 @@
+{% apply spaceless %}
+
+{# Parameters:
+  - icons: (icon[]) (default: [])
+  - path (string) (default: '')
+#}
+
+{% set _icons = icons|default([]) %}
+{% set _path = path|default('') %}
+
+{% if _icons is not empty and _icons is iterable %}
+  <div class="px-4">
+    <div class="row">
+      <h3 class="mt-4"> Icon Colours </h3>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Default</p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-primary" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Primary<br><b>icon-color-primary</b></p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-secondary" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Secondary<br><b>icon-color-secondary</b></p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-success" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Success<br><b>icon-color-success</b></p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-info" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Info<br><b>icon-color-info</b></p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-warning" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Warning<br><b>icon-color-warning</b></p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-danger" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Danger<br><b>icon-color-danger</b></p>
+      </div>
+      <div class="px-2 my-5 col">
+        <span class="icon mx-auto icon-xl icon-color-dark" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Dark<br><b>icon-color-dark</b></p>
+      </div>
+      <div class="px-2 my-5 col text-center">
+        <div class="p-3 bg-dark d-inline-block">
+          <span class="icon mx-auto icon-xl icon-color-light" data-icon="arrow-clockwise"></span>
+        </div>
+        <p class="text-center text-nowrap">Light<br><b>icon-color-light</b></p>
+      </div>
+    <div>
+    <div class="row">
+      <h3 class="mt-4"> Icon Sizes </h3>
+      <div class="px-3 my-5 col">
+        <span class="icon mx-auto" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">Default</p>
+      </div>
+      <div class="px-3 my-5 col">
+        <span class="icon mx-auto icon-lg" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">LG - <b>icon-lg</b></p>
+      </div>
+      <div class="px-3 my-5 col">
+        <span class="icon mx-auto icon-xl" data-icon="arrow-clockwise"></span>
+        <p class="text-center text-nowrap">XL - <b>icon-xl</b></p>
+      </div>
+    <div>
+    <div class="row">
+      <h3>Icons List</h3>
+      {% for _icon in _icons %}
+        <div class="px-3 my-5 col">
+          <span class="icon mx-auto icon-xl" data-icon="{{ _icon }}"></span>
+          <p class="text-center text-nowrap">{{ _icon }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% endapply %}

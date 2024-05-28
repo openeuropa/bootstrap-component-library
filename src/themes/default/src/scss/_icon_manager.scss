@@ -1,0 +1,29 @@
+body {
+  --icon-path: "static/media/src/themes/default/icons/bcl-default-icons.svg";
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background-color: var(--bs-dark);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+@each $color, $value in $theme-colors {
+  .icon-color-#{$color} {
+    background-color: $value;
+  }
+}
+
+.icon-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icon-xl {
+  width: 2rem;
+  height: 2rem;
+}

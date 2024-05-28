@@ -1,4 +1,5 @@
 import icons_list from "@openeuropa/bcl-icons-list/icons-list.html.twig";
+import icons_manager from "@openeuropa/bcl-icons-list/icons-manager.html.twig";
 import icons from "@openeuropa/bcl-theme-default/src/icons/icons";
 import customIcons from "@openeuropa/bcl-theme-default/src/icons/custom-icons";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
@@ -17,3 +18,5 @@ export default {
 
 export const Default = () =>
   icons_list({ icons: iconsList, path: defaultSprite });
+
+export const Attribute = () => icons_manager({ icons: iconsList });
