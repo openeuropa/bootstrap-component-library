@@ -2,6 +2,7 @@
 
 @mixin generate-utilities($color, $value) {
   $color-rgb: to-rgb($value);
+  &.text-bg-#{$color},
   .text-bg-#{$color} {
     color: color-contrast($value)
       if($enable-important-utilities, !important, null);
@@ -9,6 +10,7 @@
       if($enable-important-utilities, !important, null);
   }
 
+  &.bg-#{$color},
   .bg-#{$color} {
     --bs-bg-opacity: 1;
     background-color: rgba(
