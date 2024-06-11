@@ -342,6 +342,15 @@ export const initScrollspy = (story) => {
   ${demo}`;
 };
 
+export const addIconPath = (story) => {
+  const demo = story();
+  return `
+    <script>
+      document.body.style.setProperty('--icon-path', '${iconPath}');
+    </script>
+  ${demo}`;
+};
+
 export const initBadges = (story) => {
   const demo = story();
   return `

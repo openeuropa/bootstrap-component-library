@@ -3,6 +3,7 @@ import icons_manager from "@openeuropa/bcl-icons-list/icons-manager.html.twig";
 import icons from "@openeuropa/bcl-theme-default/src/icons/icons";
 import customIcons from "@openeuropa/bcl-theme-default/src/icons/custom-icons";
 import defaultSprite from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
+import { addIconPath } from "@openeuropa/bcl-story-utils";
 
 let iconsList = icons.concat(customIcons);
 iconsList = iconsList.map((icon) => icon.substring(0, icon.length - 4));
@@ -19,4 +20,7 @@ export default {
 export const Default = () =>
   icons_list({ icons: iconsList, path: defaultSprite });
 
-export const Attribute = () => icons_manager({ icons: iconsList });
+export const Attribute = () =>
+  icons_manager({ icons: iconsList, path: defaultSprite });
+
+Attribute.decorators = [addIconPath];
