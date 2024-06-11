@@ -43,11 +43,7 @@ import header from "@openeuropa/bcl-header/header.html.twig";
 import drupalAttribute from "drupal-attribute";
 
 const resetAttrs = (data, args) => {
-  data.attributes.removeClass([
-    "pixy-pink",
-    "bg-default",
-    "text-color-default",
-  ]);
+  data.attributes.removeClass(["ocean", "bg-default", "text-color-default"]);
   if (args.centered) {
     data.attributes.addClass("text-center");
   }
@@ -60,7 +56,7 @@ const applyArgs = (data, args) => {
 
   resetAttrs(data, args);
 
-  data.attributes.addClass("pixy-pink");
+  data.attributes.addClass("ocean");
   data.attributes.addClass("bg-default");
   data.attributes.addClass("text-color-default");
 
