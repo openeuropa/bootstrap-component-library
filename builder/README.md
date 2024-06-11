@@ -64,7 +64,7 @@ Example SCSS file of color-scheme.scss:
 
 ```scss
 $colors-schemes: (
-  "pixy-pink": (
+  "ocean": (
     "primary": #4eac00,
     "secondary": #fbff00,
     "danger": #ff8800,
