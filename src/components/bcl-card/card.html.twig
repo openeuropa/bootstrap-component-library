@@ -194,7 +194,7 @@
     <{{ _text_tag }}
       class='card-text{{ _text.classes ? ' ' ~ _text.classes }}'
     >
-      {{- _text.content -}}
+      {{- _text.content|nl2br -}}
     </{{ _text_tag }}>
   {%- endif -%}
   {%- if _content is not empty -%}

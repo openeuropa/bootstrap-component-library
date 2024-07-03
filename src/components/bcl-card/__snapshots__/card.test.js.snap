@@ -389,6 +389,63 @@ exports[`OE - Card renders with text color white correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Card renders correctly with text breakline`] = `
+<jest>
+  <article
+    class="card"
+  >
+    <div
+      class="card-header"
+    >
+      Header of card
+    </div>
+    <img
+      alt="alt img"
+      class="card-img-top rounded-0"
+      src="https://picsum.photos/seed/1002/600/400"
+    />
+    <div
+      class="card-body"
+    >
+      <h1
+        class="fs-4 card-title bcl-heading"
+      >
+        Title card
+      </h1>
+      <h6
+        class="card-subtitle mb-2"
+      >
+        Subtitle card
+      </h6>
+      <p
+        class="card-text mb-2"
+      >
+        Text card line 1<br>Text card line 2
+      </p>
+      <div
+        class="mt-2-5"
+      >
+        <span
+          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+        >
+          I'm a badge
+        </span>
+        <span
+          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+        >
+          I'm also a badge
+        </span>
+      </div>
+    </div>
+    <div
+      class="card-footer"
+    >
+      Footer of card
+    </div>
+  </article>
+</jest>
+`;
+
 exports[`OE - Card renders with variant correctly 1`] = `
 <jest>
   <article

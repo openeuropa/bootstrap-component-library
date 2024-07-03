@@ -66,6 +66,17 @@ describe("OE - Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with text breakline`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, text: {
+        content: "Text card line 1\nText card line 2",
+        classes: "mb-2",
+      }, }, true)
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly with custom title attributes`, () => {
     expect.assertions(1);
     demoData.title_attributes = new drupalAttribute()
