@@ -47,6 +47,7 @@ export default {
   title: "Components/Icon",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

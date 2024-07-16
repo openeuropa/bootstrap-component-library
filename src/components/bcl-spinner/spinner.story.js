@@ -69,6 +69,7 @@ export default {
   title: "Components/Spinner",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

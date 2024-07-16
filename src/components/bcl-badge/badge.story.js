@@ -99,7 +99,7 @@ const getArgTypes = () => ({
 });
 
 const resetAttrs = (data) => {
-  data.attributes.removeClass(`bg-${data.background}`);
+  data.attributes.removeClass(`text-bg-${data.background}`);
   data.attributes.removeClass("rounded-pill");
 };
 
@@ -116,6 +116,7 @@ export default {
   title: "Components/Badge",
   decorators: [withCode, withDesign, initBadges],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

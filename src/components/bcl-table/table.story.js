@@ -115,6 +115,7 @@ export default {
   title: "Components/Table",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

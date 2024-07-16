@@ -27,6 +27,7 @@ const getArgs = (data, type) => {
   }
   if (type === "text") {
     args.alignment = "right";
+    args.description_title = data.description_title || "";
   }
 
   return args;
@@ -76,7 +77,7 @@ const getArgTypes = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
-        category: "Content",
+        category: "Title",
       },
     };
     argTypes.title_tag = {
@@ -86,7 +87,17 @@ const getArgTypes = (data, type) => {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "h2" },
-        category: "Content",
+        category: "Title",
+      },
+    };
+    argTypes.description_title = {
+      name: "description title",
+      type: { name: "string" },
+      description: "Title of description text",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Title",
       },
     };
     argTypes.alignment = {
@@ -118,6 +129,7 @@ export default {
   title: "Paragraphs/Featured media",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

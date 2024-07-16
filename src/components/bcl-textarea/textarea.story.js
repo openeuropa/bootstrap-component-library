@@ -81,6 +81,7 @@ export default {
   title: "Components/Forms/Textarea",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

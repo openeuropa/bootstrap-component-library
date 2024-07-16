@@ -3,7 +3,7 @@
 exports[`OE - Hero banner default renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  full-width hero"
+    class="bcl-banner hero"
   >
     <div
       class="container"
@@ -43,7 +43,7 @@ exports[`OE - Hero banner default renders correctly 1`] = `
 exports[`OE - Hero banner default renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  full-width hero"
+    class="bcl-banner hero"
   >
     <div
       class="container"
@@ -83,7 +83,7 @@ exports[`OE - Hero banner default renders correctly with title 1`] = `
 exports[`OE - Hero banner default renders correctly with title and link 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  full-width hero"
+    class="bcl-banner hero"
   >
     <div
       class="container"
@@ -128,7 +128,7 @@ exports[`OE - Hero banner default renders correctly with title and link 1`] = `
 exports[`OE - Hero banner image shade renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-center bcl-banner shade  hero"
+    class="bcl-banner shade hero"
   >
     <div
       class="bcl-banner__image"
@@ -172,7 +172,7 @@ exports[`OE - Hero banner image shade renders correctly 1`] = `
 exports[`OE - Hero banner image shade renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-center bcl-banner shade  hero"
+    class="bcl-banner shade hero"
   >
     <div
       class="bcl-banner__image"
@@ -216,7 +216,7 @@ exports[`OE - Hero banner image shade renders correctly with title 1`] = `
 exports[`OE - Hero banner image text-block renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  overlay hero"
+    class="bcl-banner overlay hero"
   >
     <div
       class="bcl-banner__image"
@@ -260,7 +260,7 @@ exports[`OE - Hero banner image text-block renders correctly 1`] = `
 exports[`OE - Hero banner image text-block renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  overlay hero"
+    class="bcl-banner overlay hero"
   >
     <div
       class="bcl-banner__image"
@@ -304,7 +304,7 @@ exports[`OE - Hero banner image text-block renders correctly with title 1`] = `
 exports[`OE - Hero banner primary renders correctly 1`] = `
 <jest>
   <div
-    class="bg-primary text-white text-center bcl-banner  hero"
+    class="bcl-banner hero"
   >
     <div
       class="container"
@@ -344,7 +344,7 @@ exports[`OE - Hero banner primary renders correctly 1`] = `
 exports[`OE - Hero banner primary renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-primary text-white text-center bcl-banner  hero"
+    class="bcl-banner hero"
   >
     <div
       class="container"
@@ -384,7 +384,47 @@ exports[`OE - Hero banner primary renders correctly with title 1`] = `
 exports[`OE - Page banner default renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner "
+    class="bcl-banner"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="bcl-banner__content"
+      >
+        <div
+          class="display-6 mb-3 bcl-heading"
+        >
+          EU Budget for the future
+        </div>
+        <p
+          class="mb-4"
+        >
+          Innovation, economy, environment and geopolitics
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/example.html"
+        >
+          Subscribe
+          <svg
+            class="ms-2-5 bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Page banner default renders correctly fixed height 1`] = `
+<jest>
+  <div
+    class="bcl-banner fixed-height"
   >
     <div
       class="container"
@@ -424,7 +464,7 @@ exports[`OE - Page banner default renders correctly 1`] = `
 exports[`OE - Page banner default renders correctly full width 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  full-width"
+    class="bcl-banner full-width"
   >
     <div
       class="container"
@@ -464,7 +504,7 @@ exports[`OE - Page banner default renders correctly full width 1`] = `
 exports[`OE - Page banner default renders correctly with content classes 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner "
+    class="bcl-banner"
   >
     <div
       class="container"
@@ -504,7 +544,7 @@ exports[`OE - Page banner default renders correctly with content classes 1`] = `
 exports[`OE - Page banner default renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner "
+    class="bcl-banner"
   >
     <div
       class="container"
@@ -544,7 +584,7 @@ exports[`OE - Page banner default renders correctly with title 1`] = `
 exports[`OE - Page banner default renders correctly with title and link 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner "
+    class="bcl-banner"
   >
     <div
       class="container"
@@ -589,7 +629,7 @@ exports[`OE - Page banner default renders correctly with title and link 1`] = `
 exports[`OE - Page banner image shade renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-center bcl-banner shade "
+    class="bcl-banner shade"
   >
     <div
       class="bcl-banner__image"
@@ -633,7 +673,7 @@ exports[`OE - Page banner image shade renders correctly 1`] = `
 exports[`OE - Page banner image shade renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-center bcl-banner shade "
+    class="bcl-banner shade"
   >
     <div
       class="bcl-banner__image"
@@ -677,7 +717,7 @@ exports[`OE - Page banner image shade renders correctly with title 1`] = `
 exports[`OE - Page banner image text-block renders correctly 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  overlay"
+    class="bcl-banner overlay"
   >
     <div
       class="bcl-banner__image"
@@ -721,7 +761,7 @@ exports[`OE - Page banner image text-block renders correctly 1`] = `
 exports[`OE - Page banner image text-block renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-lighter text-dark text-center bcl-banner  overlay"
+    class="bcl-banner overlay"
   >
     <div
       class="bcl-banner__image"
@@ -765,7 +805,7 @@ exports[`OE - Page banner image text-block renders correctly with title 1`] = `
 exports[`OE - Page banner primary renders correctly 1`] = `
 <jest>
   <div
-    class="bg-primary text-white text-center bcl-banner "
+    class="bcl-banner"
   >
     <div
       class="container"
@@ -805,7 +845,7 @@ exports[`OE - Page banner primary renders correctly 1`] = `
 exports[`OE - Page banner primary renders correctly with title 1`] = `
 <jest>
   <div
-    class="bg-primary text-white text-center bcl-banner "
+    class="bcl-banner"
   >
     <div
       class="container"

@@ -16,6 +16,7 @@ export default {
   title: "Compositions/Recent Activities",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     controls: { disable: true },
     design: [
       {

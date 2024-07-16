@@ -66,11 +66,11 @@
 {% endif %}
 
 {% if _with_body_scroll %}
- {% set attributes = attributes.setAttribute('data-bs-scroll', true) %}
+ {% set attributes = attributes.setAttribute('data-bs-scroll', 'true') %}
 {% endif %}
 
 {% if not _with_backdrop %}
- {% set attributes = attributes.setAttribute('data-bs-backdrop', false) %}
+ {% set attributes = attributes.setAttribute('data-bs-backdrop', 'false') %}
 {% endif %}
 
 {% set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) %}
@@ -92,6 +92,7 @@
     {% set button_attributes = create_attribute()
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
+                              .setAttribute('data-bs-target', '#' ~ _id)
                               .setAttribute('aria-label', _close_aria_label)
     %}
     {% if _extra_classes_close is not empty %}
