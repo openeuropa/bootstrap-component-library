@@ -2,7 +2,7 @@
   "name": "@openeuropa/bcl-bootstrap",
   "author": "European Commission",
   "license": "EUPL-1.2",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "OE - BCL bootstrap 5 sources",
   "bin": {
     "plugins-builder": "./bin/build-plugins.js"
@@ -14,7 +14,8 @@
     "copy-js": "copyfiles -u 3 \"./node_modules/bootstrap/js/**/*\" js && copyfiles -u 1 \"./legacy/**/*\" js/src",
     "copy-icons": "copyfiles -f ./node_modules/bootstrap-icons/bootstrap-icons.svg ../bootstrap",
     "copy-icons-svg": "copyfiles -f ./node_modules/bootstrap-icons/icons/* ../bootstrap/icons/",
-    "prepublish": "npm-run-all clean copy-* build-plugins"
+    "replace-icons": "copyfiles -f ./replace-icons/* ../bootstrap/icons/",
+    "prepublish": "npm-run-all clean copy-* replace-icons build-plugins"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "6.0.4",
