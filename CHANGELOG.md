@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## v1.2.3 (2024-07-23)
+## v1.3.0 (2024-07-23)
 
 #### :nail_care: Enhancement
 * [#596](https://github.com/openeuropa/bootstrap-component-library/pull/596) OEL-3066: Replaced twitter icon. ([@tibi2303](https://github.com/tibi2303))
