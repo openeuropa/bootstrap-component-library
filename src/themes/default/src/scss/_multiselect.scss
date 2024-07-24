@@ -49,6 +49,13 @@ $multiselect-spacers: (
     @include font-size($h4-font-size);
     .ss-value {
       padding: $badge-padding-y $badge-padding-x;
+      @include font-size($badge-font-size);
+      font-weight: $badge-font-weight;
+      line-height: 1;
+      color: $badge-color;
+      text-align: left;
+      white-space: normal;
+      vertical-align: baseline;
       padding-right: map-get($spacers, "3-5");
       background-color: var(--bs-primary);
       @include border-radius($badge-border-radius);
@@ -75,12 +82,13 @@ $multiselect-spacers: (
           content: "";
           display: inline-block;
           height: 1rem;
-          transform: scale(0.8);
+          transform: scale(0.8) translateY(50%);
           width: 1rem;
           background-position: 50%;
           border-radius: 50%;
           position: absolute;
           right: 6px;
+          bottom: calc(50% - 3px);
         }
       }
     }

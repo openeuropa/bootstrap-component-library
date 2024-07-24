@@ -115,6 +115,7 @@ FormInput.storyName = "text field";
 FormInput.args = getArgs(demoData, "text");
 FormInput.argTypes = getArgTypes(demoData, "text");
 FormInput.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -136,6 +137,7 @@ Checkbox.storyName = "checkbox";
 Checkbox.args = getArgs(checkboxData, "checkbox");
 Checkbox.argTypes = getArgTypes(checkboxData, "checkbox");
 Checkbox.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -157,6 +159,7 @@ Switch.storyName = "switch";
 Switch.args = getArgs(switchData, "checkbox");
 Switch.argTypes = getArgTypes(switchData, "checkbox");
 Switch.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -178,6 +181,7 @@ Radio.storyName = "radio";
 Radio.args = getArgs(radioData, "radio");
 Radio.argTypes = getArgTypes(radioData, "radio");
 Radio.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -199,6 +203,7 @@ File.storyName = "file";
 File.args = getArgs(fileData, "file");
 File.argTypes = getArgTypes(fileData, "file");
 File.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",

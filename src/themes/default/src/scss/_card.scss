@@ -3,8 +3,7 @@
 }
 
 @each $color, $value in $theme-colors {
-  .card.bg-#{$color} {
-    color: color-contrast($value);
+  .card.text-bg-#{$color} {
     .card-header,
     .card-footer {
       border: none;

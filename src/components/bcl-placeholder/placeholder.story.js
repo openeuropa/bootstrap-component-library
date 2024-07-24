@@ -65,6 +65,7 @@ export default {
   title: "Components/Placeholder",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Bootstrap docs",

@@ -128,6 +128,7 @@ export default {
   title: "Components/Card/Layout",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

@@ -79,6 +79,7 @@ export const Default = (args) => select(applyArgs(demoData, args));
 Default.args = getArgs(demoData, "select");
 Default.argTypes = getArgTypes(demoData, "select");
 Default.parameters = {
+  badges: ["deprecated"],
   design: [
     {
       name: "Mockup",
@@ -99,6 +100,7 @@ Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
 Multiselect.args = getArgs(demoMultiData, "multiselect");
 Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
+  badges: ["deprecated"],
   a11y: {
     config: {
       rules: [

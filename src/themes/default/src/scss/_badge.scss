@@ -59,11 +59,11 @@ a.badge {
           border-color: shade-color($value, 15%) !important;
         }
       }
-      &.bg-#{$color} {
+      &.text-bg-#{$color} {
         background-color: shade-color($value, 15%) !important;
       }
     }
-    &.badge.bg-#{$color} {
+    &.text-bg-#{$color} {
       &:focus {
         @if $enable-shadows {
           @include box-shadow(

@@ -79,6 +79,7 @@ export default {
   title: "Components/List Group",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

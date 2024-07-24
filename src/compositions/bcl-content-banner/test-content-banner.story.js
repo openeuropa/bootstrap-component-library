@@ -10,6 +10,9 @@ demoData.image.classes = "chromatic-ignore";
 
 export default {
   title: "Compositions/Content banner",
+  parameters: {
+    badges: ["deprecated"],
+  },
 };
 
 export const LargeImage = () =>

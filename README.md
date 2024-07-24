@@ -1,4 +1,4 @@
-## Openeuropa Bootstrap Component Library template
+## OEL Bootstrap based Component Library template
 
 Library of components based on [Bootstrap 5](https://github.com/twbs/bootstrap/tree/v5.0.1)
 
