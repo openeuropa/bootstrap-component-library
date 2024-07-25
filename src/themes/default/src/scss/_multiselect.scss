@@ -39,9 +39,6 @@ $multiselect-spacers: (
       }
     }
   }
-  &.ss-main {
-    min-height: 46px;
-  }
   .ss-values {
     margin: calc(map-get($multiselect-spacers, "select-spacer") - 3px) 0
       calc(map-get($multiselect-spacers, "select-spacer") - 4px)
@@ -88,7 +85,7 @@ $multiselect-spacers: (
           border-radius: 50%;
           position: absolute;
           right: 6px;
-          bottom: calc(50% - 3px);
+          bottom: calc(50% - 2px);
         }
       }
     }
