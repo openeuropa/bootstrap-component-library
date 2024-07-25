@@ -1,6 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
-import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
+import {
+  correctPaths,
+  initBadges,
+  initListings,
+} from "@openeuropa/bcl-story-utils";
 
 import {
   dataListing,
@@ -13,21 +17,6 @@ import listingPage from "@openeuropa/bcl-base-templates/listing-page.html.twig";
 import user from "@openeuropa/bcl-user/user.html.twig";
 import userCompact from "@openeuropa/bcl-user/user-compact.html.twig";
 import userTerms from "@openeuropa/bcl-user/user-terms.html.twig";
-
-const initMultiselect = (story) => {
-  const demo = story();
-  return `
-    <script>
-      if (document.querySelector(".multi-select")) {
-        new SlimSelect({
-          select: ".multi-select",
-          selectByGroup: true,
-          placeholder: "Please select a value",
-        });
-      }
-    </script>
-  ${demo}`;
-};
 
 const cancelTab = (story) => {
   const demo = story();
@@ -45,7 +34,7 @@ const cancelTab = (story) => {
 
 export default {
   title: "Features/Users",
-  decorators: [withCode, withDesign, initMultiselect, cancelTab],
+  decorators: [withCode, withDesign, cancelTab, initListings],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
