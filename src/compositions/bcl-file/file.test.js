@@ -92,7 +92,14 @@ describe("OE - File Card", () => {
     return expect(
       render({
         ...demoCardData,
-        download_icon: "cloud-download",
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            name: "cloud-download",
+            size: "fluid",
+          },
+        },
       })
     ).resolves.toMatchSnapshot();
   });
