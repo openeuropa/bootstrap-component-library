@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.3.0 (2024-07-23)
+
+#### :nail_care: Enhancement
+* [#596](https://github.com/openeuropa/bootstrap-component-library/pull/596) OEL-3066: Replaced twitter icon. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
+## v1.2.2 (2024-07-10)
+
+#### :nail_care: Enhancement
+* [#590](https://github.com/openeuropa/bootstrap-component-library/pull/590) feat(security): Updated security packages. - OEL-3080 ([@tibi2303](https://github.com/tibi2303))
+* [#578](https://github.com/openeuropa/bootstrap-component-library/pull/578) feat(renaming): Renaming and added deprecated badge. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.2.1 (2024-02-21)
 
 #### :nail_care: Enhancement
