@@ -138,6 +138,19 @@
           </small>
           {% endif %}
         </div>
+        {% if _download is not empty and _download.icon is not empty %}
+          {% set _download = _download|merge({
+            icon: _download.icon
+          }) %}
+        {% else %}
+          {% set _download = _download|merge({
+            icon: {
+              name: "download",
+              size: "fluid",
+              path: _icon_path,
+            },
+          }) %}
+        {% endif %}
         {% if _download.attributes is empty %}
           {% set _download = _download|merge({
             attributes: create_attribute()
@@ -145,11 +158,6 @@
         {% endif %}
         {% set _download = _download|merge({
           icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-            path: _icon_path,
-          },
           attributes: _download.attributes
                       .setAttribute('download', true)
                       .setAttribute('target', '_blank')

@@ -87,6 +87,16 @@ describe("OE - File Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with different download icon`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download_icon: "cloud-download",
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(template, demoCardData, true))
