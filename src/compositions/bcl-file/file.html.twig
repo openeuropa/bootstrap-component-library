@@ -139,18 +139,15 @@
           {% endif %}
         </div>
         {% set _download = _download|merge({
-          icon: _download.icon|default({}|merge({
+          icon_position: "after",
+          icon: {
             name: "download",
             size: "fluid",
             path: _icon_path,
-          })),
-          attributes: _download.attributes|default(
-            create_attribute().setAttribute('download', true).setAttribute('target', '_blank')
-          )
-        }) %}
-        {% set _download = _download|merge({
-          icon_position: "after",
-          attributes: _download.attributes
+          },
+          attributes: create_attribute()
+                      .setAttribute('download', true)
+                      .setAttribute('target', '_blank')
                       .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'])
         }) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
