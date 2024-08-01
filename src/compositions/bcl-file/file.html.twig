@@ -156,16 +156,13 @@
             name: "download",
             size: "fluid",
             path: _icon_path,
-          },
+          }|merge(_download.icon|default({}),
           attributes: create_attribute({
             'download' : true,
             'target' : '_blank',
-          }|merge(_download.attributes|without('class')))
-          .addClass([
-            'standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0',
-            ]|merge(_download.attributes.class|default([]))
-          )
-        }|merge(_download|without('attributes')) %}
+            'class': ['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'],
+          }|merge(_download.attributes|default([])))
+        }|merge(_download|without('attributes', 'icon')) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
       </div>
     </div>
