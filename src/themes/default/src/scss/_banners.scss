@@ -61,7 +61,7 @@
 
 .bcl-banner__content {
   padding: map-get($spacers, "4-75") map-get($spacers, "4-5");
-  border-color: $banner-content-border-color;
+  border-color: var(--bs-primary);
 }
 
 .bcl-banner__image {
@@ -100,7 +100,7 @@
     &.overlay {
       .bcl-banner__content {
         background: $white;
-        border-bottom: 4px solid $banner-content-border-color;
+        border-bottom: 4px solid var(--bs-primary);
       }
     }
 

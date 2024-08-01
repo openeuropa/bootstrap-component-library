@@ -1,0 +1,25 @@
+@each $scheme-name, $scheme-array in $colors-schemes {
+  .#{$scheme-name} {
+    $theme-colors-rgb: map-loop($scheme-array, to-rgb, "$value");
+    @each $color, $value in $theme-colors-rgb {
+      --#{$prefix}#{$color}-rgb: #{$value};
+    }
+    @each $color, $value in $scheme-array {
+      --#{$prefix}#{$color}: #{$value};
+
+      @if $color == "text" {
+        @include generate-text($color, $value);
+      } @else if $color == "link" {
+        @include generate-link($color, $value);
+      } @else if $color == "background" {
+        @include generate-background($color, $value);
+      } @else {
+        @include generate-alerts($color, $value);
+        @include generate-buttons($color, $value);
+        @include generate-list-group($color, $value);
+        @include generate-badges($color, $value);
+        @include generate-utilities($color, $value);
+      }
+    }
+  }
+}

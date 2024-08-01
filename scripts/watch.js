@@ -28,6 +28,18 @@ const handlers = [
     ],
   },
   {
+    pattern: `${path.resolve(__dirname, "..")}/src/themes/*/src/scss/**/*.scss`,
+    events: [
+      {
+        on: "change",
+        name: "scss change",
+        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:color-scheme`,
+        message: "New styles ready",
+        reload: "*.css",
+      },
+    ],
+  },
+  {
     pattern: `${path.resolve(__dirname, "..")}/src/themes/*/src/js/**/*.js`,
     events: [
       {
