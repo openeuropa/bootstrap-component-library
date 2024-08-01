@@ -160,8 +160,8 @@
           attributes: create_attribute({
             'download' : true,
             'target' : '_blank',
-            'class': ['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'],
-          }|merge(_download.attributes|default([])))
+            'class': _download.attributes.class|default(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']),
+          }.merge(_download.attributes|default([])))
         }|merge(_download|without('attributes', 'icon')) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
       </div>
