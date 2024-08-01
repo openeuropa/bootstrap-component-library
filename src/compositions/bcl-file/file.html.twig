@@ -169,7 +169,8 @@
   </div>
   {% if _translation is not empty %}
     {% include '@oe-bcl/bcl-file/file-translations.html.twig' with _translation|merge({
-      icon_path: _icon_path
+      icon_path: _icon_path;
+      download: _download,
     }) only %}
   {% endif %}
 </div>

@@ -1,6 +1,8 @@
 {% apply spaceless %}
 
-{# Parameters:
+{#
+  @see : OEL-2772
+  Parameters:
   - id (string) (default: language-dropdown-random(1000))
   - label (string) (default: '')
   - icon_path (string) (default: '')
@@ -13,18 +15,33 @@
         download: {}, - link Object
       },
     ]
+  - attributes (drupal attrs)
+  - download (Object) (default: {})
 #}
 
 {% set _id = id|default('language-dropdown' ~ random(1000)) %}
 {% set _label = label|default('') %}
 {% set _icon_path = icon_path|default('') %}
 {% set _items = items|default([]) %}
-
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
-
 {% set attributes = attributes.addClass(['bg-lighter', 'py-3', 'px-4', 'border-top']) %}
+{% set _download = {
+  icon_position: "after",
+  icon: {
+    name: "download",
+    size: "fluid",
+    path: _icon_path,
+  }|merge(_download.icon|default({}),
+  attributes: create_attribute({
+    'download' : true,
+    'target' : '_blank',
+    'class': _download.attributes.class|default(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']),
+  }.merge(_download.attributes|default([])))
+}|merge(_download|without('attributes', 'icon')) %}
+
+{% set _download = _download|merge({ attributes: _download.attributes.removeAttribute('href') }) %}
 
 <div
   {{ attributes }}>
@@ -69,18 +86,7 @@
             {% endif %}
           </div>
           <div class="col-12 col-md-3 align-self-end text-md-end">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
-            icon_position: "after",
-            icon: {
-              name: "download",
-              size: "fluid",
-              path: _icon_path,
-            },
-            attributes: create_attribute()
-                        .setAttribute('download', true)
-                        .setAttribute('target', '_blank')
-                        .addClass(['d-block', 'standalone', 'mt-1'])
-          }) only %}
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge(_download) only %}
           </div>
         </div>
       {% endif %}
