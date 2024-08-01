@@ -87,6 +87,27 @@ describe("OE - File Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with different download icon, label and attributes (removed 1 class and added 1)`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "See",
+          path: "/example.html",
+          icon: {
+            name: "eye",
+            size: "fluid",
+          },
+          attributes: {
+            download: false,
+            class : ['align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0', 'custom_class']
+          },
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(template, demoCardData, true))
