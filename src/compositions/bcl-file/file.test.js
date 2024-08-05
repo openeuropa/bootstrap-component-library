@@ -109,4 +109,20 @@ describe("OE - File Card", () => {
       await axe(renderTwigFileAsHtml(template, demoCardData, true))
     ).toHaveNoViolations();
   });
+
+  test(`renders correctly with different download`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Go here",
+          path: "/example.html",
+          attributes: new drupalAttribute()
+            .addClass("new-class")
+            .setAttribute("example", "test"),
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
 });
