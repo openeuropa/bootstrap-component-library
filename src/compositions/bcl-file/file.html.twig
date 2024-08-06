@@ -68,13 +68,10 @@
 {% set _translation = translation|default({}) %}
 {% set _icon_path = icon_path|default('') %}
 
-{% set _classes = ['bcl-file'] %}
-
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
-
-{% set attributes = attributes.addClass(_classes) %}
+{% set attributes = attributes.addClass(['bcl-file', 'border', 'rounded']) %}
 
 {% if _icon is not empty %}
   {% set _container_classes = _container_classes ~ ' ms-2-5' %}
@@ -91,8 +88,6 @@
     attributes: _title_attributes,
   } only %}
 {% endif %}
-
-{% set attributes = attributes.addClass(['border', 'rounded']) %}
 
 {% set _container_classes = 'd-md-flex flex-grow-1' %}
 
@@ -160,6 +155,7 @@
           attributes: create_attribute({
             'download' : true,
             'target' : '_blank',
+            {# Overrides will have to copy all the default to remove a class. #}
             'class': _download.attributes.class|default(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']),
           }.merge(_download.attributes|default([])))
         }|merge(_download|without('attributes', 'icon')) %}
