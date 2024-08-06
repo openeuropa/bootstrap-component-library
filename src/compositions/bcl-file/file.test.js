@@ -110,7 +110,7 @@ describe("OE - File Card", () => {
     ).toHaveNoViolations();
   });
 
-  test(`renders correctly with different download`, () => {
+  test(`renders correctly with override default attributes download`, () => {
     expect.assertions(1);
     return expect(
       render({
@@ -120,7 +120,22 @@ describe("OE - File Card", () => {
           path: "/example.html",
           attributes: new drupalAttribute()
             .addClass("new-class")
-            .setAttribute("example", "test"),
+            .setAttribute("download", "false")
+            .setAttribute("target", "_self"),
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with new attributes download`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Go here",
+          path: "/example.html",
+          attributes: new drupalAttribute().setAttribute("example", "test"),
         },
       })
     ).resolves.toMatchSnapshot();

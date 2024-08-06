@@ -138,7 +138,10 @@
           </small>
           {% endif %}
         </div>
-        {% set download_attributes = create_attribute().setAttribute('download', 'true').setAttribute('target', '_blank') %}
+        {% set download_attributes = create_attribute()
+                                      .setAttribute('download', 'true')
+                                      .setAttribute('target', '_blank')
+                                      .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']) %}
         {% set _download = _download|merge({
           icon_position: "after",
           icon: _download.icon|default({}|merge({
@@ -146,8 +149,7 @@
             size: "fluid",
             path: _icon_path,
           })),
-          attributes: _download.attributes|default(create_attribute().merge(download_attributes))
-                      .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0'])
+          attributes: download_attributes.merge(_download.attributes|default(create_attribute()))
         }) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
       </div>
