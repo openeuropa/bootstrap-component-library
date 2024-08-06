@@ -1,8 +1,6 @@
 {% apply spaceless %}
 
-{#
-  @see : OEL-2772
-  Parameters:
+{# Parameters:
   - id (string) (default: language-dropdown-random(1000))
   - label (string) (default: '')
   - icon_path (string) (default: '')
@@ -16,17 +14,34 @@
       },
     ]
   - attributes (drupal attrs)
-  - download (Object) (default: {})
+  - download (link Object) (default: {}) format: {
+    attributes : {
+      class: [
+        'html_class1',
+        'html_class2',
+      ],
+      download: false,
+      icon: {
+        name: 'eye',
+        size: 'fluid',
+      },
+    }
+  }
 #}
 
 {% set _id = id|default('language-dropdown' ~ random(1000)) %}
+
 {% set _label = label|default('') %}
+
 {% set _icon_path = icon_path|default('') %}
+
 {% set _items = items|default([]) %}
+
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
 {% endif %}
 {% set attributes = attributes.addClass(['bg-lighter', 'py-3', 'px-4', 'border-top']) %}
+
 {% set _download = {
   icon_position: "after",
   icon: {
@@ -37,10 +52,10 @@
   attributes: create_attribute({
     'download' : true,
     'target' : '_blank',
+    {# Overrides will have to copy all the default to remove a class. #}
     'class': _download.attributes.class|default(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']),
-  }.merge(_download.attributes|default([])))
+  }.merge(_download.attributes|default({})))
 }|merge(_download|without('attributes', 'icon')) %}
-
 {% set _download = _download|merge({ attributes: _download.attributes.removeAttribute('href') }) %}
 
 <div
