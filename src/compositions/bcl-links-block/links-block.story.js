@@ -41,12 +41,14 @@ const getArgTypes = () => ({
 });
 
 const applyArgs = (data, args) => {
-  data.links.forEach((link) => {
-    if ("icon" in link) {
-      link.icon.path = "/icons.svg";
-      link.icon_position = "before";
-    }
-  });
+  if (data.links && data.links.length) {
+    data.links.forEach((link) => {
+      if ("icon" in link) {
+        link.icon.path = "/icons.svg";
+        link.icon_position = "before";
+      }
+    });
+  }
   return Object.assign(correctPaths(data), args);
 };
 
