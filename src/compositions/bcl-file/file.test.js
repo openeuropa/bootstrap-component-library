@@ -91,13 +91,45 @@ describe("OE - File Card", () => {
     expect.assertions(1);
     return expect(
       render({
-        ...demoCardData,
+        ...demoData,
         download: {
           label: "Download",
           path: "/example.html",
           icon: {
             name: "cloud-download",
             size: "fluid",
+          },
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with empty download icon name`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            size: "m",
+          },
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with download that has different icon path`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            path: "new_icons.svg",
           },
         },
       })
@@ -136,6 +168,52 @@ describe("OE - File Card", () => {
           label: "Go here",
           path: "/example.html",
           attributes: new drupalAttribute().setAttribute("example", "test"),
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`translations renders correctly with new attributes download`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "Go here",
+          path: "/example.html",
+          attributes: new drupalAttribute().setAttribute("example", "test"),
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`translations renders correctly with empty download icon name`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            size: "m",
+          },
+        },
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`translations renders correctly with download that has different icon path`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            path: "new_icons.svg",
+          },
         },
       })
     ).resolves.toMatchSnapshot();

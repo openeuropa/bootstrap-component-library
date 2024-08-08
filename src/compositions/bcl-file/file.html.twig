@@ -144,11 +144,11 @@
                                       .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']) %}
         {% set _download = _download|merge({
           icon_position: "after",
-          icon: _download.icon|default({}|merge({
+          icon: {
             name: "download",
             size: "fluid",
             path: _icon_path,
-          })),
+          }|merge(_download.icon|default({})),
           attributes: download_attributes.merge(_download.attributes|default(create_attribute()))
         }) %}
         {% include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
