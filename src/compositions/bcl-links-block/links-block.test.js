@@ -17,6 +17,21 @@ describe("OE - Links block", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly without links", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        title: "Links block test title",
+        title_tag: "h6",
+        title_link: {
+          path: "/example.html",
+        },
+        links: [],
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with horizontal", () => {
     expect.assertions(1);
     return expect(
