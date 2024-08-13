@@ -14,6 +14,7 @@ export default {
   decorators: [withCode, withDesign],
   parameters: {
     controls: { disable: true },
+    badges: ["deprecated"],
     layout: "fullscreen",
     design: [
       {

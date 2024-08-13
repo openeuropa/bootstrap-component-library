@@ -59,6 +59,7 @@ export default {
   title: "Compositions/Header",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     layout: "fullscreen",
     design: [
       {

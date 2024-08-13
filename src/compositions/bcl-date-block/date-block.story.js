@@ -83,6 +83,7 @@ export default {
   title: "Compositions/Date block",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

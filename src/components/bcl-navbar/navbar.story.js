@@ -72,6 +72,7 @@ export default {
   title: "Components/Navbar",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

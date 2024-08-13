@@ -27,6 +27,7 @@ export default {
   title: "Compositions/Search Form",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     chromatic: {
       viewports: [414, 834],
     },

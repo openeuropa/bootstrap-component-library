@@ -58,6 +58,7 @@ export default {
   title: "Paragraphs/Inpage navigation",
   decorators: [withCode, withDesign, initScrollspy, withContent],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

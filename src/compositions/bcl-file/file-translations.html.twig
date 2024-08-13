@@ -69,18 +69,21 @@
             {% endif %}
           </div>
           <div class="col-12 col-md-3 align-self-end text-md-end">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _item.download|merge({
+          {% set download_attributes = create_attribute()
+                                      .setAttribute('download', true)
+                                      .setAttribute('target', '_blank')
+                                      .addClass(['d-block', 'standalone', 'mt-1'])
+          %}
+          {% set _download_item = _item.download|merge({
             icon_position: "after",
             icon: {
               name: "download",
               size: "fluid",
               path: _icon_path,
-            },
-            attributes: create_attribute()
-                        .setAttribute('download', true)
-                        .setAttribute('target', '_blank')
-                        .addClass(['d-block', 'standalone', 'mt-1'])
-          }) only %}
+            }|merge(_item.download.icon|default({})),
+            attributes: download_attributes.merge(_item.download.attributes|default(create_attribute()))
+          }) %}
+          {% include '@oe-bcl/bcl-link/link.html.twig' with _download_item only %}
           </div>
         </div>
       {% endif %}

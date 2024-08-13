@@ -8,6 +8,7 @@ export default {
   title: "Resources/Icons",
   parameters: {
     layout: "fullscreen",
+    badges: ["deprecated"],
     controls: { disable: true },
   },
 };
