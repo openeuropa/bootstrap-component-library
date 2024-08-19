@@ -132,10 +132,8 @@
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 
-<nav
-  {{ attributes }}
->
-  <ul {{ list_attributes }}>
+<nav{{ attributes }}>
+  <ul{{ list_attributes }}>
 {% if _internal_items is not empty and _internal_items is iterable %}
   {% for _item in _internal_items %}
     {% if _item is not empty %}
