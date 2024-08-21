@@ -29,6 +29,7 @@
     }
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
+  - list_attributes (drupal attrs)
 #}
 
 {% set _size = size|default('') %}
@@ -102,19 +103,23 @@
 
 {% set _internal_items = _internal_items|merge([_next, _last]) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{% if list_attributes is empty %}
+  {% set list_attributes = create_attribute() %}
 {% endif %}
 
-{% set _classes = ['pagination'] %}
+{% set list_attributes = list_attributes.addClass('pagination') %}
 {% if _size is not empty %}
-  {% set _classes = _classes|merge(['pagination-' ~ _size]) %}
+  {% set list_attributes = list_attributes.addClass('pagination-' ~ _size) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes|merge(['pagination--' ~ _variant]) %}
+  {% set list_attributes = list_attributes.addClass('pagination--' ~ _variant) %}
 {% endif %}
 {% if _alignment is not empty %}
-  {% set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
+  {% set list_attributes = list_attributes.addClass('justify-content-' ~ _alignment) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
 {% endif %}
 
 {% set attributes = attributes.setAttribute('role', 'navigation') %}
@@ -127,10 +132,8 @@
   {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 
-<nav
-  {{ attributes }}
->
-  <ul class="{{ _classes|join(' ') }}">
+<nav{{ attributes }}>
+  <ul{{ list_attributes }}>
 {% if _internal_items is not empty and _internal_items is iterable %}
   {% for _item in _internal_items %}
     {% if _item is not empty %}
