@@ -25,7 +25,7 @@
     "changelog": "lerna-changelog",
     "clean": "rimraf build assets",
     "clean:themes": "lerna --scope \"@openeuropa/bcl-theme-*\" run clean",
-    "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js static/* assets/ && copyfiles -u 3 src/themes/**/fonts/* assets && copyfiles -u 3 src/themes/**/fonts/files/* assets",
+    "copy:assets": "copyfiles -f src/themes/**/*min.* src/themes/default/src/js/multiselect/multiselect.js node_modules/slim-select/dist/slimselect.min.js static/* assets/ && copyfiles -u 3 src/themes/**/fonts/* assets && copyfiles -u 3 src/themes/**/fonts/files/* assets",
     "copy:index": "copyfiles -f static/*.html static/*.ico build",
     "dist": "run-s clean dist:*",
     "dist:themes": "run-s build:themes copy:*",
@@ -138,7 +138,7 @@
     "prettier": "2.8.8",
     "rimraf": "5.0.7",
     "size-limit": "11.1.4",
-    "slim-select": "1.27.1",
+    "slim-select": "2.8.2",
     "stylelint": "15.11.0",
     "stylelint-config-prettier": "9.0.5",
     "stylelint-config-recommended-scss": "9.0.1"

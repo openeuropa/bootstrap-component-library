@@ -45,14 +45,6 @@ const resetAttrs = (data, args) => {
   }
 };
 
-const applyArgs = (data, args) => {
-  if (!data.attributes) {
-    data.attributes = new drupalAttribute();
-  }
-  resetAttrs(data, args);
-  return Object.assign(data, args);
-};
-
 const initMultiselect = (story) => {
   const demo = story();
   return `
@@ -66,6 +58,14 @@ const initMultiselect = (story) => {
       }
     </script>
   ${demo}`;
+};
+
+const applyArgs = (data, args) => {
+  if (!data.attributes) {
+    data.attributes = new drupalAttribute();
+  }
+  resetAttrs(data, args);
+  return Object.assign(data, args);
 };
 
 // Stories
