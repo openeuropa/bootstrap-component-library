@@ -24,7 +24,7 @@ const withContent = (story) => {
 
   const layout = `
   <div class="row">
-    <div class="bcl-sidebar col-md-3 d-none d-lg-block">
+    <div class="bcl-sidebar col-md-3">
       ${demo}
     </div>
     <div class="col-md-9">

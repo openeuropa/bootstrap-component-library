@@ -437,45 +437,61 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="btn btn-secondary dropdown-toggle d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+              
+    Page content
+  
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu d-md-block"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#description"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Description
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#partners"
+                  <a
+                    class="nav-link"
+                    href="#description"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Partner organisations
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#partners"
+                  >
+                    Partner organisations
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -4480,85 +4496,101 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="btn btn-secondary dropdown-toggle d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+              
+    Page content
+  
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu d-md-block"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -7511,85 +7543,101 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="btn btn-secondary dropdown-toggle d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+              
+    Page content
+  
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu d-md-block"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -10542,85 +10590,101 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="btn btn-secondary dropdown-toggle d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+              
+    Page content
+  
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu d-md-block"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div

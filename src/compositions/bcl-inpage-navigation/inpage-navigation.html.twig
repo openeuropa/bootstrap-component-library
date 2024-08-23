@@ -16,7 +16,8 @@ Parameters:
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
-{% set _id = id|default('bcl-inpage-navigation-' ~ random(10)) %}
+{% set _id = id|default('bcl-inpage-navigation-' ~ random(100)) %}
+{% set _dropdown_id = 'bcl-inpage-navigation-dropdown' %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -26,17 +27,26 @@ Parameters:
 {% set title_attributes = _title_attributes.addClass('mb-0') %}
 
 <nav {{ attributes }}>
+  <button
+    class="btn btn-secondary dropdown-toggle d-md-none"
+    type="button" id="{{ _dropdown_id }}"
+    data-bs-toggle="dropdown" aria-expanded="false"
+  >
+    {{ _title }}
+  </button>
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
-    attributes: _title_attributes.addClass('mb-0'),
+    attributes: _title_attributes.addClass(['mb-0', 'd-none', 'd-md-block']),
   } only %}
-  {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
-    'pills': true,
-    'vertical': true,
-    'items': _links,
-  } only %}
+  <div class="dropdown-menu d-md-block" aria-labelledby="{{ _dropdown_id }}">
+    {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
+      'pills': true,
+      'vertical': true,
+      'items': _links,
+    } only %}
+  </div>
 </nav>
 
 {% endapply %}

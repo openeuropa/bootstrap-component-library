@@ -835,55 +835,71 @@ exports[`OE - Page Page renders correctly 1`] = `
             class="d-none d-lg-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="btn btn-secondary dropdown-toggle d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+              
+    Page content
+  
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu d-md-block"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#content"
+                <li
+                  class="nav-item"
                 >
-                  Content
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#item-1"
+                  <a
+                    class="nav-link"
+                    href="#content"
+                  >
+                    Content
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Section 1
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#item-2"
+                  <a
+                    class="nav-link"
+                    href="#item-1"
+                  >
+                    Section 1
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Section 2
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#item-3"
+                  <a
+                    class="nav-link"
+                    href="#item-2"
+                  >
+                    Section 2
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Section 3
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#item-3"
+                  >
+                    Section 3
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
