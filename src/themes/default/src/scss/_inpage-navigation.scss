@@ -1,12 +1,37 @@
 .bcl-inpage-navigation {
-  position: fixed;
-  top: map-get($spacers, 3); // needed for position-sticky
+  top: 0;
   background-color: $gray-100;
+
+  &.in-view {
+    position: fixed !important;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: normal;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    background-color: $gray-100;
+    width: 100%;
+    top: 100% !important;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-color: $gray-300;
+    transform: none !important;
+  }
 
   .bcl-heading {
     margin-bottom: 0;
     padding: map-get($spacers, "3-5");
-    border-bottom: 1px solid $gray-300;
   }
   ul {
     padding: map-get($spacers, "2-5");
@@ -24,6 +49,26 @@
 
     ul {
       padding: 0 map-get($spacers, "2-5");
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .bcl-inpage-navigation {
+    top: map-get($spacers, 3);
+    .dropdown-toggle {
+      border-bottom: 1px solid $gray-300;
+      cursor: auto;
+      &::after {
+        display: none;
+      }
+    }
+    .dropdown-menu {
+      position: relative !important;
+      border: none;
+      background: transparent;
+      padding: 0;
+      display: block;
     }
   }
 }

@@ -2807,28 +2807,21 @@ exports[`OE - event page renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="d-none d-md-block bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <button
+            <h2
               aria-expanded="false"
-              class="btn btn-secondary dropdown-toggle d-md-none"
+              class="mb-0 dropdown-toggle bcl-heading"
               data-bs-toggle="dropdown"
               id="bcl-inpage-navigation-dropdown"
               type="button"
-            >
-              
-    Page content
-  
-            </button>
-            <h2
-              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
             <div
               aria-labelledby="bcl-inpage-navigation-dropdown"
-              class="dropdown-menu d-md-block"
+              class="dropdown-menu"
             >
               <ul
                 class="nav nav-pills flex-column"
@@ -2860,6 +2853,50 @@ exports[`OE - event page renders correctly 1`] = `
         <div
           class="col-12 col-lg-9 col-xxl-8"
         >
+          <nav
+            aria-label="inpage-mobile"
+            class="d-md-none bcl-inpage-navigation position-sticky"
+            id="bcl-inpage-mobile"
+          >
+            <h2
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown-mobile"
+              type="button"
+            >
+              Page content
+            </h2>
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown-mobile"
+              class="dropdown-menu"
+            >
+              <ul
+                class="nav nav-pills flex-column"
+              >
+                <li
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    href="#item-1"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    href="#item-2"
+                  >
+                    Related documents
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
           <div
             class="mt-3 mb-4 bcl-description-list"
           >
