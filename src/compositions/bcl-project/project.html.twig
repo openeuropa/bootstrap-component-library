@@ -1,17 +1,10 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
 
 {% block sidebar %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar|merge({
-    attributes: create_attribute().addClass(["d-none", "d-md-block"])
-  }) only %}
+  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {% endblock %}
 
 {% block content %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar|merge({
-    id: "bcl-inpage-mobile",
-    dropdown_id: "bcl-inpage-navigation-dropdown-mobile",
-    attributes: create_attribute().addClass(["d-md-none"]).setAttribute("aria-label", "inpage-mobile")
-  }) only %}
   {% if project_status is not empty %}
     {% if project_status_title is not empty %}
       {% set _project_title_attributes = create_attribute().addClass(['mb-4']) %}

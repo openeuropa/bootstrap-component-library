@@ -1,3 +1,7 @@
+.bcl-sidebar:has(> .bcl-inpage-navigation) {
+  position: sticky;
+  top: 0;
+}
 .bcl-inpage-navigation {
   top: 0;
   background-color: $gray-100;
@@ -46,8 +50,9 @@
   }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .bcl-inpage-navigation {
+    display: block;
     top: map-get($spacers, 3);
     .dropdown-toggle {
       border-bottom: 1px solid $gray-300;
@@ -63,11 +68,5 @@
       padding: 0;
       display: block;
     }
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .bcl-inpage-navigation {
-    display: block;
   }
 }

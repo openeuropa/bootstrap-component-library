@@ -1,17 +1,10 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
 
 {% block sidebar %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar|merge({
-    attributes: create_attribute().addClass(["d-none", "d-md-block"])
-  }) only %}
+  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {% endblock %}
 
 {% block content %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar|merge({
-    id: "bcl-inpage-mobile",
-    dropdown_id: "bcl-inpage-navigation-dropdown-mobile",
-    attributes: create_attribute().addClass(["d-md-none"]).setAttribute("aria-label", "inpage-mobile")
-  }) only %}
   <p id="content">{{ get_dummy_text(6) }}
   </p>
   <h2 id="item-1" class="my-4">Section 1</h2>
