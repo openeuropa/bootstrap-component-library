@@ -5,6 +5,7 @@ module.exports = {
   sidebar: {
     title: "Page content",
     id: "bcl-inpage-navigation",
+    icon_path: "/icons.svg",
     dropdown_id: "bcl-inpage-navigation-dropdown",
     title_attributes: new drupalAttribute().addClass("mb-0"),
     links: [

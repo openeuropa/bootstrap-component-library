@@ -7,7 +7,9 @@ Parameters:
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - links: (link[]) (default: [])
-  - id (string) (default: bcl-inpage-navigation-random(10))
+  - id (string) (default: bcl-inpage-navigation-random(100))
+  - dropdown_id (string) (default: bcl-inpage-navigation-dropdown-random(100))
+  - icon_path (string) (default: '')
   - attributes (drupal attrs)
 #}
 
@@ -17,6 +19,7 @@ Parameters:
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
 {% set _id = id|default('bcl-inpage-navigation-' ~ random(100)) %}
+{% set _icon_path = icon_path|default('') %}
 {% set _dropdown_id = dropdown_id|default('bcl-inpage-navigation-dropdown' ~ random(100)) %}
 
 {% if attributes is empty %}
@@ -25,6 +28,14 @@ Parameters:
 
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
 {% set title_attributes = _title_attributes.addClass('mb-0') %}
+{% set _title_content %}
+  {{ _title }}
+  {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    name: 'chevron-down',
+    size: 's',
+    path: _icon_path,
+  } only -%}
+{% endset %}
 
 <nav {{ attributes }}>
   {% set trigger_attributes = create_attribute()
@@ -34,7 +45,7 @@ Parameters:
                               .setAttribute('data-bs-toggle', 'dropdown')
                               .addClass(['dropdown-toggle']) %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: _title,
+    title: _title_content,
     title_tag: _title_tag,
     title_link: _title_link,
     attributes: _title_attributes
