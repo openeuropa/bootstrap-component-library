@@ -68,6 +68,14 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .bcl-inpage-navigation {
+    .dropdown-menu {
+      margin-top: -1px !important;
+    }
+  }
+}
+
 @include media-breakpoint-down(lg) {
   .bcl-sidebar:has(> .bcl-inpage-navigation) {
     padding-bottom: map-get($spacers, 3);
