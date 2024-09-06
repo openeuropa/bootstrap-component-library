@@ -1,5 +1,9 @@
 import { LoremIpsum } from "lorem-ipsum";
-import { initScrollspy, getTitleControls } from "@openeuropa/bcl-story-utils";
+import {
+  initScrollspy,
+  getTitleControls,
+  correctPaths,
+} from "@openeuropa/bcl-story-utils";
 import { withDesign } from "storybook-addon-designs";
 import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
@@ -17,14 +21,18 @@ const getArgs = (data) => ({
 
 const getArgTypes = () => getTitleControls();
 
-const applyArgs = (data, args) => Object.assign(data, args);
+const applyArgs = (data, args) => {
+  correctPaths(data);
+
+  return Object.assign(data, args);
+};
 
 const withContent = (story) => {
   const demo = story();
 
   const layout = `
   <div class="row">
-    <div class="bcl-sidebar col-md-3 d-none d-lg-block">
+    <div class="bcl-sidebar col-md-3">
       ${demo}
     </div>
     <div class="col-md-9">

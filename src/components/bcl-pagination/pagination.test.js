@@ -90,6 +90,19 @@ describe("OE - Pagination", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("with custom list attributes renders for correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        list_attributes: new drupalAttribute()
+          .addClass("new-class")
+          .setAttribute("new-attributes", "1"),
+      })
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders correctly as glossary`, () => {
     expect.assertions(1);
 
