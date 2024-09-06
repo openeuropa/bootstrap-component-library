@@ -1,6 +1,8 @@
 module.exports = {
   id: "bcl-inpage-navigation",
+  dropdown_id: "bcl-inpage-navigation-dropdown",
   title: "Page content",
+  icon_path: "/icons.svg",
   links: [
     {
       label: "Heading 1",
