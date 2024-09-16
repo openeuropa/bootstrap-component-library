@@ -63,26 +63,17 @@ const buildStyles = (entry, dest, options) => {
     ],
   });
 
-  postcss(plugins)
-    .use(
-      prefixer({
-        prefix: options.prefix ? options.prefix : "",
+  const processor = postcss(plugins);
+  if (options.prefix) {
+    console.error(
+      `The prefix option is deprecated, use 'prefixer' instead, e.g.: prefixer: { prefix: "${options.prefix}" }`
+    );
+    processor.use(prefixer({ prefix: options.prefix }));
+  } else if (options.prefixer) {
+    processor.use(prefixer(options.prefixer));
+  }
 
-        transform: function (
-          prefix,
-          selector,
-          prefixedSelector,
-          filePath,
-          rule
-        ) {
-          if (prefix) {
-            return prefixedSelector;
-          } else {
-            return selector;
-          }
-        },
-      })
-    )
+  processor
     .process(sassResult.css, {
       map:
         postcssSourceMap === "file"
