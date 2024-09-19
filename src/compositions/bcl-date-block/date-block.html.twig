@@ -45,12 +45,12 @@
   <span class="d-flex flex-column pt-2">
     <span class="d-flex flex-column align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase">
       <span class="d-block">{{- _day ~ ' ' ~ _month ~ ((_end_day or _end_month) ? ' - ' ) -}}</span>
-      {%- if _end_day is not empty -%}
+      {%- if _end_day is not empty %}
         {{- _end_day -}}
-      {% endif %}
-      {% if _end_month is not empty %}
-        {{- _end_month -}}
-      {%- endif -%}
+      {% endif -%}
+      {%- if _end_month is not empty %}
+        {{- ' ' ~ _end_month -}}
+      {% endif -%}
     </span>
     <span class="bg-lighter border w-100 rounded-bottom py-1">
       {{- _year -}}

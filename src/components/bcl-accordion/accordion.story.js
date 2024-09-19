@@ -72,6 +72,7 @@ export default {
   title: "Paragraphs/Accordion",
   decorators: [withCode, withDesign],
   parameters: {
+    badges: ["deprecated"],
     design: [
       {
         name: "Mockup",

@@ -24,6 +24,7 @@ const path = require("path");
 const fs = require("fs");
 const postcss = require("postcss");
 const cssnano = require("cssnano");
+const prefixer = require("postcss-prefix-selector");
 const autoprefixer = require("autoprefixer");
 
 const getPlugins = (options) => {
@@ -62,7 +63,17 @@ const buildStyles = (entry, dest, options) => {
     ],
   });
 
-  postcss(plugins)
+  const processor = postcss(plugins);
+  if (options.prefix) {
+    console.error(
+      `The prefix option is deprecated, use 'prefixer' instead, e.g.: prefixer: { prefix: "${options.prefix}" }`
+    );
+    processor.use(prefixer({ prefix: options.prefix }));
+  } else if (options.prefixer) {
+    processor.use(prefixer(options.prefixer));
+  }
+
+  processor
     .process(sassResult.css, {
       map:
         postcssSourceMap === "file"

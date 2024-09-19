@@ -434,48 +434,64 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#description"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Description
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#partners"
+                  <a
+                    class="nav-link"
+                    href="#description"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Partner organisations
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#partners"
+                  >
+                    Partner organisations
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -502,7 +518,7 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
                   Status
                 </p>
                 <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-info"
+                  class="mb-3 mb-md-0 badge rounded-pill text-bg-info"
                 >
                   Ongoing
                 </span>
@@ -2636,6 +2652,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                 aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
+                data-bs-target="#bcl-offcanvas"
                 type="button"
               />
             </div>
@@ -2867,7 +2884,7 @@ exports[`OE - Project listing renders correctly 1`] = `
               class="col-md-12 order-md-2 mt-3"
             >
               <span
-                class="mb-2 me-2 badge bg-light"
+                class="mb-2 me-2 badge text-bg-light"
               >
                 Ongoing
                 <span
@@ -2884,7 +2901,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                 </span>
               </span>
               <span
-                class="mb-2 me-2 badge bg-light"
+                class="mb-2 me-2 badge text-bg-light"
               >
                 Closed
                 <span
@@ -2901,7 +2918,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                 </span>
               </span>
               <span
-                class="mb-2 me-2 badge bg-light"
+                class="mb-2 me-2 badge text-bg-light"
               >
                 Start date: 22/01/2019
                 <span
@@ -3022,7 +3039,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           class="mt-2-5"
                         >
                           <span
-                            class="me-2 mb-2 badge rounded-pill bg-info"
+                            class="me-2 mb-2 badge rounded-pill text-bg-info"
                           >
                             Ongoing
                           </span>
@@ -3088,7 +3105,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           class="mt-2-5"
                         >
                           <span
-                            class="me-2 mb-2 badge rounded-pill bg-info"
+                            class="me-2 mb-2 badge rounded-pill text-bg-info"
                           >
                             Ongoing
                           </span>
@@ -3151,7 +3168,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           class="mt-2-5"
                         >
                           <span
-                            class="me-2 mb-2 badge rounded-pill bg-dark"
+                            class="me-2 mb-2 badge rounded-pill text-bg-dark"
                           >
                             Closed
                           </span>
@@ -3206,7 +3223,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                       class="mt-2-5"
                     >
                       <span
-                        class="me-2 mb-2 badge rounded-pill bg-dark"
+                        class="me-2 mb-2 badge rounded-pill text-bg-dark"
                       >
                         Closed
                       </span>
@@ -3252,7 +3269,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                       class="mt-2-5"
                     >
                       <span
-                        class="me-2 mb-2 badge rounded-pill bg-info"
+                        class="me-2 mb-2 badge rounded-pill text-bg-info"
                       >
                         Ongoing
                       </span>
@@ -3298,7 +3315,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                       class="mt-2-5"
                     >
                       <span
-                        class="me-2 mb-2 badge rounded-pill bg-dark"
+                        class="me-2 mb-2 badge rounded-pill text-bg-dark"
                       >
                         Closed
                       </span>
@@ -4476,88 +4493,104 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -4584,7 +4617,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   Status
                 </p>
                 <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-dark"
+                  class="mb-3 mb-md-0 badge rounded-pill text-bg-dark"
                 >
                   Closed
                 </span>
@@ -5538,11 +5571,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             First slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5572,11 +5605,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5617,11 +5650,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5651,11 +5684,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -5722,11 +5755,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5756,11 +5789,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5790,11 +5823,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                           </div>
                         </div>
                         <img
@@ -5846,11 +5879,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Last slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5884,11 +5917,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Last slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -5929,11 +5962,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -6102,11 +6135,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 First slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the first slide.
                               </p>
@@ -6122,11 +6155,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -6150,11 +6183,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -6199,11 +6232,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -6219,11 +6252,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -6239,11 +6272,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                             </div>
                           </div>
                           <div
@@ -6271,11 +6304,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Last slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -6291,11 +6324,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Last slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -7507,88 +7540,104 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -7615,7 +7664,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   Status
                 </p>
                 <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-info"
+                  class="mb-3 mb-md-0 badge rounded-pill text-bg-info"
                 >
                   Ongoing
                 </span>
@@ -8569,11 +8618,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             First slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -8603,11 +8652,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -8648,11 +8697,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -8682,11 +8731,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -8753,11 +8802,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -8787,11 +8836,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -8821,11 +8870,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                           </div>
                         </div>
                         <img
@@ -8877,11 +8926,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Last slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -8915,11 +8964,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Last slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -8960,11 +9009,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -9133,11 +9182,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 First slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the first slide.
                               </p>
@@ -9153,11 +9202,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -9181,11 +9230,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -9230,11 +9279,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -9250,11 +9299,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -9270,11 +9319,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                             </div>
                           </div>
                           <div
@@ -9302,11 +9351,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Last slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -9322,11 +9371,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Last slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -10538,88 +10587,104 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -10646,7 +10711,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   Status
                 </p>
                 <span
-                  class="mb-3 mb-md-0 badge rounded-pill bg-secondary"
+                  class="mb-3 mb-md-0 badge rounded-pill text-bg-secondary"
                 >
                   Not started
                 </span>
@@ -11600,11 +11665,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             First slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -11634,11 +11699,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -11679,11 +11744,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -11713,11 +11778,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         <div
                           class="bcl-gallery__item-caption"
                         >
-                          <p
+                          <div
                             class="fs-5"
                           >
                             Slide label
-                          </p>
+                          </div>
                           <div
                             class="bcl-gallery__item-description"
                           >
@@ -11784,11 +11849,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -11818,11 +11883,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -11852,11 +11917,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                           </div>
                         </div>
                         <img
@@ -11908,11 +11973,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Last slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -11946,11 +12011,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Last slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -11991,11 +12056,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <div
                             class="bcl-gallery__item-caption"
                           >
-                            <p
+                            <div
                               class="fs-5"
                             >
                               Slide label
-                            </p>
+                            </div>
                             <div
                               class="bcl-gallery__item-description"
                             >
@@ -12164,11 +12229,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 First slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the first slide.
                               </p>
@@ -12184,11 +12249,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -12212,11 +12277,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -12261,11 +12326,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -12281,11 +12346,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the slide.
                               </p>
@@ -12301,11 +12366,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Slide label
-                              </p>
+                              </div>
                             </div>
                           </div>
                           <div
@@ -12333,11 +12398,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Last slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>
@@ -12353,11 +12418,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                             <div
                               class="carousel-caption d-none d-md-block"
                             >
-                              <p
+                              <div
                                 class="fs-5"
                               >
                                 Last slide label
-                              </p>
+                              </div>
                               <p>
                                 Some representative placeholder content for the last slide.
                               </p>

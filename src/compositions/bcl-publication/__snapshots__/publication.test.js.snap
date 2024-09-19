@@ -832,58 +832,74 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#authors"
+                <li
+                  class="nav-item"
                 >
-                  Authors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#description"
+                  <a
+                    class="nav-link"
+                    href="#authors"
+                  >
+                    Authors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Description
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#file-download"
+                  <a
+                    class="nav-link"
+                    href="#description"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  File download
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#share"
+                  <a
+                    class="nav-link"
+                    href="#file-download"
+                  >
+                    File download
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Share this page
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#share"
+                  >
+                    Share this page
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -2337,58 +2353,74 @@ exports[`OE - Publication details renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#authors"
+                <li
+                  class="nav-item"
                 >
-                  Authors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#description"
+                  <a
+                    class="nav-link"
+                    href="#authors"
+                  >
+                    Authors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Description
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#file-download"
+                  <a
+                    class="nav-link"
+                    href="#description"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  File download
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#share"
+                  <a
+                    class="nav-link"
+                    href="#file-download"
+                  >
+                    File download
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Share this page
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#share"
+                  >
+                    Share this page
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -3812,6 +3844,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                 aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
+                data-bs-target="#bcl-offcanvas"
                 type="button"
               />
             </div>
@@ -3979,7 +4012,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
               class="col-md-12 order-md-2 mt-3"
             >
               <span
-                class="mb-2 me-2 badge bg-light"
+                class="mb-2 me-2 badge text-bg-light"
               >
                 Type 1
                 <span
@@ -3996,7 +4029,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                 </span>
               </span>
               <span
-                class="mb-2 me-2 badge bg-light"
+                class="mb-2 me-2 badge text-bg-light"
               >
                 Type 2
                 <span
@@ -4013,7 +4046,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                 </span>
               </span>
               <span
-                class="mb-2 me-2 badge bg-light"
+                class="mb-2 me-2 badge text-bg-light"
               >
                 Type 3
                 <span

@@ -838,34 +838,50 @@ exports[`OE - Subscription renders correctly 1`] = `
             id="bcl-inpage-navigation"
           >
             <h2
-              class="mb-0 bcl-heading"
+              aria-expanded="false"
+              class="mb-0 dropdown-toggle bcl-heading"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
             >
-              Page content
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              aria-labelledby="bcl-inpage-navigation-dropdown"
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#content"
+                <li
+                  class="nav-item"
                 >
-                  Content
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#subheading"
+                  <a
+                    class="nav-link"
+                    href="#content"
+                  >
+                    Content
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Subheading
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#subheading"
+                  >
+                    Subheading
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -915,7 +931,7 @@ exports[`OE - Subscription renders correctly 1`] = `
             <br />
           </p>
           <div
-            class="bcl-subscription-block bg-light px-4-5 pt-4 pb-4-5"
+            class="bcl-subscription-block text-bg-light px-4-5 pt-4 pb-4-5"
           >
             <div
               class="fs-2 fw-normal"

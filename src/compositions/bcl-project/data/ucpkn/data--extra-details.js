@@ -5,7 +5,8 @@ module.exports = {
   sidebar: {
     title: "Page content",
     id: "bcl-inpage-navigation",
-    attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
+    icon_path: "/icons.svg",
+    dropdown_id: "bcl-inpage-navigation-dropdown",
     links: [
       {
         label: "Project details",

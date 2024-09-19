@@ -1,6 +1,7 @@
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
 const iconList = require("./src/icons/icons");
+const customIconList = require("./src/icons/custom-icons");
 
 const outputFolder = path.resolve(__dirname);
 const nodeModules = "../../../node_modules";
@@ -73,6 +74,17 @@ module.exports = {
       },
     },
   ],
+  colorScheme: [
+    {
+      entry: path.resolve(outputFolder, "src/scss/color-scheme-variables.scss"),
+      dest: path.resolve(outputFolder, "css/color-scheme.min.css"),
+      options: {
+        includePaths,
+        minify: true,
+        sourceMap: "file",
+      },
+    },
+  ],
   styles: [
     {
       entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),
@@ -80,6 +92,18 @@ module.exports = {
       options: {
         includePaths,
         sourceMap: "file",
+      },
+    },
+    {
+      entry: path.resolve(outputFolder, "src/scss/oe-bcl-default.scss"),
+      dest: path.resolve(outputFolder, "css/oe-bcl-ckeditor5.min.css"),
+      options: {
+        prefixer: {
+          prefix: ".ck-content",
+        },
+        includePaths,
+        sourceMap: "file",
+        minify: true,
       },
     },
     {
@@ -94,10 +118,13 @@ module.exports = {
   ],
   sprite: [
     {
-      entry: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+      entry: [
+        path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+        path.resolve(__dirname, "src/icons/custom-icons"),
+      ],
       dest: path.resolve(outputFolder, "icons/"),
       options: {
-        list: iconList,
+        list: [iconList, customIconList],
       },
     },
   ],
