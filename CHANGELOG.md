@@ -3,10 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.6.0 (2024-09-20)
+
+#### :nail_care: Enhancement
+* [#610](https://github.com/openeuropa/bootstrap-component-library/pull/610) OEL-3382: Styles css prefixer flexibility. ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.5.0 (2024-09-06)
 
 #### :rocket: New Feature
-* [#605](https://github.com/openeuropa/bootstrap-component-library/pull/605) EPHEH-313: OEL-3325: Responsive inpage navigation. ([@tibi2303](https://github.com/tibi2303))
+* [#605](https://github.com/openeuropa/bootstrap-component-library/pull/605)  OEL-3325: Responsive inpage navigation. ([@tibi2303](https://github.com/tibi2303))
 
 ## v1.4.0 (2024-08-09)
 
