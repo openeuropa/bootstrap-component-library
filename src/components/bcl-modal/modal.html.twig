@@ -7,14 +7,14 @@
   - fullscreen_responsive (string) (default: '')
     options: sm, md, lg, xl, xxl
   - static_backdrop (boolean) (default: false)
-  - verticaly_centered (boolean) (default: false)
+  - vertically_centered (boolean) (default: false)
   - scrollable (boolean) (default: false)
   - header (block) (default: '')
   - messages (block) (default: '')
   - body (block) (default: '')
   - footer (block) (default: '')
   - attributes (drupal attrs)
-  
+
   Blocks
     - header
     - messages
@@ -26,7 +26,7 @@
 {% set _id = id|default('modal-' ~ random(1000)) %}
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _static_backdrop = static_backdrop ?? false %}
-{% set _verticaly_centered = verticaly_centered ?? false %}
+{% set _vertically_centered = vertically_centered ?? false %}
 {% set _scrollable = scrollable ?? false %}
 {% set _header = header|default('') %}
 {% set _messages = messages|default('') %}
@@ -57,7 +57,7 @@
   <div class="modal-dialog
   {{- _size ? ' modal-' ~ size -}}
   {{- _fullscreen_responsive ? ' modal-fullscreen-' ~ _fullscreen_responsive ~ '-down' -}}
-  {{- _verticaly_centered ? ' modal-dialog-centered' -}}
+  {{- _vertically_centered ? ' modal-dialog-centered' -}}
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
   >
     <div class="modal-content">
