@@ -7,6 +7,7 @@ module.exports = {
   prev_label: "Previous",
   next_label: "Next",
   icon_path: "/icons.svg",
+  show_caption_mobile: true,
   items: [
     {
       caption: `<p>Some representative placeholder content for the first slide.</p>`,
@@ -51,6 +52,8 @@ module.exports = {
               />`,
     },
     {
+      caption: `<p>Some representative placeholder content for the slide.</p>`,
+      caption_title: "Slide label",
       is_playable: true,
       thumbnail: `<img alt="slide" 
                     src="https://picsum.photos/id/1081/400/400" 
