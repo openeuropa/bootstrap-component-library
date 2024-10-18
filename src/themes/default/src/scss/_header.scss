@@ -270,6 +270,10 @@ $header-link-active-background: #003776 !default;
   .btn-close {
     opacity: 1;
   }
+  .modal-title {
+    @extend %heading;
+    @include font-size($h5-font-size);
+  }
   &.bcl-language-list-modal--ec,
   &.bcl-language-list-modal--eu {
     .modal-body {
@@ -288,7 +292,7 @@ $header-link-active-background: #003776 !default;
     .modal-dialog {
       background: $white;
     }
-    h5 {
+    .modal-title {
       color: $eu-cta-color;
     }
     svg {
@@ -303,7 +307,7 @@ $header-link-active-background: #003776 !default;
     .modal-content {
       background: $eu-background-color;
     }
-    h5 {
+    .modal-title {
       color: $white;
     }
     svg {
