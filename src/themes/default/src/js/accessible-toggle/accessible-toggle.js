@@ -56,8 +56,4 @@ class AccessibleToggle {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  AccessibleToggle.init();
-});
-
 export default AccessibleToggle;
