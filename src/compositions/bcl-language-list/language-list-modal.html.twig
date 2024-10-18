@@ -26,7 +26,7 @@
     <div class="d-flex justify-content-between align-items-center">
   {% endif %}
   <div class="d-flex align-items-center">
-    {% set _title_classes = 'mb-0' %}
+    {% set _title_classes = 'modal-title mb-0' %}
     {% if _icon_path is not empty %}
       {% set _title_classes = _title_classes ~ ' ms-2' %}
       {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
@@ -34,7 +34,7 @@
         path: _icon_path
       } only %}
     {% endif %}
-    <h5 class="{{ _title_classes }}">{{ _title }}</h5>
+    <div class="{{ _title_classes }}">{{ _title }}</div>
   </div>
   <button type="button" class="btn-close" data-bs-dismiss="modal"
     {% if _close_label is not empty %}
