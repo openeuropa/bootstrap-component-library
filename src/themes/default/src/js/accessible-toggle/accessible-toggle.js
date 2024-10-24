@@ -1,14 +1,14 @@
-/**
- * AccessibleToggle enhances Bootstrap Modal and Offcanvas by adding ARIA attributes for accessibility.
- * It updates `aria-expanded` on trigger elements based on the visibility of the component, ensuring
- * correct interaction with assistive technologies. The class automatically initializes all modal
- * and offcanvas triggers on the page.
- */
 import Modal from "@openeuropa/bcl-bootstrap/js/src/modal";
 import Offcanvas from "@openeuropa/bcl-bootstrap/js/src/offcanvas";
 import EventHandler from "@openeuropa/bcl-bootstrap/js/src/dom/event-handler";
 import SelectorEngine from "@openeuropa/bcl-bootstrap/js/src/dom/selector-engine";
 
+/**
+ * AccessibleToggle enhances Bootstrap Modal and Offcanvas components by:
+ * - Adding ARIA attributes for improved accessibility.
+ * - Updating `aria-expanded` on trigger elements based on visibility.
+ * Automatically initializes all modal and offcanvas triggers on the page.
+ */
 class AccessibleToggle {
   constructor(triggerElement, type) {
     this.triggerElement = triggerElement;
@@ -47,12 +47,11 @@ class AccessibleToggle {
     });
   }
 
-  static init() {
-    const modalTriggers = SelectorEngine.find('[data-bs-toggle="modal"]');
-    modalTriggers.forEach(triggerElement => new AccessibleToggle(triggerElement, "modal"));
-
-    const offcanvasTriggers = SelectorEngine.find('[data-bs-toggle="offcanvas"]');
-    offcanvasTriggers.forEach(triggerElement => new AccessibleToggle(triggerElement, "offcanvas"));
+  static init(toggles) {
+    toggles.forEach(toggle => {
+      const triggerElements = SelectorEngine.find(toggle.selector);
+      triggerElements.forEach(triggerElement => new AccessibleToggle(triggerElement, toggle.type));
+    });
   }
 }
 
