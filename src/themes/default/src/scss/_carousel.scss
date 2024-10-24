@@ -1,13 +1,21 @@
+// stylelint-disable no-descending-specificity
 $indicator-size: 8px;
 
 .carousel-indicators {
   background-color: rgba(0, 0, 0, 0.5);
+  padding: map-get($spacers, 3) 0 map-get($spacers, 4);
   margin: 0;
   [data-bs-target] {
     width: $indicator-size;
     height: $indicator-size;
-    margin: map-get($spacers, "1-5") map-get($spacers, 2) map-get($spacers, 3);
+    margin: 0 map-get($spacers, 2) 0;
     border-radius: 50%;
+    border: 1px solid transparent;
+    &:focus {
+      outline: 1px solid $white;
+      border-color: $primary;
+      opacity: 1;
+    }
   }
 }
 
@@ -46,6 +54,12 @@ $indicator-size: 8px;
   opacity: 1;
   &:hover {
     opacity: 1;
+  }
+  &:focus {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      outline: 2px solid $white;
+    }
   }
 }
 
