@@ -1,3 +1,4 @@
+// stylelint-disable no-descending-specificity
 .nav {
   &.bcl__nav {
     border: none;
@@ -9,6 +10,10 @@
       &:hover {
         background: rgba($primary, 0.3);
       }
+      &:focus-visible {
+        border-radius: 4px;
+        outline-offset: -2px;
+      }
       &.disabled {
         color: $gray-600;
       }
@@ -19,11 +24,27 @@
         border-right: none;
         border-bottom: map-get($border-widths, 2) solid $primary;
         border-left: none;
+        &:focus-visible {
+          outline-color: $primary;
+        }
       }
     }
   }
   &.bg-gray {
     background: $gray-200;
+  }
+  .nav-link {
+    &:focus-visible {
+      outline: 2px solid $primary;
+      outline-offset: -2px;
+      border-radius: 4px;
+    }
+    &.active {
+      &:focus-visible {
+        outline-color: $white;
+        outline-offset: -3px;
+      }
+    }
   }
 }
 
