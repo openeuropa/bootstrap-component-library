@@ -46,6 +46,15 @@
       }
     }
   }
+  &.nav-tabs {
+    .nav-link.active {
+      &:focus-visible {
+        border-radius: 4px;
+        outline: 2px solid $primary;
+        outline-offset: -2px;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
