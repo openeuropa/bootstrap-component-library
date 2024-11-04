@@ -39,11 +39,11 @@
       outline-offset: -2px;
       border-radius: 4px;
     }
-    &.active {
-      &:focus-visible {
-        outline-color: $white;
-        outline-offset: -3px;
-      }
+  }
+  &.nav-pills {
+    .nav-link.active {
+      outline-color: $white;
+      outline-offset: -3px;
     }
   }
   &.nav-tabs {
