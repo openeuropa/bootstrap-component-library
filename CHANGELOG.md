@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.7.0 (2024-11-06)
+
+#### :nail_care: Enhancement
+* [#617](https://github.com/openeuropa/bootstrap-component-library/pull/617) OEL-3421: Modal trigger accessible. ([@tibi2303](https://github.com/tibi2303))
+* [#616](https://github.com/openeuropa/bootstrap-component-library/pull/616) OEL-3415: Fixed blockqoute footer color. ([@tibi2303](https://github.com/tibi2303))
+* [#615](https://github.com/openeuropa/bootstrap-component-library/pull/615) OEL-3414: Changed color of the multiselect placeholder. ([@tibi2303](https://github.com/tibi2303))
+* [#614](https://github.com/openeuropa/bootstrap-component-library/pull/614) OEL-3423: Changed language list modal title tag to div. ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.6.0 (2024-09-20)
 
 #### :nail_care: Enhancement
