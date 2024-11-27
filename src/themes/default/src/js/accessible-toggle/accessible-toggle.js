@@ -14,8 +14,16 @@ class AccessibleToggle {
     this.triggerElement = triggerElement;
     this.type = type;
 
+    // Check if target exists (either `data-bs-target` or `href` must be present)
     const target = triggerElement.getAttribute("data-bs-target") || triggerElement.getAttribute("href");
+    if (!target) {
+      return;
+    }
+
     this.targetElement = SelectorEngine.findOne(target);
+    if (!this.targetElement) {
+      return;
+    }
 
     if (this.type === "modal") {
       this.instance = Modal.getOrCreateInstance(this.targetElement);
