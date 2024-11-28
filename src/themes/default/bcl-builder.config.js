@@ -135,6 +135,11 @@ module.exports = {
       options: { up: true },
     },
     {
+      from: [path.resolve(nodeModules, "slim-select-2/dist/slimselect.min.js")],
+      to: path.resolve(outputFolder, "js/slim-select-2"),
+      options: { up: true },
+    },
+    {
       from: [
         path.resolve(
           nodeModules,
