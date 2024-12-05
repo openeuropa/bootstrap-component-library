@@ -68,20 +68,6 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
-const initMultiselect2 = (story) => {
-  const demo = story();
-  return `
-    <script>
-      if (document.querySelector(".multi-select")) {
-        new SlimSelect2({
-          select: ".multi-select",
-          placeholder: "Please select a value",
-        });
-      }
-    </script>
-  ${demo}`;
-};
-
 // Stories
 export default {
   title: "Components/Forms/Select",
@@ -114,35 +100,6 @@ Multiselect.argTypes = getArgTypes(demoMultiData, "multiselect");
 Multiselect.args = getArgs(demoMultiData, "multiselect");
 Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
-  badges: ["deprecated"],
-  a11y: {
-    config: {
-      rules: [
-        { id: "aria-input-field-name", enabled: false },
-        { id: "scrollable-region-focusable", enabled: false },
-      ],
-    },
-  },
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3626%3A0",
-    },
-    {
-      name: "Slim select docs",
-      type: "iframe",
-      url: "https://slimselectjs.com/",
-    },
-  ],
-};
-
-export const Multiselect2 = (args) => select(applyArgs(demoMultiData, args));
-
-Multiselect2.argTypes = getArgTypes(demoMultiData, "multiselect");
-Multiselect2.args = getArgs(demoMultiData, "multiselect");
-Multiselect2.decorators = [initMultiselect2];
-Multiselect2.parameters = {
   badges: ["deprecated"],
   a11y: {
     config: {
