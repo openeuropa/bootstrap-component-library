@@ -15,7 +15,14 @@ class AccessibleToggle {
     this.type = type;
 
     const target = triggerElement.getAttribute("data-bs-target") || triggerElement.getAttribute("href");
+    if (!target || target === "#") {
+      return;
+    }
+
     this.targetElement = SelectorEngine.findOne(target);
+    if (!this.targetElement) {
+      return;
+    }
 
     if (this.type === "modal") {
       this.instance = Modal.getOrCreateInstance(this.targetElement);
