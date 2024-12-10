@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.7.1 (2024-12-10)
+
+#### :nail_care: Enhancement
+* [#633](https://github.com/openeuropa/bootstrap-component-library/pull/633) OEL-3552: Fixed js accessible case. ([@tibi2303](https://github.com/tibi2303))
+* [#628](https://github.com/openeuropa/bootstrap-component-library/pull/628) OEL-3425: Improved accessiblity for multiselect and remove using keyboard.  ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.7.0 (2024-11-06)
 
 #### :nail_care: Enhancement
