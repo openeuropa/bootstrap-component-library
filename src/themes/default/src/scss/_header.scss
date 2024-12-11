@@ -53,9 +53,10 @@ $header-link-active-background: #003776 !default;
       &.active {
         color: #fff;
       }
-
-      &:first-child {
-        padding-left: 0;
+      &:focus-visible {
+        outline: 2px solid $white;
+        border-radius: 4px;
+        outline-offset: 0;
       }
     }
   }
@@ -241,13 +242,6 @@ $header-link-active-background: #003776 !default;
 
   .bcl-header__navbar .navbar-collapse {
     padding-bottom: 0;
-  }
-
-  .bcl-header__navbar .nav-link.active {
-    padding-top: $spacer;
-    padding-bottom: $spacer;
-    margin-top: -#{map-get($spacers, 2)};
-    margin-bottom: -#{map-get($spacers, 2)};
   }
 
   .bcl-header__navbar .dropdown-menu {
