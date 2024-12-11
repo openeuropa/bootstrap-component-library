@@ -11,3 +11,11 @@
     border-color: var(--bs-btn-hover-border-color);
   }
 }
+
+.btn-close {
+  &:focus-visible {
+    box-shadow: none;
+    border: none;
+    outline: 2px solid $primary;
+  }
+}

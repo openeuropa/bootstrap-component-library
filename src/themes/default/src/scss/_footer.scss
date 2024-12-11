@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important
+// stylelint-disable declaration-no-important, no-descending-specificity
 
 $footer-border-color: #adb5bd !default;
 
@@ -8,6 +8,13 @@ $footer-border-color: #adb5bd !default;
   p {
     color: $white;
   }
+  a {
+    &:focus-visible {
+      box-shadow: none;
+      border: none;
+      outline: 2px solid $white;
+    }
+  }
 }
 
 .bcl-footer--eu,
@@ -15,6 +22,11 @@ $footer-border-color: #adb5bd !default;
   background: $eu-light-blue;
   a {
     color: $eu-footer-link;
+    &:focus-visible {
+      box-shadow: none;
+      border: none;
+      outline: 2px solid $primary;
+    }
   }
 }
 
@@ -24,6 +36,13 @@ $footer-border-color: #adb5bd !default;
   a,
   p {
     color: $white;
+  }
+  a {
+    &:focus-visible {
+      box-shadow: none;
+      border: none;
+      outline: 2px solid $white;
+    }
   }
 }
 
