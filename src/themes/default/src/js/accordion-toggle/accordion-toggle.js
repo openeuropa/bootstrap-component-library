@@ -49,6 +49,4 @@ class AccordionToggle {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => AccordionToggle.init());
-
 export default AccordionToggle;
