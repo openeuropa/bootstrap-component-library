@@ -57,7 +57,10 @@
   {%- endif -%}
 
   {% if _items|length > 1 and (_expand_button is not empty or _collapse_button is not empty) %}
-  <div class="d-flex justify-content-end gap-3 mb-3">
+  {% set wrapper_attributes = create_attribute().addClass(['d-flex', 'justify-content-end', 'gap-3', 'mb-3']) %}
+  <div
+    {{ wrapper_attributes }}
+    >
     {% if _expand_button is not empty %}
       {% if _expand_button.attributes is empty %}
         {% set _expand_button = _expand_button|merge({
