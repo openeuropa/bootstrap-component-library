@@ -81,6 +81,11 @@
     box-shadow: 0 0 5px var(--ss-focus-color);
   }
 
+  &.form-select {
+    background: none;
+    padding: 0.075rem 0 0.075rem 0.3rem;
+  }
+
   &.ss-disabled {
     background-color: var(--ss-disabled-color);
     cursor: not-allowed;
@@ -263,6 +268,11 @@
   transform-origin: center top;
   overflow: hidden;
   z-index: 10000;
+
+  &.form-select {
+    padding: 0;
+    background: var(--ss-bg-color);
+  }
 
   &.ss-relative {
     position: relative;
