@@ -30,6 +30,7 @@ module.exports = {
             label: "Type",
             type: "select",
             id: "type",
+            multiple: true,
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -37,6 +38,7 @@ module.exports = {
               { value: 4, label: "last option" },
               { label: "Culture", selected: true },
             ],
+            attributes: new drupalAttribute().addClass("multiselect"),
           },
         ],
         [

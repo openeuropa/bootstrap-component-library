@@ -9,6 +9,7 @@ module.exports = {
   },
   ignorePatterns: [
     '**/slimselect.min.js',
+    '**/slim-select-2/slimselect.min.js',
     'src/themes/*/js/',
     'src/themes/*/storybook/bcl-stories',
   ],
