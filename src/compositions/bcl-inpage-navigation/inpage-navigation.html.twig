@@ -9,6 +9,7 @@ Parameters:
   - links: (link[]) (default: [])
   - id (string) (default: bcl-inpage-navigation-random(100))
   - dropdown_id (string) (default: bcl-inpage-navigation-dropdown-random(100))
+  - dynamic_active: (boolean) (default: false)
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
 #}
@@ -21,6 +22,7 @@ Parameters:
 {% set _id = id|default('bcl-inpage-navigation-' ~ random(100)) %}
 {% set _icon_path = icon_path|default('') %}
 {% set _dropdown_id = dropdown_id|default('bcl-inpage-navigation-dropdown' ~ random(100)) %}
+{% set _dyanmic_active = dynamic_active|default(false) %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -37,7 +39,13 @@ Parameters:
   } only -%}
 {% endset %}
 
-<nav {{ attributes }}>
+{% set _classes = [] %}
+
+{% if _dyanmic_active %}
+  {% set _classes = _classes|merge(['dynamic-active']) %}
+{% endif %}
+
+<nav {{ attributes.addClass(_classes) }}>
   {% set trigger_attributes = create_attribute()
                               .setAttribute('aria-expanded', 'false')
                               .setAttribute('type', 'button')
