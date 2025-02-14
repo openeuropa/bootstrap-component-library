@@ -1,0 +1,106 @@
+/* stylelint-disable no-descending-specificity, declaration-no-important */
+
+.bcl-mega-menu {
+  &.nav-link {
+    padding: 0;
+  }
+  > .show + .mega-menu-container.dropdown-menu {
+    display: flex;
+  }
+  .mega-menu-container.dropdown-menu {
+    background: $lighter;
+    position: absolute;
+    min-height: 300px;
+    display: none;
+    width: 100%;
+    padding: 0 map-get($spacers, 3);
+    border-radius: 0;
+    margin-top: 8px;
+    > .row {
+      flex: 1;
+    }
+    .content-block {
+      position: relative;
+      height: 100%;
+      background: $white;
+      padding-left: map-get($spacers, 3);
+      margin-left: -16px;
+      &:after {
+        bottom: 0;
+        box-shadow: 4px 0 10px 0 rgba(224, 229, 245, 0.5);
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+      }
+    }
+    .navigation-items {
+      padding: map-get($spacers, 3) 0;
+      width: 33%;
+      position: relative;
+      height: 100%;
+      > a,
+      > .dropdown {
+        padding: map-get($spacers, 1) map-get($spacers, "2-5");
+        border-left: 4px solid transparent;
+        display: block;
+        &.active {
+          border-left-color: $primary;
+        }
+        &:hover {
+          background: $white;
+          border-left-color: $primary;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+      .dropdown {
+        position: static;
+        .dropdown-menu {
+          transform: none !important;
+          right: auto !important;
+          left: 100% !important;
+          width: 100%;
+          border-radius: 0;
+          border-color: var(--bs-border-color);
+          border-top: none;
+          border-bottom: none;
+          height: 100%;
+        }
+        &:has(.show) {
+          background: $white;
+          border-left-color: $primary;
+          & + .collapse {
+            display: block;
+          }
+        }
+        .dropdown-toggle {
+          white-space: normal;
+          display: block;
+          position: relative;
+          &:after {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+      .collapse {
+        position: absolute;
+        right: auto;
+        left: 200%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        padding: 16px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
