@@ -47,6 +47,7 @@ module.exports = {
       {
         mega_menu: true,
         link: true,
+        icon_path: "/icons.svg",
         id: "dropdown-megamenu",
         trigger: {
           label: "A link with mega menu",

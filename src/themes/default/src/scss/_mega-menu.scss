@@ -1,21 +1,33 @@
 /* stylelint-disable no-descending-specificity, declaration-no-important */
-
+.nav-item:has(> .bcl-mega-menu) {
+  position: relative;
+}
 .bcl-mega-menu {
   &.nav-link {
     padding: 0;
   }
   > .show + .mega-menu-container.dropdown-menu {
-    display: flex;
+    display: block;
   }
   .mega-menu-container.dropdown-menu {
     background: $lighter;
     position: absolute;
-    min-height: 300px;
+    max-height: 400px;
     display: none;
     width: 100%;
     padding: 0 map-get($spacers, 3);
     border-radius: 0;
-    margin-top: 8px;
+    border: 1px solid var(--bs-dropdown-border-color);
+    top: 100%;
+    margin: 8px 0 0;
+    .back-button {
+      display: none;
+    }
+    &:has(.show) {
+      .back-button {
+        display: block;
+      }
+    }
     > .row {
       flex: 1;
     }
@@ -23,8 +35,8 @@
       position: relative;
       height: 100%;
       background: $white;
-      padding-left: map-get($spacers, 3);
-      margin-left: -16px;
+      margin: 0 -1rem;
+      padding: 0 map-get($spacers, 3);
       &:after {
         bottom: 0;
         box-shadow: 4px 0 10px 0 rgba(224, 229, 245, 0.5);
@@ -38,12 +50,13 @@
     }
     .navigation-items {
       padding: map-get($spacers, 3) 0;
-      width: 33%;
-      position: relative;
+      width: 100%;
       height: 100%;
+      > a {
+        padding: map-get($spacers, 1) map-get($spacers, "2-5");
+      }
       > a,
       > .dropdown {
-        padding: map-get($spacers, 1) map-get($spacers, "2-5");
         border-left: 4px solid transparent;
         display: block;
         &.active {
@@ -59,16 +72,19 @@
       }
       .dropdown {
         position: static;
+        padding: 0;
         .dropdown-menu {
           transform: none !important;
           right: auto !important;
-          left: 100% !important;
+          left: 0 !important;
           width: 100%;
-          border-radius: 0;
-          border-color: var(--bs-border-color);
-          border-top: none;
-          border-bottom: none;
           height: 100%;
+          border: 0;
+          overflow: scroll;
+          position: absolute;
+          .dropdown-item {
+            white-space: normal;
+          }
         }
         &:has(.show) {
           background: $white;
@@ -81,25 +97,69 @@
           white-space: normal;
           display: block;
           position: relative;
+          padding: map-get($spacers, 1) map-get($spacers, "2-5")
+            map-get($spacers, 1) map-get($spacers, "2-5");
           &:after {
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
-            right: 0;
+            right: 6px;
+          }
+        }
+        &:has(+ .collapse) {
+          .dropdown-menu {
+            height: 50%;
           }
         }
       }
       .collapse {
         position: absolute;
         right: auto;
-        left: 200%;
+        left: 0;
         width: 100%;
-        height: 100%;
-        top: 0;
-        padding: 16px;
+        height: 50%;
+        top: 50%;
+        padding: map-get($spacers, 3);
+        background: $lighter;
+        overflow: scroll;
         img {
           max-width: 100%;
+          max-height: 100%;
         }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bcl-mega-menu {
+    > .show + .mega-menu-container.dropdown-menu {
+      display: flex;
+    }
+    .mega-menu-container.dropdown-menu {
+      top: 100%;
+      .content-block {
+        margin-right: 0;
+        padding-right: 0;
+      }
+      .navigation-items {
+        position: relative;
+        width: 33%;
+        .dropdown {
+          .dropdown-menu {
+            left: 100% !important;
+            top: auto;
+            height: 100% !important;
+          }
+        }
+        .collapse {
+          top: 0;
+          left: 200%;
+          height: 100%;
+        }
+      }
+      .back-button {
+        display: none !important;
       }
     }
   }
