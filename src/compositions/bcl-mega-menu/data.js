@@ -42,6 +42,34 @@ module.exports = {
           path: "/example.html",
         },
         {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
+          label: "I'm a link",
+          path: "/example.html",
+        },
+        {
           label: "I'm a button",
           button: true,
         },

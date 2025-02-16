@@ -12,6 +12,8 @@
             collapse (render) - to showcase on the last column 
       }
     ]
+  - back_button_label (string) (default: 'Back')
+  - icon_path (string) (default: '')
 #}
 
 {% set _id = id|default('dropdown-' ~ random(1000)) %}
@@ -19,6 +21,8 @@
 {% set _trigger = trigger|default({}) %}
 {% set _content_block = content_block|default('') %}
 {% set _items = items|default([]) %}
+{% set _back_button_label = back_button_label|default('Back') %}
+{% set _icon_path = icon_path|default('') %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -56,10 +60,20 @@
   {% else %}
     {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
   {% endif %}
-  <div class="mega-menu-container dropdown-menu border-bottom" aria-labelledby="{{ _id }}">
-    <div class="row">
+  <div class="mega-menu-container dropdown-menu" aria-labelledby="{{ _id }}">
+    {% include '@oe-bcl/bcl-button/button.html.twig' with {
+      label: _back_button_label,
+      icon_position: "before",
+      variant: 'link',
+      icon: {
+        path: _icon_path,
+        name: "arrow-left",
+      },
+      attributes: create_attribute().addClass(['back-button'])
+    } only %}
+    <div class="row position-relative">
       {% if content_block is defined %}
-      <div class="col-4">
+      <div class="col-12 col-lg-4">
         <div class="content-block py-3">
           {%- block content_block -%}
             {{ _content_block }}
@@ -67,7 +81,7 @@
         </div>
       </div>
       {% endif %}
-      <div class="col-8">
+      <div class="col-12 col-lg-8">
         <div class="navigation-items">
           {% for _item in _items %}
             {% if _item.items is defined %}

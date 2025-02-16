@@ -1,4 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import withCode from "@openeuropa/storybook-addon-code";
 
 import demoData from "@openeuropa/bcl-mega-menu/data.js";
@@ -9,4 +10,10 @@ export default {
   decorators: [withCode, withDesign],
 };
 
-export const Default = () => megaMenu(demoData);
+const applyArgs = (data) => {
+  data.icon_path = "/icons.svg";
+
+  return Object.assign(correctPaths(data));
+};
+
+export const Default = () => megaMenu(applyArgs(demoData));
