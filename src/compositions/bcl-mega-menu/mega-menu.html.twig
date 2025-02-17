@@ -77,7 +77,7 @@
       <div class="col-12 col-lg-4">
         <div class="content-block py-3">
           {%- block content_block -%}
-            {{ _content_block|raw }}
+            {{ _content_block }}
           {%- endblock -%}
         </div>
       </div>
@@ -96,7 +96,7 @@
               }) only %}
               {% if _item.collapse is defined %}
                 <div class="collapse">
-                  {{ _item.collapse }}
+                  {{ _item.collapse|raw }}
                 </div>
               {% endif %}
             {% else %}
