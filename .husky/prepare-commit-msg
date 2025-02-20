@@ -25,7 +25,6 @@ then
 	then
 		msg=$(cat "$COMMIT_MSG_FILE")
 		echo "$msg" > "$COMMIT_MSG_FILE"
-		echo "[skip actions]" >> "$COMMIT_MSG_FILE"
-		echo "prepare-commit-msg has added [skip actions] to your commit message"
+		echo "$COMMIT_MSG_FILE"
 	fi
 fi
