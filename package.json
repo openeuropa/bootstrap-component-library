@@ -29,7 +29,7 @@
     "copy:index": "copyfiles -f static/*.html static/*.ico build",
     "dist": "run-s clean dist:themes && dist:storybook",
     "dist:themes": "run-s build:themes copy:assets copy:index",
-    "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-*\" run dist",
+    "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-default\" run dist && lerna --scope \"@openeuropa/bcl-storybook-joinup\" run dist && lerna --scope \"@openeuropa/bcl-storybook-ucpkn\" run dist",
     "dist-project": "run-s clean build:theme:{1} copy:assets  dist-storybook:{1} --",
     "dist-storybook:default": "lerna --scope \"@openeuropa/bcl-storybook-default\" run dist",
     "dist-storybook:joinup": "lerna --scope \"@openeuropa/bcl-storybook-joinup\" run dist",
