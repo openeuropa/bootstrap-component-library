@@ -23,7 +23,7 @@ describe("OE - Header", () => {
 
   test(`Neutral passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataNeutral))
+      await axe(renderTwigFileAsHtml(template, demoDataNeutral)),
     ).toHaveNoViolations();
   });
 
@@ -35,7 +35,7 @@ describe("OE - Header", () => {
 
   test(`EU passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 
@@ -47,7 +47,7 @@ describe("OE - Header", () => {
 
   test(`EC passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataEC))
+      await axe(renderTwigFileAsHtml(template, demoDataEC)),
     ).toHaveNoViolations();
   });
 
@@ -59,7 +59,7 @@ describe("OE - Header", () => {
 
   test(`UCPKN passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, headerDataUCPKN))
+      await axe(renderTwigFileAsHtml(template, headerDataUCPKN)),
     ).toHaveNoViolations();
   });
 });

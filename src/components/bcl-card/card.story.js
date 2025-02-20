@@ -1,8 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
-import isChromatic from "chromatic/isChromatic";
 
 import demoData from "@openeuropa/bcl-data-card/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/data--horizontal";
@@ -200,10 +197,6 @@ const applyArgs = (data, args) => {
     data.badges = [];
   }
 
-  if (data.image && isChromatic()) {
-    data.image.classes = "chromatic-ignore";
-  }
-
   data.image.position = args.image_position;
   // Reset header and footer when using image overlays.
   if (args.image_position === "background") {
@@ -218,10 +211,9 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Card",
-  decorators: [withCode, withDesign, withBodyPadding],
+  decorators: [withBodyPadding],
   parameters: {
     badges: ["deprecated"],
-    chromatic: { viewports: [1200] },
     design: [
       {
         name: "Mockup",

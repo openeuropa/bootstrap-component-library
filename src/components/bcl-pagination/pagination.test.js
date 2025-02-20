@@ -34,7 +34,7 @@ describe("OE - Pagination", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, alignment })
+        render({ ...demoData, alignment }),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -43,7 +43,7 @@ describe("OE - Pagination", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, ellipsis_after: true, ellipsis_before: true })
+      render({ ...demoData, ellipsis_after: true, ellipsis_before: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -61,7 +61,7 @@ describe("OE - Pagination", () => {
               .setAttribute("new-attributes", "1"),
           },
         ],
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -69,7 +69,7 @@ describe("OE - Pagination", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, icon_path: "", _enable_prev_next_icon: true })
+      render({ ...demoData, icon_path: "", _enable_prev_next_icon: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -86,7 +86,7 @@ describe("OE - Pagination", () => {
             size: "fluid",
           },
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -99,7 +99,7 @@ describe("OE - Pagination", () => {
         list_attributes: new drupalAttribute()
           .addClass("new-class")
           .setAttribute("new-attributes", "1"),
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -107,13 +107,13 @@ describe("OE - Pagination", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "glossary" })
+      render({ ...demoData, variant: "glossary" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

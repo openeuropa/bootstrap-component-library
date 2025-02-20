@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
 
@@ -71,7 +69,6 @@ const initMultiselect = (story) => {
 // Stories
 export default {
   title: "Components/Forms/Select",
-  decorators: [withCode, withDesign],
 };
 
 export const Default = (args) => select(applyArgs(demoData, args));

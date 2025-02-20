@@ -1,13 +1,11 @@
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
-import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { Buffer } from "buffer";
 
 global.Buffer = Buffer;
 
 export const parameters = {
-  chromatic: { viewports: [1200] },
   a11y: {
-    element: "#root",
+    element: "#storybook-root",
     config: {
       rules: [
         {
@@ -28,21 +26,6 @@ export const parameters = {
   },
   controls: { expanded: true },
   layout: "padded",
-  badgesConfig: {
-    [BADGE.STABLE]: {
-      title: "v1",
-      styles: {
-        fontSize: "20",
-        paddingInline: "24px",
-        backgroundColor: "#1EA7FD",
-        borderColor: "#DCDCDC",
-        color: "#F5F5F5",
-        textTransform: "lowercase",
-        borderWidth: "2px",
-        paddingBlock: "5px",
-      },
-    },
-  },
   viewport: {
     defaultViewport: "responsive",
     viewports: {
@@ -84,3 +67,4 @@ export const parameters = {
     },
   },
 };
+export const tags = ["autodocs"];

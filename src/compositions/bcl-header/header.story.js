@@ -1,7 +1,4 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-// eslint-disable-next-line import/no-unresolved
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 
 import headerData from "@openeuropa/bcl-data-header/data";
@@ -44,7 +41,7 @@ const applyArgs = (data, args) => {
       data.head.navigation.items.splice(-1);
       data.head.navigation.items = [].concat(
         data.head.navigation.items,
-        loggedIn
+        loggedIn,
       );
     }
   } else if (data.head.navigation.items.length > 4) {
@@ -57,7 +54,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Header",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     layout: "fullscreen",

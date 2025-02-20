@@ -1,21 +1,8 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 import drupalAttribute from "drupal-attribute";
-import isChromatic from "chromatic/isChromatic";
 
 import demoData from "@openeuropa/bcl-data-carousel/data.js";
 import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
-
-if (isChromatic()) {
-  demoData.items.forEach((item, i) => {
-    item.image = `<img
-                 src="https://picsum.photos/800/400?random=${i}"
-                 alt="slide ${i}"
-                 class="d-block w-100 chromatic-ignore"
-               />`;
-  });
-}
 
 const getArgs = (data) => ({
   title: "",
@@ -157,7 +144,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Carousel",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     viewport: {
@@ -175,9 +161,6 @@ export default {
         url: "https://getbootstrap.com/docs/5.2/components/carousel/",
       },
     ],
-  },
-  chromatic: {
-    viewports: [814],
   },
 };
 

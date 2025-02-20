@@ -6,11 +6,9 @@ const branch = process.argv.slice(2)[1] || "master";
 const token = process.argv.slice(2)[2] || "";
 
 const args = [
-  "chromatic",
   "--ci",
   "--force-rebuild",
   `--project-token=${token}`,
-  `--build-script-name=build:chromatic:${theme}`,
   `--patch-build ${branch}...development`,
 ];
 

@@ -6,8 +6,6 @@ import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.tw
 
 const demoData = { ...dataDefault, ...dataLinks };
 
-demoData.image.classes = "chromatic-ignore";
-
 export default {
   title: "Compositions/Content banner",
   parameters: {

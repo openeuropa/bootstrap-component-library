@@ -6,7 +6,7 @@
   "description": "OE - BCL theme ucpkn",
   "scripts": {
     "align-templates": "lerna --scope \"@openeuropa/bcl-twig-templates\" run prepublish",
-    "build": "npm-run-all build:*",
+    "build": "npm run build:styles && npm run build:scripts && npm run build:copy && npm run build:sprite",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
     "build:copy": "cross-env bcl-builder copy",
@@ -25,10 +25,11 @@
     "@openeuropa/bcl-builder": "^1.8.2",
     "@openeuropa/bcl-theme-default": "^1.8.2",
     "@openeuropa/bcl-twig-templates": "^1.8.2",
+    "@rollup/plugin-replace": "6.0.2",
     "copyfiles": "2.4.1",
     "cross-env": "7.0.3",
     "flag-icons": "6.9.2",
-    "glob": "10.3.3",
+    "glob": "11.0.1",
     "npm-run-all": "4.1.5",
     "slim-select": "1.27.1"
   },

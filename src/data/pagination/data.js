@@ -12,7 +12,7 @@ module.exports = {
     path: "/example.html",
     attributes: new drupalAttribute().setAttribute(
       "aria-label",
-      "Previous page"
+      "Previous page",
     ),
   },
   next: {
@@ -43,6 +43,6 @@ module.exports = {
   ],
   attributes: new drupalAttribute().setAttribute(
     "aria-label",
-    "Test aria label"
+    "Test aria label",
   ),
 };
