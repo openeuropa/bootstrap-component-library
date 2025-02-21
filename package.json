@@ -27,7 +27,7 @@
     "clean:themes": "lerna --scope \"@openeuropa/bcl-theme-default\" run clean && lerna --scope \"@openeuropa/bcl-theme-joinup\" run clean && lerna --scope \"@openeuropa/bcl-theme-ucpkn\" run clean",
     "copy:assets": "copyfiles -f src/themes/**/*min.* node_modules/slim-select/dist/slimselect.min.js static/* assets/ && copyfiles -u 3 src/themes/**/fonts/* assets && copyfiles -u 3 src/themes/**/fonts/files/* assets",
     "copy:index": "copyfiles -f static/*.html static/*.ico build",
-    "dist": "run-s clean dist:themes && dist:storybook",
+    "dist": "run-s clean dist:themes dist:storybook",
     "dist:themes": "run-s build:themes copy:assets copy:index",
     "dist:storybook": "lerna --scope \"@openeuropa/bcl-storybook-default\" run dist && lerna --scope \"@openeuropa/bcl-storybook-joinup\" run dist && lerna --scope \"@openeuropa/bcl-storybook-ucpkn\" run dist",
     "dist-project": "run-s clean build:theme:{1} copy:assets  dist-storybook:{1} --",
