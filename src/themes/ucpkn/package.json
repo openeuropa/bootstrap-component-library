@@ -6,7 +6,7 @@
   "description": "OE - BCL theme ucpkn",
   "scripts": {
     "align-templates": "lerna --scope \"@openeuropa/bcl-twig-templates\" run prepublish",
-    "build": "npm-run-all 'build:*'",
+    "build": "npm-run-all 'build:*' build:copy",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
     "build:copy": "cross-env bcl-builder copy",
