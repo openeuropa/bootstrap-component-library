@@ -6,7 +6,7 @@
   "description": "OE - BCL theme default",
   "scripts": {
     "align-templates": "lerna --scope \"@openeuropa/bcl-twig-templates\" run prepublish",
-    "build": "npm run build:styles && npm run build:color-scheme && npm run build:scripts && npm run build:copy && npm run build:sprite",
+    "build": "npm-run-all 'build:*'",
     "build:styles": "cross-env bcl-builder styles",
     "build:color-scheme": "cross-env bcl-builder color-scheme",
     "build:scripts": "cross-env bcl-builder scripts",
@@ -16,7 +16,7 @@
     "prepublish": "npm run build",
     "update:styles": "npm run build:styles && npm run build:color-scheme && copyfiles -f css/*.min.css ../../../assets",
     "update:scripts": "npm run build:scripts && copyfiles -f js/*.bundle.min.js ../../../assets",
-    "update:templates": "run-s align-templates build:copy"
+    "update:templates": "npm-run-all -s align-templates build:copy"
   },
   "devDependencies": {
     "@ecl/resources-ec-logo": "3.7.1",

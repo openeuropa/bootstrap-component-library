@@ -14,12 +14,18 @@ const addons = [
 
 const webpackFinal = (config) => {
   config.module.rules.push({
-    test: /\.twig$/,
-    loader: "twing-loader",
-    options: {
-      environmentModulePath: path.resolve(`${__dirname}/environment.js`),
-    },
+    test: /\.story\.js?$/,
+    enforce: "pre",
   });
+  config.module.rules.push(
+    {
+      test: /\.twig$/,
+      loader: "twing-loader",
+      options: {
+        environmentModulePath: path.resolve(`${__dirname}/environment.js`),
+      },
+    }
+  );
 
   config.plugins.forEach((plugin, i) => {
     if (plugin.constructor.name === "ProgressPlugin") {
@@ -31,9 +37,9 @@ const webpackFinal = (config) => {
 };
 
 const config = {
-  framework: {
-    name: getAbsolutePath("@storybook/html-webpack5"),
-    options: {},
+  framework: getAbsolutePath("@storybook/html-webpack5"),
+  core: {
+    builder: getAbsolutePath("@storybook/builder-webpack5"),
   },
   staticDirs: ['../assets'],
   stories,
