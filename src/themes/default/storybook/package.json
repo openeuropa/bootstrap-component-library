@@ -10,7 +10,7 @@
     "clean": "rimraf bcl-stories",
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
-    "start": "storybook dev -p 9001 -c .storybook",
+    "start": "sb dev -p 9001 -c .storybook",
     "dist": "storybook build -c .storybook -o ../../../../build/default"
   },
   "devDependencies": {
@@ -34,6 +34,7 @@
     "babel-loader": "9.2.1",
     "buffer": "6.0.3",
     "core-js": "3.40.0",
+    "cross-env": "7.0.3",
     "drupal-attribute": "1.0.2",
     "null-loader": "4.0.1",
     "raw-loader": "4.0.2",
