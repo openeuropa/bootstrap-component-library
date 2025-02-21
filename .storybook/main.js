@@ -9,24 +9,17 @@ const addons = [
   getAbsolutePath("@storybook/addon-designs"),
   getAbsolutePath("@storybook/addon-viewport"),
   getAbsolutePath("@storybook/addon-a11y"),
-  getAbsolutePath("@storybook/addon-interactions"),
-  getAbsolutePath("@storybook/addon-webpack5-compiler-babel")
+  getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
 ];
 
 const webpackFinal = (config) => {
   config.module.rules.push({
-    test: /\.story\.js?$/,
-    enforce: "pre",
+    test: /\.twig$/,
+    loader: "twing-loader",
+    options: {
+      environmentModulePath: path.resolve(`${__dirname}/environment.js`),
+    },
   });
-  config.module.rules.push(
-    {
-      test: /\.twig$/,
-      loader: "twing-loader",
-      options: {
-        environmentModulePath: path.resolve(`${__dirname}/environment.js`),
-      },
-    }
-  );
 
   config.plugins.forEach((plugin, i) => {
     if (plugin.constructor.name === "ProgressPlugin") {
@@ -38,9 +31,9 @@ const webpackFinal = (config) => {
 };
 
 const config = {
-  framework: getAbsolutePath("@storybook/html-webpack5"),
-  core: {
-    builder: getAbsolutePath("@storybook/builder-webpack5"),
+  framework: {
+    name: getAbsolutePath("@storybook/html-webpack5"),
+    options: {},
   },
   staticDirs: ['../assets'],
   stories,
