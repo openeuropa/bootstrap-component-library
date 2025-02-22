@@ -7,6 +7,9 @@
   "bin": {
     "plugins-builder": "./bin/build-plugins.js"
   },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
   "scripts": {
     "build-plugins": "bin/build-plugins.js",
     "clean": "rimraf js plugins scss",

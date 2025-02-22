@@ -80,13 +80,6 @@
       "tools/**",
       "src/themes/*",
       "src/themes/**/storybook"
-    ],
-    "nohoist": [
-      "**/bootstrap*",
-      "**/bootstrap*/**",
-      "**/@openeuropa/bcl-twig-templates",
-      "**/@openeuropa/bcl-twig-templates/**",
-      "**/@fontsource/**"
     ]
   },
   "jest": {
@@ -110,7 +103,6 @@
     "@babel/plugin-transform-runtime": "7.26.9",
     "@babel/preset-env": "7.26.9",
     "@babel/preset-react": "7.26.3",
-    "@openeuropa/bcl-twig-templates": "workspace:^",
     "@popperjs/core": "^2.11.8",
     "@size-limit/preset-big-lib": "11.2.0",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.5",
