@@ -11,7 +11,7 @@
     "copy": "cross-env bcl-builder copy",
     "postinstall": "npm run copy",
     "start": "sb dev -p 9001 -c .storybook",
-    "dist": "sb build -c .storybook -o ../../../../build/default"
+    "dist": "sb build -c .storybook -o ../../../../build/default && ls"
   },
   "devDependencies": {
     "@babel/core": "7.26.9",
