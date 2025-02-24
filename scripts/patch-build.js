@@ -17,6 +17,6 @@ const buildPatch = spawn("yarn", args, { stdio: "inherit" });
 buildPatch.on("error", (err) => console.log(err.message));
 buildPatch.on("exit", () => {
   console.log(
-    `Build patch process ended for the ${theme} styleguide on the ${branch} branch`
+    `Build patch process ended for the ${theme} styleguide on the ${branch} branch`,
   );
 });

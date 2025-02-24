@@ -13,12 +13,12 @@
   "scripts": {
     "build-plugins": "bin/build-plugins.js",
     "clean": "rimraf js plugins scss",
-    "copy-sass": "copyfiles -u 3 \"./node_modules/bootstrap/scss/**/*\" scss",
+    "copy-sass": "copyfiles -u 3 \"./node_modules/bootstrap/scss/*\" \"./node_modules/bootstrap/scss/**/*\" scss",
     "copy-js": "copyfiles -u 3 \"./node_modules/bootstrap/js/**/*\" js && copyfiles -u 1 \"./legacy/**/*\" js/src",
     "copy-icons": "copyfiles -f ./node_modules/bootstrap-icons/bootstrap-icons.svg ../bootstrap",
-    "copy-icons-svg": "copyfiles -f ./node_modules/bootstrap-icons/icons/* ./icons/",
+    "copy-icons-svg": "copyfiles -f ./node_modules/bootstrap-icons/icons/* ../bootstrap/icons/",
     "replace-icons": "copyfiles -f ./replace-icons/* ../bootstrap/icons/",
-    "prepublish": "npm-run-all clean copy-sass copy-js copy-icons copy-icons-svg replace-icons build-plugins"
+    "prepublish": "npm-run-all clean 'copy-*' replace-icons build-plugins"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "6.0.4",

@@ -54,7 +54,7 @@ const handlers = [
   {
     pattern: `${path.resolve(
       __dirname,
-      ".."
+      "..",
     )}/src/(components|compositions)/*/*.twig`,
     events: [
       {
@@ -69,7 +69,7 @@ const handlers = [
   {
     pattern: `${path.resolve(
       __dirname,
-      ".."
+      "..",
     )}/src/themes/*/src/templates/*.twig`,
     events: [
       {
