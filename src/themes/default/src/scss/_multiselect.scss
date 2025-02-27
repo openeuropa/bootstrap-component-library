@@ -70,6 +70,12 @@ select.multi-select {
           right: 0;
           bottom: calc(50% - 3px);
         }
+        &:focus-visible {
+          &:after {
+            outline: 2px solid $white;
+            outline-offset: -6px;
+          }
+        }
       }
     }
     .ss-disabled {
