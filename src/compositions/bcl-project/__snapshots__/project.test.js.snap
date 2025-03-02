@@ -1984,6 +1984,7 @@ exports[`OE - Project listing renders correctly 1`] = `
               <div
                 aria-labelledby="dropdown-megamenu"
                 class="nav-link bcl-mega-menu"
+                style="--bcl-mm-min-height: 300px;"
               >
                 <a
                   aria-expanded="false"
@@ -2000,19 +2001,23 @@ exports[`OE - Project listing renders correctly 1`] = `
                   aria-labelledby="dropdown-megamenu"
                   class="mega-menu-container dropdown-menu"
                 >
-                  <button
-                    class="back-button btn btn-link btn-md"
-                    type="button"
+                  <div
+                    class="d-lg-none back-button-block"
                   >
-                    <svg
-                      class="me-2-5 bi icon--fluid"
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
                     >
-                      <use
-                        xlink:href="/icons.svg#arrow-left"
-                      />
-                    </svg>
-                    Back
-                  </button>
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
                   <div
                     class="row position-relative"
                   >
@@ -2042,7 +2047,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu"
@@ -2083,7 +2088,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu-2"
@@ -3974,6 +3979,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
               <div
                 aria-labelledby="dropdown-megamenu"
                 class="nav-link bcl-mega-menu"
+                style="--bcl-mm-min-height: 300px;"
               >
                 <a
                   aria-expanded="false"
@@ -3990,19 +3996,23 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                   aria-labelledby="dropdown-megamenu"
                   class="mega-menu-container dropdown-menu"
                 >
-                  <button
-                    class="back-button btn btn-link btn-md"
-                    type="button"
+                  <div
+                    class="d-lg-none back-button-block"
                   >
-                    <svg
-                      class="me-2-5 bi icon--fluid"
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
                     >
-                      <use
-                        xlink:href="/icons.svg#arrow-left"
-                      />
-                    </svg>
-                    Back
-                  </button>
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
                   <div
                     class="row position-relative"
                   >
@@ -4032,7 +4042,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu"
@@ -4073,7 +4083,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu-2"
@@ -7209,6 +7219,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
               <div
                 aria-labelledby="dropdown-megamenu"
                 class="nav-link bcl-mega-menu"
+                style="--bcl-mm-min-height: 300px;"
               >
                 <a
                   aria-expanded="false"
@@ -7225,19 +7236,23 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                   aria-labelledby="dropdown-megamenu"
                   class="mega-menu-container dropdown-menu"
                 >
-                  <button
-                    class="back-button btn btn-link btn-md"
-                    type="button"
+                  <div
+                    class="d-lg-none back-button-block"
                   >
-                    <svg
-                      class="me-2-5 bi icon--fluid"
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
                     >
-                      <use
-                        xlink:href="/icons.svg#arrow-left"
-                      />
-                    </svg>
-                    Back
-                  </button>
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
                   <div
                     class="row position-relative"
                   >
@@ -7267,7 +7282,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu"
@@ -7308,7 +7323,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu-2"
@@ -10444,6 +10459,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
               <div
                 aria-labelledby="dropdown-megamenu"
                 class="nav-link bcl-mega-menu"
+                style="--bcl-mm-min-height: 300px;"
               >
                 <a
                   aria-expanded="false"
@@ -10460,19 +10476,23 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                   aria-labelledby="dropdown-megamenu"
                   class="mega-menu-container dropdown-menu"
                 >
-                  <button
-                    class="back-button btn btn-link btn-md"
-                    type="button"
+                  <div
+                    class="d-lg-none back-button-block"
                   >
-                    <svg
-                      class="me-2-5 bi icon--fluid"
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
                     >
-                      <use
-                        xlink:href="/icons.svg#arrow-left"
-                      />
-                    </svg>
-                    Back
-                  </button>
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
                   <div
                     class="row position-relative"
                   >
@@ -10502,7 +10522,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu"
@@ -10543,7 +10563,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="outside"
+                            data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-inner-megamenu-2"

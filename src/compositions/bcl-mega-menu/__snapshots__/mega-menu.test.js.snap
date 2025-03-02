@@ -5,6 +5,7 @@ exports[`OE - Mega Menu renders correctly 1`] = `
   <div
     aria-labelledby="dropdown-megamenu"
     class="bcl-mega-menu"
+    style="--bcl-mm-min-height: 300px;"
   >
     <button
       aria-expanded="false"
@@ -21,19 +22,23 @@ exports[`OE - Mega Menu renders correctly 1`] = `
       aria-labelledby="dropdown-megamenu"
       class="mega-menu-container dropdown-menu"
     >
-      <button
-        class="back-button btn btn-link btn-md"
-        type="button"
+      <div
+        class="d-lg-none back-button-block"
       >
-        <svg
-          class="me-2-5 bi icon--fluid"
+        <button
+          class="back-button btn btn-link btn-md"
+          type="button"
         >
-          <use
-            xlink:href="#arrow-left"
-          />
-        </svg>
-        Back
-      </button>
+          <svg
+            class="me-2-5 bi icon--fluid"
+          >
+            <use
+              xlink:href="#arrow-left"
+            />
+          </svg>
+          Back
+        </button>
+      </div>
       <div
         class="row position-relative"
       >
@@ -63,7 +68,7 @@ exports[`OE - Mega Menu renders correctly 1`] = `
               <a
                 aria-expanded="false"
                 class="dropdown-toggle"
-                data-bs-auto-close="outside"
+                data-bs-auto-close="false"
                 data-bs-toggle="dropdown"
                 href="/example.html"
                 id="dropdown-megamenu-inner"
@@ -104,7 +109,7 @@ exports[`OE - Mega Menu renders correctly 1`] = `
               <a
                 aria-expanded="false"
                 class="dropdown-toggle"
-                data-bs-auto-close="outside"
+                data-bs-auto-close="false"
                 data-bs-toggle="dropdown"
                 href="/example.html"
                 id="dropdown-megamenu-inner-2"
