@@ -10,9 +10,8 @@
     display: block;
   }
   .mega-menu-container.dropdown-menu {
-    background: $lighter;
     position: absolute;
-    max-height: 400px;
+    min-height: var(--bcl-mm-min-height);
     display: none;
     width: 100%;
     padding: 0 map-get($spacers, 3);
@@ -27,6 +26,9 @@
       .back-button {
         display: block;
       }
+      .back-button-block {
+        padding-bottom: 46px;
+      }
     }
     > .row {
       flex: 1;
@@ -34,7 +36,6 @@
     .content-block {
       position: relative;
       height: 100%;
-      background: $white;
       margin: 0 -1rem;
       padding: 0 map-get($spacers, 3);
       &:after {
@@ -49,11 +50,11 @@
       }
     }
     .navigation-items {
-      padding: map-get($spacers, 3) 0;
       width: 100%;
       height: 100%;
+      .dropdown-toggle,
       > a {
-        padding: map-get($spacers, 1) map-get($spacers, "2-5");
+        padding: map-get($spacers, 2) map-get($spacers, "2-5");
       }
       > a,
       > .dropdown {
@@ -63,7 +64,7 @@
           border-left-color: $primary;
         }
         &:hover {
-          background: $white;
+          background: $blue-50;
           border-left-color: $primary;
         }
       }
@@ -82,12 +83,21 @@
           border: 0;
           overflow: scroll;
           position: absolute;
+          padding: 0;
+          border-radius: 0;
+          background: $blue-50;
           .dropdown-item {
             white-space: normal;
+            padding: map-get($spacers, 2) map-get($spacers, "2-5");
+            color: $link-color;
+            &:hover {
+              background: transparent;
+              text-decoration: underline;
+            }
           }
         }
         &:has(.show) {
-          background: $white;
+          background: $blue-50;
           border-left-color: $primary;
           & + .collapse {
             display: block;
@@ -97,13 +107,22 @@
           white-space: normal;
           display: block;
           position: relative;
-          padding: map-get($spacers, 1) map-get($spacers, "2-5")
-            map-get($spacers, 1) map-get($spacers, "2-5");
           &:after {
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
             right: 6px;
+          }
+          &.show {
+            position: absolute;
+            bottom: 100%;
+            z-index: 100;
+            color: $dark;
+            margin-left: -1rem;
+            font-size: 24px;
+            &:after {
+              display: none;
+            }
           }
         }
         &:has(+ .collapse) {
@@ -120,7 +139,7 @@
         height: 50%;
         top: 50%;
         padding: map-get($spacers, 3);
-        background: $lighter;
+        background: $white;
         overflow: scroll;
         img {
           max-width: 100%;
@@ -138,6 +157,7 @@
     }
     .mega-menu-container.dropdown-menu {
       top: 100%;
+      padding: map-get($spacers, 3) map-get($spacers, 3) 0 map-get($spacers, 3);
       .content-block {
         margin-right: 0;
         padding-right: 0;
@@ -151,15 +171,22 @@
             top: auto;
             height: 100% !important;
           }
+          .dropdown-toggle.show {
+            margin-left: 0;
+            color: $link-color;
+            position: relative;
+            bottom: 0;
+            font-size: 1rem;
+            &:after {
+              display: block;
+            }
+          }
         }
         .collapse {
           top: 0;
           left: 200%;
           height: 100%;
         }
-      }
-      .back-button {
-        display: none !important;
       }
     }
   }
