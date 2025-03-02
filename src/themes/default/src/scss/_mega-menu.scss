@@ -86,6 +86,7 @@
           padding: 0;
           border-radius: 0;
           background: $blue-50;
+          margin: 0;
           .dropdown-item {
             white-space: normal;
             padding: map-get($spacers, 2) map-get($spacers, "2-5");
@@ -151,6 +152,9 @@
 }
 
 @include media-breakpoint-up(lg) {
+  .nav-item:has(> .bcl-mega-menu) {
+    position: static;
+  }
   .bcl-mega-menu {
     > .show + .mega-menu-container.dropdown-menu {
       display: flex;
@@ -168,8 +172,9 @@
         .dropdown {
           .dropdown-menu {
             left: 100% !important;
-            top: auto;
+            top: 0;
             height: 100% !important;
+            margin: 0;
           }
           .dropdown-toggle.show {
             margin-left: 0;
