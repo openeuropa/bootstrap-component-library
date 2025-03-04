@@ -1,3 +1,5 @@
+// stylelint-disable no-descending-specificity
+
 .bcl-language-list {
   .btn {
     background: $white;
@@ -6,6 +8,12 @@
     &:hover {
       text-decoration: underline;
       border-color: $eu-cta-color;
+    }
+    &:focus-visible {
+      background: $primary;
+      color: $white;
+      outline: 2px solid $white;
+      outline-offset: -4px;
     }
     &.selected {
       background: $secondary;
@@ -21,6 +29,9 @@
     .btn {
       color: $eu-cta-color;
       font-weight: $font-weight-bold;
+      &:focus-visible {
+        color: $white;
+      }
       &.selected {
         background: $eu-selected-background;
         color: $black;

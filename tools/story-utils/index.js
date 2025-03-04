@@ -359,7 +359,7 @@ export const initBadges = (story) => {
   ${demo}`;
 };
 
-export const initListings = (story) => {
+export const initMultiselects = (story) => {
   const demo = story();
   return `
     <script>
@@ -368,9 +368,11 @@ export const initListings = (story) => {
         multiselects.forEach((element) => {
           new SlimSelect({
             select: element,
-            selectByGroup: true,
-            placeholder: "Please select a value",
-          });
+            settings: {
+              placeholderText: 'Please select a value',
+              contentLocation: document.querySelectorAll(".offcanvas-body")[0]
+            }
+          })
         });
       }
     </script>

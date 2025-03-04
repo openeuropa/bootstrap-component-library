@@ -1,5 +1,5 @@
 import {
-  initListings,
+  initMultiselects,
   initBadges,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
@@ -9,7 +9,7 @@ import search from "@openeuropa/bcl-search/search.html.twig";
 
 export default {
   title: "Features/Search",
-  decorators: [initListings, initBadges],
+  decorators: [initMultiselects, initBadges],
   parameters: {
     a11y: {
       config: {
