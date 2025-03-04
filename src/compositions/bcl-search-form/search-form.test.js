@@ -29,7 +29,7 @@ describe("OE - Search Form", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, pill: true })
+      render({ ...demoData, pill: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -44,13 +44,13 @@ describe("OE - Search Form", () => {
           transformation: "rotate-90",
           path: "/icons.svg",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataSubmittable, true))
+      await axe(renderTwigFileAsHtml(template, demoDataSubmittable, true)),
     ).toHaveNoViolations();
   });
 });

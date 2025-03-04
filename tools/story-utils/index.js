@@ -406,7 +406,7 @@ export const correctPaths = (data) => {
       ) {
         data[prop] = data[prop].replace(
           "/example.html",
-          `/example.html#${Math.random().toString(36).slice(2, 7)}`
+          `/example.html#${Math.random().toString(36).slice(2, 7)}`,
         );
       }
     }

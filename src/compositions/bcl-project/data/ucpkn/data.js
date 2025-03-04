@@ -1,11 +1,9 @@
-import isChromatic from "chromatic/isChromatic";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
   pagination,
   sortSelect,
 } from "@openeuropa/bcl-base-templates/data/listing-page";
-import drupalAttribute from "drupal-attribute";
 
 import { banner } from "@openeuropa/bcl-base-templates/data/content-page";
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing";
@@ -16,20 +14,6 @@ import dataLists from "@openeuropa/bcl-project/data/ucpkn/data--lists";
 import dataContent from "@openeuropa/bcl-project/data/ucpkn/data";
 import dataStatusContributions from "@openeuropa/bcl-project-status/data/data--contributions";
 import dataExtraDetails from "@openeuropa/bcl-project/data/ucpkn/data--extra-details";
-
-if (isChromatic()) {
-  dataContent.gallery.listing.forEach((item) => {
-    item.attributes = new drupalAttribute().addClass("chromatic-ignore");
-  });
-  dataExtraDetails.banner.image.classes = "chromatic-ignore";
-  dataListing.listing.items.forEach((item) => {
-    if (item.image) {
-      item.image.classes = item.image.classes
-        ? `${item.image.classes} chromatic-ignore`
-        : "chromatic-ignore";
-    }
-  });
-}
 
 const baseData = {
   content_type: "listing",

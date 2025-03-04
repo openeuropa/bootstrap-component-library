@@ -14,7 +14,7 @@ module.exports = {
               type: "content",
               content: `<p class='fw-bold mb-2'>[Project name]</p>${getDummyText(
                 2,
-                true
+                true,
               )}`,
             },
           ],

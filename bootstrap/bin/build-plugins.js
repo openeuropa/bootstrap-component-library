@@ -37,6 +37,8 @@ for (const file of jsFiles) {
 const build = async plugin => {
   const globals = {}
 
+  console.log(plugin);
+
   const bundle = await rollup.rollup({
     input: plugin.src,
     plugins: [
@@ -100,3 +102,4 @@ const build = async plugin => {
     process.exit(1)
   }
 })()
+    

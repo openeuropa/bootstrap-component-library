@@ -1,15 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import isChromatic from "chromatic/isChromatic";
-import { within, userEvent } from "@storybook/testing-library";
 
 import demoData from "@openeuropa/bcl-language-switcher/data.js";
 import languageSwitcher from "@openeuropa/bcl-language-switcher/language-switcher.html.twig";
 
 export default {
   title: "Compositions/Language Switcher",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["stable", "deprecated"],
     layout: "padded",
@@ -25,10 +20,3 @@ export default {
 };
 
 export const Default = () => languageSwitcher(correctPaths(demoData));
-if (isChromatic()) {
-  Default.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByText("Choose another language");
-    await userEvent.click(button);
-  };
-}

@@ -1,6 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoDefaultData from "@openeuropa/bcl-listing/data/listing--default-1-col.js";
@@ -53,20 +50,11 @@ const applyArgs = (data, args) => {
     args.alignment = "";
   }
 
-  if (isChromatic()) {
-    data.items.forEach((item) => {
-      if (item.image) {
-        item.image.classes = "chromatic-ignore";
-      }
-    });
-  }
-
   return Object.assign(data, args);
 };
 
 export default {
   title: "Paragraphs/Listings",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

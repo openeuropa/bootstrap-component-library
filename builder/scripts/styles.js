@@ -66,7 +66,7 @@ const buildStyles = (entry, dest, options) => {
   const processor = postcss(plugins);
   if (options.prefix) {
     console.error(
-      `The prefix option is deprecated, use 'prefixer' instead, e.g.: prefixer: { prefix: "${options.prefix}" }`
+      `The prefix option is deprecated, use 'prefixer' instead, e.g.: prefixer: { prefix: "${options.prefix}" }`,
     );
     processor.use(prefixer({ prefix: options.prefix }));
   } else if (options.prefixer) {

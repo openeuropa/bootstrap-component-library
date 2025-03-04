@@ -7,6 +7,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
   "devDependencies": {
     "@openeuropa/bcl-accordion": "^1.8.2",
     "@openeuropa/bcl-alert": "^1.8.2",
@@ -72,7 +75,7 @@
     "@openeuropa/bcl-toast": "^1.8.2",
     "@openeuropa/bcl-user": "^1.8.2",
     "copyfiles": "2.4.1",
-    "rimraf": "5.0.7"
+    "rimraf": "6.0.1"
   },
   "scripts": {
     "clean": "rimraf templates",

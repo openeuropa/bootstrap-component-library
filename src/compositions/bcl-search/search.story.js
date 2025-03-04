@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import {
   initMultiselects,
   initBadges,
@@ -11,7 +9,7 @@ import search from "@openeuropa/bcl-search/search.html.twig";
 
 export default {
   title: "Features/Search",
-  decorators: [withCode, withDesign, initMultiselects, initBadges],
+  decorators: [initMultiselects, initBadges],
   parameters: {
     a11y: {
       config: {

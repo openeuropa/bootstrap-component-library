@@ -1,7 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
 import {
   getIconControls,
   getVariants,
@@ -14,8 +10,6 @@ import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
 import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 import link from "@openeuropa/bcl-link/link.html.twig";
-
-const chromatic = process.env.STORYBOOK_ENV;
 
 const withCollapse = (story) => {
   const demo = story();
@@ -154,7 +148,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Link",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -184,13 +177,6 @@ Collapse.parameters = {
     url: "https://getbootstrap.com/docs/5.2/components/collapse/",
   },
 };
-if (isChromatic() || chromatic) {
-  Collapse.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.click(button);
-  };
-}
 
 export const Tooltip = (args) => link(applyArgs(tooltipDemoData, args));
 
@@ -204,10 +190,3 @@ Tooltip.parameters = {
     url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
   },
 };
-if (isChromatic() || chromatic) {
-  Tooltip.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.hover(button);
-  };
-}

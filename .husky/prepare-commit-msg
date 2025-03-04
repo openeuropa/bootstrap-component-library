@@ -21,11 +21,10 @@ SHA1=$3
 BRANCH=$(cat .git/HEAD  | cut -d '_' -f2)
 if [[ "$BRANCH" == *"#"*"#"* ]]
 then
-	if [[ "$COMMIT_SOURCE" == "message" && $(cat "$COMMIT_MSG_FILE") != *"[chromatic]"* ]]
+	if [[ "$COMMIT_SOURCE" == "message" ]]
 	then
 		msg=$(cat "$COMMIT_MSG_FILE")
 		echo "$msg" > "$COMMIT_MSG_FILE"
-		echo "[skip chromatic]" >> "$COMMIT_MSG_FILE"
-		echo "prepare-commit-msg has added [skip chromatic] to your commit message"
+		echo "$COMMIT_MSG_FILE"
 	fi
 fi
