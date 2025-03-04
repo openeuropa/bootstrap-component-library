@@ -1,0 +1,16 @@
+.icon {
+  width: 1em;
+  height: 1em;
+  display: block;
+  background-color: var(--bs-dark);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+@each $color, $value in $theme-colors {
+  .icon-color-#{$color} {
+    background-color: $value;
+  }
+}
