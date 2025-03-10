@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 
 import demoDataGroup from "@openeuropa/bcl-data-card-layout/data--group.js";
@@ -126,7 +124,6 @@ const withScript = (story) => {
 
 export default {
   title: "Components/Card/Layout",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -157,7 +154,3 @@ Grid.argTypes = getArgTypes("grid");
 export const Masonry = () => cardLayout(demoDataMasonry);
 
 Masonry.decorators = [withScript];
-Masonry.parameters = {
-  options: { showPanel: false },
-  chromatic: { delay: 1000 },
-};

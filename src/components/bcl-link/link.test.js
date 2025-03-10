@@ -26,7 +26,7 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, standalone: true })
+      render({ ...demoData, standalone: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -34,7 +34,7 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, id: "link-id" })
+      render({ ...demoData, id: "link-id" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -42,7 +42,7 @@ describe("OE - Link", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, disabled: true })
+      render({ ...demoData, disabled: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -51,7 +51,7 @@ describe("OE - Link", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant }, true)
+        render({ ...demoData, variant }, true),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -82,14 +82,14 @@ describe("OE - Link", () => {
           },
           remove_icon_spacers: true,
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

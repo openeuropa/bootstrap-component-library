@@ -9,21 +9,9 @@ import {
   share,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import isChromatic from "chromatic/isChromatic";
 
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
-
-const chromatic = process.env.STORYBOOK_ENV;
-
-if (isChromatic() || chromatic) {
-  banner.image.classes = "chromatic-ignore";
-  dataListing.listing.items.forEach((item) => {
-    item.image.classes = item.image.classes
-      ? `${item.image.classes} chromatic-ignore`
-      : "chromatic-ignore";
-  });
-}
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;

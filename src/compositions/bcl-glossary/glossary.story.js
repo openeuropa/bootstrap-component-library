@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoDataListing from "@openeuropa/bcl-glossary/data/data--listing";
@@ -10,7 +8,6 @@ import listingPage from "@openeuropa/bcl-glossary/glossary-listing.html.twig";
 
 export default {
   title: "Features/Glossary",
-  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

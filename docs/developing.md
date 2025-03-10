@@ -109,10 +109,6 @@ stories belonging to the project's styleguide.
 In a theme package the default stories are copied in `storybook/bcl-stories`
 while the new or overriding ones can be defined in `src/stories`.
 
-##### Chromatic
-
-[Chromatic docs](chromatic.md)
-
 ##### Combining stories in the theme packages
 
 All the default stories are used by default by all the different themes, but

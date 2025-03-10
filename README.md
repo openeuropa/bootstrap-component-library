@@ -116,38 +116,3 @@ twig-loader would be defined as such:
 
 [Developer's guidelines](docs/developing.md)
 
-### Setup on Windows using WSL 1
-
-#### Setup WSL
-
-1. Open Settings
-2. Click on Apps & features
-3. Under the "Related settings" section, click the Programs and Features option.
-4. Click the Turn Windows features on or off option from the left pane.
-5. Check the Windows Subsystem for Linux option.
-6. Click the OK button.
-7. Click the Restart now button.
-8. After Restart, Open Powershell with admin.
-9. Run `wsl --set-default-version 1`.
-
-#### Setup Ubuntu
-
-1. Open Microsoft Store.
-2. Search for Ubuntu.
-3. Select Ubuntu.
-4. Click Get/Install.
-5. After installation, click launch.
-6. Create a username for the Linux distro and press Enter.
-7. Specify a password for the distro and press Enter.
-8. Repeat the password and press Enter to confirm.
-
-#### Setup project
-
-1. Clone the project.
-2. In the project root, run `sudo yarn`.
-3. Type the password you entered.
-4. Run `sudo yarn start` and access `localhost:5000`.
-
-```
-
-```

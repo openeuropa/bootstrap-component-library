@@ -1,34 +1,18 @@
+import { dirname, join } from "path";
 const path = require("path");
 
-const chromatic = process.env.STORYBOOK_ENV;
-
-let stories = ["../../**/!(test*|deprecated*).story.js"];
+let stories = ["../bcl-stories/!(test*|deprecated*).story.js"];
 
 const addons = [
-  "@storybook/addon-docs",
-  "@openeuropa/storybook-addon-code",
-  "@storybook/addon-controls",
-  "storybook-addon-designs",
-  "@storybook/addon-viewport",
-  "@storybook/addon-a11y",
-  "@geometricpanda/storybook-addon-badges",
+  getAbsolutePath("@storybook/addon-docs"),
+  getAbsolutePath("@storybook/addon-controls"),
+  getAbsolutePath("@storybook/addon-designs"),
+  getAbsolutePath("@storybook/addon-viewport"),
+  getAbsolutePath("@storybook/addon-a11y"),
+  getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
 ];
 
-if (chromatic) {
-  stories = ["../../**/*.story.js"];
-  addons.push("@storybook/addon-interactions");
-}
-
 const webpackFinal = (config) => {
-  config.module.rules.push({
-    test: /\.story\.js?$/,
-    use: [
-      {
-        loader: require.resolve("@whitespace/storybook-addon-code/loader"),
-      },
-    ],
-    enforce: "pre",
-  });
   config.module.rules.push({
     test: /\.twig$/,
     loader: "twing-loader",
@@ -46,15 +30,26 @@ const webpackFinal = (config) => {
   return config;
 };
 
-module.exports = {
-  core: {
-    builder: "webpack5",
+const config = {
+  framework: {
+    name: getAbsolutePath("@storybook/html-webpack5"),
+    options: {},
   },
+
   staticDirs: ["../../../../../assets/"],
   stories,
   addons,
   webpackFinal,
+
   features: {
     postcss: false,
   },
+
+  docs: {},
 };
+
+export default config;
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, "package.json")));
+}

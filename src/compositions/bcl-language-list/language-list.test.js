@@ -38,7 +38,7 @@ describe("OE - Language", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
@@ -47,14 +47,14 @@ describe("OE - Language", () => {
       expect.assertions(1);
 
       return expect(
-        renderModal({ ...demoDataModal, variant })
+        renderModal({ ...demoDataModal, variant }),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`modal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataModal, true))
+      await axe(renderTwigFileAsHtml(template, demoDataModal, true)),
     ).toHaveNoViolations();
   });
 });

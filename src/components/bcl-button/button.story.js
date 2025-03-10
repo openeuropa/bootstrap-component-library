@@ -1,7 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import isChromatic from "chromatic/isChromatic";
-import { within, userEvent } from "@storybook/testing-library";
 import {
   initTooltip,
   getIconControls,
@@ -16,8 +12,6 @@ import popoverDemoData from "@openeuropa/bcl-data-button/data--popover";
 import tooltipDemoData from "@openeuropa/bcl-data-button/data--tooltip";
 import spinnerDemoData from "@openeuropa/bcl-data-button/data--spinner";
 import button from "@openeuropa/bcl-button/button.html.twig";
-
-const chromatic = process.env.STORYBOOK_ENV;
 
 const withCollapse = (story) => {
   const demo = story();
@@ -233,7 +227,6 @@ const initPopover = (story) => {
 
 export default {
   title: "Components/Button",
-  decorators: [withCode, withDesign],
 };
 
 export const Default = (args) => button(applyArgs(demoData, args));
@@ -277,13 +270,6 @@ Collapse.parameters = {
     },
   ],
 };
-if (isChromatic() || chromatic) {
-  Collapse.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const but = canvas.getByRole("button");
-    await userEvent.click(but);
-  };
-}
 
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
 
@@ -306,13 +292,6 @@ Popover.parameters = {
     },
   ],
 };
-if (isChromatic() || chromatic) {
-  Popover.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const but = canvas.getByRole("button");
-    await userEvent.click(but);
-  };
-}
 
 export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
 
@@ -322,21 +301,12 @@ Tooltip.argTypes = getArgTypes(tooltipDemoData, "tooltip");
 Tooltip.decorators = [initTooltip];
 Tooltip.parameters = {
   badges: ["deprecated"],
-  chromatic: { delay: 1000 },
   design: {
     name: "Bootstrap docs",
     type: "iframe",
     url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
   },
 };
-
-if (isChromatic() || chromatic) {
-  Tooltip.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const but = canvas.getByRole("button");
-    await userEvent.hover(but);
-  };
-}
 
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
 
@@ -345,7 +315,6 @@ Spinner.args = getArgs(spinnerDemoData);
 Spinner.argTypes = getArgTypes(spinnerDemoData);
 Spinner.parameters = {
   badges: ["deprecated"],
-  chromatic: { pauseAnimationAtEnd: true },
   design: [
     {
       name: "Wireframe",

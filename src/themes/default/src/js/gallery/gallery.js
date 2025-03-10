@@ -72,7 +72,6 @@ class Gallery extends BaseComponent {
     this.stopVideo(currentSlide)
   }
 
-  // eslint-disable-next-line class-methods-use-this
   stopVideo(slide) {
     const iframe = SelectorEngine.findOne('iframe', slide);
     const video = SelectorEngine.findOne('video', slide);
@@ -84,7 +83,6 @@ class Gallery extends BaseComponent {
   }
 
   // Private
-  // eslint-disable-next-line class-methods-use-this
   carouselLazyLoad(slide) {
     const media = SelectorEngine.findOne('[data-src]', slide);
 

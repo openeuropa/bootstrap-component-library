@@ -21,7 +21,7 @@ describe("OE - dropdown", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dark: true })
+      render({ ...demoData, dark: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -29,7 +29,7 @@ describe("OE - dropdown", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, link: true })
+      render({ ...demoData, link: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -37,7 +37,7 @@ describe("OE - dropdown", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, direction: "dropup" })
+      render({ ...demoData, direction: "dropup" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -45,7 +45,7 @@ describe("OE - dropdown", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, remove_wrapper: true })
+      render({ ...demoData, remove_wrapper: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -53,13 +53,13 @@ describe("OE - dropdown", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, alignment: "dropdown-menu-sm-end" })
+      render({ ...demoData, alignment: "dropdown-menu-sm-end" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

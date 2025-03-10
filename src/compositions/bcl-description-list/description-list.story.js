@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-description-list/data/data.js";
@@ -40,7 +38,6 @@ const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
   title: "Paragraphs/Description List",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     viewport: {

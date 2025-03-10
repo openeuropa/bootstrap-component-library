@@ -54,16 +54,16 @@ const buildColorScheme = (entry, dest, options) => {
   const imports = fs.readFileSync(
     path.resolve(
       ...(options.includePaths || []),
-      "@openeuropa/bcl-theme-default/src/scss/color-scheme.scss"
+      "@openeuropa/bcl-theme-default/src/scss/color-scheme.scss",
     ),
-    "utf8"
+    "utf8",
   );
   const generator = fs.readFileSync(
     path.resolve(
       ...(options.includePaths || []),
-      "@openeuropa/bcl-theme-default/src/scss/color_scheme/generator.scss"
+      "@openeuropa/bcl-theme-default/src/scss/color_scheme/generator.scss",
     ),
-    "utf8"
+    "utf8",
   );
 
   // Concatenate the contents
@@ -93,7 +93,7 @@ const buildColorScheme = (entry, dest, options) => {
           selector,
           prefixedSelector,
           filePath,
-          rule
+          rule,
         ) {
           if (prefix) {
             return prefixedSelector;
@@ -101,7 +101,7 @@ const buildColorScheme = (entry, dest, options) => {
             return selector;
           }
         },
-      })
+      }),
     )
     .process(sassResult.css, {
       map:

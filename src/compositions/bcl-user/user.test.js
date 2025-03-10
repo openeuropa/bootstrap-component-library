@@ -48,26 +48,26 @@ describe("OE - User", () => {
 
   test(`listing passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(templateList, dataListing))
+      await axe(renderTwigFileAsHtml(templateList, dataListing)),
     ).toHaveNoViolations();
   });
 
   test(`terms passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(templateTerms, dataTerms))
+      await axe(renderTwigFileAsHtml(templateTerms, dataTerms)),
     ).toHaveNoViolations();
   });
 
   test(`compact passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(templateCompact, demoDataCompact, true))
+      await axe(renderTwigFileAsHtml(templateCompact, demoDataCompact, true)),
     ).toHaveNoViolations();
   });
 
   jest.setTimeout(10000);
   test(`details passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataUser))
+      await axe(renderTwigFileAsHtml(template, dataUser)),
     ).toHaveNoViolations();
   });
 });

@@ -44,8 +44,8 @@ describe("OE - Page banner", () => {
           title: "Page banner test title",
           title_tag: "h6",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -58,8 +58,8 @@ describe("OE - Page banner", () => {
           title: "Page banner test title",
           title_tag: "h6",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -75,8 +75,8 @@ describe("OE - Page banner", () => {
             path: "/example.html",
           },
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -85,8 +85,8 @@ describe("OE - Page banner", () => {
     return expect(
       render(
         { ...dataImage, title: "Page banner test title", title_tag: "h6" },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -95,8 +95,8 @@ describe("OE - Page banner", () => {
     return expect(
       render(
         { ...dataShade, title: "Page banner test title", title_tag: "h6" },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -108,8 +108,8 @@ describe("OE - Page banner", () => {
           ...dataDefault,
           content_classes: "new-content-class",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -121,8 +121,8 @@ describe("OE - Page banner", () => {
           ...dataDefault,
           fixed_height: true,
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -134,14 +134,14 @@ describe("OE - Page banner", () => {
           ...dataDefault,
           full_width: true,
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+      await axe(renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
   });
 });
@@ -150,28 +150,28 @@ describe("OE - Hero banner", () => {
   test("default renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataDefault, hero: true }, true)
+      render({ ...dataDefault, hero: true }, true),
     ).resolves.toMatchSnapshot();
   });
 
   test("primary renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataPrimary, hero: true }, true)
+      render({ ...dataPrimary, hero: true }, true),
     ).resolves.toMatchSnapshot();
   });
 
   test("image text-block renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataImage, hero: true }, true)
+      render({ ...dataImage, hero: true }, true),
     ).resolves.toMatchSnapshot();
   });
 
   test("image shade renders correctly", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataShade, hero: true }, true)
+      render({ ...dataShade, hero: true }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -185,8 +185,8 @@ describe("OE - Hero banner", () => {
           title: "Hero banner test title",
           title_tag: "h6",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -200,8 +200,8 @@ describe("OE - Hero banner", () => {
           title: "Hero banner test title",
           title_tag: "h6",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -218,8 +218,8 @@ describe("OE - Hero banner", () => {
             path: "/example.html",
           },
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -233,8 +233,8 @@ describe("OE - Hero banner", () => {
           title: "Hero banner test title",
           title_tag: "h6",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
@@ -248,16 +248,16 @@ describe("OE - Hero banner", () => {
           title: "Hero banner test title",
           title_tag: "h6",
         },
-        true
-      )
+        true,
+      ),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(
-        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true)
-      )
+        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true),
+      ),
     ).toHaveNoViolations();
   });
 });
