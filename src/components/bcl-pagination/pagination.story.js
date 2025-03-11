@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-data-pagination/data.js";
@@ -132,7 +130,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Pagination",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { initBadges, correctPaths } from "@openeuropa/bcl-story-utils";
 import {
   demoListing,
@@ -12,7 +10,6 @@ import detailsPage from "@openeuropa/bcl-vacancy/vacancy.html.twig";
 
 export default {
   title: "Features/Vacancy",
-  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     controls: {

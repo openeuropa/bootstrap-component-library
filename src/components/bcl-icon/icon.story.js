@@ -1,12 +1,9 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import {
   getFlagNames,
   getIconNames,
   getIconControls,
 } from "@openeuropa/bcl-story-utils";
 import flagsSprite from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
-// eslint-disable-next-line import/no-unresolved
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_icon.scss";
 
 import demoData from "@openeuropa/bcl-data-icon/data.js";
@@ -45,7 +42,6 @@ const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
   title: "Components/Icon",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

@@ -1,14 +1,8 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
-
-const chromatic = process.env.STORYBOOK_ENV;
 
 const getArgs = () => ({
   direction: "default",
@@ -65,7 +59,7 @@ const paddingBody = (story) => {
 
 export default {
   title: "Components/Dropdown",
-  decorators: [withCode, withDesign, paddingBody],
+  decorators: [paddingBody],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -87,10 +81,3 @@ export const Default = (args) => dropdown(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-if (isChromatic() || chromatic) {
-  Default.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.click(button);
-  };
-}

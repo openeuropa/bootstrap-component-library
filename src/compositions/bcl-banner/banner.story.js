@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
@@ -128,7 +126,6 @@ const renderStory = (data, args) => {
 
 export default {
   title: "Paragraphs/Banner",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

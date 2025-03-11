@@ -1,12 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
-
 import demoData from "@openeuropa/bcl-data-modal/data.js";
 import modal from "@openeuropa/bcl-modal/modal.html.twig";
-
-const chromatic = process.env.STORYBOOK_ENV;
 
 const getArgs = () => ({
   size: "default",
@@ -85,7 +78,7 @@ const modalButton = (story) => {
 // Stories
 export default {
   title: "Components/Modal",
-  decorators: [withCode, withDesign, modalButton],
+  decorators: [modalButton],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -106,10 +99,3 @@ export default {
 export const Default = (args) => modal(applyArgs(demoData, args));
 Default.args = getArgs();
 Default.argTypes = getArgTypes();
-if (isChromatic() || chromatic) {
-  Default.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const modalBut = canvas.getByRole("button");
-    await userEvent.click(modalBut);
-  };
-}

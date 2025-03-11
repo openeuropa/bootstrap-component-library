@@ -1,6 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-
 import demoList from "@openeuropa/bcl-heading/data/data--list";
 import heading from "@openeuropa/bcl-heading/heading.html.twig";
 
@@ -45,7 +42,6 @@ const getArgTypes = () => ({
 
 export default {
   title: "Components/Heading(s)",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -70,9 +66,6 @@ export const Default = (args) => heading(applyArgs(args));
 
 Default.args = getArgs();
 Default.argTypes = getArgTypes();
-Default.parameters = {
-  chromatic: { disableSnapshot: true },
-};
 
 export const List = () => demoList;
 

@@ -1,6 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-
 import dataOngoing from "@openeuropa/bcl-project-status/data/data--ongoing.js";
 import dataContribs from "@openeuropa/bcl-project-status/data/data--contributions";
 import bclTitle from "@openeuropa/bcl-heading/heading.html.twig";
@@ -106,7 +103,6 @@ const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
   title: "Compositions/Project status",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -121,13 +117,8 @@ export default {
 
 export const Default = (args) =>
   `${bclTitle(title)} ${projectStatus(
-    applyArgs(dataOngoing, args)
+    applyArgs(dataOngoing, args),
   )} ${projectStatusContribs(applyArgs(dataContribs, args))}`;
 
 Default.args = getArgs(dataOngoing);
 Default.argTypes = getArgTypes(dataOngoing);
-Default.parameters = {
-  chromatic: {
-    pauseAnimationAtEnd: true,
-  },
-};

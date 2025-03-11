@@ -5,37 +5,37 @@ const getArgs = () => ({
     {
       name: "primary",
       value: getComputedStyle(document.documentElement).getPropertyValue(
-        "--bs-primary"
+        "--bs-primary",
       ),
     },
     {
       name: "secondary",
       value: getComputedStyle(document.documentElement).getPropertyValue(
-        "--bs-secondary"
+        "--bs-secondary",
       ),
     },
     {
       name: "success",
       value: getComputedStyle(document.documentElement).getPropertyValue(
-        "--bs-success"
+        "--bs-success",
       ),
     },
     {
       name: "info",
       value: getComputedStyle(document.documentElement).getPropertyValue(
-        "--bs-info"
+        "--bs-info",
       ),
     },
     {
       name: "warning",
       value: getComputedStyle(document.documentElement).getPropertyValue(
-        "--bs-warning"
+        "--bs-warning",
       ),
     },
     {
       name: "danger",
       value: getComputedStyle(document.documentElement).getPropertyValue(
-        "--bs-danger"
+        "--bs-danger",
       ),
     },
   ],

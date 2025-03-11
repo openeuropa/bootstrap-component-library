@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import {
   initBadges,
   getVariants,
@@ -114,7 +112,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Badge",
-  decorators: [withCode, withDesign, initBadges],
+  decorators: [initBadges],
   parameters: {
     badges: ["deprecated"],
     design: [

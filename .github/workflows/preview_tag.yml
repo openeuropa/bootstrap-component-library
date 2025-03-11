@@ -15,7 +15,7 @@ jobs:
         run: echo "TAG=${GITHUB_REF/refs\/tags\//}" | tr . '-' >> $GITHUB_ENV
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Package application
         run: yarn dist
       - name: Deploy to Netlify

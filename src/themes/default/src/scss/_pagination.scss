@@ -1,9 +1,25 @@
+/* stylelint-disable no-descending-specificity */
 .pagination {
-  .page-link {
-    // fix icons vertical alignment
-    display: flex;
-    height: 100%;
-    align-items: center;
+  .page-item {
+    .page-link {
+      // Align icons vertically and focus styling
+      display: flex;
+      height: 100%;
+      align-items: center;
+      &:focus-visible {
+        box-shadow: none;
+        outline: 2px solid $primary;
+        outline-offset: -3px;
+      }
+    }
+
+    &:not(.active) .page-link:focus-visible {
+      background: transparent;
+    }
+
+    &.active .page-link:focus-visible {
+      outline-color: $white;
+    }
   }
 }
 

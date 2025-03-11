@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import socialMediaData from "@openeuropa/bcl-links-block/data/data--social-media.js";
@@ -52,7 +50,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Social Media Follow",
-  decorators: [withCode, withDesign],
   parameters: {
     viewport: {
       defaultViewport: "tablet",
