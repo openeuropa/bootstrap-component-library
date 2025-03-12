@@ -19,6 +19,7 @@ import Tab from "@openeuropa/bcl-bootstrap/js/src/tab";
 import Toast from "@openeuropa/bcl-bootstrap/js/src/toast";
 import Tooltip from "@openeuropa/bcl-bootstrap/js/src/tooltip";
 import Gallery from "@openeuropa/bcl-theme-default/src/js/gallery/gallery";
+import AccordionToggle from "@openeuropa/bcl-theme-default/src/js/accordion-toggle/accordion-toggle";
 import AccessibleToggle from "@openeuropa/bcl-theme-default/src/js/accessible-toggle/accessible-toggle";
 
 export {
@@ -37,4 +38,5 @@ export {
   Tooltip,
   Gallery,
   AccessibleToggle,
+  AccordionToggle,
 };

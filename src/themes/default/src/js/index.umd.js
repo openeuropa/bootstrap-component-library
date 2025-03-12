@@ -18,6 +18,7 @@ import ScrollSpy from "@openeuropa/bcl-bootstrap/js/src/scrollspy-legacy";
 import Tab from "@openeuropa/bcl-bootstrap/js/src/tab";
 import Toast from "@openeuropa/bcl-bootstrap/js/src/toast";
 import Tooltip from "@openeuropa/bcl-bootstrap/js/src/tooltip";
+import AccordionToggle from "@openeuropa/bcl-theme-default/src/js/accordion-toggle/accordion-toggle";
 import Gallery from "@openeuropa/bcl-theme-default/src/js/gallery/gallery";
 import AccessibleToggle from "@openeuropa/bcl-theme-default/src/js/accessible-toggle/accessible-toggle";
 
@@ -37,4 +38,5 @@ export default {
   Tooltip,
   Gallery,
   AccessibleToggle,
+  AccordionToggle,
 };
