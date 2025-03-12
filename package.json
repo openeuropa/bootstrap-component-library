@@ -13,7 +13,7 @@
   },
   "scripts": {
     "align-templates": "lerna --scope @openeuropa/bcl-twig-templates run prepublish",
-    "build:themes": "lerna --scope @openeuropa/bcl-theme-* run build",
+    "build:themes": "lerna --scope '@openeuropa/bcl-theme-*' run build",
     "build:theme:default": "lerna --scope @openeuropa/bcl-theme-default run build",
     "build:theme:dev": "lerna --scope @openeuropa/bcl-theme-default run build",
     "build:theme:joinup": "lerna --scope @openeuropa/bcl-theme-joinup run build",
@@ -29,7 +29,7 @@
     "copy:index": "copyfiles -f static/*.html static/*.ico build",
     "dist": "npm-run-all clean 'dist:*'",
     "dist:themes": "npm-run-all -s 'build:theme:*' 'copy:*'",
-    "dist:storybook": "lerna --scope @openeuropa/bcl-storybook-* run dist",
+    "dist:storybook": "lerna --scope '@openeuropa/bcl-storybook-*' run dist",
     "dist-project": "npm-run-all -s clean build:theme:{1} copy:assets  dist-storybook:{1} --",
     "dist-storybook:default": "lerna --scope @openeuropa/bcl-storybook-default run dist",
     "dist-storybook:joinup": "lerna --scope @openeuropa/bcl-storybook-joinup run dist",
