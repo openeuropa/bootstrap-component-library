@@ -12,6 +12,17 @@
     },
     "cacheDir": ".changelog"
   },
+  "useNx": false,
+  "packages": [
+    "bootstrap",
+    "builder",
+    "src/data/*",
+    "src/components/*",
+    "src/compositions/*",
+    "tools/**",
+    "src/themes/*",
+    "src/themes/**/storybook"
+  ],
   "command": {
     "version": {
       "allowBranch": "chore/release-*"

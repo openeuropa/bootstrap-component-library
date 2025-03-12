@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 import Collapse from "@openeuropa/bcl-bootstrap/js/src/collapse";
 import EventHandler from "@openeuropa/bcl-bootstrap/js/src/dom/event-handler";
 import SelectorEngine from "@openeuropa/bcl-bootstrap/js/src/dom/selector-engine";
