@@ -13,10 +13,6 @@ const addons = [
 ];
 
 const webpackFinal = (config) => {
-  config.module.rules.push({
-    test: /\.story\.js?$/,
-    enforce: "pre",
-  });
   config.module.rules.push(
     {
       test: /\.twig$/,
@@ -37,9 +33,9 @@ const webpackFinal = (config) => {
 };
 
 const config = {
-  framework: getAbsolutePath("@storybook/html-webpack5"),
-  core: {
-    builder: getAbsolutePath("@storybook/builder-webpack5"),
+  framework: {
+    name: getAbsolutePath("@storybook/html-webpack5"),
+    options: {},
   },
   staticDirs: ['../assets'],
   stories,
