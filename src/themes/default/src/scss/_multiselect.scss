@@ -108,6 +108,27 @@ select.multi-select {
   }
 }
 
+.ss-main.ss-1 {
+  &.form-select.is-invalid,
+  &.form-select.is-valid {
+    background: none;
+    padding: 0;
+  }
+  &.form-select {
+    border: none;
+    background: none;
+    padding: 0.075rem 0 0.075rem 0.3rem;
+  }
+  .ss-single-selected {
+    min-height: 37px;
+    .placeholder {
+      background: none;
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+}
+
 .ss-main.multi-select.is-invalid,
 .ss-main.multi-select.is-valid,
 .was-validated .multi-select:invalid + .ss-main.multi-select,

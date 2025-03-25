@@ -1,17 +1,15 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
-  id: "multiselect-1",
-  multiple: true,
+  id: "singleselect-1",
   clean_class: true,
   required: true,
   size: "md",
-  label: "A multiselect form element",
+  label: "A single select form element",
   helper_text: "Helper text for the select element",
   helper_text_id: "helperText",
   invalid_feedback: "Invalid feedback example",
   valid_feedback: "Valid feedback example",
-  selectByGroup: true,
   placeholder: "Please select a value",
   options: [
     {
@@ -27,7 +25,6 @@ module.exports = {
     { value: 6, label: "another select option" },
     { value: 7, label: "another option" },
     { value: 8, label: "last option" },
-    { value: 9, label: "the selected option", selected: true },
   ],
-  attributes: new drupalAttribute().addClass("multi-select form-select"),
+  attributes: new drupalAttribute().addClass("single-select form-select"),
 };
