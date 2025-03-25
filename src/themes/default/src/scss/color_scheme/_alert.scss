@@ -1,18 +1,22 @@
 // Color scheme - Alert
 
-@mixin generate-alerts($color, $value) {
-  $alert-background: shift-color($value, $alert-bg-scale);
-  $alert-border: shift-color($value, $alert-border-scale);
-  $alert-color: shift-color($value, $alert-color-scale);
+// No longer using $alert-bg-scale, $alert-border-scale, $alert-color-scale variables because they are deprecated in bootstrap 5.3.x
 
-  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
-    $alert-color: mix(
-      $value,
-      color-contrast($alert-background),
-      abs($alert-color-scale)
-    );
+@use "sass:math";
+
+@mixin generate-alerts($color, $value) {
+  $bg: shift-color($value, -80%);
+  $border: shift-color($value, -70%);
+  $text: shift-color($value, 40%);
+
+  @if (contrast-ratio($bg, $text) < $min-contrast-ratio) {
+    $text: mix($value, color-contrast($bg), math.abs(40%));
   }
+
   .alert-#{$color} {
-    @include alert-variant($alert-background, $alert-border, $alert-color);
+    --#{$prefix}alert-bg: #{$bg};
+    --#{$prefix}alert-border-color: #{$border};
+    --#{$prefix}alert-color: #{$text};
+    --#{$prefix}alert-link-color: #{$text}; // or some other logic
   }
 }

@@ -17,4 +17,11 @@ module.exports = {
     },
   ],
   open_item_id: 1,
+  expand_button: {
+    label: "Expand section",
+  },
+  collapse_button: {
+    label: "Collapse section",
+    variant: "secondary",
+  },
 };
