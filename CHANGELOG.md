@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## v1.9.2 (2025-03-27)
+
+#### :nail_care: Enhancement
+* [#647](https://github.com/openeuropa/bootstrap-component-library/pull/647) feat(bootstrap): Upgrade to 5.3.X. - OEL-3661 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## v1.9.1 (2025-03-13)
 
 #### :nail_care: Enhancement
