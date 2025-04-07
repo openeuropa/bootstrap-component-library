@@ -81,7 +81,7 @@ module.exports = {
           active: true,
           attributes: new drupalAttribute().setAttribute(
             "aria-current",
-            "page"
+            "page",
           ),
         },
         {

@@ -1,12 +1,10 @@
 $utilities: map-merge(
   $utilities,
   (
-    "background-color":
-      map-merge(
+    "background-color": map-merge(
         map-get($utilities, "background-color"),
         (
-          values:
-            map-merge(
+          values: map-merge(
               map-get(map-get($utilities, "background-color"), "values"),
               (
                 date: $date,
@@ -14,12 +12,10 @@ $utilities: map-merge(
             ),
         )
       ),
-    "width":
-      map-merge(
+    "width": map-merge(
         map-get($utilities, "width"),
         (
-          values:
-            map-merge(
+          values: map-merge(
               map-get(map-get($utilities, "width"), "values"),
               (
                 min-content: min-content,
@@ -27,12 +23,10 @@ $utilities: map-merge(
             ),
         )
       ),
-    "flex":
-      map-merge(
+    "flex": map-merge(
         map-get($utilities, "flex"),
         (
-          values:
-            map-merge(
+          values: map-merge(
               map-get(map-get($utilities, "flex"), "values"),
               (
                 1: 1,
@@ -42,12 +36,10 @@ $utilities: map-merge(
         )
       ),
     // Extend rounded-top utility.
-    "max-width":
-      map-merge(
+    "max-width": map-merge(
         map-get($utilities, "max-width"),
         (
-          values:
-            map-merge(
+          values: map-merge(
               map-get(map-get($utilities, "max-width"), "values"),
               (
                 date: 10rem,
@@ -58,42 +50,36 @@ $utilities: map-merge(
         )
       ),
     // Create responsive classes for padding
-    "padding":
-      map-merge(
+    "padding": map-merge(
         map-get($utilities, "padding"),
         (
           responsive: true,
         )
       ),
     // Create responsive classes for borders
-    "border":
-      map-merge(
+    "border": map-merge(
         map-get($utilities, "border"),
         (
           responsive: true,
         )
       ),
-    "border-top":
-      map-merge(
+    "border-top": map-merge(
         map-get($utilities, "border-top"),
         (
           responsive: true,
         )
       ),
-    "border-bottom":
-      map-merge(
+    "border-bottom": map-merge(
         map-get($utilities, "border-bottom"),
         (
           responsive: true,
         )
       ),
     // Create medium font weight class
-    "font-weight":
-      map-merge(
+    "font-weight": map-merge(
         map-get($utilities, "font-weight"),
         (
-          values:
-            map-merge(
+          values: map-merge(
               map-get(map-get($utilities, "font-weight"), "values"),
               (
                 medium: 500,

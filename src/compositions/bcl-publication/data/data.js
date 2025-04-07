@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import {
   filterButton,
@@ -15,17 +14,6 @@ import dataExtraDetails from "@openeuropa/bcl-publication/data/data--extra-detai
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-
-if (isChromatic()) {
-  banner.image.classes = "chromatic-ignore";
-  dataListing.listing.items.forEach((item) => {
-    if (item.image) {
-      item.image.classes = item.image.classes
-        ? `${item.image.classes} chromatic-ignore`
-        : "chromatic-ignore";
-    }
-  });
-}
 
 const baseData = {
   content_type: "listing",

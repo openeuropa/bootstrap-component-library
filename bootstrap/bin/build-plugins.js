@@ -37,6 +37,8 @@ for (const file of jsFiles) {
 const build = async plugin => {
   const globals = {}
 
+  console.log(plugin);
+
   const bundle = await rollup.rollup({
     input: plugin.src,
     plugins: [
@@ -62,7 +64,8 @@ const build = async plugin => {
       })
 
       if (!usedPlugin) {
-        throw new Error(`Source ${source} is not mapped!`)
+        // It’s just a local JS file (such as ../dom/event-handler.js). Bundle it in.
+        return false
       }
 
       // We can change `Index` with `UtilIndex` etc if we use
@@ -100,3 +103,4 @@ const build = async plugin => {
     process.exit(1)
   }
 })()
+    

@@ -33,7 +33,7 @@ describe("OE - File", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -59,13 +59,13 @@ describe("OE - File", () => {
             },
           ],
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });
@@ -83,7 +83,7 @@ describe("OE - File Card", () => {
         ...demoCardData,
         title: "File card test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -100,7 +100,7 @@ describe("OE - File Card", () => {
             size: "fluid",
           },
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -116,7 +116,7 @@ describe("OE - File Card", () => {
             size: "m",
           },
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -132,13 +132,13 @@ describe("OE - File Card", () => {
             path: "new_icons.svg",
           },
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCardData, true))
+      await axe(renderTwigFileAsHtml(template, demoCardData, true)),
     ).toHaveNoViolations();
   });
 
@@ -155,7 +155,7 @@ describe("OE - File Card", () => {
             .setAttribute("download", "false")
             .setAttribute("target", "_self"),
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -169,7 +169,7 @@ describe("OE - File Card", () => {
           path: "/example.html",
           attributes: new drupalAttribute().setAttribute("example", "test"),
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -183,7 +183,7 @@ describe("OE - File Card", () => {
           path: "/example.html",
           attributes: new drupalAttribute().setAttribute("example", "test"),
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -199,7 +199,7 @@ describe("OE - File Card", () => {
             size: "m",
           },
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -215,7 +215,7 @@ describe("OE - File Card", () => {
             path: "new_icons.svg",
           },
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 });

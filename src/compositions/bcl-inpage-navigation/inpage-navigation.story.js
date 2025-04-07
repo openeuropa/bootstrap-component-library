@@ -4,8 +4,6 @@ import {
   getTitleControls,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-inpage-navigation/data/data.js";
@@ -64,7 +62,7 @@ const withContent = (story) => {
 
 export default {
   title: "Paragraphs/Inpage navigation",
-  decorators: [withCode, withDesign, initScrollspy, withContent],
+  decorators: [initScrollspy, withContent],
   parameters: {
     badges: ["deprecated"],
     design: [

@@ -24,7 +24,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, image: { ...image, position: "bottom" } }, true)
+      render({ ...demoData, image: { ...image, position: "bottom" } }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -32,7 +32,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "danger" }, true)
+      render({ ...demoData, variant: "danger" }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, border_variant: "danger" }, true)
+      render({ ...demoData, border_variant: "danger" }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,7 +54,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, badges: [{ label: "Card Category" }] })
+      render({ ...demoData, badges: [{ label: "Card Category" }] }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -62,7 +62,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, text_color: "white" }, true)
+      render({ ...demoData, text_color: "white" }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -78,7 +78,7 @@ describe("OE - Card", () => {
   test(`passes the accessibility tests`, async () => {
     demoData.subtitle.tag = "h2";
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

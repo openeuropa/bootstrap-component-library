@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import dataAlert from "@openeuropa/bcl-data-alert/data.js";
@@ -167,7 +165,6 @@ const renderFileStory = (data, args) => {
 
 export default {
   title: "Resources/Color scheme",
-  decorators: [withCode, withDesign],
 };
 
 export const Alert = (args) => renderAlertStory(dataAlert, args);

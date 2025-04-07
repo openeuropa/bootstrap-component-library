@@ -14,8 +14,6 @@ to ensure the possibility of testing visual regressions, branches should contain
 
 `OEL-xxx-fix-something#joinup#`
 
-With this branch name, when deploying storybook to chromatic, the relevant instance will be built so that visual tests are
-run against the right styleguide.
 Additionally, when pushing for the first time the new branch, a build for the right theme will start on the development branch
 and will then used as the baseline for the upcoming builds.
 
@@ -44,21 +42,16 @@ BCL uses netlify to host previews of the BCL website containing all the stylegui
 Previews are generated for each pull request, but also special previews are created for the development branch, the master branch
 and when a tag is created (new release)
 
-BCL is also using chromatic to run UI tests on the components, the deployment on chromatic is about a single storybook instance so
-depending on the branch name the default or any of the subthemes will be identified, build and deployed to chromatic.
-
 
 # Reviews
 
 - Code reviews on github
-- Ui reviews on chromatic
 
 The first is always required, while a UI review might not be needed in certain cases.
 When code changes are producing also changes in the rendering of the demos in the different projects a UI review is expected before 
 merging the pull request.
 It's possible to assing directly a reviewer in chromiuim and this could speed up the process, when the review is completed the status
 of the check in the github pull request will change accordingly.
-For the documentation about chromatic, consult it [here](docs/chromatic.md)
 
 
 

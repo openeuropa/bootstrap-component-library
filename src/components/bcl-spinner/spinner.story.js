@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-data-spinner/data.js";
@@ -67,7 +65,6 @@ const applyArgs = (data, args) => Object.assign(data, args);
 
 export default {
   title: "Components/Spinner",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

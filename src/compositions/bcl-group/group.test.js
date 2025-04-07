@@ -29,7 +29,7 @@ describe("OE - Group listing", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(templateListing, dataListing))
+      await axe(renderTwigFileAsHtml(templateListing, dataListing)),
     ).toHaveNoViolations();
   });
 });
@@ -51,7 +51,7 @@ describe("OE - Group listing Member", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataListingMember))
+      await axe(renderTwigFileAsHtml(template, dataListingMember)),
     ).toHaveNoViolations();
   });
 });
@@ -65,7 +65,7 @@ describe("OE - Group landing", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(templateLanding, dataLanding))
+      await axe(renderTwigFileAsHtml(templateLanding, dataLanding)),
     ).toHaveNoViolations();
   });
 });

@@ -78,7 +78,7 @@ module.exports = (entry, dest, options) => {
     spriter.add(
       filePath,
       file,
-      fs.readFileSync(filePath, { encoding: "utf-8" })
+      fs.readFileSync(filePath, { encoding: "utf-8" }),
     );
   });
 
@@ -88,7 +88,7 @@ module.exports = (entry, dest, options) => {
         mkdirp.sync(path.dirname(result[mode][resource].path));
         fs.writeFileSync(
           result[mode][resource].path,
-          result[mode][resource].contents
+          result[mode][resource].contents,
         );
       });
     });

@@ -2,10 +2,13 @@
   "name": "@openeuropa/bcl-bootstrap",
   "author": "European Commission",
   "license": "EUPL-1.2",
-  "version": "1.8.2",
+  "version": "1.10.0",
   "description": "OE - BCL bootstrap 5 sources",
   "bin": {
     "plugins-builder": "./bin/build-plugins.js"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
   },
   "scripts": {
     "build-plugins": "bin/build-plugins.js",
@@ -15,15 +18,18 @@
     "copy-icons": "copyfiles -f ./node_modules/bootstrap-icons/bootstrap-icons.svg ../bootstrap",
     "copy-icons-svg": "copyfiles -f ./node_modules/bootstrap-icons/icons/* ../bootstrap/icons/",
     "replace-icons": "copyfiles -f ./replace-icons/* ../bootstrap/icons/",
-    "prepublish": "npm-run-all clean copy-* replace-icons build-plugins"
+    "prepublish": "npm-run-all clean 'copy-*' replace-icons build-plugins"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "6.0.4",
-    "bootstrap": "5.2.3",
-    "bootstrap-icons": "1.10.4",
+    "bootstrap": "5.3.3",
+    "bootstrap-icons": "1.11.3",
     "copyfiles": "2.4.1",
+    "eslint": "^9.21.0",
     "npm-run-all": "4.1.5",
-    "rimraf": "5.0.7"
+    "rimraf": "6.0.1"
   },
   "publishConfig": {
     "access": "public"

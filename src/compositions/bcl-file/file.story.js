@@ -1,14 +1,8 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import { userEvent, within } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import file from "@openeuropa/bcl-file/file.html.twig";
 import demoData from "@openeuropa/bcl-file/data/data.js";
 import demoCardData from "@openeuropa/bcl-file/data/data--card";
-
-const chromatic = process.env.STORYBOOK_ENV;
 
 const getArgs = () => ({
   title: "",
@@ -27,7 +21,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/File",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     viewport: {
@@ -52,11 +45,3 @@ export const Card = (args) => file(applyArgs(demoCardData, args));
 
 Card.args = getArgs();
 Card.argTypes = getArgTypes();
-
-if (isChromatic() || chromatic) {
-  Card.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const languages = canvas.getByText("Other languages (3)");
-    await userEvent.click(languages);
-  };
-}

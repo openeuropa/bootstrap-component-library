@@ -21,7 +21,7 @@ const handlers = [
       {
         on: "change",
         name: "scss change",
-        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:styles`,
+        command: `lerna --scope @openeuropa/bcl-theme-${theme} run update:styles`,
         message: "New styles ready",
         reload: "*.css",
       },
@@ -33,7 +33,7 @@ const handlers = [
       {
         on: "change",
         name: "scss change",
-        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:color-scheme`,
+        command: `lerna --scope @openeuropa/bcl-theme-${theme} run update:color-scheme`,
         message: "New styles ready",
         reload: "*.css",
       },
@@ -45,7 +45,7 @@ const handlers = [
       {
         on: "change",
         name: "javascript change",
-        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:scripts`,
+        command: `lerna --scope @openeuropa/bcl-theme-${theme} run update:scripts`,
         message: "New scripts ready",
         reload: true,
       },
@@ -54,13 +54,13 @@ const handlers = [
   {
     pattern: `${path.resolve(
       __dirname,
-      ".."
+      "..",
     )}/src/(components|compositions)/*/*.twig`,
     events: [
       {
         on: "change",
         name: "twig template change",
-        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:templates`,
+        command: `lerna --scope @openeuropa/bcl-theme-${theme} run update:templates`,
         message: "New main templates ready",
         reload: true,
       },
@@ -69,13 +69,13 @@ const handlers = [
   {
     pattern: `${path.resolve(
       __dirname,
-      ".."
+      "..",
     )}/src/themes/*/src/templates/*.twig`,
     events: [
       {
         on: "change",
         name: "twig template override change",
-        command: `lerna --scope \"@openeuropa/bcl-theme-${theme}\" run update:templates`,
+        command: `lerna --scope @openeuropa/bcl-theme-${theme} run update:templates`,
         message: "New main templates ready",
         reload: true,
       },

@@ -10,9 +10,7 @@ import Button from "@openeuropa/bcl-bootstrap/js/src/button";
 import Carousel from "@openeuropa/bcl-bootstrap/js/src/carousel";
 import Collapse from "@openeuropa/bcl-bootstrap/js/src/collapse";
 import Dropdown from "@openeuropa/bcl-bootstrap/js/src/dropdown";
-import Gallery from "@openeuropa/bcl-theme-default/src/js/gallery/gallery";
 import Modal from "@openeuropa/bcl-bootstrap/js/src/modal";
-import AccessibleToggle from "@openeuropa/bcl-theme-default/src/js/accessible-toggle/accessible-toggle";
 import MegaMenu from "@openeuropa/bcl-theme-default/src/js/mega-menu/mega-menu";
 import Offcanvas from "@openeuropa/bcl-bootstrap/js/src/offcanvas";
 import Popover from "@openeuropa/bcl-bootstrap/js/src/popover";
@@ -21,6 +19,9 @@ import ScrollSpy from "@openeuropa/bcl-bootstrap/js/src/scrollspy-legacy";
 import Tab from "@openeuropa/bcl-bootstrap/js/src/tab";
 import Toast from "@openeuropa/bcl-bootstrap/js/src/toast";
 import Tooltip from "@openeuropa/bcl-bootstrap/js/src/tooltip";
+import AccordionToggle from "@openeuropa/bcl-theme-default/src/js/accordion-toggle/accordion-toggle";
+import Gallery from "@openeuropa/bcl-theme-default/src/js/gallery/gallery";
+import AccessibleToggle from "@openeuropa/bcl-theme-default/src/js/accessible-toggle/accessible-toggle";
 
 export default {
   Alert,
@@ -28,10 +29,8 @@ export default {
   Carousel,
   Collapse,
   Dropdown,
-  Gallery,
   Modal,
   MegaMenu,
-  AccessibleToggle,
   Offcanvas,
   Popover,
   ScrollSpyV2,
@@ -39,4 +38,7 @@ export default {
   Tab,
   Toast,
   Tooltip,
+  Gallery,
+  AccessibleToggle,
+  AccordionToggle,
 };
