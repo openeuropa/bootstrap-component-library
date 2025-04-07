@@ -35,7 +35,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _id = id|default('dropdown-' ~ random(1000)) %}
+{% set _id = id|default('dropdown-' ~ random(10000) ~ "-" ~ "now"|date('u')) %}
 {% set _trigger = trigger|default({}) %}
 {% set _link = link ?? false %}
 {% set _direction = direction|default('') %}
