@@ -16,7 +16,10 @@
     width: 100%;
     padding: 0 map-get($spacers, 3);
     border-radius: 0;
-    border: 1px solid var(--bs-dropdown-border-color);
+    border-bottom: 1px solid var(--bs-dropdown-border-color);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     top: 100%;
     margin: 8px 0 0;
     .back-button {
@@ -37,43 +40,81 @@
       position: relative;
       height: 100%;
       margin: 0 -1rem;
-      padding: 0 map-get($spacers, 3);
+      padding: map-get($spacers, 3);
       &:after {
-        bottom: 0;
-        box-shadow: 4px 0 10px 0 rgba(224, 229, 245, 0.5);
         content: "";
         pointer-events: none;
         position: absolute;
-        right: 0;
-        top: 0;
-        width: 10px;
+      }
+    }
+    .content-link {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
     }
     .navigation-items {
       width: 100%;
       height: 100%;
-      .dropdown-toggle,
-      > a {
-        padding: map-get($spacers, 2) map-get($spacers, "2-5");
-      }
       > a,
-      > .dropdown {
-        border-left: 4px solid transparent;
-        display: block;
-        &.active {
-          border-left-color: $primary;
+      > button,
+      > .dropdown > a,
+      li > button,
+      li > a {
+        padding: map-get($spacers, 2) map-get($spacers, "3-5");
+        white-space: normal;
+        &:has(svg) {
+          padding-right: map-get($spacers, 5);
+        }
+        &.active,
+        &.show {
+          background: $primary-bg-subtle;
         }
         &:hover {
-          background: $blue-50;
-          border-left-color: $primary;
+          text-decoration: underline;
         }
       }
-      a {
+      li:has(.see-all-button) {
+        margin: 0 map-get($spacers, "3-5");
+        position: sticky;
+        top: 100%;
+      }
+      .dropdown-toggle,
+      > a {
+        color: $dark;
+        display: block;
         text-decoration: none;
+        position: relative;
+        &.show {
+          color: $dark;
+          text-decoration: none;
+          &:after {
+            display: none;
+          }
+        }
+        &:after {
+          display: none;
+        }
+        > svg {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
       .dropdown {
         position: static;
-        padding: 0;
+        &:has(.show) {
+          background: $blue-50;
+          & + .collapse {
+            display: block;
+          }
+        }
+        &:has(+ .collapse) {
+          .dropdown-menu {
+            height: 50%;
+          }
+        }
         .dropdown-menu {
           transform: none !important;
           right: auto !important;
@@ -85,50 +126,29 @@
           position: absolute;
           padding: 0;
           border-radius: 0;
-          background: $blue-50;
+          background: $neutral-bg-subtle;
           margin: 0;
           .dropdown-item {
-            white-space: normal;
-            padding: map-get($spacers, 2) map-get($spacers, "2-5");
             color: $link-color;
             &:hover {
               background: transparent;
               text-decoration: underline;
             }
-          }
-        }
-        &:has(.show) {
-          background: $blue-50;
-          border-left-color: $primary;
-          & + .collapse {
-            display: block;
-          }
-        }
-        .dropdown-toggle {
-          white-space: normal;
-          display: block;
-          position: relative;
-          &:after {
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-            right: 6px;
-          }
-          &.show {
-            position: absolute;
-            bottom: 100%;
-            z-index: 100;
-            color: $dark;
-            margin-left: -1rem;
-            font-size: 24px;
-            &:after {
-              display: none;
+            &.see-all-button {
+              padding-left: 0;
+              padding-right: 0;
+              color: $dark;
+              position: relative;
+              &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                content: "";
+                background: $neutral-border-color;
+              }
             }
-          }
-        }
-        &:has(+ .collapse) {
-          .dropdown-menu {
-            height: 50%;
           }
         }
       }
@@ -150,8 +170,7 @@
     }
   }
 }
-
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
   .nav-item:has(> .bcl-mega-menu) {
     position: static;
   }
@@ -161,14 +180,15 @@
     }
     .mega-menu-container.dropdown-menu {
       top: 100%;
-      padding: map-get($spacers, 3) map-get($spacers, 3) 0 map-get($spacers, 3);
+      padding: map-get($spacers, 3);
       .content-block {
         margin-right: 0;
-        padding-right: 0;
+        box-shadow: 0px 10px 13px -6px rgba(224, 229, 245, 0.5);
       }
       .navigation-items {
         position: relative;
         width: 33%;
+        margin-top: map-get($spacers, 3);
         .dropdown {
           .dropdown-menu {
             left: 100% !important;
@@ -176,21 +196,36 @@
             height: 100% !important;
             margin: 0;
           }
-          .dropdown-toggle.show {
-            margin-left: 0;
-            color: $link-color;
-            position: relative;
-            bottom: 0;
-            font-size: 1rem;
-            &:after {
-              display: block;
-            }
-          }
         }
         .collapse {
           top: 0;
           left: 200%;
           height: 100%;
+        }
+      }
+    }
+  }
+  .bcl-mega-menu {
+    .mega-menu-container.dropdown-menu {
+      .content-block {
+        margin-bottom: map-get($spacers, 4);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bcl-mega-menu {
+    .mega-menu-container.dropdown-menu {
+      .content-block {
+        box-shadow: none;
+        &:after {
+          bottom: 0;
+          right: 0;
+          top: 0;
+          width: 10px;
+          height: 100%;
+          box-shadow: 4px 0 10px 0 rgba(224, 229, 245, 0.5);
         }
       }
     }

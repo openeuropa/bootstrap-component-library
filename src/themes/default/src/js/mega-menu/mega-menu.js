@@ -15,10 +15,9 @@ class MegaMenu {
 
   addEventListeners() {
     EventHandler.on(this.parentToggle, "shown.bs.dropdown", () => {
-      if (!this.childToggles.length) return;
       if (!window.matchMedia("(min-width: 992px)").matches) return;
+      if (this.childToggles.some(toggle => toggle.parentElement.classList.contains("show"))) return;
       const firstToggle = this.childToggles[0];
-      if (firstToggle.parentElement.classList.contains("show")) return;
       Dropdown.getOrCreateInstance(firstToggle).show();
     });
     this.childToggles.forEach((toggle) => {

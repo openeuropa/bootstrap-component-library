@@ -13,74 +13,102 @@ module.exports = {
       {
         mega_menu: true,
         link: true,
+        icon_path: "/icons.svg",
         id: "dropdown-megamenu",
         trigger: {
-          label: "A link with mega menu",
+          label: "A link with dropdown",
           path: "/example.html",
           attributes: new drupalAttribute().addClass("nav-link"),
+        },
+        id: "dropdown-megamenu",
+        content_link: {
+          label: "Discover more",
+          path: "/example.html",
+          icon: {
+            name: "arrow-right",
+          },
+        },
+        see_all: {
+          label: "See all",
+          path: "/example.html",
         },
         content_block:
           "<h4>Mega Menu Content Title</h4><p>Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
         items: [
           {
-            id: "dropdown-inner-megamenu",
+            id: "dropdown-megamenu-inner",
             trigger: {
-              label: "A link with dropdown",
+              label: "Base Category Item",
               path: "/example.html",
             },
             items: [
               {
-                label: "I'm a link",
+                label: "Base Sub Category Item",
                 path: "/example.html",
               },
               {
-                label: "I'm a button",
-                button: true,
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
               },
             ],
           },
           {
-            label: "A simple link!",
+            label: "Base Category Item",
             path: "/example.html",
           },
           {
-            id: "dropdown-inner-megamenu-2",
+            id: "dropdown-megamenu-inner-2",
             trigger: {
-              label: "A link with dropdown and column",
+              label: "Base Category Item",
               path: "/example.html",
             },
             collapse:
               "<a href='#' class='mb-3 d-block'> Example link</a><img src='https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg' alt='image'>",
             items: [
               {
-                label: "I'm a link",
+                label: "Base Sub Category Item",
                 path: "/example.html",
               },
               {
-                label: "I'm a button",
-                button: true,
+                label: "Base Sub Category Item",
+                path: "/example.html",
               },
               {
-                label: "I'm a disabled button",
-                button: true,
-                disabled: true,
+                label: "Base Sub Category Item",
+                path: "/example.html",
               },
               {
-                label: "I'm a active button",
-                button: true,
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
               },
             ],
           },
           {
-            label: "A simple link!",
+            label: "Base Category Item",
             path: "/example.html",
           },
           {
-            label: "A simple link!",
+            label: "Base Category Item",
             path: "/example.html",
           },
           {
-            label: "A simple link!",
+            label: "Base Category Item",
             path: "/example.html",
           },
         ],

@@ -187,7 +187,7 @@ exports[`OE - Header EC renders correctly 1`] = `
                   id="dropdown-megamenu"
                   role="button"
                 >
-                  A link with mega menu
+                  A link with dropdown
                 </a>
                 <div
                   aria-labelledby="dropdown-megamenu"
@@ -214,10 +214,10 @@ exports[`OE - Header EC renders correctly 1`] = `
                     class="row position-relative"
                   >
                     <div
-                      class="col-12 col-lg-4"
+                      class="col-md-12 col-xl-3"
                     >
                       <div
-                        class="content-block py-3"
+                        class="content-block"
                       >
                         <h4>
                           Mega Menu Content Title
@@ -225,10 +225,23 @@ exports[`OE - Header EC renders correctly 1`] = `
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
+                        <a
+                          class="content-link"
+                          href="/example.html"
+                        >
+                          Discover more
+                          <svg
+                            class="ms-2-5 bi icon--s"
+                          >
+                            <use
+                              xlink:href="/icons.svg#arrow-right"
+                            />
+                          </svg>
+                        </a>
                       </div>
                     </div>
                     <div
-                      class="col-12 col-lg-8"
+                      class="col-md-12 col-xl-9 mb-3 mb-xl-0"
                     >
                       <div
                         class="navigation-items"
@@ -242,13 +255,20 @@ exports[`OE - Header EC renders correctly 1`] = `
                             data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
-                            id="dropdown-inner-megamenu"
+                            id="dropdown-megamenu-inner"
                             role="button"
                           >
-                            A link with dropdown
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
                           </a>
                           <ul
-                            aria-labelledby="dropdown-inner-megamenu"
+                            aria-labelledby="dropdown-megamenu-inner"
                             class="dropdown-menu"
                           >
                             <li>
@@ -256,23 +276,62 @@ exports[`OE - Header EC renders correctly 1`] = `
                                 class="dropdown-item"
                                 href="/example.html"
                               >
-                                I'm a link
+                                Base Sub Category Item
                               </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a button
-                              </button>
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="see-all-button dropdown-item"
+                                href="/example.html"
+                              >
+                                See all
+                                <svg
+                                  class="ms-2-5 bi icon--s"
+                                >
+                                  <use
+                                    xlink:href="/icons.svg#arrow-right"
+                                  />
+                                </svg>
+                              </a>
                             </li>
                           </ul>
                         </div>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <div
                           class="dropdown dropend"
@@ -283,13 +342,20 @@ exports[`OE - Header EC renders correctly 1`] = `
                             data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
-                            id="dropdown-inner-megamenu-2"
+                            id="dropdown-megamenu-inner-2"
                             role="button"
                           >
-                            A link with dropdown and column
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
                           </a>
                           <ul
-                            aria-labelledby="dropdown-inner-megamenu-2"
+                            aria-labelledby="dropdown-megamenu-inner-2"
                             class="dropdown-menu"
                           >
                             <li>
@@ -297,34 +363,40 @@ exports[`OE - Header EC renders correctly 1`] = `
                                 class="dropdown-item"
                                 href="/example.html"
                               >
-                                I'm a link
+                                Base Sub Category Item
                               </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a button
-                              </button>
+                                Base Sub Category Item
+                              </a>
                             </li>
                             <li>
-                              <button
-                                aria-disabled="true"
+                              <a
                                 class="dropdown-item"
-                                disabled="true"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a disabled button
-                              </button>
+                                Base Sub Category Item
+                              </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a active button
-                              </button>
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
                             </li>
                           </ul>
                         </div>
@@ -345,17 +417,17 @@ exports[`OE - Header EC renders correctly 1`] = `
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                       </div>
                     </div>
@@ -1155,7 +1227,7 @@ exports[`OE - Header EU renders correctly 1`] = `
                   id="dropdown-megamenu"
                   role="button"
                 >
-                  A link with mega menu
+                  A link with dropdown
                 </a>
                 <div
                   aria-labelledby="dropdown-megamenu"
@@ -1182,10 +1254,10 @@ exports[`OE - Header EU renders correctly 1`] = `
                     class="row position-relative"
                   >
                     <div
-                      class="col-12 col-lg-4"
+                      class="col-md-12 col-xl-3"
                     >
                       <div
-                        class="content-block py-3"
+                        class="content-block"
                       >
                         <h4>
                           Mega Menu Content Title
@@ -1193,10 +1265,23 @@ exports[`OE - Header EU renders correctly 1`] = `
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
+                        <a
+                          class="content-link"
+                          href="/example.html"
+                        >
+                          Discover more
+                          <svg
+                            class="ms-2-5 bi icon--s"
+                          >
+                            <use
+                              xlink:href="/icons.svg#arrow-right"
+                            />
+                          </svg>
+                        </a>
                       </div>
                     </div>
                     <div
-                      class="col-12 col-lg-8"
+                      class="col-md-12 col-xl-9 mb-3 mb-xl-0"
                     >
                       <div
                         class="navigation-items"
@@ -1210,13 +1295,20 @@ exports[`OE - Header EU renders correctly 1`] = `
                             data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
-                            id="dropdown-inner-megamenu"
+                            id="dropdown-megamenu-inner"
                             role="button"
                           >
-                            A link with dropdown
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
                           </a>
                           <ul
-                            aria-labelledby="dropdown-inner-megamenu"
+                            aria-labelledby="dropdown-megamenu-inner"
                             class="dropdown-menu"
                           >
                             <li>
@@ -1224,23 +1316,62 @@ exports[`OE - Header EU renders correctly 1`] = `
                                 class="dropdown-item"
                                 href="/example.html"
                               >
-                                I'm a link
+                                Base Sub Category Item
                               </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a button
-                              </button>
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="see-all-button dropdown-item"
+                                href="/example.html"
+                              >
+                                See all
+                                <svg
+                                  class="ms-2-5 bi icon--s"
+                                >
+                                  <use
+                                    xlink:href="/icons.svg#arrow-right"
+                                  />
+                                </svg>
+                              </a>
                             </li>
                           </ul>
                         </div>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <div
                           class="dropdown dropend"
@@ -1251,13 +1382,20 @@ exports[`OE - Header EU renders correctly 1`] = `
                             data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
-                            id="dropdown-inner-megamenu-2"
+                            id="dropdown-megamenu-inner-2"
                             role="button"
                           >
-                            A link with dropdown and column
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
                           </a>
                           <ul
-                            aria-labelledby="dropdown-inner-megamenu-2"
+                            aria-labelledby="dropdown-megamenu-inner-2"
                             class="dropdown-menu"
                           >
                             <li>
@@ -1265,34 +1403,40 @@ exports[`OE - Header EU renders correctly 1`] = `
                                 class="dropdown-item"
                                 href="/example.html"
                               >
-                                I'm a link
+                                Base Sub Category Item
                               </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a button
-                              </button>
+                                Base Sub Category Item
+                              </a>
                             </li>
                             <li>
-                              <button
-                                aria-disabled="true"
+                              <a
                                 class="dropdown-item"
-                                disabled="true"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a disabled button
-                              </button>
+                                Base Sub Category Item
+                              </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a active button
-                              </button>
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
                             </li>
                           </ul>
                         </div>
@@ -1313,17 +1457,17 @@ exports[`OE - Header EU renders correctly 1`] = `
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                       </div>
                     </div>
@@ -2117,7 +2261,7 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                   id="dropdown-megamenu"
                   role="button"
                 >
-                  A link with mega menu
+                  A link with dropdown
                 </a>
                 <div
                   aria-labelledby="dropdown-megamenu"
@@ -2144,10 +2288,10 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                     class="row position-relative"
                   >
                     <div
-                      class="col-12 col-lg-4"
+                      class="col-md-12 col-xl-3"
                     >
                       <div
-                        class="content-block py-3"
+                        class="content-block"
                       >
                         <h4>
                           Mega Menu Content Title
@@ -2155,10 +2299,23 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
+                        <a
+                          class="content-link"
+                          href="/example.html"
+                        >
+                          Discover more
+                          <svg
+                            class="ms-2-5 bi icon--s"
+                          >
+                            <use
+                              xlink:href="/icons.svg#arrow-right"
+                            />
+                          </svg>
+                        </a>
                       </div>
                     </div>
                     <div
-                      class="col-12 col-lg-8"
+                      class="col-md-12 col-xl-9 mb-3 mb-xl-0"
                     >
                       <div
                         class="navigation-items"
@@ -2172,13 +2329,20 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                             data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
-                            id="dropdown-inner-megamenu"
+                            id="dropdown-megamenu-inner"
                             role="button"
                           >
-                            A link with dropdown
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
                           </a>
                           <ul
-                            aria-labelledby="dropdown-inner-megamenu"
+                            aria-labelledby="dropdown-megamenu-inner"
                             class="dropdown-menu"
                           >
                             <li>
@@ -2186,23 +2350,62 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                                 class="dropdown-item"
                                 href="/example.html"
                               >
-                                I'm a link
+                                Base Sub Category Item
                               </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a button
-                              </button>
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="see-all-button dropdown-item"
+                                href="/example.html"
+                              >
+                                See all
+                                <svg
+                                  class="ms-2-5 bi icon--s"
+                                >
+                                  <use
+                                    xlink:href="/icons.svg#arrow-right"
+                                  />
+                                </svg>
+                              </a>
                             </li>
                           </ul>
                         </div>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <div
                           class="dropdown dropend"
@@ -2213,13 +2416,20 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                             data-bs-auto-close="false"
                             data-bs-toggle="dropdown"
                             href="/example.html"
-                            id="dropdown-inner-megamenu-2"
+                            id="dropdown-megamenu-inner-2"
                             role="button"
                           >
-                            A link with dropdown and column
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
                           </a>
                           <ul
-                            aria-labelledby="dropdown-inner-megamenu-2"
+                            aria-labelledby="dropdown-megamenu-inner-2"
                             class="dropdown-menu"
                           >
                             <li>
@@ -2227,34 +2437,40 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                                 class="dropdown-item"
                                 href="/example.html"
                               >
-                                I'm a link
+                                Base Sub Category Item
                               </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a button
-                              </button>
+                                Base Sub Category Item
+                              </a>
                             </li>
                             <li>
-                              <button
-                                aria-disabled="true"
+                              <a
                                 class="dropdown-item"
-                                disabled="true"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a disabled button
-                              </button>
+                                Base Sub Category Item
+                              </a>
                             </li>
                             <li>
-                              <button
+                              <a
                                 class="dropdown-item"
-                                type="button"
+                                href="/example.html"
                               >
-                                I'm a active button
-                              </button>
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
                             </li>
                           </ul>
                         </div>
@@ -2275,17 +2491,17 @@ exports[`OE - Header Neutral renders correctly 1`] = `
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                         <a
                           href="/example.html"
                         >
-                          A simple link!
+                          Base Category Item
                         </a>
                       </div>
                     </div>

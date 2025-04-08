@@ -5,6 +5,8 @@
   - link (boolean) (default: false) - sets trigger to link, default is button
   - trigger (link or button)
   - content_block (block) (default: '')
+  - content_link (link)
+  - icon_path (string) (default: '')
   - min_height (string) (default: '300px')
     ! set min-height of mega-menu
   - items (object[])
@@ -23,6 +25,8 @@
 {% set _link = link ?? false %}
 {% set _trigger = trigger|default({}) %}
 {% set _content_block = content_block|default('') %}
+{% set _content_link = content_link|default({}) %}
+{% set _icon_path = icon_path|default('') %}
 {% set _min_height = min_height|default('300px') %}
 {% set _items = items|default([]) %}
 {% set _back_button_label = back_button_label|default('Back') %}
@@ -79,23 +83,54 @@
     </div>
     <div class="row position-relative">
       {% if content_block is defined %}
-      <div class="col-12 col-lg-4">
-        <div class="content-block py-3">
+      <div class="col-md-12 col-xl-3">
+        <div class="content-block">
           {%- block content_block -%}
             {{ _content_block }}
           {%- endblock -%}
+          {% if _content_link is defined %}
+            {% set _content_link = _content_link|merge({
+              icon: _content_link.icon|default({})|merge({
+                path: _icon_path
+              }),
+                attributes: (_content_link.attributes is defined
+                  ? _content_link.attributes
+                  : create_attribute()
+                ).addClass('content-link')
+            }) %}
+
+            {% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}
+          {% endif %}
         </div>
       </div>
       {% endif %}
-      <div class="col-12 col-lg-8">
+      <div class="col-md-12 col-xl-9 mb-3 mb-xl-0">
         <div class="navigation-items">
           {% for _item in _items %}
             {% if _item.items is defined %}
+              {% set _items_list = _item.items %}
+              {% if _item.see_all is defined %}
+                {% set _items_list = _items_list|merge([
+                  _item.see_all|merge({
+                    icon: {
+                      name: "arrow-right",
+                      path: _icon_path,
+                    },
+                    attributes: create_attribute().addClass('see-all-button')
+                  })
+                ]) %}
+              {% endif %}
+              {% set _item = _item|merge({ items: _items_list }) %}
               {% set _trigger_attributes = _item.trigger.attributes is defined ? _item.trigger.attributes : create_attribute() %}
               {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _item|merge({
                 direction: 'dropend',
                 link: true,
                 trigger: _item.trigger|merge({
+                  icon: {
+                    name: "chevron-right",
+                    path: _icon_path,
+                    size: "fluid",
+                  },
                   attributes: _trigger_attributes.setAttribute('data-bs-auto-close', 'false')
                 })
               }) only %}
