@@ -81,7 +81,7 @@
         attributes: create_attribute().addClass(['back-button'])
       } only %}
     </div>
-    <div class="row position-relative">
+    <div class="row position-relative pb-md-3 border-bottom z-3">
       {% if content_block is defined %}
       <div class="col-md-12 col-xl-3">
         <div class="content-block">
@@ -104,7 +104,7 @@
         </div>
       </div>
       {% endif %}
-      <div class="col-md-12 col-xl-9 mb-3 mb-xl-0">
+      <div class="col-md-12 col-xl-9 mb-md-3">
         <div class="navigation-items">
           {% for _item in _items %}
             {% if _item.items is defined %}
