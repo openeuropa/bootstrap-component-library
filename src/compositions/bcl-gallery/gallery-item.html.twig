@@ -30,6 +30,7 @@ Parameters:
 {% set attributes = attributes.addClass(['bcl-gallery__item', 'd-block', 'w-100', 'img-fluid'])
                               .setAttribute('data-bs-target', '#' ~ _carousel_id)
                               .setAttribute('data-bs-slide-to', _carousel_anchor)
+                              .setAttribute('tabindex', '0')
 %}
 
 <a 
