@@ -1,6 +1,7 @@
 import {
   initScrollspy,
   initBadges,
+  initMultiselects,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
 import {
@@ -112,7 +113,7 @@ export const Listing = (args) =>
   listingPage(applyArgs(correctPaths(demoListing), args));
 
 Listing.storyName = "Event listing";
-Listing.decorators = [initBadges];
+Listing.decorators = [initBadges, initMultiselects];
 Listing.args = getArgs();
 Listing.argTypes = getArgTypes();
 Listing.parameters = {

@@ -363,14 +363,13 @@ export const initMultiselects = (story) => {
   const demo = story();
   return `
     <script>
-      var multiselects = document.querySelectorAll(".multi-select");
+      var multiselects = document.querySelectorAll(".multiselect");
       if (multiselects) {
         multiselects.forEach((element) => {
           new SlimSelect({
             select: element,
             settings: {
-              placeholderText: 'Please select a value',
-              contentLocation: document.querySelectorAll(".offcanvas-body")[0]
+              placeholderText: 'Please select a value'
             }
           })
         });

@@ -1,6 +1,3 @@
-$enable-negative-margins: true;
-$negative-spacers: negativify-map($spacers);
-
 // Colors variables
 $lighter: $gray-100;
 $date: #1698af;
@@ -67,6 +64,8 @@ $spacers-extended: (
 
 $spacers: map-merge($spacers, $spacers-extended);
 $gutters: $spacers;
+$enable-negative-margins: true;
+$negative-spacers: negativify-map($spacers);
 
 // accordion
 $accordion-button-active-color: $accordion-button-color;
