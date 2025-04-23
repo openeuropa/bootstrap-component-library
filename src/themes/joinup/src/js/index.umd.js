@@ -21,7 +21,6 @@ import ScrollSpy from "@openeuropa/bcl-bootstrap/js/src/scrollspy-legacy";
 import Tab from "@openeuropa/bcl-bootstrap/js/src/tab";
 import Toast from "@openeuropa/bcl-bootstrap/js/src/toast";
 import Tooltip from "@openeuropa/bcl-bootstrap/js/src/tooltip";
-import SlimSelectWrapper from "@openeuropa/bcl-theme-default/src/js/slim-select-wrapper/slim-select-wrapper";
 
 export default {
   Alert,
@@ -40,5 +39,4 @@ export default {
   Tab,
   Toast,
   Tooltip,
-  SlimSelectWrapper,
 };
