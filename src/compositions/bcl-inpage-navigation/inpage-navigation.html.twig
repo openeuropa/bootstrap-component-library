@@ -3,7 +3,7 @@
 {#
 Parameters:
   - title: (string) (default: '')
-  - title_tag: (string) (default: 'button')
+  - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - links: (link[]) (default: [])
@@ -15,7 +15,7 @@ Parameters:
 #}
 
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('button') %}
+{% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
@@ -29,8 +29,8 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
-{% set title_attributes = _title_attributes.addClass('mb-0') %}
-{% set _title_content %}
+{% set title_attributes = _title_attributes.addClass(['mb-0', 'd-none', 'd-lg-block']) %}
+{% set _button_content %}
   {{ _title }}
   {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
     name: 'chevron-down',
@@ -51,13 +51,17 @@ Parameters:
                               .setAttribute('type', 'button')
                               .setAttribute('id', _dropdown_id)
                               .setAttribute('data-bs-toggle', 'dropdown')
-                              .addClass(['dropdown-toggle', 'h2']) %}
+                              .addClass(['dropdown-toggle', 'h2', 'd-lg-none']) %}
+  {% include '@oe-bcl/bcl-button/button.html.twig' with {
+    label: _button_content,
+    clean_class: true,
+    attributes: trigger_attributes,
+  } only %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: _title_content,
+    title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
-    attributes: _title_attributes
-                .merge(trigger_attributes),
+    attributes: _title_attributes,
   } only %}
   <div class="dropdown-menu" aria-labelledby="{{ _dropdown_id }}">
     {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
