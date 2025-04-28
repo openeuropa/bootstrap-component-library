@@ -111,7 +111,7 @@
                                     .setAttribute('aria-expanded', open_item ? 'true' : 'false')
           %}
           {% include '@oe-bcl/bcl-button/button.html.twig' with {
-            label: _item.title,
+            label: '<span>' ~ _item.title ~ '</span>',
             clean_class: true,
             attributes: button_attributes
           } only %}
