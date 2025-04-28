@@ -3,7 +3,7 @@
 {#
 Parameters:
   - title: (string) (default: '')
-  - title_tag: (string) (default: 'h2')
+  - title_tag: (string) (default: 'button')
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - links: (link[]) (default: [])
@@ -15,7 +15,7 @@ Parameters:
 #}
 
 {% set _title = title|default('') %}
-{% set _title_tag = title_tag|default('h2') %}
+{% set _title_tag = title_tag|default('button') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
@@ -51,7 +51,7 @@ Parameters:
                               .setAttribute('type', 'button')
                               .setAttribute('id', _dropdown_id)
                               .setAttribute('data-bs-toggle', 'dropdown')
-                              .addClass(['dropdown-toggle']) %}
+                              .addClass(['dropdown-toggle', 'h2']) %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title_content,
     title_tag: _title_tag,
