@@ -160,25 +160,4 @@ module.exports = {
       },
     ],
   },
-  form: {
-    attributes: new drupalAttribute().addClass("d-flex"),
-    submit: {
-      wrapper: "ms-2",
-      label: "Search",
-      type: "Search",
-      variant: "light",
-    },
-    items: [
-      [
-        {
-          type: "text",
-          required: true,
-          label: "Search",
-          hidden_label: true,
-          placeholder: "Search",
-          id: "inlineFormInputGroupSearch",
-        },
-      ],
-    ],
-  },
 };
