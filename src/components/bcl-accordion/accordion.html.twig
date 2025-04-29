@@ -110,8 +110,13 @@
                                     .setAttribute('aria-controls', 'collapse-' ~ _id ~ '-' ~ loop.index)
                                     .setAttribute('aria-expanded', open_item ? 'true' : 'false')
           %}
+          {% set item_title %}
+            <span>
+              {{- _item.title -}}
+            </span>
+          {% endset %}
           {% include '@oe-bcl/bcl-button/button.html.twig' with {
-            label: '<span>' ~ _item.title ~ '</span>',
+            label: item_title,
             clean_class: true,
             attributes: button_attributes
           } only %}
