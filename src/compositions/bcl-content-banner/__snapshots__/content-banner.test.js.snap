@@ -127,24 +127,33 @@ exports[`OE - Content banner renders correctly with a date block 1`] = `
               class="bcl-date-block bg-date rounded mw-date text-center d-flex flex-column ratio ratio-1x1"
               datetime="2021-01-23"
             >
-              <span
+              <div
                 class="d-flex flex-column pt-2"
               >
-                <span
-                  class="d-flex flex-column align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
+                <div
+                  class="d-flex align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
                 >
-                  <span
-                    class="d-block"
+                  <div
+                    class="d-flex flex-column align-item-center justify-content-center"
                   >
-                    23 Jan
-                  </span>
-                </span>
-                <span
+                    <div
+                      class="date-month"
+                    >
+                      Jan
+                    </div>
+                    <div
+                      class="date-day fw-bold"
+                    >
+                      23
+                    </div>
+                  </div>
+                </div>
+                <div
                   class="bg-lighter border w-100 rounded-bottom py-1"
                 >
                   2021
-                </span>
-              </span>
+                </div>
+              </div>
             </time>
           </div>
           <div
