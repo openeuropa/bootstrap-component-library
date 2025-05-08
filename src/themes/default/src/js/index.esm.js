@@ -21,7 +21,6 @@ import Tooltip from "@openeuropa/bcl-bootstrap/js/src/tooltip";
 import Gallery from "@openeuropa/bcl-theme-default/src/js/gallery/gallery";
 import AccordionToggle from "@openeuropa/bcl-theme-default/src/js/accordion-toggle/accordion-toggle";
 import AccessibleToggle from "@openeuropa/bcl-theme-default/src/js/accessible-toggle/accessible-toggle";
-import SlimSelectWrapper from "@openeuropa/bcl-theme-default/src/js/slim-select-wrapper/slim-select-wrapper";
 
 export {
   Alert,
@@ -40,5 +39,4 @@ export {
   Gallery,
   AccessibleToggle,
   AccordionToggle,
-  SlimSelectWrapper,
 };
