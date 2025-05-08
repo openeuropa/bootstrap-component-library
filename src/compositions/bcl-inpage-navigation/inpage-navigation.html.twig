@@ -7,8 +7,8 @@ Parameters:
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - links: (link[]) (default: [])
-  - id (string) (default: bcl-inpage-navigation-random(100))
-  - dropdown_id (string) (default: bcl-inpage-navigation-dropdown-random(100))
+  - id (string) (default: bcl-inpage-navigation-random(10000))
+  - dropdown_id (string) (default: bcl-inpage-navigation-dropdown-random(10000))
   - dynamic_active: (boolean) (default: false)
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
@@ -19,9 +19,9 @@ Parameters:
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
-{% set _id = id|default('bcl-inpage-navigation-' ~ random(100)) %}
+{% set _id = id|default('bcl-inpage-navigation-' ~ random(10000)) %}
 {% set _icon_path = icon_path|default('') %}
-{% set _dropdown_id = dropdown_id|default('bcl-inpage-navigation-dropdown' ~ random(100)) %}
+{% set _dropdown_id = dropdown_id|default('bcl-inpage-navigation-dropdown' ~ random(10000)) %}
 {% set _dyanmic_active = dynamic_active|default(false) %}
 
 {% if attributes is empty %}

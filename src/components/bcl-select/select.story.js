@@ -3,6 +3,7 @@ import drupalAttribute from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-select/data.js";
 import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect.js";
+import demoSingleData from "@openeuropa/bcl-data-select/data--single.js";
 import select from "@openeuropa/bcl-select/select.html.twig";
 
 const getArgs = (data) => {
@@ -66,6 +67,20 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
+const initSingleselect = (story) => {
+  const demo = story();
+  return `
+    <script>
+      if (document.querySelector(".single-select")) {
+        new SlimSelect({
+          select: ".single-select",
+          placeholder: "Please select a value",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
 // Stories
 export default {
   title: "Components/Forms/Select",
@@ -119,3 +134,9 @@ Multiselect.parameters = {
     },
   ],
 };
+
+export const Singleselect = (args) => select(applyArgs(demoSingleData, args));
+
+Singleselect.argTypes = getArgTypes(demoSingleData, "select");
+Singleselect.args = getArgs(demoSingleData, "select");
+Singleselect.decorators = [initSingleselect];

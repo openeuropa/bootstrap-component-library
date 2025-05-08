@@ -35,9 +35,17 @@ class AccessibleToggle {
   }
 
   addAriaAttributes() {
-    if (this.triggerElement) {
-      this.triggerElement.setAttribute("aria-haspopup", "true");
-      this.triggerElement.setAttribute("aria-expanded", "false");
+    if (this.type === 'modal') {
+      if (this.triggerElement) {
+        this.triggerElement.setAttribute('aria-haspopup', 'dialog');
+      }
+    }
+  
+    if (this.type === 'offcanvas') {
+      if (this.triggerElement) {
+        this.triggerElement.setAttribute('aria-haspopup', 'dialog');
+        this.triggerElement.setAttribute('aria-expanded', 'false');
+      }
     }
   }
 

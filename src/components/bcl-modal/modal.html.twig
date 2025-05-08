@@ -3,7 +3,7 @@
 {# Parameters:
   - size (string) default('')
     options: sm, lg, xl, fullscreen
-  - id (boolean) (default: modal-random(1000))
+  - id (boolean) (default: modal-random(10000))
   - fullscreen_responsive (string) (default: '')
     options: sm, md, lg, xl, xxl
   - static_backdrop (boolean) (default: false)
@@ -23,7 +23,7 @@
 #}
 
 {% set _size =  size|default('') %}
-{% set _id = id|default('modal-' ~ random(1000)) %}
+{% set _id = id|default('modal-' ~ random(10000)) %}
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _static_backdrop = static_backdrop ?? false %}
 {% set _verticaly_centered = verticaly_centered ?? false %}

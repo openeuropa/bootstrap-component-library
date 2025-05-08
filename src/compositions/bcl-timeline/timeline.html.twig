@@ -2,7 +2,7 @@
 
 {#
 Parameters:
-  - id: (integer) (default: random(1000))
+  - id: (integer) (default: random(10000))
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h2')
   - title_link: (link object) (default: {})
@@ -25,7 +25,7 @@ Parameters:
   - icon_path (string) (default: ''): file containing the svg icons
 #}
 
-{% set _id = id|default(random(1000)) %}
+{% set _id = id|default(random(10000)) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}

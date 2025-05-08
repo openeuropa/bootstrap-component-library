@@ -2,7 +2,7 @@
   "name": "@openeuropa/bcl-theme-default",
   "author": "European Commission",
   "license": "EUPL-1.2",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "OE - BCL theme default",
   "scripts": {
     "align-templates": "lerna --scope \"@openeuropa/bcl-twig-templates\" run prepublish",
@@ -15,23 +15,24 @@
     "clean": "rimraf css js templates logos icons",
     "prepublish": "npm run build",
     "update:styles": "npm run build:styles && npm run build:color-scheme && copyfiles -f css/*.min.css ../../../assets",
-    "update:scripts": "npm run build:scripts && copyfiles -f js/*.bundle.min.js ../../../assets",
+    "update:scripts": "npm run build:scripts && copyfiles -f js/* ../../../assets",
     "update:templates": "npm-run-all -s align-templates build:copy"
   },
   "devDependencies": {
     "@ecl/resources-ec-logo": "3.7.1",
     "@ecl/resources-eu-logo": "3.7.1",
     "@ecl/resources-flag-icons": "3.7.1",
-    "@openeuropa/bcl-bootstrap": "^1.10.0",
-    "@openeuropa/bcl-builder": "^1.10.0",
-    "@openeuropa/bcl-twig-templates": "^1.10.0",
+    "@openeuropa/bcl-bootstrap": "^1.10.1",
+    "@openeuropa/bcl-builder": "^1.10.1",
+    "@openeuropa/bcl-twig-templates": "^1.10.1",
     "@rollup/plugin-replace": "6.0.2",
     "copyfiles": "2.4.1",
     "cross-env": "7.0.3",
     "flag-icons": "6.9.2",
     "glob": "11.0.1",
     "npm-run-all": "4.1.5",
-    "slim-select": "1.27.1"
+    "slim-select": "1.27.1",
+    "slim-select-2": "brianvoe/slim-select#e6239514875df954edd772fd146aed5657f0a498"
   },
   "publishConfig": {
     "access": "public"
