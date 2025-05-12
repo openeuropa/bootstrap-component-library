@@ -10,27 +10,31 @@ exports[`OE - Date block renders correctly 1`] = `
       class="d-flex flex-column pt-2"
     >
       <div
-        class="d-flex align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
+        class="d-flex align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 text-uppercase"
       >
         <div
           class="d-flex flex-column align-item-center justify-content-center"
         >
           <div
-            class="date-month"
+            class="date-month lh-1"
           >
             Jan
           </div>
           <div
-            class="date-day fw-bold"
+            class="date-day fw-bold fs-4 lh-1"
           >
             23
           </div>
         </div>
       </div>
       <div
-        class="bg-lighter border w-100 rounded-bottom py-1"
+        class="bg-lighter border w-100 rounded-bottom py-1 d-flex align-item-center justify-content-around gap-2"
       >
-        2021
+        <div
+          class="date-year year-start"
+        >
+          2021
+        </div>
       </div>
     </div>
   </time>
@@ -47,18 +51,18 @@ exports[`OE - Date block with end date renders correctly 1`] = `
       class="d-flex flex-column pt-2"
     >
       <div
-        class="d-flex align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
+        class="d-flex align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 text-uppercase"
       >
         <div
           class="d-flex flex-column align-item-center justify-content-center"
         >
           <div
-            class="date-month"
+            class="date-month lh-1"
           >
             Jan
           </div>
           <div
-            class="date-day fw-bold"
+            class="date-day fw-bold fs-4 lh-1"
           >
             23
           </div>
@@ -78,21 +82,30 @@ exports[`OE - Date block with end date renders correctly 1`] = `
           class="d-flex flex-column align-item-center justify-content-center"
         >
           <div
-            class="date-month"
+            class="date-month lh-1"
           >
             Jun
           </div>
           <div
-            class="date-day fw-bold"
+            class="date-day fw-bold fs-4 lh-1"
           >
             24
           </div>
         </div>
       </div>
       <div
-        class="bg-lighter border w-100 rounded-bottom py-1"
+        class="bg-lighter border w-100 rounded-bottom py-1 d-flex align-item-center justify-content-around gap-2"
       >
-        2021 - 2023
+        <div
+          class="date-year year-start"
+        >
+          2021
+        </div>
+        <div
+          class="date-year year-end"
+        >
+          2023
+        </div>
       </div>
     </div>
   </time>
