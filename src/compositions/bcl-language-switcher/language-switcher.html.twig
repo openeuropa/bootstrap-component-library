@@ -1,13 +1,13 @@
 {% apply spaceless %}
 
 {# Parameters:
-  - id (string) (default: collapse-random(1000), optional)
+  - id (string) (default: collapse-random(10000), optional)
   - message (alert object) (default: {})
   - expandable (button object) (default: {})
   - languages (link[]) (default: [])
 #}
 
-{% set _id = id|default('collapse-' ~ random(1000)) %}
+{% set _id = id|default('collapse-' ~ random(10000)) %}
 {% set _message = message|default({}) %}
 {% set _expandable = expandable|default({}) %}
 {% set _languages = languages|default([]) %}

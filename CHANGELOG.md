@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.1 (2025-05-08)
+
+#### :nail_care: Enhancement
+* [#666](https://github.com/openeuropa/bootstrap-component-library/pull/666) feat(ids): Lower probability of same id twice on page. - OEL-3642 ([@tibi2303](https://github.com/tibi2303))
+* [#665](https://github.com/openeuropa/bootstrap-component-library/pull/665) feat(accordion): Limit to 80ch per row. - OEL-3656 ([@tibi2303](https://github.com/tibi2303))
+* [#659](https://github.com/openeuropa/bootstrap-component-library/pull/659) feat(multiselect): Changed placeholder color. - OEL-3727 ([@tibi2303](https://github.com/tibi2303))
+* [#660](https://github.com/openeuropa/bootstrap-component-library/pull/660) feat(accessibility): Removed aria-exanded from modals and rewrote gallery js. - OEL-3726 ([@tibi2303](https://github.com/tibi2303))
+* [#662](https://github.com/openeuropa/bootstrap-component-library/pull/662) feat(utility): Improved negative spacings. - OEL-3775 ([@tibi2303](https://github.com/tibi2303))
+* [#655](https://github.com/openeuropa/bootstrap-component-library/pull/655) feat(themes): Added ss-2 support for all themes. - OEL-3704 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Julien Tekrane ([@julien-](https://github.com/julien-))
+
 ## v1.10.0 (2025-03-27)
 
 #### :nail_care: Enhancement
