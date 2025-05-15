@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.2 (2025-05-15)
+
+#### :nail_care: Enhancement
+* [#671](https://github.com/openeuropa/bootstrap-component-library/pull/671) OEL-3679: Changed sidebar heading tag to button. ([@tibi2303](https://github.com/tibi2303))
+* [#670](https://github.com/openeuropa/bootstrap-component-library/pull/670) feat(multiselect): Changed from css var to color placeholder multiselect. - OEL-3727 ([@tibi2303](https://github.com/tibi2303))
+* [#677](https://github.com/openeuropa/bootstrap-component-library/pull/677) feat(chore): Upgrade bootstrap to 5.3.6 and other packages. - OEL-3799 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 3
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.10.1 (2025-05-08)
 
 #### :nail_care: Enhancement
