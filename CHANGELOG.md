@@ -10,7 +10,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#670](https://github.com/openeuropa/bootstrap-component-library/pull/670) feat(multiselect): Changed from css var to color placeholder multiselect. - OEL-3727 ([@tibi2303](https://github.com/tibi2303))
 * [#677](https://github.com/openeuropa/bootstrap-component-library/pull/677) feat(chore): Upgrade bootstrap to 5.3.6 and other packages. - OEL-3799 ([@tibi2303](https://github.com/tibi2303))
 
-#### Committers: 3
+#### Committers: 1
 - Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
 
 ## 1.10.1 (2025-05-08)
