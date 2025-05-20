@@ -29,6 +29,11 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
+
+{% if not attributes.hasAttribute('aria-label') and not attributes.hasAttribute('aria-labelledby') %}
+  {% set attributes = attributes.setAttribute('aria-labelledby', _dropdown_id) %}
+{% endif %}
+
 {% set title_attributes = _title_attributes.addClass(['mb-0', 'd-none', 'd-md-block']) %}
 {% set _button_content %}
   {{ _title }}
@@ -45,7 +50,7 @@ Parameters:
   {% set _classes = _classes|merge(['dynamic-active']) %}
 {% endif %}
 
-<nav {{ attributes.addClass(_classes) }}>
+<nav{{ attributes.addClass(_classes) }}>
   {% set trigger_attributes = create_attribute()
                               .setAttribute('aria-expanded', 'false')
                               .setAttribute('type', 'button')
@@ -63,7 +68,7 @@ Parameters:
     title_link: _title_link,
     attributes: _title_attributes,
   } only %}
-  <div class="dropdown-menu" aria-labelledby="{{ _dropdown_id }}">
+  <div class="dropdown-menu">
     {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
       'pills': true,
       'vertical': true,
