@@ -45,7 +45,7 @@
 
 <time {{ attributes }}>
   <div class="d-flex flex-column pt-2">
-    <div class="d-flex align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 text-uppercase">
+    <div class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-3">
       <div class="d-flex flex-column align-item-center justify-content-center">
         <div class="date-month lh-1">{{- _month -}}</div>
         <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>
@@ -68,7 +68,7 @@
         </div>
       {% endif %}
     </div>
-    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex align-item-center justify-content-around gap-2">
+    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-2 justify-content-around">
       <div class="date-year year-start">{{- _year -}}</div>
       {%- if _end_year is not empty -%}
         <div class="date-year year-end">{{ _end_year }}</div>
