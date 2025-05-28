@@ -6,4 +6,5 @@ module.exports = {
   end_day: "24",
   end_month: "Jun",
   end_year: "2023",
+  icon_path: "/icons.svg",
 };
