@@ -68,8 +68,8 @@
       {% set _alignment_class = ' align-self-' ~ _alignment %}
     {% endif %}
     {% set _card_classes = [] %}
-    {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
-    {% set _card_title_attributes = card.title_attributes ? card.title_attributes : create_attribute() %}
+    {% set _card_attributes = _card.attributes ? _card.attributes : create_attribute() %}
+    {% set _card_title_attributes = _card.title_attributes ? _card.title_attributes : create_attribute() %}
     {% set _card = _card|merge({
       title_attributes: _card_title_attributes.addClass(['fs-5'])
     }) %}
