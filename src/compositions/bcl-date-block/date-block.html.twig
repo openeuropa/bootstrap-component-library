@@ -9,6 +9,7 @@
     - end_day (integer) (default: '')
     - end_month (string) (default: '')
     - end_year (integer) (default: '')
+    - icon_path (string) (default: '')
 #}
 
 {% set _day = day|default('') %}
@@ -18,6 +19,7 @@
 {% set _end_day = end_day|default('') %}
 {% set _end_month = end_month|default('') %}
 {% set _end_year = end_year|default('') %}
+{% set _icon_path = icon_path|default('') %}
 
 {% set _classes = [
   'bcl-date-block',
@@ -42,23 +44,37 @@
 {% endif %}
 
 <time {{ attributes }}>
-  <span class="d-flex flex-column pt-2">
-    <span class="d-flex flex-column align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase">
-      <span class="d-block">{{- _day ~ ' ' ~ _month ~ ((_end_day or _end_month) ? ' - ' ) -}}</span>
-      {%- if _end_day is not empty %}
-        {{- _end_day -}}
-      {% endif -%}
-      {%- if _end_month is not empty %}
-        {{- ' ' ~ _end_month -}}
-      {% endif -%}
-    </span>
-    <span class="bg-lighter border w-100 rounded-bottom py-1">
-      {{- _year -}}
+  <div class="d-flex flex-column pt-2">
+    <div class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-2">
+      <div class="d-flex flex-column align-item-center justify-content-center">
+        <div class="date-month lh-1">{{- _month -}}</div>
+        <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>
+      </div>
+      {% if _end_day or _end_month %}
+        <div class="d-flex flex-column align-item-center justify-content-center">
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
+            name: "chevron-right",
+            size: "xs",
+            path: _icon_path,
+          } only -%}
+        </div>
+        <div class="d-flex flex-column align-item-center justify-content-center">
+          {%- if _end_month is not empty %}
+            <div class="date-month lh-1">{{- _end_month -}}</div>
+          {% endif -%}
+          {%- if _end_day is not empty %}
+            <div class="date-day fw-bold fs-4 lh-1">{{- _end_day -}}</div>
+          {% endif -%}
+        </div>
+      {% endif %}
+    </div>
+    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">
+      <div class="date-year year-start">{{- _year -}}</div>
       {%- if _end_year is not empty -%}
-        {{ ' - ' ~ _end_year }}
+        <div class="date-year year-end">{{ _end_year }}</div>
       {%- endif -%}
-    </span>
-  </span>
+    </div>
+  </div>
 </time>
 
 {% endapply %}
