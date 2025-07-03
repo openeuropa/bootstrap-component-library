@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.3 (2025-07-03)
+
+#### :nail_care: Enhancement
+* [#673](https://github.com/openeuropa/bootstrap-component-library/pull/673) feat(date-block): Update to v2 design. - OEL-3791 ([@Aporie](https://github.com/Aporie))
+* [#679](https://github.com/openeuropa/bootstrap-component-library/pull/679) OEL-3728: Move aria-labelledby to inpage wrapper. ([@vengador](https://github.com/vengador))
+
+#### :house: Internal
+* [#680](https://github.com/openeuropa/bootstrap-component-library/pull/680) feat(chore): Update security. - OEL-3890 ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 3
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Moisés Rodríguez Carmona ([@vengador](https://github.com/vengador))
+- Victor Bourgade ([@Aporie](https://github.com/Aporie))
+
 ## 1.10.2 (2025-05-15)
 
 #### :nail_care: Enhancement
