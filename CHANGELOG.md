@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.4 (2025-07-10)
+
+#### :nail_care: Enhancement
+* [#681](https://github.com/openeuropa/bootstrap-component-library/pull/681) feat(select): Added fork for slim-select and fix aria-controls. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.10.3 (2025-07-03)
 
 #### :nail_care: Enhancement
