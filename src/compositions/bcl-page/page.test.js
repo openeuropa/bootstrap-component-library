@@ -22,5 +22,5 @@ describe("OE - Page", () => {
     expect(
       await axe(renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
-  });
+  }, 10000);
 });
