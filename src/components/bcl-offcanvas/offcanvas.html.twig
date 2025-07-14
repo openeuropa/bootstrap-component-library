@@ -31,6 +31,7 @@
 {% set _with_backdrop = with_backdrop ?? true %}
 {% set _with_close = with_close ?? true %}
 {% set _close_aria_label = close_aria_label|default('') %}
+{% set _close_content = '' %}
 {% set _extra_classes_body = extra_classes_body|default('') %}
 {% set _extra_classes_header = extra_classes_header|default('') %}
 {% set _extra_classes_close = extra_classes_close|default('') %}
@@ -89,18 +90,28 @@
     } only %}
   {% endif %}
   {% if _with_close %}
-    {% set button_attributes = create_attribute()
+    {% set _close_attributes = create_attribute()
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
                               .setAttribute('data-bs-target', '#' ~ _id)
-                              .setAttribute('aria-label', _close_aria_label)
     %}
+
     {% if _extra_classes_close is not empty %}
-      {% set button_attributes = button_attributes.addClass(_extra_classes_close) %}
+      {% set _close_attributes = _close_attributes.addClass(_extra_classes_close) %}
     {% endif %}
+
+    {% if _close_aria_label %}
+      {% set _close_attributes = _close_attributes.setAttribute('aria-label', _close_aria_label) %}
+    {% else %}
+      {% set _close_content %}
+        <span class="label visually-hidden">{{ "Close" }}</span>
+      {% endset %}
+    {% endif %}
+
     {%- include '@oe-bcl/bcl-button/button.html.twig' with {
-        attributes: button_attributes,
-        clean_class: true
+         'label': _close_content,
+         'attributes': _close_attributes,
+         'clean_class': true
       } only -%}
   {% endif %}
   </div>
