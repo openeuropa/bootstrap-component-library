@@ -53,6 +53,7 @@ const buildStyles = (entry, dest, options) => {
     file: entry,
     outFile: dest,
     noErrorCss: true,
+    silenceDeprecations: options.silenceDeprecations || [],
     outputStyle: "expanded",
     sourceMap: options.sourceMap !== false,
     sourceMapContents: options.sourceMap === true,
