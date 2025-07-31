@@ -121,7 +121,7 @@
 
   <!-- navbar -->
   {% if _navbar is not empty %}
-    <div class="header-navbar collapse navbar-collapse" id='{{ _navbar_id }}'>
+    <div class="bcl-header__navbar collapse navbar-collapse" id='{{ _navbar_id }}'>
       {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
         disable_collapse: true
       }) only %}

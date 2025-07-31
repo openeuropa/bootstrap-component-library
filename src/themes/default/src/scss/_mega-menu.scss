@@ -88,9 +88,6 @@
         &.show {
           background: $primary-bg-subtle;
         }
-        &:hover {
-          text-decoration: underline;
-        }
       }
       li:has(.see-all-button) {
         margin: 0 map-get($spacers, "3-5");
@@ -109,6 +106,7 @@
           pointer-events: none;
           font-size: 20px;
           padding-bottom: map-get($spacers, 5);
+          text-decoration: none;
           svg {
             display: none;
           }
@@ -256,6 +254,24 @@
             a {
               border: none;
             }
+          }
+          > a,
+          > button,
+          > .dropdown > a,
+          li > button,
+          li > a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        > a,
+        > button,
+        > .dropdown > a,
+        li > button,
+        li > a {
+          &:hover {
+            text-decoration: underline;
           }
         }
         .dropdown > a,

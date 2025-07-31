@@ -14,15 +14,11 @@ module.exports = {
     items: [
       {
         mega_menu: true,
-        link: true,
         icon_path: "/icons.svg",
         id: "dropdown-megamenu",
         trigger: {
           label: "A link with dropdown",
-          path: "/example.html",
-          attributes: new drupalAttribute().addClass("nav-link"),
         },
-        id: "dropdown-megamenu",
         content_link: {
           label: "Discover more",
           path: "/example.html",
@@ -37,7 +33,6 @@ module.exports = {
             id: "dropdown-megamenu-inner",
             trigger: {
               label: "Base Category Item",
-              path: "/example.html",
             },
             see_all: {
               label: "See all",
@@ -68,7 +63,6 @@ module.exports = {
           },
           {
             label: "Base Category Item",
-            path: "/example.html",
           },
           {
             id: "dropdown-megamenu-inner-2",
@@ -129,12 +123,9 @@ module.exports = {
       },
       {
         id: "navbarDropdownMenuLink",
-        link: true,
         dropdown: true,
         trigger: {
           label: "Dropdown link",
-          path: "#",
-          attributes: new drupalAttribute().addClass("nav-link"),
         },
         items: [
           {

@@ -12,13 +12,10 @@ module.exports = {
     items: [
       {
         mega_menu: true,
-        link: true,
         icon_path: "/icons.svg",
         id: "dropdown-megamenu",
         trigger: {
           label: "A link with dropdown",
-          path: "/example.html",
-          attributes: new drupalAttribute().addClass("nav-link"),
         },
         id: "dropdown-megamenu",
         content_link: {
@@ -39,7 +36,6 @@ module.exports = {
             id: "dropdown-megamenu-inner",
             trigger: {
               label: "Base Category Item",
-              path: "/example.html",
             },
             items: [
               {
@@ -72,7 +68,6 @@ module.exports = {
             id: "dropdown-megamenu-inner-2",
             trigger: {
               label: "Base Category Item",
-              path: "/example.html",
             },
             items: [
               {
@@ -125,12 +120,9 @@ module.exports = {
       },
       {
         id: "dropdown-1",
-        link: true,
         dropdown: true,
         trigger: {
           label: "Dropdown Toggle",
-          path: "#",
-          attributes: new drupalAttribute().addClass("nav-link"),
         },
         items: [
           {
