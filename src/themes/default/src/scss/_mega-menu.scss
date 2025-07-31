@@ -1,7 +1,4 @@
 /* stylelint-disable no-descending-specificity, declaration-no-important */
-.nav-item:has(> .bcl-mega-menu) {
-  position: relative;
-}
 .bcl-mega-menu {
   &.nav-link {
     padding: 0;
@@ -16,8 +13,13 @@
     width: 100%;
     padding: 0 map-get($spacers, 3);
     border: none;
-    top: 100%;
-    margin: 8px 0 0;
+    top: 0;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 0;
+    border-radius: 0;
     &:after {
       content: "";
       height: 100%;
@@ -29,15 +31,14 @@
       z-index: 1;
       background: $white;
     }
-    .back-button {
-      display: none;
-    }
-    &:has(.show) {
-      .back-button {
-        display: block;
-      }
-      .back-button-block {
-        padding-bottom: 46px;
+    .back-button-block {
+      position: relative;
+      z-index: 2;
+      padding: 0 map-get($spacers, 3);
+      background: $primary-bg-subtle;
+      padding-top: 20px;
+      .btn-link {
+        text-decoration: none;
       }
     }
     > .row {
@@ -46,8 +47,9 @@
     .content-block {
       position: relative;
       height: 100%;
-      margin: 0 -1rem;
       padding: map-get($spacers, 3);
+      z-index: 2;
+      background: $primary-bg-subtle;
       &:after {
         content: "";
         pointer-events: none;
@@ -62,13 +64,22 @@
     }
     .navigation-items {
       width: 100%;
-      height: 100%;
+      position: relative;
+      z-index: 2;
+      &:has(> .dropdown > .show) {
+        > a,
+        > .dropdown {
+          display: none;
+        }
+      }
+      .dropdown:has(.dropdown-toggle.show) {
+        display: block;
+      }
       > a,
       > button,
       > .dropdown > a,
       li > button,
       li > a {
-        padding: map-get($spacers, 2) map-get($spacers, "3-5");
         white-space: normal;
         &:has(svg) {
           padding-right: map-get($spacers, 5);
@@ -95,6 +106,12 @@
         &.show {
           color: $dark;
           text-decoration: none;
+          pointer-events: none;
+          font-size: 20px;
+          padding-bottom: map-get($spacers, 5);
+          svg {
+            display: none;
+          }
           &:after {
             display: none;
           }
@@ -109,34 +126,36 @@
           transform: translateY(-50%);
         }
       }
+      &:has(.show) {
+        .dropdown {
+          height: 100%;
+        }
+      }
       .dropdown {
-        position: static;
         &:has(.show) {
           background: $blue-50;
-          & + .collapse {
-            display: block;
-          }
-        }
-        &:has(+ .collapse) {
-          .dropdown-menu {
-            height: 50%;
-          }
         }
         .dropdown-menu {
           transform: none !important;
           right: auto !important;
-          left: 0 !important;
           width: 100%;
-          height: 100%;
           border: 0;
           overflow: scroll;
-          position: absolute;
           padding: 0;
           border-radius: 0;
-          background: $neutral-bg-subtle;
           margin: 0;
+          &:after {
+            position: absolute;
+            width: 100%;
+            height: 96px;
+            left: 0;
+            top: 0;
+            content: "";
+          }
           .dropdown-item {
             color: $link-color;
+            padding: map-get($spacers, 3);
+            border-bottom: 1px solid $primary-bg-subtle;
             &:hover {
               background: transparent;
               text-decoration: underline;
@@ -146,38 +165,20 @@
               padding-right: 0;
               color: $dark;
               position: relative;
-              &:after {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 1px;
-                width: 100%;
-                content: "";
-                background: $neutral-border-color;
-              }
+              border-bottom: none;
             }
           }
         }
       }
-      .collapse {
-        position: absolute;
-        right: auto;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        top: 50%;
-        padding: map-get($spacers, 3);
-        background: $white;
-        overflow: scroll;
-        img {
-          max-width: 100%;
-          max-height: 100%;
-        }
+    }
+    &:has(.navigation-items .show) {
+      .content-block {
+        display: none;
       }
     }
   }
 }
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
   .nav-item:has(> .bcl-mega-menu) {
     position: static;
   }
@@ -187,9 +188,18 @@
     }
     .mega-menu-container.dropdown-menu {
       top: 100%;
-      padding: map-get($spacers, 3);
+      margin-top: map-get($spacers, "2-5");
+      border-bottom: var(--bs-border-width) var(--bs-border-style)
+        var(--bs-border-color);
+      &:has(.navigation-items .show) {
+        .content-block {
+          display: block;
+        }
+      }
       .content-block {
         margin-right: 0;
+        background: $white;
+        padding-right: map-get($spacers, 4);
         &:after {
           bottom: 0;
           box-shadow: 0 4px 5px 0 rgba(224, 229, 245, 0.5);
@@ -205,19 +215,71 @@
         position: relative;
         width: 33%;
         margin-top: map-get($spacers, 3);
+        height: 100%;
+        &:has(> .dropdown > .show) {
+          > a,
+          > .dropdown {
+            display: block;
+          }
+        }
         .dropdown {
+          height: auto !important;
+          position: static;
           .dropdown-menu {
             left: 100% !important;
             top: 0;
             height: 100% !important;
             margin: 0;
+            overflow: visible;
+            background: $primary-bg-subtle;
+            &:after {
+              display: none;
+            }
+            li:has(.see-all-button) {
+              background: $primary-bg-subtle;
+            }
+            .dropdown-item {
+              padding: map-get($spacers, "2-5") map-get($spacers, 3);
+              border-bottom: none;
+              &.see-all-button {
+                &:after {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 1px;
+                  width: 100%;
+                  content: "";
+                  background: $neutral-border-color;
+                }
+              }
+            }
+            a {
+              border: none;
+            }
           }
         }
-        .collapse {
-          top: 0;
-          left: 200%;
-          height: 100%;
+        .dropdown > a,
+        & > a {
+          color: $dark;
+          width: 100%;
+          display: block;
+          position: relative;
+          padding: map-get($spacers, "2-5") map-get($spacers, 3);
+          &.active {
+            color: $dark;
+          }
         }
+        .dropdown-toggle.show {
+          font-size: 1rem;
+          padding-bottom: map-get($spacers, "2-5");
+          pointer-events: auto;
+          svg {
+            display: block;
+          }
+        }
+      }
+      &:after {
+        display: none;
       }
     }
   }

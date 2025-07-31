@@ -5,7 +5,6 @@ exports[`OE - Search renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
@@ -28,11 +27,11 @@ exports[`OE - Search renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
           class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -40,80 +39,20 @@ exports[`OE - Search renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="text-center nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="text-center nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <nav
-      aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    <div
+      class="header-navbar collapse navbar-collapse"
+      id="header-navbar"
     >
-      <div
-        class="container"
+      <nav
+        aria-label="Main Navigation"
+        class="navbar navbar-expand-lg navbar-dark"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
         <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+          class="container"
         >
           <ul
             class="me-auto navbar-nav"
@@ -194,8 +133,8 @@ exports[`OE - Search renders correctly 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- breadcrumbs -->
     <div
       class="container"

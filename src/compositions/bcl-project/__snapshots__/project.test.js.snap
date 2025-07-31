@@ -5,7 +5,6 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--ucpkn"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
@@ -28,6 +27,19 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
         </a>
+        <button
+          aria-controls="header-navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#header-navbar"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
       </div>
     </nav>
     <!-- project name -->
@@ -50,28 +62,15 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
       </div>
     </div>
     <!-- navbar -->
-    <nav
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    <div
+      class="header-navbar collapse navbar-collapse"
+      id="header-navbar"
     >
-      <div
-        class="container"
+      <nav
+        class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
         <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+          class="container"
         >
           <ul
             class="me-auto navbar-nav"
@@ -284,8 +283,8 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- breadcrumbs -->
   </header>
   <main>
@@ -1835,7 +1834,6 @@ exports[`OE - Project listing renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -1859,11 +1857,11 @@ exports[`OE - Project listing renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
           class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -1871,80 +1869,20 @@ exports[`OE - Project listing renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <nav
-      aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    <div
+      class="header-navbar collapse navbar-collapse"
+      id="header-navbar"
     >
-      <div
-        class="container"
+      <nav
+        aria-label="Main Navigation"
+        class="navbar navbar-expand-lg navbar-dark"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
         <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+          class="container"
         >
           <ul
             class="me-auto navbar-nav"
@@ -1954,7 +1892,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             >
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="nav-link bcl-mega-menu"
+                class="bcl-mega-menu"
                 style="--bcl-mm-min-height: 300px;"
               >
                 <a
@@ -1990,7 +1928,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                     </button>
                   </div>
                   <div
-                    class="row position-relative pb-md-3 border-bottom z-3"
+                    class="row pb-md-3"
                   >
                     <div
                       class="col-md-12 col-xl-3"
@@ -1999,7 +1937,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                         class="content-block"
                       >
                         <h4>
-                          Mega Menu Content Title
+                          About the European Commission
                         </h4>
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -2020,7 +1958,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="col-md-12 col-xl-9 mb-md-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
                         class="navigation-items"
@@ -2031,7 +1969,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner"
@@ -2118,7 +2056,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner-2"
@@ -2178,20 +2116,6 @@ exports[`OE - Project listing renders correctly 1`] = `
                               </a>
                             </li>
                           </ul>
-                        </div>
-                        <div
-                          class="collapse"
-                        >
-                          <a
-                            class="mb-3 d-block"
-                            href="#"
-                          >
-                             Example link
-                          </a>
-                          <img
-                            alt="image"
-                            src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                          />
                         </div>
                         <a
                           href="/example.html"
@@ -2298,8 +2222,8 @@ exports[`OE - Project listing renders correctly 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- breadcrumbs -->
     <div
       class="container"
@@ -3868,7 +3792,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -3892,11 +3815,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
           class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -3904,80 +3827,20 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <nav
-      aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    <div
+      class="header-navbar collapse navbar-collapse"
+      id="header-navbar"
     >
-      <div
-        class="container"
+      <nav
+        aria-label="Main Navigation"
+        class="navbar navbar-expand-lg navbar-dark"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
         <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+          class="container"
         >
           <ul
             class="me-auto navbar-nav"
@@ -3987,7 +3850,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             >
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="nav-link bcl-mega-menu"
+                class="bcl-mega-menu"
                 style="--bcl-mm-min-height: 300px;"
               >
                 <a
@@ -4023,7 +3886,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                     </button>
                   </div>
                   <div
-                    class="row position-relative pb-md-3 border-bottom z-3"
+                    class="row pb-md-3"
                   >
                     <div
                       class="col-md-12 col-xl-3"
@@ -4032,7 +3895,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="content-block"
                       >
                         <h4>
-                          Mega Menu Content Title
+                          About the European Commission
                         </h4>
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -4053,7 +3916,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="col-md-12 col-xl-9 mb-md-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
                         class="navigation-items"
@@ -4064,7 +3927,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner"
@@ -4151,7 +4014,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner-2"
@@ -4211,20 +4074,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                               </a>
                             </li>
                           </ul>
-                        </div>
-                        <div
-                          class="collapse"
-                        >
-                          <a
-                            class="mb-3 d-block"
-                            href="#"
-                          >
-                             Example link
-                          </a>
-                          <img
-                            alt="image"
-                            src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                          />
                         </div>
                         <a
                           href="/example.html"
@@ -4331,8 +4180,8 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- breadcrumbs -->
     <div
       class="container"
@@ -7162,7 +7011,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -7186,11 +7034,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
           class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -7198,80 +7046,20 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <nav
-      aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    <div
+      class="header-navbar collapse navbar-collapse"
+      id="header-navbar"
     >
-      <div
-        class="container"
+      <nav
+        aria-label="Main Navigation"
+        class="navbar navbar-expand-lg navbar-dark"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
         <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+          class="container"
         >
           <ul
             class="me-auto navbar-nav"
@@ -7281,7 +7069,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             >
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="nav-link bcl-mega-menu"
+                class="bcl-mega-menu"
                 style="--bcl-mm-min-height: 300px;"
               >
                 <a
@@ -7317,7 +7105,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                     </button>
                   </div>
                   <div
-                    class="row position-relative pb-md-3 border-bottom z-3"
+                    class="row pb-md-3"
                   >
                     <div
                       class="col-md-12 col-xl-3"
@@ -7326,7 +7114,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="content-block"
                       >
                         <h4>
-                          Mega Menu Content Title
+                          About the European Commission
                         </h4>
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -7347,7 +7135,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="col-md-12 col-xl-9 mb-md-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
                         class="navigation-items"
@@ -7358,7 +7146,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner"
@@ -7445,7 +7233,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner-2"
@@ -7505,20 +7293,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                               </a>
                             </li>
                           </ul>
-                        </div>
-                        <div
-                          class="collapse"
-                        >
-                          <a
-                            class="mb-3 d-block"
-                            href="#"
-                          >
-                             Example link
-                          </a>
-                          <img
-                            alt="image"
-                            src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                          />
                         </div>
                         <a
                           href="/example.html"
@@ -7625,8 +7399,8 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- breadcrumbs -->
     <div
       class="container"
@@ -10456,7 +10230,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -10480,11 +10253,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
           class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -10492,80 +10265,20 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <nav
-      aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+    <div
+      class="header-navbar collapse navbar-collapse"
+      id="header-navbar"
     >
-      <div
-        class="container"
+      <nav
+        aria-label="Main Navigation"
+        class="navbar navbar-expand-lg navbar-dark"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
-        >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
         <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
+          class="container"
         >
           <ul
             class="me-auto navbar-nav"
@@ -10575,7 +10288,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             >
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="nav-link bcl-mega-menu"
+                class="bcl-mega-menu"
                 style="--bcl-mm-min-height: 300px;"
               >
                 <a
@@ -10611,7 +10324,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                     </button>
                   </div>
                   <div
-                    class="row position-relative pb-md-3 border-bottom z-3"
+                    class="row pb-md-3"
                   >
                     <div
                       class="col-md-12 col-xl-3"
@@ -10620,7 +10333,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="content-block"
                       >
                         <h4>
-                          Mega Menu Content Title
+                          About the European Commission
                         </h4>
                         <p>
                           Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -10641,7 +10354,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="col-md-12 col-xl-9 mb-md-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
                         class="navigation-items"
@@ -10652,7 +10365,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner"
@@ -10739,7 +10452,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           <a
                             aria-expanded="false"
                             class="dropdown-toggle"
-                            data-bs-auto-close="false"
+                            data-bs-auto-close="outside"
                             data-bs-toggle="dropdown"
                             href="/example.html"
                             id="dropdown-megamenu-inner-2"
@@ -10799,20 +10512,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                               </a>
                             </li>
                           </ul>
-                        </div>
-                        <div
-                          class="collapse"
-                        >
-                          <a
-                            class="mb-3 d-block"
-                            href="#"
-                          >
-                             Example link
-                          </a>
-                          <img
-                            alt="image"
-                            src="https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg"
-                          />
                         </div>
                         <a
                           href="/example.html"
@@ -10919,8 +10618,8 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- breadcrumbs -->
     <div
       class="container"

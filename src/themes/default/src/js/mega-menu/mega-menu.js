@@ -7,35 +7,23 @@ class MegaMenu {
     this.root = root;
     this.parentToggle = SelectorEngine.findOne('[data-bs-toggle="dropdown"]', this.root);
     if (!this.parentToggle) return;
-    this.parentInstance = Dropdown.getOrCreateInstance(this.parentToggle);
-    this.childToggles = SelectorEngine.find('.dropdown > [data-bs-toggle="dropdown"]', this.root);
     this.backButton = SelectorEngine.findOne('.back-button', this.root);
     this.addEventListeners();
   }
 
   addEventListeners() {
-    EventHandler.on(this.parentToggle, "shown.bs.dropdown", () => {
-      if (!window.matchMedia("(min-width: 992px)").matches) return;
-      if (this.childToggles.some(toggle => toggle.parentElement.classList.contains("show"))) return;
-      const firstToggle = this.childToggles[0];
-      Dropdown.getOrCreateInstance(firstToggle).show();
-    });
-    this.childToggles.forEach((toggle) => {
-      const dropdownInstance = Dropdown.getOrCreateInstance(toggle);
-      EventHandler.on(toggle, "click", (e) => {
-        e.preventDefault();
-        this.childToggles.forEach((other) => {
-          Dropdown.getOrCreateInstance(other).hide();
-        });
-        dropdownInstance.show();
-      });
-    });
     if (this.backButton) {
       EventHandler.on(this.backButton, "click", () => {
-        this.childToggles.forEach((toggle) => {
-          Dropdown.getOrCreateInstance(toggle).hide();
-        });
+        this.hideMostInnerDropdown();
       });
+    }
+  }
+
+  hideMostInnerDropdown() {
+    const dropdownToggles = SelectorEngine.find('.dropdown-toggle.show', this.root);
+    if (dropdownToggles.length) {
+      const mostInnerToggle = dropdownToggles[dropdownToggles.length - 1];
+      Dropdown.getOrCreateInstance(mostInnerToggle).hide();
     }
   }
 

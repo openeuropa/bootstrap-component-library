@@ -33,7 +33,7 @@ module.exports = {
           path: "/example.html",
         },
         content_block:
-          "<h4>Mega Menu Content Title</h4><p>Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+          "<h4>About the European Commission</h4><p>Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
         items: [
           {
             id: "dropdown-megamenu-inner",
@@ -74,8 +74,6 @@ module.exports = {
               label: "Base Category Item",
               path: "/example.html",
             },
-            collapse:
-              "<a href='#' class='mb-3 d-block'> Example link</a><img src='https://inno-ecl.s3.amazonaws.com/media/examples/example-image.jpg' alt='image'>",
             items: [
               {
                 label: "Base Sub Category Item",

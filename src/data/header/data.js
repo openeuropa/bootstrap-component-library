@@ -7,6 +7,7 @@ const navbar = require("@openeuropa/bcl-data-header/data--navbar");
 const modals = require("@openeuropa/bcl-data-header/data--modals");
 
 module.exports = {
+  navbar_id: "header-navbar",
   variant: "eu",
   site_name: "Project name",
   project_logo: {

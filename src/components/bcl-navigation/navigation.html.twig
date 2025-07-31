@@ -91,7 +91,7 @@
           {% set _nav_class = _nav_class ~ ' dropdown' %}
           {% set _item = _item|merge({remove_wrapper: true}) %}
         {% endif %}
-        {% if _item.dropdown %}
+        {% if _item.dropdown or _item.mega_menu %}
           {% set _item_classes = [] %}
         {% else %}
           {% set _item_classes = ['nav-link'] %}

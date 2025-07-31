@@ -13,8 +13,6 @@
     format: [
       {
         - link or dropdown
-          ! dropdown extra property:
-            collapse (render) - to showcase on the last column 
       }
     ]
   - back_button_label (string) (default: 'Back')
@@ -81,7 +79,7 @@
         attributes: create_attribute().addClass(['back-button'])
       } only %}
     </div>
-    <div class="row position-relative pb-md-3 border-bottom z-3">
+    <div class="row pb-md-3">
       {% if content_block is defined %}
       <div class="col-md-12 col-xl-3">
         <div class="content-block">
@@ -104,7 +102,7 @@
         </div>
       </div>
       {% endif %}
-      <div class="col-md-12 col-xl-9 mb-md-3">
+      <div class="col-md-12 col-xl-9 mb-lg-3">
         <div class="navigation-items">
           {% for _item in _items %}
             {% if _item.items is defined %}
@@ -131,14 +129,9 @@
                     path: _icon_path,
                     size: "fluid",
                   },
-                  attributes: _trigger_attributes.setAttribute('data-bs-auto-close', 'false')
+                  attributes: _trigger_attributes.setAttribute('data-bs-auto-close', 'outside')
                 })
               }) only %}
-              {% if _item.collapse is defined %}
-                <div class="collapse">
-                  {{ _item.collapse|raw }}
-                </div>
-              {% endif %}
             {% else %}
               {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
             {% endif %}

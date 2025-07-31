@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  navbar_id: "header-navbar",
   variant: "ucpkn",
   site_name: "UCP Knowledge Network: Applied knowledge for action",
   light: true,
