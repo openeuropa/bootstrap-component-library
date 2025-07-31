@@ -74,15 +74,13 @@ $header-link-active-background: #003776 !default;
   max-width: 80%;
 }
 
-.bcl-header__navbar {
-  .navbar {
-    padding: 0;
-    .dropdown-toggle,
-    .nav-link {
-      padding: map-get($spacers, "2-5") map-get($spacers, 3);
-      border: none;
-      background: transparent;
-    }
+.bcl-header__navbar.navbar {
+  padding: 0;
+  .dropdown-toggle,
+  .nav-link {
+    padding: map-get($spacers, "2-5") map-get($spacers, 3);
+    border: none;
+    background: transparent;
   }
 }
 
@@ -115,12 +113,10 @@ $header-link-active-background: #003776 !default;
     }
   }
 
-  .bcl-header__navbar {
+  .bcl-header__navbar.navbar {
     background: $white;
     position: relative;
-    .navbar {
-      padding-top: 0;
-    }
+    padding-top: 0;
     .navbar-nav {
       width: 100%;
       .navigation-items > .dropdown > a,
@@ -227,53 +223,51 @@ $header-link-active-background: #003776 !default;
     }
   }
 
-  .bcl-header__navbar {
-    .navbar {
-      .dropdown-toggle,
-      .nav-link {
-        border-radius: 0;
-        &.active,
-        &.show,
-        &:focus,
-        &:hover {
-          background: $white;
-          color: $dark;
-          &:focus-visible {
-            box-shadow: none;
-            border: none;
-            outline: 2px solid $primary;
-            outline-offset: -3px;
-          }
+  .bcl-header__navbar.navbar {
+    .dropdown-toggle,
+    .nav-link {
+      border-radius: 0;
+      &.active,
+      &.show,
+      &:focus,
+      &:hover {
+        background: $white;
+        color: $dark;
+        &:focus-visible {
+          box-shadow: none;
+          border: none;
+          outline: 2px solid $primary;
+          outline-offset: -3px;
         }
       }
-      .dropdown-toggle {
+    }
+    .dropdown-toggle {
+      &:after {
+        background-color: $white;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0.625 0.725L1.19375 0.1375L4.99375 3.9625L8.80625 0.125L9.375 0.7125L4.99375 5.125L0.625 0.725Z' fill='black'/%3E%3C/svg%3E");
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0.625 0.725L1.19375 0.1375L4.99375 3.9625L8.80625 0.125L9.375 0.7125L4.99375 5.125L0.625 0.725Z' fill='black'/%3E%3C/svg%3E");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: none;
+        margin-top: 4px;
+      }
+      &:hover,
+      &:active,
+      &:focus {
         &:after {
-          background-color: $white;
-          -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0.625 0.725L1.19375 0.1375L4.99375 3.9625L8.80625 0.125L9.375 0.7125L4.99375 5.125L0.625 0.725Z' fill='black'/%3E%3C/svg%3E");
-          -webkit-mask-repeat: no-repeat;
-          -webkit-mask-size: contain;
-          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0.625 0.725L1.19375 0.1375L4.99375 3.9625L8.80625 0.125L9.375 0.7125L4.99375 5.125L0.625 0.725Z' fill='black'/%3E%3C/svg%3E");
-          mask-repeat: no-repeat;
-          mask-position: center;
-          mask-size: contain;
-          display: inline-block;
-          width: 10px;
-          height: 10px;
-          border: none;
-          margin-top: 4px;
+          background-color: $primary;
         }
-        &:hover,
-        &:active,
-        &:focus {
-          &:after {
-            background-color: $primary;
-          }
-        }
-        &.show {
-          &:after {
-            background-color: $primary;
-            transform: rotate(180deg);
-          }
+      }
+      &.show {
+        &:after {
+          background-color: $primary;
+          transform: rotate(180deg);
         }
       }
     }

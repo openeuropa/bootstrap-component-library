@@ -121,11 +121,10 @@
 
   <!-- navbar -->
   {% if _navbar is not empty %}
-    <div class="bcl-header__navbar collapse navbar-collapse" id='{{ _navbar_id }}'>
-      {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
-        disable_collapse: true
-      }) only %}
-    </div>
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
+      disable_collapse: true,
+      attributes: create_attribute().addClass('bcl-header__navbar collapse navbar-collapse').setAttribute('id', _navbar_id).setAttribute('aria-label', 'Main Navigation'),
+    }) only %}
   {% endif %}
 
   <!-- breadcrumbs -->

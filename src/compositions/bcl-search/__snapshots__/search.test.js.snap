@@ -43,98 +43,94 @@ exports[`OE - Search renders correctly 1`] = `
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <div
-      class="bcl-header__navbar collapse navbar-collapse"
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
       id="header-navbar"
     >
-      <nav
-        aria-label="Main Navigation"
-        class="navbar navbar-expand-lg navbar-dark"
+      <div
+        class="container"
       >
-        <div
-          class="container"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="/example.html"
+              id="navbarDropdownMenuLink"
+              role="button"
             >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="/example.html"
-                id="navbarDropdownMenuLink"
-                role="button"
-              >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+              Dropdown link
+            </a>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- breadcrumbs -->
     <div
       class="container"

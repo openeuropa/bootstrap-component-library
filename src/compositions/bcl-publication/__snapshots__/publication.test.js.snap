@@ -44,365 +44,361 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <div
-      class="bcl-header__navbar collapse navbar-collapse"
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
       id="header-navbar"
     >
-      <nav
-        aria-label="Main Navigation"
-        class="navbar navbar-expand-lg navbar-dark"
+      <div
+        class="container"
       >
-        <div
-          class="container"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              aria-labelledby="dropdown-megamenu"
+              class="bcl-mega-menu"
+              style="--bcl-mm-min-height: 300px;"
             >
+              <button
+                aria-expanded="false"
+                autocomplete="off"
+                class="dropdown-toggle nav-link btn btn-link btn-md"
+                data-bs-auto-close="outside"
+                data-bs-toggle="dropdown"
+                id="dropdown-megamenu"
+                type="button"
+              >
+                A link with dropdown
+              </button>
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="bcl-mega-menu"
-                style="--bcl-mm-min-height: 300px;"
+                class="mega-menu-container dropdown-menu"
               >
-                <button
-                  aria-expanded="false"
-                  autocomplete="off"
-                  class="dropdown-toggle nav-link btn btn-link btn-md"
-                  data-bs-auto-close="outside"
-                  data-bs-toggle="dropdown"
-                  id="dropdown-megamenu"
-                  type="button"
-                >
-                  A link with dropdown
-                </button>
                 <div
-                  aria-labelledby="dropdown-megamenu"
-                  class="mega-menu-container dropdown-menu"
+                  class="container position-relative"
                 >
                   <div
-                    class="container position-relative"
+                    class="d-lg-none back-button-block"
+                  >
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="row pb-lg-3"
                   >
                     <div
-                      class="d-lg-none back-button-block"
+                      class="col-md-12 col-xl-3"
                     >
-                      <button
-                        class="back-button btn btn-link btn-md"
-                        type="button"
+                      <div
+                        class="content-block"
                       >
-                        <svg
-                          class="me-2-5 bi icon--fluid"
+                        <h4>
+                          About the European Commission
+                        </h4>
+                        <p>
+                          Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p
+                          class="m-0"
                         >
-                          <use
-                            xlink:href="/icons.svg#arrow-left"
-                          />
-                        </svg>
-                        Back
-                      </button>
+                          <a
+                            class="content-link"
+                            href="/example.html"
+                          >
+                            Discover more
+                            <svg
+                              class="ms-2-5 bi icon--s"
+                            >
+                              <use
+                                xlink:href="/icons.svg#arrow-right"
+                              />
+                            </svg>
+                          </a>
+                        </p>
+                      </div>
                     </div>
                     <div
-                      class="row pb-lg-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
-                        class="col-md-12 col-xl-3"
+                        class="navigation-items"
                       >
                         <div
-                          class="content-block"
+                          class="dropdown dropend"
                         >
-                          <h4>
-                            About the European Commission
-                          </h4>
-                          <p>
-                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          </p>
-                          <p
-                            class="m-0"
-                          >
-                            <a
-                              class="content-link"
-                              href="/example.html"
-                            >
-                              Discover more
-                              <svg
-                                class="ms-2-5 bi icon--s"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#arrow-right"
-                                />
-                              </svg>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="col-md-12 col-xl-9 mb-lg-3"
-                      >
-                        <div
-                          class="navigation-items"
-                        >
-                          <div
-                            class="dropdown dropend"
-                          >
-                            <a
-                              aria-expanded="false"
-                              class="dropdown-toggle"
-                              data-bs-auto-close="outside"
-                              data-bs-toggle="dropdown"
-                              href="#"
-                              id="dropdown-megamenu-inner"
-                              role="button"
-                            >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <ul
-                              aria-labelledby="dropdown-megamenu-inner"
-                              class="dropdown-menu"
-                            >
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="see-all-button dropdown-item"
-                                  href="/example.html"
-                                >
-                                  See all
-                                  <svg
-                                    class="ms-2-5 bi icon--s"
-                                  >
-                                    <use
-                                      xlink:href="/icons.svg#arrow-right"
-                                    />
-                                  </svg>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
                           <a
+                            aria-expanded="false"
+                            class="dropdown-toggle"
+                            data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown"
                             href="#"
+                            id="dropdown-megamenu-inner"
+                            role="button"
                           >
                             Base Category Item
-                          </a>
-                          <div
-                            class="dropdown dropend"
-                          >
-                            <a
-                              aria-expanded="false"
-                              class="dropdown-toggle"
-                              data-bs-auto-close="outside"
-                              data-bs-toggle="dropdown"
-                              href="/example.html"
-                              id="dropdown-megamenu-inner-2"
-                              role="button"
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
                             >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
+                          </a>
+                          <ul
+                            aria-labelledby="dropdown-megamenu-inner"
+                            class="dropdown-menu"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
                               >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <ul
-                              aria-labelledby="dropdown-megamenu-inner-2"
-                              class="dropdown-menu"
-                            >
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="see-all-button dropdown-item"
+                                href="/example.html"
+                              >
+                                See all
+                                <svg
+                                  class="ms-2-5 bi icon--s"
                                 >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
+                                  <use
+                                    xlink:href="/icons.svg#arrow-right"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
+                        <a
+                          href="#"
+                        >
+                          Base Category Item
+                        </a>
+                        <div
+                          class="dropdown dropend"
+                        >
+                          <a
+                            aria-expanded="false"
+                            class="dropdown-toggle"
+                            data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown"
+                            href="/example.html"
+                            id="dropdown-megamenu-inner-2"
+                            role="button"
+                          >
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
+                          </a>
+                          <ul
+                            aria-labelledby="dropdown-megamenu-inner-2"
+                            class="dropdown-menu"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </li>
-            <li
-              class="nav-item"
+            </div>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <button
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
+              type="button"
             >
-              <button
-                aria-expanded="false"
-                autocomplete="off"
-                class="dropdown-toggle btn btn-primary btn-md"
-                data-bs-toggle="dropdown"
-                id="navbarDropdownMenuLink"
-                type="button"
-              >
-                Dropdown link
-              </button>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+              Dropdown link
+            </button>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- breadcrumbs -->
     <div
       class="container"
@@ -1734,365 +1730,361 @@ exports[`OE - Publication details renders correctly 1`] = `
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <div
-      class="bcl-header__navbar collapse navbar-collapse"
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
       id="header-navbar"
     >
-      <nav
-        aria-label="Main Navigation"
-        class="navbar navbar-expand-lg navbar-dark"
+      <div
+        class="container"
       >
-        <div
-          class="container"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              aria-labelledby="dropdown-megamenu"
+              class="bcl-mega-menu"
+              style="--bcl-mm-min-height: 300px;"
             >
+              <button
+                aria-expanded="false"
+                autocomplete="off"
+                class="dropdown-toggle nav-link btn btn-link btn-md"
+                data-bs-auto-close="outside"
+                data-bs-toggle="dropdown"
+                id="dropdown-megamenu"
+                type="button"
+              >
+                A link with dropdown
+              </button>
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="bcl-mega-menu"
-                style="--bcl-mm-min-height: 300px;"
+                class="mega-menu-container dropdown-menu"
               >
-                <button
-                  aria-expanded="false"
-                  autocomplete="off"
-                  class="dropdown-toggle nav-link btn btn-link btn-md"
-                  data-bs-auto-close="outside"
-                  data-bs-toggle="dropdown"
-                  id="dropdown-megamenu"
-                  type="button"
-                >
-                  A link with dropdown
-                </button>
                 <div
-                  aria-labelledby="dropdown-megamenu"
-                  class="mega-menu-container dropdown-menu"
+                  class="container position-relative"
                 >
                   <div
-                    class="container position-relative"
+                    class="d-lg-none back-button-block"
+                  >
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="row pb-lg-3"
                   >
                     <div
-                      class="d-lg-none back-button-block"
+                      class="col-md-12 col-xl-3"
                     >
-                      <button
-                        class="back-button btn btn-link btn-md"
-                        type="button"
+                      <div
+                        class="content-block"
                       >
-                        <svg
-                          class="me-2-5 bi icon--fluid"
+                        <h4>
+                          About the European Commission
+                        </h4>
+                        <p>
+                          Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p
+                          class="m-0"
                         >
-                          <use
-                            xlink:href="/icons.svg#arrow-left"
-                          />
-                        </svg>
-                        Back
-                      </button>
+                          <a
+                            class="content-link"
+                            href="/example.html"
+                          >
+                            Discover more
+                            <svg
+                              class="ms-2-5 bi icon--s"
+                            >
+                              <use
+                                xlink:href="/icons.svg#arrow-right"
+                              />
+                            </svg>
+                          </a>
+                        </p>
+                      </div>
                     </div>
                     <div
-                      class="row pb-lg-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
-                        class="col-md-12 col-xl-3"
+                        class="navigation-items"
                       >
                         <div
-                          class="content-block"
+                          class="dropdown dropend"
                         >
-                          <h4>
-                            About the European Commission
-                          </h4>
-                          <p>
-                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          </p>
-                          <p
-                            class="m-0"
-                          >
-                            <a
-                              class="content-link"
-                              href="/example.html"
-                            >
-                              Discover more
-                              <svg
-                                class="ms-2-5 bi icon--s"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#arrow-right"
-                                />
-                              </svg>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="col-md-12 col-xl-9 mb-lg-3"
-                      >
-                        <div
-                          class="navigation-items"
-                        >
-                          <div
-                            class="dropdown dropend"
-                          >
-                            <a
-                              aria-expanded="false"
-                              class="dropdown-toggle"
-                              data-bs-auto-close="outside"
-                              data-bs-toggle="dropdown"
-                              href="#"
-                              id="dropdown-megamenu-inner"
-                              role="button"
-                            >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <ul
-                              aria-labelledby="dropdown-megamenu-inner"
-                              class="dropdown-menu"
-                            >
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="see-all-button dropdown-item"
-                                  href="/example.html"
-                                >
-                                  See all
-                                  <svg
-                                    class="ms-2-5 bi icon--s"
-                                  >
-                                    <use
-                                      xlink:href="/icons.svg#arrow-right"
-                                    />
-                                  </svg>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
                           <a
+                            aria-expanded="false"
+                            class="dropdown-toggle"
+                            data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown"
                             href="#"
+                            id="dropdown-megamenu-inner"
+                            role="button"
                           >
                             Base Category Item
-                          </a>
-                          <div
-                            class="dropdown dropend"
-                          >
-                            <a
-                              aria-expanded="false"
-                              class="dropdown-toggle"
-                              data-bs-auto-close="outside"
-                              data-bs-toggle="dropdown"
-                              href="/example.html"
-                              id="dropdown-megamenu-inner-2"
-                              role="button"
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
                             >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
+                          </a>
+                          <ul
+                            aria-labelledby="dropdown-megamenu-inner"
+                            class="dropdown-menu"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
                               >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <ul
-                              aria-labelledby="dropdown-megamenu-inner-2"
-                              class="dropdown-menu"
-                            >
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="see-all-button dropdown-item"
+                                href="/example.html"
+                              >
+                                See all
+                                <svg
+                                  class="ms-2-5 bi icon--s"
                                 >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
+                                  <use
+                                    xlink:href="/icons.svg#arrow-right"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
+                        <a
+                          href="#"
+                        >
+                          Base Category Item
+                        </a>
+                        <div
+                          class="dropdown dropend"
+                        >
+                          <a
+                            aria-expanded="false"
+                            class="dropdown-toggle"
+                            data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown"
+                            href="/example.html"
+                            id="dropdown-megamenu-inner-2"
+                            role="button"
+                          >
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
+                          </a>
+                          <ul
+                            aria-labelledby="dropdown-megamenu-inner-2"
+                            class="dropdown-menu"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </li>
-            <li
-              class="nav-item"
+            </div>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <button
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
+              type="button"
             >
-              <button
-                aria-expanded="false"
-                autocomplete="off"
-                class="dropdown-toggle btn btn-primary btn-md"
-                data-bs-toggle="dropdown"
-                id="navbarDropdownMenuLink"
-                type="button"
-              >
-                Dropdown link
-              </button>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+              Dropdown link
+            </button>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- breadcrumbs -->
     <div
       class="container"
@@ -3433,365 +3425,361 @@ exports[`OE - Publication listing renders correctly 1`] = `
     </nav>
     <!-- project name -->
     <!-- navbar -->
-    <div
-      class="bcl-header__navbar collapse navbar-collapse"
+    <nav
+      aria-label="Main Navigation"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
       id="header-navbar"
     >
-      <nav
-        aria-label="Main Navigation"
-        class="navbar navbar-expand-lg navbar-dark"
+      <div
+        class="container"
       >
-        <div
-          class="container"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              aria-labelledby="dropdown-megamenu"
+              class="bcl-mega-menu"
+              style="--bcl-mm-min-height: 300px;"
             >
+              <button
+                aria-expanded="false"
+                autocomplete="off"
+                class="dropdown-toggle nav-link btn btn-link btn-md"
+                data-bs-auto-close="outside"
+                data-bs-toggle="dropdown"
+                id="dropdown-megamenu"
+                type="button"
+              >
+                A link with dropdown
+              </button>
               <div
                 aria-labelledby="dropdown-megamenu"
-                class="bcl-mega-menu"
-                style="--bcl-mm-min-height: 300px;"
+                class="mega-menu-container dropdown-menu"
               >
-                <button
-                  aria-expanded="false"
-                  autocomplete="off"
-                  class="dropdown-toggle nav-link btn btn-link btn-md"
-                  data-bs-auto-close="outside"
-                  data-bs-toggle="dropdown"
-                  id="dropdown-megamenu"
-                  type="button"
-                >
-                  A link with dropdown
-                </button>
                 <div
-                  aria-labelledby="dropdown-megamenu"
-                  class="mega-menu-container dropdown-menu"
+                  class="container position-relative"
                 >
                   <div
-                    class="container position-relative"
+                    class="d-lg-none back-button-block"
+                  >
+                    <button
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="row pb-lg-3"
                   >
                     <div
-                      class="d-lg-none back-button-block"
+                      class="col-md-12 col-xl-3"
                     >
-                      <button
-                        class="back-button btn btn-link btn-md"
-                        type="button"
+                      <div
+                        class="content-block"
                       >
-                        <svg
-                          class="me-2-5 bi icon--fluid"
+                        <h4>
+                          About the European Commission
+                        </h4>
+                        <p>
+                          Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p
+                          class="m-0"
                         >
-                          <use
-                            xlink:href="/icons.svg#arrow-left"
-                          />
-                        </svg>
-                        Back
-                      </button>
+                          <a
+                            class="content-link"
+                            href="/example.html"
+                          >
+                            Discover more
+                            <svg
+                              class="ms-2-5 bi icon--s"
+                            >
+                              <use
+                                xlink:href="/icons.svg#arrow-right"
+                              />
+                            </svg>
+                          </a>
+                        </p>
+                      </div>
                     </div>
                     <div
-                      class="row pb-lg-3"
+                      class="col-md-12 col-xl-9 mb-lg-3"
                     >
                       <div
-                        class="col-md-12 col-xl-3"
+                        class="navigation-items"
                       >
                         <div
-                          class="content-block"
+                          class="dropdown dropend"
                         >
-                          <h4>
-                            About the European Commission
-                          </h4>
-                          <p>
-                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          </p>
-                          <p
-                            class="m-0"
-                          >
-                            <a
-                              class="content-link"
-                              href="/example.html"
-                            >
-                              Discover more
-                              <svg
-                                class="ms-2-5 bi icon--s"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#arrow-right"
-                                />
-                              </svg>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="col-md-12 col-xl-9 mb-lg-3"
-                      >
-                        <div
-                          class="navigation-items"
-                        >
-                          <div
-                            class="dropdown dropend"
-                          >
-                            <a
-                              aria-expanded="false"
-                              class="dropdown-toggle"
-                              data-bs-auto-close="outside"
-                              data-bs-toggle="dropdown"
-                              href="#"
-                              id="dropdown-megamenu-inner"
-                              role="button"
-                            >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <ul
-                              aria-labelledby="dropdown-megamenu-inner"
-                              class="dropdown-menu"
-                            >
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="see-all-button dropdown-item"
-                                  href="/example.html"
-                                >
-                                  See all
-                                  <svg
-                                    class="ms-2-5 bi icon--s"
-                                  >
-                                    <use
-                                      xlink:href="/icons.svg#arrow-right"
-                                    />
-                                  </svg>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
                           <a
+                            aria-expanded="false"
+                            class="dropdown-toggle"
+                            data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown"
                             href="#"
+                            id="dropdown-megamenu-inner"
+                            role="button"
                           >
                             Base Category Item
-                          </a>
-                          <div
-                            class="dropdown dropend"
-                          >
-                            <a
-                              aria-expanded="false"
-                              class="dropdown-toggle"
-                              data-bs-auto-close="outside"
-                              data-bs-toggle="dropdown"
-                              href="/example.html"
-                              id="dropdown-megamenu-inner-2"
-                              role="button"
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
                             >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
+                          </a>
+                          <ul
+                            aria-labelledby="dropdown-megamenu-inner"
+                            class="dropdown-menu"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
                               >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <ul
-                              aria-labelledby="dropdown-megamenu-inner-2"
-                              class="dropdown-menu"
-                            >
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="see-all-button dropdown-item"
+                                href="/example.html"
+                              >
+                                See all
+                                <svg
+                                  class="ms-2-5 bi icon--s"
                                 >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  class="dropdown-item"
-                                  href="/example.html"
-                                >
-                                  Base Sub Category Item
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
-                          <a
-                            href="/example.html"
-                          >
-                            Base Category Item
-                          </a>
+                                  <use
+                                    xlink:href="/icons.svg#arrow-right"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
+                        <a
+                          href="#"
+                        >
+                          Base Category Item
+                        </a>
+                        <div
+                          class="dropdown dropend"
+                        >
+                          <a
+                            aria-expanded="false"
+                            class="dropdown-toggle"
+                            data-bs-auto-close="outside"
+                            data-bs-toggle="dropdown"
+                            href="/example.html"
+                            id="dropdown-megamenu-inner-2"
+                            role="button"
+                          >
+                            Base Category Item
+                            <svg
+                              class="ms-2-5 bi icon--fluid"
+                            >
+                              <use
+                                xlink:href="/icons.svg#chevron-right"
+                              />
+                            </svg>
+                          </a>
+                          <ul
+                            aria-labelledby="dropdown-megamenu-inner-2"
+                            class="dropdown-menu"
+                          >
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                href="/example.html"
+                              >
+                                Base Sub Category Item
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
+                        <a
+                          href="/example.html"
+                        >
+                          Base Category Item
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </li>
-            <li
-              class="nav-item"
+            </div>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
             >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <button
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
+              type="button"
             >
-              <button
-                aria-expanded="false"
-                autocomplete="off"
-                class="dropdown-toggle btn btn-primary btn-md"
-                data-bs-toggle="dropdown"
-                id="navbarDropdownMenuLink"
-                type="button"
-              >
-                Dropdown link
-              </button>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+              Dropdown link
+            </button>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <!-- breadcrumbs -->
     <div
       class="container"
