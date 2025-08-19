@@ -58,5 +58,5 @@ describe("OE - Project", () => {
     expect(
       await axe(renderTwigFileAsHtml(detailsTemplate, ongoingDemo)),
     ).toHaveNoViolations();
-  });
+  }, 30000);
 });

@@ -121,6 +121,14 @@
           %}
         {% endif %}
         {% if _item.dropdown is defined %}
+            {% if _tabs %}
+              {% set _item = _item|merge({
+                inside_navigation: true,
+                trigger: _item.trigger|merge({
+                  attributes: _item.trigger.attributes.setAttribute("role", "tab"),
+                }),
+              }) %}
+            {% endif %}
           {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _item only %}
         {% elseif _item.button is defined %}
           {% include '@oe-bcl/bcl-button/button.html.twig' with _item only %}

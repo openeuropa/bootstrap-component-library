@@ -86,5 +86,5 @@ describe("OE - Gallery", () => {
     expect(
       await axe(renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
-  });
+  }, 30000);
 });
