@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import drupalAttribute from "drupal-attribute";
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   label: "Button with collapse",
   attributes: new drupalAttribute()
     .setAttribute("data-bs-toggle", "collapse")
@@ -11,3 +11,5 @@ module.exports = {
     .setAttribute("data-bs-target", "#collapseExample"),
   collapse_text: getDummyText(3),
 };
+
+export default data;

@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   title: "EU Budget for the future",
   description: "Innovation, economy, environment and geopolitics",
   link: {
@@ -17,3 +17,5 @@ module.exports = {
   shade: true,
   attributes: new drupalAttribute().addClass(["bg-lighter", "text-center"]),
 };
+
+export default data;

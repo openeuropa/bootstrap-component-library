@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   id: 1,
   toggle_collapsed: "Show %d more items",
   toggle_expanded: "Hide %d items",
@@ -149,3 +149,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

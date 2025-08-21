@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   id: "dropdown-1",
   trigger: {
     label: "Dropdown Toggle",
@@ -28,3 +28,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

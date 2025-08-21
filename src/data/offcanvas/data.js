@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   placement: "bottom",
   with_close: true,
   close_aria_label: "Close button for the offcanvas",
@@ -7,3 +7,5 @@ module.exports = {
   title_tag: "h4",
   body: "An interesting content for this offcanvas",
 };
+
+export default data;

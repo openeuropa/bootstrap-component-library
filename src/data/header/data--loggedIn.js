@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = [
+const data = [
   {
     label: "My account",
     path: "/example.html",
@@ -35,3 +35,5 @@ module.exports = [
     },
   },
 ];
+
+export default data;

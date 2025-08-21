@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import drupalAttribute from "drupal-attribute";
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   sidebar: {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("bcl-offcanvas offcanvas-start"),
@@ -372,3 +372,5 @@ module.exports = {
     ],
   },
 };
+
+export default data;

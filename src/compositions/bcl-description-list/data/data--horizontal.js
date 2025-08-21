@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   variant: "horizontal",
   items: [
     {
@@ -50,3 +50,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

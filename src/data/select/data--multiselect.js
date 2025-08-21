@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   id: "multiselect-1",
   multiple: true,
   clean_class: true,
@@ -31,3 +31,5 @@ module.exports = {
   ],
   attributes: new drupalAttribute().addClass("multi-select form-select"),
 };
+
+export default data;

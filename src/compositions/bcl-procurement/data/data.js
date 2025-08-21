@@ -10,8 +10,7 @@ import dataContent from "@openeuropa/bcl-procurement/data/data--content";
 import dataSidebarDetails from "@openeuropa/bcl-procurement/data/data--sidebar-details";
 import dataDetailsBanner from "@openeuropa/bcl-procurement/data/data--details-banner";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "listing",

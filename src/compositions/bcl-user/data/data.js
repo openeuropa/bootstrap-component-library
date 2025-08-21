@@ -11,8 +11,7 @@ import demoDataListing from "@openeuropa/bcl-user/data/data--user-listing";
 import demoDataTerms from "@openeuropa/bcl-user/data/data--terms";
 import demoDataForm from "@openeuropa/bcl-user/data/data--form";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   with_header: true,

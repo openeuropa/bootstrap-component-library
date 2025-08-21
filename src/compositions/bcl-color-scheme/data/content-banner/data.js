@@ -1,6 +1,6 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   background: "gray",
   title: "This is the title of this page",
   badges: [
@@ -34,3 +34,5 @@ module.exports = {
     variant: "secondary",
   },
 };
+
+export default data;

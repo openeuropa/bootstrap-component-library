@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   id: "languageModal",
   title: "Select your language",
   icon_path: "/icons.svg",
@@ -156,3 +156,5 @@ module.exports = {
   eu_category: "EU official languages",
   non_eu_category: "Other languages",
 };
+
+export default data;

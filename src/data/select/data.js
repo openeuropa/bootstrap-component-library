@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   id: "select-1",
   label: "A select form element",
   required: true,
@@ -14,3 +14,5 @@ module.exports = {
     { label: "the selected option", selected: true },
   ],
 };
+
+export default data;

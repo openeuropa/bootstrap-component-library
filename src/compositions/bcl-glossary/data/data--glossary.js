@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   variant: "glossary",
   items: [
     {
@@ -151,3 +151,5 @@ module.exports = {
   ],
   attributes: new drupalAttribute().setAttribute("aria-label", "aria label"),
 };
+
+export default data;

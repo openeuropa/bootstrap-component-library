@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   chart: true,
   corporate_contributions: 70,
   legend: {
@@ -28,3 +28,5 @@ module.exports = {
     attributes: new drupalAttribute().addClass("mb-0"),
   },
 };
+
+export default data;

@@ -1,6 +1,6 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   responsive_columns: 3,
   icon_path: "/icons.svg",
   equal_height: true,
@@ -72,3 +72,5 @@ module.exports = {
     label: "Read more",
   },
 };
+
+export default data;

@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   picture: {
     path: "https://picsum.photos/50/50",
     alt: "Stefan Mayer profile picture",
@@ -9,3 +9,5 @@ module.exports = {
   },
   infos: ["DG Test", "Director"],
 };
+
+export default data;

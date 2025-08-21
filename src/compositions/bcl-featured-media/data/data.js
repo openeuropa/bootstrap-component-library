@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   content: "Media description text goes here.",
   content_classes: "bg-lighter p-3",
   embedded_media:
@@ -10,3 +10,5 @@ module.exports = {
     "https://www.youtube.com/embed/VFYlYeFAEH4",
   ),
 };
+
+export default data;

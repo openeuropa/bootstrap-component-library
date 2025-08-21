@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   label: "Filter options",
   type: "button",
   size: "lg",
@@ -17,3 +17,5 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["me-2"]),
   },
 };
+
+export default data;

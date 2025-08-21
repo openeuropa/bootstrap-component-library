@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
 const detailsListMultiple = {
   details_list: {

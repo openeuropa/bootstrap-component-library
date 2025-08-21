@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   banner: {
     main_title: "Group Name",
     actions: [
@@ -120,3 +120,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

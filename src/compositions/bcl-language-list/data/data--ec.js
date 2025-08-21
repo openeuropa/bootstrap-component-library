@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   variant: "ec",
   logo: {
     path: "https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/ec/images/logo/logo-ec--en.svg",
@@ -158,3 +158,5 @@ module.exports = {
   eu_category: "EU official languages",
   non_eu_category: "Other languages",
 };
+
+export default data;

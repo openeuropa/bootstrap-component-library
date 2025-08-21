@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   variant: "ucpkn",
   site_name: "UCP Knowledge Network: Applied knowledge for action",
   light: true,
@@ -187,3 +187,5 @@ module.exports = {
     },
   },
 };
+
+export default data;

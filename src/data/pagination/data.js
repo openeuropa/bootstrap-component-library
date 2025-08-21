@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   icon_path: "/icons.svg",
   first: {
     label: "First",
@@ -46,3 +46,5 @@ module.exports = {
     "Test aria label",
   ),
 };
+
+export default data;

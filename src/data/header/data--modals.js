@@ -1,6 +1,6 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = [
+const data = [
   {
     id: "loginModal",
     header: `<h5 class="modal-title" id="loginModalLabel">Log in</h5>
@@ -13,3 +13,5 @@ module.exports = [
 	     <button type="button" class="btn btn-primary">Access EU login</button>`,
   },
 ];
+
+export default data;

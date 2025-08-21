@@ -1,4 +1,4 @@
-module.exports = `
+const data = `
   <h2 class="mb-3" id="share">Share this page</h2>
   <svg width="707" height="38" viewBox="0 0 707 38" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 4C0 1.79086 1.79086 0 4 0H44V38H4C1.79086 38 0 36.2091 0 34V4Z" fill="#326A9C"/>
@@ -21,3 +21,5 @@ module.exports = `
     <path d="M555.109 25.5625H692.883V26.3438H555.109V25.5625Z" fill="#253EBE"/>
   </svg>
 `;
+
+export default data;

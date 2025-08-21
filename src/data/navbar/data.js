@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   collapse_id: "navbar",
   brand: {
     label: "Navbar",
@@ -79,3 +79,5 @@ module.exports = {
     ],
   },
 };
+
+export default data;

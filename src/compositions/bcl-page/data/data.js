@@ -16,8 +16,7 @@ import files from "@openeuropa/bcl-page/data/data--files";
 import listingDefault from "@openeuropa/bcl-page/data/data--listing-default";
 import sidebar from "@openeuropa/bcl-page/data/data--sidebar";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const filesThumbnail = [
   { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },

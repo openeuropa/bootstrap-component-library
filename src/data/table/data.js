@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   caption: "List of users",
   table_head: {
     cells: [
@@ -191,3 +191,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

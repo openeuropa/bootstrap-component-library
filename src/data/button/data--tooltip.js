@@ -1,9 +1,11 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   label: "Button with tooltip",
   attributes: new drupalAttribute()
     .setAttribute("autocomplete", "off")
     .setAttribute("data-bs-toggle", "tooltip")
     .setAttribute("title", "This is a tooltip"),
 };
+
+export default data;

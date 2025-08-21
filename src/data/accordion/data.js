@@ -1,6 +1,4 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
-
-module.exports = {
+const data = {
   id: "1",
   items: [
     {
@@ -28,3 +26,5 @@ module.exports = {
     variant: "secondary",
   },
 };
+
+export default data;

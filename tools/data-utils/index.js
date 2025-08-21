@@ -1,15 +1,15 @@
 /**
- * @param count {integer} How many periods to generate.
- * @param paragraph {boolean} Wrap the generated periods in a <p></p> tag
- * @param paragraphs {boolean} Wrap each period in a <p></p> tag
- * @param classes {String} css classes for the paragraph(s)
+ * @param count {number}
+ * @param paragraph {boolean}
+ * @param paragraphs {boolean}
+ * @param classes {string}
  */
-const getDummyText = (
+export function getDummyText(
   count = 1,
   paragraph = false,
   paragraphs = false,
   classes = "",
-) => {
+) {
   let p = "";
   let selector = "";
   let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ";
@@ -42,8 +42,6 @@ const getDummyText = (
   }
 
   return dummyText;
-};
+}
 
-module.exports = {
-  getDummyText,
-};
+export default getDummyText;

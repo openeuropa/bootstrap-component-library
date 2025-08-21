@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   type: "actionable",
   items: [
     {
@@ -25,3 +25,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

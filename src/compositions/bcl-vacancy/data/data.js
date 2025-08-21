@@ -11,8 +11,7 @@ import dataSidebarDetails from "@openeuropa/bcl-vacancy/data/data--sidebar-detai
 import dataOpenBanner from "@openeuropa/bcl-vacancy/data/data--open-banner";
 import dataClosedBanner from "@openeuropa/bcl-vacancy/data/data--closed-banner";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "listing",

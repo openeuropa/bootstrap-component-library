@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   icon: {
     name: "search",
     size: "xs",
@@ -14,3 +14,5 @@ module.exports = {
     input_type: "search",
   },
 };
+
+export default data;

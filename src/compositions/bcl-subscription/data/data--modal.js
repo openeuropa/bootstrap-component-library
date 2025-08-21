@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   id: "subscribeModal",
   header:
     '<div class="modal-title fs-5 fw-medium">Subscribe</div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>',
@@ -96,3 +96,5 @@ module.exports = {
     ]),
   },
 };
+
+export default data;

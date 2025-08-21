@@ -1,5 +1,5 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
+import "@openeuropa/bcl-theme-default/src/scss/_header.scss";
 
 import headerData from "@openeuropa/bcl-data-header/data";
 import headerDataEC from "@openeuropa/bcl-data-header/data--ec";

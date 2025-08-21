@@ -1,9 +1,13 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-const modals = require("@openeuropa/bcl-data-header/data--modals");
-const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
+// CJS/ESM interop
+import modalsMod from "@openeuropa/bcl-data-header/data--modals";
+import languageListMod from "@openeuropa/bcl-language-list/data/data-modal";
 
-module.exports = {
+const modals = modalsMod?.default ?? modalsMod;
+const languageList = languageListMod?.default ?? languageListMod;
+
+const data = {
   variant: "eu",
   head: {
     attributes: new drupalAttribute().addClass([
@@ -84,14 +88,8 @@ module.exports = {
             "page",
           ),
         },
-        {
-          label: "Item 01",
-          path: "/example.html",
-        },
-        {
-          label: "Item 02",
-          path: "/example.html",
-        },
+        { label: "Item 01", path: "/example.html" },
+        { label: "Item 02", path: "/example.html" },
         {
           id: "navbarDropdownMenuLink",
           link: true,
@@ -102,18 +100,9 @@ module.exports = {
             attributes: new drupalAttribute().addClass("nav-link"),
           },
           items: [
-            {
-              label: "Action",
-              path: "/example.html",
-            },
-            {
-              label: "Another action",
-              path: "/example.html",
-            },
-            {
-              label: "Something else here",
-              path: "/example.html",
-            },
+            { label: "Action", path: "/example.html" },
+            { label: "Another action", path: "/example.html" },
+            { label: "Something else here", path: "/example.html" },
           ],
         },
       ],
@@ -125,16 +114,12 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["mt-3"]),
     links: [
       { label: "Home", path: "/example.html" },
-      {
-        label: "European Union",
-        path: "/example.html",
-      },
-      {
-        label: "About the European Union",
-        path: "/example.html",
-      },
+      { label: "European Union", path: "/example.html" },
+      { label: "About the European Union", path: "/example.html" },
       { label: "News" },
     ],
     icon_path: "/icons.svg",
   },
 };
+
+export default data;

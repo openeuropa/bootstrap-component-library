@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   title: "Title card",
   subtitle: {
     content: "Subtitle card",
@@ -32,3 +32,5 @@ module.exports = {
   card_footer: "Footer of card",
   attributes: new drupalAttribute().addClass("w-25"),
 };
+
+export default data;

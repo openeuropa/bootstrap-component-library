@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   pills: true,
   nav: true,
   items: [
@@ -26,3 +26,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

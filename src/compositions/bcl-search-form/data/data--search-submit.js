@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   submit: {
     attributes: new drupalAttribute().addClass(["bcl-search-form__submit"]),
     assistive_text: "Search",
@@ -17,3 +17,5 @@ module.exports = {
     input_type: "search",
   },
 };
+
+export default data;

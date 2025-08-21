@@ -1,6 +1,6 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   banner: {
     background: "gray",
     title: "Senior Expert on Internal Models",
@@ -155,3 +155,5 @@ module.exports = {
     paragraphs: [getDummyText(8), getDummyText(8), getDummyText(8)],
   },
 };
+
+export default data;

@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   activities: [
     {
       image:
@@ -35,3 +35,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   status: "ongoing",
   label: "Status",
   badge: "Ongoing",
@@ -8,3 +8,5 @@ module.exports = {
   end_label: "End",
   progress: 25,
 };
+
+export default data;

@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   id: "carouselExample",
   with_controls: true,
   with_indicators: true,
@@ -59,3 +59,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

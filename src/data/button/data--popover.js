@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   label: "Button with popover",
   attributes: new drupalAttribute()
     .setAttribute("data-bs-toggle", "popover")
@@ -10,3 +10,5 @@ module.exports = {
     .setAttribute("data-bs-content", "This is a popover")
     .setAttribute("title", "This is a title of popover"),
 };
+
+export default data;

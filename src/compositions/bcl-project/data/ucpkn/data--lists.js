@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import drupalAttribute from "drupal-attribute";
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   status_lists: {
     items: [
       {
@@ -207,3 +207,5 @@ module.exports = {
     ],
   },
 };
+
+export default data;

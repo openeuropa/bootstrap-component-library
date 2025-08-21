@@ -19,8 +19,7 @@ import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "listing",

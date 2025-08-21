@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import drupalAttribute from "drupal-attribute";
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   with_text: true,
   wrapper_classes: "pb-4",
   description: getDummyText(6, true),
@@ -19,3 +19,5 @@ module.exports = {
   ),
   title: "A title for a featured item",
 };
+
+export default data;

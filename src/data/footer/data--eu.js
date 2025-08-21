@@ -1,6 +1,6 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   variant: "eu",
   rows: [
     {
@@ -277,3 +277,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

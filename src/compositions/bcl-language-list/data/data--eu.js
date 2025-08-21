@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   variant: "eu",
   logos_alignment: "center",
   logo: {
@@ -131,3 +131,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

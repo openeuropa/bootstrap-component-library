@@ -10,8 +10,7 @@ import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-pag
 import dataListing from "@openeuropa/bcl-person/data/data--listing";
 import dataDetails from "@openeuropa/bcl-person/data/data--details";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "listing",

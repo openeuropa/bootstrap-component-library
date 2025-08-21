@@ -26,8 +26,7 @@ const date = {
   year: "2021",
 };
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const simpleFile = { ...file };
 

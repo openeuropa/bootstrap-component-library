@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   label: "A link with tooltip",
   path: "/example.html",
   attributes: new drupalAttribute()
@@ -8,3 +8,5 @@ module.exports = {
     .setAttribute("data-bs-toggle", "tooltip")
     .setAttribute("role", "button"),
 };
+
+export default data;

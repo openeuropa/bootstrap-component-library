@@ -12,8 +12,7 @@ import {
 import dataListing from "@openeuropa/bcl-publication/data/data--listing";
 import dataExtraDetails from "@openeuropa/bcl-publication/data/data--extra-details";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "listing",

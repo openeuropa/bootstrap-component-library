@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   type: "ordered",
   items: [
     {
@@ -31,3 +31,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

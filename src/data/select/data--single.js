@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   id: "singleselect-1",
   clean_class: true,
   required: true,
@@ -28,3 +28,5 @@ module.exports = {
   ],
   attributes: new drupalAttribute().addClass("single-select form-select"),
 };
+
+export default data;

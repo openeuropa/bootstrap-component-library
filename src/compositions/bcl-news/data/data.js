@@ -13,8 +13,7 @@ import layout from "@openeuropa/bcl-base-templates/data/layout";
 import dataListing from "@openeuropa/bcl-news/data/data--listing";
 import content from "@openeuropa/bcl-news/data/data--content";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "news",

@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   title_attributes: new drupalAttribute().addClass("mb-0"),
   title: "Page content",
   id: "bcl-inpage-navigation",
@@ -25,3 +25,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

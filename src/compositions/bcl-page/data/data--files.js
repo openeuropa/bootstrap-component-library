@@ -1,7 +1,7 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
-const drupalAttribute = require("drupal-attribute");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
+import drupalAttribute from "drupal-attribute";
 
-module.exports = [
+const data = [
   {
     item_title: "File title",
     language: "English",
@@ -133,3 +133,5 @@ module.exports = [
     attributes: new drupalAttribute().addClass("mb-3"),
   },
 ];
+
+export default data;

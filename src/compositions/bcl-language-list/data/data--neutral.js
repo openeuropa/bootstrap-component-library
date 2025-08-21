@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
     alt: "logo",
@@ -129,3 +129,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

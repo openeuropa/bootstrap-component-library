@@ -1,11 +1,16 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
-const breadcrumbs = require("@openeuropa/bcl-data-breadcrumb/data");
-const navbar = require("@openeuropa/bcl-data-header/data--navbar");
-const modals = require("@openeuropa/bcl-data-header/data--modals");
+import languageListMod from "@openeuropa/bcl-language-list/data/data-modal";
+import breadcrumbsMod from "@openeuropa/bcl-data-breadcrumb/data";
+import navbarMod from "@openeuropa/bcl-data-header/data--navbar";
+import modalsMod from "@openeuropa/bcl-data-header/data--modals";
 
-module.exports = {
+const languageList = languageListMod?.default ?? languageListMod;
+const breadcrumbs = breadcrumbsMod?.default ?? breadcrumbsMod;
+const navbar = navbarMod?.default ?? navbarMod;
+const modals = modalsMod?.default ?? modalsMod;
+
+const data = {
   variant: "eu",
   head: {
     attributes: new drupalAttribute()
@@ -71,3 +76,5 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["mt-3"]),
   },
 };
+
+export default data;

@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   toolbar: true,
   toolbar_aria_label: "Text here",
   attributes: new drupalAttribute().addClass("me-2"),
@@ -63,3 +63,5 @@ module.exports = {
     ],
   ],
 };
+
+export default data;

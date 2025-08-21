@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   label: "Status",
   start_date: "19 December 2020",
   start_label: "Start",
@@ -6,3 +6,5 @@ module.exports = {
   end_label: "End",
   progress: 25,
 };
+
+export default data;

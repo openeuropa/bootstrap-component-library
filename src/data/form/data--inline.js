@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   attributes: new drupalAttribute()
     .addClass(["row", "row-cols-lg-auto", "g-3", "align-items-center"])
     .setAttribute("novalidate", true)
@@ -41,3 +41,5 @@ module.exports = {
     ],
   ],
 };
+
+export default data;

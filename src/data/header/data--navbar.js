@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   color_set: "dark",
   collapse_id: "navbarNavDropdown",
   attributes: new drupalAttribute()
@@ -90,3 +90,5 @@ module.exports = {
     ],
   },
 };
+
+export default data;

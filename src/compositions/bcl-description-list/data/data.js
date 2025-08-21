@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   items: [
     {
       term: [
@@ -49,3 +49,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

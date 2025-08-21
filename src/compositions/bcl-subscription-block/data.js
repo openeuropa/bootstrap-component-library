@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   title: "Subscribe",
   content:
     "<p class='fw-bold'>Get notified lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
@@ -17,3 +17,5 @@ module.exports = {
       .setAttribute("data-bs-target", "#subscribeModal"),
   },
 };
+
+export default data;

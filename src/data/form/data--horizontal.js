@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   attributes: new drupalAttribute().setAttribute("onsubmit", "return false;"),
   submit: {
     wrapper: "col-12",
@@ -74,3 +74,5 @@ module.exports = {
     ],
   ],
 };
+
+export default data;

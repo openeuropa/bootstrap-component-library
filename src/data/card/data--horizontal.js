@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   horizontal: true,
   title: "Title card",
   subtitle: {
@@ -19,3 +19,5 @@ module.exports = {
   content: "<button class='btn btn-primary'>Custom action</button>",
   attributes: new drupalAttribute().addClass("w-50"),
 };
+
+export default data;

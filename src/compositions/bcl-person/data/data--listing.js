@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   sidebar: {
     id: "bcl-offcanvas",
     attributes: new drupalAttribute().addClass("offcanvas-start"),
@@ -44,3 +44,5 @@ module.exports = {
     },
   },
 };
+
+export default data;

@@ -1,6 +1,6 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   variant: "default-1-col",
   title: "Listing item block title",
   link: {
@@ -78,3 +78,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

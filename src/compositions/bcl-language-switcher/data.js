@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   id: "dropdown-languages",
   message: {
     message: "This page is not available in [language]",
@@ -118,3 +118,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

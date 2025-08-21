@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   items: [
     [
       {
@@ -36,3 +36,5 @@ module.exports = {
     ],
   ],
 };
+
+export default data;

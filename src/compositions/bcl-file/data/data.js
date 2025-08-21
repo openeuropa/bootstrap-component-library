@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   item_title: "File title",
   language: "English",
   meta: "(16.2 MB - PDF)",
@@ -56,3 +56,5 @@ module.exports = {
     ],
   },
 };
+
+export default data;

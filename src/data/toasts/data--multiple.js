@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   with_wrapper: true,
   wrapper_classes: "position-relative",
   wrapper_aria_live: "polite",
@@ -24,3 +24,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

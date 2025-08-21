@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   attributes: new drupalAttribute()
     .addClass(["row", "g-3"])
     .setAttribute("novalidate", true)
@@ -72,3 +72,5 @@ module.exports = {
     ],
   ],
 };
+
+export default data;

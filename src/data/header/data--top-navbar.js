@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = [
+const data = [
   {
     label: "Link",
     icon_position: "before",
@@ -50,3 +50,5 @@ module.exports = [
       .setAttribute("data-bs-target", "#loginModal"),
   },
 ];
+
+export default data;

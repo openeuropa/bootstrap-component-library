@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   heading: "Thank you",
   message: `<p>Your informations were sent successfully</p><hr>
   <dl class="d-md-grid grid-3-9">
@@ -20,3 +20,5 @@ module.exports = {
   icon_path: "/icons.svg",
   variant: "success",
 };
+
+export default data;

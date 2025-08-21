@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   nav: true,
   tabs: true,
   attributes: new drupalAttribute().addClass("bcl__nav"),
@@ -29,3 +29,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

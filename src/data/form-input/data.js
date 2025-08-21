@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   required: false,
   label: "Example form input",
   readonly: false,
@@ -9,3 +9,5 @@ module.exports = {
   invalid_feedback: "Invalid feedback example",
   valid_feedback: "Valid feedback example",
 };
+
+export default data;

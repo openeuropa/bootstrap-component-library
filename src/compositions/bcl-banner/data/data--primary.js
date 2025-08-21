@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   title: "EU Budget for the future",
   description: "Innovation, economy, environment and geopolitics",
   link: {
@@ -19,3 +19,5 @@ module.exports = {
     "text-center",
   ]),
 };
+
+export default data;

@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   alignment: "center",
   icon_path: "/icons.svg",
   first: {
@@ -53,3 +53,5 @@ module.exports = {
     .addClass(["mt-4-5"])
     .setAttribute("aria-label", "Pagination aria label"),
 };
+
+export default data;

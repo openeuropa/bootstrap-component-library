@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   toasts: [
     {
       role: "alert",
@@ -12,3 +12,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

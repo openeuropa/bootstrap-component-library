@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import drupalAttribute from "drupal-attribute";
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   type: "grid",
   responsive_columns: 3,
   responsiveness: "md",
@@ -135,3 +135,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

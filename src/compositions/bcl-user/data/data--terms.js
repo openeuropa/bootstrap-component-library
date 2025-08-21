@@ -1,6 +1,6 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-module.exports = {
+const data = {
   terms_form: {
     attributes: new drupalAttribute()
       .setAttribute("novalidate", true)
@@ -24,3 +24,5 @@ module.exports = {
     ],
   },
 };
+
+export default data;

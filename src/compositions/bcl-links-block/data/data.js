@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   background: "gray",
   variant: "vertical",
   title: "More information",
@@ -17,3 +17,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

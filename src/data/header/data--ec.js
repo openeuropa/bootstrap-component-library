@@ -1,12 +1,18 @@
-const drupalAttribute = require("drupal-attribute");
+import drupalAttribute from "drupal-attribute";
 
-const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
-const breadcrumbs = require("@openeuropa/bcl-data-breadcrumb/data");
-const navbarTop = require("@openeuropa/bcl-data-header/data--top-navbar");
-const navbar = require("@openeuropa/bcl-data-header/data--navbar");
-const modals = require("@openeuropa/bcl-data-header/data--modals");
+import languageListMod from "@openeuropa/bcl-language-list/data/data-modal";
+import breadcrumbsMod from "@openeuropa/bcl-data-breadcrumb/data";
+import navbarTopMod from "@openeuropa/bcl-data-header/data--top-navbar";
+import navbarMod from "@openeuropa/bcl-data-header/data--navbar";
+import modalsMod from "@openeuropa/bcl-data-header/data--modals";
 
-module.exports = {
+const languageList = languageListMod?.default ?? languageListMod;
+const breadcrumbs = breadcrumbsMod?.default ?? breadcrumbsMod;
+const navbarTop = navbarTopMod?.default ?? navbarTopMod;
+const navbar = navbarMod?.default ?? navbarMod;
+const modals = modalsMod?.default ?? modalsMod;
+
+const data = {
   variant: "ec",
   site_name: "Project name",
   project_logo: {
@@ -42,3 +48,5 @@ module.exports = {
     attributes: new drupalAttribute().addClass(["mt-3"]),
   },
 };
+
+export default data;

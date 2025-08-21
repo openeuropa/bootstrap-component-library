@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   id: "galleryExample",
   title: "Media gallery title",
   counter: "(%d) medias",
@@ -146,3 +146,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

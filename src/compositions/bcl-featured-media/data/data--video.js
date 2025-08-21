@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   content: "Media description text goes here.",
   content_classes: "bg-lighter p-3",
   poster_image:
@@ -22,3 +22,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

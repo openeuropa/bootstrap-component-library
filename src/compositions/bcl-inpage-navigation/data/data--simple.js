@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   title: "Page content",
   id: "bcl-inpage-navigation",
   dropdown_id: "bcl-inpage-navigation-dropdown",
@@ -14,3 +14,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

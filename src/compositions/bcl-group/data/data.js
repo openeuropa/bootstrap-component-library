@@ -12,8 +12,7 @@ import demoDataListContent from "@openeuropa/bcl-group/data/data--list-content";
 import demoDataListMember from "@openeuropa/bcl-group/data/data--list-member";
 import demoDataLanding from "@openeuropa/bcl-group/data/data--landing";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout[`header_default`] || layout.headerSimple;
 
 const baseData = {
   content_type: "group",

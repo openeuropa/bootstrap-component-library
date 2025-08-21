@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
+import drupalAttribute from "drupal-attribute";
+import { getDummyText } from "@openeuropa/bcl-data-utils";
 
-module.exports = {
+const data = {
   sidebar: {
     title: "Page content",
     id: "bcl-inpage-navigation",
@@ -153,3 +153,5 @@ module.exports = {
       '<div class="w-100"><button type="button" class="btn btn-link" data-bs-dismiss="modal">Privacy notice</button></div>',
   },
 };
+
+export default data;

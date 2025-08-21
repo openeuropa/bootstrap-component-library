@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   links: [
     { label: "Home", path: "/example.html" },
     {
@@ -13,3 +13,5 @@ module.exports = {
   ],
   icon_path: "/icons.svg",
 };
+
+export default data;

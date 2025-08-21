@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   variant: "default-1-col",
   remove_horizontal_spacer: true,
   image_size: "small",
@@ -72,3 +72,5 @@ module.exports = {
     },
   ],
 };
+
+export default data;

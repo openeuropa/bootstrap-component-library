@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   year: "2021",
   month: "Jan",
   day: "23",
@@ -8,3 +8,5 @@ module.exports = {
   end_year: "2023",
   icon_path: "/icons.svg",
 };
+
+export default data;

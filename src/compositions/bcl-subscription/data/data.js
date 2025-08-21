@@ -8,8 +8,7 @@ import content from "@openeuropa/bcl-news/data/data--content";
 import blockData from "@openeuropa/bcl-subscription-block/data";
 import modalData from "@openeuropa/bcl-subscription/data/data--modal";
 
-const header =
-  layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
+const header = layout.headerSimple;
 
 const demoData = {
   content_type: "subscription",
