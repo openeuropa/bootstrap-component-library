@@ -1,4 +1,28 @@
 /* stylelint-disable no-descending-specificity, declaration-no-important */
+
+/* -------------------------------------
+   Helpers
+-------------------------------------- */
+@mixin nav-items {
+  > a,
+  > button,
+  > span,
+  li > a,
+  li > button {
+    @content;
+  }
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* -------------------------------------
+   Component
+-------------------------------------- */
 .bcl-mega-menu {
   &.nav-link {
     padding: 0;
@@ -8,24 +32,21 @@
   }
   .mega-menu-container.dropdown-menu {
     position: absolute;
-    min-height: var(--bcl-mm-min-height);
+    top: 0;
+    left: 0;
     display: none;
     width: 100%;
-    padding: 0 map-get($spacers, 3);
-    border: none;
-    top: 0;
-    padding: 0;
+    min-height: var(--bcl-mm-min-height, 300px);
     max-height: 500px;
-    overflow-y: scroll;
-    overflow-x: hidden;
     margin-top: 0;
+    padding: 0 map-get($spacers, 3);
+    border: 0;
     border-radius: 0;
-    &:after {
+    &::after {
       content: "";
-      height: 100%;
-      left: 50%;
       position: absolute;
-      top: 0;
+      inset: 0;
+      left: 50%;
       width: 100vw;
       transform: translateX(-50%);
       z-index: 1;
@@ -34,11 +55,10 @@
     .back-button-block {
       position: relative;
       z-index: 2;
-      padding: 0 map-get($spacers, 3);
+      padding: 20px map-get($spacers, 3) 0;
       background: $primary-bg-subtle;
-      padding-top: 20px;
       .btn-link {
-        text-decoration: none;
+        @include link-reset;
       }
     }
     > .row {
@@ -46,76 +66,52 @@
     }
     .content-block {
       position: relative;
+      z-index: 2;
       height: 100%;
       padding: map-get($spacers, 3);
-      z-index: 2;
       background: $primary-bg-subtle;
-      &:after {
+      &::after {
         content: "";
-        pointer-events: none;
         position: absolute;
+        pointer-events: none;
       }
     }
+
     .content-link {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+      @include link-reset;
     }
+
+    /* ---------------------------------
+       LEFT column – vertical tablist
+    ---------------------------------- */
     .navigation-items {
-      width: 100%;
       position: relative;
       z-index: 2;
-      &:has(> .dropdown > .show) {
-        > a,
-        > .dropdown {
-          display: none;
-        }
-      }
-      .dropdown:has(.dropdown-toggle.show) {
+      width: 100%;
+      overflow: scroll;
+      max-height: 300px;
+      @include nav-items {
         display: block;
-      }
-      > a,
-      > button,
-      > .dropdown > a,
-      li > button,
-      li > a {
+        position: relative;
+        color: $dark;
         white-space: normal;
+        @include link-reset;
         &:has(svg) {
           padding-right: map-get($spacers, 5);
         }
-        &.active,
-        &.show {
-          background: $primary-bg-subtle;
-        }
       }
-      li:has(.see-all-button) {
-        margin: 0 map-get($spacers, "3-5");
-        position: sticky;
-        top: 100%;
-      }
-      .dropdown-toggle,
-      > a {
-        color: $dark;
-        display: block;
+      > span {
         text-decoration: none;
-        position: relative;
-        &.show {
-          color: $dark;
-          text-decoration: none;
+        color: $dark;
+        padding: map-get($spacers, "2-5") map-get($spacers, 3);
+        display: block;
+      }
+      > a[role="tab"] {
+        padding: map-get($spacers, "2-5") map-get($spacers, 3);
+        &.active,
+        &[aria-selected="true"] {
           pointer-events: none;
-          font-size: 20px;
-          padding-bottom: map-get($spacers, 5);
-          text-decoration: none;
-          svg {
-            display: none;
-          }
-          &:after {
-            display: none;
-          }
-        }
-        &:after {
-          display: none;
+          background: $primary-bg-subtle;
         }
         > svg {
           position: absolute;
@@ -123,59 +119,79 @@
           top: 50%;
           transform: translateY(-50%);
         }
-      }
-      &:has(.show) {
-        .dropdown {
-          height: 100%;
-        }
-      }
-      .dropdown {
-        &:has(.show) {
-          background: $blue-50;
-        }
-        .dropdown-menu {
-          transform: none !important;
-          right: auto !important;
-          width: 100%;
-          border: 0;
-          overflow: scroll;
-          padding: 0;
-          border-radius: 0;
-          margin: 0;
-          &:after {
-            position: absolute;
-            width: 100%;
-            height: 96px;
-            left: 0;
-            top: 0;
-            content: "";
-          }
-          .dropdown-item {
-            color: $link-color;
-            padding: map-get($spacers, 3);
-            border-bottom: 1px solid $primary-bg-subtle;
-            &:hover {
-              background: transparent;
-              text-decoration: underline;
-            }
-            &.see-all-button {
-              padding-left: 0;
-              padding-right: 0;
-              color: $dark;
-              position: relative;
-              border-bottom: none;
-            }
-          }
+        &:after {
+          display: none;
         }
       }
     }
-    &:has(.navigation-items .show) {
-      .content-block {
+
+    /* ---------------------------------
+       RIGHT column – tab panels
+    ---------------------------------- */
+    .sub-navigation-items.tab-content {
+      position: relative;
+      z-index: 2;
+      .tab-pane {
+        padding: map-get($spacers, 3);
+        ul {
+          margin: 0;
+          &:has(.see-all-button) {
+            li:nth-last-child(2) {
+              a {
+                border-bottom: 0;
+              }
+            }
+          }
+        }
+        li {
+          list-style: none;
+          > a {
+            display: block;
+            padding: map-get($spacers, "2-5") map-get($spacers, 3);
+            color: $link-color;
+            @include link-reset;
+            border-bottom: 1px solid $primary-bg-subtle;
+            margin: 0 map-get($spacers, "2-5");
+          }
+          &:last-child {
+            a {
+              border-bottom: 0;
+            }
+          }
+          .see-all-button {
+            border-bottom: 0;
+            position: relative;
+            padding: map-get($spacers, "2-5") 0;
+            display: flex;
+            align-items: center;
+            margin-left: map-get($spacers, 2);
+            &:after {
+              background: $neutral-border-color;
+              content: "";
+              height: 1px;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 100%;
+            }
+          }
+          &:has(.see-all-button) {
+            margin: 0 map-get($spacers, "3-5");
+            position: sticky;
+            top: 100%;
+          }
+        }
+      }
+      .panel-title {
         display: none;
       }
     }
   }
 }
+
+/* -------------------------------------
+   lg+ layout
+-------------------------------------- */
 @include media-breakpoint-up(lg) {
   .nav-item:has(> .bcl-mega-menu) {
     position: static;
@@ -186,142 +202,126 @@
     }
     .mega-menu-container.dropdown-menu {
       top: 100%;
-      margin-top: map-get($spacers, "2-5");
+      padding: map-get($spacers, "2-5") 0;
       border-bottom: var(--bs-border-width) var(--bs-border-style)
         var(--bs-border-color);
-      &:has(.navigation-items .show) {
-        .content-block {
-          display: block;
-        }
-      }
+      max-height: auto;
+      min-height: auto;
       .content-block {
         margin-right: 0;
         background: $white;
         padding-right: map-get($spacers, 4);
-        &:after {
-          bottom: 0;
-          box-shadow: 0 4px 5px 0 rgba(224, 229, 245, 0.5);
-          height: 8px;
+        &::after {
+          content: "";
+          position: absolute;
           left: 50%;
           bottom: 0;
           width: 100vw;
+          height: 8px;
           transform: translateX(-50%);
-          margin-left: 8px;
+          box-shadow: 0 4px 5px 0 rgba(224, 229, 245, 0.5);
+          pointer-events: none;
         }
       }
       .navigation-items {
-        position: relative;
-        width: 33%;
-        margin-top: map-get($spacers, 3);
         height: 100%;
-        &:has(> .dropdown > .show) {
-          > a,
-          > .dropdown {
-            display: block;
-          }
-        }
-        .dropdown {
-          height: auto !important;
-          position: static;
-          .dropdown-menu {
-            left: 100% !important;
-            top: 0;
-            height: 100% !important;
-            margin: 0;
-            overflow: visible;
-            background: $primary-bg-subtle;
-            &:after {
-              display: none;
-            }
-            li:has(.see-all-button) {
-              background: $primary-bg-subtle;
-            }
-            .dropdown-item {
-              padding: map-get($spacers, "2-5") map-get($spacers, 3);
-              border-bottom: none;
-              &.see-all-button {
-                &:after {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  height: 1px;
-                  width: 100%;
-                  content: "";
-                  background: $neutral-border-color;
-                }
-              }
-            }
-            a {
-              border: none;
-            }
-          }
-          > a,
-          > button,
-          > .dropdown > a,
-          li > button,
-          li > a {
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-        > a,
-        > button,
-        > .dropdown > a,
-        li > button,
-        li > a {
+        @include nav-items {
           &:hover {
             text-decoration: underline;
           }
         }
-        .dropdown > a,
-        & > a {
-          color: $dark;
-          width: 100%;
-          display: block;
-          position: relative;
+        > a,
+        > span {
           padding: map-get($spacers, "2-5") map-get($spacers, 3);
-          &.active {
-            color: $dark;
-          }
         }
-        .dropdown-toggle.show {
-          font-size: 1rem;
-          padding-bottom: map-get($spacers, "2-5");
-          pointer-events: auto;
-          svg {
-            display: block;
-          }
+        > a[role="tab"].active,
+        > a[role="tab"][aria-selected="true"] {
+          background: $primary-bg-subtle;
+          pointer-events: none;
+          border-left: 4px solid $primary;
+          padding-left: map-get($spacers, "2-5");
+          padding-right: map-get($spacers, 5);
         }
       }
-      &:after {
-        display: none;
-      }
-    }
-  }
-  .bcl-mega-menu {
-    .mega-menu-container.dropdown-menu {
-      .content-block {
-        margin-bottom: map-get($spacers, 4);
+
+      .sub-navigation-items.tab-content {
+        height: 100%;
+        overflow-y: auto;
+        max-height: 304px;
+        &:has(> .active) {
+          background: $primary-bg-subtle;
+        }
+        .tab-pane {
+          height: 100%;
+          overflow-y: auto;
+          padding: map-get($spacers, 3);
+          li {
+            > a {
+              border-bottom: none;
+            }
+          }
+        }
       }
     }
   }
 }
 
+/* -------------------------------------
+   xl+
+-------------------------------------- */
 @include media-breakpoint-up(xl) {
   .bcl-mega-menu {
     .mega-menu-container.dropdown-menu {
+      height: 313px;
       .content-block {
         box-shadow: none;
-        &:after {
-          bottom: 0;
-          right: 0;
+        &::after {
+          content: "";
+          position: absolute;
           top: 0;
+          right: 0;
           left: auto;
-          margin-left: 0;
           width: 10px;
           height: 100%;
           box-shadow: 10px 0 10px 0 rgba(224, 229, 245, 0.5);
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+   Mechanism on mobile to show/hide panels
+-------------------------------------- */
+@include media-breakpoint-down(lg) {
+  .bcl-mega-menu {
+    .mega-menu-container.dropdown-menu {
+      &:has(.navigation-items > .active) {
+        .content-block {
+          display: none;
+        }
+      }
+      .navigation-items {
+        &:has(> .active) {
+          display: none;
+        }
+      }
+      .sub-navigation-items.tab-content {
+        .panel-title {
+          padding: map-get($spacers, 3) map-get($spacers, 3)
+            map-get($spacers, "4-5");
+          margin: 0;
+          color: $dark;
+          background: $primary-bg-subtle;
+          display: block;
+          font-size: 20px;
+        }
+        .tab-pane {
+          > li {
+            a {
+              border-bottom: 1px solid $primary-bg-subtle;
+            }
+          }
         }
       }
     }

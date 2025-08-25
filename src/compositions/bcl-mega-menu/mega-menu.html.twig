@@ -78,7 +78,7 @@
           attributes: create_attribute().addClass(['back-button'])
         } only %}
       </div>
-      <div class="row pb-lg-3">
+      <div class="row h-100">
         {% if content_block is defined %}
         <div class="col-md-12 col-xl-3">
           <div class="content-block">
@@ -100,40 +100,103 @@
           </div>
         </div>
         {% endif %}
-        <div class="col-md-12 col-xl-9 mb-lg-3">
-          <div class="navigation-items">
-            {% for _item in _items %}
-              {% if _item.items is defined %}
-                {% set _items_list = _item.items %}
-                {% if _item.see_all is defined %}
-                  {% set _items_list = _items_list|merge([
-                    _item.see_all|merge({
-                      icon: {
-                        name: "arrow-right",
-                        path: _icon_path,
-                      },
-                      attributes: create_attribute().addClass('see-all-button')
-                    })
-                  ]) %}
-                {% endif %}
-                {% set _item = _item|merge({ items: _items_list }) %}
-                {% set _trigger_attributes = _item.trigger.attributes is defined ? _item.trigger.attributes : create_attribute() %}
-                {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _item|merge({
-                  direction: 'dropend',
-                  link: true,
-                  trigger: _item.trigger|merge({
-                    icon: {
-                      name: "chevron-right",
-                      path: _icon_path,
-                      size: "fluid",
-                    },
-                    attributes: _trigger_attributes.setAttribute('data-bs-auto-close', 'outside')
-                  })
-                }) only %}
-              {% else %}
-                {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
-              {% endif %}
-            {% endfor %}
+        <div class="col-md-12 col-xl-6 h-100">
+          <div class="row h-100 g-0">
+            <div class="col-12 col-lg-4 col-xl h-100 mt-lg-3 mt-xl-0">
+              <div class="navigation-items" role="tablist" aria-orientation="vertical">
+                {% set _dropdown_panels = _dropdown_panels|default([]) %}
+
+                {% for _raw in _items %}
+                  {% set _render_item = _raw %}
+                  {% if _raw.items is defined and _raw.items is not empty %}
+                    {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
+                    {% set _trigger_id = 'mm-trigger-' ~ _id ~ '-' ~ loop.index0 %}
+
+                    {% set _raw_items = _raw.items %}
+
+                    {% if _raw.see_all is defined and _raw.see_all is not empty %}
+                        {% set _see_all_attr = (_raw.see_all.attributes is defined ? _raw.see_all.attributes : create_attribute()) %}
+                        {% set _see_all = _raw.see_all|merge({
+                          icon: { 
+                            name: 'arrow-right', 
+                            path: _icon_path,
+                            size: 'fluid' 
+                          },
+                          attributes: _see_all_attr.addClass(['see-all-button'])
+                        }) %}
+
+                        {% set _raw_items = _raw_items|merge([ _see_all ]) %}
+                    {% endif %}
+
+                    {% set _dropdown_panels = _dropdown_panels|merge([{
+                      id: _panel_id,
+                      trigger_id: _trigger_id,
+                      items: _raw_items,
+                      title: _raw.trigger.label,
+                    }]) %}
+
+                    {% set _trigger_attributes = (_raw.trigger.attributes is defined ? _raw.trigger.attributes : create_attribute())
+                      .addClass(['tab-toggle'])
+                      .setAttribute('id', _trigger_id)
+                      .setAttribute('role', 'tab')
+                      .setAttribute('data-bs-toggle', 'tab')
+                      .setAttribute('data-bs-target', '#' ~ _panel_id)
+                      .setAttribute('aria-controls', _panel_id)
+                      .setAttribute('aria-selected', 'false')
+                    %}
+
+                    {% set _render_item = _raw|merge({
+                      trigger: _raw.trigger|merge({
+                        icon: { 
+                          name: 'chevron-right', 
+                          path: _icon_path,
+                          size: 'fluid' 
+                        },
+                        attributes: _trigger_attributes.addClass('no-chevron')
+                      })
+                    }) %}
+                    {% set _render_item = _render_item.trigger %}
+                  {% endif %}
+
+                  {% include '@oe-bcl/bcl-link/link.html.twig' with _render_item only %}
+                {% endfor %}
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 col-xl h-100 mt-lg-3 mt-xl-0">
+              <div class="sub-navigation-items tab-content">
+                {% for _panel in _dropdown_panels %}
+                  {% if _items is not empty and _items is iterable %}
+                    <div
+                      class="tab-pane p-0"
+                      id="{{ _panel.id }}"
+                      role="tabpanel"
+                      aria-labelledby="{{ _panel.trigger_id }}"
+                    >
+                      <p class="panel-title">{{ _panel.title }}</p>
+                      <ul class="list-unstyled m-0">
+                      {% for _item in _panel.items %}
+                        {% if _item.attributes is empty %}
+                          {% set _item = _item|merge({
+                            attributes: create_attribute()
+                          }) %}
+                        {% endif %}
+                        {% if _item.active %}
+                          {% set _item_classes = _item_classes|merge(['active']) %}
+                        {% endif %}
+                        {% set _item = _item|merge({
+                          clean_class: true,
+                          attributes: _item.attributes.addClass(_item_classes)
+                        }) %}
+                        <li>
+                        {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+                        </li>
+                      {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>     
+            </div>
           </div>
         </div>
       </div>
