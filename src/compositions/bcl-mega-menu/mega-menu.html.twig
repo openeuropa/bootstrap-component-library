@@ -173,7 +173,7 @@
                       aria-labelledby="{{ _panel.trigger_id }}"
                     >
                       <p class="panel-title">{{ _panel.title }}</p>
-                      <ul class="list-unstyled m-0">
+                      <ul class="list-unstyled m-0 position-relative h-100">
                       {% for _item in _panel.items %}
                         {% if _item.attributes is empty %}
                           {% set _item = _item|merge({
