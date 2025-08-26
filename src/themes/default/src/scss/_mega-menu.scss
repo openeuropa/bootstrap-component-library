@@ -145,13 +145,16 @@
         }
         li {
           list-style: none;
-          > a {
+          > * {
             display: block;
             padding: map-get($spacers, "2-5") map-get($spacers, 3);
-            color: $link-color;
+            color: $dark;
             @include link-reset;
             border-bottom: 1px solid $primary-bg-subtle;
             margin: 0 map-get($spacers, "2-5");
+          }
+          > a {
+            color: $link-color;
           }
           &:last-child {
             a {
@@ -256,7 +259,7 @@
           overflow-y: auto;
           padding: map-get($spacers, 3);
           li {
-            > a {
+            > * {
               border-bottom: none;
             }
           }
@@ -318,11 +321,16 @@
         }
         .tab-pane {
           > li {
-            a {
+            > * {
               border-bottom: 1px solid $primary-bg-subtle;
             }
           }
         }
+      }
+    }
+    &:has(.dropdown-menu.show) {
+      .dropdown-toggle {
+        display: none;
       }
     }
   }
