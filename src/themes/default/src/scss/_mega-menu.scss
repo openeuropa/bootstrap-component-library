@@ -145,7 +145,6 @@
             color: $dark;
             @include link-reset;
             border-bottom: 1px solid $primary-bg-subtle;
-            margin: 0 map-get($spacers, "2-5");
           }
           > a {
             color: $link-color;
@@ -289,6 +288,15 @@
           width: 10px;
           transform: none;
           box-shadow: 4px 3px 4px 0 rgba(224, 229, 245, 0.5);
+        }
+      }
+      .sub-navigation-items.tab-content {
+        .tab-pane {
+          li {
+            > * {
+              margin: 0 map-get($spacers, "2-5");
+            }
+          }
         }
       }
     }
