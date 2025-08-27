@@ -78,9 +78,9 @@
           attributes: create_attribute().addClass(['back-button'])
         } only %}
       </div>
-      <div class="row h-100">
+      <div class="row">
         {% if content_block is defined %}
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-3 position-relative">
           <div class="content-block">
             {%- block content_block -%}
               {{ _content_block }}
@@ -98,11 +98,14 @@
               <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
             {% endif %}
           </div>
+          <div class="shadow-container">
+            <span class="shadow-bg"></span>
+          </div>
         </div>
         {% endif %}
-        <div class="col-md-12 col-xl-6 h-100">
-          <div class="row h-100 g-0">
-            <div class="col-12 col-lg-4 col-xl h-100 mt-lg-3 mt-xl-0">
+        <div class="col-md-12 col-xl-6">
+          <div class="row g-0">
+            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
               <div class="navigation-items" role="tablist" aria-orientation="vertical">
                 {% set _dropdown_panels = _dropdown_panels|default([]) %}
 
@@ -117,10 +120,10 @@
                     {% if _raw.see_all is defined and _raw.see_all is not empty %}
                         {% set _see_all_attr = (_raw.see_all.attributes is defined ? _raw.see_all.attributes : create_attribute()) %}
                         {% set _see_all = _raw.see_all|merge({
+                          label: '<span>' ~ _raw.see_all.label ~ '</span>',
                           icon: { 
                             name: 'arrow-right', 
                             path: _icon_path,
-                            size: 'fluid' 
                           },
                           attributes: _see_all_attr.addClass(['see-all-button'])
                         }) %}
@@ -162,7 +165,7 @@
                 {% endfor %}
               </div>
             </div>
-            <div class="col-12 col-lg-4 col-xl h-100 mt-lg-3 mt-xl-0">
+            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
               <div class="sub-navigation-items tab-content">
                 {% for _panel in _dropdown_panels %}
                   {% if _items is not empty and _items is iterable %}
@@ -173,7 +176,7 @@
                       aria-labelledby="{{ _panel.trigger_id }}"
                     >
                       <p class="panel-title">{{ _panel.title }}</p>
-                      <ul class="list-unstyled m-0 position-relative h-100">
+                      <ul class="list-unstyled m-0 position-relative">
                       {% for _item in _panel.items %}
                         {% if _item.attributes is empty %}
                           {% set _item = _item|merge({

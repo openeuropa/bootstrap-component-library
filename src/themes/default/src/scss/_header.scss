@@ -112,11 +112,16 @@ $header-link-active-background: #003776 !default;
       position: static;
     }
   }
+  .bcl-header__top-navbar {
+    z-index: 1040;
+  }
 
   .bcl-header__navbar.navbar {
     background: $white;
-    position: relative;
+    position: absolute;
     padding-top: 0;
+    z-index: 1030;
+    width: 100%;
     .navbar-nav {
       width: 100%;
       .navigation-items > .dropdown > span,

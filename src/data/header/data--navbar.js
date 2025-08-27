@@ -54,10 +54,6 @@ module.exports = {
                 label: "Base Sub Category Item",
                 path: "/example.html",
               },
-              {
-                label: "Base Sub Category Item",
-                path: "/example.html",
-              },
             ],
           },
           {
@@ -90,7 +86,31 @@ module.exports = {
                 label: "Base Sub Category Item",
                 path: "/example.html",
               },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
             ],
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
           },
           {
             label: "Base Category Item",
