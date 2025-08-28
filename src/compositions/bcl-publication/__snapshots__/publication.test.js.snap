@@ -59,12 +59,13 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
             class="nav-item"
           >
             <div
-              aria-labelledby="dropdown-megamenu"
               class="bcl-mega-menu"
               style="--bcl-mm-min-height: 300px;"
             >
               <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
+                aria-haspopup="menu"
                 autocomplete="off"
                 class="dropdown-toggle nav-link btn btn-link btn-md"
                 data-bs-auto-close="outside"
@@ -74,9 +75,11 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
               >
                 A link with dropdown
               </button>
-              <div
+              <nav
+                aria-label="Main mega menu"
                 aria-labelledby="dropdown-megamenu"
                 class="mega-menu-container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
                 <div
                   class="container position-relative"
@@ -85,6 +88,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                     class="d-lg-none back-button-block"
                   >
                     <button
+                      aria-label="Back to main menu"
                       class="back-button btn btn-link btn-md"
                       type="button"
                     >
@@ -239,6 +243,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                               class="tab-pane p-0"
                               id="mm-panel-dropdown-megamenu-0"
                               role="tabpanel"
+                              tabindex="0"
                             >
                               <p
                                 class="panel-title"
@@ -282,7 +287,8 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                                 </li>
                                 <li>
                                   <a
-                                    class="see-all-button "
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
                                     href="/example.html"
                                   >
                                     <span>
@@ -304,6 +310,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                               class="tab-pane p-0"
                               id="mm-panel-dropdown-megamenu-2"
                               role="tabpanel"
+                              tabindex="0"
                             >
                               <p
                                 class="panel-title"
@@ -385,7 +392,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </nav>
             </div>
           </li>
           <li
@@ -1819,12 +1826,13 @@ exports[`OE - Publication details renders correctly 1`] = `
             class="nav-item"
           >
             <div
-              aria-labelledby="dropdown-megamenu"
               class="bcl-mega-menu"
               style="--bcl-mm-min-height: 300px;"
             >
               <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
+                aria-haspopup="menu"
                 autocomplete="off"
                 class="dropdown-toggle nav-link btn btn-link btn-md"
                 data-bs-auto-close="outside"
@@ -1834,9 +1842,11 @@ exports[`OE - Publication details renders correctly 1`] = `
               >
                 A link with dropdown
               </button>
-              <div
+              <nav
+                aria-label="Main mega menu"
                 aria-labelledby="dropdown-megamenu"
                 class="mega-menu-container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
                 <div
                   class="container position-relative"
@@ -1845,6 +1855,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                     class="d-lg-none back-button-block"
                   >
                     <button
+                      aria-label="Back to main menu"
                       class="back-button btn btn-link btn-md"
                       type="button"
                     >
@@ -1999,6 +2010,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                               class="tab-pane p-0"
                               id="mm-panel-dropdown-megamenu-0"
                               role="tabpanel"
+                              tabindex="0"
                             >
                               <p
                                 class="panel-title"
@@ -2042,7 +2054,8 @@ exports[`OE - Publication details renders correctly 1`] = `
                                 </li>
                                 <li>
                                   <a
-                                    class="see-all-button "
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
                                     href="/example.html"
                                   >
                                     <span>
@@ -2064,6 +2077,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                               class="tab-pane p-0"
                               id="mm-panel-dropdown-megamenu-2"
                               role="tabpanel"
+                              tabindex="0"
                             >
                               <p
                                 class="panel-title"
@@ -2145,7 +2159,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </nav>
             </div>
           </li>
           <li
@@ -3588,12 +3602,13 @@ exports[`OE - Publication listing renders correctly 1`] = `
             class="nav-item"
           >
             <div
-              aria-labelledby="dropdown-megamenu"
               class="bcl-mega-menu"
               style="--bcl-mm-min-height: 300px;"
             >
               <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
+                aria-haspopup="menu"
                 autocomplete="off"
                 class="dropdown-toggle nav-link btn btn-link btn-md"
                 data-bs-auto-close="outside"
@@ -3603,9 +3618,11 @@ exports[`OE - Publication listing renders correctly 1`] = `
               >
                 A link with dropdown
               </button>
-              <div
+              <nav
+                aria-label="Main mega menu"
                 aria-labelledby="dropdown-megamenu"
                 class="mega-menu-container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
                 <div
                   class="container position-relative"
@@ -3614,6 +3631,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                     class="d-lg-none back-button-block"
                   >
                     <button
+                      aria-label="Back to main menu"
                       class="back-button btn btn-link btn-md"
                       type="button"
                     >
@@ -3768,6 +3786,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                               class="tab-pane p-0"
                               id="mm-panel-dropdown-megamenu-0"
                               role="tabpanel"
+                              tabindex="0"
                             >
                               <p
                                 class="panel-title"
@@ -3811,7 +3830,8 @@ exports[`OE - Publication listing renders correctly 1`] = `
                                 </li>
                                 <li>
                                   <a
-                                    class="see-all-button "
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
                                     href="/example.html"
                                   >
                                     <span>
@@ -3833,6 +3853,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                               class="tab-pane p-0"
                               id="mm-panel-dropdown-megamenu-2"
                               role="tabpanel"
+                              tabindex="0"
                             >
                               <p
                                 class="panel-title"
@@ -3914,7 +3935,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                     </div>
                   </div>
                 </div>
-              </div>
+              </nav>
             </div>
           </li>
           <li

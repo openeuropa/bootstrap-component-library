@@ -86,10 +86,12 @@
         display: block;
         position: relative;
         color: $dark;
-        white-space: normal;
         @include link-reset;
         &:has(svg) {
           padding-right: map-get($spacers, 5);
+        }
+        &:focus-visible {
+          outline-offset: -2px;
         }
       }
       > span {
@@ -148,6 +150,9 @@
           }
           > a {
             color: $link-color;
+            &:focus-visible {
+              outline-offset: -2px;
+            }
           }
           &:last-child {
             a {

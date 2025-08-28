@@ -29,6 +29,7 @@
 {% set _items = items|default([]) %}
 {% set _back_button_label = back_button_label|default('Back') %}
 {% set _icon_path = icon_path|default('') %}
+{% set _menu_id = 'mega-menu-' ~ _id %}
 
 {% if attributes is empty %}
   {% set attributes = create_attribute() %}
@@ -36,7 +37,7 @@
 
 {% set _classes = ['bcl-mega-menu'] %}
 
-{% set attributes = attributes.setAttribute('aria-labelledby', _id).addClass(_classes) %}
+{% set attributes = attributes.addClass(_classes) %}
 
 {% if _trigger.attributes is empty %}
   {% set _trigger = _trigger|merge({
@@ -46,6 +47,8 @@
 {% set _trigger = _trigger|merge({
   attributes: _trigger.attributes.addClass(['dropdown-toggle', 'nav-link'])
                       .setAttribute('aria-expanded', 'false')
+                      .setAttribute('aria-haspopup', 'menu')
+                      .setAttribute('aria-controls', _menu_id)
                       .setAttribute('data-bs-toggle', 'dropdown')
                       .setAttribute('data-bs-auto-close', 'outside')
                       .setAttribute('id', _id)
@@ -64,7 +67,7 @@
   {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
     variant: 'link'
   }) only %}
-  <div class="mega-menu-container dropdown-menu" aria-labelledby="{{ _id }}">
+  <nav id="{{ _menu_id }}" class="mega-menu-container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
     <div class="container position-relative">
       <div class="d-lg-none back-button-block">
         {% include '@oe-bcl/bcl-button/button.html.twig' with {
@@ -75,7 +78,7 @@
             path: _icon_path,
             name: "arrow-left",
           },
-          attributes: create_attribute().addClass(['back-button'])
+          attributes: create_attribute().addClass(['back-button']).setAttribute('aria-label', 'Back to main menu')
         } only %}
       </div>
       <div class="row">
@@ -125,7 +128,7 @@
                             name: 'arrow-right', 
                             path: _icon_path,
                           },
-                          attributes: _see_all_attr.addClass(['see-all-button'])
+                          attributes: _see_all_attr.addClass(['see-all-button']).setAttribute('aria-label', 'See all items in ‘' ~ _raw.trigger.label ~ '’')
                         }) %}
 
                         {% set _raw_items = _raw_items|merge([ _see_all ]) %}
@@ -174,6 +177,7 @@
                       id="{{ _panel.id }}"
                       role="tabpanel"
                       aria-labelledby="{{ _panel.trigger_id }}"
+                      tabindex="0"
                     >
                       <p class="panel-title">{{ _panel.title }}</p>
                       <ul class="list-unstyled m-0 position-relative">
@@ -183,6 +187,7 @@
                             attributes: create_attribute()
                           }) %}
                         {% endif %}
+                        {% set _item_classes = [] %}
                         {% if _item.active %}
                           {% set _item_classes = _item_classes|merge(['active']) %}
                         {% endif %}
@@ -204,7 +209,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 </div>
 
 {% endapply %}
