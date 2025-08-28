@@ -17,9 +17,14 @@ class MegaMenu {
 
     this.linearTabbingTabs = true;
 
+    this._onResize = this._onResize?.bind ? this._onResize.bind(this) : (e) => this._onResize(e);
+
     this.addEventListeners();
 
     if (this.linearTabbingTabs) this.makeAllTabsTabbable();
+
+    this.cleanupStatesForMobileIfNeeded();
+    this.applyDesktopStatesIfNeeded();
   }
 
   addEventListeners() {
@@ -44,6 +49,57 @@ class MegaMenu {
     EventHandler.on(window, "load.bs.tab.data-api", () => {
       if (this.linearTabbingTabs) this.makeAllTabsTabbable();
     });
+
+    EventHandler.on(window, "resize", this._onResize);
+  }
+
+  _onResize() {
+    this.cleanupStatesForMobileIfNeeded();
+    this.applyDesktopStatesIfNeeded();
+  }
+
+  cleanupStatesForMobileIfNeeded() {
+    if (window.innerWidth >= 992) return;
+
+    const dirty = SelectorEngine.find(
+      ".navigation-items .active, .navigation-items .show, .sub-navigation-items .active, .sub-navigation-items .show",
+      this.root
+    );
+    dirty.forEach((el) => {
+      el.classList.remove("active", "show");
+      if (el.getAttribute("role") === "tab") {
+        el.setAttribute("aria-selected", "false");
+      }
+    });
+
+    const panes = SelectorEngine.find(".sub-navigation-items .tab-pane", this.root);
+    panes.forEach((pane) => {
+      pane.classList.remove("active", "show");
+      if (pane.getAttribute("tabindex") === "0") pane.removeAttribute("tabindex");
+    });
+
+    const openToggles = SelectorEngine.find(
+      ".navigation-items .dropdown-toggle.show, .sub-navigation-items .dropdown-toggle.show",
+      this.root
+    );
+    openToggles.forEach((toggle) => {
+      Dropdown.getOrCreateInstance(toggle).hide();
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  applyDesktopStatesIfNeeded() {
+    if (window.innerWidth < 992) return;
+
+    const subNav = SelectorEngine.findOne(".sub-navigation-items .active", this.root);
+    console.log(subNav)
+    if (!subNav) return;
+
+    const pane = subNav.closest(".tab-pane");
+    console.log(pane)
+    if (!pane) return;
+
+    pane.classList.add("active", "show");
   }
 
   makeAllTabsTabbable() {
@@ -123,7 +179,6 @@ class MegaMenu {
     if (!this.backButton || !tab) return;
     const label = tab.textContent.trim();
     const backText = `Back to ${label}`;
-
     this.backButton.setAttribute("aria-label", backText);
   }
 

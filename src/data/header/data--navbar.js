@@ -32,6 +32,7 @@ module.exports = {
             id: "dropdown-megamenu-inner",
             trigger: {
               label: "Base Category Item",
+              attributes: new drupalAttribute().addClass("active"),
             },
             see_all: {
               label: "See all",
@@ -41,6 +42,7 @@ module.exports = {
               {
                 label: "Base Sub Category Item",
                 path: "/example.html",
+                attributes: new drupalAttribute().addClass("active"),
               },
               {
                 label: "Base Sub Category Item",
