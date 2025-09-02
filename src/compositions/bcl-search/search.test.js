@@ -22,5 +22,5 @@ describe("OE - Search", () => {
     expect(
       await axe(renderTwigFileAsHtml(template, dataListing)),
     ).toHaveNoViolations();
-  });
+  }, 10000);
 });

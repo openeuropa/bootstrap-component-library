@@ -2808,12 +2808,17 @@ exports[`OE - Group listing Content renders correctly 1`] = `
                 Filter options
               </h2>
               <button
-                aria-label=""
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
                 data-bs-target="#bcl-offcanvas"
                 type="button"
-              />
+              >
+                <span
+                  class="label visually-hidden"
+                >
+                  Close
+                </span>
+              </button>
             </div>
             <div
               class="offcanvas-body p-lg-0"
