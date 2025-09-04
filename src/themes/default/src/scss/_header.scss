@@ -242,18 +242,23 @@ $header-link-active-background: #003776 !default;
     .dropdown-toggle,
     .nav-link {
       border-radius: 0;
-      &.active,
-      &.show,
-      &:focus,
       &:hover {
+        background: $primary-bg-subtle;
+        color: $dark;
+      }
+      &.active,
+      &.show {
         background: $white;
         color: $dark;
         &:focus-visible {
-          box-shadow: none;
-          border: none;
-          outline: 2px solid $primary;
-          outline-offset: -3px;
+          outline-color: $primary;
         }
+      }
+      &:focus-visible {
+        box-shadow: none;
+        border: none;
+        outline: 2px solid $white;
+        outline-offset: -8px;
       }
     }
     .dropdown-toggle {
@@ -272,10 +277,12 @@ $header-link-active-background: #003776 !default;
         border: none;
         margin-top: 4px;
       }
-      &.active,
-      &:hover,
-      &:active,
-      &:focus {
+      &:hover {
+        &:after {
+          background-color: $dark;
+        }
+      }
+      &.active {
         &:after {
           background-color: $primary;
         }
