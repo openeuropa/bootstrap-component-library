@@ -403,18 +403,21 @@
 
 @include media-breakpoint-up(lg) {
   .bcl-mega-menu {
+    .mega-menu-container.dropdown-menu {
+      .sub-navigation-items.tab-content {
+        .tab-pane {
+          ul {
+            height: 288px;
+          }
+        }
+      }
+    }
     .content-block {
       max-height: 288px;
       overflow: auto;
     }
     .navigation-items {
       max-height: 288px;
-    }
-    .sub-navigation-items {
-      ul {
-        // Fixed in order to have see all button always at the bottom
-        height: 288px;
-      }
     }
   }
 }
