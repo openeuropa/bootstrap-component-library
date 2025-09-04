@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Card renders correctly 1`] = `
 <jest>
   <article
-    class="w-25 card"
+    class="card"
   >
     <div
       class="card-header"
@@ -19,7 +19,7 @@ exports[`OE - Card renders correctly 1`] = `
       class="card-body"
     >
       <h1
-        class="fs-4 card-title bcl-heading"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -37,12 +37,12 @@ exports[`OE - Card renders correctly 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm a badge
         </span>
         <span
-          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm also a badge
         </span>
@@ -60,7 +60,7 @@ exports[`OE - Card renders correctly 1`] = `
 exports[`OE - Card renders correctly with badges 1`] = `
 <jest>
   <article
-    class="w-25 card"
+    class="card"
   >
     <div
       class="card-header"
@@ -76,7 +76,7 @@ exports[`OE - Card renders correctly with badges 1`] = `
       class="card-body"
     >
       <h1
-        class="fs-4 card-title bcl-heading"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -94,7 +94,7 @@ exports[`OE - Card renders correctly with badges 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 badge text-bg-primary"
+          class="badge text-bg-primary"
         >
           Card Category
         </span>
@@ -128,9 +128,7 @@ exports[`OE - Card renders correctly with custom title attributes 1`] = `
       class="card-body"
     >
       <h1
-        attribute="with a value"
-        class="fs-4 card-title bcl-heading"
-        test="value"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -148,12 +146,12 @@ exports[`OE - Card renders correctly with custom title attributes 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm a badge
         </span>
         <span
-          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm also a badge
         </span>
@@ -171,7 +169,7 @@ exports[`OE - Card renders correctly with custom title attributes 1`] = `
 exports[`OE - Card renders horizontal correctly 1`] = `
 <jest>
   <article
-    class="w-50 card"
+    class="card"
   >
     <div
       class="row"
@@ -192,7 +190,7 @@ exports[`OE - Card renders horizontal correctly 1`] = `
           class="card-body"
         >
           <h1
-            class="fs-4 card-title bcl-heading"
+            class="mb-4 bcl-heading"
           >
             Title card
           </h1>
@@ -237,7 +235,7 @@ exports[`OE - Card renders with border variant correctly 1`] = `
       class="card-body"
     >
       <h1
-        class="fs-4 card-title bcl-heading"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -255,12 +253,12 @@ exports[`OE - Card renders with border variant correctly 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm a badge
         </span>
         <span
-          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm also a badge
         </span>
@@ -289,7 +287,7 @@ exports[`OE - Card renders with image bottom correctly 1`] = `
       class="card-body"
     >
       <h1
-        class="fs-4 card-title bcl-heading"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -307,21 +305,21 @@ exports[`OE - Card renders with image bottom correctly 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm a badge
         </span>
         <span
-          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm also a badge
         </span>
       </div>
     </div>
     <img
-      alt="alt img"
+      alt=""
       class="card-img-bottom"
-      src="https://picsum.photos/seed/1002/600/400"
+      src=""
     />
     <div
       class="card-footer"
@@ -351,7 +349,7 @@ exports[`OE - Card renders with text color white correctly 1`] = `
       class="card-body"
     >
       <h1
-        class="fs-4 card-title bcl-heading"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -369,12 +367,12 @@ exports[`OE - Card renders with text color white correctly 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm a badge
         </span>
         <span
-          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm also a badge
         </span>
@@ -408,7 +406,7 @@ exports[`OE - Card renders with variant correctly 1`] = `
       class="card-body"
     >
       <h1
-        class="fs-4 card-title bcl-heading"
+        class="mb-4 bcl-heading"
       >
         Title card
       </h1>
@@ -426,12 +424,12 @@ exports[`OE - Card renders with variant correctly 1`] = `
         class="mt-2-5"
       >
         <span
-          class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm a badge
         </span>
         <span
-          class="test-class mb-2 badge rounded-pill badge-outline-primary"
+          class="badge rounded-pill badge-outline-primary"
         >
           I'm also a badge
         </span>

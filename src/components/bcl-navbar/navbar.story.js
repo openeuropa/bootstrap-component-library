@@ -70,18 +70,6 @@ export default {
   title: "Components/Navbar",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=30%3A10",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/navbar/",
-      },
-    ],
   },
 };
 

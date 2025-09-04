@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Button Outline danger renders correctly 1`] = `
 <jest>
@@ -238,13 +238,6 @@ exports[`OE - Button with icon renders correctly 1`] = `
     type="button"
   >
     Label
-    <svg
-      class="ms-2-5 bi icon--fluid icon--rotate-90"
-    >
-      <use
-        xlink:href="/icons.svg#mouse"
-      />
-    </svg>
   </button>
 </jest>
 `;
@@ -252,13 +245,7 @@ exports[`OE - Button with icon renders correctly 1`] = `
 exports[`OE - Button with popover renders correctly 1`] = `
 <jest>
   <button
-    autocomplete="off"
     class="btn btn-primary btn-md"
-    data-bs-content="This is a popover"
-    data-bs-placement="top"
-    data-bs-toggle="popover"
-    data-bs-trigger="focus"
-    title="This is a title of popover"
     type="button"
   >
     Button with popover
@@ -273,7 +260,7 @@ exports[`OE - Button with spinner renders correctly 1`] = `
     type="button"
   >
     <div
-      class="me-1 spinner-border spinner-border-sm"
+      class="spinner-border spinner-border-sm"
       role="status"
     >
       <span
@@ -301,12 +288,7 @@ exports[`OE - Button with text not wrapping renders correctly 1`] = `
 exports[`OE - Button with toggle renders correctly 1`] = `
 <jest>
   <button
-    aria-controls="collapseExample"
-    aria-expanded="false"
-    autocomplete="off"
     class="btn btn-primary btn-md"
-    data-bs-target="#collapseExample"
-    data-bs-toggle="collapse"
     type="button"
   >
     Button with collapse
@@ -317,10 +299,7 @@ exports[`OE - Button with toggle renders correctly 1`] = `
 exports[`OE - Button with tooltip renders correctly 1`] = `
 <jest>
   <button
-    autocomplete="off"
     class="btn btn-primary btn-md"
-    data-bs-toggle="tooltip"
-    title="This is a tooltip"
     type="button"
   >
     Button with tooltip

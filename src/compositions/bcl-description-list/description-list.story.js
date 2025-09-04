@@ -40,16 +40,6 @@ export default {
   title: "Paragraphs/Description List",
   parameters: {
     badges: ["deprecated"],
-    viewport: {
-      defaultViewport: "tablet",
-    },
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5976%3A68483",
-      },
-    ],
   },
 };
 

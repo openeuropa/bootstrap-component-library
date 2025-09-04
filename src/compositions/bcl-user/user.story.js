@@ -60,75 +60,12 @@ export default {
 };
 
 export const Default = () => user(correctPaths(dataUser));
-Default.parameters = {
-  design: [
-    {
-      name: "Mockup - User view",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10018%3A174070",
-    },
-    {
-      name: "Mockup - User edit",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10018%3A174031",
-    },
-    {
-      name: "Mockup - User delete",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10065%3A185275",
-    },
-    {
-      name: "Mockup - User privacy",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10018%3A174003",
-    },
-    {
-      name: "Mockup - User visibility",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10038%3A178598",
-    },
-  ],
-};
 
 export const Listing = () => listingPage(correctPaths(dataListing));
 
 Listing.decorators = [initBadges];
-Listing.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10390%3A267732",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10390%3A267524",
-    },
-  ],
-};
 
 export const Compact = () => userCompact(demoDataCompact);
 
-Compact.parameters = {
-  layout: "padded",
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=4362%3A43580",
-    },
-  ],
-};
-
 export const Terms = () => userTerms(dataTerms);
 Terms.storyName = "Terms and conditions";
-Terms.parameters = {
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10398%3A244475",
-    },
-  ],
-};

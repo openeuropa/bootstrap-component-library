@@ -1,13 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Link as toggle renders correctly 1`] = `
 <jest>
   <a
-    aria-controls="collapseExample"
-    aria-expanded="false"
-    data-bs-toggle="collapse"
     href="#collapseExample"
-    role="button"
   >
     I am a link
   </a>
@@ -131,13 +127,6 @@ exports[`OE - Link with icon renders and without icon spacers correctly 1`] = `
     href="/example.html"
   >
     A simple link!
-    <svg
-      class="bi icon--s icon--rotate-90"
-    >
-      <use
-        xlink:href="/icons.svg#mouse"
-      />
-    </svg>
   </a>
 </jest>
 `;
@@ -156,10 +145,7 @@ exports[`OE - Link with id renders correctly 1`] = `
 exports[`OE - Link with tooltip renders correctly 1`] = `
 <jest>
   <a
-    data-bs-toggle="tooltip"
     href="/example.html"
-    role="button"
-    title="This is a tooltip"
   >
     A link with tooltip
   </a>

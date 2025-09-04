@@ -235,18 +235,6 @@ Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
 Default.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=1%3A815",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/components/buttons/",
-    },
-  ],
 };
 
 export const Collapse = (args) => button(applyArgs(toggleDemoData, args));
@@ -257,18 +245,6 @@ Collapse.argTypes = getArgTypes(toggleDemoData, "collapse");
 Collapse.decorators = [withCollapse];
 Collapse.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=16%3A105",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/components/collapse/",
-    },
-  ],
 };
 
 export const Popover = (args) => button(applyArgs(popoverDemoData, args));
@@ -279,18 +255,6 @@ Popover.argTypes = getArgTypes(popoverDemoData, "popover");
 Popover.decorators = [initPopover];
 Popover.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=2738%3A345",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/components/popovers/",
-    },
-  ],
 };
 
 export const Tooltip = (args) => button(applyArgs(tooltipDemoData, args));
@@ -301,11 +265,6 @@ Tooltip.argTypes = getArgTypes(tooltipDemoData, "tooltip");
 Tooltip.decorators = [initTooltip];
 Tooltip.parameters = {
   badges: ["deprecated"],
-  design: {
-    name: "Bootstrap docs",
-    type: "iframe",
-    url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
-  },
 };
 
 export const Spinner = (args) => button(applyArgs(spinnerDemoData, args));
@@ -315,16 +274,4 @@ Spinner.args = getArgs(spinnerDemoData);
 Spinner.argTypes = getArgTypes(spinnerDemoData);
 Spinner.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Wireframe",
-      type: "figma",
-      url: "https://www.figma.com/file/vIqhmdQGAgfcDfFs6vb2vZ/OE-Wireframe-kit?node-id=3142%3A10921",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/components/spinners/",
-    },
-  ],
 };

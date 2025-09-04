@@ -92,18 +92,6 @@ Default.args = getArgs(demoData, "select");
 Default.argTypes = getArgTypes(demoData, "select");
 Default.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3807%3A21838",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/forms/select/",
-    },
-  ],
 };
 
 export const Multiselect = (args) => select(applyArgs(demoMultiData, args));
@@ -113,26 +101,6 @@ Multiselect.args = getArgs(demoMultiData, "multiselect");
 Multiselect.decorators = [initMultiselect];
 Multiselect.parameters = {
   badges: ["deprecated"],
-  a11y: {
-    config: {
-      rules: [
-        { id: "aria-input-field-name", enabled: false },
-        { id: "scrollable-region-focusable", enabled: false },
-      ],
-    },
-  },
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3626%3A0",
-    },
-    {
-      name: "Slim select docs",
-      type: "iframe",
-      url: "https://slimselectjs.com/",
-    },
-  ],
 };
 
 export const Singleselect = (args) => select(applyArgs(demoSingleData, args));

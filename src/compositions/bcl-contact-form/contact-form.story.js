@@ -63,13 +63,6 @@ export default {
     controls: {
       disable: true,
     },
-    design: [
-      {
-        name: "Mockup - Contact form",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5191%3A180830",
-      },
-    ],
     badges: ["stable", "deprecated"],
   },
 };

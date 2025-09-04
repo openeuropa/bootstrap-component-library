@@ -89,13 +89,6 @@ export default {
     layout: "fullscreen",
     controls: { disable: true },
     badges: ["stable", "deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244556",
-      },
-    ],
   },
 };
 
@@ -104,24 +97,6 @@ Default.decorators = [clientValidation];
 
 export const SuccessState = () => subscriptionPage(correctPaths(demoData));
 SuccessState.decorators = [openModal, successState];
-SuccessState.parameters = {
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244564",
-    },
-  ],
-};
 
 export const ErrorState = () => subscriptionPage(correctPaths(demoData));
 ErrorState.decorators = [openModal, errorState];
-ErrorState.parameters = {
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10449%3A244562",
-    },
-  ],
-};

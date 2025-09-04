@@ -22,13 +22,6 @@ export default {
   title: "Paragraphs/Gallery",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=8654%3A83333",
-      },
-    ],
   },
 };
 

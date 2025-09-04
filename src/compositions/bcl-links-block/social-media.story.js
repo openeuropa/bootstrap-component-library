@@ -51,17 +51,7 @@ const applyArgs = (data, args) => {
 export default {
   title: "Paragraphs/Social Media Follow",
   parameters: {
-    viewport: {
-      defaultViewport: "tablet",
-    },
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=4195%3A41188",
-      },
-    ],
   },
 };
 

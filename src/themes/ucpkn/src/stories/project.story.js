@@ -23,13 +23,6 @@ export default {
       disable: true,
     },
     badges: ["stable", "deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/N0nAH22yz5vfDL6yx8yemr/UCPKN-Mockup?node-id=2472%3A149950",
-      },
-    ],
   },
 };
 

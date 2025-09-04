@@ -9,13 +9,6 @@ export default {
     badges: ["stable", "deprecated"],
     layout: "padded",
     controls: { disable: true },
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=0%3A1",
-      },
-    ],
   },
 };
 

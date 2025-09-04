@@ -84,13 +84,6 @@ export default {
   title: "Compositions/Date block",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=4332%3A42035",
-      },
-    ],
   },
 };
 

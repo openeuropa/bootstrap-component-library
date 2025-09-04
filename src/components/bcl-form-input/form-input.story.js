@@ -113,18 +113,6 @@ FormInput.args = getArgs(demoData, "text");
 FormInput.argTypes = getArgTypes(demoData, "text");
 FormInput.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3700%3A3078",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/forms/form-control/",
-    },
-  ],
 };
 
 const checkboxData = { ...demoData, input_type: "checkbox" };
@@ -135,18 +123,6 @@ Checkbox.args = getArgs(checkboxData, "checkbox");
 Checkbox.argTypes = getArgTypes(checkboxData, "checkbox");
 Checkbox.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3555%3A5",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/forms/checks-radios/",
-    },
-  ],
 };
 
 const switchData = { ...demoData, input_type: "checkbox", switch: true };
@@ -157,18 +133,6 @@ Switch.args = getArgs(switchData, "checkbox");
 Switch.argTypes = getArgTypes(switchData, "checkbox");
 Switch.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3555%3A5",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/forms/checks-radios/#switches",
-    },
-  ],
 };
 
 const radioData = { ...demoData, input_type: "radio" };
@@ -179,18 +143,6 @@ Radio.args = getArgs(radioData, "radio");
 Radio.argTypes = getArgTypes(radioData, "radio");
 Radio.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3555%3A5",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/forms/checks-radios/",
-    },
-  ],
 };
 
 const fileData = { ...demoData, input_type: "file" };
@@ -201,16 +153,4 @@ File.args = getArgs(fileData, "file");
 File.argTypes = getArgTypes(fileData, "file");
 File.parameters = {
   badges: ["deprecated"],
-  design: [
-    {
-      name: "Mockup",
-      type: "figma",
-      url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3812%3A21840",
-    },
-    {
-      name: "Bootstrap docs",
-      type: "iframe",
-      url: "https://getbootstrap.com/docs/5.2/forms/form-control/#file-input",
-    },
-  ],
 };

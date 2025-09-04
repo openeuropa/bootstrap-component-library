@@ -9,13 +9,6 @@ export default {
     layout: "fullscreen",
     controls: { disable: true },
     badges: ["stable", "deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5859%3A239083",
-      },
-    ],
   },
 };
 

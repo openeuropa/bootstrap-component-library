@@ -109,18 +109,6 @@ export default {
   decoratos: [initOffcanvas],
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3501%3A5602",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/offcanvas/",
-      },
-    ],
   },
 };
 

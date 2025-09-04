@@ -87,13 +87,6 @@ export default {
   title: "Paragraphs/Fact and Figures",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=6012%3A69751",
-      },
-    ],
   },
 };
 

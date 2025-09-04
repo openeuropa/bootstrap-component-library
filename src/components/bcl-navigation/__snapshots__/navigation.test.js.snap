@@ -6,32 +6,28 @@ exports[`OE - navigation renders correctly 1`] = `
     class="nav nav-pills"
   >
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 1
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 2
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 3
     </a>
     <a
-      class="nav-link active"
       href="/example.html"
     >
       I'm a link active
     </a>
     <a
       aria-disabled="true"
-      class="nav-link disabled"
+      class="disabled"
       href="/example.html"
       tabindex="-1"
     >
@@ -50,7 +46,6 @@ exports[`OE - navigation renders correctly as list 1`] = `
       class="nav-item"
     >
       <a
-        class="nav-link"
         href="/example.html"
       >
         I'm a link 1
@@ -60,7 +55,6 @@ exports[`OE - navigation renders correctly as list 1`] = `
       class="nav-item"
     >
       <a
-        class="nav-link"
         href="/example.html"
       >
         I'm a link 2
@@ -70,7 +64,6 @@ exports[`OE - navigation renders correctly as list 1`] = `
       class="nav-item"
     >
       <a
-        class="nav-link"
         href="/example.html"
       >
         I'm a link 3
@@ -80,7 +73,6 @@ exports[`OE - navigation renders correctly as list 1`] = `
       class="nav-item"
     >
       <a
-        class="nav-link active"
         href="/example.html"
       >
         I'm a link active
@@ -91,7 +83,7 @@ exports[`OE - navigation renders correctly as list 1`] = `
     >
       <a
         aria-disabled="true"
-        class="nav-link disabled"
+        class="disabled"
         href="/example.html"
         tabindex="-1"
       >
@@ -108,32 +100,28 @@ exports[`OE - navigation renders correctly full width 1`] = `
     class="nav nav-pills nav-fill"
   >
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 1
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 2
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 3
     </a>
     <a
-      class="nav-link active"
       href="/example.html"
     >
       I'm a link active
     </a>
     <a
       aria-disabled="true"
-      class="nav-link disabled"
+      class="disabled"
       href="/example.html"
       tabindex="-1"
     >
@@ -149,32 +137,28 @@ exports[`OE - navigation renders correctly on vertical 1`] = `
     class="nav nav-pills flex-column"
   >
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 1
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 2
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 3
     </a>
     <a
-      class="nav-link active"
       href="/example.html"
     >
       I'm a link active
     </a>
     <a
       aria-disabled="true"
-      class="nav-link disabled"
+      class="disabled"
       href="/example.html"
       tabindex="-1"
     >
@@ -191,38 +175,29 @@ exports[`OE - navigation renders correctly with custom styles 1`] = `
     role="tablist"
   >
     <a
-      class="nav-link"
       href="/example.html"
-      role="tab"
     >
       I'm a link 1
     </a>
     <a
-      class="nav-link"
       href="/example.html"
-      role="tab"
     >
       I'm a link 2
     </a>
     <a
-      class="nav-link"
       href="/example.html"
-      role="tab"
     >
       I'm a link 3
     </a>
     <a
-      class="nav-link active"
       href="/example.html"
-      role="tab"
     >
       I'm a link active
     </a>
     <a
       aria-disabled="true"
-      class="nav-link disabled"
+      class="disabled"
       href="/example.html"
-      role="tab"
       tabindex="-1"
     >
       I'm a link disabled
@@ -237,32 +212,28 @@ exports[`OE - navigation renders correctly with elements aligned right 1`] = `
     class="nav nav-pills justify-content-justify-content-end"
   >
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 1
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 2
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 3
     </a>
     <a
-      class="nav-link active"
       href="/example.html"
     >
       I'm a link active
     </a>
     <a
       aria-disabled="true"
-      class="nav-link disabled"
+      class="disabled"
       href="/example.html"
       tabindex="-1"
     >
@@ -278,32 +249,28 @@ exports[`OE - navigation renders correctly with pills style on elements 1`] = `
     class="nav nav-pills"
   >
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 1
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 2
     </a>
     <a
-      class="nav-link"
       href="/example.html"
     >
       I'm a link 3
     </a>
     <a
-      class="nav-link active"
       href="/example.html"
     >
       I'm a link active
     </a>
     <a
       aria-disabled="true"
-      class="nav-link disabled"
+      class="disabled"
       href="/example.html"
       tabindex="-1"
     >
@@ -320,49 +287,27 @@ exports[`OE - navigation renders correctly with tabs 1`] = `
     role="tablist"
   >
     <a
-      aria-controls="first"
-      class="nav-link"
-      data-bs-toggle="tab"
       href="#first"
       id="first-tab"
-      role="tab"
     >
       I'm a link
     </a>
     <button
-      aria-controls="second"
-      autocomplete="off"
-      class="nav-link"
-      data-bs-target="#second"
-      data-bs-toggle="tab"
       id="second-tab"
-      role="tab"
       type="button"
     >
       I'm a button
     </button>
     <button
-      aria-controls="third"
       aria-disabled="true"
-      autocomplete="off"
-      class="nav-link"
-      data-bs-target="#third"
-      data-bs-toggle="tab"
       disabled="true"
       id="third-tab"
-      role="tab"
       type="button"
     >
       I'm a disabled button
     </button>
     <button
-      aria-controls="fourth"
-      autocomplete="off"
-      class="nav-link active"
-      data-bs-target="#fourth"
-      data-bs-toggle="tab"
       id="fourth-tab"
-      role="tab"
       type="button"
     >
       I'm a active button

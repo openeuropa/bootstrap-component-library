@@ -34,60 +34,9 @@ export default {
 };
 
 export const List = () => listingPage(correctPaths(dataListing));
-List.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A249257",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A248956",
-    },
-  ],
-};
 
 export const MemberList = () => groupListing(correctPaths(dataListingMember));
-MemberList.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A249069",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A248612",
-    },
-  ],
-};
 
 export const ContentList = () => groupListing(correctPaths(dataListingContent));
-ContentList.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A248998",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A248529",
-    },
-  ],
-};
 
 export const Landing = () => groupLanding(correctPaths(dataLanding));
-Landing.parameters = {
-  design: [
-    {
-      name: "Mockup - Landing",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=482%3A2559",
-    },
-  ],
-};

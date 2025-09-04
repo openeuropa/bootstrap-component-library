@@ -67,18 +67,6 @@ export default {
   title: "Components/Spinner",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3142%3A10872",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/spinners/",
-      },
-    ],
   },
 };
 

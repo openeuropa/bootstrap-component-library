@@ -34,9 +34,11 @@
 const path = require("path");
 const { babel } = require("@rollup/plugin-babel");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");
-const babelPresetEnv = require("@babel/preset-env");
 const rollup = require("rollup");
-const { terser } = require("rollup-plugin-terser");
+
+// robust CJS import (works whether default or named)
+const terserImport = require("@rollup/plugin-terser");
+const terser = terserImport.default ?? terserImport;
 
 module.exports = (input, dest, options) => {
   const plugins = [

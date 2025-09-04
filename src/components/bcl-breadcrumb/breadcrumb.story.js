@@ -22,21 +22,6 @@ const applyArgs = (data, args) => Object.assign(correctPaths(data), args);
 
 export default {
   title: "Components/Breadcrumb",
-  parameters: {
-    badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=1%3A512",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/breadcrumb/",
-      },
-    ],
-  },
 };
 
 export const Default = (args) => breadcrumb(applyArgs(demoData, args));

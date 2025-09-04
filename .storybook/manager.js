@@ -1,6 +1,5 @@
-import { addons } from "@storybook/manager-api";
+import { addons } from "storybook/manager-api";
 import browserUpdate from "browser-update";
-import { create } from "@storybook/theming";
 
 addons.setConfig({
   isFullscreen: false,
@@ -10,12 +9,6 @@ addons.setConfig({
   sidebarAnimations: true,
   enableShortcuts: true,
   isToolshown: true,
-  theme: create({
-    base: "light",
-    brandTitle: `OE-BCL`,
-    brandUrl: "https://github.com/openeuropa/bootstrap-component-library",
-    brandImage: undefined,
-  }),
   selectedPanel: "controls",
   initialActive: "sidebar",
   sidebar: {

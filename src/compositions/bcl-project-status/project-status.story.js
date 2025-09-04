@@ -105,13 +105,6 @@ export default {
   title: "Compositions/Project status",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=4298%3A144965",
-      },
-    ],
   },
 };
 

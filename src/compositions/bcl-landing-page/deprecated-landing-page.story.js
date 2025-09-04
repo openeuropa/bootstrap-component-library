@@ -14,13 +14,6 @@ export default {
         title: "v1",
       },
     },
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/N0nAH22yz5vfDL6yx8yemr/UCPKN-Mockup?node-id=1024%3A125486",
-      },
-    ],
     a11y: {
       config: {
         rules: [{ id: "frame-tested", enabled: false }],

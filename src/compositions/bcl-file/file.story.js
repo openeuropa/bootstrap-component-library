@@ -26,13 +26,6 @@ export default {
     viewport: {
       defaultViewport: "tablet",
     },
-    design: [
-      {
-        name: "Mockup - File",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=6818%3A91821",
-      },
-    ],
   },
 };
 

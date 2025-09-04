@@ -120,13 +120,6 @@ export default {
   title: "Paragraphs/Featured media",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=3973%3A35941",
-      },
-    ],
   },
 };
 

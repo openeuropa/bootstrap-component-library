@@ -63,13 +63,6 @@ export default {
   title: "Components/Placeholder",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/placeholders/",
-      },
-    ],
   },
 };
 

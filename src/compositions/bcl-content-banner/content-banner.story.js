@@ -97,13 +97,6 @@ export default {
   title: "Compositions/Content banner",
   parameters: {
     layout: "fullscreen",
-    design: [
-      {
-        name: "Mockup - Content banner",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit---Components?node-id=9664%3A107055",
-      },
-    ],
     badges: ["stable", "deprecated"],
   },
 };

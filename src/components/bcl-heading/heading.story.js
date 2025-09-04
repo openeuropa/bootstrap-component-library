@@ -44,13 +44,6 @@ export default {
   title: "Components/Heading(s)",
   parameters: {
     badges: ["deprecated"],
-    design: [
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/content/typography/",
-      },
-    ],
   },
 };
 

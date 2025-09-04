@@ -22,18 +22,6 @@ export default {
     badges: ["stable", "deprecated"],
     layout: "fullscreen",
     controls: { disable: true },
-    design: [
-      {
-        name: "Mockup - Desktop",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A265033",
-      },
-      {
-        name: "Mockup - Mobile",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=10377%3A265100",
-      },
-    ],
   },
 };
 

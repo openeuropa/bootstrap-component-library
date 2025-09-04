@@ -146,21 +146,6 @@ export default {
   title: "Paragraphs/Carousel",
   parameters: {
     badges: ["deprecated"],
-    viewport: {
-      defaultViewport: "tablet",
-    },
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=16%3A25",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/carousel/",
-      },
-    ],
   },
 };
 

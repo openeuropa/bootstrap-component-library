@@ -65,26 +65,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Blockquote",
-  parameters: {
-    badges: ["deprecated"],
-    design: [
-      {
-        name: "Wireframe",
-        type: "figma",
-        url: "https://www.figma.com/file/Ug1zpiazvPT8la7ySWZy47/OEL-Wireframe-kit?node-id=2884%3A544",
-      },
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=2889%3A0",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/content/typography/#blockquotes",
-      },
-    ],
-  },
 };
 
 export const Default = (args) => blockquote(applyArgs(demoData, args));

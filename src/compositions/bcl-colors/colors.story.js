@@ -124,15 +124,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Resources/Colors",
-  parameters: {
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/oTSZaVacGNUhOCtd2m30NX/BCL-Starter-kit---Styles?node-id=2859%3A373",
-      },
-    ],
-  },
 };
 
 export const Default = (args) =>

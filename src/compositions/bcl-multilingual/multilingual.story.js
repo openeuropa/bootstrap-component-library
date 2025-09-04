@@ -73,51 +73,9 @@ export default {
 
 export const MultilingualNeutral = () => contentType(correctPaths(neutralData));
 MultilingualNeutral.storyName = "Neutral";
-MultilingualNeutral.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5477%3A223304",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5506%3A225904",
-    },
-  ],
-};
 
 export const MultilingualEC = () => contentType(correctPaths(ECData));
 MultilingualEC.storyName = "EC";
-MultilingualEC.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5537%3A225555",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5568%3A229991",
-    },
-  ],
-};
 
 export const MultilingualEU = () => contentType(correctPaths(EUData));
 MultilingualEU.storyName = "EU";
-MultilingualEU.parameters = {
-  design: [
-    {
-      name: "Mockup - Desktop",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5537%3A228461",
-    },
-    {
-      name: "Mockup - Mobile",
-      type: "figma",
-      url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5537%3A228444",
-    },
-  ],
-};

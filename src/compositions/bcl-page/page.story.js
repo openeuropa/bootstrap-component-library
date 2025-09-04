@@ -22,18 +22,6 @@ export default {
     controls: {
       disable: true,
     },
-    design: [
-      {
-        name: "Mockup - Desktop",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5209%3A190784",
-      },
-      {
-        name: "Mockup - Mobile",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=5209%3A191866",
-      },
-    ],
   },
 };
 

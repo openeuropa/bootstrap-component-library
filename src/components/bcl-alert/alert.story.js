@@ -96,21 +96,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Alert",
-  parameters: {
-    badges: ["deprecated"],
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=1%3A542",
-      },
-      {
-        name: "Bootstrap docs",
-        type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/alerts/",
-      },
-    ],
-  },
 };
 
 export const Primary = (args) => alert(applyArgs(demoData, args));

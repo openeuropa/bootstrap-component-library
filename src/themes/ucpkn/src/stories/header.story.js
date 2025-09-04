@@ -12,18 +12,6 @@ export default {
     controls: { disable: true },
     badges: ["deprecated"],
     layout: "fullscreen",
-    design: [
-      {
-        name: "Mockup - Header Desktop",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5104%3A56210",
-      },
-      {
-        name: "Mockup - Header Mobile",
-        type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=5180%3A61165",
-      },
-    ],
   },
 };
 

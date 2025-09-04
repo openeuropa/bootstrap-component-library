@@ -12,13 +12,6 @@ export default {
     controls: { disable: true },
     parameters: {
       badges: ["deprecated"],
-      design: [
-        {
-          name: "Bootstrap docs",
-          type: "iframe",
-          url: "https://getbootstrap.com/docs/5.2/forms/overview/",
-        },
-      ],
     },
   },
 };

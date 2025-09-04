@@ -8,13 +8,6 @@ export default {
   parameters: {
     badges: ["deprecated"],
     controls: { disable: true },
-    design: [
-      {
-        name: "Mockup",
-        type: "figma",
-        url: "https://www.figma.com/file/NQlGvTiTXZYN8TwY2Ur5EI/BCL-Features?node-id=1021%3A26193",
-      },
-    ],
   },
 };
 

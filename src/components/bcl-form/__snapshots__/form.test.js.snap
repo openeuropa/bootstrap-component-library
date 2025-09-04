@@ -1,12 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Form basic renders correctly 1`] = `
 <jest>
-  <form
-    class="needs-validation"
-    novalidate="true"
-    onsubmit="return false;"
-  >
+  <form>
     <div
       class="mb-3"
     >
@@ -108,9 +104,7 @@ exports[`OE - Form basic renders correctly 1`] = `
 
 exports[`OE - Form horizontal renders correctly 1`] = `
 <jest>
-  <form
-    onsubmit="return false;"
-  >
+  <form>
     <div
       class="row mb-3"
     >
@@ -120,16 +114,12 @@ exports[`OE - Form horizontal renders correctly 1`] = `
       >
         Email address
       </label>
-      <div
-        class="col-sm-10"
-      >
-        <input
-          class="form-control"
-          id="exampleInputEmail1"
-          required="true"
-          type="email"
-        />
-      </div>
+      <input
+        class="form-control"
+        id="exampleInputEmail1"
+        required="true"
+        type="email"
+      />
     </div>
     <div
       class="row mb-3"
@@ -140,16 +130,12 @@ exports[`OE - Form horizontal renders correctly 1`] = `
       >
         Password
       </label>
-      <div
-        class="col-sm-10"
-      >
-        <input
-          class="form-control"
-          id="exampleInputPassword1"
-          required="true"
-          type="password"
-        />
-      </div>
+      <input
+        class="form-control"
+        id="exampleInputPassword1"
+        required="true"
+        type="password"
+      />
     </div>
     <fieldset
       class="row mb-3"
@@ -250,11 +236,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
 
 exports[`OE - Form inline renders correctly 1`] = `
 <jest>
-  <form
-    class="row row-cols-lg-auto g-3 align-items-center"
-    novalidate="true"
-    onsubmit="return false;"
-  >
+  <form>
     <div
       class="col-12"
     >
@@ -325,10 +307,7 @@ exports[`OE - Form inline renders correctly 1`] = `
 
 exports[`OE - Form renders correctly when disabled 1`] = `
 <jest>
-  <form
-    novalidate="true"
-    onsubmit="return false;"
-  >
+  <form>
     <fieldset
       disabled=""
     >
@@ -433,19 +412,8 @@ exports[`OE - Form renders correctly with title 1`] = `
 <jest>
   <h1
     class="mb-4 bcl-heading"
-  >
-    <a
-      class="standalone"
-      href="/example.html"
-    >
-      A title created by the bcl heading template
-    </a>
-  </h1>
-  <form
-    class="needs-validation"
-    novalidate="true"
-    onsubmit="return false;"
-  >
+  />
+  <form>
     <div
       class="mb-3"
     >
@@ -547,11 +515,7 @@ exports[`OE - Form renders correctly with title 1`] = `
 
 exports[`OE - Form using a grid renders correctly 1`] = `
 <jest>
-  <form
-    class="row g-3"
-    novalidate="true"
-    onsubmit="return false;"
-  >
+  <form>
     <div
       class="col-md-6"
     >
