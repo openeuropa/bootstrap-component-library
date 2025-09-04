@@ -156,6 +156,14 @@ $header-link-active-background: #003776 !default;
           }
         }
       }
+      &:has(.mega-menu-container.show) {
+        .nav-link {
+          display: none;
+        }
+        .nav-link:has(.mega-menu-container.show) {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -264,6 +272,7 @@ $header-link-active-background: #003776 !default;
         border: none;
         margin-top: 4px;
       }
+      &.active,
       &:hover,
       &:active,
       &:focus {
@@ -271,7 +280,6 @@ $header-link-active-background: #003776 !default;
           background-color: $primary;
         }
       }
-      &.active,
       &.show {
         &:after {
           background-color: $primary;
