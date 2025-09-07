@@ -37,7 +37,7 @@
     display: none;
     width: 100%;
     margin-top: 0;
-    padding: 0 map-get($spacers, 3);
+    padding: 0;
     border: 0;
     border-radius: 0;
     &::after {
@@ -82,11 +82,12 @@
       width: 100%;
       overflow: auto;
       max-height: 288px;
+      list-style: none;
+      padding-left: 0;
       @include nav-items {
         display: block;
         position: relative;
         color: $dark;
-        @include link-reset;
         &:has(svg) {
           padding-right: map-get($spacers, 5);
         }
@@ -118,6 +119,12 @@
           display: none;
         }
       }
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     /* ---------------------------------
@@ -146,13 +153,16 @@
             display: block;
             padding: map-get($spacers, "2-5") map-get($spacers, 3);
             color: $dark;
-            @include link-reset;
             border-bottom: 1px solid $primary-bg-subtle;
           }
           > a {
             color: $link-color;
+            text-decoration: none;
             &:focus-visible {
               outline-offset: -2px;
+            }
+            &:hover {
+              text-decoration: underline;
             }
           }
           &:last-child {
@@ -178,12 +188,12 @@
             }
             svg {
               width: 0.8rem;
+              flex-shrink: 0;
             }
             span {
               text-overflow: ellipsis;
               overflow: hidden;
               display: block;
-              max-width: 85%;
               white-space: nowrap;
             }
           }
@@ -238,9 +248,13 @@
       .navigation-items {
         @include nav-items {
           &:hover {
-            text-decoration: underline;
-            color: $link-color;
             background: $primary-bg-subtle;
+          }
+        }
+        > a {
+          color: $link-color;
+          &:hover {
+            text-decoration: underline;
           }
         }
         > a,
@@ -370,6 +384,14 @@
               border-bottom: 1px solid $primary-bg-subtle;
             }
           }
+          li {
+            &:has(.see-all-button) {
+              margin: 0;
+              .see-all-button {
+                padding: map-get($spacers, "2-5") map-get($spacers, 3);
+              }
+            }
+          }
         }
       }
     }
@@ -413,11 +435,11 @@
       }
     }
     .content-block {
-      max-height: 288px;
+      height: 288px;
       overflow: auto;
     }
     .navigation-items {
-      max-height: 288px;
+      height: 288px;
     }
   }
 }

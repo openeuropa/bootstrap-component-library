@@ -105,6 +105,31 @@ $header-link-active-background: #003776 !default;
     padding: map-get($spacers, 3) 0;
   }
 
+  .bcl-header:has(.bcl-header__project) {
+    .bcl-header__project {
+      z-index: 1040; // Make sure project bar is above the mega menu
+      position: relative;
+      box-shadow: var(--bs-box-shadow);
+    }
+  }
+
+  .bcl-header:not(:has(.bcl-header__project)) {
+    > .navbar:first-child {
+      box-shadow: var(--bs-box-shadow);
+    }
+  }
+
+  .bcl-header:has(.mega-menu-container.show) {
+    .bcl-header__project {
+      display: none;
+    }
+    > .navbar:first-child {
+      box-shadow: var(--bs-box-shadow);
+      z-index: 1040; // Make sure navbar is above the mega menu
+      position: relative;
+    }
+  }
+
   .bcl-header nav + nav {
     min-height: 3.5rem;
 
