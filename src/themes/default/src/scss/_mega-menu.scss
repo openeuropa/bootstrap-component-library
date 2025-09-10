@@ -165,10 +165,19 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
         }
       }
 
-      a {
-        text-decoration: none;
+      > a {
+        color: $link-color;
+
         &:hover {
           text-decoration: underline;
+        }
+
+        &.tab-toggle {
+          color: $dark;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -303,22 +312,6 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
         @include nav-items {
           &:hover {
             background: $primary-bg-subtle;
-          }
-        }
-
-        > a {
-          color: $link-color;
-
-          &:hover {
-            text-decoration: underline;
-          }
-
-          &.tab-toggle {
-            color: $dark;
-
-            &:hover {
-              text-decoration: none;
-            }
           }
         }
 
