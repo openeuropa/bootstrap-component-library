@@ -25,7 +25,6 @@
 {% set _content_block = content_block|default('') %}
 {% set _content_link = content_link|default({}) %}
 {% set _icon_path = icon_path|default('') %}
-{% set _min_height = min_height|default('300px') %}
 {% set _items = items|default([]) %}
 {% set _back_button_label = back_button_label|default('Back') %}
 {% set _icon_path = icon_path|default('') %}
@@ -59,11 +58,11 @@
   }) %}
 {% else %}
   {% set _trigger = _trigger|merge({
-    attributes: _trigger.attributes.setAttribute('autocomplete', 'off') 
+    attributes: _trigger.attributes.setAttribute('autocomplete', 'off')
   }) %}
 {% endif %}
 
-<div {{ attributes }} style="--bcl-mm-min-height: {{ _min_height }};">
+<div {{ attributes }}>
   {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
     variant: 'link'
   }) only %}

@@ -1,8 +1,16 @@
 /* stylelint-disable no-descending-specificity, declaration-no-important */
 
 /* -------------------------------------
-   Helpers
+   Design tokens & helpers
 -------------------------------------- */
+$mm-panel-height: 288px !default;
+$mm-z-content: 2 !default;
+$mm-z-overlay: 1060 !default;
+$mm-z-header: 1070 !default;
+$mm-gutter-x: map-get($spacers, 3) !default;
+$mm-gutter-y: map-get($spacers, "2-5") !default;
+
+/* Helpers */
 @mixin nav-items {
   > a,
   > button,
@@ -20,52 +28,88 @@
   }
 }
 
+@mixin focus-ring {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+@mixin mm-item-padding($py: $mm-gutter-y, $px: $mm-gutter-x) {
+  padding: $py $px;
+}
+
 /* -------------------------------------
    Component
 -------------------------------------- */
 .bcl-mega-menu {
+  /* Low-specificity defaults for interactive elements inside the component */
+  :where(a, button) {
+    @include link-reset;
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
   &.nav-link {
     padding: 0;
   }
-  > .show + .mega-menu-container.dropdown-menu {
-    display: block;
+
+  /* When toggle is expanded, show menu. Use ARIA state instead of .show sibling hacks. */
+  @include media-breakpoint-up(lg) {
+    [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
+      display: flex;
+    }
   }
+  @include media-breakpoint-down(lg) {
+    [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
+      display: block;
+    }
+  }
+
   .mega-menu-container.dropdown-menu {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     display: none;
-    width: 100%;
-    margin-top: 0;
+    inline-size: 100%;
+    margin-block-start: 0;
     padding: 0;
     border: 0;
     border-radius: 0;
+
+    /* Ensure inner stacking context for children that need to sit above the white bg */
+    .container {
+      position: relative;
+      z-index: $mm-z-content;
+    }
+
     &::after {
       content: "";
       position: absolute;
       inset: 0;
-      left: 50%;
-      width: 100vw;
+      inset-inline-start: 50%;
+      inline-size: 100vw;
       transform: translateX(-50%);
       z-index: 1;
       background: $white;
     }
+
     .back-button-block {
       position: relative;
-      z-index: 2;
       padding: 20px map-get($spacers, 1) 0;
       background: $primary-bg-subtle;
+
       .btn-link {
         @include link-reset;
       }
     }
+
     > .row {
       flex: 1;
     }
+
     .content-block {
       position: relative;
-      z-index: 2;
-      padding: map-get($spacers, 3);
+      padding: $mm-gutter-x;
       background: $primary-bg-subtle;
     }
 
@@ -78,47 +122,49 @@
     ---------------------------------- */
     .navigation-items {
       position: relative;
-      z-index: 2;
-      width: 100%;
-      overflow: auto;
-      max-height: 288px;
       list-style: none;
-      padding-left: 0;
+      overflow: auto;
+      padding-inline-start: 0;
+
       @include nav-items {
         display: block;
         position: relative;
         color: $dark;
+
         &:has(svg) {
-          padding-right: map-get($spacers, 5);
-        }
-        &:focus-visible {
-          outline-offset: -2px;
+          padding-inline-end: map-get($spacers, 5);
         }
       }
+
       > span {
         text-decoration: none;
         color: $dark;
-        padding: map-get($spacers, "2-5") map-get($spacers, 3);
+        @include mm-item-padding();
         display: block;
       }
+
       > a[role="tab"] {
-        padding: map-get($spacers, "2-5") map-get($spacers, 5)
-          map-get($spacers, "2-5") map-get($spacers, 3);
+        @include mm-item-padding($mm-gutter-y, map-get($spacers, 5));
+        padding-inline-start: $mm-gutter-x;
+
         &.active,
         &[aria-selected="true"] {
           pointer-events: none;
           background: $primary-bg-subtle;
         }
+
         > svg {
           position: absolute;
-          right: 20px;
-          top: 50%;
+          inset-inline-end: 20px;
+          inset-block-start: 50%;
           transform: translateY(-50%);
         }
+
         &:after {
           display: none;
         }
       }
+
       a {
         text-decoration: none;
         &:hover {
@@ -132,13 +178,11 @@
     ---------------------------------- */
     .sub-navigation-items.tab-content {
       position: relative;
-      z-index: 2;
+
       .tab-pane {
-        padding: map-get($spacers, 3);
+        padding: $mm-gutter-x;
+
         ul {
-          margin: 0;
-          height: 294px;
-          overflow: auto;
           &:has(.see-all-button) {
             li:nth-last-child(2) {
               a {
@@ -147,49 +191,56 @@
             }
           }
         }
+
         li {
           list-style: none;
+
           > * {
             display: block;
-            padding: map-get($spacers, "2-5") map-get($spacers, 3);
+            @include mm-item-padding();
             color: $dark;
             border-bottom: 1px solid $primary-bg-subtle;
           }
+
           > a {
             color: $link-color;
             text-decoration: none;
-            &:focus-visible {
-              outline-offset: -2px;
-            }
+
             &:hover {
               text-decoration: underline;
             }
           }
+
           &:last-child {
             a {
               border-bottom: 0;
             }
           }
+
           .see-all-button {
             border-bottom: 0;
             position: relative;
-            padding: map-get($spacers, "2-5") 0;
+            padding-block: $mm-gutter-y;
+            padding-inline: 0;
             display: flex;
             align-items: center;
             margin: 0;
+
             &:after {
               background: $neutral-border-color;
               content: "";
-              height: 1px;
-              left: 0;
+              block-size: 1px;
+              inset-inline-start: 0;
               position: absolute;
-              top: 0;
-              width: 100%;
+              inset-block-start: 0;
+              inline-size: 100%;
             }
+
             svg {
-              width: 0.8rem;
+              inline-size: 0.8rem;
               flex-shrink: 0;
             }
+
             span {
               text-overflow: ellipsis;
               overflow: hidden;
@@ -197,13 +248,15 @@
               white-space: nowrap;
             }
           }
+
           &:has(.see-all-button) {
             margin: 0 map-get($spacers, "4-25");
             position: sticky;
-            top: 100%;
+            inset-block-start: 100%;
           }
         }
       }
+
       .panel-title {
         display: none;
       }
@@ -218,67 +271,83 @@
   .nav-item:has(> .bcl-mega-menu) {
     position: static;
   }
+
   .bcl-mega-menu {
-    > .show + .mega-menu-container.dropdown-menu {
-      display: flex;
-    }
     .mega-menu-container.dropdown-menu {
-      top: 100%;
-      padding: map-get($spacers, "2-5") 0;
+      inset-block-start: 100%;
+      padding-block: map-get($spacers, "2-5");
       border-bottom: var(--bs-border-width) var(--bs-border-style)
         var(--bs-border-color);
+
       .shadow-container {
         position: relative;
-        z-index: 2;
+
         .shadow-bg {
           position: absolute;
-          left: 50%;
-          bottom: 0;
-          width: 100vw;
-          height: 8px;
+          inset-inline-start: 50%;
+          inset-block-end: 0;
+          inline-size: 100vw;
+          block-size: 8px;
           transform: translateX(-50%);
           box-shadow: 0 4px 5px 0 rgba(224, 229, 245, 0.5);
         }
       }
+
       .content-block {
-        margin-right: 0;
+        margin-inline-end: 0;
         background: $white;
-        padding-right: map-get($spacers, 4);
+        padding-inline-end: map-get($spacers, 4);
       }
+
       .navigation-items {
         @include nav-items {
           &:hover {
             background: $primary-bg-subtle;
           }
         }
+
         > a {
           color: $link-color;
+
           &:hover {
             text-decoration: underline;
           }
+
+          &.tab-toggle {
+            color: $dark;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
         }
+
         > a,
         > span {
-          padding: map-get($spacers, "2-5") map-get($spacers, 3);
+          @include mm-item-padding();
         }
+
         > a[role="tab"].active,
         > a[role="tab"][aria-selected="true"] {
           background: $primary-bg-subtle;
           pointer-events: none;
-          border-left: 4px solid $primary;
-          padding-left: map-get($spacers, "2-5");
-          padding-right: map-get($spacers, 5);
+          border-inline-start: 4px solid $primary;
+          padding-inline-start: $mm-gutter-y;
+          padding-inline-end: map-get($spacers, 5);
         }
       }
 
       .sub-navigation-items.tab-content {
         overflow-y: auto;
+
         &:has(> .active) {
           background: $primary-bg-subtle;
         }
+
         .tab-pane {
           overflow-y: auto;
-          padding: map-get($spacers, 3);
+          padding: $mm-gutter-x;
+
           li {
             > * {
               border-bottom: none;
@@ -299,20 +368,23 @@
       .content-block {
         box-shadow: none;
       }
+
       .shadow-container {
-        height: 100%;
+        block-size: 100%;
         position: absolute;
-        right: 0;
-        top: 0;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+
         .shadow-bg {
-          left: auto;
-          right: 0;
-          height: 100%;
-          width: 10px;
+          inset-inline-start: auto;
+          inset-inline-end: 0;
+          block-size: 100%;
+          inline-size: 10px;
           transform: none;
           box-shadow: 4px 3px 4px 0 rgba(224, 229, 245, 0.5);
         }
       }
+
       .sub-navigation-items.tab-content {
         .tab-pane {
           li {
@@ -327,26 +399,26 @@
 
   /* -------------------------------------
     White overlay when mega menu is open
+    (kept with :has for convenience; consider JS class .mm-open for perf)
   -------------------------------------- */
   body {
     &:has(.mega-menu-container.show) {
       overflow: hidden;
+
       main {
         &:after {
           position: absolute;
-          top: 0;
-          left: 0;
+          inset: 0;
           background: #fff;
           opacity: 0.5;
-          width: 100%;
-          height: 100%;
           content: "";
-          z-index: 1060;
+          z-index: $mm-z-overlay;
         }
       }
+
       header {
         position: relative;
-        z-index: 1070;
+        z-index: $mm-z-header;
       }
     }
   }
@@ -363,55 +435,61 @@
           display: none;
         }
       }
+
       .navigation-items {
         &:has(> .active) {
           display: none;
         }
       }
+
       .sub-navigation-items.tab-content {
         .panel-title {
-          padding: map-get($spacers, 3) map-get($spacers, 3)
-            map-get($spacers, "4-5");
+          @include mm-item-padding(map-get($spacers, 3));
           margin: 0;
           color: $dark;
           background: $primary-bg-subtle;
           display: block;
           font-size: 20px;
         }
+
         .tab-pane {
           > li {
             > * {
               border-bottom: 1px solid $primary-bg-subtle;
             }
           }
+
           li {
             &:has(.see-all-button) {
               margin: 0;
+
               .see-all-button {
-                padding: map-get($spacers, "2-5") map-get($spacers, 3);
+                @include mm-item-padding();
               }
             }
           }
         }
       }
     }
-    &:has(.dropdown-menu.show) {
-      .dropdown-toggle {
-        display: none;
-      }
+
+    /* Hide toggle when open (ARIA-driven) */
+    [aria-expanded="true"].dropdown-toggle {
+      display: none;
     }
+
     .panel-title,
     .content-block,
     .back-button-block {
       position: relative;
+
       &::after {
         position: absolute;
-        left: 50%;
+        inset-inline-start: 50%;
         content: "";
         background: $primary-bg-subtle;
-        width: 100vw;
-        height: 100%;
-        top: 0;
+        inline-size: 100vw;
+        block-size: 100%;
+        inset-block-start: 0;
         z-index: -1;
         transform: translateX(-50%);
       }
@@ -422,24 +500,47 @@
 /* -------------------------------------
     Fixes for height issues
 -------------------------------------- */
-
 @include media-breakpoint-up(lg) {
   .bcl-mega-menu {
     .mega-menu-container.dropdown-menu {
       .sub-navigation-items.tab-content {
         .tab-pane {
           ul {
-            height: 288px;
+            block-size: $mm-panel-height;
           }
         }
       }
     }
+
     .content-block {
-      max-height: 288px;
+      max-block-size: $mm-panel-height;
       overflow: auto;
     }
+
     .navigation-items {
-      height: 288px;
+      block-size: $mm-panel-height;
     }
+  }
+}
+
+/* -------------------------------------
+   Motion preferences (subtle transitions)
+-------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .bcl-mega-menu .mega-menu-container.dropdown-menu {
+    transition:
+      opacity 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .bcl-mega-menu [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
+    opacity: 1;
+    transform: none;
+  }
+
+  .bcl-mega-menu [aria-expanded="false"] + .mega-menu-container.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
   }
 }
