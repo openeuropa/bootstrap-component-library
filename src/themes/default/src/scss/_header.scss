@@ -100,11 +100,15 @@ $header-link-active-background: #003776 !default;
 }
 
 @include media-breakpoint-down(lg) {
+  body:has(.bcl-header__navbar #main-navbar.collapsing),
+  body:has(.bcl-header__navbar #main-navbar.show),
   body:has(.bcl-header__navbar.collapsing),
   body:has(.bcl-header__navbar.show) {
     overflow: hidden;
   }
 
+  header:has(.bcl-header__navbar #main-navbar.collapsing),
+  header:has(.bcl-header__navbar #main-navbar.show),
   header:has(.bcl-header__navbar.collapsing),
   header:has(.bcl-header__navbar.show) {
     height: 100vh;
