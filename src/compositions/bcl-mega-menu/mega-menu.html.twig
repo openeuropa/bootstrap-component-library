@@ -54,7 +54,7 @@
 }) %}
 {% if _link %}
   {% set _trigger = _trigger|merge({
-    attributes: _trigger.attributes.setAttribute('role', 'button') 
+    attributes: _trigger.attributes.setAttribute('role', 'button')
   }) %}
 {% else %}
   {% set _trigger = _trigger|merge({
@@ -82,28 +82,28 @@
       </div>
       <div class="row">
         {% if content_block is defined %}
-        <div class="col-md-12 col-xl-3 position-relative">
-          <div class="content-block">
-            {%- block content_block -%}
-              {{ _content_block }}
-            {%- endblock -%}
-            {% if _content_link is defined %}
-              {% set _content_link = _content_link|merge({
-                icon: _content_link.icon|default({})|merge({
-                  path: _icon_path
-                }),
+          <div class="col-md-12 col-xl-3 position-relative">
+            <div class="content-block">
+              {%- block content_block -%}
+                {{ _content_block }}
+              {%- endblock -%}
+              {% if _content_link is defined %}
+                {% set _content_link = _content_link|merge({
+                  icon: _content_link.icon|default({})|merge({
+                    path: _icon_path
+                  }),
                   attributes: (_content_link.attributes is defined
                     ? _content_link.attributes
                     : create_attribute()
                   ).addClass('content-link')
-              }) %}
-              <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
-            {% endif %}
+                }) %}
+                <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
+              {% endif %}
+            </div>
+            <div class="shadow-container">
+              <span class="shadow-bg"></span>
+            </div>
           </div>
-          <div class="shadow-container">
-            <span class="shadow-bg"></span>
-          </div>
-        </div>
         {% endif %}
         <div class="col-md-12 col-xl-6">
           <div class="row g-0">
@@ -120,20 +120,20 @@
                     {% set _raw_items = _raw.items %}
 
                     {% if _raw.see_all is defined and _raw.see_all is not empty %}
-                        {% set _see_all_label %}
-                          <span>{{- _raw.see_all.label -}}</span>
-                        {% endset %}
-                        {% set _see_all_attr = (_raw.see_all.attributes is defined ? _raw.see_all.attributes : create_attribute()) %}
-                        {% set _see_all = _raw.see_all|merge({
-                          label: _see_all_label,
-                          icon: { 
-                            name: 'arrow-right', 
-                            path: _icon_path,
-                          },
-                          attributes: _see_all_attr.addClass(['see-all-button']).setAttribute('aria-label', 'See all items in ‘' ~ _raw.trigger.label ~ '’')
-                        }) %}
+                      {% set _see_all_label %}
+                        <span>{{- _raw.see_all.label -}}</span>
+                      {% endset %}
+                      {% set _see_all_attr = (_raw.see_all.attributes is defined ? _raw.see_all.attributes : create_attribute()) %}
+                      {% set _see_all = _raw.see_all|merge({
+                        label: _see_all_label,
+                        icon: {
+                          name: 'arrow-right',
+                          path: _icon_path,
+                        },
+                        attributes: _see_all_attr.addClass(['see-all-button']).setAttribute('aria-label', 'See all items in ‘' ~ _raw.trigger.label ~ '’')
+                      }) %}
 
-                        {% set _raw_items = _raw_items|merge([ _see_all ]) %}
+                      {% set _raw_items = _raw_items|merge([ _see_all ]) %}
                     {% endif %}
 
                     {% set _dropdown_panels = _dropdown_panels|merge([{
@@ -155,10 +155,10 @@
 
                     {% set _render_item = _raw|merge({
                       trigger: _raw.trigger|merge({
-                        icon: { 
-                          name: 'chevron-right', 
+                        icon: {
+                          name: 'chevron-right',
                           path: _icon_path,
-                          size: 'fluid' 
+                          size: 'fluid'
                         },
                         attributes: _trigger_attributes.addClass('no-chevron')
                       })
@@ -183,29 +183,29 @@
                     >
                       <p class="panel-title">{{ _panel.title }}</p>
                       <ul class="list-unstyled m-0 position-relative">
-                      {% for _item in _panel.items %}
-                        {% if _item.attributes is empty %}
+                        {% for _item in _panel.items %}
+                          {% if _item.attributes is empty %}
+                            {% set _item = _item|merge({
+                              attributes: create_attribute()
+                            }) %}
+                          {% endif %}
+                          {% set _item_classes = [] %}
+                          {% if _item.active %}
+                            {% set _item_classes = _item_classes|merge(['active']) %}
+                          {% endif %}
                           {% set _item = _item|merge({
-                            attributes: create_attribute()
+                            clean_class: true,
+                            attributes: _item.attributes.addClass(_item_classes)
                           }) %}
-                        {% endif %}
-                        {% set _item_classes = [] %}
-                        {% if _item.active %}
-                          {% set _item_classes = _item_classes|merge(['active']) %}
-                        {% endif %}
-                        {% set _item = _item|merge({
-                          clean_class: true,
-                          attributes: _item.attributes.addClass(_item_classes)
-                        }) %}
-                        <li>
-                        {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
-                        </li>
-                      {% endfor %}
+                          <li>
+                            {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+                          </li>
+                        {% endfor %}
                       </ul>
                     </div>
                   {% endif %}
                 {% endfor %}
-              </div>     
+              </div>
             </div>
           </div>
         </div>
