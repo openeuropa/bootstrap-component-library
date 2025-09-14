@@ -20,6 +20,10 @@ module.exports = {
         label: "Submenu item 1",
         path: "/example.html",
       },
+      see_all: {
+        label: "More of submenu item 1",
+        path: "/example.html",
+      },
       items: [
         {
           label: "Sub-submenu item 1.1",
@@ -51,6 +55,10 @@ module.exports = {
       id: "dropdown-megamenu-inner-3",
       trigger: {
         label: "Submenu item 3",
+        path: "/example.html",
+      },
+      see_all: {
+        label: "More of submenu item 3",
         path: "/example.html",
       },
       items: [
