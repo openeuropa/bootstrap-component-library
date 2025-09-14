@@ -82,10 +82,22 @@ module.exports = {
           label: "Sub-submenu item 2.5",
           path: "/example.html",
         },
+        {
+          label: "Sub-submenu item 2.6",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.7",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.8",
+          path: "/example.html",
+        },
       ],
     },
     {
-      label: "Submenu item 3.",
+      label: "Submenu item 3 with very long text that needs multiple lines.",
       path: "/example.html",
     },
     {
@@ -94,6 +106,18 @@ module.exports = {
     },
     {
       label: "Submenu item 5.",
+      path: "/example.html",
+    },
+    {
+      label: "Submenu item 6.",
+      path: "/example.html",
+    },
+    {
+      label: "Submenu item 7.",
+      path: "/example.html",
+    },
+    {
+      label: "Submenu item 8.",
       path: "/example.html",
     },
   ],
