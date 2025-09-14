@@ -1,6 +1,6 @@
 module.exports = {
   trigger: {
-    label: "A link with dropdown",
+    label: "Top-level item with megamenu",
     path: "/example.html",
   },
   id: "dropdown-megamenu",
@@ -15,77 +15,77 @@ module.exports = {
     "<h4>About the European Commission</h4><p>Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
   items: [
     {
-      id: "dropdown-megamenu-inner",
+      id: "dropdown-megamenu-inner-1",
       trigger: {
-        label: "Base Category Item",
+        label: "Submenu item 1",
         path: "/example.html",
       },
       items: [
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 1.1",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 1.2 with longer link text that spans multiple lines",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 1.3",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 1.4",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 1.5",
           path: "/example.html",
         },
       ],
     },
     {
-      label: "Base Category Item",
+      label: "Submenu item 2",
       path: "/example.html",
     },
     {
-      id: "dropdown-megamenu-inner-2",
+      id: "dropdown-megamenu-inner-3",
       trigger: {
-        label: "Base Category Item",
+        label: "Submenu item 3",
         path: "/example.html",
       },
       items: [
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 2.1",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 2.2",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 2.3",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 2.4",
           path: "/example.html",
         },
         {
-          label: "Base Sub Category Item",
+          label: "Sub-submenu item 2.5",
           path: "/example.html",
         },
       ],
     },
     {
-      label: "Base Category Item",
+      label: "Submenu item 3.",
       path: "/example.html",
     },
     {
-      label: "Base Category Item",
+      label: "Submenu item 4.",
       path: "/example.html",
     },
     {
-      label: "Base Category Item",
+      label: "Submenu item 5.",
       path: "/example.html",
     },
   ],
