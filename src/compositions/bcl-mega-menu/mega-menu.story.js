@@ -1,16 +1,22 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
-import demoData from "@openeuropa/bcl-mega-menu/data.js";
 import megaMenu from "@openeuropa/bcl-mega-menu/mega-menu.html.twig";
 
 export default {
   title: "Compositions/Mega Menu",
 };
 
-const applyArgs = (data) => {
+const load = (name) => {
+  const data = require("@openeuropa/bcl-mega-menu/" + name);
   data.icon_path = "/icons.svg";
+  const args = Object.assign(correctPaths(data));
+  return () => megaMenu(args);
+}
 
-  return Object.assign(correctPaths(data));
-};
-
-export const Default = () => megaMenu(applyArgs(demoData));
+export const Default = load('data.js');
+export const Short = load('data--short.js');
+export const Nolink = load('data--nolink.js');
+export const Shallow = load('data--shallow.js');
+export const Active = load('data--active.js');
+export const Attributes = load('data--attributes.js');
+export const Xss = load('data--xss.js');
