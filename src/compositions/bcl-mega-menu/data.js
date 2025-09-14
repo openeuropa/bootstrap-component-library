@@ -1,7 +1,6 @@
 module.exports = {
   trigger: {
     label: "Top-level item with megamenu",
-    path: "/example.html",
   },
   id: "dropdown-megamenu",
   content_link: {
@@ -18,7 +17,6 @@ module.exports = {
       id: "dropdown-megamenu-inner-1",
       trigger: {
         label: "Submenu item 1",
-        path: "/example.html",
       },
       see_all: {
         label: "More of submenu item 1",
@@ -55,7 +53,6 @@ module.exports = {
       id: "dropdown-megamenu-inner-3",
       trigger: {
         label: "Submenu item 3",
-        path: "/example.html",
       },
       see_all: {
         label: "More of submenu item 3",
