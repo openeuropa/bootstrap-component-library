@@ -2,7 +2,6 @@ module.exports = {
   trigger: {
     label: "Top-level item with megamenu",
   },
-  id: "dropdown-megamenu",
   content_link: {
     label: "Discover more",
     path: "/example.html",
@@ -14,7 +13,6 @@ module.exports = {
     "<h4>About the European Commission</h4><p>Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
   items: [
     {
-      id: "dropdown-megamenu-inner-1",
       trigger: {
         label: "Submenu item 1",
       },
@@ -50,7 +48,6 @@ module.exports = {
       path: "/example.html",
     },
     {
-      id: "dropdown-megamenu-inner-3",
       trigger: {
         label: "Submenu item 3",
       },
