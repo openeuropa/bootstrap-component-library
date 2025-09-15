@@ -66,8 +66,10 @@
   {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
     variant: 'link'
   }) only %}
+  {# Mega menu panel. #}
   <nav id="{{ _menu_id }}" class="mega-menu-container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
     <div class="container position-relative">
+      {# Mobile back button. #}
       <div class="d-lg-none back-button-block">
         {% include '@oe-bcl/bcl-button/button.html.twig' with {
           label: _back_button_label,
@@ -80,7 +82,9 @@
           attributes: create_attribute().addClass(['back-button']).setAttribute('aria-label', 'Back to main menu')
         } only %}
       </div>
+      {# Outer flex columns. #}
       <div class="row">
+        {# Content / summary column. #}
         {% if content_block is defined %}
           <div class="col-md-12 col-xl-3 position-relative">
             <div class="content-block">
@@ -105,15 +109,19 @@
             </div>
           </div>
         {% endif %}
+        {# Submenu columns. #}
         <div class="col-md-12 col-xl-6">
           <div class="row g-0">
+            {# First submenu column. #}
             <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
               <div class="navigation-items" role="tablist" aria-orientation="vertical">
                 {% set _dropdown_panels = _dropdown_panels|default([]) %}
 
+                {# Iterate items in first submenu level. #}
                 {% for _raw in _items %}
                   {% set _render_item = _raw %}
                   {% if _raw.items is defined and _raw.items is not empty %}
+                    {# This is a parent item. #}
                     {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
                     {% set _trigger_id = 'mm-trigger-' ~ _id ~ '-' ~ loop.index0 %}
 
@@ -170,6 +178,7 @@
                 {% endfor %}
               </div>
             </div>
+            {# Second submenu column. #}
             <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
               <div class="sub-navigation-items tab-content">
                 {% for _panel in _dropdown_panels %}
