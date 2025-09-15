@@ -115,40 +115,12 @@
             {# First submenu column. #}
             <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
               <div class="navigation-items" role="tablist" aria-orientation="vertical">
-                {% set _dropdown_panels = _dropdown_panels|default([]) %}
-
                 {# Iterate items in first submenu level. #}
                 {% for _item in _items %}
                   {% if _item.items is defined and _item.items is not empty %}
                     {# This is a parent item. #}
                     {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
                     {% set _trigger_id = 'mm-trigger-' ~ _id ~ '-' ~ loop.index0 %}
-
-                    {% set _sub_items = _item.items %}
-
-                    {% if _item.see_all is defined and _item.see_all is not empty %}
-                      {% set _see_all_label %}
-                        <span>{{- _item.see_all.label -}}</span>
-                      {% endset %}
-                      {% set _see_all_attr = (_item.see_all.attributes is defined ? _item.see_all.attributes : create_attribute()) %}
-                      {% set _see_all = _item.see_all|merge({
-                        label: _see_all_label,
-                        icon: {
-                          name: 'arrow-right',
-                          path: _icon_path,
-                        },
-                        attributes: _see_all_attr.addClass(['see-all-button']).setAttribute('aria-label', 'See all items in ‘' ~ _item.trigger.label ~ '’')
-                      }) %}
-
-                      {% set _sub_items = _sub_items|merge([ _see_all ]) %}
-                    {% endif %}
-
-                    {% set _dropdown_panels = _dropdown_panels|merge([{
-                      id: _panel_id,
-                      trigger_id: _trigger_id,
-                      items: _sub_items,
-                      title: _item.trigger.label,
-                    }]) %}
 
                     {% set _trigger_attributes = (_item.trigger.attributes is defined ? _item.trigger.attributes : create_attribute())
                       .addClass(['tab-toggle'])
@@ -179,18 +151,40 @@
             {# Second submenu column. #}
             <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
               <div class="sub-navigation-items tab-content">
-                {% for _panel in _dropdown_panels %}
-                  {% if _items is not empty and _items is iterable %}
+                {# Iterate items in first submenu level, again. #}
+                {% for _item in _items %}
+                  {% if _item.items is defined and _item.items is not empty %}
+                    {# This is an item with children. #}
+                    {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
+                    {% set _trigger_id = 'mm-trigger-' ~ _id ~ '-' ~ loop.index0 %}
+                    {% set _sub_items = _item.items %}
+
+                    {% if _item.see_all is defined and _item.see_all is not empty %}
+                      {% set _see_all_label %}
+                        <span>{{- _item.see_all.label -}}</span>
+                      {% endset %}
+                      {% set _see_all_attr = (_item.see_all.attributes is defined ? _item.see_all.attributes : create_attribute()) %}
+                      {% set _see_all = _item.see_all|merge({
+                        label: _see_all_label,
+                        icon: {
+                          name: 'arrow-right',
+                          path: _icon_path,
+                        },
+                        attributes: _see_all_attr.addClass(['see-all-button']).setAttribute('aria-label', 'See all items in ‘' ~ _item.trigger.label ~ '’')
+                      }) %}
+                      {% set _sub_items = _sub_items|merge([ _see_all ]) %}
+                    {% endif %}
                     <div
                       class="tab-pane p-0"
-                      id="{{ _panel.id }}"
+                      id="{{ _panel_id }}"
                       role="tabpanel"
-                      aria-labelledby="{{ _panel.trigger_id }}"
+                      aria-labelledby="{{ _trigger_id }}"
                       tabindex="0"
                     >
-                      <p class="panel-title">{{ _panel.title }}</p>
+                      <p class="panel-title">{{ _item.trigger.label }}</p>
                       <ul class="list-unstyled m-0 position-relative">
-                        {% for _sub_item in _panel.items %}
+                        {# Iterate the sub-items. #}
+                        {% for _sub_item in _sub_items %}
                           {% if _sub_item.attributes is empty %}
                             {% set _sub_item = _sub_item|merge({
                               attributes: create_attribute()
