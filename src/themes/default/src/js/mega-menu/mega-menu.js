@@ -7,9 +7,6 @@ class MegaMenu {
   constructor(root) {
     this.root = root;
 
-    this.parentToggle = SelectorEngine.findOne('.bcl-header__navbar [data-bs-toggle="tab"]', this.root);
-    if (!this.parentToggle) return;
-
     this.backButton = SelectorEngine.findOne(".back-button", this.root);
     this.tablist = SelectorEngine.findOne('.navigation-items[role="tablist"]', this.root);
     this.tabs = SelectorEngine.find('[role="tab"]', this.root);
