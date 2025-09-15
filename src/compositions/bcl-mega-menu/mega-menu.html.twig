@@ -119,7 +119,6 @@
 
                 {# Iterate items in first submenu level. #}
                 {% for _item in _items %}
-                  {% set _render_item = _item %}
                   {% if _item.items is defined and _item.items is not empty %}
                     {# This is a parent item. #}
                     {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
@@ -161,20 +160,19 @@
                       .setAttribute('aria-selected', 'false')
                     %}
 
-                    {% set _render_item = _item|merge({
-                      trigger: _item.trigger|merge({
-                        icon: {
-                          name: 'chevron-right',
-                          path: _icon_path,
-                          size: 'fluid'
-                        },
-                        attributes: _trigger_attributes.addClass('no-chevron')
-                      })
+                    {% set _trigger = _item.trigger|merge({
+                      icon: {
+                        name: 'chevron-right',
+                        path: _icon_path,
+                        size: 'fluid'
+                      },
+                      attributes: _trigger_attributes.addClass('no-chevron')
                     }) %}
-                    {% set _render_item = _render_item.trigger %}
+                    {% include '@oe-bcl/bcl-link/link.html.twig' with _trigger only %}
+                  {% else %}
+                    {# This is a leaf item. #}
+                    {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
                   {% endif %}
-
-                  {% include '@oe-bcl/bcl-link/link.html.twig' with _render_item only %}
                 {% endfor %}
               </div>
             </div>
