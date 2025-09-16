@@ -99,7 +99,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
     ---------------------------------- */
     .navigation-items {
       list-style: none;
-      overflow: auto;
+      overflow-y: auto;
       padding-inline-start: 0;
 
       @include nav-items {
@@ -483,7 +483,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 
     .content-block {
       max-block-size: $mm-panel-height;
-      overflow: auto;
+      overflow-y: auto;
     }
 
     .navigation-items {
