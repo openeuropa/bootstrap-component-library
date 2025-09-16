@@ -417,12 +417,6 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
         }
 
         .tab-pane {
-          > li {
-            > * {
-              border-bottom: 1px solid $primary-bg-subtle;
-            }
-          }
-
           li {
             &:has(.see-all-button) {
               margin: 0;
