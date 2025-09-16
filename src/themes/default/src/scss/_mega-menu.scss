@@ -86,7 +86,6 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
   // Drop unnecessary selectors, but keep indentation.
   & {
     .content-block {
-      position: relative;
       padding: $mm-gutter-x;
       background: $primary-bg-subtle;
     }
@@ -99,7 +98,6 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
        LEFT column – vertical tablist
     ---------------------------------- */
     .navigation-items {
-      position: relative;
       list-style: none;
       overflow: auto;
       padding-inline-start: 0;
