@@ -81,7 +81,10 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
         @include link-reset;
       }
     }
+  }
 
+  // Drop unnecessary selectors, but keep indentation.
+  & {
     .content-block {
       position: relative;
       padding: $mm-gutter-x;
