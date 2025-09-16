@@ -30,7 +30,8 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 
 @mixin focus-ring {
   outline: 2px solid $primary;
-  outline-offset: 2px;
+  // Prevent outline from being cut off in scroll container.
+  outline-offset: -2px;
 }
 
 @mixin mm-item-padding($py: $mm-gutter-y, $px: $mm-gutter-x) {
