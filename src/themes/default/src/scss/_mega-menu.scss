@@ -49,10 +49,6 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
     }
   }
 
-  &.nav-link {
-    padding: 0;
-  }
-
   /* When toggle is expanded, show menu. Use ARIA state instead of .show sibling hacks. */
   @include media-breakpoint-up(lg) {
     [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
