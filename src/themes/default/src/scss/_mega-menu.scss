@@ -76,23 +76,6 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
     border: 0;
     border-radius: 0;
 
-    /* Ensure inner stacking context for children that need to sit above the white bg */
-    .container {
-      position: relative;
-      z-index: $mm-z-content;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      inset-inline-start: 50%;
-      inline-size: 100vw;
-      transform: translateX(-50%);
-      z-index: 1;
-      background: $white;
-    }
-
     .back-button-block {
       position: relative;
       padding: 20px map-get($spacers, 1) 0;
