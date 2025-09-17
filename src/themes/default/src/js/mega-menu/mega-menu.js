@@ -8,7 +8,7 @@ class MegaMenu {
     this.root = root;
 
     this.backButton = SelectorEngine.findOne(".back-button", this.root);
-    this.tablist = SelectorEngine.findOne('.navigation-items[role="tablist"]', this.root);
+    this.tablist = SelectorEngine.findOne('.bcl-mega-menu__items[role="tablist"]', this.root);
     this.tabs = SelectorEngine.find('[role="tab"]', this.root);
     this.trigger = SelectorEngine.findOne('.dropdown-toggle[data-bs-toggle="dropdown"]', this.root);
 
@@ -59,7 +59,7 @@ class MegaMenu {
     if (window.innerWidth >= 992) return;
 
     const dirty = SelectorEngine.find(
-      ".navigation-items .active, .navigation-items .show, .sub-navigation-items .active, .sub-navigation-items .show",
+      ".bcl-mega-menu__items .active, .bcl-mega-menu__items .show",
       this.root
     );
     dirty.forEach((el) => {
@@ -69,7 +69,7 @@ class MegaMenu {
       }
     });
 
-    const panes = SelectorEngine.find(".sub-navigation-items .tab-pane", this.root);
+    const panes = SelectorEngine.find(".bcl-mega-menu .tab-pane", this.root);
     panes.forEach((pane) => {
       pane.classList.remove("active", "show");
       if (pane.getAttribute("tabindex") === "0") pane.removeAttribute("tabindex");
@@ -79,7 +79,7 @@ class MegaMenu {
   applyDesktopStatesIfNeeded() {
     if (window.innerWidth < 992) return;
 
-    const subNav = SelectorEngine.findOne(".sub-navigation-items .active", this.root);
+    const subNav = SelectorEngine.findOne(".bcl-mega-menu__second-submenu .active", this.root);
     console.log(subNav)
     if (!subNav) return;
 
@@ -98,7 +98,7 @@ class MegaMenu {
   }
 
   getNavItems() {
-    const list = this.root.querySelector(".navigation-items");
+    const list = this.root.querySelector(".bcl-mega-menu__first-submenu .bcl-mega-menu__items");
     if (!list) return [];
     return Array.from(list.querySelectorAll("a, [role='tab']")).filter(
       (el) =>

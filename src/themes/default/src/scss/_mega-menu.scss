@@ -11,27 +11,11 @@ $mm-gutter-x: map-get($spacers, 3) !default;
 $mm-gutter-y: map-get($spacers, "2-5") !default;
 
 /* Helpers */
-@mixin nav-items {
-  > a,
-  > button,
-  > span,
-  li > a,
-  li > button {
-    @content;
-  }
-}
-
 @mixin link-reset {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
-}
-
-@mixin focus-ring {
-  outline: 2px solid $primary;
-  // Prevent outline from being cut off in scroll container.
-  outline-offset: -2px;
 }
 
 @mixin mm-item-padding($py: $mm-gutter-y, $px: $mm-gutter-x) {
@@ -41,396 +25,313 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 /* -------------------------------------
    Component
 -------------------------------------- */
+
+// The mega menu position should not be relative to its nav item.
+.nav-item:has(> .bcl-mega-menu) {
+  @include media-breakpoint-up(lg) {
+    position: static;
+  }
+}
+
+/* Low-specificity defaults for interactive elements inside the component */
 .bcl-mega-menu {
-  /* Low-specificity defaults for interactive elements inside the component */
-  :where(a, button) {
+  :where(a) {
     @include link-reset;
+  }
+  :where(a, button) {
     &:focus-visible {
-      @include focus-ring;
+      outline: 2px solid $primary;
+      // Prevent outline from being cut off in scroll container.
+      outline-offset: -2px;
     }
   }
+}
 
-  /* When toggle is expanded, show menu. Use ARIA state instead of .show sibling hacks. */
-  @include media-breakpoint-up(lg) {
-    [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
+// Disable page-level scroll while open, in lg+ viewport.
+@include media-breakpoint-up(lg) {
+  body:has(.bcl-mega-menu > [aria-expanded="true"]) {
+    overflow-y: hidden;
+  }
+}
+
+// Show a half-transparent page overlay in lg+ viewport.
+@include media-breakpoint-up(lg) {
+  .bcl-mega-menu__container {
+    &::after {
+      position: absolute;
+      inset-inline: 0;
+      background: #fff;
+      opacity: 0.5;
+      content: "";
+      z-index: -1;
+      // The overlay can be as tall as we want, because the body scroll is disabled.
+      block-size: 300vw;
+    }
+  }
+}
+
+// Use '[class]' to bump specificity.
+// The element also has .dropdown-menu, causing competing styles.
+.bcl-mega-menu__container[class] {
+  // Only show when expanded.
+  // Use ARIA state instead of .show sibling hacks.
+  // @todo Explain why.
+  display: none;
+  .bcl-mega-menu > [aria-expanded="true"] + & {
+    display: block;
+    @include media-breakpoint-up(lg) {
       display: flex;
     }
   }
-  @include media-breakpoint-down(lg) {
-    [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
-      display: block;
+  // Transition animation for open/close.
+  @media (prefers-reduced-motion: no-preference) {
+    transition:
+      opacity 0.15s ease,
+      transform 0.15s ease;
+    .bcl-mega-menu > [aria-expanded="true"] + & {
+      opacity: 1;
+      transform: none;
+    }
+    .bcl-mega-menu > [aria-expanded="false"] + & {
+      opacity: 0;
+      transform: translateY(-4px);
+      pointer-events: none;
     }
   }
 
-  .mega-menu-container.dropdown-menu {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  margin-block-start: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+
+  @include media-breakpoint-up(lg) {
+    inset-block-start: 100%;
+    padding-block: map-get($spacers, "2-5");
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+  }
+}
+
+// Show a shadowy bar to separate content from links columns.
+.bcl-mega-menu__container .shadow-container {
+  // In medium viewport, the content appears above the links.
+  // The shadowy bar is horizontal.
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    .shadow-bg {
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-end: 0;
+      inline-size: 100vw;
+      block-size: 8px;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 5px 0 rgba(224, 229, 245, 0.5);
+    }
+  }
+  // In larger viewport, the content appears left of the links.
+  // The shadowy bar is vertical.
+  @include media-breakpoint-up(xl) {
+    block-size: 100%;
     position: absolute;
+    inset-inline-end: 0;
     inset-block-start: 0;
-    inset-inline-start: 0;
-    display: none;
-    inline-size: 100%;
-    margin-block-start: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-
-    .back-button-block {
-      position: relative;
-      padding: 20px map-get($spacers, 1) 0;
-      background: $primary-bg-subtle;
-
-      .btn-link {
-        @include link-reset;
-      }
+    .shadow-bg {
+      inset-inline-start: auto;
+      inset-inline-end: 0;
+      block-size: 100%;
+      inline-size: 10px;
+      transform: none;
+      box-shadow: 4px 3px 4px 0 rgba(224, 229, 245, 0.5);
     }
   }
+}
 
-  // Drop unnecessary selectors, but keep indentation.
-  & {
-    .content-block {
-      padding: $mm-gutter-x;
-      background: $primary-bg-subtle;
+// The back button.
+.bcl-mega-menu__back-button-block {
+  position: relative;
+  padding: 20px map-get($spacers, 1) 0;
+  > .btn-link {
+    @include link-reset;
+  }
+}
+
+// Left column with the description and "Discover more" link.
+.bcl-mega-menu__info {
+  > .content-block {
+    padding: $mm-gutter-x;
+    background: $primary-bg-subtle;
+    @include media-breakpoint-up(lg) {
+      margin-inline-end: 0;
+      background: $white;
+      padding-inline-end: map-get($spacers, 4);
+      // Allow vertical scrollbar if content is too tall.
+      max-block-size: $mm-panel-height;
+      overflow-y: auto;
     }
 
-    .content-link {
+    > .content-link {
       @include link-reset;
     }
+  }
+}
 
-    /* ---------------------------------
-       LEFT column – vertical tablist
-    ---------------------------------- */
-    .navigation-items {
-      list-style: none;
-      overflow-y: auto;
-      padding-inline-start: 0;
-
-      @include nav-items {
-        display: block;
-        position: relative;
-        color: $dark;
-
-        &:has(svg) {
-          padding-inline-end: map-get($spacers, 5);
-        }
+// Item lists on any level.
+ul.bcl-mega-menu__items {
+  list-style: none;
+  padding-inline-start: 0;
+  // Add a scrollbar in desktop viewport.
+  @include media-breakpoint-up(lg) {
+    block-size: $mm-panel-height;
+    overflow-y: auto;
+  }
+  // Add space above in mobile viewport.
+  @include media-breakpoint-down(lg) {
+    margin: 1rem 0 0;
+  }
+  // Style the items.
+  > li {
+    // In mobile, items are separated by a border.
+    @include media-breakpoint-down(lg) {
+      &:not(:first-child) > * {
+        border-top: 1px solid $primary-bg-subtle;
       }
+    }
+    > span,
+    > a,
+    > button {
+      @include mm-item-padding();
+      // Use flex for icon spacing.
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      > svg {
+        flex-shrink: 0;
+        align-self: center;
+      }
+    }
+    > a {
+      color: $link-color;
+      text-decoration: none;
 
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    > a.see-all-button {
+      border-top: none;
+      &:after {
+        background: $neutral-border-color;
+        content: "";
+        block-size: 1px;
+        inset-inline-start: 0;
+        position: absolute;
+        inset-block-start: 0;
+        // Replicate horizontal padding of parent element.
+        inset-inline: $mm-gutter-x;
+      }
+      > svg {
+        inline-size: 0.8rem;
+      }
       > span {
-        text-decoration: none;
-        color: $dark;
-        @include mm-item-padding();
+        text-overflow: ellipsis;
+        overflow: hidden;
         display: block;
+        white-space: nowrap;
       }
-
-      > a[role="tab"] {
-        @include mm-item-padding($mm-gutter-y, map-get($spacers, 5));
-        padding-inline-start: $mm-gutter-x;
-
-        &.active,
-        &[aria-selected="true"] {
-          pointer-events: none;
-          background: $primary-bg-subtle;
-        }
-
-        > svg {
-          position: absolute;
-          inset-inline-end: 20px;
-          inset-block-start: 50%;
-          transform: translateY(-50%);
-        }
-
-        &:after {
-          display: none;
-        }
+    }
+    &:has(.see-all-button) {
+      position: sticky;
+      inset-block-start: 100%;
+    }
+    > a,
+    > button {
+      &:hover {
+        background: $primary-bg-subtle;
       }
+    }
+    > span,
+    > button {
+      color: $dark;
+    }
+    // Buttons are used for parent items.
+    > button {
+      // Buttons don't occupy full width by default.
+      width: 100%;
+      // Unset common button styles.
+      border: none;
+      border-radius: 0;
+      text-align: inherit;
+      background: none;
 
-      > a {
-        color: $link-color;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
-        &.tab-toggle {
-          color: $dark;
-
-          &:hover {
-            text-decoration: none;
+      &.active,
+      &[aria-selected="true"] {
+        pointer-events: none;
+        background: $primary-bg-subtle;
+        @include media-breakpoint-up(lg) {
+          // Simulate a border-left without having to adjust the padding.
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $primary;
           }
         }
       }
     }
+  }
+}
 
-    /* ---------------------------------
-       RIGHT column – tab panels
-    ---------------------------------- */
-    .sub-navigation-items.tab-content {
-      .tab-pane {
-        ul {
-          &:has(.see-all-button) {
-            li:nth-last-child(2) {
-              a {
-                border-bottom: 0;
-              }
-            }
-          }
-        }
-
-        li {
-          list-style: none;
-
-          > * {
-            display: block;
-            @include mm-item-padding();
-            color: $dark;
-            border-bottom: 1px solid $primary-bg-subtle;
-          }
-
-          > a {
-            color: $link-color;
-            text-decoration: none;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-
-          &:last-child {
-            a {
-              border-bottom: 0;
-            }
-          }
-
-          .see-all-button {
-            border-bottom: 0;
-            position: relative;
-            padding-block: $mm-gutter-y;
-            padding-inline: 0;
-            display: flex;
-            align-items: center;
-            margin: 0;
-
-            &:after {
-              background: $neutral-border-color;
-              content: "";
-              block-size: 1px;
-              inset-inline-start: 0;
-              position: absolute;
-              inset-block-start: 0;
-              inline-size: 100%;
-            }
-
-            svg {
-              inline-size: 0.8rem;
-              flex-shrink: 0;
-            }
-
-            span {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              display: block;
-              white-space: nowrap;
-            }
-          }
-
-          &:has(.see-all-button) {
-            margin: 0 map-get($spacers, "4-25");
-            position: sticky;
-            inset-block-start: 100%;
-          }
+// Second level items column.
+.bcl-mega-menu__second-submenu {
+  > .tab-content > .tab-pane {
+    // In desktop, the entire second-level list has a light blue background.
+    @include media-breakpoint-up(lg) {
+      background: $primary-bg-subtle;
+    }
+    // Hide other parts of the mega menu in mobile, when a sub-submenu is open.
+    @include media-breakpoint-down(lg) {
+      .bcl-mega-menu__container:has(&.active) {
+        .bcl-mega-menu__info,
+        .bcl-mega-menu__first-submenu {
+          display: none;
         }
       }
-
-      .panel-title {
+    }
+    // The panel title only shows in mobile.
+    > .panel-title {
+      @include media-breakpoint-up(lg) {
         display: none;
       }
+      @include mm-item-padding(map-get($spacers, 3));
+      margin: 0;
+      color: $dark;
+      background: $primary-bg-subtle;
+      display: block;
+      font-size: 20px;
     }
-  }
-}
-
-/* -------------------------------------
-   lg+ layout
--------------------------------------- */
-@include media-breakpoint-up(lg) {
-  .nav-item:has(> .bcl-mega-menu) {
-    position: static;
-  }
-
-  .bcl-mega-menu {
-    .mega-menu-container.dropdown-menu {
-      inset-block-start: 100%;
-      padding-block: map-get($spacers, "2-5");
-      border-bottom: var(--bs-border-width) var(--bs-border-style)
-        var(--bs-border-color);
-
-      .shadow-container {
-        position: relative;
-
-        .shadow-bg {
-          position: absolute;
-          inset-inline-start: 50%;
-          inset-block-end: 0;
-          inline-size: 100vw;
-          block-size: 8px;
-          transform: translateX(-50%);
-          box-shadow: 0 4px 5px 0 rgba(224, 229, 245, 0.5);
-        }
-      }
-
-      .content-block {
-        margin-inline-end: 0;
-        background: $white;
-        padding-inline-end: map-get($spacers, 4);
-      }
-
-      .navigation-items {
-        @include nav-items {
-          &:hover {
-            background: $primary-bg-subtle;
-          }
-        }
-
-        > a,
-        > span {
-          @include mm-item-padding();
-        }
-
-        > a[role="tab"].active,
-        > a[role="tab"][aria-selected="true"] {
-          background: $primary-bg-subtle;
-          pointer-events: none;
-          border-inline-start: 4px solid $primary;
-          padding-inline-start: $mm-gutter-y;
-          padding-inline-end: map-get($spacers, 5);
-        }
-      }
-
-      .sub-navigation-items.tab-content {
-        overflow-y: auto;
-
-        &:has(> .active) {
-          background: $primary-bg-subtle;
-        }
-
-        .tab-pane {
-
-          li {
-            > * {
-              border-bottom: none;
-            }
-          }
-        }
+    // Items get a bit more space to the sides in xl viewport.
+    @include media-breakpoint-up(xl) {
+      > ul > li > * {
+        margin: 0 map-get($spacers, "2-5");
       }
     }
   }
 }
 
-/* -------------------------------------
-   xl+
--------------------------------------- */
-@include media-breakpoint-up(xl) {
-  .bcl-mega-menu {
-    .mega-menu-container.dropdown-menu {
-      .shadow-container {
-        block-size: 100%;
-        position: absolute;
-        inset-inline-end: 0;
-        inset-block-start: 0;
-
-        .shadow-bg {
-          inset-inline-start: auto;
-          inset-inline-end: 0;
-          block-size: 100%;
-          inline-size: 10px;
-          transform: none;
-          box-shadow: 4px 3px 4px 0 rgba(224, 229, 245, 0.5);
-        }
-      }
-
-      .sub-navigation-items.tab-content {
-        .tab-pane {
-          li {
-            > * {
-              margin: 0 map-get($spacers, "2-5");
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /* -------------------------------------
-    White overlay when mega menu is open
-    (kept with :has for convenience; consider JS class .mm-open for perf)
-  -------------------------------------- */
-  body {
-    &:has(.mega-menu-container.show) {
-      overflow: hidden;
-
-      main {
-        &:after {
-          position: absolute;
-          inset: 0;
-          background: #fff;
-          opacity: 0.5;
-          content: "";
-          z-index: $mm-z-overlay;
-        }
-      }
-
-      header {
-        position: relative;
-        z-index: $mm-z-header;
-      }
-    }
-  }
-}
-
-/* -------------------------------------
-   Mechanism on mobile to show/hide panels
--------------------------------------- */
+// Set light-blue full-width background on some elements.
 @include media-breakpoint-down(lg) {
   .bcl-mega-menu {
-    .mega-menu-container.dropdown-menu {
-      &:has(.navigation-items > .active) {
-        .content-block {
-          display: none;
-        }
-      }
-
-      .navigation-items {
-        &:has(> .active) {
-          display: none;
-        }
-      }
-
-      .sub-navigation-items.tab-content {
-        .panel-title {
-          @include mm-item-padding(map-get($spacers, 3));
-          margin: 0;
-          color: $dark;
-          background: $primary-bg-subtle;
-          display: block;
-          font-size: 20px;
-        }
-
-        .tab-pane {
-          li {
-            &:has(.see-all-button) {
-              margin: 0;
-
-              .see-all-button {
-                @include mm-item-padding();
-              }
-            }
-          }
-        }
-      }
-    }
-
     .panel-title,
     .content-block,
-    .back-button-block {
+    .bcl-mega-menu__back-button-block {
       position: relative;
-
       &::after {
         position: absolute;
         inset-inline-start: 50%;
@@ -443,53 +344,8 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
         transform: translateX(-50%);
       }
     }
-  }
-}
-
-/* -------------------------------------
-    Fixes for height issues
--------------------------------------- */
-@include media-breakpoint-up(lg) {
-  .bcl-mega-menu {
-    .mega-menu-container.dropdown-menu {
-      .sub-navigation-items.tab-content {
-        .tab-pane {
-          ul {
-            block-size: $mm-panel-height;
-          }
-        }
-      }
+    .bcl-mega-menu__back-button-block::after {
+      background: linear-gradient(to bottom, darken($primary-bg-subtle, 7%) 0%, $primary-bg-subtle 30px);
     }
-
-    .content-block {
-      max-block-size: $mm-panel-height;
-      overflow-y: auto;
-    }
-
-    .navigation-items {
-      block-size: $mm-panel-height;
-    }
-  }
-}
-
-/* -------------------------------------
-   Motion preferences (subtle transitions)
--------------------------------------- */
-@media (prefers-reduced-motion: no-preference) {
-  .bcl-mega-menu .mega-menu-container.dropdown-menu {
-    transition:
-      opacity 0.15s ease,
-      transform 0.15s ease;
-  }
-
-  .bcl-mega-menu [aria-expanded="true"] + .mega-menu-container.dropdown-menu {
-    opacity: 1;
-    transform: none;
-  }
-
-  .bcl-mega-menu [aria-expanded="false"] + .mega-menu-container.dropdown-menu {
-    opacity: 0;
-    transform: translateY(-4px);
-    pointer-events: none;
   }
 }

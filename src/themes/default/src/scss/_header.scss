@@ -170,10 +170,6 @@ $header-link-active-background: #003776 !default;
     align-items: flex-start;
     .navbar-nav {
       width: 100%;
-      .navigation-items > .dropdown > span,
-      .navigation-items > span,
-      .navigation-items > .dropdown > a,
-      .navigation-items > a,
       .dropdown-toggle,
       .nav-link {
         color: $dark;
@@ -200,11 +196,6 @@ $header-link-active-background: #003776 !default;
             top: 50%;
             transform: translateY(-50%);
           }
-        }
-      }
-      &:has(.mega-menu-container.show) {
-        .nav-link {
-          display: none;
         }
       }
     }

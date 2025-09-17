@@ -67,10 +67,10 @@
     variant: 'link'
   }) only %}
   {# Mega menu panel. #}
-  <nav id="{{ _menu_id }}" class="mega-menu-container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
+  <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
     <div class="container position-relative">
       {# Mobile back button. #}
-      <div class="d-lg-none back-button-block">
+      <div class="d-lg-none bcl-mega-menu__back-button-block">
         {% include '@oe-bcl/bcl-button/button.html.twig' with {
           label: _back_button_label,
           icon_position: "before",
@@ -86,7 +86,7 @@
       <div class="row">
         {# Content / summary column. #}
         {% if content_block is defined %}
-          <div class="col-md-12 col-xl-3 position-relative">
+          <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">
             <div class="content-block">
               {%- block content_block -%}
                 {{ _content_block }}
@@ -110,11 +110,11 @@
           </div>
         {% endif %}
         {# Submenu columns. #}
-        <div class="col-md-12 col-xl-6">
+        <div class="col-md-12 col-xl-6 bcl-mega-menu__submenus">
           <div class="row g-0">
             {# First submenu column. #}
-            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
-              <div class="navigation-items" role="tablist" aria-orientation="vertical">
+            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0 bcl-mega-menu__first-submenu">
+              <ul class="bcl-mega-menu__items" role="tablist" aria-orientation="vertical">
                 {# Iterate items in first submenu level. #}
                 {% for _item in _items %}
                   {% if _item.items is defined and _item.items is not empty %}
@@ -130,6 +130,7 @@
                       .setAttribute('data-bs-target', '#' ~ _panel_id)
                       .setAttribute('aria-controls', _panel_id)
                       .setAttribute('aria-selected', 'false')
+                      .addClass('no-chevron')
                     %}
 
                     {% set _trigger = _item.trigger|merge({
@@ -138,19 +139,25 @@
                         path: _icon_path,
                         size: 'fluid'
                       },
-                      attributes: _trigger_attributes.addClass('no-chevron')
+                      attributes: _trigger_attributes,
+                      remove_icon_spacers: true,
+                      clean_class: true,
                     }) %}
-                    {% include '@oe-bcl/bcl-link/link.html.twig' with _trigger only %}
+                    <li>
+                      {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
+                    </li>
                   {% else %}
                     {# This is a leaf item. #}
-                    {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+                    <li>
+                      {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+                    </li>
                   {% endif %}
                 {% endfor %}
-              </div>
+              </ul>
             </div>
             {# Second submenu column. #}
-            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0">
-              <div class="sub-navigation-items tab-content">
+            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0 bcl-mega-menu__second-submenu">
+              <div class="tab-content">
                 {# Iterate items in first submenu level, again. #}
                 {% for _item in _items %}
                   {% if _item.items is defined and _item.items is not empty %}
@@ -166,7 +173,7 @@
                       tabindex="0"
                     >
                       <p class="panel-title">{{ _item.trigger.label }}</p>
-                      <ul class="list-unstyled m-0 position-relative">
+                      <ul class="bcl-mega-menu__items">
                         {# Iterate the sub-items. #}
                         {% for _sub_item in _item.items %}
                           {% if _sub_item.attributes is empty %}
