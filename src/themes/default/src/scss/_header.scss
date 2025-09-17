@@ -288,6 +288,9 @@ $header-link-active-background: #003776 !default;
       &:hover {
         background: $primary-bg-subtle;
         color: $dark;
+        &:focus-visible {
+          outline-color: $primary;
+        }
       }
       &.active,
       &.show {
