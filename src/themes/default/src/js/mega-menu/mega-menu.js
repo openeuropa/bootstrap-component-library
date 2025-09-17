@@ -74,15 +74,6 @@ class MegaMenu {
       pane.classList.remove("active", "show");
       if (pane.getAttribute("tabindex") === "0") pane.removeAttribute("tabindex");
     });
-
-    const openToggles = SelectorEngine.find(
-      ".navigation-items .dropdown-toggle.show, .sub-navigation-items .dropdown-toggle.show",
-      this.root
-    );
-    openToggles.forEach((toggle) => {
-      Dropdown.getOrCreateInstance(toggle).hide();
-      toggle.setAttribute("aria-expanded", "false");
-    });
   }
 
   applyDesktopStatesIfNeeded() {
