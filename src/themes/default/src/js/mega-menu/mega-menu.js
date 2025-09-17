@@ -80,11 +80,9 @@ class MegaMenu {
     if (window.innerWidth < 992) return;
 
     const subNav = SelectorEngine.findOne(".bcl-mega-menu__second-submenu .active", this.root);
-    console.log(subNav)
     if (!subNav) return;
 
     const pane = subNav.closest(".tab-pane");
-    console.log(pane)
     if (!pane) return;
 
     pane.classList.add("active", "show");
