@@ -91,7 +91,7 @@
               {%- block content_block -%}
                 {{ _content_block }}
               {%- endblock -%}
-              {% if _content_link is defined %}
+              {% if _content_link.path is not empty %}
                 {% set _content_link = _content_link|merge({
                   icon: _content_link.icon|default({})|merge({
                     path: _icon_path
