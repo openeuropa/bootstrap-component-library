@@ -1,261 +1,94 @@
-import Tab from "@openeuropa/bcl-bootstrap/js/src/tab";
 import Dropdown from "@openeuropa/bcl-bootstrap/js/src/dropdown";
 import SelectorEngine from "@openeuropa/bcl-bootstrap/js/src/dom/selector-engine";
 import EventHandler from "@openeuropa/bcl-bootstrap/js/src/dom/event-handler";
 
 class MegaMenu {
+
   constructor(root) {
     this.root = root;
 
     this.backButton = SelectorEngine.findOne(".back-button", this.root);
-    this.tablist = SelectorEngine.findOne('.bcl-mega-menu__items[role="tablist"]', this.root);
-    this.tabs = SelectorEngine.find('[role="tab"]', this.root);
-    this.trigger = SelectorEngine.findOne('.dropdown-toggle[data-bs-toggle="dropdown"]', this.root);
+    this.trigger = SelectorEngine.findOne(':scope > .dropdown-toggle[data-bs-toggle="dropdown"]', this.root);
+    this.ul = SelectorEngine.findOne('.bcl-mega-menu__items.__level-1', this.root);
 
-    this.linearTabbingTabs = true;
-
-    this._onResize = this._onResize?.bind ? this._onResize.bind(this) : (e) => this._onResize(e);
-
-    this.addEventListeners();
-
-    if (this.linearTabbingTabs) this.makeAllTabsTabbable();
-
-    this.cleanupStatesForMobileIfNeeded();
-    this.applyDesktopStatesIfNeeded();
+    this.addSubmenuTriggerListeners();
+    this.addBackButtonListener();
   }
 
-  addEventListeners() {
-    if (this.backButton) {
-      EventHandler.on(this.backButton, "click", () => this.hideMostInnerTabOrBaseDropdown());
-    }
+  addTriggerListeners() {
+    this.trigger.addEventListener('hide.bs.dropdown', () => {
+      // Close submenus, so that next time it opens at the root.
+      this.closeAllSubmenus();
+    })
+  }
 
-    if (this.tablist && this.tabs.length) {
-      this.tabs.forEach((tab) => {
-        EventHandler.on(tab, "keydown", (e) => this.onTabKeydown(e, tab));
-        EventHandler.on(tab, "blur", () => { delete tab.dataset.deferPanelTab; });
+  addSubmenuTriggerListeners() {
+    // Clicking a parent item button toggles the aria-expanded attribute.
+    SelectorEngine
+      .find(':scope li > button[aria-expanded]', this.root)
+      .forEach((trigger) => {
+        EventHandler.on(trigger, "click", () => {
+          if (trigger.getAttribute('aria-expanded') === 'true') {
+            // Close the current submenu.
+            this.closeSubmenu(trigger);
+          }
+          else {
+            this.openSubmenu(trigger);
+            // The back button is only visible in mobile / narrow viewport.
+            if (this.backButton.offsetParent !== null) {
+              this.backButton.focus();
+            }
+          }
+        });
       });
-
-      EventHandler.on(this.root, "keydown", (e) => this.onRootKeydown(e));
-    }
-
-    EventHandler.on(this.root, "shown.bs.tab", (e) => {
-      if (this.linearTabbingTabs) this.makeAllTabsTabbable();
-      this.updateBackButtonLabel(e.target);
-    });
-
-    EventHandler.on(window, "load.bs.tab.data-api", () => {
-      if (this.linearTabbingTabs) this.makeAllTabsTabbable();
-    });
-
-    EventHandler.on(window, "resize", this._onResize);
   }
 
-  _onResize() {
-    this.cleanupStatesForMobileIfNeeded();
-    this.applyDesktopStatesIfNeeded();
-  }
-
-  cleanupStatesForMobileIfNeeded() {
-    if (window.innerWidth >= 992) return;
-
-    const dirty = SelectorEngine.find(
-      ".bcl-mega-menu__items .active, .bcl-mega-menu__items .show",
-      this.root
-    );
-    dirty.forEach((el) => {
-      el.classList.remove("active", "show");
-      if (el.getAttribute("role") === "tab") {
-        el.setAttribute("aria-selected", "false");
-      }
-    });
-
-    const panes = SelectorEngine.find(".bcl-mega-menu .tab-pane", this.root);
-    panes.forEach((pane) => {
-      pane.classList.remove("active", "show");
-      if (pane.getAttribute("tabindex") === "0") pane.removeAttribute("tabindex");
-    });
-  }
-
-  applyDesktopStatesIfNeeded() {
-    if (window.innerWidth < 992) return;
-
-    const subNav = SelectorEngine.findOne(".bcl-mega-menu__second-submenu .active", this.root);
-    if (!subNav) return;
-
-    const pane = subNav.closest(".tab-pane");
-    if (!pane) return;
-
-    pane.classList.add("active", "show");
-  }
-
-  makeAllTabsTabbable() {
-    if (!this.tabs || !this.tabs.length) return;
-    this.tabs.forEach((t) => {
-      t.setAttribute("tabindex", "0");
-    });
-  }
-
-  getNavItems() {
-    const list = this.root.querySelector(".bcl-mega-menu__first-submenu .bcl-mega-menu__items");
-    if (!list) return [];
-    return Array.from(list.querySelectorAll("a, [role='tab']")).filter(
-      (el) =>
-        !el.hasAttribute("disabled") &&
-        el.getAttribute("aria-hidden") !== "true" &&
-        el.getAttribute("tabindex") !== "-1"
-    );
-  }
-
-  getNextNavItemAfterTab(tab) {
-    if (!tab) return null;
-    const items = this.getNavItems();
-    const i = items.indexOf(tab);
-    if (i === -1) return null;
-    return items[i + 1] || null;
-  }
-
-  isLastNavItemFocused() {
-    const items = this.getNavItems();
-    return items.length && document.activeElement === items[items.length - 1];
-  }
-
-  getPanelFromTab(tab) {
-    const sel =
-      tab.getAttribute("data-bs-target") ||
-      (tab.getAttribute("aria-controls") ? "#" + tab.getAttribute("aria-controls") : "");
-    return sel ? this.root.querySelector(sel) : null;
-  }
-
-  getTabFromPanel(panel) {
-    const id = panel.getAttribute("aria-labelledby");
-    return id ? this.root.querySelector("#" + id) : null;
-  }
-
-  getFocusable(root) {
-    if (!root) return [];
-    return Array.from(
-      root.querySelectorAll(
-        'a[href]:not([tabindex="-1"]), button:not([disabled]):not([tabindex="-1"]), input:not([disabled]):not([tabindex="-1"]), select:not([disabled]):not([tabindex="-1"]), textarea:not([disabled]):not([tabindex="-1"]), [tabindex]:not([tabindex="-1"])'
-      )
-    ).filter((el) => !el.hasAttribute("disabled") && el.getAttribute("aria-hidden") !== "true");
-  }
-
-  getAllDocumentFocusables() {
-    return Array.from(document.querySelectorAll('a[href], button, input, select, textarea, [tabindex]')).filter(
-      (el) =>
-        !el.hasAttribute("disabled") &&
-        el.getAttribute("tabindex") !== "-1" &&
-        el.getAttribute("aria-hidden") !== "true"
-    );
-  }
-
-  getNextFocusableAfter(el, skipWithin) {
-    const all = this.getAllDocumentFocusables();
-    const idx = all.indexOf(el);
-    if (idx === -1) return null;
-    for (let i = idx + 1; i < all.length; i++) {
-      const c = all[i];
-      if (skipWithin && skipWithin.contains(c)) continue;
-      return c;
-    }
-    return null;
-  }
-
-  updateBackButtonLabel(tab) {
-    if (!this.backButton || !tab) return;
-    const label = tab.textContent.trim();
-    const backText = `Back to ${label}`;
-    this.backButton.setAttribute("aria-label", backText);
-  }
-
-  onTabKeydown(e, tab) {
-    const { key } = e;
-    if (key === "Enter" || key === " ") {
-      tab.dataset.deferPanelTab = "1";
+  addBackButtonListener() {
+    // Clicking a back button closes the submenu or the menu itself.
+    if (!this.backButton) {
       return;
     }
-    if (key === "Tab" && !e.shiftKey && tab.dataset.deferPanelTab === "1") {
-      const panel = this.getPanelFromTab(tab);
-      const focusables = this.getFocusable(panel);
-      if (focusables.length) {
-        e.preventDefault();
-        focusables[0].focus();
-      } else if (panel) {
-        e.preventDefault();
-        if (!panel.hasAttribute("tabindex")) panel.setAttribute("tabindex", "0");
-        panel.focus();
-      }
-      delete tab.dataset.deferPanelTab;
-    }
-  }
-
-  onRootKeydown(e) {
-    if (e.key !== "Tab") return;
-
-    if (!e.shiftKey && this.isLastNavItemFocused()) {
-      const next = this.trigger ? this.getNextFocusableAfter(this.trigger, this.root) : null;
-      if (next) {
-        e.preventDefault();
-        next.focus();
+    EventHandler.on(this.backButton, "click", () => {
+      const submenusThatWereOpen = this.closeAllSubmenus();
+      if (submenusThatWereOpen.length > 0) {
+        // Focus the submenu trigger, to allow quick reopen by keystroke.
+        submenusThatWereOpen[0].focus();
         return;
       }
-    }
-
-    const activePanel = this.root.querySelector(".tab-pane.active.show");
-    if (!activePanel) return;
-
-    const focusables = this.getFocusable(activePanel);
-    if (!focusables.length) return;
-
-    const first = focusables[0];
-    const last = focusables[focusables.length - 1];
-
-    if (e.shiftKey) {
-      if (document.activeElement === first) {
-        const owningTab = this.getTabFromPanel(activePanel);
-        if (owningTab) {
-          e.preventDefault();
-          owningTab.focus();
-        }
+      // Close the mega menu itself.
+      if (this.trigger) {
+        // Close using the Bootstrap dropdown API.
+        Dropdown.getOrCreateInstance(this.trigger).hide();
+        // Focus the main trigger, to allow quick reopen by keystroke.
+        this.trigger.focus();
       }
-    } else {
-      if (document.activeElement === last) {
-        const owningTab = this.getTabFromPanel(activePanel);
-        const nextNav = this.getNextNavItemAfterTab(owningTab);
-        if (nextNav) {
-          e.preventDefault();
-          nextNav.focus();
-          return;
-        }
-
-        const next = this.trigger ? this.getNextFocusableAfter(this.trigger, this.root) : null;
-        if (next) {
-          e.preventDefault();
-          next.focus();
-        }
-      }
-    }
+    });
   }
 
-  hideMostInnerTabOrBaseDropdown() {
-    const tabToggles = SelectorEngine.find('.tab-toggle.active[data-bs-toggle="tab"]', this.root);
-    const dropdownToggle = SelectorEngine.findOne(
-      '.bcl-header__navbar .dropdown-toggle.show[data-bs-toggle="dropdown"]'
-    );
+  openSubmenu(trigger) {
+    // Close all submenus, then open the current submenu.
+    this.closeAllSubmenus();
+    trigger.setAttribute('aria-expanded', 'true');
+  }
 
-    if (tabToggles.length) {
-      const mostInnerToggle = tabToggles[tabToggles.length - 1];
-      const tabPane = document.querySelector(".tab-pane.active.show");
-      mostInnerToggle.classList.remove("active");
-      mostInnerToggle.setAttribute("aria-selected", "false");
-      if (tabPane) {
-        tabPane.classList.remove("active", "show");
-      }
-      mostInnerToggle.focus();
-    } else if (dropdownToggle) {
-      Dropdown.getOrCreateInstance(dropdownToggle).hide();
-      dropdownToggle.focus();
-    }
+  /**
+   * Closes all submenus.
+   *
+   * This is simple while there is only one submenu level.
+   *
+   * @returns {HTMLElement[]}
+   *   Triggers for submenus that were closed.
+   *   Usually this is either exactly one, or none.
+   */
+  closeAllSubmenus() {
+    const triggers = SelectorEngine
+      .find(':scope > li > button[aria-expanded="true"]', this.ul);
+    triggers.forEach(this.closeSubmenu);
+    return triggers;
+  }
+
+  closeSubmenu(trigger) {
+    trigger.setAttribute('aria-expanded', 'false');
   }
 
   static init(selector = ".bcl-mega-menu") {

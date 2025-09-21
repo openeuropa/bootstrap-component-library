@@ -68,9 +68,32 @@
   }) only %}
   {# Mega menu panel. #}
   <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
-    <div class="container position-relative">
+    {#
+      A hidden link for keyboard navigation in mobile viewport (< xl).
+      (Some assistive technologies rely on keyboard navigation even in mobile.)
+      The FocusIsland script will reject this link, and send the user to a focusable item.
+      This link prevents the user from tabbing outside the mega menu,
+      which would cause the Bootstrap dropdown script to close it.
+    #}
+    <span tabindex="0" aria-hidden="true" role="presentation" class="visually-hidden bcl-focus-sentinel __start d-xl-none"></span>
+    {#
+      Add a focus "curse".
+      As long as this is visible, links in parent "islands" cannot be focused.
+      (Here "parent" means 2+ levels up.)
+    #}
+    <span class="invisible visually-hidden d-xl-none bcl-focus-island-curse"></span>
+    {#
+      Mark the menu container as a focus island.
+      In combination with the focus curse above, tabbing will be restricted to this element.
+    #}
+    <div class="container bcl-focus-island">
       {# Mobile back button. #}
-      <div class="d-lg-none bcl-mega-menu__back-button-block">
+      {#
+        Mark the back button container as a focus island.
+        This allows tab navigation to the back button,
+        even when a submenu is open, which has its own focus island.
+      #}
+      <div class="container d-lg-none bcl-mega-menu__back-button-block bcl-focus-island">
         {% include '@oe-bcl/bcl-button/button.html.twig' with {
           label: _back_button_label,
           icon_position: "before",
@@ -82,146 +105,49 @@
           attributes: create_attribute().addClass(['back-button']).setAttribute('aria-label', 'Back to main menu')
         } only %}
       </div>
-      {# Outer flex columns. #}
-      <div class="row">
-        {# Content / summary column. #}
-        {% if content_block is defined %}
-          <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">
-            <div class="content-block">
-              {%- block content_block -%}
-                {{ _content_block }}
-              {%- endblock -%}
-              {% if _content_link.path is not empty %}
-                {% set _content_link = _content_link|merge({
-                  icon: _content_link.icon|default({})|merge({
-                    path: _icon_path
-                  }),
-                  attributes: (_content_link.attributes is defined
-                    ? _content_link.attributes
-                    : create_attribute()
-                  ).addClass('content-link')
-                }) %}
-                <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
-              {% endif %}
-            </div>
-            <div class="shadow-container">
-              <span class="shadow-bg"></span>
-            </div>
-          </div>
-        {% endif %}
-        {# Submenu columns. #}
-        <div class="col-md-12 col-xl-6 bcl-mega-menu__submenus">
-          <div class="row g-0">
-            {# First submenu column. #}
-            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0 bcl-mega-menu__first-submenu">
-              <ul class="bcl-mega-menu__items" role="tablist" aria-orientation="vertical">
-                {# Iterate items in first submenu level. #}
-                {% for _item in _items %}
-                  {% if _item.items is defined and _item.items is not empty %}
-                    {# This is a parent item. #}
-                    {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
-                    {% set _trigger_id = 'mm-trigger-' ~ _id ~ '-' ~ loop.index0 %}
-
-                    {% set _trigger_attributes = (_item.trigger.attributes is defined ? _item.trigger.attributes : create_attribute())
-                      .addClass(['tab-toggle'])
-                      .setAttribute('id', _trigger_id)
-                      .setAttribute('role', 'tab')
-                      .setAttribute('data-bs-toggle', 'tab')
-                      .setAttribute('data-bs-target', '#' ~ _panel_id)
-                      .setAttribute('aria-controls', _panel_id)
-                      .setAttribute('aria-selected', 'false')
-                      .addClass('no-chevron')
-                    %}
-
-                    {% set _trigger = _item.trigger|merge({
-                      icon: {
-                        name: 'chevron-right',
-                        path: _icon_path,
-                        size: 'fluid'
-                      },
-                      attributes: _trigger_attributes,
-                      remove_icon_spacers: true,
-                      clean_class: true,
-                    }) %}
-                    <li>
-                      {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
-                    </li>
-                  {% else %}
-                    {# This is a leaf item. #}
-                    <li>
-                      {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-            {# Second submenu column. #}
-            <div class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0 bcl-mega-menu__second-submenu">
-              <div class="tab-content">
-                {# Iterate items in first submenu level, again. #}
-                {% for _item in _items %}
-                  {% if _item.items is defined and _item.items is not empty %}
-                    {# This is an item with children. #}
-                    {% set _panel_id = 'mm-panel-' ~ _id ~ '-' ~ loop.index0 %}
-                    {% set _trigger_id = 'mm-trigger-' ~ _id ~ '-' ~ loop.index0 %}
-
-                    <div
-                      class="tab-pane p-0"
-                      id="{{ _panel_id }}"
-                      role="tabpanel"
-                      aria-labelledby="{{ _trigger_id }}"
-                      tabindex="0"
-                    >
-                      <p class="panel-title">{{ _item.trigger.label }}</p>
-                      <ul class="bcl-mega-menu__items">
-                        {# Iterate the sub-items. #}
-                        {% for _sub_item in _item.items %}
-                          {% if _sub_item.attributes is empty %}
-                            {% set _sub_item = _sub_item|merge({
-                              attributes: create_attribute()
-                            }) %}
-                          {% endif %}
-                          {% set _item_classes = [] %}
-                          {% if _sub_item.active %}
-                            {% set _item_classes = _item_classes|merge(['active']) %}
-                          {% endif %}
-                          {% set _sub_item = _sub_item|merge({
-                            clean_class: true,
-                            attributes: _sub_item.attributes.addClass(_item_classes)
-                          }) %}
-                          <li>
-                            {% include '@oe-bcl/bcl-link/link.html.twig' with _sub_item only %}
-                          </li>
-                        {% endfor %}
-                        {% if _item.see_all is defined and _item.see_all is not empty %}
-                          {% set _see_all_label %}
-                            <span>{{- _item.see_all.label -}}</span>
-                          {% endset %}
-                          {% set _see_all_attr = (_item.see_all.attributes is defined ? _item.see_all.attributes : create_attribute()) %}
-                          {% set _see_all = _item.see_all|merge({
-                            label: _see_all_label,
-                            icon: {
-                              name: 'arrow-right',
-                              path: _icon_path,
-                            },
-                            attributes: _see_all_attr
-                              .addClass(['see-all-button'])
-                              .setAttribute('aria-label', 'See all items in ‘' ~ _item.trigger.label ~ '’')
-                          }) %}
-                          <li>
-                            {% include '@oe-bcl/bcl-link/link.html.twig' with _see_all only %}
-                          </li>
-                        {% endif %}
-                      </ul>
-                    </div>
-                  {% endif %}
-                {% endfor %}
+      {# Info/summary and submenu columns. #}
+      <div class="position-relative">
+        <div class="row">
+          {# Content / summary column. #}
+          {% if content_block is defined %}
+            <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">
+              <div class="content-block">
+                {%- block content_block -%}
+                  {{ _content_block }}
+                {%- endblock -%}
+                {% if _content_link.path is not empty %}
+                  {% set _content_link = _content_link|merge({
+                    icon: _content_link.icon|default({})|merge({
+                      path: _icon_path
+                    }),
+                    attributes: (_content_link.attributes is defined
+                      ? _content_link.attributes
+                      : create_attribute()
+                    ).addClass('content-link')
+                  }) %}
+                  <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
+                {% endif %}
+              </div>
+              <div class="shadow-container">
+                <span class="shadow-bg"></span>
               </div>
             </div>
+          {% endif %}
+          {# Submenu column. #}
+          <div class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu">
+            {% include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' %}
           </div>
         </div>
       </div>
     </div>
+    {#
+      A hidden link for keyboard navigation in mobile viewport.
+      (Some assistive technologies rely on this even in mobile.)
+      The FocusIsland script will reject this, and send the user to a focusable item.
+      This link prevents the user from tabbing outside the mega menu,
+      which would cause the Bootstrap dropdown script to close it.
+    #}
+    <span tabindex="0" aria-hidden="true" role="presentation" class="visually-hidden bcl-focus-sentinel __start d-xl-none"></span>
   </nav>
 </div>
 

@@ -33,8 +33,9 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
   }
 }
 
-/* Low-specificity defaults for interactive elements inside the component */
-.bcl-mega-menu {
+// Low-specificity defaults for interactive elements inside the component.
+// This does not apply to the trigger, which should get styles from the navbar.
+.bcl-mega-menu__container {
   :where(a) {
     @include link-reset;
   }
@@ -181,6 +182,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 // Item lists on any level.
 ul.bcl-mega-menu__items {
   list-style: none;
+  margin: 0;
   padding-inline-start: 0;
   // Add a scrollbar in desktop viewport.
   @include media-breakpoint-up(lg) {
@@ -220,6 +222,60 @@ ul.bcl-mega-menu__items {
         text-decoration: underline;
       }
     }
+    > a,
+    > button {
+      &:hover {
+        background: $primary-bg-subtle;
+      }
+    }
+    > span,
+    > button {
+      color: $dark;
+    }
+    // Buttons are used for parent items.
+    > button {
+      // Buttons don't occupy full width by default.
+      width: 100%;
+      // Unset common button styles.
+      border: none;
+      border-radius: 0;
+      text-align: inherit;
+      background: none;
+      white-space: normal;
+
+      // Show an icon.
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+        flex-shrink: 0;
+        align-self: center;
+        content: '';
+        height: 1em;
+        width: 1em;
+      }
+
+      &[aria-expanded="true"] {
+        background: $primary-bg-subtle;
+        @include media-breakpoint-up(lg) {
+          // Simulate a border-left without having to adjust the padding.
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $primary;
+          }
+        }
+      }
+    }
+
+    // The see-all link is at the bottom of the list.
+    &:has(> a.see-all-button) {
+      position: sticky;
+      inset-block-start: 100%;
+    }
     > a.see-all-button {
       border-top: none;
       &:after {
@@ -242,48 +298,79 @@ ul.bcl-mega-menu__items {
         white-space: nowrap;
       }
     }
-    &:has(.see-all-button) {
-      position: sticky;
-      inset-block-start: 100%;
-    }
-    > a,
-    > button {
-      &:hover {
-        background: $primary-bg-subtle;
-      }
-    }
-    > span,
-    > button {
-      color: $dark;
-    }
-    // Buttons are used for parent items.
-    > button {
-      // Buttons don't occupy full width by default.
-      width: 100%;
-      // Unset common button styles.
-      border: none;
-      border-radius: 0;
-      text-align: inherit;
-      background: none;
+  }
+}
 
-      &.active,
-      &[aria-selected="true"] {
-        pointer-events: none;
-        background: $primary-bg-subtle;
-        @include media-breakpoint-up(lg) {
-          // Simulate a border-left without having to adjust the padding.
-          position: relative;
-          &:before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            background-color: $primary;
-          }
-        }
+// First submenu.
+.bcl-mega-menu__menu {
+  // On desktop, sub-submenus are positioned relative to this one.
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    // Avoid a space between the parent menu and the submenu.
+    @include padding-right(0);
+  }
+}
+
+// Nested submenu.
+.bcl-mega-menu__submenu {
+  // Hide unless revealed.
+  // display: none;
+  // @todo Add proper mechanism.
+  button[aria-expanded="false"] + & {
+    display: none;
+  }
+
+  // Position relative to the parent.
+  position: absolute;
+  // In mobile it covers the parent.
+  @include media-breakpoint-down(lg) {
+    inset: 0 0 auto;
+    min-height: 100%;
+  }
+  // In desktop, it appears next to the parent.
+  @include media-breakpoint-up(lg) {
+    block-size: 100%;
+    inset: 0 0 0 100%;
+    inline-size: 100%;
+  }
+
+  // In mobile, there is a white background that covers the viewport width.
+  @include media-breakpoint-down(lg) {
+    &:before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      margin-left: -50vw;
+      width: 100vw;
+      top: 0;
+      height: 100%;
+      background: white;
+      z-index: -1;
+    }
+  }
+
+  background: white;
+  // In desktop, it gets a light background.
+  @include media-breakpoint-up(lg) {
+    background: $primary-bg-subtle;
+  }
+
+  // Layout for children
+  display: flex;
+  flex-direction: column;
+
+  > .__header {
+    // The title only shows in mobile.
+    > .__label {
+      @include media-breakpoint-up(lg) {
+        display: none;
       }
+      @include mm-item-padding(map-get($spacers, 3));
+      margin: 0;
+      color: $dark;
+      background: $primary-bg-subtle;
+      display: block;
+      font-size: 20px;
     }
   }
 }
@@ -327,22 +414,20 @@ ul.bcl-mega-menu__items {
 
 // Set light-blue full-width background on some elements.
 @include media-breakpoint-down(lg) {
-  .bcl-mega-menu {
-    .panel-title,
-    .content-block,
-    .bcl-mega-menu__back-button-block {
-      position: relative;
-      &::after {
-        position: absolute;
-        inset-inline-start: 50%;
-        content: "";
-        background: $primary-bg-subtle;
-        inline-size: 100vw;
-        block-size: 100%;
-        inset-block-start: 0;
-        z-index: -1;
-        transform: translateX(-50%);
-      }
+  .bcl-mega-menu__submenu > .__header,
+  .bcl-mega-menu .content-block,
+  .bcl-mega-menu__back-button-block {
+    position: relative;
+    &::before {
+      position: absolute;
+      inset-inline-start: 50%;
+      content: "";
+      background: $primary-bg-subtle;
+      inline-size: 100vw;
+      block-size: 100%;
+      inset-block-start: 0;
+      z-index: -1;
+      transform: translateX(-50%);
     }
   }
 }
