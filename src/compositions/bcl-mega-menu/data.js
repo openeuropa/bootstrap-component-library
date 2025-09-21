@@ -1,3 +1,4 @@
+const drupalAttribute = require('drupal-attribute');
 module.exports = {
   trigger: {
     label: "Top-level item with megamenu",
@@ -19,6 +20,8 @@ module.exports = {
       see_all: {
         label: "More of submenu item 1, where even the see all text is very long.",
         path: "/example.html",
+        attributes: new drupalAttribute()
+          .setAttribute('aria-label', 'See all in Submenu item 1'),
       },
       items: [
         {
