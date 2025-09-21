@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       trigger: {
-        label: "Submenu item 3",
+        label: "Submenu item 3 (many children)",
       },
       see_all: {
         label: "More of submenu item 3",
@@ -83,6 +83,26 @@ module.exports = {
           label: "Sub-submenu item 2.8",
           path: "/example.html",
         },
+        {
+          label: "Sub-submenu item 2.9",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.10",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.11",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.13",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.14",
+          path: "/example.html",
+        },
       ],
     },
     {
@@ -90,12 +110,23 @@ module.exports = {
       path: "/example.html",
     },
     {
-      label: "Submenu item 4.",
-      path: "/example.html",
+      label: "Submenu item 4 (nolink)",
     },
     {
-      label: "Submenu item 5.",
+      label: "Submenu item 5 (nolink parent)",
       path: "/example.html",
+      trigger: {
+        label: "Submenu item 5 (nolink parent)",
+      },
+      items: [
+        {
+          label: "Sub-submenu item 5.1 (nolink)",
+        },
+        {
+          label: "Sub-submenu item 5.2",
+          path: "/example.html",
+        },
+      ],
     },
     {
       label: "Submenu item 6.",
