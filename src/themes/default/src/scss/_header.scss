@@ -174,13 +174,18 @@ $header-link-active-background: #003776 !default;
       .nav-link {
         color: $dark;
         width: 100%;
-        display: block;
+        // Use flex for icon spacing.
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
         position: relative;
         padding: 1rem;
         border-bottom: 1px solid $primary-bg-subtle;
         text-align: left;
         // Unset border-radius for buttons.
         border-radius: 0;
+        // Allow text wrapping in buttons.
+        white-space: normal;
         &.active {
           color: $dark;
         }
@@ -194,16 +199,14 @@ $header-link-active-background: #003776 !default;
         &.dropdown-toggle {
           &:after {
             background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2215%22%20viewBox%3D%220%200%2016%2015%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7.57488%2013.25L8.46238%2014.125L15.1374%207.45L8.43738%200.75L7.56238%201.625L12.7276%206.81247H0.5V8.06247H12.7512L7.57488%2013.25Z%22%20fill%3D%22%23212529%22%2F%3E%3C%2Fsvg%3E");
-            background-size: cover;
-            background-position: center;
+            align-self: center;
             content: "";
-            position: absolute;
+            // Unset border from bootstrap icon.
             border: none;
             width: 20px;
             height: 20px;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            background-size: cover;
+            background-position: center;
           }
         }
       }
