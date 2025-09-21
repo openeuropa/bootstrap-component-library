@@ -36,14 +36,6 @@ module.exports = {
           label: "Sub-submenu item 1.3",
           path: "/example.html",
         },
-        {
-          label: "Sub-submenu item 1.4",
-          path: "/example.html",
-        },
-        {
-          label: "Sub-submenu item 1.5",
-          path: "/example.html",
-        },
       ],
     },
     {
