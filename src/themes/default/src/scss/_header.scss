@@ -179,8 +179,17 @@ $header-link-active-background: #003776 !default;
         padding: 1rem;
         border-bottom: 1px solid $primary-bg-subtle;
         text-align: left;
+        // Unset border-radius for buttons.
+        border-radius: 0;
         &.active {
           color: $dark;
+        }
+        &:focus-visible {
+          outline: 2px solid $primary;
+          // Don't let the outline overlap other elements.
+          outline-offset: -2px;
+          // Remove the shadow from bootstrap style.
+          box-shadow: none;
         }
         &.dropdown-toggle {
           &:after {
