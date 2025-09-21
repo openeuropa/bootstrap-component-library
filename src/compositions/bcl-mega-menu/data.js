@@ -17,7 +17,7 @@ module.exports = {
         label: "Submenu item 1 with very long text that wraps to multiple lines",
       },
       see_all: {
-        label: "More of submenu item 1",
+        label: "More of submenu item 1, where even the see all text is very long.",
         path: "/example.html",
       },
       items: [
