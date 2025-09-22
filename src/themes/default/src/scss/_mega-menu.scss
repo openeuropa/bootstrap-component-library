@@ -313,14 +313,8 @@ ul.bcl-mega-menu__items {
 }
 
 // Nested submenu.
+// This element has the 'hidden' attribute, unless it is expanded.
 .bcl-mega-menu__submenu {
-  // Hide unless revealed.
-  // display: none;
-  // @todo Add proper mechanism.
-  button[aria-expanded="false"] + & {
-    display: none;
-  }
-
   // Position relative to the parent.
   position: absolute;
   // In mobile it covers the parent.

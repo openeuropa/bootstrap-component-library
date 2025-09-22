@@ -47,7 +47,7 @@ class MegaMenu {
   }
 
   addSubmenuTriggerListeners() {
-    // Clicking a parent item button toggles the aria-expanded attribute.
+    // Clicking/activating a parent item button toggles the submenu.
     SelectorEngine
       .find(':scope li > button[aria-expanded]', this.root)
       .forEach((trigger) => {
@@ -94,6 +94,8 @@ class MegaMenu {
     // Close all submenus, then open the current submenu.
     this.closeAllSubmenus();
     trigger.setAttribute('aria-expanded', 'true');
+    const panel = this.getPanelForTrigger(trigger);
+    if (panel) panel.hidden = false;
   }
 
   /**
@@ -115,6 +117,8 @@ class MegaMenu {
 
   closeSubmenu(trigger) {
     trigger.setAttribute('aria-expanded', 'false');
+    const panel = this.getPanelForTrigger(trigger);
+    if (panel) panel.hidden = true;
   }
 
   static init(selector = ".bcl-mega-menu") {
