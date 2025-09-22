@@ -34,8 +34,7 @@ class MegaMenu {
           if (trigger.getAttribute('aria-expanded') === 'true') {
             // Close the current submenu.
             this.closeSubmenu(trigger);
-          }
-          else {
+          } else {
             this.openSubmenu(trigger);
             // The back button is only visible in mobile / narrow viewport.
             if (this.backButton && this.backButton.offsetParent !== null) {
