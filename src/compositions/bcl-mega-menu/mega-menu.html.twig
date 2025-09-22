@@ -52,15 +52,6 @@
                       .setAttribute('data-bs-auto-close', 'outside')
                       .setAttribute('id', _id)
 }) %}
-{% if _link %}
-  {% set _trigger = _trigger|merge({
-    attributes: _trigger.attributes.setAttribute('role', 'button')
-  }) %}
-{% else %}
-  {% set _trigger = _trigger|merge({
-    attributes: _trigger.attributes.setAttribute('autocomplete', 'off')
-  }) %}
-{% endif %}
 
 <div {{ attributes }}>
   {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
