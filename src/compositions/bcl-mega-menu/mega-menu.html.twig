@@ -64,7 +64,8 @@
 
 <div {{ attributes }}>
   {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
-    variant: 'link'
+    variant: 'link',
+    clean_class: true,
   }) only %}
   {# Mega menu panel. #}
   <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
