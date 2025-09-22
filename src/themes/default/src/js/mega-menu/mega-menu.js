@@ -40,6 +40,14 @@ class MegaMenu {
   addTriggerListeners() {
     if (!this.trigger) return;
 
+    // When the mega menu is opened, focus the first item in the menu.
+    EventHandler.on(this.trigger, 'shown.bs.dropdown', () => {
+      const panelId = this.trigger.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : null;
+      const firstFocusable = panel ? this.getFocusableChildren(panel)[0] : null;
+      if (firstFocusable) firstFocusable.focus();
+    });
+
     // When the mega menu is closed, close all submenus.
     EventHandler.on(this.trigger, 'hide.bs.dropdown', () => {
       this.closeAllSubmenus();
