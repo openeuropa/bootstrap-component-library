@@ -35,6 +35,7 @@ module.exports = {
           {
             id: "dropdown-megamenu-inner",
             trigger: {
+              id: "custom-trigger-mm-1",
               label: "Base Category Item",
             },
             items: [
@@ -67,6 +68,7 @@ module.exports = {
           {
             id: "dropdown-megamenu-inner-2",
             trigger: {
+              id: "custom-trigger-mm-2",
               label: "Base Category Item",
             },
             items: [

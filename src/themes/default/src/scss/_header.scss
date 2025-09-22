@@ -170,45 +170,55 @@ $header-link-active-background: #003776 !default;
     align-items: flex-start;
     .navbar-nav {
       width: 100%;
-      .navigation-items > .dropdown > span,
-      .navigation-items > span,
-      .navigation-items > .dropdown > a,
-      .navigation-items > a,
+      margin-top: 1rem;
       .dropdown-toggle,
       .nav-link {
         color: $dark;
         width: 100%;
-        display: block;
+        // Use flex for icon spacing.
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
         position: relative;
         padding: 1rem;
         border-bottom: 1px solid $primary-bg-subtle;
         text-align: left;
+        // Unset border-radius for buttons.
+        border-radius: 0;
+        // Allow text wrapping in buttons.
+        white-space: normal;
         &.active {
           color: $dark;
         }
-        &.dropdown-toggle {
-          &:after {
-            background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2215%22%20viewBox%3D%220%200%2016%2015%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7.57488%2013.25L8.46238%2014.125L15.1374%207.45L8.43738%200.75L7.56238%201.625L12.7276%206.81247H0.5V8.06247H12.7512L7.57488%2013.25Z%22%20fill%3D%22%23212529%22%2F%3E%3C%2Fsvg%3E");
-            background-size: cover;
-            background-position: center;
-            content: "";
-            position: absolute;
-            border: none;
-            width: 20px;
-            height: 20px;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-          }
+        &:focus-visible {
+          outline: 2px solid $primary;
+          // Don't let the outline overlap other elements.
+          outline-offset: -2px;
+          // Remove the shadow from bootstrap style.
+          box-shadow: none;
+        }
+        // Whenever ::after is used for an icon, it must not shrink.
+        // This also applies to .dropdown-toggle, which gets the icon from Bootstrap.
+        &::after {
+          flex-shrink: 0;
         }
       }
-      &:has(.mega-menu-container.show) {
-        .nav-link {
-          display: none;
+      // The mega menu trigger gets a different type of icon.
+      .bcl-mega-menu > .dropdown-toggle {
+        &:after {
+          background: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2215%22%20viewBox%3D%220%200%2016%2015%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7.57488%2013.25L8.46238%2014.125L15.1374%207.45L8.43738%200.75L7.56238%201.625L12.7276%206.81247H0.5V8.06247H12.7512L7.57488%2013.25Z%22%20fill%3D%22%23212529%22%2F%3E%3C%2Fsvg%3E");
+          align-self: center;
+          content: "";
+          // Unset border from bootstrap style.
+          border: none;
+          width: 20px;
+          height: 20px;
+          background-size: cover;
+          background-position: center;
         }
-        .nav-link:has(.mega-menu-container.show) {
-          display: block;
-        }
+      }
+      .dropdown-item {
+        white-space: normal;
       }
     }
   }
@@ -291,6 +301,9 @@ $header-link-active-background: #003776 !default;
       &:hover {
         background: $primary-bg-subtle;
         color: $dark;
+        &:focus-visible {
+          outline-color: $primary;
+        }
       }
       &.active,
       &.show {

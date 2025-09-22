@@ -31,6 +31,7 @@ module.exports = {
           {
             id: "dropdown-megamenu-inner",
             trigger: {
+              id: "custom-trigger-mm-1",
               label: "Base Category Item",
               attributes: new drupalAttribute().addClass("active"),
             },
@@ -66,6 +67,7 @@ module.exports = {
             trigger: {
               label: "Base Category Item",
               path: "/example.html",
+              id: "custom-trigger-mm-2",
             },
             items: [
               {

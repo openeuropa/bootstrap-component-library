@@ -11,8 +11,7 @@ module.exports = {
       name: "arrow-right",
     },
   },
-  content_block:
-    "<h4>About us</h4><hr><p>Description text.</p>",
+  content_block: "<h4>About us</h4><hr><p>Description text.</p>",
   items: [
     {
       id: "dropdown-megamenu-inner",

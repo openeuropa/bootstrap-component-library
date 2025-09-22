@@ -65,8 +65,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
                 aria-haspopup="menu"
-                autocomplete="off"
-                class="dropdown-toggle nav-link btn btn-link btn-md"
+                class="dropdown-toggle nav-link"
                 data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
                 id="dropdown-megamenu"
@@ -77,14 +76,14 @@ exports[`OE - Subscription renders correctly 1`] = `
               <nav
                 aria-label="Main mega menu"
                 aria-labelledby="dropdown-megamenu"
-                class="mega-menu-container dropdown-menu"
+                class="bcl-mega-menu__container dropdown-menu"
                 id="mega-menu-dropdown-megamenu"
               >
                 <div
-                  class="container position-relative"
+                  class="container"
                 >
                   <div
-                    class="d-lg-none back-button-block"
+                    class="container d-lg-none bcl-mega-menu__back-button-block"
                   >
                     <button
                       aria-label="Back to main menu"
@@ -102,157 +101,90 @@ exports[`OE - Subscription renders correctly 1`] = `
                     </button>
                   </div>
                   <div
-                    class="row"
+                    class="position-relative"
                   >
                     <div
-                      class="col-md-12 col-xl-3 position-relative"
+                      class="row"
                     >
                       <div
-                        class="content-block"
-                      >
-                        <h4>
-                          About the European Commission
-                        </h4>
-                        <p>
-                          Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <p
-                          class="m-0"
-                        >
-                          <a
-                            class="content-link"
-                            href="/example.html"
-                          >
-                            Discover more
-                            <svg
-                              class="ms-2-5 bi icon--s"
-                            >
-                              <use
-                                xlink:href="/icons.svg#arrow-right"
-                              />
-                            </svg>
-                          </a>
-                        </p>
-                      </div>
-                      <div
-                        class="shadow-container"
-                      >
-                        <span
-                          class="shadow-bg"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-12 col-xl-6"
-                    >
-                      <div
-                        class="row g-0"
+                        class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info"
                       >
                         <div
-                          class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0"
+                          class="content-block"
                         >
-                          <div
-                            aria-orientation="vertical"
-                            class="navigation-items"
-                            role="tablist"
+                          <h4>
+                            About the European Commission
+                          </h4>
+                          <p>
+                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <p
+                            class="m-0"
                           >
                             <a
-                              aria-controls="mm-panel-dropdown-megamenu-0"
-                              aria-selected="false"
-                              class="active tab-toggle no-chevron"
-                              data-bs-target="#mm-panel-dropdown-megamenu-0"
-                              data-bs-toggle="tab"
-                              href="#"
-                              id="mm-trigger-dropdown-megamenu-0"
-                              role="tab"
+                              class="content-link"
+                              href="/example.html"
                             >
-                              Base Category Item
+                              Discover more
                               <svg
-                                class="ms-2-5 bi icon--fluid"
+                                class="ms-2-5 bi icon--s"
                               >
                                 <use
-                                  xlink:href="/icons.svg#chevron-right"
+                                  xlink:href="/icons.svg#arrow-right"
                                 />
                               </svg>
                             </a>
-                            <a
-                              href="#"
-                            >
-                              Base Category Item
-                            </a>
-                            <a
-                              aria-controls="mm-panel-dropdown-megamenu-2"
-                              aria-selected="false"
-                              class="tab-toggle no-chevron"
-                              data-bs-target="#mm-panel-dropdown-megamenu-2"
-                              data-bs-toggle="tab"
-                              href="/example.html"
-                              id="mm-trigger-dropdown-megamenu-2"
-                              role="tab"
-                            >
-                              Base Category Item
-                              <svg
-                                class="ms-2-5 bi icon--fluid"
-                              >
-                                <use
-                                  xlink:href="/icons.svg#chevron-right"
-                                />
-                              </svg>
-                            </a>
-                            <a
-                              href="/example.html"
-                            >
-                              Base Category Item
-                            </a>
-                            <a
-                              href="/example.html"
-                            >
-                              Base Category Item
-                            </a>
-                            <a
-                              href="/example.html"
-                            >
-                              Base Category Item
-                            </a>
-                            <a
-                              href="/example.html"
-                            >
-                              Base Category Item
-                            </a>
-                            <a
-                              href="/example.html"
-                            >
-                              Base Category Item
-                            </a>
-                            <a
-                              href="/example.html"
-                            >
-                              Base Category Item
-                            </a>
-                          </div>
+                          </p>
                         </div>
                         <div
-                          class="col-12 col-lg-4 col-xl mt-lg-3 mt-xl-0"
+                          class="shadow-container"
                         >
-                          <div
-                            class="sub-navigation-items tab-content"
+                          <span
+                            class="shadow-bg"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-1"
+                        >
+                          <li
+                            class="__parent"
                           >
-                            <div
-                              aria-labelledby="mm-trigger-dropdown-megamenu-0"
-                              class="tab-pane p-0"
-                              id="mm-panel-dropdown-megamenu-0"
-                              role="tabpanel"
-                              tabindex="0"
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-1"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              class="active"
+                              id="custom-trigger-mm-1"
+                              type="button"
                             >
-                              <p
-                                class="panel-title"
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-1"
+                              class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
+                              id="mm-panel-custom-trigger-mm-1"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
                               >
-                                Base Category Item
-                              </p>
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
                               <ul
-                                class="list-unstyled m-0 position-relative"
+                                class="bcl-mega-menu__items __level-2"
                               >
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
                                     class="active"
                                     href="/example.html"
@@ -260,31 +192,36 @@ exports[`OE - Subscription renders correctly 1`] = `
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__see_all __leaf"
+                                >
                                   <a
                                     aria-label="See all items in ‘Base Category Item’"
                                     class="see-all-button"
@@ -304,80 +241,112 @@ exports[`OE - Subscription renders correctly 1`] = `
                                 </li>
                               </ul>
                             </div>
-                            <div
-                              aria-labelledby="mm-trigger-dropdown-megamenu-2"
-                              class="tab-pane p-0"
-                              id="mm-panel-dropdown-megamenu-2"
-                              role="tabpanel"
-                              tabindex="0"
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Base Category Item
+                            </span>
+                          </li>
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-2"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              id="custom-trigger-mm-2"
+                              type="button"
                             >
-                              <p
-                                class="panel-title"
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-2"
+                              class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
+                              id="mm-panel-custom-trigger-mm-2"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
                               >
-                                Base Category Item
-                              </p>
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
                               <ul
-                                class="list-unstyled m-0 position-relative"
+                                class="bcl-mega-menu__items __level-2"
                               >
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
                                   </a>
                                 </li>
-                                <li>
+                                <li
+                                  class="__leaf"
+                                >
                                   <a
-                                    class=""
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
@@ -385,8 +354,62 @@ exports[`OE - Subscription renders correctly 1`] = `
                                 </li>
                               </ul>
                             </div>
-                          </div>
-                        </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>

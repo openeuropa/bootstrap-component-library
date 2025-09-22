@@ -11,12 +11,12 @@ const load = (name) => {
   data.icon_path = "/icons.svg";
   const args = Object.assign(correctPaths(data));
   return () => megaMenu(args);
-}
+};
 
-export const Default = load('data.js');
-export const Short = load('data--short.js');
-export const Nolink = load('data--nolink.js');
-export const Shallow = load('data--shallow.js');
-export const Active = load('data--active.js');
-export const Attributes = load('data--attributes.js');
-export const Xss = load('data--xss.js');
+export const Default = load("data.js");
+export const Short = load("data--short.js");
+export const Nolink = load("data--nolink.js");
+export const Shallow = load("data--shallow.js");
+export const Active = load("data--active.js");
+export const Attributes = load("data--attributes.js");
+export const Xss = load("data--xss.js");

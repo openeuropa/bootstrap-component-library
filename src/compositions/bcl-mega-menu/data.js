@@ -1,4 +1,6 @@
+const drupalAttribute = require("drupal-attribute");
 module.exports = {
+  id: "mega-menu",
   trigger: {
     label: "Top-level item with megamenu",
   },
@@ -14,11 +16,18 @@ module.exports = {
   items: [
     {
       trigger: {
-        label: "Submenu item 1",
+        id: "custom-trigger-mm-1",
+        label:
+          "Submenu item 1 with very long text that wraps to multiple lines",
       },
       see_all: {
-        label: "More of submenu item 1",
+        label:
+          "More of submenu item 1, where even the see all text is very long.",
         path: "/example.html",
+        attributes: new drupalAttribute().setAttribute(
+          "aria-label",
+          "See all in Submenu item 1",
+        ),
       },
       items: [
         {
@@ -26,19 +35,12 @@ module.exports = {
           path: "/example.html",
         },
         {
-          label: "Sub-submenu item 1.2 with longer link text that spans multiple lines",
+          label:
+            "Sub-submenu item 1.2 with longer link text that spans multiple lines",
           path: "/example.html",
         },
         {
           label: "Sub-submenu item 1.3",
-          path: "/example.html",
-        },
-        {
-          label: "Sub-submenu item 1.4",
-          path: "/example.html",
-        },
-        {
-          label: "Sub-submenu item 1.5",
           path: "/example.html",
         },
       ],
@@ -49,7 +51,8 @@ module.exports = {
     },
     {
       trigger: {
-        label: "Submenu item 3",
+        id: "custom-trigger-mm-2",
+        label: "Submenu item 3 (many children)",
       },
       see_all: {
         label: "More of submenu item 3",
@@ -88,6 +91,26 @@ module.exports = {
           label: "Sub-submenu item 2.8",
           path: "/example.html",
         },
+        {
+          label: "Sub-submenu item 2.9",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.10",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.11",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.13",
+          path: "/example.html",
+        },
+        {
+          label: "Sub-submenu item 2.14",
+          path: "/example.html",
+        },
       ],
     },
     {
@@ -95,12 +118,24 @@ module.exports = {
       path: "/example.html",
     },
     {
-      label: "Submenu item 4.",
-      path: "/example.html",
+      label: "Submenu item 4 (nolink)",
     },
     {
-      label: "Submenu item 5.",
+      label: "Submenu item 5 (nolink parent)",
       path: "/example.html",
+      trigger: {
+        id: "custom-trigger-mm-3",
+        label: "Submenu item 5 (nolink parent)",
+      },
+      items: [
+        {
+          label: "Sub-submenu item 5.1 (nolink)",
+        },
+        {
+          label: "Sub-submenu item 5.2",
+          path: "/example.html",
+        },
+      ],
     },
     {
       label: "Submenu item 6.",
