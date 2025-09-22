@@ -85,7 +85,8 @@ class MegaMenu {
   closeAllSubmenus() {
     const triggers = SelectorEngine
       .find(':scope > li > button[aria-expanded="true"]', this.ul);
-    triggers.forEach(this.closeSubmenu);
+    // Use arrow fn to keep `this` bound.
+    triggers.forEach((t) => this.closeSubmenu(t));
     return triggers;
   }
 
