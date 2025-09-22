@@ -68,32 +68,9 @@
   }) only %}
   {# Mega menu panel. #}
   <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
-    {#
-      A hidden link for keyboard navigation in mobile viewport (< xl).
-      (Some assistive technologies rely on keyboard navigation even in mobile.)
-      The FocusIsland script will reject this link, and send the user to a focusable item.
-      This link prevents the user from tabbing outside the mega menu,
-      which would cause the Bootstrap dropdown script to close it.
-    #}
-    <span tabindex="0" aria-hidden="true" role="presentation" class="visually-hidden bcl-focus-sentinel __start d-xl-none"></span>
-    {#
-      Add a focus "curse".
-      As long as this is visible, links in parent "islands" cannot be focused.
-      (Here "parent" means 2+ levels up.)
-    #}
-    <span class="invisible visually-hidden d-xl-none bcl-focus-island-curse"></span>
-    {#
-      Mark the menu container as a focus island.
-      In combination with the focus curse above, tabbing will be restricted to this element.
-    #}
-    <div class="container bcl-focus-island">
+    <div class="container">
       {# Mobile back button. #}
-      {#
-        Mark the back button container as a focus island.
-        This allows tab navigation to the back button,
-        even when a submenu is open, which has its own focus island.
-      #}
-      <div class="container d-lg-none bcl-mega-menu__back-button-block bcl-focus-island">
+      <div class="container d-lg-none bcl-mega-menu__back-button-block">
         {% include '@oe-bcl/bcl-button/button.html.twig' with {
           label: _back_button_label,
           icon_position: "before",
@@ -140,14 +117,6 @@
         </div>
       </div>
     </div>
-    {#
-      A hidden link for keyboard navigation in mobile viewport.
-      (Some assistive technologies rely on this even in mobile.)
-      The FocusIsland script will reject this, and send the user to a focusable item.
-      This link prevents the user from tabbing outside the mega menu,
-      which would cause the Bootstrap dropdown script to close it.
-    #}
-    <span tabindex="0" aria-hidden="true" role="presentation" class="visually-hidden bcl-focus-sentinel __start d-xl-none"></span>
   </nav>
 </div>
 

@@ -36,16 +36,7 @@
   }) %}
   {% set _items = _items|merge([_see_all]) %}
 {% endif %}
-{#
-  Mark the submenu container as a focus island.
-#}
-<div class="bcl-mega-menu__submenu __level-{{ _level }} bcl-focus-island">
-  {#
-    Add a focus "curse".
-    As long as this is visible, links in parent "islands" cannot be focused.
-    (Here "parent" means 2+ levels up.)
-  #}
-  <span class="invisible visually-hidden d-xl-none bcl-focus-island-curse"></span>
+<div class="bcl-mega-menu__submenu __level-{{ _level }}">
   {% if _trigger %}
   <div class="__header">
       <p class="__label">{{ _trigger.label }}</p>
