@@ -40,10 +40,10 @@ class MegaMenu {
   addTriggerListeners() {
     if (!this.trigger) return;
 
-    this.trigger.addEventListener('hide.bs.dropdown', () => {
-      // Close submenus, so that next time it opens at the root.
+    // When the mega menu is closed, close all submenus.
+    EventHandler.on(this.trigger, 'hide.bs.dropdown', () => {
       this.closeAllSubmenus();
-    })
+    });
   }
 
   addSubmenuTriggerListeners() {
