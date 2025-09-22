@@ -6,10 +6,16 @@
 {% set _level = level ?? 2 %}
 {% set _see_all = see_all ?? null %}
 
+{% set _trigger_id = _trigger.id|default('mm-trigger-' ~ random(10000)) %}
+{% set _panel_id = 'mm-panel-' ~ _trigger_id %}
+
 {% set _trigger_attributes = _trigger.attributes ?? create_attribute() %}
 {% set _trigger = _trigger|merge({
   attributes: _trigger_attributes
-    .setAttribute('aria-expanded', 'false'),
+    .setAttribute('id', _trigger_id)
+    .setAttribute('aria-controls', _panel_id)
+    .setAttribute('aria-expanded', 'false')
+    .setAttribute('aria-haspopup', 'menu'),
   remove_icon_spacers: true,
   clean_class: true,
 }) %}
@@ -36,7 +42,13 @@
   }) %}
   {% set _items = _items|merge([_see_all]) %}
 {% endif %}
-<div class="bcl-mega-menu__submenu __level-{{ _level }}">
+{% set submenu_attributes = create_attribute()
+  .setAttribute('id', _panel_id)
+  .setAttribute('role', 'group')
+  .setAttribute('aria-labelledby', _trigger_id)
+  .addClass('bcl-mega-menu__submenu', '__level-' ~ _level)
+%}
+<div{{ submenu_attributes }}>
   {% if _trigger %}
   <div class="__header">
       <p class="__label">{{ _trigger.label }}</p>

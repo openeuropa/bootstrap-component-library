@@ -16,6 +16,7 @@ module.exports = {
   items: [
     {
       trigger: {
+        id: "custom-trigger-mm-1",
         label:
           "Submenu item 1 with very long text that wraps to multiple lines",
       },
@@ -50,6 +51,7 @@ module.exports = {
     },
     {
       trigger: {
+        id: "custom-trigger-mm-2",
         label: "Submenu item 3 (many children)",
       },
       see_all: {
@@ -122,6 +124,7 @@ module.exports = {
       label: "Submenu item 5 (nolink parent)",
       path: "/example.html",
       trigger: {
+        id: "custom-trigger-mm-3",
         label: "Submenu item 5 (nolink parent)",
       },
       items: [
