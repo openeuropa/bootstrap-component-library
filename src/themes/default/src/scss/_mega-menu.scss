@@ -112,7 +112,8 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
   @include media-breakpoint-up(lg) {
     inset-block-start: 100%;
     padding-block: map-get($spacers, "2-5");
-    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+    border-bottom: var(--bs-border-width) var(--bs-border-style)
+      var(--bs-border-color);
   }
 }
 
@@ -248,7 +249,7 @@ ul.bcl-mega-menu__items {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
         flex-shrink: 0;
         align-self: center;
-        content: '';
+        content: "";
         height: 1em;
         width: 1em;
       }
@@ -259,7 +260,7 @@ ul.bcl-mega-menu__items {
           // Simulate a border-left without having to adjust the padding.
           position: relative;
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 4px;
             top: 0;

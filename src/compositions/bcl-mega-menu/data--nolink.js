@@ -16,13 +16,14 @@ module.exports = {
           label: "Sub-submenu item 1.1 (no path)",
         },
         {
-          label: "Sub-submenu item 1.2 (path with empty url, with description attribute)",
+          label:
+            "Sub-submenu item 1.2 (path with empty url, with description attribute)",
           path: {
-            url: '',
+            url: "",
             attributes: {
               title: "Link description for item 1.2",
-            }
-          }
+            },
+          },
         },
       ],
     },

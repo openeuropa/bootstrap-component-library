@@ -13,7 +13,7 @@ module.exports = {
     },
     attributes: {
       class: ["active"],
-    }
+    },
   },
   content_block:
     "<h4>About the European Commission</h4><p>Drupal will add an 'active' class when a link is in the active trail.</p>",

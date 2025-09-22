@@ -1,5 +1,6 @@
-const drupalAttribute = require('drupal-attribute');
+const drupalAttribute = require("drupal-attribute");
 module.exports = {
+  id: "mega-menu",
   trigger: {
     label: "Top-level item with megamenu",
   },
@@ -15,13 +16,17 @@ module.exports = {
   items: [
     {
       trigger: {
-        label: "Submenu item 1 with very long text that wraps to multiple lines",
+        label:
+          "Submenu item 1 with very long text that wraps to multiple lines",
       },
       see_all: {
-        label: "More of submenu item 1, where even the see all text is very long.",
+        label:
+          "More of submenu item 1, where even the see all text is very long.",
         path: "/example.html",
-        attributes: new drupalAttribute()
-          .setAttribute('aria-label', 'See all in Submenu item 1'),
+        attributes: new drupalAttribute().setAttribute(
+          "aria-label",
+          "See all in Submenu item 1",
+        ),
       },
       items: [
         {
@@ -29,7 +34,8 @@ module.exports = {
           path: "/example.html",
         },
         {
-          label: "Sub-submenu item 1.2 with longer link text that spans multiple lines",
+          label:
+            "Sub-submenu item 1.2 with longer link text that spans multiple lines",
           path: "/example.html",
         },
         {
