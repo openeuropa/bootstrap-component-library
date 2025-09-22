@@ -16,6 +16,27 @@ class MegaMenu {
     this.addTriggerListeners();
   }
 
+  getPanelForTrigger(trigger) {
+    const id = trigger.getAttribute('aria-controls');
+    return id ? document.getElementById(id) : null;
+  }
+
+  getFocusableChildren(container) {
+    if (!container) return [];
+    return Array.from(container.querySelectorAll(
+      'a[href], button:not([disabled]):not(.back-button), [tabindex]:not([tabindex="-1"])'
+    )).filter(el => !el.hasAttribute('disabled') && el.tabIndex !== -1);
+  }
+
+  focusFirstItemInPanel(trigger) {
+    const panel = this.getPanelForTrigger(trigger);
+    if (!panel) return;
+    const list = SelectorEngine.findOne('ul.bcl-mega-menu__items', panel);
+    if (!list) return;
+    const first = this.getFocusableChildren(list)[0];
+    if (first) first.focus();
+  }
+
   addTriggerListeners() {
     if (!this.trigger) return;
 
@@ -39,6 +60,8 @@ class MegaMenu {
             // The back button is only visible in mobile / narrow viewport.
             if (this.backButton && this.backButton.offsetParent !== null) {
               this.backButton.focus();
+            } else {
+              this.focusFirstItemInPanel(trigger);
             }
           }
         });
