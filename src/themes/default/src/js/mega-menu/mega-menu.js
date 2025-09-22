@@ -60,8 +60,9 @@ class MegaMenu {
       .find(':scope li > button[aria-expanded]', this.root)
       .forEach((trigger) => {
         EventHandler.on(trigger, "click", () => {
-          if (trigger.getAttribute('aria-expanded') === 'true') {
-            // Close the current submenu.
+          const expanded = trigger.getAttribute('aria-expanded') === 'true';
+          if (expanded) {
+            // Close this submenu.
             this.closeSubmenu(trigger);
           } else {
             this.openSubmenu(trigger);
