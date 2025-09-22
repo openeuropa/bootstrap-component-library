@@ -36,7 +36,7 @@ class MegaMenu {
           else {
             this.openSubmenu(trigger);
             // The back button is only visible in mobile / narrow viewport.
-            if (this.backButton.offsetParent !== null) {
+            if (this.backButton && this.backButton.offsetParent !== null) {
               this.backButton.focus();
             }
           }
