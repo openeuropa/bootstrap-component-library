@@ -13,6 +13,7 @@ class MegaMenu {
 
     this.addSubmenuTriggerListeners();
     this.addBackButtonListener();
+    this.addTriggerListeners();
   }
 
   addTriggerListeners() {
