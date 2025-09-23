@@ -122,32 +122,21 @@ $header-link-active-background: #003776 !default;
   }
 
   .bcl-header__project {
-    min-height: map-get($spacers, 5);
     padding: map-get($spacers, 3) 0;
   }
 
-  .bcl-header:has(.bcl-header__project) {
+  .bcl-header {
     .bcl-header__project {
       z-index: 1040; // Make sure project bar is above the mega menu
       position: relative;
       box-shadow: var(--bs-box-shadow);
+      flex-shrink: 0;
     }
   }
 
   .bcl-header:not(:has(.bcl-header__project)) {
     > .navbar:first-child {
       box-shadow: var(--bs-box-shadow);
-    }
-  }
-
-  .bcl-header:has(.mega-menu-container.show) {
-    .bcl-header__project {
-      display: none;
-    }
-    > .navbar:first-child {
-      box-shadow: var(--bs-box-shadow);
-      z-index: 1040; // Make sure navbar is above the mega menu
-      position: relative;
     }
   }
 
@@ -171,6 +160,14 @@ $header-link-active-background: #003776 !default;
     .navbar-nav {
       width: 100%;
       margin-top: 1rem;
+      &:has(.bcl-mega-menu__container.show) {
+        .nav-item {
+          display: none;
+        }
+        .nav-item:has(.bcl-mega-menu__container.show) {
+          display: block;
+        }
+      }
       .dropdown-toggle,
       .nav-link {
         color: $dark;
