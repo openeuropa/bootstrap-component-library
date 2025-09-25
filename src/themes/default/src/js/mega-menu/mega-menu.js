@@ -14,6 +14,7 @@ class MegaMenu {
     this.addSubmenuTriggerListeners();
     this.addBackButtonListener();
     this.addTriggerListeners();
+    this.addEscapeKeyHandler();
   }
 
   getPanelForTrigger(trigger) {
@@ -35,6 +36,36 @@ class MegaMenu {
     if (!list) return;
     const first = this.getFocusableChildren(list)[0];
     if (first) first.focus();
+  }
+
+  addEscapeKeyHandler() {
+    // Bootstrap attaches its dropdown keydown listener on `document` in the capture phase.
+    // By listening on `window` in the capture phase, our handler runs *before* Bootstrap’s.
+    // This lets us intercept Esc inside mega menu submenus and stop Bootstrap from closing
+    // the entire dropdown.
+    window.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+
+      // Only act if Esc originated inside THIS mega menu's open submenu
+      const panel = e.target.closest('.bcl-mega-menu__submenu');
+      if (!panel || panel.hidden || !this.root.contains(panel)) {
+        // Not our submenu: let Bootstrap handle it normally
+        return;
+      }
+
+      // Stop the event BEFORE it reaches Bootstrap's document-capture handler
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      e.stopPropagation();
+
+      // Close only this submenu and focus its trigger
+      const triggerId = panel.getAttribute('aria-labelledby');
+      const trigger = triggerId ? document.getElementById(triggerId) : null;
+      if (trigger) {
+        this.closeSubmenu(trigger);
+        trigger.focus();
+      }
+    }, true);
   }
 
   addTriggerListeners() {
