@@ -86,6 +86,8 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
       display: flex;
     }
   }
+  // Override the z-index from bootstrap .dropdown-menu.
+  z-index: var(--bcl-mega-menu-zindex);
   // Transition animation for open/close.
   @media (prefers-reduced-motion: no-preference) {
     transition:
