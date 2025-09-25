@@ -57,14 +57,14 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 
 // Show a half-transparent page overlay in lg+ viewport.
 @include media-breakpoint-up(lg) {
-  .bcl-mega-menu__container {
+  .bcl-mega-menu:has(> [aria-expanded="true"]) {
     &::after {
       position: absolute;
       inset-inline: 0;
       background: #fff;
       opacity: 0.5;
       content: "";
-      z-index: -1;
+      z-index: 1040;
       // The overlay can be as tall as we want, because the body scroll is disabled.
       block-size: 300vw;
     }
