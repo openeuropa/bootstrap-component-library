@@ -5,8 +5,6 @@
 -------------------------------------- */
 $mm-panel-height: 288px !default;
 $mm-z-content: 2 !default;
-$mm-z-overlay: 1060 !default;
-$mm-z-header: 1070 !default;
 $mm-gutter-x: map-get($spacers, 3) !default;
 $mm-gutter-y: map-get($spacers, "2-5") !default;
 
@@ -25,6 +23,10 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 /* -------------------------------------
    Component
 -------------------------------------- */
+
+.bcl-mega-menu {
+  --bcl-mega-menu-zindex: 40;
+}
 
 // The mega menu position should not be relative to its nav item.
 .nav-item:has(> .bcl-mega-menu) {
@@ -64,7 +66,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
       background: #fff;
       opacity: 0.5;
       content: "";
-      z-index: 1040;
+      z-index: calc(var(--bcl-mega-menu-zindex) - 10);
       // The overlay can be as tall as we want, because the body scroll is disabled.
       block-size: 300vw;
     }
