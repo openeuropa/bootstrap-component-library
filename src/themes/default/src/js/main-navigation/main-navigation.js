@@ -36,7 +36,7 @@ class MainNavigation {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Run for all .bcl-toggler buttons
-  MainNavigation.init(".bcl-toggler");
+  MainNavigation.init(".bcl-navbar-toggler");
 });
 
 export default MainNavigation;
