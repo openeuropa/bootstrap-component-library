@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 #### :nail_care: Enhancement
 * [#689](https://github.com/openeuropa/bootstrap-component-library/pull/689) OEL-2127: Improved accessibility for offcanvas. ([@tibi2303](https://github.com/tibi2303))
 
-#### Committers: 4
+#### Committers: 1
 - Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
 
 ## 1.10.5 (2025-08-28)
