@@ -25,7 +25,7 @@
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _placement = placement|default('') %}
-{% set _id = id|default('') %}
+{% set _id = id|default('bcl-offcanvas-' ~ random(10000)) %}
 {% set _body = body|default('') %}
 {% set _with_body_scroll = with_body_scroll ?? false %}
 {% set _with_backdrop = with_backdrop ?? true %}
@@ -57,12 +57,10 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
+{% set attributes = attributes.setAttribute('id', _id) %}
+
 {% if _aria_labelled is defined and _aria_labelled is not empty %}
   {% set attributes = attributes.setAttribute('aria-labelledby', _aria_labelled) %}
-{% endif %}
-
-{% if _id is not empty %}
- {% set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
 {% if _with_body_scroll %}
@@ -71,6 +69,10 @@
 
 {% if not _with_backdrop %}
  {% set attributes = attributes.setAttribute('data-bs-backdrop', 'false') %}
+{% endif %}
+
+{% if _title is not empty %}
+ {% set attributes = attributes.setAttribute('aria-labelledby', _id ~ '-title') %}
 {% endif %}
 
 {% set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) %}
@@ -85,7 +87,7 @@
       title: _title,
       title_tag: _title_tag,
       title_link: _title_link,
-      attributes: _title_attributes.addClass(['offcanvas-title']),
+      attributes: _title_attributes.setAttribute('id', _id ~ '-title').addClass(['offcanvas-title']),
     } only %}
   {% endif %}
   {% if _with_close %}
@@ -94,6 +96,7 @@
                               .setAttribute('data-bs-dismiss', 'offcanvas')
                               .setAttribute('data-bs-target', '#' ~ _id)
                               .setAttribute('aria-label', _close_aria_label)
+                              .setAttribute('aria-controls', _id)
     %}
     {% if _extra_classes_close is not empty %}
       {% set button_attributes = button_attributes.addClass(_extra_classes_close) %}
