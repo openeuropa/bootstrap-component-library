@@ -1,6 +1,7 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  navbar_id: "header-navbar",
   variant: "ucpkn",
   site_name: "UCP Knowledge Network: Applied knowledge for action",
   light: true,
@@ -13,40 +14,6 @@ module.exports = {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
     attributes: new drupalAttribute().addClass("bcl-header__navbar"),
-    form: {
-      attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
-      submit: {
-        variant: "light",
-        assistive_text: "search",
-        icon: {
-          name: "search",
-          size: "xs",
-          path: "/icons.svg",
-        },
-        attributes: new drupalAttribute().addClass([
-          "border-start-0",
-          "rounded-0",
-          "rounded-end",
-        ]),
-      },
-      items: [
-        [
-          {
-            type: "text",
-            required: true,
-            label: "Search",
-            hidden_label: true,
-            placeholder: "Search",
-            id: "inlineFormInputGroupSearch",
-            attributes: new drupalAttribute().addClass([
-              "border-start-0",
-              "rounded-0",
-              "rounded-start",
-            ]),
-          },
-        ],
-      ],
-    },
     navigation: {
       navbar: true,
       attributes: new drupalAttribute().addClass("me-auto"),

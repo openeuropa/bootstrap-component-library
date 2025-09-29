@@ -7,6 +7,7 @@ const modals = require("@openeuropa/bcl-data-header/data--modals");
 
 module.exports = {
   variant: "eu",
+  navbar_id: "header-navbar",
   head: {
     attributes: new drupalAttribute()
       .addClass(["w-100", "shadow-sm", "bcl-header__top-navbar"])

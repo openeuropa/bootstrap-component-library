@@ -11,6 +11,8 @@ import Carousel from "@openeuropa/bcl-bootstrap/js/src/carousel";
 import Collapse from "@openeuropa/bcl-bootstrap/js/src/collapse";
 import Dropdown from "@openeuropa/bcl-bootstrap/js/src/dropdown";
 import Modal from "@openeuropa/bcl-bootstrap/js/src/modal";
+import MainNavigation from "@openeuropa/bcl-theme-default/src/js/main-navigation/main-navigation";
+import MegaMenu from "@openeuropa/bcl-theme-default/src/js/mega-menu/mega-menu";
 import Offcanvas from "@openeuropa/bcl-bootstrap/js/src/offcanvas";
 import Popover from "@openeuropa/bcl-bootstrap/js/src/popover";
 import ScrollSpyV2 from "@openeuropa/bcl-bootstrap/js/src/scrollspy";
@@ -29,6 +31,8 @@ export default {
   Collapse,
   Dropdown,
   Modal,
+  MainNavigation,
+  MegaMenu,
   Offcanvas,
   Popover,
   ScrollSpyV2,

@@ -1,6 +1,6 @@
 {% apply spaceless %}
 
-{# 
+{#
   Parameters:
   - label (string) (default: '')
   - variant (string) (default: 'primary')
@@ -38,6 +38,7 @@
 {% set _spinner = spinner|default({}) %}
 {% set _show_spinner = show_spinner ?? false %}
 {% set _clean_class = clean_class ?? false %}
+{% set _remove_icon_spacers = remove_icon_spacers ?? false %}
 
 {% set _classes = [] %}
 {% if _clean_class == false %}
@@ -68,7 +69,7 @@
         size: "fluid",
       })
     %}
-  {% if _label is not empty %}
+  {% if _label is not empty and not _remove_icon_spacers %}
     {% if _icon.attributes is empty %}
       {% set _icon = _icon|merge({
           attributes: create_attribute()

@@ -1,49 +1,135 @@
 const drupalAttribute = require("drupal-attribute");
 
 module.exports = {
+  navbar_id: "header-navbar",
   color_set: "dark",
   collapse_id: "navbarNavDropdown",
   attributes: new drupalAttribute()
-    .addClass("bcl-header__navbar")
-    .setAttribute("aria-label", "Main Navigation"),
-  form: {
-    attributes: new drupalAttribute().addClass(["d-flex", "mt-3", "mt-lg-0"]),
-    submit: {
-      variant: "light",
-      assistive_text: "search",
-      icon: {
-        name: "search",
-        size: "xs",
-        path: "/icons.svg",
-      },
-      attributes: new drupalAttribute().addClass([
-        "border-start-0",
-        "rounded-0",
-        "rounded-end",
-      ]),
-    },
-    items: [
-      [
-        {
-          type: "text",
-          required: true,
-          label: "Search",
-          hidden_label: true,
-          placeholder: "Search",
-          id: "inlineFormInputGroupSearch",
-          attributes: new drupalAttribute().addClass([
-            "border-start-0",
-            "rounded-0",
-            "rounded-start",
-          ]),
-        },
-      ],
-    ],
-  },
+    .setAttribute("aria-label", "Main Navigation")
+    .addClass("bcl-header__navbar"),
   navigation: {
     navbar: true,
     attributes: new drupalAttribute().addClass("me-auto"),
     items: [
+      {
+        mega_menu: true,
+        icon_path: "/icons.svg",
+        id: "dropdown-megamenu",
+        trigger: {
+          label: "A link with dropdown",
+        },
+        content_link: {
+          label: "Discover more",
+          path: "/example.html",
+          icon: {
+            name: "arrow-right",
+          },
+        },
+        content_block:
+          "<h4>About the European Commission</h4><p>Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+        items: [
+          {
+            id: "dropdown-megamenu-inner",
+            trigger: {
+              id: "custom-trigger-mm-1",
+              label: "Base Category Item",
+              attributes: new drupalAttribute().addClass("active"),
+            },
+            see_all: {
+              label: "See all",
+              path: "/example.html",
+            },
+            items: [
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+                attributes: new drupalAttribute().addClass("active"),
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+            ],
+          },
+          {
+            label: "Base Category Item",
+          },
+          {
+            id: "dropdown-megamenu-inner-2",
+            trigger: {
+              label: "Base Category Item",
+              path: "/example.html",
+              id: "custom-trigger-mm-2",
+            },
+            items: [
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+            ],
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+          {
+            label: "Base Category Item",
+            path: "/example.html",
+          },
+        ],
+      },
       {
         label: "Home",
         path: "/example.html",
@@ -60,12 +146,9 @@ module.exports = {
       },
       {
         id: "navbarDropdownMenuLink",
-        link: true,
         dropdown: true,
         trigger: {
           label: "Dropdown link",
-          path: "#",
-          attributes: new drupalAttribute().addClass("nav-link"),
         },
         items: [
           {

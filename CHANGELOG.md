@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.6 (2025-09-29)
+
+#### :rocket: New Feature
+* [#672](https://github.com/openeuropa/bootstrap-component-library/pull/672) OEL-3694: Mega menu. ([@tibi2303](https://github.com/tibi2303) [@donquixote](https://github.com/donquixote))
+
+#### :nail_care: Enhancement
+* [#689](https://github.com/openeuropa/bootstrap-component-library/pull/689) OEL-2127: Improved accessibility for offcanvas. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Andreas Hennings ([@donquixote](https://github.com/donquixote))
+
 ## 1.10.5 (2025-08-28)
 
 #### :nail_care: Enhancement

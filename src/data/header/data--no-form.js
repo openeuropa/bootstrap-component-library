@@ -5,6 +5,7 @@ const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
 
 module.exports = {
   variant: "eu",
+  navbar_id: "header-navbar",
   head: {
     attributes: new drupalAttribute().addClass([
       "w-100",
@@ -68,9 +69,10 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    attributes: new drupalAttribute()
-      .addClass("bcl-header__navbar")
-      .setAttribute("aria-label", "Main Navigation"),
+    attributes: new drupalAttribute().setAttribute(
+      "aria-label",
+      "Main Navigation",
+    ),
     navigation: {
       navbar: true,
       attributes: new drupalAttribute().addClass("me-auto"),
