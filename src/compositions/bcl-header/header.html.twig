@@ -25,6 +25,7 @@
 {% set _project_logo = project_logo|default({}) %}
 {% set _site_name = site_name|default('') %}
 {% set _project_link = project_link|default('') %}
+{% set _navbar_id = navbar_id|default('header-navbar-' ~ random(100)) %}
 {% set _head = head|default({}) %}
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _language_modal = language_modal|default({}) %}
@@ -51,10 +52,38 @@
 <header
   {{ attributes }}
 >
-  <!-- navbar_settings -->
-  {% if _head is not empty %}
-    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _head only %}
-  {% endif %}
+  <nav
+    {{ _head.attributes.addClass(['navbar', 'navbar-expand-lg', 'navbar-light']) }}>
+    <div class='container'>
+    {% if _head.brand is not empty %}
+      <a class='navbar-brand' href='{{ _head.brand.link }}'>
+      {% for logo in _head.brand.logos %}
+        <img
+          src='{{ logo.src }}'
+          {% if logo.alt is not empty %}
+          alt='{{ logo.alt }}'
+          {% endif %}
+          {% if logo.class is not empty %}
+          class='{{ logo.class }}'
+          {% endif %}
+        />
+      {% endfor %}
+      </a>
+    {% endif %}
+      <button
+        class="navbar-toggler bcl-navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target='#{{ _navbar_id }}'
+        aria-controls='{{ _navbar_id }}'
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
 
   <!-- project name -->
   {% if _project_logo is not empty or _site_name is not empty %}
@@ -62,7 +91,6 @@
     <div class="container">
     {% if _project_link is not empty %}
       <a
-        class="d-inline-block"
         href="{{ _project_link }}"
       >
     {% endif %}
@@ -93,7 +121,10 @@
 
   <!-- navbar -->
   {% if _navbar is not empty %}
-    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar only %}
+    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
+      disable_collapse: true,
+      attributes: create_attribute().addClass('bcl-header__navbar collapse navbar-collapse').setAttribute('id', _navbar_id).setAttribute('aria-label', 'Main Navigation'),
+    }) only %}
   {% endif %}
 
   <!-- breadcrumbs -->
