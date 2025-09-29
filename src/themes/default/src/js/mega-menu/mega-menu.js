@@ -148,6 +148,9 @@ class MegaMenu {
    *   Usually this is either exactly one, or none.
    */
   closeAllSubmenus() {
+    if (!this.ul) {
+      return;
+    }
     const triggers = SelectorEngine
       .find(':scope > li > button[aria-expanded="true"]', this.ul);
     // Use arrow fn to keep `this` bound.
