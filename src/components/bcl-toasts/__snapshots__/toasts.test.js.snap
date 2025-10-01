@@ -9,10 +9,21 @@ exports[`OE - Toasts render correctly with body wrapper classes 1`] = `
     role="alert"
   >
     <div
+      class="test-class toast-header"
+    >
+      Toast title      
+      <button
+        aria-label="close"
+        class="test-class btn-close"
+        data-bs-dismiss="toast"
+        type="button"
+      />
+    </div>
+    <div
       class="wrapper-class another-wrapper-class"
     >
       <div
-        class="toast-body"
+        class="test-class toast-body"
       >
         Hello, world! This is a toast message.
             
@@ -35,6 +46,9 @@ exports[`OE - Toasts render correctly with body wrapper classes 1`] = `
         </div>
       </div>
     </div>
+    <p>
+      Toast custom content.
+    </p>
   </div>
 </jest>
 `;
@@ -127,7 +141,18 @@ exports[`OE - Toasts renders correctly with a single toast 1`] = `
     role="alert"
   >
     <div
-      class="toast-body"
+      class="test-class toast-header"
+    >
+      Toast title      
+      <button
+        aria-label="close"
+        class="test-class btn-close"
+        data-bs-dismiss="toast"
+        type="button"
+      />
+    </div>
+    <div
+      class="test-class toast-body"
     >
       Hello, world! This is a toast message.
             
@@ -149,6 +174,9 @@ exports[`OE - Toasts renders correctly with a single toast 1`] = `
         </button>
       </div>
     </div>
+    <p>
+      Toast custom content.
+    </p>
   </div>
 </jest>
 `;
