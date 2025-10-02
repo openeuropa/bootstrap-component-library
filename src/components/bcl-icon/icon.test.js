@@ -10,7 +10,17 @@ expect.extend(toHaveNoViolations);
 
 const template = "@oe-bcl/bcl-icon/icon.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const sizes = ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"];
+const sizes = [
+  "2xs",
+  "xs",
+  "s",
+  "m",
+  "l",
+  "xl",
+  "2xl",
+  "fluid",
+  "mobile-xl-desktop-xs",
+];
 const transformations = [
   "rotate-90",
   "rotate-180",

@@ -56,6 +56,7 @@ module.exports = [
   "exclamation-lg.svg",
   "question-lg.svg",
   "info-lg.svg",
+  "x.svg",
   "x-lg.svg",
   "plus-lg.svg",
   "dash-lg.svg",
@@ -115,6 +116,7 @@ module.exports = [
   "trash.svg",
   "trash-fill.svg",
   "link.svg",
+  "list.svg",
 
   // Social.svg
   "skype.svg",

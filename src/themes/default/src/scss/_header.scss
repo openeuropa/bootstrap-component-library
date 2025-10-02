@@ -4,25 +4,32 @@ $header-background-start: #039 !default;
 $header-background-end: #1b4ac3 !default;
 $header-link-active-background: #003776 !default;
 
-.bcl-header__project {
-  background: linear-gradient(
-    90deg,
-    $header-background-start 0%,
-    $header-background-end 100%
-  );
-}
-
 .bcl-header .nav-link {
   color: $eu-blue;
   display: flex;
   align-items: center;
 }
 
+.bcl-navbar-toggler {
+  background: transparent;
+  border: none;
+  padding: map-get($spacers, 2);
+  .active-icon {
+    display: none;
+  }
+  &[aria-expanded="true"] {
+    background-color: $primary-bg-subtle;
+    .active-icon {
+      display: block;
+    }
+    .default-icon {
+      display: none;
+    }
+  }
+}
+
 .bcl-header--ec,
 .ec__header {
-  .bcl-header__project {
-    background: $header-background;
-  }
   /* stylelint-disable-next-line no-descending-specificity */
   .nav-link {
     color: $ec-blue;
@@ -33,21 +40,7 @@ $header-link-active-background: #003776 !default;
   align-items: flex-end;
 }
 
-.bcl-header--neutral {
-  .bcl-header__project {
-    background: $gray-700;
-  }
-}
-
-.bcl-header:not(.bcl-header--neutral) .bcl-header__project {
-  padding-top: map-get($spacers, 3);
-}
-
 .bcl-header {
-  .navbar-brand img {
-    width: 100px;
-  }
-
   .notification {
     position: relative;
     padding-right: 0;
@@ -64,16 +57,6 @@ $header-link-active-background: #003776 !default;
   }
 }
 
-.bcl-header__project .bcl-header__site-name {
-  display: inline-block;
-  margin-bottom: 0;
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: $white;
-  vertical-align: middle;
-  max-width: 80%;
-}
-
 .bcl-header__navbar.navbar {
   padding: 0;
   .dropdown-toggle,
@@ -84,12 +67,6 @@ $header-link-active-background: #003776 !default;
   }
   &.collapsing {
     transition: none;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .bcl-header--neutral .bcl-header__project-logo {
-    display: none;
   }
 }
 
@@ -124,20 +101,7 @@ $header-link-active-background: #003776 !default;
     }
   }
 
-  .bcl-header__project {
-    padding: map-get($spacers, 3) 0;
-  }
-
   .bcl-header {
-    .bcl-header__project {
-      z-index: 1040; // Make sure project bar is above the mega menu
-      position: relative;
-      box-shadow: var(--bs-box-shadow);
-      flex-shrink: 0;
-    }
-  }
-
-  .bcl-header:not(:has(.bcl-header__project)) {
     > .navbar:first-child {
       box-shadow: var(--bs-box-shadow);
     }
@@ -225,12 +189,6 @@ $header-link-active-background: #003776 !default;
 }
 
 @include media-breakpoint-up(lg) {
-  .bcl-header__project.light,
-  .bcl-header--ec .bcl-header__project.light,
-  .ec__header .bcl-header__project.light {
-    background: $white;
-  }
-
   .bcl-header__navbar {
     background: linear-gradient(
       90deg,
@@ -261,26 +219,14 @@ $header-link-active-background: #003776 !default;
     font-weight: 500;
   }
 
-  .bcl-header__project.light .bcl-header__site-name {
-    color: $black;
-  }
-
   .bcl-header .navbar-toggler {
     position: relative;
     right: 0;
     bottom: 0;
   }
 
-  .bcl-header .navbar-brand img {
-    width: auto;
-  }
-
   .bcl-header__navbar .bcl-mega-menu {
     --bcl-mega-menu-zindex: 1050; // Make sure dropdown overlaps the search offcanvas
-  }
-
-  .bcl-header:not(.bcl-header--neutral) .bcl-header__project {
-    padding-bottom: map-get($spacers, 3);
   }
 
   .bcl-header__navbar.collapse {
