@@ -13,7 +13,7 @@ $header-link-active-background: #003776 !default;
 .bcl-navbar-toggler {
   background: transparent;
   border: none;
-  padding: map-get($spacers, 2);
+  padding: map-get($spacers, "1-5") map-get($spacers, "2-5");
   .active-icon {
     display: none;
   }
@@ -102,9 +102,7 @@ $header-link-active-background: #003776 !default;
   }
 
   .bcl-header {
-    > .navbar:first-child {
-      box-shadow: var(--bs-box-shadow);
-    }
+    box-shadow: var(--bs-box-shadow);
   }
 
   .bcl-header nav + nav {

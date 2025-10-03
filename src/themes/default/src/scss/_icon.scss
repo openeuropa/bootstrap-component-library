@@ -74,13 +74,3 @@ $icon: (
 .icon--file {
   color: $gray-600;
 }
-
-.icon--mobile-m-desktop-xs {
-  width: map-get($icon, "m");
-  height: map-get($icon, "m");
-
-  @include media-breakpoint-up(xl) {
-    width: map-get($icon, "xs");
-    height: map-get($icon, "xs");
-  }
-}
