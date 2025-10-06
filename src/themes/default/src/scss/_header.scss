@@ -15,11 +15,15 @@ $header-link-active-background: #003776 !default;
   border: none;
   border-radius: var(--bs-border-radius-sm);
   padding: map-get($spacers, "1-5") map-get($spacers, "2-5");
+  color: $link-color;
+  line-height: 1;
+  @extend .rounded-2;
   .active-icon {
     display: none;
   }
   &[aria-expanded="true"] {
-    background-color: $primary-bg-subtle;
+    background-color: $primary;
+    color: $white;
     .active-icon {
       display: block;
     }
@@ -211,11 +215,6 @@ $header-link-active-background: #003776 !default;
     .bcl-header__navbar {
       background: $gray-700;
     }
-  }
-
-  .bcl-header__site-name {
-    margin-left: map-get($spacers, 4);
-    font-weight: 500;
   }
 
   .bcl-header .navbar-toggler {
