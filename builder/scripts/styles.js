@@ -49,7 +49,7 @@ const buildStyles = (entry, dest, options) => {
     postcssSourceMap = options.sourceMap; // as a file
   }
 
-  const sassResult = sass.renderSync({
+  const renderOptions = {
     file: entry,
     outFile: dest,
     noErrorCss: true,
@@ -61,7 +61,23 @@ const buildStyles = (entry, dest, options) => {
       path.resolve(process.cwd(), "node_modules"),
       ...(options.includePaths || []),
     ],
-  });
+  };
+
+  const silencedDeprecations = Array.isArray(options.silenceDeprecations)
+    ? options.silenceDeprecations
+    : undefined;
+
+  if (silencedDeprecations && silencedDeprecations.length) {
+    renderOptions.silenceDeprecations = silencedDeprecations;
+  }
+
+  if (typeof options.quietDeps !== "undefined") {
+    renderOptions.quietDeps = options.quietDeps;
+  } else if (silencedDeprecations && silencedDeprecations.length) {
+    renderOptions.quietDeps = true;
+  }
+
+  const sassResult = sass.renderSync(renderOptions);
 
   const processor = postcss(plugins);
   if (options.prefix) {
