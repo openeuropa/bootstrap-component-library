@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 module.exports = {
   id: "mega-menu",
   trigger: {
@@ -24,7 +24,7 @@ module.exports = {
         label:
           "More of submenu item 1, where even the see all text is very long.",
         path: "/example.html",
-        attributes: new drupalAttribute().setAttribute(
+        attributes: new DrupalAttribute().setAttribute(
           "aria-label",
           "See all in Submenu item 1",
         ),

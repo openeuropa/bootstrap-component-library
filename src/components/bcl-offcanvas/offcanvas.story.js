@@ -1,4 +1,4 @@
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-offcanvas/data.js";
 import offCanvas from "@openeuropa/bcl-offcanvas/offcanvas.html.twig";
@@ -97,7 +97,7 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   resetAttrs(data, args);

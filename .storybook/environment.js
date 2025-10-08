@@ -5,7 +5,7 @@ const {
   TwingLoaderFilesystem,
   TwingFunction,
 } = require("twing");
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 const projComponentsAbsPath = path.resolve(__dirname, "../src/components");
 const projCompositionsAbsPath = path.resolve(__dirname, "../src/compositions");
@@ -20,7 +20,7 @@ if (typeof loader.addPath === "function") {
 }
 
 const createAttribute = new TwingFunction("create_attribute", function () {
-  return new drupalAttribute();
+  return new DrupalAttribute();
 });
 
 const dummyText = new TwingFunction("get_dummy_text", function (count, paragraph, paragraphs, classes) {

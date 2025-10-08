@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   type: "actionable",
@@ -21,7 +21,7 @@ module.exports = {
       path: "/test-path-2",
       label: "Link 2",
       target: "_blank",
-      attributes: new drupalAttribute().addClass(["list-group-item-success"]),
+      attributes: new DrupalAttribute().addClass(["list-group-item-success"]),
     },
   ],
 };

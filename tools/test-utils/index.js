@@ -1,10 +1,10 @@
 const twing = require("../../.storybook/environment");
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 const renderTwigFileAsNode = (file, options, reset) =>
   new Promise((resolve, reject) => {
     if (reset) {
-      options.attributes = new drupalAttribute();
+      options.attributes = new DrupalAttribute();
     }
     try {
       const html = twing.render(file, options);

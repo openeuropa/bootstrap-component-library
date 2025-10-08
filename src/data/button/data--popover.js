@@ -1,8 +1,8 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   label: "Button with popover",
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .setAttribute("data-bs-toggle", "popover")
     .setAttribute("autocomplete", "off")
     .setAttribute("data-bs-trigger", "focus")

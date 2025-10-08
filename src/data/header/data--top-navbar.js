@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = [
   {
@@ -28,9 +28,9 @@ module.exports = [
       name: "chat-left-dots-fill",
       size: "xs",
       path: "/icons.svg",
-      attributes: new drupalAttribute().addClass("me-2-5"),
+      attributes: new DrupalAttribute().addClass("me-2-5"),
     },
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .setAttribute("data-bs-toggle", "modal")
       .setAttribute("data-bs-target", "#languageModal"),
   },
@@ -43,9 +43,9 @@ module.exports = [
       name: "person-fill",
       size: "xs",
       path: "/icons.svg",
-      attributes: new drupalAttribute().addClass("me-2-5"),
+      attributes: new DrupalAttribute().addClass("me-2-5"),
     },
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .setAttribute("data-bs-toggle", "modal")
       .setAttribute("data-bs-target", "#loginModal"),
   },

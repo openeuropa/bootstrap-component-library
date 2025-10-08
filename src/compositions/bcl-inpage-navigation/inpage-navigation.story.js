@@ -4,7 +4,7 @@ import {
   getTitleControls,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-inpage-navigation/data/data.js";
 import heading from "@openeuropa/bcl-heading/heading.html.twig";
@@ -36,22 +36,22 @@ const withContent = (story) => {
     <div class="col-md-9">
       ${heading({
         title: "Heading 1",
-        attributes: new drupalAttribute().setAttribute("id", "item-1"),
+        attributes: new DrupalAttribute().setAttribute("id", "item-1"),
       })}
       <p>${lorem.generateParagraphs(8)}</p>
       ${heading({
         title: "Heading 2 with a long title going on several lines",
-        attributes: new drupalAttribute().setAttribute("id", "item-2"),
+        attributes: new DrupalAttribute().setAttribute("id", "item-2"),
       })}
       <p>${lorem.generateParagraphs(10)}</p>
       ${heading({
         title: "Heading 3",
-        attributes: new drupalAttribute().setAttribute("id", "item-3"),
+        attributes: new DrupalAttribute().setAttribute("id", "item-3"),
       })}
       <p>${lorem.generateParagraphs(9)}</p>
       ${heading({
         title: "Heading 4",
-        attributes: new drupalAttribute().setAttribute("id", "item-4"),
+        attributes: new DrupalAttribute().setAttribute("id", "item-4"),
       })}
       <p>${lorem.generateParagraphs(8)}</p>
     </div>

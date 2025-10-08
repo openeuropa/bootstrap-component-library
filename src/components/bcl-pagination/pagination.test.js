@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-pagination/data";
 
@@ -56,7 +56,7 @@ describe("OE - Pagination", () => {
           {
             label: "1",
             path: "/example.html",
-            attributes: new drupalAttribute()
+            attributes: new DrupalAttribute()
               .addClass("new-class")
               .setAttribute("new-attributes", "1"),
           },
@@ -96,7 +96,7 @@ describe("OE - Pagination", () => {
     return expect(
       render({
         ...demoData,
-        list_attributes: new drupalAttribute()
+        list_attributes: new DrupalAttribute()
           .addClass("new-class")
           .setAttribute("new-attributes", "1"),
       }),

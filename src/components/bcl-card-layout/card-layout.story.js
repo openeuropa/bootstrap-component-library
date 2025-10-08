@@ -1,4 +1,4 @@
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoDataGroup from "@openeuropa/bcl-data-card-layout/data--group.js";
 import demoDataGrid from "@openeuropa/bcl-data-card-layout/data--grid.js";
@@ -96,7 +96,7 @@ const getArgTypes = (type) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   data.attributes.removeClass([
     `g-${data.gutter}`,

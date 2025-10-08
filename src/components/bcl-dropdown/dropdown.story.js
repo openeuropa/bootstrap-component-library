@@ -1,5 +1,5 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
@@ -40,7 +40,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   if (args.direction === "default") {
