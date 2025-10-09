@@ -2,7 +2,13 @@ import { createRequire } from "module";
 import { dirname, join } from "path";
 
 const require = createRequire(import.meta.url);
-const path = require("path");
+const environment = require("./environment.js");
+const webpack = require("webpack");
+const pathModule = require("path");
+const twigWrapperLoader = pathModule.resolve(
+  process.cwd(),
+  "tools/webpack/twig-wrapper-loader.cjs",
+);
 
 const stories = ["../src/*/*/*.story.js"];
 
@@ -14,15 +20,28 @@ const addons = [
 ];
 
 const webpackFinal = (config) => {
-  config.module.rules.push(
-    {
-      test: /\.twig$/,
-      loader: "twing-loader",
-      options: {
-        environmentModulePath: path.resolve(`${__dirname}/environment.js`),
+  config.module = config.module || {};
+  config.module.rules = config.module.rules || [];
+  config.module.rules.push({
+    test: /\.twig$/,
+    use: [
+      {
+        loader: twigWrapperLoader,
+        options: {
+          environmentModulePath: pathModule.resolve(
+            __dirname,
+            "environment.js",
+          ),
+        },
       },
-    }
-  );
+      {
+        loader: require.resolve("twing-loader"),
+        options: {
+          environment,
+        },
+      },
+    ],
+  });
 
   config.plugins.forEach((plugin, i) => {
     if (plugin.constructor.name === "ProgressPlugin") {
@@ -35,7 +54,20 @@ const webpackFinal = (config) => {
     ...(config.resolve.fallback || {}),
     path: require.resolve("path-browserify"),
     util: require.resolve("util/"),
+    stream: require.resolve("stream-browserify"),
+    crypto: require.resolve("crypto-browserify"),
+    fs: false,
+    process: require.resolve("process/browser"),
+    buffer: require.resolve("buffer/"),
   };
+
+  config.plugins = config.plugins || [];
+  config.plugins.push(
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+      Buffer: ["buffer", "Buffer"],
+    }),
+  );
 
   return config;
 };

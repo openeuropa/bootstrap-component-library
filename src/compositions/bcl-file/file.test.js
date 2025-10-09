@@ -65,7 +65,7 @@ describe("OE - File", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });
@@ -138,7 +138,7 @@ describe("OE - File Card", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCardData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoCardData, true)),
     ).toHaveNoViolations();
   });
 

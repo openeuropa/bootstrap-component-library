@@ -1,6 +1,6 @@
-{% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
+{% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" -%}
 
-{% block content %}
+{%- block content %}
   {% include "@oe-bcl/bcl-navigation/navigation.html.twig" with navigation only %}
   <div class="tab-content">
     <div class="tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
@@ -134,4 +134,4 @@
       {% include '@oe-bcl/bcl-form/form.html.twig' with cancel.form only %}
     </div>
   </div>
-{% endblock %}
+{%- endblock -%}

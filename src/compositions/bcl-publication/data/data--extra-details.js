@@ -77,7 +77,7 @@ module.exports = {
         },
         {
           title: "File title BG",
-          description: getDummyText,
+          description: getDummyText(),
           language: "български",
           meta: "(16.2 MB - PDF)",
           download: {

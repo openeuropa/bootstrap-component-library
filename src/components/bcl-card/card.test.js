@@ -78,7 +78,7 @@ describe("OE - Card", () => {
   test(`passes the accessibility tests`, async () => {
     demoData.subtitle.tag = "h2";
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

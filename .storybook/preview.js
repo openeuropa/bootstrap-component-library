@@ -1,5 +1,7 @@
 import { MINIMAL_VIEWPORTS } from "storybook/viewport";
-import { Buffer } from 'buffer';
+import { Buffer } from "buffer";
+
+import { renderToCanvas } from "../tools/story-utils/render-to-canvas.js";
 
 global.Buffer = Buffer;
 
@@ -66,3 +68,5 @@ export const parameters = {
   },
 };
 export const tags = ["autodocs"];
+
+export { renderToCanvas };

@@ -320,9 +320,19 @@ export const getFlagNames = () => {
   return flagList;
 };
 
-export const initScrollspy = (story) => {
-  const demo = story();
-  return `
+const wrapWithScript = (story, script) => {
+  const result = story();
+  const combine = (markup) => `${script}\n  ${markup ?? ""}`;
+
+  return result && typeof result.then === "function"
+    ? result.then(combine)
+    : combine(result);
+};
+
+export const initScrollspy = (story) =>
+  wrapWithScript(
+    story,
+    `
     <script>
       var element =
         document.getElementById("bcl-inpage-navigation") ||
@@ -339,12 +349,13 @@ export const initScrollspy = (story) => {
         });
       }
     </script>
-  ${demo}`;
-};
+  `,
+  );
 
-export const initBadges = (story) => {
-  const demo = story();
-  return `
+export const initBadges = (story) =>
+  wrapWithScript(
+    story,
+    `
     <script>
       var badges = document.querySelectorAll(".badge");
       badges.forEach((element) => {
@@ -356,12 +367,13 @@ export const initBadges = (story) => {
         }
       });
     </script>
-  ${demo}`;
-};
+  `,
+  );
 
-export const initMultiselects = (story) => {
-  const demo = story();
-  return `
+export const initMultiselects = (story) =>
+  wrapWithScript(
+    story,
+    `
     <script>
       var multiselects = document.querySelectorAll(".multiselect");
       if (multiselects) {
@@ -375,8 +387,8 @@ export const initMultiselects = (story) => {
         });
       }
     </script>
-  ${demo}`;
-};
+  `,
+  );
 
 export const initTooltip = (story) => {
   const demo = story();

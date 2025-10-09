@@ -57,7 +57,7 @@ describe("OE - Card", () => {
     });
 
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataGroup, true)),
+      await axe(await renderTwigFileAsHtml(template, demoDataGroup, true)),
     ).toHaveNoViolations();
   });
 });

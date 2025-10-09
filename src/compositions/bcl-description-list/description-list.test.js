@@ -27,13 +27,13 @@ describe("OE - Description List", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
   test(`horizontal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataHorizontal, true)),
+      await axe(await renderTwigFileAsHtml(template, demoDataHorizontal, true)),
     ).toHaveNoViolations();
   });
 });
