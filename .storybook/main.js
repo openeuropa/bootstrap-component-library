@@ -5,8 +5,9 @@ const require = createRequire(import.meta.url);
 const environment = require("./environment.js");
 const webpack = require("webpack");
 const pathModule = require("path");
+const repoRoot = pathModule.resolve(__dirname, "..");
 const twigWrapperLoader = pathModule.resolve(
-  process.cwd(),
+  repoRoot,
   "tools/webpack/twig-wrapper-loader.cjs",
 );
 
