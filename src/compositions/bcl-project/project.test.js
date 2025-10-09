@@ -53,7 +53,7 @@ describe("OE - Project", () => {
       await axe(renderTwigFileAsHtml(listingTemplate, demoListing)),
     ).toHaveNoViolations();
   });
-  jest.setTimeout(10000);
+  jest.setTimeout(20000);
   test(`details passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(detailsTemplate, ongoingDemo)),

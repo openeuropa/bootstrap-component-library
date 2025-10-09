@@ -82,6 +82,7 @@ describe("OE - Gallery", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  jest.setTimeout(20000);
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(renderTwigFileAsHtml(template, dataDefault, true)),

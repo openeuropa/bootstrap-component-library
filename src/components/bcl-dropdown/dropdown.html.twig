@@ -42,6 +42,7 @@
 {% set _alignment = alignment|default('') %}
 {% set _dark = dark ?? false %}
 {% set _remove_wrapper = remove_wrapper ?? false %}
+{% set _inside_navigation = inside_navigation ?? false %}
 {% set _items = items|default([]) %}
 
 {% set _class = 'dropdown' %}
@@ -75,14 +76,18 @@
                       .setAttribute('id', _id)
 }) %}
 
-{% if _link %}
-  {% set _trigger = _trigger|merge({
-    attributes: _trigger.attributes.setAttribute('role', 'button') 
-  }) %}
+{% if not _inside_navigation %}
+  {% if _link %}
+    {% set _trigger = _trigger|merge({
+      attributes: _trigger.attributes.setAttribute('role', 'button') 
+    }) %}
+  {% else %}
+    {% set _trigger = _trigger|merge({
+      attributes: _trigger.attributes.setAttribute('autocomplete', 'off') 
+    }) %}
+  {% endif %}
 {% else %}
-  {% set _trigger = _trigger|merge({
-    attributes: _trigger.attributes.setAttribute('autocomplete', 'off') 
-  }) %}
+  {% set attributes = attributes.setAttribute('aria-hidden', 'true').setAttribute('role', 'presentation') %}
 {% endif %}
 
 {% if not _remove_wrapper %}
