@@ -1,13 +1,14 @@
+import { createRequire } from "module";
 import { dirname, join } from "path";
+
+const require = createRequire(import.meta.url);
 const path = require("path");
 
 const stories = ["../src/*/*/*.story.js"];
 
 const addons = [
   getAbsolutePath("@storybook/addon-docs"),
-  getAbsolutePath("@storybook/addon-controls"),
   getAbsolutePath("@storybook/addon-designs"),
-  getAbsolutePath("@storybook/addon-viewport"),
   getAbsolutePath("@storybook/addon-a11y"),
   getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
 ];
@@ -29,13 +30,23 @@ const webpackFinal = (config) => {
     }
   });
 
+  config.resolve = config.resolve || {};
+  config.resolve.fallback = {
+    ...(config.resolve.fallback || {}),
+    path: require.resolve("path-browserify"),
+    util: require.resolve("util/"),
+  };
+
   return config;
 };
 
 const config = {
   framework: {
-    name: getAbsolutePath("@storybook/html-webpack5"),
+    name: getAbsolutePath("@storybook/html"),
     options: {},
+  },
+  core: {
+    builder: getAbsolutePath("@storybook/builder-webpack5"),
   },
   staticDirs: ['../assets'],
   stories,

@@ -1,4 +1,4 @@
-import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { MINIMAL_VIEWPORTS } from "storybook/viewport";
 import { Buffer } from "buffer";
 
 global.Buffer = Buffer;
