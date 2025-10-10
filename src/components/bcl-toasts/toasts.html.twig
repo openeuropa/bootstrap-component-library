@@ -93,13 +93,13 @@
     <div{{ _header_attributes.addClass(['toast-header']) }}>
     {{- _toast.header|default('') -}}
     {% if _with_close %}
-      {% set _button_attributes = _button_attributes
-                                .addClass(['btn-close'])
-                                .setAttribute('aria-label', 'close')
-                                .setAttribute('data-bs-dismiss', 'toast')
-      %}
+      {% if not _button_attributes.hasAttribute('aria-label') %}
+        {% set _button_attributes = _button_attributes.setAttribute('aria-label', 'Close') %}
+      {% endif %}
       {%- include '@oe-bcl/bcl-button/button.html.twig' with {
-        attributes: _button_attributes,
+        attributes: _button_attributes
+          .addClass(['btn-close'])
+          .setAttribute('data-bs-dismiss', 'toast'),
         clean_class: true
       } only -%}
     {% endif %}
