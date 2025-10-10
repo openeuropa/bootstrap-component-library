@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.7 (2025-10-10)
+
+#### :nail_care: Enhancement
+* [#699](https://github.com/openeuropa/bootstrap-component-library/pull/699) OEL-0000: Proper slim-select version. ([@tibi2303](https://github.com/tibi2303))
+* [#697](https://github.com/openeuropa/bootstrap-component-library/pull/697) OEL-4209: Provide silent config for builder. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.10.6 (2025-09-29)
 
 #### :rocket: New Feature
