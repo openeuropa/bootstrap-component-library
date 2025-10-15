@@ -320,16 +320,14 @@ export const getFlagNames = () => {
   return flagList;
 };
 
-const wrapWithScript = (story, script) => {
-  const result = story();
+const wrapWithScript = async (story, script) => {
+  const result = await story();
   const combine = (markup) => `${script}\n  ${markup ?? ""}`;
 
-  return result && typeof result.then === "function"
-    ? result.then(combine)
-    : combine(result);
+  return combine(result);
 };
 
-export const initScrollspy = (story) =>
+export const initScrollspy = async (story) =>
   wrapWithScript(
     story,
     `
@@ -352,7 +350,7 @@ export const initScrollspy = (story) =>
   `,
   );
 
-export const initBadges = (story) =>
+export const initBadges = async (story) =>
   wrapWithScript(
     story,
     `
@@ -370,7 +368,7 @@ export const initBadges = (story) =>
   `,
   );
 
-export const initMultiselects = (story) =>
+export const initMultiselects = async (story) =>
   wrapWithScript(
     story,
     `
@@ -390,8 +388,8 @@ export const initMultiselects = (story) =>
   `,
   );
 
-export const initTooltip = (story) => {
-  const demo = story();
+export const initTooltip = async (story) => {
+  const demo = await story();
   return `
     <script>
       var tooltipTriggerList = [].slice.call(

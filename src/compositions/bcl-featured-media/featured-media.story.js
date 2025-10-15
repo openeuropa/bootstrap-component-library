@@ -106,8 +106,8 @@ const getArgTypes = (data, type) => {
   return argTypes;
 };
 
-const adjustWidth = (story) => {
-  const demo = story();
+const adjustWidth = async (story) => {
+  const demo = await story();
   return `
   <div class="row">
     <div class="col-12 col-md-4">

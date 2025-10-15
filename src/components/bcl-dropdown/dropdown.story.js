@@ -52,8 +52,8 @@ const applyArgs = (data, args) => {
   return Object.assign(correctPaths(data), args);
 };
 
-const paddingBody = (story) => {
-  const demo = story();
+const paddingBody = async (story) => {
+  const demo = await story();
   return `<div style="padding: 10rem 0 10rem 14rem">${demo}</div>`;
 };
 

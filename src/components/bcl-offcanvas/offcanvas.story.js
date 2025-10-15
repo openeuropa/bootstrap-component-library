@@ -63,8 +63,8 @@ const getArgTypes = () => ({
   },
 });
 
-const initOffcanvas = (story) => {
-  const demo = story();
+const initOffcanvas = async (story) => {
+  const demo = await story();
   return `
     <script>
       var offcanvasElementList = [].slice.call(
@@ -77,8 +77,8 @@ const initOffcanvas = (story) => {
   ${demo}`;
 };
 
-const offCanvasTrigger = (story) => {
-  const demo = story();
+const offCanvasTrigger = async (story) => {
+  const demo = await story();
   return `<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             Toggle offcanvas
           </button>${demo}`;

@@ -52,8 +52,8 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
-const initMultiselect = (story) => {
-  const demo = story();
+const initMultiselect = async (story) => {
+  const demo = await story();
   return `
     <script>
       if (document.querySelector(".multi-select")) {
@@ -67,8 +67,8 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
-const initSingleselect = (story) => {
-  const demo = story();
+const initSingleselect = async (story) => {
+  const demo = await story();
   return `
     <script>
       if (document.querySelector(".single-select")) {

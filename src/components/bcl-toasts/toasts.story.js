@@ -30,8 +30,8 @@ const getArgTypes = () => ({
   },
 });
 
-const initToast = (story) => {
-  const demo = story();
+const initToast = async (story) => {
+  const demo = await story();
   return `
     <script>
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));

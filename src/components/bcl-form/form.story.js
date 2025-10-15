@@ -23,8 +23,8 @@ export default {
   },
 };
 
-const clientValidation = (story) => {
-  const demo = story();
+const clientValidation = async (story) => {
+  const demo = await story();
   return `<script>
     var form = document.querySelector(".needs-validation");
     form.addEventListener(

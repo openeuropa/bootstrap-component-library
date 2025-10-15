@@ -25,8 +25,8 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
-const withContent = (story) => {
-  const demo = story();
+const withContent = async (story) => {
+  const demo = await story();
 
   const layout = `
   <div class="row">

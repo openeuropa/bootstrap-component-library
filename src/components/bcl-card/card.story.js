@@ -5,8 +5,8 @@ import demoData from "@openeuropa/bcl-data-card/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/data--horizontal";
 import card from "@openeuropa/bcl-card/card.html.twig";
 
-const withBodyPadding = (story) => {
-  const demo = story();
+const withBodyPadding = async (story) => {
+  const demo = await story();
   return `
     <div class="px-5">
       ${demo}

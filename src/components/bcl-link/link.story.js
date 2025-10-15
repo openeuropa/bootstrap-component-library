@@ -11,8 +11,8 @@ import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
 import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 import link from "@openeuropa/bcl-link/link.html.twig";
 
-const withCollapse = (story) => {
-  const demo = story();
+const withCollapse = async (story) => {
+  const demo = await story();
   const target = toggleDemoData.path.substring(1);
   return `${demo} 
   <div class="collapse mt-3${

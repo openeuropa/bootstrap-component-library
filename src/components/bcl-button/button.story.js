@@ -13,8 +13,8 @@ import tooltipDemoData from "@openeuropa/bcl-data-button/data--tooltip";
 import spinnerDemoData from "@openeuropa/bcl-data-button/data--spinner";
 import button from "@openeuropa/bcl-button/button.html.twig";
 
-const withCollapse = (story) => {
-  const demo = story();
+const withCollapse = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <div class="collapse mt-3${
@@ -211,8 +211,8 @@ const applyArgs = (data, args) => {
   return Object.assign(correctPaths(data), args);
 };
 
-const initPopover = (story) => {
-  const demo = story();
+const initPopover = async (story) => {
+  const demo = await story();
   return `
     <script>
       var popoverTriggerList = [].slice.call(
