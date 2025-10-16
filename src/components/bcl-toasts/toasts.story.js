@@ -49,7 +49,7 @@ const applyArgs = (data, args) => Object.assign(data, args);
 // Stories
 export default {
   title: "Components/Toasts",
-  decoratos: [initToast],
+  decorators: [initToast],
   parameters: {
     badges: ["deprecated"],
     design: [

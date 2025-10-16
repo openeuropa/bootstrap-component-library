@@ -106,7 +106,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Offcanvas",
-  decoratos: [initOffcanvas],
+  decorators: [initOffcanvas],
   parameters: {
     badges: ["deprecated"],
     design: [
