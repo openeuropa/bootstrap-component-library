@@ -1,10 +1,10 @@
-{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
-{% block sidebar %}
+{%- block sidebar %}
   {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
-{% endblock %}
+{%- endblock -%}
 
-{% block content %}
+{%- block content %}
   {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
 
   <h2 id="item-1" class="my-4">Description</h2>
@@ -21,4 +21,4 @@
   <h2 id="item-2" class="my-4">Related documents</h2>
   {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
   {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
-{% endblock %}
+{%- endblock -%}

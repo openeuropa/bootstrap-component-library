@@ -1,5 +1,5 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import dataDate from "@openeuropa/bcl-date-block/data/data";
@@ -66,7 +66,7 @@ const getArgTypes = () => ({
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   if (args.date) {
     data.image = {};

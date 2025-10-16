@@ -67,7 +67,7 @@ describe("OE - Contact-form", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault)),
+      await axe(await renderTwigFileAsHtml(template, dataDefault)),
     ).toHaveNoViolations();
   });
 });

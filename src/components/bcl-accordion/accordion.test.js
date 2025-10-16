@@ -51,7 +51,7 @@ describe("OE - Accordion", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCustomTags)),
+      await axe(await renderTwigFileAsHtml(template, demoCustomTags)),
     ).toHaveNoViolations();
   });
 });

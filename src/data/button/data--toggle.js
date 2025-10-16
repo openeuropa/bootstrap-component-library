@@ -1,9 +1,9 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   label: "Button with collapse",
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .setAttribute("data-bs-toggle", "collapse")
     .setAttribute("autocomplete", "off")
     .setAttribute("aria-expanded", "false")

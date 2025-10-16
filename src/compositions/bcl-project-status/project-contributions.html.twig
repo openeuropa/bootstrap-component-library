@@ -28,7 +28,7 @@
 <div {{ attributes }}>
   <div class="row">
 
-  {% if _chart is not empty %}
+  {% if _chart %}
     <div class="bcl-project-contributions-chart col-5 col-md-3">
     {% block project_status_contrib_chart %}
       <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">

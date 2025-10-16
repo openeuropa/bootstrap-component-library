@@ -1,4 +1,4 @@
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import {
   filterButton,
@@ -32,7 +32,7 @@ const header =
 const simpleFile = { ...file };
 
 delete simpleFile.translation;
-simpleFile.attributes = new drupalAttribute().addClass(["mb-3-5"]);
+simpleFile.attributes = new DrupalAttribute().addClass(["mb-3-5"]);
 const files = [simpleFile, simpleFile];
 
 const baseData = {
@@ -85,7 +85,7 @@ const demoListing = {
   banner: {
     title: "Events",
     title_tag: "h1",
-    attributes: new drupalAttribute(),
+    attributes: new DrupalAttribute(),
   },
 };
 

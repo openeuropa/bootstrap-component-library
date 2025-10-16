@@ -1,15 +1,15 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   navbar_id: "header-navbar",
   color_set: "dark",
   collapse_id: "navbarNavDropdown",
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .setAttribute("aria-label", "Main Navigation")
     .addClass("bcl-header__navbar"),
   navigation: {
     navbar: true,
-    attributes: new drupalAttribute().addClass("me-auto"),
+    attributes: new DrupalAttribute().addClass("me-auto"),
     items: [
       {
         mega_menu: true,
@@ -33,7 +33,7 @@ module.exports = {
             trigger: {
               id: "custom-trigger-mm-1",
               label: "Base Category Item",
-              attributes: new drupalAttribute().addClass("active"),
+              attributes: new DrupalAttribute().addClass("active"),
             },
             see_all: {
               label: "See all",
@@ -43,7 +43,7 @@ module.exports = {
               {
                 label: "Base Sub Category Item",
                 path: "/example.html",
-                attributes: new drupalAttribute().addClass("active"),
+                attributes: new DrupalAttribute().addClass("active"),
               },
               {
                 label: "Base Sub Category Item",
@@ -134,7 +134,7 @@ module.exports = {
         label: "Home",
         path: "/example.html",
         active: true,
-        attributes: new drupalAttribute().setAttribute("aria-current", "page"),
+        attributes: new DrupalAttribute().setAttribute("aria-current", "page"),
       },
       {
         label: "Item 01",

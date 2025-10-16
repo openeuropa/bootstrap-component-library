@@ -1,4 +1,4 @@
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoDataGroup from "@openeuropa/bcl-data-card-layout/data--group.js";
 import demoDataGrid from "@openeuropa/bcl-data-card-layout/data--grid.js";
@@ -96,7 +96,7 @@ const getArgTypes = (type) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   data.attributes.removeClass([
     `g-${data.gutter}`,
@@ -112,8 +112,8 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
-const withScript = (story) => {
-  const demo = story();
+const withScript = async (story) => {
+  const demo = await story();
   return `<script
   src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
   integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"

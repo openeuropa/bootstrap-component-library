@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   id: "subscribeModal",
@@ -10,7 +10,7 @@ module.exports = {
     '<button class="btn btn-primary form-submit ms-4">Subscribe now</button>' +
     "</div>",
   form: {
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .addClass("needs-validation")
       .setAttribute("novalidate", true)
       .setAttribute("onsubmit", "return false;"),
@@ -75,7 +75,7 @@ module.exports = {
     heading: "Thank you!",
     icon_path: "/icons.svg",
     variant: "success",
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "success-alert",
       "d-none",
       "mb-0",
@@ -89,7 +89,7 @@ module.exports = {
     icon_path: "/icons.svg",
     variant: "danger",
     dismissible: false,
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "error-alert",
       "d-none",
       "mb-0",

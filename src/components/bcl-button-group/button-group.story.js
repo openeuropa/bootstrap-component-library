@@ -1,4 +1,4 @@
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-button-group/data.js";
 import toolbarData from "@openeuropa/bcl-data-button-group/data--toolbar";
@@ -74,7 +74,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data);
   return Object.assign(data, args);

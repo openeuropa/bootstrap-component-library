@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     id: "bcl-inpage-navigation",
     icon_path: "/icons.svg",
     dropdown_id: "bcl-inpage-navigation-dropdown",
-    title_attributes: new drupalAttribute().addClass("mb-0"),
+    title_attributes: new DrupalAttribute().addClass("mb-0"),
     links: [
       {
         label: "Project details",

@@ -30,8 +30,8 @@ const getArgTypes = () => ({
   },
 });
 
-const initToast = (story) => {
-  const demo = story();
+const initToast = async (story) => {
+  const demo = await story();
   return `
     <script>
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));
@@ -49,7 +49,7 @@ const applyArgs = (data, args) => Object.assign(data, args);
 // Stories
 export default {
   title: "Components/Toasts",
-  decoratos: [initToast],
+  decorators: [initToast],
   parameters: {
     badges: ["deprecated"],
     design: [

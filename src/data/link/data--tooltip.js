@@ -1,9 +1,9 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   label: "A link with tooltip",
   path: "/example.html",
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .setAttribute("title", "This is a tooltip")
     .setAttribute("data-bs-toggle", "tooltip")
     .setAttribute("role", "button"),

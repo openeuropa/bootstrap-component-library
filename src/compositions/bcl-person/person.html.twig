@@ -1,10 +1,10 @@
-{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
-{% block sidebar %}
+{%- block sidebar %}
   {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
-{% endblock %}
+{%- endblock -%}
 
-{% block content %}
+{%- block content %}
   {% if information.main_title is not empty %}
     <h2
       class="mb-4"
@@ -26,4 +26,4 @@
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     {% endfor %}
   {% endif %}
-{% endblock %}
+{%- endblock -%}

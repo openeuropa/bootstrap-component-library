@@ -1,10 +1,10 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   trigger: {
     label: "Top-level item (extra attributes)",
     // This style is ignored.
-    attributes: new drupalAttribute().setAttribute(
+    attributes: new DrupalAttribute().setAttribute(
       "style",
       "border-left: 10px solid red;",
     ),
@@ -15,7 +15,7 @@ module.exports = {
     icon: {
       name: "arrow-right",
     },
-    attributes: new drupalAttribute().setAttribute(
+    attributes: new DrupalAttribute().setAttribute(
       "style",
       "border-left: 10px solid red;",
     ),
@@ -25,7 +25,7 @@ module.exports = {
     {
       trigger: {
         label: "Submenu item 1",
-        attributes: new drupalAttribute().setAttribute(
+        attributes: new DrupalAttribute().setAttribute(
           "style",
           "border-left: 10px solid red;",
         ),
@@ -33,7 +33,7 @@ module.exports = {
       see_all: {
         label: "More of submenu item 1",
         path: "/example.html",
-        attributes: new drupalAttribute().setAttribute(
+        attributes: new DrupalAttribute().setAttribute(
           "style",
           "border-left: 10px solid pink;",
         ),
@@ -42,12 +42,12 @@ module.exports = {
         {
           label: "Sub-submenu (class fw-bold)",
           path: "/example.html",
-          attributes: new drupalAttribute().addClass("fw-bold"),
+          attributes: new DrupalAttribute().addClass("fw-bold"),
         },
         {
           label: "Sub-submenu (style lightgreen)",
           path: "/example.html",
-          attributes: new drupalAttribute().setAttribute(
+          attributes: new DrupalAttribute().setAttribute(
             "style",
             "border-left: 10px solid lightgreen;",
           ),
@@ -57,7 +57,7 @@ module.exports = {
     {
       label: "Submenu item 2",
       path: "/example.html",
-      attributes: new drupalAttribute().setAttribute(
+      attributes: new DrupalAttribute().setAttribute(
         "style",
         "border-left: 10px solid blue;",
       ),
@@ -65,7 +65,7 @@ module.exports = {
     {
       trigger: {
         label: "Submenu item 3 (nolink)",
-        attributes: new drupalAttribute().setAttribute(
+        attributes: new DrupalAttribute().setAttribute(
           "style",
           "border-left: 10px solid purple;",
         ),
@@ -74,7 +74,7 @@ module.exports = {
         {
           label: "Sub-submenu item 3.1",
           path: "/example.html",
-          attributes: new drupalAttribute().setAttribute(
+          attributes: new DrupalAttribute().setAttribute(
             "style",
             "border-left: 10px solid magenta;",
           ),

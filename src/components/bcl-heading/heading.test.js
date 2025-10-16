@@ -58,7 +58,7 @@ describe("OE - Heading", () => {
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(
-        renderTwigFileAsHtml(
+        await renderTwigFileAsHtml(
           template,
           {
             title: "A title created by the bcl heading template",

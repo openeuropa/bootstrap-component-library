@@ -4,15 +4,15 @@ import {
   initTooltip,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
 import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 import link from "@openeuropa/bcl-link/link.html.twig";
 
-const withCollapse = (story) => {
-  const demo = story();
+const withCollapse = async (story) => {
+  const demo = await story();
   const target = toggleDemoData.path.substring(1);
   return `${demo} 
   <div class="collapse mt-3${
@@ -122,7 +122,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data);
   if (args.name && args.name !== "none") {
@@ -131,7 +131,7 @@ const applyArgs = (data, args) => {
     data.icon.size = args.icon_size;
     data.icon.path = "/icons.svg";
     data.icon.transformation = args.transformation;
-    data.icon.attributes = new drupalAttribute();
+    data.icon.attributes = new DrupalAttribute();
   }
   if (args.name === "none") {
     data.icon = null;

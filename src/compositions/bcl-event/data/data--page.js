@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
           name: "calendar-check",
           path: "/icons.svg",
         },
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "btn",
           "btn-primary",
           "d-block",
@@ -47,7 +47,7 @@ module.exports = {
   },
   sidebar: {
     title: "Page content",
-    title_attributes: new drupalAttribute().addClass("mb-0"),
+    title_attributes: new DrupalAttribute().addClass("mb-0"),
     id: "bcl-inpage-navigation",
     icon_path: "/icons.svg",
     dropdown_id: "bcl-inpage-navigation-dropdown",

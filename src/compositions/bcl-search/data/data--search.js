@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
   banner: {
     search_bar: {
       submit: {
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "bcl-search-form__submit",
           "px-3",
         ]),
@@ -17,12 +17,12 @@ module.exports = {
           name: "search",
           size: "xs",
           path: "/icons.svg",
-          attributes: new drupalAttribute().addClass(["d-inline-block"]),
+          attributes: new DrupalAttribute().addClass(["d-inline-block"]),
         },
       },
       input: {
         placeholder: "Search",
-        attributes: new drupalAttribute().addClass(["bcl-search-form__input"]),
+        attributes: new DrupalAttribute().addClass(["bcl-search-form__input"]),
         label: "Search bar label",
         input_type: "search",
       },
@@ -30,15 +30,15 @@ module.exports = {
   },
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("offcanvas-start"),
+    attributes: new DrupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
-    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
+    title_attributes: new DrupalAttribute().addClass("mb-lg-4"),
     search_form: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       items: [
@@ -63,7 +63,7 @@ module.exports = {
             label: "Filter A",
             type: "select",
             id: "filter-select-a",
-            attributes: new drupalAttribute().addClass("multi-select"),
+            attributes: new DrupalAttribute().addClass("multi-select"),
             multiple: true,
             clean_class: true,
             options: [
@@ -100,7 +100,7 @@ module.exports = {
           {
             label: "Creation date (from)",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new DrupalAttribute().addClass("mb-2"),
             id: "creation-date-from",
             wrapper_classes: "mb-3",
           },
@@ -110,7 +110,7 @@ module.exports = {
             input_type: "date",
             label: "Creation date (to)",
             wrapper_classes: "mb-3",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new DrupalAttribute().addClass("mb-2"),
             id: "creation-date-to",
           },
         ],
@@ -123,7 +123,7 @@ module.exports = {
             label: "Refine",
             type: "submit",
             variant: "primary",
-            attributes: new drupalAttribute().addClass("me-md-3"),
+            attributes: new DrupalAttribute().addClass("me-md-3"),
           },
           {
             label: "Clear",
@@ -146,7 +146,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
@@ -177,7 +177,7 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
             outline: true,
             rounded_pill: true,
           },
@@ -204,7 +204,7 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
             outline: true,
             rounded_pill: true,
           },
@@ -265,7 +265,7 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
             outline: true,
             rounded_pill: true,
           },
@@ -298,7 +298,7 @@ module.exports = {
           {
             label: "Category 1",
             background: "primary",
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
             outline: true,
             rounded_pill: true,
           },
@@ -334,21 +334,21 @@ module.exports = {
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 01",
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 02",
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
   ],
 };
