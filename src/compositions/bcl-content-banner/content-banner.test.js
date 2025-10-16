@@ -69,7 +69,7 @@ describe("OE - Content banner", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoLinksData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoLinksData, true)),
     ).toHaveNoViolations();
   });
 });

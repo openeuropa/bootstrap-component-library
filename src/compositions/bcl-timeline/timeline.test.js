@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import dataDefault from "@openeuropa/bcl-timeline/data";
 
@@ -48,28 +48,28 @@ describe("OE - Timeline", () => {
             title: "Item title",
             content:
               '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
-            attributes: new drupalAttribute().addClass("new-class"),
+            attributes: new DrupalAttribute().addClass("new-class"),
           },
           {
             label: "13 September 2017",
             title: "Item title",
             content:
               '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
-            attributes: new drupalAttribute().addClass("new-class"),
+            attributes: new DrupalAttribute().addClass("new-class"),
           },
           {
             label: "13 September 2017",
             title: "Item title",
             content:
               '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
-            attributes: new drupalAttribute().addClass("new-class"),
+            attributes: new DrupalAttribute().addClass("new-class"),
           },
           {
             label: "13 September 2017",
             title: "Item title",
             content:
               '<a href="/example.html">President Juncker\'s State of the Union speech</a>',
-            attributes: new drupalAttribute().addClass("new-class"),
+            attributes: new DrupalAttribute().addClass("new-class"),
           },
         ],
       }),
@@ -78,7 +78,7 @@ describe("OE - Timeline", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault, true)),
+      await axe(await renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
   });
 });

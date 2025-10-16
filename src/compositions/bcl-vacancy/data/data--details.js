@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -238,7 +238,7 @@ module.exports = {
     label: "More share options",
     path: "#",
     variant: "link",
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .setAttribute("data-bs-toggle", "modal")
       .setAttribute("data-bs-target", "#socialModal")
       .addClass(["text-center", "ms-1"]),

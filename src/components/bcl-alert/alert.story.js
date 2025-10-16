@@ -3,7 +3,7 @@ import {
   getIconNames,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-alert/data.js";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
@@ -85,7 +85,7 @@ const getArgTypes = () => ({
 });
 
 const applyArgs = (data, args) => {
-  data.attributes = new drupalAttribute();
+  data.attributes = new DrupalAttribute();
   data.icon_path = args.icon ? "/icons.svg" : "";
   if (args.icon_name === "none") {
     data.icon_path = "";

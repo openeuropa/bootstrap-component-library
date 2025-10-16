@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   navbar_id: "header-navbar",
@@ -13,10 +13,10 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    attributes: new drupalAttribute().addClass("bcl-header__navbar"),
+    attributes: new DrupalAttribute().addClass("bcl-header__navbar"),
     navigation: {
       navbar: true,
-      attributes: new drupalAttribute().addClass("me-auto"),
+      attributes: new DrupalAttribute().addClass("me-auto"),
       items: [
         {
           id: "navbarDropdownMenuLink",
@@ -25,7 +25,7 @@ module.exports = {
           trigger: {
             label: "Knowledge & Capacity",
             path: "/example.html",
-            attributes: new drupalAttribute().addClass("nav-link"),
+            attributes: new DrupalAttribute().addClass("nav-link"),
           },
           items: [
             {
@@ -57,7 +57,7 @@ module.exports = {
           trigger: {
             label: "Science & Research",
             path: "/example.html",
-            attributes: new drupalAttribute().addClass("nav-link"),
+            attributes: new DrupalAttribute().addClass("nav-link"),
           },
           items: [
             {
@@ -85,7 +85,7 @@ module.exports = {
           trigger: {
             label: "Projects",
             path: "/example.html",
-            attributes: new drupalAttribute().addClass("nav-link"),
+            attributes: new DrupalAttribute().addClass("nav-link"),
           },
           items: [
             {
@@ -113,7 +113,7 @@ module.exports = {
           trigger: {
             label: "About",
             path: "#",
-            attributes: new drupalAttribute().addClass("nav-link"),
+            attributes: new DrupalAttribute().addClass("nav-link"),
           },
           items: [
             {
@@ -134,7 +134,7 @@ module.exports = {
     },
   },
   head: {
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .addClass(["w-100", "shadow-sm"])
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,

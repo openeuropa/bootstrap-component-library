@@ -1,17 +1,17 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("offcanvas-start"),
+    attributes: new DrupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     with_body_scroll: true,
     title: "Filter options",
-    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
+    title_attributes: new DrupalAttribute().addClass("mb-lg-4"),
     search_form: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       items: [
@@ -35,7 +35,7 @@ module.exports = {
             classes: "mb-3",
             label: "Filter A",
             type: "select",
-            attributes: new drupalAttribute()
+            attributes: new DrupalAttribute()
               .addClass("multi-select")
               .setAttribute("aria-label", "multiselect"),
             multiple: true,
@@ -73,7 +73,7 @@ module.exports = {
           {
             label: "Creation date (from)",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new DrupalAttribute().addClass("mb-2"),
             id: "creation-date-from",
             wrapper_classes: "mb-3",
           },
@@ -83,7 +83,7 @@ module.exports = {
             input_type: "date",
             label: "Creation date (to)",
             wrapper_classes: "mb-3",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new DrupalAttribute().addClass("mb-2"),
             id: "creation-date-to",
           },
         ],
@@ -96,7 +96,7 @@ module.exports = {
             label: "Refine",
             type: "submit",
             variant: "primary",
-            attributes: new drupalAttribute().addClass([
+            attributes: new DrupalAttribute().addClass([
               "me-md-3",
               "mb-3-5",
               "mb-md-0",

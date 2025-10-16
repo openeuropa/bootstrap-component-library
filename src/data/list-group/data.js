@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   items: [
@@ -33,7 +33,7 @@ module.exports = {
       badge: {
         label: "10",
         rounded_pill: true,
-        attributes: new drupalAttribute().addClass("ms-2"),
+        attributes: new DrupalAttribute().addClass("ms-2"),
       },
     },
   ],

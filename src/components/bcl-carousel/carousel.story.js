@@ -1,5 +1,5 @@
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-carousel/data.js";
 import carousel from "@openeuropa/bcl-carousel/carousel.html.twig";
@@ -134,7 +134,7 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   correctPaths(data);
   resetAttrs(data, args);

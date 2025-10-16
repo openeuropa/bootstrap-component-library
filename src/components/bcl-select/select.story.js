@@ -1,5 +1,5 @@
 import { getFormControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-select/data.js";
 import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect.js";
@@ -46,14 +46,14 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data, args);
   return Object.assign(data, args);
 };
 
-const initMultiselect = (story) => {
-  const demo = story();
+const initMultiselect = async (story) => {
+  const demo = await story();
   return `
     <script>
       if (document.querySelector(".multi-select")) {
@@ -67,8 +67,8 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
-const initSingleselect = (story) => {
-  const demo = story();
+const initSingleselect = async (story) => {
+  const demo = await story();
   return `
     <script>
       if (document.querySelector(".single-select")) {

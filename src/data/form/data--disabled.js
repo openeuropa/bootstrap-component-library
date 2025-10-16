@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .setAttribute("novalidate", true)
     .setAttribute("onsubmit", "return false;"),
   submit: {

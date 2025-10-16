@@ -1,6 +1,6 @@
-{% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" %}
+{% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" -%}
 
-{% block banner %}
+{%- block banner %}
 <div class="container">
   {% if banner is not empty %}
   <div class="mt-4 mt-md-5">
@@ -70,9 +70,9 @@
   </div>
   {% endif %}
 </div>
-{% endblock %}
+{%- endblock -%}
 
-{% block content %}
+{%- block content %}
   {% if recent is not empty and members is not empty %}
   <div class="row mt-3">
     <div class="col-md-8">
@@ -98,4 +98,4 @@
       {% include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}
     {% endif %}
   {% endif %}
-{% endblock %}
+{%- endblock -%}

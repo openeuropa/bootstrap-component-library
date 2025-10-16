@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute().setAttribute("onsubmit", "return false;"),
+  attributes: new DrupalAttribute().setAttribute("onsubmit", "return false;"),
   submit: {
     wrapper: "col-12",
     label: "Sign in",

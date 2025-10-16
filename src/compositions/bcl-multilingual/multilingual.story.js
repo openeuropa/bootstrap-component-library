@@ -11,8 +11,8 @@ import MultilingualDataEU from "@openeuropa/bcl-data-header/data";
 import MultilingualDataEC from "@openeuropa/bcl-data-header/data--ec";
 import MultilingualDataNeutral from "@openeuropa/bcl-data-header/data--neutral";
 
-const openModal = (story) => {
-  const demo = story();
+const openModal = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>

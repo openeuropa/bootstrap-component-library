@@ -99,13 +99,13 @@ describe("OE - select", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
   test(`multiple passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoMultiData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoMultiData, true)),
     ).toHaveNoViolations();
   });
 });

@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = [
   {
@@ -6,12 +6,12 @@ module.exports = [
     path: "/example.html",
     icon_position: "before",
     remove_icon_spacers: true,
-    attributes: new drupalAttribute().addClass(["py-lg-2", "pb-3"]),
+    attributes: new DrupalAttribute().addClass(["py-lg-2", "pb-3"]),
     icon: {
       name: "person-fill",
       size: "xs",
       path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2-5"]),
+      attributes: new DrupalAttribute().addClass(["me-2-5"]),
     },
   },
   {
@@ -19,7 +19,7 @@ module.exports = [
     path: "/example.html",
     icon_position: "before",
     remove_icon_spacers: true,
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "border-top-lg-0",
       "border-top",
       "mx-n3",
@@ -31,7 +31,7 @@ module.exports = [
       name: "lock-fill",
       size: "xs",
       path: "/icons.svg",
-      attributes: new drupalAttribute().addClass("me-2-5"),
+      attributes: new DrupalAttribute().addClass("me-2-5"),
     },
   },
 ];
