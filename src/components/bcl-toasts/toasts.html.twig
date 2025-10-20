@@ -10,6 +10,11 @@
   - toasts (object[]) format: [
     {
       - body (string) (default: '')
+      - body_attributes (drupal attrs)
+      - header (string) (default: '')
+      - header_attributes (drupal attrs)
+      - button_attributes (drupal attrs)
+      - custom_content (string) (default: '')
       - role (string) (default: 'alert')
       - with_close (boolean) (default: true)
       - autohide (boolean) (default: false)
@@ -66,6 +71,9 @@
     {% set _with_body_wrapper = _toast.with_body_wrapper ?? false %}
     {% set _body_wrapper_classes = _toast.body_wrapper_classes|default('') %}
     {% set _toast_attributes = _toast.attributes ?: create_attribute() %}
+    {% set _body_attributes = _toast.body_attributes ?: create_attribute() %}
+    {% set _header_attributes = _toast.header_attributes ?: create_attribute() %}
+    {% set _button_attributes = _toast.button_attributes ?: create_attribute() %}
     {% set _toast_attributes =  _toast_attributes.addClass(_classes).setAttribute('aria-atomic', 'true') %}
     {% if _aria_live is not empty %}
       {% set _toast_attributes = _toast_attributes.setAttribute('aria-live', _aria_live) %}
@@ -82,16 +90,16 @@
     {% if _with_close or
       (_toast.header is defined and _toast.header is not empty)
     %}
-    <div class="toast-header">
+    <div{{ _header_attributes.addClass(['toast-header']) }}>
     {{- _toast.header|default('') -}}
     {% if _with_close %}
-      {% set button_attributes = create_attribute()
-                                .addClass(['btn-close'])
-                                .setAttribute('aria-label', 'close')
-                                .setAttribute('data-bs-dismiss', 'toast')
-      %}
+      {% if not _button_attributes.hasAttribute('aria-label') %}
+        {% set _button_attributes = _button_attributes.setAttribute('aria-label', 'Close') %}
+      {% endif %}
       {%- include '@oe-bcl/bcl-button/button.html.twig' with {
-        attributes: button_attributes,
+        attributes: _button_attributes
+          .addClass(['btn-close'])
+          .setAttribute('data-bs-dismiss', 'toast'),
         clean_class: true
       } only -%}
     {% endif %}
@@ -104,12 +112,13 @@
     {% endif %}
     >
   {% endif %}
-    <div class="toast-body">
+    <div{{ _body_attributes.addClass(['toast-body']) }}>
       {{- _body -}}
     </div>
   {% if _with_body_wrapper %}
     </div>
   {% endif %}
+  {{- _toast.custom_content|default('') -}}
   </div>
   {% endfor %}
 {% endif %}

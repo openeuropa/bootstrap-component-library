@@ -9,10 +9,21 @@ exports[`OE - Toasts render correctly with body wrapper classes 1`] = `
     role="alert"
   >
     <div
+      class="test-class toast-header"
+    >
+      Toast title                    
+      <button
+        aria-label="Close"
+        class="test-class btn-close"
+        data-bs-dismiss="toast"
+        type="button"
+      />
+    </div>
+    <div
       class="wrapper-class another-wrapper-class"
     >
       <div
-        class="toast-body"
+        class="test-class toast-body"
       >
         Hello, world! This is a toast message.
             
@@ -35,6 +46,9 @@ exports[`OE - Toasts render correctly with body wrapper classes 1`] = `
         </div>
       </div>
     </div>
+    <p>
+      Toast custom content.
+    </p>
   </div>
 </jest>
 `;
@@ -69,7 +83,7 @@ exports[`OE - Toasts render correctly with multiple toasts 1`] = `
             just now
           </small>
           <button
-            aria-label="close"
+            aria-label="Close"
             class="btn-close"
             data-bs-dismiss="toast"
             type="button"
@@ -101,7 +115,7 @@ exports[`OE - Toasts render correctly with multiple toasts 1`] = `
             2 seconds ago
           </small>
           <button
-            aria-label="close"
+            aria-label="Close"
             class="btn-close"
             data-bs-dismiss="toast"
             type="button"
@@ -127,7 +141,18 @@ exports[`OE - Toasts renders correctly with a single toast 1`] = `
     role="alert"
   >
     <div
-      class="toast-body"
+      class="test-class toast-header"
+    >
+      Toast title                    
+      <button
+        aria-label="Close"
+        class="test-class btn-close"
+        data-bs-dismiss="toast"
+        type="button"
+      />
+    </div>
+    <div
+      class="test-class toast-body"
     >
       Hello, world! This is a toast message.
             
@@ -149,6 +174,52 @@ exports[`OE - Toasts renders correctly with a single toast 1`] = `
         </button>
       </div>
     </div>
+    <p>
+      Toast custom content.
+    </p>
+  </div>
+</jest>
+`;
+
+exports[`OE - Toasts renders correctly with a single toast without close button 1`] = `
+<jest>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    class="toast"
+    role="alert"
+  >
+    <div
+      class="test-class toast-header"
+    >
+      Toast title    
+    </div>
+    <div
+      class="test-class toast-body"
+    >
+      Hello, world! This is a toast message.
+            
+      <div
+        class="mt-2 pt-2 border-top"
+      >
+        <button
+          class="btn btn-primary btn-sm me-1"
+          type="button"
+        >
+          Take action
+        </button>
+        <button
+          class="btn btn-secondary btn-sm"
+          data-bs-dismiss="toast"
+          type="button"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <p>
+      Toast custom content.
+    </p>
   </div>
 </jest>
 `;
