@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   with_wrapper: true,
@@ -20,7 +20,7 @@ module.exports = {
       header: `<strong class="me-auto">Bootstrap</strong><small class="text-muted">2 seconds ago</small>`,
       body: "Heads up, toasts will stack automatically.",
       close_aria_label: "Close",
-      attributes: new drupalAttribute().addClass("test-class"),
+      attributes: new DrupalAttribute().addClass("test-class"),
     },
   ],
 };

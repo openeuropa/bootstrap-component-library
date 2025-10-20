@@ -1,24 +1,47 @@
+import { createRequire } from "module";
 import { dirname, join } from "path";
-const path = require("path");
+
+const require = createRequire(import.meta.url);
+const environment = require("./environment.js");
+const webpack = require("webpack");
+const pathModule = require("path");
+const repoRoot = pathModule.resolve(__dirname, "../../../../../");
+const twigWrapperLoader = pathModule.resolve(
+  repoRoot,
+  "tools/webpack/twig-wrapper-loader.cjs",
+);
 
 let stories = ["../bcl-stories/!(test*|deprecated*).story.js"];
 
 const addons = [
   getAbsolutePath("@storybook/addon-docs"),
-  getAbsolutePath("@storybook/addon-controls"),
   getAbsolutePath("@storybook/addon-designs"),
-  getAbsolutePath("@storybook/addon-viewport"),
   getAbsolutePath("@storybook/addon-a11y"),
   getAbsolutePath("@storybook/addon-webpack5-compiler-babel"),
 ];
 
 const webpackFinal = (config) => {
+  config.module = config.module || {};
+  config.module.rules = config.module.rules || [];
   config.module.rules.push({
     test: /\.twig$/,
-    loader: "twing-loader",
-    options: {
-      environmentModulePath: path.resolve(`${__dirname}/environment.js`),
-    },
+    use: [
+      {
+        loader: twigWrapperLoader,
+        options: {
+          environmentModulePath: pathModule.resolve(
+            __dirname,
+            "environment.js",
+          ),
+        },
+      },
+      {
+        loader: require.resolve("twing-loader"),
+        options: {
+          environment,
+        },
+      },
+    ],
   });
 
   config.plugins.forEach((plugin, i) => {
@@ -27,13 +50,37 @@ const webpackFinal = (config) => {
     }
   });
 
+  config.resolve = config.resolve || {};
+  config.resolve.fallback = {
+    ...(config.resolve.fallback || {}),
+    path: require.resolve("path-browserify"),
+    util: require.resolve("util/"),
+    stream: require.resolve("stream-browserify"),
+    crypto: require.resolve("crypto-browserify"),
+    fs: false,
+    process: require.resolve("process/browser"),
+    buffer: require.resolve("buffer/"),
+  };
+
+  config.plugins = config.plugins || [];
+  config.plugins.push(
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+      Buffer: ["buffer", "Buffer"],
+    }),
+  );
+
   return config;
 };
 
 const config = {
   framework: {
-    name: getAbsolutePath("@storybook/html-webpack5"),
+    name: getAbsolutePath("@storybook/html"),
     options: {},
+  },
+
+  core: {
+    builder: getAbsolutePath("@storybook/builder-webpack5"),
   },
 
   staticDirs: ["../../../../../assets/"],

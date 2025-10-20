@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
 const breadcrumbs = require("@openeuropa/bcl-data-breadcrumb/data");
@@ -9,7 +9,7 @@ module.exports = {
   variant: "eu",
   navbar_id: "header-navbar",
   head: {
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .addClass(["w-100", "shadow-sm", "bcl-header__top-navbar"])
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: false,
@@ -40,9 +40,9 @@ module.exports = {
             name: "chat-left-dots-fill",
             size: "xs",
             path: "/icons.svg",
-            attributes: new drupalAttribute().addClass("me-2-5"),
+            attributes: new DrupalAttribute().addClass("me-2-5"),
           },
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#languageModal"),
         },
@@ -55,9 +55,9 @@ module.exports = {
             name: "person-fill",
             size: "xs",
             path: "/icons.svg",
-            attributes: new drupalAttribute().addClass("me-2-5"),
+            attributes: new DrupalAttribute().addClass("me-2-5"),
           },
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#loginModal"),
         },
@@ -69,6 +69,6 @@ module.exports = {
   language_modal: { ...languageList, variant: "eu" },
   breadcrumbs: {
     ...breadcrumbs,
-    attributes: new drupalAttribute().addClass(["mt-3"]),
+    attributes: new DrupalAttribute().addClass(["mt-3"]),
   },
 };

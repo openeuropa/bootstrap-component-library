@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
     title: "Page content",
     id: "bcl-inpage-navigation",
     icon_path: "/icons.svg",
-    title_attributes: new drupalAttribute().addClass("mb-0"),
+    title_attributes: new DrupalAttribute().addClass("mb-0"),
     dropdown_id: "bcl-inpage-navigation-dropdown",
     links: [
       {
@@ -29,7 +29,7 @@ module.exports = {
   },
   file: {
     title: "File download",
-    title_attributes: new drupalAttribute().setAttribute("id", "file-download"),
+    title_attributes: new DrupalAttribute().setAttribute("id", "file-download"),
     item_title: "File title",
     language: "English",
     meta: "(16.2 MB - PDF)",
@@ -77,7 +77,7 @@ module.exports = {
         },
         {
           title: "File title BG",
-          description: getDummyText,
+          description: getDummyText(),
           language: "български",
           meta: "(16.2 MB - PDF)",
           download: {

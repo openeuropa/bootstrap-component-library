@@ -1,5 +1,5 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
@@ -40,7 +40,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   if (args.direction === "default") {
@@ -52,8 +52,8 @@ const applyArgs = (data, args) => {
   return Object.assign(correctPaths(data), args);
 };
 
-const paddingBody = (story) => {
-  const demo = story();
+const paddingBody = async (story) => {
+  const demo = await story();
   return `<div style="padding: 10rem 0 10rem 14rem">${demo}</div>`;
 };
 

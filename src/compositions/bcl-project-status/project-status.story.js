@@ -115,10 +115,18 @@ export default {
   },
 };
 
-export const Default = (args) =>
-  `${bclTitle(title)} ${projectStatus(
-    applyArgs(dataOngoing, args),
-  )} ${projectStatusContribs(applyArgs(dataContribs, args))}`;
+export const Default = async (args) => {
+  const projectStatusData = applyArgs(dataOngoing, args);
+  const contribsData = applyArgs(dataContribs, args);
+
+  const [titleMarkup, statusMarkup, contribMarkup] = await Promise.all([
+    bclTitle(title),
+    projectStatus(projectStatusData),
+    projectStatusContribs(contribsData),
+  ]);
+
+  return `${titleMarkup} ${statusMarkup} ${contribMarkup}`;
+};
 
 Default.args = getArgs(dataOngoing);
 Default.argTypes = getArgTypes(dataOngoing);

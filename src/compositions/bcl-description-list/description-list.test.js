@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-description-list/data/data";
 import demoDataHorizontal from "@openeuropa/bcl-description-list/data/data--horizontal";
@@ -27,13 +27,13 @@ describe("OE - Description List", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
   test(`horizontal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataHorizontal, true)),
+      await axe(await renderTwigFileAsHtml(template, demoDataHorizontal, true)),
     ).toHaveNoViolations();
   });
 });
@@ -126,7 +126,7 @@ describe("OE - Description List with title", () => {
                   name: "geo-alt-fill",
                   size: "xs",
                   path: "/icons.svg",
-                  attributes: new drupalAttribute().addClass("new-class"),
+                  attributes: new DrupalAttribute().addClass("new-class"),
                 },
               },
             ],
@@ -153,7 +153,7 @@ describe("OE - Description List with title", () => {
                   name: "geo-alt-fill",
                   size: "xs",
                   path: "/icons.svg",
-                  attributes: new drupalAttribute().addClass("new-class"),
+                  attributes: new DrupalAttribute().addClass("new-class"),
                 },
               },
             ],

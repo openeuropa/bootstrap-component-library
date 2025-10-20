@@ -141,7 +141,7 @@ describe("OE - Page banner", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault, true)),
+      await axe(await renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
   });
 });
@@ -256,7 +256,11 @@ describe("OE - Hero banner", () => {
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(
-        renderTwigFileAsHtml(template, { ...dataDefault, hero: true }, true),
+        await renderTwigFileAsHtml(
+          template,
+          { ...dataDefault, hero: true },
+          true,
+        ),
       ),
     ).toHaveNoViolations();
   });

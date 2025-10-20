@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
       card_footer: "Footer of card 1",
       wrapper_class: "col",
       content: "<button class='btn btn-primary'>Custom action</button>",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
     },
     {
       title: "Title card 2",
@@ -46,7 +46,7 @@ module.exports = {
       card_header: "Header of card 2",
       card_footer: "Footer of card 2",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
       content: getDummyText(3),
     },
     {
@@ -68,7 +68,7 @@ module.exports = {
       card_footer: "Footer of card 3",
       wrapper_class: "col",
       content: "<p>Custom text</p>",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
     },
     {
       title: "Title card 4",
@@ -88,7 +88,7 @@ module.exports = {
       card_header: "Header of card 4",
       card_footer: "Footer of card 4",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
       content: getDummyText(4),
     },
     {
@@ -109,7 +109,7 @@ module.exports = {
       card_header: "Header of card 5",
       card_footer: "Footer of card 5",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
     },
     {
       title: "Title card 6",
@@ -129,7 +129,7 @@ module.exports = {
       card_header: "Header of card 6",
       card_footer: "Footer of card 6",
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
       content:
         "<p>Some representative placeholder content for the first card.</p>",
     },

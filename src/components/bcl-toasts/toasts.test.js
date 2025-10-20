@@ -51,7 +51,7 @@ describe("OE - Toasts", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoSingle)),
+      await axe(await renderTwigFileAsHtml(template, demoSingle)),
     ).toHaveNoViolations();
   });
 });

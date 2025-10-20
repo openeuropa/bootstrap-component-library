@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-file/data/data";
 import demoCardData from "@openeuropa/bcl-file/data/data--card";
@@ -43,7 +43,7 @@ describe("OE - File", () => {
       render({
         ...demoData,
         translation: {
-          attributes: new drupalAttribute().addClass("new-class"),
+          attributes: new DrupalAttribute().addClass("new-class"),
           id: "language-dropdown",
           label: {
             label: "Other languages (3)",
@@ -65,7 +65,7 @@ describe("OE - File", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });
@@ -138,7 +138,7 @@ describe("OE - File Card", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCardData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoCardData, true)),
     ).toHaveNoViolations();
   });
 
@@ -150,7 +150,7 @@ describe("OE - File Card", () => {
         download: {
           label: "Go here",
           path: "/example.html",
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .addClass("new-class")
             .setAttribute("download", "false")
             .setAttribute("target", "_self"),
@@ -167,7 +167,7 @@ describe("OE - File Card", () => {
         download: {
           label: "Go here",
           path: "/example.html",
-          attributes: new drupalAttribute().setAttribute("example", "test"),
+          attributes: new DrupalAttribute().setAttribute("example", "test"),
         },
       }),
     ).resolves.toMatchSnapshot();
@@ -181,7 +181,7 @@ describe("OE - File Card", () => {
         download: {
           label: "Go here",
           path: "/example.html",
-          attributes: new drupalAttribute().setAttribute("example", "test"),
+          attributes: new DrupalAttribute().setAttribute("example", "test"),
         },
       }),
     ).resolves.toMatchSnapshot();
