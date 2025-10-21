@@ -1,0 +1,83 @@
+// Pagination V2 overrides scoped to `.pagination-v2`.
+.pagination-v2 {
+  // Keep the navigation landmark borderless to match Bootstrap defaults.
+  &.pager .pagination {
+    --bs-border-color: transparent;
+  }
+
+  .pagination {
+    // Minimal tweaks so buttons keep the square footprint used in the design
+    // while relying on Bootstrap’s native colour tokens.
+    --bs-pagination-border-color: transparent;
+    --bs-pagination-disabled-border-color: transparent;
+    --bs-pagination-item-size: 2.75rem;
+
+    --bs-pagination-hover-bg: #{$primary};
+    --bs-pagination-hover-color: #{$white};
+    .page-item {
+      .page-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: var(--bs-pagination-item-size);
+        min-height: var(--bs-pagination-item-size);
+        text-decoration: none;
+
+        // When the current page renders as a `div`, keep the hover state neutral.
+        &:is(div):hover {
+          background-color: transparent;
+          border-color: transparent;
+          color: $primary;
+        }
+      }
+      &.active {
+        .page-link {
+          cursor: default;
+          --bs-pagination-active-bg: #{$primary};
+          --bs-pagination-active-color: #{$white};
+
+          &:active,
+          &:hover {
+            --bs-pagination-active-bg: #{$primary};
+            color: var(--bs-pagination-active-color);
+            background-color: var(--bs-pagination-active-bg);
+          }
+
+          &:focus,
+          &:focus-visible {
+            --bs-pagination-active-bg: #{$secondary};
+            outline-color: var(--bs-pagination-active-focus-color);
+          }
+          @include media-breakpoint-down(md) {
+            --bs-pagination-active-bg: $white;
+            --bs-pagination-active-color: $dark;
+            --bs-pagination-active-border-color: transparent;
+          }
+        }
+      }
+    }
+    // Glossary variant.
+    &.pagination--glossary {
+      .page-item {
+        margin-right: inherit;
+        .page-link {
+          @extend .fw-normal;
+          border: 1px solid $gray-400;
+          padding: map-get($spacers, "1-5") map-get($spacers, "2-5");
+          @include focused-item();
+          &:hover {
+            @extend .text-decoration-none;
+            @extend .bg-light;
+          }
+        }
+      }
+    }
+  }
+
+  /* Outline the group when any pager control is focused for keyboard users. */
+  .pager__items:focus-within {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}

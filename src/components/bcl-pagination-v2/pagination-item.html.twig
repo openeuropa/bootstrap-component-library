@@ -1,0 +1,89 @@
+{% apply spaceless %}
+
+{# Parameters:
+  - path (string) (default: '')
+  - label (string) (default: '')
+  - disabled (boolean) (default: false)
+  - active (boolean) (default: false)
+  - icon (icon object) (default: {})
+  - attributes (drupal attrs)
+#}
+
+{% set _path = path|default('') %}
+{% set _label = label|default('') %}
+{% set _disabled = disabled ?? false %}
+{% set _active = active ?? false %}
+{% set _aria_label = aria_label|default('') %}
+{% set _icon = icon|default({}) %}
+{% set _icon_path = icon_path|default('') %}
+{% set _icon_name = icon_name|default('') %}
+{% set _icon_html = icon_html|default('') %}
+{% set _icon_position = icon_position|default('after') %}
+{% set _current_mobile_label = current_mobile_label|default('') %}
+{% set _classes = ['page-link'] %}
+
+{% if _icon_path is not empty and _icon is empty %}
+  {% if _icon_name is not empty %}
+    {% set _icon = _icon|merge({
+      name: _icon_name,
+      path: _icon_path,
+      size: "fluid"
+    }) %}
+    {% set _label = "" %}
+  {% endif %}
+{% else %}
+  {% if _icon_html is not empty %}
+    {% set _label %}
+      <span aria-hidden="true">{{- _icon_html -}}</span>
+    {% endset %}
+  {% endif %}
+{% endif %}
+
+{% if _icon is not empty %}
+  {% set _icon = _icon|merge({
+    path: _icon_path,
+  }) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{% if _aria_label is not empty %}
+  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{% endif %}
+
+{% if _active %}
+  {% set attributes = attributes.setAttribute('aria-current', 'page') %}
+{% endif %}
+
+{% set attributes = attributes.addClass(_classes) %}
+
+{% if _path and not _active %}
+  {% if _disabled %}
+    {% set attributes = attributes.setAttribute('aria-disabled', 'true') %}
+  {% endif %}
+  {% set attributes = attributes.setAttribute('aria-hidden', 'false') %}
+
+  {%- include '@oe-bcl/bcl-link/link.html.twig' with {
+    label: _label,
+    path: _path,
+    disabled: _disabled,
+    icon: _icon,
+    icon_position: _icon_position,
+    attributes: attributes,
+  } only -%}
+{% else %}
+  <div{{ attributes }}>
+    {% if _current_mobile_label %}
+      <span class="d-none d-md-inline-block">{{- _label -}}</span>
+      <span class="d-inline-block d-md-none">{{- _current_mobile_label -}}</span>
+    {% else %}
+      <span class="d-inline-block">
+        {{- _label -}}
+      </span>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% endapply %}
