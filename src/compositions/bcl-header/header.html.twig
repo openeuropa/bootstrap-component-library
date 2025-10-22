@@ -84,41 +84,6 @@
     </div>
   </nav>
 
-
-  <!-- project name -->
-  {% if _project_logo is not empty or _site_name is not empty %}
-  <div class="{{ _project_classes  }}">
-    <div class="container">
-    {% if _project_link is not empty %}
-      <a
-        href="{{ _project_link }}"
-      >
-    {% endif %}
-      {% if _project_logo is not empty %}
-        <img
-        {% if _project_logo.path is not empty %}
-          src="{{ _project_logo.path }}"
-        {% endif %}
-        {% if _project_logo.alt is not empty %}
-          alt="{{ _project_logo.alt }}"
-        {% endif %}
-        {% if _project_logo.classes is not empty %}
-          class="{{ _project_logo.classes }}"
-        {% endif %}
-        />
-      {% endif %}
-      {% if _site_name is not empty %}
-        <span class="{{ _site_name_classes }}">
-        {{- _site_name -}}
-        </span>
-      {% endif %}
-    {% if _project_link is not empty %}
-      </a>
-    {% endif %}
-    </div>
-  </div>
-  {% endif %}
-
   <!-- navbar -->
   {% if _navbar is not empty %}
     {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
@@ -126,14 +91,14 @@
       attributes: create_attribute().addClass('bcl-header__navbar collapse navbar-collapse').setAttribute('id', _navbar_id).setAttribute('aria-label', 'Main Navigation'),
     }) only %}
   {% endif %}
-
-  <!-- breadcrumbs -->
-  {% if _breadcrumbs is not empty %}
-    <div class="container">
-      {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
-    </div>
-  {% endif %}
 </header>
+
+<!-- breadcrumbs -->
+{% if _breadcrumbs is not empty %}
+  <div class="container">
+    {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
+  </div>
+{% endif %}
 
 {% for modal in _modals %}
   {% include '@oe-bcl/bcl-modal/modal.html.twig' with modal only %}

@@ -314,6 +314,21 @@ ul.bcl-mega-menu__items {
     // Avoid a space between the parent menu and the submenu.
     @include padding-right(0);
   }
+  @include media-breakpoint-down(lg) {
+    > .bcl-mega-menu__items {
+      &:has(.bcl-mega-menu__submenu:not([hidden])) {
+        > .__leaf,
+        > .__parent {
+          display: none;
+        }
+      }
+      > .__parent {
+        &:has(.bcl-mega-menu__submenu:not([hidden])) {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 // Nested submenu.
