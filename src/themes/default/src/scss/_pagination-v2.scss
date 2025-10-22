@@ -14,6 +14,10 @@
 
     --bs-pagination-hover-bg: #{$primary};
     --bs-pagination-hover-color: #{$white};
+
+    @extend .pt-4;
+    border-top: 1px solid $pagination-border-color;
+
     .page-item {
       .page-link {
         display: inline-flex;
