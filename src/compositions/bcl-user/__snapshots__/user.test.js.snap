@@ -208,6 +208,7 @@ exports[`OE - User list renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -305,6 +306,7 @@ exports[`OE - User list renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -1108,7 +1110,7 @@ exports[`OE - User list renders correctly 1`] = `
             >
               <form
                 class="w-100"
-                novalidate="novalidate"
+                novalidate
                 onsubmit="return false;"
               >
                 <div
@@ -1264,7 +1266,7 @@ exports[`OE - User list renders correctly 1`] = `
                     last option
                   </option>
                   <option
-                    selected=""
+                    selected
                     value=""
                   >
                     A-Z
@@ -2075,6 +2077,7 @@ exports[`OE - User renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -2172,6 +2175,7 @@ exports[`OE - User renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -3302,7 +3306,7 @@ exports[`OE - User renders correctly 1`] = `
                 >
                   <form
                     class="row"
-                    novalidate="novalidate"
+                    novalidate
                     onsubmit="return false;"
                   >
                     <fieldset
@@ -3329,7 +3333,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="first-name"
-                          required="required"
+                          required
                           type="text"
                           value="Stefan"
                         />
@@ -3351,7 +3355,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="last-name"
-                          required="required"
+                          required
                           type="text"
                           value="Mayer"
                         />
@@ -3372,7 +3376,7 @@ exports[`OE - User renders correctly 1`] = `
                         <select
                           aria-label="gender-select"
                           class="form-select"
-                          required="required"
+                          required
                         >
                           <option
                             value="2"
@@ -3403,7 +3407,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="nationality-input"
-                          required="required"
+                          required
                           type="text"
                           value="German"
                         />
@@ -3425,7 +3429,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="birth-date"
-                          required="required"
+                          required
                           type="date"
                           value="1972-01-22"
                         />
@@ -3451,7 +3455,7 @@ exports[`OE - User renders correctly 1`] = `
                         <textarea
                           class="form-control"
                           id="bio-description"
-                          required="required"
+                          required
                           rows="4"
                         >
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -3474,7 +3478,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="country-input"
-                          required="required"
+                          required
                           type="text"
                           value="Germany"
                         />
@@ -3496,7 +3500,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="city-input"
-                          required="required"
+                          required
                           type="text"
                           value="Düsseldorf"
                         />
@@ -3531,7 +3535,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="organisation-input"
-                          required="required"
+                          required
                           type="text"
                           value="DG digit"
                         />
@@ -3553,7 +3557,7 @@ exports[`OE - User renders correctly 1`] = `
                         <input
                           class="form-control"
                           id="position-input"
-                          required="required"
+                          required
                           type="text"
                           value="Officer"
                         />
@@ -3576,8 +3580,8 @@ exports[`OE - User renders correctly 1`] = `
                       <select
                         class="multi-select"
                         id="multiselect-1"
-                        multiple="multiple"
-                        required="required"
+                        multiple
+                        required
                       >
                         <optgroup
                           label="Group 1"
@@ -3619,7 +3623,7 @@ exports[`OE - User renders correctly 1`] = `
                           last option
                         </option>
                         <option
-                          selected=""
+                          selected
                           value="9"
                         >
                           the selected option
@@ -3677,7 +3681,7 @@ exports[`OE - User renders correctly 1`] = `
                 Who can consult my data
               </p>
               <form
-                novalidate="novalidate"
+                novalidate
                 onsubmit="return false;"
               >
                 <div
@@ -3689,7 +3693,7 @@ exports[`OE - User renders correctly 1`] = `
                     <input
                       class="form-check-input"
                       id="administrators"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3709,7 +3713,7 @@ exports[`OE - User renders correctly 1`] = `
                     <input
                       class="form-check-input"
                       id="any"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3727,10 +3731,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="authenticated"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3778,7 +3782,7 @@ exports[`OE - User renders correctly 1`] = `
               </p>
               <form
                 class="row"
-                novalidate="novalidate"
+                novalidate
                 onsubmit="return false;"
               >
                 <div
@@ -3788,10 +3792,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="picture"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3809,10 +3813,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="position"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3830,10 +3834,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="city"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3851,10 +3855,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="firstName"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3874,7 +3878,7 @@ exports[`OE - User renders correctly 1`] = `
                     <input
                       class="form-check-input"
                       id="gender"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3894,7 +3898,7 @@ exports[`OE - User renders correctly 1`] = `
                     <input
                       class="form-check-input"
                       id="nationality"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3912,10 +3916,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="lastName"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3935,7 +3939,7 @@ exports[`OE - User renders correctly 1`] = `
                     <input
                       class="form-check-input"
                       id="workingLanguages"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3955,7 +3959,7 @@ exports[`OE - User renders correctly 1`] = `
                     <input
                       class="form-check-input"
                       id="dateOfBirth"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3973,10 +3977,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="organisation"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -3994,10 +3998,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="country"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -4015,10 +4019,10 @@ exports[`OE - User renders correctly 1`] = `
                     class="form-check"
                   >
                     <input
-                      checked="checked"
+                      checked
                       class="form-check-input"
                       id="bio"
-                      required="required"
+                      required
                       type="checkbox"
                     />
                     <label
@@ -4065,7 +4069,7 @@ exports[`OE - User renders correctly 1`] = `
                 When cancelling your account
               </p>
               <form
-                novalidate="novalidate"
+                novalidate
                 onsubmit="return false;"
               >
                 <div
@@ -4078,7 +4082,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="form-check-input"
                       id="keep"
                       name="cancel"
-                      required="required"
+                      required
                       type="radio"
                     />
                     <label
@@ -4099,7 +4103,7 @@ exports[`OE - User renders correctly 1`] = `
                       class="form-check-input"
                       id="delete"
                       name="cancel"
-                      required="required"
+                      required
                       type="radio"
                     />
                     <label
@@ -4506,6 +4510,7 @@ exports[`OE - User terms renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -4603,6 +4608,7 @@ exports[`OE - User terms renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -5381,7 +5387,7 @@ exports[`OE - User terms renders correctly 1`] = `
             </li>
           </ul>
           <form
-            novalidate="novalidate"
+            novalidate
             onsubmit="return false;"
           >
             <div
@@ -5393,7 +5399,7 @@ exports[`OE - User terms renders correctly 1`] = `
                 <input
                   class="form-check-input"
                   id="terms"
-                  required="required"
+                  required
                   type="checkbox"
                 />
                 <label

@@ -166,6 +166,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -263,6 +264,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden=""
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -1314,7 +1316,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 >
                   <form
                     class="needs-validation"
-                    novalidate="novalidate"
+                    novalidate
                     onsubmit="return false;"
                   >
                     <fieldset>
@@ -1337,7 +1339,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       <input
                         class="form-control"
                         placeholder="Type in your e-mail address"
-                        required="required"
+                        required
                         type="email"
                       />
                       <div
@@ -1358,12 +1360,12 @@ exports[`OE - Subscription renders correctly 1`] = `
                       <select
                         class="form-select"
                         id="language-select"
-                        required="required"
+                        required
                       >
                         <option
-                          disabled=""
+                          disabled
                           hidden=""
-                          selected=""
+                          selected
                           value=""
                         >
                           Please select a language
@@ -1404,7 +1406,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                         <input
                           class="form-check-input"
                           id="exampleInputCheck1"
-                          required="required"
+                          required
                           type="checkbox"
                         />
                         <label
