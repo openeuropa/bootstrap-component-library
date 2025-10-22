@@ -55,6 +55,7 @@
 
 {% if _active %}
   {% set attributes = attributes.setAttribute('aria-current', 'page') %}
+  {% set attributes = attributes.setAttribute('tabindex', '0') %}
 {% endif %}
 
 {% set attributes = attributes.addClass(_classes) %}

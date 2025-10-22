@@ -41,12 +41,11 @@
             --bs-pagination-active-bg: #{$primary};
             color: var(--bs-pagination-active-color);
             background-color: var(--bs-pagination-active-bg);
-          }
-
-          &:focus,
-          &:focus-visible {
-            --bs-pagination-active-bg: #{$secondary};
-            outline-color: var(--bs-pagination-active-focus-color);
+            @include media-breakpoint-down(md) {
+              --bs-pagination-active-bg: $white;
+              --bs-pagination-active-color: $dark;
+              --bs-pagination-active-border-color: transparent;
+            }
           }
           @include media-breakpoint-down(md) {
             --bs-pagination-active-bg: $white;

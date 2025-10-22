@@ -7,7 +7,7 @@ import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-pagination/data-v2";
 
-const template = "@oe-bcl/bcl-pagination/pagination.html.twig";
+const template = "@oe-bcl/bcl-pagination-v2/pagination.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
 const sizes = ["sm", "lg"];
 const alignments = ["start", "center", "end"];

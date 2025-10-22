@@ -3,16 +3,17 @@
 exports[`OE - Pagination center renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination justify-content-center"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -20,37 +21,45 @@ exports[`OE - Pagination center renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -58,20 +67,30 @@ exports[`OE - Pagination center renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -79,32 +98,40 @@ exports[`OE - Pagination center renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -112,7 +139,7 @@ exports[`OE - Pagination center renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -125,16 +152,17 @@ exports[`OE - Pagination center renders correctly 1`] = `
 exports[`OE - Pagination end renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination justify-content-end"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-end"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -142,37 +170,45 @@ exports[`OE - Pagination end renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -180,20 +216,30 @@ exports[`OE - Pagination end renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -201,32 +247,40 @@ exports[`OE - Pagination end renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -234,7 +288,7 @@ exports[`OE - Pagination end renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -247,16 +301,17 @@ exports[`OE - Pagination end renders correctly 1`] = `
 exports[`OE - Pagination lg renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination pagination-lg"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between pagination-lg justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -264,37 +319,45 @@ exports[`OE - Pagination lg renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -302,20 +365,30 @@ exports[`OE - Pagination lg renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -323,32 +396,40 @@ exports[`OE - Pagination lg renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -356,7 +437,7 @@ exports[`OE - Pagination lg renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -369,16 +450,17 @@ exports[`OE - Pagination lg renders correctly 1`] = `
 exports[`OE - Pagination renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -386,37 +468,45 @@ exports[`OE - Pagination renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -424,20 +514,30 @@ exports[`OE - Pagination renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -445,32 +545,40 @@ exports[`OE - Pagination renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -478,7 +586,7 @@ exports[`OE - Pagination renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -491,17 +599,17 @@ exports[`OE - Pagination renders correctly 1`] = `
 exports[`OE - Pagination renders correctly as glossary 1`] = `
 <jest>
   <nav
-    class="bcl-glossary"
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination pagination--glossary"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -509,37 +617,45 @@ exports[`OE - Pagination renders correctly as glossary 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -547,20 +663,30 @@ exports[`OE - Pagination renders correctly as glossary 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -568,32 +694,40 @@ exports[`OE - Pagination renders correctly as glossary 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -601,7 +735,7 @@ exports[`OE - Pagination renders correctly as glossary 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -614,15 +748,16 @@ exports[`OE - Pagination renders correctly as glossary 1`] = `
 exports[`OE - Pagination renders correctly with new attributes on items 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="new-class page-link"
           href="/example.html"
           new-attributes="1"
@@ -638,16 +773,17 @@ exports[`OE - Pagination renders correctly with new attributes on items 1`] = `
 exports[`OE - Pagination sm renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination pagination-sm"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between pagination-sm justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -655,37 +791,45 @@ exports[`OE - Pagination sm renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -693,20 +837,30 @@ exports[`OE - Pagination sm renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -714,32 +868,40 @@ exports[`OE - Pagination sm renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -747,7 +909,7 @@ exports[`OE - Pagination sm renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -760,16 +922,17 @@ exports[`OE - Pagination sm renders correctly 1`] = `
 exports[`OE - Pagination start renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination justify-content-start"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-start"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -777,37 +940,45 @@ exports[`OE - Pagination start renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -815,20 +986,30 @@ exports[`OE - Pagination start renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -836,32 +1017,40 @@ exports[`OE - Pagination start renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -869,7 +1058,7 @@ exports[`OE - Pagination start renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -882,16 +1071,17 @@ exports[`OE - Pagination start renders correctly 1`] = `
 exports[`OE - Pagination with custom icon for next renders for correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -899,37 +1089,45 @@ exports[`OE - Pagination with custom icon for next renders for correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -937,20 +1135,30 @@ exports[`OE - Pagination with custom icon for next renders for correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -958,47 +1166,47 @@ exports[`OE - Pagination with custom icon for next renders for correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          class="page-link"
-          href="/example.html"
-        >
-          <svg
-            class="bi icon--fluid"
-          >
-            <use
-              xlink:href="/icons.svg#chevron-top"
-            />
-          </svg>
-        </a>
-      </li>
-      <li
-        class="page-item"
-      >
-        <a
+          aria-hidden="false"
           aria-label="Last page"
           class="page-link"
           href="/example.html"
         >
+          55
+        </a>
+      </li>
+      <li
+        class="page-item pager__item pager__item--next d-inline-block"
+      >
+        <a
+          aria-hidden="false"
+          class="page-link"
+          href="/example.html"
+        >
           <svg
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -1011,17 +1219,18 @@ exports[`OE - Pagination with custom icon for next renders for correctly 1`] = `
 exports[`OE - Pagination with custom list attributes renders for correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="new-class pagination"
+      class="new-class pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
       new-attributes="1"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -1029,37 +1238,45 @@ exports[`OE - Pagination with custom list attributes renders for correctly 1`] =
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -1067,20 +1284,30 @@ exports[`OE - Pagination with custom list attributes renders for correctly 1`] =
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -1088,32 +1315,40 @@ exports[`OE - Pagination with custom list attributes renders for correctly 1`] =
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -1121,7 +1356,7 @@ exports[`OE - Pagination with custom list attributes renders for correctly 1`] =
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -1134,16 +1369,17 @@ exports[`OE - Pagination with custom list attributes renders for correctly 1`] =
 exports[`OE - Pagination with ellipsises renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
-          aria-label="First page"
+          aria-hidden="false"
+          aria-label="Previous page"
           class="page-link"
           href="/example.html"
         >
@@ -1151,37 +1387,45 @@ exports[`OE - Pagination with ellipsises renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-left"
+              xlink:href="/icons.svg#chevron-left"
             />
           </svg>
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Previous page"
+          aria-hidden="false"
+          aria-label="First page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          1
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -1189,20 +1433,30 @@ exports[`OE - Pagination with ellipsises renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -1210,32 +1464,40 @@ exports[`OE - Pagination with ellipsises renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
+          aria-hidden="false"
+          aria-label="Last page"
           class="page-link"
           href="/example.html"
-        />
+        >
+          55
+        </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--next d-inline-block"
       >
         <a
-          aria-label="Last page"
+          aria-hidden="false"
+          aria-label="Next page"
           class="page-link"
           href="/example.html"
         >
@@ -1243,7 +1505,7 @@ exports[`OE - Pagination with ellipsises renders correctly 1`] = `
             class="bi icon--fluid"
           >
             <use
-              xlink:href="/icons.svg#chevron-double-right"
+              xlink:href="/icons.svg#chevron-right"
             />
           </svg>
         </a>
@@ -1256,52 +1518,63 @@ exports[`OE - Pagination with ellipsises renders correctly 1`] = `
 exports[`OE - Pagination without icon path renders correctly 1`] = `
 <jest>
   <nav
-    role="navigation"
+    class="pager pagination-v2"
   >
     <ul
-      class="pagination"
+      class="pagination pager__items js-pager__items d-flex flex-row justify-content-between justify-content-md-center"
     >
       <li
-        class="page-item"
+        class="page-item pager__item pager__item--prev d-inline-block"
       >
         <a
+          aria-hidden="false"
+          aria-label="Previous page"
+          class="page-link"
+          href="/example.html"
+        >
+          <svg
+            class="bi icon--fluid"
+          >
+            <use
+              xlink:href="#chevron-left"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        class="page-item pager__item d-none d-md-inline-block"
+      >
+        <a
+          aria-hidden="false"
           aria-label="First page"
           class="page-link"
           href="/example.html"
         >
-          <span
-            aria-hidden="true"
-          >
-            «
-          </span>
+          1
         </a>
       </li>
       <li
-        class="page-item"
-      >
-        <a
-          aria-label="Previous page"
-          class="page-link"
-          href="/example.html"
-        />
-      </li>
-      <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -1309,20 +1582,30 @@ exports[`OE - Pagination without icon path renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item active"
+        class="page-item pager__item active d-inline-block"
       >
-        <a
+        <div
           aria-current="page"
           class="page-link"
-          href="/example.html"
+          tabindex="0"
         >
-          11
-        </a>
+          <span
+            class="d-none d-md-inline-block"
+          >
+            11
+          </span>
+          <span
+            class="d-inline-block d-md-none"
+          >
+            Page 11 of 55
+          </span>
+        </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
+          aria-hidden="false"
           class="page-link"
           href="/example.html"
         >
@@ -1330,40 +1613,50 @@ exports[`OE - Pagination without icon path renders correctly 1`] = `
         </a>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <div
           class="page-link"
         >
           <span
-            aria-hidden="true"
+            class="d-inline-block"
           >
-             … 
+            <span
+              aria-hidden="true"
+            >
+               … 
+            </span>
           </span>
         </div>
       </li>
       <li
-        class="page-item"
+        class="page-item pager__item d-none d-md-inline-block"
       >
         <a
-          aria-label="Next page"
-          class="page-link"
-          href="/example.html"
-        />
-      </li>
-      <li
-        class="page-item"
-      >
-        <a
+          aria-hidden="false"
           aria-label="Last page"
           class="page-link"
           href="/example.html"
         >
-          <span
-            aria-hidden="true"
+          55
+        </a>
+      </li>
+      <li
+        class="page-item pager__item pager__item--next d-inline-block"
+      >
+        <a
+          aria-hidden="false"
+          aria-label="Next page"
+          class="page-link"
+          href="/example.html"
+        >
+          <svg
+            class="bi icon--fluid"
           >
-            »
-          </span>
+            <use
+              xlink:href="#chevron-right"
+            />
+          </svg>
         </a>
       </li>
     </ul>
