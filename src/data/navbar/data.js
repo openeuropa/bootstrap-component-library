@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   collapse_id: "navbar",
@@ -8,7 +8,7 @@ module.exports = {
   },
   navigation: {
     navbar: true,
-    attributes: new drupalAttribute().addClass("me-auto"),
+    attributes: new DrupalAttribute().addClass("me-auto"),
     items: [
       {
         mega_menu: true,

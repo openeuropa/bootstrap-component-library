@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.8 (2025-10-30)
+
+#### :nail_care: Enhancement
+* [#693](https://github.com/openeuropa/bootstrap-component-library/pull/693) UCPKN-3880: Pass attributes to modal and toast sections. ([@kp77](https://github.com/kp77))
+* [#694](https://github.com/openeuropa/bootstrap-component-library/pull/694) OEL-4068: Cleanup and improved styles for new header. ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#698](https://github.com/openeuropa/bootstrap-component-library/pull/698) OEL-3821: Update packages to latest version and needed fixes for update. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Péter Keszthelyi ([@kp77](https://github.com/kp77))
+
 ## 1.10.7 (2025-10-10)
 
 #### :nail_care: Enhancement

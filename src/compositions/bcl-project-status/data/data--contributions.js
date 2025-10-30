@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   chart: true,
@@ -25,6 +25,6 @@ module.exports = {
         definition: "EUR 9.994.672,00",
       },
     ],
-    attributes: new drupalAttribute().addClass("mb-0"),
+    attributes: new DrupalAttribute().addClass("mb-0"),
   },
 };

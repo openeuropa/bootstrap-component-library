@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
           name: "linkedin",
           path: "/icons.svg",
         },
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "d-block",
           "d-md-inline-block",
           "mb-3",
@@ -40,7 +40,7 @@ module.exports = {
           name: "twitter",
           path: "/icons.svg",
         },
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "d-block",
           "d-md-inline-block",
           "mb-3",
@@ -56,7 +56,7 @@ module.exports = {
           name: "facebook",
           path: "/icons.svg",
         },
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "d-block",
           "d-md-inline-block",
           "mb-3",
@@ -72,7 +72,7 @@ module.exports = {
           name: "youtube",
           path: "/icons.svg",
         },
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "d-block",
           "d-md-inline-block",
           "mb-3",
@@ -105,12 +105,12 @@ module.exports = {
           name: "file-pdf-fill",
           size: "xl",
         },
-        attributes: new drupalAttribute().addClass(["mb-4-5"]),
+        attributes: new DrupalAttribute().addClass(["mb-4-5"]),
       },
       {
         title: "Drupal articles",
         title_tag: "h3",
-        title_attributes: new drupalAttribute().addClass(["mb-3"]),
+        title_attributes: new DrupalAttribute().addClass(["mb-3"]),
         item_title: "Drupal article 1",
         language: "English",
         meta: "(16.2 MB - PDF)",
@@ -123,7 +123,7 @@ module.exports = {
           name: "file-pdf-fill",
           size: "xl",
         },
-        attributes: new drupalAttribute().addClass(["mb-3"]),
+        attributes: new DrupalAttribute().addClass(["mb-3"]),
       },
       {
         item_title: "Drupal article 2",

@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
         type: "link",
         label: "Leave group",
         path: "/example.html",
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "d-md-inline-block",
           "me-2",
           "p-2",
@@ -29,7 +29,7 @@ module.exports = {
         trigger: {
           label: "Create content",
           path: "#",
-          attributes: new drupalAttribute().addClass([
+          attributes: new DrupalAttribute().addClass([
             "d-inline-block",
             "mt-3",
             "mt-md-0",
@@ -52,12 +52,12 @@ module.exports = {
     content:
       "<h2 class='mb-0'>Group name</h2><div><a href='#'>Leave group</a><button></div>",
     extra_classes_body: "p-3-5",
-    attributes: new drupalAttribute().addClass("border-0"),
+    attributes: new DrupalAttribute().addClass("border-0"),
   },
   navigation: {
     nav: true,
     tabs: true,
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "bcl__nav",
       "bg-gray",
       "n-mx-container",
@@ -83,7 +83,7 @@ module.exports = {
         trigger: {
           label: "Links",
           path: "#",
-          attributes: new drupalAttribute().addClass("nav-link"),
+          attributes: new DrupalAttribute().addClass("nav-link"),
         },
         items: [
           {
@@ -122,7 +122,7 @@ module.exports = {
         path: "/icons.svg",
         size: "xs",
       },
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .addClass(["w-100", "text-center", "py-4", " d-block", "d-md-none"])
         .setAttribute("aria-controls", "banner-description")
         .setAttribute("aria-expanded", "false")
@@ -136,7 +136,7 @@ module.exports = {
           name: "key-fill",
           path: "/icons.svg",
           size: "xs",
-          attributes: new drupalAttribute().addClass([
+          attributes: new DrupalAttribute().addClass([
             "me-2",
             "align-top",
             "mt-1",
@@ -149,7 +149,7 @@ module.exports = {
           name: "people-fill",
           path: "/icons.svg",
           size: "xs",
-          attributes: new drupalAttribute().addClass([
+          attributes: new DrupalAttribute().addClass([
             "me-2",
             "align-top",
             "mt-1",
@@ -338,7 +338,7 @@ module.exports = {
         path: "/icons.svg",
         size: "xs",
       },
-      attributes: new drupalAttribute().addClass(["py-2", "d-inline-block"]),
+      attributes: new DrupalAttribute().addClass(["py-2", "d-inline-block"]),
     },
   },
   contributions: {
@@ -346,7 +346,7 @@ module.exports = {
     listing: {
       variant: "highlight-3-col",
       link: {
-        attributes: new drupalAttribute().addClass(["pt-1", "pb-2"]),
+        attributes: new DrupalAttribute().addClass(["pt-1", "pb-2"]),
         path: "/example.html",
         label: "See all group contributions",
         icon: {

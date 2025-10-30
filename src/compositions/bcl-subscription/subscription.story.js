@@ -3,8 +3,8 @@ import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
 import demoData from "@openeuropa/bcl-subscription/data/data";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
 
-const clientValidation = (story) => {
-  const demo = story();
+const clientValidation = async (story) => {
+  const demo = await story();
   return `<script>
     var backdrop = document.getElementsByClassName("modal-backdrop")[0];
     if (typeof backdrop != "undefined" && backdrop != null) {
@@ -35,8 +35,8 @@ const clientValidation = (story) => {
   </script>${demo}`;
 };
 
-const openModal = (story) => {
-  const demo = story();
+const openModal = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>
@@ -52,8 +52,8 @@ const openModal = (story) => {
     `;
 };
 
-const successState = (story) => {
-  const demo = story();
+const successState = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>
@@ -68,8 +68,8 @@ const successState = (story) => {
     `;
 };
 
-const errorState = (story) => {
-  const demo = story();
+const errorState = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>

@@ -1,8 +1,8 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   label: "Sort&nbsp;by",
-  attributes: new drupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),
+  attributes: new DrupalAttribute().addClass("mb-4 mb-md-0 ms-md-4"),
   aria_label: "sort-select",
   label_extra_classes: "mb-0",
   options: [

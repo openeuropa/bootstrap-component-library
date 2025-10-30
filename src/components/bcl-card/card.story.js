@@ -1,12 +1,12 @@
 import { getVariants } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-card/data.js";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/data--horizontal";
 import card from "@openeuropa/bcl-card/card.html.twig";
 
-const withBodyPadding = (story) => {
-  const demo = story();
+const withBodyPadding = async (story) => {
+  const demo = await story();
   return `
     <div class="px-5">
       ${demo}
@@ -190,7 +190,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   if (args.variant) {

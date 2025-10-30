@@ -38,7 +38,7 @@ import file from "@openeuropa/bcl-file/file.html.twig";
 import footer from "@openeuropa/bcl-footer/footer.html.twig";
 import header from "@openeuropa/bcl-header/header.html.twig";
 
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 const resetAttrs = (data, args) => {
   data.attributes.removeClass(["ocean", "bg-default", "text-color-default"]);
@@ -49,7 +49,7 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   resetAttrs(data, args);

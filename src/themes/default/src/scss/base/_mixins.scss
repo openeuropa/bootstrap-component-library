@@ -11,3 +11,12 @@
     height: 0;
   }
 }
+
+@mixin focused-item($width: 2px, $offset: 2px, $color: $primary) {
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    outline: $width solid $color;
+    outline-offset: $offset;
+  }
+}

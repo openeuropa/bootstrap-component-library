@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   title: "Title card",
@@ -16,7 +16,7 @@ module.exports = {
       label: "I'm also a badge",
       outline: true,
       rounded_pill: true,
-      attributes: new drupalAttribute().addClass("test-class"),
+      attributes: new DrupalAttribute().addClass("test-class"),
     },
   ],
   text: {
@@ -30,5 +30,5 @@ module.exports = {
   },
   card_header: "Header of card",
   card_footer: "Footer of card",
-  attributes: new drupalAttribute().addClass("w-25"),
+  attributes: new DrupalAttribute().addClass("w-25"),
 };

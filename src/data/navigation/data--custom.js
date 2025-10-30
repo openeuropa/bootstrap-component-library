@@ -1,9 +1,9 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   nav: true,
   tabs: true,
-  attributes: new drupalAttribute().addClass("bcl__nav"),
+  attributes: new DrupalAttribute().addClass("bcl__nav"),
   items: [
     {
       label: "I'm a link 1",

@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   id: "dropdown-languages",
@@ -49,7 +49,7 @@ module.exports = {
         name: "check-lg",
         path: "/icons.svg",
         size: "xs",
-        attributes: new drupalAttribute().addClass("me-2"),
+        attributes: new DrupalAttribute().addClass("me-2"),
       },
     },
     {

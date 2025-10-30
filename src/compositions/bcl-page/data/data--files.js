@@ -1,5 +1,5 @@
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = [
   {
@@ -65,7 +65,7 @@ module.exports = [
         },
       ],
     },
-    attributes: new drupalAttribute().addClass("mb-3"),
+    attributes: new DrupalAttribute().addClass("mb-3"),
   },
   {
     item_title: "File title",
@@ -130,6 +130,6 @@ module.exports = [
         },
       ],
     },
-    attributes: new drupalAttribute().addClass("mb-3"),
+    attributes: new DrupalAttribute().addClass("mb-3"),
   },
 ];

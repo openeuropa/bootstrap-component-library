@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
 const breadcrumbs = require("@openeuropa/bcl-data-breadcrumb/data");
@@ -21,7 +21,7 @@ module.exports = {
       label: "Project name",
       link: "/example.html",
     },
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .addClass(["w-100", "bcl-header__top-navbar"])
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: false,
@@ -35,6 +35,6 @@ module.exports = {
   language_modal: languageList,
   breadcrumbs: {
     ...breadcrumbs,
-    attributes: new drupalAttribute().addClass(["mt-3"]),
+    attributes: new DrupalAttribute().addClass(["mt-3"]),
   },
 };

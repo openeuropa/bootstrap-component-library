@@ -26,7 +26,7 @@ describe("OE - Listing", () => {
 
   test(`horizontal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDefaultData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoDefaultData, true)),
     ).toHaveNoViolations();
   });
 
@@ -49,7 +49,9 @@ describe("OE - Listing", () => {
 
   test(`default passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDefault3ColData, true)),
+      await axe(
+        await renderTwigFileAsHtml(template, demoDefault3ColData, true),
+      ),
     ).toHaveNoViolations();
   });
 
@@ -60,7 +62,7 @@ describe("OE - Listing", () => {
 
   test(`highlight passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoHighlightData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoHighlightData, true)),
     ).toHaveNoViolations();
   });
 

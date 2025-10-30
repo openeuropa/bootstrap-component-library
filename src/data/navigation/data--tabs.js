@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
       content: `<p class="mt-4">This is a demo content for the First Tab. ${getDummyText()}</p>`,
       id: "first-tab",
       target: "first",
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("data-bs-toggle", "tab")
         .setAttribute("role", "button")
         .setAttribute("aria-controls", "first"),
@@ -23,7 +23,7 @@ module.exports = {
       content: `<p class="mt-4">This is a demo content for the Second Tab. ${getDummyText()}</p>`,
       id: "second-tab",
       target: "second",
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("data-bs-toggle", "tab")
         .setAttribute("autocomplete", "off")
         .setAttribute("data-bs-target", "#second")
@@ -36,7 +36,7 @@ module.exports = {
       content: `<p class="mt-4">This is a demo content for the Third Tab.</p>${getDummyText()}</p>`,
       id: "third-tab",
       target: "third",
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("data-bs-toggle", "tab")
         .setAttribute("autocomplete", "off")
         .setAttribute("data-bs-target", "#third")
@@ -49,7 +49,7 @@ module.exports = {
       content: `<p class="mt-4">This is a demo content for the Fourth Tab. ${getDummyText()}</p>`,
       id: "fourth-tab",
       target: "fourth",
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("aria-controls", "fourth")
         .setAttribute("data-bs-toggle", "tab")
         .setAttribute("autocomplete", "off")

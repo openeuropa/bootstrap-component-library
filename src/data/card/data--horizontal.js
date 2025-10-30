@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   horizontal: true,
@@ -17,5 +17,5 @@ module.exports = {
     position: "top",
   },
   content: "<button class='btn btn-primary'>Custom action</button>",
-  attributes: new drupalAttribute().addClass("w-50"),
+  attributes: new DrupalAttribute().addClass("w-50"),
 };
