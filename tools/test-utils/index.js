@@ -13,22 +13,32 @@ const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const isPlainObject = (value) =>
   Object.prototype.toString.call(value) === "[object Object]";
 
-function convertDrupalValues(value) {
+function cloneValue(value) {
   if (value === null || value === undefined) {
     return value;
   }
 
+  if (value instanceof StorybookDrupalAttribute) {
+    return value;
+  }
+
   if (value instanceof BaseDrupalAttribute) {
-    return convertDrupalAttribute(value);
+    const converted = new StorybookDrupalAttribute();
+
+    for (const [key, attributeValue] of value.entries()) {
+      converted.set(key, cloneValue(attributeValue));
+    }
+
+    return converted;
   }
 
   if (Array.isArray(value)) {
-    return value.map((item) => convertDrupalValues(item));
+    return value.map((item) => cloneValue(item));
   }
 
   if (isPlainObject(value)) {
     return Object.entries(value).reduce((accumulator, [key, item]) => {
-      accumulator[key] = convertDrupalValues(item);
+      accumulator[key] = cloneValue(item);
       return accumulator;
     }, {});
   }
@@ -36,37 +46,12 @@ function convertDrupalValues(value) {
   return value;
 }
 
-function convertDrupalAttribute(attribute) {
-  if (
-    attribute instanceof StorybookDrupalAttribute ||
-    !(attribute instanceof BaseDrupalAttribute)
-  ) {
-    return attribute;
-  }
-
-  const converted = new StorybookDrupalAttribute();
-
-  for (const [key, attributeValue] of attribute.entries()) {
-    converted.set(key, convertDrupalValues(attributeValue));
-  }
-
-  return converted;
-}
-
-function prepareRenderOptions(options) {
+function normalizeOptions(options) {
   if (options === null || options === undefined) {
     return options;
   }
 
-  if (isPlainObject(options)) {
-    return convertDrupalValues({ ...options });
-  }
-
-  if (Array.isArray(options)) {
-    return convertDrupalValues([...options]);
-  }
-
-  return convertDrupalValues(options);
+  return cloneValue(options);
 }
 
 // Track attributes rendered without explicit values so snapshots can mirror
@@ -164,13 +149,18 @@ if (
 }
 
 const renderTwigFileAsNode = async (file, options = {}, reset) => {
-  const localOptions = isPlainObject(options) ? { ...options } : options;
+  let baseOptions = options;
 
   if (reset) {
-    localOptions.attributes = new StorybookDrupalAttribute();
+    baseOptions = {
+      ...(isPlainObject(options) ? options : {}),
+      attributes: new StorybookDrupalAttribute(),
+    };
+  } else if (isPlainObject(options)) {
+    baseOptions = { ...options };
   }
 
-  const renderOptions = prepareRenderOptions(localOptions);
+  const renderOptions = normalizeOptions(baseOptions);
 
   const html = await twing.render(file, renderOptions);
   const markup = html.trim();
@@ -195,7 +185,7 @@ const renderTwigFileAsNode = async (file, options = {}, reset) => {
 };
 
 const renderTwigFileAsHtml = async (file, options = {}, main) => {
-  const renderOptions = prepareRenderOptions(options);
+  const renderOptions = normalizeOptions(options);
   const html = await twing.render(file, renderOptions);
 
   if (!main) {
