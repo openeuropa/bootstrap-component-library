@@ -1,0 +1,97 @@
+{% set undefined_value = undefined_variable ?? null %}
+
+{% set attr_boolean_true = create_attribute()
+  .setAttribute('data-case', 'boolean-true')
+  .setAttribute('data-flag', true)
+%}
+
+{% set attr_value_matches_key = create_attribute()
+  .setAttribute('data-case', 'value-matches-key')
+  .setAttribute('data-match', 'data-match')
+%}
+
+{% set attr_string_true = create_attribute()
+  .setAttribute('data-case', 'string-true')
+  .setAttribute('data-flag', 'true')
+%}
+
+{% set attr_empty_string = create_attribute()
+  .setAttribute('data-case', 'empty-string')
+  .setAttribute('data-empty', '')
+%}
+
+{% set attr_zero = create_attribute()
+  .setAttribute('data-case', 'zero')
+  .setAttribute('data-zero', 0)
+%}
+
+{% set attr_null = create_attribute()
+  .setAttribute('data-case', 'null')
+  .setAttribute('data-null', null)
+%}
+
+{% set attr_false = create_attribute()
+  .setAttribute('data-case', 'false')
+  .setAttribute('data-flag', false)
+%}
+
+{% set attr_undefined = create_attribute()
+  .setAttribute('data-case', 'undefined')
+  .setAttribute('data-flag', undefined_value)
+%}
+
+{% set attr_regular_value = create_attribute()
+  .setAttribute('data-case', 'string-value')
+  .setAttribute('data-value', 'example')
+%}
+
+{% set attr_array = create_attribute()
+  .setAttribute('data-case', 'array')
+  .setAttribute('data-list', ['one', 'two', null, 'three', ''])
+%}
+
+{% set attr_array_empty_values = create_attribute()
+  .setAttribute('data-case', 'array-empty-values')
+  .setAttribute('data-list', ['one', '', null, ''])
+%}
+
+{% set attr_empty_array = create_attribute()
+  .setAttribute('data-case', 'empty-array')
+  .setAttribute('data-list', [])
+%}
+
+{% set attr_array_only_empty_strings = create_attribute()
+  .setAttribute('data-case', 'array-only-empty-strings')
+  .setAttribute('data-list', ['', ''])
+%}
+
+{% set attr_form = create_attribute()
+  .setAttribute('id', 'attribute-form')
+  .setAttribute('novalidate', true)
+  .setAttribute('data-empty', '')
+  .setAttribute('data-zero', 0)
+  .setAttribute('data-value', 'form')
+%}
+
+<div{{ attr_boolean_true }}>Boolean true attribute</div>
+<div{{ attr_value_matches_key }}>Value matches key attribute</div>
+<div{{ attr_string_true }}>String literal "true" attribute</div>
+<div{{ attr_empty_string }}>Empty string attribute</div>
+<div{{ attr_zero }}>Zero attribute</div>
+<div{{ attr_null }}>Null attribute</div>
+<div{{ attr_false }}>False attribute</div>
+<div{{ attr_undefined }}>Undefined attribute</div>
+<div{{ attr_regular_value }}>String value attribute</div>
+<div{{ attr_array }}>Array attribute with values</div>
+<div{{ attr_array_empty_values }}>Array attribute with empty values</div>
+<div{{ attr_empty_array }}>Empty array attribute</div>
+<div{{ attr_array_only_empty_strings }}>Array attribute with only empty strings</div>
+
+<form{{ attr_form }}>
+  <fieldset>
+    <legend>Form attribute examples</legend>
+    <label for="sample-input">Sample input</label>
+    <input id="sample-input" type="text" />
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
