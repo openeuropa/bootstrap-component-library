@@ -44,7 +44,7 @@
 {% endif %}
 {% set submenu_attributes = create_attribute()
   .setAttribute('id', _panel_id)
-  .setAttribute('hidden', '')
+  .setAttribute('hidden', true)
   .setAttribute('role', 'group')
   .setAttribute('aria-labelledby', _trigger_id)
   .addClass('bcl-mega-menu__submenu', '__level-' ~ _level)
