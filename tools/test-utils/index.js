@@ -1,5 +1,6 @@
 const path = require("path");
 const prettyFormat = require("pretty-format");
+const { DrupalAttribute: BaseDrupalAttribute } = require("drupal-attribute");
 const twing = require("../../.storybook/environment");
 const { StorybookDrupalAttribute } = require(
   path.resolve(__dirname, "../../.storybook/drupal-attribute"),
@@ -8,6 +9,65 @@ const { StorybookDrupalAttribute } = require(
 const { DOMElement, DOMCollection } = prettyFormat.plugins;
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const isPlainObject = (value) =>
+  Object.prototype.toString.call(value) === "[object Object]";
+
+function convertDrupalValues(value) {
+  if (value === null || value === undefined) {
+    return value;
+  }
+
+  if (value instanceof BaseDrupalAttribute) {
+    return convertDrupalAttribute(value);
+  }
+
+  if (Array.isArray(value)) {
+    return value.map((item) => convertDrupalValues(item));
+  }
+
+  if (isPlainObject(value)) {
+    return Object.entries(value).reduce((accumulator, [key, item]) => {
+      accumulator[key] = convertDrupalValues(item);
+      return accumulator;
+    }, {});
+  }
+
+  return value;
+}
+
+function convertDrupalAttribute(attribute) {
+  if (
+    attribute instanceof StorybookDrupalAttribute ||
+    !(attribute instanceof BaseDrupalAttribute)
+  ) {
+    return attribute;
+  }
+
+  const converted = new StorybookDrupalAttribute();
+
+  for (const [key, attributeValue] of attribute.entries()) {
+    converted.set(key, convertDrupalValues(attributeValue));
+  }
+
+  return converted;
+}
+
+function prepareRenderOptions(options) {
+  if (options === null || options === undefined) {
+    return options;
+  }
+
+  if (isPlainObject(options)) {
+    return convertDrupalValues({ ...options });
+  }
+
+  if (Array.isArray(options)) {
+    return convertDrupalValues([...options]);
+  }
+
+  return convertDrupalValues(options);
+}
 
 // Track attributes rendered without explicit values so snapshots can mirror
 // Drupal's boolean attribute output.
@@ -104,13 +164,15 @@ if (
 }
 
 const renderTwigFileAsNode = async (file, options = {}, reset) => {
-  const localOptions = { ...options };
+  const localOptions = isPlainObject(options) ? { ...options } : options;
 
   if (reset) {
     localOptions.attributes = new StorybookDrupalAttribute();
   }
 
-  const html = await twing.render(file, localOptions);
+  const renderOptions = prepareRenderOptions(localOptions);
+
+  const html = await twing.render(file, renderOptions);
   const markup = html.trim();
   const valuelessCounts = getValuelessAttributeCounts(markup);
 
@@ -133,7 +195,8 @@ const renderTwigFileAsNode = async (file, options = {}, reset) => {
 };
 
 const renderTwigFileAsHtml = async (file, options = {}, main) => {
-  const html = await twing.render(file, options);
+  const renderOptions = prepareRenderOptions(options);
+  const html = await twing.render(file, renderOptions);
 
   if (!main) {
     return html;
