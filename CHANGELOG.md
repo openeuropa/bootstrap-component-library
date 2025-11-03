@@ -5,6 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.10.8 (2025-10-30)
 
+#### :rocket: New Feature
+* [#701](https://github.com/openeuropa/bootstrap-component-library/pull/701) OEL-3838: Pagination v2. ([@tibi2303](https://github.com/tibi2303))
+
 #### :nail_care: Enhancement
 * [#693](https://github.com/openeuropa/bootstrap-component-library/pull/693) UCPKN-3880: Pass attributes to modal and toast sections. ([@kp77](https://github.com/kp77))
 * [#694](https://github.com/openeuropa/bootstrap-component-library/pull/694) OEL-4068: Cleanup and improved styles for new header. ([@tibi2303](https://github.com/tibi2303))
