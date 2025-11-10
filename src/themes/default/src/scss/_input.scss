@@ -6,10 +6,8 @@
   padding-left: $input-padding-x-lg;
   font-size: $form-font-size-lg;
   &:focus-visible {
-    outline: 2px solid $primary;
-    box-shadow: none;
-    border-radius: 4px;
-    outline-offset: -1px;
+    border-color: $gray-400;
+    @include form-focus-ring();
   }
 }
 
@@ -24,10 +22,14 @@
       (-$input-padding-x-lg);
   }
   &:focus-visible {
-    outline: 2px solid $primary;
-    box-shadow: none;
-    border-radius: 4px;
-    outline-offset: -1px;
+    border-color: $gray-400;
+    @include form-focus-ring();
+  }
+  &.is-valid,
+  &.is-invalid {
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
 .form-check:not(.form-switch) {
@@ -43,16 +45,18 @@
 }
 .form-check-input {
   &:focus-visible {
-    outline: 4px solid $primary;
-    box-shadow: none;
-    border-radius: 4px;
-    outline-offset: 0;
     &[type="radio"] {
       border-radius: 50%;
     }
   }
   &:checked:focus-visible {
     border-color: $white;
+  }
+  &:focus-visible {
+    border-color: $gray-400;
+    @include form-focus-ring(
+      1px
+    ); // adjust outline offset because of default border
   }
 }
 
@@ -98,12 +102,6 @@ textarea.form-control,
 }
 
 .form-select:not([multiple]):not([size]) {
-  &:focus-visible {
-    outline: 2px solid $primary;
-    box-shadow: none;
-    border-radius: 4px;
-    outline-offset: -1px;
-  }
   &.is-invalid {
     background-image:
       url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E"),

@@ -77,8 +77,8 @@
   overflow: hidden;
   min-height: 38px;
 
-  &:focus {
-    box-shadow: 0 0 5px var(--ss-focus-color);
+  &:focus-visible {
+    @include form-focus-ring();
   }
 
   &.form-select {
@@ -330,7 +330,7 @@
       }
 
       &:focus {
-        box-shadow: 0 0 5px var(--ss-focus-color);
+        @include form-focus-ring();
       }
     }
 
