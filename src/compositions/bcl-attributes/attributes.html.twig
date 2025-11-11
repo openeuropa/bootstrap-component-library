@@ -52,7 +52,7 @@
 
 {% set attr_array_empty_values = create_attribute()
   .setAttribute('data-case', 'array-empty-values')
-  .setAttribute('data-list', ['one', '', null, ''])
+  .setAttribute('data-list', ['one', '', null, '', undefined_value])
 %}
 
 {% set attr_empty_array = create_attribute()
