@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
               type: "content",
               content: `<p class='fw-bold mb-2'>[Project name]</p>${getDummyText(
                 2,
-                true
+                true,
               )}`,
             },
           ],
@@ -180,7 +180,7 @@ module.exports = {
                     name: "box-arrow-up-right",
                     size: "xs",
                     path: "/icons.svg",
-                    attributes: new drupalAttribute().addClass(["ms-2"]),
+                    attributes: new DrupalAttribute().addClass(["ms-2"]),
                   },
                 },
                 {

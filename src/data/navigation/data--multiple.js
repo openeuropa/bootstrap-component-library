@@ -1,8 +1,8 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   vertical: true,
-  attributes: new drupalAttribute().addClass("bcl__nav"),
+  attributes: new DrupalAttribute().addClass("bcl__nav"),
   items: [
     {
       label: "I'm a link 1",
@@ -37,14 +37,14 @@ module.exports = {
       path: "/example.html",
       navigation: {
         vertical: true,
-        attributes: new drupalAttribute().addClass("ps-3"),
+        attributes: new DrupalAttribute().addClass("ps-3"),
         items: [
           {
             label: "I'm a child link",
             path: "/example.html",
             navigation: {
               vertical: true,
-              attributes: new drupalAttribute().addClass("ps-3"),
+              attributes: new DrupalAttribute().addClass("ps-3"),
               items: [
                 {
                   label: "I'm a child link",

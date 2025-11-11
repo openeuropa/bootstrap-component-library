@@ -1,6 +1,4 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-fact-figures/data.js";
@@ -68,7 +66,7 @@ const getArgTypes = () => ({
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   data.attributes.removeClass([
     `bcl-fact-figures--${data.variant}`,
@@ -87,7 +85,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Fact and Figures",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

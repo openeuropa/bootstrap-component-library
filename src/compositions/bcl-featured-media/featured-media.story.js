@@ -1,6 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import isChromatic from "chromatic/isChromatic";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-featured-media/data/data.js";
@@ -8,12 +5,6 @@ import demoDataVideo from "@openeuropa/bcl-featured-media/data/data--video";
 import demoDataImage from "@openeuropa/bcl-featured-media/data/data--image";
 import demoFeaturedItem from "@openeuropa/bcl-featured-media/data/data--featured-item";
 import featuredMedia from "@openeuropa/bcl-featured-media/featured-media.html.twig";
-
-if (isChromatic()) {
-  demoData.embedded_media = `<iframe class="chromatic-ignore" title="New digital strategy" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>`;
-  demoDataImage.image = `<img class="img-fluid w-100 chromatic-ignore" alt="random image" src="https://picsum.photos/1000/400?random=1">`;
-  demoFeaturedItem.embedded_media = `<iframe class="chromatic-ignore" title="New digital strategy" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>`;
-}
 
 const getArgs = (data, type) => {
   const args = {
@@ -115,8 +106,8 @@ const getArgTypes = (data, type) => {
   return argTypes;
 };
 
-const adjustWidth = (story) => {
-  const demo = story();
+const adjustWidth = async (story) => {
+  const demo = await story();
   return `
   <div class="row">
     <div class="col-12 col-md-4">
@@ -127,7 +118,6 @@ const adjustWidth = (story) => {
 
 export default {
   title: "Paragraphs/Featured media",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -138,7 +128,6 @@ export default {
       },
     ],
   },
-  chromatic: { delay: 1000 },
 };
 
 const applyArgs = (data, args) => Object.assign(correctPaths(data), args);

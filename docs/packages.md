@@ -57,7 +57,7 @@
 -   @openeuropa/bcl-spinner
 -   @openeuropa/bcl-table
 -   @openeuropa/bcl-textarea
--   @openeuropa/bcl-toast
+-   @openeuropa/bcl-toasts
 -   @openeuropa/bcl-user-listing
 -   @openeuropa/bcl-user-view
 

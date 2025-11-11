@@ -30,7 +30,7 @@ describe("OE - Footer EU", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataEU))
+      await axe(await renderTwigFileAsHtml(template, demoDataEU)),
     ).toHaveNoViolations();
   });
 });
@@ -44,7 +44,7 @@ describe("OE - Footer EC", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataEC))
+      await axe(await renderTwigFileAsHtml(template, demoDataEC)),
     ).toHaveNoViolations();
   });
 });

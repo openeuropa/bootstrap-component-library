@@ -16,13 +16,13 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, placeholder: "Text here" })
+      render({ ...demoData, placeholder: "Text here" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
@@ -30,7 +30,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, required: true })
+      render({ ...demoData, required: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, disabled: true })
+      render({ ...demoData, disabled: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, readonly: true })
+      render({ ...demoData, readonly: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,7 +54,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, invalid: true })
+      render({ ...demoData, invalid: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -62,7 +62,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, valid: true })
+      render({ ...demoData, valid: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -70,7 +70,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, floating: true })
+      render({ ...demoData, floating: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -78,7 +78,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, horizontal: true })
+      render({ ...demoData, horizontal: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -86,7 +86,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, input_type: "checkbox" })
+      render({ ...demoData, input_type: "checkbox" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -94,7 +94,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, input_type: "radio" })
+      render({ ...demoData, input_type: "radio" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -102,7 +102,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, input_type: "range" })
+      render({ ...demoData, input_type: "range" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -110,7 +110,7 @@ describe("OE - Form Input", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, input_type: "checkbox", switch: true })
+      render({ ...demoData, input_type: "checkbox", switch: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -123,7 +123,7 @@ describe("OE - Form Input", () => {
         input_type: "checkbox",
         toggle: true,
         toggle_variant: "primary",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -136,7 +136,7 @@ describe("OE - Form Input", () => {
         input_type: "radio",
         toggle: true,
         toggle_variant: "primary",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 });

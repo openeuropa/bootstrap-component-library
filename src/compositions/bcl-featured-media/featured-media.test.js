@@ -36,7 +36,7 @@ describe("OE - Featured media", () => {
       render({
         ...demoDataImage,
         force_wrapper: true,
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -52,7 +52,7 @@ describe("OE - Featured media", () => {
         ...demoData,
         title: "Featured media test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -63,7 +63,7 @@ describe("OE - Featured media", () => {
         ...demoDataVideo,
         title: "Featured media test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -74,7 +74,7 @@ describe("OE - Featured media", () => {
         ...demoDataImage,
         title: "Featured media test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -85,7 +85,7 @@ describe("OE - Featured media", () => {
         ...demoFeaturedItem,
         title: "Featured media test title",
         title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -96,7 +96,7 @@ describe("OE - Featured media", () => {
         ...demoFeaturedItem,
         description_title: "Featured media test description title",
         description_title_tag: "h6",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -106,13 +106,13 @@ describe("OE - Featured media", () => {
       render({
         ...demoDataVideo,
         ratio: "21x9",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

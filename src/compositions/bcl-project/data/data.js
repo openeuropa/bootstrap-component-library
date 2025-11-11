@@ -1,6 +1,5 @@
-import isChromatic from "chromatic/isChromatic";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 import {
   filterButton,
   pagination,
@@ -20,21 +19,8 @@ import dataListing from "@openeuropa/bcl-project/data/data--listing";
 import dataLists from "@openeuropa/bcl-project/data/data--lists";
 import dataExtraDetails from "@openeuropa/bcl-project/data/data--extra-details";
 
-const chromatic = process.env.STORYBOOK_ENV;
-
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-
-if (isChromatic() || chromatic) {
-  banner.image.classes = "chromatic-ignore";
-  dataListing.listing.items.forEach((item) => {
-    if (item.image) {
-      item.image.classes = item.image.classes
-        ? `${item.image.classes} chromatic-ignore`
-        : "chromatic-ignore";
-    }
-  });
-}
 
 const baseData = {
   content_type: "listing",
@@ -50,7 +36,7 @@ const demoPage = {
   ...dataExtraDetails,
   ...dataLists,
   gallery: {
-    title_attributes: new drupalAttribute().setAttribute("id", "gallery"),
+    title_attributes: new DrupalAttribute().setAttribute("id", "gallery"),
     ...dataGallery,
   },
   project_status_title: "Project details",

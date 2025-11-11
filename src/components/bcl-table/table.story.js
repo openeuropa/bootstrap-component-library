@@ -1,7 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-table/data.js";
 import table from "@openeuropa/bcl-table/table.html.twig";
@@ -86,7 +84,7 @@ const getArgTypes = () => ({
 
 const resetAttrs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   data.attributes.removeClass(`table-${data.variant}`);
   data.attributes
@@ -113,7 +111,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Table",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

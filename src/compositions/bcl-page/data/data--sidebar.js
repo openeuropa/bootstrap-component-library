@@ -1,10 +1,11 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
-  title_attributes: new drupalAttribute().addClass("mb-0"),
+  title_attributes: new DrupalAttribute().addClass("mb-0"),
   title: "Page content",
   id: "bcl-inpage-navigation",
+  icon_path: "/icons.svg",
+  dropdown_id: "bcl-inpage-navigation-dropdown",
   links: [
     {
       label: "Content",

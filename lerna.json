@@ -1,7 +1,5 @@
 {
-  "version": "1.2.1",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
+  "version": "1.10.8",
   "changelog": {
     "repo": "openeuropa/bootstrap-component-library",
     "labels": {
@@ -14,6 +12,17 @@
     },
     "cacheDir": ".changelog"
   },
+  "useNx": false,
+  "packages": [
+    "bootstrap",
+    "builder",
+    "src/data/*",
+    "src/components/*",
+    "src/compositions/*",
+    "tools/**",
+    "src/themes/*",
+    "src/themes/**/storybook"
+  ],
   "command": {
     "version": {
       "allowBranch": "chore/release-*"

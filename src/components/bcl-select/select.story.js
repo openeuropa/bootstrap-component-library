@@ -1,10 +1,9 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-select/data.js";
 import demoMultiData from "@openeuropa/bcl-data-select/data--multiselect.js";
+import demoSingleData from "@openeuropa/bcl-data-select/data--single.js";
 import select from "@openeuropa/bcl-select/select.html.twig";
 
 const getArgs = (data) => {
@@ -47,14 +46,14 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data, args);
   return Object.assign(data, args);
 };
 
-const initMultiselect = (story) => {
-  const demo = story();
+const initMultiselect = async (story) => {
+  const demo = await story();
   return `
     <script>
       if (document.querySelector(".multi-select")) {
@@ -68,10 +67,23 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
+const initSingleselect = async (story) => {
+  const demo = await story();
+  return `
+    <script>
+      if (document.querySelector(".single-select")) {
+        new SlimSelect({
+          select: ".single-select",
+          placeholder: "Please select a value",
+        });
+      }
+    </script>
+  ${demo}`;
+};
+
 // Stories
 export default {
   title: "Components/Forms/Select",
-  decorators: [withCode, withDesign],
 };
 
 export const Default = (args) => select(applyArgs(demoData, args));
@@ -122,3 +134,9 @@ Multiselect.parameters = {
     },
   ],
 };
+
+export const Singleselect = (args) => select(applyArgs(demoSingleData, args));
+
+Singleselect.argTypes = getArgTypes(demoSingleData, "select");
+Singleselect.args = getArgs(demoSingleData, "select");
+Singleselect.decorators = [initSingleselect];

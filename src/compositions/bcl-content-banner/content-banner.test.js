@@ -32,7 +32,7 @@ describe("OE - Content banner", () => {
           day: "23",
           date_time: "2021-01-23",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -40,7 +40,7 @@ describe("OE - Content banner", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, ...demoLinksData })
+      render({ ...demoData, ...demoLinksData }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -48,7 +48,7 @@ describe("OE - Content banner", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, background: "white" })
+      render({ ...demoData, background: "white" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -63,13 +63,13 @@ describe("OE - Content banner", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoLinksData, true))
+      await axe(await renderTwigFileAsHtml(template, demoLinksData, true)),
     ).toHaveNoViolations();
   });
 });

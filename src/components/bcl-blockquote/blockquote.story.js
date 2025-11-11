@@ -1,7 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getTitleControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-blockquote/data.js";
 import blockquote from "@openeuropa/bcl-blockquote/blockquote.html.twig";
@@ -58,7 +56,7 @@ const getArgTypes = () => ({
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   data.attributes.removeClass(`text-${data.alignment}`);
 
@@ -67,7 +65,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Blockquote",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

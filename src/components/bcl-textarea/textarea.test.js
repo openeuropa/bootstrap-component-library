@@ -22,7 +22,7 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, required: true })
+      render({ ...demoData, required: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -30,7 +30,7 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, disabled: true })
+      render({ ...demoData, disabled: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, readonly: true })
+      render({ ...demoData, readonly: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -50,7 +50,7 @@ describe("OE - textarea", () => {
         ...demoData,
         invalid: true,
         invalid_feedback: "New invalid feedback",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -58,7 +58,11 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, valid: true, valid_feedback: "New valid feedback" })
+      render({
+        ...demoData,
+        valid: true,
+        valid_feedback: "New valid feedback",
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -66,7 +70,7 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, floating: true })
+      render({ ...demoData, floating: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -74,7 +78,7 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, horizontal: true })
+      render({ ...demoData, horizontal: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -82,13 +86,13 @@ describe("OE - textarea", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, text: "Sample text presented inside" })
+      render({ ...demoData, text: "Sample text presented inside" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

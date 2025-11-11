@@ -20,7 +20,7 @@ describe("OE - Gallery", () => {
   test("renders correctly with new counter", () => {
     expect.assertions(1);
     return expect(
-      render({ ...dataDefault, counter: 4 })
+      render({ ...dataDefault, counter: 4 }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -63,7 +63,7 @@ describe("OE - Gallery", () => {
                     ></iframe>`,
           },
         ],
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -78,13 +78,14 @@ describe("OE - Gallery", () => {
           path: "/example.html",
           label: "Link label",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
+  jest.setTimeout(20000);
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault, true))
+      await axe(await renderTwigFileAsHtml(template, dataDefault, true)),
     ).toHaveNoViolations();
   });
 });

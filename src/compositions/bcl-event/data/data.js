@@ -1,5 +1,4 @@
-import isChromatic from "chromatic/isChromatic";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import {
   filterButton,
@@ -19,8 +18,6 @@ import layout from "@openeuropa/bcl-base-templates/data/layout";
 import dataListing from "@openeuropa/bcl-event/data/data--listing";
 import dataPage from "@openeuropa/bcl-event/data/data--page";
 
-const chromatic = process.env.STORYBOOK_ENV;
-
 const date = {
   day: "17",
   month: "oct",
@@ -32,14 +29,10 @@ const date = {
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
-if (isChromatic() || chromatic) {
-  dataPage.banner.image.classes = "chromatic-ignore";
-}
-
 const simpleFile = { ...file };
 
 delete simpleFile.translation;
-simpleFile.attributes = new drupalAttribute().addClass(["mb-3-5"]);
+simpleFile.attributes = new DrupalAttribute().addClass(["mb-3-5"]);
 const files = [simpleFile, simpleFile];
 
 const baseData = {
@@ -92,7 +85,7 @@ const demoListing = {
   banner: {
     title: "Events",
     title_tag: "h1",
-    attributes: new drupalAttribute(),
+    attributes: new DrupalAttribute(),
   },
 };
 

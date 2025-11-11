@@ -1,7 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-textarea/data.js";
 import textarea from "@openeuropa/bcl-textarea/textarea.html.twig";
@@ -70,7 +68,7 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data, args);
   return Object.assign(data, args);
@@ -79,7 +77,6 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Forms/Textarea",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

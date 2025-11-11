@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
     content_classes: "border-secondary",
     image: "https://picsum.photos/id/154/1200/800",
     full_width: true,
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "bg-light",
       "text-dark",
       "text-center",
@@ -22,9 +22,9 @@ module.exports = {
       content_classes: "bg-light p-3",
       embedded_media:
         '<iframe title="New digital strategy first" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>',
-      attributes: new drupalAttribute().setAttribute(
+      attributes: new DrupalAttribute().setAttribute(
         "src",
-        "https://www.youtube.com/embed/VFYlYeFAEH4"
+        "https://www.youtube.com/embed/VFYlYeFAEH4",
       ),
     },
   },
@@ -39,11 +39,11 @@ module.exports = {
         size: "fluid",
         path: "/icons.svg",
       },
-      attributes: new drupalAttribute().addClass(["btn", "btn-primary"]),
+      attributes: new DrupalAttribute().addClass(["btn", "btn-primary"]),
     },
     image: "https://picsum.photos/id/154/1200/800",
     shade: true,
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "bg-light",
       "text-center",
       "mb-4-5",
@@ -110,9 +110,9 @@ module.exports = {
       content_classes: "bg-light p-3",
       embedded_media:
         '<iframe title="New digital strategy" width="350" height="197" src="https://www.youtube.com/embed/fgi-GSCB6ho" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>',
-      attributes: new drupalAttribute().setAttribute(
+      attributes: new DrupalAttribute().setAttribute(
         "src",
-        "https://www.youtube.com/embed/VFYlYeFAEH4"
+        "https://www.youtube.com/embed/VFYlYeFAEH4",
       ),
     },
   },

@@ -1,6 +1,4 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-
+import { correctPaths } from "@openeuropa/bcl-story-utils";
 import dateBlock from "@openeuropa/bcl-date-block/date-block.html.twig";
 import demoData from "@openeuropa/bcl-date-block/data/data.js";
 
@@ -77,11 +75,13 @@ const getArgTypes = () => ({
   },
 });
 
-const applyArgs = (data, args) => Object.assign(data, args);
+const applyArgs = (data, args) => {
+  correctPaths(data);
+  return Object.assign(data, args);
+};
 
 export default {
   title: "Compositions/Date block",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   banner: {
@@ -11,7 +11,7 @@ module.exports = {
         trigger: {
           label: "Create content",
           path: "#",
-          attributes: new drupalAttribute().addClass([
+          attributes: new DrupalAttribute().addClass([
             "d-inline-block",
             "mt-3",
             "mt-md-0",
@@ -34,12 +34,12 @@ module.exports = {
     content:
       "<h2 class='mb-0'>Group name</h2><div><a href='#'>Leave group</a><button></div>",
     extra_classes_body: "p-3-5",
-    attributes: new drupalAttribute().addClass("border-0"),
+    attributes: new DrupalAttribute().addClass("border-0"),
   },
   navigation: {
     nav: true,
     tabs: true,
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .addClass(["bcl__nav", "bg-gray", "mb-3-5", "mb-lg-5", "n-mx-container"])
       .setAttribute("aria-label", "content-navigation"),
     items: [
@@ -62,7 +62,7 @@ module.exports = {
         trigger: {
           label: "Links",
           path: "#",
-          attributes: new drupalAttribute().addClass("nav-link"),
+          attributes: new DrupalAttribute().addClass("nav-link"),
         },
         items: [
           {
@@ -91,9 +91,9 @@ module.exports = {
       {
         label: "Link",
         path: "/example.html",
-        attributes: new drupalAttribute().setAttribute(
+        attributes: new DrupalAttribute().setAttribute(
           "aria-label",
-          "other-link"
+          "other-link",
         ),
       },
     ],
@@ -102,21 +102,21 @@ module.exports = {
     {
       label: "Group name",
       background: "light",
-      attributes: new drupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
     },
     {
       label: "Restricted",
       background: "light",
       dismissible: true,
       icon_path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
     },
     {
       label: "Private",
       background: "light",
       dismissible: true,
       icon_path: "/icons.svg",
-      attributes: new drupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2", "text-dark", "mb-2"]),
     },
   ],
 };

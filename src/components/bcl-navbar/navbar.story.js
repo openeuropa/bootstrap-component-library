@@ -1,7 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getVariants, correctPaths } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-navbar/data.js";
 import navbar from "@openeuropa/bcl-navbar/navbar.html.twig";
@@ -55,7 +53,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data);
   if (args.background === "dark") {
@@ -70,7 +68,6 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Navbar",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

@@ -1,7 +1,47 @@
+/* stylelint-disable no-descending-specificity */
+.bcl-sidebar:has(> .bcl-inpage-navigation) {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 .bcl-inpage-navigation {
-  display: none;
-  top: map-get($spacers, 3); // needed for position-sticky
+  top: 0;
   background-color: $gray-100;
+
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: normal;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    border-bottom: 1px solid $gray-300;
+    width: 100%;
+    padding: map-get($spacers, "3-5");
+    &:after {
+      display: none;
+    }
+    .bi {
+      transition: 0.3s ease;
+    }
+    &.show {
+      .bi {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    position: relative;
+    background-color: $gray-100;
+    width: 100%;
+    top: 100% !important;
+    border: none;
+    border-radius: 0;
+    transform: none !important;
+  }
 
   .bcl-heading {
     margin-bottom: 0;
@@ -28,8 +68,101 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-down(sm) {
+  .bcl-sidebar:has(> .bcl-inpage-navigation) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@include media-breakpoint-down(md) {
+  .bcl-inpage-navigation.dynamic-active {
+    display: none;
+    &:has(.active) {
+      display: block;
+    }
+  }
+  .bcl-sidebar {
+    .bcl-inpage-navigation.dynamic-active {
+      ul {
+        padding: map-get($spacers, 1);
+      }
+      .bcl-heading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2000;
+        height: 64px;
+        opacity: 0;
+      }
+      .dropdown-menu {
+        display: block;
+        padding: map-get($spacers, 2);
+        position: absolute;
+        &.show {
+          .nav-item {
+            display: block;
+            &:has(> .active) {
+              order: -1;
+            }
+          }
+          &:after {
+            border-top-color: transparent;
+            border-bottom: 5px solid #fff;
+            top: 25px;
+          }
+        }
+        .nav {
+          display: flex;
+        }
+        .nav-item {
+          display: none;
+          transition: none;
+          &:has(> .active) {
+            display: block;
+          }
+          .nav-link {
+            margin: 0;
+          }
+        }
+        &:after {
+          content: "";
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #fff;
+          position: absolute;
+          top: 30px;
+          right: 22px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
   .bcl-inpage-navigation {
     display: block;
+    top: map-get($spacers, 3);
+    .dropdown-toggle {
+      cursor: auto;
+      &::after {
+        display: none;
+      }
+      .bi {
+        display: none;
+      }
+    }
+    .dropdown-menu {
+      position: relative !important;
+      background: transparent;
+      padding: 0;
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .bcl-sidebar:has(> .bcl-inpage-navigation) {
+    padding-bottom: map-get($spacers, 3);
   }
 }

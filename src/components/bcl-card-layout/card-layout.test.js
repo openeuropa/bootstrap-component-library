@@ -28,21 +28,21 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoDataGroup, cols_extra_classes: "col-class" })
+      render({ ...demoDataGroup, cols_extra_classes: "col-class" }),
     ).resolves.toMatchSnapshot();
   });
   test(`grid renders correctly with 2 per row`, () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoDataGrid, grid_columns: "2" })
+      render({ ...demoDataGrid, grid_columns: "2" }),
     ).resolves.toMatchSnapshot();
   });
   test(`grid renders correctly with cards having equal height`, () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoDataGrid, equal_height: true })
+      render({ ...demoDataGrid, equal_height: true }),
     ).resolves.toMatchSnapshot();
   });
   test(`masonry renders correctly`, () => {
@@ -57,7 +57,7 @@ describe("OE - Card", () => {
     });
 
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataGroup, true))
+      await axe(await renderTwigFileAsHtml(template, demoDataGroup, true)),
     ).toHaveNoViolations();
   });
 });

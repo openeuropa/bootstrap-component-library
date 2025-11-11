@@ -3,4 +3,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  &:focus-visible {
+    box-shadow: none;
+    outline: 2px solid $white;
+    outline-offset: -3px;
+    background: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+  }
+}
+
+.btn-close {
+  &:focus-visible {
+    box-shadow: none;
+    border: none;
+    outline: 2px solid $primary;
+  }
 }

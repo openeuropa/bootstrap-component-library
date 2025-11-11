@@ -1,9 +1,9 @@
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 export const sortBy = {
   label: "Sort by",
-  attributes: new drupalAttribute().addClass(
-    "mt-2 mt-md-0 mb-4 mb-md-0 mx-md-4 w-auto"
+  attributes: new DrupalAttribute().addClass(
+    "mt-2 mt-md-0 mb-4 mb-md-0 mx-md-4 w-auto",
   ),
   aria_label: "sort-select",
   label_extra_classes: "mb-0",
@@ -18,8 +18,8 @@ export const sortBy = {
 
 export const itemsPerPage = {
   label: "Items per page",
-  attributes: new drupalAttribute().addClass(
-    "mt-2 mt-md-0 mb-md-0 ms-md-4 w-auto"
+  attributes: new DrupalAttribute().addClass(
+    "mt-2 mt-md-0 mb-md-0 ms-md-4 w-auto",
   ),
   aria_label: "sort-select",
   label_extra_classes: "mb-0",

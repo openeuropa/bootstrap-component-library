@@ -1,7 +1,6 @@
-import registerAddonCode from "@whitespace/storybook-addon-code/register";
-import { addons } from "@storybook/addons";
+import { addons } from "storybook/manager-api";
 import browserUpdate from "browser-update";
-import { create } from "@storybook/theming";
+import { create } from "storybook/theming";
 
 addons.setConfig({
   isFullscreen: false,
@@ -43,11 +42,4 @@ browserUpdate({
   },
   noclose: false,
   no_permanent_hide: false,
-});
-
-registerAddonCode({
-  tabs: [
-    { label: "Twig", lang: "html.twig" },
-    { label: "Data", lang: "js" },
-  ],
 });

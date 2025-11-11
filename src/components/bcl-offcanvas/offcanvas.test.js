@@ -22,7 +22,7 @@ describe("OE - Offcanvas", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, responsiveness: "lg" })
+      render({ ...demoData, responsiveness: "lg" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -65,7 +65,7 @@ describe("OE - Offcanvas", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, extra_classes_close: "close-button-extra-class" })
+      render({ ...demoData, extra_classes_close: "close-button-extra-class" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -73,7 +73,7 @@ describe("OE - Offcanvas", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, extra_classes_header: "header-extra-class" })
+      render({ ...demoData, extra_classes_header: "header-extra-class" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -81,13 +81,13 @@ describe("OE - Offcanvas", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, extra_classes_body: "body-extra-class" })
+      render({ ...demoData, extra_classes_body: "body-extra-class" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

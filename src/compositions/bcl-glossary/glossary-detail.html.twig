@@ -1,6 +1,6 @@
-{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
-{% block  content %}
+{%- block  content %}
 	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'Description',
 		title_tag: 'h2',
@@ -38,6 +38,5 @@
     <div {{ file_classes ? 'class="' ~ file_classes ~ '"' }}>
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     </div>
-  {% endfor %}
-
-{% endblock %}
+	{% endfor %}
+{%- endblock -%}

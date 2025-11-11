@@ -49,7 +49,7 @@ const buildStyles = (entry, dest, options) => {
     postcssSourceMap = options.sourceMap; // as a file
   }
 
-  const sassResult = sass.renderSync({
+  const renderOptions = {
     file: entry,
     outFile: dest,
     noErrorCss: true,
@@ -61,28 +61,35 @@ const buildStyles = (entry, dest, options) => {
       path.resolve(process.cwd(), "node_modules"),
       ...(options.includePaths || []),
     ],
-  });
+  };
 
-  postcss(plugins)
-    .use(
-      prefixer({
-        prefix: options.prefix ? options.prefix : "",
+  const silencedDeprecations = Array.isArray(options.silenceDeprecations)
+    ? options.silenceDeprecations
+    : undefined;
 
-        transform: function (
-          prefix,
-          selector,
-          prefixedSelector,
-          filePath,
-          rule
-        ) {
-          if (prefix) {
-            return prefixedSelector;
-          } else {
-            return selector;
-          }
-        },
-      })
-    )
+  if (silencedDeprecations && silencedDeprecations.length) {
+    renderOptions.silenceDeprecations = silencedDeprecations;
+  }
+
+  if (typeof options.quietDeps !== "undefined") {
+    renderOptions.quietDeps = options.quietDeps;
+  } else if (silencedDeprecations && silencedDeprecations.length) {
+    renderOptions.quietDeps = true;
+  }
+
+  const sassResult = sass.renderSync(renderOptions);
+
+  const processor = postcss(plugins);
+  if (options.prefix) {
+    console.error(
+      `The prefix option is deprecated, use 'prefixer' instead, e.g.: prefixer: { prefix: "${options.prefix}" }`,
+    );
+    processor.use(prefixer({ prefix: options.prefix }));
+  } else if (options.prefixer) {
+    processor.use(prefixer(options.prefixer));
+  }
+
+  processor
     .process(sassResult.css, {
       map:
         postcssSourceMap === "file"

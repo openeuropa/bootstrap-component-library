@@ -1,9 +1,6 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import headerData from "@openeuropa/bcl-data-header/data--ucpkn";
 import header from "@openeuropa/bcl-header/header.html.twig";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-// eslint-disable-next-line import/no-unresolved
 import "!!null-loader!@openeuropa/bcl-theme-default/src/scss/_header.scss";
 import ucpknLogo from "@openeuropa/bcl-theme-ucpkn/logo/ucpkn_logo.svg";
 
@@ -11,7 +8,6 @@ headerData.project_logo.path = ucpknLogo;
 
 export default {
   title: "Compositions/Header",
-  decorators: [withCode, withDesign],
   parameters: {
     controls: { disable: true },
     badges: ["deprecated"],

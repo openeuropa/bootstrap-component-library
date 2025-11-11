@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Content banner renders correctly 1`] = `
 <jest>
@@ -127,24 +127,37 @@ exports[`OE - Content banner renders correctly with a date block 1`] = `
               class="bcl-date-block bg-date rounded mw-date text-center d-flex flex-column ratio ratio-1x1"
               datetime="2021-01-23"
             >
-              <span
+              <div
                 class="d-flex flex-column pt-2"
               >
-                <span
-                  class="d-flex flex-column align-item-center justify-content-center bg-white border border-bottom-0 w-100 h-100 fs-5 text-uppercase"
+                <div
+                  class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-2"
                 >
-                  <span
-                    class="d-block"
+                  <div
+                    class="d-flex flex-column align-item-center justify-content-center"
                   >
-                    23 Jan
-                  </span>
-                </span>
-                <span
-                  class="bg-lighter border w-100 rounded-bottom py-1"
+                    <div
+                      class="date-month lh-1"
+                    >
+                      Jan
+                    </div>
+                    <div
+                      class="date-day fw-bold fs-4 lh-1"
+                    >
+                      23
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center"
                 >
-                  2021
-                </span>
-              </span>
+                  <div
+                    class="date-year year-start"
+                  >
+                    2021
+                  </div>
+                </div>
+              </div>
             </time>
           </div>
           <div

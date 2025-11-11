@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-links-block/data/data.js";
@@ -41,18 +39,19 @@ const getArgTypes = () => ({
 });
 
 const applyArgs = (data, args) => {
-  data.links.forEach((link) => {
-    if ("icon" in link) {
-      link.icon.path = "/icons.svg";
-      link.icon_position = "before";
-    }
-  });
+  if (data.links && data.links.length) {
+    data.links.forEach((link) => {
+      if ("icon" in link) {
+        link.icon.path = "/icons.svg";
+        link.icon_position = "before";
+      }
+    });
+  }
   return Object.assign(correctPaths(data), args);
 };
 
 export default {
   title: "Paragraphs/Links block",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     viewport: {

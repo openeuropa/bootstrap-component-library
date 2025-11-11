@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-pagination/data";
 
@@ -34,7 +34,7 @@ describe("OE - Pagination", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, alignment })
+        render({ ...demoData, alignment }),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -43,7 +43,7 @@ describe("OE - Pagination", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, ellipsis_after: true, ellipsis_before: true })
+      render({ ...demoData, ellipsis_after: true, ellipsis_before: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -56,12 +56,12 @@ describe("OE - Pagination", () => {
           {
             label: "1",
             path: "/example.html",
-            attributes: new drupalAttribute()
+            attributes: new DrupalAttribute()
               .addClass("new-class")
               .setAttribute("new-attributes", "1"),
           },
         ],
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -69,7 +69,7 @@ describe("OE - Pagination", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, icon_path: "", _enable_prev_next_icon: true })
+      render({ ...demoData, icon_path: "", _enable_prev_next_icon: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -86,7 +86,20 @@ describe("OE - Pagination", () => {
             size: "fluid",
           },
         },
-      })
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("with custom list attributes renders for correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...demoData,
+        list_attributes: new DrupalAttribute()
+          .addClass("new-class")
+          .setAttribute("new-attributes", "1"),
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -94,13 +107,13 @@ describe("OE - Pagination", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "glossary" })
+      render({ ...demoData, variant: "glossary" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(await renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

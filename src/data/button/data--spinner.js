@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   label: "Label",
@@ -6,6 +6,6 @@ module.exports = {
   spinner: {
     size: "sm",
     assistive_text: "Loading...",
-    attributes: new drupalAttribute().addClass("me-1"),
+    attributes: new DrupalAttribute().addClass("me-1"),
   },
 };

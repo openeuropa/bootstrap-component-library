@@ -1,8 +1,7 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import {
   initScrollspy,
   initBadges,
+  initMultiselects,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
 import {
@@ -34,7 +33,6 @@ const getArgTypes = () => ({
 
 export default {
   title: "Features/Event",
-  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     badges: ["stable", "deprecated"],
@@ -115,7 +113,7 @@ export const Listing = (args) =>
   listingPage(applyArgs(correctPaths(demoListing), args));
 
 Listing.storyName = "Event listing";
-Listing.decorators = [initBadges];
+Listing.decorators = [initBadges, initMultiselects];
 Listing.args = getArgs();
 Listing.argTypes = getArgTypes();
 Listing.parameters = {

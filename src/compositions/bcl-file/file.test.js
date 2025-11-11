@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-file/data/data";
 import demoCardData from "@openeuropa/bcl-file/data/data--card";
@@ -33,7 +33,7 @@ describe("OE - File", () => {
         title_link: {
           path: "/example.html",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -43,7 +43,7 @@ describe("OE - File", () => {
       render({
         ...demoData,
         translation: {
-          attributes: new drupalAttribute().addClass("new-class"),
+          attributes: new DrupalAttribute().addClass("new-class"),
           id: "language-dropdown",
           label: {
             label: "Other languages (3)",
@@ -59,13 +59,13 @@ describe("OE - File", () => {
             },
           ],
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });
@@ -83,13 +83,139 @@ describe("OE - File Card", () => {
         ...demoCardData,
         title: "File card test title",
         title_tag: "h6",
-      })
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with different download icon`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            name: "cloud-download",
+            size: "fluid",
+          },
+        },
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with empty download icon name`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            size: "m",
+          },
+        },
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with download that has different icon path`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            path: "new_icons.svg",
+          },
+        },
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCardData, true))
+      await axe(await renderTwigFileAsHtml(template, demoCardData, true)),
     ).toHaveNoViolations();
+  });
+
+  test(`renders correctly with override default attributes download`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Go here",
+          path: "/example.html",
+          attributes: new DrupalAttribute()
+            .addClass("new-class")
+            .setAttribute("download", "false")
+            .setAttribute("target", "_self"),
+        },
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders correctly with new attributes download`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        download: {
+          label: "Go here",
+          path: "/example.html",
+          attributes: new DrupalAttribute().setAttribute("example", "test"),
+        },
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`translations renders correctly with new attributes download`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "Go here",
+          path: "/example.html",
+          attributes: new DrupalAttribute().setAttribute("example", "test"),
+        },
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`translations renders correctly with empty download icon name`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            size: "m",
+          },
+        },
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test(`translations renders correctly with download that has different icon path`, () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoCardData,
+        download: {
+          label: "Download",
+          path: "/example.html",
+          icon: {
+            path: "new_icons.svg",
+          },
+        },
+      }),
+    ).resolves.toMatchSnapshot();
   });
 });

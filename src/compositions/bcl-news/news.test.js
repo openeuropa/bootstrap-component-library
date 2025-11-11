@@ -24,7 +24,7 @@ describe("OE - News", () => {
 
   test(`full page passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(await renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 
@@ -36,7 +36,7 @@ describe("OE - News", () => {
 
   test(`listing passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+      await axe(await renderTwigFileAsHtml(listingTemplate, demoListing)),
     ).toHaveNoViolations();
   });
 });

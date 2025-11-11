@@ -1,15 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import isChromatic from "chromatic/isChromatic";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import dataDefault from "@openeuropa/bcl-content-banner/data/data.js";
 import dataDate from "@openeuropa/bcl-date-block/data/data";
 import dataLinks from "@openeuropa/bcl-content-banner/data/data--links";
 import contentBanner from "@openeuropa/bcl-content-banner/content-banner.html.twig";
 
-const chromatic = process.env.STORYBOOK_ENV;
 const links = [...dataLinks.links];
 const badges = [...dataDefault.badges];
 const image = { ...dataDefault.image };
@@ -70,7 +66,7 @@ const getArgTypes = () => ({
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   if (args.date) {
     data.image = {};
@@ -90,10 +86,6 @@ const applyArgs = (data, args) => {
     data.badges = badges;
   }
 
-  if (data.image && (isChromatic() || chromatic)) {
-    data.image.classes = "chromatic-ignore";
-  }
-
   data.background = args.background;
   data.image_size = args.image_size;
   correctPaths(data);
@@ -103,7 +95,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Compositions/Content banner",
-  decorators: [withCode, withDesign],
   parameters: {
     layout: "fullscreen",
     design: [

@@ -1,14 +1,8 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-dropdown/data.js";
 import dropdown from "@openeuropa/bcl-dropdown/dropdown.html.twig";
-
-const chromatic = process.env.STORYBOOK_ENV;
 
 const getArgs = () => ({
   direction: "default",
@@ -46,7 +40,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   if (args.direction === "default") {
@@ -58,14 +52,14 @@ const applyArgs = (data, args) => {
   return Object.assign(correctPaths(data), args);
 };
 
-const paddingBody = (story) => {
-  const demo = story();
+const paddingBody = async (story) => {
+  const demo = await story();
   return `<div style="padding: 10rem 0 10rem 14rem">${demo}</div>`;
 };
 
 export default {
   title: "Components/Dropdown",
-  decorators: [withCode, withDesign, paddingBody],
+  decorators: [paddingBody],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -87,10 +81,3 @@ export const Default = (args) => dropdown(applyArgs(demoData, args));
 
 Default.args = getArgs(demoData);
 Default.argTypes = getArgTypes(demoData);
-if (isChromatic() || chromatic) {
-  Default.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.click(button);
-  };
-}

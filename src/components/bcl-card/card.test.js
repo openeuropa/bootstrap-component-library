@@ -3,7 +3,7 @@ import {
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData, { image } from "@openeuropa/bcl-data-card/data";
 import demoDataHorizontal from "@openeuropa/bcl-data-card/data--horizontal";
@@ -24,7 +24,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, image: { ...image, position: "bottom" } }, true)
+      render({ ...demoData, image: { ...image, position: "bottom" } }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -32,7 +32,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "danger" }, true)
+      render({ ...demoData, variant: "danger" }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, border_variant: "danger" }, true)
+      render({ ...demoData, border_variant: "danger" }, true),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,7 +54,7 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, badges: [{ label: "Card Category" }] })
+      render({ ...demoData, badges: [{ label: "Card Category" }] }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -62,13 +62,13 @@ describe("OE - Card", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, text_color: "white" }, true)
+      render({ ...demoData, text_color: "white" }, true),
     ).resolves.toMatchSnapshot();
   });
 
   test(`renders correctly with custom title attributes`, () => {
     expect.assertions(1);
-    demoData.title_attributes = new drupalAttribute()
+    demoData.title_attributes = new DrupalAttribute()
       .setAttribute("test", "value")
       .setAttribute("attribute", "with a value");
 
@@ -78,7 +78,7 @@ describe("OE - Card", () => {
   test(`passes the accessibility tests`, async () => {
     demoData.subtitle.tag = "h2";
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

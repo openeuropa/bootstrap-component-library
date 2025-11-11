@@ -1,0 +1,69 @@
+// Color scheme - List Group
+
+@mixin generate-badges($color, $value) {
+  .badge.bg-#{$color} a,
+  .badge.bg-#{$color} {
+    @if $color == light or $color == warning {
+      color: $black;
+    } @else {
+      color: $white;
+    }
+  }
+  .badge-outline-#{$color} a {
+    color: $value !important;
+  }
+  .badge-outline-#{$color} {
+    background: transparent !important;
+    @if $color == light {
+      border: $border-width solid $light;
+      color: $light !important;
+    } @else {
+      border: $border-width solid $value;
+      color: $value !important;
+    }
+  }
+  a.badge {
+    &:focus-within,
+    &:active,
+    &:hover {
+      &.badge-outline-#{$color} {
+        @if $color == dark {
+          background-color: $light !important;
+          border-color: $black;
+        } @else if $color == light {
+          border-color: $white;
+          color: $white;
+          background: rgba($white, 0.3) !important;
+        } @else {
+          background-color: tint-color($value, 90%) !important;
+          border-color: shade-color($value, 15%) !important;
+        }
+      }
+      &.text-bg-#{$color} {
+        background-color: shade-color($value, 15%) !important;
+      }
+    }
+    &.text-bg-#{$color} {
+      &:focus {
+        @if $enable-shadows {
+          @include box-shadow(
+            $btn-box-shadow,
+            0 0 0 $btn-focus-width
+              rgba(mix(color-contrast($value), $value, 15%), 0.5)
+          );
+        } @else {
+          box-shadow: 0
+            0
+            0
+            $btn-focus-width
+            rgba(mix(color-contrast($value), $value, 15%), 0.5);
+        }
+      }
+    }
+    &.badge-outline-#{$color} {
+      &:focus {
+        box-shadow: 0 0 0 $btn-focus-width rgba($value, 0.5);
+      }
+    }
+  }
+}

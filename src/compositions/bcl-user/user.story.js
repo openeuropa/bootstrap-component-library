@@ -1,5 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, initBadges } from "@openeuropa/bcl-story-utils";
 
 import {
@@ -14,8 +12,8 @@ import user from "@openeuropa/bcl-user/user.html.twig";
 import userCompact from "@openeuropa/bcl-user/user-compact.html.twig";
 import userTerms from "@openeuropa/bcl-user/user-terms.html.twig";
 
-const initMultiselect = (story) => {
-  const demo = story();
+const initMultiselect = async (story) => {
+  const demo = await story();
   return `
     <script>
       if (document.querySelector(".multi-select")) {
@@ -29,8 +27,8 @@ const initMultiselect = (story) => {
   ${demo}`;
 };
 
-const cancelTab = (story) => {
-  const demo = story();
+const cancelTab = async (story) => {
+  const demo = await story();
   return `
     <script>
       document.getElementById("cancel-btn").onclick = function () {
@@ -45,7 +43,7 @@ const cancelTab = (story) => {
 
 export default {
   title: "Features/Users",
-  decorators: [withCode, withDesign, initMultiselect, cancelTab],
+  decorators: [initMultiselect, cancelTab],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },

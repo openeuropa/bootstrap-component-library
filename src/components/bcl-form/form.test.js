@@ -24,7 +24,7 @@ describe("OE - Form", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataBasic, true))
+      await axe(await renderTwigFileAsHtml(template, dataBasic, true)),
     ).toHaveNoViolations();
   });
 
@@ -36,7 +36,7 @@ describe("OE - Form", () => {
 
   test(`horizontal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataHorizontal, true))
+      await axe(await renderTwigFileAsHtml(template, dataHorizontal, true)),
     ).toHaveNoViolations();
   });
 
@@ -48,7 +48,7 @@ describe("OE - Form", () => {
 
   test(`using a grid passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataGrid, true))
+      await axe(await renderTwigFileAsHtml(template, dataGrid, true)),
     ).toHaveNoViolations();
   });
 
@@ -64,7 +64,7 @@ describe("OE - Form", () => {
           path: "/example.html",
           label: "A title created by the bcl heading template",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 

@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
     ],
     content: `<div class="my-3"><span class="text-muted me-3">Published: 3 September 2020</span></div>${getDummyText(
       5,
-      true
+      true,
     )}`,
     image: {
       path: "https://picsum.photos/255/255?random=6",
@@ -36,7 +36,7 @@ module.exports = {
           name: "calendar-check",
           path: "/icons.svg",
         },
-        attributes: new drupalAttribute().addClass([
+        attributes: new DrupalAttribute().addClass([
           "btn",
           "btn-primary",
           "d-block",
@@ -46,10 +46,11 @@ module.exports = {
     ],
   },
   sidebar: {
-    attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
     title: "Page content",
-    title_attributes: new drupalAttribute().addClass("mb-0"),
+    title_attributes: new DrupalAttribute().addClass("mb-0"),
     id: "bcl-inpage-navigation",
+    icon_path: "/icons.svg",
+    dropdown_id: "bcl-inpage-navigation-dropdown",
     links: [
       {
         label: "Description",

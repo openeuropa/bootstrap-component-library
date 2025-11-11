@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   alignment: "center",
@@ -6,25 +6,25 @@ module.exports = {
   first: {
     label: "First",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute("aria-label", "First page"),
+    attributes: new DrupalAttribute().setAttribute("aria-label", "First page"),
   },
   prev: {
     label: "Previous",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute(
+    attributes: new DrupalAttribute().setAttribute(
       "aria-label",
-      "Previous page"
+      "Previous page",
     ),
   },
   next: {
     label: "Next",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute("aria-label", "Next page"),
+    attributes: new DrupalAttribute().setAttribute("aria-label", "Next page"),
   },
   last: {
     label: "Last",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute("aria-label", "Last page"),
+    attributes: new DrupalAttribute().setAttribute("aria-label", "Last page"),
   },
   items: [
     {
@@ -49,7 +49,7 @@ module.exports = {
       path: "/example.html",
     },
   ],
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .addClass(["mt-4-5"])
     .setAttribute("aria-label", "Pagination aria label"),
 };

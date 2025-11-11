@@ -17,7 +17,7 @@ describe("OE - navbar", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, color_set })
+        render({ ...demoData, color_set }),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -26,7 +26,7 @@ describe("OE - navbar", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, expand: "sm" })
+      render({ ...demoData, expand: "sm" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -34,13 +34,13 @@ describe("OE - navbar", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, disable_collapse: true })
+      render({ ...demoData, disable_collapse: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(await renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

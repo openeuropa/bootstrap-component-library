@@ -23,7 +23,7 @@ describe("OE - Accordion", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, flush: true })
+      render({ ...demoData, flush: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -39,7 +39,7 @@ describe("OE - Accordion", () => {
           path: "/example.html",
           label: "A title created by the bcl heading template",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -51,7 +51,7 @@ describe("OE - Accordion", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoCustomTags))
+      await axe(await renderTwigFileAsHtml(template, demoCustomTags)),
     ).toHaveNoViolations();
   });
 });

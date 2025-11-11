@@ -1,49 +1,26 @@
-import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { Buffer } from 'buffer';
+import { MINIMAL_VIEWPORTS } from "storybook/viewport";
+import { Buffer } from "buffer";
+
+import { renderToCanvas } from "../tools/story-utils/render-to-canvas.js";
 
 global.Buffer = Buffer;
 
 export const parameters = {
   a11y: {
-    element: "#root",
+    element: "#storybook-root",
     config: {},
     options: {
       checks: { "color-contrast": { options: { noScroll: true } } },
       restoreScroll: true,
     },
     manual: false,
+  },  
+  docs: {
+    canvas: { sourceState: 'shown' },
   },
+  viewMode: 'story',
   controls: { expanded: true },
   layout: "padded",
-  badgesConfig: {
-    [BADGE.STABLE]: {
-      title: 'v1.1',
-      styles: {
-        fontSize: '20',
-        paddingInline: '24px',
-        backgroundColor: '#1EA7FD',
-        borderColor: '#DCDCDC',
-        color: '#F5F5F5',
-        textTransform: 'lowercase',
-        borderWidth: '2px',
-        paddingBlock: '5px',
-      }
-    },
-    [BADGE.DEPRECATED]: {
-      title: 'DEPRECATED',
-      styles: {
-        fontSize: '20',
-        paddingInline: '24px',
-        backgroundColor: '#ff0000',
-        borderColor: '#DCDCDC',
-        color: '#FFFFFF',
-        textTransform: 'lowercase',
-        borderWidth: '2px',
-        paddingBlock: '5px',
-      }
-    },
-  },
   viewport: {
     defaultViewport: "responsive",
     viewports: {
@@ -90,3 +67,6 @@ export const parameters = {
     },
   },
 };
+export const tags = ["autodocs"];
+
+export { renderToCanvas };

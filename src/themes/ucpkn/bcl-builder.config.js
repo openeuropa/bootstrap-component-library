@@ -12,7 +12,7 @@ const excludePaths = [];
 if (templates.length) {
   templates.forEach((template) => {
     excludePaths.push(
-      `${nodeModules}/@openeuropa/bcl-twig-templates/templates/bcl-${template}/*.html.twig`
+      `${nodeModules}/@openeuropa/bcl-twig-templates/templates/bcl-${template}/*.html.twig`,
     );
   });
 }
@@ -89,6 +89,7 @@ module.exports = {
       options: {
         includePaths,
         sourceMap: "file",
+        silenceDeprecations: ["legacy-js-api", "import", "color-functions"],
       },
     },
     {
@@ -98,6 +99,7 @@ module.exports = {
         includePaths,
         sourceMap: "file",
         minify: true,
+        silenceDeprecations: ["legacy-js-api", "import", "color-functions"],
       },
     },
   ],
@@ -117,10 +119,15 @@ module.exports = {
       options: { up: true },
     },
     {
+      from: [path.resolve(nodeModules, "slim-select-2/dist/slimselect.min.js")],
+      to: path.resolve(outputFolder, "js/slim-select-2"),
+      options: { up: true },
+    },
+    {
       from: [
         path.resolve(
           nodeModules,
-          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg"
+          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg",
         ),
       ],
       to: path.resolve(outputFolder, "icons"),
@@ -130,7 +137,7 @@ module.exports = {
       from: [
         path.resolve(
           nodeModules,
-          "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg"
+          "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg",
         ),
       ],
       to: path.resolve(outputFolder, "icons"),

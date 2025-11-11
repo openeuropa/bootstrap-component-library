@@ -38,13 +38,13 @@ describe("OE - Vacancy", () => {
 
   test(`listing passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(listingTemplate, demoListing))
+      await axe(await renderTwigFileAsHtml(listingTemplate, demoListing)),
     ).toHaveNoViolations();
   });
 
   test(`details passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(detailsTemplate, demoDetails))
+      await axe(await renderTwigFileAsHtml(detailsTemplate, demoDetails)),
     ).toHaveNoViolations();
   });
 });

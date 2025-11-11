@@ -31,7 +31,7 @@ select.multi-select {
   opacity: 0;
 }
 
-.ss-main.multi-select {
+.ss-main.multi-select.ss-1 {
   padding: 0;
   &.form-select.is-invalid,
   &.form-select.is-valid {
@@ -70,6 +70,12 @@ select.multi-select {
           right: 0;
           bottom: calc(50% - 3px);
         }
+        &:focus-visible {
+          &:after {
+            outline: 2px solid $white;
+            outline-offset: -6px;
+          }
+        }
       }
     }
     .ss-disabled {
@@ -93,6 +99,32 @@ select.multi-select {
     .ss-add {
       margin-top: 0;
       align-self: center;
+    }
+    .ss-values {
+      .ss-disabled {
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+.ss-main.ss-1 {
+  &.form-select.is-invalid,
+  &.form-select.is-valid {
+    background: none;
+    padding: 0;
+  }
+  &.form-select {
+    border: none;
+    background: none;
+    padding: 0.075rem 0 0.075rem 0.3rem;
+  }
+  .ss-single-selected {
+    min-height: 37px;
+    .placeholder {
+      background: none;
+      cursor: pointer;
+      opacity: 1;
     }
   }
 }
@@ -134,7 +166,7 @@ select.multi-select {
 }
 
 @include media-breakpoint-up(md) {
-  .ss-main.multi-select {
+  .ss-main.ss-1.multi-select {
     .ss-multi-selected {
       padding: map-get($multiselect-spacers, "select-spacer-md") 0
         map-get($multiselect-spacers, "select-spacer-md")

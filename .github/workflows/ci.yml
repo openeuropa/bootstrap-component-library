@@ -9,14 +9,6 @@ on:
       - development
 
 jobs:
-  semantic:
-    name: Validate PR title
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: amannn/action-semantic-pull-request@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   audit:
     name: audit
     runs-on: ubuntu-latest
@@ -30,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Size limit
         run: yarn size
   tests:
@@ -39,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Build themes
         run: yarn build:themes
       - name: Tests
@@ -51,7 +43,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
+      - name: Build twig templates
+        run: yarn workspace @openeuropa/bcl-twig-templates run prepublish
       - name: Package application
         run: yarn dist
       - name: Deploy to Netlify
@@ -70,7 +64,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Package application
         run: yarn dist
       - name: Deploy to Netlify
@@ -89,7 +83,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Package application
         run: yarn dist
       - name: Deploy to Netlify

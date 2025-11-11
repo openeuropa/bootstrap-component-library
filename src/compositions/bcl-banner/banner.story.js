@@ -1,9 +1,7 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { correctPaths, getTitleControls } from "@openeuropa/bcl-story-utils";
 
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 import dataDefault from "@openeuropa/bcl-banner/data/data.js";
 import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
 import dataImage from "@openeuropa/bcl-banner/data/data--image";
@@ -107,7 +105,7 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   resetAttrs(data, args);
@@ -128,7 +126,6 @@ const renderStory = (data, args) => {
 
 export default {
   title: "Paragraphs/Banner",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

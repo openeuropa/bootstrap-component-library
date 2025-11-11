@@ -1,16 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
 import { correctPaths, initScrollspy } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-subscription/data/data";
 import subscriptionPage from "@openeuropa/bcl-subscription/subscription.html.twig";
 
-const chromatic = process.env.STORYBOOK_ENV;
-
-const clientValidation = (story) => {
-  const demo = story();
+const clientValidation = async (story) => {
+  const demo = await story();
   return `<script>
     var backdrop = document.getElementsByClassName("modal-backdrop")[0];
     if (typeof backdrop != "undefined" && backdrop != null) {
@@ -41,8 +35,8 @@ const clientValidation = (story) => {
   </script>${demo}`;
 };
 
-const openModal = (story) => {
-  const demo = story();
+const openModal = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>
@@ -58,8 +52,8 @@ const openModal = (story) => {
     `;
 };
 
-const successState = (story) => {
-  const demo = story();
+const successState = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>
@@ -74,8 +68,8 @@ const successState = (story) => {
     `;
 };
 
-const errorState = (story) => {
-  const demo = story();
+const errorState = async (story) => {
+  const demo = await story();
   return `
     ${demo}
     <script>
@@ -90,7 +84,7 @@ const errorState = (story) => {
 
 export default {
   title: "Features/Subscription",
-  decorators: [withCode, withDesign, initScrollspy],
+  decorators: [initScrollspy],
   parameters: {
     layout: "fullscreen",
     controls: { disable: true },
@@ -107,16 +101,6 @@ export default {
 
 export const Default = () => subscriptionPage(correctPaths(demoData));
 Default.decorators = [clientValidation];
-
-if (isChromatic() || chromatic) {
-  Default.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getAllByText("Subscribe", {
-      selector: "button",
-    });
-    await userEvent.click(button[0]);
-  };
-}
 
 export const SuccessState = () => subscriptionPage(correctPaths(demoData));
 SuccessState.decorators = [openModal, successState];

@@ -1,7 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getFormControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-form-input/data.js";
 import formInput from "@openeuropa/bcl-form-input/form-input.html.twig";
@@ -97,7 +95,7 @@ const resetAttrs = (data, args) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data, args);
   return Object.assign(data, args);
@@ -106,7 +104,6 @@ const applyArgs = (data, args) => {
 // Stories
 export default {
   title: "Components/Forms/Form input",
-  decorators: [withCode, withDesign],
 };
 
 export const FormInput = (args) => formInput(applyArgs(demoData, args));
@@ -216,5 +213,4 @@ File.parameters = {
       url: "https://getbootstrap.com/docs/5.2/forms/form-control/#file-input",
     },
   ],
-  chromatic: { disableSnapshot: true },
 };

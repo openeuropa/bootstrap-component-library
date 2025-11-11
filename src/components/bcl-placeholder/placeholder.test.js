@@ -35,7 +35,7 @@ describe("OE - Placeholder", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, animation })
+        render({ ...demoData, animation }),
       ).resolves.toMatchSnapshot();
     });
   });
@@ -45,14 +45,14 @@ describe("OE - Placeholder", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, variant })
+        render({ ...demoData, variant }),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(await renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });

@@ -1,6 +1,4 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-data-navigation/data.js";
@@ -85,7 +83,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
 
   if (args.alignment === "default") {
@@ -99,7 +97,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Navigation",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

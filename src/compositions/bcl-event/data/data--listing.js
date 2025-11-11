@@ -1,17 +1,17 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("offcanvas-start"),
+    attributes: new DrupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
-    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
+    title_attributes: new DrupalAttribute().addClass("mb-lg-4"),
     search_form: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       items: [
@@ -21,7 +21,7 @@ module.exports = {
             id: "keyword",
             input_type: "text",
             placeholder: "Type a keyword",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new DrupalAttribute().addClass("mb-3"),
           },
         ],
         [
@@ -30,6 +30,7 @@ module.exports = {
             label: "Type",
             type: "select",
             id: "type",
+            multiple: true,
             options: [
               { value: 1, label: "a select option" },
               { value: 2, label: "another select option" },
@@ -37,6 +38,7 @@ module.exports = {
               { value: 4, label: "last option" },
               { label: "Culture", selected: true },
             ],
+            attributes: new DrupalAttribute().addClass("multiselect"),
           },
         ],
         [
@@ -58,7 +60,7 @@ module.exports = {
           {
             label: "Start date",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new DrupalAttribute().addClass("mb-2"),
             id: "creation-date-from",
             wrapper_classes: "mb-3",
           },
@@ -68,7 +70,7 @@ module.exports = {
             input_type: "date",
             label: "End date",
             wrapper_classes: "mb-3",
-            attributes: new drupalAttribute().addClass("mb-4-5"),
+            attributes: new DrupalAttribute().addClass("mb-4-5"),
             id: "creation-date-to",
           },
         ],
@@ -81,7 +83,7 @@ module.exports = {
             label: "Refine",
             type: "submit",
             variant: "primary",
-            attributes: new drupalAttribute().addClass("me-md-3"),
+            attributes: new DrupalAttribute().addClass("me-md-3"),
           },
           {
             label: "Clear",
@@ -98,14 +100,14 @@ module.exports = {
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Barcelona",
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
   ],
 };

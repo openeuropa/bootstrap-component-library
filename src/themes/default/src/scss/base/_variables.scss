@@ -1,6 +1,3 @@
-$enable-negative-margins: true;
-$negative-spacers: negativify-map($spacers);
-
 // Colors variables
 $lighter: $gray-100;
 $date: #1698af;
@@ -67,6 +64,8 @@ $spacers-extended: (
 
 $spacers: map-merge($spacers, $spacers-extended);
 $gutters: $spacers;
+$enable-negative-margins: true;
+$negative-spacers: negativify-map($spacers);
 
 // accordion
 $accordion-button-active-color: $accordion-button-color;
@@ -79,9 +78,6 @@ $badge-font-size: 1.125rem; // 18px
 $badge-font-size-desktop: 1rem; // 16px
 $badge-active-box-shadow: $btn-active-box-shadow;
 $badge-focus-width: $btn-focus-width;
-
-// banners
-$banner-content-border-color: $primary;
 
 // Forms
 $form-check-input-size-lg: $form-check-input-width + 0.3em !default;
@@ -101,6 +97,9 @@ $card-start-col-extra-large-size: 350px;
 $card-start-col-large-size: 255px;
 $card-start-col-size: 160px;
 $card-start-col-small-size: 120px;
+
+// Pagination
+$pagination-border-color: $gray-400;
 
 // Z-index
 // Based on the webtools cookie banner consent, with z-index 100

@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
         id: "view-tab",
         target: "view",
         active: true,
-        attributes: new drupalAttribute()
+        attributes: new DrupalAttribute()
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#view")
@@ -25,7 +25,7 @@ module.exports = {
         path: "#edit",
         id: "edit-tab",
         target: "edit",
-        attributes: new drupalAttribute()
+        attributes: new DrupalAttribute()
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#edit")
@@ -37,7 +37,7 @@ module.exports = {
         path: "#privacy",
         id: "privacy-tab",
         target: "privacy",
-        attributes: new drupalAttribute()
+        attributes: new DrupalAttribute()
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#privacy")
@@ -49,7 +49,7 @@ module.exports = {
         path: "#visibility",
         id: "visibility-tab",
         target: "visibility",
-        attributes: new drupalAttribute()
+        attributes: new DrupalAttribute()
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#visibility")
@@ -61,7 +61,7 @@ module.exports = {
         path: "#cancel",
         id: "cancel-tab",
         target: "cancel",
-        attributes: new drupalAttribute()
+        attributes: new DrupalAttribute()
           .setAttribute("data-bs-toggle", "tab")
           .setAttribute("autocomplete", "off")
           .setAttribute("data-bs-target", "#cancel")
@@ -99,7 +99,7 @@ module.exports = {
           id: "profile-tab",
           target: "profile",
           active: true,
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .setAttribute("data-bs-toggle", "tab")
             .setAttribute("autocomplete", "off")
             .setAttribute("data-bs-target", "#profile")
@@ -110,7 +110,7 @@ module.exports = {
           label: "Privacy settings",
           id: "privacy-tab",
           target: "privacy",
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .setAttribute("data-bs-toggle", "tab")
             .setAttribute("autocomplete", "off")
             .setAttribute("data-bs-target", "#privacy")
@@ -133,12 +133,12 @@ module.exports = {
       label: "My_picture.jpg (3.52 Mb)",
       toggle: true,
       toggle_variant: "link",
-      attributes: new drupalAttribute().addClass(["d-none"]),
+      attributes: new DrupalAttribute().addClass(["d-none"]),
     },
     remove_image_button: {
       label: "Remove",
       variant: "danger",
-      attributes: new drupalAttribute().addClass([
+      attributes: new DrupalAttribute().addClass([
         "mt-2",
         "ms-0",
         "ms-md-2",
@@ -147,7 +147,7 @@ module.exports = {
       ]),
     },
     profile_information: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .addClass(["row"])
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
@@ -158,12 +158,12 @@ module.exports = {
             label: "Save",
             type: "submit",
             variant: "primary",
-            attributes: new drupalAttribute().addClass(["d-inline-block"]),
+            attributes: new DrupalAttribute().addClass(["d-inline-block"]),
           },
           {
             label: "Cancel account",
             variant: "danger",
-            attributes: new drupalAttribute().addClass([
+            attributes: new DrupalAttribute().addClass([
               "d-inline-block",
               "ms-md-3",
               "mt-3",
@@ -194,7 +194,7 @@ module.exports = {
             label: "First name",
             helper_text: "Helper text",
             id: "first-name",
-            attributes: new drupalAttribute().setAttribute("value", "Stefan"),
+            attributes: new DrupalAttribute().setAttribute("value", "Stefan"),
           },
           {
             wrapper_classes: "mb-3",
@@ -203,7 +203,7 @@ module.exports = {
             label: "Last name",
             helper_text: "Helper text",
             id: "last-name",
-            attributes: new drupalAttribute().setAttribute("value", "Mayer"),
+            attributes: new DrupalAttribute().setAttribute("value", "Mayer"),
           },
           {
             wrapper_classes: "mb-3",
@@ -224,7 +224,7 @@ module.exports = {
             label: "Nationality",
             id: "nationality-input",
             helper_text: "Helper text",
-            attributes: new drupalAttribute().setAttribute("value", "German"),
+            attributes: new DrupalAttribute().setAttribute("value", "German"),
           },
           {
             wrapper_classes: "mb-3",
@@ -233,9 +233,9 @@ module.exports = {
             label: "Birth date",
             id: "birth-date",
             helper_text: "Helper text",
-            attributes: new drupalAttribute().setAttribute(
+            attributes: new DrupalAttribute().setAttribute(
               "value",
-              "1972-01-22"
+              "1972-01-22",
             ),
           },
         ],
@@ -260,7 +260,7 @@ module.exports = {
             label: "Country",
             id: "country-input",
             helper_text: "Helper text",
-            attributes: new drupalAttribute().setAttribute("value", "Germany"),
+            attributes: new DrupalAttribute().setAttribute("value", "Germany"),
           },
           {
             wrapper_classes: "mb-3",
@@ -269,9 +269,9 @@ module.exports = {
             label: "City",
             id: "city-input",
             helper_text: "Helper text",
-            attributes: new drupalAttribute().setAttribute(
+            attributes: new DrupalAttribute().setAttribute(
               "value",
-              "Düsseldorf"
+              "Düsseldorf",
             ),
           },
         ],
@@ -295,7 +295,7 @@ module.exports = {
             label: "Organisation",
             id: "organisation-input",
             helper_text: "Helper text",
-            attributes: new drupalAttribute().setAttribute("value", "DG digit"),
+            attributes: new DrupalAttribute().setAttribute("value", "DG digit"),
           },
           {
             wrapper_classes: "mb-3",
@@ -304,7 +304,7 @@ module.exports = {
             label: "Position",
             id: "position-input",
             helper_text: "Helper text",
-            attributes: new drupalAttribute().setAttribute("value", "Officer"),
+            attributes: new DrupalAttribute().setAttribute("value", "Officer"),
           },
         ],
         [
@@ -341,7 +341,7 @@ module.exports = {
               { value: 8, label: "last option" },
               { value: 9, label: "the selected option", selected: true },
             ],
-            attributes: new drupalAttribute().addClass("multi-select"),
+            attributes: new DrupalAttribute().addClass("multi-select"),
           },
         ],
       ],
@@ -349,7 +349,7 @@ module.exports = {
   },
   cancel: {
     form: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       submit: {
@@ -363,7 +363,7 @@ module.exports = {
           {
             label: "Cancel",
             variant: "light",
-            attributes: new drupalAttribute().addClass([
+            attributes: new DrupalAttribute().addClass([
               "d-inline-block",
               "ms-md-3",
               "mt-3",
@@ -380,7 +380,7 @@ module.exports = {
             required: true,
             label: "Disable the account and keep its content",
             id: "keep",
-            attributes: new drupalAttribute().setAttribute("name", "cancel"),
+            attributes: new DrupalAttribute().setAttribute("name", "cancel"),
           },
           {
             input_type: "radio",
@@ -388,7 +388,7 @@ module.exports = {
             required: true,
             label: "Disable the account and unpublish its content",
             id: "delete",
-            attributes: new drupalAttribute().setAttribute("name", "cancel"),
+            attributes: new DrupalAttribute().setAttribute("name", "cancel"),
           },
         ],
       ],
@@ -396,7 +396,7 @@ module.exports = {
   },
   privacy: {
     settings: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       submit: {
@@ -441,7 +441,7 @@ module.exports = {
       ],
     },
     public_profile_content: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .addClass(["row"])
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),

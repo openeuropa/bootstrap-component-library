@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   id: "multiselect-1",
@@ -29,5 +29,5 @@ module.exports = {
     { value: 8, label: "last option" },
     { value: 9, label: "the selected option", selected: true },
   ],
-  attributes: new drupalAttribute().addClass("multi-select"),
+  attributes: new DrupalAttribute().addClass("multi-select form-select"),
 };

@@ -1,12 +1,13 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     title: "Page content",
     id: "bcl-inpage-navigation",
-    title_attributes: new drupalAttribute().addClass("mb-0"),
-    attributes: new drupalAttribute().addClass(["d-none", "d-lg-block"]),
+    icon_path: "/icons.svg",
+    dropdown_id: "bcl-inpage-navigation-dropdown",
+    title_attributes: new DrupalAttribute().addClass("mb-0"),
     links: [
       {
         label: "Project details",

@@ -1,8 +1,6 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import demoSingle from "@openeuropa/bcl-data-toasts/data.js";
 import demoMultiple from "@openeuropa/bcl-data-toasts/data--multiple";
-import toasts from "@openeuropa/bcl-toast/toasts.html.twig";
+import toasts from "@openeuropa/bcl-toasts/toasts.html.twig";
 
 const getArgs = (data) => ({
   with_wrapper: data.with_wrapper || false,
@@ -32,8 +30,8 @@ const getArgTypes = () => ({
   },
 });
 
-const initToast = (story) => {
-  const demo = story();
+const initToast = async (story) => {
+  const demo = await story();
   return `
     <script>
       var toastElList = [].slice.call(document.querySelectorAll(".toast"));
@@ -51,7 +49,7 @@ const applyArgs = (data, args) => Object.assign(data, args);
 // Stories
 export default {
   title: "Components/Toasts",
-  decorators: [withCode, withDesign, initToast],
+  decorators: [initToast],
   parameters: {
     badges: ["deprecated"],
     design: [

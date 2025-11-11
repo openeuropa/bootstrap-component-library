@@ -24,7 +24,7 @@ describe("OE - List group", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, horizontal: "horizontal" })
+      render({ ...demoData, horizontal: "horizontal" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -32,7 +32,7 @@ describe("OE - List group", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, flush: true })
+      render({ ...demoData, flush: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -40,7 +40,7 @@ describe("OE - List group", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, id: "list-group-id" })
+      render({ ...demoData, id: "list-group-id" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -58,7 +58,7 @@ describe("OE - List group", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

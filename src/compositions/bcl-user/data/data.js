@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
 import { pageTitleBanner } from "@openeuropa/bcl-base-templates/data/content-page";
 import {
@@ -14,19 +13,6 @@ import demoDataForm from "@openeuropa/bcl-user/data/data--form";
 
 const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
-
-if (isChromatic()) {
-  demoDataCompact.picture.classes = "chromatic-ignore";
-  demoDataForm.view.banner.image.classes = demoDataForm.view.banner.image
-    .classes
-    ? `${demoDataForm.view.banner.image.classes} chromatic-ignore`
-    : "chromatic-ignore";
-  listingProfiles.items.forEach((item) => {
-    item.image.classes = item.image.classes
-      ? `${item.image.classes} chromatic-ignore`
-      : "chromatic-ignore";
-  });
-}
 
 const baseData = {
   with_header: true,

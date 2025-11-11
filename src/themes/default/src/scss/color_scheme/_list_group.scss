@@ -1,0 +1,20 @@
+// Color scheme - List Group
+
+@use "sass:math";
+
+@mixin generate-list-group($color, $value) {
+  $bg: shift-color($value, -80%);
+  $text: $value;
+  $border: shift-color($value, 40%);
+
+  @if (contrast-ratio($bg, $text) < $min-contrast-ratio) {
+    $text: mix($value, color-contrast($bg), math.abs(40%));
+  }
+
+  .list-group-item-#{$color} {
+    // Required base CSS variables
+    --#{$prefix}list-group-color: #{$text};
+    --#{$prefix}list-group-bg: #{$bg};
+    --#{$prefix}list-group-border-color: #{$border};
+  }
+}

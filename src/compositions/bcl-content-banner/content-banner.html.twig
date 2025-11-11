@@ -92,6 +92,9 @@
 {% if _date is not empty %}
   {% set _left_col_classes = 'bcl-card-start-col' %}
   {% set _right_col_classes = 'col-12 col-md col-xxl-9' %}
+  {% if _image is empty %}
+    {% set _body_classes = 'pt-4 pt-md-0 px-0 px-md-1-5 pb-0' %}
+  {% endif %}
 {% endif %}
 {% if _image is empty and _date is empty %}
   {% set _right_col_classes = 'col-lg-10 col-xl-9 col-xxl-8' %}

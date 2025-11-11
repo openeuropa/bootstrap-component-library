@@ -1,6 +1,9 @@
-@include media-breakpoint-up(lg) {
-  .bcl-sidebar h2 {
-    font-size: $h4-font-size;
+@include media-breakpoint-down(md) {
+  .bcl-sidebar {
+    .dropdown-toggle,
+    h2 {
+      font-size: $h4-font-size;
+    }
   }
 }
 

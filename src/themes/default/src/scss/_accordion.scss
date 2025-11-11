@@ -1,0 +1,11 @@
+.accordion-button {
+  &:focus-visible {
+    box-shadow: none;
+    border: none;
+    outline: 2px solid $primary;
+  }
+}
+.accordion-button > span,
+.accordion-body {
+  max-width: 80ch;
+}

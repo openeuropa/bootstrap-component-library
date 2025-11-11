@@ -1,8 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
-
 import demoData from "@openeuropa/bcl-data-form/data.js";
 import demoDisabled from "@openeuropa/bcl-data-form/data--disabled.js";
 import demoGrid from "@openeuropa/bcl-data-form/data--grid.js";
@@ -10,11 +5,8 @@ import demoHorizontal from "@openeuropa/bcl-data-form/data--horizontal.js";
 import demoInline from "@openeuropa/bcl-data-form/data--inline.js";
 import form from "@openeuropa/bcl-form/form.html.twig";
 
-const chromatic = process.env.STORYBOOK_ENV;
-
 export default {
   title: "Components/Forms/Form",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     controls: { disable: true },
@@ -31,8 +23,8 @@ export default {
   },
 };
 
-const clientValidation = (story) => {
-  const demo = story();
+const clientValidation = async (story) => {
+  const demo = await story();
   return `<script>
     var form = document.querySelector(".needs-validation");
     form.addEventListener(
@@ -53,36 +45,6 @@ const clientValidation = (story) => {
 export const Basic = () => form(demoData);
 Basic.storyName = "Basic (with bootstrap validation)";
 Basic.decorators = [clientValidation];
-if (isChromatic() || chromatic) {
-  Basic.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const emailInput = canvas.getByLabelText("Email address *", {
-      selector: "input",
-    });
-
-    await userEvent.type(emailInput, "example-email", {
-      delay: 100,
-    });
-
-    const passwordInput = canvas.getByLabelText("Password *", {
-      selector: "input",
-    });
-
-    await userEvent.type(passwordInput, "ExamplePassword", {
-      delay: 100,
-    });
-
-    const checkboxInput = canvas.getByLabelText("Check me out *", {
-      selector: "input",
-    });
-
-    await userEvent.click(checkboxInput);
-
-    const submitButton = canvas.getByRole("button");
-
-    await userEvent.click(submitButton);
-  };
-}
 
 export const Disabled = () => form(demoDisabled);
 

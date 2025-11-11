@@ -1,6 +1,4 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
 import demoData from "@openeuropa/bcl-search-form/data/data--search.js";
@@ -25,12 +23,8 @@ const getArgTypes = () => ({
 
 export default {
   title: "Compositions/Search Form",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
-    chromatic: {
-      viewports: [414, 834],
-    },
     design: [
       {
         name: "Mockup",
@@ -43,7 +37,7 @@ export default {
 
 const resetAttrs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   if (!args.pill) {
     data.attributes.removeClass("rounded");

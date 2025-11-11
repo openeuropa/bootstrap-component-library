@@ -22,7 +22,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, hoverable: true })
+      render({ ...demoData, hoverable: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -30,7 +30,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, striped: true })
+      render({ ...demoData, striped: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, small: true })
+      render({ ...demoData, small: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, table_responsive: "sm" })
+      render({ ...demoData, table_responsive: "sm" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,7 +54,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, variant: "danger" })
+      render({ ...demoData, variant: "danger" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -62,7 +62,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, borderless: true })
+      render({ ...demoData, borderless: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -70,7 +70,7 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, border: "danger" })
+      render({ ...demoData, border: "danger" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -78,13 +78,13 @@ describe("OE - Table", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, caption_top: true })
+      render({ ...demoData, caption_top: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

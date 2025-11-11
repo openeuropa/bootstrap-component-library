@@ -1,24 +1,18 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
-import { within, userEvent } from "@storybook/testing-library";
-import isChromatic from "chromatic/isChromatic";
 import {
   getIconControls,
   getVariants,
   initTooltip,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-link/data.js";
 import toggleDemoData from "@openeuropa/bcl-data-link/data--toggle";
 import tooltipDemoData from "@openeuropa/bcl-data-link/data--tooltip";
 import link from "@openeuropa/bcl-link/link.html.twig";
 
-const chromatic = process.env.STORYBOOK_ENV;
-
-const withCollapse = (story) => {
-  const demo = story();
+const withCollapse = async (story) => {
+  const demo = await story();
   const target = toggleDemoData.path.substring(1);
   return `${demo} 
   <div class="collapse mt-3${
@@ -128,7 +122,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data);
   if (args.name && args.name !== "none") {
@@ -137,7 +131,7 @@ const applyArgs = (data, args) => {
     data.icon.size = args.icon_size;
     data.icon.path = "/icons.svg";
     data.icon.transformation = args.transformation;
-    data.icon.attributes = new drupalAttribute();
+    data.icon.attributes = new DrupalAttribute();
   }
   if (args.name === "none") {
     data.icon = null;
@@ -154,7 +148,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Link",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [
@@ -184,13 +177,6 @@ Collapse.parameters = {
     url: "https://getbootstrap.com/docs/5.2/components/collapse/",
   },
 };
-if (isChromatic() || chromatic) {
-  Collapse.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.click(button);
-  };
-}
 
 export const Tooltip = (args) => link(applyArgs(tooltipDemoData, args));
 
@@ -204,10 +190,3 @@ Tooltip.parameters = {
     url: "https://getbootstrap.com/docs/5.2/components/tooltips/",
   },
 };
-if (isChromatic() || chromatic) {
-  Tooltip.play = async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await userEvent.hover(button);
-  };
-}

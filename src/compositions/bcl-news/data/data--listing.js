@@ -1,18 +1,18 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
   sidebar: {
     id: "bcl-offcanvas",
-    attributes: new drupalAttribute().addClass("offcanvas-start"),
+    attributes: new DrupalAttribute().addClass("offcanvas-start"),
     extra_classes_close: "d-lg-none",
     extra_classes_header: "p-lg-0",
     close_aria_label: "Close button",
     with_body_scroll: true,
     title: "Filter options",
-    title_attributes: new drupalAttribute().addClass("mb-lg-4"),
+    title_attributes: new DrupalAttribute().addClass("mb-lg-4"),
     search_form: {
-      attributes: new drupalAttribute()
+      attributes: new DrupalAttribute()
         .setAttribute("novalidate", true)
         .setAttribute("onsubmit", "return false;"),
       items: [
@@ -22,7 +22,7 @@ module.exports = {
             id: "keyword",
             input_type: "text",
             placeholder: "Type a keyword",
-            attributes: new drupalAttribute().addClass("mb-3"),
+            attributes: new DrupalAttribute().addClass("mb-3"),
           },
         ],
         [
@@ -30,7 +30,7 @@ module.exports = {
             label: "Creation date (from)",
             id: "creation-date-from",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-2"),
+            attributes: new DrupalAttribute().addClass("mb-2"),
           },
         ],
         [
@@ -38,7 +38,7 @@ module.exports = {
             label: "Creation date (to)",
             id: "creation-date-to",
             input_type: "date",
-            attributes: new drupalAttribute().addClass("mb-4-5"),
+            attributes: new DrupalAttribute().addClass("mb-4-5"),
           },
         ],
       ],
@@ -50,7 +50,7 @@ module.exports = {
             label: "Refine",
             type: "submit",
             variant: "primary",
-            attributes: new drupalAttribute().addClass("me-md-3"),
+            attributes: new DrupalAttribute().addClass("me-md-3"),
           },
           {
             label: "Clear",
@@ -67,21 +67,21 @@ module.exports = {
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 01",
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
     {
       label: "Item 02",
       background: "light",
       icon_path: "/icons.svg",
       dismissible: true,
-      attributes: new drupalAttribute().addClass(["me-2"]),
+      attributes: new DrupalAttribute().addClass(["me-2"]),
     },
   ],
   listing: {
@@ -96,7 +96,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
@@ -128,7 +128,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
         ],
         title: "News title",
@@ -154,7 +154,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
@@ -192,7 +192,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
         ],
         title: "News title",
@@ -218,7 +218,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
           {
             label: "Category 2",
@@ -250,7 +250,7 @@ module.exports = {
             background: "primary",
             outline: true,
             rounded_pill: true,
-            attributes: new drupalAttribute().addClass(["me-2"]),
+            attributes: new DrupalAttribute().addClass(["me-2"]),
           },
         ],
         title: "News title",

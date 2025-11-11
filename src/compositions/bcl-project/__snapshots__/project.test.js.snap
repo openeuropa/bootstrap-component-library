@@ -1,11 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--ucpkn"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm navbar navbar-expand-lg navbar-light"
@@ -28,6 +27,19 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
             src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v3.0.2/eu/images/logo/condensed-version/positive/logo-eu--en.svg"
           />
         </a>
+        <button
+          aria-controls="header-navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler bcl-navbar-toggler"
+          data-bs-target="#header-navbar"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span
+            class="navbar-toggler-icon"
+          />
+        </button>
       </div>
     </nav>
     <!-- project name -->
@@ -51,273 +63,223 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
     </div>
     <!-- navbar -->
     <nav
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      aria-label="Main Navigation"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
+      id="header-navbar"
     >
       <div
         class="container"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item dropdown"
           >
-            <li
-              class="nav-item dropdown"
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="/example.html"
+              id="navbarDropdownMenuLink"
+              role="button"
             >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="/example.html"
-                id="navbarDropdownMenuLink"
-                role="button"
-              >
-                Knowledge & Capacity
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Knowledge Network Capacity Development Pillar
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Disaster Prevention and Risk Management
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Disaster Preparedness
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Emergency Response Coordination Centre
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    UCPM Lessons Learnt Programme
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="nav-item dropdown"
+              Knowledge & Capacity
+            </a>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
             >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="/example.html"
-                id="navbarDropdownMenuLinkSecond"
-                role="button"
-              >
-                Science & Research
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLinkSecond"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Knowledge Network Science Pillar
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Disaster Risk Management Knowledge Centre
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Knowledge Gaps
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Data & Tools
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="/example.html"
-                id="navbarDropdownMenuLinkThird"
-                role="button"
-              >
-                Projects
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLinkThird"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Union Civil Protection Mechanism Projects
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Other Disaster Risk Management Projects
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    EU funding for disaster management
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Stories
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
-                aria-expanded="false"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLinkProjects"
-                role="button"
-              >
-                About
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLinkProjects"
-                class="dropdown-menu"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Knowledge Network Governance
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    The EU Civil Protection Mechanism
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Information pack
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Knowledge Network Capacity Development Pillar
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Disaster Prevention and Risk Management
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Disaster Preparedness
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Emergency Response Coordination Centre
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  UCPM Lessons Learnt Programme
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="nav-item dropdown"
           >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="/example.html"
+              id="navbarDropdownMenuLinkSecond"
+              role="button"
             >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
-            <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
-              type="button"
+              Science & Research
+            </a>
+            <ul
+              aria-labelledby="navbarDropdownMenuLinkSecond"
+              class="dropdown-menu"
             >
-              <span
-                class="visually-hidden"
-              >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Knowledge Network Science Pillar
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Disaster Risk Management Knowledge Centre
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Knowledge Gaps
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Data & Tools
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="/example.html"
+              id="navbarDropdownMenuLinkThird"
+              role="button"
+            >
+              Projects
+            </a>
+            <ul
+              aria-labelledby="navbarDropdownMenuLinkThird"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Union Civil Protection Mechanism Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Other Disaster Risk Management Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  EU funding for disaster management
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Stories
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
+            <a
+              aria-expanded="false"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="#"
+              id="navbarDropdownMenuLinkProjects"
+              role="button"
+            >
+              About
+            </a>
+            <ul
+              aria-labelledby="navbarDropdownMenuLinkProjects"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Knowledge Network Governance
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  The EU Civil Protection Mechanism
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Information pack
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -434,48 +396,69 @@ exports[`OE - Project UCPKN page (ongoing) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            aria-labelledby="bcl-inpage-navigation-dropdown"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="dropdown-toggle h2 d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#description"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Description
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#partners"
+                  <a
+                    class="nav-link"
+                    href="#description"
+                  >
+                    Description
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Partner organisations
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#partners"
+                  >
+                    Partner organisations
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -1848,7 +1831,6 @@ exports[`OE - Project listing renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -1872,11 +1854,11 @@ exports[`OE - Project listing renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          class="navbar-toggler bcl-navbar-toggler"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -1884,202 +1866,464 @@ exports[`OE - Project listing renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
+      id="header-navbar"
     >
       <div
         class="container"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              class="bcl-mega-menu"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
+              <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                aria-haspopup="menu"
+                class="dropdown-toggle nav-link"
+                data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
+                id="dropdown-megamenu"
+                type="button"
               >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
+                A link with dropdown
+              </button>
+              <nav
+                aria-label="Main mega menu"
+                aria-labelledby="dropdown-megamenu"
+                class="bcl-mega-menu__container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                <div
+                  class="container"
+                >
+                  <div
+                    class="container d-lg-none bcl-mega-menu__back-button-block"
                   >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                    <button
+                      aria-label="Back to main menu"
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="position-relative"
                   >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info"
+                      >
+                        <div
+                          class="content-block"
+                        >
+                          <h4>
+                            About the European Commission
+                          </h4>
+                          <p>
+                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <p
+                            class="m-0"
+                          >
+                            <a
+                              class="content-link"
+                              href="/example.html"
+                            >
+                              Discover more
+                              <svg
+                                class="ms-2-5 bi icon--s"
+                              >
+                                <use
+                                  xlink:href="/icons.svg#arrow-right"
+                                />
+                              </svg>
+                            </a>
+                          </p>
+                        </div>
+                        <div
+                          class="shadow-container"
+                        >
+                          <span
+                            class="shadow-bg"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-1"
+                        >
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-1"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              class="active"
+                              id="custom-trigger-mm-1"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-1"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-1"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__see_all __leaf"
+                                >
+                                  <a
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
+                                    href="/example.html"
+                                  >
+                                    <span>
+                                      See all
+                                    </span>
+                                    <svg
+                                      class="ms-2-5 bi icon--s"
+                                    >
+                                      <use
+                                        xlink:href="/icons.svg#arrow-right"
+                                      />
+                                    </svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Base Category Item
+                            </span>
+                          </li>
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-2"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              id="custom-trigger-mm-2"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-2"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-2"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </li>
+          <li
+            class="nav-item"
           >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
               type="button"
             >
-              <span
-                class="visually-hidden"
-              >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
+              Dropdown link
             </button>
-          </form>
-        </div>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -2246,11 +2490,11 @@ exports[`OE - Project listing renders correctly 1`] = `
                         xlink:href="/icons.svg#globe2"
                       />
                     </svg>
-                    <h5
-                      class="mb-0 ms-2"
+                    <div
+                      class="modal-title mb-0 ms-2"
                     >
                       Select your language
-                    </h5>
+                    </div>
                   </div>
                   <button
                     aria-label="Close"
@@ -2619,6 +2863,7 @@ exports[`OE - Project listing renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <div
+            aria-labelledby="bcl-offcanvas-title"
             class="offcanvas-start offcanvas-lg"
             data-bs-scroll="true"
             id="bcl-offcanvas"
@@ -2629,10 +2874,12 @@ exports[`OE - Project listing renders correctly 1`] = `
             >
               <h2
                 class="mb-lg-4 offcanvas-title bcl-heading"
+                id="bcl-offcanvas-title"
               >
                 Filter options
               </h2>
               <button
+                aria-controls="bcl-offcanvas"
                 aria-label="Close button"
                 class="btn-close text-reset d-lg-none"
                 data-bs-dismiss="offcanvas"
@@ -2645,7 +2892,7 @@ exports[`OE - Project listing renders correctly 1`] = `
             >
               <form
                 class="w-100"
-                novalidate="true"
+                novalidate="novalidate"
                 onsubmit="return false;"
               >
                 <label
@@ -2719,7 +2966,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                         class="form-check"
                       >
                         <input
-                          checked="true"
+                          checked="checked"
                           class="form-check-input"
                           id="ongoing"
                           type="checkbox"
@@ -2736,7 +2983,7 @@ exports[`OE - Project listing renders correctly 1`] = `
                       class="form-check"
                     >
                       <input
-                        checked="true"
+                        checked="checked"
                         class="form-check-input"
                         id="closed"
                         type="checkbox"
@@ -3650,7 +3897,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -3674,11 +3920,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          class="navbar-toggler bcl-navbar-toggler"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -3686,202 +3932,464 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
+      id="header-navbar"
     >
       <div
         class="container"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              class="bcl-mega-menu"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
+              <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                aria-haspopup="menu"
+                class="dropdown-toggle nav-link"
+                data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
+                id="dropdown-megamenu"
+                type="button"
               >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
+                A link with dropdown
+              </button>
+              <nav
+                aria-label="Main mega menu"
+                aria-labelledby="dropdown-megamenu"
+                class="bcl-mega-menu__container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                <div
+                  class="container"
+                >
+                  <div
+                    class="container d-lg-none bcl-mega-menu__back-button-block"
                   >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                    <button
+                      aria-label="Back to main menu"
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="position-relative"
                   >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info"
+                      >
+                        <div
+                          class="content-block"
+                        >
+                          <h4>
+                            About the European Commission
+                          </h4>
+                          <p>
+                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <p
+                            class="m-0"
+                          >
+                            <a
+                              class="content-link"
+                              href="/example.html"
+                            >
+                              Discover more
+                              <svg
+                                class="ms-2-5 bi icon--s"
+                              >
+                                <use
+                                  xlink:href="/icons.svg#arrow-right"
+                                />
+                              </svg>
+                            </a>
+                          </p>
+                        </div>
+                        <div
+                          class="shadow-container"
+                        >
+                          <span
+                            class="shadow-bg"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-1"
+                        >
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-1"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              class="active"
+                              id="custom-trigger-mm-1"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-1"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-1"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__see_all __leaf"
+                                >
+                                  <a
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
+                                    href="/example.html"
+                                  >
+                                    <span>
+                                      See all
+                                    </span>
+                                    <svg
+                                      class="ms-2-5 bi icon--s"
+                                    >
+                                      <use
+                                        xlink:href="/icons.svg#arrow-right"
+                                      />
+                                    </svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Base Category Item
+                            </span>
+                          </li>
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-2"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              id="custom-trigger-mm-2"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-2"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-2"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </li>
+          <li
+            class="nav-item"
           >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
               type="button"
             >
-              <span
-                class="visually-hidden"
-              >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
+              Dropdown link
             </button>
-          </form>
-        </div>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -4048,11 +4556,11 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         xlink:href="/icons.svg#globe2"
                       />
                     </svg>
-                    <h5
-                      class="mb-0 ms-2"
+                    <div
+                      class="modal-title mb-0 ms-2"
                     >
                       Select your language
-                    </h5>
+                    </div>
                   </div>
                   <button
                     aria-label="Close"
@@ -4477,88 +4985,109 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            aria-labelledby="bcl-inpage-navigation-dropdown"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="dropdown-toggle h2 d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -5530,6 +6059,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="0"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5564,6 +6094,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="1"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5598,6 +6129,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="2"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5643,6 +6175,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="3"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5677,6 +6210,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="4"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -5714,6 +6248,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="5"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5748,6 +6283,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="6"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5782,6 +6318,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="7"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5809,6 +6346,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="8"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5838,6 +6376,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="9"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5876,6 +6415,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="10"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5910,6 +6450,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="11"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -5955,6 +6496,7 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="12"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -6347,7 +6889,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           type="button"
                         >
                           <span
-                            aria-hidden="true"
                             class="carousel-control-prev-icon"
                           />
                           <span
@@ -6363,7 +6904,6 @@ exports[`OE - Project page (closed) renders correctly 1`] = `
                           type="button"
                         >
                           <span
-                            aria-hidden="true"
                             class="carousel-control-next-icon"
                           />
                           <span
@@ -6681,7 +7221,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -6705,11 +7244,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          class="navbar-toggler bcl-navbar-toggler"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -6717,202 +7256,464 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
+      id="header-navbar"
     >
       <div
         class="container"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              class="bcl-mega-menu"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
+              <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                aria-haspopup="menu"
+                class="dropdown-toggle nav-link"
+                data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
+                id="dropdown-megamenu"
+                type="button"
               >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
+                A link with dropdown
+              </button>
+              <nav
+                aria-label="Main mega menu"
+                aria-labelledby="dropdown-megamenu"
+                class="bcl-mega-menu__container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                <div
+                  class="container"
+                >
+                  <div
+                    class="container d-lg-none bcl-mega-menu__back-button-block"
                   >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                    <button
+                      aria-label="Back to main menu"
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="position-relative"
                   >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info"
+                      >
+                        <div
+                          class="content-block"
+                        >
+                          <h4>
+                            About the European Commission
+                          </h4>
+                          <p>
+                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <p
+                            class="m-0"
+                          >
+                            <a
+                              class="content-link"
+                              href="/example.html"
+                            >
+                              Discover more
+                              <svg
+                                class="ms-2-5 bi icon--s"
+                              >
+                                <use
+                                  xlink:href="/icons.svg#arrow-right"
+                                />
+                              </svg>
+                            </a>
+                          </p>
+                        </div>
+                        <div
+                          class="shadow-container"
+                        >
+                          <span
+                            class="shadow-bg"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-1"
+                        >
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-1"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              class="active"
+                              id="custom-trigger-mm-1"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-1"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-1"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__see_all __leaf"
+                                >
+                                  <a
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
+                                    href="/example.html"
+                                  >
+                                    <span>
+                                      See all
+                                    </span>
+                                    <svg
+                                      class="ms-2-5 bi icon--s"
+                                    >
+                                      <use
+                                        xlink:href="/icons.svg#arrow-right"
+                                      />
+                                    </svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Base Category Item
+                            </span>
+                          </li>
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-2"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              id="custom-trigger-mm-2"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-2"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-2"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </li>
+          <li
+            class="nav-item"
           >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
               type="button"
             >
-              <span
-                class="visually-hidden"
-              >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
+              Dropdown link
             </button>
-          </form>
-        </div>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -7079,11 +7880,11 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         xlink:href="/icons.svg#globe2"
                       />
                     </svg>
-                    <h5
-                      class="mb-0 ms-2"
+                    <div
+                      class="modal-title mb-0 ms-2"
                     >
                       Select your language
-                    </h5>
+                    </div>
                   </div>
                   <button
                     aria-label="Close"
@@ -7508,88 +8309,109 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            aria-labelledby="bcl-inpage-navigation-dropdown"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="dropdown-toggle h2 d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -8561,6 +9383,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="0"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8595,6 +9418,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="1"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8629,6 +9453,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="2"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8674,6 +9499,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="3"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8708,6 +9534,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="4"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -8745,6 +9572,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="5"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8779,6 +9607,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="6"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8813,6 +9642,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="7"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8840,6 +9670,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="8"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8869,6 +9700,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="9"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8907,6 +9739,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="10"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8941,6 +9774,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="11"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -8986,6 +9820,7 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="12"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -9378,7 +10213,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           type="button"
                         >
                           <span
-                            aria-hidden="true"
                             class="carousel-control-prev-icon"
                           />
                           <span
@@ -9394,7 +10228,6 @@ exports[`OE - Project page (ongoing) renders correctly 1`] = `
                           type="button"
                         >
                           <span
-                            aria-hidden="true"
                             class="carousel-control-next-icon"
                           />
                           <span
@@ -9712,7 +10545,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -9736,11 +10568,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          class="navbar-toggler bcl-navbar-toggler"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -9748,202 +10580,464 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
+      id="header-navbar"
     >
       <div
         class="container"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              class="bcl-mega-menu"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
+              <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                aria-haspopup="menu"
+                class="dropdown-toggle nav-link"
+                data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
+                id="dropdown-megamenu"
+                type="button"
               >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
+                A link with dropdown
+              </button>
+              <nav
+                aria-label="Main mega menu"
+                aria-labelledby="dropdown-megamenu"
+                class="bcl-mega-menu__container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                <div
+                  class="container"
+                >
+                  <div
+                    class="container d-lg-none bcl-mega-menu__back-button-block"
                   >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                    <button
+                      aria-label="Back to main menu"
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="position-relative"
                   >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info"
+                      >
+                        <div
+                          class="content-block"
+                        >
+                          <h4>
+                            About the European Commission
+                          </h4>
+                          <p>
+                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <p
+                            class="m-0"
+                          >
+                            <a
+                              class="content-link"
+                              href="/example.html"
+                            >
+                              Discover more
+                              <svg
+                                class="ms-2-5 bi icon--s"
+                              >
+                                <use
+                                  xlink:href="/icons.svg#arrow-right"
+                                />
+                              </svg>
+                            </a>
+                          </p>
+                        </div>
+                        <div
+                          class="shadow-container"
+                        >
+                          <span
+                            class="shadow-bg"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-1"
+                        >
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-1"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              class="active"
+                              id="custom-trigger-mm-1"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-1"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-1"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__see_all __leaf"
+                                >
+                                  <a
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
+                                    href="/example.html"
+                                  >
+                                    <span>
+                                      See all
+                                    </span>
+                                    <svg
+                                      class="ms-2-5 bi icon--s"
+                                    >
+                                      <use
+                                        xlink:href="/icons.svg#arrow-right"
+                                      />
+                                    </svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Base Category Item
+                            </span>
+                          </li>
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-2"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              id="custom-trigger-mm-2"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-2"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-2"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </li>
+          <li
+            class="nav-item"
           >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
               type="button"
             >
-              <span
-                class="visually-hidden"
-              >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
+              Dropdown link
             </button>
-          </form>
-        </div>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -10110,11 +11204,11 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         xlink:href="/icons.svg#globe2"
                       />
                     </svg>
-                    <h5
-                      class="mb-0 ms-2"
+                    <div
+                      class="modal-title mb-0 ms-2"
                     >
                       Select your language
-                    </h5>
+                    </div>
                   </div>
                   <button
                     aria-label="Close"
@@ -10539,88 +11633,109 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
-            class="d-none d-lg-block bcl-inpage-navigation position-sticky"
+            aria-labelledby="bcl-inpage-navigation-dropdown"
+            class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
+            <button
+              aria-expanded="false"
+              class="dropdown-toggle h2 d-md-none"
+              data-bs-toggle="dropdown"
+              id="bcl-inpage-navigation-dropdown"
+              type="button"
+            >
+                Page content
+              <svg
+                class="bi icon--s"
+              >
+                <use
+                  xlink:href="/icons.svg#chevron-down"
+                />
+              </svg>
+            </button>
             <h2
-              class="mb-0 bcl-heading"
+              class="mb-0 d-none d-md-block bcl-heading"
             >
               Page content
             </h2>
-            <ul
-              class="nav nav-pills flex-column"
+            <div
+              class="dropdown-menu"
             >
-              <li
-                class="nav-item"
+              <ul
+                class="nav nav-pills flex-column"
               >
-                <a
-                  class="nav-link"
-                  href="#project-details"
+                <li
+                  class="nav-item"
                 >
-                  Project details
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#summary"
+                  <a
+                    class="nav-link"
+                    href="#project-details"
+                  >
+                    Project details
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Summary
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#objective"
+                  <a
+                    class="nav-link"
+                    href="#summary"
+                  >
+                    Summary
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Objective
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#impact"
+                  <a
+                    class="nav-link"
+                    href="#objective"
+                  >
+                    Objective
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Impact
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#contributors"
+                  <a
+                    class="nav-link"
+                    href="#impact"
+                  >
+                    Impact
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Contributors
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#achievements"
+                  <a
+                    class="nav-link"
+                    href="#contributors"
+                  >
+                    Contributors
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Achievements and milestones
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a
-                  class="nav-link"
-                  href="#gallery"
+                  <a
+                    class="nav-link"
+                    href="#achievements"
+                  >
+                    Achievements and milestones
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
                 >
-                  Gallery
-                </a>
-              </li>
-            </ul>
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                  >
+                    Gallery
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div
@@ -11592,6 +12707,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="0"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11626,6 +12742,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="1"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11660,6 +12777,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="2"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11705,6 +12823,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="3"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11739,6 +12858,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                       class="bcl-gallery__item d-block w-100 img-fluid"
                       data-bs-slide-to="4"
                       data-bs-target="#carouselGalleryExample"
+                      tabindex="0"
                     >
                       <div
                         class="bcl-gallery__item-overlay"
@@ -11776,6 +12896,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="5"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11810,6 +12931,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="6"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11844,6 +12966,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="7"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11871,6 +12994,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="8"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11900,6 +13024,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="9"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11938,6 +13063,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="10"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -11972,6 +13098,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="11"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -12017,6 +13144,7 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                         class="bcl-gallery__item d-block w-100 img-fluid"
                         data-bs-slide-to="12"
                         data-bs-target="#carouselGalleryExample"
+                        tabindex="0"
                       >
                         <div
                           class="bcl-gallery__item-overlay"
@@ -12409,7 +13537,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           type="button"
                         >
                           <span
-                            aria-hidden="true"
                             class="carousel-control-prev-icon"
                           />
                           <span
@@ -12425,7 +13552,6 @@ exports[`OE - Project page (planned) renders correctly 1`] = `
                           type="button"
                         >
                           <span
-                            aria-hidden="true"
                             class="carousel-control-next-icon"
                           />
                           <span

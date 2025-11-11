@@ -28,13 +28,13 @@ describe("OE - Inpage navigation", () => {
           path: "/example.html",
           label: "Link label",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataDefault))
+      await axe(await renderTwigFileAsHtml(template, dataDefault)),
     ).toHaveNoViolations();
   });
 });

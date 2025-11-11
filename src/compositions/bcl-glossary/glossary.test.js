@@ -23,7 +23,7 @@ describe("OE - Glossary listing", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(listingPage, demoDataListing))
+      await axe(await renderTwigFileAsHtml(listingPage, demoDataListing)),
     ).toHaveNoViolations();
   });
 });
@@ -37,7 +37,7 @@ describe("OE - Glossary detail", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(pageTemplate, demoDataDetail))
+      await axe(await renderTwigFileAsHtml(pageTemplate, demoDataDetail)),
     ).toHaveNoViolations();
   });
 });

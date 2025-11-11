@@ -22,7 +22,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dark: true })
+      render({ ...demoData, dark: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -30,7 +30,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, with_controls: false })
+      render({ ...demoData, with_controls: false }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -38,7 +38,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, with_indicators: false })
+      render({ ...demoData, with_indicators: false }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -46,7 +46,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, autoplay: false })
+      render({ ...demoData, autoplay: false }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,14 +54,14 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, rounded_indicators: true })
+      render({ ...demoData, rounded_indicators: true }),
     ).resolves.toMatchSnapshot();
   });
 
   test("renders correctly with specific slide", () => {
     expect.assertions(1);
     return expect(
-      render({ ...demoData, active_item: 2 })
+      render({ ...demoData, active_item: 2 }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -69,7 +69,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, disable_touch: true })
+      render({ ...demoData, disable_touch: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -77,7 +77,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, fade: true })
+      render({ ...demoData, fade: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -93,7 +93,7 @@ describe("OE - carousel", () => {
           path: "/example.html",
           label: "A title created by the bcl heading template",
         },
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -105,7 +105,7 @@ describe("OE - carousel", () => {
         ...demoData,
         dark: true,
         fade: true,
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -118,7 +118,7 @@ describe("OE - carousel", () => {
     });
 
     return expect(
-      render({ ...demoData, items: withIntervals })
+      render({ ...demoData, items: withIntervals }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -136,7 +136,7 @@ describe("OE - carousel", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

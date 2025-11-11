@@ -1,0 +1,65 @@
+{% apply spaceless %}
+
+{% set _items = items ?? [] %}
+{% set _trigger = trigger ?? null %}
+{% set _icon_path = icon_path ?? '' %}
+{% set _level = level ?? 2 %}
+{% set _see_all = see_all ?? null %}
+
+{% set _trigger_id = _trigger.id|default('mm-trigger-' ~ random(10000)) %}
+{% set _panel_id = 'mm-panel-' ~ _trigger_id %}
+
+{% set _trigger_attributes = _trigger.attributes ?? create_attribute() %}
+{% set _trigger = _trigger|merge({
+  attributes: _trigger_attributes
+    .setAttribute('id', _trigger_id)
+    .setAttribute('aria-controls', _panel_id)
+    .setAttribute('aria-expanded', 'false')
+    .setAttribute('aria-haspopup', 'menu'),
+  remove_icon_spacers: true,
+  clean_class: true,
+}) %}
+{% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
+
+{# Add an optional "See all" link as last item. #}
+{% if _see_all is not empty %}
+  {# Wrap the label for an ellipsis. #}
+  {% set _see_all_label %}
+    <span>{{- _see_all.label -}}</span>
+  {% endset %}
+  {% set _see_all_attr = (_see_all.attributes is defined ? _see_all.attributes : create_attribute()) %}
+  {% set _see_all = _see_all|merge({
+    label: _see_all_label,
+    icon: {
+      name: 'arrow-right',
+      path: _icon_path,
+    },
+    li_attributes: create_attribute()
+      .addClass('__see_all'),
+    attributes: _see_all_attr
+      .addClass(['see-all-button'])
+      .setAttribute('aria-label', 'See all items in ‘' ~ _trigger.label ~ '’')
+  }) %}
+  {% set _items = _items|merge([_see_all]) %}
+{% endif %}
+{% set submenu_attributes = create_attribute()
+  .setAttribute('id', _panel_id)
+  .setAttribute('hidden', '')
+  .setAttribute('role', 'group')
+  .setAttribute('aria-labelledby', _trigger_id)
+  .addClass('bcl-mega-menu__submenu', '__level-' ~ _level)
+%}
+<div{{ submenu_attributes }}>
+  {% if _trigger %}
+  <div class="__header">
+      <p class="__label">{{ _trigger.label }}</p>
+  </div>
+  {% endif %}
+  {% include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' with {
+    items: _items,
+    icon_path: _icon_path,
+    level: _level,
+  } only %}
+</div>
+
+{% endapply %}

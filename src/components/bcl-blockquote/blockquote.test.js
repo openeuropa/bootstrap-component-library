@@ -26,7 +26,7 @@ describe("OE - Blockquote", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, attribution: "" })
+      render({ ...demoData, attribution: "" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -34,7 +34,7 @@ describe("OE - Blockquote", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, alignment: "center" })
+      render({ ...demoData, alignment: "center" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -42,13 +42,13 @@ describe("OE - Blockquote", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, alignment: "right" })
+      render({ ...demoData, alignment: "right" }),
     ).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

@@ -17,14 +17,14 @@ describe("OE - badge", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, url: "http://example.com" })
+      render({ ...demoData, url: "http://example.com" }),
     ).resolves.toMatchSnapshot();
   });
   test("renders correctly with assistive text", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, assistive_text: "An assistive text" })
+      render({ ...demoData, assistive_text: "An assistive text" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -32,7 +32,7 @@ describe("OE - badge", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, rounded_pill: true })
+      render({ ...demoData, rounded_pill: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -40,7 +40,7 @@ describe("OE - badge", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, dismissible: true })
+      render({ ...demoData, dismissible: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -48,7 +48,7 @@ describe("OE - badge", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, url: "http://example.com", title: "new title" })
+      render({ ...demoData, url: "http://example.com", title: "new title" }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -56,7 +56,7 @@ describe("OE - badge", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, url: "http://example.com", dismissible: true })
+      render({ ...demoData, url: "http://example.com", dismissible: true }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -65,7 +65,7 @@ describe("OE - badge", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, background })
+        render({ ...demoData, background }),
       ).resolves.toMatchSnapshot();
     });
 
@@ -73,14 +73,14 @@ describe("OE - badge", () => {
       expect.assertions(1);
 
       return expect(
-        render({ ...demoData, background, outline: true })
+        render({ ...demoData, background, outline: true }),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true))
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 });

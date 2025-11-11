@@ -1,11 +1,9 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import {
   initBadges,
   getVariants,
   correctPaths,
 } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-badge/data.js";
 import badge from "@openeuropa/bcl-badge/badge.html.twig";
@@ -105,7 +103,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data);
 
@@ -114,7 +112,7 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Components/Badge",
-  decorators: [withCode, withDesign, initBadges],
+  decorators: [initBadges],
   parameters: {
     badges: ["deprecated"],
     design: [

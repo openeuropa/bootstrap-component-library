@@ -320,9 +320,17 @@ export const getFlagNames = () => {
   return flagList;
 };
 
-export const initScrollspy = (story) => {
-  const demo = story();
-  return `
+const wrapWithScript = async (story, script) => {
+  const result = await story();
+  const combine = (markup) => `${script}\n  ${markup ?? ""}`;
+
+  return combine(result);
+};
+
+export const initScrollspy = async (story) =>
+  wrapWithScript(
+    story,
+    `
     <script>
       var element =
         document.getElementById("bcl-inpage-navigation") ||
@@ -339,12 +347,13 @@ export const initScrollspy = (story) => {
         });
       }
     </script>
-  ${demo}`;
-};
+  `,
+  );
 
-export const initBadges = (story) => {
-  const demo = story();
-  return `
+export const initBadges = async (story) =>
+  wrapWithScript(
+    story,
+    `
     <script>
       var badges = document.querySelectorAll(".badge");
       badges.forEach((element) => {
@@ -356,29 +365,31 @@ export const initBadges = (story) => {
         }
       });
     </script>
-  ${demo}`;
-};
+  `,
+  );
 
-export const initListings = (story) => {
-  const demo = story();
-  return `
+export const initMultiselects = async (story) =>
+  wrapWithScript(
+    story,
+    `
     <script>
-      var multiselects = document.querySelectorAll(".multi-select");
+      var multiselects = document.querySelectorAll(".multiselect");
       if (multiselects) {
         multiselects.forEach((element) => {
           new SlimSelect({
             select: element,
-            selectByGroup: true,
-            placeholder: "Please select a value",
-          });
+            settings: {
+              placeholderText: 'Please select a value'
+            }
+          })
         });
       }
     </script>
-  ${demo}`;
-};
+  `,
+  );
 
-export const initTooltip = (story) => {
-  const demo = story();
+export const initTooltip = async (story) => {
+  const demo = await story();
   return `
     <script>
       var tooltipTriggerList = [].slice.call(
@@ -404,7 +415,7 @@ export const correctPaths = (data) => {
       ) {
         data[prop] = data[prop].replace(
           "/example.html",
-          `/example.html#${Math.random().toString(36).slice(2, 7)}`
+          `/example.html#${Math.random().toString(36).slice(2, 7)}`,
         );
       }
     }

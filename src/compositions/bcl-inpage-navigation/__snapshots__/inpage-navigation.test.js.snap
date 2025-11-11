@@ -1,60 +1,81 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Inpage navigation default renders correctly 1`] = `
 <jest>
   <nav
+    aria-labelledby="bcl-inpage-navigation-dropdown"
     class="bcl-inpage-navigation position-sticky"
     id="bcl-inpage-navigation"
   >
+    <button
+      aria-expanded="false"
+      class="dropdown-toggle h2 d-md-none"
+      data-bs-toggle="dropdown"
+      id="bcl-inpage-navigation-dropdown"
+      type="button"
+    >
+        Page content
+      <svg
+        class="bi icon--s"
+      >
+        <use
+          xlink:href="/icons.svg#chevron-down"
+        />
+      </svg>
+    </button>
     <h2
-      class="mb-0 bcl-heading"
+      class="mb-0 d-none d-md-block bcl-heading"
     >
       Page content
     </h2>
-    <ul
-      class="nav nav-pills flex-column"
+    <div
+      class="dropdown-menu"
     >
-      <li
-        class="nav-item"
+      <ul
+        class="nav nav-pills flex-column"
       >
-        <a
-          class="nav-link"
-          href="#item-1"
+        <li
+          class="nav-item"
         >
-          Heading 1
-        </a>
-      </li>
-      <li
-        class="nav-item"
-      >
-        <a
-          class="nav-link"
-          href="#item-2"
+          <a
+            class="nav-link"
+            href="#item-1"
+          >
+            Heading 1
+          </a>
+        </li>
+        <li
+          class="nav-item"
         >
-          Heading 2 with a long title going on several lines
-        </a>
-      </li>
-      <li
-        class="nav-item"
-      >
-        <a
-          class="nav-link"
-          href="#item-3"
+          <a
+            class="nav-link"
+            href="#item-2"
+          >
+            Heading 2 with a long title going on several lines
+          </a>
+        </li>
+        <li
+          class="nav-item"
         >
-          Heading 3
-        </a>
-      </li>
-      <li
-        class="nav-item"
-      >
-        <a
-          class="nav-link"
-          href="#item-4"
+          <a
+            class="nav-link"
+            href="#item-3"
+          >
+            Heading 3
+          </a>
+        </li>
+        <li
+          class="nav-item"
         >
-          Heading 4
-        </a>
-      </li>
-    </ul>
+          <a
+            class="nav-link"
+            href="#item-4"
+          >
+            Heading 4
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </jest>
 `;
@@ -62,11 +83,28 @@ exports[`OE - Inpage navigation default renders correctly 1`] = `
 exports[`OE - Inpage navigation renders correctly with title and link 1`] = `
 <jest>
   <nav
+    aria-labelledby="bcl-inpage-navigation-dropdown"
     class="bcl-inpage-navigation position-sticky"
     id="bcl-inpage-navigation"
   >
+    <button
+      aria-expanded="false"
+      class="dropdown-toggle h2 d-md-none"
+      data-bs-toggle="dropdown"
+      id="bcl-inpage-navigation-dropdown"
+      type="button"
+    >
+        File test title
+      <svg
+        class="bi icon--s"
+      >
+        <use
+          xlink:href="/icons.svg#chevron-down"
+        />
+      </svg>
+    </button>
     <h6
-      class="mb-0 bcl-heading"
+      class="mb-0 d-none d-md-block bcl-heading"
     >
       <a
         class="standalone"
@@ -75,50 +113,54 @@ exports[`OE - Inpage navigation renders correctly with title and link 1`] = `
         Link label
       </a>
     </h6>
-    <ul
-      class="nav nav-pills flex-column"
+    <div
+      class="dropdown-menu"
     >
-      <li
-        class="nav-item"
+      <ul
+        class="nav nav-pills flex-column"
       >
-        <a
-          class="nav-link"
-          href="#item-1"
+        <li
+          class="nav-item"
         >
-          Heading 1
-        </a>
-      </li>
-      <li
-        class="nav-item"
-      >
-        <a
-          class="nav-link"
-          href="#item-2"
+          <a
+            class="nav-link"
+            href="#item-1"
+          >
+            Heading 1
+          </a>
+        </li>
+        <li
+          class="nav-item"
         >
-          Heading 2 with a long title going on several lines
-        </a>
-      </li>
-      <li
-        class="nav-item"
-      >
-        <a
-          class="nav-link"
-          href="#item-3"
+          <a
+            class="nav-link"
+            href="#item-2"
+          >
+            Heading 2 with a long title going on several lines
+          </a>
+        </li>
+        <li
+          class="nav-item"
         >
-          Heading 3
-        </a>
-      </li>
-      <li
-        class="nav-item"
-      >
-        <a
-          class="nav-link"
-          href="#item-4"
+          <a
+            class="nav-link"
+            href="#item-3"
+          >
+            Heading 3
+          </a>
+        </li>
+        <li
+          class="nav-item"
         >
-          Heading 4
-        </a>
-      </li>
-    </ul>
+          <a
+            class="nav-link"
+            href="#item-4"
+          >
+            Heading 4
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </jest>
 `;

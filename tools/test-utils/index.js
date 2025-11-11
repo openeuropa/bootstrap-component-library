@@ -1,30 +1,31 @@
 const twing = require("../../.storybook/environment");
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
-const renderTwigFileAsNode = (file, options, reset) =>
-  new Promise((resolve, reject) => {
-    if (reset) {
-      options.attributes = new drupalAttribute();
-    }
-    try {
-      const html = twing.render(file, options);
-      const jest = document.createElement("jest");
-      jest.innerHTML = html.trim();
-      resolve(jest);
-    } catch (error) {
-      reject(error);
-    }
-  });
+const renderTwigFileAsNode = async (file, options = {}, reset) => {
+  const localOptions = { ...options };
 
-const renderTwigFileAsHtml = (file, options, main) => {
-  let html = twing.render(file, options);
-  if (main) {
-    const landmark = document.createElement("main");
-    landmark.innerHTML = html.trim();
-    html = landmark;
+  if (reset) {
+    localOptions.attributes = new DrupalAttribute();
   }
 
-  return html;
+  const html = await twing.render(file, localOptions);
+  const jest = document.createElement("jest");
+  jest.innerHTML = html.trim();
+
+  return jest;
+};
+
+const renderTwigFileAsHtml = async (file, options = {}, main) => {
+  const html = await twing.render(file, options);
+
+  if (!main) {
+    return html;
+  }
+
+  const landmark = document.createElement("main");
+  landmark.innerHTML = html.trim();
+
+  return landmark;
 };
 
 const getVariants = (outline, add) => {

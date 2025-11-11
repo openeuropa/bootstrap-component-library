@@ -1,7 +1,5 @@
-import { withDesign } from "storybook-addon-designs";
-import withCode from "@openeuropa/storybook-addon-code";
 import { getTitleControls } from "@openeuropa/bcl-story-utils";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import demoData from "@openeuropa/bcl-data-accordion/data.js";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
@@ -59,7 +57,7 @@ const resetAttrs = (data) => {
 
 const applyArgs = (data, args) => {
   if (!data.attributes) {
-    data.attributes = new drupalAttribute();
+    data.attributes = new DrupalAttribute();
   }
   resetAttrs(data);
   data.items[0].title = args.toggle1;
@@ -70,7 +68,6 @@ const applyArgs = (data, args) => {
 
 export default {
   title: "Paragraphs/Accordion",
-  decorators: [withCode, withDesign],
   parameters: {
     badges: ["deprecated"],
     design: [

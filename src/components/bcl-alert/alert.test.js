@@ -20,7 +20,7 @@ describe("OE - Alert", () => {
       render({
         ...demoData,
         dismissible: false,
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -31,7 +31,7 @@ describe("OE - Alert", () => {
       render({
         ...demoData,
         animated_dismiss: false,
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -42,7 +42,7 @@ describe("OE - Alert", () => {
       render({
         ...demoData,
         icon_name: "clock",
-      })
+      }),
     ).resolves.toMatchSnapshot();
   });
 
@@ -54,14 +54,14 @@ describe("OE - Alert", () => {
         render({
           ...demoData,
           variant,
-        })
+        }),
       ).resolves.toMatchSnapshot();
     });
   });
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData))
+      await axe(await renderTwigFileAsHtml(template, demoData)),
     ).toHaveNoViolations();
   });
 });
