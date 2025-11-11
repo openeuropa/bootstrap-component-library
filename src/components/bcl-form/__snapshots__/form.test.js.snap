@@ -4,7 +4,7 @@ exports[`OE - Form basic renders correctly 1`] = `
 <jest>
   <form
     class="needs-validation"
-    novalidate="novalidate"
+    novalidate
     onsubmit="return false;"
   >
     <div
@@ -20,7 +20,7 @@ exports[`OE - Form basic renders correctly 1`] = `
         aria-describedby="emailHelp"
         class="form-control"
         id="exampleInputEmail1"
-        required="required"
+        required
         type="email"
       />
       <div
@@ -52,7 +52,7 @@ exports[`OE - Form basic renders correctly 1`] = `
       <input
         class="form-control"
         id="exampleInputPassword1"
-        required="required"
+        required
         type="password"
       />
       <div
@@ -75,7 +75,7 @@ exports[`OE - Form basic renders correctly 1`] = `
         <input
           class="form-check-input"
           id="exampleInputCheck1"
-          required="required"
+          required
           type="checkbox"
         />
         <label
@@ -126,7 +126,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
         <input
           class="form-control"
           id="exampleInputEmail1"
-          required="required"
+          required
           type="email"
         />
       </div>
@@ -146,7 +146,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
         <input
           class="form-control"
           id="exampleInputPassword1"
-          required="required"
+          required
           type="password"
         />
       </div>
@@ -197,7 +197,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
         >
           <input
             class="form-check-input"
-            disabled="disabled"
+            disabled
             id="exampleInputRadios3"
             type="radio"
           />
@@ -222,7 +222,7 @@ exports[`OE - Form horizontal renders correctly 1`] = `
           <input
             class="form-check-input"
             id="exampleInputCheck1"
-            required="required"
+            required
             type="checkbox"
           />
           <label
@@ -252,7 +252,7 @@ exports[`OE - Form inline renders correctly 1`] = `
 <jest>
   <form
     class="row row-cols-lg-auto g-3 align-items-center"
-    novalidate="novalidate"
+    novalidate
     onsubmit="return false;"
   >
     <div
@@ -268,7 +268,7 @@ exports[`OE - Form inline renders correctly 1`] = `
         class="form-control"
         id="inlineFormInputGroupUsername"
         placeholder="Username"
-        required="required"
+        required
         type="text"
       />
     </div>
@@ -285,7 +285,7 @@ exports[`OE - Form inline renders correctly 1`] = `
         class="form-control"
         id="inlineFormInputGroupPassword"
         placeholder="Password"
-        required="required"
+        required
         type="text"
       />
     </div>
@@ -298,7 +298,7 @@ exports[`OE - Form inline renders correctly 1`] = `
         <input
           class="form-check-input"
           id="exampleInputCheck1"
-          required="required"
+          required
           type="checkbox"
         />
         <label
@@ -326,11 +326,11 @@ exports[`OE - Form inline renders correctly 1`] = `
 exports[`OE - Form renders correctly when disabled 1`] = `
 <jest>
   <form
-    novalidate="novalidate"
+    novalidate
     onsubmit="return false;"
   >
     <fieldset
-      disabled=""
+      disabled
     >
       <legend>
         Disabled fieldset example
@@ -348,7 +348,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
           class="form-control"
           id="disabledTextInput"
           placeholder="Disabled input"
-          required="required"
+          required
           type="text"
         />
         <div
@@ -386,7 +386,7 @@ exports[`OE - Form renders correctly when disabled 1`] = `
             last option
           </option>
           <option
-            selected=""
+            selected
             value=""
           >
             the selected option
@@ -443,7 +443,7 @@ exports[`OE - Form renders correctly with title 1`] = `
   </h1>
   <form
     class="needs-validation"
-    novalidate="novalidate"
+    novalidate
     onsubmit="return false;"
   >
     <div
@@ -459,7 +459,7 @@ exports[`OE - Form renders correctly with title 1`] = `
         aria-describedby="emailHelp"
         class="form-control"
         id="exampleInputEmail1"
-        required="required"
+        required
         type="email"
       />
       <div
@@ -491,7 +491,7 @@ exports[`OE - Form renders correctly with title 1`] = `
       <input
         class="form-control"
         id="exampleInputPassword1"
-        required="required"
+        required
         type="password"
       />
       <div
@@ -514,7 +514,7 @@ exports[`OE - Form renders correctly with title 1`] = `
         <input
           class="form-check-input"
           id="exampleInputCheck1"
-          required="required"
+          required
           type="checkbox"
         />
         <label
@@ -549,7 +549,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
 <jest>
   <form
     class="row g-3"
-    novalidate="novalidate"
+    novalidate
     onsubmit="return false;"
   >
     <div
@@ -565,7 +565,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         aria-describedby="emailHelp"
         class="form-control"
         id="exampleInputEmail1"
-        required="required"
+        required
         type="email"
       />
       <div
@@ -587,7 +587,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       <input
         class="form-control"
         id="exampleInputPassword1"
-        required="required"
+        required
         type="password"
       />
     </div>
@@ -633,7 +633,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       <input
         class="form-control"
         id="exampleInputCity1"
-        required="required"
+        required
         type="text"
       />
     </div>
@@ -649,7 +649,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       <input
         class="form-control"
         id="exampleInputState1"
-        required="required"
+        required
         type="text"
       />
     </div>
@@ -665,7 +665,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
       <input
         class="form-control"
         id="exampleInputZip1"
-        required="required"
+        required
         type="text"
       />
     </div>
@@ -678,7 +678,7 @@ exports[`OE - Form using a grid renders correctly 1`] = `
         <input
           class="form-check-input"
           id="exampleInputCheck1"
-          required="required"
+          required
           type="checkbox"
         />
         <label

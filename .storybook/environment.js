@@ -6,7 +6,7 @@ const {
   createFilesystemLoader,
   createFunction,
 } = require("twing");
-const { DrupalAttribute } = require("drupal-attribute");
+const { StorybookDrupalAttribute } = require("./drupal-attribute");
 
 const projComponentsAbsPath = path.resolve(__dirname, "../src/components");
 const projCompositionsAbsPath = path.resolve(__dirname, "../src/compositions");
@@ -23,7 +23,7 @@ try {
 
   const createAttribute = createFunction(
     "create_attribute",
-    () => Promise.resolve(new DrupalAttribute()),
+    () => Promise.resolve(new StorybookDrupalAttribute()),
     [],
   );
 
