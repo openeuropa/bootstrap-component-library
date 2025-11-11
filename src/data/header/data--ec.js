@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
 const breadcrumbs = require("@openeuropa/bcl-data-breadcrumb/data");
@@ -8,6 +8,7 @@ const modals = require("@openeuropa/bcl-data-header/data--modals");
 
 module.exports = {
   variant: "ec",
+  navbar_id: "header-navbar",
   site_name: "Project name",
   project_logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
@@ -16,11 +17,9 @@ module.exports = {
   },
   project_link: "/example.html",
   head: {
-    attributes: new drupalAttribute()
+    attributes: new DrupalAttribute()
       .addClass(["w-100", "shadow-sm", "bcl-header__top-navbar"])
       .setAttribute("aria-label", "Top Navigation"),
-    disable_collapse: false,
-    collapse_id: "topNavbarDropdown",
     brand: {
       link: "/example.html",
       logos: [
@@ -39,6 +38,6 @@ module.exports = {
   language_modal: { ...languageList, variant: "ec" },
   breadcrumbs: {
     ...breadcrumbs,
-    attributes: new drupalAttribute().addClass(["mt-3"]),
+    attributes: new DrupalAttribute().addClass(["mt-3"]),
   },
 };

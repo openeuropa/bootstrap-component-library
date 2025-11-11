@@ -70,8 +70,8 @@ const applyArgs = (data, args) => {
 };
 
 // Decoration
-const modalButton = (story) => {
-  const demo = story();
+const modalButton = async (story) => {
+  const demo = await story();
   return `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button>${demo}`;
 };
 

@@ -1,12 +1,13 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 const modals = require("@openeuropa/bcl-data-header/data--modals");
 const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
 
 module.exports = {
   variant: "eu",
+  navbar_id: "header-navbar",
   head: {
-    attributes: new drupalAttribute().addClass([
+    attributes: new DrupalAttribute().addClass([
       "w-100",
       "shadow-sm",
       "bcl-header__top-navbar",
@@ -39,9 +40,9 @@ module.exports = {
             name: "chat-left-dots-fill",
             size: "xs",
             path: "/icons.svg",
-            attributes: new drupalAttribute().addClass("me-2-5"),
+            attributes: new DrupalAttribute().addClass("me-2-5"),
           },
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#languageModal")
             .addClass("text-center"),
@@ -55,9 +56,9 @@ module.exports = {
             name: "person-fill",
             size: "xs",
             path: "/icons.svg",
-            attributes: new drupalAttribute().addClass("me-2-5"),
+            attributes: new DrupalAttribute().addClass("me-2-5"),
           },
-          attributes: new drupalAttribute()
+          attributes: new DrupalAttribute()
             .setAttribute("data-bs-toggle", "modal")
             .setAttribute("data-bs-target", "#loginModal")
             .addClass("text-center"),
@@ -68,18 +69,19 @@ module.exports = {
   navbar: {
     color_set: "dark",
     collapse_id: "navbarNavDropdown",
-    attributes: new drupalAttribute()
-      .addClass("bcl-header__navbar")
-      .setAttribute("aria-label", "Main Navigation"),
+    attributes: new DrupalAttribute().setAttribute(
+      "aria-label",
+      "Main Navigation",
+    ),
     navigation: {
       navbar: true,
-      attributes: new drupalAttribute().addClass("me-auto"),
+      attributes: new DrupalAttribute().addClass("me-auto"),
       items: [
         {
           label: "Home",
           path: "/example.html",
           active: true,
-          attributes: new drupalAttribute().setAttribute(
+          attributes: new DrupalAttribute().setAttribute(
             "aria-current",
             "page",
           ),
@@ -99,7 +101,7 @@ module.exports = {
           trigger: {
             label: "Dropdown link",
             path: "/example.html",
-            attributes: new drupalAttribute().addClass("nav-link"),
+            attributes: new DrupalAttribute().addClass("nav-link"),
           },
           items: [
             {
@@ -122,7 +124,7 @@ module.exports = {
   modals,
   language_modal: languageList,
   breadcrumbs: {
-    attributes: new drupalAttribute().addClass(["mt-3"]),
+    attributes: new DrupalAttribute().addClass(["mt-3"]),
     links: [
       { label: "Home", path: "/example.html" },
       {

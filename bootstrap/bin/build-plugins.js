@@ -11,7 +11,8 @@
 
 const path = require('path')
 const rollup = require('rollup')
-const { globSync } = require('glob')
+const glob = require('glob')
+const globSync = glob.globSync || ((pattern, options) => glob.sync(pattern, options))
 const { babel } = require('@rollup/plugin-babel')
 
 const srcPath = path.resolve(__dirname, '../js/src/')

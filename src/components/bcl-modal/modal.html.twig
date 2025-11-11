@@ -3,7 +3,7 @@
 {# Parameters:
   - size (string) default('')
     options: sm, lg, xl, fullscreen
-  - id (boolean) (default: modal-random(1000))
+  - id (boolean) (default: modal-random(10000))
   - fullscreen_responsive (string) (default: '')
     options: sm, md, lg, xl, xxl
   - static_backdrop (boolean) (default: false)
@@ -14,7 +14,10 @@
   - body (block) (default: '')
   - footer (block) (default: '')
   - attributes (drupal attrs)
-  
+  - header_attributes (drupal attrs)
+  - body_attributes (drupal attrs)
+  - footer_attributes (drupal attrs)
+
   Blocks
     - header
     - messages
@@ -23,15 +26,18 @@
 #}
 
 {% set _size =  size|default('') %}
-{% set _id = id|default('modal-' ~ random(1000)) %}
+{% set _id = id|default('modal-' ~ random(10000)) %}
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _static_backdrop = static_backdrop ?? false %}
 {% set _verticaly_centered = verticaly_centered ?? false %}
 {% set _scrollable = scrollable ?? false %}
 {% set _header = header|default('') %}
+{% set _header_attributes = header_attributes ?: create_attribute() %}
 {% set _messages = messages|default('') %}
 {% set _body = body|default('') %}
+{% set _body_attributes = body_attributes ?: create_attribute() %}
 {% set _footer = footer|default('') %}
+{% set _footer_attributes = footer_attributes ?: create_attribute() %}
 
 {% set _classes = ['modal', 'fade'] %}
 
@@ -62,16 +68,22 @@
   >
     <div class="modal-content">
       {% if header is not empty %}
-      <div class="modal-header">
+      <div
+        {{- _header_attributes.addClass(['modal-header']) -}}
+      >
         {%- block header _header -%}
       </div>
       {% endif %}
       {%- block messages _messages -%}
-      <div class="modal-body">
+      <div
+          {{- _body_attributes.addClass(['modal-body']) -}}
+      >
         {%- block body _body -%}
       </div>
       {% if footer is not empty %}
-      <div class="modal-footer">
+      <div
+          {{- _footer_attributes.addClass(['modal-footer']) -}}
+      >
         {%- block footer _footer -%}
       </div>
       {% endif %}

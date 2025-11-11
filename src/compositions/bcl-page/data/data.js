@@ -9,7 +9,7 @@ import {
   blockquote,
 } from "@openeuropa/bcl-base-templates/data/content-page";
 import layout from "@openeuropa/bcl-base-templates/data/layout";
-import drupalAttribute from "drupal-attribute";
+import { DrupalAttribute } from "drupal-attribute";
 
 import listing from "@openeuropa/bcl-page/data/data--listing";
 import files from "@openeuropa/bcl-page/data/data--files";
@@ -20,8 +20,8 @@ const header =
   layout[`header_${process.env.STORYBOOK_THEME}`] || layout.headerSimple;
 
 const filesThumbnail = [
-  { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
-  { ...fileThumbnail, attributes: new drupalAttribute().addClass(["mb-3"]) },
+  { ...fileThumbnail, attributes: new DrupalAttribute().addClass(["mb-3"]) },
+  { ...fileThumbnail, attributes: new DrupalAttribute().addClass(["mb-3"]) },
 ];
 
 delete banner.service_buttons;
@@ -54,7 +54,7 @@ const demoData1 = {
   files,
   accordion: {
     ...accordion,
-    attributes: new drupalAttribute().addClass(["pb-4"]),
+    attributes: new DrupalAttribute().addClass(["pb-4"]),
   },
 };
 

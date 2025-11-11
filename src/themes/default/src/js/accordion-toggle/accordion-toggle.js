@@ -3,8 +3,6 @@ import EventHandler from "@openeuropa/bcl-bootstrap/js/src/dom/event-handler";
 import SelectorEngine from "@openeuropa/bcl-bootstrap/js/src/dom/selector-engine";
 
 class AccordionToggle {
-  static isInitialized = false;
-
   constructor(buttonElement) {
     this.buttonElement = buttonElement;
     this.targetAccordionId = buttonElement.getAttribute("data-target");
@@ -36,16 +34,33 @@ class AccordionToggle {
     });
   }
 
-  static init() {
-    if (AccordionToggle.isInitialized) {
-      return;
-    }
+  static init(root = document.documentElement) {
+    const context = root instanceof Document ? root.documentElement : root;
 
-    const toggleButtons = SelectorEngine.find('[data-action][data-target]');
-    toggleButtons.forEach(buttonElement => new AccordionToggle(buttonElement));
+    const toggleButtons =
+      context instanceof Element
+        ? SelectorEngine.find('[data-action][data-target]', context)
+        : context && typeof context.querySelectorAll === "function"
+          ? Array.from(context.querySelectorAll('[data-action][data-target]'))
+          : SelectorEngine.find('[data-action][data-target]');
 
-    AccordionToggle.isInitialized = true;
+    toggleButtons.forEach((buttonElement) => {
+      if (buttonElement.dataset.accordionToggleInitialized === "true") {
+        return;
+      }
+
+      new AccordionToggle(buttonElement);
+      buttonElement.dataset.accordionToggleInitialized = "true";
+    });
   }
+}
+
+const initializeAccordionToggle = () => AccordionToggle.init();
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeAccordionToggle);
+} else {
+  initializeAccordionToggle();
 }
 
 export default AccordionToggle;

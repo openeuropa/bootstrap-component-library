@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   title: "EU Budget for the future",
@@ -11,9 +11,9 @@ module.exports = {
       path: "/icons.svg",
       size: "fluid",
     },
-    attributes: new drupalAttribute().addClass(["btn", "btn-primary"]),
+    attributes: new DrupalAttribute().addClass(["btn", "btn-primary"]),
   },
   image: "https://picsum.photos/id/154/1200/800",
   shade: true,
-  attributes: new drupalAttribute().addClass(["bg-lighter", "text-center"]),
+  attributes: new DrupalAttribute().addClass(["bg-lighter", "text-center"]),
 };

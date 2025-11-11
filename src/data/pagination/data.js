@@ -1,16 +1,16 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
   icon_path: "/icons.svg",
   first: {
     label: "First",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute("aria-label", "First page"),
+    attributes: new DrupalAttribute().setAttribute("aria-label", "First page"),
   },
   prev: {
     label: "Previous",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute(
+    attributes: new DrupalAttribute().setAttribute(
       "aria-label",
       "Previous page",
     ),
@@ -18,12 +18,12 @@ module.exports = {
   next: {
     label: "Next",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute("aria-label", "Next page"),
+    attributes: new DrupalAttribute().setAttribute("aria-label", "Next page"),
   },
   last: {
     label: "Last",
     path: "/example.html",
-    attributes: new drupalAttribute().setAttribute("aria-label", "Last page"),
+    attributes: new DrupalAttribute().setAttribute("aria-label", "Last page"),
   },
   items: [
     {
@@ -41,7 +41,7 @@ module.exports = {
       path: "/example.html",
     },
   ],
-  attributes: new drupalAttribute().setAttribute(
+  attributes: new DrupalAttribute().setAttribute(
     "aria-label",
     "Test aria label",
   ),

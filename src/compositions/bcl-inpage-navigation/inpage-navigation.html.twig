@@ -7,8 +7,8 @@ Parameters:
   - title_link: (link object) (default: {})
   - title_attributes (drupal attrs)
   - links: (link[]) (default: [])
-  - id (string) (default: bcl-inpage-navigation-random(100))
-  - dropdown_id (string) (default: bcl-inpage-navigation-dropdown-random(100))
+  - id (string) (default: bcl-inpage-navigation-random(10000))
+  - dropdown_id (string) (default: bcl-inpage-navigation-dropdown-random(10000))
   - dynamic_active: (boolean) (default: false)
   - icon_path (string) (default: '')
   - attributes (drupal attrs)
@@ -19,9 +19,9 @@ Parameters:
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _links = links|default([]) %}
-{% set _id = id|default('bcl-inpage-navigation-' ~ random(100)) %}
+{% set _id = id|default('bcl-inpage-navigation-' ~ random(10000)) %}
 {% set _icon_path = icon_path|default('') %}
-{% set _dropdown_id = dropdown_id|default('bcl-inpage-navigation-dropdown' ~ random(100)) %}
+{% set _dropdown_id = dropdown_id|default('bcl-inpage-navigation-dropdown' ~ random(10000)) %}
 {% set _dyanmic_active = dynamic_active|default(false) %}
 
 {% if attributes is empty %}
@@ -29,8 +29,13 @@ Parameters:
 {% endif %}
 
 {% set attributes = attributes.addClass(['bcl-inpage-navigation', 'position-sticky']).setAttribute('id', _id) %}
-{% set title_attributes = _title_attributes.addClass('mb-0') %}
-{% set _title_content %}
+
+{% if not attributes.hasAttribute('aria-label') and not attributes.hasAttribute('aria-labelledby') %}
+  {% set attributes = attributes.setAttribute('aria-labelledby', _dropdown_id) %}
+{% endif %}
+
+{% set title_attributes = _title_attributes.addClass(['mb-0', 'd-none', 'd-md-block']) %}
+{% set _button_content %}
   {{ _title }}
   {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
     name: 'chevron-down',
@@ -45,21 +50,25 @@ Parameters:
   {% set _classes = _classes|merge(['dynamic-active']) %}
 {% endif %}
 
-<nav {{ attributes.addClass(_classes) }}>
+<nav{{ attributes.addClass(_classes) }}>
   {% set trigger_attributes = create_attribute()
                               .setAttribute('aria-expanded', 'false')
                               .setAttribute('type', 'button')
                               .setAttribute('id', _dropdown_id)
                               .setAttribute('data-bs-toggle', 'dropdown')
-                              .addClass(['dropdown-toggle']) %}
+                              .addClass(['dropdown-toggle', 'h2', 'd-md-none']) %}
+  {% include '@oe-bcl/bcl-button/button.html.twig' with {
+    label: _button_content,
+    clean_class: true,
+    attributes: trigger_attributes,
+  } only %}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
-    title: _title_content,
+    title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
-    attributes: _title_attributes
-                .merge(trigger_attributes),
+    attributes: _title_attributes,
   } only %}
-  <div class="dropdown-menu" aria-labelledby="{{ _dropdown_id }}">
+  <div class="dropdown-menu">
     {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
       'pills': true,
       'vertical': true,

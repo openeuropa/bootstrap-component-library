@@ -19,6 +19,19 @@ describe("OE - Toasts", () => {
     return expect(render(demoSingle)).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with a single toast without close button`, () => {
+    expect.assertions(1);
+
+    const noCloseButton = { ...demoSingle };
+    const noCloseButtonToast = {
+      ...noCloseButton.toasts[0],
+      with_close: false,
+    };
+    noCloseButton.toasts = [noCloseButtonToast];
+
+    return expect(render(noCloseButton)).resolves.toMatchSnapshot();
+  });
+
   test(`render correctly with body wrapper classes`, () => {
     expect.assertions(1);
 
@@ -38,7 +51,7 @@ describe("OE - Toasts", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoSingle)),
+      await axe(await renderTwigFileAsHtml(template, demoSingle)),
     ).toHaveNoViolations();
   });
 });

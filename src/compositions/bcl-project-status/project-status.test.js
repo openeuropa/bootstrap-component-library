@@ -35,7 +35,7 @@ describe("OE - Project status", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoOngoing, true)),
+      await axe(await renderTwigFileAsHtml(template, demoOngoing, true)),
     ).toHaveNoViolations();
   });
 });
@@ -60,7 +60,7 @@ describe("OE - Project contributions", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoContribs, true)),
+      await axe(await renderTwigFileAsHtml(template, demoContribs, true)),
     ).toHaveNoViolations();
   });
 });

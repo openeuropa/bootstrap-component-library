@@ -1,7 +1,7 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 
 module.exports = {
-  attributes: new drupalAttribute()
+  attributes: new DrupalAttribute()
     .addClass(["needs-validation", "row", "g-3"])
     .setAttribute("novalidate", true)
     .setAttribute("onsubmit", "return false;"),
@@ -10,11 +10,11 @@ module.exports = {
     type: "submit",
     variant: "primary",
     wrapper: "contact-form-submit",
-    attributes: new drupalAttribute().addClass("w-auto mb-4"),
+    attributes: new DrupalAttribute().addClass("w-auto mb-4"),
   },
   title: "Enter your message",
   title_tag: "h2",
-  title_attributes: new drupalAttribute().addClass(["mb-2-5"]),
+  title_attributes: new DrupalAttribute().addClass(["mb-2-5"]),
   helper_text: "*Please fill in all required fields.",
   antispam: `<div class="p-4 mt-0 fs-4">Antispam</div>`,
   items: [

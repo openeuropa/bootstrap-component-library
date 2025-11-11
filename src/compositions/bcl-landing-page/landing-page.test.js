@@ -20,7 +20,7 @@ describe("OE - Landing page", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, dataLanding)),
+      await axe(await renderTwigFileAsHtml(template, dataLanding)),
     ).toHaveNoViolations();
   });
 });

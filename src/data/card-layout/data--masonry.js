@@ -1,4 +1,4 @@
-const drupalAttribute = require("drupal-attribute");
+const { DrupalAttribute } = require("drupal-attribute");
 const { getDummyText } = require("@openeuropa/bcl-data-utils");
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
       },
       wrapper_class: "col",
       content: "<button class='btn btn-primary'>Custom action</button>",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
     },
     {
       title: "Title card 2",
@@ -33,7 +33,7 @@ module.exports = {
         position: "bottom",
       },
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
       content: getDummyText(2),
     },
     {
@@ -43,7 +43,7 @@ module.exports = {
         classes: "mb-2",
       },
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
     },
     {
       title: "Title card 5",
@@ -56,7 +56,7 @@ module.exports = {
         classes: "mb-2",
       },
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
       content: getDummyText(4),
     },
     {
@@ -76,7 +76,7 @@ module.exports = {
       },
       wrapper_class: "col",
       content: "<button class='btn btn-success'>Custom action</button>",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
     },
     {
       title: "Title card 7",
@@ -94,7 +94,7 @@ module.exports = {
         position: "background",
       },
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass(["mb-3", "text-center"]),
+      attributes: new DrupalAttribute().addClass(["mb-3", "text-center"]),
     },
     {
       title: "Title card 6",
@@ -103,7 +103,7 @@ module.exports = {
         classes: "mb-2",
       },
       wrapper_class: "col",
-      attributes: new drupalAttribute().addClass("mb-3"),
+      attributes: new DrupalAttribute().addClass("mb-3"),
       content:
         "<p>Some representative placeholder content for the first card.</p>",
     },

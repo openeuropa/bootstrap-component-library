@@ -1,11 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OE - Subscription renders correctly 1`] = `
 <jest>
   <header
     class="bcl-header bcl-header--eu"
   >
-    <!-- navbar_settings -->
     <nav
       aria-label="Top Navigation"
       class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
@@ -29,11 +28,11 @@ exports[`OE - Subscription renders correctly 1`] = `
           />
         </a>
         <button
-          aria-controls="topNavbarDropdown"
+          aria-controls="header-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#topNavbarDropdown"
+          class="navbar-toggler bcl-navbar-toggler"
+          data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
@@ -41,202 +40,464 @@ exports[`OE - Subscription renders correctly 1`] = `
             class="navbar-toggler-icon"
           />
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="topNavbarDropdown"
-        >
-          <ul
-            class="nav"
-          >
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#languageModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#chat-left-dots-fill"
-                  />
-                </svg>
-                English
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                data-bs-target="#loginModal"
-                data-bs-toggle="modal"
-                href="/example.html"
-              >
-                <svg
-                  class="me-2-5 bi icon--xs"
-                >
-                  <use
-                    xlink:href="/icons.svg#person-fill"
-                  />
-                </svg>
-                Log in
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- project name -->
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
-      class="bcl-header__navbar navbar navbar-expand-lg navbar-dark"
+      class="bcl-header__navbar collapse navbar-collapse navbar navbar-expand-lg navbar-dark"
+      id="header-navbar"
     >
       <div
         class="container"
       >
-        <button
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler"
-          data-bs-target="#navbarNavDropdown"
-          data-bs-toggle="collapse"
-          type="button"
+        <ul
+          class="me-auto navbar-nav"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
-        </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNavDropdown"
-        >
-          <ul
-            class="me-auto navbar-nav"
+          <li
+            class="nav-item"
           >
-            <li
-              class="nav-item"
+            <div
+              class="bcl-mega-menu"
             >
-              <a
-                aria-current="page"
-                class="nav-link active"
-                href="/example.html"
-              >
-                Home
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 01
-              </a>
-            </li>
-            <li
-              class="nav-item"
-            >
-              <a
-                class="nav-link"
-                href="/example.html"
-              >
-                Item 02
-              </a>
-            </li>
-            <li
-              class="nav-item dropdown"
-            >
-              <a
+              <button
+                aria-controls="mega-menu-dropdown-megamenu"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle"
+                aria-haspopup="menu"
+                class="dropdown-toggle nav-link"
+                data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
+                id="dropdown-megamenu"
+                type="button"
               >
-                Dropdown link
-              </a>
-              <ul
-                aria-labelledby="navbarDropdownMenuLink"
-                class="dropdown-menu"
+                A link with dropdown
+              </button>
+              <nav
+                aria-label="Main mega menu"
+                aria-labelledby="dropdown-megamenu"
+                class="bcl-mega-menu__container dropdown-menu"
+                id="mega-menu-dropdown-megamenu"
               >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                <div
+                  class="container"
+                >
+                  <div
+                    class="container d-lg-none bcl-mega-menu__back-button-block"
                   >
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
+                    <button
+                      aria-label="Back to main menu"
+                      class="back-button btn btn-link btn-md"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2-5 bi icon--fluid"
+                      >
+                        <use
+                          xlink:href="/icons.svg#arrow-left"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                  </div>
+                  <div
+                    class="position-relative"
                   >
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Something else here
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/example.html"
-                  >
-                    Very long label with custom text and custom link as an example
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form
-            class="d-flex mt-3 mt-lg-0"
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info"
+                      >
+                        <div
+                          class="content-block"
+                        >
+                          <h4>
+                            About the European Commission
+                          </h4>
+                          <p>
+                            Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </p>
+                          <p
+                            class="m-0"
+                          >
+                            <a
+                              class="content-link"
+                              href="/example.html"
+                            >
+                              Discover more
+                              <svg
+                                class="ms-2-5 bi icon--s"
+                              >
+                                <use
+                                  xlink:href="/icons.svg#arrow-right"
+                                />
+                              </svg>
+                            </a>
+                          </p>
+                        </div>
+                        <div
+                          class="shadow-container"
+                        >
+                          <span
+                            class="shadow-bg"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-1"
+                        >
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-1"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              class="active"
+                              id="custom-trigger-mm-1"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-1"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-1"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__see_all __leaf"
+                                >
+                                  <a
+                                    aria-label="See all items in ‘Base Category Item’"
+                                    class="see-all-button"
+                                    href="/example.html"
+                                  >
+                                    <span>
+                                      See all
+                                    </span>
+                                    <svg
+                                      class="ms-2-5 bi icon--s"
+                                    >
+                                      <use
+                                        xlink:href="/icons.svg#arrow-right"
+                                      />
+                                    </svg>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Base Category Item
+                            </span>
+                          </li>
+                          <li
+                            class="__parent"
+                          >
+                            <button
+                              aria-controls="mm-panel-custom-trigger-mm-2"
+                              aria-expanded="false"
+                              aria-haspopup="menu"
+                              id="custom-trigger-mm-2"
+                              type="button"
+                            >
+                              Base Category Item
+                            </button>
+                            <div
+                              aria-labelledby="custom-trigger-mm-2"
+                              class="bcl-mega-menu__submenu __level-2"
+                              id="mm-panel-custom-trigger-mm-2"
+                              role="group"
+                            >
+                              <div
+                                class="__header"
+                              >
+                                <p
+                                  class="__label"
+                                >
+                                  Base Category Item
+                                </p>
+                              </div>
+                              <ul
+                                class="bcl-mega-menu__items __level-2"
+                              >
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Base Category Item
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </li>
+          <li
+            class="nav-item"
           >
-            <label
-              class="form-label visually-hidden"
-              for="inlineFormInputGroupSearch"
+            <a
+              aria-current="page"
+              class="nav-link active"
+              href="/example.html"
             >
-              Search
-            </label>
-            <input
-              class="border-start-0 rounded-0 rounded-start form-control"
-              id="inlineFormInputGroupSearch"
-              placeholder="Search"
-              required="true"
-              type="text"
-            />
+              Home
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 01
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 02
+            </a>
+          </li>
+          <li
+            class="nav-item dropdown"
+          >
             <button
-              class="border-start-0 rounded-0 rounded-end btn btn-light btn-md"
+              aria-expanded="false"
+              autocomplete="off"
+              class="dropdown-toggle btn btn-primary btn-md"
+              data-bs-toggle="dropdown"
+              id="navbarDropdownMenuLink"
               type="button"
             >
-              <span
-                class="visually-hidden"
-              >
-                search
-              </span>
-              <svg
-                class="bi icon--fluid"
-              >
-                <use
-                  xlink:href="/icons.svg#search"
-                />
-              </svg>
+              Dropdown link
             </button>
-          </form>
-        </div>
+            <ul
+              aria-labelledby="navbarDropdownMenuLink"
+              class="dropdown-menu"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Something else here
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/example.html"
+                >
+                  Very long label with custom text and custom link as an example
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <!-- breadcrumbs -->
@@ -834,12 +1095,13 @@ exports[`OE - Subscription renders correctly 1`] = `
           class="col-12 bcl-sidebar col-lg-3"
         >
           <nav
+            aria-labelledby="bcl-inpage-navigation-dropdown"
             class="bcl-inpage-navigation position-sticky"
             id="bcl-inpage-navigation"
           >
-            <h2
+            <button
               aria-expanded="false"
-              class="mb-0 dropdown-toggle bcl-heading"
+              class="dropdown-toggle h2 d-md-none"
               data-bs-toggle="dropdown"
               id="bcl-inpage-navigation-dropdown"
               type="button"
@@ -852,9 +1114,13 @@ exports[`OE - Subscription renders correctly 1`] = `
                   xlink:href="/icons.svg#chevron-down"
                 />
               </svg>
+            </button>
+            <h2
+              class="mb-0 d-none d-md-block bcl-heading"
+            >
+              Page content
             </h2>
             <div
-              aria-labelledby="bcl-inpage-navigation-dropdown"
               class="dropdown-menu"
             >
               <ul
@@ -1048,7 +1314,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                 >
                   <form
                     class="needs-validation"
-                    novalidate="true"
+                    novalidate="novalidate"
                     onsubmit="return false;"
                   >
                     <fieldset>
@@ -1071,7 +1337,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       <input
                         class="form-control"
                         placeholder="Type in your e-mail address"
-                        required="true"
+                        required="required"
                         type="email"
                       />
                       <div
@@ -1092,7 +1358,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                       <select
                         class="form-select"
                         id="language-select"
-                        required="true"
+                        required="required"
                       >
                         <option
                           disabled=""
@@ -1138,7 +1404,7 @@ exports[`OE - Subscription renders correctly 1`] = `
                         <input
                           class="form-check-input"
                           id="exampleInputCheck1"
-                          required="true"
+                          required="required"
                           type="checkbox"
                         />
                         <label

@@ -38,7 +38,7 @@ describe("OE - Language", () => {
 
   test(`passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoData, true)),
+      await axe(await renderTwigFileAsHtml(template, demoData, true)),
     ).toHaveNoViolations();
   });
 
@@ -54,7 +54,7 @@ describe("OE - Language", () => {
 
   test(`modal passes the accessibility tests`, async () => {
     expect(
-      await axe(renderTwigFileAsHtml(template, demoDataModal, true)),
+      await axe(await renderTwigFileAsHtml(template, demoDataModal, true)),
     ).toHaveNoViolations();
   });
 });
