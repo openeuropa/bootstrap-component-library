@@ -4,7 +4,7 @@ import modal from "@openeuropa/bcl-modal/modal.html.twig";
 const getArgs = () => ({
   size: "default",
   static_backdrop: false,
-  verticaly_centered: false,
+  vertically_centered: false,
   scrollable: false,
 });
 
@@ -40,7 +40,7 @@ const getArgTypes = () => ({
       category: "Style",
     },
   },
-  verticaly_centered: {
+  vertically_centered: {
     name: "verticaly centered",
     type: { name: "boolean" },
     description: "Vertically center the modal",
