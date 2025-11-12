@@ -1,6 +1,4 @@
 {% import _self as navigation %}
-{% apply spaceless %}
-
 {# Parameters:
   - id (string) (default: '')
   - pills (boolean) (default: false)
@@ -27,8 +25,7 @@
 
 {# Define main macro #}
 {% macro render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) %}
-{% apply spaceless %}
-  {% import _self as navigation %}
+{% import _self as navigation %}
 
   {% set _id = id|default('') %}
   {% set _pills = pills ?? false %}
@@ -181,9 +178,7 @@
     {%- endblock -%}
   </div>
   {% endif %}
-{% endapply %}
 {% endmacro %}
 
 {{ navigation.render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) }}
 
-{% endapply %}
