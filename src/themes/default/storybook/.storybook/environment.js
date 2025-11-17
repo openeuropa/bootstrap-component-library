@@ -6,17 +6,7 @@ const {
   createFilesystemLoader,
   createFunction,
 } = require("twing");
-const storybookAttributePath = path.resolve(
-  __dirname,
-  "..",
-  "..",
-  "..",
-  "..",
-  "..",
-  ".storybook",
-  "drupal-attribute",
-);
-const { StorybookDrupalAttribute } = require(storybookAttributePath);
+const { StorybookDrupalAttribute } = require("../../../../../.storybook/drupal-attribute");
 
 const componentsPath = path.resolve(__dirname, "../../../components");
 const compositionsPath = path.resolve(__dirname, "../../../compositions");
