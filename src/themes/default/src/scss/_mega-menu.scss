@@ -189,10 +189,58 @@ ul.bcl-mega-menu__items {
   list-style: none;
   margin: 0;
   padding-inline-start: 0;
+  .__body {
+    @include media-breakpoint-up(lg) {
+      background: $primary-bg-subtle;
+    }
+  }
+  .__see_all {
+    @include media-breakpoint-up(lg) {
+      margin: 0 map-get($spacers, "3-5");
+    }
+  }
   // Add a scrollbar in desktop viewport.
+  .see-all-button {
+    @include mm-item-padding();
+    // Use flex for icon spacing.
+    display: flex;
+    align-items: center;
+    color: $link-color;
+    border-top: 1px solid $primary-bg-subtle;
+    @include media-breakpoint-up(lg) {
+      border-top: 1px solid $primary-border-subtle;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &:hover {
+      background: $primary-bg-subtle;
+    }
+    &:after {
+      background: $neutral-border-color;
+      content: "";
+      block-size: 1px;
+      inset-inline-start: 0;
+      position: absolute;
+      inset-block-start: 0;
+      // Replicate horizontal padding of parent element.
+      inset-inline: $mm-gutter-x;
+    }
+    > svg {
+      flex-shrink: 0;
+    }
+    > span {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+      white-space: nowrap;
+    }
+  }
   @include media-breakpoint-up(lg) {
     block-size: $mm-panel-height;
     overflow-y: auto;
+    .__level-2 {
+      block-size: 240px;
+    }
   }
   // Add space above in mobile viewport.
   @include media-breakpoint-down(lg) {
@@ -273,34 +321,6 @@ ul.bcl-mega-menu__items {
             background-color: $primary;
           }
         }
-      }
-    }
-
-    // The see-all link is at the bottom of the list.
-    &:has(> a.see-all-button) {
-      position: sticky;
-      inset-block-start: 100%;
-    }
-    > a.see-all-button {
-      border-top: none;
-      &:after {
-        background: $neutral-border-color;
-        content: "";
-        block-size: 1px;
-        inset-inline-start: 0;
-        position: absolute;
-        inset-block-start: 0;
-        // Replicate horizontal padding of parent element.
-        inset-inline: $mm-gutter-x;
-      }
-      > svg {
-        inline-size: 0.8rem;
-      }
-      > span {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: block;
-        white-space: nowrap;
       }
     }
   }
