@@ -360,20 +360,15 @@ ul.bcl-mega-menu__items {
     }
   }
   @include media-breakpoint-up(lg) {
-    > .__body {
-      display: flex;
-      flex-direction: column;
+    > .bcl-mega-menu__items {
       flex: 1 1 0;
-      > .bcl-mega-menu__items {
-        flex: 1 1 0;
-        overflow-y: auto;
-        > li > :is(span, a, button) {
-          @include mm-item-padding($px: map-get($spacers, "4-25"));
-        }
+      overflow-y: auto;
+      > li > :is(span, a, button) {
+        @include mm-item-padding($px: map-get($spacers, "4-25"));
       }
     }
   }
-  > .__body > .__see_all {
+  > .__see_all {
     border-top: 1px solid $neutral-border-color;
     @include media-breakpoint-up(lg) {
       border-top: 1px solid $primary-border-subtle;
