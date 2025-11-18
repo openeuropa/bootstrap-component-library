@@ -12,6 +12,18 @@
   }
 }
 
+@mixin form-focus-ring(
+  $outline-offset: 2px,
+  $outline-width: 2px,
+  $radius: 4px,
+  $outline-color: $primary
+) {
+  outline: $outline-width solid $outline-color;
+  box-shadow: none;
+  border-radius: $radius;
+  outline-offset: $outline-offset;
+}
+
 @mixin focused-item($width: 2px, $offset: 2px, $color: $primary) {
   &:focus,
   &:focus-visible {
