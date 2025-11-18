@@ -190,29 +190,6 @@ ul.bcl-mega-menu__items {
   margin: 0;
   padding-inline-start: 0;
   // Add a scrollbar in desktop viewport.
-  .see-all-button {
-    @include mm-item-padding();
-    // Use flex for icon spacing.
-    display: flex;
-    align-items: center;
-    color: $link-color;
-    @include media-breakpoint-up(lg) {
-      padding: $mm-gutter-y map-get($spacers, "4-25");
-      margin: 0 -1.75rem;
-    }
-    &:hover {
-      background: $primary-bg-subtle;
-    }
-    > svg {
-      flex-shrink: 0;
-    }
-    > span {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      display: block;
-      white-space: nowrap;
-    }
-  }
   @include media-breakpoint-up(lg) {
     block-size: $mm-panel-height;
     overflow-y: auto;
@@ -405,6 +382,29 @@ ul.bcl-mega-menu__items {
     @include media-breakpoint-up(lg) {
       border-top: 1px solid $primary-border-subtle;
       margin: 0 map-get($spacers, "4-25");
+    }
+    > .see-all-button {
+      @include mm-item-padding();
+      // Use flex for icon spacing.
+      display: flex;
+      align-items: center;
+      color: $link-color;
+      @include media-breakpoint-up(lg) {
+        padding: $mm-gutter-y map-get($spacers, "4-25");
+        margin: 0 -1.75rem;
+      }
+      &:hover {
+        background: $primary-bg-subtle;
+      }
+      > svg {
+        flex-shrink: 0;
+      }
+      > span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+      }
     }
   }
 }
