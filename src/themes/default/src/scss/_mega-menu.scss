@@ -363,15 +363,12 @@ ul.bcl-mega-menu__items {
     > .__body {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      flex: 1 1 0;
       > .bcl-mega-menu__items {
-        flex-grow: 1;
-        block-size: 1px;
+        flex: 1 1 0;
         overflow-y: auto;
-        &.__level-2 {
-          > li > :is(span, a, button) {
-            @include mm-item-padding($px: map-get($spacers, "4-25"));
-          }
+        > li > :is(span, a, button) {
+          @include mm-item-padding($px: map-get($spacers, "4-25"));
         }
       }
     }
