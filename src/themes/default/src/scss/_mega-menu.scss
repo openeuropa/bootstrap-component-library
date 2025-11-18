@@ -403,8 +403,10 @@ ul.bcl-mega-menu__items {
         overflow: auto;
         > .bcl-mega-menu__items.__level-2 {
           block-size: auto;
-          > .__leaf {
-            > a {
+          > li {
+            > span,
+            > a,
+            > button {
               padding: $mm-gutter-y map-get($spacers, "4-25");
             }
           }
