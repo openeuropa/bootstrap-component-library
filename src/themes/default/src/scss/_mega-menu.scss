@@ -218,26 +218,6 @@ ul.bcl-mega-menu__items {
   @include media-breakpoint-up(lg) {
     block-size: $mm-panel-height;
     overflow-y: auto;
-    .__body {
-      background: $primary-bg-subtle;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      > .__items {
-        flex-grow: 1;
-        block-size: 1px;
-        overflow: auto;
-        > .bcl-mega-menu__items.__level-2 {
-          block-size: auto;
-          > .__leaf {
-            margin: 0 map-get($spacers, "2-5");
-          }
-        }
-      }
-      > .__see_all {
-        margin: 0 map-get($spacers, "4-25");
-      }
-    }
   }
   // Add space above in mobile viewport.
   @include media-breakpoint-down(lg) {
@@ -401,6 +381,32 @@ ul.bcl-mega-menu__items {
       font-size: 20px;
       @include media-breakpoint-up(lg) {
         display: none;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    > .__body {
+      background: $primary-bg-subtle;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      > .__items {
+        flex-grow: 1;
+        block-size: 1px;
+        overflow: auto;
+        > .bcl-mega-menu__items.__level-2 {
+          block-size: auto;
+          > .__leaf {
+            margin: 0 map-get($spacers, "4-25");
+            > a {
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+      > .__see_all {
+        margin: 0 map-get($spacers, "4-25");
       }
     }
   }
