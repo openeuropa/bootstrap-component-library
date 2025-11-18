@@ -397,57 +397,15 @@ ul.bcl-mega-menu__items {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      > .__items {
+      > .bcl-mega-menu__items {
         flex-grow: 1;
         block-size: 1px;
-        overflow: auto;
-        > .bcl-mega-menu__items.__level-2 {
-          block-size: auto;
-          > li {
-            > span,
-            > a,
-            > button {
-              padding: $mm-gutter-y map-get($spacers, "4-25");
-            }
+        overflow-y: auto;
+        &.__level-2 {
+          > li > :is(span, a, button) {
+            @include mm-item-padding($px: map-get($spacers, "4-25"));
           }
         }
-      }
-    }
-  }
-}
-
-// Second level items column.
-.bcl-mega-menu__second-submenu {
-  > .tab-content > .tab-pane {
-    // In desktop, the entire second-level list has a light blue background.
-    @include media-breakpoint-up(lg) {
-      background: $primary-bg-subtle;
-    }
-    // Hide other parts of the mega menu in mobile, when a sub-submenu is open.
-    @include media-breakpoint-down(lg) {
-      .bcl-mega-menu__container:has(&.active) {
-        .bcl-mega-menu__info,
-        .bcl-mega-menu__first-submenu {
-          display: none;
-        }
-      }
-    }
-    // The panel title only shows in mobile.
-    > .panel-title {
-      @include mm-item-padding(map-get($spacers, 3));
-      margin: 0;
-      color: $dark;
-      background: $primary-bg-subtle;
-      display: block;
-      font-size: 20px;
-      @include media-breakpoint-up(lg) {
-        display: none;
-      }
-    }
-    // Items get a bit more space to the sides in xl viewport.
-    @include media-breakpoint-up(xl) {
-      > ul > li > * {
-        margin: 0 map-get($spacers, "2-5");
       }
     }
   }
