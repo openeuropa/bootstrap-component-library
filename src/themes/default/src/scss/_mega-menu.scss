@@ -189,16 +189,6 @@ ul.bcl-mega-menu__items {
   list-style: none;
   margin: 0;
   padding-inline-start: 0;
-  .__body {
-    @include media-breakpoint-up(lg) {
-      background: $primary-bg-subtle;
-    }
-  }
-  .__see_all {
-    @include media-breakpoint-up(lg) {
-      margin: 0 map-get($spacers, "3-5");
-    }
-  }
   // Add a scrollbar in desktop viewport.
   .see-all-button {
     @include mm-item-padding();
@@ -215,16 +205,6 @@ ul.bcl-mega-menu__items {
     &:hover {
       background: $primary-bg-subtle;
     }
-    &:after {
-      background: $neutral-border-color;
-      content: "";
-      block-size: 1px;
-      inset-inline-start: 0;
-      position: absolute;
-      inset-block-start: 0;
-      // Replicate horizontal padding of parent element.
-      inset-inline: $mm-gutter-x;
-    }
     > svg {
       flex-shrink: 0;
     }
@@ -238,8 +218,25 @@ ul.bcl-mega-menu__items {
   @include media-breakpoint-up(lg) {
     block-size: $mm-panel-height;
     overflow-y: auto;
-    .__level-2 {
-      block-size: 240px;
+    .__body {
+      background: $primary-bg-subtle;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      > .__items {
+        flex-grow: 1;
+        block-size: 1px;
+        overflow: auto;
+        > .bcl-mega-menu__items.__level-2 {
+          block-size: auto;
+          > .__leaf {
+            margin: 0 map-get($spacers, "2-5");
+          }
+        }
+      }
+      > .__see_all {
+        margin: 0 map-get($spacers, "4-25");
+      }
     }
   }
   // Add space above in mobile viewport.
