@@ -382,15 +382,6 @@ ul.bcl-mega-menu__items {
       }
     }
   }
-  > .__body {
-    > .__see_all {
-      border-top: 1px solid $neutral-border-color;
-      @include media-breakpoint-up(lg) {
-        border-top: 1px solid $primary-border-subtle;
-        margin: 0 map-get($spacers, "4-25");
-      }
-    }
-  }
   @include media-breakpoint-up(lg) {
     > .__body {
       background: $primary-bg-subtle;
@@ -407,6 +398,13 @@ ul.bcl-mega-menu__items {
           }
         }
       }
+    }
+  }
+  > .__body > .__see_all {
+    border-top: 1px solid $neutral-border-color;
+    @include media-breakpoint-up(lg) {
+      border-top: 1px solid $primary-border-subtle;
+      margin: 0 map-get($spacers, "4-25");
     }
   }
 }
