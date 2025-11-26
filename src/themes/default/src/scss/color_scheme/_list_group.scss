@@ -1,6 +1,8 @@
-// Color scheme - List Group
-
 @use "sass:math";
+
+@import "@openeuropa/bcl-theme-default/src/scss/bcl-theme";
+
+// Color scheme - List Group
 
 @mixin generate-list-group($color, $value) {
   $bg: shift-color($value, -80%);

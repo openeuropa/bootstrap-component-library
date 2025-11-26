@@ -1,3 +1,14 @@
+@import "@openeuropa/bcl-theme-default/src/scss/bcl-theme";
+@import "@openeuropa/bcl-theme-default/src/scss/color-scheme-variables";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/background";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/text";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/link";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/alert";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/buttons";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/list_group";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/badges";
+@import "@openeuropa/bcl-theme-default/src/scss/color_scheme/utilities";
+
 @each $scheme-name, $scheme-array in $colors-schemes {
   .#{$scheme-name} {
     $theme-colors-rgb: map-loop($scheme-array, to-rgb, "$value");

@@ -1,8 +1,10 @@
+@use "sass:math";
+
+@import "@openeuropa/bcl-theme-default/src/scss/bcl-theme";
+
 // Color scheme - Alert
 
 // No longer using $alert-bg-scale, $alert-border-scale, $alert-color-scale variables because they are deprecated in bootstrap 5.3.x
-
-@use "sass:math";
 
 @mixin generate-alerts($color, $value) {
   $bg: shift-color($value, -80%);
