@@ -17,6 +17,8 @@
   - language_modal (object) (default: {})
   - light (boolean) (default: false)
   - modals (modal[]) (default: [])
+  - toggler_attributes (drupal attrs)
+  - icon_path (string) (default: '')
   - attributes (drupal attrs)
 #}
 
@@ -30,6 +32,8 @@
 {% set _breadcrumbs = breadcrumbs|default({}) %}
 {% set _language_modal = language_modal|default({}) %}
 {% set _light = light ?? false %}
+{% set _toggler_attributes = toggler_attributes ?: create_attribute() %}
+{% set _icon_path = icon_path|default('') %}
 {% set _modals = modals|default([]) %}
 
 {% set _site_name_classes = 'bcl-header__site-name' %}
@@ -38,7 +42,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bcl-header', 'bcl-header--' ~ _variant]) %}
+{% set attributes = attributes.addClass(['bcl-header', 'bcl-header--' ~ _variant, 'shadow-sm']) %}
 
 {% if site_name_classes is not empty %}
   {% set _site_name_classes = _site_name_classes ~ ' ' ~ site_name_classes %}
@@ -48,6 +52,33 @@
 {% if _light is not empty %}
   {% set _project_classes = _project_classes ~ ' light' %}
 {% endif %}
+
+{% set toggler_attributes = _toggler_attributes.addClass(['bcl-navbar-toggler', 'd-lg-none'])
+  .setAttribute('type', 'button')
+  .setAttribute('data-bs-toggle', 'collapse')
+  .setAttribute('data-bs-target', '#' ~ navbar_id)
+  .setAttribute('aria-controls', navbar_id)
+  .setAttribute('aria-expanded', 'false')
+%}
+
+{% set navbar_toggle_button %}
+  <button
+    {{ toggler_attributes }}
+  >
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+      name: 'list',
+      size: 'fluid',
+      path: _icon_path,
+      attributes: create_attribute().addClass(['default-icon']),
+    } only %}
+    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+      name: 'x',
+      size: 'fluid',
+      path: _icon_path,
+      attributes: create_attribute().addClass(['active-icon']),
+    } only %}
+  </button>
+{% endset %}
 
 <header
   {{ attributes }}
@@ -70,19 +101,16 @@
       {% endfor %}
       </a>
     {% endif %}
-      <button
-        class="navbar-toggler bcl-navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target='#{{ _navbar_id }}'
-        aria-controls='{{ _navbar_id }}'
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      {{ navbar_toggle_button }}
     </div>
   </nav>
+
+  <!-- site name -->
+  <div class="bcl-header__site-name" id="site-name-heading">
+    <div class="container">
+      <span class="h5 py-3-5 border-top-subtle mb-0 d-block">{{ _site_name }}</span>
+    </div>
+  </div>
 
   <!-- navbar -->
   {% if _navbar is not empty %}

@@ -46,6 +46,7 @@ $header-link-active-background: #003776 !default;
 }
 
 .bcl-header {
+  --oel-mega-menu-offset-top: 0px;
   .notification {
     position: relative;
     padding-right: 0;
@@ -96,7 +97,7 @@ $header-link-active-background: #003776 !default;
   header:has(.bcl-header__navbar #main-navbar.show),
   header:has(.bcl-header__navbar.collapsing),
   header:has(.bcl-header__navbar.show) {
-    height: 100vh;
+    height: calc(100vh - var(--oel-mega-menu-offset-top, 0px));
     display: flex;
     flex-flow: column;
 

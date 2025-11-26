@@ -9,6 +9,11 @@ const modals = require("@openeuropa/bcl-data-header/data--modals");
 module.exports = {
   navbar_id: "header-navbar",
   site_name: "Project name",
+  icon_path: "/icons.svg",
+  toggler_attributes: new DrupalAttribute().setAttribute(
+    "aria-label",
+    "Main navigation toggle",
+  ),
   site_name_classes: "h5 d-inline-block d-lg-none",
   head: {
     brand: {

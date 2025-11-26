@@ -3,11 +3,11 @@
 exports[`OE - event listing renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header bcl-header--eu"
+    class="bcl-header bcl-header--eu shadow-sm"
   >
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -30,18 +30,44 @@ exports[`OE - event listing renders correctly 1`] = `
         <button
           aria-controls="header-navbar"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler bcl-navbar-toggler"
+          aria-label="Main navigation toggle"
+          class="bcl-navbar-toggler d-lg-none"
           data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
+          <svg
+            class="default-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#list"
+            />
+          </svg>
+          <svg
+            class="active-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#x"
+            />
+          </svg>
         </button>
       </div>
     </nav>
+    <!-- site name -->
+    <div
+      class="bcl-header__site-name"
+      id="site-name-heading"
+    >
+      <div
+        class="container"
+      >
+        <span
+          class="h5 py-3-5 border-top-subtle mb-0 d-block"
+        >
+          Project name
+        </span>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
@@ -186,6 +212,60 @@ exports[`OE - event listing renders correctly 1`] = `
                                 >
                                   <a
                                     class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
@@ -497,6 +577,46 @@ exports[`OE - event listing renders correctly 1`] = `
                 </a>
               </li>
             </ul>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 04
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 05
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 06
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 07
+            </a>
           </li>
         </ul>
       </div>
@@ -2355,11 +2475,11 @@ exports[`OE - event listing renders correctly 1`] = `
 exports[`OE - event page renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header bcl-header--eu"
+    class="bcl-header bcl-header--eu shadow-sm"
   >
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -2382,18 +2502,44 @@ exports[`OE - event page renders correctly 1`] = `
         <button
           aria-controls="header-navbar"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler bcl-navbar-toggler"
+          aria-label="Main navigation toggle"
+          class="bcl-navbar-toggler d-lg-none"
           data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
+          <svg
+            class="default-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#list"
+            />
+          </svg>
+          <svg
+            class="active-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#x"
+            />
+          </svg>
         </button>
       </div>
     </nav>
+    <!-- site name -->
+    <div
+      class="bcl-header__site-name"
+      id="site-name-heading"
+    >
+      <div
+        class="container"
+      >
+        <span
+          class="h5 py-3-5 border-top-subtle mb-0 d-block"
+        >
+          Project name
+        </span>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
@@ -2538,6 +2684,60 @@ exports[`OE - event page renders correctly 1`] = `
                                 >
                                   <a
                                     class="active"
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
                                     href="/example.html"
                                   >
                                     Base Sub Category Item
@@ -2849,6 +3049,46 @@ exports[`OE - event page renders correctly 1`] = `
                 </a>
               </li>
             </ul>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 04
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 05
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 06
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 07
+            </a>
           </li>
         </ul>
       </div>

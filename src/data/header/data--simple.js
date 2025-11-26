@@ -8,9 +8,15 @@ const modals = require("@openeuropa/bcl-data-header/data--modals");
 module.exports = {
   variant: "eu",
   navbar_id: "header-navbar",
+  icon_path: "/icons.svg",
+  site_name: "Project name",
+  toggler_attributes: new DrupalAttribute().setAttribute(
+    "aria-label",
+    "Main navigation toggle",
+  ),
   head: {
     attributes: new DrupalAttribute()
-      .addClass(["w-100", "shadow-sm", "bcl-header__top-navbar"])
+      .addClass(["w-100", "bcl-header__top-navbar"])
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: false,
     collapse_id: "topNavbarDropdown",
