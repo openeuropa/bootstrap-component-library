@@ -6,35 +6,7 @@ const TOGGLER_SELECTOR = ".bcl-navbar-toggler";
 const OFFSET_VARIABLE = "--oel-mega-menu-offset-top";
 
 class Header {
-  constructor(element) {
-    this.element = element;
-    this.frameRequest = null;
-    this.resizeObserver = null;
-
-    this.boundScheduleUpdate = this.scheduleUpdate.bind(this);
-
-    this.init();
-  }
-
-  init() {
-    this.updateOffset();
-
-    EventHandler.on(window, "resize", this.boundScheduleUpdate);
-    EventHandler.on(window, "orientationchange", this.boundScheduleUpdate);
-    EventHandler.on(window, "scroll", this.boundScheduleUpdate);
-
-    const togglers = SelectorEngine.find(TOGGLER_SELECTOR, this.element);
-    togglers.forEach((toggler) => {
-      EventHandler.on(toggler, "click", this.boundScheduleUpdate);
-    });
-
-    if (typeof window !== "undefined" && "ResizeObserver" in window && document.body) {
-      this.resizeObserver = new ResizeObserver(() => this.scheduleUpdate());
-      this.resizeObserver.observe(document.body);
-    }
-  }
-
-  scheduleUpdate() {
+  scheduleUpdate = () => {
     if (this.frameRequest) {
       return;
     }
@@ -42,6 +14,27 @@ class Header {
     this.frameRequest = window.requestAnimationFrame(() => {
       this.frameRequest = null;
       this.updateOffset();
+    });
+  };
+
+  constructor(element) {
+    this.element = element;
+    this.frameRequest = null;
+    this.resizeObserver = null;
+
+    this.init();
+  }
+
+  init() {
+    this.updateOffset();
+
+    EventHandler.on(window, "resize", this.scheduleUpdate);
+    EventHandler.on(window, "orientationchange", this.scheduleUpdate);
+
+    const togglers = SelectorEngine.find(TOGGLER_SELECTOR, this.element);
+    togglers.forEach((toggler) => {
+      // Some layouts move the header when the nav toggler expands; keep offset in sync.
+      EventHandler.on(toggler, "click", this.scheduleUpdate);
     });
   }
 
