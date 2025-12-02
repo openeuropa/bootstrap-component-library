@@ -7,126 +7,13 @@ const { StorybookDrupalAttribute } = require(
 );
 
 const { DOMElement, DOMCollection } = prettyFormat.plugins;
-const PRE_FORMATTED_TAGS = new Set(["PRE", "TEXTAREA"]);
-const TEXT_NODE = 3;
-const ELEMENT_NODE = 1;
-const BOOLEAN_ATTRIBUTES = new Set([
-  "allowfullscreen",
-  "async",
-  "autofocus",
-  "autoplay",
-  "checked",
-  "controls",
-  "default",
-  "defer",
-  "disabled",
-  "formnovalidate",
-  "hidden",
-  "inert",
-  "ismap",
-  "loop",
-  "multiple",
-  "muted",
-  "novalidate",
-  "open",
-  "playsinline",
-  "readonly",
-  "required",
-  "reversed",
-  "scoped",
-  "selected",
-]);
 
-/**
- * ---------------------------------------------------------------------------
- * DOM helpers
- * ---------------------------------------------------------------------------
- */
-
-const trimBoundaryWhitespace = (value) => {
-  if (!value) {
-    return value;
-  }
-
-  let start = 0;
-  let seenLineBreak = false;
-
-  while (start < value.length) {
-    const char = value[start];
-
-    if (char === "\n" || char === "\r") {
-      seenLineBreak = true;
-      start += 1;
-      continue;
-    }
-
-    if (seenLineBreak && (char === " " || char === "\t")) {
-      start += 1;
-      continue;
-    }
-
-    break;
-  }
-
-  let end = value.length - 1;
-  seenLineBreak = false;
-
-  while (end >= start) {
-    const char = value[end];
-
-    if (char === "\n" || char === "\r") {
-      seenLineBreak = true;
-      end -= 1;
-      continue;
-    }
-
-    if (seenLineBreak && (char === " " || char === "\t")) {
-      end -= 1;
-      continue;
-    }
-
-    break;
-  }
-
-  return value.slice(start, end + 1);
-};
-
-const cleanWhitespace = (node) => {
-  for (let child = node.firstChild; child; ) {
-    const next = child.nextSibling;
-
-    if (child.nodeType === TEXT_NODE) {
-      if (!child.textContent.trim()) {
-        child.parentNode.removeChild(child);
-      } else {
-        const parentName = child.parentNode?.nodeName?.toUpperCase();
-        if (!parentName || !PRE_FORMATTED_TAGS.has(parentName)) {
-          const trimmed = trimBoundaryWhitespace(child.textContent);
-          if (trimmed) {
-            child.textContent = trimmed;
-          } else {
-            child.parentNode.removeChild(child);
-          }
-        }
-      }
-    } else if (child.nodeType === ELEMENT_NODE) {
-      cleanWhitespace(child);
-    }
-
-    child = next;
-  }
-};
-
-/**
- * ---------------------------------------------------------------------------
- * Option cloning
- * ---------------------------------------------------------------------------
- */
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const isPlainObject = (value) =>
   Object.prototype.toString.call(value) === "[object Object]";
 
-const cloneValue = (value) => {
+function cloneValue(value) {
   if (value === null || value === undefined) {
     return value;
   }
@@ -136,11 +23,13 @@ const cloneValue = (value) => {
   }
 
   if (value instanceof BaseDrupalAttribute) {
-    const clone = new StorybookDrupalAttribute();
+    const converted = new StorybookDrupalAttribute();
+
     for (const [key, attributeValue] of value.entries()) {
-      clone.set(key, cloneValue(attributeValue));
+      converted.set(key, cloneValue(attributeValue));
     }
-    return clone;
+
+    return converted;
   }
 
   if (Array.isArray(value)) {
@@ -148,38 +37,26 @@ const cloneValue = (value) => {
   }
 
   if (isPlainObject(value)) {
-    return Object.fromEntries(
-      Object.entries(value).map(([key, item]) => [key, cloneValue(item)]),
-    );
+    return Object.entries(value).reduce((accumulator, [key, item]) => {
+      accumulator[key] = cloneValue(item);
+      return accumulator;
+    }, {});
   }
 
   return value;
-};
+}
 
-const prepareOptions = (options = {}, reset = false) => {
-  if (reset) {
-    return {
-      ...(isPlainObject(options) ? options : {}),
-      attributes: new StorybookDrupalAttribute(),
-    };
+function normalizeOptions(options) {
+  if (options === null || options === undefined) {
+    return options;
   }
 
-  if (isPlainObject(options)) {
-    return cloneValue(options);
-  }
+  return cloneValue(options);
+}
 
-  return options;
-};
-
-/**
- * ---------------------------------------------------------------------------
- * Snapshot formatting
- * ---------------------------------------------------------------------------
- */
-
-const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const countValuelessAttributes = (markup) => {
+// Track attributes rendered without explicit values so snapshots can mirror
+// Drupal's boolean attribute output.
+const getValuelessAttributeCounts = (markup) => {
   const counts = new Map();
   const tagRegex = /<([A-Za-z][^\s/>]*)([^>]*)>/g;
 
@@ -198,7 +75,12 @@ const countValuelessAttributes = (markup) => {
     while ((attributeMatch = attributeRegex.exec(attributesChunk)) !== null) {
       const [fullAttribute, attributeName] = attributeMatch;
 
-      if (attributeName && !fullAttribute.includes("=")) {
+      if (!attributeName) {
+        continue;
+      }
+
+      const hasAssignment = fullAttribute.includes("=");
+      if (!hasAssignment) {
         counts.set(attributeName, (counts.get(attributeName) ?? 0) + 1);
       }
     }
@@ -207,7 +89,8 @@ const countValuelessAttributes = (markup) => {
   return counts;
 };
 
-const restoreValuelessAttributes = (snapshot, counts) => {
+// Re-apply valueless attributes within the pretty-printed DOM snapshot string.
+const applyValuelessAttributes = (snapshot, counts) => {
   if (!counts || counts.size === 0) {
     return snapshot;
   }
@@ -215,7 +98,12 @@ const restoreValuelessAttributes = (snapshot, counts) => {
   let result = snapshot;
 
   for (const [attributeName, occurrences] of counts.entries()) {
-    const pattern = new RegExp(`${escapeRegExp(attributeName)}=""`, "g");
+    if (!occurrences) {
+      continue;
+    }
+
+    const escapedName = escapeRegExp(attributeName);
+    const pattern = new RegExp(`${escapedName}=""`, "g");
     let remaining = occurrences;
 
     result = result.replace(pattern, (match) => {
@@ -230,32 +118,21 @@ const restoreValuelessAttributes = (snapshot, counts) => {
   return result;
 };
 
+// Remove escape sequences inside attribute values so JSON-like payloads render
+// with plain double quotes, matching the Twig templates.
 const normalizeAttributeQuotes = (snapshot) =>
   snapshot.replace(
     /([^\s=]+)="((?:[^"\\]|\\.)*)"/g,
-    (fullMatch, name, value) =>
-      value.includes('\\"')
-        ? `${name}="${value.replace(/\\"/g, '"')}"`
-        : fullMatch,
+    (fullMatch, name, value) => {
+      if (!value.includes('\\"')) {
+        return fullMatch;
+      }
+
+      const unescaped = value.replace(/\\"/g, '"');
+
+      return `${name}="${unescaped}"`;
+    },
   );
-
-const normalizeBooleanAttributes = (snapshot) =>
-  snapshot.replace(/([^\s=\/>]+)="\1"/g, (match, name) => {
-    if (BOOLEAN_ATTRIBUTES.has(name.toLowerCase())) {
-      return name;
-    }
-    return match;
-  });
-
-const formatSnapshot = (jest, counts) => {
-  const raw = prettyFormat.format(jest, {
-    plugins: [DOMElement, DOMCollection],
-  });
-
-  return normalizeBooleanAttributes(
-    normalizeAttributeQuotes(restoreValuelessAttributes(raw, counts)),
-  );
-};
 
 if (
   typeof expect !== "undefined" &&
@@ -271,32 +148,44 @@ if (
   });
 }
 
-/**
- * ---------------------------------------------------------------------------
- * Public API
- * ---------------------------------------------------------------------------
- */
+const renderTwigFileAsNode = async (file, options = {}, reset) => {
+  let baseOptions = options;
 
-const renderTwigFileAsNode = async (file, options = {}, reset = false) => {
-  const renderOptions = prepareOptions(options, reset);
+  if (reset) {
+    baseOptions = {
+      ...(isPlainObject(options) ? options : {}),
+      attributes: new StorybookDrupalAttribute(),
+    };
+  } else if (isPlainObject(options)) {
+    baseOptions = { ...options };
+  }
+
+  const renderOptions = normalizeOptions(baseOptions);
+
   const html = await twing.render(file, renderOptions);
   const markup = html.trim();
-  const valuelessCounts = countValuelessAttributes(markup);
+  const valuelessCounts = getValuelessAttributeCounts(markup);
 
   const jest = document.createElement("jest");
   jest.innerHTML = markup;
-  cleanWhitespace(jest);
+
+  const prettySnapshot = prettyFormat.format(jest, {
+    plugins: [DOMElement, DOMCollection],
+  });
+  const snapshotHtml = normalizeAttributeQuotes(
+    applyValuelessAttributes(prettySnapshot, valuelessCounts),
+  );
 
   Object.defineProperty(jest, "__storybookDrupalHtml", {
-    value: formatSnapshot(jest, valuelessCounts),
+    value: snapshotHtml,
     configurable: true,
   });
 
   return jest;
 };
 
-const renderTwigFileAsHtml = async (file, options = {}, main = false) => {
-  const renderOptions = prepareOptions(options);
+const renderTwigFileAsHtml = async (file, options = {}, main) => {
+  const renderOptions = normalizeOptions(options);
   const html = await twing.render(file, renderOptions);
 
   if (!main) {
@@ -320,14 +209,9 @@ const getVariants = (outline, add) => {
     "light",
     "dark",
   ];
-
   if (outline) {
-    variants = [
-      ...variants,
-      ...variants.map((variant) => `outline-${variant}`),
-    ];
+    variants = [...variants, ...variants.map((el) => `outline-${el}`)];
   }
-
   if (add) {
     variants = [...variants, ...add];
   }

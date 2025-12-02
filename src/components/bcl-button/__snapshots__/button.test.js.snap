@@ -238,13 +238,26 @@ exports[`OE - Button with icon renders correctly 1`] = `
     type="button"
   >
     Label
+
+
+  
+
+
+
     <svg
       class="ms-2-5 bi icon--fluid icon--rotate-90"
     >
+      
+  
       <use
         xlink:href="/icons.svg#mouse"
       />
+      
+
     </svg>
+    
+
+
   </button>
 </jest>
 `;
@@ -272,17 +285,29 @@ exports[`OE - Button with spinner renders correctly 1`] = `
     class="btn btn-primary btn-md"
     type="button"
   >
+    
+
+  
+
+
+
     <div
       class="me-1 spinner-border spinner-border-sm"
       role="status"
     >
+      
+  
       <span
         class="visually-hidden"
       >
         Loading...
       </span>
+      
+
     </div>
-    Label
+    
+
+Label
   </button>
 </jest>
 `;
