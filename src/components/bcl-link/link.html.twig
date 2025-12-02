@@ -70,7 +70,12 @@
 {% if _classes is not empty %}
   {% set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% set attributes = attributes.setAttribute('href', _path) %}
+{# Cast Url objects to strings before using them as href attributes. #}
+{% set _href = _path %}
+{% if _path.toString is defined %}
+  {% set _href = _path.toString() %}
+{% endif %}
+{% set attributes = attributes.setAttribute('href', _href) %}
 
 <a
   {{ attributes }}
@@ -83,4 +88,3 @@
     {{ _icon_markup }}
   {%- endif -%}
 </a>
-
