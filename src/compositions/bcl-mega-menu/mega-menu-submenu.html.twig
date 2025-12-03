@@ -21,26 +21,24 @@
 }) %}
 {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger only %}
 
-{# Add an optional "See all" link as last item. #}
+{% set _see_all_link = null %}
+{# Prepare an optional "See all" link rendered outside the list. #}
 {% if _see_all is not empty %}
-  {# Wrap the label for an ellipsis. #}
   {% set _see_all_label %}
     <span>{{- _see_all.label -}}</span>
   {% endset %}
   {% set _see_all_attr = (_see_all.attributes is defined ? _see_all.attributes : create_attribute()) %}
-  {% set _see_all = _see_all|merge({
+  {% set _see_all_link = _see_all|merge({
     label: _see_all_label,
     icon: {
+      size: 'xs',
       name: 'arrow-right',
       path: _icon_path,
     },
-    li_attributes: create_attribute()
-      .addClass('__see_all'),
     attributes: _see_all_attr
       .addClass(['see-all-button'])
       .setAttribute('aria-label', 'See all items in ‘' ~ _trigger.label ~ '’')
   }) %}
-  {% set _items = _items|merge([_see_all]) %}
 {% endif %}
 {% set submenu_attributes = create_attribute()
   .setAttribute('id', _panel_id)
@@ -60,6 +58,11 @@
     icon_path: _icon_path,
     level: _level,
   } only %}
+  {% if _see_all_link %}
+    <div class="__see_all">
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _see_all_link only %}
+    </div>
+  {% endif %}
 </div>
 
 {% endapply %}

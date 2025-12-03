@@ -3,6 +3,7 @@ const { DrupalAttribute } = require("drupal-attribute");
 module.exports = {
   navbar_id: "header-navbar",
   variant: "ucpkn",
+  icon_path: "/icons.svg",
   site_name: "UCP Knowledge Network: Applied knowledge for action",
   light: true,
   project_logo: {
@@ -133,9 +134,13 @@ module.exports = {
       ],
     },
   },
+  toggler_attributes: new DrupalAttribute().setAttribute(
+    "aria-label",
+    "Main navigation toggle",
+  ),
   head: {
     attributes: new DrupalAttribute()
-      .addClass(["w-100", "shadow-sm"])
+      .addClass(["w-100"])
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: true,
     brand: {

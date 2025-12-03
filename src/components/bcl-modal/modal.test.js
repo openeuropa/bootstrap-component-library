@@ -46,7 +46,7 @@ describe("OE - modal", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, verticaly_centered: true }),
+      render({ ...demoData, vertically_centered: true }),
     ).resolves.toMatchSnapshot();
   });
 

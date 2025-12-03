@@ -57,6 +57,30 @@ module.exports = {
                 label: "Base Sub Category Item",
                 path: "/example.html",
               },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
+              {
+                label: "Base Sub Category Item",
+                path: "/example.html",
+              },
             ],
           },
           {
@@ -169,6 +193,22 @@ module.exports = {
             path: "/example.html",
           },
         ],
+      },
+      {
+        label: "Item 04",
+        path: "/example.html",
+      },
+      {
+        label: "Item 05",
+        path: "/example.html",
+      },
+      {
+        label: "Item 06",
+        path: "/example.html",
+      },
+      {
+        label: "Item 07",
+        path: "/example.html",
       },
     ],
   },

@@ -9,7 +9,12 @@ const modals = require("@openeuropa/bcl-data-header/data--modals");
 module.exports = {
   variant: "ec",
   navbar_id: "header-navbar",
+  icon_path: "/icons.svg",
   site_name: "Project name",
+  toggler_attributes: new DrupalAttribute().setAttribute(
+    "aria-label",
+    "Main navigation toggle",
+  ),
   project_logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
     classes: "d-none d-lg-inline-block",
@@ -18,7 +23,7 @@ module.exports = {
   project_link: "/example.html",
   head: {
     attributes: new DrupalAttribute()
-      .addClass(["w-100", "shadow-sm", "bcl-header__top-navbar"])
+      .addClass(["w-100", "bcl-header__top-navbar"])
       .setAttribute("aria-label", "Top Navigation"),
     brand: {
       link: "/example.html",
