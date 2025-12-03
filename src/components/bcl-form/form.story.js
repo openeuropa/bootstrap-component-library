@@ -3,6 +3,7 @@ import demoDisabled from "@openeuropa/bcl-data-form/data--disabled.js";
 import demoGrid from "@openeuropa/bcl-data-form/data--grid.js";
 import demoHorizontal from "@openeuropa/bcl-data-form/data--horizontal.js";
 import demoInline from "@openeuropa/bcl-data-form/data--inline.js";
+import demoAllInputs from "@openeuropa/bcl-data-form/data--all-inputs.js";
 import form from "@openeuropa/bcl-form/form.html.twig";
 
 export default {
@@ -54,3 +55,6 @@ export const Horizontal = () => form(demoHorizontal);
 Horizontal.storyName = "Horizontal (with default browser validation)";
 
 export const Inline = () => form(demoInline);
+
+export const AllInputsControls = () => form(demoAllInputs);
+AllInputsControls.storyName = "All controls";

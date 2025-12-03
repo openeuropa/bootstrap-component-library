@@ -275,34 +275,6 @@ ul.bcl-mega-menu__items {
         }
       }
     }
-
-    // The see-all link is at the bottom of the list.
-    &:has(> a.see-all-button) {
-      position: sticky;
-      inset-block-start: 100%;
-    }
-    > a.see-all-button {
-      border-top: none;
-      &:after {
-        background: $neutral-border-color;
-        content: "";
-        block-size: 1px;
-        inset-inline-start: 0;
-        position: absolute;
-        inset-block-start: 0;
-        // Replicate horizontal padding of parent element.
-        inset-inline: $mm-gutter-x;
-      }
-      > svg {
-        inline-size: 0.8rem;
-      }
-      > span {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: block;
-        white-space: nowrap;
-      }
-    }
   }
 }
 
@@ -313,6 +285,21 @@ ul.bcl-mega-menu__items {
     position: relative;
     // Avoid a space between the parent menu and the submenu.
     @include padding-right(0);
+  }
+  @include media-breakpoint-down(lg) {
+    > .bcl-mega-menu__items {
+      &:has(.bcl-mega-menu__submenu:not([hidden])) {
+        > .__leaf,
+        > .__parent {
+          display: none;
+        }
+      }
+      > .__parent {
+        &:has(.bcl-mega-menu__submenu:not([hidden])) {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -372,40 +359,42 @@ ul.bcl-mega-menu__items {
       }
     }
   }
-}
-
-// Second level items column.
-.bcl-mega-menu__second-submenu {
-  > .tab-content > .tab-pane {
-    // In desktop, the entire second-level list has a light blue background.
+  @include media-breakpoint-up(lg) {
+    > .bcl-mega-menu__items {
+      flex: 1 1 0;
+      overflow-y: auto;
+      > li > :is(span, a, button) {
+        @include mm-item-padding($px: map-get($spacers, "4-25"));
+      }
+    }
+  }
+  > .__see_all {
+    border-top: 1px solid $neutral-border-color;
     @include media-breakpoint-up(lg) {
-      background: $primary-bg-subtle;
+      border-top: 1px solid $primary-border-subtle;
+      margin: 0 map-get($spacers, "4-25");
     }
-    // Hide other parts of the mega menu in mobile, when a sub-submenu is open.
-    @include media-breakpoint-down(lg) {
-      .bcl-mega-menu__container:has(&.active) {
-        .bcl-mega-menu__info,
-        .bcl-mega-menu__first-submenu {
-          display: none;
-        }
-      }
-    }
-    // The panel title only shows in mobile.
-    > .panel-title {
-      @include mm-item-padding(map-get($spacers, 3));
-      margin: 0;
-      color: $dark;
-      background: $primary-bg-subtle;
-      display: block;
-      font-size: 20px;
+    > .see-all-button {
+      @include mm-item-padding();
+      // Use flex for icon spacing.
+      display: flex;
+      align-items: center;
+      color: $link-color;
       @include media-breakpoint-up(lg) {
-        display: none;
+        padding: $mm-gutter-y map-get($spacers, "4-25");
+        margin: 0 -1.75rem;
       }
-    }
-    // Items get a bit more space to the sides in xl viewport.
-    @include media-breakpoint-up(xl) {
-      > ul > li > * {
-        margin: 0 map-get($spacers, "2-5");
+      &:hover {
+        background: $primary-bg-subtle;
+      }
+      > svg {
+        flex-shrink: 0;
+      }
+      > span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
       }
     }
   }

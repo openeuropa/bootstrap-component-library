@@ -39,6 +39,10 @@ $search-spacers: (
       padding-right: map-get($search-spacers, "submit-spacer-right");
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      &:focus-visible {
+        outline-offset: 2px;
+        outline-color: $primary;
+      }
     }
     .bcl-search-form__group {
       display: flex;

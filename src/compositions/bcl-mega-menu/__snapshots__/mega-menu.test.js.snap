@@ -109,6 +109,7 @@ exports[`OE - Mega Menu renders correctly 1`] = `
                   <div
                     aria-labelledby="custom-trigger-mm-1"
                     class="bcl-mega-menu__submenu __level-2"
+                    hidden
                     id="mm-panel-custom-trigger-mm-1"
                     role="group"
                   >
@@ -151,27 +152,27 @@ exports[`OE - Mega Menu renders correctly 1`] = `
                           Sub-submenu item 1.3
                         </a>
                       </li>
-                      <li
-                        class="__see_all __leaf"
-                      >
-                        <a
-                          aria-label="See all items in ‘Submenu item 1 with very long text that wraps to multiple lines’"
-                          class="see-all-button"
-                          href="/example.html"
-                        >
-                          <span>
-                            More of submenu item 1, where even the see all text is very long.
-                          </span>
-                          <svg
-                            class="ms-2-5 bi icon--s"
-                          >
-                            <use
-                              xlink:href="#arrow-right"
-                            />
-                          </svg>
-                        </a>
-                      </li>
                     </ul>
+                    <div
+                      class="__see_all"
+                    >
+                      <a
+                        aria-label="See all items in ‘Submenu item 1 with very long text that wraps to multiple lines’"
+                        class="see-all-button"
+                        href="/example.html"
+                      >
+                        <span>
+                          More of submenu item 1, where even the see all text is very long.
+                        </span>
+                        <svg
+                          class="ms-2-5 bi icon--xs"
+                        >
+                          <use
+                            xlink:href="#arrow-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </li>
                 <li
@@ -198,6 +199,7 @@ exports[`OE - Mega Menu renders correctly 1`] = `
                   <div
                     aria-labelledby="custom-trigger-mm-2"
                     class="bcl-mega-menu__submenu __level-2"
+                    hidden
                     id="mm-panel-custom-trigger-mm-2"
                     role="group"
                   >
@@ -330,27 +332,27 @@ exports[`OE - Mega Menu renders correctly 1`] = `
                           Sub-submenu item 2.14
                         </a>
                       </li>
-                      <li
-                        class="__see_all __leaf"
-                      >
-                        <a
-                          aria-label="See all items in ‘Submenu item 3 (many children)’"
-                          class="see-all-button"
-                          href="/example.html"
-                        >
-                          <span>
-                            More of submenu item 3
-                          </span>
-                          <svg
-                            class="ms-2-5 bi icon--s"
-                          >
-                            <use
-                              xlink:href="#arrow-right"
-                            />
-                          </svg>
-                        </a>
-                      </li>
                     </ul>
+                    <div
+                      class="__see_all"
+                    >
+                      <a
+                        aria-label="See all items in ‘Submenu item 3 (many children)’"
+                        class="see-all-button"
+                        href="/example.html"
+                      >
+                        <span>
+                          More of submenu item 3
+                        </span>
+                        <svg
+                          class="ms-2-5 bi icon--xs"
+                        >
+                          <use
+                            xlink:href="#arrow-right"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </li>
                 <li
@@ -384,6 +386,7 @@ exports[`OE - Mega Menu renders correctly 1`] = `
                   <div
                     aria-labelledby="custom-trigger-mm-3"
                     class="bcl-mega-menu__submenu __level-2"
+                    hidden
                     id="mm-panel-custom-trigger-mm-3"
                     role="group"
                   >

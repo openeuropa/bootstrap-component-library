@@ -10,6 +10,7 @@ module.exports = {
   navbar_id: "header-navbar",
   variant: "eu",
   site_name: "Project name",
+  icon_path: "/icons.svg",
   project_logo: {
     path: "https://inno-ecl.s3.amazonaws.com/media/examples/placeholder.svg",
     classes: "d-none d-lg-inline-block",
@@ -17,7 +18,7 @@ module.exports = {
   },
   head: {
     attributes: new DrupalAttribute()
-      .addClass(["w-100", "shadow-sm", "bcl-header__top-navbar"])
+      .addClass(["w-100", "bcl-header__top-navbar"])
       .setAttribute("aria-label", "Top Navigation"),
     disable_collapse: false,
     collapse_id: "topNavbarDropdown",
@@ -42,6 +43,10 @@ module.exports = {
   },
   navbar,
   modals,
+  toggler_attributes: new DrupalAttribute().setAttribute(
+    "aria-label",
+    "Main navigation toggle",
+  ),
   language_modal: { ...languageList, variant: "eu" },
   breadcrumbs: {
     ...breadcrumbs,

@@ -2,8 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 1.10.9 (2025-12-03)
+
+#### :bug: Bug Fix
+* [#708](https://github.com/openeuropa/bootstrap-component-library/pull/708) OEL-2677: Backwards compatible solution for typo. ([@tibi2303](https://github.com/tibi2303))
+* [#705](https://github.com/openeuropa/bootstrap-component-library/pull/705) OEL-4298: Fix toast typo. ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#709](https://github.com/openeuropa/bootstrap-component-library/pull/709) OEL-2900: Changed from padding to margin links block. ([@tibi2303](https://github.com/tibi2303))
+* [#706](https://github.com/openeuropa/bootstrap-component-library/pull/706) OEL-4110: Focus states for inputs. ([@tibi2303](https://github.com/tibi2303))
+* [#704](https://github.com/openeuropa/bootstrap-component-library/pull/704) OEL-4278: Extending drupal attributes and fixes for proper html attributes. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
 
 ## 1.10.8 (2025-10-30)
+
+#### :rocket: New Feature
+* [#701](https://github.com/openeuropa/bootstrap-component-library/pull/701) OEL-3838: Pagination v2. ([@tibi2303](https://github.com/tibi2303))
 
 #### :nail_care: Enhancement
 * [#693](https://github.com/openeuropa/bootstrap-component-library/pull/693) UCPKN-3880: Pass attributes to modal and toast sections. ([@kp77](https://github.com/kp77))

@@ -3,11 +3,11 @@
 exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header bcl-header--eu"
+    class="bcl-header bcl-header--eu shadow-sm"
   >
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -30,19 +30,44 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
         <button
           aria-controls="header-navbar"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler bcl-navbar-toggler"
+          aria-label="Main navigation toggle"
+          class="bcl-navbar-toggler d-lg-none"
           data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
+          <svg
+            class="default-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#list"
+            />
+          </svg>
+          <svg
+            class="active-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#x"
+            />
+          </svg>
         </button>
       </div>
     </nav>
-    <!-- project name -->
+    <!-- site name -->
+    <div
+      class="bcl-header__site-name"
+      id="site-name-heading"
+    >
+      <div
+        class="container"
+      >
+        <span
+          class="h5 py-3-5 border-top-subtle mb-0 d-block"
+        >
+          Project name
+        </span>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
@@ -166,6 +191,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -219,26 +245,80 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                                   </a>
                                 </li>
                                 <li
-                                  class="__see_all __leaf"
+                                  class="__leaf"
                                 >
                                   <a
-                                    aria-label="See all items in ‘Base Category Item’"
-                                    class="see-all-button"
                                     href="/example.html"
                                   >
-                                    <span>
-                                      See all
-                                    </span>
-                                    <svg
-                                      class="ms-2-5 bi icon--s"
-                                    >
-                                      <use
-                                        xlink:href="/icons.svg#arrow-right"
-                                      />
-                                    </svg>
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
                                   </a>
                                 </li>
                               </ul>
+                              <div
+                                class="__see_all"
+                              >
+                                <a
+                                  aria-label="See all items in ‘Base Category Item’"
+                                  class="see-all-button"
+                                  href="/example.html"
+                                >
+                                  <span>
+                                    See all
+                                  </span>
+                                  <svg
+                                    class="ms-2-5 bi icon--xs"
+                                  >
+                                    <use
+                                      xlink:href="/icons.svg#arrow-right"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
                             </div>
                           </li>
                           <li
@@ -263,6 +343,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -497,64 +578,104 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
               </li>
             </ul>
           </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 04
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 05
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 06
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 07
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
-    <!-- breadcrumbs -->
-    <div
-      class="container"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="mt-3"
-      >
-        <ol
-          class="breadcrumb"
-        >
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              European Union
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item"
-          >
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#arrow-left"
-                />
-              </svg>
-              About the European Union
-            </a>
-          </li>
-          <li
-            aria-current="page"
-            class="breadcrumb-item d-none d-md-block active"
-          >
-            News
-          </li>
-        </ol>
-      </nav>
-    </div>
   </header>
+  <!-- breadcrumbs -->
+  <div
+    class="container"
+  >
+    <nav
+      aria-label="breadcrumb"
+      class="mt-3"
+    >
+      <ol
+        class="breadcrumb"
+      >
+        <li
+          class="breadcrumb-item d-none d-md-block"
+        >
+          <a
+            href="/example.html"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="breadcrumb-item d-none d-md-block"
+        >
+          <a
+            href="/example.html"
+          >
+            European Union
+          </a>
+        </li>
+        <li
+          class="breadcrumb-item"
+        >
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#arrow-left"
+              />
+            </svg>
+            About the European Union
+          </a>
+        </li>
+        <li
+          aria-current="page"
+          class="breadcrumb-item d-none d-md-block active"
+        >
+          News
+        </li>
+      </ol>
+    </nav>
+  </div>
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
@@ -1275,7 +1396,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                     </div>
                     <a
                       class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                      download="true"
+                      download
                       href="#"
                       target="_blank"
                     >
@@ -1354,7 +1475,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                       >
                         <a
                           class="d-block standalone mt-1"
-                          download="download"
+                          download
                           href="#"
                           target="_blank"
                         >
@@ -1405,7 +1526,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                       >
                         <a
                           class="d-block standalone mt-1"
-                          download="download"
+                          download
                           href="#"
                           target="_blank"
                         >
@@ -1456,7 +1577,7 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
                       >
                         <a
                           class="d-block standalone mt-1"
-                          download="download"
+                          download
                           href="#"
                           target="_blank"
                         >
@@ -1790,11 +1911,11 @@ exports[`OE - Publication details (multiple authors) renders correctly 1`] = `
 exports[`OE - Publication details renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header bcl-header--eu"
+    class="bcl-header bcl-header--eu shadow-sm"
   >
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -1817,19 +1938,44 @@ exports[`OE - Publication details renders correctly 1`] = `
         <button
           aria-controls="header-navbar"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler bcl-navbar-toggler"
+          aria-label="Main navigation toggle"
+          class="bcl-navbar-toggler d-lg-none"
           data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
+          <svg
+            class="default-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#list"
+            />
+          </svg>
+          <svg
+            class="active-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#x"
+            />
+          </svg>
         </button>
       </div>
     </nav>
-    <!-- project name -->
+    <!-- site name -->
+    <div
+      class="bcl-header__site-name"
+      id="site-name-heading"
+    >
+      <div
+        class="container"
+      >
+        <span
+          class="h5 py-3-5 border-top-subtle mb-0 d-block"
+        >
+          Project name
+        </span>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
@@ -1953,6 +2099,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -2006,26 +2153,80 @@ exports[`OE - Publication details renders correctly 1`] = `
                                   </a>
                                 </li>
                                 <li
-                                  class="__see_all __leaf"
+                                  class="__leaf"
                                 >
                                   <a
-                                    aria-label="See all items in ‘Base Category Item’"
-                                    class="see-all-button"
                                     href="/example.html"
                                   >
-                                    <span>
-                                      See all
-                                    </span>
-                                    <svg
-                                      class="ms-2-5 bi icon--s"
-                                    >
-                                      <use
-                                        xlink:href="/icons.svg#arrow-right"
-                                      />
-                                    </svg>
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
                                   </a>
                                 </li>
                               </ul>
+                              <div
+                                class="__see_all"
+                              >
+                                <a
+                                  aria-label="See all items in ‘Base Category Item’"
+                                  class="see-all-button"
+                                  href="/example.html"
+                                >
+                                  <span>
+                                    See all
+                                  </span>
+                                  <svg
+                                    class="ms-2-5 bi icon--xs"
+                                  >
+                                    <use
+                                      xlink:href="/icons.svg#arrow-right"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
                             </div>
                           </li>
                           <li
@@ -2050,6 +2251,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -2284,64 +2486,104 @@ exports[`OE - Publication details renders correctly 1`] = `
               </li>
             </ul>
           </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 04
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 05
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 06
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 07
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
-    <!-- breadcrumbs -->
-    <div
-      class="container"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="mt-3"
-      >
-        <ol
-          class="breadcrumb"
-        >
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              European Union
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item"
-          >
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#arrow-left"
-                />
-              </svg>
-              About the European Union
-            </a>
-          </li>
-          <li
-            aria-current="page"
-            class="breadcrumb-item d-none d-md-block active"
-          >
-            News
-          </li>
-        </ol>
-      </nav>
-    </div>
   </header>
+  <!-- breadcrumbs -->
+  <div
+    class="container"
+  >
+    <nav
+      aria-label="breadcrumb"
+      class="mt-3"
+    >
+      <ol
+        class="breadcrumb"
+      >
+        <li
+          class="breadcrumb-item d-none d-md-block"
+        >
+          <a
+            href="/example.html"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="breadcrumb-item d-none d-md-block"
+        >
+          <a
+            href="/example.html"
+          >
+            European Union
+          </a>
+        </li>
+        <li
+          class="breadcrumb-item"
+        >
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#arrow-left"
+              />
+            </svg>
+            About the European Union
+          </a>
+        </li>
+        <li
+          aria-current="page"
+          class="breadcrumb-item d-none d-md-block active"
+        >
+          News
+        </li>
+      </ol>
+    </nav>
+  </div>
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
@@ -3071,7 +3313,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                     </div>
                     <a
                       class="standalone align-self-center d-inline-block mt-1 mt-md-0 flex-shrink-0"
-                      download="true"
+                      download
                       href="#"
                       target="_blank"
                     >
@@ -3150,7 +3392,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                       >
                         <a
                           class="d-block standalone mt-1"
-                          download="download"
+                          download
                           href="#"
                           target="_blank"
                         >
@@ -3201,7 +3443,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                       >
                         <a
                           class="d-block standalone mt-1"
-                          download="download"
+                          download
                           href="#"
                           target="_blank"
                         >
@@ -3252,7 +3494,7 @@ exports[`OE - Publication details renders correctly 1`] = `
                       >
                         <a
                           class="d-block standalone mt-1"
-                          download="download"
+                          download
                           href="#"
                           target="_blank"
                         >
@@ -3586,11 +3828,11 @@ exports[`OE - Publication details renders correctly 1`] = `
 exports[`OE - Publication listing renders correctly 1`] = `
 <jest>
   <header
-    class="bcl-header bcl-header--eu"
+    class="bcl-header bcl-header--eu shadow-sm"
   >
     <nav
       aria-label="Top Navigation"
-      class="w-100 shadow-sm bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
+      class="w-100 bcl-header__top-navbar navbar navbar-expand-lg navbar-light"
     >
       <div
         class="container"
@@ -3613,19 +3855,44 @@ exports[`OE - Publication listing renders correctly 1`] = `
         <button
           aria-controls="header-navbar"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler bcl-navbar-toggler"
+          aria-label="Main navigation toggle"
+          class="bcl-navbar-toggler d-lg-none"
           data-bs-target="#header-navbar"
           data-bs-toggle="collapse"
           type="button"
         >
-          <span
-            class="navbar-toggler-icon"
-          />
+          <svg
+            class="default-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#list"
+            />
+          </svg>
+          <svg
+            class="active-icon bi icon--fluid"
+          >
+            <use
+              xlink:href="/icons.svg#x"
+            />
+          </svg>
         </button>
       </div>
     </nav>
-    <!-- project name -->
+    <!-- site name -->
+    <div
+      class="bcl-header__site-name"
+      id="site-name-heading"
+    >
+      <div
+        class="container"
+      >
+        <span
+          class="h5 py-3-5 border-top-subtle mb-0 d-block"
+        >
+          Project name
+        </span>
+      </div>
+    </div>
     <!-- navbar -->
     <nav
       aria-label="Main Navigation"
@@ -3749,6 +4016,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-1"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-1"
                               role="group"
                             >
@@ -3802,26 +4070,80 @@ exports[`OE - Publication listing renders correctly 1`] = `
                                   </a>
                                 </li>
                                 <li
-                                  class="__see_all __leaf"
+                                  class="__leaf"
                                 >
                                   <a
-                                    aria-label="See all items in ‘Base Category Item’"
-                                    class="see-all-button"
                                     href="/example.html"
                                   >
-                                    <span>
-                                      See all
-                                    </span>
-                                    <svg
-                                      class="ms-2-5 bi icon--s"
-                                    >
-                                      <use
-                                        xlink:href="/icons.svg#arrow-right"
-                                      />
-                                    </svg>
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
+                                  </a>
+                                </li>
+                                <li
+                                  class="__leaf"
+                                >
+                                  <a
+                                    href="/example.html"
+                                  >
+                                    Base Sub Category Item
                                   </a>
                                 </li>
                               </ul>
+                              <div
+                                class="__see_all"
+                              >
+                                <a
+                                  aria-label="See all items in ‘Base Category Item’"
+                                  class="see-all-button"
+                                  href="/example.html"
+                                >
+                                  <span>
+                                    See all
+                                  </span>
+                                  <svg
+                                    class="ms-2-5 bi icon--xs"
+                                  >
+                                    <use
+                                      xlink:href="/icons.svg#arrow-right"
+                                    />
+                                  </svg>
+                                </a>
+                              </div>
                             </div>
                           </li>
                           <li
@@ -3846,6 +4168,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                             <div
                               aria-labelledby="custom-trigger-mm-2"
                               class="bcl-mega-menu__submenu __level-2"
+                              hidden
                               id="mm-panel-custom-trigger-mm-2"
                               role="group"
                             >
@@ -4080,64 +4403,104 @@ exports[`OE - Publication listing renders correctly 1`] = `
               </li>
             </ul>
           </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 04
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 05
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 06
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/example.html"
+            >
+              Item 07
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
-    <!-- breadcrumbs -->
-    <div
-      class="container"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="mt-3"
-      >
-        <ol
-          class="breadcrumb"
-        >
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item d-none d-md-block"
-          >
-            <a
-              href="/example.html"
-            >
-              European Union
-            </a>
-          </li>
-          <li
-            class="breadcrumb-item"
-          >
-            <a
-              href="/example.html"
-            >
-              <svg
-                class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
-              >
-                <use
-                  xlink:href="/icons.svg#arrow-left"
-                />
-              </svg>
-              About the European Union
-            </a>
-          </li>
-          <li
-            aria-current="page"
-            class="breadcrumb-item d-none d-md-block active"
-          >
-            News
-          </li>
-        </ol>
-      </nav>
-    </div>
   </header>
+  <!-- breadcrumbs -->
+  <div
+    class="container"
+  >
+    <nav
+      aria-label="breadcrumb"
+      class="mt-3"
+    >
+      <ol
+        class="breadcrumb"
+      >
+        <li
+          class="breadcrumb-item d-none d-md-block"
+        >
+          <a
+            href="/example.html"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="breadcrumb-item d-none d-md-block"
+        >
+          <a
+            href="/example.html"
+          >
+            European Union
+          </a>
+        </li>
+        <li
+          class="breadcrumb-item"
+        >
+          <a
+            href="/example.html"
+          >
+            <svg
+              class="d-md-none ms-0 me-2 me-2-5 bi icon--s"
+            >
+              <use
+                xlink:href="/icons.svg#arrow-left"
+              />
+            </svg>
+            About the European Union
+          </a>
+        </li>
+        <li
+          aria-current="page"
+          class="breadcrumb-item d-none d-md-block active"
+        >
+          News
+        </li>
+      </ol>
+    </nav>
+  </div>
   <div
     aria-hidden="true"
     aria-label="loginModalLabel"
@@ -4649,7 +5012,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
             >
               <form
                 class="w-100"
-                novalidate="novalidate"
+                novalidate
                 onsubmit="return false;"
               >
                 <label
@@ -4682,7 +5045,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                         class="form-check"
                       >
                         <input
-                          checked="checked"
+                          checked
                           class="form-check-input"
                           id="type-1"
                           type="checkbox"
@@ -4702,7 +5065,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                         class="form-check"
                       >
                         <input
-                          checked="checked"
+                          checked
                           class="form-check-input"
                           id="type-2"
                           type="checkbox"
@@ -4722,7 +5085,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                         class="form-check"
                       >
                         <input
-                          checked="checked"
+                          checked
                           class="form-check-input"
                           id="type-3"
                           type="checkbox"
@@ -4739,7 +5102,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                       class="form-check"
                     >
                       <input
-                        checked="checked"
+                        checked
                         class="form-check-input"
                         id="type-4"
                         type="checkbox"
@@ -4895,7 +5258,7 @@ exports[`OE - Publication listing renders correctly 1`] = `
                     last option
                   </option>
                   <option
-                    selected=""
+                    selected
                     value=""
                   >
                     A-Z
