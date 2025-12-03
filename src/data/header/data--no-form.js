@@ -6,10 +6,13 @@ const languageList = require("@openeuropa/bcl-language-list/data/data-modal");
 module.exports = {
   variant: "eu",
   navbar_id: "header-navbar",
+  toggler_attributes: new DrupalAttribute().setAttribute(
+    "aria-label",
+    "Main navigation toggle",
+  ),
   head: {
     attributes: new DrupalAttribute().addClass([
       "w-100",
-      "shadow-sm",
       "bcl-header__top-navbar",
     ]),
     disable_collapse: false,

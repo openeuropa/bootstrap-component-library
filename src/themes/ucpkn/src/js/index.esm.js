@@ -23,6 +23,7 @@ import ScrollSpy from "@openeuropa/bcl-bootstrap/js/src/scrollspy-legacy";
 import Tab from "@openeuropa/bcl-bootstrap/js/src/tab";
 import Toast from "@openeuropa/bcl-bootstrap/js/src/toast";
 import Tooltip from "@openeuropa/bcl-bootstrap/js/src/tooltip";
+import Header from "@openeuropa/bcl-theme-default/src/js/header/header";
 
 export {
   Alert,
@@ -43,4 +44,5 @@ export {
   Tab,
   Toast,
   Tooltip,
+  Header,
 };
