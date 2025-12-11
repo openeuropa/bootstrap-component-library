@@ -20,7 +20,7 @@
     - card_layout_card
 #}
 
-{% set _type = type|default('group') %}
+{%- set _type = type|default('group') %}
 {% set _items = items|default([]) %}
 {% set _grid_columns = grid_columns|default(1) %}
 {% set _responsiveness = responsiveness|default('md') %}
@@ -29,58 +29,58 @@
 {% set _equal_height = equal_height ?? false %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
 
-{% set _cols_classes = 'col' %}
+{%- set _cols_classes = 'col' %}
 
-{% if _cols_extra_classes is not empty %}
-  {% set _cols_classes = _cols_classes ~ ' ' ~ _cols_extra_classes %}
+{%- if _cols_extra_classes is not empty %}
+  {%- set _cols_classes = _cols_classes ~ ' ' ~ _cols_extra_classes %}
 {% endif %}
 {% if _type == 'group' %}
-  {% set _classes = ['card-group'] %}
+  {%- set _classes = ['card-group'] %}
 {% elseif type == 'grid' or type == 'masonry' %}
-  {% set _classes = ['row', 'row-cols-' ~ _grid_columns] %}
-  {% if _responsive_columns is not empty %}
-    {% set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns]) %}
-  {% endif %}
-  {% if _gutter is not empty %}
-    {% set _classes = _classes|merge(['g-' ~ _gutter]) %}
-  {% endif %}
+  {%- set _classes = ['row', 'row-cols-' ~ _grid_columns] %}
+  {%- if _responsive_columns is not empty %}
+    {%- set _classes = _classes|merge(['row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns]) %}
+  {%- endif %}
+  {%- if _gutter is not empty %}
+    {%- set _classes = _classes|merge(['g-' ~ _gutter]) %}
+  {%- endif %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
 <div
   {{ attributes }}
-  {% if _type == 'masonry' %}
+  {%- if _type == 'masonry' %}
     data-masonry='{"percentPosition": true }'
   {% endif %}
 >
 {% if _items is not empty and _items is iterable %}
-  {% for _item in _items %}
-    {% if _item.attributes is empty %}
-      {% set _item = _item|merge({
+  {%- for _item in _items %}
+    {%- if _item.attributes is empty %}
+      {%- set _item = _item|merge({
         attributes: create_attribute()
       }) %}
-    {% endif %}
-    {% if _equal_height %}
-      {% set _item = _item|merge({
+    {%- endif %}
+    {%- if _equal_height %}
+      {%- set _item = _item|merge({
           attributes: _item.attributes.addClass('h-100')
         })
       %}
-    {% endif %}
-    {% if _type == 'grid' or _type == 'masonry' %}
+    {%- endif %}
+    {%- if _type == 'grid' or _type == 'masonry' %}
       <div class="{{ _cols_classes }}">
     {% endif %}
-      {% block card_layout_card %}
-        {% include '@oe-bcl/bcl-card/card.html.twig' with _item only %}
-      {% endblock %}
-    {% if _type == 'grid' or _type == 'masonry' %}
+      {%- block card_layout_card %}
+        {%- include '@oe-bcl/bcl-card/card.html.twig' with _item only %}
+      {%- endblock %}
+    {%- if _type == 'grid' or _type == 'masonry' %}
       </div>
     {% endif %}
-  {% endfor %}
+  {%- endfor %}
 {% endif %}
 </div>
 

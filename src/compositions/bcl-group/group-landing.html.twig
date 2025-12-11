@@ -10,34 +10,34 @@
         {% if banner.image.alt is not empty %}
         alt="{{ banner.image.alt }}"
         {% endif %}
-        {% if banner.image.class is not empty %}
+        {%- if banner.image.class is not empty %}
         class="{{ banner.image.class }}"
         {% endif %}
       />
     {% endif %}
-    {% if banner.title is not empty %}
+    {%- if banner.title is not empty %}
       <div class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container">
         <h1 class="mb-0 d-inline-block">{{ banner.title }}</h1>
         {% if banner.actions is not empty and banner.actions is iterable %}
         <div class="d-grid d-md-block ms-auto">
           {% for _action in banner.actions %}
-            {% if _action.type == "link" %}
-              {% include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
-            {% elseif _action.type == "button" %}
-              {% include '@oe-bcl/bcl-button/button.html.twig' with _action only %}
-            {% elseif _action.type == "dropdown" %}
-              {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _action only %}
-            {% endif %}
-          {% endfor %}
+            {%- if _action.type == "link" %}
+              {%- include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
+            {%- elseif _action.type == "button" %}
+              {%- include '@oe-bcl/bcl-button/button.html.twig' with _action only %}
+            {%- elseif _action.type == "dropdown" %}
+              {%- include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _action only %}
+            {%- endif %}
+          {%- endfor %}
         </div>
         {% endif %}
       </div>
     {% endif %}
   </div>
   {% endif %}
-  {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
-  {% if banner_description is not empty and contact is not empty %}
-  {% include '@oe-bcl/bcl-link/link.html.twig' with banner_description.collapse_trigger only %}
+  {%- include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
+  {%- if banner_description is not empty and contact is not empty %}
+  {%- include '@oe-bcl/bcl-link/link.html.twig' with banner_description.collapse_trigger only %}
   <div class="collapse d-md-block" id="banner-description">
     <div class="row mt-md-4 mb-md-5 pb-md-5">
       <div class="col-md-8">
@@ -52,19 +52,19 @@
             {% endfor %}
           </div>
           {% endif %}
-          {{ banner_description.content }}
+          {{- banner_description.content }}
         </div>
       </div>
       <div class="col-md-4">
         <h2 class="mb-3 pb-2">{{ contact.title }}</h2>
         {% if contact.profiles is not empty and contact.profiles is iterable %}
-          {% for _profile in contact.profiles %}
-            {% include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
-          {% endfor %}
-        {% endif %}
-        {% if contact.more_link is not empty %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with contact.more_link only %}
-        {% endif %}
+          {%- for _profile in contact.profiles %}
+            {%- include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
+          {%- endfor %}
+        {%- endif %}
+        {%- if contact.more_link is not empty %}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with contact.more_link only %}
+        {%- endif %}
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@
 {%- endblock -%}
 
 {%- block content %}
-  {% if recent is not empty and members is not empty %}
+  {%- if recent is not empty and members is not empty %}
   <div class="row mt-3">
     <div class="col-md-8">
       <h2 class="mb-4 pb-2">{{ recent.title }}</h2>
@@ -82,20 +82,20 @@
     <div class="col-md-4">
       <h2 class="mt-4 mt-md-0 mb-4 pb-2">{{ members.title }}</h2>
       {% if members.profiles is not empty and members.profiles is iterable %}
-        {% for _profile in members.profiles %}
-          {% include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
-        {% endfor %}
-      {% endif %}
-      {% if members.more_link is not empty %}
-        {% include '@oe-bcl/bcl-link/link.html.twig' with members.more_link only %}
-      {% endif %}
+        {%- for _profile in members.profiles %}
+          {%- include '@oe-bcl/bcl-user/user-compact.html.twig' with _profile only %}
+        {%- endfor %}
+      {%- endif %}
+      {%- if members.more_link is not empty %}
+        {%- include '@oe-bcl/bcl-link/link.html.twig' with members.more_link only %}
+      {%- endif %}
     </div>
   </div>
   {% endif %}
-  {% if contributions is not empty %}
+  {%- if contributions is not empty %}
     <h2 class="my-4 pt-3 pb-2">{{ contributions.title }}</h2>
     {% if contributions.listing is not empty %}
-      {% include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}
-    {% endif %}
-  {% endif %}
+      {%- include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}
+    {%- endif %}
+  {%- endif %}
 {%- endblock -%}

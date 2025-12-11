@@ -1,23 +1,23 @@
 {% extends "@oe-bcl/bcl-modal/modal.html.twig" %}
 
-{% if _title is not empty %}
-  {% set header = true %}
+{%- if _title is not empty %}
+  {%- set header = true %}
 {% endif %}
 
-{% if _variant == 'neutral' %}
-  {% set size = "xl" %}
-  {% set fullscreen_responsive = "md" %}
+{%- if _variant == 'neutral' %}
+  {%- set size = "xl" %}
+  {%- set fullscreen_responsive = "md" %}
 {% else %}
-  {% set size = "fullscreen" %}
+  {%- set size = "fullscreen" %}
 {% endif %}
 
-{% set overlay = false %}
+{%- set overlay = false %}
 {% set inside_container = true %}
 
-{% set attributes = attributes.addClass(['bcl-language-list-modal', 'bcl-language-list-modal--' ~ _variant]) %}
+{%- set attributes = attributes.addClass(['bcl-language-list-modal', 'bcl-language-list-modal--' ~ _variant]) %}
 
-{% block header %}
-  {% if size == 'fullscreen' %}
+{%- block header %}
+  {%- if size == 'fullscreen' %}
   <div class="container">
     {% if _variant == 'eu' or _variant == 'ec' %}
     <div class="border-bottom mx-n3 px-3 px-md-0 pt-md-4-5">
@@ -27,13 +27,13 @@
   {% endif %}
   <div class="d-flex align-items-center">
     {% set _title_classes = 'modal-title mb-0' %}
-    {% if _icon_path is not empty %}
-      {% set _title_classes = _title_classes ~ ' ms-2' %}
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    {%- if _icon_path is not empty %}
+      {%- set _title_classes = _title_classes ~ ' ms-2' %}
+      {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
         name: 'globe2',
         path: _icon_path
       } only %}
-    {% endif %}
+    {%- endif %}
     <div class="{{ _title_classes }}">{{ _title }}</div>
   </div>
   <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -51,8 +51,8 @@
   {% endif %}
 {% endblock %}
 
-{% block body %}
-  {% set attributes = create_attribute().addClass(['bcl-language-list', 'bcl-language-list--' ~ _variant]) %}
+{%- block body %}
+  {%- set attributes = create_attribute().addClass(['bcl-language-list', 'bcl-language-list--' ~ _variant]) %}
   <div
     {{ attributes }}
   >
@@ -66,10 +66,10 @@
           {% if _logo.path is not empty %}
           src="{{ _logo.path }}"
           {% endif %}
-          {% if _logo.alt is not empty %}
+          {%- if _logo.alt is not empty %}
           alt="{{ _logo.alt }}"
           {% endif %}
-          {% if _logo.class is not empty %}
+          {%- if _logo.class is not empty %}
           class="{{ _logo.class }}"
           {% endif %}
         />
@@ -83,26 +83,26 @@
     </div>
     {% endif %}
 
-    {% if _items is not empty or _non_eu_items is not empty %}
+    {%- if _items is not empty or _non_eu_items is not empty %}
     <div class="main pt-4">
       {% if not (_variant == 'neutral' and _inside_container) %}
       <div class="container">
       {% endif %}
-      {% if _items is not empty and _items is iterable %}
-        {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+      {%- if _items is not empty and _items is iterable %}
+        {%- include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
             items: _items,
             icon_path: _icon_path,
             category: eu_category,
         } only %}
-      {% endif %}
-      {% if _non_eu_items is not empty and _non_eu_items is iterable %}
-        {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+      {%- endif %}
+      {%- if _non_eu_items is not empty and _non_eu_items is iterable %}
+        {%- include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
             items: _non_eu_items,
             icon_path: _icon_path,
             category: non_eu_category,
         } only %}
-      {% endif %}
-      {% if not (_variant == 'neutral' and _inside_container) %}
+      {%- endif %}
+      {%- if not (_variant == 'neutral' and _inside_container) %}
       </div>
       {% endif %}
     </div>

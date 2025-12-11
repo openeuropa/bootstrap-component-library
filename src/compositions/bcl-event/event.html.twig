@@ -1,11 +1,11 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
 {%- block sidebar %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+  {%- include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {%- endblock -%}
 
 {%- block content %}
-  {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
+  {%- include '@oe-bcl/bcl-description-list/description-list.html.twig' with details_list only %}
 
   <h2 id="item-1" class="my-4">Description</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet eleifend tortor. In facilisis eros vitae turpis ullamcorper,
@@ -20,5 +20,5 @@
 
   <h2 id="item-2" class="my-4">Related documents</h2>
   {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+  {%- include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
 {%- endblock -%}

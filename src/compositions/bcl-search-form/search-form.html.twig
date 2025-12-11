@@ -9,44 +9,44 @@
   ]
 #}
 
-{% set _pill = pill ?? false %}
+{%- set _pill = pill ?? false %}
 {% set _icon = icon|default({}) %}
 {% set _submit = submit|default({}) %}
 {% set _input = input|default({}) %}
 
-{% set _classes = ['bcl-search-form'] %}
+{%- set _classes = ['bcl-search-form'] %}
 
-{% if _pill %}
-  {% set _classes = _classes|merge(['rounded']) %}
+{%- if _pill %}
+  {%- set _classes = _classes|merge(['rounded']) %}
 {% endif %}
 
-{% if _submit is not empty %}
-  {% set _classes = _classes|merge(['submittable']) %}
+{%- if _submit is not empty %}
+  {%- set _classes = _classes|merge(['submittable']) %}
 {% endif %}
 
-{% if _icon is not empty %}
-  {% set _input = _input|merge({
+{%- if _icon is not empty %}
+  {%- set _input = _input|merge({
     attributes: _input.attributes.addClass("ps-5")
   }) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass( _classes ) %}
+{%- set attributes = attributes.addClass( _classes ) %}
 
 <form
   {{ attributes }}
 >
   <div class="bcl-search-form__group">
     {% if _icon is not empty %}
-      {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
-    {% endif %}
-    {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _input only %}
-    {% if _submit is not empty %}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with _submit only %}
-    {% endif %}
+      {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
+    {%- endif %}
+    {%- include '@oe-bcl/bcl-form-input/form-input.html.twig' with _input only %}
+    {%- if _submit is not empty %}
+      {%- include '@oe-bcl/bcl-button/button.html.twig' with _submit only %}
+    {%- endif %}
   </div>
 </form>
 

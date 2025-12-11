@@ -11,7 +11,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _message = message|default('') %}
+{%- set _message = message|default('') %}
 {% set _heading = heading|default('') %}
 {% set _variant = variant|default('primary') %}
 {% set _dismissible = dismissible ?? true %}
@@ -19,7 +19,7 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _icon_name = icon_name|default('') %}
 
-{% set _classes = ['alert', 'alert-' ~ _variant|e('html_attr'), 'd-flex', 'align-items-center'] %}
+{%- set _classes = ['alert', 'alert-' ~ _variant|e('html_attr'), 'd-flex', 'align-items-center'] %}
 {% set _icon_names = {
     primary: "info-circle-fill",
     secondary: "info-circle-fill",
@@ -32,30 +32,30 @@
   }
 %}
 
-{% if _dismissible %}
-  {% set _classes = _classes|merge(['alert-dismissible']) %}
+{%- if _dismissible %}
+  {%- set _classes = _classes|merge(['alert-dismissible']) %}
 {% endif %}
 {% if _animated_dismiss %}
-  {% set _classes = _classes|merge(['fade', 'show']) %}
+  {%- set _classes = _classes|merge(['fade', 'show']) %}
 {% endif %}
 
-{% set _classes = _classes|merge(['text-dark']) %}
+{%- set _classes = _classes|merge(['text-dark']) %}
 
-{% set _icon_classes = ['flex-shrink-0 me-3 mt-1 align-self-start' ] %}
+{%- set _icon_classes = ['flex-shrink-0 me-3 mt-1 align-self-start' ] %}
 
-{% if _variant != 'light' %}
-  {% set _icon_classes = _icon_classes|merge(['text-' ~ _variant]) %}
+{%- if _variant != 'light' %}
+  {%- set _icon_classes = _icon_classes|merge(['text-' ~ _variant]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') %}
+{%- set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') %}
 
 <div {{ attributes }}>
 {% if _icon_path is not empty %}
-  {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+  {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
     name: _icon_name ?: _icon_names[_variant],
     size: 's',
     path: _icon_path,

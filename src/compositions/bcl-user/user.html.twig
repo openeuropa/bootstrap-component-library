@@ -1,7 +1,7 @@
 {% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" -%}
 
 {%- block content %}
-  {% include "@oe-bcl/bcl-navigation/navigation.html.twig" with navigation only %}
+  {%- include "@oe-bcl/bcl-navigation/navigation.html.twig" with navigation only %}
   <div class="tab-content">
     <div class="tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
       {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with view.banner only %}

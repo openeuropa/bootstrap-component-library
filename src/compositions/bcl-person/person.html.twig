@@ -1,29 +1,29 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
 {%- block sidebar %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+  {%- include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {%- endblock -%}
 
 {%- block content %}
-  {% if information.main_title is not empty %}
+  {%- if information.main_title is not empty %}
     <h2
       class="mb-4"
     >{{- information.main_title -}}</h2>
   {% endif %}
-  {% if information.content is not empty %}
+  {%- if information.content is not empty %}
     <div class="mb-4-5">
       {{- information.content -}}
     </div>
   {% endif %}
 
-  {% if files.main_title is not empty %}
+  {%- if files.main_title is not empty %}
     <h2
       class="mb-3-5"
     >{{- files.main_title -}}</h2>
   {% endif %}
-  {% if files.listing is defined and files.listing is not empty %}
-    {% for file in files.listing %}
-      {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
-    {% endfor %}
-  {% endif %}
+  {%- if files.listing is defined and files.listing is not empty %}
+    {%- for file in files.listing %}
+      {%- include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+    {%- endfor %}
+  {%- endif %}
 {%- endblock -%}

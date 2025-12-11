@@ -1,7 +1,7 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
 {%- block  content %}
-	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+	{%- include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'Description',
 		title_tag: 'h2',
 	} only %}
@@ -31,10 +31,10 @@
 		attributes: create_attribute().addClass('mt-5', 'mb-4'),
 	} only %}
 
-	{% for file in files %}
-		{% if loop.last %}
-			{% set file_classes = 'mt-4' %}
-		{% endif %}
+	{%- for file in files %}
+		{%- if loop.last %}
+			{%- set file_classes = 'mt-4' %}
+		{%- endif %}
     <div {{ file_classes ? 'class="' ~ file_classes ~ '"' }}>
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     </div>

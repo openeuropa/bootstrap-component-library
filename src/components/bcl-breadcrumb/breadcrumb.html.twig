@@ -6,18 +6,18 @@
   - attributes (drupal attrs)
 #}
 
-{% set _links = links|default([]) %}
+{%- set _links = links|default([]) %}
 {% set _icon_path = icon_path|default('') %}
 
-{% set _classes = 'breadcrumb' %}
+{%- set _classes = 'breadcrumb' %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
+{%- set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
 
-{% if _links is not empty %}
+{%- if _links is not empty %}
 <nav
   {{ attributes }}
 >
@@ -25,22 +25,22 @@
     class="{{ _classes }}"
   >
     {% for _link in _links %}
-      {% set _segment_classes = 'breadcrumb-item d-none d-md-block' %}
-      {% if loop.revindex == 2 %}
-        {% set _segment_classes = 'breadcrumb-item' %}
-      {% endif %}
-      {% set _segment_attrs = '' %}
-      {% if loop.last %}
-        {% set _segment_classes = _segment_classes ~ ' active' %}
-        {% set _segment_attrs = 'aria-current="page"' %}
-      {% endif %}
+      {%- set _segment_classes = 'breadcrumb-item d-none d-md-block' %}
+      {%- if loop.revindex == 2 %}
+        {%- set _segment_classes = 'breadcrumb-item' %}
+      {%- endif %}
+      {%- set _segment_attrs = '' %}
+      {%- if loop.last %}
+        {%- set _segment_classes = _segment_classes ~ ' active' %}
+        {%- set _segment_attrs = 'aria-current="page"' %}
+      {%- endif %}
       <li
         class="{{ _segment_classes }}"
         {{ _segment_attrs|raw }}
       >
         {%- if _link.path -%}
           {% if loop.revindex == 2 %}
-            {% set _link = _link|merge({
+            {%- set _link = _link|merge({
               icon_position: 'before',
                 icon: {
                   name: "arrow-left",
@@ -48,9 +48,9 @@
                   attributes: create_attribute().addClass(['d-md-none ms-0 me-2']),
                 },
              }) %}
-          {% endif %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-        {% else %}
+          {%- endif %}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+        {%- else %}
           {{- _link.label -}}
         {%- endif -%}
       </li>

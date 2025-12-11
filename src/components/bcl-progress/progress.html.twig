@@ -14,7 +14,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _progress = progress|default(0) %}
+{%- set _progress = progress|default(0) %}
 {% set _min = min|default(0) %}
 {% set _max = max|default(100) %}
 {% set _striped = striped ?? false %}
@@ -25,28 +25,28 @@
 {% set _variant = variant|default('') %}
 {% set _message = message|default('') %}
 
-{% set _classes = 'progress-bar' %}
+{%- set _classes = 'progress-bar' %}
 {% if _striped is not empty %}
-  {% set _classes = _classes ~ ' progress-bar-striped' %}
+  {%- set _classes = _classes ~ ' progress-bar-striped' %}
 {% endif %}
 {% if _animated is not empty %}
-  {% set _classes = _classes ~ ' progress-bar-animated' %}
+  {%- set _classes = _classes ~ ' progress-bar-animated' %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes ~ ' text-bg-' ~ _variant %}
+  {%- set _classes = _classes ~ ' text-bg-' ~ _variant %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['progress']) %}
+{%- set attributes = attributes.addClass(['progress']) %}
 
-{% if _bar_label is empty %}
-  {% set _bar_label = _progress ~ '%' %}
+{%- if _bar_label is empty %}
+  {%- set _bar_label = _progress ~ '%' %}
 {% endif %}
 
-{% if _label is not empty %}
+{%- if _label is not empty %}
   <label class="progress-bar-label">{{ _label }}</label>
 {% endif %}
 <div

@@ -23,7 +23,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _id = id|default('') %}
+{%- set _id = id|default('') %}
 {% set _label = label|default('') %}
 {% set _required = required ?? false %}
 {% set _disabled = disabled ?? false %}
@@ -42,60 +42,60 @@
 {% set _horizontal_class = horizontal_class|default('col-sm-10') %}
 {% set _horizontal_label_class = horizontal_label_class|default('col-sm-2') %}
 
-{% set _label_block = false %}
+{%- set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _classes = ['form-control'] %}
 
-{% if _invalid is not empty %}
-  {% set _classes = _classes|merge(['is-invalid']) %}
+{%- if _invalid is not empty %}
+  {%- set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
 {% if _valid is not empty %}
-  {% set _classes = _classes|merge(['is-valid']) %}
+  {%- set _classes = _classes|merge(['is-valid']) %}
 {% endif %}
 {% set _placeholder = placeholder|default('') %}
 {% if _horizontal %}
-  {% set _label_class = 'col-form-label ' ~ _horizontal_label_class %}
+  {%- set _label_class = 'col-form-label ' ~ _horizontal_label_class %}
 {% endif %}
 {% if _hidden_label %}
-  {% set _label_class = _label_class ~ ' visually-hidden' %}
+  {%- set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes).setAttribute('rows', _rows) %}
+{%- set attributes = attributes.addClass(_classes).setAttribute('rows', _rows) %}
 
-{% if _id %}
-  {% set attributes = attributes.setAttribute('id', _id) %}
+{%- if _id %}
+  {%- set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
-{% if _required %}
-  {% set attributes = attributes.setAttribute('required', true) %}
+{%- if _required %}
+  {%- set attributes = attributes.setAttribute('required', true) %}
 {% endif %}
 
-{% if _disabled %}
-  {% set attributes = attributes.setAttribute('disabled', true) %}
+{%- if _disabled %}
+  {%- set attributes = attributes.setAttribute('disabled', true) %}
 {% endif %}
 
-{% if _readonly %}
-  {% set attributes = attributes.setAttribute('readonly', true) %}
+{%- if _readonly %}
+  {%- set attributes = attributes.setAttribute('readonly', true) %}
 {% endif %}
 
-{% if _placeholder is not empty %}
-  {% set attributes = attributes.setAttribute('placeholder', _placeholder) %}
+{%- if _placeholder is not empty %}
+  {%- set attributes = attributes.setAttribute('placeholder', _placeholder) %}
 {% endif %}
 
-{% if _helper_text_id is not empty %}
-  {% set attributes = attributes.setAttribute('aria-describedby', _helper_text_id) %}
+{%- if _helper_text_id is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-describedby', _helper_text_id) %}
 {% endif %}
 
-{% if _floating or _horizontal %}
+{%- if _floating or _horizontal %}
 {% set _wrapper_class = _floating ? 'form-floating' : 'row' %}
 <div class="{{ _wrapper_class }}">
 {% endif %}
 {% if _label is not empty %}
-  {% set _label_block %}
+  {%- set _label_block %}
     <label
     {% if _id %}
       for="{{ _id|e('html_attr') }}"
@@ -107,9 +107,9 @@
   {% endset %}
 {% endif %}
 
-{% if _label_block and _floating == false %}
-  {{ _label_block|raw }}
-{% endif %}
+{%- if _label_block and _floating == false %}
+  {{- _label_block|raw }}
+{%- endif %}
 {% if _horizontal and floating == false %}
 <div class="{{ _horizontal_class }}">
 {% endif %}
@@ -122,8 +122,8 @@
 </div>
 {% endif %}
 {% if _label_block and _floating %}
-  {{ _label_block|raw }}
-{% endif %}
+  {{- _label_block|raw }}
+{%- endif %}
 {% if _invalid_feedback is not empty %}
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}

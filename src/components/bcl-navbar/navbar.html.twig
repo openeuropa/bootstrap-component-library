@@ -26,7 +26,7 @@
     - right
 #}
 
-{% set _collapse_id = collapse_id|default('') %}
+{%- set _collapse_id = collapse_id|default('') %}
 {% set _background = background|default('') %}
 {% set _brand = brand|default({}) %}
 {% set _navigation = navigation|default({}) %}
@@ -35,26 +35,26 @@
 {% set _color_set = color_set|default('light') %}
 {% set _disable_collapse = disable_collapse ?? false %}
 
-{% set _classes = ['navbar', 'navbar-expand-' ~ _expand] %}
+{%- set _classes = ['navbar', 'navbar-expand-' ~ _expand] %}
 {% if _background is not empty %}
-  {% set _classes = _classes|merge(['bg-' ~ _background]) %}
+  {%- set _classes = _classes|merge(['bg-' ~ _background]) %}
 {% endif %}
 {% if _color_set is not empty %}
-  {% set _classes = _classes|merge(['navbar-' ~ _color_set]) %}
+  {%- set _classes = _classes|merge(['navbar-' ~ _color_set]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
 <nav
   {{ attributes }}
 >
   <div class='container'>
   {% block branding %}
-    {% if _brand is not empty %}
+    {%- if _brand is not empty %}
       <a class='navbar-brand' href='{{ _brand.link }}'>
       {% for logo in _brand.logos %}
         <img
@@ -62,7 +62,7 @@
           {% if logo.alt is not empty %}
           alt='{{ logo.alt }}'
           {% endif %}
-          {% if logo.class is not empty %}
+          {%- if logo.class is not empty %}
           class='{{ logo.class }}'
           {% endif %}
         />
@@ -74,9 +74,9 @@
     {% endif %}
       </a>
     {% endif %}
-  {% endblock %}
+  {%- endblock %}
 
-  {% if not _disable_collapse %}
+  {%- if not _disable_collapse %}
     <button
       class="navbar-toggler"
       type="button"
@@ -90,17 +90,17 @@
     </button>
     <div class="collapse navbar-collapse" id='{{ _collapse_id }}'>
   {% endif %}
-  {% block navigation %}
-    {% if _navigation is not empty %}
-      {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with _navigation only %}
-    {% endif %}
-  {% endblock %}
-  {% block right %}
-    {% if _form is not empty %}
-      {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
-    {% endif %}
-  {% endblock %}
-  {% if not _disable_collapse %}
+  {%- block navigation %}
+    {%- if _navigation is not empty %}
+      {%- include '@oe-bcl/bcl-navigation/navigation.html.twig' with _navigation only %}
+    {%- endif %}
+  {%- endblock %}
+  {%- block right %}
+    {%- if _form is not empty %}
+      {%- include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
+    {%- endif %}
+  {%- endblock %}
+  {%- if not _disable_collapse %}
     </div>
   {% endif %}
   </div>

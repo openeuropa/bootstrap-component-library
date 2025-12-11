@@ -19,7 +19,7 @@
   - icon_path (string) (default: '')
 #}
 
-{% set _id = id|default('dropdown-' ~ random(1000)) %}
+{%- set _id = id|default('dropdown-' ~ random(1000)) %}
 {% set _link = link ?? false %}
 {% set _trigger = trigger|default({}) %}
 {% set _content_block = content_block|default('') %}
@@ -30,16 +30,16 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _menu_id = 'mega-menu-' ~ _id %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set _classes = ['bcl-mega-menu'] %}
+{%- set _classes = ['bcl-mega-menu'] %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _trigger.attributes is empty %}
-  {% set _trigger = _trigger|merge({
+{%- if _trigger.attributes is empty %}
+  {%- set _trigger = _trigger|merge({
     attributes: create_attribute()
   }) %}
 {% endif %}
@@ -58,7 +58,7 @@
     variant: 'link',
     clean_class: true,
   }) only %}
-  {# Mega menu panel. #}
+  {#- Mega menu panel. #}
   <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
     <div class="container">
       {# Mobile back button. #}
@@ -78,14 +78,14 @@
       <div class="position-relative">
         <div class="row">
           {# Content / summary column. #}
-          {% if content_block is defined %}
+          {%- if content_block is defined %}
             <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">
               <div class="content-block">
                 {%- block content_block -%}
                   {{ _content_block }}
                 {%- endblock -%}
                 {% if _content_link.path is not empty %}
-                  {% set _content_link = _content_link|merge({
+                  {%- set _content_link = _content_link|merge({
                     icon: _content_link.icon|default({})|merge({
                       path: _icon_path
                     }),
@@ -102,7 +102,7 @@
               </div>
             </div>
           {% endif %}
-          {# Submenu column. #}
+          {#- Submenu column. #}
           <div class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu">
             {% include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' %}
           </div>

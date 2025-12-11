@@ -1,11 +1,11 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
 {%- block sidebar %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+  {%- include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {%- endblock -%}
 
 {%- block content %}
-  {% if authors is defined and authors is not empty %}
+  {%- if authors is defined and authors is not empty %}
     <h2
       class="mb-2-5"
       id="{{ authors.title_id }}"
@@ -21,9 +21,9 @@
       {% endfor %}
       </ul>
     {% endif %}
-  {% endif %}
+  {%- endif %}
 
-  {% if description is defined and description is not empty %}
+  {%- if description is defined and description is not empty %}
     <h2
       class="mb-4 pt-2-5"
       id="{{ description.title_id }}"
@@ -33,9 +33,9 @@
     {% for paragraph in description.paragraphs %}
       <p class="mb-3">{{- paragraph -}}</p>
     {% endfor %}
-  {% endif %}
+  {%- endif %}
 
-  {% if file is not empty %}
+  {%- if file is not empty %}
     <div class="pt-2 mb-4">
       {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
     </div>

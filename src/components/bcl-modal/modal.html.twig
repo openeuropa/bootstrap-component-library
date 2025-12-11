@@ -26,7 +26,7 @@
     - footer
 #}
 
-{% set _size =  size|default('') %}
+{%- set _size =  size|default('') %}
 {% set _id = id|default('modal-' ~ random(10000)) %}
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _static_backdrop = static_backdrop ?? false %}
@@ -40,13 +40,13 @@
 {% set _footer = footer|default('') %}
 {% set _footer_attributes = footer_attributes ?: create_attribute() %}
 
-{% set _classes = ['modal', 'fade'] %}
+{%- set _classes = ['modal', 'fade'] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes
+{%- set attributes = attributes
                     .setAttribute('id', _id)
                     .setAttribute('tabindex', '-1')
                     .setAttribute('aria-hidden', 'true')
@@ -54,8 +54,8 @@
                     .addClass(_classes)
 %}
 
-{% if _static_backdrop %}
-  {% set attributes = attributes.setAttribute('data-bs-backdrop', 'static') %}
+{%- if _static_backdrop %}
+  {%- set attributes = attributes.setAttribute('data-bs-backdrop', 'static') %}
 {% endif %}
 
 <div

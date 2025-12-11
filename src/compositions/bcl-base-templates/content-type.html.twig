@@ -25,7 +25,7 @@
   - messages_area
 #}
 
-{% set _with_header = header ?? false %}
+{%- set _with_header = header ?? false %}
 {% set _with_footer = footer ?? false %}
 {% set _with_banner = banner ?? false %}
 {% set _with_sidebar = sidebar ?? false %}
@@ -34,8 +34,8 @@
 {% set _content_type = content_type|default('') %}
 {% set _classes = ['bcl-node-type'] %}
 
-{% if _with_sidebar %}
-  {% set _col_classes = {
+{%- if _with_sidebar %}
+  {%- set _col_classes = {
     left: [
       'col-12',
       'bcl-sidebar',
@@ -45,95 +45,95 @@
     ],
   } %}
 
-  {% if _sidebar_size == 'normal' %}
-    {% set _col_classes = _col_classes|merge({
+  {%- if _sidebar_size == 'normal' %}
+    {%- set _col_classes = _col_classes|merge({
       left: _col_classes.left|merge(['col-lg-3']),
       right: _col_classes.right|merge(['col-lg-9', 'col-xxl-8']),
     }) %}
-  {% endif %}
+  {%- endif %}
 
-  {% if _sidebar_size == 'large' %}
-    {% set _col_classes = _col_classes|merge({
+  {%- if _sidebar_size == 'large' %}
+    {%- set _col_classes = _col_classes|merge({
       left: _col_classes.left|merge(['col-lg-4']),
       right: _col_classes.right|merge(['col-lg-8']),
     }) %}
-  {% endif %}
+  {%- endif %}
 {% endif %}
 
-{% if _content_type is not empty %}
-  {% set _classes = _classes|merge(['bcl-' ~ _content_type]) %}
+{%- if _content_type is not empty %}
+  {%- set _classes = _classes|merge(['bcl-' ~ _content_type]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _with_header %}
-  {% include '@oe-bcl/bcl-header/header.html.twig' with header only %}
+{%- if _with_header %}
+  {%- include '@oe-bcl/bcl-header/header.html.twig' with header only %}
 {% endif %}
 
 <main {{ attributes }}>
 {% if messages is defined and messages is not empty %}
-  {% block messages_area %}
+  {%- block messages_area %}
   <div class="container">
     {% for message in messages %}
-    {% set message_attributes = create_attribute().addClass(['mt-lg-5', 'mt-2']) %}
-      {% include '@oe-bcl/bcl-alert/alert.html.twig' with message|merge({
+    {%- set message_attributes = create_attribute().addClass(['mt-lg-5', 'mt-2']) %}
+      {%- include '@oe-bcl/bcl-alert/alert.html.twig' with message|merge({
         attributes: message_attributes,
       }) only %}
-    {% endfor %}
+    {%- endfor %}
   </div>
   {% endblock %}
 {% endif %}
 
-{% if _with_banner %}
-  {% block banner %}
-    {% include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
-  {% endblock %}
+{%- if _with_banner %}
+  {%- block banner %}
+    {%- include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
+  {%- endblock %}
 {% endif %}
 
   <div class="container mt-md-4-75 mt-4">
     <div class="row">
       {% block content_row %}
-        {{ content_row }}
-      {% endblock %}
-    {% if _with_sidebar %}
+        {{- content_row }}
+      {%- endblock %}
+    {%- if _with_sidebar %}
       <div class="{{ _col_classes.left|join(' ') }}">
         {% block sidebar %}{% endblock %}
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}
-      {% if _landing %}
+      {%- if _landing %}
       <div class="col-12">
       {% else %}
       <div class="col-lg-10 col-xl-9 col-xxl-8">
       {% endif %}
-    {% endif %}
-      {% block content_top %}
-        {{ content_top }}
-      {% endblock %}
-      {% block content %}
-        {{ content }}
-      {% endblock %}
-      {% block content_bottom %}
-        {{ content_bottom }}
-      {% endblock %}
-      {% block related %}
-        {{ related }}
-      {% endblock %}
-      {% block share %}
-        {{ share }}
-      {% endblock %}
+    {%- endif %}
+      {%- block content_top %}
+        {{- content_top }}
+      {%- endblock %}
+      {%- block content %}
+        {{- content }}
+      {%- endblock %}
+      {%- block content_bottom %}
+        {{- content_bottom }}
+      {%- endblock %}
+      {%- block related %}
+        {{- related }}
+      {%- endblock %}
+      {%- block share %}
+        {{- share }}
+      {%- endblock %}
     </div>
   </div>
 </main>
 
 {% block feedback %}
-  {{ feedback }}
-{% endblock %}
+  {{- feedback }}
+{%- endblock %}
 
-{% if _with_footer %}
-  {% include '@oe-bcl/bcl-footer/footer.html.twig' with footer only %}
+{%- if _with_footer %}
+  {%- include '@oe-bcl/bcl-footer/footer.html.twig' with footer only %}
 {% endif %}
 
 {% endapply %}

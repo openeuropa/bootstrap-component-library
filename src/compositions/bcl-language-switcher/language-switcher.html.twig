@@ -7,14 +7,14 @@
   - languages (link[]) (default: [])
 #}
 
-{% set _id = id|default('collapse-' ~ random(10000)) %}
+{%- set _id = id|default('collapse-' ~ random(10000)) %}
 {% set _message = message|default({}) %}
 {% set _expandable = expandable|default({}) %}
 {% set _languages = languages|default([]) %}
 
-{% set _expandable_attributes = _expandable.attributes ?: create_attribute() %}
+{%- set _expandable_attributes = _expandable.attributes ?: create_attribute() %}
 
-{% set _expandable_attributes = _expandable_attributes
+{%- set _expandable_attributes = _expandable_attributes
                                 .setAttribute('data-bs-toggle', 'collapse')
                                 .setAttribute('autocomplete', 'off')
                                 .setAttribute('aria-expanded', 'false')
@@ -22,9 +22,9 @@
                                 .setAttribute('data-bs-target', '#' ~ _id)
 %}
 
-{% include '@oe-bcl/bcl-alert/alert.html.twig' with _message only %}
+{%- include '@oe-bcl/bcl-alert/alert.html.twig' with _message only %}
 
-{% include '@oe-bcl/bcl-button/button.html.twig' with _expandable|merge({
+{%- include '@oe-bcl/bcl-button/button.html.twig' with _expandable|merge({
   attributes: _expandable_attributes
 }) only %}
 
@@ -34,7 +34,7 @@
     style="grid-auto-flow: row;  grid-template-columns: repeat(auto-fit, minmax(4rem, 8rem))"
   >
     {% for language in languages %}
-      {% include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
+      {%- include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
         attributes: create_attribute().addClass(
           [ "btn",
             "btn-link",
@@ -43,7 +43,7 @@
             "text-start"
           ])
       }) only %}
-    {% endfor %}
+    {%- endfor %}
   </div>
 </div>
 

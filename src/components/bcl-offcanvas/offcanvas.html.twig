@@ -20,7 +20,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -36,46 +36,46 @@
 {% set _extra_classes_close = extra_classes_close|default('') %}
 {% set _responsiveness = responsiveness|default('') %}
 
-{% if _responsiveness is not empty %}
- {% set _classes = ['offcanvas-' ~ _responsiveness] %}
+{%- if _responsiveness is not empty %}
+ {%- set _classes = ['offcanvas-' ~ _responsiveness] %}
 {% else %}
- {% set _classes = ['offcanvas'] %}
+ {%- set _classes = ['offcanvas'] %}
 {% endif %}
 
-{% set _class_body = 'offcanvas-body' ~ (_extra_classes_body ? ' ' ~ _extra_classes_body : '') %}
+{%- set _class_body = 'offcanvas-body' ~ (_extra_classes_body ? ' ' ~ _extra_classes_body : '') %}
 {% set _class_header = 'offcanvas-header' ~ (_extra_classes_header ? ' ' ~ _extra_classes_header : '') %}
 
-{% if _placement is not empty %}
- {% set _classes = _classes|merge(['offcanvas-' ~ _placement]) %}
+{%- if _placement is not empty %}
+ {%- set _classes = _classes|merge(['offcanvas-' ~ _placement]) %}
 {% endif %}
 
-{% if _title is not empty %}
-  {% set _aria_labelled = _title.id|default('') %}
+{%- if _title is not empty %}
+  {%- set _aria_labelled = _title.id|default('') %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('id', _id) %}
+{%- set attributes = attributes.setAttribute('id', _id) %}
 
-{% if _aria_labelled is defined and _aria_labelled is not empty %}
-  {% set attributes = attributes.setAttribute('aria-labelledby', _aria_labelled) %}
+{%- if _aria_labelled is defined and _aria_labelled is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-labelledby', _aria_labelled) %}
 {% endif %}
 
-{% if _with_body_scroll %}
- {% set attributes = attributes.setAttribute('data-bs-scroll', 'true') %}
+{%- if _with_body_scroll %}
+ {%- set attributes = attributes.setAttribute('data-bs-scroll', 'true') %}
 {% endif %}
 
-{% if not _with_backdrop %}
- {% set attributes = attributes.setAttribute('data-bs-backdrop', 'false') %}
+{%- if not _with_backdrop %}
+ {%- set attributes = attributes.setAttribute('data-bs-backdrop', 'false') %}
 {% endif %}
 
-{% if _title is not empty %}
- {% set attributes = attributes.setAttribute('aria-labelledby', _id ~ '-title') %}
+{%- if _title is not empty %}
+ {%- set attributes = attributes.setAttribute('aria-labelledby', _id ~ '-title') %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) %}
+{%- set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) %}
 
 <div
   {{ attributes }}
@@ -83,24 +83,24 @@
 {% if _with_close or _title is not empty %}
   <div class="{{ _class_header }}">
   {% if _title is not empty %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: _title,
       title_tag: _title_tag,
       title_link: _title_link,
       attributes: _title_attributes.setAttribute('id', _id ~ '-title').addClass(['offcanvas-title']),
     } only %}
-  {% endif %}
-  {% if _with_close %}
-    {% set button_attributes = create_attribute()
+  {%- endif %}
+  {%- if _with_close %}
+    {%- set button_attributes = create_attribute()
                               .addClass(['btn-close', 'text-reset'])
                               .setAttribute('data-bs-dismiss', 'offcanvas')
                               .setAttribute('data-bs-target', '#' ~ _id)
                               .setAttribute('aria-label', _close_aria_label)
                               .setAttribute('aria-controls', _id)
     %}
-    {% if _extra_classes_close is not empty %}
-      {% set button_attributes = button_attributes.addClass(_extra_classes_close) %}
-    {% endif %}
+    {%- if _extra_classes_close is not empty %}
+      {%- set button_attributes = button_attributes.addClass(_extra_classes_close) %}
+    {%- endif %}
     {%- include '@oe-bcl/bcl-button/button.html.twig' with {
         attributes: button_attributes,
         clean_class: true

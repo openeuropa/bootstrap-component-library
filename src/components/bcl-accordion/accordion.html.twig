@@ -22,7 +22,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -34,16 +34,16 @@
 {% set _open_item_id = open_item_id|default(0) %}
 {% set _classes = ['accordion'] %}
 {% if _flush %}
-  {% set _classes = _classes|merge(['accordion-flush']) %}
+  {%- set _classes = _classes|merge(['accordion-flush']) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes).setAttribute('id', 'accordion-' ~ _id) %}
+{%- set attributes = attributes.addClass(_classes).setAttribute('id', 'accordion-' ~ _id) %}
 
-{% if _items is not empty %}
+{%- if _items is not empty %}
 <div
   {{ attributes }}
 >
@@ -57,45 +57,45 @@
   {%- endif -%}
 
   {% if _items|length > 1 and (_expand_button is not empty or _collapse_button is not empty) %}
-  {% set wrapper_attributes = create_attribute().addClass(['d-flex', 'justify-content-end', 'gap-3', 'mb-3']) %}
+  {%- set wrapper_attributes = create_attribute().addClass(['d-flex', 'justify-content-end', 'gap-3', 'mb-3']) %}
   <div
     {{ wrapper_attributes }}
     >
     {% if _expand_button is not empty %}
-      {% if _expand_button.attributes is empty %}
-        {% set _expand_button = _expand_button|merge({
+      {%- if _expand_button.attributes is empty %}
+        {%- set _expand_button = _expand_button|merge({
             attributes: create_attribute()
           })
         %}
-      {% endif %}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with _expand_button|merge({
+      {%- endif %}
+      {%- include '@oe-bcl/bcl-button/button.html.twig' with _expand_button|merge({
         attributes: _expand_button.attributes
                     .setAttribute('data-target', 'accordion-' ~ _id)
                     .setAttribute('data-action', 'expand')
       }) only %}
-    {% endif %}
-    {% if _collapse_button is not empty %}
-      {% if _collapse_button.attributes is empty %}
-        {% set _collapse_button = _collapse_button|merge({
+    {%- endif %}
+    {%- if _collapse_button is not empty %}
+      {%- if _collapse_button.attributes is empty %}
+        {%- set _collapse_button = _collapse_button|merge({
             attributes: create_attribute()
           })
         %}
-      {% endif %}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with _collapse_button|merge({
+      {%- endif %}
+      {%- include '@oe-bcl/bcl-button/button.html.twig' with _collapse_button|merge({
         attributes: _collapse_button.attributes
                     .setAttribute('data-target', 'accordion-' ~ _id)
                     .setAttribute('data-action', 'collapse')
       }) only %}
-    {% endif %}
+    {%- endif %}
   </div>
   {% endif %}
   <div class="accordion-items-wrapper">
     {% for _item in _items %}
-      {% set _open_item = _open_item_id == loop.index %}
-      {% set _button_classes = ['accordion-button'] %}
-      {% if not _open_item %}
-        {% set _button_classes = _button_classes|merge(['collapsed']) %}
-      {% endif %}
+      {%- set _open_item = _open_item_id == loop.index %}
+      {%- set _button_classes = ['accordion-button'] %}
+      {%- if not _open_item %}
+        {%- set _button_classes = _button_classes|merge(['collapsed']) %}
+      {%- endif %}
       <div class="accordion-item">
         {%- set _item_title_tag = _item.title_tag|default('h2') %}
         <{{ _item_title_tag }}
@@ -110,12 +110,12 @@
                                     .setAttribute('aria-controls', 'collapse-' ~ _id ~ '-' ~ loop.index)
                                     .setAttribute('aria-expanded', open_item ? 'true' : 'false')
           %}
-          {% set item_title %}
+          {%- set item_title %}
             <span>
               {{- _item.title -}}
             </span>
           {% endset %}
-          {% include '@oe-bcl/bcl-button/button.html.twig' with {
+          {%- include '@oe-bcl/bcl-button/button.html.twig' with {
             label: item_title,
             clean_class: true,
             attributes: button_attributes

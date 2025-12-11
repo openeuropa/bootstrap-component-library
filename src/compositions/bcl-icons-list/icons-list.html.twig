@@ -5,10 +5,10 @@
   - path (string) (default: '')
 #}
 
-{% set _icons = icons|default([]) %}
+{%- set _icons = icons|default([]) %}
 {% set _path = path|default('') %}
 
-{% if _icons is not empty and _icons is iterable %}
+{%- if _icons is not empty and _icons is iterable %}
   <div class="px-4">
     <div class="row">
       {% for _icon in _icons %}
@@ -19,7 +19,7 @@
           attributes: create_attribute().addClass(['mx-auto', 'd-block', 'mb-3']),
           size: '2xl'
         } %}
-        {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon_object only %}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon_object only %}
         <p class="text-center text-nowrap">{{ _icon }}</p>
         </div>
       {% endfor %}

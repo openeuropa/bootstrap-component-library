@@ -35,7 +35,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _id = id|default('') %}
+{%- set _id = id|default('') %}
 {% set _label = label|default('') %}
 {% set _label_extra_classes = label_extra_classes|default('') %}
 {% set _hidden_label = hidden_label ?? false %}
@@ -52,59 +52,59 @@
 {% set _aria_label = aria_label|default('') %}
 {% set _clean_class = clean_class ?? false %}
 
-{% set _classes = ['form-select'] %}
+{%- set _classes = ['form-select'] %}
 {% set _label_class = 'form-label' %}
 
-{% if _clean_class %}
-  {% set _classes = [] %}
+{%- if _clean_class %}
+  {%- set _classes = [] %}
 {% endif %}
 
-{% if _invalid %}
-  {% set _classes = _classes|merge(['is-invalid']) %}
+{%- if _invalid %}
+  {%- set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
 
-{% if _valid %}
-  {% set _classes = _classes|merge(['is-valid']) %}
+{%- if _valid %}
+  {%- set _classes = _classes|merge(['is-valid']) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _label_extra_classes is not empty %}
-  {% set _label_class = _label_class ~ ' ' ~ _label_extra_classes %}
+{%- if _label_extra_classes is not empty %}
+  {%- set _label_class = _label_class ~ ' ' ~ _label_extra_classes %}
 {% endif %}
 
-{% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{%- if _aria_label is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-label', _aria_label) %}
 {% endif %}
 
-{% if _id is not empty %}
-  {% set attributes = attributes.setAttribute('id', _id) %}
+{%- if _id is not empty %}
+  {%- set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
-{% if _disabled %}
-  {% set attributes = attributes.setAttribute('disabled', true) %}
+{%- if _disabled %}
+  {%- set attributes = attributes.setAttribute('disabled', true) %}
 {% endif %}
 
-{% if _multiple %}
-  {% set attributes = attributes.setAttribute('multiple', true) %}
+{%- if _multiple %}
+  {%- set attributes = attributes.setAttribute('multiple', true) %}
 {% endif %}
 
-{% if _required %}
-  {% set attributes = attributes.setAttribute('required', true) %}
+{%- if _required %}
+  {%- set attributes = attributes.setAttribute('required', true) %}
 {% endif %}
 
-{% if _hidden_label %}
-  {% set _label_class = _label_class ~ ' visually-hidden' %}
+{%- if _hidden_label %}
+  {%- set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
 
-{% if _classes is not empty %}
-  {% set attributes = attributes.addClass(_classes) %}
+{%- if _classes is not empty %}
+  {%- set attributes = attributes.addClass(_classes) %}
 {% endif %}
 
-{% if _label is not empty %}
-  {% set _label_block %}
+{%- if _label is not empty %}
+  {%- set _label_block %}
     <label
     {% if _id %}
       for="{{ _id }}"
@@ -116,31 +116,31 @@
   {% endset %}
 {% endif %}
 
-{% if _label_block is defined %}
-  {{ _label_block|raw }}
-{% endif %}
+{%- if _label_block is defined %}
+  {{- _label_block|raw }}
+{%- endif %}
 <select
   {{ attributes }}
 >
 {% if _options is not empty and _options is iterable %}
-  {% for _option in _options %}
-    {% if _option.optgroup is defined %}
+  {%- for _option in _options %}
+    {%- if _option.optgroup is defined %}
       <optgroup label="{{ _option.label }}">
       {% if _option.options is not empty  and _option.options is iterable %}
-        {% for _optGroupOption in _option.options %}
+        {%- for _optGroupOption in _option.options %}
         <option
           value="{{ _optGroupOption.value }}"
         {% if _optGroupOption.selected is defined %}
           selected
         {% endif %}
-        {% if _optGroupOption.disabled %}
+        {%- if _optGroupOption.disabled %}
           disabled
         {% endif %}
         >
           {{- _optGroupOption.label -}}
         </option>
         {% endfor %}
-      {% endif %}
+      {%- endif %}
       </optgroup>
     {% else %}
       <option
@@ -148,17 +148,17 @@
       {% if _option.selected is defined %}
         selected
       {% endif %}
-      {% if _option.disabled %}
+      {%- if _option.disabled %}
         disabled
       {% endif %}
-      {% if _option.hidden %}
+      {%- if _option.hidden %}
         hidden
       {% endif %}
       >
         {{- _option.label -}}
       </option>
     {% endif %}
-  {% endfor %}
+  {%- endfor %}
 {% endif %}
 </select>
 {% if _invalid_feedback is not empty %}

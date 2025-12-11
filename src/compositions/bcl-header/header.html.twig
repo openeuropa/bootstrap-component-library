@@ -22,7 +22,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _variant = variant|default('neutral') %}
+{%- set _variant = variant|default('neutral') %}
 {% set _navbar = navbar|default({}) %}
 {% set _project_logo = project_logo|default({}) %}
 {% set _site_name = site_name|default('') %}
@@ -36,24 +36,24 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _modals = modals|default([]) %}
 
-{% set _site_name_classes = 'bcl-header__site-name' %}
+{%- set _site_name_classes = 'bcl-header__site-name' %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bcl-header', 'bcl-header--' ~ _variant, 'shadow-sm']) %}
+{%- set attributes = attributes.addClass(['bcl-header', 'bcl-header--' ~ _variant, 'shadow-sm']) %}
 
-{% if site_name_classes is not empty %}
-  {% set _site_name_classes = _site_name_classes ~ ' ' ~ site_name_classes %}
+{%- if site_name_classes is not empty %}
+  {%- set _site_name_classes = _site_name_classes ~ ' ' ~ site_name_classes %}
 {% endif %}
 
-{% set _project_classes = 'bcl-header__project' %}
+{%- set _project_classes = 'bcl-header__project' %}
 {% if _light is not empty %}
-  {% set _project_classes = _project_classes ~ ' light' %}
+  {%- set _project_classes = _project_classes ~ ' light' %}
 {% endif %}
 
-{% set toggler_attributes = _toggler_attributes.addClass(['bcl-navbar-toggler', 'd-lg-none'])
+{%- set toggler_attributes = _toggler_attributes.addClass(['bcl-navbar-toggler', 'd-lg-none'])
   .setAttribute('type', 'button')
   .setAttribute('data-bs-toggle', 'collapse')
   .setAttribute('data-bs-target', '#' ~ navbar_id)
@@ -61,7 +61,7 @@
   .setAttribute('aria-expanded', 'false')
 %}
 
-{% set navbar_toggle_button %}
+{%- set navbar_toggle_button %}
   <button
     {{ toggler_attributes }}
   >
@@ -71,7 +71,7 @@
       path: _icon_path,
       attributes: create_attribute().addClass(['default-icon']),
     } only %}
-    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: 'x',
       size: 'fluid',
       path: _icon_path,
@@ -94,14 +94,14 @@
           {% if logo.alt is not empty %}
           alt='{{ logo.alt }}'
           {% endif %}
-          {% if logo.class is not empty %}
+          {%- if logo.class is not empty %}
           class='{{ logo.class }}'
           {% endif %}
         />
       {% endfor %}
       </a>
     {% endif %}
-      {{ navbar_toggle_button }}
+      {{- navbar_toggle_button }}
     </div>
   </nav>
 
@@ -114,11 +114,11 @@
 
   <!-- navbar -->
   {% if _navbar is not empty %}
-    {% include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
+    {%- include '@oe-bcl/bcl-navbar/navbar.html.twig' with _navbar|merge({
       disable_collapse: true,
       attributes: create_attribute().addClass('bcl-header__navbar collapse navbar-collapse').setAttribute('id', _navbar_id).setAttribute('aria-label', 'Main Navigation'),
     }) only %}
-  {% endif %}
+  {%- endif %}
 </header>
 
 <!-- breadcrumbs -->
@@ -128,12 +128,12 @@
   </div>
 {% endif %}
 
-{% for modal in _modals %}
-  {% include '@oe-bcl/bcl-modal/modal.html.twig' with modal only %}
+{%- for modal in _modals %}
+  {%- include '@oe-bcl/bcl-modal/modal.html.twig' with modal only %}
 {% endfor %}
 
-{% if _language_modal is not empty %}
-  {% include '@oe-bcl/bcl-language-list/language-list.html.twig' with _language_modal only %}
+{%- if _language_modal is not empty %}
+  {%- include '@oe-bcl/bcl-language-list/language-list.html.twig' with _language_modal only %}
 {% endif %}
 
 {% endapply %}

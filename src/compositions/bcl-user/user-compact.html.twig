@@ -15,21 +15,21 @@
   - infos (string[]) (default: [])
 #}
 
-{% set _picture = picture|default({}) %}
+{%- set _picture = picture|default({}) %}
 {% set _name = name|default({}) %}
 {% set _infos = infos|default([]) %}
 
-{% set _picture_classes = 'rounded-pill' %}
+{%- set _picture_classes = 'rounded-pill' %}
 {% set _classes = ['bcl-user-compact', 'd-flex', 'mb-3'] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _picture is not empty and _picture.classes is not empty %}
-  {% set _picture_classes = _picture_classes ~ ' ' ~ _picture.classes %}
+{%- if _picture is not empty and _picture.classes is not empty %}
+  {%- set _picture_classes = _picture_classes ~ ' ' ~ _picture.classes %}
 {% endif %}
 
 <div
@@ -49,13 +49,13 @@
     <p class="fs-5 mb-0 text-primary">{{ _name.text }}</p>
   {% endif %}
 
-  {% if _infos is not empty %}
+  {%- if _infos is not empty %}
     <div class="d-flex flex-wrap">
     {% for _info in _infos %}
-      {% if _info is not empty %}
+      {%- if _info is not empty %}
       <span class="text-muted text-nowrap{{ loop.last ? '' :' me-4-5' }}">{{ _info }}</span>
       {% endif %}
-    {% endfor %}
+    {%- endfor %}
     </div>
   {% endif %}
   </div>

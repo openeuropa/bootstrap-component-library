@@ -26,7 +26,7 @@
   - close_label (string) (default: '')
 #}
 
-{% set _overlay = overlay ?? false %}
+{%- set _overlay = overlay ?? false %}
 {% set _inside_container = inside_container ?? false %}
 {% set _variant = variant|default('neutral') %}
 {% set _title = title|default('') %}
@@ -38,18 +38,18 @@
 {% set _non_eu_items = non_eu_items|default([]) %}
 {% set _close_label = close_label|default('') %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _overlay %}
-  {% include '@oe-bcl/bcl-language-list/language-list-modal.html.twig' %}
+{%- if _overlay %}
+  {%- include '@oe-bcl/bcl-language-list/language-list-modal.html.twig' %}
 {% else %}
-  {% set attributes = attributes.addClass(['bcl-language-list', 'bcl-language-list--' ~ _variant]) %}
+  {%- set attributes = attributes.addClass(['bcl-language-list', 'bcl-language-list--' ~ _variant]) %}
 
-  {% if not _inside_container %}
-    {% set attributes = attributes.addClass(['pt-5']) %}
-  {% endif %}
+  {%- if not _inside_container %}
+    {%- set attributes = attributes.addClass(['pt-5']) %}
+  {%- endif %}
 
   <div
     {{ attributes }}
@@ -64,10 +64,10 @@
           {% if _logo.path is not empty %}
           src="{{ _logo.path }}"
           {% endif %}
-          {% if _logo.alt is not empty %}
+          {%- if _logo.alt is not empty %}
           alt="{{ _logo.alt }}"
           {% endif %}
-          {% if _logo.class is not empty %}
+          {%- if _logo.class is not empty %}
           class="{{ _logo.class }}"
           {% endif %}
         />
@@ -81,26 +81,26 @@
     </div>
     {% endif %}
 
-    {% if _items is not empty or _non_eu_items is not empty %}
+    {%- if _items is not empty or _non_eu_items is not empty %}
     <div class="main pt-4">
       {% if not (_variant == 'neutral' and _inside_container) %}
       <div class="container">
       {% endif %}
-      {% if _items is not empty and _items is iterable %}
-        {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+      {%- if _items is not empty and _items is iterable %}
+        {%- include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
             items: _items,
             icon_path: _icon_path,
             category: eu_category,
         } only %}
-      {% endif %}
-      {% if _non_eu_items is not empty and _non_eu_items is iterable %}
-        {% include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
+      {%- endif %}
+      {%- if _non_eu_items is not empty and _non_eu_items is iterable %}
+        {%- include '@oe-bcl/bcl-language-list/language-list-grid.html.twig' with {
             items: _non_eu_items,
             icon_path: _icon_path,
             category: non_eu_category,
         } only %}
-      {% endif %}
-      {% if not (_variant == 'neutral' and _inside_container) %}
+      {%- endif %}
+      {%- if not (_variant == 'neutral' and _inside_container) %}
       </div>
       {% endif %}
     </div>

@@ -32,7 +32,7 @@
   - list_attributes (drupal attrs)
 #}
 
-{% set _size = size|default('') %}
+{%- set _size = size|default('') %}
 {% set _alignment = alignment|default('') %}
 {% set _variant = variant|default('') %}
 {% set _aria_label = aria_label|default('') %}
@@ -48,112 +48,112 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _internal_items = [] %}
 
-{% if _enable_first_last_icon %}
-  {% if _first is not empty %}
-    {% set _first = _first|merge({
+{%- if _enable_first_last_icon %}
+  {%- if _first is not empty %}
+    {%- set _first = _first|merge({
       icon_html: "&laquo;",
       icon_name: "chevron-double-left",
     }) %}
-  {% endif %}
-  {% if _last is not empty %}
-    {% set _last = _last|merge({
+  {%- endif %}
+  {%- if _last is not empty %}
+    {%- set _last = _last|merge({
       icon_html: '&raquo;',
       icon_name: "chevron-double-right",
     }) %}
-  {% endif %}
+  {%- endif %}
 {% endif %}
 
-{% if _enable_prev_next_icon %}
-  {% if _prev is not empty %}
-    {% set _prev = _prev|merge({
+{%- if _enable_prev_next_icon %}
+  {%- if _prev is not empty %}
+    {%- set _prev = _prev|merge({
       icon_html: "&lsaquo;",
       icon_name: "chevron-left",
     }) %}
-  {% endif %}
-  {% if _next is not empty %}
-    {% set _next = _next|merge({
+  {%- endif %}
+  {%- if _next is not empty %}
+    {%- set _next = _next|merge({
       icon_html: "&rsaquo;",
       icon_name: "chevron-right",
     }) %}
-  {% endif %}
+  {%- endif %}
 {% endif %}
 
 
-{% set _internal_items = _internal_items|merge([_first, _prev]) %}
+{%- set _internal_items = _internal_items|merge([_first, _prev]) %}
 
-{% set _ellipsis_markup %} &hellip; {% endset %}
+{%- set _ellipsis_markup %} &hellip; {% endset %}
 
-{% if _ellipsis_before %}
-  {% set _ellipsis_before_item = {
+{%- if _ellipsis_before %}
+  {%- set _ellipsis_before_item = {
     icon_html: _ellipsis_markup,
     icon_path: "",
   } %}
-  {% set _internal_items = _internal_items|merge([_ellipsis_before_item]) %}
+  {%- set _internal_items = _internal_items|merge([_ellipsis_before_item]) %}
 {% endif %}
 
-{% set _internal_items = _internal_items|merge(_items) %}
+{%- set _internal_items = _internal_items|merge(_items) %}
 
-{% if _ellipsis_after %}
-  {% set _ellipsis_after_item = {
+{%- if _ellipsis_after %}
+  {%- set _ellipsis_after_item = {
     icon_html: _ellipsis_markup,
     icon_path: "",
   } %}
-  {% set _internal_items = _internal_items|merge([_ellipsis_after_item]) %}
+  {%- set _internal_items = _internal_items|merge([_ellipsis_after_item]) %}
 {% endif %}
 
-{% set _internal_items = _internal_items|merge([_next, _last]) %}
+{%- set _internal_items = _internal_items|merge([_next, _last]) %}
 
-{% if list_attributes is empty %}
-  {% set list_attributes = create_attribute() %}
+{%- if list_attributes is empty %}
+  {%- set list_attributes = create_attribute() %}
 {% endif %}
 
-{% set list_attributes = list_attributes.addClass('pagination') %}
+{%- set list_attributes = list_attributes.addClass('pagination') %}
 {% if _size is not empty %}
-  {% set list_attributes = list_attributes.addClass('pagination-' ~ _size) %}
+  {%- set list_attributes = list_attributes.addClass('pagination-' ~ _size) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set list_attributes = list_attributes.addClass('pagination--' ~ _variant) %}
+  {%- set list_attributes = list_attributes.addClass('pagination--' ~ _variant) %}
 {% endif %}
 {% if _alignment is not empty %}
-  {% set list_attributes = list_attributes.addClass('justify-content-' ~ _alignment) %}
+  {%- set list_attributes = list_attributes.addClass('justify-content-' ~ _alignment) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('role', 'navigation') %}
+{%- set attributes = attributes.setAttribute('role', 'navigation') %}
 
-{% if _variant == 'glossary' %}
-  {% set attributes = attributes.addClass(['bcl-glossary']) %}
+{%- if _variant == 'glossary' %}
+  {%- set attributes = attributes.addClass(['bcl-glossary']) %}
 {% endif %}
 
-{% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', aria_label) %}
+{%- if _aria_label is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-label', aria_label) %}
 {% endif %}
 
 <nav{{ attributes }}>
   <ul{{ list_attributes }}>
 {% if _internal_items is not empty and _internal_items is iterable %}
-  {% for _item in _internal_items %}
-    {% if _item is not empty %}
-      {% set _item_class = ['page-item'] %}
-      {% if _item.disabled %}
-        {% set _item_class = _item_class|merge(['disabled']) %}
-      {% endif %}
-      {% if _item.active %}
-        {% set _item_class = _item_class|merge(['active']) %}
-      {% endif %}
+  {%- for _item in _internal_items %}
+    {%- if _item is not empty %}
+      {%- set _item_class = ['page-item'] %}
+      {%- if _item.disabled %}
+        {%- set _item_class = _item_class|merge(['disabled']) %}
+      {%- endif %}
+      {%- if _item.active %}
+        {%- set _item_class = _item_class|merge(['active']) %}
+      {%- endif %}
       <li class="{{ _item_class|join(' ') }}">
         {% if _item.icon_path is not defined %}
-          {% set _item = _item|merge({
+          {%- set _item = _item|merge({
             icon_path: _icon_path,
           }) %}
-        {% endif %}
-        {% include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
+        {%- endif %}
+        {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
       </li>
     {% endif %}
-  {% endfor %}
+  {%- endfor %}
 {% endif %}
   </ul>
 </nav>

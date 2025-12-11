@@ -1,17 +1,17 @@
 {% extends '@oe-bcl/bcl-base-templates/listing-page.html.twig' -%}
 
 {%- block content_row %}
-		{% include '@oe-bcl/bcl-pagination/pagination.html.twig' with glossary only %}
+		{%- include '@oe-bcl/bcl-pagination/pagination.html.twig' with glossary only %}
 	<div class="col-12">
 	  <div class="d-md-flex justify-content-end mb-md-4-75 align-items-center border-bottom-md border-top-md border-gray-300 py-3">
 	    {% include '@oe-bcl/bcl-select/select.html.twig' with sortBy only %}
-	    {% include '@oe-bcl/bcl-select/select.html.twig' with itemsPerPage only %}
+	    {%- include '@oe-bcl/bcl-select/select.html.twig' with itemsPerPage only %}
 	  </div>
   </div>
 {%- endblock -%}
 
 {%- block content_top %}
-	{% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+	{%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
 	  title: 'Starting with "A" (48)',
 	  title_tag: 'h2',
 	} only %}

@@ -12,7 +12,7 @@
     - icon_path (string) (default: '')
 #}
 
-{% set _day = day|default('') %}
+{%- set _day = day|default('') %}
 {% set _month = month|default('') %}
 {% set _date_time = date_time|default('') %}
 {% set _year = year|default('') %}
@@ -21,7 +21,7 @@
 {% set _end_year = end_year|default('') %}
 {% set _icon_path = icon_path|default('') %}
 
-{% set _classes = [
+{%- set _classes = [
   'bcl-date-block',
   'bg-date',
   'rounded',
@@ -33,14 +33,14 @@
   'ratio-1x1'
 ] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _date_time is not empty %}
-  {% set attributes = attributes.setAttribute('datetime', _date_time) %}
+{%- if _date_time is not empty %}
+  {%- set attributes = attributes.setAttribute('datetime', _date_time) %}
 {% endif %}
 
 <time {{ attributes }}>

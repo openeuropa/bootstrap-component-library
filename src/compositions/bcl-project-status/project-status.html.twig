@@ -12,7 +12,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _label = label|default('') %}
+{%- set _label = label|default('') %}
 {% set _status = status|default('planned') %}
 {% set _badge = badge|default('') %}
 {% set _start_date = start_date|default('') %}
@@ -21,18 +21,18 @@
 {% set _end_label = end_label|default('') %}
 {% set _progress = progress|default('') %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass([
+{%- set attributes = attributes.addClass([
   'bcl-project-status',
   'border-bottom',
   'pb-4',
   'mb-4'
 ]) %}
 
-{% set _bgs = {
+{%- set _bgs = {
     ongoing: 'info',
     closed: 'dark',
     planned: 'secondary',
@@ -46,14 +46,14 @@
       <p class="fw-bold">{{ _label }}</p>
     {% endif %}
 
-    {% if _badge is not empty %}
-      {% include '@oe-bcl/bcl-badge/badge.html.twig' with {
+    {%- if _badge is not empty %}
+      {%- include '@oe-bcl/bcl-badge/badge.html.twig' with {
         label: _badge,
         rounded_pill: true,
         background: _bg,
         attributes: create_attribute().addClass(['mb-3', 'mb-md-0']),
       } only %}
-    {% endif %}
+    {%- endif %}
 
     </div>
 
@@ -69,7 +69,7 @@
         </p>
       {% endif %}
 
-      {% if _end_date is not empty and _end_label is not empty %}
+      {%- if _end_date is not empty and _end_label is not empty %}
         <p class="fw-bold text-end">
           {{- _end_label -}} <br>
           <span class="fw-normal">
@@ -80,15 +80,15 @@
       </div>
 
     {% if _progress is not empty or _status != 'ongoing' %}
-      {% if _progress is empty %}
-        {% set _progress = _status == 'closed' ? 100 : 0 %}
-      {% endif %}
-      {% include '@oe-bcl/bcl-progress/progress.html.twig' with {
+      {%- if _progress is empty %}
+        {%- set _progress = _status == 'closed' ? 100 : 0 %}
+      {%- endif %}
+      {%- include '@oe-bcl/bcl-progress/progress.html.twig' with {
         variant: _bg,
         hidden_label: true,
         progress: _progress,
       } only %}
-    {% endif %}
+    {%- endif %}
 
     </div>
   </div>

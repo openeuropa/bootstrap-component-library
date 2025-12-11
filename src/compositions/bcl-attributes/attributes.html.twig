@@ -1,71 +1,71 @@
 {% set undefined_value = undefined_variable ?? null %}
 
-{% set attr_boolean_true = create_attribute()
+{%- set attr_boolean_true = create_attribute()
   .setAttribute('data-case', 'boolean-true')
   .setAttribute('data-flag', true)
 %}
 
-{% set attr_value_matches_key = create_attribute()
+{%- set attr_value_matches_key = create_attribute()
   .setAttribute('data-case', 'value-matches-key')
   .setAttribute('data-match', 'data-match')
 %}
 
-{% set attr_string_true = create_attribute()
+{%- set attr_string_true = create_attribute()
   .setAttribute('data-case', 'string-true')
   .setAttribute('data-flag', 'true')
 %}
 
-{% set attr_empty_string = create_attribute()
+{%- set attr_empty_string = create_attribute()
   .setAttribute('data-case', 'empty-string')
   .setAttribute('data-empty', '')
 %}
 
-{% set attr_zero = create_attribute()
+{%- set attr_zero = create_attribute()
   .setAttribute('data-case', 'zero')
   .setAttribute('data-zero', 0)
 %}
 
-{% set attr_null = create_attribute()
+{%- set attr_null = create_attribute()
   .setAttribute('data-case', 'null')
   .setAttribute('data-null', null)
 %}
 
-{% set attr_false = create_attribute()
+{%- set attr_false = create_attribute()
   .setAttribute('data-case', 'false')
   .setAttribute('data-flag', false)
 %}
 
-{% set attr_undefined = create_attribute()
+{%- set attr_undefined = create_attribute()
   .setAttribute('data-case', 'undefined')
   .setAttribute('data-flag', undefined_value)
 %}
 
-{% set attr_regular_value = create_attribute()
+{%- set attr_regular_value = create_attribute()
   .setAttribute('data-case', 'string-value')
   .setAttribute('data-value', 'example')
 %}
 
-{% set attr_array = create_attribute()
+{%- set attr_array = create_attribute()
   .setAttribute('data-case', 'array')
   .setAttribute('data-list', ['one', 'two', null, 'three', ''])
 %}
 
-{% set attr_array_empty_values = create_attribute()
+{%- set attr_array_empty_values = create_attribute()
   .setAttribute('data-case', 'array-empty-values')
   .setAttribute('data-list', ['one', '', null, '', undefined_value])
 %}
 
-{% set attr_empty_array = create_attribute()
+{%- set attr_empty_array = create_attribute()
   .setAttribute('data-case', 'empty-array')
   .setAttribute('data-list', [])
 %}
 
-{% set attr_array_only_empty_strings = create_attribute()
+{%- set attr_array_only_empty_strings = create_attribute()
   .setAttribute('data-case', 'array-only-empty-strings')
   .setAttribute('data-list', ['', ''])
 %}
 
-{% set attr_form = create_attribute()
+{%- set attr_form = create_attribute()
   .setAttribute('id', 'attribute-form')
   .setAttribute('novalidate', true)
   .setAttribute('data-empty', '')

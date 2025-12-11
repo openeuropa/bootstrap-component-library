@@ -46,7 +46,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _striped = striped ?? false %}
+{%- set _striped = striped ?? false %}
 {% set _hoverable = hoverable ?? false %}
 {% set _table_responsive = table_responsive|default('') %}
 {% set _variant = variant|default('') %}
@@ -60,40 +60,40 @@
 {% set _table_head = table_head|default({}) %}
 {% set _rows = rows|default([]) %}
 
-{% set _classes = ['table'] %}
+{%- set _classes = ['table'] %}
 {% if _striped %}
-  {% set _classes = _classes|merge(['table-striped']) %}
+  {%- set _classes = _classes|merge(['table-striped']) %}
 {% endif %}
 {% if _hoverable %}
-  {% set _classes = _classes|merge(['table-hover']) %}
+  {%- set _classes = _classes|merge(['table-hover']) %}
 {% endif %}
 {% if _alignment is not empty %}
-  {% set _classes = _classes|merge(['align-' ~ _alignment]) %}
+  {%- set _classes = _classes|merge(['align-' ~ _alignment]) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes|merge(['table-' ~ _variant]) %}
+  {%- set _classes = _classes|merge(['table-' ~ _variant]) %}
 {% endif %}
 {% if _small %}
-  {% set _classes = _classes|merge(['table-sm']) %}
+  {%- set _classes = _classes|merge(['table-sm']) %}
 {% endif %}
 {% if _border is not empty %}
-  {% set _classes = _classes|merge(['table-bordered', 'border-' ~ _border]) %}
+  {%- set _classes = _classes|merge(['table-bordered', 'border-' ~ _border]) %}
 {% endif %}
 {% if _borderless %}
-  {% set _classes = _classes|merge(['table-borderless']) %}
+  {%- set _classes = _classes|merge(['table-borderless']) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _table_responsive is not empty %}
-  {% set _responsive_class = 'table-responsive' %}
-  {% if _table_responsive != 'all' %}
-    {% set _responsive_class = _responsive_class ~ '-' ~ _table_responsive %}
-  {% endif %}
+{%- if _table_responsive is not empty %}
+  {%- set _responsive_class = 'table-responsive' %}
+  {%- if _table_responsive != 'all' %}
+    {%- set _responsive_class = _responsive_class ~ '-' ~ _table_responsive %}
+  {%- endif %}
   <div class="{{ _responsive_class }}">
 {% endif %}
 
@@ -117,7 +117,7 @@
       <td
       {% if _cell.col_span is not empty %}
         colspan={{ _cell.col_span }}
-      {% endif %}
+      {%- endif %}
       >
         {{- _cell.content -}}
       </td>
@@ -127,49 +127,49 @@
   </thead>
 {% endif %}
 
-{% if _rows is not empty and _rows is iterable %}
+{%- if _rows is not empty and _rows is iterable %}
 <tbody>
   {% for _row in _rows %}
-    {% set _row_class = '' %}
-    {% if _row.active %}
-      {% set _row_class = 'table-active' %}
-    {% endif %}
-    {% if _row.alignment is not empty %}
-      {% if _row_class is not empty %}
-        {% set _row_class = _row_class ~ ' align-' ~ _row.alignment %}
-      {% else %}
-        {% set _row_class = 'align-' ~ _row.alignment %}
-      {% endif %}
-    {% endif %}
-    {% if _row.variant is not empty %}
-      {% if _row_class is not empty %}
-        {% set _row_class = _row_class ~ ' table-' ~ _row.variant %}
-      {% else %}
-        {% set _row_class = 'table-' ~ _row.variant %}
-      {% endif %}
-    {% endif %}
+    {%- set _row_class = '' %}
+    {%- if _row.active %}
+      {%- set _row_class = 'table-active' %}
+    {%- endif %}
+    {%- if _row.alignment is not empty %}
+      {%- if _row_class is not empty %}
+        {%- set _row_class = _row_class ~ ' align-' ~ _row.alignment %}
+      {%- else %}
+        {%- set _row_class = 'align-' ~ _row.alignment %}
+      {%- endif %}
+    {%- endif %}
+    {%- if _row.variant is not empty %}
+      {%- if _row_class is not empty %}
+        {%- set _row_class = _row_class ~ ' table-' ~ _row.variant %}
+      {%- else %}
+        {%- set _row_class = 'table-' ~ _row.variant %}
+      {%- endif %}
+    {%- endif %}
     <tr
     {% if _row_class is not empty %}
     class="{{ _row_class }}"
     {% endif %}
     >
     {% if _row.cells is defined and _row.cells is not empty and _row.cells is iterable %}
-      {% for _cell in _row.cells %}
+      {%- for _cell in _row.cells %}
         <td
         {% if _cell.col_span is defined and _cell.col_span is not empty %}
           colspan={{ _cell.col_span }}
-        {% endif %}
+        {%- endif %}
         >
           {{- _cell.content -}}
         </td>
       {% endfor %}
-    {% endif %}
+    {%- endif %}
     </tr>
   {% endfor %}
 </tbody>
 {% endif %}
 
-{% if _table_footer is not empty %}
+{%- if _table_footer is not empty %}
   <tfoot>
   {% if _table_footer.cells is not empty and _table_footer.cells is iterable %}
     <tr>
@@ -177,7 +177,7 @@
       <td
       {% if _cell.col_span is not empty %}
         colspan={{ _cell.col_span }}
-      {% endif %}
+      {%- endif %}
       >
         {{- _cell.content -}}
       </td>
