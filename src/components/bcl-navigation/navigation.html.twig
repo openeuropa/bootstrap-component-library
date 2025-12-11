@@ -1,7 +1,7 @@
 {% import _self as navigation %}
 {% apply spaceless %}
 
-{# Parameters:
+{#- Parameters:
   - id (string) (default: '')
   - pills (boolean) (default: false)
   - tabs (boolean) (default: false) - If tabs is set to true, the nav should also be set to true for accessibility reasons
@@ -28,7 +28,7 @@
 {#- Define main macro #}
 {% macro render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) %}
 {% apply spaceless %}
-  {% import _self as navigation %}
+  {%- import _self as navigation %}
 
   {%- set _id = id|default('') %}
   {%- set _pills = pills ?? false %}
