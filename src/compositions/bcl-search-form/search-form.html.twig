@@ -34,7 +34,7 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass( _classes ) %}
+{%- set attributes = attributes.addClass( _classes ) -%}
 
 <form
   {{ attributes }}
@@ -46,7 +46,7 @@
     {%- include '@oe-bcl/bcl-form-input/form-input.html.twig' with _input only %}
     {%- if _submit is not empty %}
       {%- include '@oe-bcl/bcl-button/button.html.twig' with _submit only %}
-    {%- endif %}
+    {%- endif -%}
   </div>
 </form>
 

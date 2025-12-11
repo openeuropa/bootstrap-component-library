@@ -115,7 +115,7 @@
 {% endif %}
 
 {%- if _label is not empty %}
-  {%- set _label_block %}
+  {%- set _label_block -%}
     <label
     {% if _id %}
       for="{{ _id }}"
@@ -138,36 +138,36 @@
     {%- set _wrapper_class = _wrapper_class ~ ' form-switch' %}
   {%- endif %}
 {% endif %}
-{% if _wrapper_class is not empty %}
+{% if _wrapper_class is not empty -%}
 <div class="{{ _wrapper_class }}">
 {% endif %}
 {% endif %}
 {% if _label_block and _floating == false and _input_type != 'checkbox' and _input_type != 'radio' %}
   {{- _label_block|raw }}
 {%- endif %}
-{% if _horizontal and floating == false %}
+{% if _horizontal and floating == false -%}
   <div class="{{ _horizontal_class }}">
-{% endif %}
+{% endif -%}
     <input
       {{ attributes }}
     >
-{% if _horizontal and floating == false %}
+{% if _horizontal and floating == false -%}
   </div>
 {% endif %}
 {% if _label_block and (_floating or _input_type == 'checkbox' or _input_type == 'radio') %}
   {{- _label_block|raw }}
 {%- endif %}
-{% if _invalid_feedback is not empty %}
+{% if _invalid_feedback is not empty -%}
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}
   </div>
 {% endif %}
-{% if _valid_feedback is not empty %}
+{% if _valid_feedback is not empty -%}
   <div class="valid-feedback">
     {{- _valid_feedback -}}
   </div>
 {% endif %}
-{% if _helper_text is not empty %}
+{% if _helper_text is not empty -%}
   <div
     class="form-text"
   {%- if _helper_text_id is not empty -%}
@@ -176,7 +176,7 @@
     {{- _helper_text -}}
   </div>
 {% endif %}
-{% if _wrapper_class is not empty %}
+{% if _wrapper_class is not empty -%}
 </div>
 {% endif %}
 

@@ -1,7 +1,7 @@
 {% extends "@oe-bcl/bcl-base-templates/listing-page.html.twig" -%}
 
 {%- block banner %}
-{% if banner.search_bar is defined %}
+{% if banner.search_bar is defined -%}
   <div class="bg-lighter pt-3 pb-4 pb-lg-3">
     <div class="container">
       <div class="row">
@@ -10,12 +10,12 @@
             title: main_title,
             title_tag: "h1",
             attributes: create_attribute().addClass(['mb-3', 'mb-lg-0']),
-          } only %}
+          } only -%}
         </div>
         <div class="col-12 col-lg-6 align-self-center">
-          {% include '@oe-bcl/bcl-search-form/search-form.html.twig' with banner.search_bar only %}
+          {% include '@oe-bcl/bcl-search-form/search-form.html.twig' with banner.search_bar only -%}
         </div>
-      </div>  
+      </div>
     </div>
   </div>
 {% endif %}

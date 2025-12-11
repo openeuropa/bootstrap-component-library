@@ -14,7 +14,7 @@
 {%- set _button = button|default({}) %}
 {% set _link = link|default({}) %}
 {% set _icon = icon|default({}) %}
-{% set _label = label|default('') %}
+{% set _label = label|default('') -%}
 
 
 <dd>
@@ -38,7 +38,7 @@
       <div>{{- _label -}}</div>
     {%- endif -%}
   {%- endif -%}
-{% endblock %}
+{% endblock -%}
 </dd>
 
 {% endapply %}

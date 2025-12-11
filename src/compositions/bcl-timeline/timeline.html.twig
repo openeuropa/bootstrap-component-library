@@ -71,7 +71,7 @@ Parameters:
   } only %}
 {% endif %}
 
-{#- Print the result #}
+{#- Print the result -#}
 <ol {{ attributes }}>
   {% if _items is not empty %}
     {%- for _item in _items %}
@@ -88,7 +88,7 @@ Parameters:
       {%- endif %}
       {%- include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item only %}
       {#- Display the show more button if required. #}
-      {%- if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
+      {%- if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) -%}
         <li class="bcl-timeline__item--toggle">
           <button
             aria-expanded="false"
@@ -104,12 +104,12 @@ Parameters:
               size: 'fluid',
               path: _icon_path,
               attributes: create_attribute().addClass('ms-2-5'),
-            } only %}
+            } only -%}
           </button>
         </li>
       {% endif %}
     {%- endfor %}
-  {%- endif %}
+  {%- endif -%}
 </ol>
 
 {% endapply %}

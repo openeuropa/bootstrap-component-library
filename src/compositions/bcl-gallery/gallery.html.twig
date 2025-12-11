@@ -52,20 +52,20 @@ Parameters:
 
 {%- set attributes = attributes.addClass('bcl-gallery') %}
 
-{%- if _items is not empty and _items is iterable %}
+{%- if _items is not empty and _items is iterable -%}
 <div
   {{ attributes }}
 >
-  {% if _title is not empty or _counter is not empty %}
+  {% if _title is not empty or _counter is not empty -%}
   <div class="d-sm-flex flex-sm-row align-items-sm-center">
-  {% if _title is not empty %}
+  {% if _title is not empty -%}
     <div class="flex-sm-grow-1">
       {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _title,
         title_tag: _title_tag,
         title_link: _title_link,
         attributes: _title_attributes,
-      } only %}
+      } only -%}
     </div>
   {% endif %}
   {%- if _counter is not empty -%}
@@ -74,14 +74,14 @@ Parameters:
     </div>
   {%- endif -%}
   </div>
-  {% endif %}
+  {% endif -%}
   <div class="bcl-gallery__thumbnails">
   {% for _batch in _items|batch(_max_visible_thumbnails) %}
-    {%- if loop.index0 == 1 %}
+    {%- if loop.index0 == 1 -%}
       <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapse_id }}">
-    {% endif %}
+    {% endif -%}
       <ul class="bcl-gallery__grid">
-        {% for _item in _batch %}
+        {% for _item in _batch -%}
           <li>
           {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
             item: _item,
@@ -89,15 +89,15 @@ Parameters:
             modal_id: _modal_id,
             icon_path: _icon_path,
             carousel_anchor: loop.index0 + (_max_visible_thumbnails * loop.parent.loop.index0),
-          } only %}
+          } only -%}
           </li>
-        {% endfor %}
+        {% endfor -%}
       </ul>
-    {% if loop.last and loop.index0 >= 1 %}
+    {% if loop.last and loop.index0 >= 1 -%}
       </div>
     {% endif %}
   {%- endfor %}
-    {%- if _items|length > _max_visible_thumbnails %}
+    {%- if _items|length > _max_visible_thumbnails -%}
       <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
         <a
           class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
@@ -114,7 +114,7 @@ Parameters:
             size: '2xs',
             path: _icon_path,
             attributes: create_attribute().addClass('ms-2-5'),
-          } only %}
+          } only -%}
         </a>
         <a
           class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
@@ -130,17 +130,17 @@ Parameters:
               size: '2xs',
               path: _icon_path,
               attributes: create_attribute().addClass('ms-2-5'),
-            } only %}
+            } only -%}
           <span>
         </a>
       </div>
-    {% endif %}
+    {% endif -%}
   </div>
   <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-centered modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header border-0 justify-content-between">
-        {% if _title is not empty %}
+        {% if _title is not empty -%}
           <div class="modal-title">
             {% if _title is not empty %}
               {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
@@ -148,9 +148,9 @@ Parameters:
                 title_tag: 'h3',
                 attributes: create_attribute().addClass(['d-sm-block', 'd-none']),
               } only %}
-            {%- endif %}
+            {%- endif -%}
           </div>
-        {% endif %}
+        {% endif -%}
           <div class="carousel-pager">
             <span>1</span> / {{ _items|length -}}
           </div>
@@ -163,7 +163,7 @@ Parameters:
             {%- include '@oe-bcl/bcl-button/button.html.twig' with {
               clean_class: true,
               attributes: button_attributes
-            } only %}
+            } only -%}
           </div>
         </div>
         <div class="modal-body d-flex align-items-center justify-content-center">
@@ -184,7 +184,7 @@ Parameters:
             autoplay: false,
             items: _carousel_items,
           } only %}
-        {%- endblock %}
+        {%- endblock -%}
         </div>
       </div>
     </div>

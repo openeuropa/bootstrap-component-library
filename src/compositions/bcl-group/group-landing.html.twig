@@ -1,10 +1,10 @@
 {% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" -%}
 
-{%- block banner %}
+{%- block banner -%}
 <div class="container">
-  {% if banner is not empty %}
+  {% if banner is not empty -%}
   <div class="mt-4 mt-md-5">
-    {% if banner.image is not empty %}
+    {% if banner.image is not empty -%}
       <img
         src="{{ banner.image.path }}"
         {% if banner.image.alt is not empty %}
@@ -15,10 +15,10 @@
         {% endif %}
       />
     {% endif %}
-    {%- if banner.title is not empty %}
+    {%- if banner.title is not empty -%}
       <div class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container">
         <h1 class="mb-0 d-inline-block">{{ banner.title }}</h1>
-        {% if banner.actions is not empty and banner.actions is iterable %}
+        {% if banner.actions is not empty and banner.actions is iterable -%}
         <div class="d-grid d-md-block ms-auto">
           {% for _action in banner.actions %}
             {%- if _action.type == "link" %}
@@ -28,31 +28,31 @@
             {%- elseif _action.type == "dropdown" %}
               {%- include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _action only %}
             {%- endif %}
-          {%- endfor %}
+          {%- endfor -%}
         </div>
-        {% endif %}
+        {% endif -%}
       </div>
-    {% endif %}
+    {% endif -%}
   </div>
   {% endif %}
   {%- include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
   {%- if banner_description is not empty and contact is not empty %}
-  {%- include '@oe-bcl/bcl-link/link.html.twig' with banner_description.collapse_trigger only %}
+  {%- include '@oe-bcl/bcl-link/link.html.twig' with banner_description.collapse_trigger only -%}
   <div class="collapse d-md-block" id="banner-description">
     <div class="row mt-md-4 mb-md-5 pb-md-5">
       <div class="col-md-8">
         <div class="ps-md-3">
-          {% if banner_description.metas is not empty and banner_description.metas is iterable %}
+          {% if banner_description.metas is not empty and banner_description.metas is iterable -%}
           <div class="d-block">
-            {% for _meta in banner_description.metas %}
+            {% for _meta in banner_description.metas -%}
             <p class="mb-0 me-4 d-inline-block text-muted">
               {% include '@oe-bcl/bcl-icon/icon.html.twig' with _meta.icon only %}
               {{- _meta.label -}}
             </p>
-            {% endfor %}
+            {% endfor -%}
           </div>
           {% endif %}
-          {{- banner_description.content }}
+          {{- banner_description.content -}}
         </div>
       </div>
       <div class="col-md-4">
@@ -64,20 +64,20 @@
         {%- endif %}
         {%- if contact.more_link is not empty %}
           {%- include '@oe-bcl/bcl-link/link.html.twig' with contact.more_link only %}
-        {%- endif %}
+        {%- endif -%}
       </div>
     </div>
   </div>
-  {% endif %}
+  {% endif -%}
 </div>
 {%- endblock -%}
 
 {%- block content %}
-  {%- if recent is not empty and members is not empty %}
+  {%- if recent is not empty and members is not empty -%}
   <div class="row mt-3">
     <div class="col-md-8">
       <h2 class="mb-4 pb-2">{{ recent.title }}</h2>
-      {% include '@oe-bcl/bcl-recent-activities/recent-activities.html.twig' with recent.block_data only %}
+      {% include '@oe-bcl/bcl-recent-activities/recent-activities.html.twig' with recent.block_data only -%}
     </div>
     <div class="col-md-4">
       <h2 class="mt-4 mt-md-0 mb-4 pb-2">{{ members.title }}</h2>
@@ -88,11 +88,11 @@
       {%- endif %}
       {%- if members.more_link is not empty %}
         {%- include '@oe-bcl/bcl-link/link.html.twig' with members.more_link only %}
-      {%- endif %}
+      {%- endif -%}
     </div>
   </div>
   {% endif %}
-  {%- if contributions is not empty %}
+  {%- if contributions is not empty -%}
     <h2 class="my-4 pt-3 pb-2">{{ contributions.title }}</h2>
     {% if contributions.listing is not empty %}
       {%- include '@oe-bcl/bcl-listing/listing.html.twig' with contributions.listing only %}

@@ -173,7 +173,7 @@
   {%- set _classes = _classes|merge(['justify-content-md-' ~ _alignment]) %}
 {% endif %}
 
-{%- set list_attributes = list_attributes.addClass(_classes) %}
+{%- set list_attributes = list_attributes.addClass(_classes) -%}
 
 <nav{{ attributes }}>
   <ul{{ list_attributes }}>
@@ -196,17 +196,17 @@
 
           {%- if _item.active %}
             {%- set _item_class = _item_class|merge(['active', 'd-inline-block']) %}
-          {%- endif %}
+          {%- endif -%}
 
           <li class="{{ _item_class|join(' ') }}">
             {% if _item.icon_path is not defined %}
               {%- set _item = _item|merge({ icon_path: _icon_path }) %}
             {%- endif %}
-            {%- include '@oe-bcl/bcl-pagination-v2/pagination-item.html.twig' with _item only %}
+            {%- include '@oe-bcl/bcl-pagination-v2/pagination-item.html.twig' with _item only -%}
           </li>
         {% endif %}
       {%- endfor %}
-    {%- endif %}
+    {%- endif -%}
   </ul>
 </nav>
 

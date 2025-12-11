@@ -54,17 +54,17 @@
 {% endif %}
 {% set attributes = attributes.addClass(_classes) %}
 
-{%- if _type == 'unordered' %}
+{%- if _type == 'unordered' -%}
   <ul
     {{ attributes }}
   >
 {% endif %}
-{% if _type == 'ordered' %}
+{% if _type == 'ordered' -%}
   <ol
     {{ attributes }}
   >
 {% endif %}
-{% if _type == 'actionable' %}
+{% if _type == 'actionable' -%}
   <div
     {{ attributes }}
   >
@@ -78,7 +78,7 @@
       {%- endif %}
       {%- if _item.extra_classes is not empty %}
         {%- set _item_class = _item_class ~ ' ' ~ _item.extra_classes %}
-      {%- endif %}
+      {%- endif -%}
       <li class="{{ _item_class }}">
       {%- if _item.input is defined -%}
           {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
@@ -107,13 +107,13 @@
     {%- endif %}
   {%- endfor %}
 {% endif %}
-{% if _type == 'unordered' %}
+{% if _type == 'unordered' -%}
 </ul>
 {% endif %}
-{% if _type == 'ordered' %}
+{% if _type == 'ordered' -%}
 </ol>
 {% endif %}
-{% if _type == 'actionable' %}
+{% if _type == 'actionable' -%}
 </div>
 {% endif %}
 

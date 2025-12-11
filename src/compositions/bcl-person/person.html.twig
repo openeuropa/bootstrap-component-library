@@ -5,18 +5,18 @@
 {%- endblock -%}
 
 {%- block content %}
-  {%- if information.main_title is not empty %}
+  {%- if information.main_title is not empty -%}
     <h2
       class="mb-4"
     >{{- information.main_title -}}</h2>
   {% endif %}
-  {%- if information.content is not empty %}
+  {%- if information.content is not empty -%}
     <div class="mb-4-5">
       {{- information.content -}}
     </div>
   {% endif %}
 
-  {%- if files.main_title is not empty %}
+  {%- if files.main_title is not empty -%}
     <h2
       class="mb-3-5"
     >{{- files.main_title -}}</h2>

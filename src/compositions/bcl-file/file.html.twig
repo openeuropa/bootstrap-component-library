@@ -82,50 +82,50 @@
 
 {%- set attributes = attributes.addClass(['border', 'rounded']) %}
 
-{%- set _container_classes = 'd-md-flex flex-grow-1' %}
+{%- set _container_classes = 'd-md-flex flex-grow-1' -%}
 
 <div
   {{ attributes }}
 >
-  {% if _variant == 'card' %}
+  {% if _variant == 'card' -%}
     <div class="border-bottom px-3-5 py-3 d-md-flex">
       <div class="pe-2 pb-2">
       {% if _icon is not empty %}
         {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
           path: _icon_path,
         }) only -%}
-      {% endif %}
+      {% endif -%}
       </div>
       <div>
-        {% if _item_title is not empty %}
+        {% if _item_title is not empty -%}
           <p class="fw-medium mb-2 fs-5">{{ _item_title }}</p>
         {% endif %}
-        {%- if _text is not empty %}
+        {%- if _text is not empty -%}
           <p class="mb-3">{{ _text }}</p>
         {% endif %}
         {%- if _content is not empty %}
           {{- _content }}
-        {%- endif %}
+        {%- endif -%}
       </div>
     </div>
-  {% endif %}
+  {% endif -%}
   <div class="px-3-5 py-3">
     <div class="d-md-flex">
-      {% if _icon is not empty and _variant == 'default' %}
+      {% if _icon is not empty and _variant == 'default' -%}
         <div class="pe-2 pb-2">
         {% if _icon is not empty %}
           {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
             path: _icon_path,
           }) only -%}
-        {% endif %}
+        {% endif -%}
         </div>
-      {% endif %}
+      {% endif -%}
       <div class="{{ _container_classes }}">
         <div class="flex-grow-1">
-          {% if _item_title is not empty and _variant == 'default' %}
+          {% if _item_title is not empty and _variant == 'default' -%}
             <p class="fw-medium m-0 fs-5">{{ _item_title }}</p>
           {% endif %}
-          {%- if _language is not empty or _meta is not empty %}
+          {%- if _language is not empty or _meta is not empty -%}
           <small class="fw-medium m-0">
             {%- if _language is not empty -%}
               {{- _language -}}
@@ -136,7 +136,7 @@
               </span>
             {%- endif -%}
           </small>
-          {% endif %}
+          {% endif -%}
         </div>
         {% set download_attributes = create_attribute()
                                       .setAttribute('download', true)
@@ -151,7 +151,7 @@
           }|merge(_download.icon|default({})),
           attributes: download_attributes.merge(_download.attributes|default(create_attribute()))
         }) %}
-        {%- include '@oe-bcl/bcl-link/link.html.twig' with _download only %}
+        {%- include '@oe-bcl/bcl-link/link.html.twig' with _download only -%}
       </div>
     </div>
   </div>
@@ -159,7 +159,7 @@
     {%- include '@oe-bcl/bcl-file/file-translations.html.twig' with _translation|merge({
       icon_path: _icon_path
     }) only %}
-  {%- endif %}
+  {%- endif -%}
 </div>
 
 {% endapply %}

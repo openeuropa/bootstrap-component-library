@@ -75,11 +75,11 @@
   {%- endif %}
   {%- set attributes = attributes.addClass(_classes) %}
 
-  {%- if _nav %}
+  {%- if _nav -%}
   <nav
     {{ attributes }}
   >
-  {% else %}
+  {% else -%}
   <ul
     {{ attributes }}
   >
@@ -107,7 +107,7 @@
         {%- set _item = _item|merge({
           attributes: _item.attributes.addClass(_item_classes),
           clean_class: true}) %}
-        {%- if not _nav %}
+        {%- if not _nav -%}
         <li
           class="{{ _nav_class }}"
           {% if _tabs %}
@@ -152,17 +152,17 @@
             _item.navigation.attributes
             ) }}
         {%- endif %}
-        {%- if not _nav %}
+        {%- if not _nav -%}
         </li>
         {% endif %}
       {%- endfor %}
     {%- endif %}
-  {%- if _nav %}
+  {%- if _nav -%}
   </nav>
-  {% else %}
+  {% else -%}
   </ul>
   {% endif %}
-  {%- if _tabs_content %}
+  {%- if _tabs_content -%}
   <div class="tab-content">
     {%- block contents -%}
       {% if _items is not empty and _items is iterable %}
@@ -171,7 +171,7 @@
             {%- set _content_class = 'tab-pane fade' %}
             {%- if _item.active %}
               {%- set _content_class = _content_class ~ ' show active' %}
-            {%- endif %}
+            {%- endif -%}
             <div class="{{ _content_class }}" id="{{ _item.target }}" role="tabpanel" aria-labelledby="{{ _item.id }}">
               {{- _item.content -}}
             </div>

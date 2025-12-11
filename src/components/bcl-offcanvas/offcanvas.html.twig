@@ -75,12 +75,12 @@
  {%- set attributes = attributes.setAttribute('aria-labelledby', _id ~ '-title') %}
 {% endif %}
 
-{%- set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) %}
+{%- set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) -%}
 
 <div
   {{ attributes }}
 >
-{% if _with_close or _title is not empty %}
+{% if _with_close or _title is not empty -%}
   <div class="{{ _class_header }}">
   {% if _title is not empty %}
     {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
@@ -105,7 +105,7 @@
         attributes: button_attributes,
         clean_class: true
       } only -%}
-  {% endif %}
+  {% endif -%}
   </div>
 {% endif %}
 {%- if _body is not empty -%}

@@ -51,7 +51,7 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') %}
+{%- set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') -%}
 
 <div {{ attributes }}>
 {% if _icon_path is not empty %}
@@ -61,7 +61,7 @@
     path: _icon_path,
     attributes: create_attribute().addClass(_icon_classes),
   } only %}
-{% endif %}
+{% endif -%}
   <div class="alert-content flex-grow-1">
   {%- if _heading is not empty -%}
     <div class="alert-heading h4">{{ _heading }}</div>

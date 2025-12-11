@@ -17,7 +17,7 @@
 
 {%- set attributes = attributes.setAttribute('aria-label', 'breadcrumb') %}
 
-{%- if _links is not empty %}
+{%- if _links is not empty -%}
 <nav
   {{ attributes }}
 >
@@ -33,7 +33,7 @@
       {%- if loop.last %}
         {%- set _segment_classes = _segment_classes ~ ' active' %}
         {%- set _segment_attrs = 'aria-current="page"' %}
-      {%- endif %}
+      {%- endif -%}
       <li
         class="{{ _segment_classes }}"
         {{ _segment_attrs|raw }}
@@ -54,7 +54,7 @@
           {{- _link.label -}}
         {%- endif -%}
       </li>
-    {% endfor %}
+    {% endfor -%}
   </ol>
 </nav>
 {% endif %}

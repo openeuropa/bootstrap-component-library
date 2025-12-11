@@ -67,12 +67,12 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div {{ attributes }}>
-  {% if _image is not empty %}
+  {% if _image is not empty -%}
     <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
-  {% endif %}
+  {% endif -%}
   <div class="container">
     <div class="{{ _content_class }}">
       {% if _title is not empty %}
@@ -83,12 +83,12 @@
           attributes: _title_attributes,
         } only %}
       {%- endif %}
-    {%- if _description is not empty %}
+    {%- if _description is not empty -%}
       <p class="mb-4">{{ _description }}</p>
     {% endif %}
     {%- if _link.path %}
       {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-    {%- endif %}
+    {%- endif -%}
     </div>
   </div>
 </div>

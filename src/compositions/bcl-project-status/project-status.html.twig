@@ -37,12 +37,12 @@
     closed: 'dark',
     planned: 'secondary',
   } %}
-{% set _bg = _bgs[_status]|default('secondary') %}
+{% set _bg = _bgs[_status]|default('secondary') -%}
 
 <div {{ attributes }}>
   <div class="row">
     <div class="col-12 col-md-3">
-    {% if _label is not empty %}
+    {% if _label is not empty -%}
       <p class="fw-bold">{{ _label }}</p>
     {% endif %}
 
@@ -53,14 +53,14 @@
         background: _bg,
         attributes: create_attribute().addClass(['mb-3', 'mb-md-0']),
       } only %}
-    {%- endif %}
+    {%- endif -%}
 
     </div>
 
     <div class="col-12 col-md-9">
       <div class="d-flex justify-content-between">
 
-      {% if _start_date is not empty and _start_label is not empty %}
+      {% if _start_date is not empty and _start_label is not empty -%}
         <p class="fw-bold">
           {{- _start_label -}} <br>
           <span class="fw-normal">
@@ -69,14 +69,14 @@
         </p>
       {% endif %}
 
-      {%- if _end_date is not empty and _end_label is not empty %}
+      {%- if _end_date is not empty and _end_label is not empty -%}
         <p class="fw-bold text-end">
           {{- _end_label -}} <br>
           <span class="fw-normal">
             {{- _end_date -}}
           </span>
         </p>
-      {% endif %}
+      {% endif -%}
       </div>
 
     {% if _progress is not empty or _status != 'ongoing' %}
@@ -88,7 +88,7 @@
         hidden_label: true,
         progress: _progress,
       } only %}
-    {%- endif %}
+    {%- endif -%}
 
     </div>
   </div>

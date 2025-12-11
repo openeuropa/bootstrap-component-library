@@ -70,18 +70,18 @@
 
 {%- if _with_header %}
   {%- include '@oe-bcl/bcl-header/header.html.twig' with header only %}
-{% endif %}
+{% endif -%}
 
 <main {{ attributes }}>
 {% if messages is defined and messages is not empty %}
-  {%- block messages_area %}
+  {%- block messages_area -%}
   <div class="container">
     {% for message in messages %}
     {%- set message_attributes = create_attribute().addClass(['mt-lg-5', 'mt-2']) %}
       {%- include '@oe-bcl/bcl-alert/alert.html.twig' with message|merge({
         attributes: message_attributes,
       }) only %}
-    {%- endfor %}
+    {%- endfor -%}
   </div>
   {% endblock %}
 {% endif %}
@@ -90,22 +90,22 @@
   {%- block banner %}
     {%- include '@oe-bcl/bcl-content-banner/content-banner.html.twig' with banner only %}
   {%- endblock %}
-{% endif %}
+{% endif -%}
 
   <div class="container mt-md-4-75 mt-4">
     <div class="row">
       {% block content_row %}
         {{- content_row }}
       {%- endblock %}
-    {%- if _with_sidebar %}
+    {%- if _with_sidebar -%}
       <div class="{{ _col_classes.left|join(' ') }}">
-        {% block sidebar %}{% endblock %}
+        {% block sidebar %}{% endblock -%}
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
     {% else %}
-      {%- if _landing %}
+      {%- if _landing -%}
       <div class="col-12">
-      {% else %}
+      {% else -%}
       <div class="col-lg-10 col-xl-9 col-xxl-8">
       {% endif %}
     {%- endif %}
@@ -123,7 +123,7 @@
       {%- endblock %}
       {%- block share %}
         {{- share }}
-      {%- endblock %}
+      {%- endblock -%}
     </div>
   </div>
 </main>

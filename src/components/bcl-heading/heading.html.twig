@@ -25,7 +25,7 @@
   {%- set _title_link = _title_link|merge({ label: _title }) %}
 {% endif %}
 
-{%- if _title is not empty or _title_link is not empty %}
+{%- if _title is not empty or _title_link is not empty -%}
 <{{ _title_tag }}
   {{- attributes -}}
 >
@@ -33,7 +33,7 @@
   {% include '@oe-bcl/bcl-link/link.html.twig' with _title_link|merge({ standalone: true }) only %}
 {%- else -%}
   {{- _title -}}
-{%- endif %}
+{%- endif -%}
 </{{ _title_tag }}>
 {% endif -%}
 

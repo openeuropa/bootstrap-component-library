@@ -56,7 +56,7 @@
 
 {%- if _static_backdrop %}
   {%- set attributes = attributes.setAttribute('data-bs-backdrop', 'static') %}
-{% endif %}
+{% endif -%}
 
 <div
   {{ attributes }}
@@ -68,7 +68,7 @@
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
   >
     <div class="modal-content">
-      {% if header is not empty %}
+      {% if header is not empty -%}
       <div
         {{- _header_attributes.addClass(['modal-header']) -}}
       >
@@ -81,13 +81,13 @@
       >
         {%- block body _body -%}
       </div>
-      {% if footer is not empty %}
+      {% if footer is not empty -%}
       <div
           {{- _footer_attributes.addClass(['modal-footer']) -}}
       >
         {%- block footer _footer -%}
       </div>
-      {% endif %}
+      {% endif -%}
     </div>
   </div>
 </div>

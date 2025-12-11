@@ -32,7 +32,7 @@
   {%- endif %}
 {% else %}
   {%- if _icon_html is not empty %}
-    {%- set _label %}
+    {%- set _label -%}
       <span aria-hidden="true">{{- _icon_html -}}</span>
     {% endset %}
   {%- endif %}
@@ -66,7 +66,7 @@
     icon: _icon,
     attributes: attributes,
   } only -%}
-{% else %}
+{% else -%}
   <div {{ attributes }}>{{- _label -}}</div>
 {% endif %}
 

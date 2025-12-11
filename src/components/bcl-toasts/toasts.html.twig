@@ -50,13 +50,13 @@
   {%- endif %}
   {%- if _wrapper_classes %}
     {%- set attributes = attributes.addClass(_wrapper_classes|split(' ')) %}
-  {%- endif %}
+  {%- endif -%}
 
 <div {{ attributes }}>
 
 {% endif %}
 {# container #}
-{% if _with_container %}
+{% if _with_container -%}
   <div class="{{ _container_classes }}">
 {% endif %}
 {# toasts #}
@@ -83,13 +83,13 @@
     {%- endif %}
     {%- if not _autohide %}
       {%- set _toast_attributes = _toast_attributes.setAttribute('data-bs-autohide', 'false') %}
-    {%- endif %}
+    {%- endif -%}
     <div
       {{ _toast_attributes }}
     >
     {% if _with_close or
       (_toast.header is defined and _toast.header is not empty)
-    %}
+    -%}
     <div{{ _header_attributes.addClass(['toast-header']) }}>
     {{- _toast.header|default('') -}}
     {% if _with_close %}
@@ -105,27 +105,27 @@
     {% endif -%}
     </div>
   {% endif %}
-  {%- if _with_body_wrapper %}
+  {%- if _with_body_wrapper -%}
     <div
     {% if _body_wrapper_classes %}
       class="{{ _body_wrapper_classes }}"
     {% endif %}
     >
-  {% endif %}
+  {% endif -%}
     <div{{ _body_attributes.addClass(['toast-body']) }}>
       {{- _body -}}
     </div>
-  {% if _with_body_wrapper %}
+  {% if _with_body_wrapper -%}
     </div>
   {% endif %}
   {{- _toast.custom_content|default('') -}}
   </div>
   {% endfor %}
 {% endif %}
-{% if _with_container %}
+{% if _with_container -%}
   </div>
 {% endif %}
-{% if _with_wrapper %}
+{% if _with_wrapper -%}
 </div>
 {% endif %}
 

@@ -49,16 +49,16 @@
 
   {%- if not _inside_container %}
     {%- set attributes = attributes.addClass(['pt-5']) %}
-  {%- endif %}
+  {%- endif -%}
 
   <div
     {{ attributes }}
   >
-    {% if _logo is not empty %}
+    {% if _logo is not empty -%}
     <div class="container">
-      {% if _title is empty %}
+      {% if _title is empty -%}
       <div class="text-center">
-      {% endif %}
+      {% endif -%}
       <div class="d-inline-flex align-items-center">
         <img
           {% if _logo.path is not empty %}
@@ -71,19 +71,19 @@
           class="{{ _logo.class }}"
           {% endif %}
         />
-        {% if _title is not empty %}
+        {% if _title is not empty -%}
         <h5 class="h5 ms-4">{{ _title }}</h5>
-        {% endif %}
+        {% endif -%}
       </div>
-      {% if _title is empty %}
+      {% if _title is empty -%}
       </div>
-      {% endif %}
+      {% endif -%}
     </div>
     {% endif %}
 
-    {%- if _items is not empty or _non_eu_items is not empty %}
+    {%- if _items is not empty or _non_eu_items is not empty -%}
     <div class="main pt-4">
-      {% if not (_variant == 'neutral' and _inside_container) %}
+      {% if not (_variant == 'neutral' and _inside_container) -%}
       <div class="container">
       {% endif %}
       {%- if _items is not empty and _items is iterable %}
@@ -100,11 +100,11 @@
             category: non_eu_category,
         } only %}
       {%- endif %}
-      {%- if not (_variant == 'neutral' and _inside_container) %}
+      {%- if not (_variant == 'neutral' and _inside_container) -%}
       </div>
-      {% endif %}
+      {% endif -%}
     </div>
-    {% endif %}
+    {% endif -%}
   </div>
 {% endif %}
 

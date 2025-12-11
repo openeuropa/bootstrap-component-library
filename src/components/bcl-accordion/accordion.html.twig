@@ -43,7 +43,7 @@
 
 {%- set attributes = attributes.addClass(_classes).setAttribute('id', 'accordion-' ~ _id) %}
 
-{%- if _items is not empty %}
+{%- if _items is not empty -%}
 <div
   {{ attributes }}
 >
@@ -57,7 +57,7 @@
   {%- endif -%}
 
   {% if _items|length > 1 and (_expand_button is not empty or _collapse_button is not empty) %}
-  {%- set wrapper_attributes = create_attribute().addClass(['d-flex', 'justify-content-end', 'gap-3', 'mb-3']) %}
+  {%- set wrapper_attributes = create_attribute().addClass(['d-flex', 'justify-content-end', 'gap-3', 'mb-3']) -%}
   <div
     {{ wrapper_attributes }}
     >
@@ -86,18 +86,18 @@
                     .setAttribute('data-target', 'accordion-' ~ _id)
                     .setAttribute('data-action', 'collapse')
       }) only %}
-    {%- endif %}
+    {%- endif -%}
   </div>
-  {% endif %}
+  {% endif -%}
   <div class="accordion-items-wrapper">
     {% for _item in _items %}
       {%- set _open_item = _open_item_id == loop.index %}
       {%- set _button_classes = ['accordion-button'] %}
       {%- if not _open_item %}
         {%- set _button_classes = _button_classes|merge(['collapsed']) %}
-      {%- endif %}
+      {%- endif -%}
       <div class="accordion-item">
-        {%- set _item_title_tag = _item.title_tag|default('h2') %}
+        {%- set _item_title_tag = _item.title_tag|default('h2') -%}
         <{{ _item_title_tag }}
           class="accordion-header"
           id="heading-{{ _id }}-{{ loop.index }}"
@@ -110,7 +110,7 @@
                                     .setAttribute('aria-controls', 'collapse-' ~ _id ~ '-' ~ loop.index)
                                     .setAttribute('aria-expanded', open_item ? 'true' : 'false')
           %}
-          {%- set item_title %}
+          {%- set item_title -%}
             <span>
               {{- _item.title -}}
             </span>
@@ -119,7 +119,7 @@
             label: item_title,
             clean_class: true,
             attributes: button_attributes
-          } only %}
+          } only -%}
         </{{ _item_title_tag }}>
         <div
           id="collapse-{{ _id }}-{{ loop.index }}"
@@ -136,7 +136,7 @@
           </div>
         </div>
       </div>
-    {% endfor %}
+    {% endfor -%}
   </div>
 </div>
 {% endif %}

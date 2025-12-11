@@ -50,7 +50,7 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div
   {{ attributes }}
@@ -71,17 +71,17 @@
         })
       %}
     {%- endif %}
-    {%- if _type == 'grid' or _type == 'masonry' %}
+    {%- if _type == 'grid' or _type == 'masonry' -%}
       <div class="{{ _cols_classes }}">
     {% endif %}
       {%- block card_layout_card %}
         {%- include '@oe-bcl/bcl-card/card.html.twig' with _item only %}
       {%- endblock %}
-    {%- if _type == 'grid' or _type == 'masonry' %}
+    {%- if _type == 'grid' or _type == 'masonry' -%}
       </div>
     {% endif %}
   {%- endfor %}
-{% endif %}
+{% endif -%}
 </div>
 
 {% endapply %}

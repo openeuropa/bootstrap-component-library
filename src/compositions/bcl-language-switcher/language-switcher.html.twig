@@ -26,7 +26,7 @@
 
 {%- include '@oe-bcl/bcl-button/button.html.twig' with _expandable|merge({
   attributes: _expandable_attributes
-}) only %}
+}) only -%}
 
 <div class="collapse mt-3" id="{{ _id }}">
   <div
@@ -43,7 +43,7 @@
             "text-start"
           ])
       }) only %}
-    {%- endfor %}
+    {%- endfor -%}
   </div>
 </div>
 

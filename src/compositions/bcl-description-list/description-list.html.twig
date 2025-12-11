@@ -53,27 +53,27 @@
 
 {%- set attributes = attributes.addClass(['bcl-description-list']) %}
 
-{%- if _variant != 'horizontal' %}
+{%- if _variant != 'horizontal' -%}
 <dl
   {{ attributes }}
 >
-{% else %}
+{% else -%}
 <div
   {{ attributes }}
 >
 {% endif %}
   {%- for _item in _items %}
-  {%- if _variant == 'horizontal' %}
+  {%- if _variant == 'horizontal' -%}
   <dl
     {{ create_attribute().addClass(_item_classes) }}
   >
-  {% else %}
+  {% else -%}
   <div
     {{ create_attribute().addClass(_item_classes) }}
   >
   {% endif %}
   {%- if _item.term is not empty %}
-    {%- if _variant == 'horizontal' %}
+    {%- if _variant == 'horizontal' -%}
     <div class="{{ _col_classes }}">
     {% endif %}
     {%- if _item.term is iterable %}
@@ -85,12 +85,12 @@
         label: _item.term
       } only -%}
     {% endif %}
-    {%- if _variant == 'horizontal' %}
+    {%- if _variant == 'horizontal' -%}
     </div>
     {% endif %}
   {%- endif %}
   {%- if _item.definition is not empty %}
-    {%- if _variant == 'horizontal' %}
+    {%- if _variant == 'horizontal' -%}
     <div class="col">
     {% endif %}
     {%- if _item.definition is iterable %}
@@ -102,19 +102,19 @@
         label: _item.definition
       } only -%}
     {% endif %}
-    {%- if _variant == 'horizontal' %}
+    {%- if _variant == 'horizontal' -%}
     </div>
     {% endif %}
   {%- endif %}
-  {%- if _variant == 'horizontal' %}
+  {%- if _variant == 'horizontal' -%}
   </dl>
-  {% else %}
+  {% else -%}
   </div>
   {% endif %}
   {%- endfor %}
-{% if _variant != 'horizontal' %}
+{% if _variant != 'horizontal' -%}
 </dl>
-{% else %}
+{% else -%}
 </div>
 {% endif %}
 

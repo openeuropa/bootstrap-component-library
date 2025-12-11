@@ -4,8 +4,8 @@
   {%- include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {%- endblock -%}
 
-{%- block content %}
-  <p id="content">{{ get_dummy_text(6) }}
+{%- block content -%}
+  <p id="content">{{ get_dummy_text(6) -}}
   </p>
   <h2 id="item-1" class="my-4">Section 1</h2>
   {% if featured_item %}
@@ -18,7 +18,7 @@
 
   {%- if listing %}
     {%- include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
-  {%- endif %}
+  {%- endif -%}
 
   <h2 id="item-2" class="my-4">Section 2</h2>
 
@@ -34,7 +34,7 @@
     {%- include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
   {%- endif %}
 
-  {{- get_dummy_text(8, true) }}
+  {{- get_dummy_text(8, true) -}}
 
   <h2 id="item-3" class="my-4">Section 3</h2>
 

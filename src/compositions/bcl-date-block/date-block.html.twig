@@ -41,7 +41,7 @@
 
 {%- if _date_time is not empty %}
   {%- set attributes = attributes.setAttribute('datetime', _date_time) %}
-{% endif %}
+{% endif -%}
 
 <time {{ attributes }}>
   <div class="d-flex flex-column pt-2">
@@ -50,7 +50,7 @@
         <div class="date-month lh-1">{{- _month -}}</div>
         <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>
       </div>
-      {% if _end_day or _end_month %}
+      {% if _end_day or _end_month -%}
         <div class="d-flex flex-column align-item-center justify-content-center">
           {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
             name: "chevron-right",
@@ -59,14 +59,14 @@
           } only -%}
         </div>
         <div class="d-flex flex-column align-item-center justify-content-center">
-          {%- if _end_month is not empty %}
+          {%- if _end_month is not empty -%}
             <div class="date-month lh-1">{{- _end_month -}}</div>
           {% endif -%}
-          {%- if _end_day is not empty %}
+          {%- if _end_day is not empty -%}
             <div class="date-day fw-bold fs-4 lh-1">{{- _end_day -}}</div>
           {% endif -%}
         </div>
-      {% endif %}
+      {% endif -%}
     </div>
     <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">
       <div class="date-year year-start">{{- _year -}}</div>

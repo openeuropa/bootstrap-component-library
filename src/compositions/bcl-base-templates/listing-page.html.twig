@@ -20,7 +20,7 @@
   {%- set _title_attributes = _title_attributes ?: create_attribute() %}
 {% if filter_button %}
   {%- include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
-{% endif %}
+{% endif -%}
   <div class="row">
     <div class="col-md-6 col-lg-8 align-self-center">
       {% if _title is not empty %}
@@ -30,22 +30,22 @@
           title_link: _title_link,
           attributes: _title_attributes.addClass(['mb-0', 'text-capitalize']),
         } only %}
-      {%- endif %}
+      {%- endif -%}
     </div>
-    {% if badges is not empty and badges is iterable %}
+    {% if badges is not empty and badges is iterable -%}
       <div class="col-md-12 order-md-2 mt-3">
       {% for badge in badges %}
         {%- include '@oe-bcl/bcl-badge/badge.html.twig' with badge|merge({
           attributes: create_attribute().addClass(["mb-2", "me-2"])
         }) only %}
-      {%- endfor %}
+      {%- endfor -%}
       </div>
-    {% endif %}
+    {% endif -%}
     <div class="col-md-6 col-lg-4 mt-3 mt-md-0">
       <div class="float-md-end d-md-flex align-items-center mb-4 mb-md-0">
         {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
           attributes: create_attribute().addClass(['ms-md-2']),
-        }) only %}
+        }) only -%}
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@
 
 {%- block content_bottom %}
   {%- set _pagination = pagination|default({}) %}
-  {%- if _pagination is not empty %}
+  {%- if _pagination is not empty -%}
     <hr class="d-none d-md-block mt-4-5">
     {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with _pagination only %}
   {%- endif %}

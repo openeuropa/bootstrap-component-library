@@ -39,7 +39,7 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div {{ attributes }}>
 
@@ -193,7 +193,7 @@
       size: 'xs',
     }),
   }) only %}
-{% endif %}
+{% endif -%}
 </div>
 
 {% endapply %}

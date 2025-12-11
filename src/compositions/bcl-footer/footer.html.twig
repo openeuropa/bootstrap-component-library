@@ -39,20 +39,20 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(['bcl-footer', 'bcl-footer--' ~ _variant]) %}
+{%- set attributes = attributes.addClass(['bcl-footer', 'bcl-footer--' ~ _variant]) -%}
 
 <footer
   {{ attributes }}
 >
   <div class="container">
     {% if rows is not empty and rows is iterable %}
-      {%- for row in _rows %}
+      {%- for row in _rows -%}
         <div class="{{ row.extra_classes ? row.extra_classes ~ ' row' : 'row' }}">
-          {% for col in row.cols %}
+          {% for col in row.cols -%}
             <div class="{{ col.classes }}">
               {% if col.items is not empty and col.items is iterable %}
                 {%- for item in col.items %}
-                  {%- if item.type == 'image' %}
+                  {%- if item.type == 'image' -%}
                     <img
                       {% if item.path is not empty %}
                         src="{{ item.path }}"
@@ -69,21 +69,21 @@
                     {{- item.content }}
                   {%- endif %}
                   {%- if item.type == 'links' %}
-                    {%- for link in item.links %}
+                    {%- for link in item.links -%}
                       <div class="mb-1">
                       {% include '@oe-bcl/bcl-link/link.html.twig' with link|merge({
                         attributes: create_attribute().addClass(['standalone'])
-                      }) only %}
+                      }) only -%}
                       </div>
                     {% endfor %}
                   {%- endif %}
                 {%- endfor %}
-              {%- endif %}
+              {%- endif -%}
             </div>
-          {% endfor %}
+          {% endfor -%}
         </div>
       {% endfor %}
-    {%- endif %}
+    {%- endif -%}
   </div>
 </footer>
 

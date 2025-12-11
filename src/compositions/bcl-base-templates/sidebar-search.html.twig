@@ -10,11 +10,11 @@
 {%- block body %}
   {%- if search_form.attributes is empty %}
     {%- set attributes = search_form.create_attribute() %}
-  {%- endif %}
+  {%- endif -%}
 
   <div class="offcanvas-body p-lg-0">
     {% include '@oe-bcl/bcl-form/form.html.twig' with search_form|merge({
       attributes: search_form.attributes.addClass('w-100')
-    }) only %}
+    }) only -%}
   </div>
 {% endblock %}

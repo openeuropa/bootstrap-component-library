@@ -93,9 +93,9 @@
   {%- set _responsive_class = 'table-responsive' %}
   {%- if _table_responsive != 'all' %}
     {%- set _responsive_class = _responsive_class ~ '-' ~ _table_responsive %}
-  {%- endif %}
+  {%- endif -%}
   <div class="{{ _responsive_class }}">
-{% endif %}
+{% endif -%}
 
 <table
   {{ attributes }}
@@ -109,11 +109,11 @@
     {{- _caption -}}
   </caption>
 {%- endif -%}
-{% if _table_head is not empty %}
+{% if _table_head is not empty -%}
   <thead>
-  {% if _table_head.cells is not empty and _table_head.cells is iterable %}
+  {% if _table_head.cells is not empty and _table_head.cells is iterable -%}
     <tr>
-    {% for _cell in _table_head.cells %}
+    {% for _cell in _table_head.cells -%}
       <td
       {% if _cell.col_span is not empty %}
         colspan={{ _cell.col_span }}
@@ -121,13 +121,13 @@
       >
         {{- _cell.content -}}
       </td>
-    {% endfor %}
+    {% endfor -%}
     </tr>
-  {% endif %}
+  {% endif -%}
   </thead>
 {% endif %}
 
-{%- if _rows is not empty and _rows is iterable %}
+{%- if _rows is not empty and _rows is iterable -%}
 <tbody>
   {% for _row in _rows %}
     {%- set _row_class = '' %}
@@ -147,14 +147,14 @@
       {%- else %}
         {%- set _row_class = 'table-' ~ _row.variant %}
       {%- endif %}
-    {%- endif %}
+    {%- endif -%}
     <tr
     {% if _row_class is not empty %}
     class="{{ _row_class }}"
     {% endif %}
     >
     {% if _row.cells is defined and _row.cells is not empty and _row.cells is iterable %}
-      {%- for _cell in _row.cells %}
+      {%- for _cell in _row.cells -%}
         <td
         {% if _cell.col_span is defined and _cell.col_span is not empty %}
           colspan={{ _cell.col_span }}
@@ -163,17 +163,17 @@
           {{- _cell.content -}}
         </td>
       {% endfor %}
-    {%- endif %}
+    {%- endif -%}
     </tr>
-  {% endfor %}
+  {% endfor -%}
 </tbody>
 {% endif %}
 
-{%- if _table_footer is not empty %}
+{%- if _table_footer is not empty -%}
   <tfoot>
-  {% if _table_footer.cells is not empty and _table_footer.cells is iterable %}
+  {% if _table_footer.cells is not empty and _table_footer.cells is iterable -%}
     <tr>
-    {% for _cell in _table_footer.cells %}
+    {% for _cell in _table_footer.cells -%}
       <td
       {% if _cell.col_span is not empty %}
         colspan={{ _cell.col_span }}
@@ -181,14 +181,14 @@
       >
         {{- _cell.content -}}
       </td>
-    {% endfor %}
+    {% endfor -%}
     </tr>
-  {% endif %}
+  {% endif -%}
   </tfoot>
-{% endif %}
+{% endif -%}
 </table>
 
-{% if _table_responsive is not empty %}
+{% if _table_responsive is not empty -%}
   </div>
 {% endif %}
 

@@ -130,7 +130,7 @@
 
 {%- if _aria_label is not empty %}
   {%- set attributes = attributes.setAttribute('aria-label', aria_label) %}
-{% endif %}
+{% endif -%}
 
 <nav{{ attributes }}>
   <ul{{ list_attributes }}>
@@ -143,18 +143,18 @@
       {%- endif %}
       {%- if _item.active %}
         {%- set _item_class = _item_class|merge(['active']) %}
-      {%- endif %}
+      {%- endif -%}
       <li class="{{ _item_class|join(' ') }}">
         {% if _item.icon_path is not defined %}
           {%- set _item = _item|merge({
             icon_path: _icon_path,
           }) %}
         {%- endif %}
-        {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only %}
+        {%- include '@oe-bcl/bcl-pagination/pagination-item.html.twig' with _item only -%}
       </li>
     {% endif %}
   {%- endfor %}
-{% endif %}
+{% endif -%}
   </ul>
 </nav>
 

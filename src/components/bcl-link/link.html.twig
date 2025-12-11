@@ -72,7 +72,7 @@
 {% if _classes is not empty %}
   {%- set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% set attributes = attributes.setAttribute('href', _path) %}
+{% set attributes = attributes.setAttribute('href', _path) -%}
 
 <a
   {{ attributes }}

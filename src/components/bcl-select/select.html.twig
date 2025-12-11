@@ -104,7 +104,7 @@
 {% endif %}
 
 {%- if _label is not empty %}
-  {%- set _label_block %}
+  {%- set _label_block -%}
     <label
     {% if _id %}
       for="{{ _id }}"
@@ -118,16 +118,16 @@
 
 {%- if _label_block is defined %}
   {{- _label_block|raw }}
-{%- endif %}
+{%- endif -%}
 <select
   {{ attributes }}
 >
 {% if _options is not empty and _options is iterable %}
   {%- for _option in _options %}
-    {%- if _option.optgroup is defined %}
+    {%- if _option.optgroup is defined -%}
       <optgroup label="{{ _option.label }}">
       {% if _option.options is not empty  and _option.options is iterable %}
-        {%- for _optGroupOption in _option.options %}
+        {%- for _optGroupOption in _option.options -%}
         <option
           value="{{ _optGroupOption.value }}"
         {% if _optGroupOption.selected is defined %}
@@ -140,9 +140,9 @@
           {{- _optGroupOption.label -}}
         </option>
         {% endfor %}
-      {%- endif %}
+      {%- endif -%}
       </optgroup>
-    {% else %}
+    {% else -%}
       <option
         value="{{ _option.value }}"
       {% if _option.selected is defined %}
@@ -159,19 +159,19 @@
       </option>
     {% endif %}
   {%- endfor %}
-{% endif %}
+{% endif -%}
 </select>
-{% if _invalid_feedback is not empty %}
+{% if _invalid_feedback is not empty -%}
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}
   </div>
 {% endif %}
-{% if _valid_feedback is not empty %}
+{% if _valid_feedback is not empty -%}
   <div class="valid-feedback">
     {{- _valid_feedback -}}
   </div>
 {% endif %}
-{% if _helper_text is not empty %}
+{% if _helper_text is not empty -%}
 <div
   class="form-text"
 {% if _helper_text_id is not empty %}

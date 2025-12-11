@@ -61,7 +61,7 @@
   .setAttribute('aria-expanded', 'false')
 %}
 
-{%- set navbar_toggle_button %}
+{%- set navbar_toggle_button -%}
   <button
     {{ toggler_attributes }}
   >
@@ -76,9 +76,9 @@
       size: 'fluid',
       path: _icon_path,
       attributes: create_attribute().addClass(['active-icon']),
-    } only %}
+    } only -%}
   </button>
-{% endset %}
+{% endset -%}
 
 <header
   {{ attributes }}
@@ -86,9 +86,9 @@
   <nav
     {{ _head.attributes.addClass(['navbar', 'navbar-expand-lg', 'navbar-light']) }}>
     <div class='container'>
-    {% if _head.brand is not empty %}
+    {% if _head.brand is not empty -%}
       <a class='navbar-brand' href='{{ _head.brand.link }}'>
-      {% for logo in _head.brand.logos %}
+      {% for logo in _head.brand.logos -%}
         <img
           src='{{ logo.src }}'
           {% if logo.alt is not empty %}
@@ -98,10 +98,10 @@
           class='{{ logo.class }}'
           {% endif %}
         />
-      {% endfor %}
+      {% endfor -%}
       </a>
     {% endif %}
-      {{- navbar_toggle_button }}
+      {{- navbar_toggle_button -}}
     </div>
   </nav>
 
@@ -118,13 +118,13 @@
       disable_collapse: true,
       attributes: create_attribute().addClass('bcl-header__navbar collapse navbar-collapse').setAttribute('id', _navbar_id).setAttribute('aria-label', 'Main Navigation'),
     }) only %}
-  {%- endif %}
+  {%- endif -%}
 </header>
 
 <!-- breadcrumbs -->
-{% if _breadcrumbs is not empty %}
+{% if _breadcrumbs is not empty -%}
   <div class="container">
-    {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only %}
+    {% include '@oe-bcl/bcl-breadcrumb/breadcrumb.html.twig' with _breadcrumbs only -%}
   </div>
 {% endif %}
 

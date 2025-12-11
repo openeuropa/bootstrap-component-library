@@ -24,7 +24,7 @@
 {%- set _see_all_link = null %}
 {# Prepare an optional "See all" link rendered outside the list. #}
 {% if _see_all is not empty %}
-  {%- set _see_all_label %}
+  {%- set _see_all_label -%}
     <span>{{- _see_all.label -}}</span>
   {% endset %}
   {%- set _see_all_attr = (_see_all.attributes is defined ? _see_all.attributes : create_attribute()) %}
@@ -46,9 +46,9 @@
   .setAttribute('role', 'group')
   .setAttribute('aria-labelledby', _trigger_id)
   .addClass('bcl-mega-menu__submenu', '__level-' ~ _level)
-%}
+-%}
 <div{{ submenu_attributes }}>
-  {% if _trigger %}
+  {% if _trigger -%}
   <div class="__header">
       <p class="__label">{{ _trigger.label }}</p>
   </div>
@@ -58,11 +58,11 @@
     icon_path: _icon_path,
     level: _level,
   } only %}
-  {%- if _see_all_link %}
+  {%- if _see_all_link -%}
     <div class="__see_all">
-      {% include '@oe-bcl/bcl-link/link.html.twig' with _see_all_link only %}
+      {% include '@oe-bcl/bcl-link/link.html.twig' with _see_all_link only -%}
     </div>
-  {% endif %}
+  {% endif -%}
 </div>
 
 {% endapply %}

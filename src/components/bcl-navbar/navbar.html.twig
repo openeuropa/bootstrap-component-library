@@ -47,16 +47,16 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <nav
   {{ attributes }}
 >
   <div class='container'>
   {% block branding %}
-    {%- if _brand is not empty %}
+    {%- if _brand is not empty -%}
       <a class='navbar-brand' href='{{ _brand.link }}'>
-      {% for logo in _brand.logos %}
+      {% for logo in _brand.logos -%}
         <img
           src='{{ logo.src }}'
           {% if logo.alt is not empty %}
@@ -71,12 +71,12 @@
     <div class="h5 ms-4-5 d-none d-lg-inline-block">
       {{- _brand.label -}}
       </div>
-    {% endif %}
+    {% endif -%}
       </a>
     {% endif %}
   {%- endblock %}
 
-  {%- if not _disable_collapse %}
+  {%- if not _disable_collapse -%}
     <button
       class="navbar-toggler"
       type="button"
@@ -100,9 +100,9 @@
       {%- include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
     {%- endif %}
   {%- endblock %}
-  {%- if not _disable_collapse %}
+  {%- if not _disable_collapse -%}
     </div>
-  {% endif %}
+  {% endif -%}
   </div>
 </nav>
 

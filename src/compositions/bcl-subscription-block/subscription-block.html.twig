@@ -17,22 +17,22 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div
   {{ attributes }}
 >
-  {% if _title is not empty %}
+  {% if _title is not empty -%}
     <div class="fs-2 fw-normal">{{ _title }}</div>
   {% endif %}
   {%- if _content is not empty %}
     {{- _content }}
   {%- endif %}
-  {%- if _button is not empty %}
+  {%- if _button is not empty -%}
     <div class="pb-2">
-    {% include '@oe-bcl/bcl-button/button.html.twig' with _button only %}
+    {% include '@oe-bcl/bcl-button/button.html.twig' with _button only -%}
     </div>
-  {% endif %}
+  {% endif -%}
 </div>
 
 {% endapply %}
