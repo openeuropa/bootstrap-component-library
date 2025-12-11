@@ -79,11 +79,11 @@
 {% if not _inside_navigation %}
   {% if _link %}
     {% set _trigger = _trigger|merge({
-      attributes: _trigger.attributes.setAttribute('role', 'button') 
+      attributes: _trigger.attributes.setAttribute('role', 'button')
     }) %}
   {% else %}
     {% set _trigger = _trigger|merge({
-      attributes: _trigger.attributes.setAttribute('autocomplete', 'off') 
+      attributes: _trigger.attributes.setAttribute('autocomplete', 'off')
     }) %}
   {% endif %}
 {% else %}

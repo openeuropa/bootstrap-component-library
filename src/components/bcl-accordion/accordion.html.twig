@@ -98,8 +98,8 @@
       {% endif %}
       <div class="accordion-item">
         {%- set _item_title_tag = _item.title_tag|default('h2') %}
-        <{{ _item_title_tag }} 
-          class="accordion-header" 
+        <{{ _item_title_tag }}
+          class="accordion-header"
           id="heading-{{ _id }}-{{ loop.index }}"
         >
           {% set button_attributes = create_attribute()
