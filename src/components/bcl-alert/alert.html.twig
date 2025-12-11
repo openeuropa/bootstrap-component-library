@@ -67,7 +67,7 @@
     <div class="alert-heading h4">{{ _heading }}</div>
   {%- endif -%}
   {%- if _message is not empty -%}
-    {{- _message -}}
+    {{- _message|spaceless -}}
   {%- endif -%}
   </div>
 {%- if _dismissible -%}

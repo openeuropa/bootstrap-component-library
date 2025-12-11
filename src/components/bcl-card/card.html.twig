@@ -194,11 +194,11 @@
     <{{ _text_tag }}
       class='card-text{{ _text.classes ? ' ' ~ _text.classes }}'
     >
-      {{- _text.content -}}
+      {{- _text.content|spaceless -}}
     </{{ _text_tag }}>
   {%- endif -%}
   {%- if _content is not empty -%}
-    {{- _content -}}
+    {{- _content|spaceless -}}
   {%- endif -%}
   {% block card_badges %}
     {%- if _badges is not empty and _badges is iterable -%}

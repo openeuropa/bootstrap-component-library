@@ -109,7 +109,7 @@
         attributes: _description_title_attributes,
       } only %}
     {%- endif -%}
-    {{- _description|default('') -}}
+    {{- _description|default('')|spaceless -}}
 
     {% if _read_more is not empty %}
       {%- include '@oe-bcl/bcl-link/link.html.twig' with _read_more only %}

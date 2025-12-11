@@ -110,19 +110,19 @@
       {%- endif %}
     {%- endif %}
       {%- block content_top %}
-        {{- content_top }}
+        {{- (content_top ?? '')|spaceless }}
       {%- endblock %}
       {%- block content %}
-        {{- content }}
+        {{- content|spaceless }}
       {%- endblock %}
       {%- block content_bottom %}
-        {{- content_bottom }}
+        {{- (content_bottom ?? '')|spaceless }}
       {%- endblock %}
       {%- block related %}
-        {{- related }}
+        {{- related|default('')|spaceless }}
       {%- endblock %}
       {%- block share %}
-        {{- share }}
+        {{- share|default('')|spaceless }}
       {%- endblock -%}
     </div>{# -#}
   </div>{# -#}

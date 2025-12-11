@@ -12,7 +12,7 @@
       <h2 class="mb-4">{{ featured_section.title }}</h2>{# -#}
       <div class="row">{# -#}
         <div class="col-12 col-md-6">
-          {{- featured_section.content -}}
+          {{- featured_section.content|spaceless -}}
         </div>{# -#}
         <div class="col-12 col-md-6">
           {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_section.featured_media only -%}
@@ -38,7 +38,7 @@
       <h2 class="mb-4">{{ activity_featured.title }}</h2>{# -#}
       <div class="row">{# -#}
         <div class="col-12 col-md-6">
-          {{- activity_featured.content -}}
+          {{- activity_featured.content|spaceless -}}
         </div>{# -#}
         <div class="col-12 col-md-6">
           {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with activity_featured.featured_media only -%}

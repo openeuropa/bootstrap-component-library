@@ -26,7 +26,7 @@
       {{- description.title -}}
     </h2>
     {%- for paragraph in description.paragraphs -%}
-      <p class="mb-3">{{- paragraph -}}</p>
+      <p class="mb-3">{{- paragraph|spaceless -}}</p>
     {%- endfor %}
   {%- endif %}
 
@@ -46,7 +46,7 @@
       >
         {{- social.title -}}
       </h2>
-      {{- social_buttons }}
+      {{- social_buttons|spaceless }}
       {%- include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
       {%- include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
     {%- endblock -%}

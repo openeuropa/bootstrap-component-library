@@ -72,20 +72,20 @@
       <div
         {{- _header_attributes.addClass(['modal-header']) -}}
       >
-        {%- block header _header -%}
+        {%- block header _header|spaceless -%}
       </div>
       {%- endif %}
       {%- block messages _messages -%}
       <div
           {{- _body_attributes.addClass(['modal-body']) -}}
       >
-        {%- block body _body -%}
+        {%- block body _body|spaceless -%}
       </div>
       {%- if footer is not empty -%}
       <div
           {{- _footer_attributes.addClass(['modal-footer']) -}}
       >
-        {%- block footer _footer -%}
+        {%- block footer _footer|spaceless -%}
       </div>
       {%- endif -%}
     </div>{# -#}

@@ -8,11 +8,11 @@
   {%- if information.main_title is not empty -%}
     <h2
       class="mb-4"
-    >{{- information.main_title -}}</h2>
+    >{{- information.main_title|spaceless -}}</h2>
   {%- endif %}
   {%- if information.content is not empty -%}
     <div class="mb-4-5">
-      {{- information.content -}}
+      {{- information.content|spaceless -}}
     </div>
   {%- endif %}
 
