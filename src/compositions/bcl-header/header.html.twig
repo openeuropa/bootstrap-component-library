@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - variant (string) (default: 'neutral')
     - options: ['ec', 'eu', 'neutral']
@@ -135,5 +133,3 @@
 {%- if _language_modal is not empty %}
   {%- include '@oe-bcl/bcl-language-list/language-list.html.twig' with _language_modal only %}
 {% endif -%}
-
-{% endapply %}
