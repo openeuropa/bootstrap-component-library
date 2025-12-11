@@ -13,60 +13,60 @@
 {% set _listing = listing|default({}) %}
 
 {%- block content_top %}
-  {% set _title = title|default('') %}
-  {% set _title_tag = title_tag|default('h2') %}
-  {% set _title_link = title_link|default({}) %}
-  {% set _title_attributes = title_attributes ?: create_attribute() %}
-  {% set _title_attributes = _title_attributes ?: create_attribute() %}
+  {%- set _title = title|default('') %}
+  {%- set _title_tag = title_tag|default('h2') %}
+  {%- set _title_link = title_link|default({}) %}
+  {%- set _title_attributes = title_attributes ?: create_attribute() %}
+  {%- set _title_attributes = _title_attributes ?: create_attribute() %}
 {% if filter_button %}
-  {% include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
-{% endif %}
-  <div class="row">
+  {%- include '@oe-bcl/bcl-button/button.html.twig' with filter_button only %}
+{% endif -%}
+  <div class="row">{# -#}
     <div class="col-md-6 col-lg-8 align-self-center">
-      {% if _title is not empty %}
-        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      {%- if _title is not empty %}
+        {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: _title ~ ' (' ~ (_listing.items|length) ~ ')',
           title_tag: _title_tag,
           title_link: _title_link,
           attributes: _title_attributes.addClass(['mb-0', 'text-capitalize']),
         } only %}
-      {% endif %}
+      {%- endif -%}
     </div>
-    {% if badges is not empty and badges is iterable %}
+    {%- if badges is not empty and badges is iterable -%}
       <div class="col-md-12 order-md-2 mt-3">
-      {% for badge in badges %}
-        {% include '@oe-bcl/bcl-badge/badge.html.twig' with badge|merge({
+      {%- for badge in badges %}
+        {%- include '@oe-bcl/bcl-badge/badge.html.twig' with badge|merge({
           attributes: create_attribute().addClass(["mb-2", "me-2"])
         }) only %}
-      {% endfor %}
+      {%- endfor -%}
       </div>
-    {% endif %}
-    <div class="col-md-6 col-lg-4 mt-3 mt-md-0">
+    {%- endif -%}
+    <div class="col-md-6 col-lg-4 mt-3 mt-md-0">{# -#}
       <div class="float-md-end d-md-flex align-items-center mb-4 mb-md-0">
-        {% include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
+        {%- include '@oe-bcl/bcl-select/select.html.twig' with sort_select|merge({
           attributes: create_attribute().addClass(['ms-md-2']),
-        }) only %}
-      </div>
-    </div>
-  </div>
+        }) only -%}
+      </div>{# -#}
+    </div>{# -#}
+  </div>{# -#}
   <hr class="d-none d-md-block mb-4-75"/>
 {%- endblock -%}
 
 {%- block content %}
-  {% if _listing is not empty %}
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing only %}
-  {% endif %}
+  {%- if _listing is not empty %}
+    {%- include '@oe-bcl/bcl-listing/listing.html.twig' with  _listing only %}
+  {%- endif %}
 {%- endblock -%}
 
 {%- block content_bottom %}
-  {% set _pagination = pagination|default({}) %}
-  {% if _pagination is not empty %}
+  {%- set _pagination = pagination|default({}) %}
+  {%- if _pagination is not empty -%}
     <hr class="d-none d-md-block mt-4-5">
-    {% include '@oe-bcl/bcl-pagination/pagination.html.twig' with _pagination only %}
-  {% endif %}
+    {%- include '@oe-bcl/bcl-pagination/pagination.html.twig' with _pagination only %}
+  {%- endif %}
 {%- endblock -%}
 
 {%- block sidebar %}
-  {% set _sidebar = sidebar|default({}) %}
-  {% include '@oe-bcl/bcl-base-templates/sidebar-search.html.twig' with _sidebar only %}
+  {%- set _sidebar = sidebar|default({}) %}
+  {%- include '@oe-bcl/bcl-base-templates/sidebar-search.html.twig' with _sidebar only %}
 {%- endblock -%}

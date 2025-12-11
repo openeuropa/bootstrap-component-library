@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - id (string) (default: language-dropdown-random(10000))
   - label (string) (default: '')
@@ -15,21 +13,21 @@
     ]
 #}
 
-{% set _id = id|default('language-dropdown' ~ random(10000)) %}
+{%- set _id = id|default('language-dropdown' ~ random(10000)) %}
 {% set _label = label|default('') %}
 {% set _icon_path = icon_path|default('') %}
 {% set _items = items|default([]) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bg-lighter', 'py-3', 'px-4', 'border-top']) %}
+{%- set attributes = attributes.addClass(['bg-lighter', 'py-3', 'px-4', 'border-top']) -%}
 
 <div
-  {{ attributes }}>
+  {{ attributes }}>{# -#}
   <div class="text-end text-md-center">
-    {% include '@oe-bcl/bcl-link/link.html.twig' with _label|merge({
+    {%- include '@oe-bcl/bcl-link/link.html.twig' with _label|merge({
       path: '#' ~ _id,
       attributes: create_attribute()
                   .addClass(['standalone'])
@@ -37,25 +35,25 @@
                   .setAttribute('data-bs-toggle', 'collapse')
                   .setAttribute('aria-expanded', 'false')
                   .setAttribute('role', 'button'),
-    }) only %}
+    }) only -%}
   </div>
-  {% if _items is not empty and _items is iterable %}
+  {%- if _items is not empty and _items is iterable -%}
   <div class="collapse" id="{{ _id }}">
-    {% for _item in _items %}
-      {% set _item_classes = loop.last ? 'pt-3' : 'py-3 border-bottom' %}
+    {%- for _item in _items %}
+      {%- set _item_classes = loop.last ? 'pt-3' : 'py-3 border-bottom' -%}
       <div class="{{ _item_classes }}">
-      {% if _item.type == 'content' %}
-        {{ _item.content }}
-      {% else %}
-        <div class="row">
+      {%- if _item.type == 'content' %}
+        {{- _item.content }}
+      {%- else -%}
+        <div class="row">{# -#}
           <div class="col-12 col-md-9">
-            {% if _item.title is not empty %}
+            {%- if _item.title is not empty -%}
               <p class="fw-bold m-0">{{ _item.title }}</p>
-            {% endif %}
-            {% if _item.description is not empty %}
+            {%- endif %}
+            {%- if _item.description is not empty -%}
               <p class="m-0">{{ _item.description }}</p>
-            {% endif %}
-            {% if _item.language is not empty or _item.meta is not empty %}
+            {%- endif %}
+            {%- if _item.language is not empty or _item.meta is not empty -%}
             <small class="fw-bold m-0">
               {%- if _item.language is not empty -%}
                 {{- _item.language -}}
@@ -66,15 +64,15 @@
                 </span>
               {%- endif -%}
             </small>
-            {% endif %}
-          </div>
+            {%- endif -%}
+          </div>{# -#}
           <div class="col-12 col-md-3 align-self-end text-md-end">
-          {% set download_attributes = create_attribute()
+          {%- set download_attributes = create_attribute()
                                       .setAttribute('download', true)
                                       .setAttribute('target', '_blank')
                                       .addClass(['d-block', 'standalone', 'mt-1'])
           %}
-          {% set _download_item = _item.download|merge({
+          {%- set _download_item = _item.download|merge({
             icon_position: "after",
             icon: {
               name: "download",
@@ -83,14 +81,13 @@
             }|merge(_item.download.icon|default({})),
             attributes: download_attributes.merge(_item.download.attributes|default(create_attribute()))
           }) %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _download_item only %}
-          </div>
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _download_item only -%}
+          </div>{# -#}
         </div>
-      {% endif %}
+      {%- endif -%}
       </div>
-    {% endfor %}
+    {%- endfor -%}
   </div>
-  {% endif %}
+  {%- endif -%}
 </div>
-
-{% endapply %}
+{#--#}

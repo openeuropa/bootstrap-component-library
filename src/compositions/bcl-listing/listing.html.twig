@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h2')
@@ -16,7 +14,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -26,7 +24,7 @@
 {% set _alignment = alignment|default('') %}
 {% set _image_size = image_size|default('') %}
 
-{% set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
+{%- set _classes = ['bcl-listing', 'bcl-listing--' ~ _variant] %}
 {% set _cards = [] %}
 {% set _card_layout = {
   type: 'grid',
@@ -35,16 +33,16 @@
   attributes: create_attribute(),
 } %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div {{ attributes }}>
 
-{% if _title is not empty %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+{%- if _title is not empty %}
+  {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
@@ -52,37 +50,37 @@
   } only %}
 {% endif %}
 
-{% if _items is not empty %}
-  {% for _card in _items %}
-    {% set  _alignment_class = '' %}
-    {% set _image_classes = _card.image.classes ?: '' %}
-    {% set _start_col_classes = 'bcl-card-start-col mb-3 mb-lg-0' %}
-    {% set _end_col_classes = 'col-12 col-md' %}
-    {% if _image_size is not empty %}
-      {% set _start_col_classes = _start_col_classes ~ ' bcl-size-' ~ _image_size %}
-    {% endif %}
-    {% if 'd-none' in _image_classes %}
-      {% set _start_col_classes = _start_col_classes ~ ' d-none d-md-block' %}
-    {% endif %}
-    {% if _alignment is not empty %}
-      {% set _alignment_class = ' align-self-' ~ _alignment %}
-    {% endif %}
-    {% set _card_classes = [] %}
-    {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
-    {% set _card_title_attributes = card.title_attributes ? card.title_attributes : create_attribute() %}
-    {% set _card = _card|merge({
+{%- if _items is not empty %}
+  {%- for _card in _items %}
+    {%- set  _alignment_class = '' %}
+    {%- set _image_classes = _card.image.classes ?: '' %}
+    {%- set _start_col_classes = 'bcl-card-start-col mb-3 mb-lg-0' %}
+    {%- set _end_col_classes = 'col-12 col-md' %}
+    {%- if _image_size is not empty %}
+      {%- set _start_col_classes = _start_col_classes ~ ' bcl-size-' ~ _image_size %}
+    {%- endif %}
+    {%- if 'd-none' in _image_classes %}
+      {%- set _start_col_classes = _start_col_classes ~ ' d-none d-md-block' %}
+    {%- endif %}
+    {%- if _alignment is not empty %}
+      {%- set _alignment_class = ' align-self-' ~ _alignment %}
+    {%- endif %}
+    {%- set _card_classes = [] %}
+    {%- set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
+    {%- set _card_title_attributes = card.title_attributes ? card.title_attributes : create_attribute() %}
+    {%- set _card = _card|merge({
       title_attributes: _card_title_attributes.addClass(['fs-5'])
     }) %}
 
-    {% if _variant == 'default-1-col' or _variant == 'default-2-col' or _variant == 'default-3-col' %}
-      {% set _card_classes = [
+    {%- if _variant == 'default-1-col' or _variant == 'default-2-col' or _variant == 'default-3-col' %}
+      {%- set _card_classes = [
         'listing-item',
         'border-bottom',
         'border-md-0',
         'border-0',
       ] %}
-      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
-      {% set _card = _card|merge({
+      {%- set _card_attributes = _card_attributes.addClass(_card_classes) %}
+      {%- set _card = _card|merge({
         horizontal: true,
         extra_classes_body: 'p-0 pb-md-0 pb-3',
         attributes: _card_attributes,
@@ -92,108 +90,107 @@
         }
       }) %}
 
-      {% if _variant == 'default-2-col' %}
-        {% set _card_layout = _card_layout|merge({
+      {%- if _variant == 'default-2-col' %}
+        {%- set _card_layout = _card_layout|merge({
           responsive_columns: 2,
         }) %}
-      {% elseif _variant == 'default-3-col' %}
-        {% set _card_layout = _card_layout|merge({
+      {%- elseif _variant == 'default-3-col' %}
+        {%- set _card_layout = _card_layout|merge({
           attributes: _card_layout.attributes.addClass(['row-cols-md-2']),
           responsive_columns: 3,
           responsiveness: 'xl',
         }) %}
-      {% endif %}
-    {% endif %}
+      {%- endif %}
+    {%- endif %}
 
-    {% if _variant == 'highlight-1-col' %}
-      {% set _card_classes = [
+    {%- if _variant == 'highlight-1-col' %}
+      {%- set _card_classes = [
         'listing-item--highlight',
         'border-0',
         'bg-lighter'
       ] %}
-     {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
-     {% set _card = _card|merge({
+     {%- set _card_attributes = _card_attributes.addClass(_card_classes) %}
+     {%- set _card = _card|merge({
          wrapper_class: 'col',
          attributes: _card_attributes,
       }) %}
-      {% if _card.image is defined and _card.image is not empty %}
-        {% set _card = _card|merge({
+      {%- if _card.image is defined and _card.image is not empty %}
+        {%- set _card = _card|merge({
           extra_classes_body: "pt-0",
         }) %}
-      {% endif %}
-      {% set _card_layout = _card_layout|merge({
+      {%- endif %}
+      {%- set _card_layout = _card_layout|merge({
         cols_extra_classes: 'mt-4-5',
       }) %}
-      {% if _card.image is not empty %}
-        {% set _image_classes = _card.image.classes ?: '' %}
-        {% if not _alignment == 'center' %}
-          {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
-        {% endif %}
-        {% set _card = _card|merge({image: _card.image|merge({
+      {%- if _card.image is not empty %}
+        {%- set _image_classes = _card.image.classes ?: '' %}
+        {%- if not _alignment == 'center' %}
+          {%- set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
+        {%- endif %}
+        {%- set _card = _card|merge({image: _card.image|merge({
           classes: _image_classes,
         })}) %}
-      {% endif %}
+      {%- endif %}
 
-    {% endif %}
+    {%- endif %}
 
-    {% if _variant == 'highlight-2-col' or variant == 'highlight-3-col' %}
-      {% set _card_classes  = [
+    {%- if _variant == 'highlight-2-col' or variant == 'highlight-3-col' %}
+      {%- set _card_classes  = [
         'listing-item--highlight',
         'border-0',
         'bg-lighter',
         'h-100',
         'rounded-2'
       ] %}
-      {% set _card_attributes = _card_attributes.addClass(_card_classes) %}
-      {% set _card = _card|merge({
+      {%- set _card_attributes = _card_attributes.addClass(_card_classes) %}
+      {%- set _card = _card|merge({
         wrapper_class: 'col',
         attributes: _card_attributes,
       }) %}
-      {% if _card.image is defined and _card.image is not empty %}
-        {% set _card = _card|merge({
+      {%- if _card.image is defined and _card.image is not empty %}
+        {%- set _card = _card|merge({
           extra_classes_body: 'pt-0',
         }) %}
-      {% endif %}
-      {% if _card.image is not empty %}
-        {% set _image_classes = _card.image.classes ?: '' %}
-        {% if not _alignment == 'center' %}
-          {% set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
-        {% endif %}
-        {% set _card = _card|merge({image: _card.image|merge({
+      {%- endif %}
+      {%- if _card.image is not empty %}
+        {%- set _image_classes = _card.image.classes ?: '' %}
+        {%- if not _alignment == 'center' %}
+          {%- set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
+        {%- endif %}
+        {%- set _card = _card|merge({image: _card.image|merge({
           classes: _image_classes,
         })}) %}
-      {% endif %}
-      {% set _card_layout = _card_layout|merge({ gutter: '4' }) %}
-      {% if variant == 'highlight-2-col' %}
-        {% set _card_layout = _card_layout|merge({ responsive_columns: 2 }) %}
-      {% else %}
-        {% set _card_layout = _card_layout|merge({ responsive_columns: 3 }) %}
-      {% endif %}
-    {% endif %}
+      {%- endif %}
+      {%- set _card_layout = _card_layout|merge({ gutter: '4' }) %}
+      {%- if variant == 'highlight-2-col' %}
+        {%- set _card_layout = _card_layout|merge({ responsive_columns: 2 }) %}
+      {%- else %}
+        {%- set _card_layout = _card_layout|merge({ responsive_columns: 3 }) %}
+      {%- endif %}
+    {%- endif %}
 
-    {% if _card.image is empty and _card.date is empty %}
-      {% set _card = _card|merge({
+    {%- if _card.image is empty and _card.date is empty %}
+      {%- set _card = _card|merge({
         horizontal: false,
       }) %}
-    {% endif %}
+    {%- endif %}
 
-    {% set _cards = _cards|merge([_card]) %}
-  {% endfor %}
+    {%- set _cards = _cards|merge([_card]) %}
+  {%- endfor %}
 {% endif %}
 
-  {% include "@oe-bcl/bcl-card-layout/card-layout.html.twig" with _card_layout|merge({ items: _cards }) only %}
+  {%- include "@oe-bcl/bcl-card-layout/card-layout.html.twig" with _card_layout|merge({ items: _cards }) only %}
 
-{% if _link is not empty %}
-  {% set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
-  {% set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-inline-block']) %}
-  {% include '@oe-bcl/bcl-link/link.html.twig' with _link|merge({
+{%- if _link is not empty %}
+  {%- set _link_attributes = _link.attributes ? _link.attributes : create_attribute() %}
+  {%- set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-inline-block']) %}
+  {%- include '@oe-bcl/bcl-link/link.html.twig' with _link|merge({
     attributes: _link_attributes,
     icon: _link.icon|merge({
       name: 'chevron-right',
       size: 'xs',
     }),
   }) only %}
-{% endif %}
+{% endif -%}
 </div>
-
-{% endapply %}
+{#--#}

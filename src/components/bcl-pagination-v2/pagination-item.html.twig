@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - path (string) (default: '')
   - label (string) (default: '')
@@ -9,7 +7,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _path = path|default('') %}
+{%- set _path = path|default('') %}
 {% set _label = label|default('') %}
 {% set _disabled = disabled ?? false %}
 {% set _active = active ?? false %}
@@ -22,49 +20,49 @@
 {% set _current_mobile_label = current_mobile_label|default('') %}
 {% set _classes = ['page-link'] %}
 
-{% if _icon_path is not empty and _icon is empty %}
-  {% if _icon_name is not empty %}
-    {% set _icon = _icon|merge({
+{%- if _icon_path is not empty and _icon is empty %}
+  {%- if _icon_name is not empty %}
+    {%- set _icon = _icon|merge({
       name: _icon_name,
       path: _icon_path,
       size: "fluid"
     }) %}
-    {% set _label = "" %}
-  {% endif %}
+    {%- set _label = "" %}
+  {%- endif %}
 {% else %}
-  {% if _icon_html is not empty %}
-    {% set _label %}
+  {%- if _icon_html is not empty %}
+    {%- set _label -%}
       <span aria-hidden="true">{{- _icon_html -}}</span>
-    {% endset %}
-  {% endif %}
+    {%- endset %}
+  {%- endif %}
 {% endif %}
 
-{% if _icon is not empty %}
-  {% set _icon = _icon|merge({
+{%- if _icon is not empty %}
+  {%- set _icon = _icon|merge({
     path: _icon_path,
   }) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{%- if _aria_label is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-label', _aria_label) %}
 {% endif %}
 
-{% if _active %}
-  {% set attributes = attributes.setAttribute('aria-current', 'page') %}
-  {% set attributes = attributes.setAttribute('tabindex', '0') %}
+{%- if _active %}
+  {%- set attributes = attributes.setAttribute('aria-current', 'page') %}
+  {%- set attributes = attributes.setAttribute('tabindex', '0') %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _path and not _active %}
-  {% if _disabled %}
-    {% set attributes = attributes.setAttribute('aria-disabled', 'true') %}
-  {% endif %}
-  {% set attributes = attributes.setAttribute('aria-hidden', 'false') %}
+{%- if _path and not _active %}
+  {%- if _disabled %}
+    {%- set attributes = attributes.setAttribute('aria-disabled', 'true') %}
+  {%- endif %}
+  {%- set attributes = attributes.setAttribute('aria-hidden', 'false') %}
 
   {%- include '@oe-bcl/bcl-link/link.html.twig' with {
     label: _label,
@@ -74,17 +72,15 @@
     icon_position: _icon_position,
     attributes: attributes,
   } only -%}
-{% else %}
+{% else -%}
   <div{{ attributes }}>
-    {% if _current_mobile_label %}
-      <span class="d-none d-md-inline-block">{{- _label -}}</span>
+    {%- if _current_mobile_label -%}
+      <span class="d-none d-md-inline-block">{{- _label -}}</span>{# -#}
       <span class="d-inline-block d-md-none">{{- _current_mobile_label -}}</span>
-    {% else %}
+    {%- else -%}
       <span class="d-inline-block">
         {{- _label -}}
       </span>
-    {% endif %}
+    {%- endif -%}
   </div>
-{% endif %}
-
-{% endapply %}
+{%- endif -%}

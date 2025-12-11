@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'div')
@@ -16,7 +14,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('div') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -29,68 +27,67 @@
 {% set _fixed_height = fixed_height ?? false %}
 {% set _content_classes = content_classes|default('') %}
 
-{% set _content_class = 'bcl-banner__content' %}
+{%- set _content_class = 'bcl-banner__content' %}
 {% if _content_classes is not empty %}
-  {% set _content_class = _content_class ~ " " ~ _content_classes %}
+  {%- set _content_class = _content_class ~ " " ~ _content_classes %}
 {% endif %}
 
-{% set _title_classes = ['display-6'] %}
+{%- set _title_classes = ['display-6'] %}
 {% if _description is not empty or _link is not empty %}
-  {% set _title_classes = _title_classes|merge(['mb-3']) %}
+  {%- set _title_classes = _title_classes|merge(['mb-3']) %}
 {% endif %}
 
-{% set _title_attributes = _title_attributes.addClass(_title_classes) %}
+{%- set _title_attributes = _title_attributes.addClass(_title_classes) %}
 
-{% set _classes = ['bcl-banner'] %}
+{%- set _classes = ['bcl-banner'] %}
 
-{% if _shade %}
-  {% set _classes = _classes|merge(['shade']) %}
+{%- if _shade %}
+  {%- set _classes = _classes|merge(['shade']) %}
 {% endif %}
 
-{% if _image and not _shade %}
-  {% set _classes = _classes|merge(['overlay']) %}
+{%- if _image and not _shade %}
+  {%- set _classes = _classes|merge(['overlay']) %}
 {% endif %}
 
-{% if _hero %}
-  {% set _classes = _classes|merge(['hero']) %}
+{%- if _hero %}
+  {%- set _classes = _classes|merge(['hero']) %}
 {% endif %}
 
-{% if _full_width %}
-  {% set _classes = _classes|merge(['full-width']) %}
+{%- if _full_width %}
+  {%- set _classes = _classes|merge(['full-width']) %}
 {% endif %}
 
-{% if _fixed_height %}
-  {% set _classes = _classes|merge(['fixed-height']) %}
+{%- if _fixed_height %}
+  {%- set _classes = _classes|merge(['fixed-height']) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div {{ attributes }}>
-  {% if _image is not empty %}
+  {%- if _image is not empty -%}
     <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
-  {% endif %}
-  <div class="container">
+  {%- endif -%}
+  <div class="container">{# -#}
     <div class="{{ _content_class }}">
-      {% if _title is not empty %}
-        {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      {%- if _title is not empty %}
+        {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
           title: _title,
           title_tag: _title_tag,
           title_link: _title_link,
           attributes: _title_attributes,
         } only %}
-      {% endif %}
-    {% if _description is not empty %}
+      {%- endif %}
+    {%- if _description is not empty -%}
       <p class="mb-4">{{ _description }}</p>
-    {% endif %}
-    {% if _link.path %}
-      {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
-    {% endif %}
-    </div>
-  </div>
+    {%- endif %}
+    {%- if _link.path %}
+      {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+    {%- endif -%}
+    </div>{# -#}
+  </div>{# -#}
 </div>
-
-{% endapply %}
+{#--#}
