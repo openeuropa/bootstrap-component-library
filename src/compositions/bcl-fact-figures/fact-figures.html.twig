@@ -82,7 +82,7 @@
   {% if _wrapper_classes is not empty %}
     class="{{ _wrapper_classes|join(' ') }}"
   {% endif %}
-  >
+  >{# -#}
     <div class="{{ _grid_classes|join(' ') }}">
     {%- if _items is defined and _items is not empty and _items is iterable %}
       {%- for _item in _items -%}
@@ -122,7 +122,7 @@
         {%- include '@oe-bcl/bcl-link/link.html.twig' with _link_more only -%}
       </div>
     {%- endif -%}
-  </div>
+  </div>{# -#}
 </div>
 
 {% endapply %}

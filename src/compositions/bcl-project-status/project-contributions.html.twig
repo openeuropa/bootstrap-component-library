@@ -25,19 +25,19 @@
   'mb-4'
 ]) -%}
 
-<div {{ attributes }}>
+<div {{ attributes }}>{# -#}
   <div class="row">
 
   {%- if _chart -%}
     <div class="bcl-project-contributions-chart col-5 col-md-3">
     {%- block project_status_contrib_chart -%}
-      <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">
-        <span class="circular-progress-left">
-          <span class="circular-progress-bar"></span>
-        </span>
-        <span class="circular-progress-right">
-          <span class="circular-progress-bar"></span>
-        </span>
+      <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">{# -#}
+        <span class="circular-progress-left">{# -#}
+          <span class="circular-progress-bar"></span>{# -#}
+        </span>{# -#}
+        <span class="circular-progress-right">{# -#}
+          <span class="circular-progress-bar"></span>{# -#}
+        </span>{# -#}
       </div>
     {%- endblock -%}
     </div>
@@ -50,7 +50,7 @@
     {%- endblock -%}
     </div>
   {%- endif -%}
-  </div>
+  </div>{# -#}
 </div>
 
 {% endapply %}

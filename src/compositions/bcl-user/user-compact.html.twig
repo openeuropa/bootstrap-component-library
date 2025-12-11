@@ -34,14 +34,14 @@
 
 <div
   {{ attributes }}
->
-  <div class="flex-shrink-0">
+>{# -#}
+  <div class="flex-shrink-0">{# -#}
     <img
       class="{{ _picture_classes }}"
       src="{{ _picture.path }}"
       alt="{{ _picture.alt }}"
-    >
-  </div>
+    >{# -#}
+  </div>{# -#}
   <div class="flex-grow-1 ms-3">
   {%- if _name.link is not empty -%}
     <a href="{{ _name.link }}" class="fs-5 standalone mb-0">{{ _name.text }}</a>
@@ -58,7 +58,7 @@
     {%- endfor -%}
     </div>
   {%- endif -%}
-  </div>
+  </div>{# -#}
 </div>
 
 {% endapply %}

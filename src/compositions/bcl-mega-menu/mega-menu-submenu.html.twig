@@ -49,8 +49,8 @@
 -%}
 <div{{ submenu_attributes }}>
   {%- if _trigger -%}
-  <div class="__header">
-      <p class="__label">{{ _trigger.label }}</p>
+  <div class="__header">{# -#}
+      <p class="__label">{{ _trigger.label }}</p>{# -#}
   </div>
   {%- endif %}
   {%- include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' with {

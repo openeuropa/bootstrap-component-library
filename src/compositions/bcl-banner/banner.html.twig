@@ -73,7 +73,7 @@
   {%- if _image is not empty -%}
     <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
   {%- endif -%}
-  <div class="container">
+  <div class="container">{# -#}
     <div class="{{ _content_class }}">
       {%- if _title is not empty %}
         {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
@@ -89,8 +89,8 @@
     {%- if _link.path %}
       {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
     {%- endif -%}
-    </div>
-  </div>
+    </div>{# -#}
+  </div>{# -#}
 </div>
 
 {% endapply %}

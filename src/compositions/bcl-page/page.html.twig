@@ -6,7 +6,7 @@
 
 {%- block content -%}
   <p id="content">{{ get_dummy_text(6) -}}
-  </p>
+  </p>{# -#}
   <h2 id="item-1" class="my-4">Section 1</h2>
   {%- if featured_item %}
     {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}

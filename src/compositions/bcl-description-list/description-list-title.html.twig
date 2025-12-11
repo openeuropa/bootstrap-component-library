@@ -12,7 +12,7 @@
 {% set _color = color|default('') %}
 {% set _label = label|default('') -%}
 
-<dt>
+<dt>{# -#}
   <div class="d-flex">
   {%- if _icon is not empty -%}
     {% set _icon_classes = ["me-2", "align-self-center", "flex-shrink-0"] %}
@@ -22,12 +22,12 @@
       attributes: _icon_attributes,
     }) only %}
   {%- elseif _color is not empty -%}
-    <div class="align-self-center">
-      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>
+    <div class="align-self-center">{# -#}
+      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>{# -#}
     </div>
   {%- endif -%}
-    <div>{{- _label -}}</div>
-  </div>
+    <div>{{- _label -}}</div>{# -#}
+  </div>{# -#}
 </dt>
 
 {% endapply %}

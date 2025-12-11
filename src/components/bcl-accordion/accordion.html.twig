@@ -120,7 +120,7 @@
             clean_class: true,
             attributes: button_attributes
           } only -%}
-        </{{ _item_title_tag }}>
+        </{{ _item_title_tag }}>{# -#}
         <div
           id="collapse-{{ _id }}-{{ loop.index }}"
           class="accordion-collapse collapse{{ _open_item ? ' show' }}"
@@ -129,15 +129,15 @@
         {% if not _item.stay_open and _expand_button is empty %}
           data-bs-parent="#accordion-{{ _id }}"
         {% endif %}
-        >
+        >{# -#}
           <div class="accordion-body">
             {%- set _content = _item.content|default('') %}
             {%- block content _content -%}
-          </div>
-        </div>
+          </div>{# -#}
+        </div>{# -#}
       </div>
     {%- endfor -%}
-  </div>
+  </div>{# -#}
 </div>
 {%- endif %}
 

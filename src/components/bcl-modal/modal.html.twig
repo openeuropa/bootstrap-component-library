@@ -60,13 +60,13 @@
 
 <div
   {{ attributes }}
->
+>{# -#}
   <div class="modal-dialog
   {{- _size ? ' modal-' ~ size -}}
   {{- _fullscreen_responsive ? ' modal-fullscreen-' ~ _fullscreen_responsive ~ '-down' -}}
   {{- _vertically_centered ? ' modal-dialog-centered' -}}
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
-  >
+  >{# -#}
     <div class="modal-content">
       {%- if header is not empty -%}
       <div
@@ -88,8 +88,8 @@
         {%- block footer _footer -%}
       </div>
       {%- endif -%}
-    </div>
-  </div>
+    </div>{# -#}
+  </div>{# -#}
 </div>
 
 {% endapply %}

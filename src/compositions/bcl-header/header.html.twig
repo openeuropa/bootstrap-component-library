@@ -82,9 +82,9 @@
 
 <header
   {{ attributes }}
->
+>{# -#}
   <nav
-    {{ _head.attributes.addClass(['navbar', 'navbar-expand-lg', 'navbar-light']) }}>
+    {{ _head.attributes.addClass(['navbar', 'navbar-expand-lg', 'navbar-light']) }}>{# -#}
     <div class='container'>
     {%- if _head.brand is not empty -%}
       <a class='navbar-brand' href='{{ _head.brand.link }}'>
@@ -102,15 +102,15 @@
       </a>
     {%- endif %}
       {{- navbar_toggle_button -}}
-    </div>
-  </nav>
+    </div>{# -#}
+  </nav>{# -#}
 
-  <!-- site name -->
-  <div class="bcl-header__site-name" id="site-name-heading">
-    <div class="container">
-      <span class="h5 py-3-5 border-top-subtle mb-0 d-block">{{ _site_name }}</span>
-    </div>
-  </div>
+  <!-- site name -->{# -#}
+  <div class="bcl-header__site-name" id="site-name-heading">{# -#}
+    <div class="container">{# -#}
+      <span class="h5 py-3-5 border-top-subtle mb-0 d-block">{{ _site_name }}</span>{# -#}
+    </div>{# -#}
+  </div>{# -#}
 
   <!-- navbar -->
   {%- if _navbar is not empty %}
@@ -119,7 +119,7 @@
       attributes: create_attribute().addClass('bcl-header__navbar collapse navbar-collapse').setAttribute('id', _navbar_id).setAttribute('aria-label', 'Main Navigation'),
     }) only %}
   {%- endif -%}
-</header>
+</header>{# -#}
 
 <!-- breadcrumbs -->
 {%- if _breadcrumbs is not empty -%}

@@ -20,7 +20,7 @@
 {%- if _links is not empty -%}
 <nav
   {{ attributes }}
->
+>{# -#}
   <ol
     class="{{ _classes }}"
   >
@@ -55,7 +55,7 @@
         {%- endif -%}
       </li>
     {%- endfor -%}
-  </ol>
+  </ol>{# -#}
 </nav>
 {%- endif %}
 

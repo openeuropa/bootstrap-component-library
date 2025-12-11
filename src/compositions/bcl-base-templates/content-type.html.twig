@@ -92,7 +92,7 @@
   {%- endblock %}
 {% endif -%}
 
-  <div class="container mt-md-4-75 mt-4">
+  <div class="container mt-md-4-75 mt-4">{# -#}
     <div class="row">
       {%- block content_row %}
         {{- content_row }}
@@ -100,7 +100,7 @@
     {%- if _with_sidebar -%}
       <div class="{{ _col_classes.left|join(' ') }}">
         {%- block sidebar %}{% endblock -%}
-      </div>
+      </div>{# -#}
       <div class="{{ _col_classes.right|join(' ') }}">
     {%- else %}
       {%- if _landing -%}
@@ -124,8 +124,8 @@
       {%- block share %}
         {{- share }}
       {%- endblock -%}
-    </div>
-  </div>
+    </div>{# -#}
+  </div>{# -#}
 </main>
 
 {%- block feedback %}

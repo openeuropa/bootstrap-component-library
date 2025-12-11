@@ -28,7 +28,7 @@
   attributes: _expandable_attributes
 }) only -%}
 
-<div class="collapse mt-3" id="{{ _id }}">
+<div class="collapse mt-3" id="{{ _id }}">{# -#}
   <div
     class="d-grid"
     style="grid-auto-flow: row;  grid-template-columns: repeat(auto-fit, minmax(4rem, 8rem))"
@@ -44,7 +44,7 @@
           ])
       }) only %}
     {%- endfor -%}
-  </div>
+  </div>{# -#}
 </div>
 
 {% endapply %}

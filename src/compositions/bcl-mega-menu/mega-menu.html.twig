@@ -59,7 +59,7 @@
     clean_class: true,
   }) only %}
   {#- Mega menu panel. -#}
-  <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
+  <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">{# -#}
     <div class="container">
       {#- Mobile back button. -#}
       <div class="container d-lg-none bcl-mega-menu__back-button-block">
@@ -75,11 +75,11 @@
         } only -%}
       </div>
       {#- Info/summary and submenu columns. -#}
-      <div class="position-relative">
+      <div class="position-relative">{# -#}
         <div class="row">
           {#- Content / summary column. #}
           {%- if content_block is defined -%}
-            <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">
+            <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">{# -#}
               <div class="content-block">
                 {%- block content_block -%}
                   {{ _content_block }}
@@ -96,20 +96,20 @@
                   }) -%}
                   <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
                 {%- endif -%}
-              </div>
-              <div class="shadow-container">
-                <span class="shadow-bg"></span>
-              </div>
+              </div>{# -#}
+              <div class="shadow-container">{# -#}
+                <span class="shadow-bg"></span>{# -#}
+              </div>{# -#}
             </div>
           {%- endif %}
           {#- Submenu column. -#}
           <div class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu">
             {%- include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' -%}
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+          </div>{# -#}
+        </div>{# -#}
+      </div>{# -#}
+    </div>{# -#}
+  </nav>{# -#}
 </div>
 
 {% endapply %}

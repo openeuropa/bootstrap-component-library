@@ -43,12 +43,12 @@
   {%- set attributes = attributes.setAttribute('datetime', _date_time) %}
 {% endif -%}
 
-<time {{ attributes }}>
-  <div class="d-flex flex-column pt-2">
-    <div class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-2">
-      <div class="d-flex flex-column align-item-center justify-content-center">
-        <div class="date-month lh-1">{{- _month -}}</div>
-        <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>
+<time {{ attributes }}>{# -#}
+  <div class="d-flex flex-column pt-2">{# -#}
+    <div class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-2">{# -#}
+      <div class="d-flex flex-column align-item-center justify-content-center">{# -#}
+        <div class="date-month lh-1">{{- _month -}}</div>{# -#}
+        <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>{# -#}
       </div>
       {%- if _end_day or _end_month -%}
         <div class="d-flex flex-column align-item-center justify-content-center">
@@ -57,7 +57,7 @@
             size: "xs",
             path: _icon_path,
           } only -%}
-        </div>
+        </div>{# -#}
         <div class="d-flex flex-column align-item-center justify-content-center">
           {%- if _end_month is not empty -%}
             <div class="date-month lh-1">{{- _end_month -}}</div>
@@ -67,14 +67,14 @@
           {%- endif -%}
         </div>
       {%- endif -%}
-    </div>
-    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">
+    </div>{# -#}
+    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">{# -#}
       <div class="date-year year-start">{{- _year -}}</div>
       {%- if _end_year is not empty -%}
         <div class="date-year year-end">{{ _end_year }}</div>
       {%- endif -%}
-    </div>
-  </div>
+    </div>{# -#}
+  </div>{# -#}
 </time>
 
 {% endapply %}

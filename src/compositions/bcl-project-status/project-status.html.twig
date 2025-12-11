@@ -39,8 +39,8 @@
   } %}
 {% set _bg = _bgs[_status]|default('secondary') -%}
 
-<div {{ attributes }}>
-  <div class="row">
+<div {{ attributes }}>{# -#}
+  <div class="row">{# -#}
     <div class="col-12 col-md-3">
     {%- if _label is not empty -%}
       <p class="fw-bold">{{ _label }}</p>
@@ -55,26 +55,26 @@
       } only %}
     {%- endif -%}
 
-    </div>
+    </div>{# -#}
 
-    <div class="col-12 col-md-9">
+    <div class="col-12 col-md-9">{# -#}
       <div class="d-flex justify-content-between">
 
       {%- if _start_date is not empty and _start_label is not empty -%}
         <p class="fw-bold">
-          {{- _start_label -}} <br>
+          {{- _start_label -}} <br>{# -#}
           <span class="fw-normal">
             {{- _start_date -}}
-          </span>
+          </span>{# -#}
         </p>
       {%- endif %}
 
       {%- if _end_date is not empty and _end_label is not empty -%}
         <p class="fw-bold text-end">
-          {{- _end_label -}} <br>
+          {{- _end_label -}} <br>{# -#}
           <span class="fw-normal">
             {{- _end_date -}}
-          </span>
+          </span>{# -#}
         </p>
       {%- endif -%}
       </div>
@@ -90,8 +90,8 @@
       } only %}
     {%- endif -%}
 
-    </div>
-  </div>
+    </div>{# -#}
+  </div>{# -#}
 </div>
 
 

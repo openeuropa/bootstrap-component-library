@@ -77,7 +77,7 @@
 {% else -%}
   <div{{ attributes }}>
     {%- if _current_mobile_label -%}
-      <span class="d-none d-md-inline-block">{{- _label -}}</span>
+      <span class="d-none d-md-inline-block">{{- _label -}}</span>{# -#}
       <span class="d-inline-block d-md-none">{{- _current_mobile_label -}}</span>
     {%- else -%}
       <span class="d-inline-block">

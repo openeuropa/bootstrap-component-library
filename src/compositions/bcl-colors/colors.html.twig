@@ -16,8 +16,8 @@
     {%- else -%}
       <span class="text-capitalize">{{ _color.name }}</span>
     {%- endif -%}
-    <span class="float-end">{{ _value.color }}</span>
-    <div class="p-3" style="background: {{ _value.color }}">
+    <span class="float-end">{{ _value.color }}</span>{# -#}
+    <div class="p-3" style="background: {{ _value.color }}">{# -#}
     </div>
   {%- endfor -%}
   </div>

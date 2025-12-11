@@ -27,7 +27,7 @@
 {%- set attributes = attributes.addClass(['bg-lighter', 'py-3', 'px-4', 'border-top']) -%}
 
 <div
-  {{ attributes }}>
+  {{ attributes }}>{# -#}
   <div class="text-end text-md-center">
     {%- include '@oe-bcl/bcl-link/link.html.twig' with _label|merge({
       path: '#' ~ _id,
@@ -47,7 +47,7 @@
       {%- if _item.type == 'content' %}
         {{- _item.content }}
       {%- else -%}
-        <div class="row">
+        <div class="row">{# -#}
           <div class="col-12 col-md-9">
             {%- if _item.title is not empty -%}
               <p class="fw-bold m-0">{{ _item.title }}</p>
@@ -67,7 +67,7 @@
               {%- endif -%}
             </small>
             {%- endif -%}
-          </div>
+          </div>{# -#}
           <div class="col-12 col-md-3 align-self-end text-md-end">
           {%- set download_attributes = create_attribute()
                                       .setAttribute('download', true)
@@ -84,7 +84,7 @@
             attributes: download_attributes.merge(_item.download.attributes|default(create_attribute()))
           }) %}
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _download_item only -%}
-          </div>
+          </div>{# -#}
         </div>
       {%- endif -%}
       </div>

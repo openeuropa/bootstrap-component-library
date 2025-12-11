@@ -51,7 +51,7 @@
 
 <nav
   {{ attributes }}
->
+>{# -#}
   <div class='container'>
   {%- block branding %}
     {%- if _brand is not empty -%}
@@ -85,9 +85,9 @@
       aria-controls='{{ _collapse_id }}'
       aria-expanded="false"
       aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    >{# -#}
+      <span class="navbar-toggler-icon"></span>{# -#}
+    </button>{# -#}
     <div class="collapse navbar-collapse" id='{{ _collapse_id }}'>
   {%- endif %}
   {%- block navigation %}
@@ -103,7 +103,7 @@
   {%- if not _disable_collapse -%}
     </div>
   {%- endif -%}
-  </div>
+  </div>{# -#}
 </nav>
 
 {% endapply %}

@@ -43,7 +43,7 @@
 
 <footer
   {{ attributes }}
->
+>{# -#}
   <div class="container">
     {%- if rows is not empty and rows is iterable %}
       {%- for row in _rows -%}
@@ -84,7 +84,7 @@
         </div>
       {%- endfor %}
     {%- endif -%}
-  </div>
+  </div>{# -#}
 </footer>
 
 {% endapply %}

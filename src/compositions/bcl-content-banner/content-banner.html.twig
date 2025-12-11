@@ -126,14 +126,14 @@
   }) %}
 {% endif -%}
 
-<div {{ attributes }}>
+<div {{ attributes }}>{# -#}
   <div class="container">
   {%- include '@oe-bcl/bcl-card/card.html.twig' with _card %}
 
   {%- block action_bar -%}
     {{ _action_bar }}
   {%- endblock -%}
-  </div>
+  </div>{# -#}
 </div>
 
 {% endapply %}

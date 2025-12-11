@@ -98,7 +98,7 @@ Parameters:
     {%- endif %}
   {%- endfor %}
     {%- if _items|length > _max_visible_thumbnails -%}
-      <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
+      <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">{# -#}
         <a
           class="bcl-gallery__collapse standalone d-none d-sm-inline-block"
           aria-controls="{{ _collapse_id }}"
@@ -106,8 +106,8 @@ Parameters:
           aria-expanded="false"
           role="button"
           href="#{{ _collapse_id }}"
-        >
-          <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
+        >{# -#}
+          <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>{# -#}
           <span class="label-expanded">{{ _toggle_expanded }}</span>
           {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
             name: 'caret-down-fill',
@@ -115,15 +115,15 @@ Parameters:
             path: _icon_path,
             attributes: create_attribute().addClass('ms-2-5'),
           } only -%}
-        </a>
+        </a>{# -#}
         <a
           class="bcl-gallery__mobile-view-more standalone d-inline-block d-sm-none"
           data-bs-target="#{{ _carousel_id }}"
           data-bs-slide-to="{{ _max_visible_thumbnails - 1 }}"
           role="button"
           href="#"
-        >
-          <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
+        >{# -#}
+          <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">{# -#}
             <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
             {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
               name: 'caret-down-fill',
@@ -131,14 +131,14 @@ Parameters:
               path: _icon_path,
               attributes: create_attribute().addClass('ms-2-5'),
             } only -%}
-          <span>
-        </a>
+          <span>{# -#}
+        </a>{# -#}
       </div>
     {%- endif -%}
-  </div>
-  <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
-    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-      <div class="modal-content">
+  </div>{# -#}
+  <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">{# -#}
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">{# -#}
+      <div class="modal-content">{# -#}
         <div class="modal-header border-0 justify-content-between">
         {%- if _title is not empty -%}
           <div class="modal-title">
@@ -151,9 +151,9 @@ Parameters:
             {%- endif -%}
           </div>
         {%- endif -%}
-          <div class="carousel-pager">
+          <div class="carousel-pager">{# -#}
             <span>1</span> / {{ _items|length -}}
-          </div>
+          </div>{# -#}
           <div class="modal-close">
             {%- set button_attributes = create_attribute()
                                       .addClass('btn-close')
@@ -164,8 +164,8 @@ Parameters:
               clean_class: true,
               attributes: button_attributes
             } only -%}
-          </div>
-        </div>
+          </div>{# -#}
+        </div>{# -#}
         <div class="modal-body d-flex align-items-center justify-content-center">
         {%- block carousel %}
           {%- for _item in _items %}
@@ -185,10 +185,10 @@ Parameters:
             items: _carousel_items,
           } only %}
         {%- endblock -%}
-        </div>
-      </div>
-    </div>
-  </div>
+        </div>{# -#}
+      </div>{# -#}
+    </div>{# -#}
+  </div>{# -#}
 </div>
 {%- endif %}
 
