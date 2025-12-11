@@ -25,7 +25,7 @@
 
   {% if first_paragraphs is defined and first_paragraphs is not empty %}
     {% for _paragraph in first_paragraphs %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _paragraph.title,
         title_tag: 'h2',
         attributes: create_attribute().addClass(['mb-4', 'pt-3'])
