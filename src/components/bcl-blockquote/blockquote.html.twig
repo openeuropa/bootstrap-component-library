@@ -63,7 +63,7 @@
 {% if _attribution is not empty %}
   <figcaption class="blockquote-footer m-0">
     {{- _attribution -}}
-  {% if _cite is not empty %}
+  {% if _cite is not empty -%}
     <cite title="{{ _cite }}">{{- _cite -}}</cite>
   {% endif %}
   </figcaption>
