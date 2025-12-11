@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
   Parameters:
   - label (string) (default: '')
@@ -23,7 +21,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _label = label|default('') %}
+{%- set _label = label|default('') %}
 {% set _variant = variant|default('primary') %}
 {% set _size = size|default('md') %}
 {% set _type = type|default('button') %}
@@ -40,58 +38,58 @@
 {% set _clean_class = clean_class ?? false %}
 {% set _remove_icon_spacers = remove_icon_spacers ?? false %}
 
-{% set _classes = [] %}
+{%- set _classes = [] %}
 {% if _clean_class == false %}
-  {% set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
-  {% set _classes = _classes|merge(['btn-' ~ _size|e('html_attr')]) %}
+  {%- set _classes = _classes|merge(['btn', 'btn-' ~ (_outline ? 'outline-' : '') ~ _variant|e('html_attr')]) %}
+  {%- set _classes = _classes|merge(['btn-' ~ _size|e('html_attr')]) %}
 {% endif %}
 {% if _text_nowrap %}
-  {% set _classes = _classes|merge(['text-nowrap']) %}
+  {%- set _classes = _classes|merge(['text-nowrap']) %}
 {% endif %}
 {% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 {% if _disabled %}
-  {% set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', 'true') %}
+  {%- set attributes = attributes.setAttribute('disabled', true).setAttribute('aria-disabled', 'true') %}
 {% endif %}
 {% if _id is not empty %}
-  {% set attributes = attributes.setAttribute('id', _id) %}
+  {%- set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 {% if _classes is not empty %}
-  {% set attributes = attributes.addClass(_classes) %}
+  {%- set attributes = attributes.addClass(_classes) %}
 {% endif %}
 {% if _icon_spacing is not empty %}
-  {% set _icon_spacing = _icon_spacing ~ '-' %}
+  {%- set _icon_spacing = _icon_spacing ~ '-' %}
 {% endif %}
 {% set attributes = attributes.setAttribute('type', _type) %}
 {% if _icon is not empty %}
-    {% set _icon = _icon|merge({
+    {%- set _icon = _icon|merge({
         size: "fluid",
       })
     %}
-  {% if _label is not empty and not _remove_icon_spacers %}
-    {% if _icon.attributes is empty %}
-      {% set _icon = _icon|merge({
+  {%- if _label is not empty and not _remove_icon_spacers %}
+    {%- if _icon.attributes is empty %}
+      {%- set _icon = _icon|merge({
           attributes: create_attribute()
         })
       %}
-    {% endif %}
-    {% if _icon_position == 'before' %}
-      {% set _icon = _icon|merge({
+    {%- endif %}
+    {%- if _icon_position == 'before' %}
+      {%- set _icon = _icon|merge({
           attributes: _icon.attributes.addClass('me-' ~ _icon_spacing ~ '2-5')
         })
       %}
-    {% else %}
-      {% set _icon = _icon|merge({
+    {%- else %}
+      {%- set _icon = _icon|merge({
           attributes: _icon.attributes.addClass('ms-' ~ _icon_spacing ~ '2-5')
         })
       %}
-    {% endif %}
-  {% endif %}
+    {%- endif %}
+  {%- endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
   {%- endset -%}
-{% endif %}
+{% endif -%}
 
 <button
   {{ attributes }}
@@ -101,7 +99,7 @@
 {%- endif -%}
 {%- if _assistive_text is not empty -%}
   <span class="visually-hidden">{{- _assistive_text -}}</span>
-{% endif %}
+{%- endif %}
 {%- if _icon_position == 'before' and _icon_markup is defined -%}
   {{ _icon_markup|raw }}
 {%- endif -%}
@@ -110,5 +108,4 @@
   {{ _icon_markup|raw }}
 {%- endif -%}
 </button>
-
-{% endapply %}
+{#--#}

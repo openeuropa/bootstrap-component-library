@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - size (string) default('')
     options: sm, lg, xl, fullscreen
@@ -26,7 +24,7 @@
     - footer
 #}
 
-{% set _size =  size|default('') %}
+{%- set _size =  size|default('') %}
 {% set _id = id|default('modal-' ~ random(10000)) %}
 {% set _fullscreen_responsive =  fullscreen_responsive|default('') %}
 {% set _static_backdrop = static_backdrop ?? false %}
@@ -40,13 +38,13 @@
 {% set _footer = footer|default('') %}
 {% set _footer_attributes = footer_attributes ?: create_attribute() %}
 
-{% set _classes = ['modal', 'fade'] %}
+{%- set _classes = ['modal', 'fade'] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes
+{%- set attributes = attributes
                     .setAttribute('id', _id)
                     .setAttribute('tabindex', '-1')
                     .setAttribute('aria-hidden', 'true')
@@ -54,42 +52,41 @@
                     .addClass(_classes)
 %}
 
-{% if _static_backdrop %}
-  {% set attributes = attributes.setAttribute('data-bs-backdrop', 'static') %}
-{% endif %}
+{%- if _static_backdrop %}
+  {%- set attributes = attributes.setAttribute('data-bs-backdrop', 'static') %}
+{% endif -%}
 
 <div
   {{ attributes }}
->
+>{# -#}
   <div class="modal-dialog
   {{- _size ? ' modal-' ~ size -}}
   {{- _fullscreen_responsive ? ' modal-fullscreen-' ~ _fullscreen_responsive ~ '-down' -}}
   {{- _vertically_centered ? ' modal-dialog-centered' -}}
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
-  >
+  >{# -#}
     <div class="modal-content">
-      {% if header is not empty %}
+      {%- if header is not empty -%}
       <div
         {{- _header_attributes.addClass(['modal-header']) -}}
       >
-        {%- block header _header -%}
+        {%- block header _header|spaceless -%}
       </div>
-      {% endif %}
+      {%- endif %}
       {%- block messages _messages -%}
       <div
           {{- _body_attributes.addClass(['modal-body']) -}}
       >
-        {%- block body _body -%}
+        {%- block body _body|spaceless -%}
       </div>
-      {% if footer is not empty %}
+      {%- if footer is not empty -%}
       <div
           {{- _footer_attributes.addClass(['modal-footer']) -}}
       >
-        {%- block footer _footer -%}
+        {%- block footer _footer|spaceless -%}
       </div>
-      {% endif %}
-    </div>
-  </div>
+      {%- endif -%}
+    </div>{# -#}
+  </div>{# -#}
 </div>
-
-{% endapply %}
+{#--#}

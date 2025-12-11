@@ -1,54 +1,54 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
-{%- block sidebar %}
+{%- block sidebar -%}
   <div class="mb-4">
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Procurement details',
       title_tag: 'h2',
       attributes: create_attribute().addClass(['mb-4']),
-    } only %}
+    } only -%}
     <div class="mt-3-5">
-      {% for list in sidebar.lists %}
+      {%- for list in sidebar.lists -%}
         <div class="mb-3-5">
-          {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only %}
+          {%- include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only -%}
         </div>
-      {% endfor %}
-    </div>
+      {%- endfor -%}
+    </div>{# -#}
   </div>
 {%- endblock -%}
 
 {%- block content %}
-  {% if description is defined and description is not empty %}
+  {%- if description is defined and description is not empty -%}
     <h2
       class="mb-4"
       id="{{ description.title_id }}"
     >
       {{- description.title -}}
     </h2>
-    {% for paragraph in description.paragraphs %}
-      <p class="mb-3">{{- paragraph -}}</p>
-    {% endfor %}
-  {% endif %}
+    {%- for paragraph in description.paragraphs -%}
+      <p class="mb-3">{{- paragraph|spaceless -}}</p>
+    {%- endfor %}
+  {%- endif %}
 
-  {% if files is not empty %}
-    {% for file in files %}
+  {%- if files is not empty %}
+    {%- for file in files -%}
       <div class="pt-4">
-        {% include '@oe-bcl/bcl-file/file.html.twig' with file only %}
+        {%- include '@oe-bcl/bcl-file/file.html.twig' with file only -%}
       </div>
-    {% endfor %}
-  {% endif %}
+    {%- endfor %}
+  {%- endif %}
 
-  {% if social_block is not empty %}
-    {%- block social_block %}
+  {%- if social_block is not empty %}
+    {%- block social_block -%}
       <h2
         class="mb-4 pt-4"
         id="{{ social.title_id }}"
       >
         {{- social.title -}}
       </h2>
-      {{ social_buttons }}
-      {% include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
-      {% include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
+      {{- social_buttons }}
+      {%- include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
+      {%- include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
     {%- endblock -%}
   {% endif %}
 {%- endblock -%}

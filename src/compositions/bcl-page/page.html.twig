@@ -1,45 +1,45 @@
 {% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' -%}
 
 {%- block sidebar %}
-  {% include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
+  {%- include '@oe-bcl/bcl-inpage-navigation/inpage-navigation.html.twig' with sidebar only %}
 {%- endblock -%}
 
-{%- block content %}
-  <p id="content">{{ get_dummy_text(6) }}
-  </p>
+{%- block content -%}
+  <p id="content">{{ get_dummy_text(6)|spaceless -}}
+  </p>{# -#}
   <h2 id="item-1" class="my-4">Section 1</h2>
-  {% if featured_item %}
-    {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
-  {% endif %}
+  {%- if featured_item %}
+    {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
+  {%- endif %}
 
-  {% if page_banner %}
-    {% include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
-  {% endif %}
+  {%- if page_banner %}
+    {%- include '@oe-bcl/bcl-banner/banner.html.twig' with page_banner only %}
+  {%- endif %}
 
-  {% if listing %}
-    {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
-  {% endif %}
+  {%- if listing %}
+    {%- include '@oe-bcl/bcl-listing/listing.html.twig' with listing only %}
+  {%- endif -%}
 
   <h2 id="item-2" class="my-4">Section 2</h2>
 
-  {{ get_dummy_text(6, true) }}
+  {{- get_dummy_text(6, true)|spaceless }}
 
-  {% if blockquote %}
-    {% include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
-  {% endif %}
-  {% if accordion %}
-    {% include '@oe-bcl/bcl-accordion/accordion.html.twig' with accordion only %}
-  {% endif %}
-  {% if timeline %}
-    {% include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
-  {% endif %}
+  {%- if blockquote %}
+    {%- include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
+  {%- endif %}
+  {%- if accordion %}
+    {%- include '@oe-bcl/bcl-accordion/accordion.html.twig' with accordion only %}
+  {%- endif %}
+  {%- if timeline %}
+    {%- include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
+  {%- endif %}
 
-  {{ get_dummy_text(8, true) }}
+  {{- get_dummy_text(8, true)|spaceless -}}
 
   <h2 id="item-3" class="my-4">Section 3</h2>
 
-  {{ get_dummy_text(4, true) }}
+  {{- get_dummy_text(4, true) }}
 
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
-  {% include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
+  {%- include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
+  {%- include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}
 {%- endblock -%}

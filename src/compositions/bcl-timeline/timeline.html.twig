@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
 Parameters:
   - id: (integer) (default: random(10000))
@@ -25,7 +23,7 @@ Parameters:
   - icon_path (string) (default: ''): file containing the svg icons
 #}
 
-{% set _id = id|default(random(10000)) %}
+{%- set _id = id|default(random(10000)) %}
 {% set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
@@ -37,33 +35,33 @@ Parameters:
 {% set _hide_to = hide.to|default(items|length) %}
 {% set _icon_path = icon_path|default('') %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass('bcl-timeline') %}
+{%- set attributes = attributes.addClass('bcl-timeline') %}
 
-{# Internal logic - Process properties #}
+{#- Internal logic - Process properties #}
 
-{% set _display_amount = items|length %}
+{%- set _display_amount = items|length %}
 {% set _hide_amount = 0 %}
 {% set _bottom_amount = 0 %}
 
-{% if _hide_from > 0 %}
-  {% if _hide_to > 0 %}
-    {% set _bottom_amount = _display_amount - _hide_to %}
-  {% else %}
-    {% set _bottom_amount = _hide_to|abs %}
-  {% endif %}
-  {% set _countbase = items|length - _bottom_amount %}
-  {% set _display_amount = _hide_from %}
-  {% set _hide_amount = _countbase - _display_amount %}
-  {% set _toggle_collapsed = _toggle_collapsed|replace({'%d': _hide_amount}) %}
-  {% set _toggle_expanded = _toggle_expanded|replace({'%d': _hide_amount}) %}
+{%- if _hide_from > 0 %}
+  {%- if _hide_to > 0 %}
+    {%- set _bottom_amount = _display_amount - _hide_to %}
+  {%- else %}
+    {%- set _bottom_amount = _hide_to|abs %}
+  {%- endif %}
+  {%- set _countbase = items|length - _bottom_amount %}
+  {%- set _display_amount = _hide_from %}
+  {%- set _hide_amount = _countbase - _display_amount %}
+  {%- set _toggle_collapsed = _toggle_collapsed|replace({'%d': _hide_amount}) %}
+  {%- set _toggle_expanded = _toggle_expanded|replace({'%d': _hide_amount}) %}
 {% endif %}
 
-{% if _title is not empty %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+{%- if _title is not empty %}
+  {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
@@ -71,45 +69,44 @@ Parameters:
   } only %}
 {% endif %}
 
-{# Print the result #}
+{#- Print the result -#}
 <ol {{ attributes }}>
-  {% if _items is not empty %}
-    {% for _item in _items %}
-      {# Decide on per item if it should display. #}
-      {% if _item.attributes is empty %}
-        {% set _item = _item|merge({
+  {%- if _items is not empty %}
+    {%- for _item in _items %}
+      {#- Decide on per item if it should display. #}
+      {%- if _item.attributes is empty %}
+        {%- set _item = _item|merge({
           attributes: create_attribute()
         }) %}
-      {% endif %}
-      {% if loop.index > _display_amount and loop.revindex > _bottom_amount %}
-        {% set _item = _item|merge({
+      {%- endif %}
+      {%- if loop.index > _display_amount and loop.revindex > _bottom_amount %}
+        {%- set _item = _item|merge({
           attributes: _item.attributes.addClass('collapse',  'collapse-' ~ _id)
         }) %}
-      {% endif %}
-      {% include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item only %}
-      {# Display the show more button if required. #}
-      {% if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) %}
-        <li class="bcl-timeline__item--toggle">
+      {%- endif %}
+      {%- include '@oe-bcl/bcl-timeline/timeline-item.html.twig' with _item only %}
+      {#- Display the show more button if required. #}
+      {%- if (_hide_amount > 0 and loop.revindex == _bottom_amount + 1) or (_hide_amount > 0 and _hide_to == 0 and loop.revindex == 1) -%}
+        <li class="bcl-timeline__item--toggle">{# -#}
           <button
             aria-expanded="false"
             data-bs-toggle="collapse"
             data-bs-target=".collapse-{{ _id }}"
             class="btn btn-light btn-md"
             type="button"
-          >
-            <span class="label-collapsed">{{ _toggle_collapsed }}</span>
+          >{# -#}
+            <span class="label-collapsed">{{ _toggle_collapsed }}</span>{# -#}
             <span class="label-expanded">{{ _toggle_expanded }}</span>
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+            {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
               name: 'chevron-down',
               size: 'fluid',
               path: _icon_path,
               attributes: create_attribute().addClass('ms-2-5'),
-            } only %}
-          </button>
+            } only -%}
+          </button>{# -#}
         </li>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+      {%- endif %}
+    {%- endfor %}
+  {%- endif -%}
 </ol>
-
-{% endapply %}
+{#--#}

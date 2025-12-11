@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
   Parameters:
     - day (integer) (default: '')
@@ -12,7 +10,7 @@
     - icon_path (string) (default: '')
 #}
 
-{% set _day = day|default('') %}
+{%- set _day = day|default('') %}
 {% set _month = month|default('') %}
 {% set _date_time = date_time|default('') %}
 {% set _year = year|default('') %}
@@ -21,7 +19,7 @@
 {% set _end_year = end_year|default('') %}
 {% set _icon_path = icon_path|default('') %}
 
-{% set _classes = [
+{%- set _classes = [
   'bcl-date-block',
   'bg-date',
   'rounded',
@@ -33,48 +31,47 @@
   'ratio-1x1'
 ] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _date_time is not empty %}
-  {% set attributes = attributes.setAttribute('datetime', _date_time) %}
-{% endif %}
+{%- if _date_time is not empty %}
+  {%- set attributes = attributes.setAttribute('datetime', _date_time) %}
+{% endif -%}
 
-<time {{ attributes }}>
-  <div class="d-flex flex-column pt-2">
-    <div class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-2">
-      <div class="d-flex flex-column align-item-center justify-content-center">
-        <div class="date-month lh-1">{{- _month -}}</div>
-        <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>
+<time {{ attributes }}>{# -#}
+  <div class="d-flex flex-column pt-2">{# -#}
+    <div class="d-flex align-item-center bg-white border border-bottom-0 w-100 h-100 text-uppercase justify-content-center gap-2">{# -#}
+      <div class="d-flex flex-column align-item-center justify-content-center">{# -#}
+        <div class="date-month lh-1">{{- _month -}}</div>{# -#}
+        <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>{# -#}
       </div>
-      {% if _end_day or _end_month %}
+      {%- if _end_day or _end_month -%}
         <div class="d-flex flex-column align-item-center justify-content-center">
           {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
             name: "chevron-right",
             size: "xs",
             path: _icon_path,
           } only -%}
-        </div>
+        </div>{# -#}
         <div class="d-flex flex-column align-item-center justify-content-center">
-          {%- if _end_month is not empty %}
+          {%- if _end_month is not empty -%}
             <div class="date-month lh-1">{{- _end_month -}}</div>
-          {% endif -%}
-          {%- if _end_day is not empty %}
+          {%- endif -%}
+          {%- if _end_day is not empty -%}
             <div class="date-day fw-bold fs-4 lh-1">{{- _end_day -}}</div>
-          {% endif -%}
+          {%- endif -%}
         </div>
-      {% endif %}
-    </div>
-    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">
+      {%- endif -%}
+    </div>{# -#}
+    <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">{# -#}
       <div class="date-year year-start">{{- _year -}}</div>
       {%- if _end_year is not empty -%}
         <div class="date-year year-end">{{ _end_year }}</div>
       {%- endif -%}
-    </div>
-  </div>
+    </div>{# -#}
+  </div>{# -#}
 </time>
-
-{% endapply %}
+{#--#}

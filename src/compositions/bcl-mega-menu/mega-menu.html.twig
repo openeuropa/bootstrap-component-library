@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - id (string) (default: dropdown-random(1000))
   - link (boolean) (default: false) - sets trigger to link, default is button
@@ -19,7 +17,7 @@
   - icon_path (string) (default: '')
 #}
 
-{% set _id = id|default('dropdown-' ~ random(1000)) %}
+{%- set _id = id|default('dropdown-' ~ random(1000)) %}
 {% set _link = link ?? false %}
 {% set _trigger = trigger|default({}) %}
 {% set _content_block = content_block|default('') %}
@@ -30,16 +28,16 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _menu_id = 'mega-menu-' ~ _id %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set _classes = ['bcl-mega-menu'] %}
+{%- set _classes = ['bcl-mega-menu'] %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _trigger.attributes is empty %}
-  {% set _trigger = _trigger|merge({
+{%- if _trigger.attributes is empty %}
+  {%- set _trigger = _trigger|merge({
     attributes: create_attribute()
   }) %}
 {% endif %}
@@ -51,19 +49,19 @@
                       .setAttribute('data-bs-toggle', 'dropdown')
                       .setAttribute('data-bs-auto-close', 'outside')
                       .setAttribute('id', _id)
-}) %}
+}) -%}
 
 <div {{ attributes }}>
-  {% include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
+  {%- include '@oe-bcl/bcl-button/button.html.twig' with _trigger|merge({
     variant: 'link',
     clean_class: true,
   }) only %}
-  {# Mega menu panel. #}
-  <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">
+  {#- Mega menu panel. -#}
+  <nav id="{{ _menu_id }}" class="bcl-mega-menu__container dropdown-menu" aria-labelledby="{{ _id }}" aria-label="Main mega menu">{# -#}
     <div class="container">
-      {# Mobile back button. #}
+      {#- Mobile back button. -#}
       <div class="container d-lg-none bcl-mega-menu__back-button-block">
-        {% include '@oe-bcl/bcl-button/button.html.twig' with {
+        {%- include '@oe-bcl/bcl-button/button.html.twig' with {
           label: _back_button_label,
           icon_position: "before",
           variant: 'link',
@@ -72,20 +70,20 @@
             name: "arrow-left",
           },
           attributes: create_attribute().addClass(['back-button']).setAttribute('aria-label', 'Back to main menu')
-        } only %}
+        } only -%}
       </div>
-      {# Info/summary and submenu columns. #}
-      <div class="position-relative">
+      {#- Info/summary and submenu columns. -#}
+      <div class="position-relative">{# -#}
         <div class="row">
-          {# Content / summary column. #}
-          {% if content_block is defined %}
-            <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">
+          {#- Content / summary column. #}
+          {%- if content_block is defined -%}
+            <div class="col-md-12 col-xl-3 position-relative bcl-mega-menu__info">{# -#}
               <div class="content-block">
                 {%- block content_block -%}
                   {{ _content_block }}
                 {%- endblock -%}
                 {% if _content_link.path is not empty %}
-                  {% set _content_link = _content_link|merge({
+                  {%- set _content_link = _content_link|merge({
                     icon: _content_link.icon|default({})|merge({
                       path: _icon_path
                     }),
@@ -93,23 +91,22 @@
                       ? _content_link.attributes
                       : create_attribute()
                     ).addClass('content-link')
-                  }) %}
+                  }) -%}
                   <p class="m-0">{% include '@oe-bcl/bcl-link/link.html.twig' with _content_link only %}</p>
-                {% endif %}
-              </div>
-              <div class="shadow-container">
-                <span class="shadow-bg"></span>
-              </div>
+                {%- endif -%}
+              </div>{# -#}
+              <div class="shadow-container">{# -#}
+                <span class="shadow-bg"></span>{# -#}
+              </div>{# -#}
             </div>
-          {% endif %}
-          {# Submenu column. #}
+          {%- endif %}
+          {#- Submenu column. -#}
           <div class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu">
-            {% include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+            {%- include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' -%}
+          </div>{# -#}
+        </div>{# -#}
+      </div>{# -#}
+    </div>{# -#}
+  </nav>{# -#}
 </div>
-
-{% endapply %}
+{#--#}

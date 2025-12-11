@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - path (string) (default: '')
   - label (string) (default: '')
@@ -10,7 +8,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _path = path|default('') %}
+{%- set _path = path|default('') %}
 {% set _label = label|default('') %}
 {% set _disabled = disabled ?? false %}
 {% set _active = active ?? false %}
@@ -21,44 +19,44 @@
 {% set _icon_html = icon_html|default('') %}
 {% set _classes = ['page-link'] %}
 
-{% if _icon_path is not empty and _icon is empty %}
-  {% if _icon_name is not empty %}
-    {% set _icon = _icon|merge({
+{%- if _icon_path is not empty and _icon is empty %}
+  {%- if _icon_name is not empty %}
+    {%- set _icon = _icon|merge({
       name: _icon_name,
       path: _icon_path,
       size: "fluid"
     }) %}
-    {% set _label = "" %}
-  {% endif %}
+    {%- set _label = "" %}
+  {%- endif %}
 {% else %}
-  {% if _icon_html is not empty %}
-    {% set _label %}
+  {%- if _icon_html is not empty %}
+    {%- set _label -%}
       <span aria-hidden="true">{{- _icon_html -}}</span>
-    {% endset %}
-  {% endif %}
+    {%- endset %}
+  {%- endif %}
 {% endif %}
 
-{% if _icon is not empty %}
-  {% set _icon = _icon|merge({
+{%- if _icon is not empty %}
+  {%- set _icon = _icon|merge({
     path: _icon_path,
   }) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', _aria_label ) %}
+{%- if _aria_label is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-label', _aria_label ) %}
 {% endif %}
 
-{% if _active %}
-  {% set attributes = attributes.setAttribute('aria-current', 'page' ) %}
+{%- if _active %}
+  {%- set attributes = attributes.setAttribute('aria-current', 'page' ) %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _path %}
+{%- if _path %}
   {%- include '@oe-bcl/bcl-link/link.html.twig' with {
     label: _label,
     path: _path,
@@ -66,8 +64,6 @@
     icon: _icon,
     attributes: attributes,
   } only -%}
-{% else %}
+{% else -%}
   <div {{ attributes }}>{{- _label -}}</div>
-{% endif %}
-
-{% endapply %}
+{%- endif -%}

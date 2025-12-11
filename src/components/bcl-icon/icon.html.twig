@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - name (string) (default: '')
   - path (string) (default: '')
@@ -10,27 +8,26 @@
   - attributes (drupal attrs)
 #}
 
-{% set _name = name|default('') %}
+{%- set _name = name|default('') %}
 {% set _path = path|default('') %}
 {% set _size = size|default('s') %}
 {% set _transformation = transformation|default('') %}
 
-{% set _classes = ['bi', 'icon--' ~ _size] %}
+{%- set _classes = ['bi', 'icon--' ~ _size] %}
 
-{% if _transformation is not empty %}
-  {% set _classes = _classes|merge(['icon--' ~ _transformation]) %}
+{%- if _transformation is not empty %}
+  {%- set _classes = _classes|merge(['icon--' ~ _transformation]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <svg
   {{ attributes }}
->
-  <use xlink:href="{{ _path ~ "#" ~ _name }}"/>
+>{# -#}
+  <use xlink:href="{{ _path ~ "#" ~ _name }}"/>{# -#}
 </svg>
-
-{% endapply %}
+{#--#}

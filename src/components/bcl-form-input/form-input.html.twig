@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
   Parameters:
   - id (string) (default: '')
@@ -28,7 +26,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _id = id|default('') %}
+{%- set _id = id|default('') %}
 {% set _input_type = input_type|default('text') %}
 {% set _label = label|default('') %}
 {% set _required = required ?? false %}
@@ -52,70 +50,70 @@
 {% set _toggle_variant = toggle_variant|default('primary') %}
 {% set _remove_wrapper = remove_wrapper ?? false %}
 
-{% set _label_block = false %}
+{%- set _label_block = false %}
 {% set _label_class = 'form-label' %}
 {% set _classes = ['form-control'] %}
 
-{% if input_type == 'range' %}
-  {% set _classes = ['form-range'] %}
+{%- if input_type == 'range' %}
+  {%- set _classes = ['form-range'] %}
 {% endif %}
 {% if _input_type == 'checkbox' or _input_type == 'radio' %}
-  {% set _classes = ['form-check-input'] %}
-  {% set _label_class = 'form-check-label' %}
+  {%- set _classes = ['form-check-input'] %}
+  {%- set _label_class = 'form-check-label' %}
 {% endif %}
 {% if _invalid is not empty %}
-  {% set _classes = _classes|merge(['is-invalid']) %}
+  {%- set _classes = _classes|merge(['is-invalid']) %}
 {% endif %}
 {% if _valid is not empty %}
-  {% set _classes = _classes|merge(['is-valid']) %}
+  {%- set _classes = _classes|merge(['is-valid']) %}
 {% endif %}
 {% if _horizontal %}
-  {% set _label_class = 'col-form-label ' ~ _horizontal_label_class %}
+  {%- set _label_class = 'col-form-label ' ~ _horizontal_label_class %}
 {% endif %}
 {% if _hidden_label %}
-  {% set _label_class = _label_class ~ ' visually-hidden' %}
+  {%- set _label_class = _label_class ~ ' visually-hidden' %}
 {% endif %}
 {% if _toggle %}
-  {% set _label_class = _label_class ~ ' btn btn-' ~ _toggle_variant %}
-  {% set _classes = _classes|merge(['btn-check']) %}
+  {%- set _label_class = _label_class ~ ' btn btn-' ~ _toggle_variant %}
+  {%- set _classes = _classes|merge(['btn-check']) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes).setAttribute('type', _input_type) %}
+{%- set attributes = attributes.addClass(_classes).setAttribute('type', _input_type) %}
 
-{% if _id %}
-  {% set attributes = attributes.setAttribute('id', _id) %}
+{%- if _id %}
+  {%- set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
-{% if _required %}
-  {% set attributes = attributes.setAttribute('required', true) %}
+{%- if _required %}
+  {%- set attributes = attributes.setAttribute('required', true) %}
 {% endif %}
 
-{% if _disabled %}
-  {% set attributes = attributes.setAttribute('disabled', true) %}
+{%- if _disabled %}
+  {%- set attributes = attributes.setAttribute('disabled', true) %}
 {% endif %}
 
-{% if _readonly %}
-  {% set attributes = attributes.setAttribute('readonly', true) %}
+{%- if _readonly %}
+  {%- set attributes = attributes.setAttribute('readonly', true) %}
 {% endif %}
 
-{% if _checked %}
-  {% set attributes = attributes.setAttribute('checked', true) %}
+{%- if _checked %}
+  {%- set attributes = attributes.setAttribute('checked', true) %}
 {% endif %}
 
-{% if _placeholder is not empty %}
-  {% set attributes = attributes.setAttribute('placeholder', _placeholder) %}
+{%- if _placeholder is not empty %}
+  {%- set attributes = attributes.setAttribute('placeholder', _placeholder) %}
 {% endif %}
 
-{% if _helper_text_id is not empty %}
-  {% set attributes = attributes.setAttribute('aria-describedby', _helper_text_id) %}
+{%- if _helper_text_id is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-describedby', _helper_text_id) %}
 {% endif %}
 
-{% if _label is not empty %}
-  {% set _label_block %}
+{%- if _label is not empty %}
+  {%- set _label_block -%}
     <label
     {% if _id %}
       for="{{ _id }}"
@@ -124,50 +122,50 @@
     >
       {{- label -}}
     </label>
-  {% endset %}
+  {%- endset %}
 {% endif %}
 
-{% if (_floating or _horizontal or _input_type == 'checkbox' or _input_type == 'radio') and
+{%- if (_floating or _horizontal or _input_type == 'checkbox' or _input_type == 'radio') and
   not _toggle and
   not _remove_wrapper
 %}
-  {% set _wrapper_class = _floating ? 'form-floating' : '' %}
+  {%- set _wrapper_class = _floating ? 'form-floating' : '' %}
 {% if (_input_type == 'checkbox' or _input_type == 'radio') %}
-  {% set _wrapper_class = 'form-check' %}
-  {% if _switch %}
-    {% set _wrapper_class = _wrapper_class ~ ' form-switch' %}
-  {% endif %}
+  {%- set _wrapper_class = 'form-check' %}
+  {%- if _switch %}
+    {%- set _wrapper_class = _wrapper_class ~ ' form-switch' %}
+  {%- endif %}
 {% endif %}
-{% if _wrapper_class is not empty %}
+{% if _wrapper_class is not empty -%}
 <div class="{{ _wrapper_class }}">
-{% endif %}
+{%- endif %}
 {% endif %}
 {% if _label_block and _floating == false and _input_type != 'checkbox' and _input_type != 'radio' %}
-  {{ _label_block|raw }}
-{% endif %}
-{% if _horizontal and floating == false %}
+  {{- _label_block|raw }}
+{%- endif %}
+{% if _horizontal and floating == false -%}
   <div class="{{ _horizontal_class }}">
-{% endif %}
+{%- endif -%}
     <input
       {{ attributes }}
     >
-{% if _horizontal and floating == false %}
+{%- if _horizontal and floating == false -%}
   </div>
-{% endif %}
+{%- endif %}
 {% if _label_block and (_floating or _input_type == 'checkbox' or _input_type == 'radio') %}
-  {{ _label_block|raw }}
-{% endif %}
-{% if _invalid_feedback is not empty %}
+  {{- _label_block|raw }}
+{%- endif %}
+{% if _invalid_feedback is not empty -%}
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}
   </div>
-{% endif %}
-{% if _valid_feedback is not empty %}
+{%- endif %}
+{% if _valid_feedback is not empty -%}
   <div class="valid-feedback">
     {{- _valid_feedback -}}
   </div>
-{% endif %}
-{% if _helper_text is not empty %}
+{%- endif %}
+{% if _helper_text is not empty -%}
   <div
     class="form-text"
   {%- if _helper_text_id is not empty -%}
@@ -175,9 +173,7 @@
   {%- endif -%}>
     {{- _helper_text -}}
   </div>
-{% endif %}
-{% if _wrapper_class is not empty %}
+{%- endif %}
+{% if _wrapper_class is not empty -%}
 </div>
-{% endif %}
-
-{% endapply %}
+{%- endif -%}
