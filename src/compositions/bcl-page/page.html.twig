@@ -5,7 +5,7 @@
 {%- endblock -%}
 
 {%- block content -%}
-  <p id="content">{{ get_dummy_text(6)|spaceless -}}
+  <p id="content">{{ get_dummy_text(6) -}}
   </p>{# -#}
   <h2 id="item-1" class="my-4">Section 1</h2>
   {%- if featured_item %}
@@ -22,7 +22,7 @@
 
   <h2 id="item-2" class="my-4">Section 2</h2>
 
-  {{- get_dummy_text(6, true)|spaceless }}
+  {{- get_dummy_text(6, true) }}
 
   {%- if blockquote %}
     {%- include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
@@ -34,7 +34,7 @@
     {%- include '@oe-bcl/bcl-timeline/timeline.html.twig' with timeline only %}
   {%- endif %}
 
-  {{- get_dummy_text(8, true)|spaceless -}}
+  {{- get_dummy_text(8, true) -}}
 
   <h2 id="item-3" class="my-4">Section 3</h2>
 
