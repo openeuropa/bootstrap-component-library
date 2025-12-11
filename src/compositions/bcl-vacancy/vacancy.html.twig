@@ -2,17 +2,17 @@
 
 {%- block sidebar -%}
   <div class="mb-4">
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: 'Vacancy details',
       title_tag: 'h2',
       attributes: create_attribute().addClass(['mb-4']),
     } only -%}
     <div class="mt-3-5">
-      {% for list in sidebar.lists -%}
+      {%- for list in sidebar.lists -%}
         <div class="mb-3-5">
-          {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only -%}
+          {%- include '@oe-bcl/bcl-description-list/description-list.html.twig' with list only -%}
         </div>
-      {% endfor -%}
+      {%- endfor -%}
     </div>
   </div>
 {%- endblock -%}
@@ -25,17 +25,17 @@
     >
       {{- description.title -}}
     </h2>
-    {% for paragraph in description.paragraphs -%}
+    {%- for paragraph in description.paragraphs -%}
       <p class="mb-3">{{- paragraph -}}</p>
-    {% endfor %}
+    {%- endfor %}
   {%- endif %}
 
   {%- if files is not empty %}
     {%- for file in files -%}
       <div class="pt-4">
-        {% include '@oe-bcl/bcl-file/file.html.twig' with file only -%}
+        {%- include '@oe-bcl/bcl-file/file.html.twig' with file only -%}
       </div>
-    {% endfor %}
+    {%- endfor %}
   {%- endif %}
 
   {%- if social_block is not empty %}
@@ -46,7 +46,7 @@
       >
         {{- social.title -}}
       </h2>
-      {{ social_buttons }}
+      {{- social_buttons }}
       {%- include '@oe-bcl/bcl-button/button.html.twig' with button_social_modal only %}
       {%- include '@oe-bcl/bcl-modal/modal.html.twig' with social_modal only %}
     {%- endblock -%}

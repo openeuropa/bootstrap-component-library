@@ -35,11 +35,11 @@
 
 {%- if _animation is not empty -%}
   <p class="placeholder-{{ _animation }}">
-{% endif -%}
+{%- endif -%}
 <span {{- attributes -}} >
 </span>
-{% if _animation is not empty -%}
+{%- if _animation is not empty -%}
   </p>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

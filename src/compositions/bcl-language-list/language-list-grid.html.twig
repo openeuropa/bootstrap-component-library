@@ -23,14 +23,14 @@
 {% set _columns = _columns|merge([_items|slice((items|length / 2)|round(0, 'ceil'), items|length)]) -%}
 
 <div class="pb-2">
-  {% if _category is not empty -%}
+  {%- if _category is not empty -%}
   <h5 class="mb-4">{{ _category }}</h5>
-  {% endif %}
+  {%- endif %}
   {%- if _columns is not empty and _columns is iterable -%}
   <div class="row">
-    {% for _column in _columns -%}
+    {%- for _column in _columns -%}
       <div class="col-12 col-md">
-      {% for _item in _column %}
+      {%- for _item in _column %}
         {%- if _item.attributes is empty %}
           {%- set _item = _item|merge({
             attributes: create_attribute()
@@ -60,9 +60,9 @@
         {%- include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
       {%- endfor -%}
       </div>
-    {% endfor -%}
+    {%- endfor -%}
   </div>
-  {% endif -%}
+  {%- endif -%}
 </div>
 
 {% endapply %}

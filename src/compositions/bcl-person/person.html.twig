@@ -9,18 +9,18 @@
     <h2
       class="mb-4"
     >{{- information.main_title -}}</h2>
-  {% endif %}
+  {%- endif %}
   {%- if information.content is not empty -%}
     <div class="mb-4-5">
       {{- information.content -}}
     </div>
-  {% endif %}
+  {%- endif %}
 
   {%- if files.main_title is not empty -%}
     <h2
       class="mb-3-5"
     >{{- files.main_title -}}</h2>
-  {% endif %}
+  {%- endif %}
   {%- if files.listing is defined and files.listing is not empty %}
     {%- for file in files.listing %}
       {%- include '@oe-bcl/bcl-file/file.html.twig' with file only %}

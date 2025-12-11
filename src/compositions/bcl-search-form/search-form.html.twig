@@ -40,7 +40,7 @@
   {{ attributes }}
 >
   <div class="bcl-search-form__group">
-    {% if _icon is not empty %}
+    {%- if _icon is not empty %}
       {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only %}
     {%- endif %}
     {%- include '@oe-bcl/bcl-form-input/form-input.html.twig' with _input only %}

@@ -73,7 +73,7 @@ Parameters:
 
 {#- Print the result -#}
 <ol {{ attributes }}>
-  {% if _items is not empty %}
+  {%- if _items is not empty %}
     {%- for _item in _items %}
       {#- Decide on per item if it should display. #}
       {%- if _item.attributes is empty %}
@@ -99,7 +99,7 @@ Parameters:
           >
             <span class="label-collapsed">{{ _toggle_collapsed }}</span>
             <span class="label-expanded">{{ _toggle_expanded }}</span>
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+            {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
               name: 'chevron-down',
               size: 'fluid',
               path: _icon_path,
@@ -107,7 +107,7 @@ Parameters:
             } only -%}
           </button>
         </li>
-      {% endif %}
+      {%- endif %}
     {%- endfor %}
   {%- endif -%}
 </ol>

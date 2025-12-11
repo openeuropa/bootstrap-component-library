@@ -42,13 +42,13 @@
     aria-label="{{ _toolbar_aria_label }}"
   {% endif %}
   >
-{% endif %}
+{%- endif %}
 {% if _items is not empty %}
   {%- for _items_group in _items -%}
     <div
       {{ attributes }}
     >
-    {% if _items_group is not empty and _items_group is iterable %}
+    {%- if _items_group is not empty and _items_group is iterable %}
       {%- for _item in _items_group %}
         {%- if _item.input is defined %}
           {%- include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
@@ -58,10 +58,10 @@
       {%- endfor %}
     {%- endif -%}
     </div>
-  {% endfor %}
+  {%- endfor %}
 {% endif %}
 {% if _toolbar -%}
   </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

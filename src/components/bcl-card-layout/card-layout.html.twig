@@ -58,7 +58,7 @@
     data-masonry='{"percentPosition": true }'
   {% endif %}
 >
-{% if _items is not empty and _items is iterable %}
+{%- if _items is not empty and _items is iterable %}
   {%- for _item in _items %}
     {%- if _item.attributes is empty %}
       {%- set _item = _item|merge({
@@ -73,13 +73,13 @@
     {%- endif %}
     {%- if _type == 'grid' or _type == 'masonry' -%}
       <div class="{{ _cols_classes }}">
-    {% endif %}
+    {%- endif %}
       {%- block card_layout_card %}
         {%- include '@oe-bcl/bcl-card/card.html.twig' with _item only %}
       {%- endblock %}
     {%- if _type == 'grid' or _type == 'masonry' -%}
       </div>
-    {% endif %}
+    {%- endif %}
   {%- endfor %}
 {% endif -%}
 </div>

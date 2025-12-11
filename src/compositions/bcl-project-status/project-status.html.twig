@@ -42,9 +42,9 @@
 <div {{ attributes }}>
   <div class="row">
     <div class="col-12 col-md-3">
-    {% if _label is not empty -%}
+    {%- if _label is not empty -%}
       <p class="fw-bold">{{ _label }}</p>
-    {% endif %}
+    {%- endif %}
 
     {%- if _badge is not empty %}
       {%- include '@oe-bcl/bcl-badge/badge.html.twig' with {
@@ -60,14 +60,14 @@
     <div class="col-12 col-md-9">
       <div class="d-flex justify-content-between">
 
-      {% if _start_date is not empty and _start_label is not empty -%}
+      {%- if _start_date is not empty and _start_label is not empty -%}
         <p class="fw-bold">
           {{- _start_label -}} <br>
           <span class="fw-normal">
             {{- _start_date -}}
           </span>
         </p>
-      {% endif %}
+      {%- endif %}
 
       {%- if _end_date is not empty and _end_label is not empty -%}
         <p class="fw-bold text-end">
@@ -76,10 +76,10 @@
             {{- _end_date -}}
           </span>
         </p>
-      {% endif -%}
+      {%- endif -%}
       </div>
 
-    {% if _progress is not empty or _status != 'ongoing' %}
+    {%- if _progress is not empty or _status != 'ongoing' %}
       {%- if _progress is empty %}
         {%- set _progress = _status == 'closed' ? 100 : 0 %}
       {%- endif %}

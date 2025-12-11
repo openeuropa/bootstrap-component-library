@@ -48,12 +48,12 @@
 
 {%- if _helper_text is not empty -%}
   <p>{{ _helper_text }}</p>
-{% endif -%}
+{%- endif -%}
 
 <form
   {{ attributes }}
 >
-{% if _items is not empty and _items is iterable %}
+{%- if _items is not empty and _items is iterable %}
 {% for _item_group in _items %}
   {%- set _group_classes = '' %}
   {%- set _legend_classes = '' %}
@@ -75,7 +75,7 @@
     disabled
   {% endif %}
   >
-  {% if _item_group[0].legend is defined and _item_group[0].legend is not empty %}
+  {%- if _item_group[0].legend is defined and _item_group[0].legend is not empty %}
     {%- if _item_group[0].legend_classes is defined and _item_group[0].legend_classes is not empty %}
       {%- set _legend_classes = _item_group[0].legend_classes %}
     {%- endif -%}
@@ -86,17 +86,17 @@
     >
       {{- _item_group[0].legend -}}
     </legend>
-  {% endif %}
+  {%- endif %}
   {%- endif %}
   {%- if _group_classes is not empty -%}
     <div class="{{ _group_classes }}">
-  {% endif %}
+  {%- endif %}
   {%- for _item in _item_group %}
     {%- if _item.type != 'fieldset' %}
       {#- grouping input fields wrapper #}
       {%- if _item.wrapper_classes is defined and _item.wrapper_classes is not empty -%}
       <div class="{{ _item.wrapper_classes }}">
-      {% endif %}
+      {%- endif %}
       {#- textarea #}
       {%- if _item.type == 'textarea' %}
         {%- include '@oe-bcl/bcl-textarea/textarea.html.twig' with _item only %}
@@ -109,25 +109,25 @@
       {%- endif %}
       {%- if _item.wrapper_classes is defined and _item.wrapper_classes is not empty -%}
       </div>
-      {% endif %}
+      {%- endif %}
     {%- endif %}
   {%- endfor %}
   {%- if _group_classes is not empty -%}
     </div>
-  {% endif %}
+  {%- endif %}
   {%- if _item_group[0].type == 'fieldset' -%}
   </fieldset>
-  {% endif %}
+  {%- endif %}
   {%- endif %}
 {% endfor %}
 {% endif %}
 {% if _antispam is not empty -%}
   <div class="mt-4 mb-2">
     <div class="text-bg-light">
-      {{ _antispam -}}
+      {{- _antispam -}}
     </div>
   </div>
-{% endif %}
+{%- endif %}
 {# submit #}
 {% if _submit is not empty %}
   {%- if _submit.items is empty %}
@@ -137,13 +137,13 @@
   {%- endif %}
   {%- if _submit.wrapper is defined and _submit.wrapper is not empty -%}
   <div class="{{ _submit.wrapper }}">
-  {% endif %}
+  {%- endif %}
   {%- for _item in _submit.items %}
     {%- include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
   {%- endfor %}
   {%- if _submit.wrapper is defined and _submit.wrapper is not empty -%}
   </div>
-  {% endif %}
+  {%- endif %}
 {% endif -%}
 </form>
 

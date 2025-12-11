@@ -33,7 +33,7 @@
     class="d-grid"
     style="grid-auto-flow: row;  grid-template-columns: repeat(auto-fit, minmax(4rem, 8rem))"
   >
-    {% for language in languages %}
+    {%- for language in languages %}
       {%- include '@oe-bcl/bcl-link/link.html.twig' with language|merge({
         attributes: create_attribute().addClass(
           [ "btn",

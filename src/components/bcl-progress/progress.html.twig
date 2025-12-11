@@ -48,7 +48,7 @@
 
 {%- if _label is not empty -%}
   <label class="progress-bar-label">{{ _label }}</label>
-{% endif -%}
+{%- endif -%}
 <div
   {{ attributes }}
 >
@@ -66,8 +66,8 @@
   {%- endif -%}
   </div>
 </div>
-{% if _message is not empty -%}
+{%- if _message is not empty -%}
   <small class="form-text text-muted progress-bar-message">{{ _message }}</small>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

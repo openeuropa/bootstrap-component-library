@@ -68,26 +68,26 @@
   {{- _scrollable ? ' modal-dialog-scrollable' -}}"
   >
     <div class="modal-content">
-      {% if header is not empty -%}
+      {%- if header is not empty -%}
       <div
         {{- _header_attributes.addClass(['modal-header']) -}}
       >
         {%- block header _header -%}
       </div>
-      {% endif %}
+      {%- endif %}
       {%- block messages _messages -%}
       <div
           {{- _body_attributes.addClass(['modal-body']) -}}
       >
         {%- block body _body -%}
       </div>
-      {% if footer is not empty -%}
+      {%- if footer is not empty -%}
       <div
           {{- _footer_attributes.addClass(['modal-footer']) -}}
       >
         {%- block footer _footer -%}
       </div>
-      {% endif -%}
+      {%- endif -%}
     </div>
   </div>
 </div>

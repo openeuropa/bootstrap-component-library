@@ -92,7 +92,7 @@
 
 {%- if not _remove_wrapper -%}
 <div class="{{ _class }}">
-{% endif %}
+{%- endif %}
   {%- if _link %}
     {%- include '@oe-bcl/bcl-link/link.html.twig' with _trigger only %}
   {%- else %}
@@ -101,7 +101,7 @@
   <ul
     {{ attributes }}
   >
-    {% if _items is not empty and _items is iterable %}
+    {%- if _items is not empty and _items is iterable %}
       {%- for _item in _items %}
         {%- if _item.attributes is empty %}
           {%- set _item = _item|merge({
@@ -117,19 +117,19 @@
           attributes: _item.attributes.addClass(_item_classes)
         }) -%}
         <li>
-        {% if _item.divider is defined -%}
+        {%- if _item.divider is defined -%}
           <hr class="dropdown-divider">
-        {% elseif _item.button is defined %}
+        {%- elseif _item.button is defined %}
           {%- include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
         {%- else %}
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
         {%- endif -%}
         </li>
-      {% endfor %}
+      {%- endfor %}
     {%- endif -%}
   </ul>
-{% if not _remove_wrapper -%}
+{%- if not _remove_wrapper -%}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

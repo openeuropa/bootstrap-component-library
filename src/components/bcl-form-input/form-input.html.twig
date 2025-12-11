@@ -124,7 +124,7 @@
     >
       {{- label -}}
     </label>
-  {% endset %}
+  {%- endset %}
 {% endif %}
 
 {%- if (_floating or _horizontal or _input_type == 'checkbox' or _input_type == 'radio') and
@@ -140,20 +140,20 @@
 {% endif %}
 {% if _wrapper_class is not empty -%}
 <div class="{{ _wrapper_class }}">
-{% endif %}
+{%- endif %}
 {% endif %}
 {% if _label_block and _floating == false and _input_type != 'checkbox' and _input_type != 'radio' %}
   {{- _label_block|raw }}
 {%- endif %}
 {% if _horizontal and floating == false -%}
   <div class="{{ _horizontal_class }}">
-{% endif -%}
+{%- endif -%}
     <input
       {{ attributes }}
     >
-{% if _horizontal and floating == false -%}
+{%- if _horizontal and floating == false -%}
   </div>
-{% endif %}
+{%- endif %}
 {% if _label_block and (_floating or _input_type == 'checkbox' or _input_type == 'radio') %}
   {{- _label_block|raw }}
 {%- endif %}
@@ -161,12 +161,12 @@
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _valid_feedback is not empty -%}
   <div class="valid-feedback">
     {{- _valid_feedback -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _helper_text is not empty -%}
   <div
     class="form-text"
@@ -175,9 +175,9 @@
   {%- endif -%}>
     {{- _helper_text -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _wrapper_class is not empty -%}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

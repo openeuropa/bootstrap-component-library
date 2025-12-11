@@ -30,14 +30,14 @@
 <div
   {{ attributes }}
 >
-{% if _activities is not empty and _activities is iterable %}
+{%- if _activities is not empty and _activities is iterable %}
   {%- for _activity in _activities -%}
   <div class="d-flex bg-lighter py-3 px-3 px-md-3-5 mb-3-5 rounded-2">
-    {% if _activity.image is not empty -%}
+    {%- if _activity.image is not empty -%}
     <div>
       {{- _activity.image -}}
     </div>
-    {% endif %}
+    {%- endif %}
     {%- if _activity.content is not empty and _activity.meta is not empty -%}
     <div>
       {%- if _activity.content is not empty -%}
@@ -56,7 +56,7 @@
     </div>
     {%- endif -%}
   </div>
-  {% endfor %}
+  {%- endfor %}
 {% endif -%}
 </div>
 

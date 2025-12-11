@@ -80,9 +80,9 @@
 <div
   {{ attributes }}
 >
-{% if _with_close or _title is not empty -%}
+{%- if _with_close or _title is not empty -%}
   <div class="{{ _class_header }}">
-  {% if _title is not empty %}
+  {%- if _title is not empty %}
     {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: _title,
       title_tag: _title_tag,
@@ -107,7 +107,7 @@
       } only -%}
   {% endif -%}
   </div>
-{% endif %}
+{%- endif %}
 {%- if _body is not empty -%}
   <div class="{{ _class_body }}">
 {%- endif -%}

@@ -29,7 +29,7 @@
 <div
   {{ attributes }}>
   <div class="text-end text-md-center">
-    {% include '@oe-bcl/bcl-link/link.html.twig' with _label|merge({
+    {%- include '@oe-bcl/bcl-link/link.html.twig' with _label|merge({
       path: '#' ~ _id,
       attributes: create_attribute()
                   .addClass(['standalone'])
@@ -39,22 +39,22 @@
                   .setAttribute('role', 'button'),
     }) only -%}
   </div>
-  {% if _items is not empty and _items is iterable -%}
+  {%- if _items is not empty and _items is iterable -%}
   <div class="collapse" id="{{ _id }}">
-    {% for _item in _items %}
+    {%- for _item in _items %}
       {%- set _item_classes = loop.last ? 'pt-3' : 'py-3 border-bottom' -%}
       <div class="{{ _item_classes }}">
-      {% if _item.type == 'content' %}
+      {%- if _item.type == 'content' %}
         {{- _item.content }}
       {%- else -%}
         <div class="row">
           <div class="col-12 col-md-9">
-            {% if _item.title is not empty -%}
+            {%- if _item.title is not empty -%}
               <p class="fw-bold m-0">{{ _item.title }}</p>
-            {% endif %}
+            {%- endif %}
             {%- if _item.description is not empty -%}
               <p class="m-0">{{ _item.description }}</p>
-            {% endif %}
+            {%- endif %}
             {%- if _item.language is not empty or _item.meta is not empty -%}
             <small class="fw-bold m-0">
               {%- if _item.language is not empty -%}
@@ -66,10 +66,10 @@
                 </span>
               {%- endif -%}
             </small>
-            {% endif -%}
+            {%- endif -%}
           </div>
           <div class="col-12 col-md-3 align-self-end text-md-end">
-          {% set download_attributes = create_attribute()
+          {%- set download_attributes = create_attribute()
                                       .setAttribute('download', true)
                                       .setAttribute('target', '_blank')
                                       .addClass(['d-block', 'standalone', 'mt-1'])
@@ -86,11 +86,11 @@
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _download_item only -%}
           </div>
         </div>
-      {% endif -%}
+      {%- endif -%}
       </div>
-    {% endfor -%}
+    {%- endfor -%}
   </div>
-  {% endif -%}
+  {%- endif -%}
 </div>
 
 {% endapply %}

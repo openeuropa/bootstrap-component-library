@@ -51,7 +51,7 @@ Parameters:
 {% endif -%}
 
 <nav{{ attributes.addClass(_classes) }}>
-  {% set trigger_attributes = create_attribute()
+  {%- set trigger_attributes = create_attribute()
                               .setAttribute('aria-expanded', 'false')
                               .setAttribute('type', 'button')
                               .setAttribute('id', _dropdown_id)
@@ -69,7 +69,7 @@ Parameters:
     attributes: _title_attributes,
   } only -%}
   <div class="dropdown-menu">
-    {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
+    {%- include '@oe-bcl/bcl-navigation/navigation.html.twig' with {
       'pills': true,
       'vertical': true,
       'items': _links,

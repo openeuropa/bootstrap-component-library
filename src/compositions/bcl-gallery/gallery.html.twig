@@ -56,34 +56,34 @@ Parameters:
 <div
   {{ attributes }}
 >
-  {% if _title is not empty or _counter is not empty -%}
+  {%- if _title is not empty or _counter is not empty -%}
   <div class="d-sm-flex flex-sm-row align-items-sm-center">
-  {% if _title is not empty -%}
+  {%- if _title is not empty -%}
     <div class="flex-sm-grow-1">
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+      {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _title,
         title_tag: _title_tag,
         title_link: _title_link,
         attributes: _title_attributes,
       } only -%}
     </div>
-  {% endif %}
+  {%- endif %}
   {%- if _counter is not empty -%}
     <div class="mb-3 mb-sm-0 fw-bold">
       {{- _counter|replace({'%d': _items|length}) -}}
     </div>
   {%- endif -%}
   </div>
-  {% endif -%}
+  {%- endif -%}
   <div class="bcl-gallery__thumbnails">
-  {% for _batch in _items|batch(_max_visible_thumbnails) %}
+  {%- for _batch in _items|batch(_max_visible_thumbnails) %}
     {%- if loop.index0 == 1 -%}
       <div class="bcl-gallery__thumbnails-collaspe collapse" id="{{ _collapse_id }}">
-    {% endif -%}
+    {%- endif -%}
       <ul class="bcl-gallery__grid">
-        {% for _item in _batch -%}
+        {%- for _item in _batch -%}
           <li>
-          {% include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
+          {%- include '@oe-bcl/bcl-gallery/gallery-item.html.twig' with {
             item: _item,
             carousel_id: _carousel_id,
             modal_id: _modal_id,
@@ -91,11 +91,11 @@ Parameters:
             carousel_anchor: loop.index0 + (_max_visible_thumbnails * loop.parent.loop.index0),
           } only -%}
           </li>
-        {% endfor -%}
+        {%- endfor -%}
       </ul>
-    {% if loop.last and loop.index0 >= 1 -%}
+    {%- if loop.last and loop.index0 >= 1 -%}
       </div>
-    {% endif %}
+    {%- endif %}
   {%- endfor %}
     {%- if _items|length > _max_visible_thumbnails -%}
       <div class="bg-lighter py-3 px-4 mt-2 rounded text-center">
@@ -109,7 +109,7 @@ Parameters:
         >
           <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
           <span class="label-expanded">{{ _toggle_expanded }}</span>
-          {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
             name: 'caret-down-fill',
             size: '2xs',
             path: _icon_path,
@@ -125,7 +125,7 @@ Parameters:
         >
           <span data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
             <span class="label-collapsed">{{ _toggle_collapsed|replace({'%d': _items|length}) }}</span>
-            {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+            {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
               name: 'caret-down-fill',
               size: '2xs',
               path: _icon_path,
@@ -134,15 +134,15 @@ Parameters:
           <span>
         </a>
       </div>
-    {% endif -%}
+    {%- endif -%}
   </div>
   <div class="modal" id="{{ _modal_id }}" tabindex="-1" aria-labelledby="{{ _modal_id }}" aria-hidden="true" data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-centered modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header border-0 justify-content-between">
-        {% if _title is not empty -%}
+        {%- if _title is not empty -%}
           <div class="modal-title">
-            {% if _title is not empty %}
+            {%- if _title is not empty %}
               {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
                 title: _title,
                 title_tag: 'h3',
@@ -150,12 +150,12 @@ Parameters:
               } only %}
             {%- endif -%}
           </div>
-        {% endif -%}
+        {%- endif -%}
           <div class="carousel-pager">
             <span>1</span> / {{ _items|length -}}
           </div>
           <div class="modal-close">
-            {% set button_attributes = create_attribute()
+            {%- set button_attributes = create_attribute()
                                       .addClass('btn-close')
                                       .setAttribute('aria-label', 'Close')
                                       .setAttribute('data-bs-dismiss', 'modal')
@@ -167,7 +167,7 @@ Parameters:
           </div>
         </div>
         <div class="modal-body d-flex align-items-center justify-content-center">
-        {% block carousel %}
+        {%- block carousel %}
           {%- for _item in _items %}
             {%- set _carousel_items = _carousel_items|merge([_item|merge({
               caption_title: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption_title,
@@ -190,6 +190,6 @@ Parameters:
     </div>
   </div>
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

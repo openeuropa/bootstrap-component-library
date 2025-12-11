@@ -177,7 +177,7 @@
 
 <nav{{ attributes }}>
   <ul{{ list_attributes }}>
-    {% if _internal_items is not empty and _internal_items is iterable %}
+    {%- if _internal_items is not empty and _internal_items is iterable %}
       {%- for _item in _internal_items %}
         {%- if _item is not empty %}
           {%- set _item_class = ['page-item', 'pager__item'] %}
@@ -199,12 +199,12 @@
           {%- endif -%}
 
           <li class="{{ _item_class|join(' ') }}">
-            {% if _item.icon_path is not defined %}
+            {%- if _item.icon_path is not defined %}
               {%- set _item = _item|merge({ icon_path: _icon_path }) %}
             {%- endif %}
             {%- include '@oe-bcl/bcl-pagination-v2/pagination-item.html.twig' with _item only -%}
           </li>
-        {% endif %}
+        {%- endif %}
       {%- endfor %}
     {%- endif -%}
   </ul>

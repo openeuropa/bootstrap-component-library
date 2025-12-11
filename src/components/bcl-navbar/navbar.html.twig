@@ -53,10 +53,10 @@
   {{ attributes }}
 >
   <div class='container'>
-  {% block branding %}
+  {%- block branding %}
     {%- if _brand is not empty -%}
       <a class='navbar-brand' href='{{ _brand.link }}'>
-      {% for logo in _brand.logos -%}
+      {%- for logo in _brand.logos -%}
         <img
           src='{{ logo.src }}'
           {% if logo.alt is not empty %}
@@ -66,14 +66,14 @@
           class='{{ logo.class }}'
           {% endif %}
         />
-      {% endfor %}
+      {%- endfor %}
     {%- if _brand.label is defined -%}
     <div class="h5 ms-4-5 d-none d-lg-inline-block">
       {{- _brand.label -}}
       </div>
-    {% endif -%}
+    {%- endif -%}
       </a>
-    {% endif %}
+    {%- endif %}
   {%- endblock %}
 
   {%- if not _disable_collapse -%}
@@ -89,7 +89,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id='{{ _collapse_id }}'>
-  {% endif %}
+  {%- endif %}
   {%- block navigation %}
     {%- if _navigation is not empty %}
       {%- include '@oe-bcl/bcl-navigation/navigation.html.twig' with _navigation only %}
@@ -102,7 +102,7 @@
   {%- endblock %}
   {%- if not _disable_collapse -%}
     </div>
-  {% endif -%}
+  {%- endif -%}
   </div>
 </nav>
 

@@ -87,44 +87,44 @@
 <div
   {{ attributes }}
 >
-  {% if _variant == 'card' -%}
+  {%- if _variant == 'card' -%}
     <div class="border-bottom px-3-5 py-3 d-md-flex">
       <div class="pe-2 pb-2">
-      {% if _icon is not empty %}
+      {%- if _icon is not empty %}
         {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
           path: _icon_path,
         }) only -%}
       {% endif -%}
       </div>
       <div>
-        {% if _item_title is not empty -%}
+        {%- if _item_title is not empty -%}
           <p class="fw-medium mb-2 fs-5">{{ _item_title }}</p>
-        {% endif %}
+        {%- endif %}
         {%- if _text is not empty -%}
           <p class="mb-3">{{ _text }}</p>
-        {% endif %}
+        {%- endif %}
         {%- if _content is not empty %}
           {{- _content }}
         {%- endif -%}
       </div>
     </div>
-  {% endif -%}
+  {%- endif -%}
   <div class="px-3-5 py-3">
     <div class="d-md-flex">
-      {% if _icon is not empty and _variant == 'default' -%}
+      {%- if _icon is not empty and _variant == 'default' -%}
         <div class="pe-2 pb-2">
-        {% if _icon is not empty %}
+        {%- if _icon is not empty %}
           {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
             path: _icon_path,
           }) only -%}
         {% endif -%}
         </div>
-      {% endif -%}
+      {%- endif -%}
       <div class="{{ _container_classes }}">
         <div class="flex-grow-1">
-          {% if _item_title is not empty and _variant == 'default' -%}
+          {%- if _item_title is not empty and _variant == 'default' -%}
             <p class="fw-medium m-0 fs-5">{{ _item_title }}</p>
-          {% endif %}
+          {%- endif %}
           {%- if _language is not empty or _meta is not empty -%}
           <small class="fw-medium m-0">
             {%- if _language is not empty -%}
@@ -136,9 +136,9 @@
               </span>
             {%- endif -%}
           </small>
-          {% endif -%}
+          {%- endif -%}
         </div>
-        {% set download_attributes = create_attribute()
+        {%- set download_attributes = create_attribute()
                                       .setAttribute('download', true)
                                       .setAttribute('target', '_blank')
                                       .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']) %}
@@ -155,7 +155,7 @@
       </div>
     </div>
   </div>
-  {% if _translation is not empty %}
+  {%- if _translation is not empty %}
     {%- include '@oe-bcl/bcl-file/file-translations.html.twig' with _translation|merge({
       icon_path: _icon_path
     }) only %}

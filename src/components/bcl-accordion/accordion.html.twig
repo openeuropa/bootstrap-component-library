@@ -61,7 +61,7 @@
   <div
     {{ wrapper_attributes }}
     >
-    {% if _expand_button is not empty %}
+    {%- if _expand_button is not empty %}
       {%- if _expand_button.attributes is empty %}
         {%- set _expand_button = _expand_button|merge({
             attributes: create_attribute()
@@ -88,9 +88,9 @@
       }) only %}
     {%- endif -%}
   </div>
-  {% endif -%}
+  {%- endif -%}
   <div class="accordion-items-wrapper">
-    {% for _item in _items %}
+    {%- for _item in _items %}
       {%- set _open_item = _open_item_id == loop.index %}
       {%- set _button_classes = ['accordion-button'] %}
       {%- if not _open_item %}
@@ -102,7 +102,7 @@
           class="accordion-header"
           id="heading-{{ _id }}-{{ loop.index }}"
         >
-          {% set button_attributes = create_attribute()
+          {%- set button_attributes = create_attribute()
                                     .addClass(_button_classes)
                                     .setAttribute('data-bs-toggle', 'collapse')
                                     .setAttribute('autocomplete', 'off')
@@ -114,7 +114,7 @@
             <span>
               {{- _item.title -}}
             </span>
-          {% endset %}
+          {%- endset %}
           {%- include '@oe-bcl/bcl-button/button.html.twig' with {
             label: item_title,
             clean_class: true,
@@ -136,9 +136,9 @@
           </div>
         </div>
       </div>
-    {% endfor -%}
+    {%- endfor -%}
   </div>
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

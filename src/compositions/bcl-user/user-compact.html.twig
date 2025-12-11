@@ -43,21 +43,21 @@
     >
   </div>
   <div class="flex-grow-1 ms-3">
-  {% if _name.link is not empty -%}
+  {%- if _name.link is not empty -%}
     <a href="{{ _name.link }}" class="fs-5 standalone mb-0">{{ _name.text }}</a>
-  {% else -%}
+  {%- else -%}
     <p class="fs-5 mb-0 text-primary">{{ _name.text }}</p>
-  {% endif %}
+  {%- endif %}
 
   {%- if _infos is not empty -%}
     <div class="d-flex flex-wrap">
-    {% for _info in _infos %}
+    {%- for _info in _infos %}
       {%- if _info is not empty -%}
       <span class="text-muted text-nowrap{{ loop.last ? '' :' me-4-5' }}">{{ _info }}</span>
-      {% endif %}
+      {%- endif %}
     {%- endfor -%}
     </div>
-  {% endif -%}
+  {%- endif -%}
   </div>
 </div>
 

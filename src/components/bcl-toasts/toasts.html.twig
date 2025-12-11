@@ -54,11 +54,11 @@
 
 <div {{ attributes }}>
 
-{% endif %}
+{%- endif %}
 {# container #}
 {% if _with_container -%}
   <div class="{{ _container_classes }}">
-{% endif %}
+{%- endif %}
 {# toasts #}
 {% if _toasts is not empty %}
   {%- for _toast in _toasts %}
@@ -87,7 +87,7 @@
     <div
       {{ _toast_attributes }}
     >
-    {% if _with_close or
+    {%- if _with_close or
       (_toast.header is defined and _toast.header is not empty)
     -%}
     <div{{ _header_attributes.addClass(['toast-header']) }}>
@@ -104,29 +104,29 @@
       } only -%}
     {% endif -%}
     </div>
-  {% endif %}
+  {%- endif %}
   {%- if _with_body_wrapper -%}
     <div
     {% if _body_wrapper_classes %}
       class="{{ _body_wrapper_classes }}"
     {% endif %}
     >
-  {% endif -%}
+  {%- endif -%}
     <div{{ _body_attributes.addClass(['toast-body']) }}>
       {{- _body -}}
     </div>
-  {% if _with_body_wrapper -%}
+  {%- if _with_body_wrapper -%}
     </div>
-  {% endif %}
+  {%- endif %}
   {{- _toast.custom_content|default('') -}}
   </div>
-  {% endfor %}
+  {%- endfor %}
 {% endif %}
 {% if _with_container -%}
   </div>
-{% endif %}
+{%- endif %}
 {% if _with_wrapper -%}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

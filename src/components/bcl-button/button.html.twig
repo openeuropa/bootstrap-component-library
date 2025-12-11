@@ -101,7 +101,7 @@
 {%- endif -%}
 {%- if _assistive_text is not empty -%}
   <span class="visually-hidden">{{- _assistive_text -}}</span>
-{% endif %}
+{%- endif %}
 {%- if _icon_position == 'before' and _icon_markup is defined -%}
   {{ _icon_markup|raw }}
 {%- endif -%}

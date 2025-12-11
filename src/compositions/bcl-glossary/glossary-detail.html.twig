@@ -25,7 +25,7 @@
 	lorem libero tempus mauris, a fermentum libero orci semper lacus. Duis tristique fringilla magna,
 	eu egestas dolor molestie non. </p>
 
-	{% include  '@oe-bcl/bcl-heading/heading.html.twig' with {
+	{%- include  '@oe-bcl/bcl-heading/heading.html.twig' with {
 		title: 'File Downloads',
 		title_tag: 'h2',
 		attributes: create_attribute().addClass('mt-5', 'mb-4'),
@@ -36,7 +36,7 @@
 			{%- set file_classes = 'mt-4' %}
 		{%- endif -%}
     <div {{ file_classes ? 'class="' ~ file_classes ~ '"' }}>
-      {% include '@oe-bcl/bcl-file/file.html.twig' with file only -%}
+      {%- include '@oe-bcl/bcl-file/file.html.twig' with file only -%}
     </div>
-	{% endfor %}
+	{%- endfor %}
 {%- endblock -%}

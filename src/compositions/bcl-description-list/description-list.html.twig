@@ -57,25 +57,25 @@
 <dl
   {{ attributes }}
 >
-{% else -%}
+{%- else -%}
 <div
   {{ attributes }}
 >
-{% endif %}
+{%- endif %}
   {%- for _item in _items %}
   {%- if _variant == 'horizontal' -%}
   <dl
     {{ create_attribute().addClass(_item_classes) }}
   >
-  {% else -%}
+  {%- else -%}
   <div
     {{ create_attribute().addClass(_item_classes) }}
   >
-  {% endif %}
+  {%- endif %}
   {%- if _item.term is not empty %}
     {%- if _variant == 'horizontal' -%}
     <div class="{{ _col_classes }}">
-    {% endif %}
+    {%- endif %}
     {%- if _item.term is iterable %}
       {%- for _term in _item.term %}
         {%- include '@oe-bcl/bcl-description-list/description-list-title.html.twig' with _term only -%}
@@ -87,12 +87,12 @@
     {% endif %}
     {%- if _variant == 'horizontal' -%}
     </div>
-    {% endif %}
+    {%- endif %}
   {%- endif %}
   {%- if _item.definition is not empty %}
     {%- if _variant == 'horizontal' -%}
     <div class="col">
-    {% endif %}
+    {%- endif %}
     {%- if _item.definition is iterable %}
       {%- for _definition in _item.definition %}
         {%- include '@oe-bcl/bcl-description-list/description-list-details.html.twig' with _definition only -%}
@@ -104,18 +104,18 @@
     {% endif %}
     {%- if _variant == 'horizontal' -%}
     </div>
-    {% endif %}
+    {%- endif %}
   {%- endif %}
   {%- if _variant == 'horizontal' -%}
   </dl>
-  {% else -%}
+  {%- else -%}
   </div>
-  {% endif %}
+  {%- endif %}
   {%- endfor %}
 {% if _variant != 'horizontal' -%}
 </dl>
-{% else -%}
+{%- else -%}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

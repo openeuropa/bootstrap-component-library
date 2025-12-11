@@ -86,10 +86,10 @@
 
 {%- if _with_text or _force_wrapper -%}
 <div class="{{ _classes }}">
-{% endif %}
+{%- endif %}
 {% if _with_text -%}
   <div class="row">
-{% endif %}
+{%- endif %}
 
 {%- if _title is not empty -%}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
@@ -116,25 +116,25 @@
     {%- endif -%}
   </div>
   <div class="{{ _col_classes }} order-{{ _alignment == "right" ? '2 mt-4 mt-md-0' : '1' }}">
-{% endif -%}
+{%- endif -%}
 
 <figure
   {{ attributes }}
 >
-{% if _embedded_media is not empty %}
+{%- if _embedded_media is not empty %}
   {%- set _video_classes = "ratio ratio-" ~ _ratio -%}
   <div class="{{ _video_classes }}">
     {%- block embedded_media _embedded_media -%}
   </div>
-{% elseif _sources is not empty and _sources is iterable -%}
+{%- elseif _sources is not empty and _sources is iterable -%}
   <video
     controls
     poster="{{ _poster_image }}"
     class="w-100 d-block"
   >
-  {% for source in _sources -%}
+  {%- for source in _sources -%}
   <source type="{{ source.type }}" src="{{ source.src }}" />
-  {% endfor %}
+  {%- endfor %}
   {%- if _tracks is not empty and _tracks is iterable %}
     {%- for track in _tracks -%}
     <track
@@ -143,10 +143,10 @@
       src="{{ track.src }}"
       srclang="{{ track.src_lang }}"
     />
-    {% endfor %}
+    {%- endfor %}
   {%- endif -%}
   </video>
-{% else %}
+{%- else %}
   {{- _image }}
 {%- endif %}
 
@@ -158,15 +158,15 @@
   >
     {{- _content -}}
   </figcaption>
-{% endif -%}
+{%- endif -%}
 </figure>
 
-{% if _with_text -%}
+{%- if _with_text -%}
     </div>
   </div>
-{% endif %}
+{%- endif %}
 {% if _with_text or _force_wrapper -%}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

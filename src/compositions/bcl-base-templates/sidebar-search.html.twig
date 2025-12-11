@@ -13,8 +13,8 @@
   {%- endif -%}
 
   <div class="offcanvas-body p-lg-0">
-    {% include '@oe-bcl/bcl-form/form.html.twig' with search_form|merge({
+    {%- include '@oe-bcl/bcl-form/form.html.twig' with search_form|merge({
       attributes: search_form.attributes.addClass('w-100')
     }) only -%}
   </div>
-{% endblock %}
+{%- endblock %}

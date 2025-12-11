@@ -35,7 +35,7 @@
   {%- if _icon_html is not empty %}
     {%- set _label -%}
       <span aria-hidden="true">{{- _icon_html -}}</span>
-    {% endset %}
+    {%- endset %}
   {%- endif %}
 {% endif %}
 
@@ -76,15 +76,15 @@
   } only -%}
 {% else -%}
   <div{{ attributes }}>
-    {% if _current_mobile_label -%}
+    {%- if _current_mobile_label -%}
       <span class="d-none d-md-inline-block">{{- _label -}}</span>
       <span class="d-inline-block d-md-none">{{- _current_mobile_label -}}</span>
-    {% else -%}
+    {%- else -%}
       <span class="d-inline-block">
         {{- _label -}}
       </span>
-    {% endif -%}
+    {%- endif -%}
   </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

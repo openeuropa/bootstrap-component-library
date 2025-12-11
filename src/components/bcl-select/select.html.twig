@@ -113,7 +113,7 @@
     >
       {{- label -}}
     </label>
-  {% endset %}
+  {%- endset %}
 {% endif %}
 
 {%- if _label_block is defined %}
@@ -122,11 +122,11 @@
 <select
   {{ attributes }}
 >
-{% if _options is not empty and _options is iterable %}
+{%- if _options is not empty and _options is iterable %}
   {%- for _option in _options %}
     {%- if _option.optgroup is defined -%}
       <optgroup label="{{ _option.label }}">
-      {% if _option.options is not empty  and _option.options is iterable %}
+      {%- if _option.options is not empty  and _option.options is iterable %}
         {%- for _optGroupOption in _option.options -%}
         <option
           value="{{ _optGroupOption.value }}"
@@ -139,10 +139,10 @@
         >
           {{- _optGroupOption.label -}}
         </option>
-        {% endfor %}
+        {%- endfor %}
       {%- endif -%}
       </optgroup>
-    {% else -%}
+    {%- else -%}
       <option
         value="{{ _option.value }}"
       {% if _option.selected is defined %}
@@ -157,20 +157,20 @@
       >
         {{- _option.label -}}
       </option>
-    {% endif %}
+    {%- endif %}
   {%- endfor %}
 {% endif -%}
 </select>
-{% if _invalid_feedback is not empty -%}
+{%- if _invalid_feedback is not empty -%}
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _valid_feedback is not empty -%}
   <div class="valid-feedback">
     {{- _valid_feedback -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _helper_text is not empty -%}
 <div
   class="form-text"
@@ -179,6 +179,6 @@
 {% endif %}>
   {{- _helper_text -}}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

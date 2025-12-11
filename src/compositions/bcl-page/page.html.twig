@@ -8,7 +8,7 @@
   <p id="content">{{ get_dummy_text(6) -}}
   </p>
   <h2 id="item-1" class="my-4">Section 1</h2>
-  {% if featured_item %}
+  {%- if featured_item %}
     {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_item only %}
   {%- endif %}
 
@@ -22,7 +22,7 @@
 
   <h2 id="item-2" class="my-4">Section 2</h2>
 
-  {{ get_dummy_text(6, true) }}
+  {{- get_dummy_text(6, true) }}
 
   {%- if blockquote %}
     {%- include '@oe-bcl/bcl-blockquote/blockquote.html.twig' with blockquote only %}
@@ -38,7 +38,7 @@
 
   <h2 id="item-3" class="my-4">Section 3</h2>
 
-  {{ get_dummy_text(4, true) }}
+  {{- get_dummy_text(4, true) }}
 
   {%- include '@oe-bcl/bcl-file/file.html.twig' with files[0] only %}
   {%- include '@oe-bcl/bcl-file/file.html.twig' with files[1] only %}

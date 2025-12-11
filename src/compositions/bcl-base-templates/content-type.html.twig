@@ -73,17 +73,17 @@
 {% endif -%}
 
 <main {{ attributes }}>
-{% if messages is defined and messages is not empty %}
+{%- if messages is defined and messages is not empty %}
   {%- block messages_area -%}
   <div class="container">
-    {% for message in messages %}
+    {%- for message in messages %}
     {%- set message_attributes = create_attribute().addClass(['mt-lg-5', 'mt-2']) %}
       {%- include '@oe-bcl/bcl-alert/alert.html.twig' with message|merge({
         attributes: message_attributes,
       }) only %}
     {%- endfor -%}
   </div>
-  {% endblock %}
+  {%- endblock %}
 {% endif %}
 
 {%- if _with_banner %}
@@ -94,20 +94,20 @@
 
   <div class="container mt-md-4-75 mt-4">
     <div class="row">
-      {% block content_row %}
+      {%- block content_row %}
         {{- content_row }}
       {%- endblock %}
     {%- if _with_sidebar -%}
       <div class="{{ _col_classes.left|join(' ') }}">
-        {% block sidebar %}{% endblock -%}
+        {%- block sidebar %}{% endblock -%}
       </div>
       <div class="{{ _col_classes.right|join(' ') }}">
-    {% else %}
+    {%- else %}
       {%- if _landing -%}
       <div class="col-12">
-      {% else -%}
+      {%- else -%}
       <div class="col-lg-10 col-xl-9 col-xxl-8">
-      {% endif %}
+      {%- endif %}
     {%- endif %}
       {%- block content_top %}
         {{- content_top }}
@@ -128,7 +128,7 @@
   </div>
 </main>
 
-{% block feedback %}
+{%- block feedback %}
   {{- feedback }}
 {%- endblock %}
 

@@ -54,7 +54,7 @@
 {%- set attributes = attributes.addClass(_classes).setAttribute('role', 'alert') -%}
 
 <div {{ attributes }}>
-{% if _icon_path is not empty %}
+{%- if _icon_path is not empty %}
   {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
     name: _icon_name ?: _icon_names[_variant],
     size: 's',

@@ -58,17 +58,17 @@
   <ul
     {{ attributes }}
   >
-{% endif %}
+{%- endif %}
 {% if _type == 'ordered' -%}
   <ol
     {{ attributes }}
   >
-{% endif %}
+{%- endif %}
 {% if _type == 'actionable' -%}
   <div
     {{ attributes }}
   >
-{% endif %}
+{%- endif %}
 {% if _items is not empty and _items is iterable %}
   {%- for _item in _items %}
     {%- if _type == 'unordered' or _type == 'ordered' %}
@@ -89,7 +89,7 @@
           {%- endif -%}
       {%- endif -%}
       </li>
-    {% else %}
+    {%- else %}
       {%- if _item.attributes is empty %}
         {%- set _item = _item|merge({
           attributes: create_attribute()
@@ -109,12 +109,12 @@
 {% endif %}
 {% if _type == 'unordered' -%}
 </ul>
-{% endif %}
+{%- endif %}
 {% if _type == 'ordered' -%}
 </ol>
-{% endif %}
+{%- endif %}
 {% if _type == 'actionable' -%}
 </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

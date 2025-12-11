@@ -88,9 +88,9 @@
 <div
   {{ attributes }}
 >
-{% if _with_indicators -%}
+{%- if _with_indicators -%}
   <div class="carousel-indicators d-none d-md-flex">
-  {% for _i in 0..(_items|length - 1) %}
+  {%- for _i in 0..(_items|length - 1) %}
     {%- set button_attributes = create_attribute()
                               .setAttribute('aria-label', 'Slide ' ~ (_i + 1))
                               .setAttribute('data-bs-target', '#' ~ _id)
@@ -105,9 +105,9 @@
     } only %}
   {%- endfor -%}
   </div>
-{% endif -%}
+{%- endif -%}
   <div class="carousel-inner">
-  {% if _items is not empty and _items is iterable %}
+  {%- if _items is not empty and _items is iterable %}
     {%- for _item in items %}
     {%- set _item_classes = 'carousel-item' %}
     {%- if loop.index == _active_item %}
@@ -119,7 +119,7 @@
       data-bs-interval="{{ _item.interval }}"
     {% endif %}
     >
-    {% if _item.image is defined and _item.image is not empty %}
+    {%- if _item.image is defined and _item.image is not empty %}
       {{- _item.image }}
     {%- endif %}
     {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
@@ -130,28 +130,28 @@
       <div
         class="{{ _caption_classes }}"
       >
-        {% if _item.caption is not empty or _item.caption_title is not empty %}
+        {%- if _item.caption is not empty or _item.caption_title is not empty %}
           {%- if _item.caption_classes is defined and _item.caption_classes is not empty -%}
             <div class="{{ _item.caption_classes }}">
-          {% endif %}
+          {%- endif %}
           {%- if _item.caption_title is not empty -%}
             <div class="fs-5">{{ _item.caption_title }}</div>
-          {% endif %}
+          {%- endif %}
             {{- _item.caption -}}
           {% if _item.caption_classes is defined and _item.caption_classes is not empty -%}
             </div>
-          {% endif %}
+          {%- endif %}
         {%- endif %}
         {%- if _item.link is defined and _item.link is not empty %}
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
         {%- endif -%}
       </div>
-    {% endif -%}
+    {%- endif -%}
     </div>
-    {% endfor %}
+    {%- endfor %}
   {%- endif -%}
   </div>
-{% if _with_controls -%}
+{%- if _with_controls -%}
   <button
     class="carousel-control-prev"
     type="button"
@@ -159,9 +159,9 @@
     data-bs-slide="prev"
   >
     <span class="carousel-control-prev-icon"></span>
-  {% if _prev_label is not empty -%}
+  {%- if _prev_label is not empty -%}
     <span class="visually-hidden">{{ _prev_label }}</span>
-  {% endif -%}
+  {%- endif -%}
   </button>
   <button
     class="carousel-control-next"
@@ -170,11 +170,11 @@
     data-bs-slide="next"
   >
     <span class="carousel-control-next-icon"></span>
-  {% if _next_label is not empty -%}
+  {%- if _next_label is not empty -%}
     <span class="visually-hidden">{{ _next_label }}</span>
-  {% endif -%}
+  {%- endif -%}
   </button>
-{% endif -%}
+{%- endif -%}
 </div>
 
 {% endapply %}

@@ -23,12 +23,12 @@
 <li
   {{ attributes }}>
   <p class="fs-5 mb-1 fw-medium">{{ _label }}</p>
-  {% if _title is not empty -%}
+  {%- if _title is not empty -%}
   <p class="fs-6 mb-1 fw-medium">{{ _title }}</p>
-  {% endif %}
+  {%- endif %}
   {%- if _content is not empty -%}
   <div>{{ _content }}</div>
-  {% endif -%}
+  {%- endif -%}
 </li>
 
 {% endapply %}

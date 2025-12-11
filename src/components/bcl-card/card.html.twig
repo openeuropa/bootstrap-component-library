@@ -117,14 +117,14 @@
 <article
   {{ attributes }}
 >
-{% if _card_header is not empty -%}
+{%- if _card_header is not empty -%}
   <div class='{{ _header_classes }}'>
     {{- _card_header -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _horizontal -%}
   <div class='{{ _row_classes }}'>
-{% endif %}
+{%- endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
   {%- set _img_class = 'card-img-top' %}
   {%- if _image.position == 'background' %}
@@ -147,7 +147,7 @@
 {% endif %}
 {% if _horizontal and (_image is not empty or _date is not empty) -%}
   <div class='{{ _horizontal_grid.left_col_classes }}'>
-{% endif %}
+{%- endif %}
   {%- if _date is not empty %}
     {%- block card_date %}
       {%- include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
@@ -158,18 +158,18 @@
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
-  {% endif %}
+  {%- endif %}
 {% if _horizontal and (_image is not empty or _date is not empty) -%}
   </div>
-{% endif %}
+{%- endif %}
 {% if _image.position == 'background' -%}
   <div class="card-img-overlay">
-{% endif %}
+{%- endif %}
 {% if _horizontal -%}
 <div class='{{ _horizontal_grid.right_col_classes }}'>
-{% endif -%}
+{%- endif -%}
   <div class='{{ _body_classes }}'>
-  {% if _title is not empty %}
+  {%- if _title is not empty %}
     {%- if _title_attributes.class is empty %}
       {%- set _title_attributes = _title_attributes.addClass('fs-4') %}
     {%- endif %}
@@ -203,7 +203,7 @@
   {% block card_badges %}
     {%- if _badges is not empty and _badges is iterable -%}
       <div class="mt-2-5">
-      {% for _badge in _badges %}
+      {%- for _badge in _badges %}
         {%- if _badge.attributes is empty %}
           {%- set _badge = _badge|merge({
             attributes: create_attribute()
@@ -228,22 +228,22 @@
   {%- block card_links %}
     {%- if _links is not empty and _links is iterable -%}
       <div class="mt-2-5 mb-2">
-      {% for _link in _links -%}
+      {%- for _link in _links -%}
         <div class="mb-3 mb-md-0 d-block d-md-inline-block me-md-4-5">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
         </div>
-      {% endfor -%}
+      {%- endfor -%}
       </div>
     {%- endif -%}
   {% endblock -%}
   </div>
-{% if _horizontal -%}
+{%- if _horizontal -%}
 </div>
-{% endif %}
+{%- endif %}
 {% if _image is not empty %}
   {%- if _image.position == 'background' -%}
   </div>
-  {% endif %}
+  {%- endif %}
   {%- set _img_class = "card-img-bottom" %}
   {%- if _image.classes is not empty %}
     {%- set _img_class = _img_class ~ " " ~ _image.classes %}
@@ -251,25 +251,25 @@
   {%- if _image.position == 'bottom' %}
     {%- if _horizontal -%}
     <div class="col-4">
-    {% endif -%}
+    {%- endif -%}
     <img
       src="{{ _image.path }}"
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
-    {% if _horizontal -%}
+    {%- if _horizontal -%}
     </div>
-    {% endif %}
+    {%- endif %}
   {%- endif %}
 {% endif %}
 {% if _horizontal -%}
   </div>
-{% endif %}
+{%- endif %}
 {% if _card_footer is not empty -%}
   <div class="{{ _footer_classes }}">
     {{- _card_footer -}}
   </div>
-{% endif -%}
+{%- endif -%}
 </article>
 
 {% endapply %}

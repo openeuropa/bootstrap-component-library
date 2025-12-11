@@ -39,7 +39,7 @@
   <div
     {{ attributes }}
   >
-    {% if _title is not empty %}
+    {%- if _title is not empty %}
       {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _title,
         title_tag: _title_tag,
@@ -48,7 +48,7 @@
       } only %}
     {%- endif -%}
     <ul class="ps-0 mb-0">
-      {% for _link in _links %}
+      {%- for _link in _links %}
         {%- if _link.attributes is empty %}
           {%- set _link = _link|merge({
             attributes: create_attribute()
@@ -66,11 +66,11 @@
           {%- set _list_item_classes = _list_item_classes ~ ' me-4-5' %}
         {%- endif -%}
         <li class="{{ _list_item_classes }}">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
         </li>
-      {% endfor -%}
+      {%- endfor -%}
     </ul>
   </div>
-{% endif %}
+{%- endif %}
 
 {% endapply %}

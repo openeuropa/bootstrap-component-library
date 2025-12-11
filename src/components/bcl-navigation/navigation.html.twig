@@ -79,11 +79,11 @@
   <nav
     {{ attributes }}
   >
-  {% else -%}
+  {%- else -%}
   <ul
     {{ attributes }}
   >
-  {% endif %}
+  {%- endif %}
     {%- if _items is not empty and _items is iterable %}
       {%- for _item in items %}
         {%- set _nav_class = 'nav-item' %}
@@ -114,7 +114,7 @@
             role="tab"
           {% endif %}
         >
-        {% elseif _tabs and _item.dropdown is not defined %}
+        {%- elseif _tabs and _item.dropdown is not defined %}
           {%- set _item = _item|merge({
             attributes: _item.attributes.setAttribute("role", "tab"),
             })
@@ -154,14 +154,14 @@
         {%- endif %}
         {%- if not _nav -%}
         </li>
-        {% endif %}
+        {%- endif %}
       {%- endfor %}
     {%- endif %}
   {%- if _nav -%}
   </nav>
-  {% else -%}
+  {%- else -%}
   </ul>
-  {% endif %}
+  {%- endif %}
   {%- if _tabs_content -%}
   <div class="tab-content">
     {%- block contents -%}
@@ -175,12 +175,12 @@
             <div class="{{ _content_class }}" id="{{ _item.target }}" role="tabpanel" aria-labelledby="{{ _item.id }}">
               {{- _item.content -}}
             </div>
-          {% endif %}
+          {%- endif %}
         {%- endfor %}
       {%- endif %}
     {%- endblock -%}
   </div>
-  {% endif %}
+  {%- endif %}
 {% endapply %}
 {% endmacro %}
 

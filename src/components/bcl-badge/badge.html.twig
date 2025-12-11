@@ -53,7 +53,7 @@
   {{- _label -}}
   {%- if _dismissible -%}
   <span class="icon--close" aria-hidden="true">
-    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: "x-circle-fill",
       size: "xs",
       path: _icon_path,

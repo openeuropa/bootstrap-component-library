@@ -50,7 +50,7 @@
         <div class="date-month lh-1">{{- _month -}}</div>
         <div class="date-day fw-bold fs-4 lh-1">{{- _day -}}</div>
       </div>
-      {% if _end_day or _end_month -%}
+      {%- if _end_day or _end_month -%}
         <div class="d-flex flex-column align-item-center justify-content-center">
           {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
             name: "chevron-right",
@@ -61,12 +61,12 @@
         <div class="d-flex flex-column align-item-center justify-content-center">
           {%- if _end_month is not empty -%}
             <div class="date-month lh-1">{{- _end_month -}}</div>
-          {% endif -%}
+          {%- endif -%}
           {%- if _end_day is not empty -%}
             <div class="date-day fw-bold fs-4 lh-1">{{- _end_day -}}</div>
-          {% endif -%}
+          {%- endif -%}
         </div>
-      {% endif -%}
+      {%- endif -%}
     </div>
     <div class="bg-lighter border w-100 rounded-bottom py-1 d-flex gap-4 justify-content-center">
       <div class="date-year year-start">{{- _year -}}</div>

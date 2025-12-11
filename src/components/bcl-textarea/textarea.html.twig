@@ -93,7 +93,7 @@
 {%- if _floating or _horizontal %}
 {% set _wrapper_class = _floating ? 'form-floating' : 'row' -%}
 <div class="{{ _wrapper_class }}">
-{% endif %}
+{%- endif %}
 {% if _label is not empty %}
   {%- set _label_block -%}
     <label
@@ -104,7 +104,7 @@
     >
       {{- label -}}
     </label>
-  {% endset %}
+  {%- endset %}
 {% endif %}
 
 {%- if _label_block and _floating == false %}
@@ -112,15 +112,15 @@
 {%- endif %}
 {% if _horizontal and floating == false -%}
 <div class="{{ _horizontal_class }}">
-{% endif -%}
+{%- endif -%}
   <textarea
     {{ attributes }}
   >
   {{- _text -}}
   </textarea>
-{% if _horizontal and floating == false -%}
+{%- if _horizontal and floating == false -%}
 </div>
-{% endif %}
+{%- endif %}
 {% if _label_block and _floating %}
   {{- _label_block|raw }}
 {%- endif %}
@@ -128,12 +128,12 @@
   <div class="invalid-feedback">
     {{- _invalid_feedback -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _valid_feedback is not empty -%}
   <div class="valid-feedback">
     {{- _valid_feedback -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _helper_text is not empty -%}
   <div
     class="form-text"
@@ -142,8 +142,8 @@
   {%- endif -%}>
     {{- _helper_text -}}
   </div>
-{% endif %}
+{%- endif %}
 {% if _floating or _horizontal -%}
 </div>
-{% endif %}
+{%- endif %}
 {% endapply %}
