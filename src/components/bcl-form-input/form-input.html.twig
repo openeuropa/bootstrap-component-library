@@ -154,7 +154,7 @@
 {% if _horizontal and floating == false %}
   </div>
 {% endif %}
-{% if _label_block and (_floating or _input_type == 'checkbox' or _input_type == 'radio')  %}
+{% if _label_block and (_floating or _input_type == 'checkbox' or _input_type == 'radio') %}
   {{ _label_block|raw }}
 {% endif %}
 {% if _invalid_feedback is not empty %}

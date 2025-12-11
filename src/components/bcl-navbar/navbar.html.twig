@@ -94,12 +94,12 @@
     {% if _navigation is not empty %}
       {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with _navigation only %}
     {% endif %}
-  {%  endblock %}
+  {% endblock %}
   {% block right %}
     {% if _form is not empty %}
       {% include '@oe-bcl/bcl-form/form.html.twig' with _form only %}
     {% endif %}
-  {%  endblock %}
+  {% endblock %}
   {% if not _disable_collapse %}
     </div>
   {% endif %}

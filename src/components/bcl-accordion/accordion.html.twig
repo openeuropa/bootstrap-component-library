@@ -126,7 +126,7 @@
           class="accordion-collapse collapse{{ _open_item ? ' show' }}"
           aria-labelledby="heading-{{ _id }}-{{ loop.index }}"
           role="region"
-        {% if not _item.stay_open and _expand_button is empty  %}
+        {% if not _item.stay_open and _expand_button is empty %}
           data-bs-parent="#accordion-{{ _id }}"
         {% endif %}
         >
