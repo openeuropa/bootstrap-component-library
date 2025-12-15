@@ -36,7 +36,7 @@ Parameters:
 
 {% set title_attributes = _title_attributes.addClass(['mb-0', 'd-none', 'd-md-block']) %}
 {% set _button_content %}
-  {{ _title }}
+  {{- _title }}
   {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
     name: 'chevron-down',
     size: 's',

@@ -180,7 +180,7 @@
       title_link: _title_link,
       attributes: _title_attributes,
     } only %}
-  {% endif %}
+  {%- endif %}
   {%- if _subtitle is not empty -%}
     {% set _subtitle_tag = _subtitle.tag ?? 'h6' %}
     <{{ _subtitle_tag }}
@@ -225,7 +225,7 @@
       </div>
     {%- endif -%}
   {% endblock %}
-  {% block card_links %}
+  {%- block card_links %}
     {%- if _links is not empty and _links is iterable -%}
       <div class="mt-2-5 mb-2">
       {% for _link in _links %}
@@ -235,7 +235,7 @@
       {% endfor %}
       </div>
     {%- endif -%}
-  {% endblock %}
+  {% endblock -%}
   </div>
 {% if _horizontal %}
 </div>
