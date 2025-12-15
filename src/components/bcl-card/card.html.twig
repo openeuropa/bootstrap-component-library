@@ -145,8 +145,8 @@
     {% set _img_class = _img_class ~ " " ~ _image.classes %}
   {% endif %}
 {% endif %}
-{% if _horizontal and (_image is not empty or _date is not empty)  %}
-  <div class='{{ _horizontal_grid.left_col_classes  }}'>
+{% if _horizontal and (_image is not empty or _date is not empty) %}
+  <div class='{{ _horizontal_grid.left_col_classes }}'>
 {% endif %}
   {% if _date is not empty %}
     {% block card_date %}
@@ -220,7 +220,7 @@
           %}
         {% endif %}
         {% include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
-        
+
       {% endfor %}
       </div>
     {%- endif -%}

@@ -74,7 +74,7 @@
       title_attributes: _card_title_attributes.addClass(['fs-5'])
     }) %}
 
-    {% if _variant == 'default-1-col' or _variant == 'default-2-col' or _variant == 'default-3-col'  %}
+    {% if _variant == 'default-1-col' or _variant == 'default-2-col' or _variant == 'default-3-col' %}
       {% set _card_classes = [
         'listing-item',
         'border-bottom',
@@ -91,7 +91,7 @@
           right_col_classes: _end_col_classes ~ _alignment_class,
         }
       }) %}
-    
+
       {% if _variant == 'default-2-col' %}
         {% set _card_layout = _card_layout|merge({
           responsive_columns: 2,
