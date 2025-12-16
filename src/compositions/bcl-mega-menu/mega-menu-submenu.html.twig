@@ -51,15 +51,17 @@
       <p class="__label">{{ _trigger.label }}</p>{# -#}
   </div>
   {%- endif %}
-  {%- include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' with {
-    items: _items,
-    icon_path: _icon_path,
-    level: _level,
-  } only %}
-  {%- if _see_all_link -%}
-    <div class="__see_all">
-      {%- include '@oe-bcl/bcl-link/link.html.twig' with _see_all_link only -%}
-    </div>
-  {%- endif -%}
+  <div class="__submenu_body">
+    {%- include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' with {
+      items: _items,
+      icon_path: _icon_path,
+      level: _level,
+    } only -%}
+    {%- if _see_all_link -%}
+      <div class="__see_all">
+        {% include '@oe-bcl/bcl-link/link.html.twig' with _see_all_link only %}
+      </div>
+    {%- endif -%}
+  </div>
 </div>
 {#--#}

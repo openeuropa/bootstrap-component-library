@@ -91,364 +91,380 @@ exports[`OE - Mega Menu renders correctly 1`] = `
             <div
               class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu"
             >
-              <ul
-                class="bcl-mega-menu__items __level-1"
+              <div
+                class="__submenu_body"
               >
-                <li
-                  class="__parent"
+                <ul
+                  class="bcl-mega-menu__items __level-1"
                 >
-                  <button
-                    aria-controls="mm-panel-custom-trigger-mm-1"
-                    aria-expanded="false"
-                    aria-haspopup="menu"
-                    id="custom-trigger-mm-1"
-                    type="button"
+                  <li
+                    class="__parent"
                   >
-                    Submenu item 1 with very long text that wraps to multiple lines
-                  </button>
-                  <div
-                    aria-labelledby="custom-trigger-mm-1"
-                    class="bcl-mega-menu__submenu __level-2"
-                    hidden
-                    id="mm-panel-custom-trigger-mm-1"
-                    role="group"
-                  >
+                    <button
+                      aria-controls="mm-panel-custom-trigger-mm-1"
+                      aria-expanded="false"
+                      aria-haspopup="menu"
+                      id="custom-trigger-mm-1"
+                      type="button"
+                    >
+                      Submenu item 1 with very long text that wraps to multiple lines
+                    </button>
                     <div
-                      class="__header"
+                      aria-labelledby="custom-trigger-mm-1"
+                      class="bcl-mega-menu__submenu __level-2"
+                      hidden
+                      id="mm-panel-custom-trigger-mm-1"
+                      role="group"
                     >
-                      <p
-                        class="__label"
+                      <div
+                        class="__header"
                       >
-                        Submenu item 1 with very long text that wraps to multiple lines
-                      </p>
+                        <p
+                          class="__label"
+                        >
+                          Submenu item 1 with very long text that wraps to multiple lines
+                        </p>
+                      </div>
+                      <div
+                        class="__submenu_body"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-2"
+                        >
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 1.1
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 1.2 with longer link text that spans multiple lines
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 1.3
+                            </a>
+                          </li>
+                        </ul>
+                        <div
+                          class="__see_all"
+                        >
+                          <a
+                            aria-label="See all items in ‘Submenu item 1 with very long text that wraps to multiple lines’"
+                            class="see-all-button"
+                            href="/example.html"
+                          >
+                            <span>
+                              More of submenu item 1, where even the see all text is very long.
+                            </span>
+                            <svg
+                              class="ms-2-5 bi icon--xs"
+                            >
+                              <use
+                                xlink:href="#arrow-right"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <ul
-                      class="bcl-mega-menu__items __level-2"
+                  </li>
+                  <li
+                    class="__leaf"
+                  >
+                    <a
+                      href="/example.html"
                     >
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 1.1
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 1.2 with longer link text that spans multiple lines
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 1.3
-                        </a>
-                      </li>
-                    </ul>
+                      Submenu item 2
+                    </a>
+                  </li>
+                  <li
+                    class="__parent"
+                  >
+                    <button
+                      aria-controls="mm-panel-custom-trigger-mm-2"
+                      aria-expanded="false"
+                      aria-haspopup="menu"
+                      id="custom-trigger-mm-2"
+                      type="button"
+                    >
+                      Submenu item 3 (many children)
+                    </button>
                     <div
-                      class="__see_all"
+                      aria-labelledby="custom-trigger-mm-2"
+                      class="bcl-mega-menu__submenu __level-2"
+                      hidden
+                      id="mm-panel-custom-trigger-mm-2"
+                      role="group"
                     >
-                      <a
-                        aria-label="See all items in ‘Submenu item 1 with very long text that wraps to multiple lines’"
-                        class="see-all-button"
-                        href="/example.html"
+                      <div
+                        class="__header"
                       >
-                        <span>
-                          More of submenu item 1, where even the see all text is very long.
-                        </span>
-                        <svg
-                          class="ms-2-5 bi icon--xs"
+                        <p
+                          class="__label"
                         >
-                          <use
-                            xlink:href="#arrow-right"
-                          />
-                        </svg>
-                      </a>
+                          Submenu item 3 (many children)
+                        </p>
+                      </div>
+                      <div
+                        class="__submenu_body"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-2"
+                        >
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.1
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.2
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.3
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.4
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.5
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.6
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.7
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.8
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.9
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.10
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.11
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.13
+                            </a>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 2.14
+                            </a>
+                          </li>
+                        </ul>
+                        <div
+                          class="__see_all"
+                        >
+                          <a
+                            aria-label="See all items in ‘Submenu item 3 (many children)’"
+                            class="see-all-button"
+                            href="/example.html"
+                          >
+                            <span>
+                              More of submenu item 3
+                            </span>
+                            <svg
+                              class="ms-2-5 bi icon--xs"
+                            >
+                              <use
+                                xlink:href="#arrow-right"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li
-                  class="__leaf"
-                >
-                  <a
-                    href="/example.html"
+                  </li>
+                  <li
+                    class="__leaf"
                   >
-                    Submenu item 2
-                  </a>
-                </li>
-                <li
-                  class="__parent"
-                >
-                  <button
-                    aria-controls="mm-panel-custom-trigger-mm-2"
-                    aria-expanded="false"
-                    aria-haspopup="menu"
-                    id="custom-trigger-mm-2"
-                    type="button"
+                    <a
+                      href="/example.html"
+                    >
+                      Submenu item 3 with very long text that needs multiple lines.
+                    </a>
+                  </li>
+                  <li
+                    class="__leaf"
                   >
-                    Submenu item 3 (many children)
-                  </button>
-                  <div
-                    aria-labelledby="custom-trigger-mm-2"
-                    class="bcl-mega-menu__submenu __level-2"
-                    hidden
-                    id="mm-panel-custom-trigger-mm-2"
-                    role="group"
+                    <span>
+                      Submenu item 4 (nolink)
+                    </span>
+                  </li>
+                  <li
+                    class="__parent"
                   >
+                    <button
+                      aria-controls="mm-panel-custom-trigger-mm-3"
+                      aria-expanded="false"
+                      aria-haspopup="menu"
+                      id="custom-trigger-mm-3"
+                      type="button"
+                    >
+                      Submenu item 5 (nolink parent)
+                    </button>
                     <div
-                      class="__header"
+                      aria-labelledby="custom-trigger-mm-3"
+                      class="bcl-mega-menu__submenu __level-2"
+                      hidden
+                      id="mm-panel-custom-trigger-mm-3"
+                      role="group"
                     >
-                      <p
-                        class="__label"
+                      <div
+                        class="__header"
                       >
-                        Submenu item 3 (many children)
-                      </p>
+                        <p
+                          class="__label"
+                        >
+                          Submenu item 5 (nolink parent)
+                        </p>
+                      </div>
+                      <div
+                        class="__submenu_body"
+                      >
+                        <ul
+                          class="bcl-mega-menu__items __level-2"
+                        >
+                          <li
+                            class="__leaf"
+                          >
+                            <span>
+                              Sub-submenu item 5.1 (nolink)
+                            </span>
+                          </li>
+                          <li
+                            class="__leaf"
+                          >
+                            <a
+                              href="/example.html"
+                            >
+                              Sub-submenu item 5.2
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <ul
-                      class="bcl-mega-menu__items __level-2"
+                  </li>
+                  <li
+                    class="__leaf"
+                  >
+                    <a
+                      href="/example.html"
                     >
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.1
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.2
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.3
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.4
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.5
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.6
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.7
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.8
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.9
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.10
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.11
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.13
-                        </a>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 2.14
-                        </a>
-                      </li>
-                    </ul>
-                    <div
-                      class="__see_all"
+                      Submenu item 6.
+                    </a>
+                  </li>
+                  <li
+                    class="__leaf"
+                  >
+                    <a
+                      href="/example.html"
                     >
-                      <a
-                        aria-label="See all items in ‘Submenu item 3 (many children)’"
-                        class="see-all-button"
-                        href="/example.html"
-                      >
-                        <span>
-                          More of submenu item 3
-                        </span>
-                        <svg
-                          class="ms-2-5 bi icon--xs"
-                        >
-                          <use
-                            xlink:href="#arrow-right"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li
-                  class="__leaf"
-                >
-                  <a
-                    href="/example.html"
+                      Submenu item 7.
+                    </a>
+                  </li>
+                  <li
+                    class="__leaf"
                   >
-                    Submenu item 3 with very long text that needs multiple lines.
-                  </a>
-                </li>
-                <li
-                  class="__leaf"
-                >
-                  <span>
-                    Submenu item 4 (nolink)
-                  </span>
-                </li>
-                <li
-                  class="__parent"
-                >
-                  <button
-                    aria-controls="mm-panel-custom-trigger-mm-3"
-                    aria-expanded="false"
-                    aria-haspopup="menu"
-                    id="custom-trigger-mm-3"
-                    type="button"
-                  >
-                    Submenu item 5 (nolink parent)
-                  </button>
-                  <div
-                    aria-labelledby="custom-trigger-mm-3"
-                    class="bcl-mega-menu__submenu __level-2"
-                    hidden
-                    id="mm-panel-custom-trigger-mm-3"
-                    role="group"
-                  >
-                    <div
-                      class="__header"
+                    <a
+                      href="/example.html"
                     >
-                      <p
-                        class="__label"
-                      >
-                        Submenu item 5 (nolink parent)
-                      </p>
-                    </div>
-                    <ul
-                      class="bcl-mega-menu__items __level-2"
-                    >
-                      <li
-                        class="__leaf"
-                      >
-                        <span>
-                          Sub-submenu item 5.1 (nolink)
-                        </span>
-                      </li>
-                      <li
-                        class="__leaf"
-                      >
-                        <a
-                          href="/example.html"
-                        >
-                          Sub-submenu item 5.2
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li
-                  class="__leaf"
-                >
-                  <a
-                    href="/example.html"
-                  >
-                    Submenu item 6.
-                  </a>
-                </li>
-                <li
-                  class="__leaf"
-                >
-                  <a
-                    href="/example.html"
-                  >
-                    Submenu item 7.
-                  </a>
-                </li>
-                <li
-                  class="__leaf"
-                >
-                  <a
-                    href="/example.html"
-                  >
-                    Submenu item 8.
-                  </a>
-                </li>
-              </ul>
+                      Submenu item 8.
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

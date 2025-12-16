@@ -193,6 +193,8 @@ ul.bcl-mega-menu__items {
   @include media-breakpoint-up(lg) {
     block-size: $mm-panel-height;
     overflow-y: auto;
+    scrollbar-color: $primary-bg-light-subtle transparent;
+    scrollbar-width: thin;
   }
   // Add space above in mobile viewport.
   @include media-breakpoint-down(lg) {
@@ -368,7 +370,7 @@ ul.bcl-mega-menu__items {
       }
     }
   }
-  > .__see_all {
+  .__see_all {
     border-top: 1px solid $neutral-border-color;
     @include media-breakpoint-up(lg) {
       border-top: 1px solid $primary-border-subtle;
@@ -416,6 +418,14 @@ ul.bcl-mega-menu__items {
       inset-block-start: 0;
       z-index: -1;
       transform: translateX(-50%);
+    }
+  }
+  .bcl-mega-menu {
+    .__submenu_body {
+      max-height: var(--oel-mega-menu-submenu-height);
+      overflow: auto;
+      scrollbar-color: $primary-bg-light-subtle transparent;
+      scrollbar-width: thin;
     }
   }
 }
