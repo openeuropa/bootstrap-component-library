@@ -71,7 +71,7 @@
     {% set _card_attributes = card.attributes ? card.attributes : create_attribute() %}
     {% set _card_title_attributes = card.title_attributes ? card.title_attributes : create_attribute() %}
     {% set _card = _card|merge({
-      title_attributes: _card_title_attributes.addClass(['h5'])
+      title_attributes: _card_title_attributes.addClass(['fs-5'])
     }) %}
 
     {% if _variant == 'default-1-col' or _variant == 'default-2-col' or _variant == 'default-3-col' %}
