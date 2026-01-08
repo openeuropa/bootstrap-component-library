@@ -1,4 +1,14 @@
-.badge.text-bg-secondary {
+.badge.text-bg-secondary,
+.badge.text-bg-secondary a {
   background-color: $compliant-badge-secondary !important;
   color: #fff !important;
+}
+a.badge {
+  &:focus-within,
+  &:active,
+  &:hover {
+    &.text-bg-secondary {
+      background-color: shade-color($compliant-badge-secondary, 15%) !important;
+    }
+  }
 }
