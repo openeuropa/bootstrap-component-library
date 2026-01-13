@@ -3,7 +3,7 @@
 const { spawn } = require("child_process");
 const path = require("path");
 const theme = process.argv.slice(2)[0] || "default";
-const themes = ["default", "ucpkn", "joinup"];
+const themes = ["default", "joinup"];
 const issue = process.argv.slice(2)[1] || false;
 const root = path.resolve(__dirname, "../");
 
