@@ -1,27 +1,27 @@
 {% extends "@oe-bcl/bcl-base-templates/listing-page.html.twig" -%}
 
-{%- block banner %}
-<div class="container mt-4 mt-md-5">
-  <div class="col-xxl-11">
-    <div class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container">
+{%- block banner -%}
+<div class="container mt-4 mt-md-5">{# -#}
+  <div class="col-xxl-11">{# -#}
+    <div class="p-md-3-5 pt-3 bg-lighter d-md-flex n-mx-container">{# -#}
       <h1 class="mb-0 d-inline-block">{{ banner.main_title }}</h1>
-      {% if banner.actions is not empty and banner.actions is iterable %}
+      {%- if banner.actions is not empty and banner.actions is iterable -%}
       <div class="d-grid d-md-block ms-auto">
-        {% for _action in banner.actions %}
-          {% if _action.type == "link" %}
-            {% include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
-          {% elseif _action.type == "button" %}
-            {% include '@oe-bcl/bcl-button/button.html.twig' with _action only %}
-          {% elseif _action.type == "dropdown" %}
-            {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _action only %}
-          {% endif %}
-        {% endfor %}
+        {%- for _action in banner.actions %}
+          {%- if _action.type == "link" %}
+            {%- include '@oe-bcl/bcl-link/link.html.twig' with _action only %}
+          {%- elseif _action.type == "button" %}
+            {%- include '@oe-bcl/bcl-button/button.html.twig' with _action only %}
+          {%- elseif _action.type == "dropdown" %}
+            {%- include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _action only %}
+          {%- endif %}
+        {%- endfor -%}
       </div>
-      {% endif %}
+      {%- endif -%}
     </div>
-  {% if navigation is not empty %}
-    {% include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
-  {% endif %}
-  </div>
+  {%- if navigation is not empty %}
+    {%- include '@oe-bcl/bcl-navigation/navigation.html.twig' with navigation only %}
+  {%- endif -%}
+  </div>{# -#}
 </div>
 {%- endblock -%}

@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h1')
@@ -51,7 +49,7 @@
     - card_links
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('div') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -77,104 +75,104 @@
 {% set _badges = badges|default([]) %}
 {% set _links = links|default([]) %}
 
-{% set _classes = ['card'] %}
+{%- set _classes = ['card'] %}
 {% if _text_color is not empty %}
-  {% set _classes = _classes|merge(['text-' ~ _text_color]) %}
+  {%- set _classes = _classes|merge(['text-' ~ _text_color]) %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes|merge(['text-bg-' ~ _variant]) %}
+  {%- set _classes = _classes|merge(['text-bg-' ~ _variant]) %}
 {% endif %}
 {% if _border_variant is not empty %}
-  {% set _classes = _classes|merge(['border-' ~ _border_variant]) %}
+  {%- set _classes = _classes|merge(['border-' ~ _border_variant]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set _body_classes = 'card-body' %}
+{%- set _body_classes = 'card-body' %}
 {% if _extra_classes_body is not empty %}
-  {% set _body_classes = _body_classes ~ ' ' ~ _extra_classes_body %}
+  {%- set _body_classes = _body_classes ~ ' ' ~ _extra_classes_body %}
 {% endif %}
 
-{% set _header_classes = 'card-header' %}
+{%- set _header_classes = 'card-header' %}
 {% if _extra_classes_header is not empty %}
-  {% set _header_classes = _header_classes ~ ' ' ~ _extra_classes_header %}
+  {%- set _header_classes = _header_classes ~ ' ' ~ _extra_classes_header %}
 {% endif %}
 
-{% set _footer_classes = 'card-footer' %}
+{%- set _footer_classes = 'card-footer' %}
 {% if _extra_classes_footer is not empty %}
-  {% set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
+  {%- set _footer_classes = _footer_classes ~ ' ' ~ _extra_classes_footer %}
 {% endif %}
 
-{% set _row_classes = 'row' %}
+{%- set _row_classes = 'row' %}
 {% if _horizontal_grid.gutter is not empty %}
-  {% set _row_classes = _row_classes ~ ' g-' ~ _horizontal_grid.gutter %}
+  {%- set _row_classes = _row_classes ~ ' g-' ~ _horizontal_grid.gutter %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <article
   {{ attributes }}
 >
-{% if _card_header is not empty %}
+{%- if _card_header is not empty -%}
   <div class='{{ _header_classes }}'>
     {{- _card_header -}}
   </div>
-{% endif %}
-{% if _horizontal %}
+{%- endif %}
+{% if _horizontal -%}
   <div class='{{ _row_classes }}'>
-{% endif %}
+{%- endif %}
 {% if _image is not empty and _image.position != 'bottom' %}
-  {% set _img_class = 'card-img-top' %}
-  {% if _image.position == 'background' %}
-    {% set _img_class = 'card-img' %}
-  {% endif %}
-  {% if _image.rounded is not empty %}
-    {% set _img_class = _img_class ~ ' rounded-' ~ _image.rounded %}
-  {% elseif _horizontal %}
-    {% if attributes.hasClass('border-0') %}
-      {% set _img_class = _img_class ~ ' rounded-1' %}
-    {% else %}
-      {% set _img_class = _img_class ~ ' rounded-0 rounded-start' %}
-    {% endif %}
-  {% elseif _card_header is not empty %}
-    {% set _img_class = _img_class ~ ' rounded-0' %}
-  {% endif %}
-  {% if _image.classes is not empty %}
-    {% set _img_class = _img_class ~ " " ~ _image.classes %}
-  {% endif %}
+  {%- set _img_class = 'card-img-top' %}
+  {%- if _image.position == 'background' %}
+    {%- set _img_class = 'card-img' %}
+  {%- endif %}
+  {%- if _image.rounded is not empty %}
+    {%- set _img_class = _img_class ~ ' rounded-' ~ _image.rounded %}
+  {%- elseif _horizontal %}
+    {%- if attributes.hasClass('border-0') %}
+      {%- set _img_class = _img_class ~ ' rounded-1' %}
+    {%- else %}
+      {%- set _img_class = _img_class ~ ' rounded-0 rounded-start' %}
+    {%- endif %}
+  {%- elseif _card_header is not empty %}
+    {%- set _img_class = _img_class ~ ' rounded-0' %}
+  {%- endif %}
+  {%- if _image.classes is not empty %}
+    {%- set _img_class = _img_class ~ " " ~ _image.classes %}
+  {%- endif %}
 {% endif %}
-{% if _horizontal and (_image is not empty or _date is not empty) %}
+{% if _horizontal and (_image is not empty or _date is not empty) -%}
   <div class='{{ _horizontal_grid.left_col_classes }}'>
-{% endif %}
-  {% if _date is not empty %}
-    {% block card_date %}
-      {% include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
-    {% endblock %}
-  {% elseif _image is not empty and _image.position != "bottom" %}
+{%- endif %}
+  {%- if _date is not empty %}
+    {%- block card_date %}
+      {%- include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
+    {%- endblock %}
+  {%- elseif _image is not empty and _image.position != "bottom" -%}
     <img
       src="{{ _image.path }}"
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
-  {% endif %}
-{% if _horizontal and (_image is not empty or _date is not empty) %}
+  {%- endif %}
+{% if _horizontal and (_image is not empty or _date is not empty) -%}
   </div>
-{% endif %}
-{% if _image.position == 'background' %}
+{%- endif %}
+{% if _image.position == 'background' -%}
   <div class="card-img-overlay">
-{% endif %}
-{% if _horizontal %}
+{%- endif %}
+{% if _horizontal -%}
 <div class='{{ _horizontal_grid.right_col_classes }}'>
-{% endif %}
+{%- endif -%}
   <div class='{{ _body_classes }}'>
-  {% if _title is not empty %}
-    {% if _title_attributes.class is empty %}
-      {% set _title_attributes = _title_attributes.addClass('h4') %}
-    {% endif %}
-    {% set _title_attributes = _title_attributes.addClass('card-title') %}
-    {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+  {%- if _title is not empty %}
+    {%- if _title_attributes.class is empty %}
+      {%- set _title_attributes = _title_attributes.addClass('h4') %}
+    {%- endif %}
+    {%- set _title_attributes = _title_attributes.addClass('card-title') %}
+    {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
       title: _title,
       title_tag: _title_tag,
       title_link: _title_link,
@@ -182,7 +180,7 @@
     } only %}
   {%- endif %}
   {%- if _subtitle is not empty -%}
-    {% set _subtitle_tag = _subtitle.tag ?? 'h6' %}
+    {% set _subtitle_tag = _subtitle.tag ?? 'h6' -%}
     <{{ _subtitle_tag }}
       class='card-subtitle{{ _subtitle.classes ? ' ' ~ _subtitle.classes }}'
     >
@@ -190,7 +188,7 @@
     </{{ _subtitle_tag }}>
   {%- endif -%}
   {%- if _text is not empty -%}
-    {% set _text_tag = _text.tag ?? 'p' %}
+    {% set _text_tag = _text.tag ?? 'p' -%}
     <{{ _text_tag }}
       class='card-text{{ _text.classes ? ' ' ~ _text.classes }}'
     >
@@ -203,73 +201,72 @@
   {% block card_badges %}
     {%- if _badges is not empty and _badges is iterable -%}
       <div class="mt-2-5">
-      {% for _badge in _badges %}
-        {% if _badge.attributes is empty %}
-          {% set _badge = _badge|merge({
+      {%- for _badge in _badges %}
+        {%- if _badge.attributes is empty %}
+          {%- set _badge = _badge|merge({
             attributes: create_attribute()
           }) %}
-        {% endif %}
-        {% set _badge = _badge|merge({
+        {%- endif %}
+        {%- set _badge = _badge|merge({
             attributes: _badge.attributes.addClass('mb-2')
           })
         %}
-        {% if not loop.last %}
-          {% set _badge = _badge|merge({
+        {%- if not loop.last %}
+          {%- set _badge = _badge|merge({
               attributes: _badge.attributes.addClass('me-2')
             })
           %}
-        {% endif %}
-        {% include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
+        {%- endif %}
+        {%- include '@oe-bcl/bcl-badge/badge.html.twig' with _badge only %}
 
-      {% endfor %}
+      {%- endfor -%}
       </div>
     {%- endif -%}
   {% endblock %}
   {%- block card_links %}
     {%- if _links is not empty and _links is iterable -%}
       <div class="mt-2-5 mb-2">
-      {% for _link in _links %}
+      {%- for _link in _links -%}
         <div class="mb-3 mb-md-0 d-block d-md-inline-block me-md-4-5">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
         </div>
-      {% endfor %}
+      {%- endfor -%}
       </div>
     {%- endif -%}
   {% endblock -%}
   </div>
-{% if _horizontal %}
+{%- if _horizontal -%}
 </div>
-{% endif %}
+{%- endif %}
 {% if _image is not empty %}
-  {% if _image.position == 'background' %}
+  {%- if _image.position == 'background' -%}
   </div>
-  {% endif %}
-  {% set _img_class = "card-img-bottom" %}
-  {% if _image.classes is not empty %}
-    {% set _img_class = _img_class ~ " " ~ _image.classes %}
-  {% endif %}
-  {% if _image.position == 'bottom' %}
-    {% if _horizontal %}
+  {%- endif %}
+  {%- set _img_class = "card-img-bottom" %}
+  {%- if _image.classes is not empty %}
+    {%- set _img_class = _img_class ~ " " ~ _image.classes %}
+  {%- endif %}
+  {%- if _image.position == 'bottom' %}
+    {%- if _horizontal -%}
     <div class="col-4">
-    {% endif %}
+    {%- endif -%}
     <img
       src="{{ _image.path }}"
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
-    {% if _horizontal %}
+    {%- if _horizontal -%}
     </div>
-    {% endif %}
-  {% endif %}
+    {%- endif %}
+  {%- endif %}
 {% endif %}
-{% if _horizontal %}
+{% if _horizontal -%}
   </div>
-{% endif %}
-{% if _card_footer is not empty %}
+{%- endif %}
+{% if _card_footer is not empty -%}
   <div class="{{ _footer_classes }}">
     {{- _card_footer -}}
   </div>
-{% endif %}
+{%- endif -%}
 </article>
-
-{% endapply %}
+{#--#}

@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - vertical (boolean) (default: false)
   - size (string) (default: 'md')
@@ -11,57 +9,55 @@
   - attributes (drupal attrs)
 #}
 
-{% set _vertical = vertical ?? false %}
+{%- set _vertical = vertical ?? false %}
 {% set _size = size|default('md') %}
 {% set _aria_label = aria_label|default('') %}
 {% set _toolbar = toolbar ?? false %}
 {% set _toolbar_aria_label = toolbar_aria_label|default('') %}
 {% set _items = items|default([]) %}
 
-{% set _classes = ['btn-group'] %}
+{%- set _classes = ['btn-group'] %}
 
-{% if _vertical %}
-  {% set _classes = ['btn-group-vertical'] %}
+{%- if _vertical %}
+  {%- set _classes = ['btn-group-vertical'] %}
 {% endif %}
 
-{% set _classes = _classes|merge(['btn-group-' ~ _size]) %}
+{%- set _classes = _classes|merge(['btn-group-' ~ _size]) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _aria_label is not empty %}
-  {% set attributes = attributes.setAttribute('aria-label', _aria_label) %}
+{%- if _aria_label is not empty %}
+  {%- set attributes = attributes.setAttribute('aria-label', _aria_label) %}
 {% endif %}
 
-{% set attributes = attributes.setAttribute('role', 'group').addClass(_classes) %}
+{%- set attributes = attributes.setAttribute('role', 'group').addClass(_classes) %}
 
-{% if _toolbar %}
+{%- if _toolbar -%}
   <div class="btn-toolbar" role="toolbar"
   {% if _toolbar_aria_label is not empty %}
     aria-label="{{ _toolbar_aria_label }}"
   {% endif %}
   >
-{% endif %}
+{%- endif %}
 {% if _items is not empty %}
-  {% for _items_group in _items %}
+  {%- for _items_group in _items -%}
     <div
       {{ attributes }}
     >
-    {% if _items_group is not empty and _items_group is iterable %}
-      {% for _item in _items_group %}
-        {% if _item.input is defined %}
-          {% include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
-        {% else %}
-          {% include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+    {%- if _items_group is not empty and _items_group is iterable %}
+      {%- for _item in _items_group %}
+        {%- if _item.input is defined %}
+          {%- include '@oe-bcl/bcl-form-input/form-input.html.twig' with _item only %}
+        {%- else %}
+          {%- include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
+        {%- endif %}
+      {%- endfor %}
+    {%- endif -%}
     </div>
-  {% endfor %}
+  {%- endfor %}
 {% endif %}
-{% if _toolbar %}
+{% if _toolbar -%}
   </div>
-{% endif %}
-
-{% endapply %}
+{%- endif -%}

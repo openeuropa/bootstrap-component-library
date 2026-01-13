@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
   Parameters:
   - title (string) (default: '')
@@ -24,7 +22,7 @@
   - link_more (object of type link) (default {})
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -40,89 +38,88 @@
 {% set _icon_path = icon_path|default('') %}
 {% set _link_more = link_more|default({}) %}
 
-{% set _cols_classes = 'col' %}
+{%- set _cols_classes = 'col' %}
 {% set _classes = ['bcl-fact-figures', 'bcl-fact-figures--' ~ _variant] %}
 {% set _wrapper_classes = [] %}
 
-{% set _grid_classes = [
+{%- set _grid_classes = [
   'row-cols-' ~ _responsiveness ~ '-' ~ _responsive_columns,
   'row', 'row-cols-' ~ _grid_columns
 ] %}
 {% if _responsive_columns == 3 %}
- {% set _grid_classes = _grid_classes|merge(['row-cols-sm-2']) %}
+ {%- set _grid_classes = _grid_classes|merge(['row-cols-sm-2']) %}
 {% endif %}
 {% if _variant == 'block' or _variant == 'block-primary' %}
-  {% set _wrapper_classes = _wrapper_classes|merge(['bg-light p-3-5 pt-0']) %}
+  {%- set _wrapper_classes = _wrapper_classes|merge(['bg-light p-3-5 pt-0']) %}
 {% endif %}
 {% if _gutter is not empty %}
-  {% set _grid_classes = _grid_classes|merge(['g-' ~ _gutter]) %}
+  {%- set _grid_classes = _grid_classes|merge(['g-' ~ _gutter]) %}
 {% endif %}
 {% if _title is not empty %}
-  {% set _grid_classes = _grid_classes|merge(['mt-3']) %}
+  {%- set _grid_classes = _grid_classes|merge(['mt-3']) %}
 {% endif %}
 {% if _equal_height %}
-  {% set _cols_classes = _cols_classes ~ ' h-100' %}
+  {%- set _cols_classes = _cols_classes ~ ' h-100' %}
 {% endif %}
 {% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) -%}
 
 <div {{ attributes }}>
-{% if _title is not empty %}
-  {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+{%- if _title is not empty %}
+  {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
     attributes: _title_attributes,
   } only %}
-{% endif %}
+{% endif -%}
   <div
   {% if _wrapper_classes is not empty %}
     class="{{ _wrapper_classes|join(' ') }}"
   {% endif %}
-  >
+  >{# -#}
     <div class="{{ _grid_classes|join(' ') }}">
-    {% if _items is defined and _items is not empty and _items is iterable %}
-      {% for _item in _items %}
+    {%- if _items is defined and _items is not empty and _items is iterable %}
+      {%- for _item in _items -%}
       <div class="{{ _cols_classes }}">
-      {% if _item.icon is defined and _item.icon is not empty and _display_icons %}
-        {% set _icon_attributes = _item.icon.attributes ?: create_attribute() %}
-        {% set _item = _item|merge({
+      {%- if _item.icon is defined and _item.icon is not empty and _display_icons %}
+        {%- set _icon_attributes = _item.icon.attributes ?: create_attribute() %}
+        {%- set _item = _item|merge({
           icon: _item.icon|merge({
             path: _icon_path,
             size: 'l',
             attributes: _icon_attributes.addClass(['mb-2', 'icon--primary']),
           })
         }) %}
-        {% include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
-      {% endif %}
-      {% if _item.title is defined and _item.title is not empty %}
+        {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _item.icon only %}
+      {%- endif %}
+      {%- if _item.title is defined and _item.title is not empty -%}
         <div class="fs-4 fw-medium">
           {{- _item.title -}}
         </div>
-      {% endif %}
-      {% if _item.subtitle is defined and _item.subtitle is not empty %}
+      {%- endif %}
+      {%- if _item.subtitle is defined and _item.subtitle is not empty -%}
         <div class="fs-5 fw-medium">
           {{- _item.subtitle -}}
         </div>
-      {% endif %}
-      {% if _item.description is defined and _item.description is not empty %}
+      {%- endif %}
+      {%- if _item.description is defined and _item.description is not empty -%}
         <p>
           {{- _item.description -}}
         </p>
-      {% endif %}
+      {%- endif -%}
       </div>
-      {% endfor %}
-    {% endif %}
+      {%- endfor %}
+    {%- endif -%}
     </div>
-    {% if _link_more is defined and _link_more is not empty %}
+    {%- if _link_more is defined and _link_more is not empty -%}
       <div class="border-top d-block pt-3 mt-3">
-        {% include '@oe-bcl/bcl-link/link.html.twig' with _link_more only %}
+        {%- include '@oe-bcl/bcl-link/link.html.twig' with _link_more only -%}
       </div>
-    {% endif %}
-  </div>
+    {%- endif -%}
+  </div>{# -#}
 </div>
-
-{% endapply %}
+{#--#}

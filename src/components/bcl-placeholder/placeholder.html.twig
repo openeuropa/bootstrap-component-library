@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - width (int) (default: 0) - between 0-100
   - variant (string) (default: '')
@@ -11,35 +9,33 @@
   - attributes (drupal attrs)
 #}
 
-{% set _width = width|default(0) %}
+{%- set _width = width|default(0) %}
 {% set _variant = variant|default('') %}
 {% set _size = size|default('') %}
 {% set _animation = animation|default('') %}
 
-{% set _classes = ['placeholder'] %}
+{%- set _classes = ['placeholder'] %}
 
-{% if _size is not empty %}
-  {% set _classes = _classes|merge(['placeholder-' ~ _size]) %}
+{%- if _size is not empty %}
+  {%- set _classes = _classes|merge(['placeholder-' ~ _size]) %}
 {% endif %}
 
-{% if _variant is not empty %}
-  {% set _classes = _classes|merge(['text-bg-' ~ _variant]) %}
+{%- if _variant is not empty %}
+  {%- set _classes = _classes|merge(['text-bg-' ~ _variant]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 {% set attributes = attributes.setAttribute('style', 'width: ' ~ _width ~ '%;') %}
 
-{% if _animation is not empty %}
+{%- if _animation is not empty -%}
   <p class="placeholder-{{ _animation }}">
-{% endif %}
-<span {{- attributes -}} >
+{%- endif -%}
+<span {{- attributes -}} >{# -#}
 </span>
-{% if _animation is not empty %}
+{%- if _animation is not empty -%}
   </p>
-{% endif %}
-
-{% endapply %}
+{%- endif -%}

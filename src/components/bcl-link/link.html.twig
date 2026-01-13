@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - label (string) (default: '')
   - path (string) (default: '#')
@@ -15,7 +13,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _label = label|default('') %}
+{%- set _label = label|default('') %}
 {% set _path = path|default('#') %}
 {% set _variant = variant|default('') %}
 {% set _id = id|default('') %}
@@ -25,54 +23,54 @@
 {% set _icon_position = icon_position|default('after') %}
 {% set _remove_icon_spacers = remove_icon_spacers ?? false %}
 
-{% set _classes = [] %}
+{%- set _classes = [] %}
 
-{% if _icon is not empty %}
-  {% if _label is not empty and not _remove_icon_spacers %}
-    {% if _icon.attributes is empty %}
-      {% set _icon = _icon|merge({
+{%- if _icon is not empty %}
+  {%- if _label is not empty and not _remove_icon_spacers %}
+    {%- if _icon.attributes is empty %}
+      {%- set _icon = _icon|merge({
           attributes: create_attribute()
         })
       %}
-    {% endif %}
-    {% if _icon_position == 'before' %}
-      {% set _icon = _icon|merge({
+    {%- endif %}
+    {%- if _icon_position == 'before' %}
+      {%- set _icon = _icon|merge({
           attributes: _icon.attributes.addClass('me-2-5')
         })
       %}
-    {% else %}
-      {% set _icon = _icon|merge({
+    {%- else %}
+      {%- set _icon = _icon|merge({
           attributes: _icon.attributes.addClass('ms-2-5')
         })
       %}
-    {% endif %}
-  {% endif %}
+    {%- endif %}
+  {%- endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
   {%- endset -%}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _disabled %}
-  {% set _classes = _classes|merge(['disabled']) %}
-  {% set attributes = attributes.setAttribute('aria-disabled', 'true').setAttribute('tabindex', '-1') %}
+{%- if _disabled %}
+  {%- set _classes = _classes|merge(['disabled']) %}
+  {%- set attributes = attributes.setAttribute('aria-disabled', 'true').setAttribute('tabindex', '-1') %}
 {% endif %}
 {% if _variant is not empty %}
-  {% set _classes = _classes|merge(['link-' ~ _variant]) %}
+  {%- set _classes = _classes|merge(['link-' ~ _variant]) %}
 {% endif %}
 {% if _id is not empty %}
-  {% set attributes = attributes.setAttribute('id', _id) %}
+  {%- set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 {% if _standalone %}
-  {% set _classes = _classes|merge(['standalone']) %}
+  {%- set _classes = _classes|merge(['standalone']) %}
 {% endif %}
 {% if _classes is not empty %}
-  {% set attributes = attributes.addClass(_classes) %}
+  {%- set attributes = attributes.addClass(_classes) %}
 {% endif %}
-{% set attributes = attributes.setAttribute('href', _path) %}
+{% set attributes = attributes.setAttribute('href', _path) -%}
 
 <a
   {{ attributes }}
@@ -85,5 +83,4 @@
     {{ _icon_markup }}
   {%- endif -%}
 </a>
-
-{% endapply %}
+{#--#}

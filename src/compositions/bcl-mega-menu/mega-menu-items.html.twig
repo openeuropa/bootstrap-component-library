@@ -1,35 +1,32 @@
-{% apply spaceless %}
-
 {% set _label = label ?? null %}
 {% set _items = items ?? [] %}
 {% set _icon_path = icon_path ?? '' %}
 {% set _level = level ?? 1 %}
-{% set _see_all = see_all ?? null %}
+{% set _see_all = see_all ?? null -%}
 
 <ul class="bcl-mega-menu__items __level-{{ _level }}">
-  {% for _item in _items %}
-    {% set _li_attributes = _item.li_attributes ?? create_attribute() %}
-    {% if _item.items is defined and _item.items is not empty %}
-      {# This is a parent item. #}
+  {%- for _item in _items %}
+    {%- set _li_attributes = _item.li_attributes ?? create_attribute() %}
+    {%- if _item.items is defined and _item.items is not empty %}
+      {#- This is a parent item. -#}
       <li{{ _li_attributes.addClass('__parent') }}>
-        {% include '@oe-bcl/bcl-mega-menu/mega-menu-submenu.html.twig' with _item|merge({
+        {%- include '@oe-bcl/bcl-mega-menu/mega-menu-submenu.html.twig' with _item|merge({
           icon_path: _icon_path,
           level: _level + 1,
-        }) only %}
+        }) only -%}
       </li>
-    {% else %}
-      {# This is a leaf item. #}
+    {%- else %}
+      {#- This is a leaf item. -#}
       <li{{ _li_attributes.addClass('__leaf') }}>
-        {% if _item.path is empty %}
-          {# This is a nolink item. #}
+        {%- if _item.path is empty %}
+          {#- This is a nolink item. -#}
           <span{{ _item.attributes ?? '' }}>{{ _item.label }}</span>
-        {% else %}
-          {# This is a link. #}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
-        {% endif %}
+        {%- else %}
+          {#- This is a link. #}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+        {%- endif -%}
       </li>
-    {% endif %}
-  {% endfor %}
+    {%- endif %}
+  {%- endfor -%}
 </ul>
-
-{% endapply %}
+{#--#}
