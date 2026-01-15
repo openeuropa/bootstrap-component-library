@@ -184,18 +184,26 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
   }
 }
 
+// Add a scrollbar in desktop viewport.
+@include media-breakpoint-up(lg) {
+  .__submenu_body {
+    block-size: $mm-panel-height;
+    overflow-y: auto;
+    scrollbar-color: $primary-bg-light-subtle transparent;
+    scrollbar-width: thin;
+    &:has(> .__see_all) {
+      ul.bcl-mega-menu__items {
+        height: calc(100% - 48px); /* 48px = see all button height */
+      }
+    }
+  }
+}
+
 // Item lists on any level.
 ul.bcl-mega-menu__items {
   list-style: none;
   margin: 0;
   padding-inline-start: 0;
-  // Add a scrollbar in desktop viewport.
-  @include media-breakpoint-up(lg) {
-    block-size: $mm-panel-height;
-    overflow-y: auto;
-    scrollbar-color: $primary-bg-light-subtle transparent;
-    scrollbar-width: thin;
-  }
   // Add space above in mobile viewport.
   @include media-breakpoint-down(lg) {
     margin: 1rem 0 0;
@@ -362,7 +370,7 @@ ul.bcl-mega-menu__items {
     }
   }
   @include media-breakpoint-up(lg) {
-    > .bcl-mega-menu__items {
+    > .__submenu_body > .bcl-mega-menu__items {
       flex: 1 1 0;
       overflow-y: auto;
       > li > :is(span, a, button) {
