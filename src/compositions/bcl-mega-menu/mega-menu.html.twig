@@ -102,7 +102,9 @@
           {%- endif %}
           {#- Submenu column. -#}
           <div class="col-md-12 col-lg-4 col-xl-3 bcl-mega-menu__menu">
-            {%- include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' -%}
+            <div class="__submenu_body">
+              {% include '@oe-bcl/bcl-mega-menu/mega-menu-items.html.twig' %}
+            </div>{# -#}
           </div>{# -#}
         </div>{# -#}
       </div>{# -#}
