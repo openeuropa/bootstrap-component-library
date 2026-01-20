@@ -1,56 +1,53 @@
-{% apply spaceless %}
-
 {# Parameters:
   - corporate_contributions (string) (default: '') // value every 5 percent
   - legend (description list object) (default: {})
   - chart (boolean) (default: false)
 
-  Blocks - 
+  Blocks -
     project_status_contrib_chart
     project_status_contrib_legend
 #}
 
-{% set _corporate_contributions = corporate_contributions|default('') %}
+{%- set _corporate_contributions = corporate_contributions|default('') %}
 {% set _legend = legend|default({}) %}
 {% set _chart = chart ?? false %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass([
+{%- set attributes = attributes.addClass([
   'bcl-project-contributions',
   'border-bottom',
   'pb-4',
   'mb-4'
-]) %}
+]) -%}
 
-<div {{ attributes }}>
+<div {{ attributes }}>{# -#}
   <div class="row">
 
-  {% if _chart %}
+  {%- if _chart -%}
     <div class="bcl-project-contributions-chart col-5 col-md-3">
-    {% block project_status_contrib_chart %}
-      <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">
-        <span class="circular-progress-left">
-          <span class="circular-progress-bar"></span>
-        </span>
-        <span class="circular-progress-right">
-          <span class="circular-progress-bar"></span>
-        </span>
+    {%- block project_status_contrib_chart -%}
+      <div class="circular-progress" data-percentage="{{ _corporate_contributions }}">{# -#}
+        <span class="circular-progress-left">{# -#}
+          <span class="circular-progress-bar"></span>{# -#}
+        </span>{# -#}
+        <span class="circular-progress-right">{# -#}
+          <span class="circular-progress-bar"></span>{# -#}
+        </span>{# -#}
       </div>
-    {% endblock %}
+    {%- endblock -%}
     </div>
-  {% endif %}
+  {%- endif %}
 
-  {% if _legend is not empty %}
+  {%- if _legend is not empty -%}
     <div class="bcl-project-contributions-legend col-7 col-md-9 align-self-center">
-    {% block project_status_contrib_legend %}
-      {% include '@oe-bcl/bcl-description-list/description-list.html.twig' with _legend only %}
-    {% endblock %}
+    {%- block project_status_contrib_legend %}
+      {%- include '@oe-bcl/bcl-description-list/description-list.html.twig' with _legend only %}
+    {%- endblock -%}
     </div>
-  {% endif %}
-  </div> 
+  {%- endif -%}
+  </div>{# -#}
 </div>
-
-{% endapply %}
+{#--#}

@@ -8,7 +8,6 @@ const ports = {
   dev: "5000",
   default: "5001",
   joinup: "5002",
-  ucpkn: "5003",
 };
 
 const theme = instance === "dev" ? "default" : instance;

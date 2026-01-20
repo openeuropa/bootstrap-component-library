@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
@@ -7,34 +5,32 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
-{%  endif %}
-
-{% if attributes.class is empty %}
-  {% set attributes = attributes.addClass(['mb-4']) %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bcl-heading']) %}
-
-{% if _title_link is not empty and _title is not empty and _title_link.label is empty %}
-  {% set _title_link = _title_link|merge({ label: _title }) %}
+{%- if attributes.class is empty %}
+  {%- set attributes = attributes.addClass(['mb-4']) %}
 {% endif %}
 
-{% if _title is not empty or _title_link is not empty %}
-<{{ _title_tag }} 
+{%- set attributes = attributes.addClass(['bcl-heading']) %}
+
+{%- if _title_link is not empty and _title is not empty and _title_link.label is empty %}
+  {%- set _title_link = _title_link|merge({ label: _title }) %}
+{% endif %}
+
+{%- if _title is not empty or _title_link is not empty -%}
+<{{ _title_tag }}
   {{- attributes -}}
 >
 {%- if _title_link is not empty -%}
   {% include '@oe-bcl/bcl-link/link.html.twig' with _title_link|merge({ standalone: true }) only %}
 {%- else -%}
   {{- _title -}}
-{%- endif %}
+{%- endif -%}
 </{{ _title_tag }}>
-{% endif -%}
-
-{% endapply %}
+{%- endif -%}

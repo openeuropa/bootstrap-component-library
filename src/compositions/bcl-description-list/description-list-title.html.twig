@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
   Parameters:
   - icon: (icon object) (default: {})
@@ -8,26 +6,25 @@
   - label: (string) (default: '')
 #}
 
-{% set _icon = icon|default({}) %}
+{%- set _icon = icon|default({}) %}
 {% set _color = color|default('') %}
-{% set _label = label|default('') %}
+{% set _label = label|default('') -%}
 
-<dt>
+<dt>{# -#}
   <div class="d-flex">
   {%- if _icon is not empty -%}
     {% set _icon_classes = ["me-2", "align-self-center", "flex-shrink-0"] %}
-    {% set _icon_attributes = _icon.attributes ?: create_attribute() %}
-    {% set _icon_attributes = _icon_attributes.addClass(_icon_classes) %}
-    {% include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
+    {%- set _icon_attributes = _icon.attributes ?: create_attribute() %}
+    {%- set _icon_attributes = _icon_attributes.addClass(_icon_classes) %}
+    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon|merge({
       attributes: _icon_attributes,
     }) only %}
   {%- elseif _color is not empty -%}
-    <div class="align-self-center">
-      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>
+    <div class="align-self-center">{# -#}
+      <span class="p-2 me-2 d-inline-block rounded-1 {{ _color }}"></span>{# -#}
     </div>
   {%- endif -%}
-    <div>{{- _label -}}</div>
-  </div>
+    <div>{{- _label -}}</div>{# -#}
+  </div>{# -#}
 </dt>
-
-{% endapply %}
+{#--#}

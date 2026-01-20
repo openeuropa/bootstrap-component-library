@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - title: (string) (default: '')
   - title_tag: (string) (default: 'h2')
@@ -13,64 +11,62 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
 {% set _background = background|default('gray') %}
 {% set _variant = variant|default('vertical') %}
-{% set _links = links|default([])%}
+{% set _links = links|default([]) %}
 
-{% set _classes = ['bcl-links-block'] %}
+{%- set _classes = ['bcl-links-block'] %}
 
-{% set _title_classes = ['pb-3', 'mb-3', 'border-bottom'] %}
+{%- set _title_classes = ['pb-3', 'mb-3', 'border-bottom'] %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% if _background == 'gray' %}
-  {% set attributes = attributes.addClass(['bg-light', 'px-4', 'py-3', 'rounded-2']) %}
+{%- if _background == 'gray' %}
+  {%- set attributes = attributes.addClass(['bg-light', 'px-4', 'py-3', 'rounded-2']) %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
-{% if _links is not empty and _links is iterable %}
+{%- if _links is not empty and _links is iterable -%}
   <div
     {{ attributes }}
   >
-    {% if _title is not empty %}
-      {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
+    {%- if _title is not empty %}
+      {%- include '@oe-bcl/bcl-heading/heading.html.twig' with {
         title: _title,
         title_tag: _title_tag,
         title_link: _title_link,
         attributes: _title_attributes.addClass(_title_classes),
       } only %}
-    {% endif %}
+    {%- endif -%}
     <ul class="ps-0 mb-0">
-      {% for _link in _links %}
-        {% if _link.attributes is empty %}
-          {% set _link = _link|merge({
+      {%- for _link in _links %}
+        {%- if _link.attributes is empty %}
+          {%- set _link = _link|merge({
             attributes: create_attribute()
           }) %}
-        {% endif %}
-        {% set _link = _link|merge({
+        {%- endif %}
+        {%- set _link = _link|merge({
           clean_class: true,
           attributes: _link.attributes.addClass(['mb-3', 'd-inline-block', 'standalone'])
         }) %}
-        {% set _list_item_classes = 'list-unstyled' %}
-        {% if _variant == 'horizontal' %}
-          {% set _list_item_classes = _list_item_classes ~ ' d-inline' %}
-        {% endif %}
-        {% if loop.last == false %}
-          {% set _list_item_classes = _list_item_classes ~ ' me-4-5' %}
-        {% endif %}
+        {%- set _list_item_classes = 'list-unstyled' %}
+        {%- if _variant == 'horizontal' %}
+          {%- set _list_item_classes = _list_item_classes ~ ' d-inline' %}
+        {%- endif %}
+        {%- if loop.last == false %}
+          {%- set _list_item_classes = _list_item_classes ~ ' me-4-5' %}
+        {%- endif -%}
         <li class="{{ _list_item_classes }}">
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only -%}
         </li>
-      {% endfor %}
-    </ul>
+      {%- endfor -%}
+    </ul>{# -#}
   </div>
-{% endif %}
-
-{% endapply %}
+{%- endif -%}

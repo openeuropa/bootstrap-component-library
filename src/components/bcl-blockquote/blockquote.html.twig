@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {# Parameters:
   - title (string) (default: '')
   - title_tag (string) (default: 'h2')
@@ -13,7 +11,7 @@
   - attributes (drupal attrs)
 #}
 
-{% set _title = title|default('') %}
+{%- set _title = title|default('') %}
 {% set _title_tag = title_tag|default('h2') %}
 {% set _title_link = title_link|default({}) %}
 {% set _title_attributes = title_attributes ?: create_attribute() %}
@@ -22,7 +20,7 @@
 {% set _cite = cite|default('') %}
 {% set _alignment = alignment|default('left') %}
 
-{% set _classes = [
+{%- set _classes = [
   'text-' ~ _alignment,
   "bg-lighter",
   "p-2",
@@ -31,19 +29,19 @@
   "border-secondary"
 ] %}
 
-{% if _alignment == "center" %}
-  {% set _classes = _classes|merge(["border-top"]) %}
+{%- if _alignment == "center" %}
+  {%- set _classes = _classes|merge(["border-top"]) %}
 {% elseif _alignment == "end" %}
-  {% set _classes = _classes|merge(["border-end"]) %}
+  {%- set _classes = _classes|merge(["border-end"]) %}
 {% else %}
-  {% set _classes = _classes|merge(["border-start"]) %}
+  {%- set _classes = _classes|merge(["border-start"]) %}
 {% endif %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(_classes) %}
+{%- set attributes = attributes.addClass(_classes) %}
 
 {%- if _title is not empty -%}
   {% include '@oe-bcl/bcl-heading/heading.html.twig' with {
@@ -56,18 +54,17 @@
 
 <figure
   {{ attributes }}
->
-  <blockquote class="blockquote mb-2">
-    <p>{{- _quote -}}</p>
+>{# -#}
+  <blockquote class="blockquote mb-2">{# -#}
+    <p>{{- _quote -}}</p>{# -#}
   </blockquote>
-{% if _attribution is not empty %}
+{%- if _attribution is not empty -%}
   <figcaption class="blockquote-footer m-0">
     {{- _attribution -}}
-  {% if _cite is not empty %}
+  {% if _cite is not empty -%}
     <cite title="{{ _cite }}">{{- _cite -}}</cite>
-  {% endif %}
+  {%- endif -%}
   </figcaption>
-{% endif %}
+{%- endif -%}
 </figure>
-
-{% endapply %}
+{#--#}

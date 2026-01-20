@@ -2,14 +2,32 @@ import Dropdown from "@openeuropa/bcl-bootstrap/js/src/dropdown";
 import SelectorEngine from "@openeuropa/bcl-bootstrap/js/src/dom/selector-engine";
 import EventHandler from "@openeuropa/bcl-bootstrap/js/src/dom/event-handler";
 
+const SUBMENU_HEIGHT_VARIABLE = "--oel-mega-menu-submenu-height";
+const SUBMENU_BODY_SELECTOR = ".__submenu_body";
+
 class MegaMenu {
+  scheduleSubmenuHeightUpdate = () => {
+    if (this.submenuHeightFrame) {
+      return;
+    }
+
+    this.submenuHeightFrame = window.requestAnimationFrame(() => {
+      this.submenuHeightFrame = null;
+      this.updateSubmenuHeight();
+    });
+  };
 
   constructor(root) {
     this.root = root;
+    this.submenuHeightFrame = null;
+    this.submenuBodies = SelectorEngine.find(SUBMENU_BODY_SELECTOR, this.root);
 
     this.backButton = SelectorEngine.findOne(".back-button", this.root);
     this.trigger = SelectorEngine.findOne(':scope > .dropdown-toggle[data-bs-toggle="dropdown"]', this.root);
     this.ul = SelectorEngine.findOne('.bcl-mega-menu__items.__level-1', this.root);
+
+    EventHandler.on(window, "resize", this.scheduleSubmenuHeightUpdate);
+    EventHandler.on(window, "orientationchange", this.scheduleSubmenuHeightUpdate);
 
     this.addSubmenuTriggerListeners();
     this.addBackButtonListener();
@@ -73,6 +91,7 @@ class MegaMenu {
 
     // When the mega menu is opened, focus the first item in the menu.
     EventHandler.on(this.trigger, 'shown.bs.dropdown', () => {
+      this.scheduleSubmenuHeightUpdate();
       const panelId = this.trigger.getAttribute('aria-controls');
       const panel = panelId ? document.getElementById(panelId) : null;
       const firstFocusable = panel ? this.getFocusableChildren(panel)[0] : null;
@@ -136,6 +155,7 @@ class MegaMenu {
     trigger.setAttribute('aria-expanded', 'true');
     const panel = this.getPanelForTrigger(trigger);
     if (panel) panel.hidden = false;
+    this.scheduleSubmenuHeightUpdate();
   }
 
   /**
@@ -162,6 +182,43 @@ class MegaMenu {
     trigger.setAttribute('aria-expanded', 'false');
     const panel = this.getPanelForTrigger(trigger);
     if (panel) panel.hidden = true;
+  }
+
+  updateSubmenuHeight() {
+    if (!this.trigger || this.trigger.getAttribute('aria-expanded') !== 'true') {
+      return;
+    }
+
+    if (!this.submenuBodies || this.submenuBodies.length === 0) {
+      return;
+    }
+
+    const viewportHeight =
+      (document.documentElement && document.documentElement.clientHeight) ||
+      window.innerHeight ||
+      0;
+
+    if (!viewportHeight) {
+      return;
+    }
+
+    this.submenuBodies.forEach((submenuBody) => {
+      if (!submenuBody.isConnected || submenuBody.closest('[hidden]')) {
+        return;
+      }
+
+      const rect = submenuBody.getBoundingClientRect();
+      const visibleTop = Math.max(rect.top, 0);
+      // Use the distance to the viewport bottom instead of the current element
+      // height. Nested submenus inherit the parent max-height, so relying on
+      // rect.bottom would keep the parent's value and never recalc for children.
+      const availableHeight = Math.max(0, viewportHeight - visibleTop);
+      const value = `${availableHeight}px`;
+
+      if (submenuBody.style.getPropertyValue(SUBMENU_HEIGHT_VARIABLE) !== value) {
+        submenuBody.style.setProperty(SUBMENU_HEIGHT_VARIABLE, value);
+      }
+    });
   }
 
   static init(selector = ".bcl-mega-menu") {

@@ -1,56 +1,56 @@
 {% extends "@oe-bcl/bcl-base-templates/content-type.html.twig" -%}
 
 {%- block banner %}
-  {% if banner is defined %}
-    {% include '@oe-bcl/bcl-banner/banner.html.twig' with banner only %}
-  {% endif %}
+  {%- if banner is defined %}
+    {%- include '@oe-bcl/bcl-banner/banner.html.twig' with banner only %}
+  {%- endif %}
 {%- endblock -%}
-{%- block content %}
+{%- block content -%}
 <div class="container">
-  {% if featured_section is defined %}
-    <div class="my-4">
-      <h2 class="mb-4">{{ featured_section.title }}</h2>
-      <div class="row">
+  {%- if featured_section is defined -%}
+    <div class="my-4">{# -#}
+      <h2 class="mb-4">{{ featured_section.title }}</h2>{# -#}
+      <div class="row">{# -#}
         <div class="col-12 col-md-6">
-          {{ featured_section.content }}
-        </div>
+          {{- featured_section.content -}}
+        </div>{# -#}
         <div class="col-12 col-md-6">
-          {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_section.featured_media only %}
-        </div>
-      </div>
+          {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with featured_section.featured_media only -%}
+        </div>{# -#}
+      </div>{# -#}
     </div>
-  {% endif %}
+  {%- endif %}
 
-  {% if listing_section is defined %}
+  {%- if listing_section is defined -%}
     <div class="my-4">
-      {% include '@oe-bcl/bcl-listing/listing.html.twig' with listing_section only %}
+      {%- include '@oe-bcl/bcl-listing/listing.html.twig' with listing_section only -%}
     </div>
-  {% endif %}
+  {%- endif %}
 
-  {% if inpage_banner is defined %}
+  {%- if inpage_banner is defined -%}
     <div class="my-4">
-      {% include '@oe-bcl/bcl-banner/banner.html.twig' with inpage_banner only %}
+      {%- include '@oe-bcl/bcl-banner/banner.html.twig' with inpage_banner only -%}
     </div>
-  {% endif %}
+  {%- endif %}
 
-  {% if activity_featured is defined %}
-    <div class="my-4">
-      <h2 class="mb-4">{{ activity_featured.title }}</h2>
-      <div class="row">
+  {%- if activity_featured is defined -%}
+    <div class="my-4">{# -#}
+      <h2 class="mb-4">{{ activity_featured.title }}</h2>{# -#}
+      <div class="row">{# -#}
         <div class="col-12 col-md-6">
-          {{ activity_featured.content }}
-        </div>
+          {{- activity_featured.content -}}
+        </div>{# -#}
         <div class="col-12 col-md-6">
-          {% include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with activity_featured.featured_media only %}
-        </div>
-      </div>
+          {%- include '@oe-bcl/bcl-featured-media/featured-media.html.twig' with activity_featured.featured_media only -%}
+        </div>{# -#}
+      </div>{# -#}
     </div>
-  {% endif %}
+  {%- endif %}
 
-  {% if activity_listing is defined %}
+  {%- if activity_listing is defined -%}
     <div class="my-4">
-      {% include '@oe-bcl/bcl-listing/listing.html.twig' with activity_listing only %}
+      {%- include '@oe-bcl/bcl-listing/listing.html.twig' with activity_listing only -%}
     </div>
-  {% endif %}
+  {%- endif -%}
 </div>
 {%- endblock -%}

@@ -1,27 +1,24 @@
-{% apply spaceless %}
-
 {#
   Parameters:
     - "colors"
 #}
 
-{% set _colors = colors|default([]) %}
+{%- set _colors = colors|default([]) -%}
 
 <div class="row">
-{% for _color in _colors %}
+{%- for _color in _colors -%}
   <div class="col-12 col-md-6 col-lg-4 mb-4">
-  {% for _value in _color.values %}
-    {% if _value.percentage %}
-      <span class="text-capitalize">{{ _color.name }}</span> {{ _value.percentage}} 
-    {% else %}
+  {%- for _value in _color.values %}
+    {%- if _value.percentage -%}
+      <span class="text-capitalize">{{ _color.name }}</span> {{ _value.percentage }}
+    {%- else -%}
       <span class="text-capitalize">{{ _color.name }}</span>
-    {% endif %}
-    <span class="float-end">{{_value.color}}</span>
-    <div class="p-3" style="background: {{ _value.color }}">
+    {%- endif -%}
+    <span class="float-end">{{ _value.color }}</span>{# -#}
+    <div class="p-3" style="background: {{ _value.color }}">{# -#}
     </div>
-  {% endfor %}
+  {%- endfor -%}
   </div>
-{% endfor %}
+{%- endfor -%}
 </div>
-
-{% endapply %}
+{#--#}

@@ -1,5 +1,3 @@
-{% apply spaceless %}
-
 {#
 Parameters:
   - item (object) (default: {})
@@ -17,49 +15,48 @@ Parameters:
   - attributes (drupal attrs)
 #}
 
-{% set _item = item|default({}) %}
+{%- set _item = item|default({}) %}
 {% set _carousel_id = carousel_id|default('') %}
 {% set _modal_id = modal_id|default('') %}
 {% set _icon_path = icon_path|default('') %}
 {% set _carousel_anchor = carousel_anchor|default('') %}
 
-{% if attributes is empty %}
-  {% set attributes = create_attribute() %}
+{%- if attributes is empty %}
+  {%- set attributes = create_attribute() %}
 {% endif %}
 
-{% set attributes = attributes.addClass(['bcl-gallery__item', 'd-block', 'w-100', 'img-fluid'])
+{%- set attributes = attributes.addClass(['bcl-gallery__item', 'd-block', 'w-100', 'img-fluid'])
                               .setAttribute('data-bs-target', '#' ~ _carousel_id)
                               .setAttribute('data-bs-slide-to', _carousel_anchor)
                               .setAttribute('tabindex', '0')
-%}
+-%}
 
-<a 
+<a
   {{ attributes }}
->
+>{# -#}
   <div class="bcl-gallery__item-overlay" data-bs-target="#{{ _modal_id }}" data-bs-toggle="modal">
-  {% if _item.is_playable %}
+  {%- if _item.is_playable -%}
     <span class="bcl-gallery__item-play-icon">
-    {% include '@oe-bcl/bcl-icon/icon.html.twig' with {
+    {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {
       name: 'play-fill',
       size: 's',
       path: _icon_path,
-    } only %}
+    } only -%}
     </span>
-  {% endif %}
-  {% if _item.caption is not empty or item.caption_title is not empty %}
+  {%- endif %}
+  {%- if _item.caption is not empty or item.caption_title is not empty -%}
     <div class="bcl-gallery__item-caption">
-    {% if _item.caption_title is not empty %}
+    {%- if _item.caption_title is not empty -%}
       <div class="fs-5">{{ _item.caption_title }}</div>
-    {% endif %}
-    {% if _item.caption is not empty %}
+    {%- endif %}
+    {%- if _item.caption is not empty -%}
       <div class="bcl-gallery__item-description">
-        {{ _item.caption }}
+        {{- _item.caption -}}
       </div>
-    {% endif %}
+    {%- endif -%}
     </div>
-  {% endif %}
+  {%- endif -%}
   </div>
-  {{ _item.thumbnail }}
+  {{- _item.thumbnail -}}
 </a>
-
-{% endapply %}
+{#--#}

@@ -1,7 +1,6 @@
 {% import _self as navigation %}
-{% apply spaceless %}
 
-{# Parameters:
+{#- Parameters:
   - id (string) (default: '')
   - pills (boolean) (default: false)
   - tabs (boolean) (default: false) - If tabs is set to true, the nav should also be set to true for accessibility reasons
@@ -25,120 +24,119 @@
   - attributes (drupal attrs)
 #}
 
-{# Define main macro #}
+{#- Define main macro #}
 {% macro render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) %}
-{% apply spaceless %}
-  {% import _self as navigation %}
+  {%- import _self as navigation %}
 
-  {% set _id = id|default('') %}
-  {% set _pills = pills ?? false %}
-  {% set _tabs = tabs ?? false %}
-  {% set _vertical = vertical ?? false %}
-  {% set _full_width = full_width ?? false %}
-  {% set _alignment = alignment|default('') %}
-  {% set _tabs_content = tabs_content ?? false %}
-  {% set _nav = nav ?? false %}
-  {% set _navbar = navbar ?? false %}
-  {% set _items = items|default([]) %}
+  {%- set _id = id|default('') %}
+  {%- set _pills = pills ?? false %}
+  {%- set _tabs = tabs ?? false %}
+  {%- set _vertical = vertical ?? false %}
+  {%- set _full_width = full_width ?? false %}
+  {%- set _alignment = alignment|default('') %}
+  {%- set _tabs_content = tabs_content ?? false %}
+  {%- set _nav = nav ?? false %}
+  {%- set _navbar = navbar ?? false %}
+  {%- set _items = items|default([]) %}
 
-  {% if _navbar %}
-    {% set _classes = ['navbar-nav'] %}
-  {% else %}
-    {% set _classes = ['nav'] %}
-  {% endif %}
-  {% if _pills %}
-    {% set _classes = _classes|merge(['nav-pills']) %}
-  {% endif %}
-  {% if _tabs %}
-    {% set _classes = _classes|merge(['nav-tabs']) %}
-  {% endif %}
-  {% if _vertical %}
-    {% set _classes = _classes|merge(['flex-column']) %}
-  {% endif %}
-  {% if _full_width %}
-    {% set _classes = _classes|merge(['nav-fill']) %}
-  {% endif %}
-  {% if _alignment is not empty %}
-    {% set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
-  {% endif %}
+  {%- if _navbar %}
+    {%- set _classes = ['navbar-nav'] %}
+  {%- else %}
+    {%- set _classes = ['nav'] %}
+  {%- endif %}
+  {%- if _pills %}
+    {%- set _classes = _classes|merge(['nav-pills']) %}
+  {%- endif %}
+  {%- if _tabs %}
+    {%- set _classes = _classes|merge(['nav-tabs']) %}
+  {%- endif %}
+  {%- if _vertical %}
+    {%- set _classes = _classes|merge(['flex-column']) %}
+  {%- endif %}
+  {%- if _full_width %}
+    {%- set _classes = _classes|merge(['nav-fill']) %}
+  {%- endif %}
+  {%- if _alignment is not empty %}
+    {%- set _classes = _classes|merge(['justify-content-' ~ _alignment]) %}
+  {%- endif %}
 
-  {% if attributes is empty %}
-    {% set attributes = create_attribute() %}
-  {% endif %}
+  {%- if attributes is empty %}
+    {%- set attributes = create_attribute() %}
+  {%- endif %}
 
-  {% if _id is not empty %}
-    {% set attributes = attributes.setAttribute('id', _id) %}
-  {% endif %}
+  {%- if _id is not empty %}
+    {%- set attributes = attributes.setAttribute('id', _id) %}
+  {%- endif %}
 
-  {% if _tabs %}
-    {% set attributes = attributes.setAttribute('role', 'tablist') %}
-  {% endif %}
-  {% set attributes = attributes.addClass(_classes) %}
+  {%- if _tabs %}
+    {%- set attributes = attributes.setAttribute('role', 'tablist') %}
+  {%- endif %}
+  {%- set attributes = attributes.addClass(_classes) %}
 
-  {% if _nav %}
+  {%- if _nav -%}
   <nav
     {{ attributes }}
   >
-  {% else %}
+  {%- else -%}
   <ul
     {{ attributes }}
   >
-  {% endif %}
-    {% if _items is not empty and _items is iterable %}
-      {% for _item in items %}
-        {% set _nav_class = 'nav-item' %}
-        {% if _item.dropdown %}
-          {% set _nav_class = _nav_class ~ ' dropdown' %}
-          {% set _item = _item|merge({remove_wrapper: true}) %}
-        {% endif %}
-        {% if _item.dropdown or _item.mega_menu %}
-          {% set _item_classes = [] %}
-        {% else %}
-          {% set _item_classes = ['nav-link'] %}
-        {% endif %}
-        {% if _item.active %}
-          {% set _item_classes = _item_classes|merge(['active']) %}
-        {% endif %}
-        {% if _item.attributes is empty %}
-          {% set _item = _item|merge({
+  {%- endif %}
+    {%- if _items is not empty and _items is iterable %}
+      {%- for _item in items %}
+        {%- set _nav_class = 'nav-item' %}
+        {%- if _item.dropdown %}
+          {%- set _nav_class = _nav_class ~ ' dropdown' %}
+          {%- set _item = _item|merge({remove_wrapper: true}) %}
+        {%- endif %}
+        {%- if _item.dropdown or _item.mega_menu %}
+          {%- set _item_classes = [] %}
+        {%- else %}
+          {%- set _item_classes = ['nav-link'] %}
+        {%- endif %}
+        {%- if _item.active %}
+          {%- set _item_classes = _item_classes|merge(['active']) %}
+        {%- endif %}
+        {%- if _item.attributes is empty %}
+          {%- set _item = _item|merge({
             attributes: create_attribute()
           }) %}
-        {% endif %}
-        {% set _item = _item|merge({
+        {%- endif %}
+        {%- set _item = _item|merge({
           attributes: _item.attributes.addClass(_item_classes),
           clean_class: true}) %}
-        {% if not _nav %}
+        {%- if not _nav -%}
         <li
           class="{{ _nav_class }}"
           {% if _tabs %}
             role="tab"
           {% endif %}
         >
-        {% elseif _tabs and _item.dropdown is not defined %}
-          {% set _item = _item|merge({
+        {%- elseif _tabs and _item.dropdown is not defined %}
+          {%- set _item = _item|merge({
             attributes: _item.attributes.setAttribute("role", "tab"),
-            }) 
+            })
           %}
-        {% endif %}
-        {% if _item.dropdown is defined %}
-            {% if _tabs %}
-              {% set _item = _item|merge({
+        {%- endif %}
+        {%- if _item.dropdown is defined %}
+            {%- if _tabs %}
+              {%- set _item = _item|merge({
                 inside_navigation: true,
                 trigger: _item.trigger|merge({
                   attributes: _item.trigger.attributes.setAttribute("role", "tab"),
                 }),
               }) %}
-            {% endif %}
-          {% include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _item only %}
-        {% elseif _item.button is defined %}
-          {% include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
-        {% elseif _item.mega_menu is defined %}
-          {% include '@oe-bcl/bcl-mega-menu/mega-menu.html.twig' with _item only %}
-        {% else %}
-          {% include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
-        {% endif %}
-        {% if _item.navigation is defined and _item.navigation.items is not empty and _item.navigation.items is iterable %}
-          {{ navigation.render(
+            {%- endif %}
+          {%- include '@oe-bcl/bcl-dropdown/dropdown.html.twig' with _item only %}
+        {%- elseif _item.button is defined %}
+          {%- include '@oe-bcl/bcl-button/button.html.twig' with _item only %}
+        {%- elseif _item.mega_menu is defined %}
+          {%- include '@oe-bcl/bcl-mega-menu/mega-menu.html.twig' with _item only %}
+        {%- else %}
+          {%- include '@oe-bcl/bcl-link/link.html.twig' with _item only %}
+        {%- endif %}
+        {%- if _item.navigation is defined and _item.navigation.items is not empty and _item.navigation.items is iterable %}
+          {{- navigation.render(
             _item.navigation.items,
             _item.navigation.pills,
             _item.navigation.tabs,
@@ -151,39 +149,36 @@
             _item.navigation.navbar,
             _item.navigation.attributes
             ) }}
-        {% endif %}
-        {% if not _nav %}
+        {%- endif %}
+        {%- if not _nav -%}
         </li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% if _nav %}
+        {%- endif %}
+      {%- endfor %}
+    {%- endif %}
+  {%- if _nav -%}
   </nav>
-  {% else %}
+  {%- else -%}
   </ul>
-  {% endif %}
-  {% if _tabs_content %}
+  {%- endif %}
+  {%- if _tabs_content -%}
   <div class="tab-content">
     {%- block contents -%}
       {% if _items is not empty and _items is iterable %}
-        {% for _item in _items %}
-          {% if _item.content is not empty %}
-            {% set _content_class = 'tab-pane fade' %}
-            {% if _item.active %}
-              {% set _content_class = _content_class ~ ' show active' %}
-            {% endif %}
+        {%- for _item in _items %}
+          {%- if _item.content is not empty %}
+            {%- set _content_class = 'tab-pane fade' %}
+            {%- if _item.active %}
+              {%- set _content_class = _content_class ~ ' show active' %}
+            {%- endif -%}
             <div class="{{ _content_class }}" id="{{ _item.target }}" role="tabpanel" aria-labelledby="{{ _item.id }}">
               {{- _item.content -}}
             </div>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
+          {%- endif %}
+        {%- endfor %}
+      {%- endif %}
     {%- endblock -%}
   </div>
-  {% endif %}
-{% endapply %}
-{% endmacro %}
+  {%- endif %}
+{%- endmacro %}
 
-{{ navigation.render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) }}
-
-{% endapply %}
+{{- navigation.render(items, pills, tabs, tabs_content, vertical, full_width, alignment, id, nav, navbar, attributes) -}}

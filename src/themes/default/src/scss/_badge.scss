@@ -22,8 +22,8 @@ a.badge {
 }
 
 @each $color, $value in $theme-colors {
-  .badge.bg-#{$color} a,
-  .badge.bg-#{$color} {
+  .badge.text-bg-#{$color} a,
+  .badge.text-bg-#{$color} {
     @if $color == light or $color == warning {
       color: $black;
     } @else {
