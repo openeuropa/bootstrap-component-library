@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 1.10.10 (2026-01-20)
+
+#### :nail_care: Enhancement
+* [#720](https://github.com/openeuropa/bootstrap-component-library/pull/720) OEL-4360: Improved mobile behaviour of mega menu. ([@tibi2303](https://github.com/tibi2303))
+* [#717](https://github.com/openeuropa/bootstrap-component-library/pull/717) OEL-4230: Remove spaceless, with minimal added whitespace ([@donquixote](https://github.com/donquixote))
+* [#722](https://github.com/openeuropa/bootstrap-component-library/pull/722) OEL-3732: Changed markup of card titles. ([@tibi2303](https://github.com/tibi2303))
+* [#719](https://github.com/openeuropa/bootstrap-component-library/pull/719) OEL-4230: Clear whitespace around printed text ([@donquixote](https://github.com/donquixote))
+
+#### :house: Internal
+* [#723](https://github.com/openeuropa/bootstrap-component-library/pull/723) OEL-3390: Removed ucpkn theme flavor. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Andreas Hennings ([@donquixote](https://github.com/donquixote))
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.10.9 (2025-12-03)
 
 #### :bug: Bug Fix
