@@ -1209,45 +1209,49 @@ exports[`OE - Subscription renders correctly 1`] = `
             </div>
           </div>
         </article>
-        
-    
         <div
-          class="d-flex justify-content-end mt-2 align-items-center"
+          class="position-relative z-1"
         >
           
-      
-          <button
-            class="me-3 btn btn-outline-primary btn-md"
-            type="button"
-          >
-            <svg
-              class="me-2-5 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#printer-fill"
-              />
-            </svg>
-            Print
-          </button>
-          
-      
-          <button
-            class="btn btn-outline-primary btn-md"
-            data-bs-target="#subscribeModal"
-            data-bs-toggle="modal"
-            type="button"
-          >
-            <svg
-              class="me-2-5 bi icon--fluid"
-            >
-              <use
-                xlink:href="/icons.svg#envelope-fill"
-              />
-            </svg>
-            Subscribe
-          </button>
-          
     
+          <div
+            class="d-flex justify-content-end mt-2 align-items-center"
+          >
+            
+      
+            <button
+              class="me-3 btn btn-outline-primary btn-md"
+              type="button"
+            >
+              <svg
+                class="me-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#printer-fill"
+                />
+              </svg>
+              Print
+            </button>
+            
+      
+            <button
+              class="btn btn-outline-primary btn-md"
+              data-bs-target="#subscribeModal"
+              data-bs-toggle="modal"
+              type="button"
+            >
+              <svg
+                class="me-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#envelope-fill"
+                />
+              </svg>
+              Subscribe
+            </button>
+            
+    
+          </div>
         </div>
       </div>
     </div>

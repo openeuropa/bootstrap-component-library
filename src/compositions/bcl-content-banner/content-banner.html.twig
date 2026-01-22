@@ -43,6 +43,11 @@
 {% set _image_size = image_size|default('md') %}
 {% set _action_bar = action_bar|default('') %}
 {% set _date = date|default({}) %}
+{%- set _action_bar_content -%}
+  {%- block action_bar -%}
+    {{ _action_bar }}
+  {%- endblock -%}
+{%- endset -%}
 
 {%- if attributes is empty %}
   {%- set attributes = create_attribute() %}
@@ -127,10 +132,11 @@
 <div {{ attributes }}>{# -#}
   <div class="container">
   {%- include '@oe-bcl/bcl-card/card.html.twig' with _card %}
-
-  {%- block action_bar -%}
-    {{ _action_bar }}
-  {%- endblock -%}
+    {%- if _action_bar_content|trim is not empty -%}
+      <div class="position-relative z-1">{# -#}
+        {{- _action_bar_content -}}
+      </div>{# -#}
+    {%- endif -%}
   </div>{# -#}
 </div>
 {#--#}
