@@ -27,23 +27,7 @@
 
 {%- if _icon is not empty %}
   {%- if _label is not empty and not _remove_icon_spacers %}
-    {%- if _icon.attributes is empty %}
-      {%- set _icon = _icon|merge({
-          attributes: create_attribute()
-        })
-      %}
-    {%- endif %}
-    {%- if _icon_position == 'before' %}
-      {%- set _icon = _icon|merge({
-          attributes: _icon.attributes.addClass('me-2-5')
-        })
-      %}
-    {%- else %}
-      {%- set _icon = _icon|merge({
-          attributes: _icon.attributes.addClass('ms-2-5')
-        })
-      %}
-    {%- endif %}
+    {%- set _classes = _classes|merge(['d-flex', 'gap-2-5']) %}
   {%- endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
