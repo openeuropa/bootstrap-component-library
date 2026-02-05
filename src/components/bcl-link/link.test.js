@@ -125,6 +125,21 @@ describe("OE - Link", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("with icon display flex and no icon renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render(
+        {
+          ...demoData,
+          icon: null,
+          icon_display: "flex",
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(await renderTwigFileAsHtml(template, demoData, true)),
