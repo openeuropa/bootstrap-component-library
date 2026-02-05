@@ -29,11 +29,13 @@
 
 {%- set _classes = [] %}
 
+{%- if _use_icon_display %}
+  {%- set _classes = _classes|merge(['d-' ~ _icon_display, 'gap-2-5']) %}
+{%- endif %}
+
 {%- if _icon is not empty %}
   {%- if _label is not empty and not _remove_icon_spacers %}
-    {%- if _use_icon_display %}
-      {%- set _classes = _classes|merge(['d-' ~ _icon_display, 'gap-2-5']) %}
-    {%- else %}
+    {%- if not _use_icon_display %}
       {%- if _icon.attributes is empty %}
         {%- set _icon = _icon|merge({
             attributes: create_attribute()
