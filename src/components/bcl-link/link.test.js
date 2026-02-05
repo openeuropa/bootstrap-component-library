@@ -99,7 +99,26 @@ describe("OE - Link", () => {
             transformation: "rotate-90",
             path: "/icons.svg",
           },
-          icon_gap: true,
+          icon_display: "inline-flex",
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("with icon gap flex renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render(
+        {
+          ...demoData,
+          icon: {
+            name: "mouse",
+            transformation: "rotate-90",
+            path: "/icons.svg",
+          },
+          icon_display: "flex",
         },
         true,
       ),
