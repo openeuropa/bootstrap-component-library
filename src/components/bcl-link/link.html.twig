@@ -27,7 +27,7 @@
 
 {%- if _icon is not empty %}
   {%- if _label is not empty and not _remove_icon_spacers %}
-    {%- set _classes = _classes|merge(['d-inline-flex', 'align-items-center', 'gap-2-5']) %}
+    {%- set _classes = _classes|merge(['d-inline-flex', 'align-items-center', 'align-top', 'gap-2-5']) %}
   {%- endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}
