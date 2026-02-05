@@ -68,7 +68,7 @@
       })
     %}
   {%- if _label is not empty and not _remove_icon_spacers %}
-    {%- set attributes = attributes.addClass(['d-inline-flex', 'align-items-center', 'gap-' ~ _icon_spacing ~ '2-5']) %}
+    {%- set attributes = attributes.addClass(['align-items-center', 'gap-' ~ _icon_spacing ~ '2-5']) %}
   {%- endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}

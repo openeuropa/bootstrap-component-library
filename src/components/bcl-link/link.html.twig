@@ -9,6 +9,7 @@
   - icon (icon object) (default: {})
   - icon_position (string) (default: after)
     - options ['after', 'before']
+  - icon_gap (boolean) (default: false)
   - remove_icon_spacers (boolean) (default: false)
   - attributes (drupal attrs)
 #}
@@ -21,13 +22,34 @@
 {% set _standalone = standalone ?? false %}
 {% set _icon = icon|default({}) %}
 {% set _icon_position = icon_position|default('after') %}
+{% set _icon_gap = icon_gap ?? false %}
 {% set _remove_icon_spacers = remove_icon_spacers ?? false %}
 
 {%- set _classes = [] %}
 
 {%- if _icon is not empty %}
   {%- if _label is not empty and not _remove_icon_spacers %}
-    {%- set _classes = _classes|merge(['d-inline-flex', 'align-items-center', 'align-top', 'gap-2-5']) %}
+    {%- if _icon_gap %}
+      {%- set _classes = _classes|merge(['d-inline-flex', 'gap-2-5', 'align-top']) %}
+    {%- else %}
+      {%- if _icon.attributes is empty %}
+        {%- set _icon = _icon|merge({
+            attributes: create_attribute()
+          })
+        %}
+      {%- endif %}
+      {%- if _icon_position == 'before' %}
+        {%- set _icon = _icon|merge({
+            attributes: _icon.attributes.addClass('me-2-5')
+          })
+        %}
+      {%- else %}
+        {%- set _icon = _icon|merge({
+            attributes: _icon.attributes.addClass('ms-2-5')
+          })
+        %}
+      {%- endif %}
+    {%- endif %}
   {%- endif %}
   {%- set _icon_markup -%}
     {%- include '@oe-bcl/bcl-icon/icon.html.twig' with _icon only -%}

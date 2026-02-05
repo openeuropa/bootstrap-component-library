@@ -87,6 +87,25 @@ describe("OE - Link", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("with icon gap renders correctly", () => {
+    expect.assertions(1);
+
+    return expect(
+      render(
+        {
+          ...demoData,
+          icon: {
+            name: "mouse",
+            transformation: "rotate-90",
+            path: "/icons.svg",
+          },
+          icon_gap: true,
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(await renderTwigFileAsHtml(template, demoData, true)),
