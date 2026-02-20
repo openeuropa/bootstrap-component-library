@@ -1,7 +1,7 @@
 // eslint.config.cjs
-const { defineFlatConfig } = require('eslint-define-config');
-const babelParser = require('@babel/eslint-parser'); // IMPORTANT: require the parser
-const jestPlugin = require('eslint-plugin-jest');
+const { defineFlatConfig } = require("eslint-define-config");
+const babelParser = require("@babel/eslint-parser"); // IMPORTANT: require the parser
+const jestPlugin = require("eslint-plugin-jest");
 
 module.exports = defineFlatConfig([
   {

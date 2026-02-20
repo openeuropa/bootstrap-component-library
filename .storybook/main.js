@@ -1,12 +1,9 @@
-import { createRequire } from "module";
-import { dirname, join } from "path";
-
-const require = createRequire(import.meta.url);
-const environment = require("./environment.js");
+const path = require("path");
 const webpack = require("webpack");
-const pathModule = require("path");
-const repoRoot = pathModule.resolve(__dirname, "..");
-const twigWrapperLoader = pathModule.resolve(
+const environment = require("./environment.js");
+
+const repoRoot = path.resolve(__dirname, "..");
+const twigWrapperLoader = path.resolve(
   repoRoot,
   "tools/webpack/twig-wrapper-loader.cjs",
 );
@@ -29,7 +26,7 @@ const webpackFinal = (config) => {
       {
         loader: twigWrapperLoader,
         options: {
-          environmentModulePath: pathModule.resolve(
+          environmentModulePath: path.resolve(
             __dirname,
             "environment.js",
           ),
@@ -81,7 +78,7 @@ const config = {
   core: {
     builder: getAbsolutePath("@storybook/builder-webpack5"),
   },
-  staticDirs: ['../assets'],
+  staticDirs: ["../assets"],
   stories,
   addons,
   webpackFinal,
@@ -91,8 +88,8 @@ const config = {
   docs: {},
 };
 
-export default config;
+module.exports = config;
 
 function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
+  return path.dirname(require.resolve(path.join(value, "package.json")));
 }
