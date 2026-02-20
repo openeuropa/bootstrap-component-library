@@ -89,7 +89,13 @@ module.exports = {
       options: {
         includePaths,
         sourceMap: "file",
-        silenceDeprecations: ["legacy-js-api", "import", "color-functions"],
+        silenceDeprecations: [
+          "legacy-js-api",
+          "import",
+          "color-functions",
+          "if-function",
+          "global-builtin",
+        ],
       },
     },
     {
@@ -99,7 +105,13 @@ module.exports = {
         includePaths,
         sourceMap: "file",
         minify: true,
-        silenceDeprecations: ["legacy-js-api", "import", "color-functions"],
+        silenceDeprecations: [
+          "legacy-js-api",
+          "import",
+          "color-functions",
+          "if-function",
+          "global-builtin",
+        ],
       },
     },
   ],
