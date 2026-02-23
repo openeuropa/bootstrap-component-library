@@ -19,6 +19,7 @@ const getArgs = (data, type) => {
     subtitle: data.subtitle,
     text: data.text,
     content: data.content || "",
+    image_footer: data.image_footer || "",
     card_header: data.card_header || "",
     card_footer: data.card_footer || "",
     variant: data.variant,
@@ -74,6 +75,19 @@ const getArgTypes = (data, type) => {
     content: {
       type: { name: "string" },
       description: "Custom content of the card",
+      control: {
+        type: "text",
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    image_footer: {
+      name: "image footer",
+      type: { name: "string" },
+      description: "Optional content rendered below the image",
       control: {
         type: "text",
       },
@@ -238,3 +252,21 @@ export const Horizontal = (args) => card(applyArgs(demoDataHorizontal, args));
 
 Horizontal.args = getArgs(demoDataHorizontal, "horizontal");
 Horizontal.argTypes = getArgTypes(demoDataHorizontal, "horizontal");
+
+const demoDataHorizontalWithFooter = {
+  ...demoDataHorizontal,
+  image_footer: "© 2024 Example Organisation",
+};
+
+export const HorizontalWithImageFooter = (args) =>
+  card(applyArgs(demoDataHorizontalWithFooter, args));
+
+HorizontalWithImageFooter.args = getArgs(
+  demoDataHorizontalWithFooter,
+  "horizontal",
+);
+HorizontalWithImageFooter.argTypes = getArgTypes(
+  demoDataHorizontalWithFooter,
+  "horizontal",
+);
+HorizontalWithImageFooter.storyName = "Horizontal with image footer";

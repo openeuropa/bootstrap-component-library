@@ -10,10 +10,11 @@
   - items (object[]) format: [
      {
       image: (string) <img> tag
-      caption (string)
-      caption_classes (string)
-      caption_title (string)
-      interval (integer) (default: 0)
+     caption (string)
+     caption_classes (string)
+     caption_title (string)
+     copyright (string)
+     interval (integer) (default: 0)
      }
    ],
   - fade (boolean) (default: false)
@@ -120,7 +121,7 @@
     {%- if _item.image is defined and _item.image is not empty %}
       {{- _item.image }}
     {%- endif %}
-    {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
+    {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) or (_item.copyright is defined and _item.copyright is not empty) %}
       {%- set _caption_classes = 'carousel-caption' %}
       {%- if _item.caption is not empty and _item.link is empty %}
         {%- set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
@@ -143,6 +144,11 @@
         {%- if _item.link is defined and _item.link is not empty %}
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
         {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if _item.copyright is defined and _item.copyright is not empty -%}
+      <div class="copyright-overlay">
+        <div class="copyright-text">{{- _item.copyright -}}</div>
       </div>
     {%- endif -%}
     </div>

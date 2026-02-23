@@ -11,6 +11,7 @@ const getArgs = (data, type) => {
     title: data.title || "",
     title_tag: "h2",
     content: data.content || "",
+    copyright: data.copyright || "",
     content_classes: data.content_classes || "",
   };
   if (type === "iframe") {
@@ -44,6 +45,15 @@ const getArgTypes = (data, type) => {
         type: { summary: "string" },
         defaultValue: { summary: "" },
         category: "Style",
+      },
+    },
+    copyright: {
+      description: "Copyright text displayed between media and figcaption",
+      type: { name: "string" },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
       },
     },
   };

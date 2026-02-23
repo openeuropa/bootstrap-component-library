@@ -9,6 +9,7 @@
   - image: (string) (default: '')
   - poster_image: (string) (default: '')
   - content: (string) (default: '')
+  - copyright: (string) (default: '')
   - wrapper_classes: (default: '')
   - force_wrapper (boolean) (default: false) - always render wrapper element
   - content_classes: (string) (default: '')
@@ -48,6 +49,7 @@
 {% set _image = image|default('') %}
 {% set _poster_image = poster_image|default('') %}
 {% set _content = content|default('') %}
+{% set _copyright = copyright|default('') %}
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _content_classes = content_classes|default('') %}
 {% set _read_more = read_more|default({}) %}
@@ -71,12 +73,12 @@
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass(["rounded", "overflow-hidden"]) %}
+{%- set attributes = attributes.addClass(["rounded", "overflow-hidden", "flex-column"]) %}
 
 {%- if _image is not empty %}
   {%- set attributes = attributes.addClass(["d-inline-flex", "flex-wrap"]) %}
   {%- if _content_classes is not empty %}
-    {%- set _content_classes = _content_classes ~ ' flex-1 w-min-content' %}
+    {%- set _content_classes = _content_classes %}
   {%- else %}
     {%- set _content_classes = 'flex-1 w-min-content' %}
   {%- endif %}
@@ -147,6 +149,12 @@
 {%- else %}
   {{- _image }}
 {%- endif %}
+
+{%- if _copyright is not empty -%}
+  <div class="copyright-overlay">
+    <div class="copyright-text">{{- _copyright -}}</div>
+  </div>
+{%- endif -%}
 
 {%- if _content is not empty -%}
   <figcaption
