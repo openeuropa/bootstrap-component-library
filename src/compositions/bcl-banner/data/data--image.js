@@ -3,6 +3,7 @@ const { DrupalAttribute } = require("drupal-attribute");
 module.exports = {
   title: "EU Budget for the future",
   description: "Innovation, economy, environment and geopolitics",
+  copyright: "Copyright demo",
   link: {
     label: "Subscribe",
     path: "/example.html",
