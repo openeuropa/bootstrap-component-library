@@ -17,6 +17,7 @@ Parameters:
         media: (string) <img> tag
         caption (string)
         caption_title (string)
+        copyright (string)
       }
     ]
   - icon_path (string) (default: '')
@@ -170,6 +171,7 @@ Parameters:
             {%- set _carousel_items = _carousel_items|merge([_item|merge({
               caption_title: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption_title,
               caption: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.caption,
+              copyright: ('<iframe' in _item.media or '<video' in _item.media) ? '' : _item.copyright,
               image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
             })]) %}
           {%- endfor %}
