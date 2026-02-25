@@ -5,20 +5,17 @@ module.exports = [
     label: "My account",
     path: "/example.html",
     icon_position: "before",
-    remove_icon_spacers: true,
     attributes: new DrupalAttribute().addClass(["py-lg-2", "pb-3"]),
     icon: {
       name: "person-fill",
       size: "xs",
       path: "/icons.svg",
-      attributes: new DrupalAttribute().addClass(["me-2-5"]),
     },
   },
   {
     label: "Log out",
     path: "/example.html",
     icon_position: "before",
-    remove_icon_spacers: true,
     attributes: new DrupalAttribute().addClass([
       "border-top-lg-0",
       "border-top",
@@ -31,7 +28,6 @@ module.exports = [
       name: "lock-fill",
       size: "xs",
       path: "/icons.svg",
-      attributes: new DrupalAttribute().addClass("me-2-5"),
     },
   },
 ];

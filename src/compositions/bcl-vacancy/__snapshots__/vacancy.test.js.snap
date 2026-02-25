@@ -112,11 +112,11 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
                   >
                     <button
                       aria-label="Back to main menu"
-                      class="back-button btn btn-link btn-md"
+                      class="back-button btn btn-link btn-md gap-2-5"
                       type="button"
                     >
                       <svg
-                        class="me-2-5 bi icon--fluid"
+                        class="bi icon--fluid"
                       >
                         <use
                           xlink:href="/icons.svg#arrow-left"
@@ -1187,22 +1187,26 @@ exports[`OE - Vacancy details (closed) renders correctly 1`] = `
           </div>
         </article>
         <div
-          class="d-grid d-md-block mt-3-5"
+          class="position-relative z-1"
         >
-          <button
-            class="btn btn-primary btn-md"
-            disabled
-            type="button"
+          <div
+            class="d-grid d-md-block mt-3-5"
           >
-            <svg
-              class="me-2-5 bi icon--fluid"
+            <button
+              class="btn btn-primary btn-md"
+              disabled
+              type="button"
             >
-              <use
-                xlink:href="/icons.svg#pencil-fill"
-              />
-            </svg>
-            Apply now
-          </button>
+              <svg
+                class="me-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#pencil-fill"
+                />
+              </svg>
+              Apply now
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -2675,11 +2679,11 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
                   >
                     <button
                       aria-label="Back to main menu"
-                      class="back-button btn btn-link btn-md"
+                      class="back-button btn btn-link btn-md gap-2-5"
                       type="button"
                     >
                       <svg
-                        class="me-2-5 bi icon--fluid"
+                        class="bi icon--fluid"
                       >
                         <use
                           xlink:href="/icons.svg#arrow-left"
@@ -3750,21 +3754,25 @@ exports[`OE - Vacancy details (opened) renders correctly 1`] = `
           </div>
         </article>
         <div
-          class="d-grid d-md-block mt-3-5"
+          class="position-relative z-1"
         >
-          <button
-            class="btn btn-primary btn-md"
-            type="button"
+          <div
+            class="d-grid d-md-block mt-3-5"
           >
-            <svg
-              class="me-2-5 bi icon--fluid"
+            <button
+              class="btn btn-primary btn-md"
+              type="button"
             >
-              <use
-                xlink:href="/icons.svg#pencil-fill"
-              />
-            </svg>
-            Apply now
-          </button>
+              <svg
+                class="me-2-5 bi icon--fluid"
+              >
+                <use
+                  xlink:href="/icons.svg#pencil-fill"
+                />
+              </svg>
+              Apply now
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -5237,11 +5245,11 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
                   >
                     <button
                       aria-label="Back to main menu"
-                      class="back-button btn btn-link btn-md"
+                      class="back-button btn btn-link btn-md gap-2-5"
                       type="button"
                     >
                       <svg
-                        class="me-2-5 bi icon--fluid"
+                        class="bi icon--fluid"
                       >
                         <use
                           xlink:href="/icons.svg#arrow-left"
@@ -6500,13 +6508,13 @@ exports[`OE - Vacancy listing renders correctly 1`] = `
         >
           <button
             aria-controls="bcl-offcanvas"
-            class="d-lg-none w-100 mb-4 btn btn-light btn-lg"
+            class="d-lg-none w-100 mb-4 btn btn-light btn-lg gap-2-5"
             data-bs-target="#bcl-offcanvas"
             data-bs-toggle="offcanvas"
             type="button"
           >
             <svg
-              class="me-2 me-2-5 bi icon--fluid"
+              class="me-2 bi icon--fluid"
             >
               <use
                 xlink:href="/icons.svg#filter"

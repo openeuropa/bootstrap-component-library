@@ -125,6 +125,53 @@ exports[`OE - Link warning renders correctly 1`] = `
 </jest>
 `;
 
+exports[`OE - Link with icon gap renders correctly 1`] = `
+<jest>
+  <a
+    class="d-inline-flex gap-2-5"
+    href="/example.html"
+  >
+    A simple link!
+    <svg
+      class="bi icon--s icon--rotate-90"
+    >
+      <use
+        xlink:href="/icons.svg#mouse"
+      />
+    </svg>
+  </a>
+</jest>
+`;
+
+exports[`OE - Link with icon gap flex renders correctly 1`] = `
+<jest>
+  <a
+    class="d-flex gap-2-5"
+    href="/example.html"
+  >
+    A simple link!
+    <svg
+      class="bi icon--s icon--rotate-90"
+    >
+      <use
+        xlink:href="/icons.svg#mouse"
+      />
+    </svg>
+  </a>
+</jest>
+`;
+
+exports[`OE - Link with icon display flex and no icon renders correctly 1`] = `
+<jest>
+  <a
+    class="d-flex gap-2-5"
+    href="/example.html"
+  >
+    A simple link!
+  </a>
+</jest>
+`;
+
 exports[`OE - Link with icon renders and without icon spacers correctly 1`] = `
 <jest>
   <a

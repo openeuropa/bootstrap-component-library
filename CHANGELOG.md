@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.10.11 (2026-02-25)
+
+#### :bug: Bug Fix
+* [#732](https://github.com/openeuropa/bootstrap-component-library/pull/732) OEL-4475: Reset height in the fallback ([@piotrsmykaj](https://github.com/piotrsmykaj))
+* [#727](https://github.com/openeuropa/bootstrap-component-library/pull/727) OEL-3389: Fixed visibility action bar in content banner. ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#733](https://github.com/openeuropa/bootstrap-component-library/pull/733) OEL-4032: Use gap for icon spacing and clean header demo data button and link. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Piotr Smykaj ([@piotrsmykaj](https://github.com/piotrsmykaj))
+
 ## 1.10.10 (2026-01-20)
 
 #### :nail_care: Enhancement
