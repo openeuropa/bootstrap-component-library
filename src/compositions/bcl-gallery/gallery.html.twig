@@ -169,9 +169,6 @@ Parameters:
         {%- block carousel %}
           {%- for _item in _items %}
             {%- set _carousel_items = _carousel_items|merge([_item|merge({
-              caption_title: _item.caption_title,
-              caption: _item.caption,
-              copyright: _item.copyright,
               image: ('<iframe' in _item.media or '<img' in _item.media) ? _item.media|replace({'src=': 'data-src='}) : _item.media,
             })]) %}
           {%- endfor %}
