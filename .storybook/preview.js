@@ -22,8 +22,7 @@ export const parameters = {
   controls: { expanded: true },
   layout: "padded",
   viewport: {
-    defaultViewport: "responsive",
-    viewports: {
+    options: {
       responsive: {
         name: "responsive",
         styles: {
@@ -53,7 +52,7 @@ export const parameters = {
         },
         type: "desktop",
       },
-    },
+    }
   },
   options: {
     storySort: {
@@ -70,3 +69,10 @@ export const parameters = {
 export const tags = ["autodocs"];
 
 export { renderToCanvas };
+
+export const initialGlobals = {
+  viewport: {
+    value: "responsive",
+    isRotated: false
+  }
+};
