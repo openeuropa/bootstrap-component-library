@@ -19,7 +19,7 @@ const getArgs = (data, type) => {
     subtitle: data.subtitle,
     text: data.text,
     content: data.content || "",
-    image_footer: data.image_footer || "",
+    image_copyright: data.image_copyright || "",
     card_header: data.card_header || "",
     card_footer: data.card_footer || "",
     variant: data.variant,
@@ -84,10 +84,10 @@ const getArgTypes = (data, type) => {
         category: "Content",
       },
     },
-    image_footer: {
-      name: "image footer",
+    image_copyright: {
+      name: "image copyright",
       type: { name: "string" },
-      description: "Optional content rendered below the image",
+      description: "Optional copyright text rendered below the image",
       control: {
         type: "text",
       },
@@ -253,20 +253,20 @@ export const Horizontal = (args) => card(applyArgs(demoDataHorizontal, args));
 Horizontal.args = getArgs(demoDataHorizontal, "horizontal");
 Horizontal.argTypes = getArgTypes(demoDataHorizontal, "horizontal");
 
-const demoDataHorizontalWithFooter = {
+const demoDataHorizontalWithCopyright = {
   ...demoDataHorizontal,
-  image_footer: "© 2024 Example Organisation",
+  image_copyright: "© 2024 Example Organisation",
 };
 
-export const HorizontalWithImageFooter = (args) =>
-  card(applyArgs(demoDataHorizontalWithFooter, args));
+export const HorizontalWithImageCopyright = (args) =>
+  card(applyArgs(demoDataHorizontalWithCopyright, args));
 
-HorizontalWithImageFooter.args = getArgs(
-  demoDataHorizontalWithFooter,
+HorizontalWithImageCopyright.args = getArgs(
+  demoDataHorizontalWithCopyright,
   "horizontal",
 );
-HorizontalWithImageFooter.argTypes = getArgTypes(
-  demoDataHorizontalWithFooter,
+HorizontalWithImageCopyright.argTypes = getArgTypes(
+  demoDataHorizontalWithCopyright,
   "horizontal",
 );
-HorizontalWithImageFooter.storyName = "Horizontal with image footer";
+HorizontalWithImageCopyright.storyName = "Horizontal with image copyright";

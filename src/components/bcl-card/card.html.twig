@@ -22,7 +22,7 @@
       alt (string),
       position (string)
     }
-  - image_footer (string) (default: '')
+  - image_copyright (string) (default: '')
   - date (date block object) (default: {})
   - variant (string) (default: '')
   - horizontal (boolean) (default: false)
@@ -58,7 +58,7 @@
 {% set _text = text|default({}) %}
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
-{% set _image_footer = image_footer|default('') %}
+{% set _image_copyright = image_copyright|default('') %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal ?? false %}
@@ -158,9 +158,9 @@
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
-    {%- if _image_footer is not empty %}
+    {%- if _image_copyright is not empty %}
       <div class="bcl-card__image-footer">
-        {{- _image_footer -}}
+        <div class="bcl-copyright">{{- _image_copyright -}}</div>
       </div>
     {%- endif %}
   {%- endif %}
@@ -262,9 +262,9 @@
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
-    {%- if _image_footer is not empty %}
+    {%- if _image_copyright is not empty %}
       <div class="bcl-card__image-footer">
-        {{- _image_footer -}}
+        <div class="bcl-copyright">{{- _image_copyright -}}</div>
       </div>
     {%- endif %}
     {%- if _horizontal -%}

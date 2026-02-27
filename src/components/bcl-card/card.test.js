@@ -42,12 +42,15 @@ describe("OE - Card", () => {
     return expect(render(demoDataHorizontal)).resolves.toMatchSnapshot();
   });
 
-  test(`renders horizontal with image footer correctly`, () => {
+  test(`renders horizontal with image copyright correctly`, () => {
     expect.assertions(1);
 
     return expect(
       render(
-        { ...demoDataHorizontal, image_footer: "© 2024 Example Organisation" },
+        {
+          ...demoDataHorizontal,
+          image_copyright: "© 2024 Example Organisation",
+        },
         true,
       ),
     ).resolves.toMatchSnapshot();
