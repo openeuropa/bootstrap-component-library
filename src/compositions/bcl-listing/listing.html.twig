@@ -118,7 +118,7 @@
       }) %}
       {%- if _card.image is defined and _card.image is not empty %}
         {%- set _card = _card|merge({
-          extra_classes_body: "pt-0",
+          extra_classes_body: "pt-0" ~ (_card.image_copyright is not empty ? 'pt-3' : ''),
         }) %}
       {%- endif %}
       {%- set _card_layout = _card_layout|merge({
@@ -126,7 +126,7 @@
       }) %}
       {%- if _card.image is not empty %}
         {%- set _image_classes = _card.image.classes ?: '' %}
-        {%- if not _alignment == 'center' %}
+        {%- if not _alignment == 'center' and _card.image_copyright is empty %}
           {%- set _image_classes = _image_classes ? _image_classes ~ ' mb-3' : 'mb-3' %}
         {%- endif %}
         {%- set _card = _card|merge({image: _card.image|merge({
