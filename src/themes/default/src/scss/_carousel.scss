@@ -88,15 +88,15 @@ $indicator-size: 8px;
 }
 
 .carousel {
-  .bcl-copyright--overlay {
+  .bcl-copyright {
     bottom: 0;
     width: 100%;
     position: absolute;
     left: 0;
   }
-  &:has(.carousel-item.carousel-item-start .bcl-copyright--overlay),
-  &:has(.carousel-item.carousel-item-end .bcl-copyright--overlay),
-  &:has(.carousel-item.active .bcl-copyright--overlay) {
+  &:has(.carousel-item.carousel-item-start .bcl-copyright),
+  &:has(.carousel-item.carousel-item-end .bcl-copyright),
+  &:has(.carousel-item.active .bcl-copyright) {
     .carousel-indicators {
       bottom: 29px;
     }
