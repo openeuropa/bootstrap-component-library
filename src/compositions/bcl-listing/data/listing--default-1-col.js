@@ -26,6 +26,7 @@ module.exports = {
                   <span class="text-muted d-md-inline d-block me-4 mb-2 mb-md-0">Brussels, Belgium</span>
                   <span class="d-md-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
                 </div>`,
+      image_copyright: "Image: European Union",
     },
     {
       body_classes: "p-md-0 pt-sm-3",
