@@ -45,7 +45,6 @@
 {% set _action_bar = action_bar|default('') %}
 {% set _date = date|default({}) %}
 {% set _copyright = copyright|default('') %}
-{% set _image_copyright = '' %}
 {%- set _action_bar_content -%}
   {%- block action_bar -%}
     {{ _action_bar }}
@@ -105,9 +104,6 @@
 {% if _image is empty and _date is empty %}
   {%- set _right_col_classes = 'col-lg-10 col-xl-9 col-xxl-8' %}
 {% endif %}
-{% if _copyright is not empty %}
-  {% set _image_copyright = _copyright %}
-{% endif %}
 
 {%- set _horizontal_classes = {
   left_col_classes: _left_col_classes,
@@ -123,7 +119,7 @@
   horizontal_grid: _horizontal_classes,
   extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',
   extra_classes_body: _body_classes,
-  image_copyright: _image_copyright,
+  image_copyright: _copyright,
   attributes: create_attribute().addClass(['bg-transparent', 'border-0']),
 } %}
 
