@@ -109,6 +109,62 @@ describe("OE - Listing", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("highlight-2-col renders body spacing with and without image copyright", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        variant: "highlight-2-col",
+        items: [
+          {
+            title: "Card with copyright",
+            image: {
+              path: "https://picsum.photos/seed/2001/600/400",
+              alt: "alt img",
+              position: "top",
+            },
+            image_copyright: "Image: European Union",
+          },
+          {
+            title: "Card without copyright",
+            image: {
+              path: "https://picsum.photos/seed/2002/600/400",
+              alt: "alt img",
+              position: "top",
+            },
+          },
+        ],
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("highlight-2-col renders body spacing with and without image copyright", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        variant: "highlight-3-col",
+        items: [
+          {
+            title: "Card with copyright",
+            image: {
+              path: "https://picsum.photos/seed/2001/600/400",
+              alt: "alt img",
+              position: "top",
+            },
+            image_copyright: "Image: European Union",
+          },
+          {
+            title: "Card without copyright",
+            image: {
+              path: "https://picsum.photos/seed/2002/600/400",
+              alt: "alt img",
+              position: "top",
+            },
+          },
+        ],
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("horizontal renders correctly with title and link", () => {
     expect.assertions(1);
     return expect(
