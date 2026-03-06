@@ -52,6 +52,14 @@ describe("OE - Content banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with copyright", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, copyright: "© 2024 Example Organisation" }),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with title and link", () => {
     expect.assertions(1);
 

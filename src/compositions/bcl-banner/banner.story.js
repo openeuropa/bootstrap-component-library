@@ -12,6 +12,7 @@ const getArgs = (data) => {
     title: data.title,
     title_tag: "div",
     description: data.description,
+    copyright: data.copyright || "",
     centered: true,
     hero: false,
     full_width: false,
@@ -30,6 +31,15 @@ const getArgTypes = (data) => {
     description: {
       type: "string",
       description: "Sub-heading of the banner",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    copyright: {
+      type: "string",
+      description: "Copyright text displayed below the banner",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },

@@ -22,6 +22,7 @@
       alt (string),
       position (string)
     }
+  - image_copyright (string) (default: '')
   - date (date block object) (default: {})
   - variant (string) (default: '')
   - horizontal (boolean) (default: false)
@@ -57,6 +58,7 @@
 {% set _text = text|default({}) %}
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
+{% set _image_copyright = image_copyright|default('') %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal ?? false %}
@@ -132,7 +134,11 @@
     {%- set _img_class = _img_class ~ ' rounded-' ~ _image.rounded %}
   {%- elseif _horizontal %}
     {%- if attributes.hasClass('border-0') %}
-      {%- set _img_class = _img_class ~ ' rounded-1' %}
+      {%- if image_copyright is not empty %}
+        {%- set _img_class = _img_class ~ ' rounded-top-1' %}
+      {%- else %}
+        {%- set _img_class = _img_class ~ ' rounded-1' %}
+      {%- endif %}
     {%- else %}
       {%- set _img_class = _img_class ~ ' rounded-0 rounded-start' %}
     {%- endif %}
@@ -156,6 +162,11 @@
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
+    {%- if _image_copyright is not empty %}
+      <div class="bcl-card__image-footer">
+        <div class="bcl-copyright">{{- _image_copyright -}}</div>
+      </div>
+    {%- endif %}
   {%- endif %}
 {% if _horizontal and (_image is not empty or _date is not empty) -%}
   </div>
@@ -255,6 +266,11 @@
       alt="{{ _image.alt }}"
       class="{{ _img_class }}"
     >
+    {%- if _image_copyright is not empty %}
+      <div class="bcl-card__image-footer">
+        <div class="bcl-copyright">{{- _image_copyright -}}</div>
+      </div>
+    {%- endif %}
     {%- if _horizontal -%}
     </div>
     {%- endif %}

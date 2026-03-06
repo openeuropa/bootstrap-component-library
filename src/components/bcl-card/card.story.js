@@ -19,6 +19,7 @@ const getArgs = (data, type) => {
     subtitle: data.subtitle,
     text: data.text,
     content: data.content || "",
+    image_copyright: data.image_copyright || "",
     card_header: data.card_header || "",
     card_footer: data.card_footer || "",
     variant: data.variant,
@@ -74,6 +75,19 @@ const getArgTypes = (data, type) => {
     content: {
       type: { name: "string" },
       description: "Custom content of the card",
+      control: {
+        type: "text",
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    image_copyright: {
+      name: "image copyright",
+      type: { name: "string" },
+      description: "Optional copyright text rendered below the image",
       control: {
         type: "text",
       },
@@ -238,3 +252,21 @@ export const Horizontal = (args) => card(applyArgs(demoDataHorizontal, args));
 
 Horizontal.args = getArgs(demoDataHorizontal, "horizontal");
 Horizontal.argTypes = getArgTypes(demoDataHorizontal, "horizontal");
+
+const demoDataHorizontalWithCopyright = {
+  ...demoDataHorizontal,
+  image_copyright: "© 2024 Example Organisation",
+};
+
+export const HorizontalWithImageCopyright = (args) =>
+  card(applyArgs(demoDataHorizontalWithCopyright, args));
+
+HorizontalWithImageCopyright.args = getArgs(
+  demoDataHorizontalWithCopyright,
+  "horizontal",
+);
+HorizontalWithImageCopyright.argTypes = getArgTypes(
+  demoDataHorizontalWithCopyright,
+  "horizontal",
+);
+HorizontalWithImageCopyright.storyName = "Horizontal with image copyright";

@@ -113,6 +113,19 @@ describe("OE - Page banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("default renders correctly with copyright", () => {
+    expect.assertions(1);
+    return expect(
+      render(
+        {
+          ...dataDefault,
+          copyright: "© 2024 Example Organisation",
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("default renders correctly fixed height", () => {
     expect.assertions(1);
     return expect(

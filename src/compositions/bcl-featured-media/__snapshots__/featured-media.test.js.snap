@@ -203,6 +203,39 @@ exports[`OE - Featured media featured item renders correctly with title 1`] = `
 </jest>
 `;
 
+exports[`OE - Featured media renders correctly with copyright 1`] = `
+<jest>
+  <figure
+    class="rounded overflow-hidden"
+    src="https://www.youtube.com/embed/VFYlYeFAEH4"
+  >
+    <div
+      class="ratio ratio-16x9"
+    >
+      <iframe
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""
+        frameborder="0"
+        height="197"
+        src="https://www.youtube.com/embed/fgi-GSCB6ho"
+        title="New digital strategy"
+        width="350"
+      />
+    </div>
+    <div
+      class="bcl-copyright"
+    >
+      © 2024 Example Organisation
+    </div>
+    <figcaption
+      class="bg-lighter p-3"
+    >
+      Media description text goes here.
+    </figcaption>
+  </figure>
+</jest>
+`;
+
 exports[`OE - Featured media renders correctly with iframe 1`] = `
 <jest>
   <figure
@@ -267,7 +300,7 @@ exports[`OE - Featured media renders correctly with iframe and with title 1`] = 
 exports[`OE - Featured media renders correctly with image 1`] = `
 <jest>
   <figure
-    class="rounded overflow-hidden d-inline-flex flex-wrap"
+    class="rounded overflow-hidden"
   >
     <img
       alt="random image"
@@ -275,7 +308,7 @@ exports[`OE - Featured media renders correctly with image 1`] = `
       src="https://picsum.photos/1000/400?random=1"
     />
     <figcaption
-      class="bg-lighter p-3 flex-1 w-min-content"
+      class="bg-lighter p-3"
     >
       Media description text goes here.
     </figcaption>
@@ -289,7 +322,7 @@ exports[`OE - Featured media renders correctly with image and forced wrapper 1`]
     class="bcl-featured-item"
   >
     <figure
-      class="rounded overflow-hidden d-inline-flex flex-wrap"
+      class="rounded overflow-hidden"
     >
       <img
         alt="random image"
@@ -297,7 +330,7 @@ exports[`OE - Featured media renders correctly with image and forced wrapper 1`]
         src="https://picsum.photos/1000/400?random=1"
       />
       <figcaption
-        class="bg-lighter p-3 flex-1 w-min-content"
+        class="bg-lighter p-3"
       >
         Media description text goes here.
       </figcaption>
@@ -314,7 +347,7 @@ exports[`OE - Featured media renders correctly with image and with title 1`] = `
     Featured media test title
   </h6>
   <figure
-    class="rounded overflow-hidden d-inline-flex flex-wrap"
+    class="rounded overflow-hidden"
   >
     <img
       alt="random image"
@@ -322,7 +355,7 @@ exports[`OE - Featured media renders correctly with image and with title 1`] = `
       src="https://picsum.photos/1000/400?random=1"
     />
     <figcaption
-      class="bg-lighter p-3 flex-1 w-min-content"
+      class="bg-lighter p-3"
     >
       Media description text goes here.
     </figcaption>
