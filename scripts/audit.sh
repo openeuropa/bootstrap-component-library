@@ -2,4 +2,4 @@
 
 set +e
 
-pnpm audit --audit-level high
+pnpm audit --prod --audit-level high
