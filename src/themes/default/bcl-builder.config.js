@@ -33,8 +33,8 @@ const resolvePackagePath = (packageName, ...segments) => {
 };
 
 const outputFolder = path.resolve(__dirname);
+const repoRoot = path.resolve(__dirname, "../../../");
 const nodeModules = path.resolve(__dirname, "../../../node_modules");
-const bootstrapPath = resolvePackagePath("@openeuropa/bcl-bootstrap");
 const bootstrapIconsPath = resolvePackagePath("bootstrap-icons");
 const twigTemplatesPath = resolvePackagePath("@openeuropa/bcl-twig-templates");
 const resourcesFlagIconsPath = resolvePackagePath("@ecl/resources-flag-icons");
@@ -43,6 +43,10 @@ const resourcesEuLogoPath = resolvePackagePath("@ecl/resources-eu-logo");
 const slimSelectPath = resolvePackagePath("slim-select");
 const slimSelect2Path = resolvePackagePath("slim-select-2");
 const flagIconsPath = resolvePackagePath("flag-icons");
+const bootstrapReplaceIconsPath = path.resolve(
+  repoRoot,
+  "bootstrap/replace-icons",
+);
 
 // SCSS includePaths
 const includePaths = [nodeModules];
@@ -185,7 +189,8 @@ module.exports = {
   sprite: [
     {
       entry: [
-        path.resolve(bootstrapPath, "icons"),
+        bootstrapReplaceIconsPath,
+        path.resolve(bootstrapIconsPath, "icons"),
         path.resolve(__dirname, "src/icons/custom-icons"),
       ],
       dest: path.resolve(outputFolder, "icons/"),
