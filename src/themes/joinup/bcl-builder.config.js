@@ -1,10 +1,48 @@
+const fs = require("fs");
 const path = require("path");
 const replace = require("@rollup/plugin-replace");
 const iconList = require("@openeuropa/bcl-theme-default/src/icons/icons");
 const templates = require("./src/templates/bcl-templates");
 
+const resolvePackagePath = (packageName, ...segments) => {
+  let packageRoot;
+
+  try {
+    packageRoot = path.dirname(
+      require.resolve(`${packageName}/package.json`, { paths: [__dirname] }),
+    );
+  } catch (error) {
+    if (error.code !== "ERR_PACKAGE_PATH_NOT_EXPORTED") {
+      throw error;
+    }
+
+    let currentPath = fs.realpathSync(
+      require.resolve(packageName, { paths: [__dirname] }),
+    );
+
+    while (!packageRoot) {
+      currentPath = path.dirname(currentPath);
+
+      if (fs.existsSync(path.resolve(currentPath, "package.json"))) {
+        packageRoot = currentPath;
+      }
+    }
+  }
+
+  return path.resolve(packageRoot, ...segments);
+};
+
 const outputFolder = path.resolve(__dirname);
-const nodeModules = "../../../node_modules";
+const nodeModules = path.resolve(__dirname, "../../../node_modules");
+const bootstrapPath = resolvePackagePath("@openeuropa/bcl-bootstrap");
+const bootstrapIconsPath = resolvePackagePath("bootstrap-icons");
+const twigTemplatesPath = resolvePackagePath("@openeuropa/bcl-twig-templates");
+const resourcesFlagIconsPath = resolvePackagePath("@ecl/resources-flag-icons");
+const resourcesEcLogoPath = resolvePackagePath("@ecl/resources-ec-logo");
+const resourcesEuLogoPath = resolvePackagePath("@ecl/resources-eu-logo");
+const slimSelectPath = resolvePackagePath("slim-select");
+const slimSelect2Path = resolvePackagePath("slim-select-2");
+const flagIconsPath = resolvePackagePath("flag-icons");
 
 // SCSS includePaths
 const includePaths = [nodeModules];
@@ -12,7 +50,7 @@ const excludePaths = [];
 if (templates.length) {
   templates.forEach((template) => {
     excludePaths.push(
-      `${nodeModules}/@openeuropa/bcl-twig-templates/templates/bcl-${template}/*.html.twig`,
+      path.resolve(twigTemplatesPath, `templates/bcl-${template}/*.html.twig`),
     );
   });
 }
@@ -117,7 +155,7 @@ module.exports = {
   ],
   sprite: [
     {
-      entry: path.resolve(nodeModules, "@openeuropa/bcl-bootstrap/icons"),
+      entry: path.resolve(bootstrapPath, "icons"),
       dest: path.resolve(outputFolder, "icons/"),
       options: {
         list: iconList,
@@ -126,54 +164,44 @@ module.exports = {
   ],
   copy: [
     {
-      from: [path.resolve(nodeModules, "slim-select/dist/slimselect.min.js")],
+      from: [path.resolve(slimSelectPath, "dist/slimselect.min.js")],
       to: path.resolve(outputFolder, "js"),
       options: { up: true },
     },
     {
-      from: [path.resolve(nodeModules, "slim-select-2/dist/slimselect.min.js")],
+      from: [path.resolve(slimSelect2Path, "dist/slimselect.min.js")],
       to: path.resolve(outputFolder, "js/slim-select-2"),
       options: { up: true },
     },
     {
-      from: [
-        path.resolve(
-          nodeModules,
-          "@openeuropa/bcl-bootstrap/bootstrap-icons.svg",
-        ),
-      ],
+      from: [path.resolve(bootstrapIconsPath, "bootstrap-icons.svg")],
       to: path.resolve(outputFolder, "icons"),
       options: { up: true },
     },
     {
       from: [
-        path.resolve(
-          nodeModules,
-          "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg",
-        ),
+        path.resolve(resourcesFlagIconsPath, "dist/sprites/icons-flag.svg"),
       ],
       to: path.resolve(outputFolder, "icons"),
       options: { up: true },
     },
     {
-      from: [`${nodeModules}/flag-icons/flags/**/*.svg`],
+      from: [path.resolve(flagIconsPath, "flags/**/*.svg")],
       to: path.resolve(outputFolder, "icons/world-flags"),
       options: { up: 6 },
     },
     {
-      from: [`${nodeModules}/@ecl/resources-ec-logo/**/*.svg`],
+      from: [path.resolve(resourcesEcLogoPath, "**/*.svg")],
       to: path.resolve(outputFolder, "logos/ec"),
       options: { up: 7 },
     },
     {
-      from: [`${nodeModules}/@ecl/resources-eu-logo/**/*.svg`],
+      from: [path.resolve(resourcesEuLogoPath, "**/*.svg")],
       to: path.resolve(outputFolder, "logos/eu"),
       options: { up: 7 },
     },
     {
-      from: [
-        `${nodeModules}/@openeuropa/bcl-twig-templates/templates/**/*.twig`,
-      ],
+      from: [path.resolve(twigTemplatesPath, "templates/**/*.twig")],
       to: path.resolve(outputFolder, "templates"),
       options: { up: 7, exclude: excludePaths },
     },

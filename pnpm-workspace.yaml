@@ -1,0 +1,32 @@
+packages:
+  - "bootstrap"
+  - "builder"
+  - "src/data/*"
+  - "src/components/*"
+  - "src/compositions/*"
+  - "tools/**"
+  - "src/themes/*"
+  - "src/themes/**/storybook"
+
+linkWorkspacePackages: true
+nodeLinker: hoisted
+packageImportMethod: clone-or-copy
+publicHoistPattern:
+  - "@openeuropa/*"
+
+overrides:
+  crypto-js: 4.2.0
+  merge: 2.1.1
+  tar-fs: 3.0.9
+  ws: 8.17.1
+
+packageExtensions:
+  "@storybook/addon-docs@*":
+    dependencies:
+      "@types/react": "^19.0.0"
+  "@storybook/addon-webpack5-compiler-babel@*":
+    dependencies:
+      webpack: "^5.0.0"
+  "storybook@*":
+    dependencies:
+      "@testing-library/dom": "^10.4.0"

@@ -8,9 +8,6 @@
   "repository": {
     "type": "git"
   },
-  "installConfig": {
-    "hoistingLimits": "workspaces"
-  },
   "scripts": {
     "align-templates": "lerna --scope @openeuropa/bcl-twig-templates run prepublish",
     "build:themes": "lerna --scope '@openeuropa/bcl-theme-*' run build",
@@ -34,10 +31,10 @@
     "fix": "run-p 'fix:*'",
     "fix:js": "eslint --fix src --ext .js",
     "fix:scss": "stylelint --fix src/**/*.scss",
-    "fix:prettier": "prettier --write (src|storybook|tools|builder|scripts)/**/*.{md,mdx,html,json,yml,js,jsx,scss}",
+    "fix:prettier": "prettier --write \"{src,storybook,tools,builder,scripts}/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "lint": "npm-run-all -p 'lint:*'",
     "lint:js": "eslint src",
-    "lint:prettier": "prettier --check (src|storybook|tools|builder)/**/*.{md,mdx,html,json,yml,js,jsx,scss}",
+    "lint:prettier": "prettier --check \"{src,storybook,tools,builder}/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "jest": "jest",
     "patch": "patch-package",
     "patch-build": "scripts/patch-build.js",
@@ -78,10 +75,6 @@
       "src/themes/**/storybook"
     ]
   },
-  "jest": {
-    "verbose": true,
-    "testEnvironment": "jsdom"
-  },
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write",
@@ -100,7 +93,9 @@
     "@babel/preset-env": "7.29.0",
     "@babel/preset-react": "7.28.5",
     "@popperjs/core": "^2.11.8",
+    "@openeuropa/bcl-data-utils": "workspace:*",
     "@size-limit/preset-big-lib": "12.0.0",
+    "@openeuropa/bcl-test-utils": "workspace:*",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.6",
     "@storybook/builder-webpack5": "^9.1.10",
     "@storybook/html": "^9.1.10",
@@ -149,13 +144,8 @@
     "stylelint-config-recommended-scss": "17.0.0",
     "typescript": "^5.9.3",
     "util": "^0.12.5",
+    "vm-browserify": "1.1.2",
     "webpack": "^5.105.2"
   },
-  "resolutions": {
-    "crypto-js": "npm:4.2.0",
-    "merge": "npm:2.1.1",
-    "tar-fs": "npm:3.0.9",
-    "ws": "npm:8.17.1"
-  },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "pnpm@10.6.2"
 }

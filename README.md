@@ -16,9 +16,8 @@ are visible thanks to interactive fields called controls.
 
 ## Usage
 
-Be sure to have [Node.js](https://nodejs.org/) as well as yarn installed before
-proceeding, this library uses the current LTS version of node.js, named
-[fermium](https://nodejs.org/download/release/latest-fermium/)
+Be sure to have [Node.js](https://nodejs.org/) and `pnpm` installed before
+proceeding. Use the Node.js version defined in `.nvmrc`.
 
 ```shell
 # Clone the repo
@@ -26,15 +25,14 @@ git clone https://github.com/openeuropa/bootstrap-component-library
 cd bootstrap-component-library
 
 # Install dependencies and build the themes
-yarn
+pnpm install
 
 # Start a development session (storybook with browsersync )
-yarn start {project}
+pnpm start {project}
 ```
 
 - Open <http://localhost:5000> to see the storybook instance.
 - Use <http://localhost:3000> to enjoy live reloading on storybook.
-
 
 ## Npm packages
 
@@ -49,9 +47,9 @@ files available to each of the theme packages.
 
 ### How to use a package from npm
 
-- fetch the package with npm or yarn, e.g.
+- fetch the package with npm or pnpm, e.g.
   `npm install @openeuropa/bcl-theme-default` or
-  `yarn add @openeuropa/bcl-theme-default`
+  `pnpm add @openeuropa/bcl-theme-default`
 - include the templates in your application, you will need a `twig loader`
   capable of identifying the templates using their namespace `@oe-bcl`.
 
@@ -67,7 +65,7 @@ files available to each of the theme packages.
 
 ### BCL builder
 
-The `@openeuropa/bcl-builder` is a package providing scripts to be executed via 
+The `@openeuropa/bcl-builder` is a package providing scripts to be executed via
 the command line, `styles`, `scripts`, `copy`, `rename` and `sprite`.
 They can be used respectively to compile SASS files and minify css
 files, compile and minify js files, to copy files or rename files and to generate
@@ -90,7 +88,7 @@ in any platform supporting twig:
 Each theme package is meant to provide all the needed resources in terms of css,
 js, twig templates and icons.
 Js is offered in three different formats, `umd` (universal module definition),
-`esm` (ES Modules) and the `bundle`  (which includes popper Js), similarly to
+`esm` (ES Modules) and the `bundle` (which includes popper Js), similarly to
 what happens with the files distributed by the bootstrap library.
 All the files come with a `map` file and with a minified version ready for being
 used in a production website.
@@ -115,4 +113,3 @@ twig-loader would be defined as such:
 ## Developer's guidelines
 
 [Developer's guidelines](docs/developing.md)
-
