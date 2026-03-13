@@ -210,7 +210,7 @@ module.exports = {
     {
       from: [path.resolve(twigTemplatesPath, "templates/**/*.twig")],
       to: path.resolve(outputFolder, "templates"),
-      options: { up: 7, exclude: excludePaths },
+      options: { up: 8, exclude: excludePaths },
     },
     {
       from: ["src/templates/**/*.twig"],
