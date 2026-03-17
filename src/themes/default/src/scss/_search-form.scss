@@ -1,14 +1,15 @@
+@use "sass:map";
 @use "sass:math";
 
 // Search form Spacers
 $search-spacers: (
-  "icon-spacer-left": map-get($spacers, 3),
-  "icon-spacer-top": math.div(($form-select-height - map-get($icon, "xs")), 2),
+  "icon-spacer-left": map.get($spacers, 3),
+  "icon-spacer-top": math.div(($form-select-height - map.get($icon, "xs")), 2),
   "icon-spacer-top-md": math.div(
-      ($form-select-height-md - map-get($icon, "xs")),
+      ($form-select-height-md - map.get($icon, "xs")),
       2
     ),
-  "submit-spacer-right": map-get($spacers, 3),
+  "submit-spacer-right": map.get($spacers, 3),
 );
 
 .bcl-search-form {
@@ -36,7 +37,7 @@ $search-spacers: (
       border-bottom-right-radius: 0;
     }
     .bcl-search-form__submit {
-      padding-right: map-get($search-spacers, "submit-spacer-right");
+      padding-right: map.get($search-spacers, "submit-spacer-right");
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       &:focus-visible {
@@ -62,15 +63,15 @@ $search-spacers: (
   }
   .bcl-search-form__icon {
     position: absolute;
-    top: map-get($search-spacers, "icon-spacer-top");
-    left: map-get($search-spacers, "icon-spacer-left");
+    top: map.get($search-spacers, "icon-spacer-top");
+    left: map.get($search-spacers, "icon-spacer-left");
   }
 }
 
 @include media-breakpoint-up(md) {
   .bcl-search-form {
     .bcl-search-form__icon {
-      top: map-get($search-spacers, "icon-spacer-top-md");
+      top: map.get($search-spacers, "icon-spacer-top-md");
     }
   }
 }

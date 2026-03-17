@@ -1,3 +1,4 @@
+@use "sass:map";
 /* stylelint-disable no-descending-specificity */
 .pagination {
   flex-wrap: wrap;
@@ -33,7 +34,7 @@
     border-bottom: 2px solid transparent;
     color: $dark;
     font-weight: $font-weight-bold;
-    padding: map-get($spacers, 3);
+    padding: map.get($spacers, 3);
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -43,7 +44,7 @@
     border-color: $primary;
     border-width: 2px;
     color: $dark;
-    padding-bottom: calc(map-get($spacers, 3) - 1px);
+    padding-bottom: calc(map.get($spacers, 3) - 1px);
   }
 
   .page-item:first-child .page-link {

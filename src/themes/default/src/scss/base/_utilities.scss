@@ -1,33 +1,34 @@
-$utilities: map-merge(
+@use "sass:map";
+$utilities: map.merge(
   $utilities,
   (
-    "background-color": map-merge(
-        map-get($utilities, "background-color"),
+    "background-color": map.merge(
+        map.get($utilities, "background-color"),
         (
-          values: map-merge(
-              map-get(map-get($utilities, "background-color"), "values"),
+          values: map.merge(
+              map.get(map.get($utilities, "background-color"), "values"),
               (
                 date: $date,
               )
             ),
         )
       ),
-    "width": map-merge(
-        map-get($utilities, "width"),
+    "width": map.merge(
+        map.get($utilities, "width"),
         (
-          values: map-merge(
-              map-get(map-get($utilities, "width"), "values"),
+          values: map.merge(
+              map.get(map.get($utilities, "width"), "values"),
               (
                 min-content: min-content,
               )
             ),
         )
       ),
-    "flex": map-merge(
-        map-get($utilities, "flex"),
+    "flex": map.merge(
+        map.get($utilities, "flex"),
         (
-          values: map-merge(
-              map-get(map-get($utilities, "flex"), "values"),
+          values: map.merge(
+              map.get(map.get($utilities, "flex"), "values"),
               (
                 1: 1,
                 end-100: 1 0 100%,
@@ -36,11 +37,11 @@ $utilities: map-merge(
         )
       ),
     // Extend rounded-top utility.
-    "max-width": map-merge(
-        map-get($utilities, "max-width"),
+    "max-width": map.merge(
+        map.get($utilities, "max-width"),
         (
-          values: map-merge(
-              map-get(map-get($utilities, "max-width"), "values"),
+          values: map.merge(
+              map.get(map.get($utilities, "max-width"), "values"),
               (
                 date: 10rem,
                 col-date: calc(10rem + var(--#{$variable-prefix}gutter-x)),
@@ -50,37 +51,37 @@ $utilities: map-merge(
         )
       ),
     // Create responsive classes for padding
-    "padding": map-merge(
-        map-get($utilities, "padding"),
+    "padding": map.merge(
+        map.get($utilities, "padding"),
         (
           responsive: true,
         )
       ),
     // Create responsive classes for borders
-    "border": map-merge(
-        map-get($utilities, "border"),
+    "border": map.merge(
+        map.get($utilities, "border"),
         (
           responsive: true,
         )
       ),
-    "border-top": map-merge(
-        map-get($utilities, "border-top"),
+    "border-top": map.merge(
+        map.get($utilities, "border-top"),
         (
           responsive: true,
         )
       ),
-    "border-bottom": map-merge(
-        map-get($utilities, "border-bottom"),
+    "border-bottom": map.merge(
+        map.get($utilities, "border-bottom"),
         (
           responsive: true,
         )
       ),
     // Create medium font weight class
-    "font-weight": map-merge(
-        map-get($utilities, "font-weight"),
+    "font-weight": map.merge(
+        map.get($utilities, "font-weight"),
         (
-          values: map-merge(
-              map-get(map-get($utilities, "font-weight"), "values"),
+          values: map.merge(
+              map.get(map.get($utilities, "font-weight"), "values"),
               (
                 medium: 500,
               )
