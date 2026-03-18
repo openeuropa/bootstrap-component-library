@@ -17,4 +17,4 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 # Publish updated packages
-./node_modules/.bin/lerna publish from-package "$@"
+pnpm exec lerna publish from-package "$@"

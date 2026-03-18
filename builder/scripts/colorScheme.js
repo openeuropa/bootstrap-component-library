@@ -39,6 +39,19 @@ const getPlugins = (options) => {
   return plugins;
 };
 
+const resolveThemeSource = (includePaths, localPath, packagePath) => {
+  const candidates = [
+    ...(includePaths || []).map((basePath) =>
+      path.resolve(basePath, packagePath),
+    ),
+    // Keep installed package resolution first for compatibility, and only
+    // fall back to local workspace sources when building this monorepo.
+    path.resolve(process.cwd(), localPath),
+  ];
+
+  return candidates.find((candidate) => fs.existsSync(candidate));
+};
+
 const buildColorScheme = (entry, dest, options) => {
   const plugins = getPlugins(options);
 
@@ -51,20 +64,25 @@ const buildColorScheme = (entry, dest, options) => {
 
   // Read contents of the entry file and the base color scheme SCSS file
   const entryVariables = fs.readFileSync(entry, "utf8");
-  const imports = fs.readFileSync(
-    path.resolve(
-      ...(options.includePaths || []),
-      "@openeuropa/bcl-theme-default/src/scss/color-scheme.scss",
-    ),
-    "utf8",
+  const importsPath = resolveThemeSource(
+    options.includePaths,
+    "src/scss/color-scheme.scss",
+    "@openeuropa/bcl-theme-default/src/scss/color-scheme.scss",
   );
-  const generator = fs.readFileSync(
-    path.resolve(
-      ...(options.includePaths || []),
-      "@openeuropa/bcl-theme-default/src/scss/color_scheme/generator.scss",
-    ),
-    "utf8",
+  const generatorPath = resolveThemeSource(
+    options.includePaths,
+    "src/scss/color_scheme/generator.scss",
+    "@openeuropa/bcl-theme-default/src/scss/color_scheme/generator.scss",
   );
+
+  if (!importsPath || !generatorPath) {
+    throw new Error(
+      "Could not resolve the default theme color-scheme sources.",
+    );
+  }
+
+  const imports = fs.readFileSync(importsPath, "utf8");
+  const generator = fs.readFileSync(generatorPath, "utf8");
 
   // Concatenate the contents
   const scssContent = imports + "\n" + entryVariables + "\n" + generator;
@@ -78,6 +96,8 @@ const buildColorScheme = (entry, dest, options) => {
     sourceMapContents: options.sourceMap === true,
     sourceMapEmbed: options.sourceMap === true,
     includePaths: [
+      path.dirname(importsPath),
+      path.dirname(generatorPath),
       path.resolve(process.cwd(), "node_modules"),
       ...(options.includePaths || []),
     ],
