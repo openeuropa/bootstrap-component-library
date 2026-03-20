@@ -30,6 +30,7 @@
     ]
   - aria_label (string) (default: '')
   - clean_class (boolean) (default: false) - removes 'form-select' class
+  - selectByGroup (boolean) (default: false) - enable optgroup select-all support in Slim Select
   - attributes (drupal attrs)
 #}
 
@@ -49,6 +50,7 @@
 {% set _options = options|default([]) %}
 {% set _aria_label = aria_label|default('') %}
 {% set _clean_class = clean_class ?? false %}
+{% set _select_by_group = selectByGroup ?? false %}
 
 {%- set _classes = ['form-select'] %}
 {% set _label_class = 'form-label' %}
@@ -123,7 +125,14 @@
 {%- if _options is not empty and _options is iterable %}
   {%- for _option in _options %}
     {%- if _option.optgroup is defined -%}
-      <optgroup label="{{ _option.label }}">
+      <optgroup
+        label="{{ _option.label }}"
+        {% if _option.select_all is defined and _option.select_all %}
+          data-selectall="true"
+        {% elseif _select_by_group %}
+          data-selectall="true"
+        {% endif %}
+      >
       {%- if _option.options is not empty  and _option.options is iterable %}
         {%- for _optGroupOption in _option.options -%}
         <option
