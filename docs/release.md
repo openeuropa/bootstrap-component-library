@@ -10,21 +10,22 @@ release you're making: is it a patch? A new minor?
 For a patch, run:
 
 ```sh
-yarn update-version patch
+pnpm update-version patch
 ```
+
 or for a new minor:
 
 ```sh
-yarn update-version minor
+pnpm update-version minor
 ```
 
 If you need to jump to a higher version number (e.g. if you're skipping some BCL versions, upgrading from BCL 2.3.x to 2.6.y), you will have to provide the version number manually:
 
 ```sh
-yarn update-version 2.6.0
+pnpm update-version 2.6.0
 ```
 
-If you don't provide any arguments and just run `yarn update-version`, lerna will try to infer the new version automatically from the git commits messages. This hasn't been tested yet in this repository, so please be careful when using it.
+If you don't provide any arguments and just run `pnpm update-version`, lerna will try to infer the new version automatically from the git commits messages. This hasn't been tested yet in this repository, so please be careful when using it.
 
 ### Create a change log entry for the release:
 
@@ -32,7 +33,6 @@ You'll need an [access token for the GitHub API](https://help.github.com/article
 
 - Run `npm run changelog`. The command will find all the labeled pull requests merged since the last release and create a change log entry with all the changes and links to PRs and their authors.
 - Copy and paste the output from the changelog generator to `CHANGELOG.md`.
-
 
 ### Publish the packages:
 

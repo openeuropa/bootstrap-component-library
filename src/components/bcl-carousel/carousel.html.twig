@@ -8,14 +8,15 @@
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
   - items (object[]) format: [
-     {
+    {
       image: (string) <img> tag
       caption (string)
       caption_classes (string)
       caption_title (string)
+      copyright (string)
       interval (integer) (default: 0)
-     }
-   ],
+    }
+  ],
   - fade (boolean) (default: false)
   - with_controls (boolean) (default: true)
   - prev_label (string) (default: '')
@@ -144,6 +145,9 @@
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
         {%- endif -%}
       </div>
+    {%- endif -%}
+    {%- if _item.copyright is defined and _item.copyright is not empty -%}
+      <div class="bcl-copyright">{{- _item.copyright -}}</div>
     {%- endif -%}
     </div>
     {%- endfor %}

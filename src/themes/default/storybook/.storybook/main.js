@@ -1,15 +1,14 @@
-import { createRequire } from "module";
-import { dirname, join } from "path";
-
-const require = createRequire(import.meta.url);
-const environment = require("./environment.js");
+const path = require("path");
 const webpack = require("webpack");
-const pathModule = require("path");
-const repoRoot = pathModule.resolve(__dirname, "../../../../../");
-const twigWrapperLoader = pathModule.resolve(
+const { globSync } = require("glob");
+const environment = require("./environment.js");
+
+const repoRoot = path.resolve(__dirname, "../../../../../");
+const twigWrapperLoader = path.resolve(
   repoRoot,
   "tools/webpack/twig-wrapper-loader.cjs",
 );
+const workspaceAliases = getWorkspaceAliases();
 
 let stories = ["../bcl-stories/!(test*|deprecated*).story.js"];
 
@@ -29,10 +28,7 @@ const webpackFinal = (config) => {
       {
         loader: twigWrapperLoader,
         options: {
-          environmentModulePath: pathModule.resolve(
-            __dirname,
-            "environment.js",
-          ),
+          environmentModulePath: path.resolve(__dirname, "environment.js"),
         },
       },
       {
@@ -51,12 +47,18 @@ const webpackFinal = (config) => {
   });
 
   config.resolve = config.resolve || {};
+  config.resolve.alias = {
+    ...(config.resolve.alias || {}),
+    ...workspaceAliases,
+  };
+  config.resolve.symlinks = false;
   config.resolve.fallback = {
     ...(config.resolve.fallback || {}),
     path: require.resolve("path-browserify"),
     util: require.resolve("util/"),
     stream: require.resolve("stream-browserify"),
     crypto: require.resolve("crypto-browserify"),
+    vm: require.resolve("vm-browserify"),
     fs: false,
     process: require.resolve("process/browser"),
     buffer: require.resolve("buffer/"),
@@ -95,8 +97,33 @@ const config = {
   docs: {},
 };
 
-export default config;
+module.exports = config;
 
 function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, "package.json")));
+  return path.dirname(require.resolve(path.join(value, "package.json")));
+}
+
+function getWorkspaceAliases() {
+  const packageJsonFiles = globSync(
+    [
+      "bootstrap/package.json",
+      "builder/package.json",
+      "src/data/*/package.json",
+      "src/components/*/package.json",
+      "src/compositions/*/package.json",
+      "tools/*/package.json",
+      "src/themes/*/package.json",
+      "src/themes/**/storybook/package.json",
+    ],
+    { cwd: repoRoot },
+  );
+
+  return Object.fromEntries(
+    packageJsonFiles.map((packageJsonFile) => {
+      const packageJsonPath = path.resolve(repoRoot, packageJsonFile);
+      const { name } = require(packageJsonPath);
+
+      return [name, path.dirname(packageJsonPath)];
+    }),
+  );
 }

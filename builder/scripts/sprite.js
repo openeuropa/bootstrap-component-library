@@ -66,15 +66,17 @@ module.exports = (entry, dest, options) => {
   });
 
   files.forEach((file) => {
-    let filePath;
-    if (Array.isArray(entry)) {
-      filePath = path.resolve(entry[0], file);
-      if (!fs.existsSync(filePath)) {
-        filePath = path.resolve(entry[1], file);
-      }
-    } else {
-      filePath = path.resolve(entry, file);
+    const entryPaths = Array.isArray(entry) ? entry : [entry];
+    const filePath = entryPaths
+      .map((entryPath) => path.resolve(entryPath, file))
+      .find((resolvedPath) => fs.existsSync(resolvedPath));
+
+    if (!filePath) {
+      throw new Error(
+        `Could not resolve sprite source "${file}" from: ${entryPaths.join(", ")}`,
+      );
     }
+
     spriter.add(
       filePath,
       file,

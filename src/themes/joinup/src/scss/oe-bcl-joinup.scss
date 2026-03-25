@@ -2,7 +2,7 @@
 @import "@openeuropa/bcl-theme-default/src/scss/base/colors";
 
 // Custom theme colors
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/colors";
+@import "base/colors";
 
 // Configuration
 @import "@openeuropa/bcl-bootstrap/scss/functions";
@@ -11,17 +11,17 @@
 
 // Override Bootstrap variables
 @import "@openeuropa/bcl-theme-default/src/scss/base/variables";
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/variables";
+@import "base/variables";
 
 @import "@openeuropa/bcl-bootstrap/scss/mixins";
 @import "@openeuropa/bcl-bootstrap/scss/utilities";
 
 // Import base elements
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/fonts";
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/typography";
+@import "base/fonts";
+@import "base/typography";
 
 // Modify utilities
-@import "@openeuropa/bcl-theme-joinup/src/scss/base/utilities";
+@import "base/utilities";
 
 // Layout & components
 @import "@openeuropa/bcl-bootstrap/scss/root";
@@ -69,6 +69,7 @@
 
 // Custom styles
 @import "@openeuropa/bcl-theme-default/src/scss/card";
+@import "@openeuropa/bcl-theme-default/src/scss/copyright";
 @import "@openeuropa/bcl-theme-default/src/scss/reset";
 @import "@openeuropa/bcl-theme-default/src/scss/header";
 @import "@openeuropa/bcl-theme-default/src/scss/description_list";
@@ -95,7 +96,7 @@
 @import "@openeuropa/bcl-theme-default/src/scss/pagination-v2";
 
 // JoinUp Custom styles
-@import "@openeuropa/bcl-theme-joinup/src/scss/badges";
-@import "@openeuropa/bcl-theme-joinup/src/scss/buttons";
-@import "@openeuropa/bcl-theme-joinup/src/scss/form";
-@import "@openeuropa/bcl-theme-joinup/src/scss/pagination";
+@import "badges";
+@import "buttons";
+@import "form";
+@import "pagination";

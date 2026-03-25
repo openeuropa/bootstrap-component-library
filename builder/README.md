@@ -97,11 +97,11 @@ We've also added some new variables that overwrite and make use of extra classes
 Step 1:
 Depending on your package manager:
 
-Yarn:
+PNPM:
 
-- yarn add @openeuropa/bcl-builder --save
-- yarn add @openeuropa/bcl-bootstrap --save
-- yarn add @openeuropa/bcl-theme-default --save
+- pnpm add @openeuropa/bcl-builder
+- pnpm add @openeuropa/bcl-bootstrap
+- pnpm add @openeuropa/bcl-theme-default
 
 NPM:
 

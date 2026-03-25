@@ -11,6 +11,7 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the first slide.</p>`,
       caption_title: "First slide label",
+      copyright: "Copyright: Example",
       thumbnail: `<img alt="First slide" 
                     src="https://picsum.photos/id/1005/400/400" 
                   />`,

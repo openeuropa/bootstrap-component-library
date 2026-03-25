@@ -1,8 +1,8 @@
 const path = require("path");
 const stories = require("../src/stories/bcl-stories");
 
-const nodeModules = path.resolve(__dirname, "../../../../node_modules");
 const outputFolder = path.resolve(__dirname);
+const defaultStorybookPath = path.resolve(__dirname, "../../default/storybook");
 
 const excludePaths = [];
 if (stories.length) {
@@ -21,12 +21,7 @@ module.exports = {
       options: { up: true, exclude: excludePaths },
     },
     {
-      from: [
-        path.resolve(
-          nodeModules,
-          "@openeuropa/bcl-storybook-default/.storybook/*.js",
-        ),
-      ],
+      from: [path.resolve(defaultStorybookPath, ".storybook/*.js")],
       to: path.resolve(outputFolder, ".storybook"),
       options: { up: true },
     },

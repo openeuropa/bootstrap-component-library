@@ -87,6 +87,30 @@ $indicator-size: 8px;
   }
 }
 
+.carousel {
+  .bcl-copyright {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  &:has(.carousel-item.carousel-item-start .bcl-copyright),
+  &:has(.carousel-item.carousel-item-end .bcl-copyright),
+  &:has(.carousel-item.active .bcl-copyright) {
+    .carousel-indicators {
+      bottom: 29px;
+    }
+    .carousel-caption {
+      bottom: 29px;
+    }
+    .carousel-indicators + .carousel-inner {
+      .carousel-caption {
+        bottom: 79px;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .carousel-indicators {
     & + .carousel-inner {

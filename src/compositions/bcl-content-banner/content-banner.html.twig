@@ -10,6 +10,7 @@
     - image_size: (string) (default: 'md')
       options: ['md', 'lg', 'xl']
     - date: (date block object) (default: {})
+    - copyright: (string) (default: '')
 
     Card inheritance
       - badges (badge[]) (default: [])
@@ -43,6 +44,7 @@
 {% set _image_size = image_size|default('md') %}
 {% set _action_bar = action_bar|default('') %}
 {% set _date = date|default({}) %}
+{% set _copyright = copyright|default('') %}
 {%- set _action_bar_content -%}
   {%- block action_bar -%}
     {{ _action_bar }}
@@ -117,6 +119,7 @@
   horizontal_grid: _horizontal_classes,
   extra_classes_header: 'bg-transparent pt-0 pb-0 border-0',
   extra_classes_body: _body_classes,
+  image_copyright: _copyright,
   attributes: create_attribute().addClass(['bg-transparent', 'border-0']),
 } %}
 

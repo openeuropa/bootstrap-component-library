@@ -2,13 +2,13 @@
 
 ### Quick reference
 
-1) Run `nvm use`
-2) Run `yarn`
-3) Run `yarn start dev` when developing on the default stories
-4) Run `yarn start {theme}` when developing anything related to a sub-theme
+1. Run `nvm use`
+2. Run `pnpm install`
+3. Run `pnpm start dev` when developing on the default stories
+4. Run `pnpm start {theme}` when developing anything related to a sub-theme
 
-`yarn start dev` can be used to develop on the `default` theme, as well as
-`yarn start default`, the only difference is that `start-dev` has to be used when
+`pnpm start dev` can be used to develop on the `default` theme, as well as
+`pnpm start default`, the only difference is that `start-dev` has to be used when
 working on the story files in `src/components` and `src/compositions`
 
 ### Architecture of the library
@@ -128,7 +128,7 @@ The stories are sorted alphabetically.
 Since the different storybook instances defining the styleguides are using a
 copied version of the default stories, it's not convenient to work on any of them
 when it's about editing the story files.
-Running `yarn storybook` another instance of storybook will be started reading
+Running `pnpm storybook` another instance of storybook will be started reading
 from the stories defined in the `components` folder, this way all the changes in
 the `*.story.js` file will be immediately visible in the instance.
 
@@ -172,7 +172,7 @@ file an array like this `['table']`
 The element added to the array has to be the story file name without the `story.js`
 extension.
 
-If you do so, you might also need to manually run `yarn build:storybook` for the
+If you do so, you might also need to manually run `pnpm build:storybook` for the
 default stories imported in the theme you are working on to be updated, but it
 shouldn't be normally the case.
 
@@ -196,7 +196,6 @@ of setting up all the needed resources for a theme package.
 ### Workflow
 
 [Workflow docs](worflow.md)
-
 
 ### Release
 

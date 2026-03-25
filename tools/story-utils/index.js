@@ -1,6 +1,9 @@
-import iconPath from "@openeuropa/bcl-theme-default/icons/bcl-default-icons.svg";
+import iconPath from "../../src/themes/default/icons/bcl-default-icons.svg";
 import flagPath from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
-import flagList from "@ecl/resources-flag-icons/dist/lists/flag.json";
+import memberFlags from "@ecl/resources-flag-icons/dist/lists/members/all.json";
+import nonMemberFlags from "@ecl/resources-flag-icons/dist/lists/non-members/all.json";
+
+const flagList = [...new Set([...memberFlags, ...nonMemberFlags])];
 
 export const getTitleControls = () => {
   const titleControls = {

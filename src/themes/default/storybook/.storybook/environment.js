@@ -6,7 +6,9 @@ const {
   createFilesystemLoader,
   createFunction,
 } = require("twing");
-const { StorybookDrupalAttribute } = require("../../../../../.storybook/drupal-attribute");
+const {
+  StorybookDrupalAttribute,
+} = require("../../../../../.storybook/drupal-attribute");
 
 const componentsPath = path.resolve(__dirname, "../../../components");
 const compositionsPath = path.resolve(__dirname, "../../../compositions");
@@ -32,10 +34,13 @@ try {
 
   const dummyText = createFunction(
     "get_dummy_text",
-    (_context, count = 1, paragraph = false, paragraphs = false, classes = "") =>
-      Promise.resolve(
-        getDummyText(count, paragraph, paragraphs, classes),
-      ),
+    (
+      _context,
+      count = 1,
+      paragraph = false,
+      paragraphs = false,
+      classes = "",
+    ) => Promise.resolve(getDummyText(count, paragraph, paragraphs, classes)),
     [
       { name: "count", defaultValue: 1 },
       { name: "paragraph", defaultValue: false },

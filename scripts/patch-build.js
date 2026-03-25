@@ -12,7 +12,9 @@ const args = [
   `--patch-build ${branch}...development`,
 ];
 
-const buildPatch = spawn("yarn", args, { stdio: "inherit" });
+const buildPatch = spawn("pnpm", ["dlx", "chromatic", ...args], {
+  stdio: "inherit",
+});
 
 buildPatch.on("error", (err) => console.log(err.message));
 buildPatch.on("exit", () => {

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.11.0 (2026-03-25)
+
+#### :rocket: New Feature
+* [#736](https://github.com/openeuropa/bootstrap-component-library/pull/736) OEL-4499: Adapt templates for copyright. ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#744](https://github.com/openeuropa/bootstrap-component-library/pull/744) OEL-4590: Migrate from yarn to pnpm. ([@tibi2303](https://github.com/tibi2303))
+* [#735](https://github.com/openeuropa/bootstrap-component-library/pull/735) OEL-4476: Update package versions and fixed warnings. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.10.11 (2026-02-25)
 
 #### :bug: Bug Fix

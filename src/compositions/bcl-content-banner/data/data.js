@@ -19,6 +19,7 @@ module.exports = {
     5,
     true,
   )}`,
+  copyright: "Copyright demo",
   image: {
     path: "https://picsum.photos/255/255?random=6",
     alt: "alt img",
