@@ -1,3 +1,4 @@
+@use "sass:map";
 // Colors variables
 $lighter: $gray-100;
 $date: #1698af;
@@ -10,7 +11,7 @@ $cyan-50: tint-color($cyan, 90%);
 $zindex-dropdown: 1055;
 
 // Override theme-color "light"
-$theme-colors: map-merge(
+$theme-colors: map.merge(
   $theme-colors,
   (
     "light": $light,
@@ -34,11 +35,11 @@ $custom-cyans: (
   "cyan-50": $cyan-50,
 );
 
-$blues: map-merge($blues, $custom-blues);
-$reds: map-merge($reds, $custom-reds);
-$yellows: map-merge($yellows, $custom-yellows);
-$greens: map-merge($greens, $custom-greens);
-$cyans: map-merge($cyans, $custom-cyans);
+$blues: map.merge($blues, $custom-blues);
+$reds: map.merge($reds, $custom-reds);
+$yellows: map.merge($yellows, $custom-yellows);
+$greens: map.merge($greens, $custom-greens);
+$cyans: map.merge($cyans, $custom-cyans);
 
 // Custom color variables
 $ec-blue: #17458f;
@@ -62,7 +63,7 @@ $spacers-extended: (
   "4-75": $spacer * 2.5,
 );
 
-$spacers: map-merge($spacers, $spacers-extended);
+$spacers: map.merge($spacers, $spacers-extended);
 $gutters: $spacers;
 $enable-negative-margins: true;
 $negative-spacers: negativify-map($spacers);

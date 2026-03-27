@@ -50,6 +50,13 @@ const bootstrapReplaceIconsPath = path.resolve(
 
 // SCSS includePaths
 const includePaths = [nodeModules];
+const silenceDeprecations = [
+  "legacy-js-api",
+  "import",
+  "color-functions",
+  "if-function",
+  "global-builtin",
+];
 const excludePaths = [];
 if (templates.length) {
   templates.forEach((template) => {
@@ -130,14 +137,8 @@ module.exports = {
       dest: path.resolve(outputFolder, "css/oe-bcl-joinup.css"),
       options: {
         includePaths,
+        silenceDeprecations,
         sourceMap: "file",
-        silenceDeprecations: [
-          "legacy-js-api",
-          "import",
-          "color-functions",
-          "if-function",
-          "global-builtin",
-        ],
       },
     },
     {
@@ -145,15 +146,9 @@ module.exports = {
       dest: path.resolve(outputFolder, "css/oe-bcl-joinup.min.css"),
       options: {
         includePaths,
+        silenceDeprecations,
         sourceMap: "file",
         minify: true,
-        silenceDeprecations: [
-          "legacy-js-api",
-          "import",
-          "color-functions",
-          "if-function",
-          "global-builtin",
-        ],
       },
     },
   ],

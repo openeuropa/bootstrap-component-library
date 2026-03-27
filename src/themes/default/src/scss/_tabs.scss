@@ -1,9 +1,10 @@
+@use "sass:map";
 // stylelint-disable no-descending-specificity
 .nav {
   &.bcl__nav {
     border: none;
     .nav-link {
-      padding: map-get($spacers, 3);
+      padding: map.get($spacers, 3);
       color: $black;
       border: none;
       border-radius: 0;
@@ -22,7 +23,7 @@
         background: transparent;
         border-top: none;
         border-right: none;
-        border-bottom: map-get($border-widths, 2) solid $primary;
+        border-bottom: map.get($border-widths, 2) solid $primary;
         border-left: none;
         &:focus-visible {
           outline-color: $primary;
@@ -67,7 +68,7 @@
     }
     .nav-link {
       margin-bottom: 0;
-      border-bottom: map-get($border-widths, 1) solid $gray-300;
+      border-bottom: map.get($border-widths, 1) solid $gray-300;
       &.active {
         border-bottom: none;
       }

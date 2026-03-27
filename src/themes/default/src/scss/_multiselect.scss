@@ -1,3 +1,4 @@
+@use "sass:map";
 /* stylelint-disable selector-no-qualifying-type,
    selector-max-class, selector-max-compound-selectors,
    no-descending-specificity,
@@ -9,16 +10,16 @@
 
 // Multiselect Spacers
 $multiselect-spacers: (
-  "disabled-spacer": calc(map-get($spacers, 2) - 1px),
-  "disabled-spacer-md": calc(map-get($spacers, 2) - 2px),
-  "select-spacer": calc(map-get($spacers, 2) - 2px),
+  "disabled-spacer": calc(map.get($spacers, 2) - 1px),
+  "disabled-spacer-md": calc(map.get($spacers, 2) - 2px),
+  "select-spacer": calc(map.get($spacers, 2) - 2px),
   "select-spacer-md": 0.075rem,
   "select-spacer-start": 0.3rem,
-  "badge-padding-x": map-get($spacers, 1),
-  "badge-padding-y": map-get($spacers, 1),
-  "add-margin-top": map-get($spacers, "2-5"),
-  "add-margin-top-md": map-get($spacers, 2),
-  "icon-position-x": map-get($spacers, 4),
+  "badge-padding-x": map.get($spacers, 1),
+  "badge-padding-y": map.get($spacers, 1),
+  "add-margin-top": map.get($spacers, "2-5"),
+  "add-margin-top-md": map.get($spacers, 2),
+  "icon-position-x": map.get($spacers, 4),
 );
 
 select.multi-select {
@@ -50,7 +51,7 @@ select.multi-select {
       text-align: left;
       white-space: normal;
       vertical-align: baseline;
-      padding-right: map-get($spacers, "3-5");
+      padding-right: map.get($spacers, "3-5");
       @include border-radius($badge-border-radius);
       @include gradient-bg();
       .ss-value-delete {
@@ -79,16 +80,16 @@ select.multi-select {
       }
     }
     .ss-disabled {
-      padding-top: map-get($multiselect-spacers, "disabled-spacer");
-      padding-bottom: map-get($multiselect-spacers, "disabled-spacer");
+      padding-top: map.get($multiselect-spacers, "disabled-spacer");
+      padding-bottom: map.get($multiselect-spacers, "disabled-spacer");
       @include font-size(1rem);
     }
   }
   .ss-multi-selected {
     border-color: $input-border-color;
-    padding: map-get($multiselect-spacers, "select-spacer") 0
-      map-get($multiselect-spacers, "select-spacer")
-      map-get($multiselect-spacers, "select-spacer-start");
+    padding: map.get($multiselect-spacers, "select-spacer") 0
+      map.get($multiselect-spacers, "select-spacer")
+      map.get($multiselect-spacers, "select-spacer-start");
     &.ss-disabled {
       .ss-values {
         .ss-value {
@@ -135,7 +136,7 @@ select.multi-select {
 .was-validated .multi-select:valid + .ss-main.multi-select {
   .ss-multi-selected {
     background-repeat: no-repeat;
-    background-position: right map-get($multiselect-spacers, "icon-position-x")
+    background-position: right map.get($multiselect-spacers, "icon-position-x")
       center;
     background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
   }
@@ -168,9 +169,9 @@ select.multi-select {
 @include media-breakpoint-up(md) {
   .ss-main.ss-1.multi-select {
     .ss-multi-selected {
-      padding: map-get($multiselect-spacers, "select-spacer-md") 0
-        map-get($multiselect-spacers, "select-spacer-md")
-        map-get($multiselect-spacers, "select-spacer-start");
+      padding: map.get($multiselect-spacers, "select-spacer-md") 0
+        map.get($multiselect-spacers, "select-spacer-md")
+        map.get($multiselect-spacers, "select-spacer-start");
     }
     .ss-values {
       @include font-size(1rem);
@@ -179,9 +180,9 @@ select.multi-select {
       }
       .ss-disabled {
         padding-top: calc(
-          map-get($multiselect-spacers, "disabled-spacer-md") + 1px
+          map.get($multiselect-spacers, "disabled-spacer-md") + 1px
         );
-        padding-bottom: map-get($multiselect-spacers, "disabled-spacer-md");
+        padding-bottom: map.get($multiselect-spacers, "disabled-spacer-md");
       }
     }
   }
