@@ -127,9 +127,7 @@
     {%- if _option.optgroup is defined -%}
       <optgroup
         label="{{ _option.label }}"
-        {% if _option.select_all is defined and _option.select_all %}
-          data-selectall="true"
-        {% elseif _select_by_group %}
+        {% if (_option.select_all ?? false) or _select_by_group %}
           data-selectall="true"
         {% endif %}
       >
