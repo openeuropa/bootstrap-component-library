@@ -22,6 +22,7 @@
 const sass = require("sass");
 const path = require("path");
 const fs = require("fs");
+const { pathToFileURL } = require("url");
 const postcss = require("postcss");
 const cssnano = require("cssnano");
 const prefixer = require("postcss-prefix-selector");
@@ -87,21 +88,34 @@ const buildColorScheme = (entry, dest, options) => {
   // Concatenate the contents
   const scssContent = imports + "\n" + entryVariables + "\n" + generator;
 
-  const sassResult = sass.renderSync({
-    data: scssContent,
-    outFile: dest,
-    noErrorCss: true,
-    outputStyle: "expanded",
+  const compileOptions = {
+    style: "expanded",
     sourceMap: options.sourceMap !== false,
-    sourceMapContents: options.sourceMap === true,
-    sourceMapEmbed: options.sourceMap === true,
-    includePaths: [
+    sourceMapIncludeSources: options.sourceMap === true,
+    url: pathToFileURL(entry),
+    loadPaths: [
       path.dirname(importsPath),
       path.dirname(generatorPath),
       path.resolve(process.cwd(), "node_modules"),
       ...(options.includePaths || []),
     ],
-  });
+  };
+
+  const silencedDeprecations = Array.isArray(options.silenceDeprecations)
+    ? options.silenceDeprecations
+    : undefined;
+
+  if (silencedDeprecations && silencedDeprecations.length) {
+    compileOptions.silenceDeprecations = silencedDeprecations;
+  }
+
+  if (typeof options.quietDeps !== "undefined") {
+    compileOptions.quietDeps = options.quietDeps;
+  } else if (silencedDeprecations && silencedDeprecations.length) {
+    compileOptions.quietDeps = true;
+  }
+
+  const sassResult = sass.compileString(scssContent, compileOptions);
 
   postcss(plugins)
     .use(
@@ -126,7 +140,7 @@ const buildColorScheme = (entry, dest, options) => {
     .process(sassResult.css, {
       map:
         postcssSourceMap === "file"
-          ? { inline: false, prev: sassResult.map.toString() }
+          ? { inline: false, prev: JSON.stringify(sassResult.sourceMap) }
           : postcssSourceMap,
       from: entry,
       to: dest,

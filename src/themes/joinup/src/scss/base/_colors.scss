@@ -1,11 +1,12 @@
+@use "sass:color";
 // Custom theme colors
 
 $brand: #1073de;
 
 $primary: #143b76;
-$secondary: lighten(
-  desaturate(adjust-hue($brand, -1), 15.13),
-  47.84
+$secondary: color.adjust(
+  color.adjust(color.adjust($brand, $hue: -1deg), $saturation: -15.13%),
+  $lightness: 47.84%
 ); // #e7f1fb
 $success: #18bf80;
 $warning: #eba843;

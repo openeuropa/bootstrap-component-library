@@ -49,6 +49,13 @@ const bootstrapReplaceIconsPath = path.resolve(
 
 // SCSS includePaths
 const includePaths = [nodeModules];
+const silenceDeprecations = [
+  "legacy-js-api",
+  "import",
+  "color-functions",
+  "if-function",
+  "global-builtin",
+];
 
 module.exports = {
   scripts: [
@@ -122,14 +129,8 @@ module.exports = {
       options: {
         includePaths,
         minify: true,
+        silenceDeprecations,
         sourceMap: "file",
-        silenceDeprecations: [
-          "legacy-js-api",
-          "import",
-          "color-functions",
-          "if-function",
-          "global-builtin",
-        ],
       },
     },
   ],
@@ -139,14 +140,8 @@ module.exports = {
       dest: path.resolve(outputFolder, "css/oe-bcl-default.css"),
       options: {
         includePaths,
+        silenceDeprecations,
         sourceMap: "file",
-        silenceDeprecations: [
-          "legacy-js-api",
-          "import",
-          "color-functions",
-          "if-function",
-          "global-builtin",
-        ],
       },
     },
     {
@@ -157,15 +152,9 @@ module.exports = {
           prefix: ".ck-content",
         },
         includePaths,
+        silenceDeprecations,
         sourceMap: "file",
         minify: true,
-        silenceDeprecations: [
-          "legacy-js-api",
-          "import",
-          "color-functions",
-          "if-function",
-          "global-builtin",
-        ],
       },
     },
     {
@@ -173,15 +162,9 @@ module.exports = {
       dest: path.resolve(outputFolder, "css/oe-bcl-default.min.css"),
       options: {
         includePaths,
+        silenceDeprecations,
         sourceMap: "file",
         minify: true,
-        silenceDeprecations: [
-          "legacy-js-api",
-          "import",
-          "color-functions",
-          "if-function",
-          "global-builtin",
-        ],
       },
     },
   ],

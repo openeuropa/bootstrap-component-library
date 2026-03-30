@@ -49,15 +49,10 @@ const buildStyles = (entry, dest, options) => {
     postcssSourceMap = options.sourceMap; // as a file
   }
 
-  const renderOptions = {
-    file: entry,
-    outFile: dest,
-    noErrorCss: true,
-    outputStyle: "expanded",
+  const compileOptions = {
+    style: "expanded",
     sourceMap: options.sourceMap !== false,
-    sourceMapContents: options.sourceMap === true,
-    sourceMapEmbed: options.sourceMap === true,
-    includePaths: [
+    loadPaths: [
       path.resolve(process.cwd(), "node_modules"),
       ...(options.includePaths || []),
     ],
@@ -68,16 +63,16 @@ const buildStyles = (entry, dest, options) => {
     : undefined;
 
   if (silencedDeprecations && silencedDeprecations.length) {
-    renderOptions.silenceDeprecations = silencedDeprecations;
+    compileOptions.silenceDeprecations = silencedDeprecations;
   }
 
   if (typeof options.quietDeps !== "undefined") {
-    renderOptions.quietDeps = options.quietDeps;
+    compileOptions.quietDeps = options.quietDeps;
   } else if (silencedDeprecations && silencedDeprecations.length) {
-    renderOptions.quietDeps = true;
+    compileOptions.quietDeps = true;
   }
 
-  const sassResult = sass.renderSync(renderOptions);
+  const sassResult = sass.compile(entry, compileOptions);
 
   const processor = postcss(plugins);
   if (options.prefix) {
@@ -93,7 +88,7 @@ const buildStyles = (entry, dest, options) => {
     .process(sassResult.css, {
       map:
         postcssSourceMap === "file"
-          ? { inline: false, prev: sassResult.map.toString() }
+          ? { inline: false, prev: JSON.stringify(sassResult.sourceMap) }
           : postcssSourceMap,
       from: entry,
       to: dest,
