@@ -10,9 +10,11 @@ const {
   StorybookDrupalAttribute,
 } = require("../../../../../.storybook/drupal-attribute");
 
-const componentsPath = path.resolve(__dirname, "../../../components");
-const compositionsPath = path.resolve(__dirname, "../../../compositions");
-const templatesPath = path.resolve(__dirname, "../../templates");
+const repoRoot = path.resolve(__dirname, "../../../../../");
+const themeRoot = path.resolve(__dirname, "../..");
+const componentsPath = path.resolve(repoRoot, "src/components");
+const compositionsPath = path.resolve(repoRoot, "src/compositions");
+const templatesPath = path.resolve(themeRoot, "templates");
 
 let environment;
 
@@ -23,6 +25,8 @@ try {
   loader.addPath(componentsPath);
   loader.addPath(compositionsPath);
   loader.addPath(templatesPath, "@oe-bcl");
+  loader.addPath(componentsPath, "@oe-bcl");
+  loader.addPath(compositionsPath, "@oe-bcl");
   loader.addPath(componentsPath, "@oe_components");
   loader.addPath(compositionsPath, "@oe_compositions");
 
