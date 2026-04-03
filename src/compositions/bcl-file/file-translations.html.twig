@@ -27,19 +27,38 @@
 <div
   {{ attributes }}>{# -#}
   <div class="text-end text-md-center">
-    {%- include '@oe-bcl/bcl-link/link.html.twig' with _label|merge({
-      path: '#' ~ _id,
+    {% include '@oe-bcl/bcl-button/button.html.twig' with _label|merge({
       attributes: create_attribute()
-                  .addClass(['standalone'])
-                  .setAttribute('aria-controls', _id)
-                  .setAttribute('data-bs-toggle', 'collapse')
-                  .setAttribute('aria-expanded', 'false')
-                  .setAttribute('role', 'button'),
+        .addClass(['standalone', 'p-0', 'border-0', 'bg-transparent', 'text-primary'])
+        .setAttribute('aria-controls', _id)
+        .setAttribute('aria-expanded', 'false')
+        .setAttribute('aria-label', 'Show other language versions of this document'|t)
+        .setAttribute('data-bs-toggle', 'collapse')
+        .setAttribute('data-bs-target', '#' ~ _id)
     }) only -%}
   </div>
   {%- if _items is not empty and _items is iterable -%}
   <div class="collapse" id="{{ _id }}">
     {%- for _item in _items %}
+
+      {% if _item.title is not empty and _item.download.path is not empty %}
+        {% set _item_title %}
+          {{ _item.title }}
+          <span class="visually-hidden">
+            {{ '(opens in a new tab)'|t }}
+          </span>
+        {% endset %}
+        {% set _item_title %}
+          {{ bcl_link(
+            _item_title,
+            _item.download.path,
+            attributes: create_attribute({
+              'target' : '_blank',
+            })
+          ) }}
+        {% endset %}
+      {% endif %}
+
       {%- set _item_classes = loop.last ? 'pt-3' : 'py-3 border-bottom' -%}
       <div class="{{ _item_classes }}">
       {%- if _item.type == 'content' %}
@@ -48,7 +67,7 @@
         <div class="row">{# -#}
           <div class="col-12 col-md-9">
             {%- if _item.title is not empty -%}
-              <p class="fw-bold m-0">{{ _item.title }}</p>
+              <p class="fw-bold m-0">{{ _item_title|default(_item.title) }}</p>
             {%- endif %}
             {%- if _item.description is not empty -%}
               <p class="m-0">{{ _item.description }}</p>
@@ -67,22 +86,6 @@
             {%- endif -%}
           </div>{# -#}
           <div class="col-12 col-md-3 align-self-end text-md-end">
-          {%- set download_attributes = create_attribute()
-                                      .setAttribute('download', true)
-                                      .setAttribute('target', '_blank')
-                                      .addClass(['d-block', 'standalone', 'mt-1'])
-          %}
-          {%- set _download_item = _item.download|merge({
-            icon_position: "after",
-            icon: {
-              name: "download",
-              size: "fluid",
-              path: _icon_path,
-            }|merge(_item.download.icon|default({})),
-            attributes: download_attributes.merge(_item.download.attributes|default(create_attribute()))
-          }) %}
-          {%- include '@oe-bcl/bcl-link/link.html.twig' with _download_item only -%}
-          </div>{# -#}
         </div>
       {%- endif -%}
       </div>
