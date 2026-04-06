@@ -157,16 +157,18 @@
       {%- include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
     {%- endblock %}
   {%- elseif _image is not empty and _image.position != "bottom" -%}
-    <img
-      src="{{ _image.path }}"
-      alt="{{ _image.alt }}"
-      class="{{ _img_class }}"
-    >
-    {%- if _image_copyright is not empty %}
-      <div class="bcl-card__image-footer">
-        <div class="bcl-copyright">{{- _image_copyright -}}</div>
-      </div>
-    {%- endif %}
+    <figure class="m-0">
+      <img
+        src="{{ _image.path }}"
+        alt="{{ _image.alt }}"
+        class="{{ _img_class }}"
+      >
+      {%- if _image_copyright is not empty %}
+        <div class="bcl-card__image-footer">
+          <div class="bcl-copyright">{{- _image_copyright -}}</div>
+        </div>
+      {%- endif %}
+    </figure>
   {%- endif %}
 {% if _horizontal and (_image is not empty or _date is not empty) -%}
   </div>
@@ -261,16 +263,18 @@
     {%- if _horizontal -%}
     <div class="col-4">
     {%- endif -%}
-    <img
-      src="{{ _image.path }}"
-      alt="{{ _image.alt }}"
-      class="{{ _img_class }}"
-    >
-    {%- if _image_copyright is not empty %}
-      <div class="bcl-card__image-footer">
-        <div class="bcl-copyright">{{- _image_copyright -}}</div>
-      </div>
-    {%- endif %}
+    <figure class="m-0">
+      <img
+        src="{{ _image.path }}"
+        alt="{{ _image.alt }}"
+        class="{{ _img_class }}"
+      >
+      {%- if _image_copyright is not empty %}
+        <div class="bcl-card__image-footer">
+          <div class="bcl-copyright">{{- _image_copyright -}}</div>
+        </div>
+      {%- endif %}
+    </figure>
     {%- if _horizontal -%}
     </div>
     {%- endif %}
