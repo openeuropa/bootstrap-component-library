@@ -119,7 +119,9 @@
     {% endif %}
     >
     {%- if _item.image is defined and _item.image is not empty %}
-      {{- _item.image }}
+      <figure class="m-0">
+        {{- _item.image }}
+      </figure>
     {%- endif %}
     {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
       {%- set _caption_classes = 'carousel-caption' %}
