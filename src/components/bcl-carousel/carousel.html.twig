@@ -121,6 +121,9 @@
     {%- if _item.image is defined and _item.image is not empty %}
       <figure class="m-0">
         {{- _item.image }}
+        {%- if _item.copyright is defined and _item.copyright is not empty -%}
+          <figcaption class="bcl-copyright">{{- _item.copyright -}}</figcaption>
+        {%- endif -%}
       </figure>
     {%- endif %}
     {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
@@ -147,9 +150,6 @@
           {%- include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
         {%- endif -%}
       </div>
-    {%- endif -%}
-    {%- if _item.copyright is defined and _item.copyright is not empty -%}
-      <div class="bcl-copyright">{{- _item.copyright -}}</div>
     {%- endif -%}
     </div>
     {%- endfor %}
