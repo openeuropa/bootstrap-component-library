@@ -164,9 +164,11 @@
         class="{{ _img_class }}"
       >
       {%- if _image_copyright is not empty %}
-        <div class="bcl-card__image-footer">
-          <div class="bcl-copyright">{{- _image_copyright -}}</div>
-        </div>
+        <figcaption>
+          <div class="bcl-card__image-footer">
+            <div class="bcl-copyright">{{- _image_copyright -}}</div>
+          </div>
+        </figcaption>
       {%- endif %}
     </figure>
   {%- endif %}
@@ -270,9 +272,11 @@
         class="{{ _img_class }}"
       >
       {%- if _image_copyright is not empty %}
-        <div class="bcl-card__image-footer">
-          <div class="bcl-copyright">{{- _image_copyright -}}</div>
-        </div>
+        <figcaption>
+          <div class="bcl-card__image-footer">
+            <div class="bcl-copyright">{{- _image_copyright -}}</div>
+          </div>
+        </figcaption>
       {%- endif %}
     </figure>
     {%- if _horizontal -%}
