@@ -15,11 +15,14 @@ publicHoistPattern:
   - "@openeuropa/*"
 
 overrides:
+  '@rollup/plugin-terser>serialize-javascript': 7.0.5
+  '@xmldom/xmldom': 0.8.12
   basic-ftp: 5.2.0
   crypto-js: 4.2.0
   copyfiles>minimatch: 3.1.4
   glob@7.2.3>minimatch: 3.1.4
   merge: 2.1.1
+  minimatch@3.1.4>brace-expansion: 1.1.13
   picomatch@<2.3.2: 2.3.2
   picomatch@>=4.0.0 <4.0.4: 4.0.4
   svgo@^2.8.0: 2.8.1

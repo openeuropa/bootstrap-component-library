@@ -41,7 +41,6 @@ const resourcesFlagIconsPath = resolvePackagePath("@ecl/resources-flag-icons");
 const resourcesEcLogoPath = resolvePackagePath("@ecl/resources-ec-logo");
 const resourcesEuLogoPath = resolvePackagePath("@ecl/resources-eu-logo");
 const slimSelectPath = resolvePackagePath("slim-select");
-const slimSelect2Path = resolvePackagePath("slim-select-2");
 const flagIconsPath = resolvePackagePath("flag-icons");
 const bootstrapReplaceIconsPath = path.resolve(
   repoRoot,
@@ -168,11 +167,6 @@ module.exports = {
     {
       from: [path.resolve(slimSelectPath, "dist/slimselect.min.js")],
       to: path.resolve(outputFolder, "js"),
-      options: { up: true },
-    },
-    {
-      from: [path.resolve(slimSelect2Path, "dist/slimselect.min.js")],
-      to: path.resolve(outputFolder, "js/slim-select-2"),
       options: { up: true },
     },
     {
