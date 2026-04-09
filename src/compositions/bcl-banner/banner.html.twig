@@ -7,6 +7,7 @@
   - link: (link object) (default: {})
   - image: (string) <img> tag
   - copyright: (string) (default: '')
+  - copyright_label: (string) (default: '')
   - shade: (boolean) (default: false)
   - hero: (boolean) (default: false)
   - full_width: (boolean) (default: false)
@@ -23,6 +24,7 @@
 {% set _link = link|default({}) %}
 {% set _image = image|default('') %}
 {% set _copyright = copyright|default('') %}
+{% set _copyright_label = copyright_label|default('') %}
 {% set _shade = shade ?? false %}
 {% set _hero = hero ?? false %}
 {% set _full_width = full_width ?? false %}
@@ -93,6 +95,6 @@
   </div>{# -#}
 </div>
   {%- if _copyright is not empty -%}
-    <div class="bcl-copyright">{{- _copyright -}}</div>
+    <div class="bcl-copyright">{%- if _copyright_label is not empty %}<span class="visually-hidden">{{- _copyright_label -}}</span>{% endif %}{{- _copyright -}}</div>
   {%- endif -%}
 {#--#}

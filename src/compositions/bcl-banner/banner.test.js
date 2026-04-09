@@ -126,6 +126,19 @@ describe("OE - Page banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("image renders correctly with copyright label", () => {
+    expect.assertions(1);
+    return expect(
+      render(
+        {
+          ...dataImage,
+          copyright_label: "Image credit:",
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("default renders correctly fixed height", () => {
     expect.assertions(1);
     return expect(

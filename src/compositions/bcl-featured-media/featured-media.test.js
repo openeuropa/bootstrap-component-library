@@ -40,6 +40,17 @@ describe("OE - Featured media", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with copyright label", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        copyright: "© 2024 Example Organisation",
+        copyright_label: "Image credit:",
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with image and forced wrapper", () => {
     expect.assertions(1);
     return expect(
