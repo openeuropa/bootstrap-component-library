@@ -56,6 +56,21 @@ describe("OE - Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders horizontal with image copyright label correctly`, () => {
+    expect.assertions(1);
+
+    return expect(
+      render(
+        {
+          ...demoDataHorizontal,
+          image_copyright: "© 2024 Example Organisation",
+          image_copyright_label: "Image credit:",
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`renders with border variant correctly`, () => {
     expect.assertions(1);
 

@@ -23,6 +23,7 @@
       position (string)
     }
   - image_copyright (string) (default: '')
+  - image_copyright_label (string) (default: '')
   - date (date block object) (default: {})
   - variant (string) (default: '')
   - horizontal (boolean) (default: false)
@@ -59,6 +60,7 @@
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
 {% set _image_copyright = image_copyright|default('') %}
+{% set _image_copyright_label = image_copyright_label|default('') %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal ?? false %}
@@ -166,7 +168,7 @@
       {%- if _image_copyright is not empty %}
         <figcaption>
           <div class="bcl-card__image-footer">
-            <div class="bcl-copyright">{{- _image_copyright -}}</div>
+            <div class="bcl-copyright">{%- if _image_copyright_label is not empty %}<span class="visually-hidden">{{- _image_copyright_label -}}</span>{% endif %}{{- _image_copyright -}}</div>
           </div>
         </figcaption>
       {%- endif %}
@@ -274,7 +276,7 @@
       {%- if _image_copyright is not empty %}
         <figcaption>
           <div class="bcl-card__image-footer">
-            <div class="bcl-copyright">{{- _image_copyright -}}</div>
+            <div class="bcl-copyright">{%- if _image_copyright_label is not empty %}<span class="visually-hidden">{{- _image_copyright_label -}}</span>{% endif %}{{- _image_copyright -}}</div>
           </div>
         </figcaption>
       {%- endif %}

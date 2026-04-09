@@ -10,6 +10,7 @@
   - poster_image: (string) (default: '')
   - content: (string) (default: '')
   - copyright: (string) (default: '')
+  - copyright_label: (string) (default: '')
   - wrapper_classes: (default: '')
   - force_wrapper (boolean) (default: false) - always render wrapper element
   - content_classes: (string) (default: '')
@@ -50,6 +51,7 @@
 {% set _poster_image = poster_image|default('') %}
 {% set _content = content|default('') %}
 {% set _copyright = copyright|default('') %}
+{% set _copyright_label = copyright_label|default('') %}
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _content_classes = content_classes|default('') %}
 {% set _read_more = read_more|default({}) %}
@@ -150,7 +152,7 @@
 {%- endif %}
 
 {%- if _copyright is not empty -%}
-  <figcaption class="bcl-copyright">{{- _copyright -}}</figcaption>
+  <figcaption class="bcl-copyright">{%- if _copyright_label is not empty %}<span class="visually-hidden">{{- _copyright_label -}}</span>{% endif %}{{- _copyright -}}</figcaption>
 {%- endif -%}
 
 {%- if _content is not empty -%}

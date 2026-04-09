@@ -134,6 +134,14 @@ describe("OE - carousel", () => {
     return expect(render(demoData)).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with copyright label", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({ ...demoData, copyright_label: "Image credit:" }),
+    ).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(await renderTwigFileAsHtml(template, demoData, true)),
