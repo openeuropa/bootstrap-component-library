@@ -51,6 +51,17 @@ describe("OE - Featured media", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with image description id", () => {
+    expect.assertions(1);
+    return expect(
+      render({
+        ...demoData,
+        copyright: "© 2024 Example Organisation",
+        image_description_id: "img-desc-featured-1",
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("renders correctly with image and forced wrapper", () => {
     expect.assertions(1);
     return expect(

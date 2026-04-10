@@ -142,6 +142,18 @@ describe("OE - carousel", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with description id", () => {
+    expect.assertions(1);
+
+    const dataWithDescriptionId = { ...demoData };
+    dataWithDescriptionId.items = demoData.items.map((item, i) => ({
+      ...item,
+      description_id: `img-desc-carousel-${i}`,
+    }));
+
+    return expect(render(dataWithDescriptionId)).resolves.toMatchSnapshot();
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(await renderTwigFileAsHtml(template, demoData, true)),
