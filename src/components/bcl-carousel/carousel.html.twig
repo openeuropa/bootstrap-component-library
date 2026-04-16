@@ -15,7 +15,6 @@
       caption_classes (string)
       caption_title (string)
       copyright (string)
-      description_id (string)
       interval (integer) (default: 0)
     }
   ],
@@ -124,9 +123,6 @@
     {%- if _item.image is defined and _item.image is not empty %}
       <figure class="m-0">
         {{- _item.image }}
-        {%- if _item.description_id is defined and _item.description_id is not empty -%}
-          <span id="{{ _item.description_id }}" class="visually-hidden">{{- _item.copyright -}}{%- if _item.caption_title is defined and _item.caption_title is not empty %} {{- _item.caption_title -}}{% endif %}{%- if _item.caption is defined and _item.caption is not empty %} {{- _item.caption -}}{% endif %}</span>
-        {%- endif -%}
         {%- if _item.copyright is defined and _item.copyright is not empty -%}
           <figcaption class="bcl-copyright">{%- if _copyright_label is not empty %}<span class="visually-hidden">{{- _copyright_label -}}</span>{% endif %}{{- _item.copyright -}}</figcaption>
         {%- endif -%}

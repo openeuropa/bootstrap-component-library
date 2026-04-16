@@ -12,7 +12,6 @@
     - date: (date block object) (default: {})
     - copyright: (string) (default: '')
     - copyright_label: (string) (default: '')
-    - image_description_id: (string) (default: '')
 
     Card inheritance
       - badges (badge[]) (default: [])
@@ -48,7 +47,6 @@
 {% set _date = date|default({}) %}
 {% set _copyright = copyright|default('') %}
 {% set _copyright_label = copyright_label|default('') %}
-{% set _image_description_id = image_description_id|default('') %}
 {%- set _action_bar_content -%}
   {%- block action_bar -%}
     {{ _action_bar }}
@@ -125,7 +123,6 @@
   extra_classes_body: _body_classes,
   image_copyright: _copyright,
   image_copyright_label: _copyright_label,
-  image_description_id: _image_description_id,
   attributes: create_attribute().addClass(['bg-transparent', 'border-0']),
 } %}
 
