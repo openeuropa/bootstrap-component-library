@@ -11,7 +11,6 @@
   - content: (string) (default: '')
   - copyright: (string) (default: '')
   - copyright_label: (string) (default: '')
-  - image_description_id: (string) (default: '')
   - wrapper_classes: (default: '')
   - force_wrapper (boolean) (default: false) - always render wrapper element
   - content_classes: (string) (default: '')
@@ -53,7 +52,6 @@
 {% set _content = content|default('') %}
 {% set _copyright = copyright|default('') %}
 {% set _copyright_label = copyright_label|default('') %}
-{% set _image_description_id = image_description_id|default('') %}
 {% set _wrapper_classes = wrapper_classes|default('') %}
 {% set _content_classes = content_classes|default('') %}
 {% set _read_more = read_more|default({}) %}
@@ -153,9 +151,6 @@
   {{- _image }}
 {%- endif %}
 
-{%- if _image_description_id is not empty -%}
-  <span id="{{ _image_description_id }}" class="visually-hidden">{{- _copyright -}}{%- if _content is not empty %} {{- _content -}}{% endif %}</span>
-{%- endif -%}
 {%- if _copyright is not empty -%}
   <figcaption class="bcl-copyright">{%- if _copyright_label is not empty %}<span class="visually-hidden">{{- _copyright_label -}}</span>{% endif %}{{- _copyright -}}</figcaption>
 {%- endif -%}

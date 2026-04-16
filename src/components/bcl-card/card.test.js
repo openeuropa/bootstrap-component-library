@@ -71,21 +71,6 @@ describe("OE - Card", () => {
     ).resolves.toMatchSnapshot();
   });
 
-  test(`renders horizontal with image description id correctly`, () => {
-    expect.assertions(1);
-
-    return expect(
-      render(
-        {
-          ...demoDataHorizontal,
-          image_copyright: "© 2024 Example Organisation",
-          image_description_id: "img-desc-card-1",
-        },
-        true,
-      ),
-    ).resolves.toMatchSnapshot();
-  });
-
   test(`renders with border variant correctly`, () => {
     expect.assertions(1);
 

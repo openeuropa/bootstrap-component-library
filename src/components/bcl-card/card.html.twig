@@ -24,7 +24,6 @@
     }
   - image_copyright (string) (default: '')
   - image_copyright_label (string) (default: '')
-  - image_description_id (string) (default: '')
   - date (date block object) (default: {})
   - variant (string) (default: '')
   - horizontal (boolean) (default: false)
@@ -62,7 +61,6 @@
 {% set _image = image|default({}) %}
 {% set _image_copyright = image_copyright|default('') %}
 {% set _image_copyright_label = image_copyright_label|default('') %}
-{% set _image_description_id = image_description_id|default('') %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal ?? false %}
@@ -166,9 +164,7 @@
         src="{{ _image.path }}"
         alt="{{ _image.alt }}"
         class="{{ _img_class }}"
-        {%- if _image_description_id is not empty %} aria-describedby="{{ _image_description_id }}"{% endif %}
       >
-      {%- if _image_description_id is not empty %}<span id="{{ _image_description_id }}" class="visually-hidden">{{- _image_copyright -}}</span>{%- endif %}
       {%- if _image_copyright is not empty %}
         <figcaption>
           <div class="bcl-card__image-footer">
@@ -276,9 +272,7 @@
         src="{{ _image.path }}"
         alt="{{ _image.alt }}"
         class="{{ _img_class }}"
-        {%- if _image_description_id is not empty %} aria-describedby="{{ _image_description_id }}"{% endif %}
       >
-      {%- if _image_description_id is not empty %}<span id="{{ _image_description_id }}" class="visually-hidden">{{- _image_copyright -}}</span>{%- endif %}
       {%- if _image_copyright is not empty %}
         <figcaption>
           <div class="bcl-card__image-footer">
