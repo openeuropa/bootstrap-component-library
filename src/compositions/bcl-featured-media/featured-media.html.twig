@@ -151,17 +151,20 @@
   {{- _image }}
 {%- endif %}
 
-{%- if _copyright is not empty -%}
-  <figcaption class="bcl-copyright">{%- if _copyright_label is not empty %}<span class="visually-hidden">{{- _copyright_label -}}</span>{% endif %}{{- _copyright -}}</figcaption>
-{%- endif -%}
-
-{%- if _content is not empty -%}
-  <figcaption
-    {% if _content_classes is not empty %}
-    class="{{ _content_classes }}"
-    {% endif %}
-  >
-    {{- _content -}}
+{%- if _copyright is not empty or _content is not empty -%}
+  <figcaption>
+    {%- if _content is not empty -%}
+      <div{% if _content_classes is not empty %} class="{{ _content_classes }}"{% endif %}>{{- _content -}}</div>
+    {%- endif -%}
+    {%- if _copyright is not empty -%}
+      {%- if _content is not empty %}<br />{% endif -%}
+      <div class="bcl-copyright">
+        {%- if _copyright_label is not empty %}
+          <span class="visually-hidden">{{- _copyright_label -}}</span>
+        {% endif %}
+        {{- _copyright -}}
+      </div>
+    {%- endif -%}
   </figcaption>
 {%- endif -%}
 </figure>

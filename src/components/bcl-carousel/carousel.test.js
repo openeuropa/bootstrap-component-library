@@ -138,7 +138,7 @@ describe("OE - carousel", () => {
     expect.assertions(1);
 
     return expect(
-      render({ ...demoData, copyright_label: "Image credit:" }),
+      render({ ...demoData, copyright_label: "Copyright:" }),
     ).resolves.toMatchSnapshot();
   });
 

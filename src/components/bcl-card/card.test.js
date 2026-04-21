@@ -64,7 +64,7 @@ describe("OE - Card", () => {
         {
           ...demoDataHorizontal,
           image_copyright: "© 2024 Example Organisation",
-          image_copyright_label: "Image credit:",
+          image_copyright_label: "Copyright:",
         },
         true,
       ),
