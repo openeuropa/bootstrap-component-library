@@ -149,9 +149,9 @@
         {%- endif -%}
         {%- if _item.copyright is defined and _item.copyright is not empty -%}
           <figcaption class="bcl-copyright">
-            {%- if _item.copyright_label is defined and _item.copyright_label is not empty %}
-              <span class="visually-hidden">{{- _item.copyright_label -}}</span>
-            {% endif %}
+            {%- if _item.copyright_label is defined and _item.copyright_label is not empty -%}
+              <span class="visually-hidden">{{- _item.copyright_label }} </span>
+            {%- endif -%}
             {{- _item.copyright -}}
           </figcaption>
         {%- endif -%}
