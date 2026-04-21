@@ -61,6 +61,27 @@
 {% set _image = image|default({}) %}
 {% set _image_copyright = image_copyright|default('') %}
 {% set _image_copyright_label = image_copyright_label|default('') %}
+{% macro image_figure(image, img_class, copyright, copyright_label) %}
+  <figure class="m-0">
+    <img
+      src="{{ image.path }}"
+      alt="{{ image.alt }}"
+      class="{{ img_class }}"
+    >
+    {%- if copyright is not empty %}
+      <figcaption>
+        <div class="bcl-card__image-footer">
+          <div class="bcl-copyright">
+            {%- if copyright_label is not empty %}
+              <span class="visually-hidden">{{- copyright_label -}}</span>
+            {% endif %}
+            {{- copyright -}}
+          </div>
+        </div>
+      </figcaption>
+    {%- endif %}
+  </figure>
+{% endmacro %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal ?? false %}
@@ -159,25 +180,7 @@
       {%- include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
     {%- endblock %}
   {%- elseif _image is not empty and _image.position != "bottom" -%}
-    <figure class="m-0">
-      <img
-        src="{{ _image.path }}"
-        alt="{{ _image.alt }}"
-        class="{{ _img_class }}"
-      >
-      {%- if _image_copyright is not empty %}
-        <figcaption>
-          <div class="bcl-card__image-footer">
-            <div class="bcl-copyright">
-              {%- if _image_copyright_label is not empty %}
-                <span class="visually-hidden">{{- _image_copyright_label -}}</span>
-              {% endif %}
-              {{- _image_copyright -}}
-            </div>
-          </div>
-        </figcaption>
-      {%- endif %}
-    </figure>
+    {{- _self.image_figure(_image, _img_class, _image_copyright, _image_copyright_label) }}
   {%- endif %}
 {% if _horizontal and (_image is not empty or _date is not empty) -%}
   </div>
@@ -272,25 +275,7 @@
     {%- if _horizontal -%}
     <div class="col-4">
     {%- endif -%}
-    <figure class="m-0">
-      <img
-        src="{{ _image.path }}"
-        alt="{{ _image.alt }}"
-        class="{{ _img_class }}"
-      >
-      {%- if _image_copyright is not empty %}
-        <figcaption>
-          <div class="bcl-card__image-footer">
-            <div class="bcl-copyright">
-              {%- if _image_copyright_label is not empty %}
-                <span class="visually-hidden">{{- _image_copyright_label -}}</span>
-              {% endif %}
-              {{- _image_copyright -}}
-            </div>
-          </div>
-        </figcaption>
-      {%- endif %}
-    </figure>
+    {{- _self.image_figure(_image, _img_class, _image_copyright, _image_copyright_label) }}
     {%- if _horizontal -%}
     </div>
     {%- endif %}
