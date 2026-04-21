@@ -159,9 +159,9 @@
     {%- if _copyright is not empty -%}
       {%- if _content is not empty %}<br />{% endif -%}
       <div class="bcl-copyright">
-        {%- if _copyright_label is not empty %}
-          <span class="visually-hidden">{{- _copyright_label -}}</span>
-        {% endif %}
+        {%- if _copyright_label is not empty -%}
+          <span class="visually-hidden">{{- _copyright_label }} </span>
+        {%- endif -%}
         {{- _copyright -}}
       </div>
     {%- endif -%}
