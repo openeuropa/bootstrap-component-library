@@ -168,7 +168,12 @@
       {%- if _image_copyright is not empty %}
         <figcaption>
           <div class="bcl-card__image-footer">
-            <div class="bcl-copyright">{%- if _image_copyright_label is not empty %}<span class="visually-hidden">{{- _image_copyright_label -}}</span>{% endif %}{{- _image_copyright -}}</div>
+            <div class="bcl-copyright">
+              {%- if _image_copyright_label is not empty %}
+                <span class="visually-hidden">{{- _image_copyright_label -}}</span>
+              {% endif %}
+              {{- _image_copyright -}}
+            </div>
           </div>
         </figcaption>
       {%- endif %}
@@ -276,7 +281,12 @@
       {%- if _image_copyright is not empty %}
         <figcaption>
           <div class="bcl-card__image-footer">
-            <div class="bcl-copyright">{%- if _image_copyright_label is not empty %}<span class="visually-hidden">{{- _image_copyright_label -}}</span>{% endif %}{{- _image_copyright -}}</div>
+            <div class="bcl-copyright">
+              {%- if _image_copyright_label is not empty %}
+                <span class="visually-hidden">{{- _image_copyright_label -}}</span>
+              {% endif %}
+              {{- _image_copyright -}}
+            </div>
           </div>
         </figcaption>
       {%- endif %}

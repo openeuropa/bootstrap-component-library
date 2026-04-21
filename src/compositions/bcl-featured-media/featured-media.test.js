@@ -46,7 +46,7 @@ describe("OE - Featured media", () => {
       render({
         ...demoData,
         copyright: "© 2024 Example Organisation",
-        copyright_label: "Image credit:",
+        copyright_label: "Copyright:",
       }),
     ).resolves.toMatchSnapshot();
   });

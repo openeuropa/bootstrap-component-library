@@ -132,7 +132,7 @@ describe("OE - Page banner", () => {
       render(
         {
           ...dataImage,
-          copyright_label: "Image credit:",
+          copyright_label: "Copyright:",
         },
         true,
       ),

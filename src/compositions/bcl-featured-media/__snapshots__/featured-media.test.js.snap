@@ -54,10 +54,12 @@ exports[`OE - Featured media featured item renders correctly 1`] = `
               width="350"
             />
           </div>
-          <figcaption
-            class="bg-lighter p-3"
-          >
-            Media description text goes here.
+          <figcaption>
+            <div
+              class="bg-lighter p-3"
+            >
+              Media description text goes here.
+            </div>
           </figcaption>
         </figure>
       </div>
@@ -125,10 +127,12 @@ exports[`OE - Featured media featured item renders correctly with description ti
               width="350"
             />
           </div>
-          <figcaption
-            class="bg-lighter p-3"
-          >
-            Media description text goes here.
+          <figcaption>
+            <div
+              class="bg-lighter p-3"
+            >
+              Media description text goes here.
+            </div>
           </figcaption>
         </figure>
       </div>
@@ -191,10 +195,12 @@ exports[`OE - Featured media featured item renders correctly with title 1`] = `
               width="350"
             />
           </div>
-          <figcaption
-            class="bg-lighter p-3"
-          >
-            Media description text goes here.
+          <figcaption>
+            <div
+              class="bg-lighter p-3"
+            >
+              Media description text goes here.
+            </div>
           </figcaption>
         </figure>
       </div>
@@ -222,15 +228,18 @@ exports[`OE - Featured media renders correctly with copyright 1`] = `
         width="350"
       />
     </div>
-    <figcaption
-      class="bcl-copyright"
-    >
-      © 2024 Example Organisation
-    </figcaption>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
+      <br />
+      <div
+        class="bcl-copyright"
+      >
+        © 2024 Example Organisation
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -255,20 +264,25 @@ exports[`OE - Featured media renders correctly with copyright label 1`] = `
         width="350"
       />
     </div>
-    <figcaption
-      class="bcl-copyright"
-    >
-      <span
-        class="visually-hidden"
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
       >
-        Image credit:
-      </span>
-      © 2024 Example Organisation
-    </figcaption>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+        Media description text goes here.
+      </div>
+      <br />
+      <div
+        class="bcl-copyright"
+      >
+                  
+        <span
+          class="visually-hidden"
+        >
+          Copyright:
+        </span>
+        
+        © 2024 Example Organisation
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -293,10 +307,12 @@ exports[`OE - Featured media renders correctly with iframe 1`] = `
         width="350"
       />
     </div>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -326,10 +342,12 @@ exports[`OE - Featured media renders correctly with iframe and with title 1`] = 
         width="350"
       />
     </div>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -345,10 +363,12 @@ exports[`OE - Featured media renders correctly with image 1`] = `
       class="img-fluid flex-end-100"
       src="https://picsum.photos/1000/400?random=1"
     />
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -367,10 +387,12 @@ exports[`OE - Featured media renders correctly with image and forced wrapper 1`]
         class="img-fluid flex-end-100"
         src="https://picsum.photos/1000/400?random=1"
       />
-      <figcaption
-        class="bg-lighter p-3"
-      >
-        Media description text goes here.
+      <figcaption>
+        <div
+          class="bg-lighter p-3"
+        >
+          Media description text goes here.
+        </div>
       </figcaption>
     </figure>
   </div>
@@ -392,10 +414,12 @@ exports[`OE - Featured media renders correctly with image and with title 1`] = `
       class="img-fluid flex-end-100"
       src="https://picsum.photos/1000/400?random=1"
     />
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -426,10 +450,12 @@ exports[`OE - Featured media renders correctly with ratio 1`] = `
         srclang=""
       />
     </video>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -460,10 +486,12 @@ exports[`OE - Featured media renders correctly with video 1`] = `
         srclang=""
       />
     </video>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>
@@ -499,10 +527,12 @@ exports[`OE - Featured media renders correctly with video and with title 1`] = `
         srclang=""
       />
     </video>
-    <figcaption
-      class="bg-lighter p-3"
-    >
-      Media description text goes here.
+    <figcaption>
+      <div
+        class="bg-lighter p-3"
+      >
+        Media description text goes here.
+      </div>
     </figcaption>
   </figure>
 </jest>

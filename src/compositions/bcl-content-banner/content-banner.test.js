@@ -67,7 +67,7 @@ describe("OE - Content banner", () => {
       render({
         ...demoData,
         copyright: "© 2024 Example Organisation",
-        copyright_label: "Image credit:",
+        copyright_label: "Copyright:",
       }),
     ).resolves.toMatchSnapshot();
   });

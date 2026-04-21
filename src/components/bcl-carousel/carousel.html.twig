@@ -7,7 +7,6 @@
   - autoplay (boolean) (default: true)
   - dark (boolean) (default: false)
   - active_item (integer) (default: 1)
-  - copyright_label: (string) (default: '')
   - items (object[]) format: [
     {
       image: (string) <img> tag
@@ -15,6 +14,7 @@
       caption_classes (string)
       caption_title (string)
       copyright (string)
+      copyright_label (string)
       interval (integer) (default: 0)
     }
   ],
@@ -36,7 +36,6 @@
 {% set _autoplay = autoplay ?? true %}
 {% set _dark = dark ?? false %}
 {% set _active_item = active_item|default(1) %}
-{% set _copyright_label = copyright_label|default('') %}
 {% set _items = items|default([]) %}
 {% set _fade = fade ?? false %}
 {% set _with_controls = with_controls ?? true %}
@@ -123,36 +122,41 @@
     {%- if _item.image is defined and _item.image is not empty %}
       <figure class="m-0">
         {{- _item.image }}
+        {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
+          {%- set _caption_classes = 'carousel-caption' %}
+          {%- if _item.caption is not empty and _item.link is empty %}
+            {%- set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
+          {%- endif -%}
+          <div
+            class="{{ _caption_classes }}"
+          >
+            {%- if _item.caption is not empty or _item.caption_title is not empty %}
+              {%- if _item.caption_classes is defined and _item.caption_classes is not empty -%}
+                <div class="{{ _item.caption_classes }}">
+              {%- endif %}
+              {%- if _item.caption_title is not empty -%}
+                <div class="fs-5">{{ _item.caption_title }}</div>
+              {%- endif %}
+                {{- _item.caption -}}
+              {% if _item.caption_classes is defined and _item.caption_classes is not empty -%}
+                </div>
+              {%- endif %}
+            {%- endif %}
+            {%- if _item.link is defined and _item.link is not empty %}
+              {%- include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
         {%- if _item.copyright is defined and _item.copyright is not empty -%}
-          <figcaption class="bcl-copyright">{%- if _copyright_label is not empty %}<span class="visually-hidden">{{- _copyright_label -}}</span>{% endif %}{{- _item.copyright -}}</figcaption>
+          <figcaption class="bcl-copyright">
+            {%- if _item.copyright_label is defined and _item.copyright_label is not empty %}
+              <span class="visually-hidden">{{- _item.copyright_label -}}</span>
+            {% endif %}
+            {{- _item.copyright -}}
+          </figcaption>
         {%- endif -%}
       </figure>
     {%- endif %}
-    {%- if (_item.caption is defined and _item.caption is not empty) or (_item.link is defined and _item.link is not empty) or (_item.caption_title is defined and _item.caption_title is not empty) %}
-      {%- set _caption_classes = 'carousel-caption' %}
-      {%- if _item.caption is not empty and _item.link is empty %}
-        {%- set _caption_classes = _caption_classes ~ ' d-none d-md-block' %}
-      {%- endif -%}
-      <div
-        class="{{ _caption_classes }}"
-      >
-        {%- if _item.caption is not empty or _item.caption_title is not empty %}
-          {%- if _item.caption_classes is defined and _item.caption_classes is not empty -%}
-            <div class="{{ _item.caption_classes }}">
-          {%- endif %}
-          {%- if _item.caption_title is not empty -%}
-            <div class="fs-5">{{ _item.caption_title }}</div>
-          {%- endif %}
-            {{- _item.caption -}}
-          {% if _item.caption_classes is defined and _item.caption_classes is not empty -%}
-            </div>
-          {%- endif %}
-        {%- endif %}
-        {%- if _item.link is defined and _item.link is not empty %}
-          {%- include '@oe-bcl/bcl-link/link.html.twig' with _item.link only %}
-        {%- endif -%}
-      </div>
-    {%- endif -%}
     </div>
     {%- endfor %}
   {%- endif -%}
