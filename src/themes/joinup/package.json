@@ -11,6 +11,7 @@
     "build:font-files": "copyfiles -u 6 ../../../node_modules/@fontsource/roboto/files/roboto-{latin*,cyrillic,greek}-{400,500,700}* fonts",
     "build:styles": "cross-env bcl-builder styles",
     "build:scripts": "cross-env bcl-builder scripts",
+    "prebuild:copy": "rimraf templates",
     "build:copy": "cross-env bcl-builder copy",
     "build:sprite": "cross-env bcl-builder sprite",
     "clean": "rimraf css js templates logos icons fonts",

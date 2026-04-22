@@ -29,12 +29,16 @@ const resolvePackagePath = (packageName, ...segments) => {
     }
   }
 
-  return path.resolve(packageRoot, ...segments);
+  return path.resolve(fs.realpathSync(packageRoot), ...segments);
 };
 
 const outputFolder = path.resolve(__dirname);
 const repoRoot = path.resolve(__dirname, "../../../");
 const nodeModules = path.resolve(__dirname, "../../../node_modules");
+const toOutputRelativePath = (targetPath) =>
+  path.relative(outputFolder, targetPath);
+const toOutputRelativePackagePath = (packagePath, ...segments) =>
+  toOutputRelativePath(path.resolve(packagePath, ...segments));
 const bootstrapIconsPath = resolvePackagePath("bootstrap-icons");
 const twigTemplatesPath = resolvePackagePath("@openeuropa/bcl-twig-templates");
 const resourcesFlagIconsPath = resolvePackagePath("@ecl/resources-flag-icons");
@@ -200,24 +204,26 @@ module.exports = {
       options: { up: true },
     },
     {
-      from: [path.resolve(flagIconsPath, "flags/**/*.svg")],
+      from: [toOutputRelativePackagePath(flagIconsPath, "flags/**/*.svg")],
       to: path.resolve(outputFolder, "icons/world-flags"),
+      options: { up: 5 },
+    },
+    {
+      from: [toOutputRelativePackagePath(resourcesEcLogoPath, "**/*.svg")],
+      to: path.resolve(outputFolder, "logos/ec"),
       options: { up: 6 },
     },
     {
-      from: [path.resolve(resourcesEcLogoPath, "**/*.svg")],
-      to: path.resolve(outputFolder, "logos/ec"),
-      options: { up: 7 },
-    },
-    {
-      from: [path.resolve(resourcesEuLogoPath, "**/*.svg")],
+      from: [toOutputRelativePackagePath(resourcesEuLogoPath, "**/*.svg")],
       to: path.resolve(outputFolder, "logos/eu"),
-      options: { up: 7 },
+      options: { up: 6 },
     },
     {
-      from: [path.resolve(twigTemplatesPath, "templates/**/*.twig")],
+      from: [
+        toOutputRelativePackagePath(twigTemplatesPath, "templates/**/*.twig"),
+      ],
       to: path.resolve(outputFolder, "templates"),
-      options: { up: 8 },
+      options: { up: 5 },
     },
   ],
 };

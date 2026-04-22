@@ -10,6 +10,7 @@
     "build:styles": "cross-env bcl-builder styles",
     "build:color-scheme": "cross-env bcl-builder color-scheme",
     "build:scripts": "cross-env bcl-builder scripts",
+    "prebuild:copy": "rimraf templates",
     "build:copy": "cross-env bcl-builder copy",
     "build:sprite": "cross-env bcl-builder sprite",
     "clean": "rimraf css js templates logos icons",
