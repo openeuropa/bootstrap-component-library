@@ -62,7 +62,7 @@
 {% set _image_copyright = image_copyright|default('') %}
 {% set _image_copyright_label = image_copyright_label|default('') %}
 {% macro image_figure(image, img_class, copyright, copyright_label) %}
-  <figure class="m-0">
+  <figure class="m-0 bcl-card__image-wrapper">
     <img
       src="{{ image.path }}"
       alt="{{ image.alt }}"
