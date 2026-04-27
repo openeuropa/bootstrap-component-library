@@ -4,6 +4,7 @@ module.exports = {
   title: "EU Budget for the future",
   description: "Innovation, economy, environment and geopolitics",
   copyright: "Copyright demo",
+  copyright_label: "Image credit:",
   link: {
     label: "Subscribe",
     path: "/example.html",

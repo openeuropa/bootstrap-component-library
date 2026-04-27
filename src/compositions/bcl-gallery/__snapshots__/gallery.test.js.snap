@@ -636,7 +636,12 @@ exports[`OE - Gallery default renders correctly 1`] = `
                     <figcaption
                       class="bcl-copyright"
                     >
-                      Copyright: Example
+                      <span
+                        class="visually-hidden"
+                      >
+                        Image credit: 
+                      </span>
+                      © Example Organisation
                     </figcaption>
                   </figure>
                       
@@ -761,6 +766,16 @@ exports[`OE - Gallery default renders correctly 1`] = `
                       
               
                     </video>
+                    <figcaption
+                      class="bcl-copyright"
+                    >
+                      <span
+                        class="visually-hidden"
+                      >
+                        Copyright: 
+                      </span>
+                      © Example Organisation
+                    </figcaption>
                   </figure>
                       
                 </div>
@@ -980,6 +995,193 @@ exports[`OE - Gallery default renders correctly 1`] = `
                       
               
                     </video>
+                  </figure>
+                      
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                data-bs-slide="prev"
+                data-bs-target="#carouselGalleryExample"
+                type="button"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                />
+                <span
+                  class="visually-hidden"
+                >
+                  Previous
+                </span>
+              </button>
+              <button
+                class="carousel-control-next"
+                data-bs-slide="next"
+                data-bs-target="#carouselGalleryExample"
+                type="button"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                />
+                <span
+                  class="visually-hidden"
+                >
+                  Next
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Gallery renders correctly with image copyright label 1`] = `
+<jest>
+  <div
+    class="bcl-gallery"
+  >
+    <div
+      class="d-sm-flex flex-sm-row align-items-sm-center"
+    >
+      <div
+        class="flex-sm-grow-1"
+      >
+        <h2
+          class="mb-4 bcl-heading"
+        >
+          Media gallery title
+        </h2>
+      </div>
+      <div
+        class="mb-3 mb-sm-0 fw-bold"
+      >
+        (1) medias
+      </div>
+    </div>
+    <div
+      class="bcl-gallery__thumbnails"
+    >
+      <ul
+        class="bcl-gallery__grid"
+      >
+        <li>
+          <a
+            class="bcl-gallery__item d-block w-100 img-fluid"
+            data-bs-slide-to="0"
+            data-bs-target="#carouselGalleryExample"
+            tabindex="0"
+          >
+            <div
+              class="bcl-gallery__item-overlay"
+              data-bs-target="#modalGalleryExample"
+              data-bs-toggle="modal"
+            >
+              <div
+                class="bcl-gallery__item-caption"
+              >
+                <div
+                  class="fs-5"
+                >
+                  Image slide
+                </div>
+              </div>
+            </div>
+            <img
+              alt="First slide"
+              src="https://picsum.photos/id/1005/400/400"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      aria-hidden="true"
+      aria-labelledby="modalGalleryExample"
+      class="modal"
+      data-bs-backdrop="false"
+      id="modalGalleryExample"
+      tabindex="-1"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-fullscreen"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header border-0 justify-content-between"
+          >
+            <div
+              class="modal-title"
+            >
+              <h3
+                class="d-sm-block d-none bcl-heading"
+              >
+                Media gallery title
+              </h3>
+            </div>
+            <div
+              class="carousel-pager"
+            >
+              <span>
+                1
+              </span>
+               / 1
+            </div>
+            <div
+              class="modal-close"
+            >
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              />
+            </div>
+          </div>
+          <div
+            class="modal-body d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="carousel slide"
+              id="carouselGalleryExample"
+            >
+              <div
+                class="carousel-inner"
+              >
+                <div
+                  class="carousel-item active"
+                >
+                        
+                  <figure
+                    class="m-0"
+                  >
+                    <img
+                      alt="First slide"
+                      data-src="https://picsum.photos/id/1005/800/400"
+                    />
+                    <div
+                      class="carousel-caption"
+                    >
+                      <div
+                        class="fs-5"
+                      >
+                        Image slide
+                      </div>
+                    </div>
+                    <figcaption
+                      class="bcl-copyright"
+                    >
+                      <span
+                        class="visually-hidden"
+                      >
+                        Image credit: 
+                      </span>
+                      © Example Organisation
+                    </figcaption>
                   </figure>
                       
                 </div>
@@ -1977,7 +2179,12 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                     <figcaption
                       class="bcl-copyright"
                     >
-                      Copyright: Example
+                      <span
+                        class="visually-hidden"
+                      >
+                        Image credit: 
+                      </span>
+                      © Example Organisation
                     </figcaption>
                   </figure>
                       
@@ -2102,6 +2309,16 @@ exports[`OE - Gallery renders correctly with new counter 1`] = `
                       
               
                     </video>
+                    <figcaption
+                      class="bcl-copyright"
+                    >
+                      <span
+                        class="visually-hidden"
+                      >
+                        Copyright: 
+                      </span>
+                      © Example Organisation
+                    </figcaption>
                   </figure>
                       
                 </div>
@@ -3005,7 +3222,12 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                     <figcaption
                       class="bcl-copyright"
                     >
-                      Copyright: Example
+                      <span
+                        class="visually-hidden"
+                      >
+                        Image credit: 
+                      </span>
+                      © Example Organisation
                     </figcaption>
                   </figure>
                       
@@ -3130,6 +3352,16 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                       
               
                     </video>
+                    <figcaption
+                      class="bcl-copyright"
+                    >
+                      <span
+                        class="visually-hidden"
+                      >
+                        Copyright: 
+                      </span>
+                      © Example Organisation
+                    </figcaption>
                   </figure>
                       
                 </div>
@@ -3349,6 +3581,213 @@ exports[`OE - Gallery renders correctly with title and link 1`] = `
                       
               
                     </video>
+                  </figure>
+                      
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                data-bs-slide="prev"
+                data-bs-target="#carouselGalleryExample"
+                type="button"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                />
+                <span
+                  class="visually-hidden"
+                >
+                  Previous
+                </span>
+              </button>
+              <button
+                class="carousel-control-next"
+                data-bs-slide="next"
+                data-bs-target="#carouselGalleryExample"
+                type="button"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                />
+                <span
+                  class="visually-hidden"
+                >
+                  Next
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Gallery renders correctly with video copyright label 1`] = `
+<jest>
+  <div
+    class="bcl-gallery"
+  >
+    <div
+      class="d-sm-flex flex-sm-row align-items-sm-center"
+    >
+      <div
+        class="flex-sm-grow-1"
+      >
+        <h2
+          class="mb-4 bcl-heading"
+        >
+          Media gallery title
+        </h2>
+      </div>
+      <div
+        class="mb-3 mb-sm-0 fw-bold"
+      >
+        (1) medias
+      </div>
+    </div>
+    <div
+      class="bcl-gallery__thumbnails"
+    >
+      <ul
+        class="bcl-gallery__grid"
+      >
+        <li>
+          <a
+            class="bcl-gallery__item d-block w-100 img-fluid"
+            data-bs-slide-to="0"
+            data-bs-target="#carouselGalleryExample"
+            tabindex="0"
+          >
+            <div
+              class="bcl-gallery__item-overlay"
+              data-bs-target="#modalGalleryExample"
+              data-bs-toggle="modal"
+            >
+              <span
+                class="bcl-gallery__item-play-icon"
+              >
+                <svg
+                  class="bi icon--s"
+                >
+                  <use
+                    xlink:href="/icons.svg#play-fill"
+                  />
+                </svg>
+              </span>
+              <div
+                class="bcl-gallery__item-caption"
+              >
+                <div
+                  class="fs-5"
+                >
+                  Video slide
+                </div>
+              </div>
+            </div>
+            <img
+              alt="Video thumbnail"
+              src="https://picsum.photos/id/1081/400/400"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      aria-hidden="true"
+      aria-labelledby="modalGalleryExample"
+      class="modal"
+      data-bs-backdrop="false"
+      id="modalGalleryExample"
+      tabindex="-1"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-fullscreen"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header border-0 justify-content-between"
+          >
+            <div
+              class="modal-title"
+            >
+              <h3
+                class="d-sm-block d-none bcl-heading"
+              >
+                Media gallery title
+              </h3>
+            </div>
+            <div
+              class="carousel-pager"
+            >
+              <span>
+                1
+              </span>
+               / 1
+            </div>
+            <div
+              class="modal-close"
+            >
+              <button
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              />
+            </div>
+          </div>
+          <div
+            class="modal-body d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="carousel slide"
+              id="carouselGalleryExample"
+            >
+              <div
+                class="carousel-inner"
+              >
+                <div
+                  class="carousel-item active"
+                >
+                        
+                  <figure
+                    class="m-0"
+                  >
+                    <video
+                      controls="controls"
+                      poster="https://picsum.photos/id/1081/800/400"
+                    >
+                      
+                      
+                      <source
+                        src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4"
+                        type="video/mp4"
+                      />
+                      
+                    
+                    </video>
+                    <div
+                      class="carousel-caption"
+                    >
+                      <div
+                        class="fs-5"
+                      >
+                        Video slide
+                      </div>
+                    </div>
+                    <figcaption
+                      class="bcl-copyright"
+                    >
+                      <span
+                        class="visually-hidden"
+                      >
+                        Copyright: 
+                      </span>
+                      © Example Organisation
+                    </figcaption>
                   </figure>
                       
                 </div>

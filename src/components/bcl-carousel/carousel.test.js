@@ -137,9 +137,17 @@ describe("OE - carousel", () => {
   test("renders correctly with copyright label", () => {
     expect.assertions(1);
 
-    return expect(
-      render({ ...demoData, copyright_label: "Copyright:" }),
-    ).resolves.toMatchSnapshot();
+    const items = demoData.items.map((item, i) =>
+      i === 1
+        ? {
+            ...item,
+            copyright: "© Example Organisation",
+            copyright_label: "Image credit:",
+          }
+        : item,
+    );
+
+    return expect(render({ ...demoData, items })).resolves.toMatchSnapshot();
   });
 
   test(`passes the accessibility tests`, async () => {
