@@ -69,14 +69,12 @@
       class="{{ img_class }}"
     >
     {%- if copyright is not empty %}
-      <figcaption>
-        <div class="bcl-card__image-footer">
-          <div class="bcl-copyright">
-            {%- if copyright_label is not empty -%}
-              <span class="visually-hidden">{{- copyright_label }} </span>
-            {%- endif -%}
-            {{- copyright -}}
-          </div>
+      <figcaption class="bcl-card__image-footer">
+        <div class="bcl-copyright">
+          {%- if copyright_label is not empty -%}
+            <span class="visually-hidden">{{- copyright_label }} </span>
+          {%- endif -%}
+          {{- copyright -}}
         </div>
       </figcaption>
     {%- endif %}
