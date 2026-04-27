@@ -281,21 +281,15 @@ exports[`OE - Card renders horizontal with image copyright correctly 1`] = `
             src="https://picsum.photos/seed/1019/400/600"
           />
                 
-          <figcaption>
+          <figcaption
+            class="bcl-card__image-footer"
+          >
             
         
             <div
-              class="bcl-card__image-footer"
+              class="bcl-copyright"
             >
-              
-          
-              <div
-                class="bcl-copyright"
-              >
-                © 2024 Example Organisation
-              </div>
-              
-        
+              © 2024 Example Organisation
             </div>
             
       
@@ -361,26 +355,20 @@ exports[`OE - Card renders horizontal with image copyright label correctly 1`] =
             src="https://picsum.photos/seed/1019/400/600"
           />
                 
-          <figcaption>
+          <figcaption
+            class="bcl-card__image-footer"
+          >
             
         
             <div
-              class="bcl-card__image-footer"
+              class="bcl-copyright"
             >
-              
-          
-              <div
-                class="bcl-copyright"
+              <span
+                class="visually-hidden"
               >
-                <span
-                  class="visually-hidden"
-                >
-                  Copyright: 
-                </span>
-                © 2024 Example Organisation
-              </div>
-              
-        
+                Copyright: 
+              </span>
+              © 2024 Example Organisation
             </div>
             
       
