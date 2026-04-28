@@ -13,6 +13,7 @@ const getArgs = (data) => {
     title_tag: "div",
     description: data.description,
     copyright: data.copyright || "",
+    copyright_label: data.copyright_label || "",
     centered: true,
     hero: false,
     full_width: false,
@@ -40,6 +41,16 @@ const getArgTypes = (data) => {
     copyright: {
       type: "string",
       description: "Copyright text displayed below the banner",
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    copyright_label: {
+      name: "copyright label",
+      type: "string",
+      description: "Visually hidden label preceding the copyright text",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },

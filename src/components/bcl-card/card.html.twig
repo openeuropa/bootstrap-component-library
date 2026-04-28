@@ -23,6 +23,7 @@
       position (string)
     }
   - image_copyright (string) (default: '')
+  - image_copyright_label (string) (default: '')
   - date (date block object) (default: {})
   - variant (string) (default: '')
   - horizontal (boolean) (default: false)
@@ -59,6 +60,26 @@
 {% set _content = content|default('') %}
 {% set _image = image|default({}) %}
 {% set _image_copyright = image_copyright|default('') %}
+{% set _image_copyright_label = image_copyright_label|default('') %}
+{% macro image_figure(image, img_class, copyright, copyright_label) %}
+  <figure class="m-0 bcl-card__image-wrapper">
+    <img
+      src="{{ image.path }}"
+      alt="{{ image.alt }}"
+      class="{{ img_class }}"
+    >
+    {%- if copyright is not empty %}
+      <figcaption class="bcl-card__image-footer">
+        <div class="bcl-copyright">
+          {%- if copyright_label is not empty -%}
+            <span class="visually-hidden">{{- copyright_label }} </span>
+          {%- endif -%}
+          {{- copyright -}}
+        </div>
+      </figcaption>
+    {%- endif %}
+  </figure>
+{% endmacro %}
 {% set _date = date|default({}) %}
 {% set _variant = variant|default('') %}
 {% set _horizontal = horizontal ?? false %}
@@ -157,16 +178,7 @@
       {%- include '@oe-bcl/bcl-date-block/date-block.html.twig' with _date only %}
     {%- endblock %}
   {%- elseif _image is not empty and _image.position != "bottom" -%}
-    <img
-      src="{{ _image.path }}"
-      alt="{{ _image.alt }}"
-      class="{{ _img_class }}"
-    >
-    {%- if _image_copyright is not empty %}
-      <div class="bcl-card__image-footer">
-        <div class="bcl-copyright">{{- _image_copyright -}}</div>
-      </div>
-    {%- endif %}
+    {{- _self.image_figure(_image, _img_class, _image_copyright, _image_copyright_label) }}
   {%- endif %}
 {% if _horizontal and (_image is not empty or _date is not empty) -%}
   </div>
@@ -261,16 +273,7 @@
     {%- if _horizontal -%}
     <div class="col-4">
     {%- endif -%}
-    <img
-      src="{{ _image.path }}"
-      alt="{{ _image.alt }}"
-      class="{{ _img_class }}"
-    >
-    {%- if _image_copyright is not empty %}
-      <div class="bcl-card__image-footer">
-        <div class="bcl-copyright">{{- _image_copyright -}}</div>
-      </div>
-    {%- endif %}
+    {{- _self.image_figure(_image, _img_class, _image_copyright, _image_copyright_label) }}
     {%- if _horizontal -%}
     </div>
     {%- endif %}

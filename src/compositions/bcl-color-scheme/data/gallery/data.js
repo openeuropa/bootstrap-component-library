@@ -11,7 +11,8 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the first slide.</p><span class="my-2 badge rounded-pill badge-outline-secondary">I'm a badge</span><div class="d-block my-2"><button class="btn btn-primary">Test button</button></div>`,
       caption_title: "First slide label",
-      copyright: "Copyright: Example",
+      copyright: "© Example Organisation",
+      copyright_label: "Image credit:",
       thumbnail: `<img alt="First slide" 
                     src="https://picsum.photos/id/1005/400/400" 
                   />`,
@@ -53,8 +54,10 @@ module.exports = {
     },
     {
       is_playable: true,
-      thumbnail: `<img alt="slide" 
-                    src="https://picsum.photos/id/1081/400/400" 
+      copyright: "© Example Organisation",
+      copyright_label: "Copyright:",
+      thumbnail: `<img alt="slide"
+                    src="https://picsum.photos/id/1081/400/400"
                   />`,
       media: `<video poster="https://picsum.photos/id/1081/800/400" controls="controls">
                 <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
@@ -66,8 +69,8 @@ module.exports = {
     {
       caption: `<p>Some representative placeholder content for the slide.</p>`,
       caption_title: "Slide label",
-      thumbnail: `<img alt="slide" 
-                    src="https://picsum.photos/id/1018/400/400" 
+      thumbnail: `<img alt="slide"
+                    src="https://picsum.photos/id/1018/400/400"
                   />`,
       media: `<img alt="Slide" 
                 src="https://picsum.photos/id/1018/800/400" 
