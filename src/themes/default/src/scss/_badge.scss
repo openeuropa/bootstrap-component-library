@@ -1,3 +1,4 @@
+@use "sass:map";
 // Standalone badges
 .badge {
   font-size: $badge-font-size;
@@ -9,7 +10,7 @@
   }
   .icon--close {
     display: inline-flex;
-    margin-left: map-get($spacers, 2);
+    margin-left: map.get($spacers, 2);
   }
 }
 

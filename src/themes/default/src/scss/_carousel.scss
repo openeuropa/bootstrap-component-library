@@ -1,14 +1,15 @@
+@use "sass:map";
 // stylelint-disable no-descending-specificity
 $indicator-size: 8px;
 
 .carousel-indicators {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: map-get($spacers, 3) 0 map-get($spacers, 4);
+  padding: map.get($spacers, 3) 0 map.get($spacers, 4);
   margin: 0;
   [data-bs-target] {
     width: $indicator-size;
     height: $indicator-size;
-    margin: 0 map-get($spacers, 2) 0;
+    margin: 0 map.get($spacers, 2) 0;
     border-radius: 50%;
     border: 1px solid transparent;
     &:focus {
@@ -25,7 +26,7 @@ $indicator-size: 8px;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
-  padding: map-get($spacers, 3) 0 map-get($spacers, 4);
+  padding: map.get($spacers, 3) 0 map.get($spacers, 4);
   p {
     margin-bottom: 0;
   }

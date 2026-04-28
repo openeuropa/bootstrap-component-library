@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:map";
 // Override Bootstrap's Sass default variables for Joinup
 
 // General
@@ -7,10 +9,13 @@ $enable-shadows: true;
 $box-shadow: 0 0.1rem 0.4rem 0.1rem rgba($black, 0.1);
 
 // Color system
-$brand-darker: darken($brand, 15); // #0b4e97
-$primary-darker: darken(desaturate($primary, 0.07), 4.12); // #113264
+$brand-darker: color.adjust($brand, $lightness: -15%); // #0b4e97
+$primary-darker: color.adjust(
+  color.adjust($primary, $saturation: -0.07%),
+  $lightness: -4.12%
+); // #113264
 
-$theme-colors: map-merge(
+$theme-colors: map.merge(
   $theme-colors,
   (
     "brand": $brand,

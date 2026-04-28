@@ -1,3 +1,4 @@
+@use "sass:map";
 /* stylelint-disable no-descending-specificity */
 .bcl-sidebar:has(> .bcl-inpage-navigation) {
   position: sticky;
@@ -19,7 +20,7 @@
     background: transparent;
     border-bottom: 1px solid $gray-300;
     width: 100%;
-    padding: map-get($spacers, "3-5");
+    padding: map.get($spacers, "3-5");
     &:after {
       display: none;
     }
@@ -45,15 +46,15 @@
 
   .bcl-heading {
     margin-bottom: 0;
-    padding: map-get($spacers, "3-5");
+    padding: map.get($spacers, "3-5");
     border-bottom: 1px solid $gray-300;
   }
   ul {
-    padding: map-get($spacers, "2-5");
+    padding: map.get($spacers, "2-5");
 
     .nav-link {
-      padding: map-get($spacers, 2);
-      margin-bottom: map-get($spacers, 2);
+      padding: map.get($spacers, 2);
+      margin-bottom: map.get($spacers, 2);
       &:not(.active) {
         &:hover {
           text-decoration-line: underline;
@@ -63,7 +64,7 @@
     }
 
     ul {
-      padding: 0 map-get($spacers, "2-5");
+      padding: 0 map.get($spacers, "2-5");
     }
   }
 }
@@ -84,7 +85,7 @@
   .bcl-sidebar {
     .bcl-inpage-navigation.dynamic-active {
       ul {
-        padding: map-get($spacers, 1);
+        padding: map.get($spacers, 1);
       }
       .bcl-heading {
         position: absolute;
@@ -97,7 +98,7 @@
       }
       .dropdown-menu {
         display: block;
-        padding: map-get($spacers, 2);
+        padding: map.get($spacers, 2);
         position: absolute;
         &.show {
           .nav-item {
@@ -142,7 +143,7 @@
 @include media-breakpoint-up(md) {
   .bcl-inpage-navigation {
     display: block;
-    top: map-get($spacers, 3);
+    top: map.get($spacers, 3);
     .dropdown-toggle {
       cursor: auto;
       &::after {
@@ -163,6 +164,6 @@
 
 @include media-breakpoint-down(lg) {
   .bcl-sidebar:has(> .bcl-inpage-navigation) {
-    padding-bottom: map-get($spacers, 3);
+    padding-bottom: map.get($spacers, 3);
   }
 }

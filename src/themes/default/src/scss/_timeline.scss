@@ -1,3 +1,4 @@
+@use "sass:map";
 /* stylelint-disable declaration-no-important */
 // timeline
 .bcl-timeline {
@@ -9,8 +10,8 @@
 
   > li {
     position: relative;
-    padding-bottom: map-get($spacers, "4-5");
-    padding-left: calc(22px + map-get($spacers, 3));
+    padding-bottom: map.get($spacers, "4-5");
+    padding-left: calc(22px + map.get($spacers, 3));
 
     &::before {
       content: "";

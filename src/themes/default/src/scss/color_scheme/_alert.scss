@@ -1,3 +1,4 @@
+@use "sass:color";
 // Color scheme - Alert
 
 // No longer using $alert-bg-scale, $alert-border-scale, $alert-color-scale variables because they are deprecated in bootstrap 5.3.x
@@ -10,7 +11,7 @@
   $text: shift-color($value, 40%);
 
   @if (contrast-ratio($bg, $text) < $min-contrast-ratio) {
-    $text: mix($value, color-contrast($bg), math.abs(40%));
+    $text: color.mix($value, color-contrast($bg), math.abs(40%));
   }
 
   .alert-#{$color} {

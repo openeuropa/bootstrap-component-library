@@ -1,3 +1,4 @@
+@use "sass:color";
 .btn {
   font-weight: 500;
   &:not(.btn-link) {
@@ -9,7 +10,10 @@
 
 .btn-primary {
   &:hover {
-    background-color: lighten(desaturate($primary, 23.76), 8.63);
+    background-color: color.adjust(
+      color.adjust($primary, $saturation: -23.76%),
+      $lightness: 8.63%
+    );
   }
   &:focus,
   &:active,

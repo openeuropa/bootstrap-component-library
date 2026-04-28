@@ -1,3 +1,4 @@
+@use "sass:map";
 .bcl-gallery {
   .bcl-gallery__thumbnails {
     border-radius: $border-radius;
@@ -25,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0 map-get($spacers, 3);
+    padding: 0 map.get($spacers, 3);
     transition: background-color 0.2s ease;
   }
 
@@ -57,16 +58,16 @@
 
   .bcl-gallery__item-description {
     display: none;
-    margin-top: map-get($spacers, 1);
+    margin-top: map.get($spacers, 1);
   }
 
   ul.bcl-gallery__grid li:not(:last-child) {
-    margin-bottom: map-get($spacers, 2);
+    margin-bottom: map.get($spacers, 2);
   }
 
   .bcl-gallery__thumbnails-collaspe {
     ul.bcl-gallery__grid {
-      margin-top: map-get($spacers, 2);
+      margin-top: map.get($spacers, 2);
     }
   }
 
@@ -199,9 +200,9 @@
     ul.bcl-gallery__grid {
       display: grid;
       grid-template-rows: 1fr 1fr 0;
-      grid-gap: map-get($spacers, 2);
+      grid-gap: map.get($spacers, 2);
       grid-template-columns: repeat(4, 1fr);
-      margin-bottom: -#{map-get($spacers, 2)};
+      margin-bottom: -#{map.get($spacers, 2)};
     }
 
     ul.bcl-gallery__grid li:not(:last-child) {
@@ -215,7 +216,7 @@
 
     .bcl-gallery__thumbnails-collaspe {
       ul.bcl-gallery__grid {
-        margin-top: map-get($spacers, 2);
+        margin-top: map.get($spacers, 2);
       }
       ul.bcl-gallery__grid:nth-child(odd) li:first-child {
         grid-column: auto;
@@ -257,7 +258,7 @@
       }
 
       .bcl-gallery__item-play-icon + .bcl-gallery__item-caption {
-        margin-top: map-get($spacers, 2);
+        margin-top: map.get($spacers, 2);
       }
     }
   }

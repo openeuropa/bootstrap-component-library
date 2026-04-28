@@ -1,3 +1,4 @@
+@use "sass:map";
 /* stylelint-disable no-descending-specificity, declaration-no-important */
 
 /* -------------------------------------
@@ -5,8 +6,8 @@
 -------------------------------------- */
 $mm-panel-height: 288px !default;
 $mm-z-content: 2 !default;
-$mm-gutter-x: map-get($spacers, 3) !default;
-$mm-gutter-y: map-get($spacers, "2-5") !default;
+$mm-gutter-x: map.get($spacers, 3) !default;
+$mm-gutter-y: map.get($spacers, "2-5") !default;
 
 /* Helpers */
 @mixin link-reset {
@@ -115,7 +116,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 
   @include media-breakpoint-up(lg) {
     inset-block-start: 100%;
-    padding-block: map-get($spacers, "2-5");
+    padding-block: map.get($spacers, "2-5");
     border-bottom: var(--bs-border-width) var(--bs-border-style)
       var(--bs-border-color);
   }
@@ -158,7 +159,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
 // The back button.
 .bcl-mega-menu__back-button-block {
   position: relative;
-  padding: 20px map-get($spacers, 1) 0;
+  padding: 20px map.get($spacers, 1) 0;
   > .btn-link {
     @include link-reset;
   }
@@ -172,7 +173,7 @@ $mm-gutter-y: map-get($spacers, "2-5") !default;
     @include media-breakpoint-up(lg) {
       margin-inline-end: 0;
       background: $white;
-      padding-inline-end: map-get($spacers, 4);
+      padding-inline-end: map.get($spacers, 4);
       // Allow vertical scrollbar if content is too tall.
       max-block-size: $mm-panel-height;
       overflow-y: auto;
@@ -358,7 +359,7 @@ ul.bcl-mega-menu__items {
   > .__header {
     // The title only shows in mobile.
     > .__label {
-      @include mm-item-padding(map-get($spacers, 3));
+      @include mm-item-padding(map.get($spacers, 3));
       margin: 0;
       color: $dark;
       background: $primary-bg-subtle;
@@ -374,7 +375,7 @@ ul.bcl-mega-menu__items {
       flex: 1 1 0;
       overflow-y: auto;
       > li > :is(span, a, button) {
-        @include mm-item-padding($px: map-get($spacers, "4-25"));
+        @include mm-item-padding($px: map.get($spacers, "4-25"));
       }
     }
   }
@@ -382,7 +383,7 @@ ul.bcl-mega-menu__items {
     border-top: 1px solid $neutral-border-color;
     @include media-breakpoint-up(lg) {
       border-top: 1px solid $primary-border-subtle;
-      margin: 0 map-get($spacers, "4-25");
+      margin: 0 map.get($spacers, "4-25");
     }
     > .see-all-button {
       @include mm-item-padding();
@@ -391,7 +392,7 @@ ul.bcl-mega-menu__items {
       align-items: center;
       color: $link-color;
       @include media-breakpoint-up(lg) {
-        padding: $mm-gutter-y map-get($spacers, "4-25");
+        padding: $mm-gutter-y map.get($spacers, "4-25");
         margin: 0 -1.75rem;
       }
       &:hover {

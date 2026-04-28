@@ -19,8 +19,9 @@ const initMultiselect = async (story) => {
       if (document.querySelector(".multi-select")) {
         new SlimSelect({
           select: ".multi-select",
-          selectByGroup: true,
-          placeholder: "Please select a value",
+          settings: {
+            placeholderText: "Please select a value",
+          },
         });
       }
     </script>

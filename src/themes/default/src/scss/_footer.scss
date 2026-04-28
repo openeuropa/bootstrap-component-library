@@ -1,3 +1,4 @@
+@use "sass:map";
 // stylelint-disable declaration-no-important, no-descending-specificity
 
 $footer-border-color: #adb5bd !default;
@@ -54,13 +55,13 @@ $footer-border-color: #adb5bd !default;
   display: block;
   width: 100%;
   margin: 0 12px;
-  margin-bottom: map-get($spacers, 4);
+  margin-bottom: map.get($spacers, 4);
   content: "";
   border-bottom: 1px solid $footer-border-color;
 }
 
 @include media-breakpoint-up(lg) {
   .bcl-footer__bordered-row::before {
-    margin-bottom: map-get($spacers, 5);
+    margin-bottom: map.get($spacers, 5);
   }
 }

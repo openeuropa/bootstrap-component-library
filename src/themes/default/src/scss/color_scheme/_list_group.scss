@@ -1,3 +1,4 @@
+@use "sass:color";
 // Color scheme - List Group
 
 @use "sass:math";
@@ -8,7 +9,7 @@
   $border: shift-color($value, 40%);
 
   @if (contrast-ratio($bg, $text) < $min-contrast-ratio) {
-    $text: mix($value, color-contrast($bg), math.abs(40%));
+    $text: color.mix($value, color-contrast($bg), math.abs(40%));
   }
 
   .list-group-item-#{$color} {
