@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.12.0 (2026-04-28)
+
+#### :nail_care: Enhancement
+* [#747](https://github.com/openeuropa/bootstrap-component-library/pull/747) OEL-4605: Replaced ss-1 and ss-2 with ss-3. ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#752](https://github.com/openeuropa/bootstrap-component-library/pull/752) OEL-4712: Stabilize theme asset copy paths across environments. ([@tibi2303](https://github.com/tibi2303))
+* [#746](https://github.com/openeuropa/bootstrap-component-library/pull/746) OEL-4597: Fix deprecation warnings coming from BCL. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.11.0 (2026-03-25)
 
 #### :rocket: New Feature
