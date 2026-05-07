@@ -20,6 +20,7 @@ const getArgs = (data, type) => {
     text: data.text,
     content: data.content || "",
     image_copyright: data.image_copyright || "",
+    image_copyright_label: data.image_copyright_label || "",
     card_header: data.card_header || "",
     card_footer: data.card_footer || "",
     variant: data.variant,
@@ -88,6 +89,19 @@ const getArgTypes = (data, type) => {
       name: "image copyright",
       type: { name: "string" },
       description: "Optional copyright text rendered below the image",
+      control: {
+        type: "text",
+      },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "" },
+        category: "Content",
+      },
+    },
+    image_copyright_label: {
+      name: "image copyright label",
+      type: { name: "string" },
+      description: "Visually hidden label preceding the image copyright text",
       control: {
         type: "text",
       },
@@ -256,6 +270,7 @@ Horizontal.argTypes = getArgTypes(demoDataHorizontal, "horizontal");
 const demoDataHorizontalWithCopyright = {
   ...demoDataHorizontal,
   image_copyright: "© 2024 Example Organisation",
+  image_copyright_label: "Image credit:",
 };
 
 export const HorizontalWithImageCopyright = (args) =>

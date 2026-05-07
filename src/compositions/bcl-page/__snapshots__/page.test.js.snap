@@ -1154,25 +1154,40 @@ exports[`OE - Page Page renders correctly 1`] = `
             <div
               class="bcl-card-start-col bcl-size-large"
             >
-              <img
-                alt="alt img"
-                class="card-img-top rounded-top-1"
-                src="https://picsum.photos/255/255?random=6"
-              />
-                    
-              <div
-                class="bcl-card__image-footer"
+                
+              <figure
+                class="m-0 bcl-card__image-wrapper"
               >
                 
-        
-                <div
-                  class="bcl-copyright"
+    
+                <img
+                  alt="alt img"
+                  class="card-img-top rounded-top-1"
+                  src="https://picsum.photos/255/255?random=6"
+                />
+                      
+                <figcaption
+                  class="bcl-card__image-footer"
                 >
-                  Copyright demo
-                </div>
-                
+                  
+        
+                  <div
+                    class="bcl-copyright"
+                  >
+                    <span
+                      class="visually-hidden"
+                    >
+                      Image credit: 
+                    </span>
+                    Copyright demo
+                  </div>
+                  
       
-              </div>
+                </figcaption>
+                  
+              </figure>
+              
+
             </div>
             <div
               class="col-md col-xl-9 col-xxl-8"
@@ -1420,10 +1435,12 @@ exports[`OE - Page Page renders correctly 1`] = `
                       width="350"
                     />
                   </div>
-                  <figcaption
-                    class="bg-lighter p-3"
-                  >
-                    Media description text goes here.
+                  <figcaption>
+                    <div
+                      class="bg-lighter p-3"
+                    >
+                      Media description text goes here.
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -1471,6 +1488,11 @@ exports[`OE - Page Page renders correctly 1`] = `
           <div
             class="bcl-copyright"
           >
+            <span
+              class="visually-hidden"
+            >
+              Image credit: 
+            </span>
             Copyright demo
           </div>
           <h2

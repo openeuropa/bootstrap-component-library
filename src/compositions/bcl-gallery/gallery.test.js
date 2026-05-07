@@ -82,6 +82,47 @@ describe("OE - Gallery", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with image copyright label", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...dataDefault,
+        items: [
+          {
+            caption_title: "Image slide",
+            copyright: "© Example Organisation",
+            copyright_label: "Image credit:",
+            thumbnail: `<img alt="First slide" src="https://picsum.photos/id/1005/400/400" />`,
+            media: `<img alt="First slide" src="https://picsum.photos/id/1005/800/400" />`,
+          },
+        ],
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("renders correctly with video copyright label", () => {
+    expect.assertions(1);
+
+    return expect(
+      render({
+        ...dataDefault,
+        items: [
+          {
+            caption_title: "Video slide",
+            is_playable: true,
+            copyright: "© Example Organisation",
+            copyright_label: "Copyright:",
+            thumbnail: `<img alt="Video thumbnail" src="https://picsum.photos/id/1081/400/400" />`,
+            media: `<video poster="https://picsum.photos/id/1081/800/400" controls="controls">
+                      <source src="https://inno-ecl.s3.amazonaws.com/media/videos/big_buck_bunny.mp4" type="video/mp4">
+                    </video>`,
+          },
+        ],
+      }),
+    ).resolves.toMatchSnapshot();
+  });
+
   jest.setTimeout(20000);
   test(`passes the accessibility tests`, async () => {
     expect(

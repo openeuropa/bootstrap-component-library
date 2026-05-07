@@ -27,6 +27,7 @@ module.exports = {
                   <span class="d-md-inline d-block text-muted mb-2 mb-md-0">17 October 2019</span>
                 </div>`,
       image_copyright: "Image: European Union",
+      image_copyright_label: "Image credit:",
     },
     {
       body_classes: "p-md-0 pt-sm-3",
