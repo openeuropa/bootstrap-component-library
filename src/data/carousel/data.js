@@ -35,7 +35,8 @@ module.exports = {
       classes: "item_extra_class",
       caption_title: "Third slide label",
       caption: `<p>Some representative placeholder content for the third slide.</p>`,
-      copyright: "Copyright: Example",
+      copyright: "© Example Organisation",
+      copyright_label: "Image credit:",
       image: `<img
                 src="https://picsum.photos/800/400?random=3"
                 class="d-block w-100"

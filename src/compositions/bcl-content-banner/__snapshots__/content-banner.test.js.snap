@@ -17,25 +17,40 @@ exports[`OE - Content banner renders correctly 1`] = `
           <div
             class="bcl-card-start-col bcl-size-large"
           >
-            <img
-              alt="alt img"
-              class="card-img-top rounded-top-1"
-              src="https://picsum.photos/255/255?random=6"
-            />
-                  
-            <div
-              class="bcl-card__image-footer"
+              
+            <figure
+              class="m-0 bcl-card__image-wrapper"
             >
               
-        
-              <div
-                class="bcl-copyright"
+    
+              <img
+                alt="alt img"
+                class="card-img-top rounded-top-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+                    
+              <figcaption
+                class="bcl-card__image-footer"
               >
-                Copyright demo
-              </div>
-              
+                
+        
+                <div
+                  class="bcl-copyright"
+                >
+                  <span
+                    class="visually-hidden"
+                  >
+                    Image credit: 
+                  </span>
+                  Copyright demo
+                </div>
+                
       
-            </div>
+              </figcaption>
+                
+            </figure>
+            
+
           </div>
           <div
             class="col-md col-xl-9 col-xxl-8"
@@ -296,25 +311,186 @@ exports[`OE - Content banner renders correctly with copyright 1`] = `
           <div
             class="bcl-card-start-col bcl-size-large"
           >
-            <img
-              alt="alt img"
-              class="card-img-top rounded-top-1"
-              src="https://picsum.photos/255/255?random=6"
-            />
-                  
-            <div
-              class="bcl-card__image-footer"
+              
+            <figure
+              class="m-0 bcl-card__image-wrapper"
             >
               
-        
-              <div
-                class="bcl-copyright"
+    
+              <img
+                alt="alt img"
+                class="card-img-top rounded-top-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+                    
+              <figcaption
+                class="bcl-card__image-footer"
               >
-                © 2024 Example Organisation
-              </div>
-              
+                
+        
+                <div
+                  class="bcl-copyright"
+                >
+                  <span
+                    class="visually-hidden"
+                  >
+                    Image credit: 
+                  </span>
+                  © 2024 Example Organisation
+                </div>
+                
       
+              </figcaption>
+                
+            </figure>
+            
+
+          </div>
+          <div
+            class="col-md col-xl-9 col-xxl-8"
+          >
+            <div
+              class="card-body pt-4 pt-md-0 px-0 px-md-1-5 pb-0"
+            >
+              <h1
+                class="fs-1 card-title bcl-heading"
+              >
+                This is the title of this page
+              </h1>
+              <div
+                class="my-3"
+              >
+                <span
+                  class="text-muted me-3"
+                >
+                  17 October 2019
+                </span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <br />
+                  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. 
+                <br />
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis fermentum facilisis ex, ac porta massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <br />
+                 
+                <br />
+                  Duis fermentum facilisis ex, ac porta massa.
+              </p>
+              <div
+                class="mt-2-5"
+              >
+                <span
+                  class="mb-2 me-2 badge rounded-pill badge-outline-primary"
+                >
+                  Category 1
+                </span>
+                <span
+                  class="mb-2 badge rounded-pill badge-outline-primary"
+                >
+                  Category 2
+                </span>
+              </div>
             </div>
+          </div>
+        </div>
+      </article>
+      <div
+        class="position-relative z-1"
+      >
+        <div
+          class="d-flex justify-content-end mt-2 align-items-center"
+        >
+          
+      
+          <button
+            class="w-auto me-3 btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Print
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#printer-fill"
+              />
+            </svg>
+          </button>
+          
+      
+          <button
+            class="w-auto btn btn-outline-primary btn-md"
+            type="button"
+          >
+            Export
+            <svg
+              class="ms-2-5 bi icon--fluid"
+            >
+              <use
+                xlink:href="/icons.svg#file-arrow-down-fill"
+              />
+            </svg>
+          </button>
+          
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</jest>
+`;
+
+exports[`OE - Content banner renders correctly with copyright label 1`] = `
+<jest>
+  <div
+    class="bcl-content-banner pb-md-4-75 pb-4 pt-4 pt-md-4-75 bg-lighter"
+  >
+    <div
+      class="container"
+    >
+      <article
+        class="bg-transparent border-0 card"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="bcl-card-start-col bcl-size-large"
+          >
+              
+            <figure
+              class="m-0 bcl-card__image-wrapper"
+            >
+              
+    
+              <img
+                alt="alt img"
+                class="card-img-top rounded-top-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+                    
+              <figcaption
+                class="bcl-card__image-footer"
+              >
+                
+        
+                <div
+                  class="bcl-copyright"
+                >
+                  <span
+                    class="visually-hidden"
+                  >
+                    Copyright: 
+                  </span>
+                  © 2024 Example Organisation
+                </div>
+                
+      
+              </figcaption>
+                
+            </figure>
+            
+
           </div>
           <div
             class="col-md col-xl-9 col-xxl-8"
@@ -427,25 +603,40 @@ exports[`OE - Content banner renders correctly with title and link 1`] = `
           <div
             class="bcl-card-start-col bcl-size-large"
           >
-            <img
-              alt="alt img"
-              class="card-img-top rounded-top-1"
-              src="https://picsum.photos/255/255?random=6"
-            />
-                  
-            <div
-              class="bcl-card__image-footer"
+              
+            <figure
+              class="m-0 bcl-card__image-wrapper"
             >
               
-        
-              <div
-                class="bcl-copyright"
+    
+              <img
+                alt="alt img"
+                class="card-img-top rounded-top-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+                    
+              <figcaption
+                class="bcl-card__image-footer"
               >
-                Copyright demo
-              </div>
-              
+                
+        
+                <div
+                  class="bcl-copyright"
+                >
+                  <span
+                    class="visually-hidden"
+                  >
+                    Image credit: 
+                  </span>
+                  Copyright demo
+                </div>
+                
       
-            </div>
+              </figcaption>
+                
+            </figure>
+            
+
           </div>
           <div
             class="col-md col-xl-9 col-xxl-8"
@@ -563,25 +754,40 @@ exports[`OE - Content banner with links renders correctly 1`] = `
           <div
             class="bcl-card-start-col bcl-size-large"
           >
-            <img
-              alt="alt img"
-              class="card-img-top rounded-top-1"
-              src="https://picsum.photos/255/255?random=6"
-            />
-                  
-            <div
-              class="bcl-card__image-footer"
+              
+            <figure
+              class="m-0 bcl-card__image-wrapper"
             >
               
-        
-              <div
-                class="bcl-copyright"
+    
+              <img
+                alt="alt img"
+                class="card-img-top rounded-top-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+                    
+              <figcaption
+                class="bcl-card__image-footer"
               >
-                Copyright demo
-              </div>
-              
+                
+        
+                <div
+                  class="bcl-copyright"
+                >
+                  <span
+                    class="visually-hidden"
+                  >
+                    Image credit: 
+                  </span>
+                  Copyright demo
+                </div>
+                
       
-            </div>
+              </figcaption>
+                
+            </figure>
+            
+
           </div>
           <div
             class="col-md col-xl-9 col-xxl-8"
@@ -746,25 +952,40 @@ exports[`OE - Content banner with white background renders correctly 1`] = `
           <div
             class="bcl-card-start-col bcl-size-large"
           >
-            <img
-              alt="alt img"
-              class="card-img-top rounded-top-1"
-              src="https://picsum.photos/255/255?random=6"
-            />
-                  
-            <div
-              class="bcl-card__image-footer"
+              
+            <figure
+              class="m-0 bcl-card__image-wrapper"
             >
               
-        
-              <div
-                class="bcl-copyright"
+    
+              <img
+                alt="alt img"
+                class="card-img-top rounded-top-1"
+                src="https://picsum.photos/255/255?random=6"
+              />
+                    
+              <figcaption
+                class="bcl-card__image-footer"
               >
-                Copyright demo
-              </div>
-              
+                
+        
+                <div
+                  class="bcl-copyright"
+                >
+                  <span
+                    class="visually-hidden"
+                  >
+                    Image credit: 
+                  </span>
+                  Copyright demo
+                </div>
+                
       
-            </div>
+              </figcaption>
+                
+            </figure>
+            
+
           </div>
           <div
             class="col-md col-xl-9 col-xxl-8"
