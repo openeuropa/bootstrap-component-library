@@ -1263,6 +1263,7 @@ export default [
   "tv",
   "twitch",
   "twitter",
+  "bluesky",
   "type-bold",
   "type-h1",
   "type-h2",

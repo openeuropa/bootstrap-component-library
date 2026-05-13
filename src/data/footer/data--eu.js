@@ -64,6 +64,16 @@ module.exports = {
                   },
                 },
                 {
+                  label: "Bluesky",
+                  icon_position: "before",
+                  path: "/example.html",
+                  icon: {
+                    name: "bluesky",
+                    size: "xs",
+                    path: "/icons.svg",
+                  },
+                },
+                {
                   label: "Linkedin",
                   path: "/example.html",
                   icon_position: "before",
