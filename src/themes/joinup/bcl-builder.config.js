@@ -196,12 +196,12 @@ module.exports = {
     {
       from: [toOutputRelativePackagePath(resourcesEcLogoPath, "**/*.svg")],
       to: path.resolve(outputFolder, "logos/ec"),
-      options: { up: 6 },
+      options: { up: 7 },
     },
     {
       from: [toOutputRelativePackagePath(resourcesEuLogoPath, "**/*.svg")],
       to: path.resolve(outputFolder, "logos/eu"),
-      options: { up: 6 },
+      options: { up: 7 },
     },
     {
       from: [
