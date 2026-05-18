@@ -129,6 +129,7 @@ module.exports = [
   "youtube.svg",
   "twitch.svg",
   "twitter.svg",
+  "bluesky.svg",
   "facebook.svg",
   "instagram.svg",
   "slack.svg",

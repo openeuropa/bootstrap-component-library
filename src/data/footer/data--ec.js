@@ -60,6 +60,16 @@ module.exports = {
                   },
                 },
                 {
+                  label: "Bluesky",
+                  path: "/example.html",
+                  icon_position: "before",
+                  icon: {
+                    path: "/icons.svg",
+                    name: "bluesky",
+                    size: "xs",
+                  },
+                },
+                {
                   label: "Linkedin",
                   path: "/example.html",
                   icon_position: "before",
