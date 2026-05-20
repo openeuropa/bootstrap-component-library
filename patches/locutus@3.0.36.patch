@@ -1,0 +1,23 @@
+diff --git a/package.json b/package.json
+index 37f14601a46128b2a14046f7fced1c872195950e..037795131d621c115858d427130d2afc31579d9d 100644
+--- a/package.json
++++ b/package.json
+@@ -140,6 +140,18 @@
+       "require": "./*.js",
+       "default": "./*.js"
+     },
++    "./php/math": {
++      "types": "./php/math/index.d.ts",
++      "import": "./esm/php/math/index.js",
++      "require": "./php/math/index.js",
++      "default": "./php/math/index.js"
++    },
++    "./php/strings": {
++      "types": "./php/strings/index.d.ts",
++      "import": "./esm/php/strings/index.js",
++      "require": "./php/strings/index.js",
++      "default": "./php/strings/index.js"
++    },
+     "./package.json": "./package.json"
+   }
+ }

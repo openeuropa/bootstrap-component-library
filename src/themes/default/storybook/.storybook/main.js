@@ -57,7 +57,6 @@ const webpackFinal = (config) => {
     path: require.resolve("path-browserify"),
     util: require.resolve("util/"),
     stream: require.resolve("stream-browserify"),
-    crypto: require.resolve("crypto-browserify"),
     vm: require.resolve("vm-browserify"),
     fs: false,
     process: require.resolve("process/browser"),
