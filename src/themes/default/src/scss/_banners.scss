@@ -11,8 +11,14 @@
   }
 
   p {
+    margin-bottom: 0;
     font-size: 1.125rem;
     font-weight: 500;
+  }
+
+  p + .bcl-banner__link {
+    display: inline-block;
+    margin-top: map.get($spacers, 4);
   }
 
   &.shade {
