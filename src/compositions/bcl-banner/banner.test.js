@@ -49,6 +49,19 @@ describe("OE - Page banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("default renders correctly without link", () => {
+    expect.assertions(1);
+    return expect(
+      render(
+        {
+          ...dataDefault,
+          link: {},
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
   test("primary renders correctly with title", () => {
     expect.assertions(1);
     return expect(
@@ -210,6 +223,20 @@ describe("OE - Hero banner", () => {
           hero: true,
           title: "Hero banner test title",
           title_tag: "h6",
+        },
+        true,
+      ),
+    ).resolves.toMatchSnapshot();
+  });
+
+  test("default renders correctly without link", () => {
+    expect.assertions(1);
+    return expect(
+      render(
+        {
+          ...dataDefault,
+          hero: true,
+          link: {},
         },
         true,
       ),
