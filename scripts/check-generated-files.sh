@@ -32,6 +32,7 @@ failed=0
 
 for file in "${expected_files[@]}"; do
   if [[ ! -s "$file" ]]; then
+    echo "Missing generated file: $file"
     echo "::error file=$file::Expected generated file is missing or empty"
     failed=1
   fi
@@ -39,6 +40,7 @@ done
 
 for path in "${unexpected_paths[@]}"; do
   if [[ -e "$path" ]]; then
+    echo "Unexpected generated path: $path"
     echo "::error file=$path::Generated templates were copied into a nested package path"
     failed=1
   fi
