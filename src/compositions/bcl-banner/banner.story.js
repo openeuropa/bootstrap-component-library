@@ -7,6 +7,11 @@ import dataPrimary from "@openeuropa/bcl-banner/data/data--primary";
 import dataImage from "@openeuropa/bcl-banner/data/data--image";
 import dataShade from "@openeuropa/bcl-banner/data/data--shade";
 
+const dataDefaultNoLink = {
+  ...dataDefault,
+  link: {},
+};
+
 const getArgs = (data) => {
   const args = {
     title: data.title,
@@ -164,6 +169,12 @@ export const Default = (args) => renderStory(dataDefault, args);
 Default.storyName = "Simple - default";
 Default.args = getArgs(dataDefault);
 Default.argTypes = getArgTypes(dataDefault);
+
+export const DefaultNoLink = (args) => renderStory(dataDefaultNoLink, args);
+
+DefaultNoLink.storyName = "Simple - default without link";
+DefaultNoLink.args = getArgs(dataDefaultNoLink);
+DefaultNoLink.argTypes = getArgTypes(dataDefaultNoLink);
 
 export const Primary = (args) => renderStory(dataPrimary, args);
 

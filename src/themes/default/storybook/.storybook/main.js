@@ -57,7 +57,6 @@ const webpackFinal = (config) => {
     path: require.resolve("path-browserify"),
     util: require.resolve("util/"),
     stream: require.resolve("stream-browserify"),
-    crypto: require.resolve("crypto-browserify"),
     vm: require.resolve("vm-browserify"),
     fs: false,
     process: require.resolve("process/browser"),
@@ -82,7 +81,7 @@ const config = {
   },
 
   core: {
-    builder: getAbsolutePath("@storybook/builder-webpack5"),
+    builder: "@storybook/builder-webpack5",
   },
 
   staticDirs: ["../../../../../assets/"],

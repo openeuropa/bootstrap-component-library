@@ -86,9 +86,17 @@
         } only %}
       {%- endif %}
     {%- if _description is not empty -%}
-      <p class="mb-4">{{ _description }}</p>
+      <p>{{ _description }}</p>
     {%- endif %}
     {%- if _link.path %}
+      {%- if _link.attributes is empty %}
+        {%- set _link = _link|merge({
+          attributes: create_attribute()
+        }) %}
+      {%- endif %}
+      {%- set _link = _link|merge({
+        attributes: _link.attributes.addClass('bcl-banner__link')
+      }) %}
       {%- include '@oe-bcl/bcl-link/link.html.twig' with _link only %}
     {%- endif -%}
     </div>{# -#}

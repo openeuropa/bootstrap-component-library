@@ -1,0 +1,137 @@
+diff --git a/index.cjs b/index.cjs
+index 9ef10fa3d7701e38e6b0220c167f73f2123834d4..ac41274a2d5b7fafe92bfdc37f5b1608a497dfad 100644
+--- a/index.cjs
++++ b/index.cjs
+@@ -2,41 +2,45 @@
+ 
+ var Levenshtein = require('levenshtein');
+ var Path = require('path');
+-var rtrim = require('locutus/php/strings/rtrim');
++var rtrim = getLocutusExport(require('locutus/php/strings/rtrim'), 'rtrim');
+ var luxon = require('luxon');
+ var isPlainObject$1 = require('is-plain-object');
+ var parser = require('regex-parser');
+-var phpRange = require('locutus/php/array/range');
+-var array_chunk = require('locutus/php/array/array_chunk');
+-var array_merge = require('locutus/php/array/array_merge');
++var phpRange = getLocutusExport(require('locutus/php/array/range'), 'range');
++var array_chunk = getLocutusExport(require('locutus/php/array/array_chunk'), 'array_chunk');
++var array_merge = getLocutusExport(require('locutus/php/array/array_merge'), 'array_merge');
+ var snakeCase = require('snake-case');
+ var isObject = require('isobject');
+ var twigLexer = require('twig-lexer');
+ var strings = require('locutus/php/strings');
+-var phpSprintf = require('locutus/php/strings/sprintf');
+-var phpRawurlencode = require('locutus/php/url/rawurlencode');
+-var phpOrd = require('locutus/php/strings/ord');
++var phpSprintf = getLocutusExport(require('locutus/php/strings/sprintf'), 'sprintf');
++var phpRawurlencode = getLocutusExport(require('locutus/php/url/rawurlencode'), 'rawurlencode');
++var phpOrd = getLocutusExport(require('locutus/php/strings/ord'), 'ord');
+ var sourceMap = require('source-map');
+ var math = require('locutus/php/math');
+ var pad = require('pad');
+-var phpStrtr = require('locutus/php/strings/strtr');
+-var phpNumberFormat = require('locutus/php/strings/number_format');
+-var phpHttpBuildQuery = require('locutus/php/url/http_build_query');
++var phpStrtr = getLocutusExport(require('locutus/php/strings/strtr'), 'strtr');
++var phpNumberFormat = getLocutusExport(require('locutus/php/strings/number_format'), 'number_format');
++var phpHttpBuildQuery = getLocutusExport(require('locutus/php/url/http_build_query'), 'http_build_query');
+ var IconVLite = require('iconv-lite');
+-var phpUcwords = require('locutus/php/strings/ucwords');
++var phpUcwords = getLocutusExport(require('locutus/php/strings/ucwords'), 'ucwords');
+ var words = require('capitalize');
+-var phpStripTags = require('locutus/php/strings/strip_tags');
+-var phpTrim = require('locutus/php/strings/trim');
+-var phpLeftTrim = require('locutus/php/strings/ltrim');
+-var phpNl2br = require('locutus/php/strings/nl2br');
+-var explode = require('locutus/php/strings/explode');
++var phpStripTags = getLocutusExport(require('locutus/php/strings/strip_tags'), 'strip_tags');
++var phpTrim = getLocutusExport(require('locutus/php/strings/trim'), 'trim');
++var phpLeftTrim = getLocutusExport(require('locutus/php/strings/ltrim'), 'ltrim');
++var phpNl2br = getLocutusExport(require('locutus/php/strings/nl2br'), 'nl2br');
++var explode = getLocutusExport(require('locutus/php/strings/explode'), 'explode');
+ var esrever = require('esrever');
+-var phpRound = require('locutus/php/math/round');
+-var phpCeil = require('locutus/php/math/ceil');
+-var phpFloor = require('locutus/php/math/floor');
++var phpRound = getLocutusExport(require('locutus/php/math/round'), 'round');
++var phpCeil = getLocutusExport(require('locutus/php/math/ceil'), 'ceil');
++var phpFloor = getLocutusExport(require('locutus/php/math/floor'), 'floor');
+ var runes = require('runes');
+-var mt_rand = require('locutus/php/math/mt_rand');
+-var array_rand = require('locutus/php/array/array_rand');
++var mt_rand = getLocutusExport(require('locutus/php/math/mt_rand'), 'mt_rand');
++var array_rand = getLocutusExport(require('locutus/php/array/array_rand'), 'array_rand');
++
++function getLocutusExport(module, name) {
++    return typeof module === 'function' ? module : module[name];
++}
+ 
+ function _interopNamespaceDefault(e) {
+     var n = Object.create(null);
+diff --git a/light/index.cjs b/light/index.cjs
+index 31b33b159b597b6aee7bad3e6c1528f0f77ae2cb..11a3fcdfbd8651911759707a9d8ba9bdcfc17a35 100644
+--- a/light/index.cjs
++++ b/light/index.cjs
+@@ -4,36 +4,40 @@ var Levenshtein = require('levenshtein');
+ var luxon = require('luxon');
+ var isPlainObject$1 = require('is-plain-object');
+ var parser = require('regex-parser');
+-var phpRange = require('locutus/php/array/range');
+-var array_chunk = require('locutus/php/array/array_chunk');
+-var array_merge = require('locutus/php/array/array_merge');
++var phpRange = getLocutusExport(require('locutus/php/array/range'), 'range');
++var array_chunk = getLocutusExport(require('locutus/php/array/array_chunk'), 'array_chunk');
++var array_merge = getLocutusExport(require('locutus/php/array/array_merge'), 'array_merge');
+ var snakeCase = require('snake-case');
+ var isObject = require('isobject');
+ var twigLexer = require('twig-lexer');
+ var strings = require('locutus/php/strings');
+-var phpSprintf = require('locutus/php/strings/sprintf');
+-var phpRawurlencode = require('locutus/php/url/rawurlencode');
+-var phpOrd = require('locutus/php/strings/ord');
++var phpSprintf = getLocutusExport(require('locutus/php/strings/sprintf'), 'sprintf');
++var phpRawurlencode = getLocutusExport(require('locutus/php/url/rawurlencode'), 'rawurlencode');
++var phpOrd = getLocutusExport(require('locutus/php/strings/ord'), 'ord');
+ var math = require('locutus/php/math');
+ var pad = require('pad');
+-var phpStrtr = require('locutus/php/strings/strtr');
+-var phpNumberFormat = require('locutus/php/strings/number_format');
+-var phpHttpBuildQuery = require('locutus/php/url/http_build_query');
+-var phpUcwords = require('locutus/php/strings/ucwords');
++var phpStrtr = getLocutusExport(require('locutus/php/strings/strtr'), 'strtr');
++var phpNumberFormat = getLocutusExport(require('locutus/php/strings/number_format'), 'number_format');
++var phpHttpBuildQuery = getLocutusExport(require('locutus/php/url/http_build_query'), 'http_build_query');
++var phpUcwords = getLocutusExport(require('locutus/php/strings/ucwords'), 'ucwords');
+ var words = require('capitalize');
+-var phpStripTags = require('locutus/php/strings/strip_tags');
+-var phpTrim = require('locutus/php/strings/trim');
+-var phpLeftTrim = require('locutus/php/strings/ltrim');
+-var phpRightTrim = require('locutus/php/strings/rtrim');
+-var phpNl2br = require('locutus/php/strings/nl2br');
+-var explode = require('locutus/php/strings/explode');
++var phpStripTags = getLocutusExport(require('locutus/php/strings/strip_tags'), 'strip_tags');
++var phpTrim = getLocutusExport(require('locutus/php/strings/trim'), 'trim');
++var phpLeftTrim = getLocutusExport(require('locutus/php/strings/ltrim'), 'ltrim');
++var phpRightTrim = getLocutusExport(require('locutus/php/strings/rtrim'), 'rtrim');
++var phpNl2br = getLocutusExport(require('locutus/php/strings/nl2br'), 'nl2br');
++var explode = getLocutusExport(require('locutus/php/strings/explode'), 'explode');
+ var esrever = require('esrever');
+-var phpRound = require('locutus/php/math/round');
+-var phpCeil = require('locutus/php/math/ceil');
+-var phpFloor = require('locutus/php/math/floor');
++var phpRound = getLocutusExport(require('locutus/php/math/round'), 'round');
++var phpCeil = getLocutusExport(require('locutus/php/math/ceil'), 'ceil');
++var phpFloor = getLocutusExport(require('locutus/php/math/floor'), 'floor');
+ var runes = require('runes');
+-var mt_rand = require('locutus/php/math/mt_rand');
+-var array_rand = require('locutus/php/array/array_rand');
++var mt_rand = getLocutusExport(require('locutus/php/math/mt_rand'), 'mt_rand');
++var array_rand = getLocutusExport(require('locutus/php/array/array_rand'), 'array_rand');
++
++function getLocutusExport(module, name) {
++    return typeof module === 'function' ? module : module[name];
++}
+ 
+ const createBaseError = (name, message, location, source, previous) => {
+     const baseError = Error(message);
