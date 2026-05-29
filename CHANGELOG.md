@@ -21,6 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#760](https://github.com/openeuropa/bootstrap-component-library/pull/760) OEL-4762: Updates on packages. ([@tibi2303](https://github.com/tibi2303))
 
 #### Committers: 2
+- Aaron Gil Martinez ([@AaronGilMartinez](https://github.com/AaronGilMartinez))
 - Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
 
 ## 1.12.1 (2026-05-11)
