@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.13.1 (2026-05-29)
+
+#### :nail_care: Enhancement
+* [#765](https://github.com/openeuropa/bootstrap-component-library/pull/765) OEL-4774: Dynamic output for templates folder structure.
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.13.0 (2026-05-28)
 
 #### :nail_care: Enhancement
@@ -12,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 #### :house: Internal
 * [#760](https://github.com/openeuropa/bootstrap-component-library/pull/760) OEL-4762: Updates on packages. ([@tibi2303](https://github.com/tibi2303))
 
-#### Committers: 1
+#### Committers: 2
 - Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
 
 ## 1.12.1 (2026-05-11)
