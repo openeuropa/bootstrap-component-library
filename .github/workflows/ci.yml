@@ -55,8 +55,16 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Build bootstrap sources
+        run: pnpm --filter @openeuropa/bcl-bootstrap run prepublish
+      - name: Build twig templates
+        run: pnpm --filter @openeuropa/bcl-twig-templates run prepublish
       - name: Build themes
         run: pnpm build:themes
+      - name: Copy generated assets
+        run: pnpm copy:assets
+      - name: Check generated files
+        run: scripts/check-generated-files.sh
       - name: Tests
         run: pnpm test
   deploy-preview:
