@@ -39,8 +39,17 @@ const toOutputRelativePath = (targetPath) =>
   path.relative(outputFolder, targetPath);
 const toOutputRelativePackagePath = (packagePath, ...segments) =>
   toOutputRelativePath(path.resolve(packagePath, ...segments));
+const getCopyUpToGlobBase = (sourceGlob) =>
+  path
+    .normalize(sourceGlob.split("**")[0])
+    .replace(/[\\/]+$/, "")
+    .split(/[\\/]+/).length;
 const bootstrapIconsPath = resolvePackagePath("bootstrap-icons");
 const twigTemplatesPath = resolvePackagePath("@openeuropa/bcl-twig-templates");
+const twigTemplatesGlob = toOutputRelativePackagePath(
+  twigTemplatesPath,
+  "templates/**/*.twig",
+);
 const resourcesFlagIconsPath = resolvePackagePath("@ecl/resources-flag-icons");
 const resourcesEcLogoPath = resolvePackagePath("@ecl/resources-ec-logo");
 const resourcesEuLogoPath = resolvePackagePath("@ecl/resources-eu-logo");
@@ -204,11 +213,12 @@ module.exports = {
       options: { up: 7 },
     },
     {
-      from: [
-        toOutputRelativePackagePath(twigTemplatesPath, "templates/**/*.twig"),
-      ],
+      from: [twigTemplatesGlob],
       to: path.resolve(outputFolder, "templates"),
-      options: { up: 5, exclude: excludePaths },
+      options: {
+        up: getCopyUpToGlobBase(twigTemplatesGlob),
+        exclude: excludePaths,
+      },
     },
     {
       from: ["src/templates/**/*.twig"],

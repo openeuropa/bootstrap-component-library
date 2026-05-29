@@ -78,7 +78,7 @@
   },
   "scripts": {
     "clean": "rimraf templates",
-    "copy": "copyfiles -u 2 ./node_modules/**/*.twig templates/",
+    "copy": "copyfiles -F -u 2 ./node_modules/**/*.twig templates/",
     "prepublish": "npm run clean && npm run copy"
   },
   "repository": {
