@@ -10,11 +10,11 @@
   "scripts": {
     "build-plugins": "bin/build-plugins.js",
     "clean": "rimraf js plugins scss",
-    "copy-sass": "copyfiles -u 3 \"$(node -p \"const path = require('path'); path.relative(process.cwd(), path.dirname(require.resolve('bootstrap/package.json'))) || '.'\")/scss/*\" \"$(node -p \"const path = require('path'); path.relative(process.cwd(), path.dirname(require.resolve('bootstrap/package.json'))) || '.'\")/scss/**/*\" scss",
-    "copy-js": "copyfiles -u 3 \"$(node -p \"const path = require('path'); path.relative(process.cwd(), path.dirname(require.resolve('bootstrap/package.json'))) || '.'\")/js/**/*\" js && copyfiles -u 1 \"./legacy/**/*\" js/src",
-    "copy-icons": "copyfiles -f \"$(node -p \"require.resolve('bootstrap-icons/bootstrap-icons.svg')\")\" ../bootstrap",
-    "copy-icons-svg": "copyfiles -f \"$(node -p \"require('path').dirname(require.resolve('bootstrap-icons/package.json'))\")/icons/*\" ../bootstrap/icons/",
-    "replace-icons": "copyfiles -f ./replace-icons/* ../bootstrap/icons/",
+    "copy-sass": "node bin/copy-sources.js sass",
+    "copy-js": "node bin/copy-sources.js js",
+    "copy-icons": "node bin/copy-sources.js icon-sprite",
+    "copy-icons-svg": "node bin/copy-sources.js icon-svgs",
+    "replace-icons": "node bin/copy-sources.js replacement-icons",
     "prepublish": "npm-run-all clean 'copy-*' replace-icons build-plugins"
   },
   "devDependencies": {
