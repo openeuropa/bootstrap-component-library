@@ -84,7 +84,7 @@ const config = {
     options: {},
   },
   core: {
-    builder: getAbsolutePath("@storybook/builder-webpack5"),
+    builder: require.resolve("@storybook/builder-webpack5"),
   },
   staticDirs: ["../assets"],
   stories,
