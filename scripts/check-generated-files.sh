@@ -40,12 +40,18 @@ unexpected_paths=(
 
 failed=0
 
-for file in "${expected_files[@]}"; do
+check_file() {
+  local file="$1"
+
   if [[ ! -s "$file" ]]; then
     echo "Missing generated file: $file"
     echo "::error file=$file::Expected generated file is missing or empty"
     failed=1
   fi
+}
+
+for file in "${expected_files[@]}"; do
+  check_file "$file"
 done
 
 for path in "${unexpected_paths[@]}"; do
@@ -68,10 +74,53 @@ check_min_count() {
   fi
 }
 
+check_roboto_fonts() {
+  local fonts_path="$1"
+  local label="$2"
+  local css_subsets=(
+    "cyrillic"
+    "cyrillic-ext"
+    "greek"
+    "greek-ext"
+    "latin"
+    "latin-ext"
+  )
+  local font_subsets=(
+    "cyrillic"
+    "greek"
+    "latin"
+    "latin-ext"
+  )
+  local weights=("400" "500" "700")
+  local css_styles=("" "-italic")
+  local font_styles=("normal" "italic")
+  local extensions=("woff" "woff2")
+
+  for subset in "${css_subsets[@]}"; do
+    for weight in "${weights[@]}"; do
+      for style in "${css_styles[@]}"; do
+        check_file "$fonts_path/${subset}-${weight}${style}.css"
+      done
+    done
+  done
+
+  for subset in "${font_subsets[@]}"; do
+    for weight in "${weights[@]}"; do
+      for style in "${font_styles[@]}"; do
+        for extension in "${extensions[@]}"; do
+          check_file "$fonts_path/files/roboto-${subset}-${weight}-${style}.${extension}"
+        done
+      done
+    done
+  done
+
+  check_min_count "$label" 80 "$(find "$fonts_path" -type f 2>/dev/null | wc -l | tr -d ' ')"
+}
+
 check_min_count "Bootstrap icons" 1000 "$(find bootstrap/icons -maxdepth 1 -type f -name '*.svg' 2>/dev/null | wc -l | tr -d ' ')"
 check_min_count "Twig templates" 80 "$(find src/components/bcl-twig-templates/templates -type f -name '*.twig' 2>/dev/null | wc -l | tr -d ' ')"
-check_min_count "Joinup fonts" 80 "$(find src/themes/joinup/fonts -type f 2>/dev/null | wc -l | tr -d ' ')"
-check_min_count "Published asset fonts" 80 "$(find assets/fonts -type f 2>/dev/null | wc -l | tr -d ' ')"
+check_roboto_fonts "src/themes/joinup/fonts" "Joinup fonts"
+check_roboto_fonts "assets/fonts" "Published asset fonts"
 
 if [[ "$failed" -ne 0 ]]; then
   exit 1
