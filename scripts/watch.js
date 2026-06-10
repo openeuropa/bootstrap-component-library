@@ -5,7 +5,7 @@ const browsersync = require("browser-sync");
 const path = require("path");
 const instance = process.argv.slice(3)[0] || "default";
 const ports = {
-  dev: "5000",
+  dev: "5001",
   default: "5001",
   joinup: "5002",
 };

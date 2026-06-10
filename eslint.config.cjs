@@ -1,9 +1,8 @@
 // eslint.config.cjs
-const { defineFlatConfig } = require("eslint-define-config");
 const babelParser = require("@babel/eslint-parser"); // IMPORTANT: require the parser
 const jestPlugin = require("eslint-plugin-jest");
 
-module.exports = defineFlatConfig([
+module.exports = [
   {
     ignores: [
       '**/slimselect.min.js',
@@ -53,4 +52,4 @@ module.exports = defineFlatConfig([
       'no-undef': 'off'
     }
   }
-]);
+];
