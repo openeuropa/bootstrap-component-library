@@ -81,7 +81,7 @@ const config = {
   },
 
   core: {
-    builder: "@storybook/builder-webpack5",
+    builder: require.resolve("@storybook/builder-webpack5"),
   },
 
   staticDirs: ["../../../../../assets/"],
