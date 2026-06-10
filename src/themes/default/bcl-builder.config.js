@@ -34,11 +34,17 @@ const resolvePackagePath = (packageName, ...segments) => {
 
 const outputFolder = path.resolve(__dirname);
 const repoRoot = path.resolve(__dirname, "../../../");
-const nodeModules = path.resolve(__dirname, "../../../node_modules");
 const toOutputRelativePath = (targetPath) =>
   path.relative(outputFolder, targetPath);
 const toOutputRelativePackagePath = (packagePath, ...segments) =>
   toOutputRelativePath(path.resolve(packagePath, ...segments));
+const toPackageImportPath = (packageName) => {
+  const packagePath = resolvePackagePath(packageName);
+
+  return packageName.startsWith("@")
+    ? path.dirname(path.dirname(packagePath))
+    : path.dirname(packagePath);
+};
 const getCopyUpToGlobBase = (sourceGlob) =>
   path
     .normalize(sourceGlob.split("**")[0])
@@ -61,7 +67,7 @@ const bootstrapReplaceIconsPath = path.resolve(
 );
 
 // SCSS includePaths
-const includePaths = [nodeModules];
+const includePaths = [toPackageImportPath("@openeuropa/bcl-bootstrap")];
 const silenceDeprecations = [
   "legacy-js-api",
   "import",
