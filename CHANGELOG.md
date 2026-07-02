@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.13.2 (2026-07-02)
+
+#### :house: Internal
+* [#767](https://github.com/openeuropa/bootstrap-component-library/pull/767) OEL-4810: Fix generated asset copying with pnpm layout. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.13.1 (2026-05-29)
 
 #### :nail_care: Enhancement
