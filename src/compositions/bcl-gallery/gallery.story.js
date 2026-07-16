@@ -18,6 +18,24 @@ const applyArgs = (data, args) => {
   return Object.assign(data, args);
 };
 
+const mixedThumbnailSizes = [
+  [800, 450, "16:9 landscape"],
+  [800, 600, "4:3 landscape"],
+  [900, 600, "3:2 landscape"],
+  [900, 400, "panoramic"],
+  [1000, 500, "2:1 landscape"],
+  [720, 480, "3:2 landscape"],
+  [960, 540, "16:9 landscape"],
+  [1000, 400, "wide landscape"],
+  [1200, 500, "panoramic"],
+  [700, 500, "landscape"],
+];
+
+const mixedThumbnailIds = [
+  1005, 101, 1012, 1015, 1081, 1018, 1026, 1043, 1050, 1071, 1077, 1035, 1039,
+  1040, 1041, 1044, 1052, 1057, 1060, 1069,
+];
+
 export default {
   title: "Paragraphs/Gallery",
   parameters: {
@@ -43,39 +61,20 @@ export const UniformThumbnails = (args) =>
     applyArgs(
       {
         ...dataDefault,
-        items: [
-          {
-            ...dataDefault.items[0],
-            is_playable: true,
-            thumbnail: `<img alt="16:9 video thumbnail"
-                          src="https://picsum.photos/id/1005/800/450"
+        items: mixedThumbnailIds.map((id, index) => {
+          const [width, height, ratio] =
+            mixedThumbnailSizes[index % mixedThumbnailSizes.length];
+
+          return {
+            ...dataDefault.items[index % dataDefault.items.length],
+            is_playable:
+              index === 0 ||
+              dataDefault.items[index % dataDefault.items.length].is_playable,
+            thumbnail: `<img alt="${ratio} thumbnail"
+                          src="https://picsum.photos/id/${id}/${width}/${height}"
                         />`,
-          },
-          {
-            ...dataDefault.items[1],
-            thumbnail: `<img alt="Portrait thumbnail"
-                          src="https://picsum.photos/id/101/400/600"
-                        />`,
-          },
-          {
-            ...dataDefault.items[2],
-            thumbnail: `<img alt="16:9 landscape thumbnail"
-                          src="https://picsum.photos/id/1012/800/450"
-                        />`,
-          },
-          {
-            ...dataDefault.items[3],
-            thumbnail: `<img alt="Square thumbnail"
-                          src="https://picsum.photos/id/1015/500/500"
-                        />`,
-          },
-          {
-            ...dataDefault.items[4],
-            thumbnail: `<img alt="Tall portrait thumbnail"
-                          src="https://picsum.photos/id/1081/450/800"
-                        />`,
-          },
-        ],
+          };
+        }),
         thumbnail_fit: "cover",
       },
       args,
