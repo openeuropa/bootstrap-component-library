@@ -37,3 +37,29 @@ export const Default = (args) => gallery(applyArgs(dataDefault, args));
 Default.storyName = "Default";
 Default.args = getArgs(dataDefault);
 Default.argTypes = getArgTypes();
+
+export const UniformThumbnails = (args) =>
+  gallery(
+    applyArgs(
+      {
+        ...dataDefault,
+        items: dataDefault.items.map((item, index) =>
+          index === 0
+            ? {
+                ...item,
+                is_playable: true,
+                thumbnail: `<img alt="First slide"
+                              src="https://picsum.photos/id/1005/800/450"
+                            />`,
+              }
+            : item,
+        ),
+        thumbnail_fit: "cover",
+      },
+      args,
+    ),
+  );
+
+UniformThumbnails.storyName = "Uniform thumbnails";
+UniformThumbnails.args = getArgs(dataDefault);
+UniformThumbnails.argTypes = getArgTypes();
