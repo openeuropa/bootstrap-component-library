@@ -11,6 +11,7 @@ Parameters:
   - next_label (string) (default: 'Next')
   - prev_label (string) (default: 'Previous')
   - max_visible_thumbnails (int) (default: 5)
+  - thumbnail_fit (string) (default: ''): 'cover'
   - items (object[]) format: [
       {
         thumbnail (string) img path
@@ -39,6 +40,7 @@ Parameters:
 {% set _next_label = next_label|default('Next') %}
 {% set _prev_label = prev_label|default('Previous') %}
 {% set _max_visible_thumbnails = max_visible_thumbnails|default(5) %}
+{% set _thumbnail_fit = thumbnail_fit|default('') %}
 {% set _items = items|default([]) %}
 {% set _icon_path = icon_path|default('') %}
 {% set _carousel_id = "carousel" ~ _id|capitalize %}
@@ -50,7 +52,11 @@ Parameters:
   {%- set attributes = create_attribute() %}
 {% endif %}
 
-{%- set attributes = attributes.addClass('bcl-gallery') %}
+{%- set _classes = ['bcl-gallery'] %}
+{%- if _thumbnail_fit == 'cover' %}
+  {%- set _classes = _classes|merge(['bcl-gallery--thumbnail-cover']) %}
+{%- endif %}
+{%- set attributes = attributes.addClass(_classes) %}
 
 {%- if _items is not empty and _items is iterable -%}
 <div
