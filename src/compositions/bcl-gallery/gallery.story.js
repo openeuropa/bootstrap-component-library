@@ -43,17 +43,39 @@ export const UniformThumbnails = (args) =>
     applyArgs(
       {
         ...dataDefault,
-        items: dataDefault.items.map((item, index) =>
-          index === 0
-            ? {
-                ...item,
-                is_playable: true,
-                thumbnail: `<img alt="First slide"
-                              src="https://picsum.photos/id/1005/800/450"
-                            />`,
-              }
-            : item,
-        ),
+        items: [
+          {
+            ...dataDefault.items[0],
+            is_playable: true,
+            thumbnail: `<img alt="16:9 video thumbnail"
+                          src="https://picsum.photos/id/1005/800/450"
+                        />`,
+          },
+          {
+            ...dataDefault.items[1],
+            thumbnail: `<img alt="Portrait thumbnail"
+                          src="https://picsum.photos/id/101/400/600"
+                        />`,
+          },
+          {
+            ...dataDefault.items[2],
+            thumbnail: `<img alt="16:9 landscape thumbnail"
+                          src="https://picsum.photos/id/1012/800/450"
+                        />`,
+          },
+          {
+            ...dataDefault.items[3],
+            thumbnail: `<img alt="Square thumbnail"
+                          src="https://picsum.photos/id/1015/500/500"
+                        />`,
+          },
+          {
+            ...dataDefault.items[4],
+            thumbnail: `<img alt="Tall portrait thumbnail"
+                          src="https://picsum.photos/id/1081/450/800"
+                        />`,
+          },
+        ],
         thumbnail_fit: "cover",
       },
       args,
