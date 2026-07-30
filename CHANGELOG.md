@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.14.0 (2026-07-30)
+
+#### :nail_care: Enhancement
+* [#770](https://github.com/openeuropa/bootstrap-component-library/pull/770) OEL-4820: Fix visible corners on card image. ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#769](https://github.com/openeuropa/bootstrap-component-library/pull/769) OEL-4822: Upgrade eslint from 8 to 10 and adapted. ([@tibi2303](https://github.com/tibi2303))
+* [#775](https://github.com/openeuropa/bootstrap-component-library/pull/775) OEL-4945: Update vulnerable packages. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+
 ## 1.13.2 (2026-07-02)
 
 #### :house: Internal
