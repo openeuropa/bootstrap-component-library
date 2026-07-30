@@ -17,7 +17,6 @@ module.exports = {
         trigger: {
           label: "A link with dropdown",
         },
-        id: "dropdown-megamenu",
         content_link: {
           label: "Discover more",
           path: "/example.html",

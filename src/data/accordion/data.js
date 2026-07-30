@@ -1,5 +1,3 @@
-const { getDummyText } = require("@openeuropa/bcl-data-utils");
-
 module.exports = {
   id: "1",
   items: [
