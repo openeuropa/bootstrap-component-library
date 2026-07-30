@@ -52,7 +52,7 @@ overrides:
   nx>yaml: 2.8.3
   picomatch@<2.3.2: 2.3.2
   picomatch@>=4.0.0 <4.0.4: 4.0.4
-  postcss@<=8.5.11: 8.5.12
+  postcss: 8.5.25
   ajv@8.17.1: 8.18.0
   schema-utils@4.3.3>ajv: 8.18.0
   shell-quote: 1.10.0
@@ -89,3 +89,6 @@ allowBuilds:
 patchedDependencies:
   locutus@3.0.36: patches/locutus@3.0.36.patch
   twing@7.3.1: patches/twing@7.3.1.patch
+
+minimumReleaseAgeExclude:
+  - postcss@8.5.25
