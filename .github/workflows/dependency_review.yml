@@ -22,3 +22,8 @@ jobs:
           vulnerability-check: true
           show-openssf-scorecard: false
           show-patched-versions: true
+          # GHSA-mh99-v99m-4gvg is already patched on 1.1.17/2.1.3, see
+          # https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-mh99-v99m-4gvg.
+          # pnpm audit still flags it because npm's advisory flattens the patched versions
+          # into one "<=5.0.7" range, which wrongly also catches 1.1.17/2.1.3.
+          allow-ghsas: GHSA-mh99-v99m-4gvg
