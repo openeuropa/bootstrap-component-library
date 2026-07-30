@@ -1,4 +1,6 @@
 const { defineConfig } = require("eslint/config");
+const js = require("@eslint/js");
+const globals = require("globals");
 const jestPlugin = require("eslint-plugin-jest");
 
 module.exports = defineConfig([
@@ -12,17 +14,14 @@ module.exports = defineConfig([
   },
   {
     files: ["**/*.js"],
+    extends: [js.configs.recommended],
 
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
-        process: "readonly",
-        __dirname: "readonly",
-        module: "readonly",
-        require: "readonly",
-        window: "readonly",
-        document: "readonly",
+        ...globals.node,
+        ...globals.browser,
       },
     },
 
