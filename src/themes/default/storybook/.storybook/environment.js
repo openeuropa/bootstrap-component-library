@@ -59,7 +59,7 @@ try {
 
   environment.addFunction(createAttribute);
   environment.addFunction(dummyText);
-} catch (error) {
+} catch {
   environment = {
     render() {
       throw new Error(
