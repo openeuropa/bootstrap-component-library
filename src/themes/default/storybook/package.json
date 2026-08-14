@@ -6,10 +6,10 @@
   "version": "1.14.0",
   "description": "OE storybook",
   "scripts": {
-    "build": "npm run clean && npm run copy",
+    "build": "pnpm run clean && pnpm run copy",
     "clean": "rimraf bcl-stories",
     "copy": "cross-env bcl-builder copy",
-    "postinstall": "npm run copy",
+    "postinstall": "pnpm run copy",
     "start": "storybook dev --port 9001 -c .storybook",
     "dist": "storybook build -c .storybook -o ../../../../build/default && ls"
   },

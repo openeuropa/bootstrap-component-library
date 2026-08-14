@@ -3,9 +3,10 @@
 ### Quick reference
 
 1. Run `nvm use`
-2. Run `pnpm install`
-3. Run `pnpm start dev` when developing on the default stories
-4. Run `pnpm start {theme}` when developing anything related to a sub-theme
+2. Run `pnpm ci`
+3. Run `pnpm run setup:project` to generate package sources, themes and git hooks
+4. Run `pnpm start dev` when developing on the default stories
+5. Run `pnpm start {theme}` when developing anything related to a sub-theme
 
 `pnpm start dev` can be used to develop on the `default` theme, as well as
 `pnpm start default`, the only difference is that `start-dev` has to be used when

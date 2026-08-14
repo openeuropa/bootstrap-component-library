@@ -14,9 +14,9 @@
     "build:copy": "cross-env bcl-builder copy",
     "build:sprite": "cross-env bcl-builder sprite",
     "clean": "rimraf css js templates logos icons",
-    "prepublish": "npm run build",
-    "update:styles": "npm run build:styles && npm run build:color-scheme && copyfiles -f css/*.min.css ../../../assets",
-    "update:scripts": "npm run build:scripts && copyfiles -f js/* ../../../assets",
+    "prepublish": "pnpm run build",
+    "update:styles": "pnpm run build:styles && pnpm run build:color-scheme && copyfiles -f css/*.min.css ../../../assets",
+    "update:scripts": "pnpm run build:scripts && copyfiles -f js/* ../../../assets",
     "update:templates": "npm-run-all -s align-templates build:copy"
   },
   "devDependencies": {
