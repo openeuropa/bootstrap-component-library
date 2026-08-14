@@ -79,7 +79,7 @@
   "scripts": {
     "clean": "rimraf templates",
     "copy": "node bin/copy-templates.js",
-    "prepublish": "npm run clean && npm run copy"
+    "prepublish": "pnpm run clean && pnpm run copy"
   },
   "repository": {
     "type": "git",

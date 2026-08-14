@@ -8,6 +8,25 @@ packages:
   - "src/themes/*"
   - "src/themes/**/storybook"
 
+# pnpm 11 no longer reads npm's lifecycle-script configuration. Keep the
+# corporate supply-chain policy enforced for local and CI installations.
+ignoreScripts: true
+minimumReleaseAge: 10080
+# Reject dependency releases whose publishing trust evidence is weaker than
+# an earlier release of the same package.
+trustPolicy: no-downgrade
+# These existing transitive versions predate this policy and currently have
+# weaker registry trust evidence. Keep the exceptions version-specific so all
+# future releases remain protected by the no-downgrade check.
+trustPolicyExclude:
+  - "@octokit/endpoint@9.0.6"
+  - "chokidar@4.0.3"
+  - "semver@5.7.2 || 6.3.1"
+  - "ua-parser-js@1.0.41"
+# Prevent transitive dependencies from introducing Git repositories or direct
+# tarball URLs instead of packages from the configured registry.
+blockExoticSubdeps: true
+
 linkWorkspacePackages: true
 nodeLinker: hoisted
 packageImportMethod: clone-or-copy

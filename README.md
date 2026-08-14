@@ -24,8 +24,10 @@ proceeding. Use the Node.js version defined in `.nvmrc`.
 git clone https://github.com/openeuropa/bootstrap-component-library
 cd bootstrap-component-library
 
-# Install dependencies and build the themes
-pnpm install
+# Install dependencies, then generate package sources, themes and git hooks.
+# Install-time lifecycle scripts are intentionally disabled.
+pnpm ci
+pnpm run setup:project
 
 # Start a development session (storybook with browsersync )
 pnpm start {project}
@@ -71,7 +73,7 @@ They can be used respectively to compile SASS files and minify css
 files, compile and minify js files, to copy files or rename files and to generate
 svg sprites.
 It comes with a `bin` file that is available when the package is installed and
-can be run as `npm run ecl-builder scriptName`.
+can be run as `pnpm exec bcl-builder scriptName`.
 It supports a configuration file `bcl-builder.config.js` where each script can
 be configured to perform specific operations in the enviroment where they are
 used.

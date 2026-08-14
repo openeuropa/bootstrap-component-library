@@ -16,5 +16,9 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1;
 fi
 
+# Lifecycle scripts are disabled during installation. Generate every package
+# input explicitly before Lerna creates and publishes the package archives.
+pnpm run build:assets
+
 # Publish updated packages
 pnpm exec lerna publish from-package "$@"

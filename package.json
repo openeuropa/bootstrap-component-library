@@ -10,6 +10,7 @@
   },
   "scripts": {
     "align-templates": "lerna --scope @openeuropa/bcl-twig-templates run prepublish",
+    "build:assets": "npm-run-all -s pre-publish copy:assets",
     "build:themes": "lerna --scope '@openeuropa/bcl-theme-*' run build",
     "build:theme:default": "lerna --scope @openeuropa/bcl-theme-default run build",
     "build:theme:dev": "lerna --scope @openeuropa/bcl-theme-default run build",
@@ -37,7 +38,7 @@
     "lint:prettier": "prettier --check \"{src,storybook,tools,builder}/**/*.{md,mdx,html,json,yml,js,jsx,scss}\"",
     "jest": "jest",
     "patch-build": "scripts/patch-build.js",
-    "postinstall": "npm-run-all -s pre-publish copy:assets",
+    "postinstall": "pnpm run build:assets",
     "prepare": "husky",
     "prepare-env": "scripts/prepare-env.js",
     "pre-publish": "lerna run postinstall && lerna run prepublish",
@@ -48,7 +49,8 @@
     "storybook:default": "storybook dev --port 5001 -c src/themes/default/storybook/.storybook --ci",
     "storybook:joinup": "STORYBOOK_THEME=joinup storybook dev --port 5002 -c src/themes/joinup/storybook/.storybook --ci",
     "test": "npm-run-all 'lint:*' twig:snapshots",
-    "twig:snapshots": "npm run jest",
+    "setup:project": "npm-run-all -s build:assets prepare",
+    "twig:snapshots": "pnpm run jest",
     "update-version": "scripts/update-version.sh",
     "watch": "scripts/watch.js --"
   },
