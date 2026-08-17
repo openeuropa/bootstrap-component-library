@@ -47,7 +47,7 @@
     title: _title,
     title_tag: _title_tag,
     title_link: _title_link,
-    title_attributes: _title_attributes,
+    attributes: _title_attributes,
   } only %}
 {% endif %}
 
@@ -187,7 +187,7 @@
   {%- set _link_attributes = _link_attributes.addClass(['mt-3-5', 'd-inline-block']) %}
   {%- include '@oe-bcl/bcl-link/link.html.twig' with _link|merge({
     attributes: _link_attributes,
-    icon: _link.icon|merge({
+    icon: _link.icon|default({})|merge({
       name: 'chevron-right',
       size: 'xs',
     }),

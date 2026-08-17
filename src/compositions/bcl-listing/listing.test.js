@@ -2,6 +2,7 @@ import {
   renderTwigFileAsNode,
   renderTwigFileAsHtml,
 } from "@openeuropa/bcl-test-utils";
+import { DrupalAttribute } from "drupal-attribute";
 import { axe, toHaveNoViolations } from "jest-axe";
 
 import demoDateData from "@openeuropa/bcl-listing/data/listing--date";
@@ -178,6 +179,30 @@ describe("OE - Listing", () => {
         },
       }),
     ).resolves.toMatchSnapshot();
+  });
+
+  test("renders title attributes and a CTA without an icon", async () => {
+    expect.assertions(5);
+    const listing = await render({
+      ...demoDefaultData,
+      title: "Listing with custom title attributes",
+      title_attributes: new DrupalAttribute()
+        .addClass("custom-title")
+        .setAttribute("data-title", "custom-value"),
+      link: {
+        path: "/archive.html",
+        label: "View the archive",
+      },
+    });
+
+    const title = listing.querySelector("h2.custom-title");
+    const link = listing.querySelector('a[href="/archive.html"]');
+    const icon = link.querySelector("use");
+    expect(title).not.toBeNull();
+    expect(title.getAttribute("data-title")).toBe("custom-value");
+    expect(link.textContent).toContain("View the archive");
+    expect(icon).not.toBeNull();
+    expect(icon.getAttribute("xlink:href")).toBe("#chevron-right");
   });
 
   test("renders correctly in 2 columns with title", () => {
