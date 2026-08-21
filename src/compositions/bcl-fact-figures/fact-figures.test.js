@@ -73,6 +73,18 @@ describe("OE - Fact and figures", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with centered items`, async () => {
+    expect.assertions(2);
+    const rendered = await render({ ...demoData, alignment: "center" });
+
+    expect(rendered.querySelectorAll(".row > .col.text-center")).toHaveLength(
+      demoData.items.length,
+    );
+    expect(
+      rendered.querySelectorAll(".row > .col p.text-justify"),
+    ).toHaveLength(demoData.items.length);
+  });
+
   test(`renders correctly with extra class on columns`, () => {
     expect.assertions(1);
     return expect(
