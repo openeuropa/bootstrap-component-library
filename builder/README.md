@@ -6,7 +6,7 @@ They can be used respectively to compile SASS files and minify css
 files, compile and minify js files, to copy files or rename files and to generate
 svg sprites.
 It comes with a `bin` file that is available when the package is installed and
-can be run as `npm run ecl-builder scriptName`.
+can be run as `pnpm exec bcl-builder scriptName`.
 It supports a configuration file `bcl-builder.config.js` where each script can
 be configured to perform specific operations in the enviroment where they are
 used.

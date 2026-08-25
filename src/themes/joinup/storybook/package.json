@@ -6,10 +6,10 @@
   "version": "1.14.0",
   "description": "OE storybook",
   "scripts": {
-    "build": "npm run clean && npm run copy",
+    "build": "pnpm run clean && pnpm run copy",
     "clean": "rimraf bcl-stories",
     "copy": "cross-env bcl-builder copy",
-    "postinstall": "npm run copy",
+    "postinstall": "pnpm run copy",
     "start": "storybook dev --port 9001 -c .storybook",
     "dist": "STORYBOOK_THEME=joinup storybook build -c .storybook -o ../../../../build/joinup"
   },
@@ -19,6 +19,7 @@
     "@babel/preset-env": "7.29.5",
     "@babel/preset-react": "7.28.5",
     "@babel/runtime": "7.28.6",
+    "@openeuropa/bcl-builder": "workspace:*",
     "@openeuropa/bcl-story-utils": "workspace:*",
     "@storybook/addon-a11y": "^10.4.0",
     "@storybook/addon-designs": "^11.1.3",

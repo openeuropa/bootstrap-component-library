@@ -22,7 +22,9 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm ci
+      - name: Build generated assets
+        run: pnpm build:assets
       - name: Package application
         run: pnpm dist
       - name: Deploy to Netlify
