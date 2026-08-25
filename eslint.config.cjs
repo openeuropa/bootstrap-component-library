@@ -7,7 +7,6 @@ module.exports = defineConfig([
   {
     ignores: [
       "**/slimselect.min.js",
-      "**/slim-select-2/slimselect.min.js",
       "src/themes/*/js/",
       "src/themes/*/storybook/bcl-stories",
     ],
