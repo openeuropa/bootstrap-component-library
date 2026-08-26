@@ -99,7 +99,7 @@ const applyArgs = (data, args) => {
         values: [],
       };
       percentages.forEach((percentage) => {
-        let mixedColor = "";
+        let mixedColor;
         let percentageString = percentage;
         if (percentage > 0) {
           percentageString = `+${percentage}`;

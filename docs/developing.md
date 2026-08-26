@@ -3,12 +3,13 @@
 ### Quick reference
 
 1. Run `nvm use`
-2. Run `pnpm install`
-3. Run `pnpm start dev` when developing on the default stories
-4. Run `pnpm start {theme}` when developing anything related to a sub-theme
+2. Run `pnpm ci`
+3. Run `pnpm run setup:project` to generate package sources, themes and git hooks
+4. Run `pnpm start dev` when developing on the default stories
+5. Run `pnpm start {theme}` when developing anything related to a sub-theme
 
 `pnpm start dev` can be used to develop on the `default` theme, as well as
-`pnpm start default`, the only difference is that `start-dev` has to be used when
+`pnpm start default`; use `pnpm start dev` when
 working on the story files in `src/components` and `src/compositions`
 
 ### Architecture of the library
@@ -128,7 +129,7 @@ The stories are sorted alphabetically.
 Since the different storybook instances defining the styleguides are using a
 copied version of the default stories, it's not convenient to work on any of them
 when it's about editing the story files.
-Running `pnpm storybook` another instance of storybook will be started reading
+Running `pnpm run storybook:dev` starts another Storybook instance that reads
 from the stories defined in the `components` folder, this way all the changes in
 the `*.story.js` file will be immediately visible in the instance.
 
@@ -172,7 +173,7 @@ file an array like this `['table']`
 The element added to the array has to be the story file name without the `story.js`
 extension.
 
-If you do so, you might also need to manually run `pnpm build:storybook` for the
+If you do so, you might also need to manually run `pnpm run build:storybook:{theme}` for the
 default stories imported in the theme you are working on to be updated, but it
 shouldn't be normally the case.
 
@@ -190,12 +191,12 @@ be added to the main `package.json`, following the existing ones:
 Also the `static/index.html` file should be updated adding a link to the new
 folder with the project when deployed.
 The configuration of a new theme is mainly the adaptation of the
-`ecl-builder.config.js` file, as previously mentioned this file is taking care
+`bcl-builder.config.js` file, as previously mentioned this file is taking care
 of setting up all the needed resources for a theme package.
 
 ### Workflow
 
-[Workflow docs](worflow.md)
+[Workflow docs](workflow.md)
 
 ### Release
 
