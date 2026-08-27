@@ -67,6 +67,7 @@ packageExtensionsChecksum: sha256-bDBi5OrvEkalWgnRry3XIFQ+QXrLusQYvrqC4Qd+Ejc=
 
 patchedDependencies:
   locutus@3.0.36: 286f28bef39dac74b109b86b3b9397b9b4a34fd03dfdf2a2965d821c55e6dfaa
+  slim-select@3.6.1: 0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650
   twing@7.3.1: bf4c4b36c87db336303b65b045abd7e98a91abc5d74f823b5b3aa2c218a4b3d4
 
 importers:
@@ -194,8 +195,8 @@ importers:
         specifier: 12.1.0
         version: 12.1.0
       slim-select:
-        specifier: 3.4.3
-        version: 3.4.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 3.6.1
+        version: 3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       storybook:
         specifier: ^10.4.0
         version: 10.4.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@types/react@19.2.14)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1235,8 +1236,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5
       slim-select:
-        specifier: 3.4.3
-        version: 3.4.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 3.6.1
+        version: 3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   src/themes/default/storybook:
     devDependencies:
@@ -1406,8 +1407,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5
       slim-select:
-        specifier: 3.4.3
-        version: 3.4.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 3.6.1
+        version: 3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   src/themes/joinup/storybook:
     devDependencies:
@@ -8763,8 +8764,9 @@ packages:
     resolution: {integrity: sha512-stxByr12oeeOyY2BlviTNQlYV5xOj47GirPr4yA1hE9JCtxfQN0+tVbkxwCtYDQWhEKWFHsEK48ORg5jrouCAg==}
     engines: {node: '>=20'}
 
-  slim-select@3.4.3:
-    resolution: {integrity: sha512-6jeOO7nVXNAdsAMAUIw2igcPG379yzGoa2mPBJ4tuoidenPz4AvFTnEewhVR4AnKBOSDf6L7trRJHuumJwJqOg==}
+  slim-select@3.6.1:
+    resolution: {integrity: sha512-5cczXlJ7ppVHSqQe/ZjH+gdgrB9aicCdYLYG8GfMEC0Um1rr/XcwNEygg7S3+3PvjvZDSH4WMCa39wMxhyWX/g==}
+    engines: {node: '>=20.19.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -17994,7 +17996,7 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
-  slim-select@3.4.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  slim-select@3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     optionalDependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
