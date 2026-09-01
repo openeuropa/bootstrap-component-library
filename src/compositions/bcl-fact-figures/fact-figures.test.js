@@ -81,7 +81,7 @@ describe("OE - Fact and figures", () => {
       demoData.items.length,
     );
     expect(
-      rendered.querySelectorAll(".row > .col p.text-justify"),
+      rendered.querySelectorAll(".row > .col.text-center > p.text-start"),
     ).toHaveLength(demoData.items.length);
   });
 

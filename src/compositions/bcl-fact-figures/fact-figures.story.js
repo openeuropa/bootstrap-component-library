@@ -31,7 +31,7 @@ const getArgTypes = () => ({
     type: { name: "select" },
     options: ["left", "center"],
     description:
-      "Alignment of the content inside the items; centered items keep justified descriptions",
+      "Alignment of icons, values, and labels; descriptions remain left-aligned",
     table: {
       type: { summary: "string" },
       defaultValue: { summary: "left" },
