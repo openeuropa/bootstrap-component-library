@@ -22,6 +22,8 @@
       Center alignment keeps item descriptions left-aligned.
   - cols_extra_classes (string) (default: '')
   - icon_path (string) (default: '')
+  - icon_size (string) (default: '3xl')
+      options: l, 3xl
   - link_more (object of type link) (default {})
 #}
 
@@ -40,6 +42,7 @@
 {% set _alignment = alignment|default('left') %}
 {% set _cols_extra_classes = cols_extra_classes|default('') %}
 {% set _icon_path = icon_path|default('') %}
+{% set _icon_size = icon_size|default('3xl') %}
 {% set _link_more = link_more|default({}) %}
 
 {%- set _cols_classes = 'col' %}
@@ -97,7 +100,7 @@
         {%- set _item = _item|merge({
           icon: _item.icon|merge({
             path: _icon_path,
-            size: '3xl',
+            size: _icon_size,
             attributes: _icon_attributes.addClass(['mb-2', 'icon--primary']),
           })
         }) %}
