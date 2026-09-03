@@ -10,7 +10,7 @@ expect.extend(toHaveNoViolations);
 
 const template = "@oe-bcl/bcl-icon/icon.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params);
-const sizes = ["2xs", "xs", "s", "m", "l", "xl", "2xl", "fluid"];
+const sizes = ["2xs", "xs", "s", "m", "l", "xl", "2xl", "3xl", "fluid"];
 const transformations = [
   "rotate-90",
   "rotate-180",
@@ -24,9 +24,7 @@ describe("OE - Icon", () => {
     test(`${size} renders correctly`, () => {
       expect.assertions(1);
 
-      return expect(
-        render({ ...demoData, icon_size: size }),
-      ).resolves.toMatchSnapshot();
+      return expect(render({ ...demoData, size })).resolves.toMatchSnapshot();
     });
   });
 
