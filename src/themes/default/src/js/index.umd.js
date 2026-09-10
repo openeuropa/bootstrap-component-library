@@ -8,6 +8,7 @@
 import Alert from "@openeuropa/bcl-bootstrap/js/src/alert";
 import Button from "@openeuropa/bcl-bootstrap/js/src/button";
 import Carousel from "@openeuropa/bcl-bootstrap/js/src/carousel";
+import CarouselV2 from "./carousel-v2/carousel-v2";
 import Collapse from "@openeuropa/bcl-bootstrap/js/src/collapse";
 import Dropdown from "@openeuropa/bcl-bootstrap/js/src/dropdown";
 import Modal from "@openeuropa/bcl-bootstrap/js/src/modal";
@@ -29,6 +30,7 @@ export default {
   Alert,
   Button,
   Carousel,
+  CarouselV2,
   Collapse,
   Dropdown,
   Modal,
