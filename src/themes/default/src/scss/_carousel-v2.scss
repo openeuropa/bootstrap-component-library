@@ -1,0 +1,130 @@
+.bcl-carousel-v2 {
+  display: flex;
+  flex-direction: column;
+  color: var(--bs-body-color);
+  background: var(--bs-body-bg);
+
+  [hidden] {
+    display: none !important;
+  }
+
+  // Progressive enhancement: keep every slide readable until initialized.
+  &:not([data-bcl-initialized]) > .carousel-inner > .carousel-item {
+    display: block;
+    float: none;
+    margin: 0 0 1.5rem;
+  }
+
+  .bcl-carousel-v2__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bcl-carousel-v2__image {
+    min-width: 0;
+    align-self: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .bcl-carousel-v2__content {
+    min-width: 0;
+    padding: 1.5rem;
+    background: var(--bs-body-bg);
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .bcl-carousel-v2__description {
+    margin-bottom: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .bcl-carousel-v2__copyright {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--bs-secondary-color);
+  }
+
+  .bcl-carousel-v2__controls {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-block: 1px solid var(--bs-primary);
+  }
+
+  .bcl-carousel-v2__navigation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bcl-carousel-v2__control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border-radius: 50%;
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+    }
+  }
+
+  .bcl-carousel-v2__counter {
+    color: var(--bs-primary);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.bcl-carousel-v2--split .bcl-carousel-v2__layout {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+    }
+
+    &.bcl-carousel-v2--split .bcl-carousel-v2__image {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &.bcl-carousel-v2--split .bcl-carousel-v2__content {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &.bcl-carousel-v2--full_width {
+      .bcl-carousel-v2__image,
+      .bcl-carousel-v2__content {
+        grid-area: 1 / 1;
+      }
+
+      .bcl-carousel-v2__content {
+        position: relative;
+        align-self: center;
+        justify-self: start;
+        width: 50%;
+        margin: 2rem;
+        box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 15%);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-item {
+      transition: none;
+    }
+  }
+}
