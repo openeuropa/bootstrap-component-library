@@ -9,6 +9,7 @@ const getArgs = () => ({
   title: "",
   title_tag: "h2",
   variant: "default",
+  alignment: "left",
   responsive_columns: 3,
   more: true,
   display_icons: true,
@@ -24,6 +25,17 @@ const getArgTypes = () => ({
       type: { summary: "string" },
       defaultValue: { summary: "default" },
       category: "Content",
+    },
+  },
+  alignment: {
+    type: { name: "select" },
+    options: ["left", "center"],
+    description:
+      "Alignment of icons, values, and labels; descriptions remain left-aligned",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "left" },
+      category: "Style",
     },
   },
   display_icons: {
