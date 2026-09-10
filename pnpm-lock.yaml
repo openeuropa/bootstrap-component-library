@@ -364,6 +364,15 @@ importers:
         specifier: ^1.15.0
         version: 1.21.1
 
+  src/components/bcl-carousel-v2:
+    dependencies:
+      '@openeuropa/bcl-icon':
+        specifier: ^1.15.0
+        version: 1.21.1
+      '@openeuropa/bcl-link':
+        specifier: ^1.15.0
+        version: 1.21.1
+
   src/components/bcl-dropdown:
     dependencies:
       '@openeuropa/bcl-button':
@@ -515,6 +524,9 @@ importers:
       '@openeuropa/bcl-carousel':
         specifier: ^1.15.0
         version: 1.21.1
+      '@openeuropa/bcl-carousel-v2':
+        specifier: workspace:^1.15.0
+        version: link:../bcl-carousel-v2
       '@openeuropa/bcl-contact-form':
         specifier: ^1.15.0
         version: 1.21.1
