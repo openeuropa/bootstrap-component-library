@@ -16,17 +16,17 @@
   Image markup is supplied by the caller, including alt, dimensions and srcset.
   Controls are progressively enhanced; without JavaScript all slides are visible.
 #}
-{% set _items = items|default([]) %}
-{% set _id = id|default('bcl-carousel-v2-' ~ random(1000000000)) %}
-{% set _layout = layout|default('split') in ['split', 'full_width'] ? layout|default('split') : 'split' %}
-{% set _active = active_item|default(1) %}
-{% set _active = _active >= 1 and _active <= _items|length ? _active : 1 %}
-{% set _title_tag = title_tag|default('h2') in ['h2', 'h3', 'h4', 'h5', 'h6'] ? title_tag|default('h2') : 'h2' %}
-{% set _interval = interval|default(5000) > 0 ? interval|default(5000) : 5000 %}
-{% set _icon_path = icon_path|default('') %}
-{% set _slide_label = slide_label|default('%current% of %total%') %}
-{% set attributes = attributes ?: create_attribute() %}
-{% set attributes = attributes.addClass(['bcl-carousel-v2', 'bcl-carousel-v2--' ~ _layout, 'carousel', 'slide'])
+{%- set _items = items|default([]) -%}
+{%- set _id = id|default('bcl-carousel-v2-' ~ random(1000000000)) -%}
+{%- set _layout = layout|default('split') in ['split', 'full_width'] ? layout|default('split') : 'split' -%}
+{%- set _active = active_item|default(1) -%}
+{%- set _active = _active >= 1 and _active <= _items|length ? _active : 1 -%}
+{%- set _title_tag = title_tag|default('h2') in ['h2', 'h3', 'h4', 'h5', 'h6'] ? title_tag|default('h2') : 'h2' -%}
+{%- set _interval = interval|default(5000) > 0 ? interval|default(5000) : 5000 -%}
+{%- set _icon_path = icon_path|default('') -%}
+{%- set _slide_label = slide_label|default('%current% of %total%') -%}
+{%- set attributes = attributes ?: create_attribute() -%}
+{%- set attributes = attributes.addClass(['bcl-carousel-v2', 'bcl-carousel-v2--' ~ _layout, 'carousel', 'slide'])
   .setAttribute('id', _id)
   .setAttribute('role', 'region')
   .setAttribute('aria-roledescription', 'carousel')
@@ -36,54 +36,54 @@
   .setAttribute('data-bs-touch', disable_touch ?? false ? 'false' : 'true')
   .setAttribute('data-bs-ride', 'false')
   .setAttribute('data-bs-pause', 'false')
-%}
-{% if _items is not empty %}
-<section{{ attributes }}>
-  {% if _items|length > 1 %}
-    {# First in tab order, visually below the slides. Keep a single control set. #}
-    <div class="bcl-carousel-v2__controls" hidden>
+-%}
+{%- if _items is not empty -%}
+<section{{ attributes }}>{#- -#}
+  {%- if _items|length > 1 -%}
+    {#- First in tab order, visually below the slides. Keep a single control set. -#}
+    <div class="bcl-carousel-v2__controls" hidden>{#- -#}
       <button type="button" class="btn btn-outline-primary bcl-carousel-v2__control" data-bcl-rotation
         data-bcl-play-label="{{ play_label|default('Play slides') }}"
         data-bcl-pause-label="{{ pause_label|default('Pause slides') }}"
-        aria-label="{{ play_label|default('Play slides') }}" aria-controls="{{ _id }}-slides">
-        <span data-bcl-play-icon aria-hidden="true">{% include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'play-fill', path: _icon_path} only %}</span>
-        <span data-bcl-pause-icon aria-hidden="true" hidden>{% include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'pause-fill', path: _icon_path} only %}</span>
-      </button>
-      <div class="bcl-carousel-v2__navigation">
+        aria-label="{{ play_label|default('Play slides') }}" aria-controls="{{ _id }}-slides">{#- -#}
+        <span data-bcl-play-icon aria-hidden="true">{%- include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'play-fill', path: _icon_path} only -%}</span>{#- -#}
+        <span data-bcl-pause-icon aria-hidden="true" hidden>{%- include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'pause-fill', path: _icon_path} only -%}</span>{#- -#}
+      </button>{#- -#}
+      <div class="bcl-carousel-v2__navigation">{#- -#}
         <button type="button" class="btn btn-outline-primary bcl-carousel-v2__control" data-bs-target="#{{ _id }}" data-bs-slide="prev"
-          aria-label="{{ prev_label|default('Previous slide') }}" aria-controls="{{ _id }}-slides">
-          {% include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'chevron-left', path: _icon_path, attributes: create_attribute().setAttribute('aria-hidden', 'true')} only %}
-        </button>
+          aria-label="{{ prev_label|default('Previous slide') }}" aria-controls="{{ _id }}-slides">{#- -#}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'chevron-left', path: _icon_path, attributes: create_attribute().setAttribute('aria-hidden', 'true')} only -%}
+        </button>{#- -#}
         <button type="button" class="btn btn-outline-primary bcl-carousel-v2__control" data-bs-target="#{{ _id }}" data-bs-slide="next"
-          aria-label="{{ next_label|default('Next slide') }}" aria-controls="{{ _id }}-slides">
-          {% include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'chevron-right', path: _icon_path, attributes: create_attribute().setAttribute('aria-hidden', 'true')} only %}
-        </button>
-        <span class="bcl-carousel-v2__counter" aria-hidden="true"><span data-bcl-current>{{ _active }}</span>/<span>{{ _items|length }}</span></span>
-      </div>
-    </div>
-  {% endif %}
-  <div class="carousel-inner" id="{{ _id }}-slides" aria-live="off">
-    {% for item in _items %}
+          aria-label="{{ next_label|default('Next slide') }}" aria-controls="{{ _id }}-slides">{#- -#}
+          {%- include '@oe-bcl/bcl-icon/icon.html.twig' with {name: 'chevron-right', path: _icon_path, attributes: create_attribute().setAttribute('aria-hidden', 'true')} only -%}
+        </button>{#- -#}
+        <span class="bcl-carousel-v2__counter" aria-hidden="true"><span data-bcl-current>{{ _active }}</span>/<span>{{ _items|length }}</span></span>{#- -#}
+      </div>{#- -#}
+    </div>{#- -#}
+  {%- endif -%}
+  <div class="carousel-inner" id="{{ _id }}-slides" aria-live="off">{#- -#}
+    {%- for item in _items -%}
       <div class="carousel-item{{ loop.index == _active ? ' active' : '' }}" role="group" aria-roledescription="slide"
         aria-label="{{ _slide_label|replace({'%current%': loop.index, '%total%': _items|length}) }}"
-        {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval }}"{% endif %}>
-        <div class="bcl-carousel-v2__layout">
-          <div class="bcl-carousel-v2__image">{{ item.image }}</div>
-          {% if item.caption_title is not empty or item.caption is not empty or item.link is not empty %}
-            <div class="bcl-carousel-v2__content">
-              {% if item.caption_title is not empty %}<{{ _title_tag }}>{{ item.caption_title }}</{{ _title_tag }}>{% endif %}
-              {% if item.caption is not empty %}<div class="bcl-carousel-v2__description">{{ item.caption }}</div>{% endif %}
-              {% if item.link is not empty %}
-                {% include '@oe-bcl/bcl-link/link.html.twig' with item.link|merge({attributes: (item.link.attributes ?: create_attribute()).addClass(['btn', 'btn-primary'])}) only %}
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
-        {% if item.copyright is not empty %}
-          <div class="bcl-carousel-v2__copyright"><span class="visually-hidden">{{ item.copyright_label|default('Image credit:') }} </span>{{ item.copyright }}</div>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+        {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval }}"{% endif %}>{#- -#}
+        <div class="bcl-carousel-v2__layout">{#- -#}
+          <div class="bcl-carousel-v2__image">{{ item.image }}</div>{#- -#}
+          {%- if item.caption_title is not empty or item.caption is not empty or item.link is not empty -%}
+            <div class="bcl-carousel-v2__content">{#- -#}
+              {%- if item.caption_title is not empty -%}<{{ _title_tag }}>{{ item.caption_title }}</{{ _title_tag }}>{%- endif -%}
+              {%- if item.caption is not empty -%}<div class="bcl-carousel-v2__description">{{ item.caption }}</div>{%- endif -%}
+              {%- if item.link is not empty -%}
+                {%- include '@oe-bcl/bcl-link/link.html.twig' with item.link|merge({attributes: (item.link.attributes ?: create_attribute()).addClass(['btn', 'btn-primary'])}) only -%}
+              {%- endif -%}
+            </div>{#- -#}
+          {%- endif -%}
+        </div>{#- -#}
+        {%- if item.copyright is not empty -%}
+          <div class="bcl-carousel-v2__copyright"><span class="visually-hidden">{{ item.copyright_label|default('Image credit:') }} </span>{{ item.copyright }}</div>{#- -#}
+        {%- endif -%}
+      </div>{#- -#}
+    {%- endfor -%}
+  </div>{#- -#}
+</section>{#- -#}
+{%- endif -%}
