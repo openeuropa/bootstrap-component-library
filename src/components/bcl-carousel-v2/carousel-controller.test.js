@@ -48,6 +48,46 @@ afterEach(() => {
 });
 
 describe("Carousel V2 Bootstrap integration", () => {
+  test("credits stay outside the moving slides and update after the transition", async () => {
+    const { element, controller } = await mount({
+      items: [
+        { ...data.items[0], copyright: "First credit" },
+        { ...data.items[1], copyright: "Second credit" },
+        { ...data.items[2], copyright: "" },
+      ],
+    });
+    const footer = element.querySelector(".bcl-carousel-v2__credits");
+    expect(footer.parentElement).toBe(element);
+    expect(
+      element.querySelector(".carousel-item .bcl-carousel-v2__copyright"),
+    ).toBeNull();
+    element.classList.add("slide");
+    jest.useFakeTimers();
+    controller.carousel.next();
+    expect(
+      footer.querySelector(":scope > :not([hidden])").textContent,
+    ).toContain("First credit");
+    element
+      .querySelector(".carousel-item.active")
+      .dispatchEvent(new Event("transitionend"));
+    expect(
+      footer.querySelector(":scope > :not([hidden])").textContent,
+    ).toContain("Second credit");
+    controller.carousel.next();
+    element
+      .querySelector(".carousel-item.active")
+      .dispatchEvent(new Event("transitionend"));
+    expect(footer.hidden).toBe(true);
+    controller.dispose();
+    expect(element.querySelector(".bcl-carousel-v2__credits")).toBeNull();
+    expect(
+      element.querySelectorAll(".carousel-item > .bcl-carousel-v2__copyright"),
+    ).toHaveLength(2);
+    expect(element.querySelector(".bcl-carousel-v2__copyright").hidden).toBe(
+      false,
+    );
+  });
+
   test.each([false, true])(
     "Bootstrap swipe respects disable_touch=%s",
     async (disable_touch) => {

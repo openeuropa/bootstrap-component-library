@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .bcl-carousel-v2 {
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
   &:not([data-bcl-initialized]) > .carousel-inner > .carousel-item {
     display: block;
     float: none;
-    margin: 0 0 1.5rem;
+    margin: 0 0 map.get($spacers, 4);
   }
 
   .bcl-carousel-v2__layout {
@@ -21,7 +23,6 @@
   }
 
   .bcl-carousel-v2__image {
-    min-width: 0;
     align-self: center;
 
     img {
@@ -33,7 +34,7 @@
 
   .bcl-carousel-v2__content {
     min-width: 0;
-    padding: 1.5rem;
+    padding: map.get($spacers, 4);
     background: var(--bs-body-bg);
 
     > :last-child {
@@ -42,13 +43,17 @@
   }
 
   .bcl-carousel-v2__description {
-    margin-bottom: 1rem;
+    margin-bottom: map.get($spacers, 3);
     overflow-wrap: anywhere;
   }
 
+  .bcl-carousel-v2__credits {
+    border: map.get($border-widths, 1) solid var(--bs-primary);
+  }
+
   .bcl-carousel-v2__copyright {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: map.get($spacers, 2) map.get($spacers, 3);
+    font-size: $font-size-sm;
     color: var(--bs-secondary-color);
   }
 
@@ -57,15 +62,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem;
-    border-block: 1px solid var(--bs-primary);
+    gap: map.get($spacers, 3);
+    padding: map.get($spacers, 3);
+    border: map.get($border-widths, 1) solid var(--bs-primary);
+  }
+
+  // Credits and controls form one bordered footer, without a divider.
+  &:has(> .bcl-carousel-v2__controls:not([hidden])) {
+    .bcl-carousel-v2__credits {
+      border-bottom: 0;
+    }
+
+    &:has(> .bcl-carousel-v2__credits:not([hidden])) {
+      .bcl-carousel-v2__controls {
+        border-top: 0;
+      }
+    }
   }
 
   .bcl-carousel-v2__navigation {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: map.get($spacers, 2);
   }
 
   .bcl-carousel-v2__control {
@@ -77,8 +95,19 @@
     padding: 0;
     border-radius: 50%;
 
+    [data-bcl-play-icon],
+    [data-bcl-pause-icon] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      display: block;
+    }
+
     &:focus-visible {
-      outline: 2px solid currentColor;
+      outline: map.get($border-widths, 2) solid currentColor;
       outline-offset: 3px;
     }
   }
@@ -87,6 +116,13 @@
     color: var(--bs-primary);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .bcl-carousel-v2__credits,
+    .bcl-carousel-v2__controls {
+      border-inline: 0;
+    }
   }
 
   @include media-breakpoint-up(lg) {
@@ -106,6 +142,11 @@
     }
 
     &.bcl-carousel-v2--full_width {
+      .bcl-carousel-v2__image img {
+        max-height: 28rem;
+        object-fit: cover;
+      }
+
       .bcl-carousel-v2__image,
       .bcl-carousel-v2__content {
         grid-area: 1 / 1;
@@ -116,7 +157,7 @@
         align-self: center;
         justify-self: start;
         width: 50%;
-        margin: 2rem;
+        margin: map.get($spacers, "4-5");
         box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 15%);
       }
     }

@@ -18,6 +18,17 @@ class CarouselV2 {
     this.hovered = element.matches(":hover");
     this.listeners = [];
 
+    // Keep the credit border outside Bootstrap's translated slide elements.
+    this.credits = this.slides.map((slide) =>
+      slide.querySelector(":scope > .bcl-carousel-v2__copyright"),
+    );
+    this.creditFooter = document.createElement("div");
+    this.creditFooter.className = "bcl-carousel-v2__credits";
+    this.credits.forEach((credit) => {
+      if (credit) this.creditFooter.append(credit);
+    });
+    this.inner.after(this.creditFooter);
+
     // No Bootstrap auto-resume on mouseleave, touchend or data-API navigation.
     this.carousel = Carousel.getOrCreateInstance(element, {
       ride: false,
@@ -91,6 +102,10 @@ class CarouselV2 {
       slide.toggleAttribute("inert", index !== activeIndex);
     });
     if (this.counter) this.counter.textContent = String(activeIndex + 1);
+    this.credits.forEach((credit, index) => {
+      if (credit) credit.hidden = index !== activeIndex;
+    });
+    this.creditFooter.hidden = !this.credits[activeIndex];
   }
 
   updateRotation() {
@@ -124,10 +139,16 @@ class CarouselV2 {
     this.element.removeAttribute("data-bcl-initialized");
     this.inner.setAttribute("aria-live", "off");
     if (this.controls) this.controls.hidden = true;
-    this.slides.forEach((slide) => {
+    this.slides.forEach((slide, index) => {
       slide.removeAttribute("aria-hidden");
       slide.removeAttribute("inert");
+      const credit = this.credits[index];
+      if (credit) {
+        credit.hidden = false;
+        slide.append(credit);
+      }
     });
+    this.creditFooter.remove();
     instances.delete(this.element);
   }
 
