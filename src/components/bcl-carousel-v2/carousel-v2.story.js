@@ -69,16 +69,17 @@ export const FullWidth = {
 export const SplitControlsTest = {
   name: "Tests / Split controls",
   args: { id: "carousel-v2-split-controls-test" },
-  tags: ["!autodocs"],
+  tags: ["!autodocs", "carousel-v2-test"],
   play: testControls,
 };
 export const FullWidthControlsTest = {
   name: "Tests / Full width controls",
   args: { id: "carousel-v2-full-width-controls-test", layout: "full_width" },
-  tags: ["!autodocs"],
+  tags: ["!autodocs", "carousel-v2-test"],
   play: testControls,
 };
 export const Autoplay = {
+  tags: ["carousel-v2-test"],
   args: { id: "carousel-v2-autoplay", autoplay: true },
   play: async ({ canvasElement }) => {
     const root = canvasElement.querySelector(".bcl-carousel-v2");
@@ -96,6 +97,7 @@ export const Autoplay = {
   },
 };
 export const SingleSlide = {
+  tags: ["carousel-v2-test"],
   args: { id: "carousel-v2-single", items: data.items.slice(0, 1) },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -105,5 +107,14 @@ export const SingleSlide = {
     await expect(
       canvas.getByRole("heading", { name: data.items[0].caption_title }),
     ).toBeVisible();
+  },
+};
+
+export const FullWidthSingleSlide = {
+  ...SingleSlide,
+  args: {
+    ...SingleSlide.args,
+    id: "carousel-v2-full-width-single",
+    layout: "full_width",
   },
 };

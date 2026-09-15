@@ -11,6 +11,7 @@
   - title_tag (string): slide heading level, defaults to h2
   - prev_label, next_label, pause_label, play_label (strings): translated actions
   - slide_label (string): translated '%current% of %total%' template
+  - carousel_role_label, slide_role_label (strings): translated role descriptions
   - icon_path (string): BCL icon sprite
   - attributes (Drupal attributes)
   Image markup is supplied by the caller, including alt, dimensions and srcset.
@@ -29,7 +30,7 @@
 {%- set attributes = attributes.addClass(['bcl-carousel-v2', 'bcl-carousel-v2--' ~ _layout, 'carousel', 'slide'])
   .setAttribute('id', _id)
   .setAttribute('role', 'region')
-  .setAttribute('aria-roledescription', 'carousel')
+  .setAttribute('aria-roledescription', carousel_role_label|default('carousel'))
   .setAttribute('aria-label', label|default('Featured content'))
   .setAttribute('data-bcl-autoplay', autoplay ?? false ? 'true' : 'false')
   .setAttribute('data-bs-interval', _interval)
@@ -64,7 +65,7 @@
   {%- endif -%}
   <div class="carousel-inner" id="{{ _id }}-slides" aria-live="off">{#- -#}
     {%- for item in _items -%}
-      <div class="carousel-item{{ loop.index == _active ? ' active' : '' }}" role="group" aria-roledescription="slide"
+      <div class="carousel-item{{ loop.index == _active ? ' active' : '' }}" role="group" aria-roledescription="{{ slide_role_label|default('slide') }}"
         aria-label="{{ _slide_label|replace({'%current%': loop.index, '%total%': _items|length}) }}"
         {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval }}"{% endif %}>{#- -#}
         <div class="bcl-carousel-v2__layout">{#- -#}
