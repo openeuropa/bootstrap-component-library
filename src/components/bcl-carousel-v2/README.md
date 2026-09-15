@@ -24,7 +24,8 @@ until Play is selected. The Play/Pause control retains focus and announces its
 next action. Reduced motion starts paused and disables transitions; the user
 can explicitly choose Play. A subsequent change to reduced motion stops it.
 
-All control labels and the `%current% of %total%` slide label are configurable
+All control labels, `carousel_role_label`, `slide_role_label`, and the
+`%current% of %total%` slide label are configurable
 for translation. Inactive slides are inert and hidden from assistive technology;
 the slide container is live only while rotation is paused. Without JavaScript,
 all slides remain readable and the controls stay hidden.
@@ -48,3 +49,7 @@ Storybook's dedicated controls test stories exercise navigation, rotation contro
 and counter updates using play functions; the normal layout previews stay still.
 Jest covers markup, accessibility,
 Bootstrap integration, timer behavior, reduced motion and lifecycle cleanup.
+
+To run the stories tagged `carousel-v2-test` locally, start
+`pnpm storybook:default`, then run `pnpm test:storybook`.
+Install Chromium once with `pnpm exec playwright install chromium`.
