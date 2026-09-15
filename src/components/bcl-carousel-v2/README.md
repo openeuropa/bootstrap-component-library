@@ -7,8 +7,9 @@ Joinup theme CSS and JavaScript. Supply a unique `id`, an accessible `label`,
 - `layout: split` (default): content beside the image from `lg` (992px), stacked
   below the image on smaller screens.
 - `layout: full_width`: an image spanning the carousel, with a content card
-  overlay from `lg`, stacked below the image on smaller screens.
-- Images retain their natural aspect ratio without cropping. Different ratios
+  overlay from `lg`, stacked below the image on smaller screens. Desktop images
+  are capped at 28rem (448px) high and cropped without stretching.
+- Other images retain their natural aspect ratio without cropping. Different ratios
   and content lengths can change slide height. Supply consistent image ratios
   when a consistent height is desired; include intrinsic dimensions and
   responsive `srcset`/`sizes` or a rendered `picture` in each `image` value.
@@ -43,6 +44,7 @@ the controller creates the Bootstrap instance with auto-resume disabled, so an
 explicit user pause survives navigation and hover. V1 and Gallery keep their
 existing behavior.
 
-Storybook's Split and Full Width stories exercise navigation, rotation controls
-and counter updates using play functions. Jest covers markup, accessibility,
+Storybook's dedicated controls test stories exercise navigation, rotation controls
+and counter updates using play functions; the normal layout previews stay still.
+Jest covers markup, accessibility,
 Bootstrap integration, timer behavior, reduced motion and lifecycle cleanup.
