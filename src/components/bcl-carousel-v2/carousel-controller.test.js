@@ -9,6 +9,12 @@ const template = "@oe-bcl/bcl-carousel-v2/carousel.html.twig";
 let motion;
 const mounted = [];
 
+function pointerEvent(type, pointerType = "mouse") {
+  const event = new Event(type);
+  Object.defineProperty(event, "pointerType", { value: pointerType });
+  return event;
+}
+
 async function mount(options = {}) {
   const container = document.createElement("div");
   container.innerHTML = await renderTwigFileAsHtml(template, {
@@ -216,8 +222,8 @@ describe("Carousel V2 Bootstrap integration", () => {
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     rotation.click();
     element.querySelector('[data-bs-slide="next"]').click();
-    element.dispatchEvent(new MouseEvent("mouseenter"));
-    element.dispatchEvent(new MouseEvent("mouseleave"));
+    element.dispatchEvent(pointerEvent("pointerenter"));
+    element.dispatchEvent(pointerEvent("pointerleave"));
     jest.advanceTimersByTime(500);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("3");
     expect(rotation.getAttribute("aria-label")).toBe("Play slides");
@@ -230,12 +236,23 @@ describe("Carousel V2 Bootstrap integration", () => {
     const { element, rotation } = await mount({ interval: 100 });
     jest.useFakeTimers();
     rotation.click();
-    element.dispatchEvent(new MouseEvent("mouseenter"));
+    element.dispatchEvent(pointerEvent("pointerenter"));
     jest.advanceTimersByTime(200);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
-    element.dispatchEvent(new MouseEvent("mouseleave"));
+    element.dispatchEvent(pointerEvent("pointerleave"));
     jest.advanceTimersByTime(100);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+  });
+
+  test("touch-generated hover does not block Play", async () => {
+    const { element, rotation } = await mount({ interval: 100 });
+    jest.useFakeTimers();
+    element.dispatchEvent(pointerEvent("pointerenter", "touch"));
+    element.dispatchEvent(new MouseEvent("mouseenter"));
+    rotation.click();
+    jest.advanceTimersByTime(100);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+    expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
   });
 
   test("focus on content stops rotation until explicitly restarted", async () => {

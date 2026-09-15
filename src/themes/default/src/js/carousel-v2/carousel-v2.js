@@ -15,7 +15,9 @@ class CarouselV2 {
     this.motion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     this.paused =
       element.dataset.bclAutoplay !== "true" || !!this.motion?.matches;
-    this.hovered = element.matches(":hover");
+    this.hovered =
+      element.matches(":hover") &&
+      !!window.matchMedia?.("(any-hover: hover)").matches;
     this.listeners = [];
 
     // Keep the credit border outside Bootstrap's translated slide elements.
@@ -43,11 +45,13 @@ class CarouselV2 {
         this.paused = !this.paused;
         this.updateRotation();
       });
-      this.listen(element, "mouseenter", () => {
+      this.listen(element, "pointerenter", (event) => {
+        if (event.pointerType !== "mouse") return;
         this.hovered = true;
         this.updateRotation();
       });
-      this.listen(element, "mouseleave", () => {
+      this.listen(element, "pointerleave", (event) => {
+        if (event.pointerType !== "mouse") return;
         this.hovered = false;
         this.updateRotation();
       });

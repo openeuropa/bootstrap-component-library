@@ -52,7 +52,15 @@ describe("Carousel V2 markup", () => {
       prev_label: "Anterior",
       next_label: "Următor",
       slide_label: "%current% din %total%",
+      carousel_role_label: "carusel",
+      slide_role_label: "diapozitiv",
     });
+    expect(
+      node.querySelector("section").getAttribute("aria-roledescription"),
+    ).toBe("carusel");
+    expect(
+      node.querySelector(".active").getAttribute("aria-roledescription"),
+    ).toBe("diapozitiv");
     expect(node.querySelector(".active").getAttribute("aria-label")).toBe(
       "2 din 3",
     );
