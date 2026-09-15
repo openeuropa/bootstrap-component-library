@@ -26,7 +26,7 @@ export default {
     docs: {
       description: {
         component:
-          "Responsive split and full-width layouts with shared rotation controls. Autoplay is opt-in; reduced motion starts paused. Images retain their aspect ratio. Full-width content overlays the image from the lg breakpoint and stacks below it on mobile.",
+          "Responsive split and full-width layouts with shared rotation controls. Autoplay is opt-in; reduced motion starts paused. Full-width desktop images are capped at 28rem high and cropped without stretching. Content overlays the image from the lg breakpoint and stacks below it on mobile.",
       },
     },
   },
@@ -62,9 +62,20 @@ const testControls = async ({ canvasElement }) => {
   await expect(inner).toHaveAttribute("aria-live", "polite");
 };
 
-export const Split = { play: testControls };
+export const Split = {};
 export const FullWidth = {
   args: { id: "carousel-v2-full-width", layout: "full_width" },
+};
+export const SplitControlsTest = {
+  name: "Tests / Split controls",
+  args: { id: "carousel-v2-split-controls-test" },
+  tags: ["!autodocs"],
+  play: testControls,
+};
+export const FullWidthControlsTest = {
+  name: "Tests / Full width controls",
+  args: { id: "carousel-v2-full-width-controls-test", layout: "full_width" },
+  tags: ["!autodocs"],
   play: testControls,
 };
 export const Autoplay = {
