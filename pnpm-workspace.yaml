@@ -34,6 +34,8 @@ publicHoistPattern:
   - "@openeuropa/*"
 
 overrides:
+  # GHSA-w5hq-g745-h8pq; retain CommonJS support for test tooling.
+  'uuid@<11.1.1': 11.1.1
   '@babel/core@<=7.29.0': 7.29.7
   '@rollup/plugin-terser>serialize-javascript': 7.0.5
   '@sigstore/core@<=3.2.0': 3.2.1
