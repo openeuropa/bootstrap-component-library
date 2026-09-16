@@ -9,6 +9,7 @@ $icon: (
   "l": 2rem,
   "xl": 2.5rem,
   "2xl": 3rem,
+  "3xl": 6rem,
   "fluid": 1em,
 ) !default;
 
@@ -45,6 +46,11 @@ $icon: (
 .icon--2xl {
   width: map.get($icon, "2xl");
   height: map.get($icon, "2xl");
+}
+
+.icon--3xl {
+  width: map.get($icon, "3xl");
+  height: map.get($icon, "3xl");
 }
 
 .icon--fluid {

@@ -11,6 +11,7 @@ const getArgs = () => ({
   variant: "default",
   alignment: "left",
   responsive_columns: 3,
+  icon_size: "3xl",
   more: true,
   display_icons: true,
 });
@@ -45,6 +46,17 @@ const getArgTypes = () => ({
     table: {
       type: { summary: "boolean" },
       defaultValue: { summary: "true" },
+      category: "Content",
+    },
+  },
+  icon_size: {
+    name: "icon size",
+    type: { name: "select" },
+    options: ["l", "3xl"],
+    description: "Size of the icons",
+    table: {
+      type: { summary: "string" },
+      defaultValue: { summary: "3xl" },
       category: "Content",
     },
   },
