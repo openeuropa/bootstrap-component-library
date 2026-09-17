@@ -86,6 +86,50 @@ We've also added some new variables that overwrite and make use of extra classes
 - `.text-color-default`: Text color is changed based on the 'text' variable, overriding all text colors inside a component.
 - `.bg-default`: Background color is changed based on the 'background' variable. It adds a background for the component but does not override if it already has a `bg` class (e.g., `bg-primary`).
 
+#### Color tones
+
+Optional. Set `$color-scheme-tones` in the entry file to get a tone scale (lighter / darker variants) for each scheme color.
+The map key is the tone name, the value is the [OKLCH](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch) lightness.
+The hue is kept and the chroma is reduced only when the color is out of sRGB.
+OKLCH gives the same visible lightness for all colors, so the text contrast ([WCAG](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)) stays about the same across colors.
+
+Example with the `ocean` scheme above:
+
+```scss
+$color-scheme-tones: (
+  "100": 97%,
+  "500": 55%,
+  "900": 18%,
+);
+```
+
+adds these variables to the generated CSS:
+
+```css
+.ocean {
+  --bs-primary-100: #d4ffbf;
+  --bs-primary-500: #2c8800;
+  --bs-primary-900: #001800;
+  --bs-secondary-100: #fdff0c;
+  --bs-secondary-500: #767800;
+  --bs-secondary-900: #131300;
+  --bs-danger-100: #ffeed9;
+  --bs-danger-500: #b35200;
+  --bs-danger-900: #260600;
+  --bs-success-100: #d2ffc7;
+  --bs-success-500: #008b00;
+  --bs-success-900: #001900;
+  --bs-link-100: #f5f1ff;
+  --bs-link-500: #821dff;
+  --bs-link-900: #180041;
+}
+```
+
+Use `$color-scheme-tones-exclude` to list the scheme keys without tones. The default value is `"text", "background"`.
+A new value replaces this list, so keep these two keys in it: `$color-scheme-tones-exclude: "text", "background", "link";`.
+
+Requirement: Sass >= 1.79 (color spaces).
+
 ### Prerequisites
 
 - BCL-Builder version >= 1.2.1
