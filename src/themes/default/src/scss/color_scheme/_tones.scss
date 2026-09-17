@@ -1,0 +1,35 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:math";
+// Color scheme - Tones
+
+// Tone name => OKLCH lightness. Empty map: no tone is generated.
+$color-scheme-tones: () !default;
+
+// Scheme keys without tones.
+$color-scheme-tones-exclude: "text", "background" !default;
+
+// Returns the color with a new OKLCH lightness, mapped into sRGB.
+@function tone-color($color, $lightness) {
+  $tone: color.to-gamut(
+    color.change($color, $lightness: $lightness, $space: oklch),
+    $space: rgb,
+    $method: local-minde
+  );
+
+  @return rgb(
+    math.round(color.channel($tone, "red", $space: rgb)),
+    math.round(color.channel($tone, "green", $space: rgb)),
+    math.round(color.channel($tone, "blue", $space: rgb))
+  );
+}
+
+@mixin generate-tones($colors) {
+  @each $color, $value in $colors {
+    @if not list.index($color-scheme-tones-exclude, $color) {
+      @each $tone, $lightness in $color-scheme-tones {
+        --#{$prefix}#{$color}-#{$tone}: #{tone-color($value, $lightness)};
+      }
+    }
+  }
+}
