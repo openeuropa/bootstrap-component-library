@@ -1,0 +1,549 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Carousel V2 markup renders full_width layout 1`] = `
+<jest>
+  <section
+    aria-label="Featured priorities"
+    aria-roledescription="carousel"
+    class="bcl-carousel-v2 bcl-carousel-v2--full_width carousel slide"
+    data-bcl-autoplay="false"
+    data-bs-interval="5000"
+    data-bs-pause="false"
+    data-bs-ride="false"
+    data-bs-touch="true"
+    id="carousel-v2-example"
+    role="region"
+  >
+    <div
+      class="bcl-carousel-v2__controls"
+      hidden
+    >
+      <button
+        aria-controls="carousel-v2-example-slides"
+        aria-label="Play slides"
+        class="btn btn-outline-primary bcl-carousel-v2__control"
+        data-bcl-pause-label="Pause slides"
+        data-bcl-play-label="Play slides"
+        data-bcl-rotation
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          data-bcl-play-icon
+        >
+          <svg
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#play-fill"
+            />
+          </svg>
+        </span>
+        <span
+          aria-hidden="true"
+          data-bcl-pause-icon
+          hidden
+        >
+          <svg
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#pause-fill"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        class="bcl-carousel-v2__navigation"
+      >
+        <button
+          aria-controls="carousel-v2-example-slides"
+          aria-label="Previous slide"
+          class="btn btn-outline-primary bcl-carousel-v2__control"
+          data-bs-slide="prev"
+          data-bs-target="#carousel-v2-example"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-left"
+            />
+          </svg>
+        </button>
+        <button
+          aria-controls="carousel-v2-example-slides"
+          aria-label="Next slide"
+          class="btn btn-outline-primary bcl-carousel-v2__control"
+          data-bs-slide="next"
+          data-bs-target="#carousel-v2-example"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </button>
+        <span
+          aria-hidden="true"
+          class="bcl-carousel-v2__counter"
+        >
+          <span
+            data-bcl-current
+          >
+            1
+          </span>
+          /
+          <span>
+            3
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      aria-live="off"
+      class="carousel-inner"
+      id="carousel-v2-example-slides"
+    >
+      <div
+        aria-label="1 of 3"
+        aria-roledescription="slide"
+        class="carousel-item active"
+        role="group"
+      >
+        <div
+          class="bcl-carousel-v2__layout"
+        >
+          <div
+            class="bcl-carousel-v2__image"
+          >
+            <img
+              alt="Green coastal cliffs with a winding path"
+              decoding="async"
+              height="600"
+              src="https://picsum.photos/id/1018/1200/600"
+              width="1200"
+            />
+          </div>
+          <div
+            class="bcl-carousel-v2__content"
+          >
+            <h2>
+              Explore our coastlines
+            </h2>
+            <div
+              class="bcl-carousel-v2__description"
+            >
+              <p>
+                Discover the landscapes and communities shaping our shared environment.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="#coastlines"
+            >
+              Discover more
+            </a>
+          </div>
+        </div>
+        <div
+          class="bcl-carousel-v2__copyright"
+        >
+          <span
+            class="visually-hidden"
+          >
+            Image credit: 
+          </span>
+          © Coastal Observatory (demo)
+        </div>
+      </div>
+      <div
+        aria-label="2 of 3"
+        aria-roledescription="slide"
+        class="carousel-item"
+        role="group"
+      >
+        <div
+          class="bcl-carousel-v2__layout"
+        >
+          <div
+            class="bcl-carousel-v2__image"
+          >
+            <img
+              alt="River winding through a mountain valley"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="https://picsum.photos/id/1015/1200/600"
+              width="1200"
+            />
+          </div>
+          <div
+            class="bcl-carousel-v2__content"
+          >
+            <h2>
+              Protecting nature together
+            </h2>
+            <div
+              class="bcl-carousel-v2__description"
+            >
+              <p>
+                Learn how local projects help protect biodiversity for future generations.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="#projects"
+            >
+              Explore projects
+            </a>
+          </div>
+        </div>
+        <div
+          class="bcl-carousel-v2__copyright"
+        >
+          <span
+            class="visually-hidden"
+          >
+            Image credit: 
+          </span>
+          © Nature Conservation Network (demo)
+        </div>
+      </div>
+      <div
+        aria-label="3 of 3"
+        aria-roledescription="slide"
+        class="carousel-item"
+        role="group"
+      >
+        <div
+          class="bcl-carousel-v2__layout"
+        >
+          <div
+            class="bcl-carousel-v2__image"
+          >
+            <img
+              alt="Rugged mountains under a clear sky"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="https://picsum.photos/id/1016/1200/600"
+              width="1200"
+            />
+          </div>
+          <div
+            class="bcl-carousel-v2__content"
+          >
+            <h2>
+              A sustainable future
+            </h2>
+            <div
+              class="bcl-carousel-v2__description"
+            >
+              <p>
+                Find out how research supports more resilient communities.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="#research"
+            >
+              Read more
+            </a>
+          </div>
+        </div>
+        <div
+          class="bcl-carousel-v2__copyright"
+        >
+          <span
+            class="visually-hidden"
+          >
+            Image credit: 
+          </span>
+          © Sustainable Futures Institute (demo)
+        </div>
+      </div>
+    </div>
+  </section>
+</jest>
+`;
+
+exports[`Carousel V2 markup renders split layout 1`] = `
+<jest>
+  <section
+    aria-label="Featured priorities"
+    aria-roledescription="carousel"
+    class="bcl-carousel-v2 bcl-carousel-v2--split carousel slide"
+    data-bcl-autoplay="false"
+    data-bs-interval="5000"
+    data-bs-pause="false"
+    data-bs-ride="false"
+    data-bs-touch="true"
+    id="carousel-v2-example"
+    role="region"
+  >
+    <div
+      class="bcl-carousel-v2__controls"
+      hidden
+    >
+      <button
+        aria-controls="carousel-v2-example-slides"
+        aria-label="Play slides"
+        class="btn btn-outline-primary bcl-carousel-v2__control"
+        data-bcl-pause-label="Pause slides"
+        data-bcl-play-label="Play slides"
+        data-bcl-rotation
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          data-bcl-play-icon
+        >
+          <svg
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#play-fill"
+            />
+          </svg>
+        </span>
+        <span
+          aria-hidden="true"
+          data-bcl-pause-icon
+          hidden
+        >
+          <svg
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#pause-fill"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        class="bcl-carousel-v2__navigation"
+      >
+        <button
+          aria-controls="carousel-v2-example-slides"
+          aria-label="Previous slide"
+          class="btn btn-outline-primary bcl-carousel-v2__control"
+          data-bs-slide="prev"
+          data-bs-target="#carousel-v2-example"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-left"
+            />
+          </svg>
+        </button>
+        <button
+          aria-controls="carousel-v2-example-slides"
+          aria-label="Next slide"
+          class="btn btn-outline-primary bcl-carousel-v2__control"
+          data-bs-slide="next"
+          data-bs-target="#carousel-v2-example"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bi icon--s"
+          >
+            <use
+              xlink:href="/icons.svg#chevron-right"
+            />
+          </svg>
+        </button>
+        <span
+          aria-hidden="true"
+          class="bcl-carousel-v2__counter"
+        >
+          <span
+            data-bcl-current
+          >
+            1
+          </span>
+          /
+          <span>
+            3
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      aria-live="off"
+      class="carousel-inner"
+      id="carousel-v2-example-slides"
+    >
+      <div
+        aria-label="1 of 3"
+        aria-roledescription="slide"
+        class="carousel-item active"
+        role="group"
+      >
+        <div
+          class="bcl-carousel-v2__layout"
+        >
+          <div
+            class="bcl-carousel-v2__image"
+          >
+            <img
+              alt="Green coastal cliffs with a winding path"
+              decoding="async"
+              height="600"
+              src="https://picsum.photos/id/1018/1200/600"
+              width="1200"
+            />
+          </div>
+          <div
+            class="bcl-carousel-v2__content"
+          >
+            <h2>
+              Explore our coastlines
+            </h2>
+            <div
+              class="bcl-carousel-v2__description"
+            >
+              <p>
+                Discover the landscapes and communities shaping our shared environment.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="#coastlines"
+            >
+              Discover more
+            </a>
+          </div>
+        </div>
+        <div
+          class="bcl-carousel-v2__copyright"
+        >
+          <span
+            class="visually-hidden"
+          >
+            Image credit: 
+          </span>
+          © Coastal Observatory (demo)
+        </div>
+      </div>
+      <div
+        aria-label="2 of 3"
+        aria-roledescription="slide"
+        class="carousel-item"
+        role="group"
+      >
+        <div
+          class="bcl-carousel-v2__layout"
+        >
+          <div
+            class="bcl-carousel-v2__image"
+          >
+            <img
+              alt="River winding through a mountain valley"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="https://picsum.photos/id/1015/1200/600"
+              width="1200"
+            />
+          </div>
+          <div
+            class="bcl-carousel-v2__content"
+          >
+            <h2>
+              Protecting nature together
+            </h2>
+            <div
+              class="bcl-carousel-v2__description"
+            >
+              <p>
+                Learn how local projects help protect biodiversity for future generations.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="#projects"
+            >
+              Explore projects
+            </a>
+          </div>
+        </div>
+        <div
+          class="bcl-carousel-v2__copyright"
+        >
+          <span
+            class="visually-hidden"
+          >
+            Image credit: 
+          </span>
+          © Nature Conservation Network (demo)
+        </div>
+      </div>
+      <div
+        aria-label="3 of 3"
+        aria-roledescription="slide"
+        class="carousel-item"
+        role="group"
+      >
+        <div
+          class="bcl-carousel-v2__layout"
+        >
+          <div
+            class="bcl-carousel-v2__image"
+          >
+            <img
+              alt="Rugged mountains under a clear sky"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="https://picsum.photos/id/1016/1200/600"
+              width="1200"
+            />
+          </div>
+          <div
+            class="bcl-carousel-v2__content"
+          >
+            <h2>
+              A sustainable future
+            </h2>
+            <div
+              class="bcl-carousel-v2__description"
+            >
+              <p>
+                Find out how research supports more resilient communities.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="#research"
+            >
+              Read more
+            </a>
+          </div>
+        </div>
+        <div
+          class="bcl-carousel-v2__copyright"
+        >
+          <span
+            class="visually-hidden"
+          >
+            Image credit: 
+          </span>
+          © Sustainable Futures Institute (demo)
+        </div>
+      </div>
+    </div>
+  </section>
+</jest>
+`;
