@@ -34,7 +34,6 @@ packageExtensionsChecksum: sha256-bDBi5OrvEkalWgnRry3XIFQ+QXrLusQYvrqC4Qd+Ejc=
 patchedDependencies:
   braces@3.0.3: bda0bdd7a68daff67eee7b85b1757e92e4abdd4a07def2912fc1702474c76c14
   locutus@3.0.36: 286f28bef39dac74b109b86b3b9397b9b4a34fd03dfdf2a2965d821c55e6dfaa
-  slim-select@3.6.1: 0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650
   twing@7.3.1: bf4c4b36c87db336303b65b045abd7e98a91abc5d74f823b5b3aa2c218a4b3d4
 
 importers:
@@ -165,8 +164,8 @@ importers:
         specifier: 14.0.1
         version: 14.0.1
       slim-select:
-        specifier: 3.6.1
-        version: 3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: github:tibi2303/slim-select#c4ce7ea6725f3758c947968fb00987ade05c06b0
+        version: https://codeload.github.com/tibi2303/slim-select/tar.gz/c4ce7ea6725f3758c947968fb00987ade05c06b0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       storybook:
         specifier: ^10.6.0
         version: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.2.4)
@@ -1206,8 +1205,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5
       slim-select:
-        specifier: 3.6.1
-        version: 3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: github:tibi2303/slim-select#c4ce7ea6725f3758c947968fb00987ade05c06b0
+        version: https://codeload.github.com/tibi2303/slim-select/tar.gz/c4ce7ea6725f3758c947968fb00987ade05c06b0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   src/themes/default/storybook:
     devDependencies:
@@ -1377,8 +1376,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5
       slim-select:
-        specifier: 3.6.1
-        version: 3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: github:tibi2303/slim-select#c4ce7ea6725f3758c947968fb00987ade05c06b0
+        version: https://codeload.github.com/tibi2303/slim-select/tar.gz/c4ce7ea6725f3758c947968fb00987ade05c06b0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   src/themes/joinup/storybook:
     devDependencies:
@@ -9553,8 +9552,9 @@ packages:
     resolution: {integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==}
     engines: {node: '>=10'}
 
-  slim-select@3.6.1:
-    resolution: {integrity: sha512-5cczXlJ7ppVHSqQe/ZjH+gdgrB9aicCdYLYG8GfMEC0Um1rr/XcwNEygg7S3+3PvjvZDSH4WMCa39wMxhyWX/g==}
+  slim-select@https://codeload.github.com/tibi2303/slim-select/tar.gz/c4ce7ea6725f3758c947968fb00987ade05c06b0:
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/tibi2303/slim-select/tar.gz/c4ce7ea6725f3758c947968fb00987ade05c06b0}
+    version: 3.6.1
     engines: {node: '>=20.19.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -19738,7 +19738,7 @@ snapshots:
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
 
-  slim-select@3.6.1(patch_hash=0fb92625c5c2595f7f86199e8d70d5c715f9980bf77c464034eb29b743779650)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  slim-select@https://codeload.github.com/tibi2303/slim-select/tar.gz/c4ce7ea6725f3758c947968fb00987ade05c06b0(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     optionalDependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
