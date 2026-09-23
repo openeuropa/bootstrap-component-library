@@ -115,3 +115,15 @@ twig-loader would be defined as such:
 ## Developer's guidelines
 
 [Developer's guidelines](docs/developing.md)
+
+## Accessibility
+
+Run `pnpm run audit:a11y` to scan the existing component and composition test
+fixtures against WCAG 2.2 A/AA axe rules and generate a coverage report in
+`build/accessibility`. See the [findings by component](docs/accessibility-findings.md)
+for a concise issue list, or the [detailed audit](docs/accessibility-audit.md)
+for evidence and remaining checks.
+
+Run `pnpm run audit:a11y:snapshots` to check the rendered DOM of every snapshot
+test variant. Results are written to `build/accessibility/snapshots`; the command
+returns a nonzero exit code for accessibility findings, scan errors, or test failures.

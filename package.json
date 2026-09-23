@@ -52,7 +52,9 @@
     "setup:project": "npm-run-all -s build:assets prepare",
     "twig:snapshots": "pnpm run jest",
     "update-version": "scripts/update-version.sh",
-    "watch": "scripts/watch.js --"
+    "watch": "scripts/watch.js --",
+    "audit:a11y": "node scripts/accessibility-audit.cjs",
+    "audit:a11y:snapshots": "node scripts/accessibility-snapshots.cjs"
   },
   "keywords": [
     "openeuropa",
