@@ -111,6 +111,13 @@ $header-link-active-background: #003776 !default;
     box-shadow: var(--bs-box-shadow);
   }
 
+  .bcl-header:not(:has(.bcl-mega-menu > [aria-expanded="true"]))
+    .bcl-header__site-name {
+    position: relative;
+    z-index: 1040;
+    box-shadow: 0 8px 16px rgba(224, 229, 245, 0.8);
+  }
+
   .bcl-header nav + nav {
     min-height: 3.5rem;
 
@@ -153,7 +160,8 @@ $header-link-active-background: #003776 !default;
         gap: 1rem;
         justify-content: space-between;
         position: relative;
-        padding: 1rem;
+        padding-block: 1rem;
+        padding-inline: 0 1rem;
         border-bottom: 1px solid $primary-bg-subtle;
         text-align: left;
         // Unset border-radius for buttons.
@@ -184,8 +192,8 @@ $header-link-active-background: #003776 !default;
           content: "";
           // Unset border from bootstrap style.
           border: none;
-          width: 20px;
-          height: 20px;
+          width: 14px;
+          height: 14px;
           background-size: cover;
           background-position: center;
         }
@@ -245,6 +253,10 @@ $header-link-active-background: #003776 !default;
   }
 
   .bcl-header__navbar.navbar {
+    // Align the first label with the header while retaining its clickable padding.
+    .navbar-nav {
+      margin-inline-start: -#{map.get($spacers, 3)};
+    }
     .dropdown-toggle,
     .nav-link {
       border-radius: 0;
