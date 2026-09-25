@@ -142,6 +142,7 @@ $mm-gutter-y: map.get($spacers, "2-5") !default;
   // The shadowy bar is vertical.
   @include media-breakpoint-up(xl) {
     block-size: 100%;
+    clip-path: inset(0 -10px);
     position: absolute;
     inset-inline-end: 0;
     inset-block-start: 0;
@@ -159,16 +160,19 @@ $mm-gutter-y: map.get($spacers, "2-5") !default;
 // The back button.
 .bcl-mega-menu__back-button-block {
   position: relative;
-  padding: 20px map.get($spacers, 1) 0;
+  padding-block: 20px 0;
+  padding-inline: 0 map.get($spacers, 1);
   > .btn-link {
     @include link-reset;
+    padding-inline-start: 0;
   }
 }
 
 // Left column with the description and "Discover more" link.
 .bcl-mega-menu__info {
   > .content-block {
-    padding: $mm-gutter-x;
+    padding-block: $mm-gutter-x;
+    padding-inline: 0 $mm-gutter-x;
     background: $primary-bg-subtle;
     @include media-breakpoint-up(lg) {
       margin-inline-end: 0;
@@ -411,8 +415,18 @@ ul.bcl-mega-menu__items {
   }
 }
 
-// Set light-blue full-width background on some elements.
 @include media-breakpoint-down(lg) {
+  ul.bcl-mega-menu__items > li > :is(span, a, button),
+  .bcl-mega-menu__submenu > .__header > .__label,
+  .bcl-mega-menu__submenu .__see_all > .see-all-button {
+    padding-inline-start: 0;
+  }
+
+  .bcl-mega-menu__back-button-block::before {
+    box-shadow: inset 0 16px 16px -12px rgba($primary, 0.25);
+  }
+
+  // Set light-blue full-width background on some elements.
   .bcl-mega-menu__submenu > .__header,
   .bcl-mega-menu .content-block,
   .bcl-mega-menu__back-button-block {
