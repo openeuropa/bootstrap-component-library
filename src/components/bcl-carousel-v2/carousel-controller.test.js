@@ -48,6 +48,7 @@ afterEach(() => {
       controller.dispose();
   });
   document.body.innerHTML = "";
+  document.documentElement.removeAttribute("dir");
   jest.useRealTimers();
   jest.restoreAllMocks();
   delete window.matchMedia;
@@ -147,18 +148,34 @@ describe("Carousel V2 Bootstrap integration", () => {
     expect(element.querySelector(".active").hasAttribute("inert")).toBe(false);
   });
 
-  test("keyboard navigation moves focus out of the hidden slide", async () => {
-    const { element } = await mount();
-    const link = element.querySelector(".active a");
-    link.focus();
-    link.dispatchEvent(
-      new KeyboardEvent("keydown", { key: "ArrowRight", bubbles: true }),
-    );
-    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
-    expect(document.activeElement).toBe(
-      element.querySelector('[data-bs-slide="next"]'),
-    );
-  });
+  test.each([
+    ["ltr", "ArrowLeft", "prev", "3"],
+    ["ltr", "ArrowRight", "next", "2"],
+    ["rtl", "ArrowLeft", "next", "2"],
+    ["rtl", "ArrowRight", "prev", "3"],
+  ])(
+    "%s %s moves focus to %s after the outgoing slide is hidden",
+    async (dir, key, control, current) => {
+      document.documentElement.dir = dir;
+      const { element } = await mount();
+      element.classList.add("slide");
+      jest.useFakeTimers();
+      const link = element.querySelector(".active a");
+      link.focus();
+      link.dispatchEvent(new KeyboardEvent("keydown", { key, bubbles: true }));
+      expect(document.activeElement).toBe(link);
+      element
+        .querySelector(".carousel-item.active")
+        .dispatchEvent(new Event("transitionend"));
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe(
+        current,
+      );
+      expect(document.activeElement).toBe(
+        element.querySelector(`[data-bs-slide="${control}"]`),
+      );
+      expect(link.closest(".carousel-item").hasAttribute("inert")).toBe(true);
+    },
+  );
 
   test("autoplay starts through Bootstrap and uses per-slide intervals", async () => {
     const cycle = jest.spyOn(Carousel.prototype, "cycle");
@@ -264,6 +281,24 @@ describe("Carousel V2 Bootstrap integration", () => {
     element.querySelector(".active a").blur();
     jest.advanceTimersByTime(200);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+  });
+
+  test("keyboard focus on rotation stops autoplay until explicitly restarted", async () => {
+    const { element, rotation } = await mount({
+      autoplay: true,
+      interval: 100,
+    });
+    jest.useFakeTimers();
+    rotation.focus();
+    expect(rotation.getAttribute("aria-label")).toBe("Play slides");
+    rotation.blur();
+    jest.advanceTimersByTime(200);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    rotation.focus();
+    rotation.click();
+    expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
+    jest.advanceTimersByTime(100);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
   });
 
   test("reduced motion overrides autoplay, supports explicit Play and subsequent preference changes", async () => {
