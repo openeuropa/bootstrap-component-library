@@ -38,6 +38,24 @@ const testControls = async ({ canvasElement }) => {
   await waitFor(() =>
     expect(root).toHaveAttribute("data-bcl-initialized", "true"),
   );
+  const slideLink = root.querySelector(".carousel-item.active a");
+  // Enter from immediately before the carousel to verify its first tab stop.
+  const beforeCarousel = root.ownerDocument.createElement("button");
+  beforeCarousel.textContent = "Before carousel";
+  root.before(beforeCarousel);
+  try {
+    beforeCarousel.focus();
+    for (const name of ["Play slides", "Previous slide", "Next slide"]) {
+      await userEvent.tab();
+      await expect(canvas.getByRole("button", { name })).toHaveFocus();
+    }
+    await userEvent.tab();
+    await expect(slideLink).toHaveFocus();
+    await userEvent.tab();
+    await expect(root.contains(root.ownerDocument.activeElement)).toBe(false);
+  } finally {
+    beforeCarousel.remove();
+  }
   const counter = root.querySelector("[data-bcl-current]");
   const initial = Number(counter.textContent);
   const total = root.querySelectorAll(".carousel-item").length;

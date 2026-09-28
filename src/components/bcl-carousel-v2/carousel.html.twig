@@ -19,11 +19,14 @@
 #}
 {%- set _items = items|default([]) -%}
 {%- set _id = id|default('bcl-carousel-v2-' ~ random(1000000000)) -%}
-{%- set _layout = layout|default('split') in ['split', 'full_width'] ? layout|default('split') : 'split' -%}
+{%- set _layout = layout|default('split') -%}
+{%- set _layout = _layout in ['split', 'full_width'] ? _layout : 'split' -%}
 {%- set _active = active_item|default(1) -%}
 {%- set _active = _active >= 1 and _active <= _items|length ? _active : 1 -%}
-{%- set _title_tag = title_tag|default('h2') in ['h2', 'h3', 'h4', 'h5', 'h6'] ? title_tag|default('h2') : 'h2' -%}
-{%- set _interval = interval|default(5000) > 0 ? interval|default(5000) : 5000 -%}
+{%- set _title_tag = title_tag|default('h2') -%}
+{%- set _title_tag = _title_tag in ['h2', 'h3', 'h4', 'h5', 'h6'] ? _title_tag : 'h2' -%}
+{%- set _interval = interval|default(5000) -%}
+{%- set _interval = _interval > 0 ? _interval : 5000 -%}
 {%- set _icon_path = icon_path|default('') -%}
 {%- set _slide_label = slide_label|default('%current% of %total%') -%}
 {%- set attributes = attributes ?: create_attribute() -%}
@@ -41,7 +44,7 @@
 {%- if _items is not empty -%}
 <section{{ attributes }}>{#- -#}
   {%- if _items|length > 1 -%}
-    {#- First in tab order, visually below the slides. Keep a single control set. -#}
+    {#- WAI carousel pattern: rotation control first in tab order; CSS keeps the footer below the slides. -#}
     <div class="bcl-carousel-v2__controls" hidden>{#- -#}
       <button type="button" class="btn btn-outline-primary bcl-carousel-v2__control" data-bcl-rotation
         data-bcl-play-label="{{ play_label|default('Play slides') }}"

@@ -35,7 +35,12 @@
   .bcl-carousel-v2__content {
     min-width: 0;
     padding: map.get($spacers, 4);
+    overflow-wrap: anywhere;
     background: var(--bs-body-bg);
+
+    > :is(h2, h3, h4, h5, h6) {
+      margin-bottom: map.get($spacers, 3);
+    }
 
     > :last-child {
       margin-bottom: 0;
@@ -44,6 +49,7 @@
 
   .bcl-carousel-v2__description {
     margin-bottom: map.get($spacers, 3);
+    font-size: $font-size-base;
     overflow-wrap: anywhere;
   }
 
@@ -52,14 +58,16 @@
   }
 
   .bcl-carousel-v2__copyright {
-    padding: map.get($spacers, 2) map.get($spacers, 3);
+    padding: map.get($spacers, 1) map.get($spacers, 3);
     font-size: $font-size-sm;
-    color: var(--bs-secondary-color);
+    color: $gray-600;
+    overflow-wrap: anywhere;
   }
 
   .bcl-carousel-v2__controls {
     order: 1;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: map.get($spacers, 3);
@@ -82,12 +90,14 @@
 
   .bcl-carousel-v2__navigation {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: map.get($spacers, 2);
   }
 
   .bcl-carousel-v2__control {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     width: 2.75rem;
@@ -114,6 +124,7 @@
 
   .bcl-carousel-v2__counter {
     color: var(--bs-primary);
+    font-size: $font-size-lg;
     font-weight: 600;
     font-variant-numeric: tabular-nums;
   }

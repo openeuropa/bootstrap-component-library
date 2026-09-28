@@ -1,4 +1,5 @@
 import Carousel from "@openeuropa/bcl-bootstrap/js/src/carousel";
+import { isRTL } from "@openeuropa/bcl-bootstrap/js/src/util/index";
 
 const SELECTOR = ".bcl-carousel-v2";
 const instances = new Map();
@@ -38,7 +39,7 @@ class CarouselV2 {
     });
     this.carousel.pause();
     this.listen(element, "slid.bs.carousel", (event) => {
-      if (event.target === element) this.updateSlides();
+      if (event.target === element) this.updateSlides(event.direction);
     });
     if (this.rotation) {
       this.listen(this.rotation, "click", () => {
@@ -56,8 +57,12 @@ class CarouselV2 {
         this.updateRotation();
       });
       this.listen(element, "focusin", (event) => {
-        // Keep the rotation button operable without changing its pending action.
-        if (!this.rotation.contains(event.target)) {
+        // Keyboard focus always stops rotation. A pointer click on the
+        // rotation button must retain its pending Play/Pause action.
+        if (
+          !this.rotation.contains(event.target) ||
+          this.rotation.matches(":focus-visible")
+        ) {
           this.paused = true;
           this.updateRotation();
         }
@@ -85,7 +90,7 @@ class CarouselV2 {
     this.listeners.push(() => target.removeEventListener(event, listener));
   }
 
-  updateSlides() {
+  updateSlides(direction) {
     const activeIndex = this.slides.findIndex((slide) =>
       slide.classList.contains("active"),
     );
@@ -97,8 +102,9 @@ class CarouselV2 {
           index !== activeIndex && slide.contains(document.activeElement),
       )
     ) {
+      const order = (direction === "left") !== isRTL() ? "next" : "prev";
       this.element
-        .querySelector('[data-bs-slide="next"]')
+        .querySelector(`[data-bs-slide="${order}"]`)
         ?.focus({ preventScroll: true });
     }
     this.slides.forEach((slide, index) => {
