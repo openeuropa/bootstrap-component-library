@@ -75,7 +75,7 @@
           <div class="bcl-carousel-v2__image">{{ item.image }}</div>{#- -#}
           {%- if item.caption_title is not empty or item.caption is not empty or item.link is not empty -%}
             <div class="bcl-carousel-v2__content">{#- -#}
-              {%- if item.caption_title is not empty -%}<{{ _title_tag }}>{{ item.caption_title }}</{{ _title_tag }}>{%- endif -%}
+              {%- if item.caption_title is not empty -%}<{{ _title_tag }} class="h1">{{ item.caption_title }}</{{ _title_tag }}>{%- endif -%}
               {%- if item.caption is not empty -%}<div class="bcl-carousel-v2__description">{{ item.caption }}</div>{%- endif -%}
               {%- if item.link is not empty -%}
                 {%- include '@oe-bcl/bcl-link/link.html.twig' with item.link|merge({attributes: (item.link.attributes ?: create_attribute()).addClass(['btn', 'btn-primary'])}) only -%}
