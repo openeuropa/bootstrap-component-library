@@ -129,6 +129,9 @@ describe("Slim Select accessibility", () => {
       ),
     ).toEqual(["Belgium", "Czechia", "France"]);
     expect(action.closest('[role="listbox"]')).toBeNull();
+    expect(
+      group.querySelector(".ss-optgroup-label .ss-selectall-slot"),
+    ).not.toBeNull();
     expect(action.getAttribute("aria-controls")).toBe(group.id);
     expect(
       await axe(document.body, { rules: { region: { enabled: false } } }),
@@ -187,6 +190,56 @@ describe("Slim Select accessibility", () => {
     action = createGroupedSelect({}, { beforeChange });
     action.click();
     expect(beforeChange).toHaveBeenCalled();
+    expect(slimSelect.getSelected()).toEqual(["it"]);
+  });
+
+  test("enabling and disabling updates native selection buttons", () => {
+    createGroupedSelect({ disabled: true });
+    const buttons = () => [
+      ...document.querySelectorAll(".ss-value-delete, .ss-selectall"),
+    ];
+    expect(buttons()).toHaveLength(2);
+    expect(buttons().every((button) => button.disabled)).toBe(true);
+
+    slimSelect.enable();
+    expect(buttons().every((button) => !button.disabled)).toBe(true);
+    document.querySelector(".ss-selectall").click();
+    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
+
+    slimSelect.disable();
+    expect(buttons().every((button) => button.disabled)).toBe(true);
+    buttons().forEach((button) => button.click());
+    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
+
+    slimSelect.enable();
+    document
+      .querySelector('.ss-value-delete[aria-label="Remove Italy"]')
+      .click();
+    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz"]);
+  });
+
+  test("enabling keeps group selection disabled without eligible options", () => {
+    createGroupedSelect({ disabled: true });
+    slimSelect.setData([
+      {
+        label: "Unavailable",
+        selectAll: true,
+        options: [{ text: "France", value: "fr", disabled: true }],
+      },
+    ]);
+    slimSelect.enable();
+    const action = document.querySelector(".ss-selectall");
+    expect(action.disabled).toBe(true);
+    action.click();
+    expect(slimSelect.getSelected()).toEqual([]);
+  });
+
+  test("group selection accepts beforeChange without a return value", () => {
+    const beforeChange = jest.fn();
+    createGroupedSelect({}, { beforeChange }).click();
+    expect(beforeChange).toHaveBeenCalledTimes(1);
+    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
+    document.querySelector(".ss-selectall").click();
     expect(slimSelect.getSelected()).toEqual(["it"]);
   });
 

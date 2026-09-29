@@ -74,6 +74,12 @@
 
 // Main container
 .ss-main {
+  --ss-control-padding-y: #{$input-padding-y-lg};
+
+  @include media-breakpoint-up(md) {
+    --ss-control-padding-y: #{$input-padding-y};
+  }
+
   display: flex;
   flex-direction: row;
   position: relative;
@@ -82,14 +88,17 @@
   width: 100%;
   padding: 0.075rem 0 0.075rem 0.3rem;
   cursor: pointer;
-  border: 1px solid var(--ss-border-color);
+  border: $form-select-border-width solid var(--ss-border-color);
   border-radius: var(--ss-border-radius);
   background-color: var(--ss-bg-color);
   outline: 0;
   box-sizing: border-box;
   transition: background-color var(--ss-animation-timing);
   overflow: hidden;
-  min-height: 38px;
+  min-height: calc(
+    1em * #{$form-select-line-height} + var(--ss-control-padding-y) * 2 +
+      #{$form-select-border-width} * 2
+  );
 
   &:focus-visible {
     @include form-focus-ring();
@@ -131,6 +140,12 @@
     flex-wrap: wrap;
     gap: var(--ss-spacing-m);
     flex: 1 1 100%;
+    align-items: center;
+    // Match the native select content height, accounting for the main padding.
+    min-height: calc(
+      1em * #{$form-select-line-height} + var(--ss-control-padding-y) * 2 -
+        0.15rem
+    );
 
     .ss-placeholder {
       display: flex;
@@ -178,7 +193,7 @@
       animation-duration: var(--ss-animation-timing);
       animation-timing-function: ease-out;
       animation-fill-mode: both;
-      margin: 3px 5px 3px 0;
+      margin: 0 5px 0 0;
       position: relative;
       min-height: 2rem;
       padding: 0.35em 2.25rem 0.35em 0.65em;
@@ -321,10 +336,14 @@
     transform-origin: center bottom;
     border-top-left-radius: var(--ss-border-radius);
     border-top-right-radius: var(--ss-border-radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &.ss-dir-below {
     transform-origin: center top;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-left-radius: var(--ss-border-radius);
     border-bottom-right-radius: var(--ss-border-radius);
   }
@@ -552,20 +571,11 @@
   overflow: hidden;
 }
 
-.ss-content .ss-group-actions {
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  justify-content: flex-end;
-  gap: 0.25rem;
-  padding: 0 0.5rem;
-
-  &:empty {
-    display: none;
-  }
-
-  .ss-selectall {
+.ss-content {
+  .ss-selectall,
+  .ss-selectall-slot {
     display: inline-flex;
+    white-space: nowrap;
     align-items: center;
     justify-content: center;
     min-width: 24px;
@@ -578,6 +588,10 @@
     font: inherit;
     font-size: 0.75rem;
     cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.875rem;
+    }
 
     &:hover,
     &[aria-pressed="true"] {
@@ -598,6 +612,33 @@
     @media (pointer: coarse) {
       min-height: 44px;
       min-width: 44px;
+    }
+  }
+}
+
+.ss-content {
+  .ss-options {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .ss-options-body {
+    position: relative;
+  }
+
+  .ss-options .ss-list {
+    overflow: visible;
+  }
+
+  .ss-selectall-slot {
+    visibility: hidden;
+  }
+
+  .ss-group-actions {
+    .ss-selectall {
+      position: absolute;
+      z-index: 1;
     }
   }
 }
