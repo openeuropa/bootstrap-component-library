@@ -71,8 +71,10 @@
   {%- endif -%}
   <div class="carousel-inner" id="{{ _id }}-slides" aria-live="off">{#- -#}
     {%- for item in _items -%}
+      {%- set _position = _slide_label|replace({'%current%': loop.index, '%total%': _items|length}) -%}
+      {%- set _title = item.caption_title|default('')|striptags|trim -%}
       <div class="carousel-item{{ loop.index == _active ? ' active' : '' }}" role="group" aria-roledescription="{{ slide_role_label|default('slide') }}"
-        aria-label="{{ _slide_label|replace({'%current%': loop.index, '%total%': _items|length}) }}"
+        aria-label="{{ (_title ? _title ~ ' — ' ~ _position : _position)|escape('html_attr') }}"
         {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval }}"{% endif %}>{#- -#}
         <div class="bcl-carousel-v2__layout">{#- -#}
           <div class="bcl-carousel-v2__image">{{ item.image }}</div>{#- -#}

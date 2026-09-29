@@ -65,7 +65,7 @@ describe("Carousel V2 markup", () => {
       node.querySelector(".active").getAttribute("aria-roledescription"),
     ).toBe("diapozitiv");
     expect(node.querySelector(".active").getAttribute("aria-label")).toBe(
-      "2 din 3",
+      "Protecting nature together — 2 din 3",
     );
     expect(node.querySelector("[data-bcl-current]").textContent).toBe("2");
     expect(
@@ -101,7 +101,7 @@ describe("Carousel V2 markup", () => {
     ).toBe(true);
     expect(node.querySelector("section").dataset.bsInterval).toBe("5000");
     expect(node.querySelector(".active").getAttribute("aria-label")).toBe(
-      "1 of 3",
+      "Explore our coastlines — 1 of 3",
     );
     expect(node.querySelector("h2")).not.toBeNull();
   });
@@ -122,5 +122,20 @@ describe("Carousel V2 markup", () => {
     expect(
       node.querySelector(".bcl-carousel-v2__content").textContent,
     ).toContain("Always readable");
+  });
+
+  test("slide names strip title markup and fall back to position without a title", async () => {
+    const node = await renderTwigFileAsNode(template, {
+      ...data,
+      items: [
+        { ...data.items[0], caption_title: '<em>Nature</em> & "wildlife"' },
+        { ...data.items[1], caption_title: "" },
+      ],
+    });
+    const slides = node.querySelectorAll(".carousel-item");
+    expect(slides[0].getAttribute("aria-label")).toBe(
+      'Nature & "wildlife" — 1 of 2',
+    );
+    expect(slides[1].getAttribute("aria-label")).toBe("2 of 2");
   });
 });
