@@ -57,6 +57,7 @@ afterEach(() => {
 describe("Carousel V2 Bootstrap integration", () => {
   test("credits stay outside the moving slides and update after the transition", async () => {
     const { element, controller } = await mount({
+      layout: "full_width",
       items: [
         { ...data.items[0], copyright: "First credit" },
         { ...data.items[1], copyright: "Second credit" },
@@ -94,6 +95,87 @@ describe("Carousel V2 Bootstrap integration", () => {
       false,
     );
   });
+
+  test("image layout keeps credits beside each image and restores sizing on disposal", async () => {
+    const { element, controller } = await mount({ layout: "split" });
+    expect(element.querySelector(".bcl-carousel-v2__credits")).toBeNull();
+    expect(
+      element.querySelector(".carousel-item .bcl-carousel-v2__copyright"),
+    ).not.toBeNull();
+    expect(
+      element.style.getPropertyValue("--bcl-carousel-controls-height"),
+    ).toBe("0px");
+    controller.carousel.next();
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+    controller.dispose();
+    expect(
+      element.style.getPropertyValue("--bcl-carousel-controls-height"),
+    ).toBe("");
+  });
+
+  test.each([false, true])(
+    "image layout measures media and wrapped controls, then disconnects its observer (credit=%s)",
+    async (withCredit) => {
+      let notifyResize;
+      const observe = jest.fn();
+      const disconnect = jest.fn();
+      const previousObserver = window.ResizeObserver;
+      window.ResizeObserver = jest.fn((callback) => {
+        notifyResize = callback;
+        return { observe, disconnect };
+      });
+      try {
+        const { element, controller } = await mount({
+          layout: "split",
+          items: data.items.map((item) => ({
+            ...item,
+            copyright: withCredit ? "Credit" : "",
+          })),
+        });
+        const image = element.querySelector(".active .bcl-carousel-v2__image");
+        const credit = element.querySelector(
+          ".active .bcl-carousel-v2__copyright",
+        );
+        const controls = element.querySelector(".bcl-carousel-v2__controls");
+        Object.defineProperty(image, "offsetHeight", {
+          configurable: true,
+          value: 300,
+        });
+        if (credit)
+          Object.defineProperty(credit, "offsetHeight", { value: 24 });
+        Object.defineProperty(controls, "offsetHeight", {
+          configurable: true,
+          value: 44,
+        });
+        notifyResize();
+        expect(
+          element.style.getPropertyValue("--bcl-carousel-media-height"),
+        ).toBe(withCredit ? "324px" : "300px");
+        expect(
+          element.style.getPropertyValue("--bcl-carousel-controls-height"),
+        ).toBe("44px");
+        expect(observe).toHaveBeenCalledWith(image);
+        expect(observe).toHaveBeenCalledWith(controls);
+        if (credit) expect(observe).toHaveBeenCalledWith(credit);
+        Object.defineProperty(image, "offsetHeight", { value: 200 });
+        Object.defineProperty(controls, "offsetHeight", { value: 96 });
+        notifyResize();
+        expect(
+          element.style.getPropertyValue("--bcl-carousel-media-height"),
+        ).toBe(withCredit ? "224px" : "200px");
+        expect(
+          element.style.getPropertyValue("--bcl-carousel-controls-height"),
+        ).toBe("96px");
+        controller.dispose();
+        expect(disconnect).toHaveBeenCalledTimes(1);
+        expect(
+          element.style.getPropertyValue("--bcl-carousel-media-height"),
+        ).toBe("");
+      } finally {
+        window.ResizeObserver = previousObserver;
+      }
+    },
+  );
 
   test.each([false, true])(
     "Bootstrap swipe respects disable_touch=%s",

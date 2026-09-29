@@ -44,7 +44,7 @@
 {%- if _items is not empty -%}
 <section{{ attributes }}>{#- -#}
   {%- if _items|length > 1 -%}
-    {#- WAI carousel pattern: rotation control first in tab order; CSS keeps the footer below the slides. -#}
+    {#- WAI carousel pattern: rotation control first in tab order; CSS positions it for each layout. -#}
     <div class="bcl-carousel-v2__controls" hidden>{#- -#}
       <button type="button" class="btn btn-outline-primary bcl-carousel-v2__control" data-bcl-rotation
         data-bcl-play-label="{{ play_label|default('Play slides') }}"
