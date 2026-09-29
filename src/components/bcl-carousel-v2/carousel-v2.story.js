@@ -14,7 +14,13 @@ export default {
     active_item: 1,
   },
   argTypes: {
-    layout: { control: "select", options: ["split", "full_width"] },
+    layout: {
+      control: {
+        type: "select",
+        labels: { split: "Carousel image", full_width: "Carousel hero" },
+      },
+      options: ["split", "full_width"],
+    },
     autoplay: { control: "boolean" },
     interval: { control: { type: "number", min: 1000, step: 1000 } },
     active_item: {
@@ -26,7 +32,7 @@ export default {
     docs: {
       description: {
         component:
-          "Responsive split and full-width layouts with shared rotation controls. Autoplay is opt-in; reduced motion starts paused. Full-width desktop images are capped at 28rem high and cropped without stretching. Content overlays the image from the lg breakpoint and stacks below it on mobile.",
+          "Carousel image displays the image beside the content. Carousel hero displays a full-width image with content overlaid from the lg breakpoint and stacked below it on mobile. Both share rotation controls. Autoplay is opt-in; reduced motion starts paused. Hero desktop images are capped at 28rem high and cropped without stretching; its content and footer backgrounds remain white.",
       },
     },
   },
@@ -80,21 +86,67 @@ const testControls = async ({ canvasElement }) => {
   await expect(inner).toHaveAttribute("aria-live", "polite");
 };
 
-export const Split = {};
+export const Split = { name: "Carousel image" };
+export const SplitInContainer = {
+  name: "Carousel image / Page container",
+  args: { id: "carousel-v2-page-container" },
+  decorators: [(story) => `<div class="container">${story()}</div>`],
+  parameters: { layout: "fullscreen" },
+};
 export const FullWidth = {
+  name: "Carousel hero",
   args: { id: "carousel-v2-full-width", layout: "full_width" },
 };
 export const SplitControlsTest = {
-  name: "Tests / Split controls",
+  name: "Tests / Carousel image controls",
   args: { id: "carousel-v2-split-controls-test" },
   tags: ["!autodocs", "carousel-v2-test"],
-  play: testControls,
+  play: async (context) => {
+    await testControls(context);
+    const root = context.canvasElement.querySelector(".bcl-carousel-v2");
+    await waitFor(() => {
+      const controls = root
+        .querySelector(".bcl-carousel-v2__controls")
+        .getBoundingClientRect();
+      const image = root
+        .querySelector(".active .bcl-carousel-v2__image")
+        .getBoundingClientRect();
+      const heading = root
+        .querySelector(".active .bcl-carousel-v2__content > :first-child")
+        .getBoundingClientRect();
+      expect(controls.bottom).toBeLessThanOrEqual(heading.top);
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        expect(controls.right).toBeLessThanOrEqual(image.left);
+      } else {
+        expect(image.bottom).toBeLessThanOrEqual(controls.top);
+      }
+    });
+  },
 };
 export const FullWidthControlsTest = {
-  name: "Tests / Full width controls",
+  name: "Tests / Carousel hero controls",
   args: { id: "carousel-v2-full-width-controls-test", layout: "full_width" },
   tags: ["!autodocs", "carousel-v2-test"],
   play: testControls,
+};
+export const ImageOnlyControlsTest = {
+  name: "Tests / Carousel image without text",
+  args: {
+    id: "carousel-v2-image-only",
+    layout: "split",
+    items: data.items.map(({ image, copyright }) => ({ image, copyright })),
+  },
+  tags: ["!autodocs", "carousel-v2-test"],
+  play: async ({ canvasElement }) => {
+    const root = canvasElement.querySelector(".bcl-carousel-v2");
+    await waitFor(() => {
+      expect(root).toHaveAttribute("data-bcl-initialized", "true");
+      const controls = root.querySelector(".bcl-carousel-v2__controls");
+      expect(controls.getBoundingClientRect().bottom).toBeLessThanOrEqual(
+        root.getBoundingClientRect().bottom,
+      );
+    });
+  },
 };
 export const Autoplay = {
   tags: ["carousel-v2-test"],
@@ -115,6 +167,7 @@ export const Autoplay = {
   },
 };
 export const SingleSlide = {
+  name: "Carousel image / Single slide",
   tags: ["carousel-v2-test"],
   args: { id: "carousel-v2-single", items: data.items.slice(0, 1) },
   play: async ({ canvasElement }) => {
@@ -130,6 +183,7 @@ export const SingleSlide = {
 
 export const FullWidthSingleSlide = {
   ...SingleSlide,
+  name: "Carousel hero / Single slide",
   args: {
     ...SingleSlide.args,
     id: "carousel-v2-full-width-single",

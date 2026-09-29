@@ -20,17 +20,21 @@ class CarouselV2 {
       element.matches(":hover") &&
       !!window.matchMedia?.("(any-hover: hover)").matches;
     this.listeners = [];
+    this.isImageLayout = element.classList.contains("bcl-carousel-v2--split");
 
-    // Keep the credit border outside Bootstrap's translated slide elements.
+    // Hero credits form a stationary footer. Image-layout credits stay with
+    // their image, above the controls on mobile and below the image on desktop.
     this.credits = this.slides.map((slide) =>
       slide.querySelector(":scope > .bcl-carousel-v2__copyright"),
     );
-    this.creditFooter = document.createElement("div");
-    this.creditFooter.className = "bcl-carousel-v2__credits";
-    this.credits.forEach((credit) => {
-      if (credit) this.creditFooter.append(credit);
-    });
-    this.inner.after(this.creditFooter);
+    if (!this.isImageLayout) {
+      this.creditFooter = document.createElement("div");
+      this.creditFooter.className = "bcl-carousel-v2__credits";
+      this.credits.forEach((credit) => {
+        if (credit) this.creditFooter.append(credit);
+      });
+      this.inner.after(this.creditFooter);
+    }
 
     // No Bootstrap auto-resume on mouseleave, touchend or data-API navigation.
     this.carousel = Carousel.getOrCreateInstance(element, {
@@ -82,7 +86,34 @@ class CarouselV2 {
     element.setAttribute("data-bcl-initialized", "true");
     this.updateSlides();
     this.updateRotation();
+    if (this.isImageLayout && this.controls && window.ResizeObserver) {
+      // Images, translated credits and wrapped controls can change height.
+      this.resizeObserver = new ResizeObserver(() => this.updateImageLayout());
+      this.resizeObserver.observe(this.controls);
+      this.slides.forEach((slide) => {
+        const image = slide.querySelector(".bcl-carousel-v2__image");
+        if (image) this.resizeObserver.observe(image);
+      });
+      this.credits.forEach((credit) => {
+        if (credit) this.resizeObserver.observe(credit);
+      });
+    }
     instances.set(element, this);
+  }
+
+  updateImageLayout() {
+    if (!this.isImageLayout || !this.controls) return;
+    const active = this.slides.find((slide) => slide.classList.contains("active"));
+    const image = active?.querySelector(".bcl-carousel-v2__image");
+    const credit = active?.querySelector(".bcl-carousel-v2__copyright");
+    this.element.style.setProperty(
+      "--bcl-carousel-media-height",
+      `${(image?.offsetHeight || 0) + (credit?.offsetHeight || 0)}px`,
+    );
+    this.element.style.setProperty(
+      "--bcl-carousel-controls-height",
+      `${this.controls.offsetHeight}px`,
+    );
   }
 
   listen(target, event, listener) {
@@ -112,10 +143,13 @@ class CarouselV2 {
       slide.toggleAttribute("inert", index !== activeIndex);
     });
     if (this.counter) this.counter.textContent = String(activeIndex + 1);
-    this.credits.forEach((credit, index) => {
-      if (credit) credit.hidden = index !== activeIndex;
-    });
-    this.creditFooter.hidden = !this.credits[activeIndex];
+    if (this.creditFooter) {
+      this.credits.forEach((credit, index) => {
+        if (credit) credit.hidden = index !== activeIndex;
+      });
+      this.creditFooter.hidden = !this.credits[activeIndex];
+    }
+    this.updateImageLayout();
   }
 
   updateRotation() {
@@ -135,6 +169,9 @@ class CarouselV2 {
   }
 
   dispose() {
+    this.resizeObserver?.disconnect();
+    this.element.style.removeProperty("--bcl-carousel-media-height");
+    this.element.style.removeProperty("--bcl-carousel-controls-height");
     this.listeners.forEach((remove) => remove());
     this.carousel.pause();
     // Finish Bootstrap's queued transition before disposing its instance.
@@ -153,12 +190,12 @@ class CarouselV2 {
       slide.removeAttribute("aria-hidden");
       slide.removeAttribute("inert");
       const credit = this.credits[index];
-      if (credit) {
+      if (credit && this.creditFooter) {
         credit.hidden = false;
         slide.append(credit);
       }
     });
-    this.creditFooter.remove();
+    this.creditFooter?.remove();
     instances.delete(this.element);
   }
 
