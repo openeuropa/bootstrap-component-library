@@ -149,7 +149,9 @@ describe("Slim Select accessibility", () => {
       );
       expect(document.activeElement).toBe(action);
       expect(action.tagName).toBe("BUTTON");
-      expect(action.textContent).toContain("Select All: Group 1");
+      expect(action.textContent).toBe("Select All");
+      expect(action.getAttribute("aria-label")).toBe("Select All: Group 1");
+      expect(action.querySelector("svg")).toBeNull();
       expect(action.getAttribute("aria-pressed")).toBe("false");
       action.dispatchEvent(
         new KeyboardEvent("keydown", { key, bubbles: true, cancelable: true }),
