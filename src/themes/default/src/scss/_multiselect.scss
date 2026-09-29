@@ -556,8 +556,9 @@
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  padding: 0 0.5rem;
 
   &:empty {
     display: none;
@@ -567,25 +568,26 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    min-width: 44px;
-    min-height: 44px;
-    padding: 0.5rem;
-    border: 1px solid var(--ss-border-color);
-    border-radius: var(--ss-border-radius);
-    background: var(--ss-bg-color);
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0 0.25rem;
+    border: 0;
+    border-radius: 2px;
+    background: transparent;
     color: var(--ss-font-color);
     font: inherit;
+    font-size: 0.75rem;
     cursor: pointer;
+
+    &:hover,
+    &[aria-pressed="true"] {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
 
     &:focus {
       outline: 2px solid currentColor;
-      outline-offset: 2px;
-    }
-
-    &[aria-pressed="true"] {
-      border-width: 2px;
-      font-weight: bold;
+      outline-offset: 1px;
     }
 
     &:disabled {
@@ -593,16 +595,9 @@
       opacity: 0.5;
     }
 
-    svg {
-      width: 1rem;
-      height: 1rem;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 8;
-    }
-
-    &[aria-pressed="false"] svg path:last-child {
-      display: none;
+    @media (pointer: coarse) {
+      min-height: 44px;
+      min-width: 44px;
     }
   }
 }
