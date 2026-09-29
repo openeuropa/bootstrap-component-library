@@ -13,6 +13,9 @@ describe("Carousel V2 markup", () => {
   test.each(["split", "full_width"])("renders %s layout", async (layout) => {
     const node = await renderTwigFileAsNode(template, { ...data, layout });
     expect(node).toMatchSnapshot();
+    expect(
+      node.querySelector("section").classList.contains("carousel-fade"),
+    ).toBe(layout === "split");
     expect(node.querySelectorAll("[data-bcl-rotation]")).toHaveLength(1);
     expect(node.querySelectorAll("[data-bs-slide]")).toHaveLength(2);
     expect(node.querySelector("section").getAttribute("data-bs-ride")).toBe(
