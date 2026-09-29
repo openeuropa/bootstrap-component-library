@@ -41,6 +41,9 @@
   .setAttribute('data-bs-ride', 'false')
   .setAttribute('data-bs-pause', 'false')
 -%}
+{%- if _layout == 'split' -%}
+  {%- set attributes = attributes.addClass('carousel-fade') -%}
+{%- endif -%}
 {%- if _items is not empty -%}
 <section{{ attributes }}>{#- -#}
   {%- if _items|length > 1 -%}
