@@ -179,6 +179,12 @@
     padding: var(--bcl-carousel-padding);
     background: $gray-200;
 
+    // Bootstrap delays fading out the old slide; crossfade both instead.
+    .active.carousel-item-start,
+    .active.carousel-item-end {
+      @include transition(opacity $carousel-transition-duration ease-in-out);
+    }
+
     // Extend only the background beyond the page grid, as with content banners.
     .container & {
       isolation: isolate;
