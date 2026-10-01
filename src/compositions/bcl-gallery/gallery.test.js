@@ -67,6 +67,16 @@ describe("OE - Gallery", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test("renders correctly with cover-fitted thumbnails", async () => {
+    expect.assertions(1);
+    const html = await renderTwigFileAsHtml(template, {
+      ...dataDefault,
+      thumbnail_fit: "cover",
+    });
+
+    expect(html).toContain("bcl-gallery--thumbnail-cover");
+  });
+
   test("renders correctly with title and link", () => {
     expect.assertions(1);
     return expect(

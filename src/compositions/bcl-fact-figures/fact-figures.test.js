@@ -73,11 +73,49 @@ describe("OE - Fact and figures", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`renders correctly with centered items`, async () => {
+    expect.assertions(2);
+    const rendered = await render({ ...demoData, alignment: "center" });
+
+    expect(rendered.querySelectorAll(".row > .col.text-center")).toHaveLength(
+      demoData.items.length,
+    );
+    expect(
+      rendered.querySelectorAll(".row > .col.text-center > p.text-start"),
+    ).toHaveLength(demoData.items.length);
+  });
+
   test(`renders correctly with extra class on columns`, () => {
     expect.assertions(1);
     return expect(
       render({ ...demoData, cols_extra_classes: "new-column-class" }),
     ).resolves.toMatchSnapshot();
+  });
+
+  test(`renders icons at 3xl by default`, async () => {
+    expect.assertions(2);
+    const node = await render(demoData);
+    expect(node.querySelectorAll("svg.icon--3xl")).toHaveLength(
+      demoData.items.length,
+    );
+    expect(node.querySelectorAll("svg.icon--l")).toHaveLength(0);
+  });
+
+  test(`renders icons at l when icon_size is "l"`, async () => {
+    expect.assertions(2);
+    const node = await render({ ...demoData, icon_size: "l" });
+    expect(node.querySelectorAll("svg.icon--l")).toHaveLength(
+      demoData.items.length,
+    );
+    expect(node.querySelectorAll("svg.icon--3xl")).toHaveLength(0);
+  });
+
+  test(`renders icons at 3xl when icon_size is "3xl"`, async () => {
+    expect.assertions(1);
+    const node = await render({ ...demoData, icon_size: "3xl" });
+    expect(node.querySelectorAll("svg.icon--3xl")).toHaveLength(
+      demoData.items.length,
+    );
   });
 
   test(`passes the accessibility tests`, async () => {
