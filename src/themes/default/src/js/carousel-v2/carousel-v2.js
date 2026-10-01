@@ -126,12 +126,14 @@ class CarouselV2 {
       slide.classList.contains("active"),
     );
     // Arrow-key/swipe/API navigation can hide a slide that still owns focus.
-    // Move focus to navigation before making the outgoing content inert.
+    // Move focus to navigation before making the outgoing content inert, and
+    // keep it following the direction while it already sits on a nav button.
+    const focused = document.activeElement;
     if (
       this.slides.some(
-        (slide, index) =>
-          index !== activeIndex && slide.contains(document.activeElement),
-      )
+        (slide, index) => index !== activeIndex && slide.contains(focused),
+      ) ||
+      focused?.matches?.('[data-bs-slide="prev"], [data-bs-slide="next"]')
     ) {
       const order = (direction === "left") !== isRTL() ? "next" : "prev";
       this.element
