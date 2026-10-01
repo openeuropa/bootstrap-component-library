@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.16.0 (2026-09-30)
+
+#### :bug: Bug Fix
+* [#791](https://github.com/openeuropa/bootstrap-component-library/pull/791) OEL-5043: Fix mega menu alignment, mobile shadows, and arrow sizing. ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#785](https://github.com/openeuropa/bootstrap-component-library/pull/785) OEL-4961: Increase icon size for Facts and figures ([@piotrsmykaj](https://github.com/piotrsmykaj))
+* [#782](https://github.com/openeuropa/bootstrap-component-library/pull/782) OEL-4967: Alignment center for facts and figures. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Piotr Smykaj ([@piotrsmykaj](https://github.com/piotrsmykaj))
+
 ## 1.15.0 (2026-08-26)
 
 #### :nail_care: Enhancement
