@@ -259,6 +259,26 @@ describe("Carousel V2 Bootstrap integration", () => {
     },
   );
 
+  test.each([
+    ["ltr", "prev", "ArrowRight", "next"],
+    ["ltr", "next", "ArrowLeft", "prev"],
+    ["rtl", "prev", "ArrowLeft", "next"],
+    ["rtl", "next", "ArrowRight", "prev"],
+  ])("%s focus on %s follows %s to %s", async (dir, start, key, expected) => {
+    document.documentElement.dir = dir;
+    const { element } = await mount();
+    element.classList.add("slide");
+    jest.useFakeTimers();
+    element.querySelector(`[data-bs-slide="${start}"]`).focus();
+    element.dispatchEvent(new KeyboardEvent("keydown", { key, bubbles: true }));
+    element
+      .querySelector(".carousel-item.active")
+      .dispatchEvent(new Event("transitionend"));
+    expect(document.activeElement).toBe(
+      element.querySelector(`[data-bs-slide="${expected}"]`),
+    );
+  });
+
   test("autoplay starts through Bootstrap and uses per-slide intervals", async () => {
     const cycle = jest.spyOn(Carousel.prototype, "cycle");
     const { element, rotation } = await mount({
