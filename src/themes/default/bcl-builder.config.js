@@ -207,6 +207,11 @@ module.exports = {
       options: { up: true },
     },
     {
+      from: [path.resolve(slimSelectPath, "dist/slimselect.js")],
+      to: path.resolve(outputFolder, "js/slim-select-2"),
+      options: { up: true },
+    },
+    {
       from: [path.resolve(bootstrapIconsPath, "bootstrap-icons.svg")],
       to: path.resolve(outputFolder, "icons"),
       options: { up: true },
@@ -237,6 +242,15 @@ module.exports = {
       from: [twigTemplatesGlob],
       to: path.resolve(outputFolder, "templates"),
       options: { up: getCopyUpToGlobBase(twigTemplatesGlob) },
+    },
+  ],
+  rename: [
+    {
+      from: path.resolve(outputFolder, "js/slim-select-2/slimselect.js"),
+      to: "slimselect.min.js",
+      options: {
+        operation: "rewrite",
+      },
     },
   ],
 };

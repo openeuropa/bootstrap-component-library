@@ -192,8 +192,13 @@ module.exports = {
   ],
   copy: [
     {
-      from: [path.resolve(slimSelectPath, "dist/slimselect.min.js")],
+      from: [path.resolve(slimSelectPath, "dist/slimselect.js")],
       to: path.resolve(outputFolder, "js"),
+      options: { up: true },
+    },
+    {
+      from: [path.resolve(slimSelectPath, "dist/slimselect.js")],
+      to: path.resolve(outputFolder, "js/slim-select-2"),
       options: { up: true },
     },
     {
@@ -235,6 +240,15 @@ module.exports = {
       from: ["src/templates/**/*.twig"],
       to: path.resolve(outputFolder, "templates"),
       options: { up: 2 },
+    },
+  ],
+  rename: [
+    {
+      from: path.resolve(outputFolder, "js/slim-select-2/slimselect.js"),
+      to: "slimselect.min.js",
+      options: {
+        operation: "rewrite",
+      },
     },
   ],
 };

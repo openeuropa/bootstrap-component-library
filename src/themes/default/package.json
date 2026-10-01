@@ -12,6 +12,7 @@
     "build:scripts": "cross-env bcl-builder scripts",
     "prebuild:copy": "rimraf templates",
     "build:copy": "cross-env bcl-builder copy",
+    "build:rename": "cross-env bcl-builder rename",
     "build:sprite": "cross-env bcl-builder sprite",
     "clean": "rimraf css js templates logos icons",
     "prepublish": "pnpm run build",
@@ -32,7 +33,7 @@
     "flag-icons": "7.5.0",
     "glob": "13.0.6",
     "npm-run-all": "4.1.5",
-    "slim-select": "3.4.3"
+    "slim-select": "3.6.1"
   },
   "publishConfig": {
     "access": "public"
