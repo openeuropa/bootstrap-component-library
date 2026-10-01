@@ -288,6 +288,10 @@
         grid-column: 1;
         grid-row: 1 / 3;
         padding-top: 0;
+
+        > :is(h2, h3, h4, h5, h6) {
+          font-size: 40px;
+        }
       }
 
       .bcl-carousel-v2__controls {
