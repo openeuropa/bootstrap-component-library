@@ -142,20 +142,34 @@
       }
     }
 
-    // Credits and controls form one footer, without a divider.
-    &:has(> .bcl-carousel-v2__controls:not([hidden])) {
-      .bcl-carousel-v2__credits {
-        border-bottom: 0;
-      }
+    @include media-breakpoint-up(lg) {
+      // Credits and controls form one footer, without a divider.
+      &:has(> .bcl-carousel-v2__controls:not([hidden])) {
+        .bcl-carousel-v2__credits {
+          border-bottom: 0;
+        }
 
-      &:has(> .bcl-carousel-v2__credits:not([hidden])) {
-        .bcl-carousel-v2__controls {
-          border-top: 0;
+        &:has(> .bcl-carousel-v2__credits:not([hidden])) {
+          .bcl-carousel-v2__controls {
+            border-top: 0;
+          }
         }
       }
     }
 
+    @include media-breakpoint-down(lg) {
+      .bcl-carousel-v2__credits {
+        display: none;
+      }
+    }
+
     @include media-breakpoint-up(lg) {
+      &[data-bcl-initialized]
+        .bcl-carousel-v2__layout
+        > .bcl-carousel-v2__copyright {
+        display: none;
+      }
+
       .bcl-carousel-v2__image img {
         max-height: 28rem;
         object-fit: cover;

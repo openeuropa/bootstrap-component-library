@@ -78,6 +78,9 @@
         {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval }}"{% endif %}>{#- -#}
         <div class="bcl-carousel-v2__layout">{#- -#}
           <div class="bcl-carousel-v2__image">{{ item.image }}</div>{#- -#}
+          {%- if item.copyright is not empty -%}
+            <div class="bcl-carousel-v2__copyright"><span class="visually-hidden">{{ item.copyright_label|default('Image credit:') }} </span>{{ item.copyright }}</div>{#- -#}
+          {%- endif -%}
           {%- if item.caption_title is not empty or item.caption is not empty or item.link is not empty -%}
             <div class="bcl-carousel-v2__content">{#- -#}
               {%- if item.caption_title is not empty -%}<{{ _title_tag }} class="h1">{{ item.caption_title }}</{{ _title_tag }}>{%- endif -%}
@@ -88,9 +91,6 @@
             </div>{#- -#}
           {%- endif -%}
         </div>{#- -#}
-        {%- if item.copyright is not empty -%}
-          <div class="bcl-carousel-v2__copyright"><span class="visually-hidden">{{ item.copyright_label|default('Image credit:') }} </span>{{ item.copyright }}</div>{#- -#}
-        {%- endif -%}
       </div>{#- -#}
     {%- endfor -%}
   </div>{#- -#}
