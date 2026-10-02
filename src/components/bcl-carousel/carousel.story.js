@@ -146,6 +146,12 @@ export default {
   title: "Paragraphs/Carousel",
   parameters: {
     badges: ["deprecated"],
+    docs: {
+      description: {
+        component:
+          "Deprecated: use Carousel V2 for new carousels. V1 remains supported for Gallery and existing consumers.",
+      },
+    },
     viewport: {
       defaultViewport: "tablet",
     },
