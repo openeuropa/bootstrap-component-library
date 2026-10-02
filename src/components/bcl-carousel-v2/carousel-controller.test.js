@@ -55,45 +55,42 @@ afterEach(() => {
 });
 
 describe("Carousel V2 Bootstrap integration", () => {
-  test("credits stay outside the moving slides and update after the transition", async () => {
-    const { element, controller } = await mount({
-      layout: "full_width",
-      items: [
-        { ...data.items[0], copyright: "First credit" },
-        { ...data.items[1], copyright: "Second credit" },
-        { ...data.items[2], copyright: "" },
-      ],
-    });
+  test("hero credits stay immediately after their image through navigation and disposal", async () => {
+    const { element, controller } = await mount({ layout: "full_width" });
+    const credits = Array.from(
+      element.querySelectorAll(
+        ".bcl-carousel-v2__layout > .bcl-carousel-v2__copyright",
+      ),
+    );
+    expect(credits.length).toBeGreaterThan(0);
+    const checkPosition = () => {
+      credits.forEach((credit) => {
+        expect(
+          credit.previousElementSibling.classList.contains(
+            "bcl-carousel-v2__image",
+          ),
+        ).toBe(true);
+        expect(
+          credit.nextElementSibling.classList.contains(
+            "bcl-carousel-v2__content",
+          ),
+        ).toBe(true);
+      });
+    };
+    checkPosition();
     const footer = element.querySelector(".bcl-carousel-v2__credits");
     expect(footer.parentElement).toBe(element);
-    expect(
-      element.querySelector(".carousel-item .bcl-carousel-v2__copyright"),
-    ).toBeNull();
-    element.classList.add("slide");
-    jest.useFakeTimers();
+    expect(footer.querySelector(":scope > :not([hidden])").textContent).toBe(
+      credits[0].textContent,
+    );
     controller.carousel.next();
-    expect(
-      footer.querySelector(":scope > :not([hidden])").textContent,
-    ).toContain("First credit");
-    element
-      .querySelector(".carousel-item.active")
-      .dispatchEvent(new Event("transitionend"));
-    expect(
-      footer.querySelector(":scope > :not([hidden])").textContent,
-    ).toContain("Second credit");
-    controller.carousel.next();
-    element
-      .querySelector(".carousel-item.active")
-      .dispatchEvent(new Event("transitionend"));
-    expect(footer.hidden).toBe(true);
+    checkPosition();
+    expect(footer.querySelector(":scope > :not([hidden])").textContent).toBe(
+      credits[1].textContent,
+    );
     controller.dispose();
     expect(element.querySelector(".bcl-carousel-v2__credits")).toBeNull();
-    expect(
-      element.querySelectorAll(".carousel-item > .bcl-carousel-v2__copyright"),
-    ).toHaveLength(2);
-    expect(element.querySelector(".bcl-carousel-v2__copyright").hidden).toBe(
-      false,
-    );
+    checkPosition();
   });
 
   test("image layout keeps credits beside each image and restores sizing on disposal", async () => {

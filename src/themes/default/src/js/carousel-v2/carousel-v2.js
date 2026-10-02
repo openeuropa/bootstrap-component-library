@@ -22,16 +22,18 @@ class CarouselV2 {
     this.listeners = [];
     this.isImageLayout = element.classList.contains("bcl-carousel-v2--split");
 
-    // Hero credits form a stationary footer. Image-layout credits stay with
-    // their image, above the controls on mobile and below the image on desktop.
     this.credits = this.slides.map((slide) =>
-      slide.querySelector(":scope > .bcl-carousel-v2__copyright"),
+      slide.querySelector(".bcl-carousel-v2__copyright"),
     );
+
     if (!this.isImageLayout) {
       this.creditFooter = document.createElement("div");
       this.creditFooter.className = "bcl-carousel-v2__credits";
-      this.credits.forEach((credit) => {
-        if (credit) this.creditFooter.append(credit);
+      // Desktop keeps its stationary footer; mobile uses the original below the image.
+      this.footerCredits = this.credits.map((credit) => {
+        const copy = credit?.cloneNode(true);
+        if (copy) this.creditFooter.append(copy);
+        return copy;
       });
       this.inner.after(this.creditFooter);
     }
@@ -146,10 +148,10 @@ class CarouselV2 {
     });
     if (this.counter) this.counter.textContent = String(activeIndex + 1);
     if (this.creditFooter) {
-      this.credits.forEach((credit, index) => {
+      this.footerCredits.forEach((credit, index) => {
         if (credit) credit.hidden = index !== activeIndex;
       });
-      this.creditFooter.hidden = !this.credits[activeIndex];
+      this.creditFooter.hidden = !this.footerCredits[activeIndex];
     }
     this.updateImageLayout();
   }
@@ -188,14 +190,9 @@ class CarouselV2 {
     this.element.removeAttribute("data-bcl-initialized");
     this.inner.setAttribute("aria-live", "off");
     if (this.controls) this.controls.hidden = true;
-    this.slides.forEach((slide, index) => {
+    this.slides.forEach((slide) => {
       slide.removeAttribute("aria-hidden");
       slide.removeAttribute("inert");
-      const credit = this.credits[index];
-      if (credit && this.creditFooter) {
-        credit.hidden = false;
-        slide.append(credit);
-      }
     });
     this.creditFooter?.remove();
     instances.delete(this.element);
