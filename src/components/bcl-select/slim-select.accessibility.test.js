@@ -50,9 +50,10 @@ describe("Slim Select accessibility", () => {
       new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }),
     );
 
-    expect(search.getAttribute("aria-activedescendant")).toBe(
-      main.getAttribute("aria-activedescendant"),
-    );
+    expect(main.hasAttribute("role")).toBe(false);
+    expect(main.tabIndex).toBe(-1);
+    expect(search.tabIndex).toBe(0);
+    expect(main.hasAttribute("aria-activedescendant")).toBe(false);
     const activeOption = document.getElementById(
       search.getAttribute("aria-activedescendant"),
     );
@@ -115,6 +116,132 @@ describe("Slim Select accessibility", () => {
     slimSelect.open();
     return document.querySelector(".ss-selectall");
   };
+
+  test("Enter reopens without selecting the previously highlighted option", () => {
+    createGroupedSelect();
+    const search = document.querySelector(".ss-search input");
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "ArrowUp", bubbles: true }),
+    );
+    slimSelect.close();
+    search.focus();
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
+    );
+    expect(search.getAttribute("aria-expanded")).toBe("true");
+    expect(slimSelect.getSelected()).toEqual(["it"]);
+    expect(search.getAttribute("aria-activedescendant")).toBeNull();
+  });
+
+  test("the search input is the only combobox and stays focused during navigation", () => {
+    const action = createGroupedSelect();
+    slimSelect.close();
+    const search = document.querySelector(".ss-search input");
+    expect(document.querySelectorAll('[role="combobox"]')).toHaveLength(1);
+    expect(search.closest(".ss-main")).not.toBeNull();
+    expect(search.hasAttribute("aria-hidden")).toBe(false);
+    search.focus();
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }),
+    );
+    expect(document.activeElement).toBe(search);
+    expect(search.getAttribute("aria-expanded")).toBe("true");
+    expect(
+      document.getElementById(search.getAttribute("aria-activedescendant"))
+        .textContent,
+    ).toBe("Belgium");
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "Tab",
+        bubbles: true,
+        cancelable: true,
+      }),
+    );
+    expect(document.activeElement).toBe(action);
+  });
+
+  test("Space types without selecting; Enter selects only the active option", () => {
+    createGroupedSelect();
+    const search = document.querySelector(".ss-search input");
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }),
+    );
+    const space = new KeyboardEvent("keydown", {
+      key: " ",
+      bubbles: true,
+      cancelable: true,
+    });
+    search.dispatchEvent(space);
+    expect(space.defaultPrevented).toBe(false);
+    expect(slimSelect.getSelected()).toEqual(["it"]);
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
+    );
+    expect(slimSelect.getSelected().sort()).toEqual(["be", "it"]);
+    expect(document.activeElement).toBe(search);
+  });
+
+  test("Escape closes the popup and keeps focus on the input", () => {
+    createGroupedSelect();
+    const search = document.querySelector(".ss-search input");
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "Escape", bubbles: true }),
+    );
+    expect(search.getAttribute("aria-expanded")).toBe("false");
+    expect(document.activeElement).toBe(search);
+    expect(search.hasAttribute("aria-hidden")).toBe(false);
+  });
+
+  test("typing opens and filters the popup without changing focus", () => {
+    jest.useFakeTimers();
+    try {
+      createGroupedSelect();
+      slimSelect.close();
+      const search = document.querySelector(".ss-search input");
+      search.focus();
+      search.value = "Belg";
+      search.dispatchEvent(new Event("input", { bubbles: true }));
+      jest.advanceTimersByTime(150);
+      expect(search.getAttribute("aria-expanded")).toBe("true");
+      expect(document.activeElement).toBe(search);
+      expect(
+        [...document.querySelectorAll('.ss-list [role="option"]')].map(
+          (option) => option.textContent,
+        ),
+      ).toEqual(["Belgium"]);
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  test("Tab leaves the input; Shift Tab can return and Enter reopens", () => {
+    document.body.innerHTML =
+      '<label for="plain">Destination</label><select id="plain" multiple><option value="be">Belgium</option></select><button id="next">Next</button>';
+    slimSelect = new SlimSelect({
+      select: "#plain",
+      settings: { contentPosition: "relative" },
+    });
+    const search = document.querySelector(".ss-search input");
+    search.focus();
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
+    );
+    const tab = new KeyboardEvent("keydown", {
+      key: "Tab",
+      bubbles: true,
+      cancelable: true,
+    });
+    search.dispatchEvent(tab);
+    expect(tab.defaultPrevented).toBe(false);
+    expect(search.getAttribute("aria-expanded")).toBe("false");
+    document.querySelector("#next").focus();
+    search.focus();
+    search.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
+    );
+    expect(search.getAttribute("aria-expanded")).toBe("true");
+    expect(slimSelect.getSelected()).toEqual([]);
+  });
 
   test("exposes the named group as the parent of its options", async () => {
     const action = createGroupedSelect();
@@ -267,7 +394,9 @@ describe("Slim Select accessibility", () => {
         cancelable: true,
       }),
     );
-    expect(document.activeElement).toBe(document.querySelector(".ss-main"));
+    expect(document.activeElement).toBe(
+      document.querySelector(".ss-search input"),
+    );
     expect(action.tabIndex).toBe(-1);
   });
 
