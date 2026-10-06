@@ -12,6 +12,9 @@ packages:
 # corporate supply-chain policy enforced for local and CI installations.
 ignoreScripts: true
 minimumReleaseAge: 10080
+# GHSA-68fv-2mgg-jv7q: allow this security fix before the seven-day cutoff.
+minimumReleaseAgeExclude:
+  - "source-map-js@1.2.2"
 # Reject dependency releases whose publishing trust evidence is weaker than
 # an earlier release of the same package.
 trustPolicy: no-downgrade
@@ -35,6 +38,7 @@ publicHoistPattern:
 
 # Keep security overrides needed by the current dependency graph.
 overrides:
+  'source-map-js@<1.2.2': 1.2.2
   '@babel/core@<=7.29.0': 7.29.7
   '@istanbuljs/load-nyc-config>js-yaml': 3.15.2
   '@tootallnate/once': 3.0.1
