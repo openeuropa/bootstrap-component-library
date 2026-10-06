@@ -450,6 +450,59 @@ describe("Carousel V2 Bootstrap integration", () => {
     );
   });
 
+  test.each(
+    ["split", "full_width"].flatMap((firstLayout) =>
+      ["split", "full_width"].flatMap((secondLayout) =>
+        ["prev", "next"].map((direction) => [
+          firstLayout,
+          secondLayout,
+          direction,
+        ]),
+      ),
+    ),
+  )(
+    "autoplay in %s stays active while navigating %s with %s",
+    async (firstLayout, secondLayout, direction) => {
+      const first = await mount({
+        id: "autoplay-carousel",
+        layout: firstLayout,
+        autoplay: true,
+        interval: 100,
+      });
+      const second = await mount({
+        id: "manual-carousel",
+        layout: secondLayout,
+      });
+      jest.useFakeTimers();
+      first.controller.updateRotation();
+      const button = second.element.querySelector(
+        `[data-bs-slide="${direction}"]`,
+      );
+      button.focus();
+      button.click();
+      expect(
+        second.element.querySelector("[data-bcl-current]").textContent,
+      ).toBe(direction === "next" ? "2" : "3");
+
+      jest.advanceTimersByTime(100);
+      expect(document.activeElement).toBe(button);
+      expect(first.rotation.getAttribute("aria-label")).toBe("Pause slides");
+      expect(
+        first.element
+          .querySelector(".carousel-inner")
+          .getAttribute("aria-live"),
+      ).toBe("off");
+      expect(
+        first.element.querySelector("[data-bcl-current]").textContent,
+      ).toBe("2");
+      jest.advanceTimersByTime(100);
+      expect(
+        first.element.querySelector("[data-bcl-current]").textContent,
+      ).toBe("3");
+      expect(document.activeElement).toBe(button);
+    },
+  );
+
   test("single slide never cycles, even with autoplay enabled", async () => {
     const cycle = jest.spyOn(Carousel.prototype, "cycle");
     const { element } = await mount({

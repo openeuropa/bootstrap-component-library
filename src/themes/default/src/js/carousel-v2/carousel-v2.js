@@ -135,7 +135,8 @@ class CarouselV2 {
       this.slides.some(
         (slide, index) => index !== activeIndex && slide.contains(focused),
       ) ||
-      focused?.matches?.('[data-bs-slide="prev"], [data-bs-slide="next"]')
+      (this.element.contains(focused) &&
+        focused?.matches?.('[data-bs-slide="prev"], [data-bs-slide="next"]'))
     ) {
       const order = (direction === "left") !== isRTL() ? "next" : "prev";
       this.element
