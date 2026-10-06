@@ -59,8 +59,27 @@
   display: none !important;
 }
 
+// Visually hidden live region for screen reader search announcements
+.ss-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 // Main container
 .ss-main {
+  --ss-control-padding-y: #{$input-padding-y-lg};
+
+  @include media-breakpoint-up(md) {
+    --ss-control-padding-y: #{$input-padding-y};
+  }
+
   display: flex;
   flex-direction: row;
   position: relative;
@@ -69,14 +88,17 @@
   width: 100%;
   padding: 0.075rem 0 0.075rem 0.3rem;
   cursor: pointer;
-  border: 1px solid var(--ss-border-color);
+  border: $form-select-border-width solid var(--ss-border-color);
   border-radius: var(--ss-border-radius);
   background-color: var(--ss-bg-color);
   outline: 0;
   box-sizing: border-box;
   transition: background-color var(--ss-animation-timing);
   overflow: hidden;
-  min-height: 38px;
+  min-height: calc(
+    1em * #{$form-select-line-height} + var(--ss-control-padding-y) * 2 +
+      #{$form-select-border-width} * 2
+  );
 
   &:focus-visible {
     @include form-focus-ring();
@@ -118,6 +140,12 @@
     flex-wrap: wrap;
     gap: var(--ss-spacing-m);
     flex: 1 1 100%;
+    align-items: center;
+    // Match the native select content height, accounting for the main padding.
+    min-height: calc(
+      1em * #{$form-select-line-height} + var(--ss-control-padding-y) * 2 -
+        0.15rem
+    );
 
     .ss-placeholder {
       display: flex;
@@ -165,8 +193,10 @@
       animation-duration: var(--ss-animation-timing);
       animation-timing-function: ease-out;
       animation-fill-mode: both;
-      margin: 3px 5px 3px 0;
-      padding: 0.35em 1.25rem 0.35em 0.65em;
+      margin: 0 5px 0 0;
+      position: relative;
+      min-height: 2rem;
+      padding: 0.35em 2.25rem 0.35em 0.65em;
 
       &.ss-value-out {
         animation-name: ss-valueOut;
@@ -181,27 +211,38 @@
       }
 
       .ss-value-delete {
+        appearance: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset: 0 0 0 auto;
+        width: 2rem;
+        min-height: 2rem;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-radius: var(--ss-border-radius);
+        background: transparent;
+        cursor: pointer;
         font-size: 0;
+
+        svg {
+          display: none;
+        }
         &:after {
           background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8.5C16 12.9183 12.4183 16.5 8 16.5C3.58172 16.5 0 12.9183 0 8.5C0 4.08172 3.58172 0.5 8 0.5C12.4183 0.5 16 4.08172 16 8.5ZM5.35355 5.14645C5.15829 4.95118 4.84171 4.95118 4.64645 5.14645C4.45118 5.34171 4.45118 5.65829 4.64645 5.85355L7.29289 8.5L4.64645 11.1464C4.45118 11.3417 4.45118 11.6583 4.64645 11.8536C4.84171 12.0488 5.15829 12.0488 5.35355 11.8536L8 9.20711L10.6464 11.8536C10.8417 12.0488 11.1583 12.0488 11.3536 11.8536C11.5488 11.6583 11.5488 11.3417 11.3536 11.1464L8.70711 8.5L11.3536 5.85355C11.5488 5.65829 11.5488 5.34171 11.3536 5.14645C11.1583 4.95118 10.8417 4.95118 10.6464 5.14645L8 7.79289L5.35355 5.14645Z' fill='%23F8F9FA'/%3E%3C/svg%3E%0A");
           background-repeat: no-repeat;
           content: "";
           display: inline-block;
           height: 1rem;
-          transform: scale(0.8) translateY(50%);
           width: 1rem;
-          padding: 15px;
           background-position: 50%;
           border-radius: 50%;
-          position: absolute;
-          right: 0;
-          bottom: calc(50% - 3px);
         }
-        &:focus-visible {
-          &:after {
-            outline: 2px solid $white;
-            outline-offset: -6px;
-          }
+        &:focus {
+          outline: 2px solid $white;
+          outline-offset: -3px;
         }
       }
     }
@@ -295,10 +336,14 @@
     transform-origin: center bottom;
     border-top-left-radius: var(--ss-border-radius);
     border-top-right-radius: var(--ss-border-radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &.ss-dir-below {
     transform-origin: center top;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-left-radius: var(--ss-border-radius);
     border-bottom-right-radius: var(--ss-border-radius);
   }
@@ -394,13 +439,15 @@
       .ss-optgroup-label {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
+        gap: 0.5rem;
         padding: var(--ss-spacing-m) var(--ss-spacing-l) var(--ss-spacing-m)
           var(--ss-spacing-l);
 
         .ss-optgroup-label-text {
-          flex: 1 1 auto;
+          flex: 0 1 auto;
           font-weight: bold;
           color: var(--ss-font-color);
         }
@@ -417,55 +464,6 @@
           align-items: center;
           justify-content: center;
           gap: var(--ss-spacing-m);
-
-          .ss-selectall {
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: row;
-            cursor: pointer;
-
-            &:hover {
-              opacity: 0.5;
-            }
-
-            &.ss-selected {
-              svg {
-                path {
-                  stroke: var(--ss-error-color);
-                }
-              }
-            }
-
-            span {
-              flex: 0 1 auto;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: calc(100% * 0.6);
-              text-align: center;
-              padding: 0 var(--ss-spacing-s) 0 0;
-            }
-
-            svg {
-              flex: 0 1 auto;
-              width: 13px;
-              height: 13px;
-
-              path {
-                fill: none;
-                stroke: var(--ss-success-color);
-                stroke-linecap: round;
-                stroke-linejoin: round;
-              }
-
-              &:first-child {
-                stroke-width: 5;
-              }
-              &:last-child {
-                stroke-width: 11;
-              }
-            }
-          }
 
           .ss-closable {
             flex: 0 1 auto;
@@ -573,4 +571,73 @@
   clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   overflow: hidden;
+}
+
+.ss-content {
+  .ss-selectall,
+  .ss-selectall-slot {
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 32px;
+    box-sizing: border-box;
+    padding: 0.125rem 0.5rem;
+    border: 1px solid var(--ss-font-color);
+    border-radius: 4px;
+    background: var(--ss-bg-color);
+    color: var(--ss-font-color);
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover,
+    &[aria-pressed="true"] {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    &:focus {
+      outline: 2px solid currentColor;
+      outline-offset: 1px;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    @media (pointer: coarse) {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+}
+
+.ss-content {
+  .ss-options {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .ss-options-body {
+    position: relative;
+  }
+
+  .ss-options .ss-list {
+    overflow: visible;
+  }
+
+  .ss-selectall-slot {
+    visibility: hidden;
+  }
+
+  .ss-group-actions {
+    .ss-selectall {
+      position: absolute;
+      z-index: 1;
+    }
+  }
 }
