@@ -90,7 +90,9 @@ export const Split = { name: "Carousel image" };
 export const SplitInContainer = {
   name: "Carousel image / Page container",
   args: { id: "carousel-v2-page-container" },
-  decorators: [(story) => `<div class="container">${story()}</div>`],
+  decorators: [
+    async (story) => `<div class="container">${await story()}</div>`,
+  ],
   parameters: { layout: "fullscreen" },
 };
 export const FullWidth = {
