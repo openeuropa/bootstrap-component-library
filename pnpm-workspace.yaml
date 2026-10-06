@@ -79,10 +79,13 @@ allowBuilds:
   unrs-resolver: true
 
 patchedDependencies:
+  braces@3.0.3: patches/braces@3.0.3.patch
   locutus@3.0.36: patches/locutus@3.0.36.patch
   twing@7.3.1: patches/twing@7.3.1.patch
 
 auditConfig:
   ignoreGhsas:
+    # No published fix; depth guards are backported in braces@3.0.3.patch.
+    - GHSA-vfj7-8cjw-p6xm
     # extract-zip symlink traversal; no fixed release published yet.
     - GHSA-jmr9-qjv8-65gv
