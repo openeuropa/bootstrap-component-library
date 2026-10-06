@@ -50,10 +50,12 @@ describe("Slim Select accessibility", () => {
       new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }),
     );
 
-    expect(main.hasAttribute("role")).toBe(false);
-    expect(main.tabIndex).toBe(-1);
-    expect(search.tabIndex).toBe(0);
-    expect(main.hasAttribute("aria-activedescendant")).toBe(false);
+    expect(main.getAttribute("role")).toBe("combobox");
+    expect(main.tabIndex).toBe(0);
+    expect(search.tabIndex).toBe(-1);
+    expect(main.getAttribute("aria-activedescendant")).toBe(
+      search.getAttribute("aria-activedescendant"),
+    );
     const activeOption = document.getElementById(
       search.getAttribute("aria-activedescendant"),
     );
@@ -124,8 +126,9 @@ describe("Slim Select accessibility", () => {
       new KeyboardEvent("keydown", { key: "ArrowUp", bubbles: true }),
     );
     slimSelect.close();
-    search.focus();
-    search.dispatchEvent(
+    const main = document.querySelector(".ss-main");
+    main.focus();
+    main.dispatchEvent(
       new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
     );
     expect(search.getAttribute("aria-expanded")).toBe("true");
@@ -133,15 +136,16 @@ describe("Slim Select accessibility", () => {
     expect(search.getAttribute("aria-activedescendant")).toBeNull();
   });
 
-  test("the search input is the only combobox and stays focused during navigation", () => {
+  test("search stays inside the dropdown and receives focus after opening", () => {
     const action = createGroupedSelect();
     slimSelect.close();
     const search = document.querySelector(".ss-search input");
-    expect(document.querySelectorAll('[role="combobox"]')).toHaveLength(1);
-    expect(search.closest(".ss-main")).not.toBeNull();
-    expect(search.hasAttribute("aria-hidden")).toBe(false);
-    search.focus();
-    search.dispatchEvent(
+    expect(search.closest(".ss-content")).not.toBeNull();
+    expect(search.closest(".ss-main")).toBeNull();
+    expect(search.hasAttribute("aria-hidden")).toBe(true);
+    const main = document.querySelector(".ss-main");
+    main.focus();
+    main.dispatchEvent(
       new KeyboardEvent("keydown", { key: "ArrowDown", bubbles: true }),
     );
     expect(document.activeElement).toBe(search);
@@ -181,22 +185,21 @@ describe("Slim Select accessibility", () => {
     expect(document.activeElement).toBe(search);
   });
 
-  test("Escape closes the popup and keeps focus on the input", () => {
+  test("Escape closes the popup and returns focus to the trigger", () => {
     createGroupedSelect();
     const search = document.querySelector(".ss-search input");
     search.dispatchEvent(
       new KeyboardEvent("keydown", { key: "Escape", bubbles: true }),
     );
     expect(search.getAttribute("aria-expanded")).toBe("false");
-    expect(document.activeElement).toBe(search);
-    expect(search.hasAttribute("aria-hidden")).toBe(false);
+    expect(document.activeElement).toBe(document.querySelector(".ss-main"));
+    expect(search.hasAttribute("aria-hidden")).toBe(true);
   });
 
-  test("typing opens and filters the popup without changing focus", () => {
+  test("typing filters the popup without changing search focus", () => {
     jest.useFakeTimers();
     try {
       createGroupedSelect();
-      slimSelect.close();
       const search = document.querySelector(".ss-search input");
       search.focus();
       search.value = "Belg";
@@ -222,8 +225,9 @@ describe("Slim Select accessibility", () => {
       settings: { contentPosition: "relative" },
     });
     const search = document.querySelector(".ss-search input");
-    search.focus();
-    search.dispatchEvent(
+    const main = document.querySelector(".ss-main");
+    main.focus();
+    main.dispatchEvent(
       new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
     );
     const tab = new KeyboardEvent("keydown", {
@@ -235,8 +239,8 @@ describe("Slim Select accessibility", () => {
     expect(tab.defaultPrevented).toBe(false);
     expect(search.getAttribute("aria-expanded")).toBe("false");
     document.querySelector("#next").focus();
-    search.focus();
-    search.dispatchEvent(
+    main.focus();
+    main.dispatchEvent(
       new KeyboardEvent("keydown", { key: "Enter", bubbles: true }),
     );
     expect(search.getAttribute("aria-expanded")).toBe("true");
@@ -394,9 +398,7 @@ describe("Slim Select accessibility", () => {
         cancelable: true,
       }),
     );
-    expect(document.activeElement).toBe(
-      document.querySelector(".ss-search input"),
-    );
+    expect(document.activeElement).toBe(document.querySelector(".ss-main"));
     expect(action.tabIndex).toBe(-1);
   });
 
