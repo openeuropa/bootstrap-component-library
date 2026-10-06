@@ -438,9 +438,10 @@
 
       .ss-optgroup-label {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--ss-spacing-m);
         padding: var(--ss-spacing-m) var(--ss-spacing-l) var(--ss-spacing-m)
           var(--ss-spacing-l);
 
@@ -586,12 +587,8 @@
     background: transparent;
     color: var(--ss-font-color);
     font: inherit;
-    font-size: 0.75rem;
+    font-size: 1rem;
     cursor: pointer;
-
-    @include media-breakpoint-down(md) {
-      font-size: 0.875rem;
-    }
 
     &:hover,
     &[aria-pressed="true"] {
@@ -639,6 +636,45 @@
     .ss-selectall {
       position: absolute;
       z-index: 1;
+    }
+  }
+}
+
+// Keep the editable combobox visible and focused while its popup opens/closes.
+.ss-main.ss-editable {
+  flex-wrap: wrap;
+
+  &:focus-within {
+    @include form-focus-ring();
+  }
+
+  .ss-values {
+    flex: 0 1 auto;
+    min-height: 0;
+
+    &:has(.ss-placeholder) {
+      display: none;
+    }
+  }
+
+  .ss-search {
+    display: flex;
+    flex: 1 1 8rem;
+    min-width: 0;
+
+    input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      padding: var(--ss-spacing-s) var(--ss-spacing-m);
+      background: transparent;
+      color: var(--ss-font-color);
+      font: inherit;
+
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
     }
   }
 }
