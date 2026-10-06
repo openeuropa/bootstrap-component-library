@@ -438,15 +438,16 @@
 
       .ss-optgroup-label {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: flex-start;
-        gap: var(--ss-spacing-m);
+        gap: 0.5rem;
         padding: var(--ss-spacing-m) var(--ss-spacing-l) var(--ss-spacing-m)
           var(--ss-spacing-l);
 
         .ss-optgroup-label-text {
-          flex: 1 1 auto;
+          flex: 0 1 auto;
           font-weight: bold;
           color: var(--ss-font-color);
         }
@@ -580,11 +581,12 @@
     align-items: center;
     justify-content: center;
     min-width: 24px;
-    min-height: 24px;
-    padding: 0 0.25rem;
-    border: 0;
-    border-radius: 2px;
-    background: transparent;
+    min-height: 32px;
+    box-sizing: border-box;
+    padding: 0.125rem 0.5rem;
+    border: 1px solid var(--ss-font-color);
+    border-radius: 4px;
+    background: var(--ss-bg-color);
     color: var(--ss-font-color);
     font: inherit;
     font-size: 1rem;
@@ -636,45 +638,6 @@
     .ss-selectall {
       position: absolute;
       z-index: 1;
-    }
-  }
-}
-
-// Keep the editable combobox visible and focused while its popup opens/closes.
-.ss-main.ss-editable {
-  flex-wrap: wrap;
-
-  &:focus-within {
-    @include form-focus-ring();
-  }
-
-  .ss-values {
-    flex: 0 1 auto;
-    min-height: 0;
-
-    &:has(.ss-placeholder) {
-      display: none;
-    }
-  }
-
-  .ss-search {
-    display: flex;
-    flex: 1 1 8rem;
-    min-width: 0;
-
-    input {
-      width: 100%;
-      min-width: 0;
-      border: 0;
-      padding: var(--ss-spacing-s) var(--ss-spacing-m);
-      background: transparent;
-      color: var(--ss-font-color);
-      font: inherit;
-
-      &:focus {
-        outline: 0;
-        box-shadow: none;
-      }
     }
   }
 }
