@@ -9,7 +9,7 @@ export default {
   args: {
     ...data,
     layout: "split",
-    autoplay: false,
+    autoplay: true,
     interval: 10000,
     active_item: 1,
   },
@@ -36,7 +36,7 @@ export default {
     docs: {
       description: {
         component:
-          "Carousel image displays the image beside the content. Carousel hero displays a full-width image with content overlaid from the lg breakpoint and stacked below it on mobile. Both share rotation controls. Autoplay is opt-in; reduced motion starts paused. Hero desktop images are capped at 28rem high and cropped without stretching; its content and footer backgrounds remain white.",
+          "Carousel image displays the image beside the content. Carousel hero displays a full-width image with content overlaid from the lg breakpoint and stacked below it on mobile. Both share rotation controls. Autoplay is enabled by default; reduced motion starts paused. Hero desktop images are capped at 28rem high and cropped without stretching; its content and footer backgrounds remain white.",
       },
     },
   },
@@ -105,7 +105,7 @@ export const FullWidth = {
 };
 export const SplitControlsTest = {
   name: "Tests / Carousel image controls",
-  args: { id: "carousel-v2-split-controls-test" },
+  args: { id: "carousel-v2-split-controls-test", autoplay: false },
   tags: ["!autodocs", "carousel-v2-test"],
   play: async (context) => {
     await testControls(context);
@@ -131,7 +131,11 @@ export const SplitControlsTest = {
 };
 export const FullWidthControlsTest = {
   name: "Tests / Carousel hero controls",
-  args: { id: "carousel-v2-full-width-controls-test", layout: "full_width" },
+  args: {
+    id: "carousel-v2-full-width-controls-test",
+    layout: "full_width",
+    autoplay: false,
+  },
   tags: ["!autodocs", "carousel-v2-test"],
   play: testControls,
 };

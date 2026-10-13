@@ -2,7 +2,7 @@
   - id (string): unique ID; generated when omitted
   - label (string): accessible carousel name, defaults to 'Featured content'
   - layout (string): 'split' (default) or 'full_width'
-  - autoplay (boolean): false by default; reduced motion always starts paused
+  - autoplay (boolean): true by default; reduced motion always starts paused
   - interval (integer): rotation interval in milliseconds (default 10000; minimum 8000)
   - active_item (integer): 1-based initial slide (default 1)
   - disable_touch (boolean): false by default
@@ -36,7 +36,7 @@
   .setAttribute('role', 'region')
   .setAttribute('aria-roledescription', carousel_role_label|default('carousel'))
   .setAttribute('aria-label', label|default('Featured content'))
-  .setAttribute('data-bcl-autoplay', autoplay ?? false ? 'true' : 'false')
+  .setAttribute('data-bcl-autoplay', autoplay ?? true ? 'true' : 'false')
   .setAttribute('data-bs-interval', _interval)
   .setAttribute('data-bs-touch', disable_touch ?? false ? 'false' : 'true')
   .setAttribute('data-bs-ride', 'false')

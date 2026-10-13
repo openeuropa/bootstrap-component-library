@@ -13,7 +13,7 @@ Joinup theme CSS and JavaScript. Supply a unique `id`, an accessible `label`,
   and content lengths can change slide height. Supply consistent image ratios
   when a consistent height is desired; include intrinsic dimensions and
   responsive `srcset`/`sizes` or a rendered `picture` in each `image` value.
-- `autoplay` defaults to false, `interval` to 10000 milliseconds, and
+- `autoplay` defaults to true, `interval` to 10000 milliseconds, and
   `active_item` to 1. A positive per-item `interval` overrides the default.
   Intervals have an 8000ms minimum. BCL extends each slide's interval to at least
   `3000 + 400 × word count` milliseconds, counting its rendered title, description
@@ -64,7 +64,7 @@ explicit user pause survives navigation and hover. V1 and Gallery keep their
 existing behavior.
 
 Storybook's dedicated controls test stories exercise navigation, rotation controls
-and counter updates using play functions; the normal layout previews stay still.
+and counter updates using play functions; normal layout previews autoplay.
 Jest covers markup, accessibility,
 Bootstrap integration, timer behavior, reduced motion and lifecycle cleanup.
 

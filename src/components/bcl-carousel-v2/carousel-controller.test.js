@@ -19,6 +19,7 @@ async function mount(options = {}) {
   const container = document.createElement("div");
   container.innerHTML = await renderTwigFileAsHtml(template, {
     ...data,
+    autoplay: false,
     ...options,
   });
   document.body.append(container);
@@ -55,6 +56,30 @@ afterEach(() => {
 });
 
 describe("Carousel V2 Bootstrap integration", () => {
+  test("omitted autoplay starts rotation and progress by default", async () => {
+    jest.useFakeTimers();
+    const { element, rotation } = await mount({ autoplay: undefined });
+    expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
+    expect(
+      element.querySelector(".active .bcl-carousel-v2__progress").hidden,
+    ).toBe(false);
+    element.querySelector(".active a").focus();
+    jest.advanceTimersByTime(10000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+  });
+
+  test.each([false, undefined])(
+    "reduced motion starts paused with autoplay %s",
+    async (autoplay) => {
+      motion.matches = true;
+      jest.useFakeTimers();
+      const { element, rotation } = await mount({ autoplay });
+      expect(rotation.getAttribute("aria-label")).toBe("Play slides");
+      jest.advanceTimersByTime(20000);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    },
+  );
+
   test("progress freezes on hover and shares the remaining slide timer", async () => {
     const animations = [];
     const animate = jest.fn((frames, options) => {

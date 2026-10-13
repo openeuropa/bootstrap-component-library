@@ -39,6 +39,15 @@ describe("Carousel V2 markup", () => {
     },
   );
 
+  test.each([
+    [undefined, "true"],
+    [false, "false"],
+    [true, "true"],
+  ])("autoplay %s renders %s", async (autoplay, expected) => {
+    const node = await renderTwigFileAsNode(template, { ...data, autoplay });
+    expect(node.querySelector("section").dataset.bclAutoplay).toBe(expected);
+  });
+
   test("page context selects h4 without changing the display style", async () => {
     const node = await renderTwigFileAsNode(template, {
       ...data,

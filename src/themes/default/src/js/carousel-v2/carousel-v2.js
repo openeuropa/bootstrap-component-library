@@ -35,7 +35,7 @@ class CarouselV2 {
     this.counter = element.querySelector("[data-bcl-current]");
     this.motion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     this.paused =
-      element.dataset.bclAutoplay !== "true" || !!this.motion?.matches;
+      element.dataset.bclAutoplay === "false" || !!this.motion?.matches;
     this.pauseOnHover = element.dataset.bclPauseOnHover !== "false";
     this.hovered =
       this.pauseOnHover &&
