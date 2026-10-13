@@ -59,9 +59,10 @@ and listeners with `bootstrap.CarouselV2.getOrCreateInstance(element).dispose()`
 Calling `init()` also disposes instances whose elements have been removed.
 
 Do not initialize V2 separately with Bootstrap's constructor or `data-bs-ride`:
-the controller creates the Bootstrap instance with auto-resume disabled, so an
+the controller extends Bootstrap with auto-resume disabled, so an
 explicit user pause survives navigation and hover. V1 and Gallery keep their
-existing behavior.
+existing behavior. If a Bootstrap instance already exists on a V2 element,
+BCL replaces it during initialization so progress and timing remain coordinated.
 
 Storybook's dedicated controls test stories exercise navigation, rotation controls
 and counter updates using play functions; normal layout previews autoplay.

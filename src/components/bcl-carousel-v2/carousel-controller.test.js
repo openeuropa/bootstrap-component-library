@@ -15,7 +15,7 @@ function pointerEvent(type, pointerType = "mouse") {
   return event;
 }
 
-async function mount(options = {}) {
+async function mount(options = {}, beforeInit) {
   const container = document.createElement("div");
   container.innerHTML = await renderTwigFileAsHtml(template, {
     ...data,
@@ -28,6 +28,7 @@ async function mount(options = {}) {
   element.classList.remove("slide");
   // jsdom has no layout. Bootstrap's visibility check requires a client rect.
   element.getClientRects = () => [{ width: 100, height: 100 }];
+  beforeInit?.(element);
   const controller = CarouselV2.getOrCreateInstance(element);
   mounted.push(controller);
   return {
@@ -45,7 +46,7 @@ beforeEach(() => {
 
 afterEach(() => {
   mounted.splice(0).forEach((controller) => {
-    if (controller.element.hasAttribute("data-bcl-initialized"))
+    if (controller.element?.hasAttribute("data-bcl-initialized"))
       controller.dispose();
   });
   document.body.innerHTML = "";
@@ -119,7 +120,7 @@ describe("Carousel V2 Bootstrap integration", () => {
       jest.advanceTimersByTime(2000);
       rotation.click();
       expect(Array.from(bars).every((bar) => bar.hidden)).toBe(true);
-      expect(controller.progressElapsed).toBe(2000);
+      expect(controller.elapsed).toBe(2000);
       jest.advanceTimersByTime(20000);
       element.querySelector(".active a").focus();
       element.dispatchEvent(pointerEvent("pointerenter"));
@@ -151,14 +152,14 @@ describe("Carousel V2 Bootstrap integration", () => {
     rotation.click();
     jest.advanceTimersByTime(4000);
     element.querySelector('[data-bs-slide="next"]').click();
-    expect(controller.progressDuration).toBe(16000);
-    expect(controller.progressElapsed).toBe(0);
+    expect(controller.duration).toBe(16000);
+    expect(controller.elapsed).toBe(0);
     jest.advanceTimersByTime(5000);
     element.dispatchEvent(pointerEvent("pointerenter"));
     element.querySelector('[data-bs-slide="prev"]').click();
-    expect(controller.progressElapsed).toBe(0);
+    expect(controller.elapsed).toBe(0);
     element.dispatchEvent(pointerEvent("pointerleave"));
-    expect(controller.progressDuration).toBe(10000);
+    expect(controller.duration).toBe(10000);
     jest.advanceTimersByTime(9999);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
     jest.advanceTimersByTime(1);
@@ -207,7 +208,7 @@ describe("Carousel V2 Bootstrap integration", () => {
     expect(footer.querySelector(":scope > :not([hidden])").textContent).toBe(
       credits[0].textContent,
     );
-    controller.carousel.next();
+    controller.next();
     checkPosition();
     expect(footer.querySelector(":scope > :not([hidden])").textContent).toBe(
       credits[1].textContent,
@@ -226,7 +227,7 @@ describe("Carousel V2 Bootstrap integration", () => {
     expect(
       element.style.getPropertyValue("--bcl-carousel-controls-height"),
     ).toBe("0px");
-    controller.carousel.next();
+    controller.next();
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     controller.dispose();
     expect(
@@ -341,14 +342,60 @@ describe("Carousel V2 Bootstrap integration", () => {
     expect(Carousel.getInstance(element)).toBeNull();
   });
 
-  test("cancelled slide events keep the current slide accessible", async () => {
-    const { element } = await mount();
-    element.addEventListener("slide.bs.carousel", (event) =>
-      event.preventDefault(),
+  test("cancelled slide events preserve progress and the remaining countdown", async () => {
+    jest.useFakeTimers();
+    const { element, controller } = await mount({ autoplay: true });
+    jest.advanceTimersByTime(4000);
+    const bar = element.querySelector(".active .bcl-carousel-v2__progress");
+    element.addEventListener(
+      "slide.bs.carousel",
+      (event) => event.preventDefault(),
+      { once: true },
     );
     element.querySelector('[data-bs-slide="next"]').click();
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
     expect(element.querySelector(".active").hasAttribute("inert")).toBe(false);
+    expect(bar.hidden).toBe(false);
+    expect(controller.duration).toBe(10000);
+    expect(jest.getTimerCount()).toBe(1);
+    jest.advanceTimersByTime(5999);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    jest.advanceTimersByTime(1);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+    expect(bar.hidden).toBe(true);
+  });
+
+  test("replaces an existing Bootstrap instance with BCL timing and cleanup", async () => {
+    jest.useFakeTimers();
+    let previous;
+    const { element, controller, rotation } = await mount(
+      { autoplay: true },
+      (root) => {
+        previous = Carousel.getOrCreateInstance(root, {
+          pause: "hover",
+          ride: "carousel",
+        });
+      },
+    );
+    expect(Carousel.getInstance(element)).toBe(controller);
+    expect(controller).not.toBe(previous);
+    expect(jest.getTimerCount()).toBe(1);
+    expect(
+      element.querySelector(".active .bcl-carousel-v2__progress").hidden,
+    ).toBe(false);
+    jest.advanceTimersByTime(4000);
+    rotation.click();
+    element.dispatchEvent(new MouseEvent("mouseleave"));
+    jest.advanceTimersByTime(20000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    rotation.click();
+    jest.advanceTimersByTime(5999);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    jest.advanceTimersByTime(1);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+    controller.dispose();
+    expect(Carousel.getInstance(element)).toBeNull();
+    expect(jest.getTimerCount()).toBe(0);
   });
 
   test.each([
