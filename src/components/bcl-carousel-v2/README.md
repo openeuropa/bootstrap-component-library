@@ -25,22 +25,20 @@ Joinup theme CSS and JavaScript. Supply a unique `id`, an accessible `label`,
 - Zero items render nothing. One item renders without controls or rotation.
 
 Bootstrap supplies previous/next, swipe, keyboard support and transitions. The
-V2 controller adds rotation intent, counter updates and accessibility. Hover
-temporarily suspends rotation.
-Hover pause is handled by BCL. Do not change `data-bs-pause`.
-`data-bcl-pause-on-hover="true"` makes this ownership explicit; Bootstrap's
-`data-bs-pause="false"` prevents competing auto-resume handlers. Focus inside the carousel does not stop rotation. An explicit Pause stops it
-until Play is selected. The Play/Pause control retains focus and announces its
-next action. Reduced motion starts paused and disables transitions; the user
-can explicitly choose Play. A subsequent change to reduced motion stops it.
+V2 controller adds rotation intent, counter updates and accessibility. Mouse hover
+and focus inside the carousel do not pause rotation. Keep `data-bs-pause="false"`
+and `data-bcl-pause-on-hover="false"`. An explicit Pause stops rotation until Play
+is selected and preserves elapsed slide time. The Play/Pause control retains
+focus and announces its next action. Reduced motion starts paused and disables
+transitions; the user can explicitly choose Play. A subsequent change to reduced
+motion stops it.
 
 A decorative 3px progress bar in blue (`#253EBE`) sits above the image and spans
-its column. It appears while rotation is enabled, freezes on hover, hides on
-Pause, and starts fresh on every slide change. Hover and explicit Pause preserve elapsed time; Play resumes the remaining
-slide time. Its animation uses the same interval as Bootstrap's rotation timer;
-there is no separate timer for progress. Reduced motion hides the indicator,
-even after an explicit Play. It is hidden from assistive technology and cannot
-receive focus.
+its column. It remains visible and freezes on Pause; Play resumes both the bar
+and the remaining slide countdown. Every slide change starts progress afresh.
+Its animation uses the same interval as Bootstrap's rotation timer; there is no
+separate timer for progress. Reduced motion hides the indicator, even after an
+explicit Play. It is hidden from assistive technology and cannot receive focus.
 
 All control labels, `carousel_role_label`, `slide_role_label`, and the
 `%current% of %total%` slide label are configurable

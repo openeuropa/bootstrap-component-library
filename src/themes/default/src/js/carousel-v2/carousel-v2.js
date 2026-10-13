@@ -16,7 +16,7 @@ class CarouselV2 extends Carousel {
         ?.dispatchEvent(new Event("transitionend"));
       previous.dispose();
     }
-    // Hover pause is handled by BCL. Do not change data-bs-pause.
+    // Hover must not pause rotation. Keep Bootstrap hover handling disabled.
     super(element, { ride: false, pause: false });
     this.element = element;
     this.slides = Array.from(element.querySelectorAll(".carousel-item"));
@@ -43,11 +43,6 @@ class CarouselV2 extends Carousel {
     this.motion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     this.paused =
       element.dataset.bclAutoplay === "false" || !!this.motion?.matches;
-    this.pauseOnHover = element.dataset.bclPauseOnHover !== "false";
-    this.hovered =
-      this.pauseOnHover &&
-      element.matches(":hover") &&
-      !!window.matchMedia?.("(any-hover: hover)").matches;
     this.events = new AbortController();
     this.isImageLayout = element.classList.contains("bcl-carousel-v2--split");
     this.setupSlides();
@@ -107,13 +102,6 @@ class CarouselV2 extends Carousel {
       this.paused = !this.paused;
       this.updateRotation();
     });
-    for (const type of ["pointerenter", "pointerleave"]) {
-      this.listen(this.element, type, (event) => {
-        if (!this.pauseOnHover || event.pointerType !== "mouse") return;
-        this.hovered = type === "pointerenter";
-        this.updateRotation();
-      });
-    }
     if (this.motion) {
       this.listen(this.motion, "change", (event) => {
         if (!event.matches) return;
@@ -173,7 +161,7 @@ class CarouselV2 extends Carousel {
   }
 
   updateRotation() {
-    const rotating = !this.paused && !this.hovered && this.slides.length > 1;
+    const rotating = !this.paused && this.slides.length > 1;
     this.pause();
     if (rotating)
       this.cycle(
@@ -258,8 +246,7 @@ class CarouselV2 extends Carousel {
 
   showProgress() {
     if (this.bar)
-      this.bar.hidden =
-        this.paused || !!this.motion?.matches || this.slides.length < 2;
+      this.bar.hidden = !!this.motion?.matches || this.slides.length < 2;
   }
 
   dispose() {

@@ -30,7 +30,7 @@
 {%- set _icon_path = icon_path|default('') -%}
 {%- set _slide_label = slide_label|default('%current% of %total%') -%}
 {%- set attributes = attributes ?: create_attribute() -%}
-{# Hover pause is handled by BCL. Do not change data-bs-pause. #}
+{# Hover must not pause rotation. Keep data-bs-pause="false". #}
 {%- set attributes = attributes.addClass(['bcl-carousel-v2', 'bcl-carousel-v2--' ~ _layout, 'carousel', 'slide'])
   .setAttribute('id', _id)
   .setAttribute('role', 'region')
@@ -41,7 +41,7 @@
   .setAttribute('data-bs-touch', disable_touch ?? false ? 'false' : 'true')
   .setAttribute('data-bs-ride', 'false')
   .setAttribute('data-bs-pause', 'false')
-  .setAttribute('data-bcl-pause-on-hover', 'true')
+  .setAttribute('data-bcl-pause-on-hover', 'false')
 -%}
 {%- if _layout == 'split' -%}
   {%- set attributes = attributes.addClass('carousel-fade') -%}

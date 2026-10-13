@@ -81,7 +81,7 @@ describe("Carousel V2 Bootstrap integration", () => {
     },
   );
 
-  test("progress freezes on hover and shares the remaining slide timer", async () => {
+  test("progress stays visible on Pause and resumes the remaining slide timer", async () => {
     const animations = [];
     const animate = jest.fn((frames, options) => {
       const animation = { cancel: jest.fn(), frames, options };
@@ -95,19 +95,20 @@ describe("Carousel V2 Bootstrap integration", () => {
     try {
       const { element, rotation, controller } = await mount();
       const bars = element.querySelectorAll(".bcl-carousel-v2__progress");
-      expect(bars[0].hidden).toBe(true);
+      expect(bars[0].hidden).toBe(false);
       jest.useFakeTimers();
       rotation.click();
       expect(bars[0].hidden).toBe(false);
       expect(animations[0].options.duration).toBe(10000);
       jest.advanceTimersByTime(4000);
       element.dispatchEvent(pointerEvent("pointerenter"));
+      rotation.click();
       expect(bars[0].hidden).toBe(false);
       expect(bars[0].style.transform).toBe("scaleX(0.4)");
       expect(animations[0].cancel).toHaveBeenCalled();
       jest.advanceTimersByTime(20000);
       expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
-      element.dispatchEvent(pointerEvent("pointerleave"));
+      rotation.click();
       expect(animations[1].options.duration).toBe(6000);
       expect(animations[1].frames[0].transform).toBe("scaleX(0.4)");
       jest.advanceTimersByTime(5999);
@@ -119,7 +120,8 @@ describe("Carousel V2 Bootstrap integration", () => {
       expect(animations.at(-1).options.duration).toBe(10000);
       jest.advanceTimersByTime(2000);
       rotation.click();
-      expect(Array.from(bars).every((bar) => bar.hidden)).toBe(true);
+      expect(bars[1].hidden).toBe(false);
+      expect(bars[1].style.transform).toBe("scaleX(0.2)");
       expect(controller.elapsed).toBe(2000);
       jest.advanceTimersByTime(20000);
       element.querySelector(".active a").focus();
@@ -558,16 +560,18 @@ describe("Carousel V2 Bootstrap integration", () => {
     ).toBe("polite");
   });
 
-  test("hover temporarily suspends rotation without clearing the user's intent", async () => {
+  test("mouse hover and focus inside the slide never suspend rotation", async () => {
     const { element, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
-    rotation.click();
     element.dispatchEvent(pointerEvent("pointerenter"));
-    jest.advanceTimersByTime(20000);
-    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
-    element.dispatchEvent(pointerEvent("pointerleave"));
+    element.dispatchEvent(new MouseEvent("mouseenter"));
+    element.querySelector(".active a").focus();
+    rotation.click();
     jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+    expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
+    jest.advanceTimersByTime(10000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("3");
   });
 
   test("touch-generated hover does not block Play", async () => {

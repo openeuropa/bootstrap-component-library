@@ -57,7 +57,7 @@ describe("Carousel V2 markup", () => {
     expect(node.querySelector("h4.bcl-carousel-v2__title")).not.toBeNull();
     expect(node.querySelector(".h1")).toBeNull();
     expect(node.querySelector("section").dataset.bsPause).toBe("false");
-    expect(node.querySelector("section").dataset.bclPauseOnHover).toBe("true");
+    expect(node.querySelector("section").dataset.bclPauseOnHover).toBe("false");
   });
 
   test("configured intervals never fall below eight seconds", async () => {
