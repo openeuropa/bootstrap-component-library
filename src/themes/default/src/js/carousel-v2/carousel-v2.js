@@ -201,7 +201,6 @@ class CarouselV2 {
   updateRotation() {
     const rotating = !this.paused && !this.hovered && this.slides.length > 1;
     this.carousel.pause();
-    if (this.paused) this.resetProgress();
     if (rotating) {
       const remaining =
         this.progressDuration && this.progressElapsed

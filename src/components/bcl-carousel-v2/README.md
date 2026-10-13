@@ -36,7 +36,7 @@ can explicitly choose Play. A subsequent change to reduced motion stops it.
 
 A decorative 3px progress bar in blue (`#253EBE`) sits above the image and spans
 its column. It appears while rotation is enabled, freezes on hover, hides on
-Pause, and starts fresh on every slide change. Hover resumes the remaining
+Pause, and starts fresh on every slide change. Hover and explicit Pause preserve elapsed time; Play resumes the remaining
 slide time. Its animation uses the same interval as Bootstrap's rotation timer;
 there is no separate timer for progress. Reduced motion hides the indicator,
 even after an explicit Play. It is hidden from assistive technology and cannot

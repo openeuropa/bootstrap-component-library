@@ -91,10 +91,23 @@ describe("Carousel V2 Bootstrap integration", () => {
       expect(bars[0].hidden).toBe(true);
       expect(bars[1].hidden).toBe(false);
       expect(animations.at(-1).options.duration).toBe(10000);
+      jest.advanceTimersByTime(2000);
       rotation.click();
       expect(Array.from(bars).every((bar) => bar.hidden)).toBe(true);
+      expect(controller.progressElapsed).toBe(2000);
+      jest.advanceTimersByTime(20000);
+      element.querySelector(".active a").focus();
+      element.dispatchEvent(pointerEvent("pointerenter"));
+      element.dispatchEvent(pointerEvent("pointerleave"));
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
       rotation.click();
-      expect(animations.at(-1).frames[0].transform).toBe("scaleX(0)");
+      expect(animations.at(-1).frames[0].transform).toBe("scaleX(0.2)");
+      expect(animations.at(-1).options.duration).toBe(8000);
+      expect(bars[1].hidden).toBe(false);
+      jest.advanceTimersByTime(7999);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+      jest.advanceTimersByTime(1);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("3");
       const last = animations.at(-1);
       controller.dispose();
       expect(last.cancel).toHaveBeenCalled();
@@ -363,6 +376,7 @@ describe("Carousel V2 Bootstrap integration", () => {
   });
 
   test("autoplay starts through Bootstrap and uses per-slide intervals", async () => {
+    jest.useFakeTimers();
     const cycle = jest.spyOn(Carousel.prototype, "cycle");
     const { element, rotation } = await mount({
       autoplay: true,
@@ -371,9 +385,6 @@ describe("Carousel V2 Bootstrap integration", () => {
     });
     expect(cycle).toHaveBeenCalled();
     expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
-    rotation.click();
-    jest.useFakeTimers();
-    rotation.click();
     jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     jest.advanceTimersByTime(29999);
