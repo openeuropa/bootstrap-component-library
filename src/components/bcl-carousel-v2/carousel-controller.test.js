@@ -55,6 +55,92 @@ afterEach(() => {
 });
 
 describe("Carousel V2 Bootstrap integration", () => {
+  test("progress freezes on hover and shares the remaining slide timer", async () => {
+    const animations = [];
+    const animate = jest.fn((frames, options) => {
+      const animation = { cancel: jest.fn(), frames, options };
+      animations.push(animation);
+      return animation;
+    });
+    Object.defineProperty(Element.prototype, "animate", {
+      configurable: true,
+      value: animate,
+    });
+    try {
+      const { element, rotation, controller } = await mount();
+      const bars = element.querySelectorAll(".bcl-carousel-v2__progress");
+      expect(bars[0].hidden).toBe(true);
+      jest.useFakeTimers();
+      rotation.click();
+      expect(bars[0].hidden).toBe(false);
+      expect(animations[0].options.duration).toBe(10000);
+      jest.advanceTimersByTime(4000);
+      element.dispatchEvent(pointerEvent("pointerenter"));
+      expect(bars[0].hidden).toBe(false);
+      expect(bars[0].style.transform).toBe("scaleX(0.4)");
+      expect(animations[0].cancel).toHaveBeenCalled();
+      jest.advanceTimersByTime(20000);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+      element.dispatchEvent(pointerEvent("pointerleave"));
+      expect(animations[1].options.duration).toBe(6000);
+      expect(animations[1].frames[0].transform).toBe("scaleX(0.4)");
+      jest.advanceTimersByTime(5999);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+      jest.advanceTimersByTime(1);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+      expect(bars[0].hidden).toBe(true);
+      expect(bars[1].hidden).toBe(false);
+      expect(animations.at(-1).options.duration).toBe(10000);
+      rotation.click();
+      expect(Array.from(bars).every((bar) => bar.hidden)).toBe(true);
+      rotation.click();
+      expect(animations.at(-1).frames[0].transform).toBe("scaleX(0)");
+      const last = animations.at(-1);
+      controller.dispose();
+      expect(last.cancel).toHaveBeenCalled();
+      expect(jest.getTimerCount()).toBe(0);
+      expect(Array.from(bars).every((bar) => bar.hidden)).toBe(true);
+    } finally {
+      delete Element.prototype.animate;
+    }
+  });
+
+  test("navigation resets progress to the next slide's own interval, including while hovered", async () => {
+    const { element, rotation, controller } = await mount({
+      items: [data.items[0], { ...data.items[1], interval: 16000 }],
+    });
+    jest.useFakeTimers();
+    rotation.click();
+    jest.advanceTimersByTime(4000);
+    element.querySelector('[data-bs-slide="next"]').click();
+    expect(controller.progressDuration).toBe(16000);
+    expect(controller.progressElapsed).toBe(0);
+    jest.advanceTimersByTime(5000);
+    element.dispatchEvent(pointerEvent("pointerenter"));
+    element.querySelector('[data-bs-slide="prev"]').click();
+    expect(controller.progressElapsed).toBe(0);
+    element.dispatchEvent(pointerEvent("pointerleave"));
+    expect(controller.progressDuration).toBe(10000);
+    jest.advanceTimersByTime(9999);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    jest.advanceTimersByTime(1);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+  });
+
+  test("reduced motion keeps progress hidden even when Play is chosen", async () => {
+    motion.matches = true;
+    const { element, rotation } = await mount({ autoplay: true });
+    jest.useFakeTimers();
+    rotation.click();
+    expect(
+      Array.from(element.querySelectorAll(".bcl-carousel-v2__progress")).every(
+        (bar) => bar.hidden,
+      ),
+    ).toBe(true);
+    jest.advanceTimersByTime(10000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+  });
+
   test("hero credits stay immediately after their image through navigation and disposal", async () => {
     const { element, controller } = await mount({ layout: "full_width" });
     const credits = Array.from(
@@ -412,33 +498,33 @@ describe("Carousel V2 Bootstrap integration", () => {
     expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
   });
 
-  test("focus on content stops rotation until explicitly restarted", async () => {
+  test.each([".active a", '[data-bs-slide="next"]', "[data-bcl-rotation]"])(
+    "rotation continues while focus is inside on %s",
+    async (selector) => {
+      const { element, rotation } = await mount({ interval: 10000 });
+      jest.useFakeTimers();
+      rotation.click();
+      element.querySelector(selector).focus();
+      expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
+      jest.advanceTimersByTime(10000);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+      expect(element.contains(document.activeElement)).toBe(true);
+      jest.advanceTimersByTime(10000);
+      expect(element.querySelector("[data-bcl-current]").textContent).toBe("3");
+    },
+  );
+
+  test("focus changes do not restart an explicitly paused carousel", async () => {
     const { element, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
     rotation.click();
+    rotation.click();
     element.querySelector(".active a").focus();
-    expect(rotation.getAttribute("aria-label")).toBe("Play slides");
-    element.querySelector(".active a").blur();
-    jest.advanceTimersByTime(20000);
-    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
-  });
-
-  test("keyboard focus on rotation stops autoplay until explicitly restarted", async () => {
-    const { element, rotation } = await mount({
-      autoplay: true,
-      interval: 10000,
-    });
-    jest.useFakeTimers();
     rotation.focus();
-    expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     rotation.blur();
     jest.advanceTimersByTime(20000);
+    expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
-    rotation.focus();
-    rotation.click();
-    expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
-    jest.advanceTimersByTime(10000);
-    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
   });
 
   test("reduced motion overrides autoplay, supports explicit Play and subsequent preference changes", async () => {

@@ -170,6 +170,23 @@ export const Autoplay = {
         name: reducedMotion ? "Play slides" : "Pause slides",
       }),
     ).toBeVisible();
+    const progress = root.querySelector(".active .bcl-carousel-v2__progress");
+    if (reducedMotion) {
+      await expect(progress).not.toBeVisible();
+    } else {
+      await expect(progress).toBeVisible();
+      const image = root
+        .querySelector(".active .bcl-carousel-v2__image")
+        .getBoundingClientRect();
+      const bar = progress.getBoundingClientRect();
+      // The transform shows elapsed progress; its untransformed box spans the image.
+      await expect(progress.offsetWidth).toBeCloseTo(image.width, 0);
+      await expect(bar.height).toBe(3);
+      await expect(bar.top).toBeCloseTo(image.top, 0);
+      await expect(getComputedStyle(progress).backgroundColor).toBe(
+        "rgb(37, 62, 190)",
+      );
+    }
   },
 };
 export const SingleSlide = {

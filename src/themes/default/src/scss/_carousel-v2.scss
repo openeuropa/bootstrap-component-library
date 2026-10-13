@@ -25,12 +25,29 @@
   }
 
   .bcl-carousel-v2__image {
+    position: relative;
+    padding-top: 3px;
     align-self: center;
 
     img {
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+
+  .bcl-carousel-v2__progress {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    height: 3px;
+    background: #253ebe;
+    pointer-events: none;
+    transform: scaleX(0);
+    transform-origin: left;
+
+    [dir="rtl"] & {
+      transform-origin: right;
     }
   }
 

@@ -18,6 +18,13 @@ describe("Carousel V2 markup", () => {
     ).toBe(layout === "split");
     expect(node.querySelector("p.bcl-carousel-v2__title")).not.toBeNull();
     expect(node.querySelectorAll("[data-bcl-rotation]")).toHaveLength(1);
+    const progress = node.querySelector(
+      ".bcl-carousel-v2__image > .bcl-carousel-v2__progress",
+    );
+    expect(progress.getAttribute("aria-hidden")).toBe("true");
+    expect(progress.hidden).toBe(true);
+    expect(progress.hasAttribute("tabindex")).toBe(false);
+    expect(progress.hasAttribute("role")).toBe(false);
     expect(node.querySelectorAll("[data-bs-slide]")).toHaveLength(2);
     expect(node.querySelector("section").getAttribute("data-bs-ride")).toBe(
       "false",

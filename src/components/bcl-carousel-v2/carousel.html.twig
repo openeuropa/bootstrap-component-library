@@ -79,7 +79,9 @@
         aria-label="{{ (_title ? _title ~ ' — ' ~ _position : _position)|escape('html_attr') }}"
         {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval < 8000 ? 8000 : item.interval }}"{% endif %}>{#- -#}
         <div class="bcl-carousel-v2__layout">{#- -#}
-          <div class="bcl-carousel-v2__image">{{ item.image }}</div>{#- -#}
+          <div class="bcl-carousel-v2__image">{#- -#}
+            <span class="bcl-carousel-v2__progress" aria-hidden="true" hidden></span>{{ item.image }}{#- -#}
+          </div>{#- -#}
           {%- if item.copyright is not empty -%}
             <div class="bcl-carousel-v2__copyright"><span class="visually-hidden">{{ item.copyright_label|default('Image credit:') }} </span>{{ item.copyright }}</div>{#- -#}
           {%- endif -%}

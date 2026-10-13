@@ -4,6 +4,26 @@ import { isRTL } from "@openeuropa/bcl-bootstrap/js/src/util/index";
 const SELECTOR = ".bcl-carousel-v2";
 const instances = new Map();
 
+/** Observe Bootstrap's actual timer, including its internal slide restarts. */
+class TimedCarousel extends Carousel {
+  cycle(remaining) {
+    this.remaining = remaining;
+    super.cycle();
+    this.onCycle?.(this._config.interval, remaining !== undefined);
+    this.remaining = undefined;
+  }
+
+  _updateInterval() {
+    super._updateInterval();
+    if (this.remaining !== undefined) this._config.interval = this.remaining;
+  }
+
+  pause() {
+    super.pause();
+    this.onPause?.();
+  }
+}
+
 /** Bootstrap owns transitions, gestures and timing; V2 owns rotation intent. */
 class CarouselV2 {
   constructor(element) {
@@ -57,13 +77,25 @@ class CarouselV2 {
 
     // Hover pause is handled by BCL. Do not change data-bs-pause.
     // No Bootstrap auto-resume on mouseleave, touchend or data-API navigation.
-    this.carousel = Carousel.getOrCreateInstance(element, {
+    this.carousel = TimedCarousel.getOrCreateInstance(element, {
       ride: false,
       pause: false,
     });
     this.carousel.pause();
+    this.carousel.onCycle = (duration, resumed) =>
+      this.startProgress(duration, resumed);
+    this.carousel.onPause = () => this.freezeProgress();
+    this.listen(element, "slide.bs.carousel", (event) => {
+      if (event.target !== element) return;
+      // Every navigation path starts the next slide with a fresh full interval.
+      this.resetProgress();
+      this.progressSlide = event.relatedTarget;
+    });
     this.listen(element, "slid.bs.carousel", (event) => {
-      if (event.target === element) this.updateSlides(event.direction);
+      if (event.target === element) {
+        this.updateSlides(event.direction);
+        this.showProgress();
+      }
     });
     if (this.rotation) {
       this.listen(this.rotation, "click", () => {
@@ -79,17 +111,6 @@ class CarouselV2 {
         if (!this.pauseOnHover || event.pointerType !== "mouse") return;
         this.hovered = false;
         this.updateRotation();
-      });
-      this.listen(element, "focusin", (event) => {
-        // Keyboard focus always stops rotation. A pointer click on the
-        // rotation button must retain its pending Play/Pause action.
-        if (
-          !this.rotation.contains(event.target) ||
-          this.rotation.matches(":focus-visible")
-        ) {
-          this.paused = true;
-          this.updateRotation();
-        }
       });
       // A preference change stops rotation; only an explicit Play restarts it.
       if (this.motion) {
@@ -180,7 +201,15 @@ class CarouselV2 {
   updateRotation() {
     const rotating = !this.paused && !this.hovered && this.slides.length > 1;
     this.carousel.pause();
-    if (rotating) this.carousel.cycle();
+    if (this.paused) this.resetProgress();
+    if (rotating) {
+      const remaining =
+        this.progressDuration && this.progressElapsed
+          ? Math.max(1, this.progressDuration - this.progressElapsed)
+          : undefined;
+      this.carousel.cycle(remaining);
+    }
+    this.showProgress();
     this.inner.setAttribute("aria-live", rotating ? "off" : "polite");
     if (!this.rotation) return;
     this.rotation.setAttribute(
@@ -193,7 +222,76 @@ class CarouselV2 {
     this.rotation.querySelector("[data-bcl-pause-icon]").hidden = this.paused;
   }
 
+  startProgress(duration, resumed) {
+    if (!resumed) {
+      this.resetProgress();
+      this.progressDuration = duration;
+    }
+    this.progressStarted = Date.now();
+    this.progressRunning = true;
+    const slide =
+      this.progressSlide || this.element.querySelector(".carousel-item.active");
+    const bar = slide?.querySelector(".bcl-carousel-v2__progress");
+    this.progressBar = bar;
+    this.showProgress();
+    if (!bar || this.motion?.matches) return;
+    // This animation uses the exact duration of Bootstrap's single rotation timer.
+    // It has no completion callback or independent timer driving slide changes.
+    this.progressAnimation = bar.animate?.(
+      [
+        {
+          transform: `scaleX(${(this.progressElapsed || 0) / this.progressDuration})`,
+        },
+        { transform: "scaleX(1)" },
+      ],
+      { duration, easing: "linear", fill: "forwards" },
+    );
+  }
+
+  freezeProgress() {
+    if (this.progressRunning) {
+      this.progressElapsed = Math.min(
+        this.progressDuration,
+        (this.progressElapsed || 0) + Date.now() - this.progressStarted,
+      );
+    }
+    this.progressRunning = false;
+    this.progressAnimation?.cancel();
+    this.progressAnimation = null;
+    if (this.progressBar) {
+      this.progressBar.style.transform = `scaleX(${(this.progressElapsed || 0) / (this.progressDuration || 1)})`;
+    }
+  }
+
+  resetProgress() {
+    this.progressAnimation?.cancel();
+    this.progressAnimation = null;
+    this.progressRunning = false;
+    this.progressElapsed = 0;
+    this.progressDuration = 0;
+    this.slides.forEach((slide) => {
+      const bar = slide.querySelector(".bcl-carousel-v2__progress");
+      if (bar) {
+        bar.hidden = true;
+        bar.style.transform = "scaleX(0)";
+      }
+    });
+  }
+
+  showProgress() {
+    this.slides.forEach((slide) => {
+      const bar = slide.querySelector(".bcl-carousel-v2__progress");
+      if (bar)
+        bar.hidden =
+          this.paused ||
+          !!this.motion?.matches ||
+          this.slides.length < 2 ||
+          bar !== this.progressBar;
+    });
+  }
+
   dispose() {
+    this.resetProgress();
     this.resizeObserver?.disconnect();
     this.element.style.removeProperty("--bcl-carousel-media-height");
     this.element.style.removeProperty("--bcl-carousel-controls-height");
