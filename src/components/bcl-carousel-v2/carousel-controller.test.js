@@ -280,20 +280,61 @@ describe("Carousel V2 Bootstrap integration", () => {
     const cycle = jest.spyOn(Carousel.prototype, "cycle");
     const { element, rotation } = await mount({
       autoplay: true,
-      interval: 100,
-      items: [data.items[0], { ...data.items[1], interval: 300 }],
+      interval: 10000,
+      items: [data.items[0], { ...data.items[1], interval: 30000 }],
     });
     expect(cycle).toHaveBeenCalled();
     expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
     rotation.click();
     jest.useFakeTimers();
     rotation.click();
-    jest.advanceTimersByTime(100);
+    jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
-    jest.advanceTimersByTime(299);
+    jest.advanceTimersByTime(29999);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     jest.advanceTimersByTime(1);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+  });
+
+  test("long slide text extends the interval using the reading-time rule", async () => {
+    const { element, rotation } = await mount({
+      interval: 1000,
+      items: [
+        {
+          ...data.items[0],
+          caption_title: "Title",
+          caption: `<p>${"word ".repeat(49)}</p>`,
+          link: null,
+        },
+        { ...data.items[1], caption_title: "Short", caption: "", link: null },
+      ],
+    });
+    expect(element.querySelector(".active").dataset.bsInterval).toBe("23000");
+    jest.useFakeTimers();
+    rotation.click();
+    jest.advanceTimersByTime(22999);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    jest.advanceTimersByTime(1);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
+    jest.advanceTimersByTime(8000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+  });
+
+  test("Pause while hovered stays stopped after mouse leave until Play", async () => {
+    const { element, rotation } = await mount();
+    jest.useFakeTimers();
+    rotation.click();
+    element.dispatchEvent(pointerEvent("pointerenter"));
+    rotation.click();
+    element.dispatchEvent(pointerEvent("pointerleave"));
+    element.dispatchEvent(new MouseEvent("mouseleave"));
+    element.dispatchEvent(new Event("touchend"));
+    jest.advanceTimersByTime(60000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
+    expect(rotation.getAttribute("aria-label")).toBe("Play slides");
+    rotation.click();
+    jest.advanceTimersByTime(10000);
+    expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
   });
 
   test("V1 and Gallery carousels are not initialized by the V2 controller", () => {
@@ -327,20 +368,20 @@ describe("Carousel V2 Bootstrap integration", () => {
   });
 
   test("pause survives data-API navigation and hover; Play resumes real Bootstrap cycling", async () => {
-    const { element, rotation } = await mount({ interval: 100 });
+    const { element, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
     rotation.click();
     expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
     expect(
       element.querySelector(".carousel-inner").getAttribute("aria-live"),
     ).toBe("off");
-    jest.advanceTimersByTime(100);
+    jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     rotation.click();
     element.querySelector('[data-bs-slide="next"]').click();
     element.dispatchEvent(pointerEvent("pointerenter"));
     element.dispatchEvent(pointerEvent("pointerleave"));
-    jest.advanceTimersByTime(500);
+    jest.advanceTimersByTime(50000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("3");
     expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     expect(
@@ -349,54 +390,54 @@ describe("Carousel V2 Bootstrap integration", () => {
   });
 
   test("hover temporarily suspends rotation without clearing the user's intent", async () => {
-    const { element, rotation } = await mount({ interval: 100 });
+    const { element, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
     rotation.click();
     element.dispatchEvent(pointerEvent("pointerenter"));
-    jest.advanceTimersByTime(200);
+    jest.advanceTimersByTime(20000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
     element.dispatchEvent(pointerEvent("pointerleave"));
-    jest.advanceTimersByTime(100);
+    jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
   });
 
   test("touch-generated hover does not block Play", async () => {
-    const { element, rotation } = await mount({ interval: 100 });
+    const { element, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
     element.dispatchEvent(pointerEvent("pointerenter", "touch"));
     element.dispatchEvent(new MouseEvent("mouseenter"));
     rotation.click();
-    jest.advanceTimersByTime(100);
+    jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
   });
 
   test("focus on content stops rotation until explicitly restarted", async () => {
-    const { element, rotation } = await mount({ interval: 100 });
+    const { element, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
     rotation.click();
     element.querySelector(".active a").focus();
     expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     element.querySelector(".active a").blur();
-    jest.advanceTimersByTime(200);
+    jest.advanceTimersByTime(20000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
   });
 
   test("keyboard focus on rotation stops autoplay until explicitly restarted", async () => {
     const { element, rotation } = await mount({
       autoplay: true,
-      interval: 100,
+      interval: 10000,
     });
     jest.useFakeTimers();
     rotation.focus();
     expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     rotation.blur();
-    jest.advanceTimersByTime(200);
+    jest.advanceTimersByTime(20000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
     rotation.focus();
     rotation.click();
     expect(rotation.getAttribute("aria-label")).toBe("Pause slides");
-    jest.advanceTimersByTime(100);
+    jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
   });
 
@@ -404,19 +445,19 @@ describe("Carousel V2 Bootstrap integration", () => {
     motion.matches = true;
     const { element, rotation } = await mount({
       autoplay: true,
-      interval: 100,
+      interval: 10000,
     });
     jest.useFakeTimers();
-    jest.advanceTimersByTime(200);
+    jest.advanceTimersByTime(20000);
     expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("1");
     rotation.click();
-    jest.advanceTimersByTime(100);
+    jest.advanceTimersByTime(10000);
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
     const change = new Event("change");
     Object.defineProperty(change, "matches", { value: true });
     motion.dispatchEvent(change);
-    jest.advanceTimersByTime(200);
+    jest.advanceTimersByTime(20000);
     expect(rotation.getAttribute("aria-label")).toBe("Play slides");
     expect(element.querySelector("[data-bcl-current]").textContent).toBe("2");
   });
@@ -467,7 +508,7 @@ describe("Carousel V2 Bootstrap integration", () => {
         id: "autoplay-carousel",
         layout: firstLayout,
         autoplay: true,
-        interval: 100,
+        interval: 10000,
       });
       const second = await mount({
         id: "manual-carousel",
@@ -484,7 +525,7 @@ describe("Carousel V2 Bootstrap integration", () => {
         second.element.querySelector("[data-bcl-current]").textContent,
       ).toBe(direction === "next" ? "2" : "3");
 
-      jest.advanceTimersByTime(100);
+      jest.advanceTimersByTime(10000);
       expect(document.activeElement).toBe(button);
       expect(first.rotation.getAttribute("aria-label")).toBe("Pause slides");
       expect(
@@ -495,7 +536,7 @@ describe("Carousel V2 Bootstrap integration", () => {
       expect(
         first.element.querySelector("[data-bcl-current]").textContent,
       ).toBe("2");
-      jest.advanceTimersByTime(100);
+      jest.advanceTimersByTime(10000);
       expect(
         first.element.querySelector("[data-bcl-current]").textContent,
       ).toBe("3");
@@ -514,7 +555,7 @@ describe("Carousel V2 Bootstrap integration", () => {
   });
 
   test("disposal clears timers, listeners and enhancement state", async () => {
-    const { element, controller, rotation } = await mount({ interval: 100 });
+    const { element, controller, rotation } = await mount({ interval: 10000 });
     jest.useFakeTimers();
     rotation.click();
     controller.dispose();

@@ -16,7 +16,9 @@ class CarouselV2 {
     this.motion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
     this.paused =
       element.dataset.bclAutoplay !== "true" || !!this.motion?.matches;
+    this.pauseOnHover = element.dataset.bclPauseOnHover !== "false";
     this.hovered =
+      this.pauseOnHover &&
       element.matches(":hover") &&
       !!window.matchMedia?.("(any-hover: hover)").matches;
     this.listeners = [];
@@ -38,6 +40,22 @@ class CarouselV2 {
       this.inner.after(this.creditFooter);
     }
 
+    // Allow time to read rendered titles, descriptions and links and view images.
+    // Each slide respects the configured interval, an 8s floor and 3s + 0.4s/word.
+    const defaultInterval = Number(element.dataset.bsInterval) || 10000;
+    this.slides.forEach((slide) => {
+      const content = slide.querySelector(".bcl-carousel-v2__content");
+      const text = content
+        ? Array.from(content.children, (child) => child.textContent).join(" ")
+        : "";
+      const words = text.trim().split(/\s+/u).filter(Boolean).length;
+      const interval = Number(slide.dataset.bsInterval) || defaultInterval;
+      slide.dataset.bsInterval = String(
+        Math.max(8000, interval, 3000 + 400 * words),
+      );
+    });
+
+    // Hover pause is handled by BCL. Do not change data-bs-pause.
     // No Bootstrap auto-resume on mouseleave, touchend or data-API navigation.
     this.carousel = Carousel.getOrCreateInstance(element, {
       ride: false,
@@ -53,12 +71,12 @@ class CarouselV2 {
         this.updateRotation();
       });
       this.listen(element, "pointerenter", (event) => {
-        if (event.pointerType !== "mouse") return;
+        if (!this.pauseOnHover || event.pointerType !== "mouse") return;
         this.hovered = true;
         this.updateRotation();
       });
       this.listen(element, "pointerleave", (event) => {
-        if (event.pointerType !== "mouse") return;
+        if (!this.pauseOnHover || event.pointerType !== "mouse") return;
         this.hovered = false;
         this.updateRotation();
       });
@@ -105,7 +123,9 @@ class CarouselV2 {
 
   updateImageLayout() {
     if (!this.isImageLayout || !this.controls) return;
-    const active = this.slides.find((slide) => slide.classList.contains("active"));
+    const active = this.slides.find((slide) =>
+      slide.classList.contains("active"),
+    );
     const image = active?.querySelector(".bcl-carousel-v2__image");
     const credit = active?.querySelector(".bcl-carousel-v2__copyright");
     this.element.style.setProperty(

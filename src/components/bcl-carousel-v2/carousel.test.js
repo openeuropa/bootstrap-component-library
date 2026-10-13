@@ -16,6 +16,7 @@ describe("Carousel V2 markup", () => {
     expect(
       node.querySelector("section").classList.contains("carousel-fade"),
     ).toBe(layout === "split");
+    expect(node.querySelector("p.bcl-carousel-v2__title")).not.toBeNull();
     expect(node.querySelectorAll("[data-bcl-rotation]")).toHaveLength(1);
     expect(node.querySelectorAll("[data-bs-slide]")).toHaveLength(2);
     expect(node.querySelector("section").getAttribute("data-bs-ride")).toBe(
@@ -30,6 +31,30 @@ describe("Carousel V2 markup", () => {
       expect(await axe(markup)).toHaveNoViolations();
     },
   );
+
+  test("page context selects h4 without changing the display style", async () => {
+    const node = await renderTwigFileAsNode(template, {
+      ...data,
+      title_tag: "h4",
+    });
+    expect(node.querySelector("h2")).toBeNull();
+    expect(node.querySelector("h4.bcl-carousel-v2__title")).not.toBeNull();
+    expect(node.querySelector(".h1")).toBeNull();
+    expect(node.querySelector("section").dataset.bsPause).toBe("false");
+    expect(node.querySelector("section").dataset.bclPauseOnHover).toBe("true");
+  });
+
+  test("configured intervals never fall below eight seconds", async () => {
+    const node = await renderTwigFileAsNode(template, {
+      ...data,
+      interval: 1000,
+      items: [{ ...data.items[0], interval: 500 }],
+    });
+    expect(node.querySelector("section").dataset.bsInterval).toBe("8000");
+    expect(node.querySelector(".carousel-item").dataset.bsInterval).toBe(
+      "8000",
+    );
+  });
 
   test("renders an empty carousel as nothing", async () => {
     expect((await renderTwigFileAsHtml(template, { items: [] })).trim()).toBe(
@@ -99,11 +124,11 @@ describe("Carousel V2 markup", () => {
         .querySelector("section")
         .classList.contains("bcl-carousel-v2--split"),
     ).toBe(true);
-    expect(node.querySelector("section").dataset.bsInterval).toBe("5000");
+    expect(node.querySelector("section").dataset.bsInterval).toBe("10000");
     expect(node.querySelector(".active").getAttribute("aria-label")).toBe(
       "Explore our coastlines — 1 of 3",
     );
-    expect(node.querySelector("h2")).not.toBeNull();
+    expect(node.querySelector("p.bcl-carousel-v2__title")).not.toBeNull();
   });
 
   test("keeps responsive image markup and does not hide content before enhancement", async () => {

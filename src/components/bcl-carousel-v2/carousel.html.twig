@@ -3,12 +3,12 @@
   - label (string): accessible carousel name, defaults to 'Featured content'
   - layout (string): 'split' (default) or 'full_width'
   - autoplay (boolean): false by default; reduced motion always starts paused
-  - interval (integer): positive rotation interval in milliseconds (default 5000)
+  - interval (integer): rotation interval in milliseconds (default 10000; minimum 8000)
   - active_item (integer): 1-based initial slide (default 1)
   - disable_touch (boolean): false by default
   - items (array): image (rendered img/picture), caption_title, caption (rendered
     content), link (BCL link object), copyright, copyright_label, interval
-  - title_tag (string): slide heading level, defaults to h2
+  - title_tag (string): slide heading level from the page context, defaults to p
   - prev_label, next_label, pause_label, play_label (strings): translated actions
   - slide_label (string): translated '%current% of %total%' template
   - carousel_role_label, slide_role_label (strings): translated role descriptions
@@ -23,13 +23,14 @@
 {%- set _layout = _layout in ['split', 'full_width'] ? _layout : 'split' -%}
 {%- set _active = active_item|default(1) -%}
 {%- set _active = _active >= 1 and _active <= _items|length ? _active : 1 -%}
-{%- set _title_tag = title_tag|default('h2') -%}
-{%- set _title_tag = _title_tag in ['h2', 'h3', 'h4', 'h5', 'h6'] ? _title_tag : 'h2' -%}
-{%- set _interval = interval|default(5000) -%}
-{%- set _interval = _interval > 0 ? _interval : 5000 -%}
+{%- set _title_tag = title_tag|default('p') -%}
+{%- set _title_tag = _title_tag in ['p', 'h2', 'h3', 'h4', 'h5', 'h6'] ? _title_tag : 'p' -%}
+{%- set _interval = interval|default(10000) -%}
+{%- set _interval = _interval > 0 ? (_interval < 8000 ? 8000 : _interval) : 10000 -%}
 {%- set _icon_path = icon_path|default('') -%}
 {%- set _slide_label = slide_label|default('%current% of %total%') -%}
 {%- set attributes = attributes ?: create_attribute() -%}
+{# Hover pause is handled by BCL. Do not change data-bs-pause. #}
 {%- set attributes = attributes.addClass(['bcl-carousel-v2', 'bcl-carousel-v2--' ~ _layout, 'carousel', 'slide'])
   .setAttribute('id', _id)
   .setAttribute('role', 'region')
@@ -40,6 +41,7 @@
   .setAttribute('data-bs-touch', disable_touch ?? false ? 'false' : 'true')
   .setAttribute('data-bs-ride', 'false')
   .setAttribute('data-bs-pause', 'false')
+  .setAttribute('data-bcl-pause-on-hover', 'true')
 -%}
 {%- if _layout == 'split' -%}
   {%- set attributes = attributes.addClass('carousel-fade') -%}
@@ -75,7 +77,7 @@
       {%- set _title = item.caption_title|default('')|striptags|trim -%}
       <div class="carousel-item{{ loop.index == _active ? ' active' : '' }}" role="group" aria-roledescription="{{ slide_role_label|default('slide') }}"
         aria-label="{{ (_title ? _title ~ ' — ' ~ _position : _position)|escape('html_attr') }}"
-        {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval }}"{% endif %}>{#- -#}
+        {% if item.interval is defined and item.interval > 0 %}data-bs-interval="{{ item.interval < 8000 ? 8000 : item.interval }}"{% endif %}>{#- -#}
         <div class="bcl-carousel-v2__layout">{#- -#}
           <div class="bcl-carousel-v2__image">{{ item.image }}</div>{#- -#}
           {%- if item.copyright is not empty -%}
@@ -83,7 +85,7 @@
           {%- endif -%}
           {%- if item.caption_title is not empty or item.caption is not empty or item.link is not empty -%}
             <div class="bcl-carousel-v2__content">{#- -#}
-              {%- if item.caption_title is not empty -%}<{{ _title_tag }} class="h1">{{ item.caption_title }}</{{ _title_tag }}>{%- endif -%}
+              {%- if item.caption_title is not empty -%}<{{ _title_tag }} class="bcl-carousel-v2__title">{{ item.caption_title }}</{{ _title_tag }}>{%- endif -%}
               {%- if item.caption is not empty -%}<div class="bcl-carousel-v2__description">{{ item.caption }}</div>{%- endif -%}
               {%- if item.link is not empty -%}
                 {%- include '@oe-bcl/bcl-link/link.html.twig' with item.link|merge({attributes: (item.link.attributes ?: create_attribute()).addClass(['btn', 'btn-primary'])}) only -%}

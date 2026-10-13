@@ -13,13 +13,23 @@ Joinup theme CSS and JavaScript. Supply a unique `id`, an accessible `label`,
   and content lengths can change slide height. Supply consistent image ratios
   when a consistent height is desired; include intrinsic dimensions and
   responsive `srcset`/`sizes` or a rendered `picture` in each `image` value.
-- `autoplay` defaults to false, `interval` to 5000 milliseconds, and
+- `autoplay` defaults to false, `interval` to 10000 milliseconds, and
   `active_item` to 1. A positive per-item `interval` overrides the default.
+  Intervals have an 8000ms minimum. BCL extends each slide's interval to at least
+  `3000 + 400 × word count` milliseconds, counting its rendered title, description
+  and link text.
+- Set `title_tag` from the page's heading hierarchy (for example, `h4` under an
+  `h3` section). Expose this as a heading level field in the integrating backend
+  if page context is unavailable. The default is `p`; heading level does not
+  change the h1-sized display style (`bcl-carousel-v2__title`).
 - Zero items render nothing. One item renders without controls or rotation.
 
 Bootstrap supplies previous/next, swipe, keyboard support and transitions. The
 V2 controller adds rotation intent, counter updates and accessibility. Hover
-temporarily suspends rotation. Focus on slide content or navigation stops it
+temporarily suspends rotation.
+Hover pause is handled by BCL. Do not change `data-bs-pause`.
+`data-bcl-pause-on-hover="true"` makes this ownership explicit; Bootstrap's
+`data-bs-pause="false"` prevents competing auto-resume handlers. Focus on slide content or navigation stops it
 until Play is selected. The Play/Pause control retains focus and announces its
 next action. Reduced motion starts paused and disables transitions; the user
 can explicitly choose Play. A subsequent change to reduced motion stops it.

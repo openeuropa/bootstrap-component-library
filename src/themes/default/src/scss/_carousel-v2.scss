@@ -40,17 +40,21 @@
     overflow-wrap: anywhere;
     background: var(--bs-body-bg);
 
-    > :is(h2, h3, h4, h5, h6) {
+    > .bcl-carousel-v2__title {
       margin-bottom: map.get($spacers, 3);
-
-      @include media-breakpoint-down(lg) {
-        font-size: map.get($font-sizes, 3);
-      }
     }
 
     > :last-child {
       margin-bottom: 0;
     }
+  }
+
+  .bcl-carousel-v2__title {
+    @include font-size(map.get($font-sizes, 1));
+
+    font-family: $display-font-family;
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
   }
 
   .bcl-carousel-v2__description {
@@ -262,7 +266,7 @@
       padding: map.get($spacers, 3) 0 0;
       background: transparent;
 
-      > :is(h2, h3, h4, h5, h6) {
+      > .bcl-carousel-v2__title {
         color: var(--bs-primary);
         font-weight: $font-weight-normal;
       }
@@ -306,10 +310,6 @@
         grid-column: 1;
         grid-row: 1 / 3;
         padding-top: 0;
-
-        > :is(h2, h3, h4, h5, h6) {
-          font-size: map.get($font-sizes, 1);
-        }
       }
 
       .bcl-carousel-v2__controls {

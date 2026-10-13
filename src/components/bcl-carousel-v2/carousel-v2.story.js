@@ -10,7 +10,7 @@ export default {
     ...data,
     layout: "split",
     autoplay: false,
-    interval: 5000,
+    interval: 10000,
     active_item: 1,
   },
   argTypes: {
@@ -21,8 +21,12 @@ export default {
       },
       options: ["split", "full_width"],
     },
+    title_tag: {
+      control: "select",
+      options: ["p", "h2", "h3", "h4", "h5", "h6"],
+    },
     autoplay: { control: "boolean" },
-    interval: { control: { type: "number", min: 1000, step: 1000 } },
+    interval: { control: { type: "number", min: 8000, step: 1000 } },
     active_item: {
       control: { type: "number", min: 1, max: data.items.length },
     },
@@ -178,7 +182,9 @@ export const SingleSlide = {
       canvas.queryByRole("button", { name: "Next slide" }),
     ).not.toBeInTheDocument();
     await expect(
-      canvas.getByRole("heading", { name: data.items[0].caption_title }),
+      canvas.getByText(data.items[0].caption_title, {
+        selector: ".bcl-carousel-v2__title",
+      }),
     ).toBeVisible();
   },
 };
