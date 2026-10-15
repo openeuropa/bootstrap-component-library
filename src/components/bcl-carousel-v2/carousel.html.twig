@@ -1,7 +1,8 @@
 {# Parameters:
   - id (string): unique ID; generated when omitted
   - label (string): accessible carousel name, defaults to 'Featured content'
-  - layout (string): 'split' (default) or 'full_width'
+  - layout (string): 'split' (default) or 'full_width' (hero)
+  - full_bleed (boolean): false by default; span the page from inside .container
   - autoplay (boolean): true by default; reduced motion always starts paused
   - interval (integer): rotation interval in milliseconds (default 10000; minimum 8000)
   - active_item (integer): 1-based initial slide (default 1)
@@ -43,6 +44,9 @@
   .setAttribute('data-bs-pause', 'false')
   .setAttribute('data-bcl-pause-on-hover', 'false')
 -%}
+{%- if full_bleed ?? false -%}
+  {%- set attributes = attributes.addClass('bcl-carousel-v2--full-bleed') -%}
+{%- endif -%}
 {%- if _layout == 'split' -%}
   {%- set attributes = attributes.addClass('carousel-fade') -%}
 {%- endif -%}

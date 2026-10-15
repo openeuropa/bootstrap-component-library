@@ -140,6 +140,14 @@
     font-variant-numeric: tabular-nums;
   }
 
+  // Page width is independent of the split/hero layout.
+  &.bcl-carousel-v2--full-bleed {
+    .container & {
+      width: 100vw;
+      margin-inline: calc(50% - 50vw);
+    }
+  }
+
   // Carousel hero: full-width image, overlaid desktop content, bordered footer.
   &.bcl-carousel-v2--full_width {
     // Keep white even on colored page sections.
@@ -227,7 +235,7 @@
     }
 
     // Extend only the background beyond the page grid, as with content banners.
-    .container & {
+    .container &:not(.bcl-carousel-v2--full-bleed) {
       isolation: isolate;
 
       &::before {

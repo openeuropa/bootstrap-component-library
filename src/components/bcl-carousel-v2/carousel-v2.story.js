@@ -9,6 +9,7 @@ export default {
   args: {
     ...data,
     layout: "split",
+    full_bleed: false,
     autoplay: true,
     interval: 10000,
     active_item: 1,
@@ -25,6 +26,7 @@ export default {
       control: "select",
       options: ["p", "h2", "h3", "h4", "h5", "h6"],
     },
+    full_bleed: { name: "Span page width", control: "boolean" },
     autoplay: { control: "boolean" },
     interval: { control: { type: "number", min: 8000, step: 1000 } },
     active_item: {
@@ -102,6 +104,28 @@ export const SplitInContainer = {
 export const FullWidth = {
   name: "Carousel hero",
   args: { id: "carousel-v2-full-width", layout: "full_width" },
+};
+export const FullWidthInContainer = {
+  name: "Carousel hero / Page container",
+  args: { id: "carousel-v2-hero-page-container", layout: "full_width" },
+  decorators: [
+    async (story) => `<div class="container">${await story()}</div>`,
+  ],
+  parameters: { layout: "fullscreen" },
+};
+export const SplitFullBleed = {
+  ...SplitInContainer,
+  name: "Carousel image / Span page width",
+  args: { id: "carousel-v2-split-full-bleed", full_bleed: true },
+};
+export const HeroFullBleed = {
+  ...FullWidthInContainer,
+  name: "Carousel hero / Span page width",
+  args: {
+    id: "carousel-v2-hero-full-bleed",
+    layout: "full_width",
+    full_bleed: true,
+  },
 };
 export const SplitControlsTest = {
   name: "Tests / Carousel image controls",

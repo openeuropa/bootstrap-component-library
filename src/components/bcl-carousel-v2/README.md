@@ -9,6 +9,10 @@ Joinup theme CSS and JavaScript. Supply a unique `id`, an accessible `label`,
 - `layout: full_width`: an image spanning the carousel, with a content card
   overlay from `lg`, stacked below the image on smaller screens. Desktop images
   are capped at 28rem (448px) high and cropped without stretching.
+- `full_bleed: true`: makes either layout span the page width from inside a
+  centered `.container`. Defaults to false, retaining the container width.
+  Expose this independent option as a “Span page width” checkbox in the backend;
+  `layout` continues to choose between the split and hero designs.
 - Other images retain their natural aspect ratio without cropping. Different ratios
   and content lengths can change slide height. Supply consistent image ratios
   when a consistent height is desired; include intrinsic dimensions and

@@ -39,6 +39,23 @@ describe("Carousel V2 markup", () => {
     },
   );
 
+  test.each(
+    ["split", "full_width"].flatMap((layout) =>
+      [undefined, false, true].map((full_bleed) => [layout, full_bleed]),
+    ),
+  )("%s supports independent full_bleed %s", async (layout, full_bleed) => {
+    const node = await renderTwigFileAsNode(template, {
+      ...data,
+      layout,
+      full_bleed,
+    });
+    const root = node.querySelector("section");
+    expect(root.classList.contains(`bcl-carousel-v2--${layout}`)).toBe(true);
+    expect(root.classList.contains("bcl-carousel-v2--full-bleed")).toBe(
+      full_bleed === true,
+    );
+  });
+
   test.each([
     [undefined, "true"],
     [false, "false"],
