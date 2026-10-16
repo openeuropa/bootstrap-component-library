@@ -4,6 +4,7 @@
     @each $color, $value in $theme-colors-rgb {
       --#{$prefix}#{$color}-rgb: #{$value};
     }
+    @include generate-tones($scheme-array);
     @each $color, $value in $scheme-array {
       --#{$prefix}#{$color}: #{$value};
 
