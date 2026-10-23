@@ -9,6 +9,7 @@ exports[`OE - select renders correctly 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     id="select-1"
     required
@@ -68,12 +69,12 @@ exports[`OE - select renders correctly as a multiple choice select 1`] = `
     A multiselect form element
   </label>
   <select
+    aria-describedby="helperText"
     id="multiselect-1"
     multiple
     required
   >
     <optgroup
-      data-selectall="true"
       label="Group 1"
     >
       <option
@@ -147,6 +148,7 @@ exports[`OE - select renders correctly when disabled 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     disabled
     id="select-1"
@@ -207,6 +209,7 @@ exports[`OE - select renders correctly when invalid 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select is-invalid"
     id="select-1"
     required
@@ -266,6 +269,7 @@ exports[`OE - select renders correctly when multiple 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     id="select-1"
     multiple
@@ -326,6 +330,7 @@ exports[`OE - select renders correctly when readonly 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     id="select-1"
     required
@@ -385,6 +390,7 @@ exports[`OE - select renders correctly when required 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     id="select-1"
     required
@@ -444,6 +450,7 @@ exports[`OE - select renders correctly when valid 1`] = `
     A select form element
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select is-valid"
     id="select-1"
     required
@@ -503,6 +510,7 @@ exports[`OE - select renders correctly with a label 1`] = `
     A select label
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     id="select-1"
     required
@@ -562,6 +570,7 @@ exports[`OE - select renders correctly with an hidden label 1`] = `
     A select label
   </label>
   <select
+    aria-describedby="helperText"
     class="form-select"
     id="select-1"
     required

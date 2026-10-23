@@ -212,6 +212,7 @@ module.exports = {
             label: "Gender",
             aria_label: "gender-select",
             helper_text: "Helper text",
+            helper_text_id: "user-gender-help",
             options: [
               { value: 2, label: "Male" },
               { value: 3, label: "Female" },
@@ -323,7 +324,6 @@ module.exports = {
             helper_text: "Helper text for the select element",
             invalid_feedback: "Invalid feedback example",
             valid_feedback: "Valid feedback example",
-            selectByGroup: true,
             placeholder: "Please select a value",
             options: [
               {
