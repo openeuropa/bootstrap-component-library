@@ -574,48 +574,6 @@
 }
 
 .ss-content {
-  .ss-selectall,
-  .ss-selectall-slot {
-    display: inline-flex;
-    white-space: nowrap;
-    align-items: center;
-    justify-content: center;
-    min-width: 24px;
-    min-height: 32px;
-    box-sizing: border-box;
-    padding: 0.125rem 0.5rem;
-    border: 1px solid var(--ss-font-color);
-    border-radius: 4px;
-    background: var(--ss-bg-color);
-    color: var(--ss-font-color);
-    font: inherit;
-    font-size: 1rem;
-    cursor: pointer;
-
-    &:hover,
-    &[aria-pressed="true"] {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    &:focus {
-      outline: 2px solid currentColor;
-      outline-offset: 1px;
-    }
-
-    &:disabled {
-      cursor: default;
-      opacity: 0.5;
-    }
-
-    @media (pointer: coarse) {
-      min-height: 44px;
-      min-width: 44px;
-    }
-  }
-}
-
-.ss-content {
   .ss-options {
     flex: 1 1 auto;
     min-height: 0;
@@ -628,16 +586,5 @@
 
   .ss-options .ss-list {
     overflow: visible;
-  }
-
-  .ss-selectall-slot {
-    visibility: hidden;
-  }
-
-  .ss-group-actions {
-    .ss-selectall {
-      position: absolute;
-      z-index: 1;
-    }
   }
 }
