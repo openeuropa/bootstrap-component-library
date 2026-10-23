@@ -243,3 +243,50 @@ export const FullWidthSingleSlide = {
     layout: "full_width",
   },
 };
+
+const testPageWidth = async ({ canvasElement }) => {
+  const root = canvasElement.querySelector(".bcl-carousel-v2");
+  const page = canvasElement.querySelector("main");
+  await waitFor(() => {
+    const bounds = root.getBoundingClientRect();
+    const available = page.getBoundingClientRect();
+    if (root.ownerDocument.defaultView.innerWidth < 992) {
+      const container = root.closest(".container");
+      const grid = container.getBoundingClientRect();
+      const style = getComputedStyle(container);
+      available.x = grid.left + parseFloat(style.paddingLeft);
+      available.width =
+        grid.width -
+        parseFloat(style.paddingLeft) -
+        parseFloat(style.paddingRight);
+    }
+    expect(Math.abs(bounds.left - available.left)).toBeLessThan(1);
+    expect(Math.abs(bounds.right - available.right)).toBeLessThan(1);
+    const title = root.querySelector(".active .bcl-carousel-v2__title");
+    const rotation = root.querySelector("[data-bcl-rotation]");
+    expect(
+      Math.abs(
+        title.getBoundingClientRect().left -
+          rotation.getBoundingClientRect().left,
+      ),
+    ).toBeLessThan(2);
+  });
+};
+
+export const SplitWithAdminSidebar = {
+  ...SplitFullBleed,
+  name: "Tests / Full width image with admin sidebar",
+  args: { ...SplitFullBleed.args, autoplay: false },
+  decorators: [
+    async (story) =>
+      `<main style="margin-left: 80px"><div class="container"><div class="row"><div class="col-12">${await story()}</div></div></div></main>`,
+  ],
+  tags: ["!autodocs", "carousel-v2-test"],
+  play: testPageWidth,
+};
+
+export const HeroWithAdminSidebar = {
+  ...SplitWithAdminSidebar,
+  name: "Tests / Full width hero with admin sidebar",
+  args: { ...HeroFullBleed.args, autoplay: false },
+};

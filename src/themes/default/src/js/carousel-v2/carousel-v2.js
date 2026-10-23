@@ -45,12 +45,55 @@ class CarouselV2 extends Carousel {
       element.dataset.bclAutoplay === "false" || !!this.motion?.matches;
     this.events = new AbortController();
     this.isImageLayout = element.classList.contains("bcl-carousel-v2--split");
+    this.setupPageWidth();
     this.setupSlides();
     this.setupEvents();
     element.setAttribute("data-bcl-initialized", "true");
     this.updateSlides();
     this.updateRotation();
     instances.set(element, this);
+  }
+
+  // Measure the available page instead of assuming a centered viewport container.
+  // Drupal's administration sidebar can shift the page without changing 100vw.
+  setupPageWidth() {
+    const container = this.element.closest(".container");
+    if (!container) return;
+    const page = this.element.closest("main") || document.body;
+    const update = () => {
+      const viewportWidth = document.documentElement.clientWidth;
+      const bounds = page.getBoundingClientRect();
+      const left = Math.max(0, bounds.left);
+      const right = Math.min(viewportWidth, bounds.right);
+      const grid = container.getBoundingClientRect();
+      const style = getComputedStyle(container);
+      const currentMargin =
+        parseFloat(getComputedStyle(this.element).marginLeft) || 0;
+      const origin = this.element.getBoundingClientRect().left - currentMargin;
+      this.element.style.setProperty(
+        "--bcl-carousel-page-width",
+        `${right - left}px`,
+      );
+      this.element.style.setProperty(
+        "--bcl-carousel-page-offset",
+        `${left - origin}px`,
+      );
+      this.element.style.setProperty(
+        "--bcl-carousel-grid-start",
+        `${Math.max(0, grid.left + parseFloat(style.paddingLeft) - left)}px`,
+      );
+      this.element.style.setProperty(
+        "--bcl-carousel-grid-end",
+        `${Math.max(0, right - grid.right + parseFloat(style.paddingRight))}px`,
+      );
+    };
+    update();
+    this.listen(window, "resize", update);
+    if (window.ResizeObserver) {
+      this.pageResizeObserver = new ResizeObserver(update);
+      this.pageResizeObserver.observe(page);
+      this.pageResizeObserver.observe(container);
+    }
   }
 
   setupSlides() {
@@ -258,6 +301,7 @@ class CarouselV2 extends Carousel {
       ?.dispatchEvent(new Event("transitionend"));
     this.resetProgress();
     this.resizeObserver?.disconnect();
+    this.pageResizeObserver?.disconnect();
     this.element.style.removeProperty("--bcl-carousel-media-height");
     this.element.style.removeProperty("--bcl-carousel-controls-height");
     this.element.removeAttribute("data-bcl-initialized");

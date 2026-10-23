@@ -33,6 +33,11 @@
       display: block;
       width: 100%;
       height: auto;
+
+      @include media-breakpoint-down(lg) {
+        max-height: 20rem;
+        object-fit: cover;
+      }
     }
   }
 
@@ -142,9 +147,45 @@
 
   // Page width is independent of the split/hero layout.
   &.bcl-carousel-v2--full-bleed {
-    .container & {
-      width: 100vw;
-      margin-inline: calc(50% - 50vw);
+    @include media-breakpoint-up(lg) {
+      .container & {
+        width: var(--bcl-carousel-page-width, 100%);
+        margin-left: var(--bcl-carousel-page-offset, 0);
+        margin-right: 0;
+      }
+
+      &.bcl-carousel-v2--full_width {
+        .bcl-carousel-v2__controls,
+        .bcl-carousel-v2__credits {
+          border-inline: 0;
+        }
+
+        .bcl-carousel-v2__controls,
+        .bcl-carousel-v2__credits {
+          padding-left: var(--bcl-carousel-grid-start, #{map.get($spacers, 3)});
+          padding-right: var(--bcl-carousel-grid-end, #{map.get($spacers, 3)});
+        }
+
+        .bcl-carousel-v2__credits .bcl-carousel-v2__copyright {
+          padding-inline: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+          .bcl-carousel-v2__content {
+            margin-left: max(
+              0px,
+              calc(
+                var(--bcl-carousel-grid-start, #{map.get($spacers, "4-5")}) -
+                  #{map.get($spacers, 4)}
+              )
+            );
+            padding-left: min(
+              #{map.get($spacers, 4)},
+              var(--bcl-carousel-grid-start, #{map.get($spacers, "4-5")})
+            );
+          }
+        }
+      }
     }
   }
 
@@ -159,7 +200,7 @@
     }
 
     .bcl-carousel-v2__controls {
-      padding: map.get($spacers, 3);
+      padding: map.get($spacers, 4);
     }
 
     .bcl-carousel-v2__credits,
@@ -225,7 +266,8 @@
     --bcl-carousel-padding: #{map.get($spacers, 3)};
 
     position: relative;
-    padding: var(--bcl-carousel-padding);
+    padding: var(--bcl-carousel-padding)
+      var(--bcl-carousel-padding-inline, var(--bcl-carousel-padding));
     background: $gray-200;
 
     // Bootstrap delays fading out the old slide; crossfade both instead.
@@ -234,21 +276,32 @@
       @include transition(opacity $carousel-transition-duration ease-in-out);
     }
 
-    // Extend only the background beyond the page grid, as with content banners.
-    .container &:not(.bcl-carousel-v2--full-bleed) {
+    // Keep the content on the page grid while extending the section background.
+    .container & {
+      --bcl-carousel-padding-inline: 0px;
+
       isolation: isolate;
+
+      @include media-breakpoint-up(lg) {
+        &.bcl-carousel-v2--full-bleed {
+          --bcl-carousel-padding-inline: var(--bcl-carousel-padding);
+
+          &::before {
+            display: none;
+          }
+        }
+      }
 
       &::before {
         position: absolute;
         z-index: -1;
         top: 0;
-        left: 50%;
-        width: 100vw;
+        left: var(--bcl-carousel-page-offset, 0);
+        width: var(--bcl-carousel-page-width, 100%);
         height: 100%;
         background: $gray-200;
         content: "";
         pointer-events: none;
-        transform: translateX(-50%);
       }
     }
 
@@ -320,7 +373,20 @@
         var(--bcl-carousel-padding) + var(--bcl-carousel-media-height, 0px) +
           #{map.get($spacers, 3)}
       );
-      inset-inline: var(--bcl-carousel-padding);
+      inset-inline: var(
+        --bcl-carousel-padding-inline,
+        var(--bcl-carousel-padding)
+      );
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 0;
+
+      .bcl-carousel-v2__controls {
+        top: calc(
+          var(--bcl-carousel-media-height, 0px) + #{map.get($spacers, 3)}
+        );
+      }
     }
 
     @include media-breakpoint-up(lg) {
@@ -341,7 +407,13 @@
         top: var(--bcl-carousel-padding);
         inset-inline-end: auto;
         width: calc(
-          (100% - var(--bcl-carousel-padding) * 2 - #{map.get($spacers, 4)}) *
+          (
+              100% - var(
+                  --bcl-carousel-padding-inline,
+                  var(--bcl-carousel-padding)
+                ) *
+                2 - #{map.get($spacers, 4)}
+            ) *
             0.625
         );
       }

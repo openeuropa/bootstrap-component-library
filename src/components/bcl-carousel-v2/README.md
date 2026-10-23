@@ -9,12 +9,18 @@ Joinup theme CSS and JavaScript. Supply a unique `id`, an accessible `label`,
 - `layout: full_width`: an image spanning the carousel, with a content card
   overlay from `lg`, stacked below the image on smaller screens. Desktop images
   are capped at 28rem (448px) high and cropped without stretching.
-- `full_bleed: true`: makes either layout span the page width from inside a
-  centered `.container`. Defaults to false, retaining the container width.
-  Expose this independent option as a “Span page width” checkbox in the backend;
+- `full_bleed: true`: from `lg` (992px), expands either layout beyond its
+  `.container` to the available page width, accounting for an administration
+  sidebar. The image layout expands its content as well as its background.
+  Below 992px, both width modes keep the carousel content inside the container
+  and respect its gutters. Defaults to false, retaining the container width.
+  The image layout's section background spans the page in both width modes.
+  Expose this independent option as a “Full width” checkbox in the backend;
   `layout` continues to choose between the split and hero designs.
-- Other images retain their natural aspect ratio without cropping. Different ratios
-  and content lengths can change slide height. Supply consistent image ratios
+- Below 992px, images in both layouts have a maximum height of 20rem (320px)
+  and use `object-fit: cover` to crop without stretching. Desktop image-layout
+  images use a square crop; desktop hero images are capped at 28rem (448px).
+  Content lengths can still change slide height. Supply consistent image ratios
   when a consistent height is desired; include intrinsic dimensions and
   responsive `srcset`/`sizes` or a rendered `picture` in each `image` value.
 - `autoplay` defaults to true, `interval` to 10000 milliseconds, and
