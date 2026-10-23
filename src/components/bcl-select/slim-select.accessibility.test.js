@@ -116,7 +116,6 @@ describe("Slim Select accessibility", () => {
       events,
     });
     slimSelect.open();
-    return document.querySelector(".ss-selectall");
   };
 
   test("Enter reopens without selecting the previously highlighted option", () => {
@@ -137,7 +136,7 @@ describe("Slim Select accessibility", () => {
   });
 
   test("search stays inside the dropdown and receives focus after opening", () => {
-    const action = createGroupedSelect();
+    createGroupedSelect();
     slimSelect.close();
     const search = document.querySelector(".ss-search input");
     expect(search.closest(".ss-content")).not.toBeNull();
@@ -154,14 +153,14 @@ describe("Slim Select accessibility", () => {
       document.getElementById(search.getAttribute("aria-activedescendant"))
         .textContent,
     ).toBe("Belgium");
-    search.dispatchEvent(
-      new KeyboardEvent("keydown", {
-        key: "Tab",
-        bubbles: true,
-        cancelable: true,
-      }),
-    );
-    expect(document.activeElement).toBe(action);
+    const tab = new KeyboardEvent("keydown", {
+      key: "Tab",
+      bubbles: true,
+      cancelable: true,
+    });
+    search.dispatchEvent(tab);
+    expect(tab.defaultPrevented).toBe(false);
+    expect(search.getAttribute("aria-expanded")).toBe("false");
   });
 
   test("Space types without selecting; Enter selects only the active option", () => {
@@ -248,7 +247,7 @@ describe("Slim Select accessibility", () => {
   });
 
   test("exposes the named group as the parent of its options", async () => {
-    const action = createGroupedSelect();
+    createGroupedSelect();
     const group = document.querySelector('.ss-list [role="group"]');
     expect(
       document.getElementById(group.getAttribute("aria-labelledby"))
@@ -259,147 +258,35 @@ describe("Slim Select accessibility", () => {
         (option) => option.textContent,
       ),
     ).toEqual(["Belgium", "Czechia", "France"]);
-    expect(action.closest('[role="listbox"]')).toBeNull();
     expect(
-      group.querySelector(".ss-optgroup-label .ss-selectall-slot"),
-    ).not.toBeNull();
-    expect(action.getAttribute("aria-controls")).toBe(group.id);
+      document.querySelector(
+        ".ss-selectall, .ss-selectall-slot, .ss-group-actions",
+      ),
+    ).toBeNull();
     expect(
       await axe(document.body, { rules: { region: { enabled: false } } }),
     ).toHaveNoViolations();
   });
 
-  test.each(["Enter", " "])(
-    "toggles only eligible group options using %s and keeps focus",
-    (key) => {
-      let action = createGroupedSelect();
-      const search = document.querySelector(".ss-search input");
-      search.dispatchEvent(
-        new KeyboardEvent("keydown", {
-          key: "Tab",
-          bubbles: true,
-          cancelable: true,
-        }),
-      );
-      expect(document.activeElement).toBe(action);
-      expect(action.tagName).toBe("BUTTON");
-      expect(action.textContent).toBe("Select All");
-      expect(action.getAttribute("aria-label")).toBe("Select All: Group 1");
-      expect(action.querySelector("svg")).toBeNull();
-      expect(action.getAttribute("aria-pressed")).toBe("false");
-      action.dispatchEvent(
-        new KeyboardEvent("keydown", { key, bubbles: true, cancelable: true }),
-      );
-      expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
-      action = document.querySelector(".ss-selectall");
-      expect(document.activeElement).toBe(action);
-      expect(action.getAttribute("aria-pressed")).toBe("true");
-      action.dispatchEvent(
-        new KeyboardEvent("keydown", { key, bubbles: true, cancelable: true }),
-      );
-      expect(slimSelect.getSelected()).toEqual(["it"]);
-      action = document.querySelector(".ss-selectall");
-      expect(action.getAttribute("aria-pressed")).toBe("false");
-      action.dispatchEvent(
-        new KeyboardEvent("keydown", {
-          key: "Tab",
-          shiftKey: true,
-          bubbles: true,
-          cancelable: true,
-        }),
-      );
-      expect(document.activeElement).toBe(search);
-    },
-  );
-
-  test("group selection respects selection limits and beforeChange", () => {
-    const beforeChange = jest.fn(() => false);
-    let action = createGroupedSelect({ maxSelected: 2 }, { beforeChange });
-    action.click();
-    expect(slimSelect.getSelected()).toEqual(["it"]);
-    slimSelect.destroy();
-    action = createGroupedSelect({}, { beforeChange });
-    action.click();
-    expect(beforeChange).toHaveBeenCalled();
-    expect(slimSelect.getSelected()).toEqual(["it"]);
-  });
-
-  test("enabling and disabling updates native selection buttons", () => {
+  test("enabling and disabling updates individual remove buttons", () => {
     createGroupedSelect({ disabled: true });
-    const buttons = () => [
-      ...document.querySelectorAll(".ss-value-delete, .ss-selectall"),
-    ];
-    expect(buttons()).toHaveLength(2);
+    const buttons = () => [...document.querySelectorAll(".ss-value-delete")];
+    expect(buttons()).toHaveLength(1);
     expect(buttons().every((button) => button.disabled)).toBe(true);
 
     slimSelect.enable();
     expect(buttons().every((button) => !button.disabled)).toBe(true);
-    document.querySelector(".ss-selectall").click();
-    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
 
     slimSelect.disable();
     expect(buttons().every((button) => button.disabled)).toBe(true);
     buttons().forEach((button) => button.click());
-    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
+    expect(slimSelect.getSelected()).toEqual(["it"]);
 
     slimSelect.enable();
     document
       .querySelector('.ss-value-delete[aria-label="Remove Italy"]')
       .click();
-    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz"]);
-  });
-
-  test("enabling keeps group selection disabled without eligible options", () => {
-    createGroupedSelect({ disabled: true });
-    slimSelect.setData([
-      {
-        label: "Unavailable",
-        selectAll: true,
-        options: [{ text: "France", value: "fr", disabled: true }],
-      },
-    ]);
-    slimSelect.enable();
-    const action = document.querySelector(".ss-selectall");
-    expect(action.disabled).toBe(true);
-    action.click();
     expect(slimSelect.getSelected()).toEqual([]);
-  });
-
-  test("group selection accepts beforeChange without a return value", () => {
-    const beforeChange = jest.fn();
-    createGroupedSelect({}, { beforeChange }).click();
-    expect(beforeChange).toHaveBeenCalledTimes(1);
-    expect(slimSelect.getSelected().sort()).toEqual(["be", "cz", "it"]);
-    document.querySelector(".ss-selectall").click();
-    expect(slimSelect.getSelected()).toEqual(["it"]);
-  });
-
-  test("group controls can return focus when search is disabled", () => {
-    const action = createGroupedSelect({ showSearch: false });
-    action.focus();
-    action.dispatchEvent(
-      new KeyboardEvent("keydown", {
-        key: "Tab",
-        shiftKey: true,
-        bubbles: true,
-        cancelable: true,
-      }),
-    );
-    expect(document.activeElement).toBe(document.querySelector(".ss-main"));
-  });
-
-  test("closed group actions leave the tab sequence and Escape restores combobox focus", () => {
-    const action = createGroupedSelect();
-    action.focus();
-    action.dispatchEvent(
-      new KeyboardEvent("keydown", {
-        key: "Escape",
-        bubbles: true,
-        cancelable: true,
-      }),
-    );
-    expect(document.activeElement).toBe(document.querySelector(".ss-main"));
-    expect(action.tabIndex).toBe(-1);
   });
 
   test("remove controls have native button semantics and a focusable element", () => {

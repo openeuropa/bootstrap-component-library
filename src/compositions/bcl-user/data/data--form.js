@@ -324,7 +324,6 @@ module.exports = {
             helper_text: "Helper text for the select element",
             invalid_feedback: "Invalid feedback example",
             valid_feedback: "Valid feedback example",
-            selectByGroup: true,
             placeholder: "Please select a value",
             options: [
               {
