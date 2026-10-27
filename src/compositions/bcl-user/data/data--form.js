@@ -212,6 +212,7 @@ module.exports = {
             label: "Gender",
             aria_label: "gender-select",
             helper_text: "Helper text",
+            helper_text_id: "user-gender-help",
             options: [
               { value: 2, label: "Male" },
               { value: 3, label: "Female" },
