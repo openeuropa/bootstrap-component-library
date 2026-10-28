@@ -12,6 +12,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * [#789](https://github.com/openeuropa/bootstrap-component-library/pull/789) OEL-5010: Fix Slim Select option announcements and remove button accessibility. ([@tibi2303](https://github.com/tibi2303))
 * [#797](https://github.com/openeuropa/bootstrap-component-library/pull/797) OEL-5143: Expand bcl-copyright same as banner full width. ([@tibi2303](https://github.com/tibi2303))
 
+#### :house: Internal
+* [#794](https://github.com/openeuropa/bootstrap-component-library/pull/794) OEL-5065: Update dependencies and cleanup overrides. ([@tibi2303](https://github.com/tibi2303))
+
 #### Committers: 2
 - Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
 - Piotr Smykaj ([@piotrsmykaj](https://github.com/piotrsmykaj))
