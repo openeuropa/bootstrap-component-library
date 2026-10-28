@@ -1,6 +1,6 @@
 ## OEL Bootstrap based Component Library template
 
-Library of components based on [Bootstrap 5](https://github.com/twbs/bootstrap/tree/v5.0.1)
+Library of components based on [Bootstrap 5](https://github.com/twbs/bootstrap/tree/v5.3.8)
 
 ![Build Status](https://github.com/openeuropa/bootstrap-component-library/actions/workflows/ci.yml/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
