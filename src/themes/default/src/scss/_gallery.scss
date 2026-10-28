@@ -1,14 +1,32 @@
 @use "sass:map";
 .bcl-gallery {
-  .bcl-gallery__thumbnails {
-    border-radius: $border-radius;
-    overflow: hidden;
-  }
-
   ul.bcl-gallery__grid {
     list-style: none;
     padding: 0;
     margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  .bcl-gallery__thumbnails {
+    > .bcl-gallery__grid {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    &:has(> .bcl-gallery__thumbnails-collaspe.collapse.show) {
+      > .bcl-gallery__thumbnails-collaspe {
+        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        overflow: hidden;
+      }
+    }
+
+    &:not(:has(> .bcl-gallery__thumbnails-collaspe.collapse.show)) {
+      > .bcl-gallery__grid {
+        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+    }
   }
 
   .bcl-gallery__item {
@@ -199,10 +217,9 @@
   @include media-breakpoint-up(sm) {
     ul.bcl-gallery__grid {
       display: grid;
-      grid-template-rows: 1fr 1fr 0;
+      grid-template-rows: 1fr 1fr;
       grid-gap: map.get($spacers, 2);
       grid-template-columns: repeat(4, 1fr);
-      margin-bottom: -#{map.get($spacers, 2)};
     }
 
     ul.bcl-gallery__grid li:not(:last-child) {

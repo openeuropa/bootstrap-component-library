@@ -1,0 +1,70 @@
+diff --git a/index.js b/index.js
+--- a/index.js
++++ b/index.js
+@@ -1,6 +1,6 @@
+ const debug = require('debug')('extract-zip')
+ // eslint-disable-next-line node/no-unsupported-features/node-builtins
+-const { createWriteStream, promises: fs } = require('fs')
++const { createWriteStream, constants, promises: fs } = require('fs')
+ const getStream = require('get-stream')
+ const path = require('path')
+ const { promisify } = require('util')
+@@ -121,15 +121,57 @@
+     await fs.mkdir(destDir, mkdirOptions)
+     if (isDir) return
+ 
++    if (!symlink) {
++      const existing = await fs.lstat(dest).catch(err => {
++        if (err.code !== 'ENOENT') throw err
++        return null
++      })
++      if (existing && existing.isSymbolicLink()) {
++        throw new Error(`Refusing to write through symlink "${dest}"`)
++      }
++    }
++
+     debug('opening read stream', dest)
+     const readStream = await promisify(this.zipfile.openReadStream.bind(this.zipfile))(entry)
+ 
+     if (symlink) {
+       const link = await getStream(readStream)
++      await this.assertSymlinkTarget(path.resolve(path.dirname(dest), link))
+       debug('creating symlink', link, dest)
+       await fs.symlink(link, dest)
+     } else {
+-      await pipeline(readStream, createWriteStream(dest, { mode: procMode }))
++      const flags = constants.O_WRONLY | constants.O_CREAT | constants.O_TRUNC | (constants.O_NOFOLLOW || 0)
++      await pipeline(readStream, createWriteStream(dest, { mode: procMode, flags }))
++    }
++  }
++
++  async assertSymlinkTarget (target) {
++    const assertContained = candidate => {
++      const relative = path.relative(this.opts.dir, candidate)
++      if (relative === '..' || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative)) {
++        throw new Error(`Out of bound symlink target "${target}"`)
++      }
++    }
++    assertContained(target)
++
++    // Check existing ancestors as well as the lexical target. Allow missing
++    // targets inside the archive, but fail closed on dangling existing links.
++    let ancestor = target
++    while (true) {
++      try {
++        assertContained(await fs.realpath(ancestor))
++        return
++      } catch (err) {
++        if (err.code !== 'ENOENT') throw err
++        const existing = await fs.lstat(ancestor).catch(statErr => {
++          if (statErr.code !== 'ENOENT') throw statErr
++          return null
++        })
++        if (existing && existing.isSymbolicLink()) throw err
++        const parent = path.dirname(ancestor)
++        if (parent === ancestor) throw err
++        ancestor = parent
++      }
+     }
+   }
+ 
