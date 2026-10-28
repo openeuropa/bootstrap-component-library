@@ -139,10 +139,12 @@ const applyArgs = (data, args) => {
   return Object.assign(correctPaths(data), args);
 };
 
-const renderStory = (data, args) => {
-  let story = banner(applyArgs(data, args));
-  if (args.full_width) {
+const renderStory = async (data, args, inContainer = false) => {
+  let story = await banner(applyArgs(data, args));
+  if (args.full_width || inContainer) {
     story = `<div class="container">${story}</div>`;
+  }
+  if (args.full_width) {
     story +=
       '<div class="container"><p class="my-3">Content inside the grid</p></div>';
   }
@@ -187,6 +189,26 @@ export const Image = (args) => renderStory(dataImage, args);
 Image.storyName = "Image - text-block";
 Image.args = getArgs(dataImage);
 Image.argTypes = getArgTypes(dataImage);
+
+export const Contained = (args) => renderStory(dataImage, args, true);
+
+Contained.storyName = "Image - full width inside container with copyright";
+Contained.args = {
+  ...getArgs(dataImage),
+  full_width: true,
+  hero: true,
+  copyright: "© Example Organisation",
+};
+Contained.argTypes = getArgTypes(dataImage);
+Contained.parameters = {
+  layout: "fullscreen",
+  docs: {
+    description: {
+      story:
+        "The banner and copyright strip extend to the viewport edges from the medium breakpoint, while the following content stays inside the Bootstrap grid.",
+    },
+  },
+};
 
 export const Shade = (args) => renderStory(dataShade, args);
 

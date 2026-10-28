@@ -108,4 +108,21 @@ describe("OE - select", () => {
       await axe(await renderTwigFileAsHtml(template, demoMultiData, true)),
     ).toHaveNoViolations();
   });
+  test("generates a helper ID when it is omitted", async () => {
+    const html = await renderTwigFileAsHtml(
+      template,
+      {
+        id: "helped-select",
+        helper_text: "Choose a value",
+        options: [],
+      },
+      false,
+    );
+    const container = document.createElement("div");
+    container.innerHTML = html;
+    expect(
+      container.querySelector("select").getAttribute("aria-describedby"),
+    ).toBe("helped-select-help");
+    expect(container.querySelector(".form-text").id).toBe("helped-select-help");
+  });
 });

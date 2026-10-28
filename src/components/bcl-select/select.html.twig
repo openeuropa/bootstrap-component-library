@@ -83,6 +83,17 @@
   {%- set attributes = attributes.setAttribute('id', _id) %}
 {% endif %}
 
+{%- if _helper_text is not empty %}
+  {%- if _helper_text_id is empty %}
+    {%- set _helper_text_id = (_id is not empty ? _id : 'select-' ~ random(1000000)) ~ '-help' %}
+  {%- endif %}
+  {%- set _described_by = (attributes['aria-describedby']|default('') ~ '')|split(' ') %}
+  {%- if _helper_text_id not in _described_by %}
+    {%- set _described_by = _described_by|merge([_helper_text_id]) %}
+  {%- endif %}
+  {%- set attributes = attributes.setAttribute('aria-describedby', _described_by|join(' ')|trim) %}
+{%- endif %}
+
 {%- if _disabled %}
   {%- set attributes = attributes.setAttribute('disabled', true) %}
 {% endif %}

@@ -1,0 +1,17 @@
+{% extends '@oe-bcl/bcl-base-templates/content-type.html.twig' %}
+
+{% block banner %}
+  <div class="container pt-4">
+    <hr class="mb-4-75">
+    <h1 class="display-1 mb-0">{{ page_title }}</h1>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% include '@oe-bcl/bcl-carousel-v2/carousel.html.twig' with carousel only %}
+  <div class="py-4-75">
+    <h2>Discover our work</h2>
+    <p>Explore the projects and research supporting a more sustainable future for communities across Europe.</p>
+    <p>Find out how we work with partners to protect nature, share knowledge and put ideas into practice.</p>
+  </div>
+{% endblock %}

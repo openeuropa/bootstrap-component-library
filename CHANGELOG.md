@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.17.0 (2026-10-28)
+
+#### :rocket: New Feature
+* [#788](https://github.com/openeuropa/bootstrap-component-library/pull/788) OEL-4962: Carousel v2. ([@tibi2303](https://github.com/tibi2303))
+
+#### :nail_care: Enhancement
+* [#789](https://github.com/openeuropa/bootstrap-component-library/pull/789) OEL-5010: Fix Slim Select option announcements and remove button accessibility. ([@tibi2303](https://github.com/tibi2303))
+* [#797](https://github.com/openeuropa/bootstrap-component-library/pull/797) OEL-5143: Expand bcl-copyright same as banner full width. ([@tibi2303](https://github.com/tibi2303))
+
+#### :house: Internal
+* [#794](https://github.com/openeuropa/bootstrap-component-library/pull/794) OEL-5065: Update dependencies and cleanup overrides. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 2
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+- Piotr Smykaj ([@piotrsmykaj](https://github.com/piotrsmykaj))
+
 ## 1.16.0 (2026-09-30)
 
 #### :bug: Bug Fix

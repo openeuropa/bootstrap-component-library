@@ -3786,6 +3786,7 @@ exports[`OE - User renders correctly 1`] = `
                           Gender
                         </label>
                         <select
+                          aria-describedby="user-gender-help"
                           aria-label="gender-select"
                           class="form-select"
                           required
@@ -3803,6 +3804,7 @@ exports[`OE - User renders correctly 1`] = `
                         </select>
                         <div
                           class="form-text"
+                          id="user-gender-help"
                         >
                           Helper text
                         </div>
@@ -3990,6 +3992,7 @@ exports[`OE - User renders correctly 1`] = `
                         Working languages
                       </label>
                       <select
+                        aria-describedby="multiselect-1-help"
                         class="multi-select"
                         id="multiselect-1"
                         multiple
@@ -4054,6 +4057,7 @@ exports[`OE - User renders correctly 1`] = `
                       </div>
                       <div
                         class="form-text"
+                        id="multiselect-1-help"
                       >
                         Helper text for the select element
                       </div>
