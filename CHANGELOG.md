@@ -9,7 +9,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 #### Committers: 1
 - Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
-tiberiudumitru@192 bootstrap-component-library %
 
 ## 1.17.0 (2026-10-28)
 
