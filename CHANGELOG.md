@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.17.1 (2026-10-28)
+
+* [#795](https://github.com/openeuropa/bootstrap-component-library/pull/795) OEL-5129: Apply media gallery bottom rounding based on collapse state. ([@tibi2303](https://github.com/tibi2303))
+
+#### Committers: 1
+- Dumitru Tiberiu-Andrei ([@tibi2303](https://github.com/tibi2303))
+tiberiudumitru@192 bootstrap-component-library %
+
 ## 1.17.0 (2026-10-28)
 
 #### :rocket: New Feature
