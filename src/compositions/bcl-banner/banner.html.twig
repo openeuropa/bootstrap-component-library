@@ -71,9 +71,21 @@
 
 {%- set attributes = attributes.addClass(_classes) -%}
 
+{%- set _copyright_markup -%}
+  {%- if _copyright is not empty -%}
+    <div class="bcl-copyright">
+      {%- if _copyright_label is not empty -%}
+        <span class="visually-hidden">{{- _copyright_label }} </span>
+      {%- endif -%}
+      {{- _copyright -}}
+    </div>
+  {%- endif -%}
+{%- endset -%}
+
 <div {{ attributes }}>
   {%- if _image is not empty -%}
     <div class="bcl-banner__image" style="background-image:url({{ _image }})"></div>
+    {{- _copyright_markup -}}
   {%- endif -%}
   <div class="container">{# -#}
     <div class="{{ _content_class }}">
@@ -101,13 +113,8 @@
     {%- endif -%}
     </div>{# -#}
   </div>{# -#}
-</div>
-  {%- if _copyright is not empty -%}
-    <div class="bcl-copyright">
-      {%- if _copyright_label is not empty -%}
-        <span class="visually-hidden">{{- _copyright_label }} </span>
-      {%- endif -%}
-      {{- _copyright -}}
-    </div>
+  {%- if _image is empty -%}
+    {{- _copyright_markup -}}
   {%- endif -%}
+</div>
 {#--#}

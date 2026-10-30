@@ -106,13 +106,23 @@
   .bcl-banner {
     overflow: hidden;
     border-radius: 4px;
-    &:has(+ .bcl-copyright) {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+    // Keep the image and overlay in one row, with copyright directly below.
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 1fr auto;
+
+    &::before,
+    > .container,
+    > .bcl-banner__image {
+      grid-area: 1 / 1 / 2 / 2;
     }
-    & + .bcl-copyright {
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
+
+    > .container {
+      align-self: center;
+    }
+
+    > .bcl-copyright {
+      grid-area: 2 / 1 / 3 / 2;
     }
 
     &.overlay {
@@ -153,7 +163,6 @@
   }
 
   .bcl-banner.full-width,
-  .bcl-banner.full-width + .bcl-copyright,
   .bcl-content-banner {
     left: 50%;
     width: 100vw;
@@ -207,11 +216,8 @@
 }
 @include media-breakpoint-up(md) {
   .bcl-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     &.fixed-height {
-      height: 330px;
+      grid-template-rows: 330px auto;
       .bcl-banner__image {
         height: 100%;
       }
@@ -221,9 +227,8 @@
 
 @include media-breakpoint-up(lg) {
   .bcl-banner {
-    min-height: 300px;
-
     &:not(.fixed-height) {
+      grid-template-rows: minmax(300px, auto) auto;
       &::before {
         display: block;
         width: 1px;
@@ -233,7 +238,9 @@
     }
 
     &.hero {
-      min-height: 380px;
+      &:not(.fixed-height) {
+        grid-template-rows: minmax(380px, auto) auto;
+      }
       &::before {
         padding-top: 25%;
       }
