@@ -153,9 +153,6 @@
 
 {%- if _copyright is not empty or _content is not empty -%}
   <figcaption>
-    {%- if _content is not empty -%}
-      <div{% if _content_classes is not empty %} class="{{ _content_classes }}"{% endif %}>{{- _content -}}</div>
-    {%- endif -%}
     {%- if _copyright is not empty -%}
       <div class="bcl-copyright">
         {%- if _copyright_label is not empty -%}
@@ -163,6 +160,9 @@
         {%- endif -%}
         {{- _copyright -}}
       </div>
+    {%- endif -%}
+    {%- if _content is not empty -%}
+      <div{% if _content_classes is not empty %} class="{{ _content_classes }}"{% endif %}>{{- _content -}}</div>
     {%- endif -%}
   </figcaption>
 {%- endif -%}
