@@ -1,6 +1,7 @@
 import {
   renderTwigFileAsNode,
   renderTwigFileAsHtml,
+  DrupalAttribute,
 } from "@openeuropa/bcl-test-utils";
 import { axe, toHaveNoViolations } from "jest-axe";
 
@@ -8,6 +9,8 @@ import demoData from "@openeuropa/bcl-data-offcanvas/data";
 
 const template = "@oe-bcl/bcl-offcanvas/offcanvas.html.twig";
 const render = (params) => renderTwigFileAsNode(template, params, true);
+const renderOffcanvas = async (params, reset = true) =>
+  (await renderTwigFileAsNode(template, params, reset)).firstElementChild;
 
 expect.extend(toHaveNoViolations);
 
@@ -85,9 +88,66 @@ describe("OE - Offcanvas", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test(`has the dialog role when labelled and not responsive`, async () => {
+    const offcanvas = await renderOffcanvas(demoData);
+
+    expect(offcanvas.getAttribute("role")).toBe("dialog");
+  });
+
+  test(`has the region role when labelled and responsive`, async () => {
+    const offcanvas = await renderOffcanvas({
+      ...demoData,
+      responsiveness: "lg",
+    });
+
+    expect(offcanvas.getAttribute("role")).toBe("region");
+  });
+
+  test(`has no role without title`, async () => {
+    const offcanvas = await renderOffcanvas({ ...demoData, title: "" });
+
+    expect(offcanvas.hasAttribute("role")).toBe(false);
+  });
+
+  test(`keeps the role given in attributes`, async () => {
+    const offcanvas = await renderOffcanvas(
+      {
+        ...demoData,
+        responsiveness: "lg",
+        attributes: new DrupalAttribute().setAttribute("role", "complementary"),
+      },
+      false,
+    );
+
+    expect(offcanvas.getAttribute("role")).toBe("complementary");
+  });
+
+  test(`has a default label on the close button`, async () => {
+    const offcanvas = await renderOffcanvas({
+      ...demoData,
+      close_aria_label: "",
+    });
+
+    expect(
+      offcanvas.querySelector(".btn-close").getAttribute("aria-label"),
+    ).toBe("Close");
+  });
+
   test(`passes the accessibility tests`, async () => {
     expect(
       await axe(await renderTwigFileAsHtml(template, demoData, true)),
+    ).toHaveNoViolations();
+  });
+
+  test(`passes the accessibility tests with responsive behaviour`, async () => {
+    expect(
+      await axe(
+        await renderTwigFileAsHtml(
+          template,
+          { ...demoData, responsiveness: "lg" },
+          true,
+        ),
+      ),
     ).toHaveNoViolations();
   });
 });

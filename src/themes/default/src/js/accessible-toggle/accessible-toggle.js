@@ -3,10 +3,14 @@ import Offcanvas from "@openeuropa/bcl-bootstrap/js/src/offcanvas";
 import EventHandler from "@openeuropa/bcl-bootstrap/js/src/dom/event-handler";
 import SelectorEngine from "@openeuropa/bcl-bootstrap/js/src/dom/selector-engine";
 
+// Offcanvas elements that already have the role restore listener.
+const offcanvasWithRole = new WeakSet();
+
 /**
  * AccessibleToggle enhances Bootstrap Modal and Offcanvas components by:
  * - Adding ARIA attributes for improved accessibility.
  * - Updating `aria-expanded` on trigger elements based on visibility.
+ * - Restoring the offcanvas role from the markup after Bootstrap removes it on hide.
  * Automatically initializes all modal and offcanvas triggers on the page.
  */
 class AccessibleToggle {
@@ -59,6 +63,27 @@ class AccessibleToggle {
 
     EventHandler.on(this.targetElement, hideEvent, () => {
       this.triggerElement.setAttribute("aria-expanded", "false");
+    });
+
+    if (this.type === "offcanvas") {
+      this.restoreRoleOnHidden();
+    }
+  }
+
+  restoreRoleOnHidden() {
+    // Init can run many times, keep the first role read from the markup.
+    if (offcanvasWithRole.has(this.targetElement)) {
+      return;
+    }
+
+    const role = this.targetElement.getAttribute("role");
+    if (!role) {
+      return;
+    }
+
+    offcanvasWithRole.add(this.targetElement);
+    EventHandler.on(this.targetElement, "hidden.bs.offcanvas", () => {
+      this.targetElement.setAttribute("role", role);
     });
   }
 
