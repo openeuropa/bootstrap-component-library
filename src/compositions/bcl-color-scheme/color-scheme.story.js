@@ -1,5 +1,6 @@
 import { correctPaths } from "@openeuropa/bcl-story-utils";
 
+import dataBadge from "@openeuropa/bcl-data-badge/data.js";
 import dataAlert from "@openeuropa/bcl-data-alert/data.js";
 import dataAccordion from "@openeuropa/bcl-data-accordion/data.js";
 import dataBanner from "@openeuropa/bcl-banner/data/data.js";
@@ -19,6 +20,7 @@ import dataContentBanner from "@openeuropa/bcl-color-scheme/data/content-banner/
 import dataCarousel from "@openeuropa/bcl-color-scheme/data/carousel/data.js";
 import dataGallery from "@openeuropa/bcl-color-scheme/data/gallery/data.js";
 
+import badge from "@openeuropa/bcl-badge/badge.html.twig";
 import alert from "@openeuropa/bcl-alert/alert.html.twig";
 import accordion from "@openeuropa/bcl-accordion/accordion.html.twig";
 import banner from "@openeuropa/bcl-banner/banner.html.twig";
@@ -166,6 +168,32 @@ const renderFileStory = (data, args) => {
 export default {
   title: "Resources/Color scheme",
 };
+
+export const Badge = async () => {
+  const badges = await Promise.all(
+    ["primary", "secondary"].flatMap((background) =>
+      [false, true].flatMap((rounded_pill) =>
+        [false, true].map((outline) =>
+          badge({
+            ...correctPaths({ ...dataBadge }),
+            label: `${background === "primary" ? "Primary" : "Secondary"} ${outline ? "outline" : "plain"}${rounded_pill ? " pill" : ""}`,
+            background,
+            url: "#badge-example",
+            outline,
+            rounded_pill,
+          }),
+        ),
+      ),
+    ),
+  );
+
+  return `
+    <div class="ocean bg-default text-color-default p-4">
+      <div class="d-flex flex-wrap gap-3">${badges.join("")}</div>
+    </div>
+  `;
+};
+Badge.storyName = "Badge";
 
 export const Alert = (args) => renderAlertStory(dataAlert, args);
 Alert.storyName = "Alert";
