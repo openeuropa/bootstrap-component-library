@@ -96,19 +96,8 @@ const getArgTypes = () => ({
   },
 });
 
-const resetAttrs = (data) => {
-  data.attributes.removeClass(`text-bg-${data.background}`);
-  data.attributes.removeClass("rounded-pill");
-};
-
-const applyArgs = (data, args) => {
-  if (!data.attributes) {
-    data.attributes = new DrupalAttribute();
-  }
-  resetAttrs(data);
-
-  return Object.assign(correctPaths(data), args);
-};
+const applyArgs = (data, args) =>
+  correctPaths({ ...data, ...args, attributes: new DrupalAttribute() });
 
 export default {
   title: "Components/Badge",
@@ -119,12 +108,12 @@ export default {
       {
         name: "Mockup",
         type: "figma",
-        url: "https://www.figma.com/file/7aJedLkk8hiDoD3RcxTnQi/BCL-Starter-kit?node-id=1%3A527",
+        url: "https://www.figma.com/design/zmegk96z70Cp7pdXSoIZT9/OEL-Design-System---V2.0.2?node-id=25976-5370",
       },
       {
         name: "Bootstrap docs",
         type: "iframe",
-        url: "https://getbootstrap.com/docs/5.2/components/badge/",
+        url: "https://getbootstrap.com/docs/5.3/components/badge/",
       },
     ],
   },
