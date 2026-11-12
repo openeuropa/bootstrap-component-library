@@ -9,7 +9,7 @@
   - with_body_scroll (boolean) (default: false)
   - with_backdrop (boolean) (default: true)
   - with_close (boolean) (default: true)
-  - close_aria_label (default: '')
+  - close_aria_label (default: 'Close')
   - extra_classes_body (string) (default: '')
   - extra_classes_header (string) (default: '')
   - extra_classes_close (string) (default: '')
@@ -28,7 +28,7 @@
 {% set _with_body_scroll = with_body_scroll ?? false %}
 {% set _with_backdrop = with_backdrop ?? true %}
 {% set _with_close = with_close ?? true %}
-{% set _close_aria_label = close_aria_label|default('') %}
+{% set _close_aria_label = close_aria_label|default('Close') %}
 {% set _extra_classes_body = extra_classes_body|default('') %}
 {% set _extra_classes_header = extra_classes_header|default('') %}
 {% set _extra_classes_close = extra_classes_close|default('') %}
@@ -71,6 +71,11 @@
 
 {%- if _title is not empty %}
  {%- set attributes = attributes.setAttribute('aria-labelledby', _id ~ '-title') %}
+{% endif %}
+
+{#- A labelled div needs a role: region when shown inline, else dialog. -#}
+{%- if attributes['aria-labelledby'] is not empty and attributes['role'] is empty %}
+ {%- set attributes = attributes.setAttribute('role', _responsiveness is not empty ? 'region' : 'dialog') %}
 {% endif %}
 
 {%- set attributes = attributes.setAttribute('tabindex', '-1').addClass(_classes) -%}
