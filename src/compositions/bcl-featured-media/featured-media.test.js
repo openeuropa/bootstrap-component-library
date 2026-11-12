@@ -51,6 +51,27 @@ describe("OE - Featured media", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test.each([
+    ["image", demoDataImage],
+    ["video", demoDataVideo],
+    ["iframe", demoData],
+    ["featured item", demoFeaturedItem],
+  ])("%s copyright precedes the caption content", async (_, data) => {
+    const node = await render({
+      ...data,
+      copyright: "© Example Organisation",
+      copyright_label: "Copyright:",
+    });
+    const caption = node.querySelector("figcaption");
+    const copyright = caption.querySelector(".bcl-copyright");
+
+    expect(caption.firstElementChild).toBe(copyright);
+    expect(copyright.nextElementSibling.textContent).toBe(data.content);
+    expect(copyright.querySelector(".visually-hidden").textContent).toBe(
+      "Copyright: ",
+    );
+  });
+
   test("renders correctly with image and forced wrapper", () => {
     expect.assertions(1);
     return expect(
