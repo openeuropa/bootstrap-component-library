@@ -49,7 +49,7 @@ const getArgTypes = (data, type) => {
       },
     },
     copyright: {
-      description: "Copyright text displayed between media and figcaption",
+      description: "Copyright text displayed directly below the media",
       type: { name: "string" },
       table: {
         type: { summary: "string" },

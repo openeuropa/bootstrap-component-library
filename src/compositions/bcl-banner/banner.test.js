@@ -152,6 +152,27 @@ describe("OE - Page banner", () => {
     ).resolves.toMatchSnapshot();
   });
 
+  test.each([
+    ["image", {}],
+    ["shade", { shade: true }],
+    ["hero", { hero: true }],
+    ["fixed height", { fixed_height: true }],
+    ["full width", { full_width: true }],
+  ])(
+    "%s copyright follows the image before the content",
+    async (_, options) => {
+      const node = await render({ ...dataImage, ...options }, true);
+      const image = node.querySelector(".bcl-banner__image");
+      const copyright = node.querySelector(".bcl-copyright");
+
+      expect(image.nextElementSibling).toBe(copyright);
+      expect(copyright.nextElementSibling).toBe(
+        node.querySelector(".container"),
+      );
+      expect(node.querySelectorAll(".bcl-copyright")).toHaveLength(1);
+    },
+  );
+
   test("default renders correctly fixed height", () => {
     expect.assertions(1);
     return expect(

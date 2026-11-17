@@ -45,7 +45,7 @@ const getArgTypes = (data) => {
     },
     copyright: {
       type: "string",
-      description: "Copyright text displayed below the banner",
+      description: "Copyright text displayed directly below the image",
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
