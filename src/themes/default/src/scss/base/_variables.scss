@@ -75,10 +75,12 @@ $accordion-border-color: $gray-300;
 
 // Badges
 $badge-font-weight: $font-weight-normal; // 400
-$badge-font-size: 1.125rem; // 18px
-$badge-font-size-desktop: 1rem; // 16px
+$badge-font-size-desktop: map.get($font-sizes, 6);
+$badge-font-size: $badge-font-size-desktop + map.get($spacers, 1) * 0.5;
+$badge-min-height-desktop: map.get($spacers, "4-25");
+$badge-line-height-desktop: map.get($spacers, 4) + map.get($spacers, 1) * 0.5;
 $badge-active-box-shadow: $btn-active-box-shadow;
-$badge-focus-width: $btn-focus-width;
+$badge-focus-width: map.get($spacers, 1) * 0.5;
 
 // Forms
 $form-check-input-size-lg: $form-check-input-width + 0.3em !default;
