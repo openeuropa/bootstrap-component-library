@@ -54,6 +54,8 @@
 {% set _translation = translation|default({}) %}
 {% set _icon_path = icon_path|default('') %}
 
+{% set _meta_id = 'doc-meta-' ~ 'file'|clean_unique_id %}
+
 {%- set _classes = ['bcl-file'] %}
 
 {%- if attributes is empty %}
@@ -66,6 +68,8 @@
   {%- set _container_classes = _container_classes ~ ' ms-2-5' %}
   {%- set _icon = _icon|merge({
     attributes: create_attribute().addClass(['mt-1', 'icon--file'])
+    .setAttribute('aria-hidden', 'true')
+    .setAttribute('focusable', 'false')
   }) %}
 {% endif %}
 
@@ -120,11 +124,31 @@
       {%- endif -%}
       <div class="{{ _container_classes }}">{# -#}
         <div class="flex-grow-1">
-          {%- if _item_title is not empty and _variant == 'default' -%}
-            <p class="fw-medium m-0 fs-5">{{ _item_title }}</p>
-          {%- endif %}
+          {% if _item_title is not empty and _download.path is not empty%}
+            {% set _item_title %}
+              {{ _item_title }}
+              <span class="visually-hidden"> | 
+                {{ 'View document @meta, opens in a new tab'|t({
+                  '@meta': _meta|default('')
+                }) }}
+              </span>
+            {% endset %}
+            {% set _item_title %}
+              {{ bcl_link(
+                _item_title,
+                _download.path,
+                attributes: create_attribute({
+                  'target' : '_blank',
+                  'aria-describedby': _meta_id,
+                })
+              ) }}
+            {% endset %}
+          {% endif %}
+          {% if _item_title is not empty %}
+            <p class="fw-medium mb-2 fs-5">{{ _item_title }}</p>
+          {% endif %}
           {%- if _language is not empty or _meta is not empty -%}
-          <small class="fw-medium m-0">
+          <small class="fw-medium m-0"  id="{{ _meta_id }}">
             {%- if _language is not empty -%}
               {{- _language -}}
             {%- endif -%}
@@ -136,20 +160,6 @@
           </small>
           {%- endif -%}
         </div>
-        {%- set download_attributes = create_attribute()
-                                      .setAttribute('download', true)
-                                      .setAttribute('target', '_blank')
-                                      .addClass(['standalone', 'align-self-center', 'd-inline-block', 'mt-1', 'mt-md-0', 'flex-shrink-0']) %}
-        {%- set _download = _download|merge({
-          icon_position: "after",
-          icon: {
-            name: "download",
-            size: "fluid",
-            path: _icon_path,
-          }|merge(_download.icon|default({})),
-          attributes: download_attributes.merge(_download.attributes|default(create_attribute()))
-        }) %}
-        {%- include '@oe-bcl/bcl-link/link.html.twig' with _download only -%}
       </div>{# -#}
     </div>{# -#}
   </div>
