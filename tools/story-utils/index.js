@@ -316,6 +316,7 @@ export const getIconNames = () => {
     "phone-fill",
     "diamond",
     "star",
+    "threads",
   ];
 };
 
