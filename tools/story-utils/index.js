@@ -1,4 +1,6 @@
 import iconPath from "../../src/themes/default/icons/bcl-default-icons.svg";
+import icons from "../../src/themes/default/src/icons/icons";
+import customIcons from "../../src/themes/default/src/icons/custom-icons";
 import flagPath from "@ecl/resources-flag-icons/dist/sprites/icons-flag.svg";
 import memberFlags from "@ecl/resources-flag-icons/dist/lists/members/all.json";
 import nonMemberFlags from "@ecl/resources-flag-icons/dist/lists/non-members/all.json";
@@ -299,23 +301,9 @@ export const getIconControls = (type, data) => {
 export const getIconNames = () => {
   return [
     "none",
-    "upload",
-    "arrow-left",
-    "arrow-right",
-    "unlock",
-    "person",
-    "geo-alt",
-    "lock",
-    "building",
-    "key",
-    "flag",
-    "wifi",
-    "rss-fill",
-    "clock",
-    "calendar-x",
-    "phone-fill",
-    "diamond",
-    "star",
+    ...new Set(
+      [...icons, ...customIcons].map((icon) => icon.replace(/\.svg$/, "")),
+    ),
   ];
 };
 

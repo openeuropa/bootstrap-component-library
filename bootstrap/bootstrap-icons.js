@@ -1264,6 +1264,7 @@ export default [
   "twitch",
   "twitter",
   "bluesky",
+  "threads",
   "type-bold",
   "type-h1",
   "type-h2",
